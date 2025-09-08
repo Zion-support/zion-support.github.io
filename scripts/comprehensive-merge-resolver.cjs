@@ -5,13 +5,13 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🚀 Comprehensive Merge Conflict Resolver');
-console.log('=====================================');
+console.log('==');
 
 // Function to remove merge conflict markers
 function removeMergeConflictMarkers(content) {
   return content
-    .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?    .replace(/<<<<<<< HEAD[\s\S]*?    .replace(/=======[\s\S]*?    .replace(/<<<<<<< HEAD/g, '')
-    .replace(/=======/g, '')
+    .replace(/[\s\S]*?    .replace(/
+    .replace(//g, '')
     .replace(/}
     .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
     .replace(//g, '')
@@ -129,7 +129,7 @@ function processFile(filePath) {
     // Check for merge conflict markers
     // Check for merge conflict markers
 
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+    if (content.includes('
       console.log(`🔧 Removing merge conflict markers from ${filePath}`);
       content = removeMergeConflictMarkers(content);
       modified = true;
@@ -173,7 +173,7 @@ function findFilesWithConflicts() {
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+          if (content.includes('
             files.push(fullPath);
           }
         } catch (error) {

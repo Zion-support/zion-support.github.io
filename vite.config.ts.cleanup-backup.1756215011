@@ -1,29 +1,4 @@
-<<<<<<< HEAD:vite.config.ts.cleanup-backup.1756215011
-<<<<<<< HEAD
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
 import path from 'node:path'
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-<<<<<<< HEAD
-import { resolve } from 'path'
-=======
-import path from 'node:path'
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-438b
-
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -44,9 +19,6 @@ export default defineConfig({
       },
     },
   ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 =======
 import { defineConfig } from 'vite'
@@ -58,15 +30,10 @@ export default defineConfig({
   root: '.',
   publicDir: 'public',
   plugins: [react()],
->>>>>>> cursor/website-audit-and-enhancement-7e39:vite.config.ts
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')
     }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-7bd2
-=======
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
@@ -126,7 +93,6 @@ export default defineConfig({
       }
     })
   ],
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-dfe9
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),
@@ -147,11 +113,7 @@ export default defineConfig({
     minify: 'terser',
     sourcemap: false,
     rollupOptions: {
-<<<<<<< HEAD:vite.config.ts.cleanup-backup.1756215011
-<<<<<<< HEAD
-=======
       input: path.resolve(__dirname, 'public/index.html'),
->>>>>>> cursor/website-audit-and-enhancement-7e39:vite.config.ts
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom'],
@@ -237,22 +199,9 @@ export default defineConfig({
   esbuild: { drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [] },
   worker: { format: 'es' },
   envPrefix: ['VITE_', 'ZION_'],
-<<<<<<< HEAD:vite.config.ts.cleanup-backup.1756215011
-  // Experimental features
-  experimental: {
-    renderBuiltUrl(filename, { hostType }) {
-      if (hostType === 'js') {
-        return { js: `/${filename}` }
-      } else {
-        return { relative: true }
-      }
-    },
-  },
-=======
       external: ['lucide-react']
     }
   }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 =======
 >>>>>>> cursor/website-audit-and-enhancement-7e39:vite.config.ts
 })

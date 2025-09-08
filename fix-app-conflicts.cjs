@@ -6,12 +6,6 @@ function fixMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-<<<<<<< HEAD
-
-          takeHead = false;
-          continue;
-        } else if (line.includes(>>>>>>>')) {
-=======
       console.log(`Fixing merge conflicts in: ${filePath}`);
       
       // Simple merge conflict resolution - take the HEAD version
@@ -34,7 +28,10 @@ function fixMergeConflicts(filePath) {
           takeHead = true;
           continue;
         } else if (line.includes('')) {
->>>>>>> origin/chore/fix-lint-and-merge
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
           inConflict = false;
           continue;
         }
@@ -70,11 +67,17 @@ function findAndFixConflicts(dir) {
 
 // Fix conflicts in app directory
 <<<<<<< HEAD
-console.log('Fixing merge conflicts in app directory...);
-findAndFixConflicts(./app');
-console.log('Merge conflicts fixed!');
-=======
 console.log('Fixing merge conflicts in app directory...');
 findAndFixConflicts('./app');
 console.log('Merge conflicts fixed!');
->>>>>>> origin/chore/fix-lint-and-merge
+=======
+
+console.log('Fixing merge conflicts in app directory...);
+findAndFixConflicts(./app');
+console.log('Merge conflicts fixed!');
+
+console.log('Fixing merge conflicts in app directory...');
+findAndFixConflicts('./app');
+console.log('Merge conflicts fixed!');
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425

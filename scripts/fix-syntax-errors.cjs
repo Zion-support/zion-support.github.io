@@ -84,7 +84,7 @@ const fs = require('fs')
     content = content.replace(/([^;}])\n/g, '$1;\n');
     
     // Fix merge conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?    
+    content = content.replace(/[\s\S]*?    
 
 
 

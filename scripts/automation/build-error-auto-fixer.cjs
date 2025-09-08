@@ -10,6 +10,15 @@ class BuildErrorAutoFixer {}
     this.reportsDir = path.join(this.projectRoot, 'error-reports');
     this.logsDir = path.join(this.projectRoot, 'automation/logs');
     this.fixInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 900000; // 15 minutes;
+    console.log(`[${timestamp}] [${level}] ${message})};
+>>>>>>> origin/chore/fix-lint-and-merge
+  async runBuildCheck() {}
+    try {}
+
+        const match = line.match(/([^:]+):(\d+):(\d+)/);
+        if (match) {}
+          if (currentError) {}
+=======
     this.autoFixEnabled = process.env.AUTO_FIX_ENABLED === 'true';
 =======
 
@@ -56,6 +65,7 @@ class BuildErrorAutoFixer {}
         if (match) {}
           if (currentError) {}
             errors.push(currentError)};
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
           currentError = {}
 
       return 0};
@@ -63,6 +73,29 @@ class BuildErrorAutoFixer {}
 =======
     for (const error of errors) {}
         if (await this.fixSingleBuildError(error)) {}
+        
+        let originalContent = content;
+        let modifiedContent = content;
+        
+=======
+        let originalContent = content;
+        let modifiedContent = content;
+        
+=======
+        let originalContent = content;
+        let modifiedContent = content;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+        for (const fix of fixes) {}
+            const result = fix(lines, error);
+            if (result.modified) {}
+      this.log('Fixed dependency issues', 'INFO');
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+=======
           fixesApplied++};
 
     return fixesApplied};
@@ -180,6 +213,7 @@ class BuildErrorAutoFixer {}
       execSync('npm update', { "stdio": 'pipe' }
 });
       this.log('Fixed dependency issues', 'INFO');
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
       return true} catch (fixError) {}
       this.log(`Failed to fix dependency "error": ${fixError.message}`, 'ERROR');
       return false};

@@ -100,8 +100,8 @@ if (require.main === module) {}
   const suite = new AutomatedTestingSuite();
   suite.run();
 };
+module.exports = AutomatedTestingSuite;
 <<<<<<< HEAD
-module.exports = AutomatedTestingSuite;
 =======
-module.exports = AutomatedTestingSuite;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425

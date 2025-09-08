@@ -16,7 +16,7 @@ echo "🔍 Resolving merge conflicts in key files..."
 # Resolve conflicts in netlify.toml
 if [ -f "netlify.toml" ]; then
     echo "📝 Resolving netlify.toml conflicts..."
-    sed -i '/<<<<<<< HEAD/,/>>>>>>> /c\
+    sed -i '/
 [build]\
   # Build the Vite project on Netlify\
   command = "npm ci --no-audit --no-fund && npm run build"\
@@ -44,7 +44,7 @@ fi
 # Resolve conflicts in App.tsx
 if [ -f "src/App.tsx" ]; then
     echo "📝 Resolving App.tsx conflicts..."
-    sed -i '/<<<<<<< HEAD/,/>>>>>>> /c\
+    sed -i '/
 import React, { Suspense, lazy } from "react";' src/App.tsx
 fi
 

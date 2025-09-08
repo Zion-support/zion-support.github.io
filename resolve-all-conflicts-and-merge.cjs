@@ -35,15 +35,14 @@ function resolveMergeConflicts(filePath) {
     
     let modified = false;
     
-    // Remove merge conflict markers and keep the incoming changes (after =======)
-    if (content.includes('<<<<<<< HEAD')) {
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
+    // Remove merge conflict markers and keep the incoming changes (after )
+    if (content.includes('([\s\S]*?)
       modified = true;
     }
     
     // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+    content = content.replace(/
+    content = content.replace(/[\s\S]*?
     
     if (modified) {
       fs.writeFileSync(filePath, content);
@@ -80,7 +79,7 @@ async function main() {
       for (const file of files) {
         if (fs.existsSync(file)) {
           const content = fs.readFileSync(file, 'utf8');
-          if (content.includes('<<<<<<< HEAD')) {
+          if (content.includes('
             conflictFiles.push(file);
           }
         }

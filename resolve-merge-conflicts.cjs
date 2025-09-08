@@ -185,7 +185,7 @@ function autoResolveFile(file) {
     // Simple conflict resolution patterns
     let resolved = content
         // Remove conflict markers and keep both sides for simple cases
-        .replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> .*?\n/g, (match, ours, theirs) => {
+        .replace(/\n([\s\S]*?)\n
             // For simple additions, keep both
             if (ours.trim() && theirs.trim() && !ours.includes(theirs) && !theirs.includes(ours)) {
                 return ours + '\n' + theirs + '\n';
@@ -194,9 +194,9 @@ function autoResolveFile(file) {
             return ours + '\n';
         })
         // Clean up any remaining markers
-        .replace(/<<<<<<< HEAD\n/g, '')
-        .replace(/=======\n/g, '')
-        .replace(/>>>>>>> .*?\n/g, '');
+        .replace(/
+        .replace(/\n/g, '')
+        .replace(/
     
     if (resolved !== content) {
         fs.writeFileSync(file, resolved);

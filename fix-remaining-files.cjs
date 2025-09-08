@@ -1,5 +1,5 @@
 const fs = require('fs');
-<<<<<<<< HEAD:fix-remaining-files.cjs
+<
 
 console.log('🔧 Fixing remaining problematic files...');
 
