@@ -1,25 +1,27 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('stale_content_auditor_runner function triggered');
+    console.log('🤖 stale_content_auditor_runner function triggered');
     
-    // Basic function logic
-    const result = {
+    // Basic implementation - replace with actual logic
+    const timestamp = new Date().toISOString();
+    
+    return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Stale content auditor runner function executed successfully',
-        timestamp: new Date().toISOString(),
+        message: 'stale_content_auditor_runner function executed successfully',
+        timestamp: timestamp,
         function: 'stale_content_auditor_runner'
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in stale_content_auditor_runner:', error);
+    console.error('❌ stale_content_auditor_runner function failed:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message
+        error: 'stale_content_auditor_runner function failed',
+        message: error.message,
+        timestamp: new Date().toISOString()
       })
     };
   }
