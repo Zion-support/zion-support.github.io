@@ -653,7 +653,7 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                   <li>• Zero-trust architecture</li>
                 </ul>
                 <Link href="/privacy" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  View Security & Privacy →
+                  View Security Guide →
                 </Link>
               </div>
 
@@ -667,7 +667,7 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                   <li>• Continuous validation</li>
                 </ul>
                 <Link href="/resources" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  Explore Testing Resources →
+                  View Testing Guide →
                 </Link>
               </div>
 
@@ -680,8 +680,8 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                   <li>• Analytics dashboard</li>
                   <li>• Predictive maintenance</li>
                 </ul>
-                <Link href="/blog/performance-optimization" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  Read Performance Optimization →
+                <Link href="/resources" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  View Performance Guide →
                 </Link>
               </div>
             </div>
