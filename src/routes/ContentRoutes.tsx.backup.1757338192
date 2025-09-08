@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+
+export default function ContentRoutes(): JSX.Element {
+  return (
+    <Routes>
+      {/* Placeholder routes kept minimal for successful compilation */}
+      <Route path="/sitemap" element={<div>Sitemap</div>} />
+      <Route path="/sitemap-page" element={<div>Sitemap Page</div>} />
+      <Route path="/search" element={<div>Search</div>} />
+=======
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Blog from '@/pages/Blog';
@@ -15,6 +27,7 @@ export default function ContentRoutes() {
       <Route path="/search" element={<SearchPage />} />
       <Route path="/sitemap" element={<Sitemap />} />
       <Route path="/sitemap-page" element={<SitemapPage />} />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9231
     </Routes>
   );
 }

@@ -1,13 +1,23 @@
 [build]
+<<<<<<< HEAD
+  # Skip build and serve prebuilt static output from the repository
+  command = "echo 'Netlify: Skipping build; serving prebuilt out/ directory'"
+  publish = "out"
+=======
   # Temporary: skip building and publish existing dist to unblock Netlify deploy
   command = "/usr/bin/env bash -lc 'echo Skipping build on Netlify; true'"
   publish = "dist"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9231
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "20"
+<<<<<<< HEAD
+  # Skip dependency install since we are not building on Netlify
+=======
   PYTHON_VERSION = "3.11"
   # Skip Netlify auto installers; rely on build command
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9231
   NETLIFY_SKIP_INSTALL = "true"
   # Disable mise shims entirely during Netlify builds
   MISE_DISABLE = "1"
