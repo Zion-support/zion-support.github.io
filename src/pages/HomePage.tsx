@@ -92,6 +92,26 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </section>
+
+        {/* CTA Section */}
+        <section className="container mx-auto px-4 py-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-12 border border-white/20 text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
+              Join hundreds of satisfied clients who have trusted us with their digital transformation journey.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="bg-zion-cyan hover:bg-zion-cyan/80">
+                <Link to="/pricing">View Pricing</Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-zion-blue">
+                <Link to="/portfolio">See Our Work</Link>
+              </Button>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
