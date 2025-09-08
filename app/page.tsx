@@ -22,7 +22,7 @@ const Card: React.FC<CardProps> = ({ title, description, icon, href }) => (
   </div>
 );
 
-export default function Home() {
+export default function HomePage() {
   const features = [
     {
       title: 'AI-Powered Solutions',
@@ -49,28 +49,28 @@ export default function Home() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 text-center">
-        <div className="container mx-auto max-w-6xl">
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
-            Zion Tech Group
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            Welcome to{' '}
+            <span className="text-blue-600">Zion Tech Group</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Leading technology solutions provider specializing in AI development, 
-            cloud architecture, and digital transformation for modern businesses.
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Leading provider of AI solutions, micro SaaS development, and enterprise IT services. 
+            Transform your business with cutting-edge technology.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/services" 
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
+            <Link
+              href="/services"
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
             >
               Our Services
-              <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
-            <Link 
-              href="/contact" 
-              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+            <Link
+              href="/contact"
+              className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
             >
               Get Started
             </Link>
@@ -78,112 +78,64 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Zion Tech Group?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We deliver cutting-edge technology solutions with measurable results 
-              and exceptional customer service.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                Cutting-Edge Technology
-              </h3>
-              <p className="text-gray-600">
-                We leverage the latest technologies including AI, machine learning, 
-                and cloud computing to deliver innovative solutions.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                Proven Results
-              </h3>
-              <p className="text-gray-600">
-                Our solutions have helped hundreds of businesses improve efficiency, 
-                reduce costs, and drive growth.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                Expert Team
-              </h3>
-              <p className="text-gray-600">
-                Our team of experienced developers and consultants brings deep 
-                expertise across multiple technology domains.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Services Section */}
-      <section className="py-20 px-4 bg-white">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Our Services
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive technology solutions tailored to your business needs.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card
-              title="AI Development"
-              description="Custom AI solutions including machine learning models, natural language processing, and automation systems."
-              icon={<Zap className="w-6 h-6" />}
-              href="/services/ai-services"
-            />
-            <Card
-              title="Cloud Architecture"
-              description="Scalable cloud infrastructure design and migration services for optimal performance and cost efficiency."
-              icon={<Award className="w-6 h-6" />}
-              href="/services/cloud-architecture"
-            />
-            <Card
-              title="Digital Transformation"
-              description="Complete digital transformation strategies to modernize your business processes and technology stack."
-              icon={<Star className="w-6 h-6" />}
-              href="/services/digital-transformation"
-            />
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Our Core Services
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">AI Solutions</h3>
+              <p className="text-gray-600">
+                Cutting-edge artificial intelligence solutions to automate and optimize your business processes.
+              </p>
+            </div>
+            <div className="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Micro SaaS</h3>
+              <p className="text-gray-600">
+                Scalable micro SaaS applications designed to solve specific business challenges efficiently.
+              </p>
+            </div>
+            <div className="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">IT Services</h3>
+              <p className="text-gray-600">
+                Comprehensive IT services including infrastructure, security, and digital transformation.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-blue-600">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our technology solutions can help you achieve your goals.
+            Let's discuss how our technology solutions can drive your success.
           </p>
-          <Link 
-            href="/contact" 
-            className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
+          <Link
+            href="/contact"
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
-            Get Started Today
-            <ArrowRight className="ml-2 w-5 h-5" />
+            Contact Us Today
           </Link>
         </div>
       </section>
