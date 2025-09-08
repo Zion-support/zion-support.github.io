@@ -1,3 +1,6 @@
+import React, { useState, useCallback, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Send, CheckCircle, AlertCircle, Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 interface FormData {
 
@@ -8,69 +11,12 @@ interface FormData {
   company: string;
   service: string;
 
-  const services = [
-    'AI & Machine Learning', 'Cloud & DevOps'',    'Cybersecurity', 'Web Development'',    'Mobile Development', 'Data Analytics'',    'Digital Transformation', 'Other''];''
-  const validateForm = (): boolean => {;const newErrors: Partial<FormData> = {};
-
-
-  const: validateForm = (): boolean: => {
-
-    const newErrors: Partial<FormData> =  {};
-
-    if: (!formData.name.trim()) {
-
-      newErrors.name = 'Name is required';'}
-
-    if: (!formData.email.trim()) {
-
-      newErrors.email = 'Email is required';'} else: if (!/\S+@\S+\.\S+/.test(formData.email)) {
-
-      newErrors.email = 'Email is invalid';'}
-
-    if: (!formData.message.trim()) {
-
-      newErrors.message = 'Message is required';'}
-
-interface User {
-  id: string;
-  email: string;
-  nam,
-    e: string;
-  rol,
-    e: 'admin' | 'user' | 'guest'}
-
-interface Service {
-  id: string;
-  name: string;
-  description: string;
-  pric,
-    e: number;
-  categor,
-    y: string}
-
-interface FormData {
-  [key: string]: string | number | boolean | File}
-
-interface ComponentProps {
+interface ContactFormProps {
   className?: string;
-  children?: React.ReactNode;
-  [key: string]: unknown}
+}
 
-'
-import { motion } from 'framer-motion';
-import { CheckCircle, Cloud, Mail, MapPin, Phone, Send, User } from 'lucide-react';
-
-interface FormData {
-  name: string;
-  email: string;
-  compunknown: string;
-  servic,
-    e: string;
-  messag,
-    e: string}
-
-const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
+const ContactForm: React.FC<ContactFormProps> = ({ className = "" }) => {
+  const [formData, setFormData] = useState<ContactFormData>({
     name: '',
     email: '',
     company: '',
@@ -78,21 +24,71 @@ const ContactForm: React.FC = () => {
     service: '',
     message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
 
-  const [errors, setErrors] = useState<Partial<FormData>>({});
-  const services = ['
-    'AI & Machine Learning',
-    'Cloud & DevOps',
-    'Cybersecurity',
-    'Web Development',
-    'Mobile Development',
-    'Data Analytics',
-    'Digital Transformation',
-    'Other' ]
-  const validateForm = (): boolean => {
-    const newErrors: Partial<FormData> = {};
-    if (!formData.name.trim()) {'
-      newErrors.name = 'Name is required'}
+  // Check for reduced motion preference
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setIsReducedMotion(mediaQuery.matches);
+    
+    const handleChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
+    mediaQuery.addEventListener('change', handleChange);
+    
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
+  const validateField = useCallback((name: keyof ContactFormData, value: string): string => {
+    switch (name) {
+      case 'name':
+        return value.trim() ? '' : 'Name is required';
+      case 'email':
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return value.trim() ? (emailRegex.test(value) ? '' : 'Please enter a valid email') : 'Email is required';
+      case 'company':
+        return value.trim() ? '' : 'Company is required';
+      case 'phone':
+        return value.trim() ? '' : 'Phone is required';
+      case 'service':
+        return value.trim() ? '' : 'Please select a service';
+      case 'message':
+        return value.trim() ? (value.length >= 10 ? '' : 'Message must be at least 10 characters') : 'Message is required';
+      default:
+        return '';
+    }
+  }, []);
+
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    
+    // Clear error when user starts typing
+    if (errors[name as keyof ContactFormData]) {
+      setErrors({ ...errors, [name]: '' });
+    }
+  }, [errors, formData]);
+
+  const handleBlur = useCallback((name: keyof ContactFormData) => {
+    const error = validateField(name, formData[name]);
+    setErrors({ ...errors, [name]: error });
+  }, [validateField, formData, errors]);
+
+  const validateForm = useCallback((): boolean => {
+    const newErrors: Partial<ContactFormData> = {};
+    let isValid = true;
+
+    Object.keys(formData).forEach((key) => {
+      const fieldName = key as keyof ContactFormData;
+      const error = validateField(fieldName, formData[fieldName]);
+      if (error) {
+        newErrors[fieldName] = error;
+        isValid = false;
+      }
+    });
+
+    setErrors(newErrors);
+    return isValid;
+  }, [formData, validateField]);
 
     if (!formData.email.trim()) {'
       newErrors.email = 'Email is required'} else if (!/\S+@\S+\.\S+/.test(formData.email)) {'
@@ -137,180 +133,218 @@ className="bg-green-50 border border-green-200 rounded-xl p-8 text-center""     
       </motion.div>
     )}
 
-
-
-
-      <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 mb-8">
-        <div>"
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Contact Information
-          </h3>"
-          <div className="space-y-4">"
-            <div className="flex items-center space-x-3">"
-              <Mail className="w-5 h-5 text-blue-600" />
-              <div>"
-                <p className="font-medium text-gray-900">Email</p>"
-                <p className="text-gray-600">kleber@ziontechgroup.com</p>
-              </div>
-            </div>"
-            <div className="flex items-center space-x-3">"
-              <Phone className="w-5 h-5 text-blue-600" />
-              <div>"
-                <p className="font-medium text-gray-900">Phone</p>"
-                <p className="text-gray-600">+1 (302) 464-0950</p>
-              </div>
-            </div>"
-            <div className="flex items-center space-x-3">"
-              <MapPin className="w-5 h-5 text-blue-600" />
-              <div>"
-                <p className="font-medium text-gray-900">Address</p>"
-                <p className="text-gray-600">
-                  364 E Main St STE 1008
-
-                  <br />
-                  Middletow,n, DE 19709
-
-                </p>
-              </div>
-            </div>
-          </div>
+      {/* Contact Information */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div className="flex items-center gap-3 text-gray-300">
+          <Phone className="w-5 h-5 text-cyan-400" />
+          <span>+1 (555) 123-4567</span>
         </div>
+        <div className="flex items-center gap-3 text-gray-300">
+          <Mail className="w-5 h-5 text-cyan-400" />
+          <span>contact@ziontechgroup.com</span>
+        </div>
+        <div className="flex items-center gap-3 text-gray-300">
+          <MapPin className="w-5 h-5 text-cyan-400" />
+          <span>San Francisco, CA</span>
+        </div>
+      </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+      {/* Business Hours */}
+      <div className="flex items-center gap-3 text-gray-300 mb-8 justify-center">
+        <Clock className="w-5 h-5 text-cyan-400" />
+        <span>Mon-Fri: 9:00 AM - 6:00 PM PST</span>
+      </div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
-            <div>
-              <label"
-                htmlFor="name""
-                className="block text-sm font-medium text-gray-700 mb-2"
-
-              >
-                Full: Name *
-
-              </label>
-
-                placeholder="John Doe"
-
-              />
-              {errors.name && ("
-                <p className="text-red-500 text-sm mt-1">{errors.name}</p>
-
-              )}
-            </div>
-
-            <div>
-
-              >
-                Email: Address *
-
-              </label>
-
-                value={formData.email}
-
-                  errors.email ? 'border-red-500' : 'border-gray-300'
-                }`}
-
-                placeholder="john@compunknown.com"
-
-              />
-              {errors.email && ("
-                <p className="text-red-500 text-sm mt-1">{errors.email}</p>
-              )}
-            </div>
-          </div>
-
-            <div>
-              <label: htmlFor="company"";
-                className="block: text-sm font-medium text-gray-700 mb-2"";
-              >
-                Company: </label>
-              <input
-                type="text"";
-                id="company"";
-                name="company"";
-                value={formData.compan,y}
-                onChange={handleChange}
-
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
-            <div>
-              <label"
-                htmlFor="compunknown""
-                className="block text-sm font-medium text-gray-700 mb-2"
-              >
-                Compunknown
-              </label>
-              <input"
-                type="text""
-                id="compunknown""
-                name="compunknown"
-                value={formData.compunknown}
-                onChange={handleChange}"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focu,
-    s:ring-blue-500 focu,
-    s:border-transparent""
-                placeholder="Your Compunknown"
-
-
-              />
-            </div>
-
-            <div>
-
-              >
-                Service: Interest
-
-              </label>
-
-                    {service}
-
-                  </option>
-
-
-              </select>
-            </div>
+      {/* Form */}
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+              Full Name *
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleInputChange}
+              onBlur={() => handleBlur('name')}
+              className={inputClasses}
+              placeholder="Enter your full name"
+            />
+            {errors.name && (
+              <div className={errorClasses}>
+                <AlertCircle className="w-4 h-4" />
+                {errors.name}
+              </div>
+            )}
           </div>
 
           <div>
-
-            >
-              Message: *
-
+            <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+              Email Address *
             </label>
-
-              value={formData.message}
-              onChange={handleChange}
-
-              rows={5}
-
-                errors.message ? 'border-red-500' : 'border-gray-300'
-              }`}
-
-              placeholder="Tell us about your project and how we can help..."
-
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              onBlur={() => handleBlur('email')}
+              className={inputClasses}
+              placeholder="Enter your email address"
             />
-            {errors.message && ("
-              <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+            {errors.email && (
+              <div className={errorClasses}>
+                <AlertCircle className="w-4 h-4" />
+                {errors.email}
+              </div>
+            )}
+          </div>
+        </div>
 
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+              Company *
+            </label>
+            <input
+              type="text"
+              id="company"
+              name="company"
+              value={formData.company}
+              onChange={handleInputChange}
+              onBlur={() => handleBlur('company')}
+              className={inputClasses}
+              placeholder="Enter your company name"
+            />
+            {errors.company && (
+              <div className={errorClasses}>
+                <AlertCircle className="w-4 h-4" />
+                {errors.company}
+              </div>
             )}
           </div>
 
-          >
-            {isSubmitting ? (
-              <>`
-                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                <span>Sending...</span>
-              </>
-            ) : (
-              <>"
-                <Send className="w-5 h-5" />
-                <span>Send Message</span>
-
-              </>
+          <div>
+            <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+              Phone Number *
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleInputChange}
+              onBlur={() => handleBlur('phone')}
+              className={inputClasses}
+              placeholder="Enter your phone number"
+            />
+            {errors.phone && (
+              <div className={errorClasses}>
+                <AlertCircle className="w-4 h-4" />
+                {errors.phone}
+              </div>
             )}
-          </motion.button>
-        </form>
-      </div>
-    </div>
-  )};
+          </div>
+        </div>
 
+        <div>
+          <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+            Service Interest *
+          </label>
+          <select
+            id="service"
+            name="service"
+            value={formData.service}
+            onChange={handleInputChange}
+            onBlur={() => handleBlur('service')}
+            className={inputClasses}
+          >
+            <option value="">Select a service</option>
+            <option value="ai-solutions">AI & Machine Learning</option>
+            <option value="quantum-computing">Quantum Computing</option>
+            <option value="cybersecurity">Cybersecurity</option>
+            <option value="cloud-solutions">Cloud Solutions</option>
+            <option value="consulting">Technology Consulting</option>
+            <option value="other">Other</option>
+          </select>
+          {errors.service && (
+            <div className={errorClasses}>
+              <AlertCircle className="w-4 h-4" />
+              {errors.service}
+            </div>
+          )}
+        </div>
 
+        <div>
+          <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+            Message *
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleInputChange}
+            onBlur={() => handleBlur('message')}
+            rows={5}
+            className={inputClasses}
+            placeholder="Tell us about your project or how we can help..."
+          />
+          {errors.message && (
+            <div className={errorClasses}>
+              <AlertCircle className="w-4 h-4" />
+              {errors.message}
+            </div>
+
+        {/* Submit Button */}
+        <motion.button
+          type="submit"
+          disabled={isSubmitting}
+          whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
+          whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+          className={`w-full py-4 px-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 ${
+            isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:from-cyan-600 hover:to-blue-700'
+          }`}
+        >
+          {isSubmitting ? (
+            <>
+              <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+              Sending...
+            </>
+          ) : (
+            <>
+              <Send className="w-5 h-5" />
+              Send Message
+            </>
+          )}
+        </motion.button>
+
+        {/* Status Messages */}
+        {submitStatus === 'success' && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="flex items-center gap-3 p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-400"
+          >
+            <CheckCircle className="w-5 h-5" />
+            <span>Thank you! Your message has been sent successfully. We'll get back to you soon.</span>
+          </motion.div>
+        )}
+
+        {submitStatus === 'error' && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="flex items-center gap-3 p-4 bg-red-500/20 border border-red-500/50 rounded-lg text-red-400"
+          >
+            <AlertCircle className="w-5 h-5" />
+            <span>Something went wrong. Please try again or contact us directly.</span>
+          </motion.div>
+        )}
+      </form>
+    </motion.div>
+  );
+};
+
+export default ContactForm;
