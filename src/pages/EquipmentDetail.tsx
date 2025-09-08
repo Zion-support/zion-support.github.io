@@ -20,9 +20,7 @@ import { Switch } from '@/components/ui/switch';
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { getStripe } from "@/utils/getStripe";
-import { safeStorage } from '@/utils/safeStorage';
-import { SEO } from "@/components/SEO";
-import { StructuredData } from "@/components/StructuredData";
+import { apiClient } from "@/utils/apiClient";
 
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
 =======

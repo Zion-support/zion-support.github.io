@@ -6,16 +6,7 @@ import { safeStorage } from '@/utils/safeStorage';
 import { Button } from '@/components/ui/button';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { getStripe } from '@/utils/getStripe';
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,
-  DialogFooter,
-} from '@/components/ui/dialog';
-import { Input } from '@/components/ui/input';
-import { useAuth } from '@/hooks/useAuth';
+import { apiClient } from '@/utils/apiClient';
 
 
 export default function Checkout() {
@@ -87,9 +78,19 @@ export default function Checkout() {
 
   const handleCheckout = async () => {
     const product = items[0];
-    if (!user) {
-      setShowGuest(true);
-      return;
+    try {
+      const response = await apiClient('/api/checkout_sessions', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ productId: product.id }),
+      });
+      const { sessionId } = await response.json();
+      const stripe = await getStripe();
+      if (stripe && sessionId) {
+        await stripe.redirectToCheckout({ sessionId });
+      }
+    } catch (err) {
+      console.error('Checkout error', err);
     }
     await createSession({ priceId: product.id });
   };

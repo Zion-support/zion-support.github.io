@@ -63,14 +63,17 @@ export default function Contact() {
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
-      const response = await api.post(
-        "https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat",
-        {
+      const response = await apiClient("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
           messages: [{ role: "user", content: message }]
-        }
-      );
-
-      if (response.status < 200 || response.status >= 300) {
+        }),
+      });
+      
+      if (!response.ok) {
         throw new Error("Failed to get response from AI assistant");
       }
       
