@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
-import './index.css';
+// import './index.css';
 
 // Import i18n configuration
 import './i18n';
@@ -9,10 +9,10 @@ import './i18n';
 // Register service worker
 import { registerServiceWorker } from './serviceWorkerRegistration';
 
-// Error handling function
-const showApiError = (error: unknown): void => {
-  console.error('API Error:', error);
-};
+// Error handling function (currently unused but kept for future use)
+// const showApiError = (error: unknown): void => {
+//   console.error('API Error:', error);
+// };
 
 // Global error handler
 const handleGlobalError = (error: Error): void => {
@@ -55,7 +55,7 @@ try {
   );
 
   // Register service worker in production
-  if (process.env.NODE_ENV === 'production') {
+  if (import.meta.env.PROD) {
     registerServiceWorker();
   }
 } catch (error) {
