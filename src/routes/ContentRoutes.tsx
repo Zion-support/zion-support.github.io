@@ -1,19 +1,17 @@
-import React from 'react';
-import { Route } from 'react-router-dom';
-import Blog from '@/pages/Blog';
-import BlogPost from '@/pages/BlogPost';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Blog from "@/pages/Blog";
+import BlogPost from "@/pages/BlogPost";
+import Sitemap from "@/pages/Sitemap";
 
-
-
-
-
-
-      {/* Global Search Route */}
-      <Route path="/search" element={<SearchPage />} />
-      
-      {/* Sitemap Pages */}
+const ContentRoutes = () => {
+  return (
+    <Routes>
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/:slug" element={<BlogPost />} />
       <Route path="/sitemap" element={<Sitemap />} />
-      <Route path="/sitemap-page" element={<SitemapPage />} />
     </Routes>
   );
-}
+};
+
+export default ContentRoutes;
