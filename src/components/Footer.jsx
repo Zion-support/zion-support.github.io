@@ -85,12 +85,20 @@ export function Footer() {
 
   const footerSections = [
     {
+      title: "Services",
+      links: [
+        { label: "All Services", path: "/services" },
+        { label: "Cloud & DevOps", path: "/services" },
+        { label: "Cybersecurity", path: "/services" },
+        { label: "IT Infrastructure", path: "/services" }
+      ]
+    },
+    {
       title: "Company",
       links: [
         { label: "About Us", path: "/about" },
-        { label: "Our Team", path: "/about#team" },
-        { label: "Careers", path: "/jobs/post" },
-        { label: "Press", path: "/news" },
+        { label: "Careers", path: "/careers" },
+        { label: "Case Studies", path: "/case-studies" },
         { label: "Partners", path: "/partners" }
       ]
     },
@@ -144,33 +152,17 @@ export function Footer() {
     {
       title: "Community",
       links: [
-        { label: "Events", path: "/events" },
-        { label: "News", path: "/news" },
         { label: "Blog", path: "/blog" },
-        { label: "Forum", path: "/forum/create" },
-        { label: "Post Job", path: "/jobs/post" },
-        { label: "Hiring Tracker", path: "/hiring-tracker" },
-        { label: "Talent Onboarding", path: "/talent-onboarding" }
+        { label: "Documentation", path: "/docs" }
       ]
     },
     {
       title: "Support",
       links: [
-        { label: "FAQ", path: "/faq" },
-        { label: "Contact", path: "/contact" },
-        { label: "Documentation", path: "/docs" },
-        { label: "Developer Portal", path: "/developer" },
-        { label: "How It Works", path: "/how-it-works" },
-        { label: "Get Started", path: "/get-started" },
-        { label: "Site Map", path: "/sitemap" }
-      ]
-    },
-    {
-      title: "Legal",
-      links: [
-        { label: "Terms of Service", path: "/terms" },
-        { label: "Privacy Policy", path: "/privacy" },
-        { label: "Cookie Policy", path: "/cookies" }
+        { label: "Contact Us", path: "/contact" },
+        { label: "Help Center", path: "/help" },
+        { label: "Support Portal", path: "/support" },
+        { label: "FAQ", path: "/faq" }
       ]
     }
   ];

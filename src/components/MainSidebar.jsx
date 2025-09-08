@@ -9,9 +9,7 @@ export function MainSidebar() {
             items[
                 { key: 'home', href: '/', icon: <Home className="w-4 h-4"/>, label: 'Home' },
                 { key: 'services', href: '/services', icon: <Settings className="w-4 h-4"/>, label: 'Services' },
-                { key: 'services-catalog', href: '/services-catalog', icon: <BarChart3 className="w-4 h-4"/>, label: 'Services Catalog' },
-                { key: 'services-comparison', href: '/services-comparison', icon: <ShoppingCart className="w-4 h-4"/>, label: 'Compare Services' },
-                { key: 'pricing', href: '/pricing-guide', icon: <Users className="w-4 h-4"/>, label: 'Pricing' },
+                { key: 'partners', href: '/partners', icon: <Users className="w-4 h-4"/>, label: 'Partners' },
             ]
         },
         {
@@ -29,11 +27,7 @@ export function MainSidebar() {
             title: 'Resources',
             items[
                 { key: 'blog', href: '/blog', icon: <FileText className="w-4 h-4"/>, label: 'Blog' },
-                { key: 'docs', href: '/docs', icon: <Code className="w-4 h-4"/>, label: 'Documentation' },
-                { key: 'webinars', href: '/webinars', icon: <Calendar className="w-4 h-4"/>, label: 'Webinars' },
-                { key: 'training', href: '/training', icon: <Zap className="w-4 h-4"/>, label: 'Training' },
-                { key: 'case-studies', href: '/case-studies', icon: <BarChart3 className="w-4 h-4"/>, label: 'Case Studies' },
-                { key: 'white-papers', href: '/white-papers', icon: <FileText className="w-4 h-4"/>, label: 'White Papers' },
+                { key: 'sitemap', href: '/sitemap', icon: <Globe className="w-4 h-4"/>, label: 'Sitemap' },
             ]
         },
         {

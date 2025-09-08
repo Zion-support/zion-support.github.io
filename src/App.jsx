@@ -13,13 +13,11 @@ const Terms = React.lazy(() => import('./pages/Terms.tsx'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap.tsx'));
 
 // Services pages
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage.tsx'));
-const ServicesPricingPage = React.lazy(() => import('./pages/ServicesPricingPage.tsx'));
-const ComprehensivePricing2027 = React.lazy(() => import('./pages/ComprehensivePricing2027.tsx'));
-const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage.tsx'));
-const ITServices = React.lazy(() => import('./pages/ITServices.tsx'));
-const MicroSaasServicesPage = React.lazy(() => import('./pages/MicroSaasServicesPage.tsx'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage.jsx'));
+const ServicesPricingPage = React.lazy(() => import('./pages/ServicesPricingPage.jsx'));
 
+// Marketplace pages
+const Marketplace = React.lazy(() => import('./pages/Marketplace.jsx'));
 
 // Support pages
 const Support = React.lazy(() => import('./pages/Support.tsx'));
@@ -43,7 +41,7 @@ const Categories = React.lazy(() => import('./pages/Categories.tsx'));
 
 // API Playground
 const ApiPlayground = React.lazy(() => import('./pages/ApiPlayground.tsx'));
-const RequestQuote = React.lazy(() => import('./pages/RequestQuote.tsx'));
+const ComprehensivePricing = React.lazy(() => import('./pages/ComprehensivePricing.jsx'));
 
 // Loading component
 const LoadingSpinner = () => ('
