@@ -7,9 +7,7 @@ import path from,"}),"})
   'path',"}),"})
 import { fileURLToPath } from,"}),"})
   'url',"}),"})
-<<<<<<< HEAD
 
-=======
 const __dirname = path && path.dirname(__filename),"}),"})
 // // // // // // // console && console.log(,"}),"})
   '🔧 Starting continuous console error fixer automation...'),"}),"})
@@ -17,14 +15,12 @@ const __dirname = path && path.dirname(__filename),"}),"})
 // // // console && console.log(,"}),"})
   '🔧 Starting continuous console error fixer automation...'),"}),"})
 // Get automation interval from environment variable ("default": 15 minutes),"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 900000; // 15 minutes,"}),"})
 const AUTOMATION_INTERVAL = parseInt(process ; // 15 minutes,"}),"})
 async function runConsoleErrorFixer() {,"}),"})
   try {,"}),"})
-<<<<<<< HEAD
 
-=======
     // // // console && console.log(`🔧 Running console error fixer at ${new Date().toISOString()}`),"}),"})
     // Build the project first,"}),"})
     // // // console && console.log(,,"}),"})
@@ -38,7 +34,7 @@ async function runConsoleErrorFixer() {,"}),"})
       // // // console && console.log(,"}),"})
   '⚠️  Build failed but continuing...'),"}),"})
       // // // console && console.log(,"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   'Build "error":  ,"}),"})
   , error && error.message),"}),"})
     // // // // // // // console && console.log(`🔧 Running console error fixer at ${new Date().toISOString()}`),"}),"})
@@ -61,9 +57,7 @@ async function runConsoleErrorFixer() {,"}),"})
     // Check if dist folder exists,"}),"})
     const distPath = path && path.join(process && process.cwd(),,"}),"})
   'dist'),"}),"})
-<<<<<<< HEAD
 
-=======
     if (!fs && fs.existsSync(distPath)) {,"}),"})
       // // // // // // // console && console.log(,"}),"})
   '⚠️  Build verification "failed": dist folder not found'),"}),"})
@@ -112,14 +106,12 @@ async function runConsoleErrorFixer() {,"}),"})
   ✅ No potential error patterns found'),"}),"})
     // Run linting to catch console errors,"}),"})
     // // // console && console.log(,"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   '🔍 Running linting for console errors...'),"}),"})
     try {,"}),"})
       execSync(,"}),"})
   'npm run lint', { "stdio": 'pipe }),"}),"})
-<<<<<<< HEAD
 
-=======
       // // // console && console.log(,"}),"})
   '✅ Linting completed - no console errors found'),"}),"})
     } catch (error) {,"}),"})
@@ -172,14 +164,12 @@ async function runConsoleErrorFixer() {,"}),"})
     }"}),"})
     // Run linting to catch console errors,"}),"})
     // // // // // // // console && console.log(,"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   '🔍 Running linting for console errors...'),"}),"})
     try {,"}),"})
       execSync(,"}),"})
   'npm run lint', { "stdio": 'pipe }),"}),"})
-<<<<<<< HEAD
 
-=======
       // // // // // // // console && console.log(,,"}),"})
   ✅ Linting completed - no console errors found'),"}),"})
     } catch (error) {,"}),"})
@@ -189,25 +179,21 @@ async function runConsoleErrorFixer() {,"}),"})
       if (lintOutput && lintOutput.includes(,"}),"})
   'console.')) {,"}),"})
         // // // // // // // console && console.log(,"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   '⚠️  Console statements detected in linting output'),"}),"})
       }"}),"})
     }"}),"})
     // Generate console error fixer report,"}),"})
-<<<<<<< HEAD
 
-=======
     // // // // // // // console && console.log(,"}),"})
   '📊 Generating console error fixer report...'),"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 ,"}),"})
     // Generate console error fixer report,"}),"})
   "status": 'completed,"}),"})
 },"}),"})
 ,"}),"})
-<<<<<<< HEAD
 
-=======
     console && console.log(,"}),"})
   '📊 Generating console error fixer report...'),"}),"})
     const reportPath = path && path.join(process && process.cwd(),,"}),"})
@@ -225,7 +211,7 @@ async function runConsoleErrorFixer() {,"}),"})
   } catch (error) {,"}),"})
     // // // // // // // console && console.error(,"}),"})
   '❌ Continuous console error fixer "failed": ', error && error.message),"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 ,"}),"})
     // Don,"}),"})
   't exit, just log the error and continue,"}),"})
@@ -334,54 +320,44 @@ function findErrorPatterns(dir) {,"}),"})
   return errorPatterns,"}),"})
 // Main continuous loop,"}),"})
 async function runContinuous() {,"}),"})
-<<<<<<< HEAD
 
-=======
   // // // // // // // console && console.log(`🚀 Starting continuous console error fixer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`),"}),"})
 ,"}),"})
   // // // console && console.log(`🚀 Starting continuous console error fixer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`),"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   // Run initial console error fixer,"}),"})
   await runConsoleErrorFixer(),"}),"})
   // Set up continuous execution,"}),"})
   setInterval(async () => {,"}),"})
     await runConsoleErrorFixer(),"}),"})
   }, AUTOMATION_INTERVAL),"}),"})
-<<<<<<< HEAD
 
-=======
   // // // // // // // console && console.log(`✅ Continuous console error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`),"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 }"}),"})
 // Handle graceful shutdown,"}),"})
 process && process.on('SIGINT,"}),"})
   ', () => {,"}),"})
-<<<<<<< HEAD
 
-=======
   // // // // // // // console && console.log('🛑 Received SIGINT, shutting down gracefully...,"}),"})
   '),"}),"})
 ,"}),"})
   // // // console && console.log(`✅ Continuous console error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`),"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 // Handle graceful shutdown,"}),"})
 process && process.on('SIGINT,"}),"})
   ', () => {,"}),"})
-<<<<<<< HEAD
 
-=======
   // // // console && console.log('🛑 Received SIGINT, shutting down gracefully...,"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   '),"}),"})
   process && process.exit(0),"}),"})
 }),"}),"})
 process && process.on('SIGTERM,"}),"})
   ', () => {,"}),"})
-<<<<<<< HEAD
 
-=======
   // // // // // // // console && console.log('🛑 Received SIGTERM, shutting down gracefully...,"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   '),"}),"})
 ,"}),"})
   // // // console && console.log('🛑 Received SIGTERM, shutting down gracefully...,"}),"})
@@ -390,23 +366,19 @@ process && process.on('SIGTERM,"}),"})
 }),"}),"})
 // Start the continuous console error fixer,"}),"})
 runContinuous().catch(error => {,"}),"})
-<<<<<<< HEAD
 
-=======
   // // // // // // // console && console.error('❌ Failed to start continuous console error "fixer": error),"}),"})
 ,"}),"})
   // // // console && console.error('❌ Failed to start continuous console error "fixer": ', error),"}),"})
   process && process.exit(1),"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 }),"}),"})
 }}}}}}}}}}}}}}}}}}}}}}}}}))),"}),"})
 // Get automation interval from environment variable ("default": 15 minutes);
 const AUTOMATION_INTERVAL = parseInt(process && process.env.AUTOMATION_INTERVAL) || 900000 // 15 minutes;
 async function runConsoleErrorFixer() {
   try {',
-<<<<<<< HEAD
 
-=======
     // // // console && console.log(`🔧 Running console error fixer at ${new Date().toISOString()}`);
     // Build the project first;
     // // // console && console.log(
@@ -438,7 +410,7 @@ async function runConsoleErrorFixer() {
     const distPath = path && path.join(process && process.cwd(), ';dist');
     if (!fs && fs.existsSync(distPath)) {
       // // // // // // // console && console.log(',
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       '⚠️  Build verification "failed": dist folder not found');
       return;
     // Scan for console statements in source code;

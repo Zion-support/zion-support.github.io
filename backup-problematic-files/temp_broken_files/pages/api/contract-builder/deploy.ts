@@ -53,18 +53,7 @@ export default async function handler(req: NextApiRequest;, res:NextApiResponse)
       // gas and value are intentionally left for client to estimate via MetaMask;
     },;
     return res.status(200).json({ abi, tx }),;
-<<<<<<< HEAD
-  } catch ("e":any) {;
-    }
-    return res.status(400).json({ "error":e?.message || 'Failed to prepare deployment tx' }),;'
-  }
-export default function handler() {
-  }
-  if (req.method !== 'POST') {'
-}
-return res.status(405).json({ "error": 'Method not allowed' });'
-  }
-=======
+
   } catch (e:any) {;
     return res.status(400).json({ error: e?.message || 'Failed to prepare deployment tx' ;}),;
 export default function handler(req: NextApiRequest;, res: NextApiResponse) {
@@ -73,7 +62,7 @@ export default function handler(req: NextApiRequest;, res: NextApiResponse) {
 
   const { bytecode, constructorArgs } = req.body || {},
 
->>>>>>> origin/chore/fix-lint-and-merge
+
   if (!bytecode || !constructorArgs) {
     return res.status(400).json({ error: 'bytecode and constructorArgs are required' })
   }

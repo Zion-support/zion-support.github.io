@@ -1,61 +1,14 @@
-<<<<<<< HEAD
-import React from 'react';
-// This file fixes the ref type issues in sidebar components
-// Export a placeholder to ensure the file is recognized as a module
-export const SIDEBAR_REF_TYPE_FIX = $2;
-// Define a type that makes the ref forwards compatible
-export type ForwardRefComponent<T, P = $2;
-// Helper type for component refs
-export type ElementRef<T extends React.ElementType> = React.ComponentPropsWithRef<T>['ref'],
 
-// Helper type for wrapping refs that fixes the mismatch errors
-export type PolymorphicRef<T extends React.ElementType> = React.Ref<React.ElementRef<T>>,
-=======
 import React from "react";
 
-<<<<<<< HEAD
-// This file fixes the ref type issues in sidebar components
-// Export a placeholder to ensure the file is recognized as a module
-=======
-export type ForwardRefComponent<T, P = {}> = React && React.ForwardRefExoticComponent<React && React.PropsWithoutRef<P> & React && React.RefAttributes<T>>;
-<<<<<<< HEAD
-// Helper type for component refs
-export type ElementRef<T extends React && React.ElementType> = React && React.ComponentPropsWithRef<T>['ref'];
-// Helper type for wrapping refs that fixes the mismatch errors
-export type PolymorphicRef<T extends React && React.ElementType> = React && React.Ref<React && React.ElementRef<T>>;
-// Helper for dealing with refs in complex situations
-export type PolymorphicComponentProp<T extends React && React.ElementType, Props = {}> = 
-  React && React.PropsWithChildren<Props & { as?: T }>;
-// Safe ref casting helper type - this is the key to fixing our issues
-// We need to use a type that is compatible with both Slot's ref and React's ref handling
-export type SafeRef<T> = React && React.Ref<T>;
-// Sidebar specific types
-export type SidebarState = "expanded" | "collapsed";
-=======
 
-// Helper type for component refs
-export type ElementRef<T extends React && React.ElementType> = React && React.ComponentPropsWithRef<T>['ref'];
-
-// Helper type for wrapping refs that fixes the mismatch errors
-export type PolymorphicRef<T extends React && React.ElementType> = React && React.Ref<React && React.ElementRef<T>>;
-
-// Helper for dealing with refs in complex situations
-export type PolymorphicComponentProp<T extends React && React.ElementType, Props = {}> = 
-  React && React.PropsWithChildren<Props & { as?: T }>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
 
 // Helper for dealing with refs in complex situations
 export type PolymorphicComponentProp<T extends React.ElementType, Props = $2;
 // Safe ref casting helper type - this is the key to fixing our issues
 // We need to use a type that is compatible with both Slot's ref and React's ref handling
 export type SafeRef<T> = React.Ref<T>,
-<<<<<<< HEAD
 
-// Sidebar specific types
-export type SidebarState = $2;
-export type SidebarContext = $2;
-=======
 
 // Helper type for component refs
 export type ElementRef<T extends React.ElementType> =
@@ -78,13 +31,7 @@ export type PolymorphicComponentProp<
 export type SafeRef<T> = React && React.Ref<T>;
 
 // Sidebar specific types
-<<<<<<< HEAD
 
-=======
-export type SidebarState = "expanded" | "collapsed";
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import React from './react';
 // This file fixes the ref type issues in sidebar components;
 // Export a placeholder to ensure the file is recognized as a module;
@@ -117,131 +64,17 @@ export type SafeRef < T> = React.Ref < T>;
 // Sidebar specific types;"
 export type SidebarState = "expanded" | "collapsed";
 ;
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 export type SidebarContext = {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   state: SidebarState;
   open: boolean;
   set_open: (open: boolean) => void;
   open_mobile: boolean;
-<<<<<<< HEAD
 
   setOpenMobile: (open: boolean) => void;
-  isMobile: boolean;
-  toggleSidebar: () => void;
-};
 
-import React from 'react',;
-;
-// This file fixes the ref type issues in sidebar components;
-;
-// Export a placeholder to ensure the file is recognized as a module;
-export const SIDEBAR_REF_TYPE_FIX = true,;
-;
-// Define a type that makes the ref forwards compatible;
-export type ForwardRefComponent<T P = {}> = React.ForwardRefExoticComponent<React.PropsWithoutRef<P> & React.RefAttributes<T>>,;
-;
-
-export type ElementRef<T extends React.ElementType> = React.ComponentPropsWithRef<T>['ref'],;
-;
-// Helper type for wrapping refs that fixes the mismatch errors;
-export type PolymorphicRef<T extends React.ElementType> = React.Ref<React.ElementRef<T>>,;
-;
-// Helper for dealing with refs in complex situations;
-export type PolymorphicComponentProp<T extends React.ElementType, Props = {}> = ;
-  React.PropsWithChildren<Props & { as?:T }>,;
-;
-=======
-  setOpenMobile: (open: boolean) => void;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  is_mobile: boolean;
-  toggle_sidebar: () => void;
-}
-;
-
-<<<<<<< HEAD
-import React from 'react',
-
-// This file fixes the ref type issues in sidebar components
-// Export a placeholder to ensure the file is recognized as a module
-
-import React from 'react';
-import React from 'react',
-// This file fixes the ref type issues in sidebar components
-// Export a placeholder to ensure the file is recognized as a module
-
-export const SIDEBAR_REF_TYPE_FIX = true;
-// Define a type that makes the ref forwards compatible
-export type ForwardRefComponent<T, P = {}> = React.ForwardRefExoticComponent<
-  React.PropsWithoutRef<P> & React.RefAttributes<T>
->;
-// Helper type for component refs
-export type ElementRef<T extends React.ElementType> =
-  React.ComponentPropsWithRef<T>["ref"];
-// Helper type for wrapping refs that fixes the mismatch errors
-export type PolymorphicRef<T extends React.ElementType> = React.Ref<
-  React.ElementRef<T>
->;
-// Helper for dealing with refs in complex situations
-export type PolymorphicComponentProp<
-  T extends React.ElementType
-  Props = {}
-> = React.PropsWithChildren<Props & { as?: T }>;
-// Safe ref casting helper type - this is the key to fixing our issues
-// We need to use a type that is compatible with both Slot's ref and React's ref handling
-export type SafeRef<T> = React.Ref<T>;
-// Sidebar specific types
-export type SidebarState = "expanded" | "collapsed";
-export type SidebarContext = {
-  state: SidebarState;
-  open: boolean;
-  setOpen: (open: boolean) => void;
-  openMobile: boolean;
-  setOpenMobile: (open: boolean) => void;
-  isMobile: boolean;
-  toggleSidebar: () => void;
-}
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
-export type SidebarState = "expanded" | "collapsed",;
-;
-export type SidebarContext = {;
-  state:SidebarState,;
-  open:boolean,;
-  setOpen:(open:boolean) => void,;
-  openMobile:boolean,;
-  setOpenMobile:(open:boolean) => void,;
-  isMobile:boolean,;
-
-export type PolymorphicComponentProp<T extends React.ElementType, Props = {}> = ;
-  React.PropsWithChildren<Props & { as?: T }>;
-export type PolymorphicComponentProp<T extends React.ElementType, Props = {}> = 
-  React.PropsWithChildren<Props & { as?: T }>,
-
-<<<<<<< HEAD
-export type SidebarContext = {;
-  state: SidebarState;
-  open: boolean;
-  setOpen: (open: boolean) => void;
-  openMobile: boolean;
-  setOpenMobile: (open: boolean) => void;
-  isMobile: boolean,
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-export const SIDEBAR_REF_TYPE_FIX = true,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
   state: SidebarState,
   open: boolean,
@@ -263,123 +96,10 @@ export type PolymorphicRef<T extends React.ElementType> = React.Ref<React.Elemen
 export type PolymorphicComponentProp<T extends React.ElementType, Props = {}> =;
   React.PropsWithChildren<Props & { as?: T }>,;
 
-<<<<<<< HEAD
-=======
+
 // Helper for dealing with refs in complex situations
 
-<<<<<<< HEAD
-import React from 'react',;
-;
-// This file fixes the ref type issues in sidebar components;
-;
-// Export a placeholder to ensure the file is recognized as a module;
-export const SIDEBAR_REF_TYPE_FIX = true,;
-;
-// Define a type that makes the ref forwards compatible;
-export type ForwardRefComponent<T P = {}> = React.ForwardRefExoticComponent<React.PropsWithoutRef<P> & React.RefAttributes<T>>,;
-;
-// Helper type for component refs;
-export type ElementRef<T extends React.ElementType> = React.ComponentPropsWithRef<T>['ref'],;
-;
-// Helper type for wrapping refs that fixes the mismatch errors;
-export type PolymorphicRef<T extends React.ElementType> = React.Ref<React.ElementRef<T>>,;
-;
-// Helper for dealing with refs in complex situations;
-export type PolymorphicComponentProp<T extends React.ElementType, Props = {}> = ;
-  React.PropsWithChildren<Props & { as?:T }>,;
-;
-// Safe ref casting helper type - this is the key to fixing our issues;
-// We need to use a type that is compatible with both Slot's ref and React's ref handling;
-export type SafeRef<T> = React.Ref<T>,;
-;
-// Sidebar specific types;
-export type SidebarState = "expanded" | "collapsed",;
-;
-export type SidebarContext = {;
-  state:SidebarState,;
-  open:boolean,;
-  setOpen:(open:boolean) => void,;
-  openMobile:boolean,;
-  setOpenMobile:(open:boolean) => void,;
-  isMobile:boolean,;
-  toggleSidebar:() => void;
-},; import React from 'react';
-// This file fixes the ref type issues in sidebar components // Export a placeholder to ensure the file is recognized as a module // Define a type that makes the ref forwards compatible export type ForwardRefComponent<T P = {
-  
-}> = React.ForwardRefExoticComponent<React.PropsWithoutRef<P> & React.RefAttributes<T>>;
-// Helper type for component refs export type ElementRef<T extends React.ElementType> = React.ComponentPropsWithRef<T>['ref'];
-// Helper type for wrapping refs that fixes the mismatch errors export type PolymorphicRef<T extends React.ElementType> = React.Ref<React.ElementRef<T>>;
-// Helper for dealing with refs in complex situations export type PolymorphicComponentProp<T extends React.ElementType, Props = {
-  
-}> = // Safe ref casting helper type - this is the key to fixing our issues // We need to use a type that is compatible with both Slot's ref and React's ref handling export type SafeRef<T> = React.Ref<T>;
-// Sidebar specific types 
-export type PolymorphicComponentProp<T extends React.ElementType, Props = {}> = ;
-  React.PropsWithChildren<Props & { as?: T }>;
-export type PolymorphicComponentProp<T extends React.ElementType, Props = {}> = 
-  React.PropsWithChildren<Props & { as?: T }>,
 
-// Safe ref casting helper type - this is the key to fixing our issues
-// We need to use a type that is compatible with both Slot's ref and React's ref handling
-export type SafeRef<T> = React.Ref<T>,
 
-// Sidebar specific types
-export type SidebarState = "expanded" | "collapsed",
 
-export type SidebarContext = {;
-  state: SidebarState;
-  open: boolean;
-  setOpen: (open: boolean) => void;
-  openMobile: boolean;
-  setOpenMobile: (open: boolean) => void;
-  isMobile: boolean,
-  toggleSidebar: () => void
-export type SidebarContext = {
-  state: SidebarState,
->>>>>>> merged-prs-20250907-203621
-  open: boolean,
-  setOpen: (open: boolean) => void,
-  openMobile: boolean,
-  setOpenMobile: (open: boolean) => void,
-  isMobile: boolean,
-  toggleSidebar: () => void
-},
-<<<<<<< HEAD
-=======
-import React from 'react',;
-// This file fixes the ref type issues in sidebar components;
-// Export a placeholder to ensure the file is recognized as a module;
-export const SIDEBAR_REF_TYPE_FIX = true,;
-// Define a type that makes the ref forwards compatible;
-export type ForwardRefComponent<T P = {}> = React.ForwardRefExoticComponent<React.PropsWithoutRef<P> & React.RefAttributes<T>>,;
-// Helper type for component refs;
-export type ElementRef<T extends React.ElementType> = React.ComponentPropsWithRef<T>['ref'],;
-// Helper type for wrapping refs that fixes the mismatch errors;
-export type PolymorphicRef<T extends React.ElementType> = React.Ref<React.ElementRef<T>>,;
-// Helper for dealing with refs in complex situations;
-export type PolymorphicComponentProp<T extends React.ElementType, Props = {}> =;
-  React.PropsWithChildren<Props & { as?: T }>,;
-// Safe ref casting helper type - this is the key to fixing our issues;
-// We need to use a type that is compatible with both Slot's ref and React's ref handling;
-export type SafeRef<T> = React.Ref<T>,;
-// Sidebar specific types;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-export type SidebarState = "expanded" | "collapsed",;
-export type SidebarContext = {;
-  state: SidebarState,;
-  open: boolean,;
-  setOpen: (open: boolean) => void,;
-  openMobile: boolean,;
-  setOpenMobile: (open: boolean) => void,;
-  isMobile: boolean;
-<<<<<<< HEAD
-  toggleSidebar: () => void;
-=======
-  toggleSidebar: () => void;
-};
-=======
-};
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+

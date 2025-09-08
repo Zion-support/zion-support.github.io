@@ -1,19 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD:pages/api/livekit/room.ts
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    return res.status(405).json({ message: 'Method not allowed' });
-  }
-
-  try {
-    // TODO: Implement room logic
-    res.status(200).json({ message: 'room endpoint' });
-  } catch (error) {
-    console.error('Error in room:', error);
-    res.status(500).json({ message: 'Internal server error' });
-  }
-=======
 import { RoomServiceClient, CreateRoomOptions } from 'livekit-server-sdk';
 ;
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || '';
@@ -60,5 +46,5 @@ export default async function handler(req:NextApiRequest, res:NextApiResponse) {
     return res.status(500).json({ error:'Failed to create room' });
   } 
 }
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:backup-problematic-files/temp_broken_files/pages/api/livekit/room.ts
+
 }

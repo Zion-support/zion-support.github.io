@@ -1,4 +1,4 @@
-<<<<<<<< HEAD:temp_conflicts/pages/blockchain-solutions.jsx
+<:temp_conflicts/pages/blockchain-solutions.jsx
 
 import Head from 'next/head';
 const BlockchainSolutions = () => {
@@ -19,7 +19,7 @@ const BlockchainSolutions: NextPage = () => {
       </main>
     </div>
   )
-<<<<<<<< HEAD:temp_conflicts/pages/blockchain-solutions.jsx
+<:temp_conflicts/pages/blockchain-solutions.jsx
 },
 
 export default BlockchainSolutions,

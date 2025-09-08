@@ -1,66 +1,19 @@
-<<<<<<< HEAD
-/* eslint-env node */
-module.exports = {
-  extends: [
-    'next/core-web-vitals',
-    'plugin:@typescript-eslint/recommended',
-  ],
-=======
-<<<<<<< HEAD
-=======
-
-/* eslint - env node */;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-/* eslint-env node */
-module.exports = {
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 /* eslint-env node */
 module.exports = {
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
   env: {
     node: true,
     es2021: true
   },
-<<<<<<< HEAD
-  extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
-  parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint"],
-=======
 
 
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-/* eslint-env node */
-module.exports = {
-  extends: [
-    'next/core-web-vitals',
-    '@typescript-eslint/recommended'
-  ],
-ursor/fix-syntax-push-and-merge-to-main-40de
-export default {
-  extends: ['next/core-web-vitals', 'next/typescript'],
-ursor/add-new-services-and-deploy-updates-0462
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   rules: {
@@ -74,8 +27,7 @@ ursor/add-new-services-and-deploy-updates-0462
     '@typescript-eslint/no-explicit-any': 'warn'
   },
   env: {
-<<<<<<< HEAD
-=======
+
 ursor/fix-syntax-push-and-merge-to-main-40de
   "extends": [
     "next/core-web-vitals",
@@ -155,70 +107,13 @@ module.exports = {
   },
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     node: true,
     browser: true,
     es2021: true
   },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-=======
 
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  env: {
-    node: true,
-    es2021: true
-  },
-  extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
-  parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint"],
-  rules: {
-    "@typescript-eslint/no-unused-vars": "off",
-    "@typescript-eslint/no-explicit-any": "off",
-    "react-hooks/exhaustive-deps": "warn",
-    "react/react-in-jsx-scope": "off",
-    "no-undef": "off",
-    "react/no-unescaped-entities": "off",
-    "@next/next/no-html-link-for-pages": "off",
-    "@next/next/no-img-element": "off"
-  },
-<<<<<<< HEAD
-ursor/integrate-build-improve-and-re-verify-8f7d
-  env: {
-    node: true,
-    es2021: true
-  },
-  extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
-  parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint"],
-  rules: {
-    "@typescript-eslint/no-unused-vars": "off",
-    "@typescript-eslint/no-explicit-any": "off",
-    "react-hooks/exhaustive-deps": "warn",
-    "react/react-in-jsx-scope": "off",
-    "no-undef": "off",
-    "react/no-unescaped-entities": "off",
-    "@next/next/no-html-link-for-pages": "off",
-    "@next/next/no-img-element": "off"
-  },
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-
-
-
-
-<<<<<<< HEAD
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   ignorePatterns: [
     'pages._archive_corrupted/**',
     'pages.disabled.full/**',
@@ -243,9 +138,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     'dist/**',
     'build/**'
   ]
-<<<<<<< HEAD
-};
-=======
+
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module',
@@ -267,29 +160,23 @@ origin/automation-improvements-final
   ignore_patterns: [;
 
   ignorePatterns: [
-<<<<<<< HEAD
-  ignorePatterns: [
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
     "node_modules/",
     ".next/",
     "out/",
     "dist/",
     "build/",
     "coverage/",
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
     "*.config.js",
     "*.config.cjs",
     "*.config.mjs",
     "fix - critical - files.js",
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
     "fix-*.js",
     "fix-*.cjs",
     "*-fix*.cjs",
@@ -309,10 +196,9 @@ origin/automation-improvements-final
     "api - backup/",
     "temp_backup/",
     "corrupted_files_backup_2/",
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
     "ai - optimization - backups/",
     "optimization - reports/",
     "test - generation - reports/",
@@ -322,10 +208,9 @@ origin/automation-improvements-final
     "pages.__backup/",
     "pages - disabled/",
     "pages.disabled_auto/",
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
     "zion_academy/",
     "pm2 - automation/",
     "scripts/",
@@ -333,10 +218,9 @@ origin/automation-improvements-final
     "temp_*/",
     "temp_exclude/",
     "test_build/",
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
     "tests.disabled/",
     "pages.disabled/",
     "src.disabled/",
@@ -346,18 +230,16 @@ origin/automation-improvements-final
     "contracts.disabled/",
     "solutions.disabled/",
     "zion - os.disabled/",
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
     "src_backup_temp/",
     "temp - backup/",
     "tests/",
     "supabase/",
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
     "*.test.js",
     "*.test.ts",
     "*.test.tsx",
@@ -392,19 +274,17 @@ origin/automation-improvements-final
     "setup_tests.ts",
     "simple - test.js",
     "src / components / layout/",
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
     "types/",
     "utils/",
     "pages_backup/",
     "pages_backup_before_cleanup/",
     "services/",
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
     "components.disabled_full/",
     "comprehensive - automation - runner.js",
     "comprehensive - automation.js",
@@ -415,48 +295,21 @@ origin/automation-improvements-final
     "cypress_backup/",
     "data && data.disabled/",
     "database/",
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
     "build-verification && verification.js",
     "check-syntax && syntax.js",
     "clean-conflicts && conflicts.js",
     "commit-and-push && push.js",
 
-<<<<<<< HEAD
-
-};
-
-
-
-};
-
 
   ],
 };
-};
-=======
-  ],
-};
 
 
 
-=======
 
-
-=======
-};
-
-
-
-};
-
-=======
-
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     "commit-and-push.js"
   ]
 };
@@ -505,75 +358,6 @@ origin/automation-improvements-final
     "automation - runner.js",
     "basic - test.js",
     "broken_files_backup/",
-<<<<<<< HEAD
-    "build-verification.js",
-    "check-syntax.js",
-    "clean-conflicts.js",
-    "commit-and-push.js"
-  ]
-};
-    "commit-and-push.js",
-  ],
-};
-};
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-};
-origin/main
-origin/automation-improvements-final
-    "commit-and-push.js"
-  ]
-};
-};
-;
-=======
-<<<<<<< HEAD
-    "build - verification.js",
-    "check - syntax.js",
-    "clean - conflicts.js",
-    "commit - and - push.js",
-  ],
-}
-;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-;
-/* eslint-env node */;
-/* eslint-disable no-undef */;
-module.exports = {;
-  env: {;
-    node: true,;
-    es2021: true;
-  },;
-  globals: {;
-    module: 'readonly',;
-    require: 'readonly',;
-    exports: 'readonly',;
-    __dirname: 'readonly',;
-    __filename: 'readonly',;
-    global: 'readonly',;
-    Buffer: 'readonly',;
-    console: 'readonly';
-  },;
-  extends: ['next/core-web-vitals'],;
-  rules: {;
-    'react-hooks/rules-of-hooks': 'errorreact-hooks/exhaustive-deps': 'warn@typescript-eslint/no-unused-vars': [;
-      'warn',;
-      { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }
-    ],;
-    '@typescript-eslint/no-explicit-any': 'warn@typescript-eslint/no-empty-object-type': 'warn@next/next/no-html-link-for-pages': 'warn';
-  },;
-  ignorePatterns: [;
-    'node_modules/.next/out/build/',;
-    'dist/*.config.js*.config.tsscripts/',;
-    'automation/netlify/src/apps/';
-  ];
-},;
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

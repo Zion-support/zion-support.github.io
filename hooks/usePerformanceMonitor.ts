@@ -1,40 +1,5 @@
-<<<<<<< HEAD
 
-};
-;
-export default usePerformanceMonitor;
-=======
-<<<<<<< HEAD
-}
-export function usePerformanceMonitor() {
-=======
-;
-interface PerformanceMetrics {
-<<<<<<< HEAD
-  loadTime: number, firstContentfulPaint: number
-  largestContentfulPaint: number, firstInputDelay: number
-  cumulativeLayoutShift: number
-}
-export function usePerformanceMonitor() {
 
-export function usePerformanceMonitor() {;
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isSupported, setIsSupported] = useState(false);
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    // Check if Performance Observer is supported
-    if (!('PerformanceObserver' in window)) {
-    setIsSupported(false)
-    return
-  }
-    setIsSupported(true);
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'navigation') {
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
@@ -64,53 +29,9 @@ export default usePerformanceMonitor;
             loadTime: navEntry && navEntry.loadEventEnd - navEntry && navEntry.loadEventStart,
           }));
         }
-<<<<<<< HEAD
-          const paintEntry = entry as PerformancePaintTiming;
-          if (paintEntry && paintEntry.name === 'first-contentful-paint') {
-            setMetrics(prev => ({
-=======
+
         if (entry && entry.entryType === 'paint') {
-<<<<<<< HEAD
-          const paintEntry = entry as PerformancePaintTiming;
-          if (paintEntry && paintEntry.name === 'first-contentful-paint') {
-            setMetrics(prev => ({
-=======
 
-          const paintEntry = entry as PerformancePaintTiming;
-          if (paintEntry && paintEntry.name === 'first-contentful-paint') {
-            setMetrics(prev => ({
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              ...prev,
-              firstContentfulPaint: paintEntry && paintEntry.startTime,
-            }));
-          }
-        }
-        if (entry && entry.entryType === 'largest-contentful-paint') {
-          const lcpEntry = entry as PerformanceEntry;
-          setMetrics(prev => ({
-            ...prev,
-            largestContentfulPaint: lcpEntry && lcpEntry.startTime,
-          }));
-        }
-        if (entry && entry.entryType === 'first-input') {
-          const fidEntry = entry as PerformanceEventTiming;
-          setMetrics(prev => ({
-            ...prev,
-            firstInputDelay: fidEntry && fidEntry.processingStart - fidEntry && fidEntry.startTime,
-          }));
-        }
-        if (entry && entry.entryType === 'layout-shift') {
-          const clsEntry = entry as PerformanceEntry & { value: number };
-          setMetrics(prev => ({
-            ...prev,
-            cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + clsEntry && clsEntry.value,
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   load_time: number, firstContentfulPaint: number,
   largestContentfulPaint: number, firstInputDelay: number,
   cumulativeLayoutShift: number,
@@ -197,43 +118,15 @@ if ( {) {
         }
       });
     });
-<<<<<<< HEAD
-  }, []);
-  return { metrics, isSupported }
-}
-=======
-<<<<<<< HEAD
-      observer && observer.disconnect();
-    };
-=======
 
-      observer && observer.disconnect();
-    };
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  }, []);
-  return { metrics, isSupported }
-}
-;
-    // Observe different performance entry types;
-    try {
-      observer.observe ({ entry_types: ['navigation', 'paint', 'largest - contentful - paint', 'first - input', 'layout - shift'] });
-    } catch (error) {
-      // eslint - disable - next - line no - console;
-      console.warn ('Performance Observer not fully supported:', error);
-    }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     return () => {
       window.removeEventListener('load', updateMetrics)
 };
   }, []);
-<<<<<<< HEAD
 
-  return metrics;
-
-=======
 ;
   return { metrics, is_supported }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 }
->>>>>>> merged-prs-20250907-203621
+

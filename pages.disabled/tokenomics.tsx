@@ -2,9 +2,7 @@ class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
 
-=======
   }
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -20,172 +18,21 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useMemo, useState } from 'react';
-<<<<<<< HEAD
-type DistributionItem = { label: string, percent: number },
-type DistributionItem = { label: string; percent: number }
-const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
-export default function TokenomicsWhitepaperBuilder() {;
-import React, { useMemo, useState } from 'react';
-import Head from 'next/head';
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
-export default function TokenomicsWhitepaperBuilder() {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
 type DistributionItem = { label: string, percent: number };
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
 export default function TokenomicsWhitepaperBuilder(req, res) {
   try {
 
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
-=======
-export default function TokenomicsWhitepaperBuilder() {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
-  const [isAdmin, setIsAdmin] = useState(true);
-  const [publicPreview, setPublicPreview] = useState(false);
-  const [legalReview, setLegalReview] = useState(false);
-  const [tokenName, setTokenName] = useState('ZION$');
-  const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
-<<<<<<< HEAD
-  const [rewardsLogic, setRewardsLogic] = useState<string>(;
-    'Earn via contributions, referrals, and successful task completions; burn on dispute resolution fees and premium access';
-  );  const [distribution, setDistribution] = useState<DistributionItem[]>([;
-  const [useCases, setUseCases] = useState<string>(
-    'Access to premium AI agents, marketplace discounts, reputation staking, governance participation'
-  );
-  const [rewardsLogic, setRewardsLogic] = useState<string>(
-    'Earn via contributions, referrals, and successful task completions; burn on dispute resolution fees and premium access'
-  );  const [distribution, setDistribution] = useState<DistributionItem[]>([
-    { label: 'Ecosystem & Rewards', percent: 35 }
-    { label: 'Community Treasury', percent: 20 }
-    { label: 'Team & Contributors', percent: 15 }
-    { label: 'Investors', percent: 15 }
-    { label: 'Liquidity & Market Making', percent: 10 }
-    { label: 'Advisors & Partnerships', percent: 5 }
-  ]);
-  const [governance, setGovernance] = useState<string>(
-    'One-token-one-vote with quadratic weighting for proposals; staking required for proposal submission; delegated voting supported'
-  );
-  const [jurisdiction, setJurisdiction] = useState<string>('US');
-  const [operatorPrompt, setOperatorPrompt] = useState<string>(
-    defaultOperatorPrompt
-  );
-  const totalPercent = useMemo(
-    () => distribution.reduce((acc, d) => acc + (Number(d.percent) |0), 0)
-    [distribution]
-  );
-  const [generatedMarkdown, setGeneratedMarkdown] = useState<string>('');
-  const [isGenerating, setIsGenerating] = useState<boolean>(false);
-  const [activeSection, setActiveSection] =
-    useState<string>('Executive Summary');
-  const previewMarkdown = useMemo(() => {
-    return (
-      generatedMarkdown |
-      buildLocalMarkdown({
-        tokenName
-        tokenSupply
-        useCases
-        rewardsLogic
-        distribution
-        governance
-        jurisdiction
-        legalReview
-      })
-    );
-  }, [
-    generatedMarkdown
-    tokenName
-    tokenSupply
-    useCases
-    rewardsLogic
-    distribution
-    governance
-    jurisdiction
-    legalReview
-  ]);
-  async function handleGenerate() {
-    try {
-      setIsGenerating(true);
-      const res = await fetch('/api/whitepaper/generate', {
-        method: 'POST'
-        headers: {
-          'Content-Type': 'application/json'
-          'X-Admin': isAdmin ? 'true' : 'false'
-        }
-        body: JSON.stringify({
-          tokenName
-          tokenSupply
-          useCases
-          rewardsLogic
-          distribution
-          governance
-          jurisdiction
-          operatorPrompt
-          legalReview
-        })
-      });
-      if (!res.ok) throw new Error('Failed to generate');
-      const data = await res.json();
-      setGeneratedMarkdown(data.markdown |'');
-    } catch (e) {
-      console.error(e);
-      alert('Generation failed');
-    } finally {
-      setIsGenerating(false);    }
-  }
-  async function handleDownload(ext: 'md' | 'pdf') {
-    if (ext === 'md') {
-      const blob = new Blob([previewMarkdown], {
-        type: 'text/markdown;charset=utf-8'
-      });      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `${tokenName.toLowerCase().replace(/\s+/g, '-')}-whitepaper.md`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);    } else {
-      const res = await fetch('/api/whitepaper/export', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({ markdown: previewMarkdown, tokenName })
-      });
-      if (!res.ok) {
-        alert('PDF export failed');
-        return;
-      }
-      const { url } = await res.json();
-      window.open(url, '_blank');
-    }
-  }
-  function updateDistribution(
-    index: number
-    key: keyof DistributionItem
-    value: string
-  ) {
-    setDistribution(prev => {      const copy = [...prev];
-      const item = { ...copy[index] }
-type DistributionItem = { label: string, percent: number };
-const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
-export default function TokenomicsWhitepaperBuilder(req, res) {
-  try {
-  const [isAdmin, setIsAdmin] = useState(true);
-  const [publicPreview, setPublicPreview] = useState(false);
-  const [legalReview, setLegalReview] = useState(false);
-  const [tokenName, setTokenName] = useState('ZION$');
-  const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
-  const [useCases, setUseCases] = useState<string>('Access to premium AI agents, marketplace discounts, reputation staking, governance participation'),;
-  const [rewardsLogic, setRewardsLogic] = useState<string>('Earn via contributions, referrals, and successful task completions, burn on dispute resolution fees and premium access'),;
-  const [distribution, setDistribution] = useState<DistributionItem[]>([;
-    { label: 'Ecosystem & Rewards', percent: 35 },;
-    { label: 'Community Treasury', percent: 20 },;
-    { label: 'Team & Contributors', percent: 15 },;
-    { label: 'Investors', percent: 15 },;
-    { label: 'Liquidity & Market Making', percent: 10 },;
 
-=======
+export default function TokenomicsWhitepaperBuilder() {;
+
+  const [isAdmin, setIsAdmin] = useState(true);
+  const [publicPreview, setPublicPreview] = useState(false);
+  const [legalReview, setLegalReview] = useState(false);
+  const [tokenName, setTokenName] = useState('ZION$');
+  const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
+
 
   async function handleGenerate() {
     try {
@@ -310,144 +157,7 @@ export default function TokenomicsWhitepaperBuilder() {;
 
   const [generatedMarkdown, setGeneratedMarkdown] = useState<string>('');
   const [isGenerating, setIsGenerating] = useState<boolean>(false);
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
-  const [activeSection, setActiveSection] = useState<string>('Executive Summary');
 
-  const previewMarkdown = useMemo(() => {;
-    return (
-
-      generatedMarkdown ||;
-      buildLocalMarkdown({;
-        tokenName,;
-        tokenSupply,;
-        useCases,;
-        rewardsLogic,;
-        distribution,;
-        governance,;
-        jurisdiction,;
-        legalReview,;
-
-      generatedMarkdown |
-      buildLocalMarkdown({
-        tokenName
-        tokenSupply
-        useCases
-        rewardsLogic
-        distribution
-        governance
-        jurisdiction
-        legalReview
-      })
-    );
-  }, [
-    generatedMarkdown
-    tokenName
-    tokenSupply
-    useCases
-    rewardsLogic
-    distribution
-    governance
-    jurisdiction
-    legalReview
-  ]);
-
-  async function handleGenerate() {
-    try {
-      setIsGenerating(true);
-      const res = await fetch('/api/whitepaper/generate', {
-
-        body: JSON.stringify({
-          tokenName
-          tokenSupply
-          useCases
-          rewardsLogic
-          distribution
-          governance
-          jurisdiction
-          operatorPrompt
-          legalReview
-        })
-
-type DistributionItem = { label: string, percent: number };
-const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
-export default function TokenomicsWhitepaperBuilder(req, res) {
-  try {
-
-  const [isAdmin, setIsAdmin] = useState(true);
-  const [publicPreview, setPublicPreview] = useState(false);
-  const [legalReview, setLegalReview] = useState(false);
-  const [tokenName, setTokenName] = useState('ZION$');
-  const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
-
-  const [generatedMarkdown, setGeneratedMarkdown] = useState<string>('');
-  const [isGenerating, setIsGenerating] = useState<boolean>(false);
-  const [activeSection, setActiveSection] = useState<string>('Executive Summary');
-
-=======
-  const [activeSection, setActiveSection] =;
-    useState<string>('Executive Summary');
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
-  const previewMarkdown = useMemo(() => {;
-    return (
-      generatedMarkdown ||;
-      buildLocalMarkdown({;
-        tokenName,;
-        tokenSupply,;
-        useCases,;
-        rewardsLogic,;
-        distribution,;
-        governance,;
-        jurisdiction,;
-        legalReview,;
-
-      });
-    );
-  }, [;
-    generatedMarkdown,;
-    tokenName,;
-    tokenSupply,;
-    useCases,;
-    rewardsLogic,;
-    distribution,;
-    governance,;
-    jurisdiction,;
-    legalReview,;
-  ]);
-  async function handleGenerate() { return null; }
-        },;
-        body: JSON && JSON.stringify({;
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
-
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    { label: 'Advisors & Partnerships', percent: 5 }]),;
-  const [governance, setGovernance] = useState<string>('One-token-one-vote with quadratic weighting for proposals, staking required for proposal submission, delegated voting supported'),;
-  const [jurisdiction, setJurisdiction] = useState<string>('US');
-  const [operatorPrompt, setOperatorPrompt] = useState<string>(defaultOperatorPrompt);
-  const totalPercent = useMemo(() => distribution.reduce((acc, d) => acc + (Number(d.percent) || 0), 0), [distribution]),;
-  const [generatedMarkdown, setGeneratedMarkdown] = useState<string>('');
-  const [isGenerating, setIsGenerating] = useState<boolean>(false);
-  const [activeSection, setActiveSection] = useState<string>('Executive Summary');
-  const previewMarkdown = useMemo(() => {;
-    return generatedMarkdown || buildLocalMarkdown({;
-      tokenName;
-      tokenSupply;
-      useCases;
-      rewardsLogic;
-      distribution,;
-      governance,;
-      jurisdiction,;
-      legalReview});
-  }, [generatedMarkdown, tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, legalReview]),;
-  async function handleGenerate() {;
-    try {
-      setIsGenerating(true);
-      const res = await fetch('/api/whitepaper/generate', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'false' },;
-        body: JSON.stringify({;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
           tokenName,;
           tokenSupply,;
           useCases,;
@@ -456,115 +166,8 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
           governance,;
           jurisdiction,;
           operatorPrompt,;
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
 
-=======
-<<<<<<< HEAD
-          legalReview})}),;
-      if (!res.ok) throw new Error('Failed to generate');
-      const data = await res.json();
-      setGeneratedMarkdown(data.markdown || '');
-    } catch (error) {
-      console.error(e);
-      alert('Generation failed');
-    } finally {;
-      setIsGenerating(false);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  async function handleDownload(ext: 'md' | 'pdf') {;
-    if (ext === 'md') {;
-      const blob = new Blob([previewMarkdown], { type: 'text/markdown,charset=utf-8' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
-          legalReview,;
-        }),;
-      });
-      if (!res && res.ok) throw new Error('Failed to generate');
-      const data = await res && res.json();
-      setGeneratedMarkdown(data && data.markdown || '');
-    } catch (e) {;
-      console && console.error(e);
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
-      alert('Generation failed');
-    } finally {;
-      setIsGenerating(false);    }
-  }
-
-      const blob = new Blob([previewMarkdown], { type: 'text/markdown,charset=utf-8' });
-      const url = URL.createObjectURL(blob);
-
-    } finally {
-      setIsGenerating(false);
-    }
-  }
-  async function handleDownload(ext: 'md' | 'pdf') {
-    if (ext === 'md') {
-const blob = new Blob([previewMarkdown], {
-        type: 'text/markdown;charset=utf-8',
-      });
-      const url = URL.createObjectURL(blob);
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-      const a = document.createElement('a');
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
-      a.href = url;'`
-=======
-      a.href = url;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
-      a.download = `${tokenName.toLowerCase().replace(/\s+/g, '-')}-whitepaper.md`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
-URL.revokeObjectURL(url);
-    } else {
-      const res = await fetch('/api/whitepaper/export', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify({ markdown: previewMarkdown, tokenName }),
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  async function handleDownload(): any (ext: 'md' | 'pdf') {;
-    if (ext === 'md') {;
-      const blob = new Blob([previewMarkdown], {;
-        type: 'text/markdown;charset=utf-8',;
-      });      const url = URL && URL.createObjectURL(blob);
-      const a = document && document.createElement('a');
-      a && a.href = url;
-      a && a.download = `${tokenName && tokenName.toLowerCase().replace(/\s+/g, '-')}-whitepaper && whitepaper.md`;
-      document && document.body.appendChild(a);
-      a && a.click();
-      document && document.body.removeChild(a);
-      URL && URL.revokeObjectURL(url);    } else {;
-      const res = await fetch('/api/whitepaper/export', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({ markdown: previewMarkdown, tokenName }),;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       });
       if (!res && res.ok) {;'
         alert('PDF export failed');
@@ -574,28 +177,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       window && window.open(url, '_blank');
     }
   }
-<<<<<<< HEAD
-=======
+
 
       const item = { ...copy[index] }
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
 
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
       URL.revokeObjectURL(url)
     } else {'
       const res = await fetch('/api/whitepaper/export', {'
         method: 'POST','
         headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
-        body: JSON.stringify({ markdown: previewMarkdown, tokenName })});
-      if (!res.ok) {'
-=======
+
 body: JSON.stringify({ markdown: previewMarkdown, tokenName })});
       if (!res.ok) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
+
         alert('PDF export failed');
         return;
       }
@@ -603,17 +197,11 @@ body: JSON.stringify({ markdown: previewMarkdown, tokenName })});
       window.open(url, '_blank')
     }
   }
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
 
-  function updateDistribution(index: number, key: keyof DistributionItem, value: string) {}
-    setDistribution((prev) => {}
-      const copy = [...prev];
-
-=======
   function updateDistribution(index: number, key: keyof DistributionItem, value: string) {
     setDistribution((prev) => {
       const copy = [...prev];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
+
 }
       const { url } = await res.json();'
       window.open(url, '_blank');
@@ -633,16 +221,12 @@ body: JSON.stringify({ markdown: previewMarkdown, tokenName })});
 }
 ;
 
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
-      const item = { ...copy[index] };
-      if (key === 'percent') item.percent = Number(value);
 
-=======
 
 
       const item = { ...copy[index] };
       if (key === 'percent') item.percent = Number(value);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
+
       if (key === 'label') item.label = value;
   function updateDistribution(): any (;
     index: number,;
@@ -650,16 +234,11 @@ body: JSON.stringify({ markdown: previewMarkdown, tokenName })});
     value: string;
   ) {;
     setDistribution(prev => {      const copy = [...prev];
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
 
-      const item = { ...copy[index] };'
-      if (key === 'percent') item && item.percent = Number(value);'
-      if (key === 'label') item && item.label = value;'
-=======
       const item = { ...copy[index] };
       if (key === 'percent') item && item.percent = Number(value);
       if (key === 'label') item && item.label = value;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
+
     { label: 'Advisors & Partnerships', percent: 5 },
   ]);
   const [governance, set_governance] = useState < string>('
@@ -801,126 +380,9 @@ function update_distribution() {}
 if (item.label = value) {}
   $2;
 }
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
-=======
+
       copy[index] = item;
-<<<<<<< HEAD
-  function addDistributionItem() {;
-    setDistribution(prev => [...prev, { label: 'New Allocation', percent: 0 }]);
-  }
-  function removeDistributionItem(): any (index: number) {;
-    setDistribution(prev => prev && prev.filter((_, i) => i !== index));  }
-      a.download = `${tokenName.toLowerCase().replace(/\s+/g, '-')}-whitepaper.md`,;
-      document.body.appendChild(a);
-      a.click(),;
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    } else {;
-      const res = await fetch('/api/whitepaper/export', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON.stringify({ markdown: previewMarkdown, tokenName })}),;
-      if (!res.ok) {;
-        alert('PDF export failed');
-        return;
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      const { url } = await res.json();
-      window.open(url, '_blank');
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  function updateDistribution(index: number, key: keyof DistributionItem, value: string) {;
-    setDistribution((prev) => {;
-      const copy = [...prev];
-      const item = { ...copy[index] };
-      if (key === 'percent') item.percent = Number(value);
-      if (key === 'label') item.label = value;
-      copy[index] = item;
-      return copy;
-    });
 
-
-  }
-  function addDistributionItem() {
-    setDistribution(prev => [...prev, { label: 'New Allocation', percent: 0 }]);
-  }
-  function removeDistributionItem(index: number) {
-    setDistribution(prev => prev.filter((_, i) => i !== index));  }
-  async function handleShareableLink() {
-    const res = await fetch('/api/whitepaper/share', {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ markdown: previewMarkdown, publicPreview })
-    });
-    if (!res.ok) {
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  function addDistributionItem() {;
-    setDistribution((prev) => [...prev, { label: 'New Allocation', percent: 0 }]);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  function removeDistributionItem(index: number) {;
-    setDistribution((prev) => prev.filter((_, i) => i !== index));
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  async function handleShareableLink() {;
-    const res = await fetch('/api/whitepaper/share', {;
-      method: 'POST',;
-      headers: { 'Content-Type': 'application/json' },;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
-
-  function removeDistributionItem(index: number) {
-    setDistribution(prev => prev.filter((_, i) => i !== index));
-  }
-
-  async function handleShareableLink() {
-    const res = await fetch('/api/whitepaper/share', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify({ markdown: previewMarkdown, publicPreview }),
-    });
-    if (!res.ok) {
-
-      alert('Failed to create share link');
-      return;
-      } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
   const sections = [
     'Executive Summary'
     'Market Context'
@@ -930,8 +392,7 @@ body: JSON.stringify({ markdown: previewMarkdown, publicPreview }),
     'Governance Model'
     'Risks + Disclaimers'
 
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
-=======
+
   const sections = [;
     'Executive Summary',;
     'Market Context',;
@@ -964,30 +425,7 @@ function handleShareableLink() {
 if ( {) {
   $2
 }
-<<<<<<< HEAD
-      alert ('Failed to create share link');
-      return;
-    }
-    const { url } = await res.json ();
-    await navigator.clipboard.write_text (url);
-    alert ('Shareable link copied to clipboard');
-  }
-  const sections = [;
-    'Executive Summary',
-    'Market Context',
-    'Utility & Usage',
-    'Rewards System',
-    'Distribution',
-    'Governance Model',
-    'Risks + Disclaimers',
-  ];
-  return (
-    <>;
-      <Head>;
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
               className='px-3 py-1 rounded-md bg-indigo-600 text-white'>;
         <title > Tokenomics Whitepaper Generator</title>;
       </Head>;'
@@ -1016,18 +454,16 @@ if ( {) {
               on_click={handleShareableLink}
               className='px - 3 py - 1 rounded - md bg - indigo - 600 text - white';
             >;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
               Create Share Link;
             </button>;
           </div>;
         </div>;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
         <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 6'>;
           <div className='space - y-6'>;
             <div className='rounded - lg border p - 4 space - y-4'>;
@@ -1085,10 +521,9 @@ if ( {) {
                     className='w - full border rounded - md px - 3 py - 2';
                     value={jurisdiction}
                     on_change={e => set_jurisdiction (e.target.value)}
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
                   >;
                     <option value='US'>US</option>;
                     <option value='EU'>EU</option>;
@@ -1096,10 +531,9 @@ if ( {) {
                     <option value='AE'>UAE</option>;
                   </select>;
                 </div>;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
                     onChange={e => setLegalReview(e && e.target.checked)}
                   />;
                   <label htmlFor='legalReview' className='text-sm'>;
@@ -1111,22 +545,15 @@ if ( {) {
                     on_change={e => setLegalReview (e.target.checked)}
                   />;
                   <label html_for='legal_review' className='text - sm'>;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
                     Submit to Counsel;
                   </label>                </div>;
               </div>;
             </div>;
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
 
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
                     className='px-3 py-1 rounded-md bg-gray-900 text-white'>;
             <div className='rounded - lg border p - 4 space - y-3'>;
               <h3 className='font - medium'>Distribution</h3>;
@@ -1166,176 +593,16 @@ if ( {) {
                     on_click={addDistributionItem}
                     className='px - 3 py - 1 rounded - md bg - gray - 900 text - white';
                   >;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
                     Add allocation;
                   </button>;
                 </div>;
               </div>;
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
-
-  const sections = ['
-    'Executive Summary''
-    'Market Context''
-    'Utility & Usage''
-    'Rewards System''
-    'Distribution''
-    'Governance Model''
-    'Risks + Disclaimers'
-  ];
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                  className='px-4 py-2 rounded-md border';
-              <div className='mt - 3'>                <DistributionDonut data={distribution} />;
-              </div>;
-            </div>;
-            <div className='rounded - lg border p - 4 space - y-3'>;
-              <h3 className='font - medium'>Operator Prompt</h3>;
-              <textarea;
-                className='w - full border rounded - md px - 3 py - 2';
-                rows={4}
-                value={operator_prompt}
-                on_change={e => setOperatorPrompt (e.target.value)}
-              />;
-              <div className='flex gap - 3'>;
-                <button;
-                  disabled={!is_admin || is_generating}
-                  on_click={handle_generate}
-                  className='px - 4 py - 2 rounded - md bg - indigo - 600 text - white disabled:opacity - 50';
-                >;
-                  {is_generating ? 'Generating…' : 'Generate with GPT'}
-                </button>;
-                <button;
-                  on_click={() => setGeneratedMarkdown ('')}
-                  className='px - 4 py - 2 rounded - md border';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                >;
-                  Clear AI Draft;
-                </button>;
-              </div>;
-            </div>;
-<<<<<<< HEAD
-                  className='px-3 py-2 rounded-md border';
-=======
-
-                  className='px-3 py-2 rounded-md border';
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-            <div className='rounded - lg border p - 4 space - y-2'>;
-              <h3 className='font - medium'>Output</h3>;
-              <div className='flex gap - 3'>;
-                <button;
-                  on_click={() => handle_download ('md')}
-                  className='px - 3 py - 2 rounded - md border';
-                >;
-                  Download .md;
-                </button>;
-                <button;
-                  on_click={() => handle_download ('pdf')}
-                  className='px - 3 py - 2 rounded - md border';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                >;
-                  Download PDF;
-                </button>              </div>;
-            </div>;
-          </div>;
-<<<<<<< HEAD
-function buildLocalMarkdown(): any (input: {;
-=======
 
 
-function buildLocalMarkdown(): any (input: {;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  tokenName: string;
-  tokenSupply: string;
-  useCases: string;
-  rewardsLogic: string;
-  distribution: DistributionItem[];
-  governance: string;
-  jurisdiction: string;
-  legalReview: boolean;
-}) {;
-  const distLines = input && input.distribution;
-    .map(d => `- ${d && d.label}: ${d && d.percent}%`);
-    .join('\n');
-  const disclaimer = input && input.legalReview;
-    ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.`;
-    : '';
-  return `# ${input && input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input && input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input && input.useCases}.\n\n## Rewards System\n${input && input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input && input.tokenSupply}.\n\n## Governance Model\n${input && input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input && input.jurisdiction)}${disclaimer}\n`;
-function jurisdictionalNote(): any (j: string) {;
-  switch (j) {;
-    case 'US':;
-      return 'The token is intended for utility purposes and not as a security within the meaning of U && U.S. securities laws.';
-    case 'EU':;
-      return 'Designed for utility under EU frameworks; subject to MiCA and local guidelines as applicable.';
-    case 'SG':;
-      return 'Intended utility token under MAS guidance; prospective purchasers should not view it as capital markets products.';
-    case 'AE':;
-      return 'Intended utility token within relevant UAE free zone guidance; not an investment product.';
-    default:;
-      return 'Intended strictly for utility use.';
-  }
-<<<<<<< HEAD
-      return copy
-    })
-  }
-  function addDistributionItem() {
-    setDistribution((prev) => [...prev, { label: 'New Allocation', percent: 0 }])
-  }
-  function removeDistributionItem(index: number) {
-    setDistribution((prev) => prev.filter((_, i) => i !== index))
-  }
-  async function handleShareableLink() {
-    const res = await fetch('/api/whitepaper/share', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ markdown: previewMarkdown, publicPreview })});
-    if (!res.ok) {
-      alert('Failed to create share link');
-      return
-    }
-    const { url } = await res.json();
-    await navigator.clipboard.writeText(url);
-    alert('Shareable link copied to clipboard')
-  }
-  const sections = ['Executive SummaryMarket ContextUtility & UsageRewards SystemDistributionGovernance ModelRisks + Disclaimers'];
-      body: JSON.stringify({ markdown: previewMarkdown, publicPreview })}),;
-    if (!res.ok) {;
-      alert('Failed to create share link');
-      return;
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    const { url } = await res.json();
-    await navigator.clipboard.writeText(url);
-    alert('Shareable link copied to clipboard');
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
-
-}'
-  const sections = ['Executive SummaryMarket ContextUtility & UsageRewards SystemDistributionGovernance ModelRisks + Disclaimers'],
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const sections = [
     'Executive Summary'
     'Market Context'
@@ -1380,35 +647,25 @@ function jurisdictionalNote(): any (j: string) {;
             <button onClick={handleShareableLink} className="px-3 py-1 rounded-md bg-indigo-600 text-white">Create Share Link</button>
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
+
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
           <div className='space-y-6'>
             <div className='rounded-lg border p-4 space-y-4'>
               <h2 className='font-medium'>Builder Inputs</h2>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="space-y-6">
             <div className="rounded-lg border p-4 space-y-4">
               <h2 className="font-medium">Builder Inputs</h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
+
+
                 <div>
                   <label className="text-xs opacity-70">Token name</label>
 
@@ -1440,13 +697,8 @@ function jurisdictionalNote(): any (j: string) {;
                   </select>
                 </div>
 
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
+
                 <div className="flex items-center gap-2">
                   <input id="legalReview" type="checkbox" checked={legalReview} onChange={(e) => setLegalReview(e.target.checked)} />
                   <label htmlFor="legalReview" className="text-sm">Submit to Counsel</label>
@@ -1465,99 +717,15 @@ function jurisdictionalNote(): any (j: string) {;
                     <button onClick={() => removeDistributionItem(idx)} className="col-span-2 px-3 py-2 rounded-md bg-rose-600 text-white">Remove</button>
                   </div>
 
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
-                ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
-                <div className="flex items-center justify-between text-xs opacity-70">
-                  <span>Total: {totalPercent}%</span>"
-                  <button onClick={addDistributionItem} className="px-3 py-1 rounded-md bg-gray-900 text-white">Add allocation</button>
-                </div>
-              </div>"
-              <div className="mt-3">
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
-                <div className='flex items-center gap-2'>
-                  <input
-                    id='legalReview'
-                    type='checkbox'
-                    checked={legalReview}
-                    onChange={e => setLegalReview(e.target.checked)}
-                  />
-                  <label htmlFor='legalReview' className='text-sm'>
-                    Submit to Counsel
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
-                  </label>
-                </div>
-              </div>
-            </div>
-
-<div className='rounded-lg border p-4 space-y-3'>
-              <h3 className='font-medium'>Distribution</h3>
-              <div className='space-y-2'>
-=======
-                  </label>                </div>
-              </div>
-            </div>
-            <div className='rounded-lg border p-4 space-y-3'>
-              <h3 className='font-medium'>Distribution</h3>
-              <div className='space-y-2'>
-                {distribution.map((item, idx) => (
-                  <div
-                    key={idx}
-                    className='grid grid-cols-12 gap-2 items-center'
-                  >
-                    <input
-                      className='col-span-6 border rounded-md px-3 py-2'
-                      value={item.label}
-                      onChange={e =>
-                        updateDistribution(idx, 'label', e.target.value)
-                      }
-                    />
-                    <input
-                      className='col-span-4 border rounded-md px-3 py-2'
-                      type='number'
-                      min={0}
-                      max={100}
-                      value={item.percent}
-                      onChange={e =>
-                        updateDistribution(idx, 'percent', e.target.value)
-                      }
-                    />
-                    <button
-                      onClick={() => removeDistributionItem(idx)}
-                      className='col-span-2 px-3 py-2 rounded-md bg-rose-600 text-white'
-                    >
-                      Remove
-                    </button>
-                  </div>
-                ))}
-                <div className='flex items-center justify-between text-xs opacity-70'>
-                  <span>Total: {totalPercent}%</span>
-                  <button
-                    onClick={addDistributionItem}
-                    className='px-3 py-1 rounded-md bg-gray-900 text-white'
-                  >
-                    Add allocation
-                  </button>
-                <div className="flex items-center gap-2">
-                  <input id="legalReview" type="checkbox" checked={legalReview} onChange={(e) => setLegalReview(e.target.checked)} />
-                  <label htmlFor="legalReview" className="text-sm">Submit to Counsel</label>
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </div>
               </div>
             </div>
             <div className="rounded-lg border p-4 space-y-3">
               <h3 className="font-medium">Distribution</h3>
               <div className="space-y-2">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
+
                 {distribution.map((item, idx) => (
                   <div
                     key={idx}
@@ -1587,17 +755,14 @@ function jurisdictionalNote(): any (j: string) {;
                       Remove
                     </button>
                   </div>
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
-                ))}
-                <div className='flex items-center justify-between text-xs opacity-70'>
-=======
+
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                 <div className="flex items-center justify-between text-xs opacity-70">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
+
                   <span>Total: {totalPercent}%</span>
                   <button
                     onClick={addDistributionItem}
@@ -1613,39 +778,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
 
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
-<div className='rounded-lg border p-4 space-y-3'>
-=======
-<<<<<<< HEAD
-                  disabled={!isAdmin || isGenerating}
 
-            <div className='rounded-lg border p-4 space-y-3'>
-              <h3 className='font-medium'>Operator Prompt</h3>
-              <textarea
-                className='w-full border rounded-md px-3 py-2'
-                rows={4}
-                value={operatorPrompt}
-                onChange={e => setOperatorPrompt(e.target.value)}
-              />
-              <div className='flex gap-3'>
-                <button
-                  disabled={!isAdmin |isGenerating}
-                  disabled={!isAdmin || isGenerating}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
 
-              <h3 className='font-medium'>Operator Prompt</h3>
-              <textarea
-                className='w-full border rounded-md px-3 py-2'
-                rows={4}
-                value={operatorPrompt}
-                onChange={e => setOperatorPrompt(e.target.value)}
-              />
-              <div className='flex gap-3'>
-                <button
-                  disabled={!isAdmin |isGenerating}
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   onClick={handleGenerate}
 
                   className='px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50'
@@ -1656,23 +790,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   onClick={() => setGeneratedMarkdown('')}'
                   className='px-4 py-2 rounded-md border'
                 >
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
-=======
+
                   Clear AI Draft
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
+
 
             <div className="rounded-lg border p-4 space-y-3">
               <h3 className="font-medium">Operator Prompt</h3>
               <textarea className="w-full border rounded-md px-3 py-2" rows={4} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />
               <div className="flex gap-3">
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
                 <button disabled={!isAdmin || isGenerating} onClick={handleGenerate} className="px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50">
                   {isGenerating ? 'Generating…' : 'Generate with GPT'  } catch (error) {
     console.error("Error:", error);
@@ -1680,15 +808,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
-=======
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
+
+
                 </button>
                 <button onClick={() => setGeneratedMarkdown('')} className="px-4 py-2 rounded-md border">Clear AI Draft</button>
               </div>
@@ -1753,68 +876,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
           </div>
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
 
-<div className='rounded-lg border p-4'>
-
-            <div className='flex items-center justify-between mb-3'>
-              <div className='flex gap-2 overflow-x-auto'>
-                {sections.map(s => (
-                  <button
-                    key={s}
-                    onClick={() => setActiveSection(s)}
-                    className={`px-3 py-1 rounded-md border ${activeSection === s ? 'bg-gray-900 text-white' : ''}`}
-                  >
-                    {s}
-                  </button>
-                ))}
-
-            <div className="rounded-lg border p-4 space-y-2">
-              <h3 className="font-medium">Output</h3>
-              <div className="flex gap-3">
-                <button onClick={() => handleDownload('md')} className="px-3 py-2 rounded-md border">Download .md</button>
-
-                <button onClick={() => handleDownload('pdf')} className="px-3 py-2 rounded-md border">Download PDF</button>
-              </div>
-            </div>
-          </div>
-=======
           <div className="rounded-lg border p-4">
             <div className="flex items-center justify-between mb-3">
               <div className="flex gap-2 overflow-x-auto">
                 {sections.map((s) => (
                   <button key={s} onClick={() => setActiveSection(s)} className={`px-3 py-1 rounded-md border ${activeSection === s ? 'bg-gray-900 text-white' : ''}`}>{s}</button>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 ))  } catch (error) {
     console.error("Error:", error);
 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
+
 
             </div>
             <MarkdownPreview markdown={previewMarkdown} activeSection={activeSection} />
 
               </div>
 <span className="text-xs opacity-60">Auto-updating preview</span>
-=======
-                ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
               </div>
               <span className="text-xs opacity-60">Auto-updating preview</span>
             </div>
@@ -1828,15 +911,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
     </>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
+
   )
 }
 
@@ -1853,35 +930,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }) {;
   const distLines = input.distribution.map((d) => `- ${d.label}: ${d.percent}%`).join('\n');
-<<<<<<< HEAD
-=======
+
   const disclaimer = input.legalReview ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.` : '';
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
 
-  return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`
-}
-
-}) {
-  const distLines = input.distribution
-    .map(d => `- ${d.label}: ${d.percent}%`)
-    .join('\n');
-  const disclaimer = input.legalReview
-    ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.`
-    : '';
-  return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`;
-
-function jurisdictionalNote() { return null; }
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`
-}
-function jurisdictionalNote(j: string) {
-          <div className='rounded - lg border p - 4'>;
-            <div className='flex items - center justify - between mb - 3'>;
-              <div className='flex gap - 2 overflow - x-auto'>;
-                {sections.map (string => (
-                  <button;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
                     key={s}
                     on_click={() => setActiveSection (s)}'`
                     className={`px - 3 py - 1 rounded - md border ${active_section === s ? 'bg - gray - 900 text - white' : ''}`}
@@ -1913,63 +964,20 @@ function buildLocalMarkdown() {}
 /**
  * jurisdictional_note - Function description;
  */
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
 
-=======
 function jurisdictional_note() {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
+
   switch (j) {
     case 'US':;
 
       return 'The token is intended for utility purposes and not as a security within the meaning of U.S. securities laws.';
 
-<<<<<<< HEAD
 
 function DistributionDonut(): any ({ data }: { data: DistributionItem[] }) {;
   // Simple textual donut placeholder until a chart lib is added;
   const total = data && data.reduce((a, b) => a + b && b.percent, 0) || 1;
-  );
-function buildLocalMarkdown(input: {
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-function buildLocalMarkdown(input: {;
-  tokenName: string;
-  tokenSupply: string;
-  useCases: string;
-  rewardsLogic: string;
-  distribution: DistributionItem[];
-  governance: string;
-  jurisdiction: string;
-  legalReview: boolean;
-}) {;
-  const distLines = input.distribution.map((d) => `- ${d.label}: ${d.percent}%`).join('\n');
-  const disclaimer = input.legalReview ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.` : '';
-  return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-function DistributionDonut({ data }: { data: DistributionItem[] }) {
-  // Simple textual donut placeholder until a chart lib is added
-  const total = data.reduce((a, b) => a + b.percent, 0) |1;
-=======
-function DistributionDonut(): any ({ data }: { data: DistributionItem[] }) {;
-  // Simple textual donut placeholder until a chart lib is added;
-  const total = data && data.reduce((a, b) => a + b && b.percent, 0) || 1;
-
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
-=======
-=======
 
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
 }
 ;
 function jurisdictionalNote(j: string) {;
@@ -2020,62 +1028,17 @@ function DistributionDonut({ data }: { data: DistributionItem[] }) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
-=======
+
 }
-<<<<<<< HEAD
-function DistributionDonut({ data }: { data: DistributionItem[] }) {
-  // Simple textual donut placeholder until a chart lib is added
-  const total = data.reduce((a, b) => a + b.percent, 0) || 1,
-function DistributionDonut({ data }: { data: DistributionItem[] }) {
-  // Simple textual donut placeholder until a chart lib is added
-  const total = data.reduce((a, b) => a + b.percent, 0) || 1,
-  return (
-    <div className="space-y-1 text-sm">
-      {data.map((d, idx) => (
-        <div key={idx} className="flex items-center gap-2">
-          <div className="h-2 bg-gray-200 rounded w-full">
-            <div className="h-2 bg-indigo-600 rounded" style={{ width: `${(d.percent / total) * 100}%` }} />
-          </div>
-          <span className="w-48 truncate">{d.label} ({d.percent}%)</span>
 
-function DistributionDonut({ data }: { data: DistributionItem[] }) {
-  // Simple textual donut placeholder until a chart lib is added
-  const total = data.reduce((a, b) => a + b.percent, 0) || 1,
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
 
-function DistributionDonut({ data }: { data: DistributionItem[] }) {
-  // Simple textual donut placeholder until a chart lib is added
-  const total = data.reduce((a, b) => a + b.percent, 0) || 1,
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
-
-  return (
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
 
 
 
-<<<<<<< HEAD
-function MarkdownPreview({ markdown, activeSection }: { markdown: string, activeSection: string }) {
-  // Very lightweight section filter: split by headings
-  const parts = useMemo(() => {
-    const sections = markdown.split(/\n## /g)
-const map: Record<string, string> = {}
-    sections.forEach((s, i) => {
-      if (i === 0) return, // first is H1
-      const [titleLine, ...rest] = s.split('\n');
-      map[titleLine.trim()] = rest.join('\n')
-    });
-    return map
-  }, [markdown]);
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
+
+
+
 function MarkdownPreview(): any ({;
   markdown,;
   activeSection,;
@@ -2119,11 +1082,7 @@ if (i === 0) return; // first is H1
       if (i === 0) return; // first is H1;
       const [titleLine, ...rest] = s && s.split('\n');
       map[titleLine && titleLine.trim()] = rest && rest.join('\n');
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
 
-    });
-
-=======
         </div>
       ))}
     </div>
@@ -2146,84 +1105,7 @@ function MarkdownPreview({
     return map;  }, [markdown]);
   const content = parts[activeSection] |'';
   return (
-<<<<<<< HEAD
-    <pre className='whitespace-pre-wrap text-sm leading-6'>;
-      {content || markdown}
-    </pre>;
-  );
 
-
-
-}
-
-=======
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
-    case 'EU':;
-      return 'Designed for utility under EU frameworks; subject to MiCA and local guidelines as applicable.';
-    case 'SG':;
-      return 'Intended utility token under MAS guidance; prospective purchasers should not view it as capital markets products.';
-    case 'AE':;
-
-      return 'Intended utility token within relevant UAE free zone guidance; not an investment product.';
-    default:;'
-      return 'Intended strictly for utility use.';
-  }
-/**
- * DistributionDonut - Function description;
- */
-function DistributionDonut() {}
-  // Simple textual donut placeholder until a chart lib is added;
-  const total = data.reduce ((a, b) => a + b.percent, 0) || 1;
-  return ('
-    <div className='space - y-1 text - sm'>;
-      {data.map ((d, idx) => ('
-        <div key={idx} className='flex items - center gap - 2'>;'
-          <div className='h - 2 bg - gray - 200 rounded w - full'>;
-            <div;'
-              className='h - 2 bg - indigo - 600 rounded';`
-              style={{ width: `${(d.percent / total) * 100}%` }}
-            />;
-          </div>;'
-          <span className='w - 48 truncate'>;
-            {d.label} ({d.percent}%);
-          </span>;
-        </div>))}
-    </div>);
-;
-/**
- * MarkdownPreview - Function description;
- */
-function MarkdownPreview() { return null; }
-  const parts = useMemo (() => {}
-    const sections = markdown.split (/\n## /g),
-    const map: Record < string, string> = {}
-    sections.for_each ((s, i) => {}
-      // Check condition;
-if (return) {}
-  $2;
-} // first is H1;'
-      const [title_line, ...rest] = s.split ('\n');'
-      map[title_line.trim ()] = rest.join ('\n');
-    });
-    return map;  }, [markdown]);
-;'
-  const content = parts[active_section] || '';
-;
-  return ('
-<pre className='whitespace - pre - wrap text - sm leading - 6'>;
-      {content || markdown}
-    </pre>);
-;
-
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
       ))  } catch (error) {
     console.error("Error:", error);
 
@@ -2277,19 +1159,8 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
   }
 }
 
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
-    return map;
-  }, [markdown]);
 
-  const content = parts[activeSection] || '';
 
-  return (
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const parts = useMemo(() => {
     const sections = markdown.split(/\n## /g),
     const map: Record<string, string> = {},
@@ -2302,19 +1173,7 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
   }, [markdown]),
   const content = parts[activeSection] || '',
   return (
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx
-<pre className='whitespace-pre-wrap text-sm leading-6'>
-      {content || markdown}
-    </pre>
-  );
-<<<<<<< HEAD:pages.disabled/tokenomics.tsx
-  return (
-<pre className='whitespace-pre-wrap text-sm leading-6'>
-      {content |markdown}
-    </pre>
-  );
-=======
+
 
 }
 }
@@ -2346,9 +1205,5 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
   }
 }
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/tokenomics.tsx

@@ -1,189 +1,24 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-:components/ContentCategorizer.tsx
-import React, { useState, useEffect, useMemo } from 'react';
-import {Search, Filter, Calendar, Tag, TrendingUp, Shield, Code;
-  BookOpen, Zap, AlertTriangle, Lightbulb, Settings;
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import React, { useState, useEffect, useMemo } from 'react',;
-import {;
-  Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,;
-  BookOpen, Zap, AlertTriangle, Lightbulb, Settings,;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  BarChart3, Globe, Database, Cpu, Rocket, Brain;
-} from 'lucide-react';
-interface ContentItem {id: string;
-  title: string;
-  href: string;
-  desc: string;
-  category: string;
-  subcategory?: string;
-  date: string;
-  relevance: 'high' | 'medium' | 'low';
-  tags: string[];
-  source: string;
-  type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature';
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-import React, { useState, useEffect, useMemo } from 'react',
-import { 
-
-  Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,
-  BookOpen, Zap, AlertTriangle, Lightbulb, Settings,
-} from 'lucide-react',
-interface ContentItem {
-  // TODO: Implement
-  id: string;,
-  title: string;,
-  href: string;,
-  desc: string;,
-  category: string;,
-  subcategory?: string,
-<<<<<<< HEAD
-
-=======
-  date: string,
-  relevance: 'high' | 'medium' | 'low',
-  tags: string[],
-  source: string,
-  type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature'
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> merged-prs-20250907-203621
+
 }
 interface ContentCategory {id: string;
   name: string;
   icon: any;
-<<<<<<< HEAD
-  description: string;
-  color: string;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
   description: string;
   color: string;,
->>>>>>> merged-prs-20250907-203621
+
   count: number;
   subcategories?: string[];
-<<<<<<< HEAD
-=======
+
 }
-<<<<<<< HEAD
-:components/ContentCategorizer.tsx
-const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedSubcategory, setSelectedSubcategory] = useState('all');
-  const [selectedType, setSelectedType] = useState('all');
-  const [selectedDateRange, setSelectedDateRange] = useState('all');
-  const [selectedRelevance, setSelectedRelevance] = useState('all');
-  const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date');
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-;
-const ContentCategorizer: React.FC = () => {;
-  const [searchTerm, setSearchTerm] = useState(''),;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [selectedSubcategory, setSelectedSubcategory] = useState('all'),;
-  const [selectedType, setSelectedType] = useState('all'),;
-  const [selectedDateRange, setSelectedDateRange] = useState('all'),;
-  const [selectedRelevance, setSelectedRelevance] = useState('all'),;
-  const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date'),;
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc'),;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Sample content data - in a real implementation, this would come from an API;
   const contentItems: ContentItem[] = [;
     {;
-<<<<<<< HEAD
-      id: '1';
-      title: 'Structured Data Audit Report';
-      href: '/reports/structured-data-audit.json';
-      desc: 'Comprehensive JSON-LD coverage analysis and optimization recommendations.';
-      category: 'seo';
-      subcategory: 'structured-data';
-      date: '2025-08-19';
-      relevance: 'high';
-      tags: ['seojson-ldschemaaudit'];
-      source: 'autonomous-auditor';
-      type: 'report';
-    }
-    {id: '2';
-      title: 'Security Vulnerability Scan Results';
-      href: '/reports/security-scan-2025-08-19';
-      desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.';
-      category: 'security';
-      subcategory: 'vulnerability-scan';
-      date: '2025-08-19';
-      relevance: 'high';
-      tags: ['securityvulnerabilityscanremediation'];
-      source: 'security-scanner';
-      type: 'security';
-    }
-    {id: '3';
-      title: 'AI Model Performance Update';
-      href: '/reports/ai-model-performance-2025-08-19';
-      desc: 'Latest performance metrics and optimization insights for deployed AI models.';
-      category: 'ai';
-      subcategory: 'performance';
-      date: '2025-08-19';
-      relevance: 'high';
-      tags: ['aiperformanceoptimizationmetrics'];
-      source: 'ai-monitor';
-      type: 'update';
-    }
-    {id: '4';
-      title: 'Feature Deployment Summary';
-      href: '/reports/feature-deployment-2025-08-19';
-      desc: 'Overview of newly deployed features and their impact on user experience.';
-      category: 'features';
-      subcategory: 'deployment';
-      date: '2025-08-19';
-      relevance: 'medium';
-      tags: ['featuresdeploymentuximpact'];
-      source: 'deployment-tracker';
-      type: 'feature';
-    }
-    {id: '5';
-      title: 'System Health Dashboard';
-      href: '/reports/system-health-2025-08-19';
-      desc: 'Real-time system performance metrics and infrastructure health status.';
-      category: 'monitoring';
-      subcategory: 'system-health';
-      date: '2025-08-19';
-      relevance: 'medium';
-      tags: ['monitoringperformanceinfrastructurehealth'];
-      source: 'health-monitor';
-      type: 'report';
-    }
-    {id: '6';
-      title: 'User Behavior Insights';
-      href: '/reports/user-behavior-2025-08-19';
-      desc: 'Analysis of user interaction patterns and engagement optimization opportunities.';
-      category: 'analytics';
-      subcategory: 'user-behavior';
-      date: '2025-08-19';
-      relevance: 'high';
-      tags: ['analyticsuser-behaviorengagementoptimization'];
-      source: 'behavior-analyzer';
-      type: 'insight';
-=======
+
       id: '1';',
   title: 'Structured Data Audit Report';
       href: '/reports/structured-data-audit.json';',
@@ -195,84 +30,7 @@ const ContentCategorizer: React.FC = () => {;
       tags: ['seojson-ldschemaaudit'];',
   source: 'autonomous-auditor';
       type: 'report';
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    },;
-    {;
-      id: '2',;
-      title: 'Security Vulnerability Scan Results',;
-      href: '/reports/security-scan-2025-08-19',;
-      desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.',;
-      category: 'security',;
-      subcategory: 'vulnerability-scan',;
-      date: '2025-08-19',;
-      relevance: 'high',;
-      tags: ['securityvulnerabilityscanremediation'],;
-      source: 'security-scanner',;
-      type: 'security';
-    },;
-    {;
-      id: '3',;
-      title: 'AI Model Performance Update',;
-      href: '/reports/ai-model-performance-2025-08-19',;
-      desc: 'Latest performance metrics and optimization insights for deployed AI models.',;
-      category: 'ai',;
-      subcategory: 'performance',;
-      date: '2025-08-19',;
-      relevance: 'high',;
-      tags: ['aiperformanceoptimizationmetrics'],;
-      source: 'ai-monitor',;
-      type: 'update';
-    },;
-    {;
-      id: '4',;
-      title: 'Feature Deployment Summary',;
-      href: '/reports/feature-deployment-2025-08-19',;
-      desc: 'Overview of newly deployed features and their impact on user experience.',;
-      category: 'features',;
-      subcategory: 'deployment',;
-      date: '2025-08-19',;
-      relevance: 'medium',;
-      tags: ['featuresdeploymentuximpact'],;
-      source: 'deployment-tracker',;
-      type: 'feature';
-    },;
-    {;
-      id: '5',;
-      title: 'System Health Dashboard',;
-      href: '/reports/system-health-2025-08-19',;
-      desc: 'Real-time system performance metrics and infrastructure health status.',;
-      category: 'monitoring',;
-      subcategory: 'system-health',;
-      date: '2025-08-19',;
-      relevance: 'medium',;
-      tags: ['monitoringperformanceinfrastructurehealth'],;
-      source: 'health-monitor',;
-      type: 'report';
-    },;
-    {;
-      id: '6',;
-      title: 'User Behavior Insights',;
-      href: '/reports/user-behavior-2025-08-19',;
-      desc: 'Analysis of user interaction patterns and engagement optimization opportunities.',;
-      category: 'analytics',;
-      subcategory: 'user-behavior',;
-      date: '2025-08-19',;
-      relevance: 'high',;
-      tags: ['analyticsuser-behaviorengagementoptimization'],;
-      source: 'behavior-analyzer',;
-      type: 'insight';
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const ContentCategorizer: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState(),
   const [selectedCategory, setSelectedCategory] = useState('all'),
@@ -297,9 +55,7 @@ const contentItems: ContentItem[] = [
       source: 'autonomous-auditor';,
       type: 'report;
     },
-<<<<<<< HEAD
 
-=======
     {
       id: '2',
       title: 'Security Vulnerability Scan Results',
@@ -364,15 +120,8 @@ const contentItems: ContentItem[] = [
       tags: ['analyticsuser-behaviorengagementoptimization'],
       source: 'behavior-analyzer',
       type: 'insight'
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> merged-prs-20250907-203621
     }
     {id: '2';
       title: 'Security Vulnerability Scan Results';
@@ -384,7 +133,7 @@ const contentItems: ContentItem[] = [
       relevance: 'high';
       tags: ['securityvulnerabilityscanremediation'];
       source: 'security-scanner';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       type: 'security';
     {id: '3';',
   title: 'AI Model Performance Update';
@@ -426,115 +175,72 @@ const contentItems: ContentItem[] = [
   const categories: ContentCategory[] = [;
     {id: 'all';
       name: 'All Content';
-<<<<<<< HEAD
-      icon: Globe;
-      description: 'Complete collection of autonomous content';
-=======
+
 
   description: 'Complete collection of autonomous content';
 
->>>>>>> merged-prs-20250907-203621
+
       color: 'from-blue-500 to-cyan-500';
       count: contentItems.length;
     }
     {id: 'seo';
       name: 'SEO & Analytics';
-<<<<<<< HEAD
-      icon: BarChart3;
-      description: 'Search optimization and performance analytics';
-=======
+
 
   description: 'Search optimization and performance analytics';
 
->>>>>>> merged-prs-20250907-203621
+
       color: 'from-green-500 to-emerald-500';
       count: contentItems.filter(item => item.category === 'seo').length;
       subcategories: ['structured-dataperformancetechnical-seo'];
     }
     {id: 'security';
       name: 'Security & Compliance';
-<<<<<<< HEAD
-      icon: Shield;
-      description: 'Security assessments and compliance reports';
-=======
+
 
   description: 'Security assessments and compliance reports';
 
->>>>>>> merged-prs-20250907-203621
+
       color: 'from-red-500 to-orange-500';
       count: contentItems.filter(item => item.category === 'security').length;
       subcategories: ['vulnerability-scancompliancethreat-detection'];
     }
     {id: 'ai';
       name: 'AI & Machine Learning';
-<<<<<<< HEAD
-      icon: Brain;
-      description: 'AI model performance and insights';
-=======
+
 
   description: 'AI model performance and insights';
 
->>>>>>> merged-prs-20250907-203621
+
       color: 'from-purple-500 to-pink-500';
       count: contentItems.filter(item => item.category === 'ai').length;
       subcategories: ['performancetrainingdeployment'];
     }
     {id: 'features';
       name: 'Feature Updates';
-<<<<<<< HEAD
-      icon: Zap;
-      description: 'New features and system updates';
-=======
+
 
   description: 'New features and system updates';
 
->>>>>>> merged-prs-20250907-203621
+
       color: 'from-yellow-500 to-orange-500';
       count: contentItems.filter(item => item.category === 'features').length;
       subcategories: ['deploymentenhancementsroadmap'];
     }
     {id: 'monitoring';
       name: 'System Monitoring';
-<<<<<<< HEAD
-      icon: Cpu;
-      description: 'Infrastructure and system health';
-=======
+
 
   description: 'Infrastructure and system health';
 
->>>>>>> merged-prs-20250907-203621
+
       color: 'from-indigo-500 to-purple-500';
       count: contentItems.filter(item => item.category === 'monitoring').length;
       subcategories: ['system-healthperformanceinfrastructure'];
     }
     {id: 'analytics';
       name: 'User Analytics';
-<<<<<<< HEAD
-      icon: TrendingUp;
-      description: 'User behavior and engagement insights';
-      color: 'from-teal-500 to-cyan-500';
-      count: contentItems.filter(item => item.category === 'analytics').length;
-      subcategories: ['user-behaviorengagementconversion'];
-    }
-  ];
-  const contentTypes = [;
-    { id: 'all', name: 'All Types', icon: Globe }
-    { id: 'report', name: 'Reports', icon: BookOpen }
-    { id: 'update', name: 'Updates', icon: Zap }
-    { id: 'insight', name: 'Insights', icon: Lightbulb }
-    { id: 'guide', name: 'Guides', icon: Code }
-    { id: 'security', name: 'Security', icon: Shield }
-    { id: 'feature', name: 'Features', icon: TrendingUp }
-  ];
-  const dateRanges = [;
-    { id: 'all', name: 'All Time' }
-    { id: 'today', name: 'Today' }
-    { id: 'week', name: 'This Week' }
-    { id: 'month', name: 'This Month' }
-    { id: 'quarter', name: 'This Quarter' }
-  ];
-  const relevanceLevels = [;
-=======
+
 
   description: 'User behavior and engagement insights';
 
@@ -604,48 +310,8 @@ pr-12325
     { id: 'month';, name: 'This Month' ;}
     { id: 'quarter';, name: 'This Quarter' ;}']
   const relevanceLevels = [;
-<<<<<<< HEAD
-=======
->>>>>>> merged-prs-20250907-203621
-    { id: 'all', name: 'All Relevance', color: 'text-gray-400' }
-    { id: 'high', name: 'High Priority', color: 'text-green-400' }
-    { id: 'medium', name: 'Medium Priority', color: 'text-yellow-400' }
-    { id: 'low', name: 'Low Priority', color: 'text-red-400' }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-:components/ContentCategorizer.tsx
->>>>>>> merged-prs-20250907-203621
-  ];
-  const filteredItems = useMemo(() => {const filtered = contentItems.filter(item => {;
-      const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) |;
-                           item.desc.toLowerCase().includes(searchTerm.toLowerCase()) |;
-                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      const matchesCategory = selectedCategory === 'all' |item.category === selectedCategory;
-      const matchesSubcategory = selectedSubcategory === 'all' |item.subcategory === selectedSubcategory;
-      const matchesType = selectedType === 'all' |item.type === selectedType;
-      const matchesRelevance = selectedRelevance === 'all' |item.relevance === selectedRelevance;
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  ],;
-  const filteredItems = useMemo(() => {;
-    const filtered = contentItems.filter(item => {;
-      const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                           item.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),;
-      const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,;
-      const matchesSubcategory = selectedSubcategory === 'all' || item.subcategory === selectedSubcategory,;
-      const matchesType = selectedType === 'all' || item.type === selectedType,;
-      const matchesRelevance = selectedRelevance === 'all' || item.relevance === selectedRelevance,;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> merged-prs-20250907-203621
       return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance;
     });
     // Sort items;
@@ -653,33 +319,8 @@ pr-12325
       switch (sortBy) {;
         case 'date':;
           comparison = new Date(a.date).getTime() - new Date(b.date).getTime();
-<<<<<<< HEAD
-          break;
-=======
-<<<<<<< HEAD
-
-=======
-          break;
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-        case 'relevance':;
-          const relevanceOrder = { high: 3, medium: 2, low: 1 }
-          comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance];
-          break;
-        case 'title':;
-          comparison = a.title.localeCompare(b.title);
-          break;
-<<<<<<< HEAD
-      }
-      return sortOrder === 'asc' ? comparison : -comparison;
-    });
-=======
-=======
 
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   ],
 
   const filteredItems = useMemo(() => {
@@ -704,66 +345,41 @@ filtered.sort((a, b) => {
           comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance],
           break,        case 'title':
           comparison = a.title.localeCompare(b.title),
-<<<<<<< HEAD
 
-=======
           break
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       return sortOrder === 'asc' ? comparison : -comparison;
->>>>>>> merged-prs-20250907-203621
+
     return filtered;
   }, [searchTerm, selectedCategory, selectedSubcategory, selectedType, selectedRelevance, sortBy, sortOrder]);
   const getCategoryIcon = (category: string) => {const cat = categories.find(c => c.id === category);
     return cat ? cat.icon : Globe;
-<<<<<<< HEAD
-  }
-=======
->>>>>>> merged-prs-20250907-203621
+
+
   const getRelevanceColor = (relevance: string) => {switch (relevance) {;
       case 'high': return 'text-green-400';
       case 'medium': return 'text-yellow-400';
       case 'low': return 'text-red-400';
       default: return 'text-gray-400';
-<<<<<<< HEAD
-    }
-}
-  const getTypeIcon = (type: string) => {
-    const typeInfo = contentTypes.find(t => t.id === type)
-    return typeInfo ? typeInfo.icon : Globe
-  }
-  const clearAllFilters = () => {
-    setSearchTerm('')
-=======
+
   const getTypeIcon = (type: string) => {
     const typeInfo = contentTypes.find(t => t.id === type)
     return typeInfo ? typeInfo.icon : Globe;
   const clearAllFilters = () => {
     setSearchTerm()
->>>>>>> merged-prs-20250907-203621
+
     setSelectedCategory('all')
     setSelectedSubcategory('all')
     setSelectedType('all')
     setSelectedDateRange('all')
     setSelectedRelevance('all')
-<<<<<<< HEAD
-  }
-  return (
-    <div className=&quot;space-y-6&quot;>
-      {/* Search and Advanced Filters */}
-=======
+
   return (
     <div className=&quot;space-y-6&quot;>
 </div>
->>>>>>> merged-prs-20250907-203621
+
       <div className=&quot;space-y-4&quot;>
         <div className=&quot;relative&quot;>
           <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5&quot; />
@@ -773,226 +389,63 @@ type=&quot;text&quot;
             placeholder=&quot;Search content by title, description, tags, or keywords...&quot;
             value={searchTerm})
             onChange={(e) => setSearchTerm(e.target.value)}
-<<<<<<< HEAD
-            className=&quot;w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;
-          />
-        </div>
-        {/* Advanced Filter Controls */}
-        <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4&quot;>
-          {/* Category Filter */}          <div>
-            <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Category</label>
-=======
+
 </input>
         <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4&quot;>
           {/* Category Filter */}          <div>
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Category</label>
-<<<<<<< HEAD
-:components/ContentCategorizer.tsx
->>>>>>> merged-prs-20250907-203621
-            <select
-              value={selectedCategory}
-              onChange={(e) => {setSelectedCategory(e.target.value);
-                setSelectedSubcategory('all');
-              }}
-className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;
-            >
-<<<<<<< HEAD
-=======
-=======
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-            <select,
-value={selectedCategory}
-              onChange={(e) => {
-                setSelectedCategory(e.target.value),
-                setSelectedSubcategory('all')
-              }}
-              className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;            >
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
               {categories.map(category => (
                 <option key={category.id} value={category.id}>
                   {category.name} ({category.count})
                 </option>
               ))}
-<<<<<<< HEAD
-:components/ContentCategorizer.tsx
-            </select>;
-          </div>;
-          {/* Subcategory Filter */}
-<div>
-=======
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-            </select>
-          </div>
 
-          {_/* Subcategory Filter */}
-          <div>
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Subcategory</label>
             <select,
 value={selectedSubcategory}
               onChange={(e) => setSelectedSubcategory(e.target.value)}
-<<<<<<< HEAD
-              className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;
-            >
-              <option value=&quot;all&quot;>All Subcategories</option>
-              {selectedCategory !== 'all' && categories.find(c => c.id === selectedCategory)?.subcategories?.map(sub => (
-                <option key={sub} value={sub}>
-                  {sub.replace('- ').replace(/\b\w/g, l => l.toUpperCase())}
-                </option>;
-              ))}
-            </select>;
-          </div>;
-          {/* Content Type Filter */}
-<div>
-            <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Content Type</label>
-            <select,
-value={selectedType}
-              onChange={(e) => setSelectedType(e.target.value)}
-              className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;            >
-              {contentTypes.map(type => (
-                <option key={type.id} value={type.id}>
-                  {type.name}
-=======
+
 </select>
               <option value=&quot;all&quot;>All Subcategories</option>
                 <option key={sub} value={sub}>
-<<<<<<< HEAD
-:components/ContentCategorizer.tsx
-                  {sub.replace('- ').replace(/\b\w/g, l => l.toUpperCase())}
->>>>>>> merged-prs-20250907-203621
-                </option>;
-              ))}
-            </select>;
-          </div>;
-          {/* Content Type Filter */}
-<div>
-=======
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                  {sub.replace('- ').replace(/\b\w/g, l => l.toUpperCase())}                </option>
-              ))}
-            </select>
-          </div>
 
-          {_/* Content Type Filter */}
-          <div>
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Content Type</label>
 value={selectedType}
               onChange={(e) => setSelectedType(e.target.value)}
                 <option key={type.id} value={type.id}>
                 </option>;
-<<<<<<< HEAD
 
-=======
               ))}
-<<<<<<< HEAD
-:components/ContentCategorizer.tsx
-            </select>;
-          </div>;
-          {/* Relevance Filter */}
-<div>
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-            </select>
-          </div>
 
-          {_/* Relevance Filter */}
-          <div>
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Relevance</label>
 value={selectedRelevance}
               onChange={(e) => setSelectedRelevance(e.target.value)}
-<<<<<<< HEAD
-              className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;            >
-              {relevanceLevels.map(level => (
+
                 <option key={level.id} value={level.id}>
-                  {level.name}
-                </option>;
-              ))}
-=======
-                <option key={level.id} value={level.id}>
->>>>>>> merged-prs-20250907-203621
+
             </select>;
           </div>;
-<<<<<<< HEAD
 
-=======
         </div>;
-<<<<<<< HEAD
-;
-:components/ContentCategorizer.tsx
-;
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-=======
 
-;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         {/* Sort Controls and Clear Filters */}
-<<<<<<< HEAD
-=======
 
->>>>>>> merged-prs-20250907-203621
+
+
 <div className=&quot;flex flex-wrap items-center justify-between gap-4&quot;>
           <div className=&quot;flex items-center gap-4&quot;>
             <div className=&quot;flex items-center gap-2&quot;>
               <label className=&quot;text-sm text-white/70&quot;>Sort by:</label>
-<<<<<<< HEAD
-              <select,
-value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as 'date' | 'relevance' | 'title')}
-                className=&quot;px-3 py-1 bg-white/5 border border-white/10 rounded text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50&quot;              >
-                <option value=&quot;date&quot;>Date</option>
-                <option value=&quot;relevance&quot;>Relevance</option>
-                <option value=&quot;title&quot;>Title</option>
-              </select>
-              <button,
-onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
-                className=&quot;p-1 bg-white/5 border border-white/10 rounded hover:bg-white/10 transition-colors duration-200&quot;              >
-                {sortOrder === 'asc' ? '↑' : '↓'}
-=======
+
 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as 'date' | 'relevance' | 'title')}
                 <option value=&quot;date&quot;>Date</option>
@@ -1000,50 +453,16 @@ value={sortBy}
                 <option value=&quot;title&quot;>Title</option>
               <button,
 onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
-<<<<<<< HEAD
 
-=======
-                className=&quot;p-1 bg-white/5 border border-white/10 rounded hover:bg-white/10 transition-colors duration-200&quot;              >
-                {sortOrder === 'asc' ? '↑' : '↓'}
-<<<<<<< HEAD
-:components/ContentCategorizer.tsx
->>>>>>> merged-prs-20250907-203621
-              </button>;
-            </div>;
-          </div>;
-          <button;
-            onClick={clearAllFilters}
-className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200&quot;
-          >
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              </button>
-            </div>
-          </div>
-          
-          <button,
-onClick={clearAllFilters}
-            className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200&quot;          >
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
             Clear All Filters
           </button>
         </div>
       </div>
-<<<<<<< HEAD
-=======
+
 :components/ContentCategorizer.tsx
->>>>>>> merged-prs-20250907-203621
+
       {/* Category Pills */}
       <div>
         <div className=&quot;flex flex-wrap gap-2&quot;>
@@ -1074,26 +493,15 @@ onClick={clearAllFilters}
               <category.icon className=&quot;w-4 h-4&quot; />
 </category>
               <span className=&quot;text-xs bg-white/10 px-2 py-1 rounded-full&quot;>
-<<<<<<< HEAD
-</span>
-              </span>;
-            </button>;
 
-=======
                 {category.count}              </span>
             </button>
           ))}
         </div>;
       </div>;
 ;
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       {/* Results Summary */}
 <div className=&quot;text-sm text-white/60&quot;>
         Showing {filteredItems.length} of {contentItems.length} items
@@ -1102,27 +510,13 @@ onClick={clearAllFilters}
         {selectedType !== 'all' && ` of type ${contentTypes.find(t => t.id === selectedType)?.name}`}
       </div>;
       {/* Content Grid */}
-<<<<<<< HEAD
-
-:components/ContentCategorizer.tsx
-
-=======
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                   {item.type}
                 </div>;
               </div>;
-<<<<<<< HEAD
-              {/* Title and Description */}
-<h3 className=&quot;text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200&quot;>
-                {item.title}
-              </h3>
-=======
+
       <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">        {filteredItems.map((item) => {
           const CategoryIcon = getCategoryIcon(item.category),
           const TypeIcon = getTypeIcon(item.type),
@@ -1153,83 +547,40 @@ onClick={clearAllFilters}
                   <span className=&quot;text-xs text-white/60 uppercase tracking-wider&quot;>
                 <div className=&quot;flex items-center gap-1 text-xs text-white/50&quot;>
                   <TypeIcon className=&quot;w-3 h-3&quot; />
-<<<<<<< HEAD
-
-=======
-                  {item.type}
-                </div>;
-              </div>;
-;
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               {/* Title and Description */}
 
 <h3 className=&quot;text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200&quot;>
 </h3>
->>>>>>> merged-prs-20250907-203621
+
               <p className=&quot;text-sm text-white/75 mb-4 leading-relaxed&quot;>
 </p>
               </p>;
-<<<<<<< HEAD
-;
-:components/ContentCategorizer.tsx
-;
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-=======
 
-<<<<<<< HEAD
-=======
-;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
               {/* Tags */}
 
 <div className=&quot;flex flex-wrap gap-1 mb-4&quot;>
                   <span key={index} className=&quot;px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot;>
-<<<<<<< HEAD
 
-=======
                     {tag}
                   </span>;
                 ))}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-:components/ContentCategorizer.tsx
->>>>>>> merged-prs-20250907-203621
-{item.tags.length > 3 && (
-                  <span className=&quot;px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot;>
-                    +{item.tags.length - 3}
-                  </span>;
-                )}
-              </div>;
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {item.tags.length > 3 && (
                   <span className=&quot;px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot;>                    +{item.tags.length - 3}
                   </span>
                 )}
               </div>;
 ;
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
+
+
               {/* Metadata */}
 
 <div className=&quot;flex items-center justify-between text-xs text-white/50 mb-4&quot;>
@@ -1242,59 +593,10 @@ onClick={clearAllFilters}
 
               <div className=&quot;flex items-center justify-between&quot;>
                 <span className=&quot;text-xs text-white/40&quot;>
-<<<<<<< HEAD
 
-=======
                   Source: {item.source}
                 </span>
-<<<<<<< HEAD
-              </div>
-              {/* Source and Action */}
-              <div className=&quot;flex items-center justify-between&quot;>
-                <span className=&quot;text-xs text-white/40&quot;>
-                  Source: {item.source}
-                </span>
-                <a
-                  href={item.href}
-        })}
-      </div>;
-      {/* No Results */}
-{filteredItems.length === 0 && (
-        <div className=&quot;text-center py-12&quot;>
-          <div className=&quot;text-white/40 text-6xl mb-4&quot;>🔍</div>
-          <h3 className=&quot;text-xl font-semibold text-white/70 mb-2&quot;>No content found</h3>
-          <p className=&quot;text-white/50 mb-4&quot;>            Try adjusting your search terms or filters to find what you're looking for.
-          </p>
-          <button,
-onClick={clearAllFilters}
-            className=&quot;px-6 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-lg text-cyan-300 hover:bg-cyan-500/30 transition-all duration-200&quot;
-          >
-            Reset All Filters
-          </button>
-        </div>
-      )}
-    </div>;
-  );
-}
-export default ContentCategorizer;
-=======
-<<<<<<< HEAD
-:components/ContentCategorizer.tsx
-                <a
-                  href={item.href}
-                <a 
-                  href={item.href} 
 
-=======
-
-                <a 
-                  href={item.href} 
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        })}
-      </div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                 <a,
 href={item.href} 
                   target="blank"""
@@ -1304,10 +606,7 @@ href={item.href}
                   rel=&quot;noopener&quot;
                   className=&quot;inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 transition-colors duration-200 text-sm font-medium&quot;
                 >
-<<<<<<< HEAD
-</a>
-                  <span aria-hidden></span>
-=======
+
                   Open Content
                   <span aria-hidden>→</span>
                 </a>
@@ -1317,21 +616,14 @@ href={item.href}
         })}
       </div>;
 ;
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* No Results */}
 {filteredItems.length === 0 && (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
         <div className=&quot;text-center py-12&quot;>
           <div className=&quot;text-white/40 text-6xl mb-4&quot;></div>
 
           <p className=&quot;text-white/50 mb-4&quot;>            Try adjusting your search terms or filters to find what you're looking for.
 onClick={clearAllFilters}
             className=&quot;px-6 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-lg text-cyan-300 hover:bg-cyan-500/30 transition-all duration-200&quot;
->>>>>>> merged-prs-20250907-203621
+

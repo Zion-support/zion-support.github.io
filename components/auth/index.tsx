@@ -1,22 +1,5 @@
-<<<<<<< HEAD
-<div className="container mx-auto px-4 py-10"> <h1 className="text-2xl font-semibold">Sign In</h1> <p className="mt-2 text-gray-600 dark: text-gray-300">Authentication UI coming soon.</p>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 
-
-
-
-
-
-=======
-return (
->>>>>>> origin/chore/fix-lint-and-merge
 
   return (
     <div className='container mx-auto px-4 py-10'>;'
@@ -31,23 +14,8 @@ return (
 }
 
 import React from 'react';
-<<<<<<< HEAD
-export default function AuthIndexPage() {return (<div className='container mx-auto px-4 py-10'>;
-      <h1 className='text-2xl font-semibold'>Sign In</h1>;
-      <p className='mt-2 text-gray-600 dark:text-gray-300'>;
-        Authentication UI coming soon.;
-      </p>;
-  );
 
-}
 
-<<<<<<< HEAD
-  );
-
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import React from 'react';
 export default function AuthIndexPage() {
   return (
@@ -68,14 +36,7 @@ function AuthIndexPage() {return (<div className=container mx - auto px - 4 py -
   return (
     <div className='container mx-auto px-4 py-10>
       <h1 className=text-2xl font-semibold'>Sign In</h1>
-=======
 
-export default function AuthIndexPage() {
-  return (
-    <div className='container mx-auto px-4 py-10'>
-      <h1 className='text-2xl font-semibold'>Sign In</h1>
-
->>>>>>> origin/chore/fix-lint-and-merge
       <p className='mt-2 text-gray-600 dark:text-gray-300'>
         Authentication UI coming soon.
 
@@ -106,27 +67,13 @@ function AuthIndexPage() {
       <p className="mt - 2 text - gray - 600 dark: text - gray - 300">Authentication UI coming soon.</p>;
     </div>);
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
 
   )
 }
 
-import React from 'react';
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
-  )
-}
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function AuthIndexPage() {
   return (
     <div className='container mx-auto px-4 py-10'>
@@ -141,20 +88,7 @@ export default function AuthIndexPage() {
     <div className="container mx-auto px-4 py-10">"
       <h1 className="text-2xl font-semibold">Sign In</h1>"
       <p className="mt-2 text-gray-600 dark: text-gray-300">Authentication UI coming soon.</p>
-<<<<<<< HEAD
-    </div>
-  );
 
-    </div>;
-  );
-}
-
-}
-    </div>
-  );
-}
-}
-=======
 
     </div>
 );
@@ -162,36 +96,8 @@ export default function AuthIndexPage() {
     </div>
   );
 
-<<<<<<< HEAD
-    </div>;
-  );
-}
-
-}
-    </div>
-  );
-}
-}
-
-    </div>
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
 
 
 
 
 
-
-    </div>
-  );
-
-=======
-pr-12243
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621

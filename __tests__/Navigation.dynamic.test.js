@@ -1,64 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import _React from 'react';  import '@testing-library/jest-dom'; import Navigationdynamic from '../components/Navigation.dynamic'; describe('Navigationdynamic',() => { test('renders without crashing',() => { render(<Navigationdynamic />); expect(screen.getByTestId('navigation.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Navigationdynamic />)}); test('handles user interactions',() => { render(<Navigationdynamic />)}); test('applies correct styling',() => { render(<Navigationdynamic />)})});
-import _React from 'react';  import '@testing-library/jest-dom'; import Navigationdynamic from '../components/Navigation.dynamic'; describe('Navigationdynamic',() => { test('renders without crashing',() => { render(<Navigationdynamic />); expect(screen.getByTestId('navigation.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Navigationdynamic />)}); test('handles user interactions',() => { render(<Navigationdynamic />)}); test('applies correct styling',() => { render(<Navigationdynamic />)})});
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
-<<<<<<< HEAD
-describe('Navigation.dynamic.test', () => {
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react'
-import { render, screen, fireEvent } from '@testing-library/react'
-import '@testing-library/jest-dom'
-import Navigationdynamic from '../components/Navigation.dynamic'
-describe('Navigationdynamic'
-  test('renders without crashing'
-    expect(screen.getByTestId('navigation.dynamic'
-  test('displays correct content'
-  test('handles user interactions'
-  test('applies correct styling'
-const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Navigationdynamic from "./components/Navigation.dynamic"; describe('Navigationdynamic', () => { test("renders without crashing",() => { render(<Navigationdynamic />); expect(screen.getByTestId("navigation.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Navigationdynamic />)}); test("handles user interactions",() => { render(<Navigationdynamic />)}); test("applies correct styling"
-import _React from 'react';  import '@testing-library/jest-dom'; import Navigationdynamic from '../components/Navigation.dynamic'; describe('Navigationdynamic',() => { test('renders without crashing',() => { render(<Navigationdynamic />); expect(screen.getByTestId('navigation.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Navigationdynamic />)}); test('handles user interactions',() => { render(<Navigationdynamic />)}); test('applies correct styling',() => { render(<Navigationdynamic />)})});
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Navigationdynamic from '../components/Navigation.dynamic';
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-describe('Navigationdynamic', () => {
->>>>>>> merged-prs-20250907-203621
   test('renders without crashing', () => {
     render(<Navigationdynamic />);
     expect(screen.getByTestId('navigation.dynamic')).toBeInTheDocument();
   });
-<<<<<<< HEAD
 
-  test('displays correct content', () => {
-    render(<Navigationdynamic />);
-    // Add specific content tests based on component
-  });
 
-  test('handles user interactions', () => {
-    render(<Navigationdynamic />);
-    // Add interaction tests based on component functionality
-  });
-
-  test('applies correct styling', () => {
-    render(<Navigationdynamic />);
-    // Add styling tests if needed
-  });
-});
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   test('displays correct content', () => {
     render(<Navigationdynamic />);
   });
@@ -70,13 +17,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   });
 });
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Navigationdynamic from "./components/Navigation.dynamic"; describe("Navigationdynamic",() => { test("renders without crashing",() => { render(<Navigationdynamic />); expect(screen.getByTestId("navigation.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Navigationdynamic />)}); test("handles user interactions",() => { render(<Navigationdynamic />)}); test("applies correct styling",() => { render(<Navigationdynamic />)})});''"
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react';
-import Navigation from '../components/Navigation.dynamic';
 
-import React from 'react';
-
-=======
 import _React from 'react';  import '@testing-library/jest-dom'; import Navigationdynamic from '../components/Navigation.dynamic'; describe('Navigationdynamic',() => { test('renders without crashing',() => { render(<Navigationdynamic />); expect(screen.getByTestId('navigation.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Navigationdynamic />)}); test('handles user interactions',() => { render(<Navigationdynamic />)}); test('applies correct styling',() => { render(<Navigationdynamic />)})});
 import _React from 'react';  import '@testing-library/jest-dom'; import Navigationdynamic from '../components/Navigation.dynamic'; describe('Navigationdynamic',() => { test('renders without crashing',() => { render(<Navigationdynamic />); expect(screen.getByTestId('navigation.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Navigationdynamic />)}); test('handles user interactions',() => { render(<Navigationdynamic />)}); test('applies correct styling',() => { render(<Navigationdynamic />)})});
 ursor/add-new-services-and-deploy-updates-0462
@@ -96,60 +37,30 @@ describe('Navigation', () => {
   });
 });
 origin/main
-=======
-
-import React from 'react';
 
 
 
-
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import Navigationdynamic from '../components/Navigation && Navigation.dynamic'
 describe('Navigationdynamic'
   test('renders without crashing'
-<<<<<<< HEAD
-=======
+
 
 });
 
-<<<<<<< HEAD
-    expect(screen && screen.getByTestId('navigation ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Navigationdynamic from "./components/Navigation ; describe('Navigationdynamic', () => { test("renders without crashing",() => { render(<Navigationdynamic />); expect(screen && screen.getByTestId("navigation && navigation.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Navigationdynamic />)}); test("handles user interactions",() => { render(<Navigationdynamic />)}); test("applies correct styling"
 
     expect(screen && screen.getByTestId('navigation ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Navigationdynamic from "./components/Navigation ; describe('Navigationdynamic', () => { test("renders without crashing",() => { render(<Navigationdynamic />); expect(screen && screen.getByTestId("navigation && navigation.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Navigationdynamic />)}); test("handles user interactions",() => { render(<Navigationdynamic />)}); test("applies correct styling"
-=======
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Navigation from '../components/Navigation';
->>>>>>> origin/main
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    expect(screen && screen.getByTestId('navigation ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Navigationdynamic from "./components/Navigation ; describe('Navigationdynamic', () => { test("renders without crashing",() => { render(<Navigationdynamic />); expect(screen && screen.getByTestId("navigation && navigation.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Navigationdynamic />)}); test("handles user interactions",() => { render(<Navigationdynamic />)}); test("applies correct styling"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 
 describe('Navigation', () => {
   test('renders without crashing', () => {
     render(<Navigation />);
     expect(screen.getByTestId('navigation.dynamic')).toBeInTheDocument();
   });
-<<<<<<< HEAD
-});
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 import { render, screen } from '@testing - library / react';
 import '@testing - library / jest - dom';
 import Navigation from '../components / Navigation.dynamic';
@@ -157,26 +68,12 @@ describe ('Navigation', () => {
   test ('renders without crashing', () => {
     render (<Navigation />);
     expect (screen.getByTestId ('navigation')).toBeInTheDocument ();
-=======
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
 
-describe('Navigation.dynamic.test', () => {
-  test('renders without crashing', () => {
-    expect(true).toBe(true);
->>>>>>> pr/11282
   });
   test ('displays navigation items', () => {
     // Test navigation items;
 });
-<<<<<<< HEAD
 
-import _React from 'react';  import '@testing-library/jest-dom'; import Navigationdynamic from '../components/Navigation.dynamic'; describe('Navigationdynamic',() => { test('renders without crashing',() => { render(<Navigationdynamic />); expect(screen.getByTestId('navigation.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Navigationdynamic />)}); test('handles user interactions',() => { render(<Navigationdynamic />)}); test('applies correct styling',() => { render(<Navigationdynamic />)})});
-
-<<<<<<< HEAD
-import _React from 'react';  import '@testing-library/jest-dom'; import Navigationdynamic from '../components/Navigation.dynamic'; describe('Navigationdynamic',() => { test('renders without crashing',() => { render(<Navigationdynamic />); expect(screen.getByTestId('navigation.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Navigationdynamic />)}); test('handles user interactions',() => { render(<Navigationdynamic />)}); test('applies correct styling',() => { render(<Navigationdynamic />)})});
-=======
   test('displays correct content', () => {
     render(<Navigation />);
     // Add specific content tests based on component
@@ -190,22 +87,6 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Navigati
     // Add styling tests if needed
   });
 });
->>>>>>> origin/main
-=======
-<<<<<<< HEAD
-import _React from 'react';  import '@testing-library/jest-dom'; import Navigationdynamic from '../components/Navigation.dynamic'; describe('Navigationdynamic',() => { test('renders without crashing',() => { render(<Navigationdynamic />); expect(screen.getByTestId('navigation.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Navigationdynamic />)}); test('handles user interactions',() => { render(<Navigationdynamic />)}); test('applies correct styling',() => { render(<Navigationdynamic />)})});
->>>>>>> pr/11282
-=======
-<<<<<<< HEAD
-    expect(screen.getByTestId('navigation.dynamic'
-  test('displays correct content'
-  test('handles user interactions'
-  test('applies correct styling'
-const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Navigationdynamic from "./components/Navigation.dynamic"; describe('Navigationdynamic', () => { test("renders without crashing",() => { render(<Navigationdynamic />); expect(screen.getByTestId("navigation.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Navigationdynamic />)}); test("handles user interactions",() => { render(<Navigationdynamic />)}); test("applies correct styling"
-origin/automation-improvements-final
-});
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+
+

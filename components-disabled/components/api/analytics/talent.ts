@@ -35,45 +35,8 @@ function handler() {
     const supabase = createServerClient ();
     const talent_id = (req.query.talent_id as string) || null,
     const [views_r, invites_r, apps_r, tags_r] = await Promise.all_settled ([;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      supabase;
-        .from ('profile_views');'
-        .select ('id, talent_id');'
-        .eq ('talent_id', talent_id),'
-      supabase;
-        .from ('quotes');'
-        .select ('id, talent_id, status');'
-        .eq ('talent_id', talent_id),'
-      supabase;
-        .from ('applications');'
-        .select ('id, talent_id, status');'
-        .eq ('talent_id', talent_id),'
-      supabase;
-        .from ('search_matches');'
-        .select ('talent_id, tag');'
-        .eq ('talent_id', talent_id),'
-    ]);
-      views_r.status === 'fulfilled' && views_r.value.data;'
-=======
->>>>>>> merged-prs-20250907-203621
-      supabase;)
-        .from ('profile_views');
-        .select ('id, talent_id');
-        .eq ('talent_id', talent_id),
-        .from ('quotes');
-        .select ('id, talent_id, status');
-        .from ('applications');
-        .from ('search_matches');
-        .select ('talent_id, tag');
-        .eq ('talent_id', talent_id),']
-    const views =;
-      views_r.status === 'fulfilled' && views_r.value.data;
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
         ? (views_r.value.data as any[]);
         : [];
     const invites =;

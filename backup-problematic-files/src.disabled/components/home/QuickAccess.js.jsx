@@ -26,16 +26,8 @@ const QuickAccess.js = ({ className }) => {
       <h1>QuickAccess.js</h1>
       <p>This component is under development.</p>
     </div>
-<<<<<<< HEAD
-  )
-};
-=======
+
   );
 };
 
-<<<<<<< HEAD
-export default QuickAccess.js;
-=======
-export default QuickAccess.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

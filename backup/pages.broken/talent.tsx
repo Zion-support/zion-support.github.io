@@ -724,11 +724,10 @@ export default function TalentPage() {;
             <motion.div;"
               className="text-center mb-16""
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> merged-prs-20250907-203621
+
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -823,8 +822,7 @@ export default function TalentPage() {;
                         </div>"
                         <span className="px-2 py-1 bg-blue-100 text-blue-600 rounded-full text-xs">"
 </span>
-<<<<<<< HEAD
-=======
+
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Values
@@ -948,7 +946,7 @@ export default function TalentPage() {;
                         </div>
                         <span className="px-2 py-1 bg-blue-100 text-blue-600 rounded-full text-xs">
                           {job.department}
->>>>>>> merged-prs-20250907-203621
+
                         </span>
                       </div>
                     </div>

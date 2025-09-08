@@ -1,32 +1,22 @@
 const nodemailer = require('nodemailer')
 class AlertingSystem {
   constructor() {
-<<<<<<< HEAD
-    this.transporter = nodemailer.createTransporter({
-      "service": 'gmail',
-      "auth": {
-        user: process.env.ALERT_EMAIL_USER,
-        "pass": 'process.env.ALERT_EMAIL_PASS'
-=======
+
     this && this.transporter = nodemailer && nodemailer.createTransporter({
       "service": 'gmail',
       "auth": {
         user: process && process.env.ALERT_EMAIL_USER,
         "pass": 'process && process.env.ALERT_EMAIL_PASS'
->>>>>>> merged-prs-20250907-203621
+
       }
     })}
   async sendAlert(subject, message, severity = 'warning') {
     const mailOptions = {
-<<<<<<< HEAD
-      "from": 'process.env.ALERT_EMAIL_USER',
-      "to": 'process.env.ALERT_EMAIL_RECIPIENTS',
-      "subject": `[${severity.toUpperCase()}] ${subject}`,
-=======
+
       "from": 'process && process.env.ALERT_EMAIL_USER',
       "to": 'process && process.env.ALERT_EMAIL_RECIPIENTS',
       "subject": `[${severity && severity.toUpperCase()}] ${subject}`,
->>>>>>> merged-prs-20250907-203621
+
       "text": 'message',
       "html": `
         <h2>${subject}</h2>
@@ -37,11 +27,9 @@ class AlertingSystem {
       `
    };
     try {
-<<<<<<< HEAD
-      await this.transporter.sendMail(mailOptions);
-=======
+
       await this && this.transporter.sendMail(mailOptions);
->>>>>>> merged-prs-20250907-203621
+
       // Alert sent successfully
     } catch {
       // Failed to send alert
@@ -51,41 +39,7 @@ class AlertingSystem {
     const alerts = [];
     // Check error rate
     if ( {
-<<<<<<< HEAD
-      alerts.push({
-        "type": 'error_rate',
-        "message": `Error rate is ${metrics.errorRate.toFixed(2)}% ("threshold": '5%)`',
-        "severity": 'critical'
-      })}
-    // Check response time
-    if (metrics.avgResponseTime > 2000) {
-      alerts.push({
-        "type": 'response_time',
-        "message": `Average response time is ${metrics.avgResponseTime}ms ("threshold": '2000ms)`',
-        "severity": 'warning'
-      })}
-    // Check memory usage
-    const latestMemory = metrics.memoryUsage[metrics.memoryUsage.length - 1) {
-     {
-      alerts.push({
-        "type": 'error_rate',
-        "message": `Error rate is ${metrics.errorRate.toFixed(2)}% ("threshold": 5%)`,
-        "severity": 'critical'
-      })}
-    // Check response time
-    if (metrics.avgResponseTime > 2000) {
-      alerts.push({
-        "type": 'response_time',
-        "message": `Average response time is ${metrics.avgResponseTime}ms ("threshold": 2000ms)`,
-        "severity": 'warning'
-      })}
-    // Check memory usage
-    const latestMemory = metrics.memoryUsage[metrics.memoryUsage.length - 1}];
-    if ( { // 100MB
-      alerts.push({
-        "type": 'memory_usage',
-        "message": `Memory usage is ${Math.round(latestMemory.heapUsed / 1024 / 1024)}MB ("threshold": '100MB)`',
-=======
+
       alerts && alerts.push({
         "type": 'error_rate',
         "message": `Error rate is ${metrics && metrics.errorRate.toFixed(2)}% ("threshold": '5%)`',
@@ -119,29 +73,21 @@ class AlertingSystem {
       alerts && alerts.push({
         "type": 'memory_usage',
         "message": `Memory usage is ${Math && Math.round(latestMemory && latestMemory.heapUsed / 1024 / 1024)}MB ("threshold": '100MB)`',
->>>>>>> merged-prs-20250907-203621
+
         "severity": 'warning'
       })}
     return alerts) {
      { // 100MB
-<<<<<<< HEAD
-      alerts.push({
-        "type": 'memory_usage',
-        "message": `Memory usage is ${Math.round(latestMemory.heapUsed / 1024 / 1024)}MB ("threshold": 100MB)`,
-=======
+
       alerts && alerts.push({
         "type": 'memory_usage',
         "message": `Memory usage is ${Math && Math.round(latestMemory && latestMemory.heapUsed / 1024 / 1024)}MB ("threshold": 100MB)`,
->>>>>>> merged-prs-20250907-203621
+
         "severity": 'warning'
       })}
     return alerts}}
 }
-<<<<<<< HEAD
-module.exports = AlertingSystem;
-const nodemailer = require('nodemailer') class AlertingSystem { constructor() { this.transporter = nodemailer.createTransporter({ service: 'gmail',auth: { user: process.env.ALERT_EMAIL_USER,pass: 'process.env.ALERT_EMAIL_PASS' } })} async sendAlert(subject,message,severity = 'warning') { const mailOptions = { from: 'process.env.ALERT_EMAIL_USER',to: 'process.env.ALERT_EMAIL_RECIPIENTS',subject: `[${severity.toUpperCase()}] ${subject}`,text: 'message',html: ` <h2>${subject}</h2> <p><strong>Severity:</strong> ${severity}</p> <p><strong>Time:</strong> ${new Date().toISOString()}</p> <p><strong>Message:</strong></p> <pre>${message}</pre> ` ; }; try { await this.transporter.sendMail(mailOptions)} catch { } } checkThresholds(metrics) { const alerts = [;]; if ( { alerts.push({ type: 'error_rate',message: `Error rate is ${metrics.errorRate.toFixed(2)}% (threshold: '5%)`',severity: 'critical' })} if (metrics.avgResponseTime > 2000) { alerts.push({ type: 'response_time',message: `Average response time is ${metrics.avgResponseTime}ms (threshold: '2000ms)`',severity: 'warning' })} const latestMemory = metrics.memoryUsage[metrics.memoryUsage.length - 1) { { alerts.push({ type: 'error_rate',message: `Error rate is ${metrics.errorRate.toFixed(2)}% (threshold: '5%)`',severity: 'critical' })} if (metrics.avgResponseTime > 2000) { alerts.push({ type: 'response_time',message: `Average response time is ${metrics.avgResponseTime}ms (threshold: '2000ms)`',severity: 'warning' })} const latestMemory = metrics.memoryUsage[metrics.memoryUsage.length - 1}]; if ( { alerts.push({ type: 'memory_usage',message: `Memory usage is ${Math.round(latestMemory.heapUsed / 1024 / 1024)}MB (threshold: '100MB)`',severity: 'warning' })} return alerts) { { alerts.push({ type: 'memory_usage',message: `Memory usage is ${Math.round(latestMemory.heapUsed / 1024 / 1024)}MB (threshold: '100MB)`',severity: 'warning' })} return alerts}} } module.exports = AlertingSystem;
-const nodemailer = require('nodemailer') class AlertingSystem { constructor() { this.transporter = nodemailer.createTransporter({ service: 'gmail',auth: { user: process.env.ALERT_EMAIL_USER,pass: 'process.env.ALERT_EMAIL_PASS' } })} async sendAlert(subject,message,severity = 'warning') { const mailOptions = { from: 'process.env.ALERT_EMAIL_USER',to: 'process.env.ALERT_EMAIL_RECIPIENTS',subject: `[${severity.toUpperCase()}] ${subject}`,text: 'message',html: ` <h2>${subject}</h2> <p><strong>Severity:</strong> ${severity}</p> <p><strong>Time:</strong> ${new Date().toISOString()}</p> <p><strong>Message:</strong></p> <pre>${message}</pre> ` }; try { await this.transporter.sendMail(mailOptions)} catch { } } checkThresholds(metrics) { const alerts = []; if ( { alerts.push({ type: 'error_rate',message: `Error rate is ${metrics.errorRate.toFixed(2)}% (threshold: '5%)`',severity: 'critical' })} if (metrics.avgResponseTime > 2000) { alerts.push({ type: 'response_time',message: `Average response time is ${metrics.avgResponseTime}ms (threshold: '2000ms)`',severity: 'warning' })} const latestMemory = metrics.memoryUsage[metrics.memoryUsage.length - 1) { { alerts.push({ type: 'error_rate',message: `Error rate is ${metrics.errorRate.toFixed(2)}% (threshold: 5%)`,severity: 'critical' })} if (metrics.avgResponseTime > 2000) { alerts.push({ type: 'response_time',message: `Average response time is ${metrics.avgResponseTime}ms (threshold: 2000ms)`,severity: 'warning' })} const latestMemory = metrics.memoryUsage[metrics.memoryUsage.length - 1}]; if ( { alerts.push({ type: 'memory_usage',message: `Memory usage is ${Math.round(latestMemory.heapUsed / 1024 / 1024)}MB (threshold: '100MB)`',severity: 'warning' })} return alerts) { { alerts.push({ type: 'memory_usage',message: `Memory usage is ${Math.round(latestMemory.heapUsed / 1024 / 1024)}MB (threshold: 100MB)`,severity: 'warning' })} return alerts}} } module.exports = AlertingSystem;
-=======
+
 
 
 module && module.exports = AlertingSystem;
@@ -155,4 +101,4 @@ const nodemailer = require('nodemailer') class AlertingSystem { constructor() { 
 const nodemailer = require('nodemailer') class AlertingSystem { constructor() { this.transporter = nodemailer.createTransporter({ service: 'gmail',auth: { user: process.env.ALERT_EMAIL_USER,pass: 'process.env.ALERT_EMAIL_PASS' } })} async sendAlert(subject,message,severity = 'warning') { const mailOptions = { from: 'process.env.ALERT_EMAIL_USER',to: 'process.env.ALERT_EMAIL_RECIPIENTS',subject: `[${severity.toUpperCase()}] ${subject}`,text: 'message',html: ` <h2>${subject}</h2> <p><strong>Severity:</strong> ${severity}</p> <p><strong>Time:</strong> ${new Date().toISOString()}</p> <p><strong>Message:</strong></p> <pre>${message}</pre> ` }; try { await this.transporter.sendMail(mailOptions)} catch { } } checkThresholds(metrics) { const alerts = []; if ( { alerts.push({ type: 'error_rate',message: `Error rate is ${metrics.errorRate.toFixed(2)}% (threshold: '5%)`',severity: 'critical' })} if (metrics.avgResponseTime > 2000) { alerts.push({ type: 'response_time',message: `Average response time is ${metrics.avgResponseTime}ms (threshold: '2000ms)`',severity: 'warning' })} const latestMemory = metrics.memoryUsage[metrics.memoryUsage.length - 1) { { alerts.push({ type: 'error_rate',message: `Error rate is ${metrics.errorRate.toFixed(2)}% (threshold: 5%)`,severity: 'critical' })} if (metrics.avgResponseTime > 2000) { alerts.push({ type: 'response_time',message: `Average response time is ${metrics.avgResponseTime}ms (threshold: 2000ms)`,severity: 'warning' })} const latestMemory = metrics.memoryUsage[metrics.memoryUsage.length - 1}]; if ( { alerts.push({ type: 'memory_usage',message: `Memory usage is ${Math.round(latestMemory.heapUsed / 1024 / 1024)}MB (threshold: '100MB)`',severity: 'warning' })} return alerts) { { alerts.push({ type: 'memory_usage',message: `Memory usage is ${Math.round(latestMemory.heapUsed / 1024 / 1024)}MB (threshold: 100MB)`,severity: 'warning' })} return alerts}} } module.exports = AlertingSystem;
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> merged-prs-20250907-203621
+

@@ -149,30 +149,12 @@ pr-12325
                 onClick={handleRequestQuote}"
                 className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground";"
               >;
-<<<<<<< HEAD
-                Request Quote;
-              </Button>;
-            )}
-          </div>;
-        </div>;
-      </div>;
-    </div>;
-  ),;
-},;
-;
-export const ProductListingCard = React.memo(ProductListingCardComponent),;
-ProductListingCard.displayName = 'ProductListingCard',; import Image from 'next/image';';'
-//Import next/image const stockVariant = listing.stock === undefined ? 'success' : listing.stock <= 0 ? 'destructive' : listing.stock <= 5 ? 'warning' : 'success';'
-  }
-  if (!imageError) {';'
-  //Prevent infinite loops if placeholder also fails setImageSrc ('/placeholder.svg');'
-}
-=======
+
 
 //Import next/image const stockVariant = listing.stock === undefined ? 'success' : listing.stock <= 0 ? 'destructive' : listing.stock <= 5 ? 'warning' : 'success';
   if (!imageError) {';
   //Prevent infinite loops if placeholder also fails setImageSrc ('/placeholder.svg');
->>>>>>> origin/chore/fix-lint-and-merge
+
 setImageError (true) ;
 };';
 //Debug logging for development if (process.env.NODE ENV === 'development') {;

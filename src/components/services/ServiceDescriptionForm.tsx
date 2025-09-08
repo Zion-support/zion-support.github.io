@@ -1,121 +1,5 @@
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
-import { Loader, Sparkles } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { useForm } from "react-hook-form";
-import z from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import {logErrorToProduction} from '@/utils/productionLogger';
-const formSchema = z.object({
-  title: z.string().min(3, "Title must be at least 3 characters");
-  keyFeatures: z.string(),
-  targetAudience: z.string()}),
-
-type FormData = z.infer<typeof formSchema>;
-
-interface ServiceDescriptionFormProps {
-  onDescriptionGenerated: (description: string) => void
-}
-
-export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
-  const { toast } = useToast();
-  const [isLoading, setIsLoading] = useState(false);
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-const formSchema = z && z.object({;
-  title: z && z.string().min(3, "Title must be at least 3 characters");
-  keyFeatures: z && z.string(),;
-  targetAudience: z && z.string()}),;
-
-type FormData = z && z.infer<typeof formSchema>;
 
 
-      const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs.";
-
-}
-  );
-<<<<<<< HEAD
-
-
-const formSchema = z.object({
-  title: z.string().min(3, "Title must be at least 3 characters")
-  keyFeatures: z.string()
-  targetAudience: z.string()})
-type FormData = z.infer<typeof formSchema>
-      const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs."
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-}
-
-
-  )
-}
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",
-import { Loader, Sparkles } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client",
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
-import { useForm } from "react-hook-form",
-import z from "zod",
-import { zodResolver } from "@hookform/resolvers/zod",
-import {logErrorToProduction} from '@/utils/productionLogger',
-const formSchema = z.object({
-  title: z.string().min(3, "Title must be at least 3 characters"),
-  keyFeatures: z.string(),
-  targetAudience: z.string()}),
-
-;
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",
-import { Loader, Sparkles } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client",
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
-import { useForm } from "react-hook-form",
-import z from "zod",
-import { zodResolver } from "@hookform/resolvers/zod",
-import {logErrorToProduction} from '@/utils/productionLogger',
-const formSchema = z.object({
-  title: z.string().min(3, "Title must be at least 3 characters"),
-  keyFeatures: z.string(),
-  targetAudience: z.string()}),
-
-type FormData = z.infer<typeof formSchema>,
-
-interface ServiceDescriptionFormProps {
-  onDescriptionGenerated: (description: string) => void
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-const form_schema = z.object ({
-  title: z.string ().min (3, "Title must be at least 3 characters");
-  key_features: z.string (),
-  target_audience: z.string ()}),
-type FormData = z.infer < typeof form_schema>;
-      const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high - quality solutions tailored to your specific needs.";
-}
-
-export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
-  const { toast } = useToast(),
-  const [isLoading, setIsLoading] = useState(false),
->>>>>>> merged-prs-20250907-203621
   
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -125,11 +9,9 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       targetAudience: ""}}),
 
   const handleSubmit = async (data: FormData) => {
-<<<<<<< HEAD
-    setIsLoading(true);
-=======
+
     setIsLoading(true),
->>>>>>> merged-prs-20250907-203621
+
     
     try {
       const { data: response, error } = await supabase.functions.invoke('generate-service-description', {
@@ -137,22 +19,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
           title: data.title, 
           keyFeatures: data.keyFeatures, 
           targetAudience: data.targetAudience 
-<<<<<<< HEAD
-        }
-      });
 
-      if (error) {
-        throw new Error(error.message)
-      }
-      
-      if (response && (response as any).error) {
-        throw new Error((response as any).error)
-      }
-
-      const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs.";
-      
-      onDescriptionGenerated(description);
-=======
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -205,7 +72,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs.",
       
       onDescriptionGenerated(description),
->>>>>>> merged-prs-20250907-203621
+
       
       toast({
         title: "Description Generated",
@@ -221,11 +88,9 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
-  };
-=======
+
   },
->>>>>>> merged-prs-20250907-203621
+
 
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -252,17 +117,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
                       {...field}
                       placeholder="e.g. Professional Web Design Services"
                       className="bg-zion-blue border border-zion-blue-light text-white"
-<<<<<<< HEAD
-                      disabled={isLoading}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            
-            <FormField
-=======
+
 ;
       const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs.",;
       onDescriptionGenerated(description),;
@@ -314,7 +169,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
               )}
             />;
             <FormField;
->>>>>>> merged-prs-20250907-203621
+
               control={form.control}
               name="keyFeatures"
               render={({ field }: { field: any }) => (
@@ -326,16 +181,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
                       placeholder="Enter key features, separated by commas"
                       className="bg-zion-blue border border-zion-blue-light text-white min-h-20"
                       disabled={isLoading}
-<<<<<<< HEAD
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            
-            <FormField
-=======
+
                     />;
                   </FormControl>;
                   <FormMessage />;
@@ -343,7 +189,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
               )}
             />;
             <FormField;
->>>>>>> merged-prs-20250907-203621
+
               control={form.control}
               name="targetAudience"
               render={({ field }: { field: any }) => (
@@ -355,45 +201,19 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
                       placeholder="e.g. Small businesses, Startups, E-commerce brands"
                       className="bg-zion-blue border border-zion-blue-light text-white"
                       disabled={isLoading}
-<<<<<<< HEAD
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-=======
+
                     />;
                   </FormControl>;
                   <FormMessage />;
                 </FormItem>;
->>>>>>> merged-prs-20250907-203621
+
               )}
             />
             
             <Button 
               type="submit"
               disabled={isLoading}
-<<<<<<< HEAD
-              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-            >
-              {isLoading ? (
-                <>
-                  <Loader className="mr-2 h-4 w-4 animate-spin" />
-                  Generating Description...
-                </>
-              ) : (
-                <>
-                  <Sparkles className="h-4 w-4 mr-2" />
-                  Generate Description
-                </>
-              )}
-            </Button>
-          </form>
-        </Form>
-      </CardContent>
-    </Card>
-  )
-}
-=======
+
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
             >;
               {isLoading ? (;
@@ -414,12 +234,4 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
     </Card>;
   );
 }
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-;
-;
-=======
 
-;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> merged-prs-20250907-203621

@@ -1,5 +1,4 @@
-<<<<<<< HEAD:pages/api/learn/courses/[id].ts
-=======
+
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
@@ -26,7 +25,7 @@ export default function handler(req, res) {
     const courses = JSON.parse(raw);
     const { id } = req.query;
     const course = courses.find((c: any) => c.id === id);
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/learn/courses/[id].ts
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -34,16 +33,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(405).json({ message: 'Method not allowed' });
   }
 
-<<<<<<< HEAD:pages/api/learn/courses/[id].ts
-  try {
-    // TODO: Implement id logic
-    res.status(200).json({ message: 'id endpoint' });
-  } catch (error) {
-    console.error('Error in id:', error);
-    res.status(500).json({ message: 'Internal server error' });
-  }
-}
-=======
+
 
 pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -78,4 +68,4 @@ function handler() {
 };
 main
 pr-12243
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/learn/courses/[id].ts
+

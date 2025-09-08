@@ -1,6 +1,5 @@
 
-<<<<<<< HEAD
-=======
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -21,13 +20,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
-<<<<<<< HEAD:pages.disabled/seo/[slug].tsx
-=======
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/seo/[slug].tsx
 import { useRouter } from 'next/router';
 
 import TalentGrid from '../../components/seo/TalentGrid';
@@ -35,59 +28,14 @@ import FAQ from '../../components/seo/FAQ';
 
 export type LandingPayload = {
 
-<<<<<<< HEAD:pages.disabled/seo/[slug].tsx
-import React from 'react';
-=======
-<<<<<<< HEAD
-import {use_router} from 'next / router';
-import TalentGrid from '../../components / seo / TalentGrid';
-import FAQ from '../../components / seo / FAQ';
-export type LandingPayload = {
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
   title: string;
   h1: string;
   body_html: string;
   region?: string;
-<<<<<<< HEAD
-  service?: string;
-export type LandingPayload = {
-  title: string,
-  h1: string,
-  bodyHtml: string,
-region?: string;
-  service?: string;
-  faq: Array<{ q: string, a: string }>
-};
-import React from 'react';
-import { useRouter  } from 'next/router';
-import { useRouter } from 'next/router';
-import TalentGrid from '../../components/seo/TalentGrid';
-import FAQ from '../../components/seo/FAQ';
-export type LandingPayload = {;
-export type LandingPayload = {
-  title: string;
-  h1: string;
-  bodyHtml: string;
-  region?: string;
-  service?: string;
-  faq: Array<{ q: string; a: string }>;}
-export default function SEOLandingPage() {
-  const router = useRouter();
-  const { slug } = router.query as { slug?: string };
-  const [payload, setPayload] = React.useState<LandingPayload | null>(null);
 
-  React.useEffect(() => {
-    if (!router.isReady |!slug) return;
-    const dataParam = (router.query?.data as string) |'';
-    if (dataParam) {
-      try {
-        setPayload(JSON.parse(decodeURIComponent(dataParam)));
-  faq: Array<{ q: string; a: string }>;};
-export default function SEOLandingPage() {;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/seo/[slug].tsx
+
 
 import { useRouter  } from 'next/router';
 import TalentGrid from '../../components/seo/TalentGrid';
@@ -124,11 +72,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <h2 className="text-lg font-semibold mb-2">Featured Talent</h2>
         <TalentGrid region={payload.region} service={payload.service} />
 
-<<<<<<< HEAD:pages.disabled/seo/[slug].tsx
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/seo/[slug].tsx
+
+
+
+
   const router = useRouter();
   const { slug } = router && router.query as { slug?: string };
   const [payload, setPayload] = React && React.useState<LandingPayload | null>(null);
@@ -139,87 +86,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       try {;
         setPayload(JSON && JSON.parse(decodeURIComponent(dataParam)));
         return;
-<<<<<<< HEAD
-      } catch {}
-    }
-    // Fallback: render a basic placeholder until a generated page is deployed;
-    setPayload({;
-      title: String(slug).replace(/-/g, ' '),;
-      h1: String(slug).replace(/-/g, ' '),;
-      bodyHtml: '<p>Localized marketplace landing page.</p>',;
-      region: undefined,;
-      service: undefined,;
-      faq: [],;
-    });  }, [router && router.isReady, slug]);
 
-
-  faq: Array<{ q: string; a: string }>;};
-
-export default function SEOLandingPage() {;
-  service?: string,;
-  faq: Array<{ q: string, a: string }>;
-},;
-export default function SEOLandingPage(req, res) {
-  try {
-  const router = useRouter();
-  const { slug } = router.query as { slug?: string };
-  const [payload, setPayload] = React.useState<LandingPayload | null>(null);
-  React.useEffect(() => {;
-    if (!router.isReady || !slug) return,;
-    const dataParam = (router.query?.data as string) || '';
-    if (dataParam) {;
-      try {
-        setPayload(JSON.parse(decodeURIComponent(dataParam)));
-        return;
-      } catch {}
-    }
-      } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    // Fallback: render a basic placeholder until a generated page is deployed
-    setPayload({ title: String(slug).replace(/-/g, ' '), h1: String(slug).replace(/-/g, ' '), bodyHtml: '<p>Localized marketplace landing page.</p>', region: undefined, service: undefined, faq: [] })
-  }, [router.isReady, slug]),
-  if (!payload) return null,
-  return (
-    <div className="max-w-4xl mx-auto">
-      <head>
-        <title>{payload.title}</title>
-        <meta name="description" content={`${payload.title} • Zion Marketplace`} />
-      </head>
-        return
-      } catch {}
-    }
-=======
 
         return
       } catch {}
     }
-<<<<<<< HEAD:pages.disabled/seo/[slug].tsx
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/seo/[slug].tsx
+
 
 
 
     // Fallback: render a basic placeholder until a generated page is deployed
     setPayload({ title: String(slug).replace(/-/g, ' '), h1: String(slug).replace(/-/g, ' '), bodyHtml: '<p>Localized marketplace landing page.</p>', region: undefined, service: undefined, faq: [] })
   }, [router.isReady, slug]);
-<<<<<<< HEAD:pages.disabled/seo/[slug].tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/seo/[slug].tsx
+
+
+
+
 
   if (!payload) return null;
 
@@ -237,15 +119,9 @@ export default function SEOLandingPage(req, res) {
       <FAQ items={payload && payload.faq} />;
     </div>;
   );
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:pages.disabled/seo/[slug].tsx
-=======
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/seo/[slug].tsx
+
   )
 }
   faq: Array<{ q: string; array: string }>;}
@@ -308,37 +184,10 @@ if (return null) {
       <FAQ items={payload.faq} />;
     </div>);
 ;
-<<<<<<< HEAD:pages.disabled/seo/[slug].tsx
-);
-=======
-<<<<<<< HEAD
-      <h1 className='text-2xl font-semibold mb-4'>{payload.h1}</h1>
-      <div
-        className='prose dark:prose-invert max-w-none'
-        dangerouslySetInnerHTML={{ __html: payload.bodyHtml }}
-      />
-      <div className='mt-8'>
-        <h2 className='text-lg font-semibold mb-2'>Featured Talent</h2>        <TalentGrid region={payload.region} service={payload.service} />
-      </div>
-      <FAQ items={payload.faq} />
-    </div>
-);
 
-}
-      <h1 className="text-2xl font-semibold mb-4">{payload.h1}</h1>
-      <div className="prose dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: payload.bodyHtml }} />
-      <div className="mt-8">
-        <h2 className="text-lg font-semibold mb-2">Featured Talent</h2>
-        <TalentGrid region={payload.region} service={payload.service} />
-      </div>
-      <FAQ items={payload.faq} />
-    </div>
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/seo/[slug].tsx
+
+
+
   )
   } catch (error) {
     console.error("Error:", error);
@@ -346,14 +195,7 @@ if (return null) {
   }
 }
 
-<<<<<<< HEAD:pages.disabled/seo/[slug].tsx
-);
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/seo/[slug].tsx
+
+
+

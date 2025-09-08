@@ -78,11 +78,10 @@ const solutions = [{ id: 'ai-ml',
   icon: <Lock className='w-5 h-5'/>, projects: 45,}
 } ] const [selectedSolution, setSelectedSolution] =;
   useState(null);
-<<<<<<< HEAD
-=======
+
   const [hoveredSolution, setHoveredSolution] = useState(null);
   const containerVariants = { hidden: { opacity: 0,}
->>>>>>> origin/chore/fix-lint-and-merge
+
 }, visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.1 },
 };
 }

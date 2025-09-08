@@ -71,12 +71,11 @@ const securityStandards = [{ name: 'ISO 27001', ' category: 'Information Securit
   label: 'Compliance',}
 } ] const [selectedStandard, setSelectedStandard] =;
   useState(null);
-<<<<<<< HEAD
-=======
+
   const [selectedFramework, setSelectedFramework] = useState(null);
   const [selectedFeature, setSelectedFeature] = useState(null);
   const containerVariants = { hidden: { opacity: 0,}
->>>>>>> origin/chore/fix-lint-and-merge
+
 }, visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.1 } },
 }
 ;

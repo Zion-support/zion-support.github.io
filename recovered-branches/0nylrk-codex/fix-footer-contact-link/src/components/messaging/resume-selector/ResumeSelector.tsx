@@ -1,174 +1,10 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-import React, { useState, useEffect } from 'react',
-import { Button } from "@/components/ui/button",
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
-import { Label } from "@/components/ui/label";
-import { Plus, Loader2  } from 'lucide-react';
-import { useResume } from "@/hooks/useResume",
-import { exportResumeToPDF } from "@/utils/pdfExport",
-import { toast } from "@/components/ui/use-toast";
-<<<<<<< HEAD
-import { ResumePreviewCard } from './ResumePreviewCard';
-import { UploadSection } from './UploadSection';
-import { SelectResumeSection } from './SelectResumeSection';
-import { ResumeOption, ResumeSelectorProps } from './types';
-export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
-  const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent'),
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),
-  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]),
-  const [customFile, setCustomFile] = useState<File | null>(null),
-  const [isLoading, setIsLoading] = useState($2);
-  const { resume, fetchResume } = useResume($2);
-  // Fetch resume data when component mounts
-  useEffect(() => {
 
-    const loadResumes = async () => {
-      setIsLoading($2);
-      try {
-        await fetchResume()
-      } catch (error) {
-        console.error("Error loading resumes:", error)
-      } finally {
-        setIsLoading(false)
-      }
-    },
-    
-    loadResumes()
-  }, [fetchResume]),
-  
-  // Update resume options when resume data changes
-  useEffect(() => {
-    if (resume) {
-      const options: ResumeOption[] = [{
-        id: resume.id || 'current',
-        title: resume.basic_info.title,
-        type: 'ai_resume',
-        resume: resume}],
-      
-      setResumeOptions($2);
-      // Pre-select the most recent resume
-      if (options.length > 0 && selectedOption === 'recent') {
-        setSelectedResume($2);
-        onResumeSelected(options[0])
-      }
-    }
-  }, [resume, selectedOption, onResumeSelected]),
-  
-  // Handle radio option change
-  const handleOptionChange = (value: 'recent' | 'select' | 'upload') => {
-    setSelectedOption($2);
-    if (value === 'recent' && resumeOptions.length > 0) {
-      setSelectedResume($2);
-      onResumeSelected(resumeOptions[0])
-    } else if (value = $2;
-  // Handle resume selection change
-  const handleResumeSelect = (resumeId: string) => {
-    const selected = resumeOptions.find($2);
-    if (selected) {
-      setSelectedResume($2);
-      onResumeSelected(selected)
-    }
-  },
-  
-  // Handle custom file upload
-  const handleFileUpload = $2;
-      // Check if it's a PDF file
-      if (file.type !== 'application/pdf') {
-        toast($2);
-        return
-      }
-      // Create a custom resume option
-      const customOption: ResumeOption = $2;
-        title: file.name,
-        type: 'custom_upload',
-        file: file},
-      
-      setCustomFile($2);
-      setSelectedResume($2);
-      onResumeSelected(customOption)
-    }
-  },
-  
-  // Handle resume download
-  const handleDownloadResume = async () => {
-    if (!selectedResume || selectedResume.type !== 'ai_resume' || !selectedResume.resume) {
-      return
-    }
-    
-    try {
-      setIsLoading($2);
-      const pdfBlob = await exportResumeToPDF($2);
-      // Create download link
-      const url = URL.createObjectURL($2);
-      const link = document.createElement($2);
-      link.href = $2;
-      link.download = $2;
-      document.body.appendChild($2);
-      link.click($2);
-      // Clean up
-      document.body.removeChild($2);
-      URL.revokeObjectURL($2);
-      toast({
-        title: "Success!",
-        description: "Your resume has been downloaded."})
-    } catch (error) {
-      console.error($2);
-      toast({
-        title: "Download failed"
-        description: "There was an error downloading your resume."
-        variant: "destructive"
-      })
-    } finally {
-      setIsLoading(false)
-    }
-  },
-  
-  // Handle "Generate Resume Now" button
-  const handleGenerateResume = $2;
-=======
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-import React, { useState, useEffect } from './react';
-import { Button  } from '@/components / ui / button';
-import { RadioGroup, RadioGroupItem  } from '@/components / ui / radio - group';
-import { Label  } from '@/components / ui / label';
-import { Plus, Loader2  } from './lucide-react';
-import { use_resume  } from '@/hooks / use_resume';
-import { exportResumeToPDF  } from '@/utils / pdf_export';
-import { toast  } from '@/components / ui / use - toast';
-
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
-import { Button } from "@/components/ui/button",
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
-import { Label } from "@/components/ui/label";
-import { Plus, Loader2  } from 'lucide-react';
-import { useResume } from "@/hooks/useResume",
-import { exportResumeToPDF } from "@/utils/pdfExport",
-import { toast } from "@/components/ui/use-toast";
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import { ResumePreviewCard  } from './ResumePreviewCard';
 import { UploadSection  } from './UploadSection';
 import { SelectResumeSection  } from './SelectResumeSection';
 import { ResumeOption, ResumeSelectorProps  } from './types';
-<<<<<<< HEAD
-export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
 
-  const [selectedOption, setSelectedOption] = useState<
-    "recent" | "select" | "upload"
-  >("recent");
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(
-    null
-=======
 
 export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps) {;
   const [selectedOption, setSelectedOption] = useState<;
@@ -177,34 +13,16 @@ export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(;
     null,;
 
-<<<<<<< HEAD
-export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
 
-  const [selectedOption, setSelectedOption] = useState<
-    "recent" | "select" | "upload"
-  >("recent");
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(
-    null
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   );
 import { toast  } from '@/components / ui / use - toast';  );
   const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]);
 
   const [customFile, setCustomFile] = useState<File | null>(null);
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
 
-  const { resume, fetchResume } = useResume();import React, { useState, useEffect } from "react";
-=======
   const { resume, fetchResume } = useResume();
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import React, { useState, useEffect } from "react";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
@@ -216,143 +34,10 @@ import { ResumePreviewCard } from "./ResumePreviewCard";
 import { UploadSection } from "./UploadSection";
 import { SelectResumeSection } from "./SelectResumeSection";
 import { ResumeOption, ResumeSelectorProps } from "./types";
-<<<<<<< HEAD
-export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
-  const [selectedOption, setSelectedOption] = useState<
-    "recent" | "select" | "upload";
-  >("recent");
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(
-    null,
-  );
-  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]);
-  const [customFile, setCustomFile] = useState<File | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const { resume, fetchResume } = useResume();
-
-export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
-  const [selectedOption, setSelectedOption] = useState<
-    "recent" | "select" | "upload";
-  >("recent");
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(
-    null,
-  );
-  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]);
-  const [customFile, setCustomFile] = useState<File | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
-
-import React, { useState, useEffect } from 'react',
-import { Button } from "@/components/ui/button",
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
-import { Label } from "@/components/ui/label",
-import { Plus, Loader2 } from 'lucide-react',
-import { useResume } from "@/hooks/useResume",
-import { exportResumeToPDF } from "@/utils/pdfExport",
-import { toast } from "@/components/ui/use-toast",
-import { ResumePreviewCard } from './ResumePreviewCard',
-import { UploadSection } from './UploadSection',
-import { SelectResumeSection } from './SelectResumeSection',
-import { ResumeOption, ResumeSelectorProps } from './types',
-import React, { useState, useEffect } from 'react',;
-import { Button } from "@/components/ui/button",;
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",;
-import { Label } from "@/components/ui/label",;
-import { Plus, Loader2 } from 'lucide-react',;
-import { useResume } from "@/hooks/useResume",;
-import { exportResumeToPDF } from "@/utils/pdfExport",;
-import { toast } from "@/components/ui/use-toast",;
-import { ResumePreviewCard } from './ResumePreviewCard',;
-import { UploadSection } from './UploadSection',;
-import { SelectResumeSection } from './SelectResumeSection',;
-import { ResumeOption, ResumeSelectorProps } from './types',;
-
-import { ResumePreviewCard  } from './ResumePreviewCard';
-import { UploadSection  } from './UploadSection';
-import { SelectResumeSection  } from './SelectResumeSection';
-
-import { ResumeOption, ResumeSelectorProps  } from './types';
-
-  );
-
-import React, { useState, useEffect } from './react';
-import { Button  } from '@/components / ui / button';
-import { RadioGroup, RadioGroupItem  } from '@/components / ui / radio - group';
-import { Label  } from '@/components / ui / label';
-import { Plus, Loader2  } from './lucide-react';
-import { use_resume  } from '@/hooks / use_resume';
-import { exportResumeToPDF  } from '@/utils / pdf_export';
-import { toast  } from '@/components / ui / use - toast';  );
-
-  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]);
-
-  const [customFile, setCustomFile] = useState<File | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
-
-export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
-  const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent'),
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),
-  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]),
-  const [customFile, setCustomFile] = useState<File | null>(null),
-  const [isLoading, setIsLoading] = useState(false),
-
-import React, { useState, useEffect } from 'react',
-import { Button } from "@/components/ui/button",
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
-import { Label } from "@/components/ui/label",
-import { Plus, Loader2 } from 'lucide-react',
-import { useResume } from "@/hooks/useResume",
-import { exportResumeToPDF } from "@/utils/pdfExport",
-import { toast } from "@/components/ui/use-toast",
-import { ResumePreviewCard } from './ResumePreviewCard',
-import { UploadSection } from './UploadSection',
-import { SelectResumeSection } from './SelectResumeSection',
-
-import { ResumeOption, ResumeSelectorProps } from './types',
-
-export function ResumeSelector() { return null; }
-  const { resume, fetchResume } = useResume(),
-
-import React, { useState, useEffect } from 'react',
-import { Button } from "@/components/ui/button",
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
-import { Label } from "@/components/ui/label",
-import { Plus, Loader2 } from 'lucide-react',
-import { useResume } from "@/hooks/useResume",
-import { exportResumeToPDF } from "@/utils/pdfExport",
-import { toast } from "@/components/ui/use-toast",
-import { ResumePreviewCard } from './ResumePreviewCard',
-import { UploadSection } from './UploadSection',
-import { SelectResumeSection } from './SelectResumeSection',
-import { ResumeOption, ResumeSelectorProps } from './types',
-
-export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
-  const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent'),
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),
-  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]),
-  const [customFile, setCustomFile] = useState<File | null>(null),
-  const [isLoading, setIsLoading] = useState(false),
-  
-  const { resume, fetchResume } = useResume(),
-import { ResumePreviewCard  } from './ResumePreviewCard';
-import { UploadSection  } from './UploadSection';
-import { SelectResumeSection  } from './SelectResumeSection';
-import { ResumeOption, ResumeSelectorProps  } from './types';
-export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps) {;
-  const [selectedOption, setSelectedOption] = useState<;
-    "recent" | "select" | "upload";
-  >("recent");
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(;
-    null,;
-  );
-  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]);
-  const [customFile, setCustomFile] = useState<File | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const { resume, fetchResume } = useResume();
-  
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
   // Fetch resume data when component mounts
   useEffect(() => {
 
@@ -454,10 +139,9 @@ if ( {) {}
     }
     loadResumes();
   }, [fetchResume]);
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
 export /**
  * ResumeSelector - Function description
  */
@@ -468,23 +152,7 @@ function ResumeSelector() {
     loadResumes();
   }, [fetchResume]);        setSelectedResume(options[0]);
         onResumeSelected(options[0]);
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';'
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",;"
-import { Label } from "@/components/ui/label",;"
-import { Plus, Loader2 } from 'lucide-react',;'
-import { useResume } from "@/hooks/useResume",;"
-import { exportResumeToPDF } from "@/utils/pdfExport",;"
-import { toast } from "@/components/ui/use-toast",;"
-import { ResumePreviewCard } from './ResumePreviewCard',;'
-import { UploadSection } from './UploadSection',;'
-import { SelectResumeSection } from './SelectResumeSection',;'
-import { ResumeOption, ResumeSelectorProps } from './types',;'
-;
-export function ResumeSelector() {;
-  }
-  ;
-=======
+
 
 import React, { useState, useEffect } from 'react',;
 import { Button } from "@/components/ui/button",;
@@ -594,30 +262,7 @@ if ( {) {
   $2;
 }
       const options: ResumeOption[] = [;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        {
-          id: resume.id |"current"
-          title: resume.basic_info.title
-          type: "ai_resume"
-          resume: resume
-        }
-<<<<<<< HEAD
-
-        {"
-          id: resume.id |"current"",
-  title: resume.basic_info.title;"
-          type: "ai_resume"",
-  resume: resume;
-=======
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   // Update resume options when resume data changes;
   useEffect(() => {;
     if (resume) {;]
@@ -631,13 +276,7 @@ if ( {) {
           title: resume && resume.basic_info.title,;"
           type: "ai_resume",;"
           resume: resume,;
-<<<<<<< HEAD
-        },;]
-      ];
 
-      // Pre-select the most recent resume;"
-      if (options && options.length > 0 && selectedOption === "recent") {;"
-=======
         },;
       ];
       // Pre-select the most recent resume;
@@ -645,187 +284,13 @@ if ( {) {
         setSelectedResume(options[0]);
         onResumeSelected(options[0]);
 
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react',;
-import { Button } from "@/components/ui/button",;
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",;
-import { Label } from "@/components/ui/label",;
-import { Plus, Loader2 } from 'lucide-react',;
-import { useResume } from "@/hooks/useResume",;
-import { exportResumeToPDF } from "@/utils/pdfExport",;
-import { toast } from "@/components/ui/use-toast",;
-import { ResumePreviewCard } from './ResumePreviewCard',;
-import { UploadSection } from './UploadSection',;
-import { SelectResumeSection } from './SelectResumeSection',;
-import { ResumeOption, ResumeSelectorProps } from './types',;
-;
-export function ResumeSelector({ onResumeSelected } ResumeSelectorProps) {;
-  const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent'),;
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),;
-  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]),;
-  const [customFile, setCustomFile] = useState<File | null>(null),;
-  const [isLoading, setIsLoading] = useState(false),;
-  ;
-  const { resume, fetchResume } = useResume(),;
-  ;
-  // Fetch resume data when component mounts;
-  useEffect(() => {;
-    const loadResumes = async () => {;
-      setIsLoading(true),;
-      try {;
-        await fetchResume(),;
-      } catch (error) {;
-        console.error("Error loading resumes:", error),;
-      } finally {;
-        setIsLoading(false),;
-      }
-    },;
-    ;
-    loadResumes(),;
-  }, [fetchResume]),;
-  ;
-  // Update resume options when resume data changes;
-  useEffect(() => {;
-    if (resume) {;
-      const options:ResumeOption[] = [{;
-        id:resume.id || 'current',;
-        title:resume.basic_info.title,;
-        type:'ai_resume',;
-        resume:resume;
-      }],;
-      ;
-      setResumeOptions(options),;
-      ;
-      // Pre-select the most recent resume;
-      if (options.length > 0 && selectedOption === 'recent') {;
-        setSelectedResume(options[0]),;
-        onResumeSelected(options[0]),;
-      }
-    }
-  }, [resume, selectedOption, onResumeSelected]),;
-  ;
-  // Handle radio option change;
-  const handleOptionChange = (value:'recent' | 'select' | 'upload') => {;
-    setSelectedOption(value),;
-    ;
-    if (value === 'recent' && resumeOptions.length > 0) {;
-      setSelectedResume(resumeOptions[0]),;
-      onResumeSelected(resumeOptions[0]);
-    } else if (value === 'select') {;
-      // Reset selection until user chooses;
-      setSelectedResume(null),;
-    } else if (value === 'upload') {;
-      setSelectedResume(null),;
-    }
-  },;
-  ;
-  // Handle resume selection change;
-  const handleResumeSelect = (resumeId:string) => {;
-    const selected = resumeOptions.find(opt => opt.id === resumeId),;
-    if (selected) {;
-      setSelectedResume(selected),;
-      onResumeSelected(selected);
-    }
-  },;
-  ;
-  // Handle custom file upload;
-  const handleFileUpload = (e:React.ChangeEvent<HTMLInputElement>) => {;
-    if (e.target.files && e.target.files[0]) {;
-      const file = e.target.files[0],;
-      ;
-      // Check if it's a PDF file;
-      if (file.type !== 'application/pdf') {;
-        toast({;
-          title:"Invalid file type",;
-          description:"Please upload a PDF file",;
-          variant:"destructive";
-        }),;
-        return,;
-      }
-      ;
-      // Create a custom resume option;
-      const customOption:ResumeOption = {;
-        id:'custom-upload',;
-        title:file.name,;
-        type:'custom_upload',;
-        file:file;
-      },;
-      ;
-      setCustomFile(file),;
-      setSelectedResume(customOption),;
-      onResumeSelected(customOption),;
-    }
-      (setSelectedResume(resumeOptions[0]), onResumeSelected(resumeOptions[0]));
-    } else if (value === "select") {;
-      // Reset selection until user chooses;
-      setSelectedResume(null);
-    } else if (value === "upload") {;
-      setSelectedResume(null);
-    }
-      setIsLoading(true),
-      try {
-        await fetchResume()
-      } catch (error) {
-        console.error("Error loading resumes:", error)
-      } finally {
 
-  };
-
-
-        setIsLoading(false);
-      }
-    }
-    loadResumes();
-  }, [fetchResume]);
-  // Update resume options when resume data changes
-  useEffect(() => {
-    if (resume) {
-      const options: ResumeOption[] = [
-        {
-          id: resume.id |"current"
-          title: resume.basic_info.title
-          type: "ai_resume"
-          resume: resume
-        }
-      ];
-      setResumeOptions(options);
-      // Pre-select the most recent resume
-      if (options.length > 0 && selectedOption === "recent") {
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         setSelectedResume(options[0]);
         onResumeSelected(options[0]);
       }
     }
   }, [resume, selectedOption, onResumeSelected]);
-<<<<<<< HEAD
-  // Handle radio option change
-  const handleOptionChange = (value: "recent" | "select" | "upload") => {
-    setSelectedOption(value);
-    if (value === "recent" && resumeOptions.length > 0) {
-      (setSelectedResume(resumeOptions[0]), onResumeSelected(resumeOptions[0]));
-    } else if (value === "select") {
-      // Reset selection until user chooses
-      setSelectedResume(null);
-    } else if (value === "upload") {
-      setSelectedResume(null);
-    }
-  }
-  // Handle resume selection change
-  const handleResumeSelect = (resumeId: string) => {
-    const selected = resumeOptions.find((opt) => opt.id === resumeId);
-    if (selected) {
-      (setSelectedResume(selected), onResumeSelected(selected));
-    }
-  }
-  // Handle custom file upload
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      const file = e.target.files[0];
-  };
 
-=======
 
   // Handle radio option change;
   const handleOptionChange = (value: "recent" | "select" | "upload") => {;
@@ -860,7 +325,7 @@ import { ResumeOption, ResumeSelectorProps } from './types',;
 ;
 export function ResumeSelector() { return null; }
   const { resume, fetchResume } = useResume(),;
->>>>>>> origin/chore/fix-lint-and-merge
+
   ;
   // Fetch resume data when component mounts;
   useEffect(() => {;
@@ -920,9 +385,7 @@ export function ResumeSelector() { return null; }
         console.error("Error loading resumes:", error)
       } finally {}
   };
-<<<<<<< HEAD
-  // Handle custom file upload,
-=======
+
 
   }
   // Handle resume selection change
@@ -930,27 +393,17 @@ export function ResumeSelector() { return null; }
     const selected = resumeOptions.find((opt) => opt.id === resumeId);
     if (selected) {
       (setSelectedResume(selected), onResumeSelected(selected));
->>>>>>> origin/chore/fix-lint-and-merge
+
     }
   }
   // Handle custom file upload
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
-<<<<<<< HEAD
-}
-      // Check if it's a PDF file'
-      if (file.type !== "application/pdf") {"
-        }
-=======
+
       const file = e.target.files[0];
   };
 
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         setIsLoading(false)
 import React, { useState, useEffect } from 'react',;
 import { Button } from "@/components/ui/button",;
@@ -1011,27 +464,20 @@ export function ResumeSelector() { return null; }
     }
   },
 
-<<<<<<< HEAD
-  
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
   // Handle custom file upload
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0],
-<<<<<<< HEAD
 
-=======
       
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
+
       // Check if it's a PDF file
       if (file.type !== "application/pdf") {
->>>>>>> origin/chore/fix-lint-and-merge
+
         toast({
 
 '
@@ -1039,223 +485,33 @@ export function ResumeSelector() { return null; }
       if (file.type !== "application/pdf") {}
         toast({}
   };
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
   // Handle resume selection change;
   const handleResumeSelect = (resumeId: string) => {;
     const selected = resumeOptions && resumeOptions.find((opt) => opt && opt.id === resumeId);
     if (selected) {;
       (setSelectedResume(selected), onResumeSelected(selected));
     }
-<<<<<<< HEAD
-"
-          variant: "destructive"
-        }),
-        return;
-  },;
-=======
-  };
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  };
+
   // Handle custom file upload;
   const handleFileUpload = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
     if (e && e.target.files && e && e.target.files[0]) {;
       const file = e && e.target.files[0];
-<<<<<<< HEAD
-'
-      // Check if it's a PDF file;"
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      // Check if it's a PDF file;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       if (file && file.type !== "application/pdf") {;
 
           variant: "destructive",;
 
         });
         return;
-<<<<<<< HEAD
 
-      setIsLoading(true);
-      const pdfBlob = await exportResumeToPDF(selectedResume.resume);
-      // Create download link;
-      const url = URL.createObjectURL(pdfBlob);"
-      const link = document.createElement("a");
-      link.href = url;"
-      link.download = `${selectedResume.title |"Resume"}.pdf`;
-      document.body.appendChild(link);
-      link.click();
-      // Clean up;
-      document.body.removeChild(link);
-      URL.revokeObjectURL(url);
-      toast({"
-        title: "Success!""
-        description: "Your resume has been downloaded."
-      });"
-          title: "Invalid file type","
-=======
       }
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      // Create a custom resume option;
-      const customOption: ResumeOption = {;
-        id: "custom-upload",;
-        title: file && file.name,;
-        type: "custom_upload",;
-        file: file,;
-      };
-<<<<<<< HEAD
-      
-      // Check if it's a PDF file
-      if (file.type !== 'application/pdf') {
-        toast({
-          title: "Invalid file type"
-          description: "Please upload a PDF file"
-          variant: "destructive"
-          title: "Invalid file type",
-          description: "Please upload a PDF file",
-          variant: "destructive",
-        });
-        return;
-      }
-      // Create a custom resume option
-      const customOption: ResumeOption = {
-        id: "custom-upload"
-        title: file.name
-        type: "custom_upload"
-        file: file
-      }
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      setCustomFile(file);
-      setSelectedResume(customOption);
-      onResumeSelected(customOption);
-    }
-<<<<<<< HEAD
-  }
-  // Handle resume download
-  const handleDownloadResume = async () => {
-    if (
-      !selectedResume |
-      selectedResume.type !== "ai_resume" |
-      !selectedResume.resume
-    ) {
-      return;
-    }
-    try {
-      setIsLoading(true);
-      const pdfBlob = await exportResumeToPDF(selectedResume.resume);
-      // Create download link
-      const url = URL.createObjectURL(pdfBlob);
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = `${selectedResume.title |"Resume"}.pdf`;
-      document.body.appendChild(link);
-      link.click();
-      // Clean up
-      document.body.removeChild(link);
-      URL.revokeObjectURL(url);
-      toast({
-        title: "Success!"
-        description: "Your resume has been downloaded."
-      });
-          title: "Invalid file type",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-          description: "Please upload a PDF file",
-
-          variant: "destructive"
-        }),
-<<<<<<< HEAD
-        return;
-=======
-        return
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-  },;
-  // Handle custom file upload;
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {;
-    if (e.target.files && e.target.files[0]) {;
-<<<<<<< HEAD
-      const file = e.target.files[0],;'
-      // Check if it's a PDF file;'
-      if (file.type !== 'application/pdf') {;
-        toast({;"
-          title: "Invalid file type","
-          description: "Please upload a PDF file",;"
-=======
-      const file = e.target.files[0],;
-      // Check if it's a PDF file;
-      if (file.type !== 'application/pdf') {;
-        toast({;
-          title: "Invalid file type",;
-          description: "Please upload a PDF file",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-          variant: "destructive";
-        }),;
-        return;
-      }
-;
-      // Create a custom resume option;
-<<<<<<< HEAD
-      const customOption: ResumeOption = {;'
-        id: 'custom-upload',;
-        title: file.name,;'
-=======
-      const customOption: ResumeOption = {;
-        id: 'custom-upload',;
-        title: file.name,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-        type: 'custom_upload',;
-        file: file;
-      },;
-      setCustomFile(file),;
-      setSelectedResume(customOption),;
-      onResumeSelected(customOption);
-    }
-  },;
-  // Handle resume download;
-<<<<<<< HEAD
-  const handleDownloadResume = async () => {;'
-    if (!selectedResume || selectedResume.type !== 'ai_resume' || !selectedResume.resume) {;
-      return;
-    }
-
-"
-          title: "Invalid file type","
-          description: "Please upload a PDF file",
-
-=======
-  const handleDownloadResume = async () => {;
-    if (!selectedResume || selectedResume.type !== 'ai_resume' || !selectedResume.resume) {;
-      return;
-    }
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-
-          title: "Invalid file type",
-          description: "Please upload a PDF file",
-
-<<<<<<< HEAD
-    
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    try {
-      setIsLoading(true),
-      const pdfBlob = await exportResumeToPDF(selectedResume.resume),
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       // Create download link
       const url = URL.createObjectURL(pdfBlob),
 
@@ -1267,16 +523,10 @@ export function ResumeSelector() { return null; }
 
       toast({
         title: "Success!",
-<<<<<<< HEAD
 
-=======
         description: "Your resume has been downloaded."})
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     } catch (error) {
       console.error("Error downloading PDF:", error);
       toast({
@@ -1298,43 +548,7 @@ export function ResumeSelector() { return null; }
   const handleGenerateResume = () => {;"
     window && window.open("/dashboard/talent/portfolio_blank");
   };
-<<<<<<< HEAD
 
-  return ("
-    <div className="space-y-4">;"
-      <h3 className="text-lg font-medium text-white">Attach Resume</h3>;
-
-      <RadioGroup
-
-        value={selectedOption}
-        onValueChange={(value) =>;"
-          handleOptionChange(value as "recent" | "select" | "upload");
-        }
-
-      setIsLoading(false)
-    }
-  }"
-  // Handle "Generate Resume Now" button;
-  const handleGenerateResume = () => {"
-    window.open("/dashboard/talent/portfolio_blank");
-  }
-
-      <h3 className="text-lg font-medium text-white">Attach Resume</h3>;
-
-      });
-    } finally {;
-      setIsLoading(false);
-    }
-      <RadioGroup;
-        value={selectedOption}
-        onValueChange={(value) =>"
-          handleOptionChange(value as "recent" | "select" | "upload")
-
-      <RadioGroup 
-        value={selectedOption} 
-        onValueChange={(value) => handleOptionChange(value as 'recent' | 'select' | 'upload')}
-
-=======
   // Handle resume download;
   const handleDownloadResume = async () => {;
     if (;
@@ -1371,131 +585,33 @@ export function ResumeSelector() { return null; }
     } finally {;
       setIsLoading(false);
 
-<<<<<<< HEAD
-    } catch (error) {
-      console.error('Error downloading PDF:', error),
-      toast({
-        title: "Download failed"
-        description: "There was an error downloading your resume."
-        variant: "destructive"
-      });
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        title: "Download failed",
-        description: "There was an error downloading your resume.",
-        variant: "destructive"
-      })
 
-<<<<<<< HEAD
-
-  };
-=======
-    } finally {
-      setIsLoading(false)
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    }
-
-
-  };
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Handle "Generate Resume Now" button;
   const handleGenerateResume = () => {;
     window && window.open("/dashboard/talent/portfolio_blank");
   };
-<<<<<<< HEAD
-  return (
-    <div className="space-y-4">;
-      <h3 className="text-lg font-medium text-white">Attach Resume</h3>;
-=======
+
 
   return (
     <div className="space-y-4">;
       <h3 className="text-lg font-medium text-white">Attach Resume</h3>;
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
       <RadioGroup
         value={selectedOption}
         onValueChange={(value) =>;
           handleOptionChange(value as "recent" | "select" | "upload");
         }
-<<<<<<< HEAD
-    } finally {
-      setIsLoading(false)
-    }
-  }
-  // Handle "Generate Resume Now" button
-  const handleGenerateResume = () => {
-    window.open("/dashboard/talent/portfolio_blank");
-  }
-
->>>>>>> merged-prs-20250907-203621
-  return (
-    <div className="space-y-4">
-      <h3 className="text-lg font-medium text-white">Attach Resume</h3>
-      <RadioGroup
-        value={selectedOption}
-        onValueChange={(value) =>
-          handleOptionChange(value as "recent" | "select" | "upload")
-        }
-<<<<<<< HEAD
-        className="space-y-3"
-      >
-        <div className="flex items-center space-x-2">
-          <RadioGroupItem value="recent" id="recent" />
-          <Label htmlFor="recent" className="text-white">Use most recent AI Resume</Label>
-        </div>
-=======
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  },
-  
-  // Handle "Generate Resume Now" button
-  const handleGenerateResume = () => {
-    window.open('/dashboard/talent/portfolio_blank')
-  },
-  
-  return (
-    <div className="space-y-4">
-      <h3 className="text-lg font-medium text-white">Attach Resume</h3>
-<<<<<<< HEAD
-      <RadioGroup
-        value={selectedOption}
-        onValueChange={(value) =>
-          handleOptionChange(value as "recent" | "select" | "upload")
-        }
-      
-      <RadioGroup 
-        value={selectedOption} 
-        onValueChange={(value) => handleOptionChange(value as 'recent' | 'select' | 'upload')}
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
         className="space-y-3"
       >"
         <div className="flex items-center space-x-2">"
           <RadioGroupItem value="recent" id="recent" />
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-          <Label htmlFor="recent" className="text-white">
-            Use most recent AI Resume
-          </Label>
-        </div>
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-        
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="select" id="select" />
 
@@ -1503,92 +619,12 @@ export function ResumeSelector() { return null; }
             Select from saved versions;
           </Label>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      </RadioGroup>      // Create download link;
-      link.href = url,;
-      link.download = `${selectedResume.title || 'Resume'}.pdf`,;`
-=======
-
-        <div className="flex items-center space-x-2">
-          <RadioGroupItem value="upload" id="upload" />
-
-=======
-
-
-        
 
 
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="upload" id="upload" />
-          <Label htmlFor="upload" className="text-white">
-            Upload a custom resume (PDF)
-          </Label>
-        </div>
-      </RadioGroup>
 
 
-<<<<<<< HEAD
-          <Label htmlFor="recent" className="text-white">Use most recent AI Resume</Label>
-        </div>
-        
->>>>>>> merged-prs-20250907-203621
-        <div className="flex items-center space-x-2">
-          <RadioGroupItem value="select" id="select" />
-          <Label htmlFor="select" className="text-white">Select from saved versions</Label>
-        </div>
-<<<<<<< HEAD
-=======
-        
->>>>>>> merged-prs-20250907-203621
-        <div className="flex items-center space-x-2">
-          <RadioGroupItem value="upload" id="upload" />
-          <Label htmlFor="upload" className="text-white">Upload a custom resume (PDF)</Label>
-        </div>
-      </RadioGroup>
-      {/* Resume selection options based on radio selection */}
-      {selectedOption === "recent" && resume && (
-        <ResumePreviewCard
-<<<<<<< HEAD
-          resume={resume}
-          onDownload={handleDownloadResume}
-          isLoading={isLoading}
-        />
-      )}
-      {selectedOption === "select" && (
-        <SelectResumeSection
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-;
-    try {;
-      setIsLoading(true),;
-      const pdfBlob = await exportResumeToPDF(selectedResume.resume),;
-<<<<<<< HEAD
-
-=======
-  },;
-  ;
-  // Handle resume download;
-  const handleDownloadResume = async () => {;
-    if (!selectedResume || selectedResume.type !== 'ai_resume' || !selectedResume.resume) {;
-      return,;
-    }
-    ;
-    try {;
-      setIsLoading(true),;
-      const pdfBlob = await exportResumeToPDF(selectedResume.resume),;
-      ;
-      // Create download link;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-      const url = URL.createObjectURL(pdfBlob),;
-
-      const link = document.createElement('a'),;
-      link.href = url,;'`
-      link.download = `${selectedResume.title || 'Resume'}.pdf`,;
->>>>>>> origin/chore/fix-lint-and-merge
       document.body.appendChild(link),;
       link.click(),;
       // Clean up;
@@ -1607,407 +643,33 @@ export function ResumeSelector() { return null; }
       <RadioGroup;
         value={selectedOption} ;'
         onValueChange={(value) => handleOptionChange(value as 'recent' | 'select' | 'upload')}
-<<<<<<< HEAD
-      ;
-      // Clean up;
-      document.body.removeChild(link),;
-      URL.revokeObjectURL(url),;
-      ;
-      toast({;
-        title:"Success!",;
-        description:"Your resume has been downloaded."}),;
-    } catch (error) {;
-      console.error('Error downloading PDF:', error),;
-      toast({;
-        title:"Download failed",;
-        description:"There was an error downloading your resume.",;
-        variant:"destructive";
-      }),;
-    } finally {;
-      setIsLoading(false),;
-    }
-  },;
-  ;
-  // Handle "Generate Resume Now" button;
-  const handleGenerateResume = () => {;
-    window.open('/dashboard/talent/portfolio_blank'),;
-  },;
-  ;
-  return (;
-    <div className="space-y-4">;
-      <h3 className="text-lg font-medium text-white">Attach Resume</h3>;
-      ;
-      <RadioGroup ;
-        value={selectedOption} ;
-        onValueChange={(value) => handleOptionChange(value as 'recent' | 'select' | 'upload')}
-=======
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        className="space-y-3";
-      >;
-        <div className="flex items-center space-x-2">;
-          <RadioGroupItem value="recent" id="recent" />;
-<<<<<<< HEAD
-
-      {selectedOption === "select" && (;
-
-      {selectedOption === "select" && (;
-        <SelectResumeSection
 
 
 
-      {selectedOption === "select" && (
-        <SelectResumeSection
-
-;
-      {selectedOption === 'select' && (;
-        <SelectResumeSection;
-
-
-          resumeOptions={resumeOptions}
-          selectedResume={selectedResume}
-          <Label htmlFor="recent" className="text-white">Use most recent AI Resume</Label>;
-        </div>;
-        ;
-          <Label htmlFor="recent" className="text-white">Use most recent AI Resume</Label>;
-        </div>;
-        <div className="flex items-center space-x-2">;
-          <RadioGroupItem value="select" id="select" />;
-          <Label htmlFor="select" className="text-white">Select from saved versions</Label>;
-        </div>;
-        <div className="flex items-center space-x-2">;
-          <RadioGroupItem value="upload" id="upload" />;
-          <Label htmlFor="upload" className="text-white">Upload a custom resume (PDF)</Label>;
-        </div>;
-      </RadioGroup>;
-
-      {selectedOption === "upload" && (;
-
-      {selectedOption === "upload" && (;
-        <UploadSection
-
-
-
-      {selectedOption === "upload" && (
-        <UploadSection
-
-;
-      {selectedOption === 'upload' && (;
-        <UploadSection;
-
-
-          customFile={customFile}
-          onFileUpload={handleFileUpload}
-      ;
-      {selectedOption === 'upload' && (;
-        <UploadSection;
-          customFile={customFile}          onFileUpload={handleFileUpload}
-=======
-          <Label htmlFor="recent" className="text-white">;
-            Use most recent AI Resume;
-          </Label>;
-        </div>;
-
-        <div className="flex items-center space-x-2">;
-          <RadioGroupItem value="select" id="select" />;
-          <Label htmlFor="select" className="text-white">;
-            Select from saved versions;
-          </Label>;
-        </div>;
-
-        <div className="flex items-center space-x-2">;
-          <RadioGroupItem value="upload" id="upload" />;
-          <Label htmlFor="upload" className="text-white">;
-=======
-;
-      setResumeOptions (options);
-;
-      // Pre - select the most recent resume;
-      // Check condition
-if ( {) {
-  $2
-}
-        setSelectedResume (options[0]);
-        onResumeSelected (options[0]);
-      }
-    }
-  }, [resume, selected_option, onResumeSelected]);
-;
-  // Handle radio option change;
-  const handleOptionChange = (value: "recent" | "select" | "upload") =>: any {
-    setSelectedOption (value);
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      (setSelectedResume (resume_options[0]), onResumeSelected (resume_options[0]));
-    } else // Check condition
-if ( {) {
-  $2
-}
-      // Reset selection until user chooses;
-      setSelectedResume (null);
-    } else // Check condition
-if ( {) {
-  $2
-}
-      setSelectedResume (null);
-    }
-  }
-;
-  // Handle resume selection change;
-  const handleResumeSelect = (resume_id: string) =>: any {
-    const selected = resume_options.find ((opt) => opt.id === resume_id);
-    // Check condition
-if ( {) {
-  $2
-}
-      (setSelectedResume (selected), onResumeSelected (selected));
-    }
-  }
-;
-  // Handle custom file upload;
-  const handleFileUpload = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      const file = e.target.files[0];
-;
-      // Check if it's a PDF file;
-      // Check condition
-if ( {) {
-  $2
-}
-        toast ({
-          title: "Invalid file type",
-          description: "Please upload a PDF file",
-          variant: "destructive",
-        });
-        return;
-      }
-      // Create a custom resume option;
-      const custom_option: ResumeOption = {
-        id: "custom - upload",
-        title: file.name,
-        type: "custom_upload",
-        file: file,
-      }
-;
-      setCustomFile (file);
-      setSelectedResume (custom_option);
-      onResumeSelected (custom_option);
-    }
-  }
-;
-  // Handle resume download;
-  const handleDownloadResume = async () => {
-    // Check condition
-if ( {) {
-  $2
-}
-      return;
-    }
-    try {
-      setIsLoading (true);
-      const pdf_blob = await exportResumeToPDF (selected_resume.resume);
-;
-      // Create download link;
-      const url = URL.createObjectURL (pdf_blob);
-      const link = document.create_element ("a");
-      link.href = url;
-      link.download = `${selected_resume.title || "Resume"}.pdf`;
-      document.body.append_child (link);
-      link.click ();
-;
-      // Clean up;
-      document.body.remove_child (link);
-      URL.revokeObjectURL (url);
-;
-      toast ({
-        title: "Success!",
-        description: "Your resume has been downloaded.",
-      });
-    } catch (error) {
-      console.error ("Error downloading PDF:", error);
-      toast ({
-        title: "Download failed",
-        description: "There was an error downloading your resume.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsLoading (false);
-    }
-  }
-;
-  // Handle "Generate Resume Now" button;
-  const handleGenerateResume = () =>: any {
-    window.open ("/dashboard / talent / portfolio_blank");
-  }
-;
-  return (
-    <div className="space - y-4">;
-      <h3 className="text - lg font - medium text - white">Attach Resume</h3>;
-      <RadioGroup;
-        value={selected_option}
-        onValueChange={(value) =>;
-          handleOptionChange (value as "recent" | "select" | "upload");
-        }
-        className="space - y-3";
-      >;
-        <div className="flex items - center space - x-2">;
-          <RadioGroupItem value="recent" id="recent" />;
-          <Label html_for="recent" className="text - white">;
-            Use most recent AI Resume;
-          </Label>;
-        </div>;
-        <div className="flex items - center space - x-2">;
-          <RadioGroupItem value="select" id="select" />;
-          <Label html_for="select" className="text - white">;
-            Select from saved versions;
-          </Label>;
-        </div>;
-        <div className="flex items - center space - x-2">;
-          <RadioGroupItem value="upload" id="upload" />;
-          <Label html_for="upload" className="text - white">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             Upload a custom resume (PDF);
 
           resume={resume}
           onDownload={handleDownloadResume}
           isLoading={isLoading}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
         />;
       )}
 
-<<<<<<< HEAD
-      {selectedOption === "select" && (;
-
-=======
-
-<<<<<<< HEAD
-;
 
 
-;
-
-      ;
-      {/* Generate Resume Now button */}
-      <div className="flex justify-between items-center pt-2">;
-          className="text-zion-purple border-zion-purple/20">;
-        <Button ;
-          variant="outline";
-          onClick={handleGenerateResume}
-          className="text-zion-purple border-zion-purple/20";
-        >;
-          <Plus className="h-4 w-4 mr-2" />;
-          Generate Resume Now;
-        </Button>;
-      </div>;
-    </div>;
-      {/* Resume selection options based on radio selection */}
-      {selectedOption === 'recent' && resume && (;
-        <ResumePreviewCard;
-          resume={resume}
-          onDownload={handleDownloadResume}
-          isLoading={isLoading}
-        />
-      )}
-=======
-      {selectedOption === "select" && (;
-
-        <SelectResumeSection
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-      {selectedOption === "select" && (
-        <SelectResumeSection
-;
-      {selectedOption === 'select' && (;
-        <SelectResumeSection;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> merged-prs-20250907-203621
           resumeOptions={resumeOptions}
           selectedResume={selectedResume}
           handleResumeSelect={handleResumeSelect}
           handleDownloadResume={handleDownloadResume}
           isLoading={isLoading}
-<<<<<<< HEAD
-        />
-      )}
-      {selectedOption === "upload" && (
-        <UploadSection
-          customFile={customFile}
-          onFileUpload={handleFileUpload}
-        />
-      )}
-      {/* Generate Resume Now button */}
-      <div className="flex justify-between items-center pt-2">
-        <Button 
-          variant="outline"
-          onClick={handleGenerateResume}
-          className="text-zion-purple border-zion-purple/20"
-        >
-          <Plus className="h-4 w-4 mr-2" />
-          Generate Resume Now
-        </Button>
-      </div>
-    </div>
-=======
-<<<<<<< HEAD
-        />
-      )}
-
-=======
-        />;
-      )}
 
 
-      {selectedOption === "upload" && (;
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-        <UploadSection
-
-<<<<<<< HEAD
-        <UploadSection;
-"
-      {selectedOption === "upload" && (
-        <UploadSection;
-;'
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      {selectedOption === "upload" && (
-        <UploadSection
-;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       {selectedOption === 'upload' && (;
         <UploadSection;
-<<<<<<< HEAD
-          customFile={customFile}
-          onFileUpload={handleFileUpload}
-        />
-      )}
-;
 
-;
-      {/* Generate Resume Now button */}
-      <div className="flex justify-between items-center pt-2">
-        <Button 
-          variant="outline"
-          onClick={handleGenerateResume}
-=======
 
           customFile={customFile}
           onFileUpload={handleFileUpload}
@@ -2085,12 +747,7 @@ if ( {) {
       </div>;
     </div>);
 
-<<<<<<< HEAD
-=======
-}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
           className="text-zion-purple border-zion-purple/20"
         >"
           <Plus className="h-4 w-4 mr-2" />
@@ -2098,100 +755,7 @@ if ( {) {
         </Button>
       </div>
     </div>
-<<<<<<< HEAD
-  )
-}
-;
-  ),; export function ResumeSelector ({
-  onResumeSelected 
-}: ResumeSelectorProps) {
-  const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'> ('recent');
-const [selectedResume, setSelectedResume] = useState<ResumeOption | null> (null);
-const [resumeOptions, setResumeOptions] = useState<ResumeOption[]> ([]);
-const [customFile, setCustomFile] = useState<File | null> (null);
-const [isLoading, setIsLoading] = useState (false);
-const {
-  resume, fetchResume 
-}= useResume ();
-//Fetch resume data when component mounts useEffect ( () => {
-  const loadResumes = async () => {
-  setIsLoading (true);
-try {
-  await fetchResume () 
-}catch (error) {
-  
-}finally {
-  setIsLoading (false) 
-}
-};
-}, [fetchResume]);
-//Update resume options when resume data changes useEffect ( () => {
-  if (resume) {
-  const options: ResumeOption[] = [ {
-  setResumeOptions (options);
-//Pre-select the most recent resume 
-}
-}, [resume, selectedOption, onResumeSelected]);
-//Handle radio option change //Check if it's a PDF file if (file.type !== 'application/pdf') {
-  toast ({
-  return;
-}//Create a custom resume option setCustomFile (file);
-setSelectedResume (customOption);
-onResumeSelected (customOption) 
-}
-};
-//Handle resume download 
-}catch (error) {
-  console.error ('Error downloading PDF:', error);
-toast ({
-  
-}finally {
-  setIsLoading (false) 
-}
-};
-//Handle "Generate Resume Now" button const handleGenerateResume = () => {
-  window.open ('/dashboard/talent/portfolio blank') 
-};
-return (<div className="space-y-4" > <h3 className="text-lg font-medium text-white" >Attach Resume</h3> <RadioGroup value= {
-  selectedOption 
-}onValueChange= {
-  (value) => handleOptionChange (value as 'recent'| 'select'| 'upload') 
-}className="space-y-3" flex items-center space-x-2"> <RadioGroupItem value=" recent"id=" recent"/> <Label htmlFor=" recent"className=" text-white">Use most recent AI Resume</Label> </div> <div className=" flex items-center space-x-2"> <RadioGroupItem value=" select"id=" select"/> <Label htmlFor=" select"className=" text-white">Select from saved versions</Label> </div> <div className=" flex items-center space-x-2"> <RadioGroupItem value=" upload"id=" upload"/> <Label htmlFor=" upload"className=" text-white">Upload a custom resume (PDF) </Label> </div> </RadioGroup> {
-  /* Resume selection options based on radio selection */ 
-}{
-  selectedOption === 'recent'&& resume && (<ResumePreviewCard resume= {
-  resume 
-}onDownload= {
-  handleDownloadResume 
-}isLoading= {
-  isLoading 
-}/>) 
-}{
-  selectedOption === 'select'&& (<SelectResumeSection resumeOptions= {
-  resumeOptions 
-}selectedResume= {
-  selectedResume 
-}handleResumeSelect= {
-  handleResumeSelect 
-}handleDownloadResume= {
-  handleDownloadResume 
-}isLoading= {
-  isLoading 
-}/>) 
-}{
-  selectedOption === 'upload' && (<UploadSection customFile= {
-  customFile 
-}onFileUpload= {
-  handleFileUpload 
-}/>) 
-}> <Plus className=" h-4 w-4 mr-2" /> Generate Resume Now </Button> </div> </div>) 
-}
-  );
-}
-  )
-}
-;
-=======
+
 
 }
 ;
@@ -2278,15 +842,13 @@ return (<div className="space-y-4" > <h3 className="text-lg font-medium text-whi
 }> <Plus className=" h-4 w-4 mr-2" /> Generate Resume Now </Button> </div> </div>) 
 });
 }
->>>>>>> merged-prs-20250907-203621
+
   )
 }
 ;
-<<<<<<< HEAD
-}
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
+
+
+

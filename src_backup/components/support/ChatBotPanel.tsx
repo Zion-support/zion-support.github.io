@@ -5,36 +5,8 @@ import { Separator } from "@/components/ui/separator",
 import { toast } from "@/components/ui/use-toast",
 import { cn } from "@/lib/utils",
 import { ChatMessage } from "./ChatMessage",
-<<<<<<< HEAD
-:src/components/support/ChatBotPanel.tsx
-import { QuickReplyButton } from "./QuickReplyButton";
-import { Send, Loader2 } from 'lucide-react'
-import { useTheme } from "@/hooks/useTheme";
-// Define suggested quick replies
-// Define suggested quick replies
-const QUICK_REPLIES = [
-  { id: "hire", text: "How do I hire?" },
-  { id: "match", text: "How do I get matched?" },
-  { id: "billing", text: "Billing help" }],
 
-  { id: "hire", text: "How do I hire?" }
-  { id: "match", text: "How do I get matched?" }
-  { id: "billing", text: "Billing help" }]
-type Message = {
-  id: string
-  content: string
-  sender: "user" | "bot"
-  timestamp: Date
-}
-export function ChatBotPanel() {
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      id: "welcome"
-      content: "Hi! How can I help you?"
-      sender: "bot"
-      timestamp: new Date()}])
-=======
->>>>>>> origin/chore/fix-lint-and-merge
+
 
   id: string,
   content: string,"

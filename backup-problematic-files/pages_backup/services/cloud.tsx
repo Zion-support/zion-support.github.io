@@ -8,62 +8,31 @@ export default function CloudServicesPage() {
 export default function CloudServicesPage() {;
   const cloudServices = [;
     {}
-<<<<<<< HEAD
 
-=======
       title: "Cloud Migration",";
       description: "Seamless migration of your infrastructure to the cloud",";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       icon: Cloud,;
       features: ["Zero Downtime", "Data Integrity", "Cost Optimization"]";
     },;
     {}
-<<<<<<< HEAD
 
-=======
       title: "Cloud Infrastructure",";
       description: "Scalable and secure cloud infrastructure setup",";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       icon: Server,;
       features: ["Auto Scaling", "High Availability", "Disaster Recovery"]";
     },;
     {}
-<<<<<<< HEAD
 
-=======
       title: "Cloud Security",";
       description: "Comprehensive security solutions for cloud environments",";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       icon: Shield,;
       features: ["Identity Management", "Data Encryption", "Compliance"]";
     },;
     {}
-<<<<<<< HEAD
 
-      icon: Zap,;
-      features: ["Cost Analysis", "Performance Tuning", "Resource Management"]";
-      title: "Cloud Migration",";""
-      description: "Seamless migration of your infrastructure to the cloud",";"
-      icon: Cloud,;]"
-      features: ["Zero Downtime", "Data Integrity", "Cost Optimization"]";"
-    },;
-    {}"
-      title: "Cloud Infrastructure",";""
-      description: "Scalable and secure cloud infrastructure setup",";"
-      icon: Server,;"
-      features: ["Auto Scaling", "High Availability", "Disaster Recovery"]";"
-      title: "Cloud Security",";""
-      description: "Comprehensive security solutions for cloud environments",";"
-      icon: Shield,;"
-      features: ["Identity Management", "Data Encryption", "Compliance"]";"
-      title: "Cloud Optimization",";""
-      description: "Performance and cost optimization for cloud resources",";"
-      icon: Zap,;"
-      features: ["Cost Analysis", "Performance Tuning", "Resource Management"]";"
-pr-12325
-    }
-;  ];
-=======
       title: "Cloud Optimization",";
       description: "Performance and cost optimization for cloud resources",";
       icon: Zap,;
@@ -76,7 +45,7 @@ pr-12325
       description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."">;
       <div className="min-h-screen bg-gray-50">";
   ];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 
 interface CloudProps {
   className?: string;
@@ -89,16 +58,14 @@ export default function CloudServicesPage() {
       description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services.">;
       <div className="min-h-screen bg-gray-50">;
         {/* Hero Section */}
-<<<<<<< HEAD
 
-=======
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">";
           <div className="container mx-auto px-4">";
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -116,8 +83,7 @@ export default function CloudServicesPage() {
                 From migration to optimization, we help you leverage the power of the cloud.,;
               </p>;
             </motion && motion.div>;
-<<<<<<< HEAD
-=======
+
           </div>;
         </section>;
               className="text-center";
@@ -130,7 +96,7 @@ export default function CloudServicesPage() {
                 From migration to optimization, we help you leverage the power of the cloud.;
               </p>;
             </motion && motion.div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
           </div>;
         </section>;
               className="text-center";
@@ -157,8 +123,7 @@ export default function CloudServicesPage() {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
+
         {/* Services Section */}
         <section className="py-20">";
           <div className="container mx-auto px-4">";
@@ -202,7 +167,7 @@ export default function CloudServicesPage() {
             </div>
           </div>
         </section>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 
         {/* Services Grid */}
         <section className="py-16 px-4">;
@@ -210,31 +175,7 @@ export default function CloudServicesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {cloudServices && cloudServices.map((service, index) => (;
                 <motion&& motion.div
-<<<<<<< HEAD
 
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}"
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">;"
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">;"
-                    <service && service.icon className="w-6 h-6 text-blue-600" />;"
-</service>
-                  </div>;"
-                  <h3 className="text-xl font-semibold mb-2">{service && service.title}</h3>;""
-                  <p className="text-gray-600 mb-4">{service && service.description}</p>;""
-                  <div className="space-y-2 mb-4">;"
-                      <div key={featureIndex} className="flex items-center text-sm text-gray-600">;"
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />;"
-
-                  <div className="text-lg font-semibold text-blue-600 mb-4">{service && service.pricing}</div>;"
-                  <Link;"
-                    href="/contact"""
-                    className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">;"
-                    <ArrowRight className="ml-2 w-4 h-4" />;"
-
-                  ;
-=======
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -261,15 +202,10 @@ export default function CloudServicesPage() {
                     <ArrowRight className="ml-2 w-4 h-4" />;
                   </Link>;
                 </motion && motion.div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
               ))}
 
-<<<<<<< HEAD
-              whileHover={{ scale: 1 && 1.05 }}>,;
-              <ArrowRight className="w-5 h-5 ml-2" />";"
 
-            </motion && motion.a>;
-=======
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">";
           <div className="container mx-auto px-4 text-center">";
@@ -289,16 +225,4 @@ export default function CloudServicesPage() {
         </section>;
       </div>;
     </Layout>;
-<<<<<<< HEAD
-  );
-};
 
-export default Cloud;
-=======
-<<<<<<< HEAD
-  );
-};
-
-export default Cloud;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

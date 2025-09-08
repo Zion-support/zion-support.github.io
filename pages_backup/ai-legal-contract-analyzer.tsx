@@ -75,9 +75,7 @@ import {
               <a'
                 href='/contact'
 
-<<<<<<< HEAD:pages_backup/ai-legal-contract-analyzer.tsx
-import Head from 'next / head';
-=======
+
                 className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2'>;
                 Review Contracts Faster;
                 <ArrowRight />;
@@ -96,44 +94,21 @@ import Head from 'next / head';
                   <span>{service && service.contactInfo.address}</span>;
 import Head from 'next / head';
 import {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/ai-legal-contract-analyzer.tsx
+
 
 import React from 'react';
 '
 
-<<<<<<< HEAD
-import React from 'react',
-import React from 'react';
-import Head from 'next/head';
 
-import {
-  Phone
-  Mail
-  MapPin
-  Check
-  ArrowRight
-  Star
-  Scale;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
   Phone,
   Mail,
   MapPin,
   Check,
   ArrowRight,
-<<<<<<< HEAD
-  Star,;
-  Scale,;
-=======
-
-<<<<<<< HEAD:pages_backup/ai-legal-contract-analyzer.tsx
-=======
-  Star,;
-  Scale,;
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/ai-legal-contract-analyzer.tsx
+
 } from 'lucide-react';
 
 import Layout from '../components / layout / Layout';
@@ -225,103 +200,45 @@ if (return null) {}
             </div>;
           </div>;
         </div>;
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:pages_backup/ai-legal-contract-analyzer.tsx
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        <div className="bg - amber - 50 rounded - lg p - 8 text - center">;
-          <h2 className="text - 2xl font - bold mb - 4">Streamline Legal Work</h2>;
-          <p className="text - lg text - gray - 700 mb - 6">;
-            Accelerate your legal work with AI - powered contract analysis and document review tools.;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/ai-legal-contract-analyzer.tsx
+
+
           </p>;
           <div className="flex justify - center gap - 4">;"
             <a href="/contact" className="bg - amber - 600 text - white px - 6 py - 3 rounded - lg hover: bg - amber - 700">;
               Get Started;
             </a>;
-<<<<<<< HEAD:pages_backup/ai-legal-contract-analyzer.tsx
-=======
-            <a href="/about" className="border border - amber - 600 text - amber - 600 px - 6 py - 3 rounded - lg hover:bg - amber - 50">;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/ai-legal-contract-analyzer.tsx
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+            <a href="/about" className="border border - amber - 600 text - amber - 600 px - 6 py - 3 rounded - lg hover:bg - amber - 50">;
+
               Learn More;
             </a>;
           </div>;
         </div>;
       </main>;
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD:pages_backup/ai-legal-contract-analyzer.tsx
-export default function AILegalContractAnalyzerPage() {
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, Scale } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/ai-legal-contract-analyzer.tsx
 
-<<<<<<< HEAD
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, Scale } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+
 export default function AILegalContractAnalyzerPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/ai-legal-contract-analyzer');
   );  if (!service) return null;
 
-<<<<<<< HEAD:pages_backup/ai-legal-contract-analyzer.tsx
-=======
-<<<<<<< HEAD
-=======
 
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/ai-legal-contract-analyzer.tsx
 import React from 'react'
 import Head from 'next/head'
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Scale } from 'lucide-react',
 import Layout from '../components/layout/Layout'
 
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:pages_backup/ai-legal-contract-analyzer.tsx
-    s.link.endsWith('/ai-legal-contract-analyzer')
-  );
-  if (!service) return null;
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-export default function AILegalContractAnalyzerPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-legal-contract-analyzer'))
-  if (!service) return null,
 
-<<<<<<< HEAD
-export default function AILegalContractAnalyzerPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-legal-contract-analyzer'))
-  if (!service) return null,
-export default function AILegalContractAnalyzerPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-legal-contract-analyzer'))
-  if (!service) return null,
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/ai-legal-contract-analyzer.tsx
   return (
     <Layout>
       <Head>
@@ -349,17 +266,7 @@ export default function AILegalContractAnalyzerPage() {
               <p className="text-slate-300 mb-6">{service.description}</p>"
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => (
-<<<<<<< HEAD:pages_backup/ai-legal-contract-analyzer.tsx
 
-                  <li
-                    key={i}
-                    className='flex items-start space-x-3 text-slate-200 w-5 h-5 text-amber-400 mt-0.5'
-                  >
-                    <Check />
-                    <span>{feat}</span>
-                  </li>
-                ))}
-=======
                   <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-amber-400 mt-0.5"><Check /><span>{feat}</span></li>
 
 
@@ -371,116 +278,7 @@ export default function AILegalContractAnalyzerPage() {
     </Layout>
   )
 }
-<<<<<<< HEAD
-    </Layout>);
-;
 
 
 
-    </Layout>);
-;
-                ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/ai-legal-contract-analyzer.tsx
-              </ul>
-            </div>
-            <div className='bg-black/30 rounded-2xl border border-amber-500/30 p-6 h-fit'>
-              <div className='flex items-end justify-between mb-3'>
-                <div>
-                  <div className='text-3xl font-bold text-white text-slate-400 text-base'>
-                    {service.price}
-                    <span>{service.period}</span>
-                  </div>
-                  <div className='text-slate-400'>
-                    {service.trialDays}-day free trial • Setup:{' '}
-                    {service.setupTime}
-                  </div>
-                </div>
-                <div className='flex items-center text-yellow-400 w-4 h-4 mr-1'>
-                  <Star />
-                  {service.rating.toFixed(1)}
-                </div>
-              </div>
-<<<<<<< HEAD:pages_backup/ai-legal-contract-analyzer.tsx
-              <a
-                href='/contact'
-                className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2'
-              >
-                Review Contracts Faster
-                <ArrowRight />
-              </a>
-              <div className='mt-6 space-y-3 text-sm text-slate-300'>
-                <div className='flex items-center space-x-2 w-4 h-4 text-amber-400'>
-                  <Phone />
-                  <span>{service.contactInfo.mobile}</span>
-                </div>
-                <div className='flex items-center space-x-2 w-4 h-4 text-purple-400'>
-                  <Mail />
-                  <span>{service.contactInfo.email}</span>
-                </div>
-                <div className='flex items-center space-x-2 w-4 h-4 text-green-400 text-xs'>
-                  <MapPin />
-                  <span>{service.contactInfo.address}</span>
-                </div>
 
-=======
-              <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Review Contracts Faster<ArrowRight /></Link>
-              <div className="mt-6 space-y-3 text-sm text-slate-300">
-                <div className="flex items-center space-x-2 w-4 h-4 text-amber-400"><Phone /><span>{service.contactInfo.mobile}</span></div>
-                <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{service.contactInfo.email}</span></div>
-                <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs"><MapPin /><span >{service.contactInfo.address}</span></div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/ai-legal-contract-analyzer.tsx
-              </div>
-            </div>
-          </div>
-        </div>
-<<<<<<< HEAD:pages_backup/ai-legal-contract-analyzer.tsx
-
-=======
-        <div className="bg-amber-50 rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-bold mb-4">Streamline Legal Work</h2>
-          <p className="text-lg text-gray-700 mb-6">
-            Accelerate your legal work with AI-powered contract analysis and document review tools.
-          </p>
-          <div className="flex justify-center gap-4">
-            <a href="/contact" className="bg-amber-600 text-white px-6 py-3 rounded-lg hover: bg-amber-700">
-              Get Started
-            </a>
-            <a href="/about" className="border border-amber-600 text-amber-600 px-6 py-3 rounded-lg hover:bg-amber-50">
-              Learn More
-            </a>
-          </div>
-        </div>
-      </main>
-    </Layout>
-);
-
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/ai-legal-contract-analyzer.tsx
-      </div>
-    </Layout>
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
-
-    </Layout>);
-<<<<<<< HEAD:pages_backup/ai-legal-contract-analyzer.tsx
-;
-=======
-;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/ai-legal-contract-analyzer.tsx

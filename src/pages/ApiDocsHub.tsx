@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 
-import React from 'react'
-import Link from 'next/link'
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 return (
     <ApiDocsLayout>
       <div className='max-w-4xl'>
@@ -236,11 +232,10 @@ export function ApiDocsHub() {
             >
               <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${section.color} flex items-center justify-center mb-4`}>
                 <section.icon className="h-6 w-6 text-white" />
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
               </div>
               <h2 className="text-xl font-semibold text-white mb-2">{section.title}</h2>
               <p className="text-zinc-400 mb-4">{section.description}</p>
@@ -251,17 +246,9 @@ export function ApiDocsHub() {
             </Link>
           ))}
         </div>
-<<<<<<< HEAD
-        <div className='mt-12 p-6 rounded-lg bg-zinc-900 border border-zinc-800'>
-          <h2 className='text-xl font-semibold text-white mb-4'>
-            Ready to get started?
-          </h2>
-          <p className='text-zinc-400 mb-6'>
-            To use the Zion AI Marketplace API, you'll need an API key. Visit
-            your developer portal to create one.
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
 
         <div className="mt-12 p-6 rounded-lg bg-zinc-900 border border-zinc-800">
           <h2 className="text-xl font-semibold text-white mb-4">Ready to get started?</h2>
@@ -278,20 +265,11 @@ export function ApiDocsHub() {
           </Link>
         </div>
       </div>
-<<<<<<< HEAD
-    </ApiDocsLayout>;
-  );
-export default ApiDocsHub;
-}
-    </ApiDocsLayout>
-  )
-export default ApiDocsHub
 
-=======
 
         </div>;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 import React from "react",;
 import Link from "next/link",;
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from 'lucide-react';
@@ -416,8 +394,6 @@ export function ApiDocsHub() {;
 export default ApiDocsHub;
 
     </ApiDocsLayout>
-<<<<<<< HEAD
+
   )
-=======
-  )
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+

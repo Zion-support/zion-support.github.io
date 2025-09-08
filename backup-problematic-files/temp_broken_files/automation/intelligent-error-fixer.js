@@ -320,28 +320,7 @@ const {
       if (!fs.existsSync(pagesDir)) {
         return;
       const duplicates = [];
-<<<<<<< HEAD
-      const seen = new Set()function scanDirectory() {const files = fs.readdirSync(dir, { "withFileTypes": true })files.forEach((file) => {if (file.isDirectory()) {scanDirectory(path.join(dir, file.name))} else if (file.name.endsWith('.js') || file.name.endsWith('.tsx')) {const baseName = file.name.replace(/\.(js|tsx)$/, '')const relativePath = path.relative(pagesDir,path.join(dir, baseName))if (seen.has(relativePath)) {duplicates.push(path.join(dir, file.name))} else {seen.add(relativePath)}'
-          }
-        })}
-      scanDirectory(pagesDir)// Remove duplicate .js files if .tsx exists;
-      for (const duplicate of duplicates) {if (duplicate.endsWith('.js')) {const tsxVersion = duplicate.replace('.js', '.tsx')if (fs.existsSync(tsxVersion)) {this.log(`Removing duplicate JS "file": ${duplicate}`)fs.unlinkSync(duplicate)}`        }
-      }
-    }
-    async installMissingDependencies() {this.log('Checking for missing dependencies...')const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'))const dependencies = {...packageJson.dependencies,...packageJson.devDependencies}const commonMissing = ['web3modal', 'ethers', 'react-is'];'
-      const toInstall = commonMissing.filter(dep => !dependencies[dep])if (toInstall.length > 0) {this.log(`Installing missing "dependencies": ${toInstall.join(', ')}`)try {execSync(`yarn add ${toInstall.join(' ')}`, { "stdio": 'pipe' })this.log('Successfully installed missing dependencies')} catch (error) {this.log(`Failed to install "dependencies": ${error.message}`, 'ERROR')}'      }
-    }
-    async generateReport(errors, fixes) {const report = {"timestamp": new Date().toISOString(),"totalErrors": errors.length,"fixesApplied": fixes.length,"errors": errors,"fixes": fixes,"summary": {"buildStatus": 'checking',"criticalErrors": errors.filter(e => e.critical).length,"warningsResolved": fixes.filter(f => f.type === 'warning').length,"syntaxErrorsFixed": fixes.filter(f => f.type === 'syntax').length}}fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))this.log(`Report "generated": ${this.reportFile}`)return report;`    }
-    async run() {this.log('Starting Intelligent Error Fixer...')const errors = [];'
-      }
-      try {// 1. Clean up duplicate files;
-        }
-        await this.cleanupDuplicateFiles()// 2. Install missing dependencies;
-        await this.installMissingDependencies()// 3. Run initial build check;
-          }
-          for (const file of uniqueFiles) {const filePath = path.join(process.cwd(), file)const fixed = await this.fixFile(filePath)if (fixed) {fixes.push({"type": 'syntax',"file": file,"timestamp": new Date().toISOString()})}"
-          }
-=======
+
       const seen = new Set();
       function scanDirectory(dir) {
         const files = fs.readdirSync(dir, { "withFileTypes": true });"
@@ -396,7 +375,7 @@ const {
                 "type": 'syntax',
                 "file": file,")"
                 "timestamp": new Date().toISOString()});"
->>>>>>> origin/chore/fix-lint-and-merge
+
           // Run build again after fixes;
           if (fixes.length > 0) {"
   // TODO: Implement

@@ -1,4 +1,4 @@
-<<<<<<<< HEAD:src_backup/components/projects/milestones/AddMilestoneForm.tsx
+<:src_backup/components/projects/milestones/AddMilestoneForm.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 import React from 'react;
 import { use_form } from react - hook - form';
@@ -77,7 +77,7 @@ const form_schema = z.object ({
   due_date: z.date ().optional (),
   amount: z.coerce.number ().min (0, 'Amount must be greater than or equal to 0)});
 type MilestoneFormValues = z.infer < typeof form_schema>;
-<<<<<<<< HEAD:src_backup/components/projects/milestones/AddMilestoneForm.tsx
+<:src_backup/components/projects/milestones/AddMilestoneForm.tsx
   PopoverTrigger } from @/components/ui/popover';
 import { AIMilestoneGenerator  } from './AIMilestoneGenerator;
 import { GeneratedMilestone } from @/hooks/useMilestoneGenerator';
@@ -171,7 +171,7 @@ import { CalendarIcon, Loader2 } from lucide-react
 import { format } from 'date-fns';
 import { Button } from @/components/ui/button;
 import { Calendar } from '@/components/ui/calendar';
-<<<<<<<< HEAD:src_backup/components/projects/milestones/AddMilestoneForm.tsx
+<:src_backup/components/projects/milestones/AddMilestoneForm.tsx
   Form,
   FormControl,
   FormField,
@@ -273,7 +273,7 @@ export function AddMilestoneForm({
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
       })
     })
-<<<<<<<< HEAD:src_backup/components/projects/milestones/AddMilestoneForm.tsx
+<:src_backup/components/projects/milestones/AddMilestoneForm.tsx
   }
   const handleAddMilestone = (milestone: GeneratedMilestone,) => {
     onSubmit({
@@ -307,7 +307,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className=space-y-6">
       {/* AI Milestone Generator */}
-<<<<<<<< HEAD:src_backup/components/projects/milestones/AddMilestoneForm.tsx
+<:src_backup/components/projects/milestones/AddMilestoneForm.tsx
 
       {projectScope && projectStartDate && (;
         <AIMilestoneGenerator;
@@ -333,7 +333,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           projectType={projectType}
           onAddMilestones={handleAddMilestones}
           onAddMilestone={handleAddMilestone}
-<<<<<<<< HEAD:src_backup/components/projects/milestones/AddMilestoneForm.tsx
+<:src_backup/components/projects/milestones/AddMilestoneForm.tsx
         />;)}<Form {...form}>;
         <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4>;<FormField;
             control = {form && form.control}
@@ -372,7 +372,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <FormControl>;
                   <Input placeholder=Milestone title" {...field} />;
                 </FormControl>;
-<<<<<<<< HEAD:src_backup/components/projects/milestones/AddMilestoneForm.tsx
+<:src_backup/components/projects/milestones/AddMilestoneForm.tsx
                 <FormMessage />;/>;<FormField;
             control = {form && form.control}
             name="description;
@@ -426,7 +426,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className=grid grid-cols-1 md:grid-cols-2 gap-4">;
 
             <FormField
-<<<<<<<< HEAD:src_backup/components/projects/milestones/AddMilestoneForm.tsx
+<:src_backup/components/projects/milestones/AddMilestoneForm.tsx
               control={form.control}
               name="due_date
               render={({ field }: { field: any }) => (
@@ -468,7 +468,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                               Pick a date;
                             </span>;
                           )}
-<<<<<<<< HEAD:src_backup/components/projects/milestones/AddMilestoneForm.tsx
+<:src_backup/components/projects/milestones/AddMilestoneForm.tsx
                           <CalendarIcon className=ml-auto h-4 w-4 opacity-50" />;
                         </Button>;
                       </FormControl>;
@@ -519,7 +519,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       />;
                     </PopoverContent>;
                   </Popover>;
-<<<<<<<< HEAD:src_backup/components/projects/milestones/AddMilestoneForm.tsx
+<:src_backup/components/projects/milestones/AddMilestoneForm.tsx
                   <FormMessage />;/>;<FormField;
               control = {form && form.control}
               name="amount;
@@ -673,7 +673,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </form>;
       </Form>;
-<<<<<<<< HEAD:src_backup/components/projects/milestones/AddMilestoneForm.tsx
+<:src_backup/components/projects/milestones/AddMilestoneForm.tsx
     </div>)}//If there are multiple milestones, submit them one by one <AIMilestoneGenerator scope= {project_scope;
 }start_date= {projectStartDate;
 }end_date= {projectEndDate;

@@ -63,35 +63,7 @@ const AdminPartnersPage: React.FC = () => {
   useEffect(() => {
     // Simulate loading partners
     setTimeout(() => {
-<<<<<<< HEAD:pages_backup_1757220418/admin/partners.tsx
-      setPartners(mockPartners)
-      setLoading(false)
-    }, 1000)
-  }, [])
-  const filteredPartners = partners.filter(partner => {
-    const matchesSearch = partner.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         partner.code.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         partner.contactEmail.toLowerCase().includes(searchTerm.toLowerCase())
-    const matchesStatus = statusFilter === 'all' || partner.status === statusFilter
-    return matchesSearch && matchesStatus
-  })
-  const handleStatusChange = (partnerId: string, newStatus: Partner['status']) => {
-    setPartners(prev => 
-      prev.map(partner => 
-        partner.id === partnerId 
-          ? { ...partner, status: newStatus }
-          : partner
-      )
-    )
-  }
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'active': return 'bg-green-100 text-green-800'
-      case 'inactive': return 'bg-red-100 text-red-800'
-      case 'pending': return 'bg-yellow-100 text-yellow-800'
-      default: return 'bg-gray-100 text-gray-800'
-    }
-=======
+
       setPartners(mockPartners);
       setLoading(false);
     }, 1000);  }, []);
@@ -116,7 +88,7 @@ const AdminPartnersPage: React.FC = () => {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/admin/partners.tsx
+
   }
   const totalPartners = partners.length
   const activePartners = partners.filter(p => p.status === 'active').length

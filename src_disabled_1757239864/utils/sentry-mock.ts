@@ -1,4 +1,4 @@
-<<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
+<:src_backup/utils/sentry-mock.ts
 // Mock implementation for Sentry to prevent Node.js module import issues during build
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules
 
@@ -13,7 +13,7 @@ const mockSentry = {
   captureMessage: noop,
   captureEvent: noop,
   addBreadcrumb: noop,
-<<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
+<:src_backup/utils/sentry-mock.ts
   setContext: noop,
   setTag: noop,
   setUser: noop,
@@ -114,7 +114,7 @@ main
 
         next()},
 
-<<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
+<:src_backup/utils/sentry-mock.ts
   // Server-specific methods (Node.js)
   Handlers: {
     requestHandler:
@@ -154,7 +154,7 @@ main
   
   // Integrations
   Integrations: {
-<<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
+<:src_backup/utils/sentry-mock.ts
     BrowserTracing: class BrowserTracing {
 // Mock implementation for Sentry to prevent Node.js module import issues during build;
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules;
@@ -195,7 +195,7 @@ const mockSentry = {// Core Sentry methods;
   
   // Utils
   createTransport: noopReturn,
-<<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
+<:src_backup/utils/sentry-mock.ts
   SDK_VERSION: '7 && 7.0.0-mock,
 
 main
@@ -303,7 +303,7 @@ const mock_sentry = {// Core Sentry methods;
   SDK_VERSION: '7.0.0 - mock,
   // Constants;
   Severity: {
-<<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
+<:src_backup/utils/sentry-mock.ts
     Fatal: "fatal",
     Error: "error",
     Warning: "warning",
@@ -400,7 +400,7 @@ const mockScope = {
 // Additional exports for compatibility
 >export { mockSentry as Sentry }
 // All exports are already defined above
-<<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
+<:src_backup/utils/sentry-mock.ts
 =
   // Browser-specific methods
 
@@ -468,7 +468,7 @@ export const SDK_VERSION = mock_sentry.SDK_VERSION;
 export const Severity = mock_sentry.Severity;
 // Additional exports for compatibility;
 export { mock_sentry as Sentry }
-<<<<<<<< HEAD:src_backup/utils/sentry-mock.ts
+<:src_backup/utils/sentry-mock.ts
 // All exports are already defined above;
 // All exports are already defined above;
 

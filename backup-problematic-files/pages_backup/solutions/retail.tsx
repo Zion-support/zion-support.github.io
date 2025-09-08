@@ -1,111 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Layout from '../../components/Layout';'
-import {ShoppingCart,, Users,, BarChart,, Smartphone,, Package} from 'lucide-react';'
-import React from 'react';'
-import Layout from '../../components/Layout';';'
-import {ShoppingCart,, Users,, BarChart,, Smartphone,, Package,, CheckCircle,, ArrowRight} from 'lucide-react';'
-import {ShoppingCart,, Users,, BarChart3,, Smartphone,, CheckCircle,, ArrowRight} from 'lucide-react';'
-const features = [;
-  {}
-    "icon": ShoppingCart,"title": 'E-commerce Platforms,',,"description": 'Custom e-commerce solutions that provide seamless shopping experiences across all devices.''},{}'
-    "icon": Users,"title": 'Customer Analytics,',,"description": 'Advanced customer behavior analytics to optimize marketing and improve conversion rates.''},{}'
-    "icon": BarChart,"title": 'Inventory Management,',,"description": 'Real-time inventory tracking and management systems to optimize stock levels and reduce costs.''},{}'
-    "icon": Smartphone,"title": 'Mobile Commerce,',,"description": 'Mobile-first shopping experiences with native apps and progressive web applications.''},{}'
-    "icon": Package,"title": 'Supply Chain Optimization,',,"description": 'End-to-end supply chain visibility and optimization using AI and machine learning.'';'
-    "title": 'E-commerce Platform',"description": 'Complete online shopping experience with advanced features';'
-  },{"icon": Users,"title": 'Customer Management',"description": 'Comprehensive customer relationship management system';'
-  },{"icon": BarChart3,"title": 'Analytics & Insights',"description": 'Advanced analytics for sales, inventory, and customer behavior';'
-  },{"icon": Smartphone,"title": 'Mobile Commerce',"description": 'Mobile-first shopping experience and mobile app solutions';'
-  },{"icon": CheckCircle,"title": 'Inventory Management',"description": 'Real-time inventory tracking and automated reordering';'
-  },{"icon": ArrowRight,"title": 'Omnichannel',"description": 'Seamless integration across all sales channels';'
-    }
-    "title": 'E-commerce Platform',,"description": 'Complete online shopping experience with advanced features';'
-  },{"icon": Users,"title": 'Customer Management',,"description": 'Comprehensive customer relationship management system';'
-  },{"icon": BarChart3,"title": 'Analytics & Insights',,"description": 'Advanced analytics for sales, inventory, and customer behavior';'
-  },{"icon": Smartphone,"title": 'Mobile Commerce',,"description": 'Mobile-first shopping experience and mobile app solutions';'
-  },{"icon": CheckCircle,"title": 'Inventory Management',,"description": 'Real-time inventory tracking and automated reordering';'
-  },{"icon": ArrowRight,"title": 'Omnichannel',,"description": 'Seamless integration across all sales channels';'
-  }];
-    "icon": ShoppingCart,;
-    "title": 'E-commerce Platforms,',,'
-  "description": 'Custom e-commerce solutions that provide seamless shopping experiences across all devices.'',;'
-  },;
-  {}
-    "icon": Users,;
-    "title": 'Customer Analytics,',,'
-  "description": 'Advanced customer behavior analytics to optimize marketing and improve conversion rates.'',;'
-  },;
-  {}
-    "icon": BarChart,;
-    "title": 'Inventory Management,',,'
-  "description": 'Real-time inventory tracking and management systems to optimize stock levels and reduce costs.'',;'
-  },;
-  {}
-    "icon": Smartphone,;
-    "title": 'Mobile Commerce,',,'
-  "description": 'Mobile-first shopping experiences with native apps and progressive web applications.'',;'
-  },;
-  {}
-    "icon": Package,;
-    "title": 'Supply Chain Optimization,',,'
-  "description": 'End-to-end supply chain visibility and optimization using AI and machine learning.'';'
-    "title": 'E-commerce Platform','
-    "description": 'Complete online shopping experience with advanced features''
-=======
-=======
-import Layout from '../../components/Layout';
-import {ShoppingCart,, Users,, BarChart,, Smartphone,, Package} from 'lucide-react';
-import React from 'react';
-import Layout from '../../components/Layout';';
-import {ShoppingCart,, Users,, BarChart,, Smartphone,, Package,, CheckCircle,, ArrowRight} from 'lucide-react';
-import Layout from '../../components/Layout';
-import {ShoppingCart,, Users,, BarChart3,, Smartphone,, CheckCircle,, ArrowRight} from 'lucide-react';
-const features = [;
-  {}
-    icon: ShoppingCart,;
-    title: 'E-commerce Platforms,',;
-    description: 'Custom e-commerce solutions that provide seamless shopping experiences across all devices.'',;
-  },;
-  {}
-    icon: Users,;
-    title: 'Customer Analytics,',;
-    description: 'Advanced customer behavior analytics to optimize marketing and improve conversion rates.'',;
-  },;
-  {}
-    icon: BarChart,;
-    title: 'Inventory Management,',;
-    description: 'Real-time inventory tracking and management systems to optimize stock levels and reduce costs.'',;
-  },;
-  {}
-    icon: Smartphone,;
-    title: 'Mobile Commerce,',;
-    description: 'Mobile-first shopping experiences with native apps and progressive web applications.'',;
-  },;
-  {}
-    icon: Package,;
-    title: 'Supply Chain Optimization,',;
-    description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'';
-import React from 'react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  ShoppingCart, 
-  Users, 
-  BarChart3, 
-  Smartphone, 
-  CheckCircle, 
-  ArrowRight 
-} from 'lucide-react';
 
-const features = [
-  {
-    icon: ShoppingCart,
-    title: 'E-commerce Platform',
-    description: 'Complete online store solution with payment processing'
->>>>>>> origin/chore/fix-lint-and-merge
+
   },
   {
     icon: Users,
@@ -247,18 +141,7 @@ const benefits = [;
   description: 'Seamless integration across all sales channels';
   }
 ;];
-<<<<<<< HEAD
-  'E-commerce Platform Development',',;'
-  'Mobile Commerce Applications',',;'
-  'Inventory Management Systems',',;'
-  'Customer Relationship Management',',;'
-  'Point of Sale (POS) Systems',',;'
-  'Supply Chain Management',',;'
-  'Retail Analytics & BI',',;'
-  'Personalization Engines',',;'
-  'Omnichannel Solutions',',;'
-  'Retail Mobile Applications'';'
-=======
+
 const solutions = [;
   'E-commerce Platform Development',',;
   'Mobile Commerce Applications',',;
@@ -270,7 +153,7 @@ const solutions = [;
   'Personalization Engines',',;
   'Omnichannel Solutions',',;
   'Retail Mobile Applications'';
->>>>>>> origin/chore/fix-lint-and-merge
+
 ;];
 export default function RetailSolutionsPage() {;
   return (
@@ -326,14 +209,7 @@ export default function RetailSolutionsPage() {;
                   <h3 className="text-xl font-semibold text-white mb-4">{feature && feature.title}</h3>";
                   <p className="text-gray-300">{feature && feature.description}</p>";
                 </div>;
-<<<<<<< HEAD
-  'Increased online sales and revenue',;'
-  'Improved customer experience',;'
-  'Better inventory management',;'
-  'Enhanced data-driven decision making',;'
-  'Streamlined operations',;'
-  'Mobile-first customer engagement';'
-=======
+
 const benefits = [;
   'Increased online sales and revenue',;
   'Improved customer experience',;
@@ -341,7 +217,7 @@ const benefits = [;
   'Enhanced data-driven decision making',;
   'Streamlined operations',;
   'Mobile-first customer engagement';
->>>>>>> origin/chore/fix-lint-and-merge
+
 ];
 
     icon: ArrowRight,
@@ -546,18 +422,7 @@ const benefits = [;
     description: 'Seamless integration across all sales channels'
   }
 ;];
-<<<<<<< HEAD
-  'E-commerce Platform Development',','
-  'Mobile Commerce Applications',','
-  'Inventory Management Systems',','
-  'Customer Relationship Management',','
-  'Point of Sale (POS) Systems',','
-  'Supply Chain Management',','
-  'Retail Analytics & BI',','
-  'Personalization Engines',','
-  'Omnichannel Solutions',','
-  'Retail Mobile Applications'';'
-=======
+
 const solutions = [;
   'E-commerce Platform Development',',
   'Mobile Commerce Applications',',
@@ -569,7 +434,7 @@ const solutions = [;
   'Personalization Engines',',
   'Omnichannel Solutions',',
   'Retail Mobile Applications'';
->>>>>>> origin/chore/fix-lint-and-merge
+
 ;];
 export default function RetailSolutionsPage() {
   return (;
@@ -626,14 +491,7 @@ export default function RetailSolutionsPage() {
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>"
                   <p className="text-gray-300">{feature.description}</p>"
                 </div>;
-<<<<<<< HEAD
-  'Increased online sales and revenue','
-  'Improved customer experience','
-  'Better inventory management','
-  'Enhanced data-driven decision making','
-  'Streamlined operations','
-  'Mobile-first customer engagement''
-=======
+
 const benefits = [
   'Increased online sales and revenue',
   'Improved customer experience',
@@ -641,28 +499,10 @@ const benefits = [
   'Enhanced data-driven decision making',
   'Streamlined operations',
   'Mobile-first customer engagement'
->>>>>>> origin/chore/fix-lint-and-merge
+
 ];
 export default function RetailSolutions() {
-<<<<<<< HEAD
 
-    icon: Smartphone,
-    title: 'Mobile Commerce',
-    description: 'Mobile-optimized shopping experience'
-  }
-];
-
-export default function RetailSolutionsPage() {
-
-  return (
-    <>
-      <Head>
-        <title>Retail Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive retail technology solutions for modern commerce." />
-      </Head>
-
-      <div className="min-h-screen bg-gray-50">
-=======
 export default function RetailSolutions() {;
   return (
     <Layout
@@ -673,7 +513,7 @@ export default function RetailSolutions() {;
         {/* Hero Section */}
     >
       <div className="min-h-screen bg-white">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
@@ -814,11 +654,9 @@ export default function RetailSolutions() {;
                 </button>;
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium">";
                   Download Retail Guide;
-<<<<<<< HEAD
 
-=======
                 </ul>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
               </div>;
             </div>;
           </div>;
@@ -906,22 +744,7 @@ export default function RetailSolutions() {;
       </div>
     </Layout>
     </Layout>
-<<<<<<< HEAD
-    </>
-=======
-    </>
-    </>
-<<<<<<< HEAD
-  );
-};
 
-export default Retail;
-=======
-<<<<<<< HEAD
-    </Layout>
-  );
-};
+    </>
+    </>
 
-export default Retail;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

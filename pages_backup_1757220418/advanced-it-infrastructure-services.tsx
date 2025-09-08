@@ -12,10 +12,7 @@ import {
   Wifi, Building, Cpu as CpuIcon
 } from 'lucide-react',
 import Layout from '../components/layout/Layout';
-<<<<<<< HEAD:pages_backup_1757220418/advanced-it-infrastructure-services.tsx
-import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services';
-const contactInfo = $2;
-=======
+
 
 const contactInfo = {
   mobile: '+1 302 464 0950'
@@ -159,20 +156,12 @@ const testimonials = [
     avatar: '👩‍🔒'
   },];
   mobile: '+1 302 464 0950',
->>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/advanced-it-infrastructure-services.tsx
+
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-<<<<<<< HEAD:pages_backup_1757220418/advanced-it-infrastructure-services.tsx
 
-const heroStats = [
-  { label: 'Infrastructure Projects', value: '150+', icon: <Server className = $2;
-  { label: 'Enterprise Clients', value: '300+', icon: <Building className = $2;
-  { label: 'Uptime Guarantee', value: '99.99%', icon: <Award className = $2;
-  { label: 'Cost Reduction', value: '60%', icon: <TrendingUp className = $2;
-const serviceCategories = $2;
-=======
   { label: 'Infrastructure Projects', value: '150+', icon: <Server className="w-5 h-5" /> },
   { label: 'Enterprise Clients', value: '300+', icon: <Building className="w-5 h-5" /> },
   { label: 'Uptime Guarantee', value: '99.99%', icon: <Award className="w-5 h-5" /> },
@@ -184,7 +173,7 @@ const serviceCategories = $2;
 ],
   {
     title: 'Quantum Cloud Computing',
->>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/advanced-it-infrastructure-services.tsx
+
     description: 'Next-generation cloud infrastructure with quantum processing capabilities',
     services: advancedITInfrastructureServices2025.filter($2);
     icon: Cloud,
@@ -225,15 +214,12 @@ const serviceCategories = $2;
   }
 ],
 
-<<<<<<< HEAD:pages_backup_1757220418/advanced-it-infrastructure-services.tsx
-const heroFeatures = $2;
-    description: 'Revolutionary quantum processing capabilities that provide 1000x performance for specific workloads.',
-=======
+
   {
     title: 'Quantum Computing',
     description:
       'Revolutionary quantum processing capabilities that provide 1000x performance for specific workloads.',
->>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/advanced-it-infrastructure-services.tsx
+
     icon: Atom,
     gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600'
   },
@@ -257,12 +243,10 @@ const heroFeatures = $2;
   }
 ],
 
-<<<<<<< HEAD:pages_backup_1757220418/advanced-it-infrastructure-services.tsx
-const testimonials = $2;
-=======
+
   {
     name: 'Dr. Jennifer Martinez',
->>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/advanced-it-infrastructure-services.tsx
+
     role: 'CTO, QuantumTech Industries',
     company: 'QuantumTech Industries',
     content: 'Zion Tech Group\'s quantum cloud infrastructure has revolutionized our research capabilities. We\'ve achieved computational breakthroughs that were previously impossible.',
@@ -283,9 +267,7 @@ const testimonials = $2;
     company: 'SecureCorp International',
     content: 'Their zero-trust security architecture provides comprehensive protection that has prevented multiple sophisticated cyber attacks. The ROI has been exceptional.',
     rating: 5,
-<<<<<<< HEAD:pages_backup_1757220418/advanced-it-infrastructure-services.tsx
-    avatar: '👩‍🔒'
-=======
+
     avatar: '👩‍🔒',
   },
 ];
@@ -317,7 +299,7 @@ const heroStats = [;
   { label: 'Cost Reduction', value: '60%', icon: <TrendingUp className="w-5 h-5" />   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/advanced-it-infrastructure-services.tsx
+
   }
 ],
 

@@ -78,8 +78,7 @@ export default function Services2026ShowcaseEnhancedPage() {
     { id: 'healthcare', name: 'Healthcare & Biotech', icon: '🏥', count: all2026Services.filter(s = $2;
     { id: 'financial', name: 'Financial Technology', icon: '💰', count: all2026Services.filter(s = $2;
     { id: 'manufacturing', name: 'Manufacturing & IoT', icon: '🏭', count: all2026Services.filter(s = $2;
-<<<<<<< HEAD
-=======
+
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all')
@@ -144,7 +143,7 @@ export default function Services2026ShowcaseEnhancedPage() {
     { id: 'financial', name: 'Financial Technology', icon: '💰', count: all2026Services.filter(s => s.category.includes('Financial') |s.category.includes('Trading')).length }
     { id: 'manufacturing', name: 'Manufacturing & IoT', icon: '🏭', count: all2026Services.filter(s => s.category.includes('Manufacturing') |s.category.includes('IoT')).length }
   ]
->>>>>>> merged-prs-20250907-203621
+
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
     { id: 'low', name: 'Under $1K/month', range: 'Under $1K' },
@@ -153,10 +152,9 @@ export default function Services2026ShowcaseEnhancedPage() {
     { id: 'premium', name: '$20K+/month', range: '$20K+' }
   ],
 
-<<<<<<< HEAD
-=======
+
   ]
->>>>>>> merged-prs-20250907-203621
+
   const sortOptions = [
     { id: 'name', name: 'Name A-Z' },
     { id: 'price-low', name: 'Price Low to High' },
@@ -168,13 +166,12 @@ export default function Services2026ShowcaseEnhancedPage() {
 
   // Filter and sort services
   const filteredServices = $2;
-<<<<<<< HEAD
-=======
+
   ]
   // Filter and sort services
   const filteredServices = useMemo(() => {
     let filtered = all2026Services
->>>>>>> merged-prs-20250907-203621
+
     // Search filter
     if (searchTerm) {
       filtered = filtered.filter(service =>
@@ -200,8 +197,7 @@ export default function Services2026ShowcaseEnhancedPage() {
         filtered = filtered.filter(service => service.category.includes('Financial') || service.category.includes('Trading'))
       } else if (selectedCategory === 'manufacturing') {
         filtered = filtered.filter(service => service.category.includes('Manufacturing') || service.category.includes('IoT'))
-<<<<<<< HEAD
-=======
+
         filtered = filtered.filter(service => service.category.includes('Quantum') |service.category.includes('Emerging'))
       } else if (selectedCategory === 'enterprise') {
         filtered = filtered.filter(service => service.category.includes('Enterprise') |service.category.includes('IT'))
@@ -213,7 +209,7 @@ export default function Services2026ShowcaseEnhancedPage() {
         filtered = filtered.filter(service => service.category.includes('Financial') |service.category.includes('Trading'))
       } else if (selectedCategory === 'manufacturing') {
         filtered = filtered.filter(service => service.category.includes('Manufacturing') |service.category.includes('IoT'))
->>>>>>> merged-prs-20250907-203621
+
       }
     }
 
@@ -225,14 +221,13 @@ export default function Services2026ShowcaseEnhancedPage() {
         if (selectedPriceRange = $2;
         if (selectedPriceRange = $2;
         if (selectedPriceRange = $2;
-<<<<<<< HEAD
-=======
+
         const price = parseInt(service.price.replace(/[^0-9]/g, ''))
         if (selectedPriceRange === 'low') return price < 1000
         if (selectedPriceRange === 'medium') return price >= 1000 && price < 5000
         if (selectedPriceRange === 'high') return price >= 5000 && price < 20000
         if (selectedPriceRange === 'premium') return price >= 20000
->>>>>>> merged-prs-20250907-203621
+
         return true
       })
     }
@@ -256,8 +251,7 @@ export default function Services2026ShowcaseEnhancedPage() {
 
     return filtered
   }, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
-<<<<<<< HEAD
-=======
+
           return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''))
         case 'price-high':
           return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, ''))
@@ -283,7 +277,7 @@ export default function Services2026ShowcaseEnhancedPage() {
     financialServices: all2026Services.filter(s => s.category.includes('Financial') |s.category.includes('Trading')).length
     manufacturingServices: all2026Services.filter(s => s.category.includes('Manufacturing') |s.category.includes('IoT')).length
   }
->>>>>>> merged-prs-20250907-203621
+
 
   // Service statistics
   const serviceStats = $2;
@@ -294,8 +288,7 @@ export default function Services2026ShowcaseEnhancedPage() {
     healthcareServices: all2026Services.filter(s = $2;
     financialServices: all2026Services.filter(s = $2;
     manufacturingServices: all2026Services.filter(s = $2;
-<<<<<<< HEAD
-=======
+
   const serviceStats = {
     totalServices: all2026Services.length,
     aiServices: all2026Services.filter(s => s.category.includes('AI')).length,
@@ -306,22 +299,17 @@ export default function Services2026ShowcaseEnhancedPage() {
     financialServices: all2026Services.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length,
     manufacturingServices: all2026Services.filter(s => s.category.includes('Manufacturing') || s.category.includes('IoT')).length
   },
->>>>>>> merged-prs-20250907-203621
+
   return (
     <UltraFuturisticBackground variant="holographic intensity=high">
       <div className="min-h-screen>
         <Head>
           <title>Enhanced 2026 Services Showcase - Zion Tech Group</title>
-<<<<<<< HEAD
-          <meta name="description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services. Transform your business with cutting-edge technology." />
-          <meta name="keywords" content="2026 services, micro SAAS, AI services, quantum computing, enterprise IT, blockchain, 5G networks, edge computing, zero trust security" />
-          <link rel="icon" href="/favicon.svg" />
-          
-=======
+
           <meta name=description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services. Transform your business with cutting-edge technology. />
           <meta name=keywords" content="2026 services, micro SAAS, AI services, quantum computing, enterprise IT, blockchain, 5G networks, edge computing, zero trust security />
           <link rel=icon" href="/favicon.svg />
->>>>>>> merged-prs-20250907-203621
+
           {/* Open Graph */}
           <meta property="og:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
           <meta property="og:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
@@ -344,8 +332,7 @@ export default function Services2026ShowcaseEnhancedPage() {
               initial={{ opacity: 0, y: 20}}
               animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-=======
+
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -361,7 +348,7 @@ export default function Services2026ShowcaseEnhancedPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> merged-prs-20250907-203621
+
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6>
                 Enhanced 2026 Services Showcase
@@ -690,10 +677,8 @@ export default function Services2026ShowcaseEnhancedPage() {
       </div>
     </UltraFuturisticBackground>
   )
-<<<<<<< HEAD
-}
-=======
-<<<<<<<< HEAD:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
+
+<:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
 }
 }
   )
@@ -702,4 +687,4 @@ export default function Services2026ShowcaseEnhancedPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> merged-prs-20250907-203621
+

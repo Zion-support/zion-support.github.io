@@ -54,22 +54,7 @@ class: AppHealthMonitor {
     await this.checkSecurity();
     await this.checkAccessibility();
     this.generateReport()}
-<<<<<<< HEAD
-  async checkDependencies() {''
-    }
-    console.log(' Checking dependencies...');'
-    try {''
-      }
-      const packageJsonPath = path.join(this.projectRoot, 'package.json');'
-      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));'
-      // Check for outdated dependencies,
-try {''
-}
-          "encoding": 'utf8','
-          "cwd": this.projectRoot;"
-    }
-    "stdio": 'pipe''
-=======
+
   async checkDependencies() {'
 
     try {'
@@ -82,7 +67,7 @@ try {''
           "encoding": 'utf8',
           "cwd": this.projectRoot
           stdio: 'pipe'
->>>>>>> origin/chore/fix-lint-and-merge
+
         });
         if (Object.keys(outdatedDeps).length > 0) {
           issues.push('
@@ -182,28 +167,7 @@ try {''
         "error": error.message:  }
     }
   }
-<<<<<<< HEAD
-  async checkPerformance() {console.log(' Checking performance...')';'
-    "try": {const issues = [];"
-      // "Check": bundle size;
-      }
-      "if": (fs.existsSync(buildDir)) {const bundleSize = this.getDirectorySize(buildDir)"if": (bundleSize > 50 * 1024 * 1024) { // 50MB;"
-          }
-          issues.push('Large bundle size detected')}'}'
-      // "Check": for large images;"
-      const publicDir = path.join(this.projectRoot, 'public')';'
-      "if": (fs.existsSync(publicDir)) {const imageSize = this.getImageDirectorySize(publicDir)"if": (imageSize > 10 * 1024 * 1024) { // 10MB;"
-          }
-          issues.push('Large images detected')}'}'
-      this.healthReport.checks."performance": = {"status": issues."length": === 0 ? 'healthy' : 'warning, ',';'
-        "issues": issue,s;"
-        "bundleSize": fs.existsSync(buildDir) ? this.getDirectorySize(buildDir) : 0;"
-        }
-        "imageSize": fs.existsSync(publicDir) ? this.getImageDirectorySize(publicDir) : "0":  }
-    } catch (error) {this.healthReport.checks.performance = {"status": 'error, ',';'
-        "issues": ['"Failed": to check performance'], ';'
-        "error": error."message":  }"
-=======
+
   async checkPerformance() {
 
     "try": {
@@ -230,7 +194,7 @@ try {''
         "status": 'error, ',';
         "issues": ['Failed: to check performance'], ';
         "error": error.message:  }
->>>>>>> origin/chore/fix-lint-and-merge
+
     }
   }
   async checkSecurity() {
@@ -277,32 +241,7 @@ try {''
         if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {';
           accessibilityIssues++}
       }
-<<<<<<< HEAD
-      "if": (accessibilityIssues > 0) {issues.push(`${accessibilityIssues} accessibility issues found`)}`
-      this.healthReport.checks.accessibility = {"status": issues."length": === 0 ? 'healthy' : 'warning, ',';'
-        "issues": issue,s;"
-        "accessibilityIssues": "accessibilityIssues":  }"
-    } catch (error) {this.healthReport.checks.accessibility = {"status": 'error, ',';'
-        "issues": ['"Failed": to check accessibility'], ';'
-        "error": error."message":  }"
-      const buildDir = path.join(this.projectRoot, '.next')const buildExists = fs.existsSync(buildDir)let buildAge = null;'
-      if (buildExists) {const stats = fs.statSync(buildDir)buildAge = Date.now() - stats.mtime.getTime()}// Try to run a build check;
-      try {';'
-        }
-        execSync('npm run build', {"cwd": this.projectRoot;"
-          }
-          "stdio": 'pipe',"timeout": 60000;"
-        })buildSuccess = true} catch (error) {// Build failed}this.healthReport.checks.build = {"status": buildSuccess ? 'healthy' : 'error',"buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed']}'
-      } catch (error) {this.healthReport.checks.build = {"status": 'error',"issues": ['Failed to check build health'],"error": error.message}"
-      this.healthReport.checks.build = {';'
-        "status": buildSuccess ? 'healthy' : 'error';'
-        }
-        "buildExists": buildExists,"buildAge": buildAge,"buildSuccess": buildSuccess,"issues": buildSuccess ? [] : ['Build process failed'];'
-      }} catch (error) {this.healthReport.checks.build = {';'
-        "status": 'error',"issues": ['Failed to check build health'];'
-        }
-        "error": error.message;
-=======
+
       "if": (accessibilityIssues > 0) {
         issues.push(`${accessibilityIssues} accessibility issues found`)}
       this.healthReport.checks.accessibility = {
@@ -354,7 +293,7 @@ try {''
         "status": 'error',
         "issues": ['Failed to check build health']
         error: error.message
->>>>>>> origin/chore/fix-lint-and-merge
+
       }}
   }
   async checkCodeQuality() {'

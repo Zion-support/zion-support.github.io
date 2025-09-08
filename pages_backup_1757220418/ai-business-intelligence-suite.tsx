@@ -531,8 +531,6 @@ export default function AIBusinessIntelligenceSuite() {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> merged-prs-20250907-203621
+

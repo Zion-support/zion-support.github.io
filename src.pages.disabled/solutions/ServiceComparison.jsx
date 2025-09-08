@@ -10,27 +10,7 @@ export default function AddToCart.test({ }: AddToCart.testProps) {
 
 
 
-<<<<<<< HEAD
-  it('calls onAddToCart when button is clicked', () => {
-    render(<MockAddToCart productId="test-product" onAddToCart={mockOnAddToCart} />);
-    
-    fireEvent.click(button);
-    
-    expect(mockOnAddToCart).toHaveBeenCalledTimes(1);
-  });
 
-  it('handles multiple clicks correctly', async () => {
-    render(<MockAddToCart productId="test-product" onAddToCart={mockOnAddToCart} />);
-    
-    
-    fireEvent.click(button);
-    fireEvent.click(button);
-    fireEvent.click(button);
-    
-    expect(mockOnAddToCart).toHaveBeenCalledTimes(3);
-  });
-});
-=======
 =
 >
 
@@ -60,4 +40,4 @@ export default function AddToCart.test({ }: AddToCart.testProps) {
 >
 
 
->>>>>>> origin/chore/fix-lint-and-merge
+

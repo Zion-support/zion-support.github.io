@@ -1,29 +1,4 @@
-<<<<<<< HEAD:pages/ci-cd-security-hardening.tsx
-import React from 'react';
-import Head from 'next/head';
 
-export default function CiCdSecurityHardening() {
-  return (
-    <>
-      <Head>
-        <title>ci-cd-security-hardening | Zion Tech Group</title>
-        <meta name="description" content="ci-cd-security-hardening page" />
-      </Head>
-      <div className="min-h-screen bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              ci-cd-security-hardening
-            </h1>
-            <p className="text-xl text-gray-600">
-              This is the ci-cd-security-hardening page.
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-=======
 import React from 'react',;
 import Head from 'next/head',;
 import { Phone, Mail, MapPin, Check, ArrowRight, Shield, Star } from 'lucide-react',;
@@ -83,5 +58,5 @@ export default function CiCdSecurityHardeningPage() {;
   service.name 
 }- Zion Tech Group</title>) ) 
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-rose-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </Layout>) 
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:backup-problematic-files/temp_broken_files/pages/ci-cd-security-hardening.tsx
+
 }

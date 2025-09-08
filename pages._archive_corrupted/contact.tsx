@@ -1,77 +1,16 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false })
-const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false })
-const \"ContactPage\": React.FC = () => {
-import React from 'react'
-import dynamic from 'next/dynamic'
-import Head from 'next/head'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-<<<<<<< HEAD
-=======
 
-const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false })
-const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false })
-const \"ContactPage\": React.FC = () => {
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false });
-const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false });
-const \"ContactPage\": React.FC = () => {;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
-import React from 'react';
-
-<<<<<<< HEAD
-import dynamic from 'next/dynamic';
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { 
-const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false })""
-const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false })""
-const \"ContactPage\": React.FC = () => {""
-import React from 'react
-import dynamic from 'next/dynamic
-import Head from 'next/head
-import Link from 'next/link
-import { motion } from 'framer-motion
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import React from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Link from 'next/link';
 
-<<<<<<< HEAD
-=======
+
 
 
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 import { 
 import {
   // TODO: Implement
@@ -87,13 +26,8 @@ pr-12325
   Globe
 } from 'lucide-react';
 
-<<<<<<< HEAD
-} from 'lucide-react';
-} from 'lucide-react'
-} from 'lucide-react';
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
@@ -101,26 +35,10 @@ const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })
 const "ContactPage": React.FC = () => {
 
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
-const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })
-const "ContactPage": React.FC = () => {
 
-=======
-<<<<<<< HEAD
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
   const contactInfo = [{
       icon: <Phone className=\"w-6 h-6\"  />,
       \"title\": \"Phone\",
@@ -147,15 +65,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     }
   ]
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   const services = [\"AI & Machine Learning Solutions\",
     \"IT Infrastructure & Support\",
     \"Micro SaaS Development\",
@@ -172,109 +83,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     "Blockchain Technology",
     "Digital Transformation",
 
-<<<<<<< HEAD
-  ]
-<<<<<<< HEAD
-return (;
-    <>
-      <SEO title=\"Contact Us - Zion Tech Group\""
-        description=\"Get in touch with Zion Tech Group for AI services, IT solutions, and micro SaaS development. Call +1 302 464 0950 or email kleber@ziontechgroup.com\""
-        keywords=\"contact, Zion Tech Group, AI services, IT solutions, micro SaaS, phone, email, address\""
-        canonical=\""https\": //ziontechgroup.com/contact\"" />
-      <PageTransition>
-        <main className=\"min-h-screen bg-white\">"
-          {/* Hero Section */}
-          <section className=\"bg-gradient-to-br from-blue-50 to-indigo-100 py-20\">;"
-            <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 "lg":px-8\">;"
-              <motion.div;
-                initial={{ "opacity": 0, \"y\": 20 }}"
-                animate={{ \"opacity\": 1, \"y\": 0 }}"
-                transition={{ \"duration\": 0.6 }}"
-                className=\"text-center\";"
-              >;
-                <h1 className=\"text-4xl \"md\": text-6xl font-bold text-gray-900 mb-6\">;"
-                  Get In <span className=\"text-blue-600\">Touch</span>;"
-                </h1>;
-                <p className=\"text-xl text-gray-600 mb-8 max-w-3xl mx-auto\">;"
-                  Ready to transform your business with our innovative AI, IT, and micro SaaS solutions? Let\'s discuss your project.;'
-                </p>;
-                <div className=\"flex flex-col \"sm\": fle x-row gap-4 justify-center\">;"
-                  <motion.a;
-                    href=\""tel":+13024640950\";"
-                    whileHover={{ "scale": 1.05 }}
-                    whileTap={{ \"scale\": 0.95 }}"
-                    className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2\";"
-                  >;
-                    <Phone className=\"w-5 h-5\" />;"
-                    Call \"Now\": +1 302 464 0950;"
-                  </motion.a>;
-                  <motion.a;
-                    href=\""mailto": klebe r@ziontechgroup.com\";"
-                    whileHover={{ "scale": 1.05 }}
-                    whileTap={{ \"scale\": 0.95 }}"
-                    className=\"border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2\";"
-                  >;
-                    <Mail className=\"w-5 h-5\" />;"
-                    Send Email;
-                  </motion.a>;
-                </div>;
-              </motion.div>;
-            </div>;
-          </section>;
-ursor/automate-test-improve-and-merge-code-646c;
-  ];
-import { motion } from 'framer-motion';'
-import { Phone,, Mail,, MapPin,, Clock,, ArrowRight,, Send,, MessageCircle,, Globe } from 'lucide-react';'
-  ];
-import { Mail,, Phone,, MapPin,, Clock,, Send,, CheckCircle } from 'lucide-react';'
-const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })const "ContactPage": React.FC = () => {const contactInfo = [{"icon": <Phone className=\"w-6 h-6\" />,\"title\": \"Phone\",\"details\": \"+1 302 464 0950\",\"link\": \""tel":+13024640950\";"
-    },{\"icon\": <Mail className=\"w-6 h-6\" />,\"title\": \"Email\",\"details\": \"kleber@ziontechgroup && ziontechgroup.com\",\"link\": \""mailto": klebe r@ziontechgroup && ziontechgroup.com\";"
-    },{\"icon\": <MapPin className=\"w-6 h-6\" />,\"title\": \"Address\",\"details\": \"364 E Main St STE 1008\nMiddletown, DE 19709\",\"link\": \""https"://maps && maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709\";"
-    },{\"icon\": <Clock className=\"w-6 h-6\" />,\"title\": \"Business Hours\",\"details\": \"Monday - "Friday": "9":00 AM - "6":00 PM\"nSaturday": "10":00 AM - "4":00 PM\",\"link\": null;"
-    }
-  ];
-  const services = [\"AI & Machine Learning Solutions\";"
-    \"IT Infrastructure & Support\",\"Micro SaaS Development\",\"Cybersecurity Services\",\"Cloud & DevOps Solutions\",\"Blockchain Technology\",\"Digital Transformation\",\"Consulting & Strategy\";"
-  const services = ["AI & Machine Learning Solutions";"
-    "IT Infrastructure & Support","Micro SaaS Development","Cybersecurity Services","Cloud & DevOps Solutions","Blockchain Technology","Digital Transformation","Consulting & Strategy";"
-  ];
-  return (<>;
-      <SEOtitle=\"Contact Us - Zion Tech Group\";"
-        description=\"Get in touch with Zion Tech Group for AI services, IT solutions, and micro SaaS development. Call +1 302 464 0950 or email kleber@ziontechgroup && ziontechgroup.com\";"
-        keywords=\"contact, Zion Tech Group, AI services, IT solutions, micro SaaS, phone, email, address\";"
-        canonical=\""https\": //ziontechgroup && ziontechgroup.com/contact\";"
-                    className=\"border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2\""
-                  >
-                    <Mail className=\"w-5 h-5\" />"
-                    Send Email
-                  </motion.a>
-                </div>
-              </motion.div>
-            </div>
-          </section>
-  ]
-import {motion} from 'framer-motion';'
-import {Phone,, Mail,, MapPin,, Clock,, ArrowRight,, Send,, MessageCircle,, Globe} from 'lucide-react';'
-import {Helmet} from 'react-helmet-async';'
-import {Mail,, Phone,, MapPin,, Clock,, Send,, CheckCircle} from 'lucide-react';'
-const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false });"
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false });"
-const "ContactPage": React.FC = () => {;"
-  }
-=======
-=======
-<<<<<<< HEAD
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
   ]
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 import {motion} from 'framer-motion';
 import {Phone,, Mail,, MapPin,, Clock,, ArrowRight,, Send,, MessageCircle,, Globe} from 'lucide-react';
 import React, { useState } from 'react';
@@ -283,7 +95,7 @@ import {Mail,, Phone,, MapPin,, Clock,, Send,, CheckCircle} from 'lucide-react';
 const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false });
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false });
 const "ContactPage": React.FC = () => {;
->>>>>>> origin/chore/fix-lint-and-merge
+
   const contactInfo = [{;
       icon: <Phone className=\"w-6 h-6\"  />,;
       \"title\": \"Phone\",;
@@ -309,22 +121,7 @@ const "ContactPage": React.FC = () => {;
       \"link\": null;
     }
   ];
-<<<<<<< HEAD
-    \"IT Infrastructure & Support\",;"
-    \"Micro SaaS Development\",;"
-    \"Cybersecurity Services\",;"
-    \"Cloud & DevOps Solutions\",;"
-    \"Blockchain Technology\",;"
-    \"Digital Transformation\",;"
-    \"Consulting & Strategy\";"
-    "IT Infrastructure & Support",;"
-    "Micro SaaS Development",;"
-    "Cybersecurity Services",;"
-    "Cloud & DevOps Solutions",;"
-    "Blockchain Technology",;"
-    "Digital Transformation",;"
-    "Consulting & Strategy";"
-=======
+
   const services = [\"AI & Machine Learning Solutions\",;
     \"IT Infrastructure & Support\",;
     \"Micro SaaS Development\",;
@@ -341,7 +138,7 @@ const "ContactPage": React.FC = () => {;
     "Blockchain Technology",;
     "Digital Transformation",;
     "Consulting & Strategy";
->>>>>>> origin/chore/fix-lint-and-merge
+
   ];
   return (
     <>;
@@ -357,88 +154,7 @@ const "ContactPage": React.FC = () => {;
       <PageTransition>
         <main className=\"min-h-screen bg-white\">
           {/* Hero Section */}
-<<<<<<< HEAD
-          <section className=\"bg-gradient-to-br from-blue-50 to-indigo-100 py-20\">;"
-            <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 "lg":px-8\">;"
-              <motion&& motion.div;
-              <motion&& motion.div,
-initial={{ "opacity": 0, \"y\": 20 }}"
-                animate={{ \"opacity\": 1, \"y\": 0 }}"
-                transition={{ \"duration\": 0 && 0.6 }}"
-                className=\"text-center\">;"
-                <h1 className=\"text-4xl \"md\": text-6xl font-bold text-gray-900 mb-6\">;"
-                  Get In <span className=\"text-blue-600\">Touch</span>;"
-                </h1>;
-                <p className=\"text-xl text-gray-600 mb-8 max-w-3xl mx-auto\">;"
-                  Ready to transform your business with our innovative AI, IT, and micro SaaS solutions? Let\'s discuss your project.;'
-                </p>;
-                <div className=\"flex flex-col \"sm\": fle x-row gap-4 justify-center\">;"
-                  <motion&& motion.a;
-                    href=\""tel":+13024640950\";"
-ursor/automate-test-improve-and-merge-code-646c;
-                    whileHover={{ "scale": 1.05 }}
-                    whileTap={{ \"scale\": 0.95 }}"
-                    className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2\";"
-                  >;
-                    <Phone className=\"w-5 h-5\" />;"
-                    Call \"Now\": +1 302 464 0950;"
-                  </motion.a>;
-                  <motion.a;
-                    href=\""mailto": klebe r@ziontechgroup.com\";"
-                    whileHover={{ "scale": 1.05 }}
-                    whileTap={{ \"scale\": 0.95 }}"
-                    className=\"border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2\";"
-                  >;
-                    <Mail className=\"w-5 h-5\" />;"
-                    Send Email;
-                  </motion.a>;
-                </div>;
-              </motion.div>;
-            </div>;
-          </section>;
-ursor/automate-test-improve-and-merge-code-646c;
-const \"Contact\": NextPage = () => {import type { NextPage } from 'next';'
-import MainLayout from '../components/layout/MainLayout';'
-import { Mail, Phone, MapPin, Clock, Send  } from 'lucide-react';'
-const "Contact": NextPage = () => {ursor/automate-test-improve-and-merge-code-646c;"
-  }
-  const contactInfo = [{const "Contact": NextPage = () => {  const contactInfo = [{"icon": Mail,\"title\": \'Email Us\',\"details\": \'info@ziontechgroup.com\',\"link\": \'"mailto":info@ziontechgroup.com\';'
-    },{\"icon\": Phone,\"title\": \'Call Us\',\"details\": \'+1 (555) 123-4567\',\"link\": \'"tel":+1-555-123-4567\';'
-    },{\"icon\": MapPin,\"title\": \'Visit Us\',\"details\": \'123 Tech Street, San Francisco, CA 94105\',\"link\": \'"https"://maps.google.com\';'
-    },{\"icon\": Clock,\"title\": \'Business Hours\',\"details\": \'Mon-"Fri": 9AM-6PM PST\',\"link\": null;"
-                  <motion&& motion.a
-}
-href=\""tel":+13024640950\""
-const \"Contact\": NextPage = () => {"
-}
-import type { NextPage } from 'next';'
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';'
-const "Contact": NextPage = () => {"
-  }
-      }
-      "icon": Mail,
-      \"title\": \'Email Us\','
-      \"details\": \'info@ziontechgroup.com\','
-      \"link\": \'"mailto":info@ziontechgroup.com\''
-    },
-    {
-      \"icon\": Phone,"
-      \"title\": \'Call Us\','
-      \"details\": \'+1 (555) 123-4567\','
-      \"link\": \'"tel":+1-555-123-4567\''
-    },
-    {
-      \"icon\": MapPin,"
-      \"title\": \'Visit Us\','
-      \"details\": \'123 Tech Street, San Francisco, CA 94105\','
-      \"link\": \'"https"://maps.google.com\''
-    },
-    {
-      \"icon\": Clock,"
-      \"title\": \'Business Hours\','
-      \"details\": \'Mon-"Fri": 9AM-6PM PST\','
-      \"link\": null"
-=======
+
           <section className=\"bg-gradient-to-br from-blue-50 to-indigo-100 py-20\">
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
               <motion.div
@@ -456,30 +172,7 @@ const "Contact": NextPage = () => {"
                 <div className=\"flex flex-col \"sm\": fle x-row gap-4 justify-center\">
                   <motion.a
                     href=\"tel:+13024640950\"
-<<<<<<< HEAD
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-const \"Contact\": NextPage = () => {
-import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
-const "Contact": NextPage = () => {
 
-const \"Contact\": NextPage = () => {
-import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
-
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  const contactInfo = [{
-
->>>>>>> origin/chore/fix-lint-and-merge
     }
   ];
   const offices = [{
@@ -495,76 +188,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       \"email\": \'ny@ziontechgroup.com\'
     },
     {
-<<<<<<< HEAD
-      \"city\": \'London\',
-      \"address\": \'789 Digital Lane, London, UK EC1A 1BB\',
-      \"phone\": \'+44 20 7123 4567\',
-      \"email\": \'london@ziontechgroup.com\'
-    }
-  ];
 
-  return (
-    <MainLayout
-      title=\"Contact Us - Zion Tech Group\"
-      description=\"Get in touch with Zion Tech Group. We\'re here to help you transform your business with innovative technology solutions.\">;
-  return (
-    <MainLayout
-      title=\"Contact Us - Zion Tech Group\"
-      description=\"Get in touch with Zion Tech Group. We\'re here to help you transform your business with innovative technology solutions.\"
-    >
-      {/* Hero Section */}
-      <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">
-        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
-          <div className=\"text-center\">
-            <h1 className=\"text-5xl font-bold mb-6\">Get In Touch</h1>
-            <p className=\"text-xl max-w-3xl mx-auto\">
-              Ready to transform your business? Let\'s discuss how our technology solutions 
-              can help you achieve your goals.
-            </p>
-          </div>
-        </div>
-      </section>
-      {/* Contact Information */}
-      <section className=\"py-20\">
-        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
-          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16\">
-            {contactInfo.map((info) => (
-              <div key={info.title} className=\"text-center\">
-                <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">
-                  <info.icon className=\"h-8 w-8\" />
-                </div>
-                <h3 className=\"text-xl font-semibold text-gray-900 mb-2\">
-                  {info.title}
-                </h3>
-                {info.link ? (
-                  <a
-                    href={info.link}
-                    className=\"text-blue-600 \"hover\": text-blue-700 transition-colors\"
-                  >
-                    {info.details}
-                  </a>
-                ) : (
-                  <p className=\"text-gray-600\">{info.details}</p>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Contact Form & Office Locations */}
-      <section className=\"py-20 bg-gray-50\">
-        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
-          <div className=\"grid grid-cols-1 lg:grid-cols-2 gap-12\">
-            {/* Contact Form */}
-            <div>
-              <h2 className=\"text-3xl font-bold text-gray-900 mb-6\">Send Us a Message</h2>
-              <form className=\"space-y-6\">
-                <div className=\"grid grid-cols-1 \"md\": grid-cols-2 gap-6\">
-                  <div>
-                    <label htmlFor=\"firstName\" className=\"block text-sm font-medium text-gray-700 mb-2\">
-                      First Name *
-
-=======
       \"icon\": MapPin,
       \"title\": \'Visit Us\',
       \"details\": \'123 Tech Street, San Francisco, CA 94105\',
@@ -575,7 +199,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       \"title\": \'Business Hours\',
       \"details\": \'Mon-Fri: 9AM-6PM PST\',
       \"link\": null
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                     whileHover={{ scale: 1 && 1.05 }}
                     whileTap={{ \"scale\": 0 && 0.95 }}
                     className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2\">;
@@ -643,21 +267,9 @@ const "Contact": NextPage = () => {;
       \"email\": \'london@ziontechgroup && ziontechgroup.com\';
     }
   ];
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  return (
-    <MainLayout
-      title=\"Contact Us - Zion Tech Group\"
-      description=\"Get in touch with Zion Tech Group. We\'re here to help you transform your business with innovative technology solutions.\">;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       {/* Hero Section */}
 
       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">;
@@ -964,34 +576,9 @@ const "Contact": NextPage = () => {;
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-=======
+
       {/* FAQ Section */}
-<<<<<<< HEAD
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-          <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\">
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
-          <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\">
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 What is your typical project timeline?
 
               </h3>
@@ -1002,33 +589,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               </p>
             </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
 
-<<<<<<< HEAD
-                Do you provide ongoing support?
-=======
-<<<<<<< HEAD
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
                 Do you provide ongoing support?
               </h3>
               <p className=\"text-gray-600\">
@@ -1038,31 +608,18 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               </p>
             </div>
 
-<<<<<<< HEAD
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
 
-<<<<<<< HEAD
-                What technologies do you specialize in?
-=======
-<<<<<<< HEAD
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
                 What technologies do you specialize in?
               </h3>
               <p className=\"text-gray-600\">
@@ -1072,31 +629,19 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               </p>
             </div>
 
-<<<<<<< HEAD
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
+
                 How do you ensure project quality?
 
 };
@@ -1152,186 +697,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 ))}
               </div>
             </div>
-<<<<<<< HEAD
-          </section>
-          {/* Contact Form */}
-          <section className=\"bg-gray-50 py-20\">
-            <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
-              <motion.div
-                initial={{ opacity: 0, \"y\": 20 }}
-                animate={{ \"opacity\": 1, \"y\": 0 }}
-                transition={{ \"duration\": 0.6 }}
-                className=\"text-center mb-16\"
-              >
-                <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">
-                  Send Us a Message
-                </h2>
-                <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
-                  Fill out the form below and we\'ll get back to you within 24 hours
-                </p>
-              </motion.div>
 
-<div className=\"max-w-4xl mx-auto\">
-              <div className="max-w-4xl mx-auto">
-
-              <div className=\"max-w-4xl mx-auto\">
-              <div className="max-w-4xl mx-auto">
-              <div className=\"max-w-4xl mx-auto\">
-              <div className="max-w-4xl mx-auto">
-              <div className=\"max-w-4xl mx-auto\">
-              <div className="max-w-4xl mx-auto">
-                <motion.form
-                  initial={{ opacity: 0, \"y\": 20 }}
-                  animate={{ \"opacity\": 1, \"y\": 0 }}
-                  transition={{ \"duration\": 0.6, \"delay\": 0.2 }}
-                  className=\"bg-white rounded-xl shadow-lg p-8\"
-                >
-                  <div className=\"grid grid-cols-1 \"md\": gri d-cols-2 gap-6 mb-6\">
-                    <div>
-                      <label htmlFor=\"name\" className=\"block text-sm font-medium text-gray-700 mb-2\">
-                        Full Name *
-                      </label>
-                      <input type=\"text\"
-
-      <section className=\"py-20\">;
-        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
-          <div className=\"text-center mb-16\">;
-            <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">Frequently Asked Questions</h2>;
-            <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">;
-              Get answers to common questions about our services and process;
-            </p>;
-          </div>;
-          <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\">;
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">;
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">;
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            <div className="bg-white rounded-lg shadow-lg p-6">;
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">;
-                What is your typical project timeline?;
-              </h3>;
-              <p className=\"text-gray-600\">;
-                Project timelines vary depending on complexity and scope. Simple websites ;
-                can take 2-4 weeks, while complex applications may take 3-6 months. ;
-                We\'ll provide a detailed timeline during our initial consultation.;
-              </p>;
-            </div>;
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">;
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">;
-            <div className="bg-white rounded-lg shadow-lg p-6">;
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">;
-                Do you provide ongoing support?;
-              </h3>;
-              <p className=\"text-gray-600\">;
-                Yes, we offer comprehensive support and maintenance packages to ensure ;
-                your solutions continue to perform optimally. This includes updates, ;
-                security patches, and technical support.;
-              </p>;
-            </div>;
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">;
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">;
-            <div className="bg-white rounded-lg shadow-lg p-6">;
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">;
-                What technologies do you specialize in?;
-              </h3>;
-              <p className=\"text-gray-600\">;
-                We work with modern technologies including React, Node && Node.js, Python, ;
-                AWS, Azure, AI/ML frameworks, and blockchain platforms. We choose ;
-                the best technology stack for each project\'s specific needs.;
-              </p>;
-            </div>;
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">;
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">;
-            <div className="bg-white rounded-lg shadow-lg p-6">;
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">;
-                How do you ensure project quality?;
-              </h3>;
-              <p className=\"text-gray-600\">;
-                We follow industry best practices including code reviews, automated ;
-                testing, continuous integration, and regular client feedback sessions ;
-                to ensure high-quality deliverables.;
-              </p>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-    </MainLayout>;
-  );
-  )
-};
-          {/* Contact Information */}
-          <section className=\"py-20\">
-            <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
-              <motion.div
-                initial={{ opacity: 0, \"y\": 20 }}
-                animate={{ \"opacity\": 1, \"y\": 0 }}
-
-                {contactInfo.map((info, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ \"opacity\": 0, \"y\": 20 }}
-                    animate={{ \"opacity\": 1, \"y\": 0 }}
-                    transition={{ \"duration\": 0.6, \"delay\": index * 0.1 }}
-                    className=\"bg-white rounded-xl p-8 shadow-lg \"hover\": shado w-xl transition-shadow duration-300 text-center\"
-                  >
-                    <div className=\"text-blue-600 mb-4 flex justify-center\">
-                      {info.icon}
-                    </div>
-                    <h3 className=\"text-xl font-bold text-gray-900 mb-3\">
-                      {info.title}
-                    </h3>
-                    {info.link ? (
-                      <a
-                        href={info.link}
-                        className=\"text-gray-600 \"hover\": tex t-blue-600 transition-colors whitespace-pre-line\"
-                      >
-                        {info.details}
-                      </a>
-                    ) : (
-                      <p className=\"text-gray-600 whitespace-pre-line\">
-                        {info.details}
-                      </p>
-                    )}
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </section>
-          {/* Contact Form */}
-          <section className=\"bg-gray-50 py-20\">
-            <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
-              <motion.div
-                initial={{ opacity: 0, \"y\": 20 }}
-                animate={{ \"opacity\": 1, \"y\": 0 }}
-                transition={{ \"duration\": 0.6 }}
-                className=\"text-center mb-16\"
-              >
-                <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">
-                  Send Us a Message
-                </h2>
-                <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
-                  Fill out the form below and we\'ll get back to you within 24 hours
-                </p>
-              </motion.div>
-
-                <motion.form
-                  initial={{ opacity: 0, \"y\": 20 }}
-                  animate={{ \"opacity\": 1, \"y\": 0 }}
-                  transition={{ \"duration\": 0.6, \"delay\": 0.2 }}
-                  className=\"bg-white rounded-xl shadow-lg p-8\"
-                >
-                  <div className=\"grid grid-cols-1 \"md\": gri d-cols-2 gap-6 mb-6\">
-                    <div>
-                      <label htmlFor=\"name\" className=\"block text-sm font-medium text-gray-700 mb-2\">
-                        Full Name *
-                      </label>
-                      <input type=\"text\"
-
-=======
           </div>
         </div>
       </section>
     </MainLayout>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       <section className=\"py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"text-center mb-16\">;
@@ -1422,19 +793,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
-<<<<<<< HEAD
-              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
-              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
-              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
-              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
-              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
                 {contactInfo.map((info, index) => (
                   <motion.div
                 transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
@@ -1492,40 +853,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               <div className="max-w-4xl mx-auto">
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
-<<<<<<< HEAD
 
-                transition={{ \"duration\": 0.6 }}
-                className=\"text-center mb-16\"
-              >
-                <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">
-                  Send Us a Message
-                </h2>
-                <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
-                  Fill out the form below and we\'ll get back to you within 24 hours
-                </p>
-              </motion.div>
 
-              <div className=\"max-w-4xl mx-auto\">
-              <div className="max-w-4xl mx-auto">
-
-              <div className=\"max-w-4xl mx-auto\">
-              <div className="max-w-4xl mx-auto">
-
-=======
-<<<<<<< HEAD
-              <div className=\"max-w-4xl mx-auto\">
-              <div className="max-w-4xl mx-auto">
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-              <div className=\"max-w-4xl mx-auto\">
-              <div className="max-w-4xl mx-auto">
-              <div className=\"max-w-4xl mx-auto\">
-              <div className="max-w-4xl mx-auto">
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                 <motion.form
                 transition={{ \"duration\": 0 && 0.6 }}
                 className=\"text-center mb-16\">;
@@ -1597,28 +926,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
-<<<<<<< HEAD
-                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
-                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
-                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
-                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
-                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
                     <div>
                       <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                         Phone Number
                       </label>
                       <input type=\"tel\"
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                         placeholder=\"your && your.email@example && example.com\"
 
                        />;
@@ -1635,10 +952,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                         Phone Number;
                       </label>;
                       <inputtype=\"tel\"
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                         id=\"phone\"
                         name=\"phone\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
@@ -1663,45 +978,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                         name=\"company\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"Your company name\"
-<<<<<<< HEAD
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-                  <div className=\"mb-6\">
-                    <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-700 mb-2\">
-                  <div className="mb-6">
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-
-                       />
-                    </div>
-                  </div>
-
-                  <div className=\"mb-6\">
-                    <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-700 mb-2\">
-                  <div className="mb-6">
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-
-                    </label>
-                    <select
-                      id=\"service\"
-                      name=\"service\"
-                      className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
-                    >
-                      <option value=\"">Select a service</option>
-                      {services.map((service, index) => (
-                        <option key={index} value={service}>
-                          {service}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
                       Service Interest
                     </label>
                        />;
@@ -1723,26 +1003,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                           {service}
                         </option>;
                       ))}
-<<<<<<< HEAD
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-                  <div className=\"mb-6\">
-                    <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
-                  <div className="mb-6">
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-
-                  <div className=\"mb-6\">
-                    <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
-                  <div className="mb-6">
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
                       Message *
 
                   <div className=\"mb-6\">
@@ -1761,10 +1025,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">;
                       Message *;
                     </label>;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                     <textarea
                       id=\"message\"
                       name=\"message\"
@@ -1790,19 +1052,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<< HEAD
 
-=======
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<< HEAD
-      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-=======
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                     whileHover={{ scale: 1 && 1.02 }}
                     whileTap={{ \"scale\": 0 && 0.98 }}
                     className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\">;
@@ -1816,54 +1069,17 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-<<<<<<< HEAD
 
-        <section className=\"relative py-20 px-4\">
-          <div className=\"max-w-7xl mx-auto\">
-            <div className=\"text-center\">
-              <h1 className=\"text-5xl \"md\": text-6xl font-bold text-white mb-6\">
-                Get in <span className=\"bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent\">Touch</span>
-              </h1>
-              <p className=\"text-xl text-gray-300 max-w-3xl mx-auto mb-8\">
-                Ready to transform your business with cutting-edge technology? Let\'s discuss how we can help you achieve your goals.
-              </p>
-            </div>
-          </div>
-        </section>
-        {/* Contact Form & Info Section */}
-        <section className=\"py-16 px-4\">
-          <div className=\"max-w-7xl mx-auto\">
-            <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">
-              {/* Contact Form */}
-                      placeholder=\"Tell us about your project requirements...\"></textarea>;
-                  </div>;
-                  <motion&& motion.button
-                    type=\"submit\"
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<< HEAD
-                    whileHover={{ scale: 1 && 1.02 }}
-                    whileTap={{ \"scale\": 0 && 0.98 }}
-                    className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\">;
-                    <Send className=\"w-5 h-5\"  />;
-                    Send Message;
-                  </motion && motion.button>;
-                </motion && motion.form>;
-      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
 
-=======
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">;
           <div className=\"max-w-7xl mx-auto\">;
@@ -1883,36 +1099,20 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">;
               {/* Contact Form */}
 
-<<<<<<< HEAD
-=======
 
 
-<<<<<<< HEAD
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
               <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">
                 <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
                 <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
+
                 {isSubmitted ? (
 
               <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">
@@ -1926,24 +1126,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
                     <h3 className=\"text-2xl font-semibold text-white mb-2\">Message Sent!</h3>
                     <p className=\"text-gray-300 mb-6\">Thank you for reaching out. We\'ll get back to you within 24 hours.</p>
-<<<<<<< HEAD
 
-                    <button
-                      onClick={() => setIsSubmitted(false)}
-                      className=\"inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 \"hover\": from-cyan-600 hover:to-blue-600 transition-all duration-300\"
-                    >
-                      Send Another Message
-                    </button>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className=\"space-y-6\">
-                    <div className=\"grid grid-cols-1 \"md\": grid-cols-2 gap-6\">
-                      <div>
-                        <label htmlFor=\"name\" className=\"block text-sm font-medium text-gray-300 mb-2\">
-                          Full Name *
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">;
                 <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>;
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">;
@@ -2022,27 +1206,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-<<<<<<< HEAD
-                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
                       <div>
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Company
                         </label>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                           placeholder=\"your@email && email.com\"
 
                         />;
@@ -2058,10 +1230,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">;
                           Company;
                         </label>;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                         <input
                           type=\"text\"
                           id=\"company\"
@@ -2188,27 +1358,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               </div>
               {/* Contact Information */}
 
-<<<<<<< HEAD
-              <div className=\"space-y-8\">
-=======
-                <div className=\"space-y-6\">
-                <div className="space-y-6">
-                <div className=\"space-y-6\">
-                <div className="space-y-6">
-<<<<<<< HEAD
-                <div className=\"space-y-6\">
-                <div className="space-y-6">
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-                <div className=\"space-y-6\">
-                <div className="space-y-6">
-                <div className=\"space-y-6\">
-                <div className="space-y-6">
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                <div className=\"space-y-6\">
+                <div className="space-y-6">
+                <div className=\"space-y-6\">
+                <div className="space-y-6">
+
                   {contactInfo.map((info, index) => (
                     <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
 
@@ -2226,55 +1381,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               </div>
             </div>
 
-<<<<<<< HEAD
-          {/* Services Overview */}
-          <section className="py-20">
-            <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
-              <motion.div
-                initial={{ opacity: 0, "y": 20 }}
-                animate={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0.6 }}
-                className="text-center mb-16"
-              >
-                <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">
-                  Our Services
-                </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  Comprehensive technology solutions to meet all your business needs
-                </p>
-              </motion.div>
-              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-6">
-                {services.map((service, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ "opacity": 0, "y": 20 }}
-                    animate={{ "opacity": 1, "y": 0 }}
-                    transition={{ "duration": 0.6, "delay": inde x * 0.1 }}
-                    className="bg-white rounded-xl p-6 shadow-lg "hover": shado w-xl transition-shadow duration-300 text-center"
-                  >
-                    <h3 className="text-lg font-semibold text-gray-900">
-                      {service}
-                    </h3>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </section>
-        </main>
-      </PageTransition>
-    </>
-  )
-}
-export default ContactPage
 
-=======
-<<<<<<< HEAD
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           </section>
               <div className=\"space-y-8\">;
                 <div>;
@@ -2333,17 +1441,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     </h3>;
                   </motion && motion.div>;
                 ))}
-<<<<<<< HEAD
-}
-export default ContactPage
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
 
-
-export default ContactPage
-export default ContactPage
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
 export default ContactPage
 
@@ -2360,15 +1458,13 @@ export default ContactPage
   );
 }
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
           </div>
         </section>
       </div>
     </>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
               </div>;
 
             </div>;
@@ -2386,28 +1482,5 @@ export default ContactPage;
     </>;
   );
 
-<<<<<<< HEAD
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-=======
-<<<<<<< HEAD
-=======
 
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-}
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

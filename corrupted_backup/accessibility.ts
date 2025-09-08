@@ -32,23 +32,7 @@ export const accessibilityConfig = {;
     "spaceKey": true,}"
 }
 // Accessibility utilities;
-<<<<<<< HEAD
-export const accessibilityUtils = {
-  // Generate unique IDs for ARIA attributes;
 
-}
-
-const style = window.getComputedStyle(element)) => $3;
-return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},;"
-  // Announce to screen readers;
-  "announce": ({;"
-
-}
-
-const announcement = document.createElement("div")) => $3;"
-    announcement.setAttribute("aria-live", "polite");"
-    announcement.setAttribute("aria-atomic", "true");"
-=======
 export const accessibilityUtils = {;
   // Generate unique IDs for ARIA attributes;"
   "generateId": (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2, 9)}`,"
@@ -61,37 +45,27 @@ export const accessibilityUtils = {;
     const announcement = document.createElement("div")) => $3;""
     announcement.setAttribute("aria-live", "polite");""
     announcement.setAttribute("aria-atomic", "true");""
->>>>>>> origin/chore/fix-lint-and-merge
+
     announcement.className = "sr-only";"
     announcement.textContent = message;
     document.body.appendChild(announcement);
     setTimeout(() => {;
       document.body.removeChild(announcement),}, 1000),}
 }
-<<<<<<< HEAD
-=======
+
 export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation"; footer: "Site footer"; search: "Search"; menu: "Menu"; close: "Close"; open: "Open"; next: "Next"; previous: "Previous"; loading: "Loading"; error: "Error"; success: "Success"; warning: "Warning";;,}; ; focusManagement: {; skipToContent: true; focusTrap: 'true'; focusVisible: 'true;';,}; ; colorContrast: {; minimumRatio: 4.5; enhancedRatio: '7.0;';,}; ; keyboardNavigation: {; tabIndex: 0; arrowKeys: 'true'; escapeKey: 'true'; enterKey: 'true'; spaceKey: 'true;';,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`; ; isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"}; ; announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement);;,},1000);;,} }
 export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
 export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
 export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
 export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
->>>>>>> origin/chore/fix-lint-and-merge
+
 export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",; footer: "Site footer",; search: "Search",; menu: "Menu",; close: "Close",; open: "Open",; next: "Next",; previous: "Previous",; loading: "Loading",; error: "Error",; success: "Success",; warning: "Warning";,;,},; ; focusManagement: {; skipToContent: true,; focusTrap: 'true',; focusVisible: 'true;',;,},; ; colorContrast: {; minimumRatio: 4.5,; enhancedRatio: '7.0;',;,},; ; keyboardNavigation: {; tabIndex: 0,; arrowKeys: 'true',; escapeKey: 'true',; enterKey: 'true',; spaceKey: 'true;',;,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,; ; isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},; ; announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement);,;,},1000);,;,} }
 export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
 export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
 export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
 export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
 // Accessibility utilities
-<<<<<<< HEAD
-export const accessibilityUtils = {
-  // Focus management
-}
-"trapFocus": ("element": HTMLElement) => {
-   ;
-}
-const focusableElements = element.querySelectorAll(;
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])''
-=======
+
 }"`;
 export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",; footer: "Site footer",; search: "Search",; menu: "Menu",; close: "Close",; open: "Open",; next: "Next",; previous: "Previous",; loading: "Loading",; error: "Error",; success: "Success",; warning: "Warning";,;,},; ; focusManagement: {; skipToContent: true,; focusTrap: 'true',; focusVisible: 'true;',;,},; ; colorContrast: {; minimumRatio: 4.5,; enhancedRatio: '7.0;',;,},; ; keyboardNavigation: {; tabIndex: 0,; arrowKeys: 'true',; escapeKey: 'true',; enterKey: 'true',; spaceKey: 'true;',;,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,; ; isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},; ; announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement);,;,},1000);,;,} }""`;
 export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {; skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {; minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {; tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({; const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({; const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }""`;
@@ -102,17 +76,15 @@ export const accessibilityUtils = {
   trapFocus: (element: HTMLElement) => {
     const focusableElements = element.querySelectorAll()"
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])
->>>>>>> origin/chore/fix-lint-and-merge
+
     );
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-<<<<<<< HEAD
 
-=======
     const handleTabKey = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
->>>>>>> origin/chore/fix-lint-and-merge
+
         if (e.shiftKey) {
           if (document.activeElement === firstElement) {
             lastElement.focus();
@@ -121,16 +93,7 @@ export const accessibilityUtils = {
   // TODO: Implement
           if (document.activeElement === lastElement) {
             firstElement.focus();
-<<<<<<< HEAD
-            e.preventDefault();
-          }
-        }
-      }
-    }
 
-
-    announcement.textContent = message;
-=======
     };
 
     element.addEventListener('keydown', handleTabKey);
@@ -145,26 +108,11 @@ export const accessibilityUtils = {
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
->>>>>>> origin/chore/fix-lint-and-merge
+
     
     setTimeout(() => document.body.removeChild(announcement), 1000);
 
-<<<<<<< HEAD
 
-    })return skipLink;
-  }
-}
-
-export default accessibilityUtils;
-    `;`
-    
-
-    });
-    
-    return skipLink;
-  }
-}
-=======
   // Skip links;
   createSkipLink: (targetId: string, text: string = 'Skip to main content') => {
     const skipLink = document.createElement('a');`;
@@ -191,7 +139,7 @@ export default accessibilityUtils;
       skipLink.style.top = '-40px';
     
     return skipLink;
->>>>>>> origin/chore/fix-lint-and-merge
+
 
 export default accessibilityUtils;
 export default accessibilityUtils;

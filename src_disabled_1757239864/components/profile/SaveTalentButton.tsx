@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Button } from "@/components/ui/button";
-import React from 'react',
-import { Button } from "@/components/ui/button",
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
 import { Star } from 'lucide-react'
 import React from 'react'
 import { Button } from '@/components/ui/button'
@@ -15,40 +10,20 @@ interface SaveTalentButtonProps {
   talentId: string
   onSave: (talentId: string) => void
   isSaved: boolean
-<<<<<<< HEAD
-export function SaveTalentButton({
-  talentId
-  onSave
-  isSaved
-}: SaveTalentButtonProps) {
-      onClick={() => onSave(talentId)}
-      variant={isSaved ? 'default' : 'outline'}
-      size='sm'
-      className={
-        isSaved
-          ? 'bg-yellow-500 hover:bg-yellow-600 text-white'
-          : 'text-yellow-500 border-yellow-500 hover:bg-yellow-500/10'
-      }    >
-import { Button } from "@/components/ui/button"
-=======
+
 
 import { Button } from "@/components/ui/button";
 import { Star } from 'lucide-react'
 import { Star } from 'lucide-react';
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 interface SaveTalentButtonProps {
   talentId: string,
   onSave: (talentId: string,) => void,
   isSaved: boolean
-<<<<<<< HEAD:src_disabled_1757239864/components/profile/SaveTalentButton.tsx
-=======
-<<<<<<< HEAD
-}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/profile/SaveTalentButton.tsx
+
+
 
   talentId: string
   onSave: (talentId: string,) => void
@@ -56,14 +31,8 @@ interface SaveTalentButtonProps {
   isSaved: boolean
 }
 export function SaveTalentButton({ talentId, onSave, isSaved }: SaveTalentButtonProps) {
-<<<<<<< HEAD
-  )
-}}
-}
-import React from 'react',;
-import { Button } from "@/components/ui/button",;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
 import { Button } from '@/components/ui/button';
 import { Star } from 'lucide-react';
 
@@ -151,12 +120,5 @@ function SaveTalentButton() {
 
   talentId: string,
   onSave: (talentId: string,) => void,
-<<<<<<< HEAD:src_disabled_1757239864/components/profile/SaveTalentButton.tsx
-  isSaved: boolean
-=======
-<<<<<<< HEAD
-  isSaved: boolean
-=======
-  isSaved: boolean
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/profile/SaveTalentButton.tsx
+
+

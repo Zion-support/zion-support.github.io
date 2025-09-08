@@ -34,34 +34,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           onClick={handleCopy}
           aria-label=Copy prompt'
         >
-<<<<<<< HEAD
-          {copied ? 'Copied : <Copy className=w-4 h-4' />}
-}
-=======
+
           {copied ? 'Copied' : <Copy className='w-4 h-4' />}
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
 
 }
 
 }
 
-<<<<<<< HEAD
-import { useState } from 'react;
-import { Copy, Send } from lucide-react';
-import type { Prompt } from '@/types/ prompts;
-import { Button } from @/components/ui/ button';
-=======
+
 import { useState } from 'react';
 import { Copy, Send } from 'lucide-react';
 import type { Prompt } from '@/types / prompts';
 import { Button } from '@/components / ui / button';
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
 interface PromptCardProps {
   prompt: Prompt;
 export /**
@@ -81,40 +67,8 @@ function PromptCard() {
   }
     window.open (`/zion - gpt?prompt=${encoded}`, _blank');
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    <div className='p - 4 border rounded - md bg - background flex flex - col justify - between>;
-import { useState  } from react';
-import { Copy, Send  } from 'lucide-react;
-import { Button   } from @/components/ui/button';
-interface PromptCardProps  {prompt: Prompt;export function PromptCard(): any ({ prompt }: PromptCardProps) {const [copied, setCopied] = useState(false)const handleCopy = () => {navigator && navigator.clipboard.writeText(prompt && prompt.text)setCopied(true)setTimeout(() => setCopied(false), 2000)}const handleSend = () => {const encoded = encodeURIComponent(prompt && prompt.text)window && window.open(`/zion-gpt?prompt=${encoded}`, _blank')setTimeout(() => setCopied(false), 2000)setTimeout(() => setCopied(false), 2000)}const handleSend = () => {const encoded = encodeURIComponent(prompt && prompt.text)window && window.open(`/zion-gpt?prompt=${encoded}`, '_blank)import { Button  } from @/components/ui/button';
-interface PromptCardProps  {prompt: Prompt;export function PromptCard() {const [copied, setCopied]  = useState(false)const handleCopy = () => {navigator.clipboard.writeText(prompt.text)setCopied(true)setTimeout(() => setCopied(false), 2000)}const handleSend = () => {const encoded = encodeURIComponent(prompt.text)window.open(`/zion-gpt?prompt=${encoded}`, '_blank)}return (<div className=p-4 border rounded-md bg-background flex flex-col justify-between'>;
-      <p className='mb-4 text-sm>{prompt.text}</p>;
-      <div className=flex gap-2 mt-auto'>;
-        <Button;
-          variant='outline;
-          size=sm';
-          onClick={handleCopy}
-          aria-label='Copy prompt;
-        >;
-          {copied ? Copied' : <Copy className='w-4 h-4 />}}
-  )}}import type { Prompt } from @/types / prompts';
-import { Button  } from '@/components / ui / button;
-interface PromptCardProps  {prompt: Prompt;
-export /**;
- * PromptCard - Function description;
- */;
-  const handle_send = () =>: any {const encoded = encodeURIComponent (prompt.text)window.open (`/zion - gpt?prompt=${encoded}`, _blank')set_timeout (() => set_copied (false), 2000)set_timeout (() => set_copied (false), 2000)}
-  const handle_send = () =>: any {const encoded = encodeURIComponent (prompt.text)window.open (`/zion - gpt?prompt=${encoded}`, '_blank)return (<div className=p - 4 border rounded - md bg - background flex flex - col justify - between'>;
-      <p className='mb - 4 text - sm>{prompt.text}</p>;
-      <div className=flex gap - 2 mt - auto'>;
-=======
->>>>>>> merged-prs-20250907-203621
-    <div className='p - 4 border rounded - md bg - background flex flex - col justify - between'>;
-      <p className='mb - 4 text - sm'>{prompt.text}</p>;
-      <div className='flex gap - 2 mt - auto'>;
->>>>>>> origin/chore/fix-lint-and-merge
+
+
         <Button;
           variant='outline;
           size=sm';
@@ -131,41 +85,5 @@ export /**;
         >;
           <Send className='w - 4 h - 4 />        </Button>;
       </div>;
-<<<<<<< HEAD
-    </div>);
-}        <Button variant="secondary" size="sm" on_click={handle_send} aria - label="Send to ZionGPT">;
-          <Send className="w - 4 h - 4" />;
-        </Button>;
-      </div>;
-    </div>);
-}
-=======
-<<<<<<< HEAD
-    </div>)}        <Button variant="secondary size=sm" on_click={handle_send} aria - label="Send to ZionGPT>;
-          <Send className=w - 4 h - 4" />;
-        </Button>;
-      </div>;
-    </div>);
-    </div>)}</Button>;
-        <Button;
-          variant=secondary';
-          size='sm;
-          onClick={handleSend}
-          aria-label=Send to ZionGPT';
-        >;
-          <Send className='w-4 h-4' />;
-        </Button>;
-      </div>;
-    </div>;
-  )}
-}
-=======
-    </div>);
-}        <Button variant="secondary" size="sm" on_click={handle_send} aria - label="Send to ZionGPT">;
-          <Send className="w - 4 h - 4" />;
-        </Button>;
-      </div>;
-    </div>);
-}
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+

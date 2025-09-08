@@ -17,17 +17,12 @@ export default function AdminKycPage() {
 
   async function act(userId: string, action: 'approve' | 'reject' | 'needs_more_info') {
     const res = await fetch('/api/admin/kyc-queue', {
-<<<<<<< HEAD:pages_backup_1757220418/admin/kyc.tsx
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, action, reason: reason || undefined })}),
-    const data = await res.json($2);
-=======
+
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ userId, action, reason: reason |undefined })})
 
->>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/admin/kyc.tsx
+
     if (data.ok) load()
   }
 

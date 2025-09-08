@@ -4,201 +4,13 @@ import { useRouter } from 'next/router', // Changed from useNavigate'
 import { CheckCircle2 } from 'lucide-react''
 import { useTranslation } from 'react-i18next';
 export default function PaymentSuccess() {
-<<<<<<< HEAD:src-disabled/pages.disabled/payment-success.tsx
-  return (
-    <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">"
-      <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">"
-        <div className="inline-flex h-12 w-12 rounded-full bg-green-100 mb-4 items-center justify-center">"
-          <CheckCircle2 className="h-6 w-6 text-green-600" />"
-        </div>
-        <h1 className="text-2xl font-bold text-white mb-2">{t('errors.payment_success_title')}</h1>'
-        <p className="text-zion-slate-light mb-6">"
-          {t('errors.payment_success_message')}'
-        </p>
-        <div className="flex flex-col space-y-3">"
-          <Button
-            onClick={() => router.push('/dashboard')} // Changed to router.push'
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white""
-=======
-<<<<<<< HEAD
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { useRouter } from 'next/router'; // Changed from useNavigate
-import { CheckCircle2 } from 'lucide-react'; import { useTranslation } from 'react-i18next'
-import { useRouter } from 'next/router', // Changed from useNavigate
-import { CheckCircle2 } from 'lucide-react'
-import { useTranslation } from 'react-i18next';
-export default function PaymentSuccess() {;
-  const router = useRouter(); // Changed from navigate
-  const { t } = useTranslation()
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
-
-
-<<<<<<< HEAD
-import React from 'react',
-import { Button } from '@/components/ui/button',
-import { useRouter } from 'next/router', // Changed from useNavigate
-import { CheckCircle2 } from 'lucide-react'
-import { useTranslation } from 'react-i18next',
-export default function PaymentSuccess() {
-  const router = useRouter(), // Changed from navigate
-  const { t } = useTranslation(),
-  
-  
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  return (
-    <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
-      <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
-        <div className="inline-flex h-12 w-12 rounded-full bg-green-100 mb-4 items-center justify-center">
-          <CheckCircle2 className="h-6 w-6 text-green-600" />
-        </div>
-<<<<<<< HEAD
-        <h1 className='text-2xl font-bold text-white mb-2'>
-          {t('errors.payment_success_title')}
-        </h1>
-        <p className='text-zion-slate-light mb-6'>
-          {t('errors.payment_success_message')}
-        </p>
-        <div className='flex flex-col space-y-3'>
-          <Button
-          <Button
-ursor/fix-website-loading-errors-and-merge-6662
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        
-        <h1 className="text-2xl font-bold text-white mb-2">{t('errors.payment_success_title')}</h1>
-        
-        <p className="text-zion-slate-light mb-6">
-          {t('errors.payment_success_message')}
-        </p>
-        
-        <div className="flex flex-col space-y-3">
-          <Button 
-
-
-            onClick={() => router.push('/dashboard')} // Changed to router.push
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/pages/payment-success.tsx
           >
             {t('errors.go_to_dashboard')}'
           </Button>
-<<<<<<< HEAD:src-disabled/pages.disabled/payment-success.tsx
-=======
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/pages/payment-success.tsx
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  const router = useRouter(); // Changed from navigate
-  const { t } = useTranslation();
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import { useRouter } from 'next/router', // Changed from useNavigate
-import { CheckCircle2 } from 'lucide-react'
-import { useTranslation } from 'react-i18next',;
-export default function PaymentSuccess() {
-  const router = useRouter(), // Changed from navigate
-  const { t } = useTranslation(),
-  return (
-    <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
-      <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
-        <div className="inline-flex h-12 w-12 rounded-full bg-green-100 mb-4 items-center justify-center">
-          <CheckCircle2 className="h-6 w-6 text-green-600" />
-        </div>
-            onClick={() => router.push('/dashboard')} // Changed to router.push
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-          >
-            {t('errors.go_to_dashboard')}
-          </Button>
-import { Button } from '@/components/ui/button';
-import { useRouter } from 'next/router'; // Changed from useNavigate;
-import { CheckCircle2 } from 'lucide-react';import { useTranslation } from 'react-i18next';
-
-
-
-    <div className='min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4'>
-      <div className='max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center'>
-        <div className='inline-flex h-12 w-12 rounded-full bg-green-100 mb-4 items-center justify-center'>
-          <CheckCircle2 className='h-6 w-6 text-green-600' />
-        </div>
-        <h1 className='text-2xl font-bold text-white mb-2'>
-          {t('errors.payment_success_title')}
-        </h1>
-        <p className='text-zion-slate-light mb-6'>
-          {t('errors.payment_success_message')}
-        </p>
-        <div className='flex flex-col space-y-3'>
-          <Button
-<<<<<<< HEAD:src-disabled/pages.disabled/payment-success.tsx
-            onClick={() => router.push('/dashboard')} // Changed to router.push
-            className='bg-zion-purple hover:bg-zion-purple-dark text-white'
-          >
-            {t('errors.go_to_dashboard')}
-          </Button>
-          <Button
-            variant='outline'
-=======
-            onClick={() => router && router.push('/dashboard')} // Changed to router && router.push;
-            className='bg-zion-purple hover:bg-zion-purple-dark text-white';
-          >;
-            {t('errors && errors.go_to_dashboard')}
-          </Button>;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          <Button
-            variant='outline'
-            onClick={() => router.push('/')} // Changed to router.push
-            className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'          >  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
-      <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
-        <div className="inline-flex h-12 w-12 rounded-full bg-green-100 mb-4 items-center justify-center">
-          <CheckCircle2 className="h-6 w-6 text-green-600" />
-        </div>
-        <h1 className="text-2xl font-bold text-white mb-2">{t('errors.payment_success_title')}</h1>
-        <p className="text-zion-slate-light mb-6">
-          {t('errors.payment_success_message')}
-        </p>
-        <div className="flex flex-col space-y-3">
-          <Button
-            onClick={() => router.push('/dashboard')} // Changed to router.push
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-          >
-            {t('errors.go_to_dashboard')}
-          </Button>
-          <Button
-          <Button 
-=======
-
-
-          <Button 
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-            variant="outline"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/pages/payment-success.tsx
             onClick={() => router.push('/')} // Changed to router.push
             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -269,16 +81,9 @@ export default function PaymentSuccess() {
 
 ;
           <Button 
-<<<<<<< HEAD:src-disabled/pages.disabled/payment-success.tsx
-=======
 
-<<<<<<< HEAD
-;
-          
-          <Button 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/pages/payment-success.tsx
+
+
             variant="outline"
             onClick={() => router.push('/')} // Changed to router.push
             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
@@ -354,16 +159,5 @@ function PaymentSuccess() {
       </div>;
     </div>);
 }
-<<<<<<< HEAD:src-disabled/pages.disabled/payment-success.tsx
-;))
-;
-origin/cursor/automate-test-improve-and-merge-code-2533
-  );
-}
-=======
-<<<<<<< HEAD
-;
-=======
-;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/pages/payment-success.tsx
+
+

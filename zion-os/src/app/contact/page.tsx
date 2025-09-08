@@ -249,12 +249,10 @@ export default function ContactPage() {
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-      </section>;
-=======
+
 
 import Link from 'next/link';
->>>>>>> origin/chore/fix-lint-and-merge
+
 export default function ContactPage() {
   return (;
     <div className=&quot;min-h-screen bg-white&quot;>

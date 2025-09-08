@@ -38,7 +38,7 @@ export default function NewJobPage() {
   },
 
   return (
-<<<<<<< HEAD:pages/jobs/new.tsx
+:pages/jobs/new.tsx
     <>
       <Head>
         <title>new | Zion Tech Group</title>
@@ -59,7 +59,7 @@ export default function NewJobPage() {
     </>
   );
 }
-=======
+
     <div className="max-w-2xl mx-auto">
       <EnhancedCard>
         <h1 className="text-lg font-semibold mb-3">Post a Job</h1>

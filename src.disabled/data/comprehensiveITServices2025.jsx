@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-"export\": const COMPREHENSIVE_IT_SERVICES_2025 = [
-export: const COMPREHENSIVE_IT_SERVICES_2025 = [""
-"export": const COMPREHENSIVE_IT_SERVICES_2025 = ["]"
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-"export": const COMPREHENSIVE_IT_SERVICES_2025 = ["]"
 
-"export": const COMPREHENSIVE_IT_SERVICES_2025 = ["]"
 
-"export\": const COMPREHENSIVE_IT_SERVICES_2025 = [
-export: const COMPREHENSIVE_IT_SERVICES_2025 = [""
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-"export": const COMPREHENSIVE_IT_SERVICES_2025 = ["]"
-"export": const COMPREHENSIVE_IT_SERVICES_2025 = ["]"
-ursor/add-new-services-and-deploy-updates-0462
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621

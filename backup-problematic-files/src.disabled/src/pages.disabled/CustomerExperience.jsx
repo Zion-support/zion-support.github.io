@@ -5,16 +5,8 @@ const CustomerExperience = ({ className }) => {
       <h1>CustomerExperience</h1>
       <p>This component is under development.</p>
     </div>
-<<<<<<< HEAD
-  )
-};
-=======
+
   );
 };
 
-<<<<<<< HEAD
-export default CustomerExperience;
-=======
-export default CustomerExperience;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

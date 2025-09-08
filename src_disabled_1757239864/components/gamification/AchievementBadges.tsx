@@ -1,6 +1,6 @@
 export interface Achievement {
 
-<<<<<<<< HEAD:src_backup/components/gamification/AchievementBadges.tsx
+<:src_backup/components/gamification/AchievementBadges.tsx
 export interface Achievement  {id: string;
 =  id: string
   title: string
@@ -55,7 +55,7 @@ export interface Achievement  {id: string;
   title: string;
   description: string;
   achieved: boolean;
-<<<<<<<< HEAD:src_backup/components/gamification/AchievementBadges.tsx
+<:src_backup/components/gamification/AchievementBadges.tsx
 interface AchievementBadgesProps  {achievements: Achievement[];
   achievements: Achievement[];}
 export interface Achievement  {id: string;
@@ -85,7 +85,7 @@ interface AchievementBadgesProps {
 export function AchievementBadges({ achievements }: AchievementBadgesProps) {
   return (
 
-<<<<<<<< HEAD:src_backup/components/gamification/AchievementBadges.tsx
+<:src_backup/components/gamification/AchievementBadges.tsx
 
 
       </CardContent>;

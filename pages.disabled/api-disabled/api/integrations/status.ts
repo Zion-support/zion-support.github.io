@@ -1,28 +1,6 @@
-<<<<<<< HEAD:pages.disabled/api-disabled/api/integrations/status.ts
-for (const p of PROVIDERS) {
-    const conn = state.connections.find(c => c.providerId === p.id)
-    connections[p.id] = conn |{ providerId: p.id, status: 'disconnected' }
 
-=======
 
-<<<<<<< HEAD
-}
 
-}
-=======
-
-  for (const p of PROVIDERS) {
-    const conn = state.connections.find(c => c.providerId === p.id)
-    connections[p.id] = conn |{ providerId: p.id, status: 'disconnected' }
-  }
-  res.status(200).json({ connections })
-
-=======
-}
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/integrations/status.ts
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { read_state } from '../../../lib / integrations / file_store',
 import { PROVIDERS } from '../../../lib / integrations / registry',
@@ -46,102 +24,8 @@ function handler() {
   }
   res.status (200).json ({ connections });
 }
-<<<<<<< HEAD:pages.disabled/api-disabled/api/integrations/status.ts
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readState } from '[^']*';
-import { PROVIDERS } from '[^']*';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
-  const state = null;
-    connections[p.id] = conn || { providerId: p.id, status: 'disconnected' }
-  }
-  res.status(200).json({ connections })
-}
-=======
-<<<<<<< HEAD
 
 
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { readState } from '../../../lib/integrations/fileStore',;
-import { PROVIDERS } from '../../../lib/integrations/registry',;
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' }),
-  const state = readState(),
-  const connections: Record<string, any> = {},
-  for (const p of PROVIDERS) {
-    const conn = state.connections.find(c => c.providerId === p.id),
-    connections[p.id] = conn || { providerId: p.id, status: 'disconnected' }
-  }
-  res.status(200).json({ connections });
-};
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-import { readState } from '../../../lib/integrations/fileStore';
-import { PROVIDERS } from '../../../lib/integrations/registry';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' })
-  const state = readState()
-  const connections: Record<string, any> = {}
-  for (const p of PROVIDERS) {
-    const conn = state.connections.find(c => c.providerId === p.id)
-    connections[p.id] = conn |{ providerId: p.id, status: 'disconnected' }
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readState } from '../../../lib/integrations/fileStore';
-import { PROVIDERS } from '../../../lib/integrations/registry';
-export default function handler(req, res) {
-  try {
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-    connections[p.id] = conn || { providerId: p.id, status: 'disconnected'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  res.status(200).json({ connections });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/integrations/status.ts
+

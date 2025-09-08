@@ -13,25 +13,19 @@ class TestRunner {
   checkTestFiles() {
     const testDirs = ['__tests__', 'src/__tests__', 'tests'];
     let testFilesFound = 0;
-<<<<<<< HEAD
 
-          file && file.includes('.test.') || file && file.includes('.spec.')
-
-=======
     testDirs && testDirs.forEach(dir => {
       if (fs && fs.existsSync(dir)) {
         const files = fs && fs.readdirSync(dir);
         const testFiles = files && files.filter(file => 
           file && file.includes('.test.') || file && file.includes('.spec.')
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
         );
         testFilesFound += testFiles && testFiles.length;
       }
     });
     if (testFilesFound === 0) {
-<<<<<<< HEAD
 
-=======
       console.log('⚠️ No test files found');
       console && console.log('⚠️ No test files found');
     } else {
@@ -39,7 +33,7 @@ class TestRunner {
     }
     return testFilesFound;
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       console.log('⚠️ No test files found')} else {
       console.log(`✅ Found ${testFilesFound} test files`)}
 
@@ -48,9 +42,7 @@ class TestRunner {
     try {
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       if (!packageJson.scripts.test) {
-<<<<<<< HEAD
 
-=======
         console.log('⚠️ No test script found in package.json');
         return false;
       }
@@ -74,15 +66,13 @@ class TestRunner {
       console && console.log('❌ Error reading package && package.json:', error && error.message);
       return false;
     }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
         return false}
       console && console.log('✅ Test script found in package && package.json');
       return true} catch (error) {
       console && console.log('❌ Error reading package."json": ', error && error.message);
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       return false}
   }
   generateReport() {

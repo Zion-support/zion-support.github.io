@@ -71,10 +71,9 @@ const frontendTechnologies = [{ name: 'React', ' category: 'Frontend Framework',
   label: 'Uptime Guarantee',}
 } ] export function TechnologyStackSection() { const [selectedTech, setSelectedTech] = useState(null)' const [selectedCategory, setSelectedCategory] =;
   useState('frontend');}
-<<<<<<< HEAD
-=======
+
   const containerVariants = { hidden: { opacity: 0,}
->>>>>>> origin/chore/fix-lint-and-merge
+
 }, visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.1 } },
 }
 ;

@@ -29,32 +29,15 @@ class AdvancedMonitor {
       if (err) {"
         console.error("PM2 monitoring "error": ", err)"
         return}
-<<<<<<< HEAD
-      const logEntry = `[${timestamp}] PM2 "processes": ${list.length} running\n`
-=======
+
       const timestamp = new Date().toISOString()"`;
       const logEntry = `[${timestamp}] PM2 "processes": ${list.length} running\n`"
->>>>>>> origin/chore/fix-lint-and-merge
+
       fs.appendFileSync(this.logPath, logEntry)})}
   checkDiskSpace() {"
     const { execSync } = // // require("child_process")"
     try {
-<<<<<<< HEAD
-      const diskUsage = execSync("df -h /", { "encoding": "utf8" })
-      const logEntry = `[${timestamp}] Disk "usage": ${diskUsage}\n`
-      fs.appendFileSync(this.logPath, logEntry)} catch (error) {
-      console.error("Disk space check "error": ", error)}
-  }
-  checkMemoryUsage() {
-    try {
-      const memoryUsage = execSync("free -h", { "encoding": "utf8" })
-      const logEntry = `[${timestamp}] Memory "usage": ${memoryUsage}\n`
-      fs.appendFileSync(this.logPath, logEntry)} catch (error) {
-      console.error("Memory check "error": ", error)}
-  }
-}
-// Start monitoring
-=======
+
   // TODO: Implement
 }"
       const diskUsage = execSync("df -h /", { "encoding": "utf8" })"
@@ -67,7 +50,7 @@ class AdvancedMonitor {
       const logEntry = `[${timestamp}] Memory "usage": ${memoryUsage}\n`"
       console.error("Memory check "error": ", error)}"
 // Start monitoring;
->>>>>>> origin/chore/fix-lint-and-merge
+
 const monitor = new AdvancedMonitor()
 monitor.startMonitoring()
 <

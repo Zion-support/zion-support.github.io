@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-resetFilters: () => void
-}
-export const FraudFilters: React.FC<FraudFiltersProps> = ({
 
 
-
-
-
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
 interface FraudFiltersProps {
   searchQuery: string,
   setSearchQuery: (value: string) => void,
@@ -40,39 +28,8 @@ import React from 'react;
 
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-interface FraudFiltersProps {
-  searchQuery: string,
-  setSearchQuery: (value: string,) => void,
-  statusFilter: string | null,
-  setStatusFilter: (value: string | null,) => void,
-  severityFilter: string | null,
-  setSeverityFilter: (value: string | null,) => void,
-  contentTypeFilter: string | null,
-  setContentTypeFilter: (value: string | null,) => void,
-  resetFilters: () => void;
 
-}
-interface FraudFiltersProps  {searchQuery: string,setSearchQuery: (value: string) => void,statusFilter: string | null,setStatusFilter: (value: string | null) => void,severityFilter: string | null,setSeverityFilter: (value: string | null) => void,contentTypeFilter: string | null,setContentTypeFilter: (value: string | null) => void,resetFilters: () => void;
-}
-export const FraudFilters: React.FC<FraudFiltersProps> = ({resetFilters: () => void;
-}
-export const FraudFilters: React.FC<FraudFiltersProps> = ({searchQuery;
-  setSearchQuery;
-  statusFilter;
-  setStatusFilter;
-  severityFilter;
-  setSeverityFilter;
-  contentTypeFilter;
-  setContentTypeFilter;
-  resetFilters}) => {  return (
 
-    <div className="flex flex-col md: flex-row gap-4 mb-6>
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
   searchQuery,
   setSearchQuery,
@@ -86,13 +43,8 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   return (
     <div className="flex flex-col md:flex-row gap-4 mb-6">
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      <div className=relative flex-1>
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
         <Input
           placeholder=Search by user or content..."
@@ -132,83 +84,8 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
         </SelectContent>
       </Select>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-      
 
 
-      <Button variant=outline" onClick={resetFilters} className="md: w-auto>
-        <Filter className=h-4 w-4 mr-2" /> Reset Filters
-      </Button>
-    </div>
-  )
-
-          onChange = {(e,) => setSearchQuery(e && e.target.value)}
-
-
-},
-import React from "react,
-import { Input } from @/components/ui/input",
-import { Button } from "@/components/ui/button,
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from @/components/ui/select",
-import { Search, Filter } from lucide-react';
-interface FraudFiltersProps {
-  searchQuery: string,
-  setSearchQuery: (value: string) => void,
-  statusFilter: string | null,
-  setStatusFilter: (value: string | null) => void,
-  severityFilter: string | null,
-  setSeverityFilter: (value: string | null) => void,
-  contentTypeFilter: string | null,
-  setContentTypeFilter: (value: string | null) => void,
-  resetFilters: () => void;
-
-export const FraudFilters: React.FC<FraudFiltersProps> = ({
-  searchQuery,
-  setSearchQuery,
-  statusFilter,
-  setStatusFilter,
-  severityFilter,
-  setSeverityFilter,
-  contentTypeFilter,
-}interface FraudFiltersProps  {searchQuery: string,setSearchQuery: (value: string,) => void,statusFilter: string | null,setStatusFilter: (value: string | null,) => void,severityFilter: string | null,setSeverityFilter: (value: string | null,) => void,contentTypeFilter: string | null,setContentTypeFilter: (value: string | null,) => void,resetFilters: () => void;
-}export const FraudFilters: React.FC<FraudFiltersProps> = ({searchQuery;
-  setSearchQuery;
-  statusFilter;
-  setStatusFilter;
-  severityFilter;
-  setSeverityFilter;
-  contentTypeFilter;
-=======
->>>>>>> merged-prs-20250907-203621
-import { Search, Filter } from 'lucide-react';
-interface FraudFiltersProps {;
-  searchQuery: string,;
-  setSearchQuery: (value: string) => void,;
-  statusFilter: string | null,;
-  setStatusFilter: (value: string | null) => void,;
-  severityFilter: string | null,;
-  setSeverityFilter: (value: string | null) => void,;
-  contentTypeFilter: string | null,;
-  setContentTypeFilter: (value: string | null) => void,;
-  resetFilters: () => void;
-
-;
-
-export const FraudFilters: React.FC<FraudFiltersProps> = ({;
-  searchQuery,;
-  setSearchQuery,;
-  statusFilter,;
-  setStatusFilter,;
-  severityFilter,;
-  setSeverityFilter,;
-  contentTypeFilter,;
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
   setContentTypeFilter;
   resetFilters}) => {
   return (;"
@@ -222,14 +99,8 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           className=pl-10;
         />;
       </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
 
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>;
         <SelectTrigger className=w-[180px]>;
@@ -267,14 +138,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           <SelectValue placeholder=Content Type" />;
         </SelectTrigger>;
         <SelectContent>;"
-<<<<<<< HEAD
-          <SelectItem value=>All Types</SelectItem>;"
-          <SelectItem value="signup>Signups</SelectItem>;
-          <SelectItem value="job">Jobs</SelectItem>;
-          <SelectItem value=message">Messages</SelectItem>;"
-          <SelectItem value=quote>Quotes</SelectItem>;"
-          <SelectItem value="review>Reviews</SelectItem>;
-=======
+
           <SelectItem value="">All Severities</SelectItem>;"
           <SelectItem value="safe">Safe</SelectItem>;"
           <SelectItem value="suspicious">Suspicious</SelectItem>;"
@@ -294,7 +158,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           <SelectItem value="message">Messages</SelectItem>;"
           <SelectItem value="quote">Quotes</SelectItem>;"
           <SelectItem value="review">Reviews</SelectItem>;
->>>>>>> origin/chore/fix-lint-and-merge
+
         </SelectContent>;
       </Select>;
 
@@ -366,17 +230,10 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({}
 
       </Button>;
     </div>);
-<<<<<<< HEAD
-}"
-'},
-'},
-=======
+
 }'"
 '"},
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
 
 import React from react;
 import { Input } from '@/components/ui/input';
@@ -391,18 +248,8 @@ import { Search, Filter } from lucide-react;
 
 interface FraudFiltersProps {
   searchQuery: string;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    </div>)}
-'"}}
-'"}}import { Input  } from @/components/ui/input;
-import { Button  } from '@/components/ui/button';
-import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from @/components/ui/select;
-interface FraudFiltersProps  {searchQuery: string;
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
   setSearchQuery: (value: string) => void;
   statusFilter: string | null;
   setStatusFilter: (value: string | null) => void;
@@ -414,16 +261,5 @@ interface FraudFiltersProps  {searchQuery: string;
 }
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
   );
-<<<<<<< HEAD
-};
-'"
-=======
-<<<<<<< HEAD
-}
-export const FraudFilters: React.FC<FraudFiltersProps> = ({)}'";
-'"
-=======
-};
-'"
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+

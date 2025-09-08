@@ -1,75 +1,10 @@
-<<<<<<< HEAD
 
-    updateJobMatchStatus
-    updateJobMatchStatus, 
-import { useAuth } from "@/hooks/useAuth"
-import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/badge"
-import { useJobSuggestions } from "@/hooks/useJobSuggestions"
-import { JobMatchesCard } from "./JobMatchesCard"
-import { NoJobsCard } from "./NoJobsCard"
-    updateJobMatchStatus
 
-updateJobMatchStatus, 
-
-import { useAuth } from "@/hooks/useAuth",
-import { Loader2 } from 'lucide-react'
-import { Badge } from "@/components/ui/badge",
-import { useJobSuggestions } from "@/hooks/useJobSuggestions",
-import { JobMatchesCard } from "./JobMatchesCard",
-import { NoJobsCard } from "./NoJobsCard",
-  talentId?: string
-}
-export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
-
-interface SuggestedJobsProps {
-  talentId?: string
-}
-export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
-
-  const { user } = useAuth()
-  const currentTalentId = talentId |user?.id
-  const {
-    isLoading
-    updateJobMatchStatus
-    categorizedMatches: {
-      newMatches
-      viewedMatches
-      appliedMatches
-    }
-  } = useJobSuggestions(currentTalentId)
-  const handleApply = (matchId: string, jobId: string) => {
-    updateJobMatchStatus(matchId, 'applied');    // In a real app, this might redirect to application form or open a modal
-  }
-  const handleDecline = (matchId: string) => {
-    updateJobMatchStatus(matchId, 'declined')
-  }
-  const { user } = useAuth(),
-  const currentTalentId = talentId || user?.id,
-  const { user } = useAuth()
-  const currentTalentId = talentId || user?.id
-  const { user } = useAuth(),
-  const currentTalentId = talentId || user?.id,
-  const { 
-    isLoading,
-    updateJobMatchStatus, 
-    categorizedMatches: { 
-updateJobMatchStatus,
-import { use_auth  } from '@/hooks / use_auth';
-import { Loader2 } from 'lucide-react'import { Badge  } from '@/components / ui / badge';
-import { useJobSuggestions  } from '@/hooks / useJobSuggestions';
-import { JobMatchesCard  } from './JobMatchesCard';
-import { NoJobsCard  } from './NoJobsCard';
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface SuggestedJobsProps {
   talent_id?: string;
 }
-<<<<<<< HEAD:src-disabled/components/jobs/SuggestedJobs.tsx
 
-origin/cursor/automate-test-improve-and-merge-code-2533
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/jobs/SuggestedJobs.tsx
 export /**
  * SuggestedJobs - Function description
  */
@@ -91,39 +26,8 @@ function SuggestedJobs() {
   const handle_decline = (match_id:,  string) =>: any {,
     updateJobMatchStatus (match_id, 'declined');
   }
-<<<<<<< HEAD:src-disabled/components/jobs/SuggestedJobs.tsx
-=======
-<<<<<<< HEAD
-      newMatches,
-      viewedMatches,
-      appliedMatches ;
-    } ;
-  } = useJobSuggestions(currentTalentId);
-  const handleApply = (matchId: string, jobId: string) => {;
-    updateJobMatchStatus(matchId, 'applied');    // In a real app, this might redirect to application form or open a modal
-  }
-  const handleDecline = (matchId: string) => {
-    updateJobMatchStatus(matchId, 'declined')
-  }
-      newMatches, 
-      viewedMatches, 
-      appliedMatches 
-    } 
-  } = useJobSuggestions(currentTalentId),
 
-  const handleApply = (matchId: string, jobId: string) => {
-    updateJobMatchStatus(matchId, 'applied'),
-    // In a real app, this might redirect to application form or open a modal
-  },
 
-  const handleDecline = (matchId: string) => {
-    updateJobMatchStatus(matchId, 'declined')
-  },
-  if (isLoading) {
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/jobs/SuggestedJobs.tsx
   const { user } = useAuth(),
   const currentTalentId = talentId || user?.id,
   const { user } = useAuth()
@@ -136,63 +40,27 @@ if ( {) {
   $2
 }
     return (
-<<<<<<< HEAD:src-disabled/components/jobs/SuggestedJobs.tsx
 
-=======
       <div className="flex items - center justify - center p - 6">;
         <Loader2 className="w - 6 h - 6 animate - spin text - primary" />;
       </div>);
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/jobs/SuggestedJobs.tsx
+
     updateJobMatchStatus, ;
 import { useAuth } from "@/hooks/useAuth";
 import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/badge";
 import { useJobSuggestions } from "@/hooks/useJobSuggestions";
 import { JobMatchesCard } from "./JobMatchesCard";
 import { NoJobsCard } from "./NoJobsCard";
-<<<<<<< HEAD:src-disabled/components/jobs/SuggestedJobs.tsx
 
-    updateJobMatchStatus
-import { useAuth } from "@/hooks/useAuth"
-import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/badge"
-import { useJobSuggestions } from "@/hooks/useJobSuggestions"
-import { JobMatchesCard } from "./JobMatchesCard"
-import { NoJobsCard } from "./NoJobsCard"
-interface SuggestedJobsProps {
-  talentId?: string
-}
-export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
-  const { user } = useAuth();
-  const currentTalentId = null;
 
-  if (isLoading) {
-    return (
-
-=======
-<<<<<<< HEAD
-
-  if (isLoading) {
-    return (
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/jobs/SuggestedJobs.tsx
       <div className="flex items-center justify-center p-6">
         <Loader2 className="w-6 h-6 animate-spin text-primary" />
       </div>
     )
-<<<<<<< HEAD
-  }
-  }
-  if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
-    return <NoJobsCard />
-  }
-=======
 
-<<<<<<< HEAD:src-disabled/components/jobs/SuggestedJobs.tsx
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/jobs/SuggestedJobs.tsx
+
 import { useAuth } from "@/hooks/useAuth",;
 import { Loader2 } from 'lucide-react';
 import { Badge } from "@/components/ui/badge",;
@@ -202,15 +70,9 @@ import { NoJobsCard } from "./NoJobsCard",;
 interface SuggestedJobsProps {;
   talentId?: string;
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src-disabled/components/jobs/SuggestedJobs.tsx
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
-  const { user } = useAuth();
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/jobs/SuggestedJobs.tsx
+
+
   const currentTalentId = talentId || user?.id;
   const { ;
     isLoading,;
@@ -221,92 +83,21 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
       appliedMatches ;
     } ;
   } = useJobSuggestions(currentTalentId);
-<<<<<<< HEAD
-  const handleApply = (matchId: string, jobId: string) => {;
-    updateJobMatchStatus(matchId, 'applied');    // In a real app, this might redirect to application form or open a modal;
-interface SuggestedJobsProps {;
-  talentId?: string;
-}
-;
-export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
-  const { user } = useAuth(),;
-  const currentTalentId = talentId || user?.id,;
-  const {;
-    isLoading,;
-    updateJobMatchStatus,;
-    categorizedMatches: {;
-      newMatches,;
-      viewedMatches,;
-      appliedMatches;
-    } ;
-  } = useJobSuggestions(currentTalentId),;
-  const handleApply = (matchId: string, jobId: string) => {;
-    updateJobMatchStatus(matchId, 'applied'),;
-    // In a real app, this might redirect to application form or open a modal;
-  };
-=======
 
-<<<<<<< HEAD:src-disabled/components/jobs/SuggestedJobs.tsx
-  if (isLoading) {;
 
-=======
-  const handleApply = (matchId: string, jobId: string) => {;
-    updateJobMatchStatus(matchId, 'applied');    // In a real app, this might redirect to application form or open a modal;
-  };
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  const handleDecline = (matchId: string) => {;
-    updateJobMatchStatus(matchId, 'declined');
-  };
-  if (isLoading) {;
-<<<<<<< HEAD
-    return (;
-=======
-    return (
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/jobs/SuggestedJobs.tsx
       <div className="flex items-center justify-center p-6">;
         <Loader2 className="w-6 h-6 animate-spin text-primary" />;
       </div>;
     );
   }
-<<<<<<< HEAD
-  return (
-  
-    <div className="space-y-6">
-      {/* New Matches Section */}
-;
-  if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {;
-    return <NoJobsCard />;
-  }
-  
-  return (
-    <div className="space-y-6">
-      {/* New Matches Section */}
-      {newMatches.length > 0 && (
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <h3 className="text-lg font-medium">New Job Matches</h3>
-            <Badge className="bg-green-100 text-green-800 border-green-300">
-              {newMatches.length} New
-            </Badge>
-          </div>
-          <div className="grid gap-4 md:grid-cols-2">
-            {newMatches.map(match => (
-ursor/fix-website-loading-errors-and-merge-6662
-=======
+
 
   if (newMatches && newMatches.length === 0 && viewedMatches && viewedMatches.length === 0 && appliedMatches && appliedMatches.length === 0) {;
 
     return <NoJobsCard />;
 
-<<<<<<< HEAD:src-disabled/components/jobs/SuggestedJobs.tsx
-=======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/jobs/SuggestedJobs.tsx
   }
 
   return (
@@ -368,36 +159,12 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
           <div className="flex items-center justify-between">;
             <h3 className="text-lg font-medium">New Job Matches</h3>;
             <Badge className="bg-green-100 text-green-800 border-green-300">;
-<<<<<<< HEAD:src-disabled/components/jobs/SuggestedJobs.tsx
-              {newMatches && newMatches.length} New;
-            </Badge>;
-          </div>;
-          <div className="grid gap-4 md:grid-cols-2">;
-            {newMatches && newMatches.map(match => (;
-              <JobMatchesCard
-                key = {match && match.id,}
-                match = {match,}
-                onApply = {handleApply,}
-                onDecline = {handleDecline,}
-              />;
 
-=======
               />;
 
 
           
-<<<<<<< HEAD
-          <div className="grid gap-4 md:grid-cols-2">
-            {newMatches.map(match => (
-              <JobMatchesCard
-                key = {match.id,}
-                match = {match,}
-                onApply = {handleApply,}
-                onDecline = {handleDecline,}
-          
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/jobs/SuggestedJobs.tsx
+
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
               <JobMatchesCard 
@@ -406,37 +173,7 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
                 onApply={handleApply} 
                 onDecline={handleDecline} 
               />
-<<<<<<< HEAD
-                match = {match,}
-                onApply = {handleApply,}
-                onDecline = {handleDecline,}
-              />;
-              />
-            ))}
-              {newMatches.length} New;
-            </Badge>;
-          </div>;
-          ;
-          <div className="grid gap-4 md:grid-cols-2">;
-            {newMatches.map(match => (;
-              <JobMatchesCard ;
-                key={match.id} ;
-                match={match} ;
-                onApply={handleApply} ;
-                onDecline={handleDecline} ;
-              />;            ))}
-          </div>;
-        </div>;
-      )}
-      ;
-      {/* Previously Viewed Section */}
-              />
-            ))}
-          </div>
-        </div>
-      )}
-;
-=======
+
             ))}
           </div>;
         </div>;
@@ -444,42 +181,7 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
 
 ;
 
-<<<<<<< HEAD:src-disabled/components/jobs/SuggestedJobs.tsx
-;
 
-      {/* Previously Viewed Section */}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      
-;
-
-      {/* Previously Viewed Section */}
-      {viewedMatches.length > 0 && (
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <h3 className="text-lg font-medium">Previously Viewed</h3>
-          </div>
-<<<<<<< HEAD
-          <div className="grid gap-4 md:grid-cols-2">
-            {viewedMatches.map(match => (
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/jobs/SuggestedJobs.tsx
-
-      {viewedMatches.length > 0 && (
-        <div className="space-y-4">"
-          <div className="flex items-center justify-between">"
-            <h3 className="text-lg font-medium">Previously Viewed</h3>"
-          </div>
-
-      {/* Previously Viewed Section */}
-      {viewedMatches && viewedMatches.length > 0 && (;
-        <div className="space-y-4">;
-          <div className="flex items-center justify-between">;
-            <h3 className="text-lg font-medium">Previously Viewed</h3>;
-          </div>;
-          <div className="grid gap-4 md:grid-cols-2">;
-            {viewedMatches && viewedMatches.map(match => (;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <JobMatchesCard
                 key = {match && match.id,}
                 match = {match,}
@@ -487,22 +189,10 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
                 onDecline = {handleDecline,}
               />;
 
-<<<<<<< HEAD:src-disabled/components/jobs/SuggestedJobs.tsx
-=======
+
 
           
-<<<<<<< HEAD
-          <div className="grid gap-4 md:grid-cols-2">
-            {viewedMatches.map(match => (
-              <JobMatchesCard
-                key = {match.id,}
-                match = {match,}
-                onApply = {handleApply,}
-                onDecline = {handleDecline,}
-          
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/jobs/SuggestedJobs.tsx
+
           <div className="grid gap-4 md:grid-cols-2">
             {viewedMatches.map(match => (
               <JobMatchesCard 
@@ -511,36 +201,7 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
                 onApply={handleApply} 
                 onDecline={handleDecline} 
               />
-<<<<<<< HEAD
-      {viewedMatches && viewedMatches.length > 0 && (;
-      {viewedMatches.length > 0 && (;
-        <div className="space-y-4">;
-          <div className="flex items-center justify-between">;
-            <h3 className="text-lg font-medium">Previously Viewed</h3>;
-          </div>;
-              />
-            ))}
-          ;
-          <div className="grid gap-4 md:grid-cols-2">;
-            {viewedMatches.map(match => (;
-              <JobMatchesCard ;
-                key={match.id} ;
-                match={match} ;
-                onApply={handleApply} ;
-                onDecline={handleDecline} ;
-              />;            ))}
-          </div>;
-        </div>;
-      )}
-      ;
-      {/* Applied Jobs Section */}
-              />
-            ))}
-          </div>
-        </div>
-      )}
-;
-=======
+
             ))}
           </div>;
         </div>;
@@ -548,11 +209,7 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
 
 ;
 
-<<<<<<< HEAD:src-disabled/components/jobs/SuggestedJobs.tsx
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/jobs/SuggestedJobs.tsx
+
 ;
 
       {/* Applied Jobs Section */}
@@ -562,16 +219,9 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
           <div className="flex items-center justify-between">"
             <h3 className="text-lg font-medium">Applied Jobs</h3>"
           </div>
-<<<<<<< HEAD
-              <JobMatchesCard
-                key = {match.id,}
-=======
 
-<<<<<<< HEAD:src-disabled/components/jobs/SuggestedJobs.tsx
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/jobs/SuggestedJobs.tsx
+
               <JobMatchesCard 
 
                 key = {match.id,}
@@ -583,126 +233,27 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
           <div className="flex items-center justify-between">;
             <h3 className="text-lg font-medium">Applied Jobs</h3>;
           </div>;
-<<<<<<< HEAD:src-disabled/components/jobs/SuggestedJobs.tsx
-          <div className="grid gap-4 md:grid-cols-2">;
-            {appliedMatches && appliedMatches.map(match => (;
-=======
+
           <div className="grid gap-4 md:grid-cols-2">
             {appliedMatches.map(match => (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/jobs/SuggestedJobs.tsx
-              <JobMatchesCard
-<<<<<<< HEAD
-              <JobMatchesCard 
-                key = {match.id,}
-=======
-                key = {match && match.id,}
-<<<<<<< HEAD:src-disabled/components/jobs/SuggestedJobs.tsx
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/jobs/SuggestedJobs.tsx
+              <JobMatchesCard
+
+                key = {match && match.id,}
+
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
                 showApplied = {true,}
-<<<<<<< HEAD:src-disabled/components/jobs/SuggestedJobs.tsx
-=======
-<<<<<<< HEAD
-          
-              />
-          
-          <div className="grid gap-4 md:grid-cols-2">
-            {appliedMatches.map(match => (
-              <JobMatchesCard 
-                key={match.id} 
-                match={match} 
-                onApply={handleApply} 
-                onDecline={handleDecline}
-                showApplied={true}
-              />;
-            ))}
-          </div>
-        </div>
-      )}
-          </div>
-        </div>
-      )}
-    </div>
-  )
-}= useJobSuggestions (currentTalentId)
-const handleApply = (matchId: string, jobId: string) => {
-  updateJobMatchStatus (matchId,  'applied')
-//In a real app, this might redirect to application form or open a modal
-}
-const handleDecline = (matchId: string) => {'
-  updateJobMatchStatus (matchId, 'declined')
-}
-if (isLoading) {
-  return (<div className="flex items-center justify-center p-6" > <Loader2 className="w-6 h-6 animate-spin text-primary" /> </div>)
-}if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
-  return <NoJobsCard /> "
-}return (<div className="space-y-6" > {
-  /* New Matches Section */
-}{"
-  newMatches.length > 0 && (<div className="space-y-4" > <div className="flex items-center justify-between" > <h3 className="text-lg font-medium" >New Job Matches</h3> <Badge className="bg-green-100 text-green-800 border-green-300" > newMatches.length
-}New </Badge> </div> <JobMatchesCard key= {
-  match.id
-}match= {
-  match
-}onApply= {
-  handleApply
-}onDecline= {
-  handleDecline
-}/>) )
-}</div> </div>) "
-}</div> <div className="grid gap-4 md:grid-cols-2" > {
-  viewedMatches.map (match => (<JobMatchesCard key= {
-  match.id
-}match= {
-  match
-}onApply= {
-  handleApply
-}onDecline= {
-  handleDecline
-}/>) )
-}</div> </div>) "
-}</div> <div className="grid gap-4 md:grid-cols-2" > {
-  appliedMatches.map (match => (<JobMatchesCard key= {
-  match.id
-}match= {
-  match
-}onApply= {
-  handleApply
-}onDecline= {
-  handleDecline
-}showApplied= {
-  true
-}/>) )
-}</div> </div>)
-}</div>)
-}'"}
-          ;
-          <div className="grid gap-4 md:grid-cols-2">;
-            {appliedMatches.map(match => (;
-              <JobMatchesCard ;
-                key={match.id} ;
-                match={match} ;
-                onApply={handleApply} ;                onDecline={handleDecline}
-                showApplied={true}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              />;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/jobs/SuggestedJobs.tsx
+
 
             ))}
           </div>;
         </div>;
       )}
     </div>;
-<<<<<<< HEAD:src-disabled/components/jobs/SuggestedJobs.tsx
-  );
-=======
+
   ),; interface SuggestedJobsProps {;
   talentId?: string ;
 }export function SuggestedJobs ({;
@@ -735,7 +286,7 @@ if (isLoading) {;
 }return (<div className="space-y-6" > {;
   /* New Matches Section */ ;
 }{";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/jobs/SuggestedJobs.tsx
+
 
   // Check condition
 if ( {) {
@@ -830,29 +381,9 @@ if ( {) {
 }/>) );
 }</div> </div>);
 }</div>);
-<<<<<<< HEAD:src-disabled/components/jobs/SuggestedJobs.tsx
 
-    </div>
-  );
-
-}= useJobSuggestions (currentTalentId);
-const handleApply = (matchId: string, jobId: string) => {;
-  updateJobMatchStatus (matchId,  'applied');
-//In a real app, this might redirect to application form or open a modal ;
-};
-const handleDecline = (matchId: string) => {';
-  updateJobMatchStatus (matchId, 'declined') ;
-};
-if (isLoading) {;
-  return (<div className="flex items-center justify-center p-6" > <Loader2 className="w-6 h-6 animate-spin text-primary" /> </div>) ;
-}if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {;
-  return <NoJobsCard /> ";
-}return (<div className="space-y-6" > {;
-  /* New Matches Section */ ;
-}{";
-=======
 }'"}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/jobs/SuggestedJobs.tsx
+
   newMatches.length > 0 && (<div className="space-y-4" > <div className="flex items-center justify-between" > <h3 className="text-lg font-medium" >New Job Matches</h3> <Badge className="bg-green-100 text-green-800 border-green-300" > newMatches.length ;
 }New </Badge> </div> <JobMatchesCard key= {;
   match.id ;
@@ -889,18 +420,11 @@ if (isLoading) {;
 }/>) ) ;
 }</div> </div>) ;
 }</div>) ;
-<<<<<<< HEAD:src-disabled/components/jobs/SuggestedJobs.tsx
-}'"
-=======
+
 }'"
     </div>;
   );
 }
 ;
 }
-<<<<<<< HEAD
-;
-=======
-;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/jobs/SuggestedJobs.tsx
+

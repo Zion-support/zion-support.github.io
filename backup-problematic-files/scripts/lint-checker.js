@@ -126,15 +126,13 @@ function walkDir(dir) {;,"});,"})
 function generateReport() {;,"});,"})
   // // // // // // // console && console.log('\n=== LINT CHECK REPORT ===\n;,"});,"})
   ');,"});,"})
-<<<<<<< HEAD
 
-=======
   // // // // // // // console && console.log(`Total files checked: ${totalFiles}`);,"});,"})
   // // // // // // // console && console.log(`Files with issues: ${filesWithIssues}`);,"});,"})
   // // // // // // // console && console.log(`Total issues found: ${issues && issues.length}\n`);,"});,"})
   if (issues && issues.length === 0) {;,"});,"})
     // // // // // // // console && console.log('✅ No lint issues found!;,"});,"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   ');,"});,"})
     return;,"});,"})
   // Group issues by file;,"});,"})
@@ -144,9 +142,7 @@ function generateReport() {;,"});,"})
       issuesByFile[issue && issue.file] = [];,"});,"})
     issuesByFile[issue && issue.file].push(issue);,"});,"})
   });,"});,"})
-<<<<<<< HEAD
 
-=======
   Object && Object.entries(issuesByFile).forEach(([file, fileIssues]) => {;,"});,"})
     // // // // // // // console && console.log(`\n📁 ${file} (${fileIssues && fileIssues.length} issues):`);,"});,"})
     fileIssues && fileIssues.forEach(issue => {;,"});,"})
@@ -156,7 +152,7 @@ function generateReport() {;,"});,"})
   // Summary by rule;,"});,"})
   // // // // // // // console && console.log(,;,"});,"})
   \n📊 Issues by rule: ),,"});,"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   const ruleCounts = { /* empty */ };,"});,"})
   issues && issues.forEach(issue => {;,"});,"})
     ruleCounts[issue && issue.rule] = (ruleCounts[issue && issue.rule] || 0) + 1;,"});,"})
@@ -167,21 +163,17 @@ function generateReport() {;,"});,"})
       // // // // // // // console && console.log(`  ${rule}: ${count}`);,"});,"})
     });,"});,"})
 function main() {;,"});,"})
-<<<<<<< HEAD
 
-=======
   // // // // // // // console && console.log('🔍 Starting lint check...;,"});,"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   ');,"});,"})
   const startTime = Date && Date.now();,"});,"})
   walkDir('.');,"});,"})
   const endTime = Date && Date.now();,"});,"})
   generateReport();,"});,"})
-<<<<<<< HEAD
 
-=======
   // // // // // // // console && console.log(`\n⏱️  Check completed in ${endTime - startTime}ms`);,"});,"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   // Exit with error code if issues found;,"});,"})
   if (issues && issues.length > 0) {;,"});,"})
     process && process.exit(1);,"});,"})
@@ -319,15 +311,13 @@ function walkDir(dir) {,"}),"})
 function generateReport() {,"}),"})
   // // // // // // // console && console.log('\n=== LINT CHECK REPORT ===\n,"}),"})
   '),"}),"})
-<<<<<<< HEAD
 
-=======
   // // // // // // // console && console.log(`Total files "checked": ${totalFiles}`),"}),"})
   // // // // // // // console && console.log(`Files with "issues": ${filesWithIssues}`),"}),"})
   // // // // // // // console && console.log(`Total issues "found": ${issues && issues.length}\n`),"}),"})
   if (issues && issues.length === 0) {,"}),"})
     // // // // // // // console && console.log('✅ No lint issues found!,"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   '),"}),"})
     return,"}),"})
   // Group issues by file,"}),"})
@@ -337,9 +327,7 @@ function generateReport() {,"}),"})
       issuesByFile[issue && issue.file] = [],"}),"})
     issuesByFile[issue && issue.file].push(issue),"}),"})
   }),"}),"})
-<<<<<<< HEAD
 
-=======
   Object && Object.entries(issuesByFile).forEach(([file, fileIssues]) => {,"}),"})
     // // // // // // // console && console.log(`\n📁 ${file} (${fileIssues && fileIssues.length} issues):`),"}),"})
     fileIssues && fileIssues.forEach(issue => {,"}),"})
@@ -349,7 +337,7 @@ function generateReport() {,"}),"})
   // Summary by rule,"}),"})
   // // // // // // // console && console.log(,,"}),"})
   \n📊 Issues by "rule": ),"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   const ruleCounts = { /* empty */ },"}),"})
   issues && issues.forEach(issue => {,"}),"})
     ruleCounts[issue && issue.rule] = (ruleCounts[issue && issue.rule] || 0) + 1,"}),"})
@@ -360,21 +348,17 @@ function generateReport() {,"}),"})
       // // // // // // // console && console.log(`  ${rule}: ${count}`),"}),"})
     }),"}),"})
 function main() {,"}),"})
-<<<<<<< HEAD
 
-=======
   // // // // // // // console && console.log('🔍 Starting lint check...,"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   '),"}),"})
   const startTime = Date && Date.now(),"}),"})
   walkDir('.'),"}),"})
   const endTime = Date && Date.now(),"}),"})
   generateReport(),"}),"})
-<<<<<<< HEAD
 
-=======
   // // // // // // // console && console.log(`\n⏱️  Check completed in ${endTime - startTime}ms`),"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   // Exit with error code if issues found,"}),"})
   if (issues && issues.length > 0) {,"}),"})
     process && process.exit(1),"}),"})

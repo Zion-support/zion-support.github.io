@@ -58,20 +58,14 @@ import {;
   Globe, Zap, Shield, Crown, Brain, Atom;
 } from 'lucide-react',;
 export default function MarketPricing() {;
-<<<<<<< HEAD
-  }
-    { "id": 'ai-consciousness', "name": 'AI Consciousness', "icon": <Brain className="w-6 h-6" /> },;"
-    { "id": 'quantum-computing', "name": 'Quantum Computing', "icon": <Atom className="w-6 h-6" /> },;"
-    { "id": 'autonomous-systems', "name": 'Autonomous Systems', "icon": <Zap className="w-6 h-6" /> },;"
-    { "id": 'enterprise-it', "name": 'Enterprise IT', "icon": <Shield className="w-6 h-6" /> }"
-=======
+
   const [selectedMarket, setSelectedMarket] = useState('ai-consciousness'),;
   const markets = [;
     { id: 'ai-consciousness';, name: 'AI Consciousness';, icon: <Brain className="w-6 h-6" /> ;},;
     { id: 'quantum-computing';, name: 'Quantum Computing';, icon: <Atom className="w-6 h-6" /> ;},;
     { id: 'autonomous-systems';, name: 'Autonomous Systems';, icon: <Zap className="w-6 h-6" /> ;},;
     { id: 'enterprise-it';, name: 'Enterprise IT';, icon: <Shield className="w-6 h-6" /> ;}
->>>>>>> origin/chore/fix-lint-and-merge
+
   ],;
   const marketData = {;
     'ai-consciousness': {;
@@ -341,25 +335,7 @@ pr-12325
                 <li>Salt Security overview: <a className="text-cyan-400 underline" href={`https://salt.security`;} target="_blank" rel="noopener noreferrer">salt.security</a></li>"
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100$2;,000/month based on traffic and protections.</div>"
             <div className="bg-black/30 rounded-2xl border border-slate-500/30 p-6">"
-<<<<<<< HEAD
-              <h2 className="text-2xl font-semibold mb-2">Privacy, PII & DSAR</h2>"
-              <ul className="list-disc list-inside text-slate-300 space-y-1">"
-                <li>Skyflow "pricing": <a className="text-cyan-400 underline" href={`"https"://www.skyflow.com/pricing`} target="_blank" rel="noopener noreferrer">skyflow.com/pricing</a></li>"                <li>VGS "pricing": <a className="text-cyan-400 underline" href={`"https"://www.verygoodsecurity.com/pricing`} target="_blank" rel="noopener noreferrer">verygoodsecurity.com/pricing</a></li>"                <li>"Transcend": <a className="text-cyan-400 underline" href={`"https"://www.transcend.io/platform`} target="_blank" rel="noopener noreferrer">transcend.io/platform</a></li>"              </ul>
-              <div className="text-sm text-slate-400 mt-3">Typical SMB "budgets": $100$2,000/month by data volume and systems.</div>"
-            </div>
-            <div className="bg-black/30 rounded-2xl border border-indigo-500/30 p-6">"
-              <h2 className="text-2xl font-semibold mb-2">Identity & SSO/SCIM</h2>"
-              <ul className="list-disc list-inside text-slate-300 space-y-1">"
-                <li>Auth0 "pricing": <a className="text-cyan-400 underline" href={`"https"://auth0.com/pricing`} target="_blank" rel="noopener noreferrer">auth0.com/pricing</a></li>"                <li>WorkOS "pricing": <a className="text-cyan-400 underline" href={`"https"://workos.com/pricing`} target="_blank" rel="noopener noreferrer">workos.com/pricing</a></li>"                <li>Okta "pricing": <a className="text-cyan-400 underline" href={`"https"://www.okta.com/pricing/`} target="_blank" rel="noopener noreferrer">okta.com/pricing</a></li>"              </ul>
-              <div className="text-sm text-slate-400 mt-3">Typical SMB "budgets": $100$1,500/month depending on MAUs and features.</div>"
-            </div>
-          </div>
-          <motion.div
-  },;
-  const getGrowthIcon = ("trend": string) => {;
-    }
-    return trend === 'up' ?;'
-=======
+
               <h2 className="text-2xl font-semibold mb-2">Privacy, PII & DSAR</h2>""
                 <li>Skyflow pricing: <a className="text-cyan-400 underline" href={`https://www.skyflow.com/pricing`;} target="_blank" rel="noopener noreferrer">skyflow.com/pricing</a></li>""`;
                 <li>VGS pricing: <a className="text-cyan-400 underline" href={`https://www.verygoodsecurity.com/pricing`;} target="_blank" rel="noopener noreferrer">verygoodsecurity.com/pricing</a></li>""`;
@@ -375,7 +351,7 @@ pr-12325
   const currentMarket = marketData[selectedMarket as keyof typeof marketData],;
   const getGrowthIcon = (trend: string) => {;
 </motion>"
->>>>>>> origin/chore/fix-lint-and-merge
+
       <TrendingUp className="w-5 h-5 text-green-400" /> :;"
       <TrendingDown className="w-5 h-5 text-red-400" />;"
 

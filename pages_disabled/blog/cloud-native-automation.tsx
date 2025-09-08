@@ -1,11 +1,9 @@
 
-<<<<<<< HEAD
-import Head from 'next/head';
-=======
+
 
 import Head from 'next/head';
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 import Link from 'next/link';
 import React from 'react';
 export default function CloudNativeAutomation() {
@@ -183,20 +181,13 @@ export default function CloudNativeAutomation() {
                 <p className='text-white/90 mb-4'>
                   As we continue to evolve our cloud-native automation
 
-<<<<<<< HEAD
-                  infrastructure, we're exploring emerging technologies
 
-
-                  like: </p>
-                  infrastructure, we&apos,re exploring emerging technologies
-                  infrastructure, we're exploring emerging technologies
-=======
 
                   infrastructure, we're exploring emerging technologies
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
                   like: </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>• Serverless computing for event-driven automation</li>
@@ -239,17 +230,13 @@ export default function CloudNativeAutomation() {
       </div>
     </>
   )
-<<<<<<< HEAD
-}
+
+
 
 }
-=======
 
-=======
-}
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 import Head from 'next / head',
 import Link from 'next / link',
 import React from 'react',
@@ -509,21 +496,12 @@ export default function CloudNativeAutomation(req, res) {
           </div>;
         </main>;
       </div>;
-<<<<<<< HEAD
-    </>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-=======
-<<<<<<< HEAD
+
+
     </>);
 }
 
 ;
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+

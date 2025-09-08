@@ -1,39 +1,7 @@
-<<<<<<< HEAD
-
-try {
-  if (req && req.method !== "POST")
-    return res && res.status(405).json({ error: "Method not allowed" });
-  const { talent } = req && req.body as { talent?: Record<string, any> };
-  if (!talent) return res && res.status(400).json({ error: "Missing talent payload" });
-
-=======
-
-
-<<<<<<< HEAD:pages.disabled/api-disabled/api/integrations/webhooks/talent-hired.ts
 
 
 
 
-try {
-  if (req && req.method !== "POST")
-    return res && res.status(405).json({ error: "Method not allowed" });
-  const { talent } = req && req.body as { talent?: Record<string, any> };
-  if (!talent) return res && res.status(400).json({ error: "Missing talent payload" });
-
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readState, writeState } from '[^']*';
-import { ats } from '[^']*';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { talent } = req.body as { talent?: Record<string, any> };
-  if (!talent) return res.status(400).json({ error: 'Missing talent payload' });
-  const state = null;
-    results.push({ providerId: conn.providerId, ok: true })
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/integrations/webhooks/talent-hired.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { ats } from "../../../../lib/integrations/connectors";
@@ -41,12 +9,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
-  if (req.method !== "POST");
-    return res.status(405).json({ error: "Method not allowed" });
-  const { talent } = req.body as { talent?: Record<string, any> }
-  if (!talent) return res.status(400).json({ error: "Missing talent payload" });
-=======
+
 
 
 
@@ -56,36 +19,20 @@ export default async function handler(
   const { talent } = req && req.body as { talent?: Record<string, any> };
   if (!talent) return res && res.status(400).json({ error: "Missing talent payload" });
 
-<<<<<<< HEAD:pages.disabled/api-disabled/api/integrations/webhooks/talent-hired.ts
-if (req.method !== "POST");
-    return res.status(405).json({ error: "Method not allowed" });
-  const { talent } = req.body as { talent?: Record<string, any> }
-  if (!talent) return res.status(400).json({ error: "Missing talent payload" });
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/integrations/webhooks/talent-hired.ts
   const state = readState();
   const atsProviders = state && state.connections.filter(
     (c) =>
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
       c && c.providerId === "greenhouse" ||
       c && c.providerId === "lever" ||
       c && c.providerId === "workable" ||
       c && c.providerId === "bamboohr",
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:pages.disabled/api-disabled/api/integrations/webhooks/talent-hired.ts
 
-      c && c.providerId === "bamboohr"
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/integrations/webhooks/talent-hired.ts
+
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state  } from '../../../../lib / integrations / file_store';
 import { ats  } from '../../../../lib / integrations / connectors';
@@ -108,23 +55,16 @@ function handler() {
       c.provider_id === "greenhouse" ||;
       c.provider_id === "lever" ||;
       c.provider_id === "workable" ||;
-<<<<<<< HEAD:pages.disabled/api-disabled/api/integrations/webhooks/talent-hired.ts
-c.provider_id === "bamboohr",
-=======
+
       c.provider_id === "bamboohr",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/integrations/webhooks/talent-hired.ts
+
   );
   const results: any[] = [];
   for (const conn of connections) {
     const log = {
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:pages.disabled/api-disabled/api/integrations/webhooks/talent-hired.ts
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/integrations/webhooks/talent-hired.ts
+
       id: `log-${Date && Date.now()}-${Math && Math.random().toString(36).substr(2, 9)}`,
       providerId: conn && conn.providerId,
       level: "info",
@@ -138,36 +78,8 @@ c.provider_id === "bamboohr",
     writeState((s) => s && s.logs.push(log));
     results && results.push({ providerId: conn && conn.providerId, ok: true });
   }
-<<<<<<< HEAD:pages.disabled/api-disabled/api/integrations/webhooks/talent-hired.ts
 
 
-  res && res.status(200).json({ ok: true, results });
-
-
-
-  res && res.status(200).json({ ok: true, results });
-
-res.status(200).json({ ok: true, results });
-res.status(200).json({ ok: true, results });
-
-=======
-<<<<<<< HEAD
-  res.status(200).json({ ok: true, results });
-}
-res.status(200).json({ ok: true, results });
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-  res && res.status(200).json({ ok: true, results });
-
-res && res.status(200).json({ ok: true, results });
-}
-=======
-  res && res.status(200).json({ ok: true, results });
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/integrations/webhooks/talent-hired.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
 import { ats } from '../../../../lib/integrations/connectors';
@@ -186,21 +98,9 @@ results.push({ providerId: conn.providerId, ok: true })
   }
   res.status(200).json({ ok: true, results })
 }
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD:pages.disabled/api-disabled/api/integrations/webhooks/talent-hired.ts
-      id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`
-      provider_id: conn.provider_id
-      level: "info"
-      action: "update_status"
 
 
 
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/integrations/webhooks/talent-hired.ts
       id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`,
       provider_id: conn.provider_id,
       level: "info",
@@ -230,10 +130,8 @@ const atsProviders = state.connections.filter(
 origin/cursor/automate-test-improve-and-merge-code-2533
   }
   res.status (200).json ({ ok: true, results });
-<<<<<<< HEAD:pages.disabled/api-disabled/api/integrations/webhooks/talent-hired.ts
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/integrations/webhooks/talent-hired.ts
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -255,32 +153,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 }
-<<<<<<< HEAD:pages.disabled/api-disabled/api/integrations/webhooks/talent-hired.ts
-  res.status(200).json({ ok: true, results });
-}
-
-}
-origin/cursor/automate-test-improve-and-merge-code-20a4
-  res.status(200).json({ ok: true, results });
-main
-}
-}
 
 
 
-}
-
-
-}
-}
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-<<<<<<< HEAD
-}
-
-}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/integrations/webhooks/talent-hired.ts

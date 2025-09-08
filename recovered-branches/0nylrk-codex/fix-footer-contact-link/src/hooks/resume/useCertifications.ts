@@ -1,56 +1,24 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Certification  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
-<<<<<<< HEAD
-export function useCertifications() {
-  const { user } = useAuth($2);
-  const [isLoading, setIsLoading] = useState($2);
-  const [error, setError] = useState<string | null>(null),
-  
-  const addCertification = async (resumeId: string, cert: Certification): Promise<boolean> => {
-    if (!user) {
-      setError($2);
-      return false
-    }
-    
-    setIsLoading($2);
-    setError($2);
-=======
-<<<<<<< HEAD
-=======
-export function useCertifications() {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Certification} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useCertifications() {;
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   const { user } = useAuth();
 
-<<<<<<< HEAD
-=======
+
   const [error, setError] = useState<string | null>(null);
   const addCertification = async (resumeId: string, cert: Certification): Promise<boolean> => {
     if (!user) {
@@ -58,15 +26,7 @@ export function useCertifications() {;
       return false
 
 
-<<<<<<< HEAD
-    }
-    setIsLoading(true);
-    setError(null);
-=======
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Certification } from '@/types/resume',;
@@ -79,103 +39,42 @@ export function useCertifications() { return null; }
   const [isLoading, setIsLoading] = useState(false),;
   const [error, setError] = useState<string | null>(null),;
   const addCertification = async (resumeId: string, cert: Certification): Promise<boolean> => {;
-<<<<<<< HEAD
-=======
+
     if (!user) {;
       setError('You must be logged in to add certifications'),;
       return false;
 
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
 
     setIsLoading(true),
     setError(null),
-<<<<<<< HEAD
 
-=======
     
-<<<<<<< HEAD
-    
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+
+
+
     try {
       const { error } = await supabase
         .from('certifications')
         .insert({
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          name: cert && cert.name;
 
->>>>>>> merged-prs-20250907-203621
-          resume_id: resumeId;
-          name: cert.name;
-          issuing_organization: cert.issuing_organization;
-          issue_date: cert.issue_date ? formatDateForDB(cert.issue_date) : null;
-          expiration_date: cert.expiration_date ? formatDateForDB(cert.expiration_date) : null;
-          credential_id: cert.credential_id
-          credential_url: cert.credential_url
-<<<<<<< HEAD
-=======
-        });
-      if (error) throw error;
-=======
 
-      return showSuccessToast("Certification added", "Your certification has been added to your resume")
-    } catch (e: any) {'
-      return handleResumeError(e, 'Could not add certification')
-
-<<<<<<< HEAD
-=======
-        });
-      if (error) throw error;
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          resume_id: resumeId,
-          name: cert.name,
-          issuing_organization: cert.issuing_organization,
-          issue_date: cert.issue_date ? formatDateForDB(cert.issue_date) : null,
-          expiration_date: cert.expiration_date ? formatDateForDB(cert.expiration_date) : null,
-          credential_id: cert.credential_id,
-          credential_url: cert.credential_url
->>>>>>> merged-prs-20250907-203621
         }),
       
       if (error) throw error,
       
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+
+
       return showSuccessToast("Certification added", "Your certification has been added to your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not add certification')
     } finally {
-<<<<<<< HEAD
-      setIsLoading(false)
-    }
-  },
-  
-  const updateCertification = async (certId: string, cert: Certification): Promise<boolean> => {
-    if (!user) {
-      setError($2);
-      return false
-=======
+
 
       setIsLoading(false)
 
@@ -189,35 +88,16 @@ export function useCertifications() { return null; }
     setIsLoading(true);
     setError(null);
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-  }
-  const updateCertification = async (certId: string, cert: Certification): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to update certifications')
-      return false
-    }
-    setIsLoading(true);
-    setError(null);
-=======
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
 
     setIsLoading(true),;
     setError(null),;
     try {;
-<<<<<<< HEAD
-      }
-        .from('certifications');'
-=======
+
       const { error } = await supabase;'
         .from('certifications');
->>>>>>> origin/chore/fix-lint-and-merge
+
         .insert({;
           resume_id: resumeId,;
           name: cert.name,;
@@ -240,70 +120,18 @@ export function useCertifications() { return null; }
       setError('You must be logged in to update certifications'),;
       return false;
 
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     }
     
     setIsLoading(true),
     setError(null),
 
-<<<<<<< HEAD
-;
-export function useCertifications() {;
-  }
-=======
+
     }
     
-<<<<<<< HEAD
-    setIsLoading(true),
-    setError(null),
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
-import { useState } from 'react',;
-import { supabase } from '@/integrations/supabase/client',;
-import { Certification } from '@/types/resume',;
-import { useAuth } from '@/hooks/useAuth',;
-import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils',;
-;
-export function useCertifications() {;
-  const { user } = useAuth(),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const [error, setError] = useState<string | null>(null),;
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-  ;
-  const addCertification = async (resumeId:string, cert:Certification):Promise<boolean> => {;
-    if (!user) {;
-      setError('You must be logged in to add certifications'),;
-      return false;
-    }
-    ;
-    setIsLoading(true),;
-    setError(null),;
-    ;
-    try {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      }
-        .from('certifications');'
-=======
-      const { error } = await supabase;
-        .from('certifications');
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-      const { error } = await supabase;
-        .from('certifications');
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         .insert({;
           resume_id:resumeId,;
           name:cert.name,;
@@ -333,18 +161,11 @@ export function useCertifications() {;
     setError(null),;
     ;
     try {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      }
-        .from('certifications');'
-=======
+
       const { error } = await supabase;
         .from('certifications');
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-      const { error } = await supabase;
-        .from('certifications');
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
         .update({;
           name:cert.name,;
           issuing_organization:cert.issuing_organization,;
@@ -374,18 +195,11 @@ export function useCertifications() {;
     setError(null),;
     ;
     try {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      }
-        .from('certifications');'
-=======
+
       const { error } = await supabase;
         .from('certifications');
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-      const { error } = await supabase;
-        .from('certifications');
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
         .delete();
         .eq('id', certId),;
       ;
@@ -396,80 +210,16 @@ export function useCertifications() {;
       return handleResumeError(e, 'Could not delete certification'),;
     } finally {;
       setIsLoading(false),;
->>>>>>> merged-prs-20250907-203621
-    }
-<<<<<<< HEAD
 
-=======
+    }
+
     
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
+
     try {
-<<<<<<< HEAD
-      const { error } = await supabase
-        .from('certifications')
-        .update({
-=======
-<<<<<<< HEAD
-}
-        .from('certifications')'
-=======
-      const { error } = await supabase
-        .from('certifications')
->>>>>>> origin/chore/fix-lint-and-merge
-        .update({
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          name: cert && cert.name;
-          issuing_organization: cert && cert.issuing_organization;
-          issue_date: cert && cert.issue_date ? formatDateForDB(cert && cert.issue_date) : null;
-          expiration_date: cert && cert.expiration_date ? formatDateForDB(cert && cert.expiration_date) : null;
-          credential_id: cert && cert.credential_id,
-<<<<<<< HEAD
-=======
-          credential_url: cert && cert.credential_url
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-          name: cert.name;
-          issuing_organization: cert.issuing_organization;
-          issue_date: cert.issue_date ? formatDateForDB(cert.issue_date) : null;
-          expiration_date: cert.expiration_date ? formatDateForDB(cert.expiration_date) : null;
-          credential_id: cert.credential_id
-          credential_url: cert.credential_url
-        })
-<<<<<<< HEAD
-        .eq($2);
-      if (error) throw error,
-      
-      return showSuccessToast("Certification updated", "Your certification has been updated")
-    } catch (e: any) {
-      return handleResumeError(e, 'Could not update certification')
-    } finally {
-      setIsLoading(false)
-    }
-  },
-  
-  const deleteCertification = async (certId: string): Promise<boolean> => {
-    if (!user) {
-      setError($2);
-      return false
-=======
-        .eq('id', certId);
-      if (error) throw error;
-=======
 
-        })
-        .eq('id', certId);
-      if (error) throw error;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           name: cert.name,
           issuing_organization: cert.issuing_organization,
           issue_date: cert.issue_date ? formatDateForDB(cert.issue_date) : null,
@@ -479,16 +229,10 @@ export function useCertifications() {;
         .eq('id', certId),
       
       if (error) throw error,
-<<<<<<< HEAD
 
-=======
       
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       return showSuccessToast("Certification updated", "Your certification has been updated")
     } catch (e: any) {'
       return handleResumeError(e, 'Could not update certification')
@@ -509,13 +253,10 @@ export function useCertifications() {;
     setIsLoading(true),;
     setError(null),;
     try {;
-<<<<<<< HEAD
-      }
-        .from('certifications');'
-=======
+
       const { error } = await supabase;'
         .from('certifications');
->>>>>>> origin/chore/fix-lint-and-merge
+
         .update({;
           name: cert.name,;
           issuing_organization: cert.issuing_organization,;
@@ -538,49 +279,20 @@ export function useCertifications() {;
       setError('You must be logged in to delete certifications'),;
       return false;
 
->>>>>>> merged-prs-20250907-203621
+
     }
     
     setIsLoading(true),
     setError(null),
 
     try {
-<<<<<<< HEAD
-      const { error } = await supabase
-        .from('certifications')
-        .delete()
-        .eq($2);
-      if (error) throw error,
-      
-      return showSuccessToast("Certification deleted", "Your certification has been removed from your resume")
-    } catch (e: any) {
-      return handleResumeError(e, 'Could not delete certification')
-    } finally {
-=======
-<<<<<<< HEAD
-}
-        .from('certifications')'
-=======
-      const { error } = await supabase
-        .from('certifications')
->>>>>>> origin/chore/fix-lint-and-merge
-        .delete()
 
-        .eq('id', certId),
-      
-      if (error) throw error,
 
-      return showSuccessToast("Certification deleted", "Your certification has been removed from your resume")
-    } catch (e: any) {'
-      return handleResumeError(e, 'Could not delete certification')
-    } finally {}
->>>>>>> merged-prs-20250907-203621
       setIsLoading(false)
     }
   },
 
-<<<<<<< HEAD
-=======
+
 import {useState} from 'react';
 
     } catch (e: any) {
@@ -588,24 +300,7 @@ import {useState} from 'react';
     } finally {
       setIsLoading(false)
 
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-    }
-  }
-  const deleteCertification = async (certId: string): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to delete certifications')
-      return false
-    }
-    setIsLoading(true);
-    setError(null);
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
     setIsLoading(true),;
     setError(null),;
@@ -634,106 +329,15 @@ import {useState} from 'react';
       setError('You must be logged in to delete certifications'),;
       return false;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {supabase} from '@/integrations / supabase / client';'
-import {Certification} from '@/types / resume';'
-import {use_auth} from '@/hooks / use_auth';'
-export /**
- * use_certifications - Function description
-=======
-=======
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-    }
-    
-    setIsLoading(true),
-    setError(null),
-<<<<<<< HEAD
 
-=======
-    
-<<<<<<< HEAD
-    
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     try {
       const { error } = await supabase
         .from('certifications')
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        .eq('id', certId);
-      if (error) throw error;
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        .eq('id', certId),
-      
-      if (error) throw error,
-      
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      return showSuccessToast("Certification deleted", "Your certification has been removed from your resume")
-    } catch (e: any) {
-      return handleResumeError(e, 'Could not delete certification')
-    } finally {
-      setIsLoading(false)
-
-
-
-<<<<<<< HEAD
-    }
-  }
->>>>>>> merged-prs-20250907-203621
-  return {
-    isLoading;
-    error;
-    addCertification;
-    updateCertification;
-
-    deleteCertification
-  }
-}
-;
-    setIsLoading(true),;
-    setError(null),;
-    try {;
-      const { error } = await supabase;
-        .from('certifications');
-        .delete();
-        .eq('id', certId),;
-      if (error) throw error,;
-      return showSuccessToast("Certification deleted", "Your certification has been removed from your resume");
-    } catch (e: any) {;
-      return handleResumeError(e, 'Could not delete certification');
-    } finally {;
-      setIsLoading(false);
-    }
-=======
-
-=======
-import {useState} from 'react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-import {supabase} from '@/integrations / supabase / client';
-import {Certification} from '@/types / resume';
-import {use_auth} from '@/hooks / use_auth';
-
-import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
-export /**;
- * use_certifications - Function description;
->>>>>>> origin/chore/fix-lint-and-merge
  */
 function use_certifications() {}
   const { user } = use_auth ();
@@ -747,7 +351,7 @@ if ( {) {}
   $2;
 }
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
   },;
   return {;
     isLoading,;
@@ -755,38 +359,25 @@ if ( {) {}
     addCertification;
     updateCertification;
     deleteCertification;
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  }
-}
-;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
 
         .from ('certifications');
         .insert ({}
 
   }
 }
-<<<<<<< HEAD
-    setIsLoading (true);
-    set_error (null);
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
 ;
 
     try {
-<<<<<<< HEAD
-      }
-        .from ('certifications');'
-=======
+
   // TODO: Implement
       const { error } = await supabase;
         .from ('certifications');
->>>>>>> origin/chore/fix-lint-and-merge
+
         .insert ({
 
 if (throw error) {
@@ -815,12 +406,9 @@ if (throw error) {
 ;
 
     try {
-<<<<<<< HEAD
-      }
-        .from ('certifications');'
-=======
+
   // TODO: Implement
->>>>>>> origin/chore/fix-lint-and-merge
+
         .update ({
 
         .eq ('id', cert_id);
@@ -843,12 +431,9 @@ if (throw error) {
 ;
 
     try {
-<<<<<<< HEAD
-      }
-        .from ('certifications');'
-=======
+
   // TODO: Implement
->>>>>>> origin/chore/fix-lint-and-merge
+
         .delete ();
       // Check condition;
       return showSuccessToast ("Certification deleted", "Your certification has been removed from your resume");"
@@ -865,70 +450,7 @@ if (throw error) {
     add_certification;
     update_certification;
     delete_certification;
-<<<<<<< HEAD
 
-  },;
-;
-  return {;
-    isLoading,;
-    error,;
-    addCertification,;
-    updateCertification,;
-    deleteCertification;
-  },; setIsLoading (true);
-setError (null);
-try {
-  const {
-  error 
-}= await supabase .from ('certifications') if (error) throw error;
-}catch (e: any) {
-  return handleResumeError (e, 'Could not add certification') 
-}finally {
-  setIsLoading (false) 
-}
-};
-const updateCertification = async (certId: string, cert: Certification) : Promise<boolean> => {
-  if (!user) {
-  setError ('You must be logged in to update certifications');
-return false;
-}setError (null);
-try {
-  const {
-  error 
-}= await supabase .from ('certifications') if (error) throw error;
-}catch (e: any) {
-  return handleResumeError (e, 'Could not update certification') 
-}finally {
-  setIsLoading (false) 
-}
-};
-const deleteCertification = async (certId: string) : Promise<boolean> => {
-  if (!user) {
-  setError ('You must be logged in to delete certifications');
-return false;
-}setError (null);
-try {
-  const {
-  error 
-}= await supabase .from ('certifications') .delete () .eq ('id', certId);
-if (error) throw error;
-}catch (e: any) {
-  return handleResumeError (e, 'Could not delete certification') 
-}finally {
-  setIsLoading (false) 
-}
-};
-return {
-  isLoading;
-error;
-addCertification;
-updateCertification;
-deleteCertification 
-}
-}
-
-  }
-=======
   }
   },;
 ;
@@ -990,22 +512,4 @@ deleteCertification
 }
 }
   }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-}
-;
-  }
-}
-;
-<<<<<<< HEAD
 
-  }
-}
-    setIsLoading (true);
-    set_error (null);
-;
-=======
-=======
-}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

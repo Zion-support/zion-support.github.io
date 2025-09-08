@@ -401,22 +401,8 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
             />
           </div>
 
-<<<<<<< HEAD
-:src/components/QuoteRequestForm/ServiceTypeStep.tsx
-  id: z.string()
-  title: z.string()
-  category: z.string()
-  image: z.string().optional()})
-      const maxRetries = 3
-  const sourceListings = listings
-}
 
-  )
-}
-  )
-}
-=======
->>>>>>> origin/chore/fix-lint-and-merge
+
   );
 
 };

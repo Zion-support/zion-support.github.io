@@ -1,59 +1,7 @@
-<<<<<<< HEAD
-
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-import { Resend } from "npm: resend@2.0.0";
-const corsHeaders = $2;
-=======
-<<<<<<< HEAD
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
-import {Resend} from "npm: resend@2 ;
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
-import {Resend} from "npm: resend@2.0.0";
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"";
-import {Resend} from "npm: resend@2.0.0";
-const corsHeaders = {"
-  "Access-Control-Allow-Origin": "*""
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}"
-
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
-"
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts","
-import { Resend } from "npm: resend@2.0.0",";
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;"
-import {Resend} from "npm: resend@2.0.0";"
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts","
-=======
-
-<<<<<<< HEAD
 
 
-
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
-import {Resend} from "npm: resend@2.0.0";
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
-=======
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
-import {Resend} from "npm: resend@2 ;
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Resend } from "npm: resend@2.0.0",
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
-import {Resend} from "npm: resend@2.0.0";
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-import { Resend } from "npm: resend@2.0.0",
-<<<<<<< HEAD
-=======
+
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -62,43 +10,13 @@ const corsHeaders = {
 "
 const resend = new Resend(Deno && Deno.env.get("RESEND_API_KEY"));
 
-<<<<<<< HEAD
-    const { to, subject, html } = await req.json();
-    const emailResponse = await resend.emails.send({
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
-<<<<<<< HEAD
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
->>>>>>> merged-prs-20250907-203621
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
-const resend = new Resend(Deno.env.get("RESEND_API_KEY")),
-
-serve(async (req) => {
-  if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
-  }
-  try {
-    const { to, subject, html } = await req.json();
-    const emailResponse = await resend.emails.send({
-      from: "Lovable <onboarding@resend.dev>";
-      to: [to];
-      subject
-      html});
-    return new Response(JSON.stringify(emailResponse), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" }
-      status: 200})
-  } catch (error) {
-    return new Response(JSON.stringify({ error: error.message }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" }
-=======
 
     const { to, subject, html } = await req && req.json();
 
@@ -117,43 +35,13 @@ serve(async (req) => {
     return new Response(JSON && JSON.stringify({ error: error && error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
       status: 500})
-<<<<<<< HEAD
-=======
+
   }
 });
 
-<<<<<<< HEAD
-=======
-=======
-import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
-import { Resend } from 'npm: resend@2.0.0';
-const cors_headers = {
-  "Access - Control - Allow - Origin": "*",
-  "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
-;
-const resend = new Resend (Deno.env.get ("RESEND_API_KEY"));
-;
-serve (async (req) => {
-  // Check condition
-if ( {) {
-  $2
-}
-    return new Response (null, { headers: cors_headers });
-  }
-  try {
-    const { to, subject, html } = await req.json ();
-;
-    const email_response = await resend.emails.send ({
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-      from: "Lovable <onboarding@resend.dev>";
 
-      to: [to];
-      subject;
-      html});
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const { to, subject, html } = await req.json(),
 
     const emailResponse = await resend.emails.send({
@@ -169,34 +57,8 @@ if ( {) {
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
-<<<<<<< HEAD
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
-import { Resend } from "npm: resend@2.0.0",;
-const corsHeaders = {;
-  "Access-Control-Allow-Origin": "*",;
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
-const resend = new Resend(Deno.env.get("RESEND_API_KEY")),;
-serve(async (req) => {;
-  if (req.method === "OPTIONS") {;
-    return new Response(null, { headers: corsHeaders });
-  }
-;
-  try {;
-    const { to, subject, html } = await req.json(),;
-    const emailResponse = await resend.emails.send({;
-      from: "Lovable <onboarding@resend.dev>",;
-      to: [to],;
-      subject,;
-      html}),;
-    return new Response(JSON.stringify(emailResponse), {;
-      headers: { ...corsHeaders, "Content-Type": "application/json" },;
-      status: 200});
-  } catch (error) {;
-    return new Response(JSON.stringify({ error: error.message }), {;
-      headers: { ...corsHeaders, "Content-Type": "application/json" },;
-      status: 500});
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
 
     const { to, subject, html } = await req && req.json();
     const emailResponse = await resend && resend.emails.send({
@@ -363,17 +225,7 @@ if ( {) {}
   }
 });
 ;
-<<<<<<< HEAD
 
-});
-=======
-<<<<<<< HEAD
-  }
-});
->>>>>>> merged-prs-20250907-203621
-  }
-});
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
+

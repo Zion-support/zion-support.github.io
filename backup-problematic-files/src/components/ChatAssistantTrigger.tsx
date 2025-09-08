@@ -43,10 +43,7 @@ return (<> <Button > <MessageSquare className="h-5 w-5" />  {;"
   isOpen ;
 }onClose= {;)
   () => setIsOpen (false) ;
-<<<<<<< HEAD
 
-}</>) ;
-=======
 }recipient= {;
   {';
   id: 'ai-assistant', name: 'AI Assistant',  avatarUrl: 'https://placehold.co/64x64?text=AI', role: 'Virtual Assistant' ;
@@ -55,9 +52,4 @@ return (<> <Button > <MessageSquare className="h-5 w-5" />  {;"
   handleSendMessage ;
 }/>) ;
 }</>) ;
-<<<<<<< HEAD
-}'"
-=======
-}'"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

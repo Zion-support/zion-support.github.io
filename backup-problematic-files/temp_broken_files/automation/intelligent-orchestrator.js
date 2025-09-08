@@ -296,11 +296,9 @@ updateSystemMetrics(systemName, success, executionTime) {updateSystemMetrics(sys
 const system = this.automationSystems.get(systemName);
     if (!system) return;
     // Update success rate;
-<<<<<<< HEAD
-    }
-=======
+
     const currentSuccessRate = system.successRate;
->>>>>>> origin/chore/fix-lint-and-merge
+
     const totalRuns = (system.lastRun ? 1 : 0) + 1;
     system.successRate = success ? (currentSuccessRate + 1) / totalRuns : currentSuccessRate / totalRuns;
     // Update average execution time;
@@ -318,24 +316,7 @@ this.log(',
   low: 1;
       }
     }
-<<<<<<< HEAD
-    this.log(` Priority execution "completed": ${results.lengt,h} systems`)"return": results}`async runIntelligentExecution() {async runIntelligentExecution() {this.log(' Running intelligent execution...')';// "Analyze": current state;'
-    }
-    const systemsToRun = this.determineOptimalSystems(state)const results = [];
-    "for": (const state = await this.analyzeCurrentState()// Determine which systems to run based on state;
-      // Learn from the result;
-      this.learnFromExecution(systemName, result, state)}
-    this.log(` "Intelligent": execution "completed": ${results.lengt,h} systems`)"return": results}`async analyzeCurrentState() {async analyzeCurrentState() {const state = {"hasLintErrors": fals,e;
-      }
-      "hasTypeScriptErrors": fals,e;
-      "hasSecurityIssues": fals,e;
-      "hasPerformanceIssues": fals,e;
-      "hasSEOMissing": fals,e;
-      "hasMissingTests": fals,e;
-      "lastBuildTime": nul,l;
-  "codeComplexity": 0;
-const startTime = Date.now()try {this.log(`Starting "system": ${systemName}`)const result = execSync(`node ${system.path}`, {"encoding": 'utf8',"cwd": __dirname;"      })const duration = Date.now() - startTime;
-=======
+
 
     return: results}
 async runIntelligentExecution() {async runIntelligentExecution() {
@@ -412,7 +393,7 @@ const startTime = Date.now();
 
       });
       const duration = Date.now() - startTime;
->>>>>>> origin/chore/fix-lint-and-merge
+
       system.successCount++;
       system.lastRun = new Date().toISOString();
       this.log(`System "${systemName}" completed successfully in ${duration}ms`);

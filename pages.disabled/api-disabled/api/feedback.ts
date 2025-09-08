@@ -1,6 +1,4 @@
-<<<<<<< HEAD:pages/api/feedback.ts
-import type { NextApiRequest, NextApiResponse } from 'next';
-=======
+
 
 import {
   saveFeedbackFallback
@@ -178,7 +176,7 @@ function handler() {
   if (return bad (res, "rating must be 1 - 5")) {
   $2
 }
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/feedback.ts
+
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
@@ -192,9 +190,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     console.error('Error in feedback:', error);
     res.status(500).json({ message: 'Internal server error' });
   }
-<<<<<<< HEAD:pages/api/feedback.ts
-}
-=======
+
 }
 function bad(res: NextApiResponse, msg: string, code = 400) { return res.status(code).json({ ok: false, error: msg })   } catch (error) {
     console.error("Error:", error);
@@ -433,4 +429,4 @@ context: context || undefined,
 
 }}
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/feedback.ts
+

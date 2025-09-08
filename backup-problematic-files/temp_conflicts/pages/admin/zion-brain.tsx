@@ -11,63 +11,8 @@ type LogsSummary = { entries: any[];, byModule: Record<string number>;, byType: 
   const [logs, setLogs] = useState<LogsSummary | null>(null),;
 
   const [stuck, setStuck] = useState<any[]>([]),;
-<<<<<<< HEAD
-;
-  useEffect(() => {;
-    }
-    const t = localStorage.getItem('zion_superadmin_token') || '',;'
-    setToken(t),;
-    refreshLogs(t),;
-  }, []),;
-;
-  const authHeaders = useMemo(() => (token ? { 'x-admin-token':token } {}), [token]),;'
-;
-  async function refreshLogs() {;
-    }
-    const headers = t ? { 'x-admin-token':t } authHeaders,;'
-    const res = await fetch('/api/zion-brain/logs', { headers }),;'
-    if (res.ok) setLogs(await res.json()),;
-    const stuckRes = await fetch('/api/zion-brain/logs?stuck=1', { headers }),;'
-    if (stuckRes.ok) setStuck((await stuckRes.json()).entries || []),;
-  }
-;
-  async function handleRoute() {;
-    }
-    const res = await fetch('/api/zion-brain/router', { "method":'POST', "headers":{ 'Content-Type':'application/json', ...authHeaders }, "body":JSON.stringify({ "text":routerInput }) }),;'
-    const data = await res.json(),;
-    setRouterResult(data),;
-    await refreshLogs(),;
-  }
-;
-  async function handleEvaluateReflex() {;
-    }
-    const res = await fetch('/api/zion-brain/reflex', { "method":'POST', "headers":{ 'Content-Type':'application/json', ...authHeaders }, "body":JSON.stringify(metrics) }),;'
-    setTriggers(data.triggers || []),;
-    await refreshLogs(),;
-  }
-;
-  async function handleOptimize() {;
-    }
-    const res = await fetch('/api/zion-brain/optimize', { "method":'POST', "headers":{ 'Content-Type':'application/json', ...authHeaders }, "body":JSON.stringify({ prompt, userIntent }) }),;'
-    setOptimized(data.optimized || ''),;'
-    await refreshLogs(),;
-  }
-;
-  function saveToken() {;
-    }
-    localStorage.setItem('zion_superadmin_token', token),;'
-    refreshLogs(token),;
-  }
-;
-  const heatCells = useMemo(() => {;
-    }
-    if (!logs) return [] as { "key":string, "value":number }[],;
-    return Object.entries(logs.byModule || {}).map(([k, v]) => ({ "key":k, "value":v as number })),;
-  }, [logs]),;
-;
-  return (;
-=======
->>>>>>> origin/chore/fix-lint-and-merge
+
+
     <>;
       <Head>;
 

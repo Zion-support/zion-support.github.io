@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-return (
-=======
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -23,7 +21,7 @@ import React from 'react';
 
 const PortfolioBuilder = ({ className }) => {
   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     <div className={className || ''}>
       <h1>PortfolioBuilder</h1>
       <p>This component is under development.</p>

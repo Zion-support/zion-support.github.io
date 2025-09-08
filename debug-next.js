@@ -1,94 +1,13 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-const fs = require($2);
-const path = require($2);
-console.log($2);
-// Check if we're in a valid Next.js project,
-  console.log('📁 Current directory:', process.cwd()),
-console.log('📄 Package.json exists:', fs.existsSync('package.json')),
-console.log('📄 Next.config.js exists:', fs.existsSync('next.config.js')),
-console.log('📁 Pages directory exists:', fs.existsSync('pages')),
-console.log('📁 Components directory exists:', fs.existsSync('components')),
-// Check package.json,
-  if (fs.existsSync('package.json')) {
-  const packageJson = $2;
-  console.log($2);
-  console.log('📦 React version:', packageJson.dependencies?.react || 'Not found')
-}
-// Check pages directory structure,
-  if (fs.existsSync('pages')) {
-  const pages = fs.readdirSync($2);
-  console.log($2);
-  console.log('📄 Main pages:', pages.filter(p => p.includes('index') || p.includes('_app')))
-}
-// Check for any problematic files,
-  console.log($2);
-const problematicFiles = $2;
-const allFiles = getAllFiles($2);
-for (const file of allFiles) {
-  try {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-    const content = fs.readFileSync(file, 'utf8');
-    if (content.includes('') |content.includes('
-const fs = require('fs'),;
-const path = require('path'),;
-const fs = require('fs');
-const path = require('path');
 
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
 const fs = require ('fs'),
 const path = require ('path'),
 console.log ('🔍 Debugging Next.js project structure...'),
 
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
 
-console.log('🔍 Debugging Next.js project structure...');
-'
-// Check if we're in a valid Next.js project'
-console.log('📁 Current directory:', process.cwd());'
-console.log('📄 Package.json exists:', fs.existsSync('package.json'));'
-console.log('📄 Next.config.js exists:', fs.existsSync('next.config.js'));'
-console.log('📁 Pages directory exists:', fs.existsSync('pages'));'
-console.log('📁 Components directory exists:', fs.existsSync('components'));
 
-// Check package.json'
-if (fs.existsSync('package.json')) {'
-  const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));'
-  console.log('📦 Next.js version:', packageJson.dependencies?.next || 'Not found');'
-  console.log('📦 React version:', packageJson.dependencies?.react || 'Not found');
-}
-
-// Check pages directory structure'
-if (fs.existsSync('pages')) {'
-  const pages = fs.readdirSync('pages');'
-  console.log('📄 Pages found:', pages.length);'
-  console.log('📄 Main pages:', pages.filter(p => p.includes('index') || p.includes('_app')));
-}
-
-// Check for any problematic files'
-console.log('🔍 Checking for problematic files...');
-const problematicFiles = [];'
-const allFiles = getAllFiles('.', ['.tsx', '.ts', '.jsx', '.js']);
-
-for (const file of allFiles) {}
-  try {'
-    const content = fs.readFileSync(file, 'utf8');
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 console.log('🔍 Debugging Next.js project structure...'),;
 // Check if we're in a valid Next.js project;
@@ -115,151 +34,24 @@ if (fs.existsSync('pages')) {;
 
 console.log('🔍 Checking for problematic files...'),;
 
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-console.log('🔍 Debugging Next.js project structure...');
-// Check if we're in a valid Next.js project;
-console.log('📁 Current directory:', process.cwd());
-console.log('📄 Package.json exists:', fs.existsSync('package.json'));
-console.log('📄 Next.config.js exists:', fs.existsSync('next.config.js'));
-console.log('📁 Pages directory exists:', fs.existsSync('pages'));
-console.log('📁 Components directory exists:', fs.existsSync('components'));
-// Check package.json;
-if (fs.existsSync('package.json')) {const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
-  console.log('📦 Next.js version:', packageJson.dependencies?.next |'Not found');
-  console.log('📦 React version:', packageJson.dependencies?.react |'Not found');
-}
-// Check pages directory structure;
-if (fs.existsSync('pages')) {const pages = fs.readdirSync('pages');
-  console.log('📄 Pages found:', pages.length);
-  console.log('📄 Main pages:', pages.filter(p => p.includes('index') |p.includes('_app')));
-}
-// Check for any problematic files;
-console.log('🔍 Checking for problematic files...');
-const problematicFiles = [];
-const allFiles = getAllFiles('.', ['.tsx.ts.jsx.js']);
-for (const file of allFiles) {;
-  try {;
-    const content = fs.readFileSync(file, 'utf8');
-    if (content.includes('') |content.includes('
-const fs = require('fs'),;
-const path = require('path'),;
-const fs = require('fs');
-const path = require('path');
-console.log('🔍 Debugging Next.js project structure...'),;
-// Check if we're in a valid Next.js project;
-console.log('📁 Current directory:', process.cwd()),;
-console.log('📄 Package.json exists:', fs.existsSync('package.json')),;
-console.log('📄 Next.config.js exists:', fs.existsSync('next.config.js')),;
-console.log('📁 Pages directory exists:', fs.existsSync('pages')),;
-console.log('📁 Components directory exists:', fs.existsSync('components')),;
-// Check package.json;
-if (fs.existsSync('package.json')) {;
-  const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
-  const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),;
-  const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
-  console.log('📦 Next.js version:', packageJson.dependencies?.next || 'Not found'),;
-  console.log('📦 React version:', packageJson.dependencies?.react || 'Not found');
-}
-;
-// Check pages directory structure;
-if (fs.existsSync('pages')) {;
-  const pages = fs.readdirSync('pages');
-  const pages = fs.readdirSync('pages'),;
-  const pages = fs.readdirSync('pages');
-  console.log('📄 Pages found:', pages.length),;
-  console.log('📄 Main pages:', pages.filter(p => p.includes('index') || p.includes('_app')));
-}
-;
-// Check for any problematic files;
-console.log('🔍 Checking for problematic files...'),;
-const problematicFiles = [];
-const problematicFiles = [],;
-const problematicFiles = [];
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
 const allFiles = getAllFiles('.', ['.tsx.ts.jsx.js']),;
 for (const file of allFiles) {;
   try {;'
     const content = fs.readFileSync(file, 'utf8'),;
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-    if (content.includes('') || content.includes('
-}
-}
-    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {;
-      problematicFiles.push(file);
+
+
     }
   } catch (error) {;
     // Skip files that can't be read;
   }
 }
-;
-console.log('⚠️  Files with merge conflicts:', problematicFiles.length),;
-if (problematicFiles.length > 0) {;
-  console.log('Files:', problematicFiles.slice(0, 10));
-}
-;
-// Function to get all files recursively;
-function getAllFiles(dir, extensions) {;
-  let files = [];
-  try {;
-    const items = fs.readdirSync(dir);
-    for (const item of items) {;
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
-        files = files.concat(getAllFiles(fullPath, extensions));
-      } else if (extensions.some(ext => item.endsWith(ext))) {;
-        files.push(fullPath);
-      }
-    }
-  } catch (error) {;
-    // Skip directories that can't be read;
-  }
-  return files;
-}
-;
-console.log('✅ Debug completed'),;
-=======
-
-<<<<<<< HEAD
-    if (content.includes() || content.includes('
-=======
-    if (content.includes('') || content.includes('
->>>>>>> origin/chore/fix-lint-and-merge
-}
-}
-    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {;
-
-      problematicFiles.push(file);
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
-    const content = fs.readFileSync($2);
-      problematicFiles.push(file)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
->>>>>>> merged-prs-20250907-203621
-    }
-  } catch (error) {;
-    // Skip files that can't be read;
-  }
-}
-<<<<<<< HEAD
 
 
-console.log('✅ Debug completed');
-=======
->>>>>>> merged-prs-20250907-203621
 console.log($2);
 if (problematicFiles.length > 0) {
   console.log('Files:', problematicFiles.slice(0, 10))
@@ -283,23 +75,10 @@ if (problematicFiles.length > 0) {
   }
   return files
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
 
-console.log('✅ Debug completed');
-=======
 
-console.log('✅ Debug completed');
->>>>>>> origin/chore/fix-lint-and-merge
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-=======
-console.log($2);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
->>>>>>> merged-prs-20250907-203621
+
+
+
+
+

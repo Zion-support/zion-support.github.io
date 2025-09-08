@@ -3,126 +3,9 @@ import { Download } from 'lucide-react';"
 import type { QuoteRequest } from "@/types/quotes";
 
 
-<<<<<<< HEAD:src-disabled/components/quotes/ExportToCSV.tsx
-interface ExportToCSVProps {}
-=======
+
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { Button } from '@/components/ui/button'
-import { Download } from 'lucide-react'
-import type { QuoteRequest } from "@/types/quotes";
-interface ExportToCSVProps {
 
-  quotes: QuoteRequest[]
-  filename?: string
-export const ExportToCSV = ({
-  quotes
-  filename = 'quote-requests'
-}: ExportToCSVProps) => {  const handleExport = () => {
-    // Define CSV Headers
-    const headers = [
-      'ID'
-      'Talent Name'
-      'Requester Name'
-      'Requester Email'
-      'Project Name'
-      'Project Summary'
-      'Budget'
-      'Timeline'
-      'Status'
-      'Created Date'
-    ]
-import { Button } from "@/components/ui/button";
-    // Format quote data for CSV
-    const rows = quotes.map(quote => [
-      quote.id
-      quote.talent_name |'Unknown'
-      quote.requester_name
-      quote.requester_email
-      quote.project_name
-      quote.project_summary
-      quote.budget_display |
-        (quote.budget_min && quote.budget_max
-          ? `$${quote.budget_min} - $${quote.budget_max}`
-          : quote.budget_min
-            ? `$${quote.budget_min}`
-            : 'Not specified')
-      quote.timeline
-      quote.status
-      new Date(quote.created_at).toLocaleDateString()
-
-import { Button } from "@/components/ui/button",
-import { Download } from 'lucide-react'
-import type { QuoteRequest } from "@/types/quotes",
-interface ExportToCSVProps {
-  quotes: QuoteRequest[],
-  filename?: string
-}
-
-export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {
-  const handleExport = () => {
-    // Define CSV Headers
-    const headers = [
-      'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline',
-      'StatusCreated Date'
-    ],
-    
-    // Format quote data for CSV
-    const rows = quotes.map(quote => [
-      quote.id,
-      quote.talent_name || 'Unknown',
-      quote.requester_name,
-      quote.requester_email,
-      quote.project_name,
-      quote.project_summary,
-      quote.budget_display || 
-        (quote.budget_min && quote.budget_max 
-          ? `$${quote.budget_min} - $${quote.budget_max}` 
-          : quote.budget_min 
-            ? `$${quote.budget_min}` 
-            : 'Not specified'),
-      quote.timeline,
-      quote.status,
-      new Date(quote.created_at).toLocaleDateString(),
-    ])
-    // Create CSV content
-    const csvContent = [
-      headers.join(',')
-      ...rows.map(row =>
-        row
-          .map(cell =>
-            // Escape commas and quotes in cell values
-            typeof cell === 'string' &&
-            (cell.includes(',') |cell.includes('"'))
-              ? `"${cell.replace(/"/g, '""')}"`
-              : cell
-          )
-          .join(',')
-      )
-    ].join('\n')
-    // Create download link
-          .join(',');
-      ),;
-    ].join('\n');
-    // Create download link;
-    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' })
-    const url = URL.createObjectURL(blob)
-    const link = document.createElement('a')
-    link.setAttribute('href', url)
-    link.setAttribute(
-      'download'
-      `${filename}-${new Date().toISOString().split('T')[0]}.csv`
-    )
-    document.body.appendChild(link)
-import { Button } from "@/components/ui/button"
-import type { QuoteRequest } from "@/types/quotes"
-=======
-import { Download } from 'lucide-react'
-import type { QuoteRequest } from "@/types/quotes";
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-interface ExportToCSVProps {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/quotes/ExportToCSV.tsx
   quotes: QuoteRequest[]
   filename?: string;
 }"
@@ -159,39 +42,15 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 
       ...rows.map(row =>
         row.map(cell =>
-<<<<<<< HEAD
-      ...rows.map(row =>
-        row.map(cell =>
-      new Date(quote.created_at).toLocaleDateString()
-    ]),
-    
-    // Create CSV content
-    const csvContent = [
-      headers.join(),
-      ...rows.map(row => 
-        row.map(cell => 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
 
           // Escape commas and quotes in cell values
             ? `"${cell.replace(/"/g, '""')}"`
             : cell
         ).join()
       )
-<<<<<<< HEAD
-    ].join('\n')
-    // Create download link
-    const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' })
-    const url = URL.createObjectURL(blob)
-    const link = document.createElement('a')
-    link.setAttribute('href', url)
-    link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`)
-    document.body.appendChild(link)
-    // Download file and clean up
-    link.click()
-    setTimeout(() => {
-      document.body.removeChild(link)
-=======
+
 
     const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' });
     const url = URL.createObjectURL(blob);
@@ -206,7 +65,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 
       document.body.removeChild(link);
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
       URL.revokeObjectURL(url)
     }, 100)
 import { Button } from '@/components / ui / button';
@@ -322,8 +181,7 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
       URL.revokeObjectURL (url);
     }, 100);
   }
-<<<<<<< HEAD:src-disabled/components/quotes/ExportToCSV.tsx
-=======
+
       >
       <Download size={16} />
       Export CSV
@@ -333,14 +191,7 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
 '"
   } }
   return (
-<<<<<<< HEAD
-'"}
-  )
-}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/quotes/ExportToCSV.tsx
 
 import { Button } from "@/components/ui/button",
 import { Download } from 'lucide-react'
@@ -417,10 +268,9 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       variant="outline" 
 import { Button } from "@/components/ui/button",;
 import type { QuoteRequest } from "@/types/quotes",;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
 interface ExportToCSVProps {;
   quotes: QuoteRequest[],;
   filename?: string;
@@ -429,9 +279,7 @@ interface ExportToCSVProps {;
 export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {;
   const handleExport = () => {;
     // Define CSV Headers;
-<<<<<<< HEAD:src-disabled/components/quotes/ExportToCSV.tsx
 
-=======
     const headers = [;
       'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline',;
       'StatusCreated Date';
@@ -480,56 +328,12 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       URL.revokeObjectURL(url);
     }, 100);
   };
-<<<<<<< HEAD
-=======
 
-      >;
-      <Download size={16} />;
-      Export CSV;
-    </Button>;
-  );
-};
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-
-  return (
-    <Button
-      variant="outline" 
-      onClick = {handleExport,}
-      className="flex items-center gap-2"
-      disabled={quotes && quotes.length === 0}>;
-      <Download size={16} />;
-      Export CSV;
-    </Button>;
-  );
-};
-'"},;
-
-
-
-<<<<<<< HEAD
-  return (;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    <Button;
-      variant="outline";
-      onClick={handleExport}
-      className="flex items-center gap-2";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/quotes/ExportToCSV.tsx
       disabled={quotes.length === 0}
     >;
       <Download size={16} />;
       Export CSV;
     </Button>;
-<<<<<<< HEAD:src-disabled/components/quotes/ExportToCSV.tsx
+
   );
-=======
-  );
-<<<<<<< HEAD
-};
-}
-=======
-}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/quotes/ExportToCSV.tsx
+

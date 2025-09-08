@@ -5,16 +5,8 @@ const HiringTracker = ({ className }) => {
       <h1>HiringTracker</h1>
       <p>This component is under development.</p>
     </div>
-<<<<<<< HEAD
-  )
-};
-=======
+
   );
 };
 
-<<<<<<< HEAD
-export default HiringTracker;
-=======
-export default HiringTracker;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

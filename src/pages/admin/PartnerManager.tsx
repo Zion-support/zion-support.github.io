@@ -1,534 +1,11 @@
-<<<<<<< HEAD
-import { useState, useEffect } from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { useRouter } from 'next/router';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { toast } from "@/hooks/use-toast";
-import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client";
-import { logErrorToProduction } from '@/utils/productionLogger';
-import { EmptyState } from "@/components/ui/empty-state";
-interface PartnerProfile {
-  id: string;
-  user_id: string;
-  name: string;
-  status: 'pending' | 'approved' | 'rejected';
-  created_at: string;
-  niche: string;
-  audience_size: string;
-  social_media?: Record<string, string>,
-=======
-<<<<<<< HEAD
-import { useRouter } from 'next/router'
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import { Badge } from "@/components/ui/badge"
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import { toast } from "@/hooks/use-toast"
-import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'import { supabase } from "@/integrations/supabase/client"
-import { logErrorToProduction } from '@/utils/productionLogger'
-import { EmptyState } from "@/components/ui/empty-state"
-import { useState, useEffect } from "react",
-import { useAuth } from "@/hooks/useAuth";
-import { useRouter  } from 'next/router';
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
-import { toast } from "@/hooks/use-toast",
-import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client";
-import { logErrorToProduction  } from '@/utils/productionLogger';
-import { EmptyState } from "@/components/ui/empty-state";
-interface PartnerProfile {
 
 
-  onViewDetails, }
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-onViewDetails, }
-
-  )
-}
-
-
-
-  social_media?: Record<string, string>
-  website?: string
-  bio?: string
-  payout_method?: string
-  fraud_flags?: number
-  social_media?: Record<string string>,
-  website?: string,
-  bio?: string,
-  payout_method?: string,
-  fraud_flags?: number,
-import { use_router } from 'next / router';
-import { Button  } from '@/components / ui / button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
-import { Input  } from '@/components / ui / input';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow  } from '@/components / ui / table';
-import { Badge  } from '@/components / ui / badge';
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger  } from '@/components / ui / dialog';
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';
-import { Alert, AlertDescription, AlertTitle  } from '@/components / ui / alert';
-import { toast  } from '@/hooks / use - toast';
-import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'import { supabase  } from '@/integrations / supabase / client';
-import { logErrorToProduction } from '@/utils / production_logger';
-import { EmptyState  } from '@/components / ui / empty - state';
-interface PartnerProfile {
-  id: string,
-  user_id: string,
-  name: string,
-  status: 'pending' | 'approved' | 'rejected',
-  created_at: string,
-  niche: string,
-  audience_size: string,
-<<<<<<< HEAD
-  social_media?: Record<string, string>
-  website?: string
-  bio?: string
-  payout_method?: string
-  fraud_flags?: number
-  social_media?: Record<string string>,
->>>>>>> merged-prs-20250907-203621
-  website?: string,
-  bio?: string,
-  payout_method?: string,
-  fraud_flags?: number,
-  commission_rate?: number
-}
-<<<<<<< HEAD
-
-export default function PartnerManager() {
-  const [partners, setPartners] = useState<PartnerProfile[]>([]),
-  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),
-  const [isLoading, setIsLoading] = useState($2);
-  const [searchQuery, setSearchQuery] = useState($2);
-  const [activeTab, setActiveTab] = useState($2);
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
-  const [isDetailsOpen, setIsDetailsOpen] = useState($2);
-  const [isSettingsOpen, setIsSettingsOpen] = useState($2);
-  const [commissionRate, setCommissionRate] = useState($2);
-  const { user, isAuthenticated } = useAuth($2);
-  const router = useRouter($2);
-  useEffect(() => {
-    if (!isAuthenticated) {
-      router.push('/auth/login?returnTo = $2;
-      return
-    }
-
-    fetchPartners()
-  }, [isAuthenticated, router]),
-
-  const fetchPartners = async () => {
-    try {
-      setIsLoading($2);
-      // In a real application, check admin permissions here
-      
-      const { data, error } = await supabase
-        .from('partner_profiles')
-        .select('*')
-        .order($2);
-      if (error) throw error,
-      
-      // If no data is returned, use mock data
-      if (!data || data.length === 0) {
-        const mockData: PartnerProfile[] = [
-          {,
-            id: '1',
-            user_id: 'user1',
-            name: 'AI Bytes',
-            status: 'pending',
-            created_at: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString($2);
-            niche: 'AI Tutorials',
-            audience_size: '10k-50k',
-            social_media: { twitter: '@aibytes', youtube: 'AI Bytes' },
-            website: 'aibytes.com',
-            bio: 'We create AI tutorials and insights for developers.',
-            payout_method: 'paypal',
-            fraud_flags: 0,
-            commission_rate: 25,
-          },
-          {
-            id: '2',
-            user_id: 'user2',
-            name: 'ML Academy',
-            status: 'approved',
-            created_at: new Date(Date.now() - 15 * 24 * 60 * 60 * 1000).toISOString($2);
-            niche: 'Machine Learning Education',
-            audience_size: 'over100k',
-            social_media: { twitter: '@mlacademy', youtube: 'ML Academy' },
-            website: 'mlacademy.edu',
-            bio: 'Premiere online academy for machine learning enthusiasts.',
-            payout_method: 'bank',
-            fraud_flags: 0,
-            commission_rate: 30,
-          },
-          {
-            id: '3',
-            user_id: 'user3',
-            name: 'Tech Insights',
-            status: 'rejected',
-            created_at: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString($2);
-            niche: 'Technology News',
-            audience_size: '1k-10k',
-            social_media: { twitter: '@techinsights' },
-            website: 'techinsights.io',
-            bio: 'We share insights about the latest in tech.',
-            payout_method: 'crypto',
-            fraud_flags: 2,
-            commission_rate: 20,
-          },
-          {
-            id: '4',
-            user_id: 'user4',
-            name: 'CodeMaster',
-            status: 'approved',
-            created_at: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString($2);
-            niche: 'Coding Tutorials',
-            audience_size: '50k-100k',
-            social_media: { youtube: 'CodeMaster', linkedin: 'codemaster' },
-            website: 'codemaster.dev',
-            bio: 'Learn to code with our expert tutorials.',
-            payout_method: 'paypal',
-            fraud_flags: 0,
-            commission_rate: 25,
-          },
-          {
-            id: '5',
-            user_id: 'user5',
-            name: 'AI Daily',
-            status: 'pending',
-            created_at: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString($2);
-            niche: 'AI News',
-            audience_size: '10k-50k',
-            social_media: { twitter: '@aidaily', instagram: '@aidailynews' },
-            website: 'aidaily.news',
-            bio: 'Daily updates on the world of artificial intelligence.',
-            payout_method: 'platform_credit',
-            fraud_flags: 1,
-            commission_rate: 20,
-          }
-        ],
-        
-        setPartners($2);
-        filterPartners(mockData, activeTab, searchQuery)
-      } else {
-        setPartners($2);
-        filterPartners(data as PartnerProfile[], activeTab, searchQuery)
-=======
-export default function PartnerManager() {
-
-  const [partners, setPartners] = useState<PartnerProfile[]>([])
-  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([])
-  const [isLoading, setIsLoading] = useState(true)
-  const [searchQuery, setSearchQuery] = useState("")
-  const [activeTab, setActiveTab] = useState("pending")
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null)
-  const [isDetailsOpen, setIsDetailsOpen] = useState(false)
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false)
-  const [commissionRate, setCommissionRate] = useState(25)
-  const { user, isAuthenticated } = useAuth()
-  const router = useRouter()
-  useEffect((,) => {
-    if (!isAuthenticated) {
-      router.push('/auth/login?returnTo=' + encodeURIComponent('/admin/partners'))
-      return;
-    }
-    fetchPartners()
-  }, [isAuthenticated, router])
-  const fetchPartners = async () => {
-    try {
-      setIsLoading(true)
-      // In a real application, check admin permissions here
-      const { data, error } = await supabase
-        .from('partner_profiles')
-        .select('*')
-        .order('created_at', { ascending: false })
-        return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>
-        return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>
-      default:
-        return <Badge variant="outline">{status}</Badge>
-  partners
-  isLoading
-  onViewDetails, }
-
-  )
-  partners, 
-  isLoading, ;
-  onViewDetails, };
-  );
-};
-}
-  const [partners, setPartners] = useState<PartnerProfile[]>([]),
-  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),
-  const [isLoading, setIsLoading] = useState(true),
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [activeTab, setActiveTab] = useState("pending"),
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
-  const [isDetailsOpen, setIsDetailsOpen] = useState(false),
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false),
-  const [commissionRate, setCommissionRate] = useState(25),
-  const { user, isAuthenticated } = useAuth(),
-  const router = useRouter(),
-
-  useEffect(() => {
-    if (!isAuthenticated) {
-      router.push('/auth/login?returnTo=' + encodeURIComponent('/admin/partners')),
-      return
-import { useState, useEffect } from "react",;
-import { useAuth } from "@/hooks/useAuth",;
-import { useRouter } from 'next/router',;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Input } from "@/components/ui/input",;
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
-import { Badge } from "@/components/ui/badge",;
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",;
-import { toast } from "@/hooks/use-toast",;
-import { Check, Flag, Search, Settings, X, Users } from 'lucide-react';
-import { supabase } from "@/integrations/supabase/client",;
-import { logErrorToProduction } from '@/utils/productionLogger',;
-import { EmptyState } from "@/components/ui/empty-state",;
-interface PartnerProfile {;
-  id: string,;
-  user_id: string,;
-  name: string,;
-  status: 'pending' | 'approved' | 'rejected',;
-  created_at: string,;
-  niche: string,;
-  audience_size: string,;
-  social_media?: Record<string string>,;
-  website?: string,;
-  bio?: string,;
-  payout_method?: string,;
-  fraud_flags?: number,;
-  commission_rate?: number;
-}
-    }
-    fetch_partners ();
-  }, [is_authenticated, router]);
-  const fetch_partners = async () => {
-    try {
-      setIsLoading (true);
-      // In a real application, check admin permissions here;
-      const { data, error } = await supabase;
-        .from ('partner_profiles');
-        .select ('*');
-        .order ('created_at', { ascending: false }),
-        return <Badge variant="outline" className="bg - yellow - 900 / 30 text - yellow - 500 border - yellow - 600">Pending</Badge>;
-        return <Badge variant="outline" className="bg - red - 900 / 30 text - red - 500 border - red - 600">Rejected</Badge>;
-      default:;
-        return <Badge variant="outline">{status}</Badge>;
-  partners,
-  is_loading,
-  onViewDetails, }
-  );
-}
-
-
-;
-export default function PartnerManager() {;
-  const [partners, setPartners] = useState<PartnerProfile[]>([]),;
-  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),;
-  const [isLoading, setIsLoading] = useState(true),;
-  const [searchQuery, setSearchQuery] = useState(""),;
-  const [activeTab, setActiveTab] = useState("pending"),;
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),;
-  const [isDetailsOpen, setIsDetailsOpen] = useState(false),;
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false),;
-  const [commissionRate, setCommissionRate] = useState(25),;
-  const { user, isAuthenticated } = useAuth(),;
-  const router = useRouter(),;
-  useEffect(() => {;
-    if (!isAuthenticated) {;
-      router.push('/auth/login?returnTo=' + encodeURIComponent('/admin/partners')),;
-      return;
-    }
-;
-    fetchPartners();
-  }, [isAuthenticated, router]),;
-  const fetchPartners = async () => {;
-    try {;
-      setIsLoading(true),;
-      // In a real application, check admin permissions here;
-      const { data, error } = await supabase;
-        .from('partner_profiles');
-        .select('*');
-        .order('created_at', { ascending: false }),;
-      if (error) throw error,;
-      // If no data is returned, use mock data;
-      if (!data || data.length === 0) {;
-        const mockData: PartnerProfile[] = [;
-          {;
-            id: '1',;
-            user_id: 'user1',;
-            name: 'AI Bytes',;
-            status: 'pending',;
-            created_at: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),;
-            niche: 'AI Tutorials',;
-            audience_size: '10k-50k',;
-            social_media: { twitter: '@aibytes', youtube: 'AI Bytes' },;
-            website: 'aibytes.com',;
-            bio: 'We create AI tutorials and insights for developers.',;
-            payout_method: 'paypal',;
-            fraud_flags: 0,;
-            commission_rate: 25;
-          },;
-          {;
-            id: '2',;
-            user_id: 'user2',;
-            name: 'ML Academy',;
-            status: 'approved',;
-            created_at: new Date(Date.now() - 15 * 24 * 60 * 60 * 1000).toISOString(),;
-            niche: 'Machine Learning Education',;
-            audience_size: 'over100k',;
-            social_media: { twitter: '@mlacademy', youtube: 'ML Academy' },;
-            website: 'mlacademy.edu',;
-            bio: 'Premiere online academy for machine learning enthusiasts.',;
-            payout_method: 'bank',;
-            fraud_flags: 0,;
-            commission_rate: 30;
-          },;
-          {;
-            id: '3',;
-            user_id: 'user3',;
-            name: 'Tech Insights',;
-            status: 'rejected',;
-            created_at: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString(),;
-            niche: 'Technology News',;
-            audience_size: '1k-10k',;
-            social_media: { twitter: '@techinsights' },;
-            website: 'techinsights.io',;
-            bio: 'We share insights about the latest in tech.',;
-            payout_method: 'crypto',;
-            fraud_flags: 2,;
-            commission_rate: 20;
-          },;
-          {;
-            id: '4',;
-            user_id: 'user4',;
-            name: 'CodeMaster',;
-            status: 'approved',;
-            created_at: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString(),;
-            niche: 'Coding Tutorials',;
-            audience_size: '50k-100k',;
-            social_media: { youtube: 'CodeMaster', linkedin: 'codemaster' },;
-            website: 'codemaster.dev',;
-            bio: 'Learn to code with our expert tutorials.',;
-            payout_method: 'paypal',;
-            fraud_flags: 0,;
-            commission_rate: 25;
-          },;
-          {;
-            id: '5',;
-            user_id: 'user5',;
-            name: 'AI Daily',;
-            status: 'pending',;
-            created_at: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString(),;
-            niche: 'AI News',;
-            audience_size: '10k-50k',;
-            social_media: { twitter: '@aidaily', instagram: '@aidailynews' },;
-            website: 'aidaily.news',;
-            bio: 'Daily updates on the world of artificial intelligence.',;
-            payout_method: 'platform_credit',;
-            fraud_flags: 1,;
-            commission_rate: 20;
-          }
-        ],;
-        setPartners(mockData),;
-        filterPartners(mockData, activeTab, searchQuery);
-      } else {;
-        setPartners(data as PartnerProfile[]),;
-        filterPartners(data as PartnerProfile[], activeTab, searchQuery);
->>>>>>> merged-prs-20250907-203621
-      }
-    } catch (error) {
-      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching partners' }),
-      toast({
-        title: "Error",
-        description: "Failed to load partner data",
-        variant: "destructive"})
-    } finally {
-      setIsLoading(false)
-<<<<<<< HEAD
-    }
-  },
-
-  const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {,
-=======
-=======
-  social_media?: Record < string, string>;
-  website?: string;
-  bio?: string;
-  payout_method?: string;
-  fraud_flags?: number;
-  commission_rate?: number;
-}
-export default /**
- * PartnerManager - Function description
- */
-function PartnerManager() {
-  const [partners, set_partners] = useState < PartnerProfile[]>([]);
-  const [filtered_partners, setFilteredPartners] = useState < PartnerProfile[]>([]);
-  const [is_loading, setIsLoading] = useState (true);
-  const [search_query, setSearchQuery] = useState ("");
-  const [active_tab, setActiveTab] = useState ("pending");
-  const [selected_partner, setSelectedPartner] = useState < PartnerProfile | null>(null);
-  const [isDetailsOpen, setIsDetailsOpen] = useState (false);
-  const [isSettingsOpen, setIsSettingsOpen] = useState (false);
-  const [commission_rate, setCommissionRate] = useState (25);
-  const { user, is_authenticated } = use_auth ();
-  const router = use_router ();
-  useEffect ((, ) => {
-    // Check condition
-if ( {) {
-  $2
-}
-      router.push ('/auth / login?return_to=' + encodeURIComponent ('/admin / partners'));
-      return;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    }
-  },
-
-  const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {
->>>>>>> merged-prs-20250907-203621
     let filtered = partners,
     
     // Filter by status
     if (status !== "all") {
       filtered = filtered.filter(p => p.status === status)
-<<<<<<< HEAD
-    }
-    
-    // Filter by search query
-    if (query) {
-      const lowerQuery = query.toLowerCase(),
-      filtered = filtered.filter(p => 
-        p.name.toLowerCase().includes(lowerQuery) ||
-        p.niche.toLowerCase().includes(lowerQuery) ||
-        p.bio?.toLowerCase().includes(lowerQuery) ||
-        p.website?.toLowerCase().includes(lowerQuery)
-      )
-=======
+
     } catch (error) {;
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching partners' }),;
       toast({;
@@ -555,79 +32,65 @@ if ( {) {
         p.bio?.toLowerCase().includes(lowerQuery) ||;
         p.website?.toLowerCase().includes(lowerQuery);
       );
->>>>>>> merged-prs-20250907-203621
+
     }
     
     setFilteredPartners(filtered)
   },
 
-<<<<<<< HEAD
-  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {,
-=======
+
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
->>>>>>> merged-prs-20250907-203621
+
     setSearchQuery(e.target.value),
     filterPartners(partners, activeTab, e.target.value)
   },
 
-<<<<<<< HEAD
-  const handleTabChange = (value: string) => {,
-=======
+
   const handleTabChange = (value: string) => {
->>>>>>> merged-prs-20250907-203621
+
     setActiveTab(value),
     filterPartners(partners, value, searchQuery)
   },
 
-<<<<<<< HEAD
-  const handleViewDetails = (partner: PartnerProfile) => {,
-=======
+
   const handleViewDetails = (partner: PartnerProfile) => {
->>>>>>> merged-prs-20250907-203621
+
     setSelectedPartner(partner),
     setIsDetailsOpen(true)
   },
 
-<<<<<<< HEAD
-  const handleOpenSettings = (partner: PartnerProfile) => {,
-=======
+
   const handleOpenSettings = (partner: PartnerProfile) => {
->>>>>>> merged-prs-20250907-203621
+
     setSelectedPartner(partner),
     setCommissionRate(partner.commission_rate || 25),
     setIsSettingsOpen(true)
   },
 
   const handleUpdateStatus = async (partnerId: string, status: 'approved' | 'rejected') => {
-<<<<<<< HEAD
-    try {,
-=======
+
     try {
->>>>>>> merged-prs-20250907-203621
+
       // In a real app, this would update the database
       setPartners(partners.map(p => 
         p.id === partnerId ? { ...p, status } : p
       )),
       
-<<<<<<< HEAD
-      filterPartners($2);
-=======
+
       filterPartners(
         partners.map(p => p.id === partnerId ? { ...p, status } : p),
->>>>>>> merged-prs-20250907-203621
+
         activeTab,
         searchQuery
       ),
       
-<<<<<<< HEAD
-      toast($2);
-=======
+
       toast({
         title: status === 'approved' ? "Partner Approved" : "Partner Rejected",
         description: `The partner has been ${status}.`,
         variant: status === 'approved' ? "default" : "destructive"}),
       
->>>>>>> merged-prs-20250907-203621
+
       // Close the dialog if open
       if (isDetailsOpen && selectedPartner?.id === partnerId) {
         setIsDetailsOpen(false)
@@ -641,16 +104,7 @@ if ( {) {
     }
   },
 
-<<<<<<< HEAD
-  const handleSaveSettings = $2;
-    try {
-      // Update commission rate
-      setPartners(partners.map(p => 
-        p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate} : p
-      )),
-      
-      filterPartners($2);
-=======
+
   const handleSaveSettings = async () => {
     if (!selectedPartner) return,
     
@@ -662,20 +116,18 @@ if ( {) {
       
       filterPartners(
         partners.map(p => p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p),
->>>>>>> merged-prs-20250907-203621
+
         activeTab,
         searchQuery
       ),
       
-<<<<<<< HEAD
-      toast($2);
-=======
+
       toast({
         title: "Settings Updated",
         description: "Partner settings have been updated successfully.",
         variant: "default"}),
       
->>>>>>> merged-prs-20250907-203621
+
       setIsSettingsOpen(false)
     } catch (error) {
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error updating partner settings' }),
@@ -683,19 +135,7 @@ if ( {) {
         title: "Error",
         description: "Failed to update partner settings",
         variant: "destructive"})
-<<<<<<< HEAD
-    }
-  },
 
-  const getAudienceSizeLabel = (size: string) => {
-    switch (size) {,
-      case 'under1k': return 'Under 1,000',
-      case '1k-10k': return '1,000 - 10,000',
-      case '10k-50k': return '10,000 - 50,000',
-      case '50k-100k': return '50,000 - 100,000',
-      case 'over100k': return 'Over 100,000',
-      default: return size,
-=======
 ;
     setFilteredPartners(filtered);
   },;
@@ -776,92 +216,26 @@ if ( {) {
       case '50k-100k': return '50,000 - 100,000',;
       case 'over100k': return 'Over 100,000',;
       default: return size;
->>>>>>> merged-prs-20250907-203621
+
     }
   },
 
   const getStatusBadge = (status: string) => {
     switch (status) {
-<<<<<<< HEAD
-      case 'pending':,
-        return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>,
-      case 'approved':
-        return <Badge variant = $2;
-      case 'rejected':
-        return <Badge variant = $2;
-=======
+
       case 'pending':
         return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>,
       case 'approved':
         return <Badge variant="outline" className="bg-green-900/30 text-green-500 border-green-600">Approved</Badge>,
       case 'rejected':
         return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>,
->>>>>>> merged-prs-20250907-203621
+
       default:
         return <Badge variant="outline">{status}</Badge>
     }
   },
 
-<<<<<<< HEAD
-  const getFraudFlagBadge = (flags: number = 0) => {,
-    if (flags === 0) return null,
-    
-    return (
-      <Badge variant = $2;
-  return (
-    <div className="container max-w-7xl py-10">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
-        <div>
-          <h1 className="text-3xl font-bold tracking-tight text-white">Partner Management</h1>
-          <p className="text-zion-slate-light">Approve and manage affiliate partners</p>
-        </div>
-      </div>
 
-      <Card className="bg-zion-blue-dark border-zion-blue-light mb-8">
-        <CardHeader className="pb-3">
-          <CardTitle>Overview</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="grid gap-4 md:grid-cols-3">
-            <Card className="bg-zion-blue border-zion-blue-light">
-              <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-zion-slate-light">
-                  Pending Applications
-                </CardTitle>
-                <div className="text-2xl font-bold text-white">,
-                  {partners.filter(p => p.status === 'pending').length}
-                </div>
-              </CardHeader>
-              <CardContent className="pt-0">
-                <p className="text-xs text-zion-slate-light">
-                  Partners waiting for review and approval
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-zion-blue border-zion-blue-light">
-              <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-zion-slate-light">
-                  Active Partners
-                </CardTitle>
-                <div className="text-2xl font-bold text-white">
-                  {partners.filter(p => p.status === 'approved').length}
-                </div>
-              </CardHeader>
-              <CardContent className="pt-0">
-                <p className="text-xs text-zion-slate-light">
-                  Currently approved and active partners
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-zion-blue border-zion-blue-light">
-              <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-zion-slate-light">
-                  Fraud Flags
-                </CardTitle>
-                <div className="text-2xl font-bold text-white">
-=======
   const getFraudFlagBadge = (flags: number = 0) => {
     if (flags === 0) return null,
     
@@ -940,7 +314,7 @@ if ( {) {
                   Fraud Flags;
                 </CardTitle>;
                 <div className="text-2xl font-bold text-white">;
->>>>>>> merged-prs-20250907-203621
+
                   {partners.reduce((total, p) => total + (p.fraud_flags || 0), 0)}
                 </div>
               </CardHeader>
@@ -965,11 +339,9 @@ if ( {) {
               <Search className="absolute left-2 top-2.5 h-4 w-4 text-zion-slate-light" />
               <Input
                 placeholder="Search partners..."
-<<<<<<< HEAD
-                className="pl-8",
-=======
+
                 className="pl-8"
->>>>>>> merged-prs-20250907-203621
+
                 value={searchQuery}
                 onChange={handleSearch}
               />
@@ -986,11 +358,9 @@ if ( {) {
             </TabsList>
             
             <TabsContent value="pending" className="space-y-4">
-<<<<<<< HEAD
-              <PartnerTable,
-=======
+
               <PartnerTable 
->>>>>>> merged-prs-20250907-203621
+
                 partners={filteredPartners} 
                 isLoading={isLoading}
                 onViewDetails={handleViewDetails}
@@ -1018,11 +388,9 @@ if ( {) {
                 partners={filteredPartners} 
                 isLoading={isLoading}
                 onViewDetails={handleViewDetails}
-<<<<<<< HEAD
-                onUpdateStatus={handleUpdateStatus} 
-=======
+
                 onUpdateStatus={handleUpdateStatus} ;
->>>>>>> merged-prs-20250907-203621
+
                 onOpenSettings={handleOpenSettings}
                 getStatusBadge={getStatusBadge}
                 getFraudFlagBadge={getFraudFlagBadge}
@@ -1038,20 +406,13 @@ if ( {) {
                 onOpenSettings={handleOpenSettings}
                 getStatusBadge={getStatusBadge}
                 getFraudFlagBadge={getFraudFlagBadge}
-<<<<<<< HEAD
-              />
-            </TabsContent>
-          </Tabs>
-        </CardContent>
-      </Card>
-      
-=======
+
               />;
             </TabsContent>;
           </Tabs>;
         </CardContent>;
       </Card>;
->>>>>>> merged-prs-20250907-203621
+
       {/* Partner Details Dialog */}
       <Dialog open={isDetailsOpen} onOpenChange={setIsDetailsOpen}>
         <DialogContent className="sm:max-w-lg bg-zion-blue border-zion-blue-light">
@@ -1066,11 +427,9 @@ if ( {) {
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-2">
                 <div>
-<<<<<<< HEAD
-                  <p className="text-xs text-zion-slate-light">Name</p>,
-=======
+
                   <p className="text-xs text-zion-slate-light">Name</p>
->>>>>>> merged-prs-20250907-203621
+
                   <p className="font-medium text-white">{selectedPartner.name}</p>
                 </div>
                 <div>
@@ -1101,21 +460,7 @@ if ( {) {
                   <p className="text-zion-cyan">{selectedPartner.website}</p>
                 </div>
               )}
-<<<<<<< HEAD
-              
-              {selectedPartner.social_media && Object.keys(selectedPartner.social_media).length > 0 && (
-                <div>
-                  <p className="text-xs text-zion-slate-light">Social Media</p>
-                  <div className="grid grid-cols-2 gap-2">
-                    {Object.entries(selectedPartner.social_media).map(([platform, handle]) => (
-                      <p key={platform} className="text-white">
-                        <span className="font-medium">{platform}: </span>
-                        {handle}
-                      </p>
-                    ))}
-                  </div>
-                </div>
-=======
+
 ;
               {selectedPartner.social_media && Object.keys(selectedPartner.social_media).length > 0 && (;
                 <div>;
@@ -1129,7 +474,7 @@ if ( {) {
                     ))}
                   </div>;
                 </div>;
->>>>>>> merged-prs-20250907-203621
+
               )}
               
               <div className="grid grid-cols-2 gap-2">
@@ -1160,26 +505,7 @@ if ( {) {
                   <Button 
                     variant="destructive" 
                     onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
-<<<<<<< HEAD
-                  >
-                    <X className="h-4 w-4 mr-1" />
-                    Reject
-                  </Button>
-                  <Button 
-                    className="bg-green-600 hover:bg-green-700",
-                    onClick={() => handleUpdateStatus(selectedPartner.id, 'approved')}
-                  >
-                    <Check className="h-4 w-4 mr-1" />
-                    Approve
-                  </Button>
-                </div>
-              )}
-            </div>
-          )}
-        </DialogContent>
-      </Dialog>
-      
-=======
+
                   >;
                     <X className="h-4 w-4 mr-1" />;
                     Reject;
@@ -1197,7 +523,7 @@ if ( {) {
           )}
         </DialogContent>;
       </Dialog>;
->>>>>>> merged-prs-20250907-203621
+
       {/* Partner Settings Dialog */}
       <Dialog open={isSettingsOpen} onOpenChange={setIsSettingsOpen}>
         <DialogContent className="bg-zion-blue border-zion-blue-light">
@@ -1240,41 +566,7 @@ if ( {) {
                   Save Changes
                 </Button>
               </DialogFooter>
-<<<<<<< HEAD
-            </div>,
-          )}
-        </DialogContent>
-      </Dialog>
-    </div>
-  )
-}
 
-interface PartnerTableProps {;
-  partners: PartnerProfile[];
-  isLoading: boolean;
-  onViewDetails: (partner: PartnerProfile) => void;
-  onUpdateStatus: (partnerId: string, status: 'approved' | 'rejected') => void;
-  onOpenSettings: (partner: PartnerProfile) => void;
-  getStatusBadge: (status: string) => JSX.Element;
-  getFraudFlagBadge: (flags?: number) => JSX.Element | null,
-}
-
-function PartnerTable({ 
-  partners, 
-  isLoading, 
-  onViewDetails, 
-  onUpdateStatus,
-  onOpenSettings,
-  getStatusBadge,
-  getFraudFlagBadge
-}: PartnerTableProps) {
-  if (isLoading) {
-    return (
-      <div className="text-center py-8">
-        <p className="text-zion-slate-light">Loading partner data...</p>
-      </div>
-    )
-=======
             </div>
           )}
         </DialogContent>;
@@ -1282,38 +574,7 @@ function PartnerTable({
     </div>;
   );
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-;
-interface PartnerTableProps {;
-  partners: PartnerProfile[],;
-  isLoading: boolean,;
-  onViewDetails: (partner: PartnerProfile) => void,;
-  onUpdateStatus: (partnerId: string, status: 'approved' | 'rejected') => void,;
-  onOpenSettings: (partner: PartnerProfile) => void,;
-  getStatusBadge: (status: string) => JSX.Element,;
-  getFraudFlagBadge: (flags?: number) => JSX.Element | null;
-}
-;
-function PartnerTable({;
-  partners,;
-  isLoading,;
-  onViewDetails,;
-  onUpdateStatus,;
-  onOpenSettings;
-  getStatusBadge;
-  getFraudFlagBadge;
-}: PartnerTableProps) {;
-  if (isLoading) {;
-    return (;
-      <div className="text-center py-8">;
-        <p className="text-zion-slate-light">Loading partner data...</p>;
-      </div>;
-    );
->>>>>>> merged-prs-20250907-203621
   }
   
   if (partners.length === 0) {
@@ -1328,36 +589,7 @@ function PartnerTable({;
       </div>
     )
   }
-<<<<<<< HEAD
-  
-  return (
-    <Table>
-      <TableHeader>
-        <TableRow className="hover: bg-transparent">
-          <TableHead>Name</TableHead>
-          <TableHead>Niche</TableHead>
-          <TableHead>Audience</TableHead>
-          <TableHead>Status</TableHead>
-          <TableHead>Date</TableHead>
-          <TableHead className="text-right">Actions</TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>,
-        {partners.map((partner) => (,
-          <TableRow key={partner.id} className="border-zion-blue-light hover:bg-zion-blue-light/10">
-            <TableCell className="font-medium text-white">
-              <div className="flex items-center gap-2">,
-                {partner.name}
-                {getFraudFlagBadge(partner.fraud_flags)}
-              </div>
-            </TableCell>
-            <TableCell>{partner.niche}</TableCell>
-            <TableCell>
-              {partner.audience_size.replace('k,000').replace('- - ').replace('overOver ')}
-            </TableCell>
-            <TableCell>{getStatusBadge(partner.status)}</TableCell>
-            <TableCell>
-=======
+
 ;
   return (;
     <Table>;
@@ -1386,7 +618,7 @@ function PartnerTable({;
             </TableCell>;
             <TableCell>{getStatusBadge(partner.status)}</TableCell>;
             <TableCell>;
->>>>>>> merged-prs-20250907-203621
+
               {new Date(partner.created_at).toLocaleDateString()}
             </TableCell>
             <TableCell className="text-right">
@@ -1404,22 +636,18 @@ function PartnerTable({;
                     </Button>
                     <Button 
                       variant="ghost"
-<<<<<<< HEAD
-                      size="sm",
-=======
+
                       size="sm"
->>>>>>> merged-prs-20250907-203621
+
                       onClick={() => onUpdateStatus(partner.id, 'approved')}
                       className="text-green-500 hover:text-green-600 hover:bg-green-900/20"
                     >
                       <Check className="h-4 w-4" />
                       <span className="sr-only">Approve</span>
                     </Button>
-<<<<<<< HEAD
-                  </>,
-=======
+
                   </>
->>>>>>> merged-prs-20250907-203621
+
                 )}
                 
                 <Button 
@@ -1434,21 +662,7 @@ function PartnerTable({;
                 
                 <Button 
                   variant="outline" 
-<<<<<<< HEAD
-                  size="sm",
-                  onClick={() => onViewDetails(partner)}
-                >
-                  View
-                </Button>
-              </div>
-            </TableCell>
-          </TableRow>
-        ))}
-      </TableBody>
-    </Table>
-  )
-}
-=======
+
                   size="sm"
                   onClick={() => onViewDetails(partner)}
                 >;
@@ -1462,9 +676,4 @@ function PartnerTable({;
     </Table>;
   );
 }
-<<<<<<< HEAD
-;
-=======
-;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> merged-prs-20250907-203621
+

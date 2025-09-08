@@ -1,20 +1,12 @@
-<<<<<<< HEAD
 
-=======
 #!/usr/bin/"env": node {
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env: node console.log(" Fixing:"; async function main() {""
 #!/usr/bin/"env": node _console.log("🔧 Fixing:"; async function main() {
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 #!/usr/bin/"env": node {
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env: node console.log(" Fixing:"; async function main() {""
 #!/usr/bin/"env": node _console.log("🔧 Fixing:"; async function main() {
-<<<<<<< HEAD
 
-=======
 #!/usr/bin/"env": node {
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env: node console.log(" Fixing:"; async function main() {""
 #!/usr/bin/"env": node _console.log("🔧 Fixing:"; async function main() {
@@ -23,10 +15,4 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 #!/usr/bin/"env": node {
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env: node console.log(" Fixing:"; async function main() {""
 #!/usr/bin/"env": node _console.log("🔧 Fixing:"; async function main() {
-<<<<<<< HEAD
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621

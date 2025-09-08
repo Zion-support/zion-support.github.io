@@ -1,169 +1,24 @@
-<<<<<<< HEAD
-interface SearchResult  {interface SearchResult  {title: string,description: string
-  url: string;}
-  category: string;}
-=======
-<<<<<<< HEAD
-interface SearchResult  {interface SearchResult  {title: string,description: string;
-  url: string;}
-  category: string;}
-=======
-<<<<<<< HEAD
-=======
->>>>>>> merged-prs-20250907-203621
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 import React, { useState, useEffect, useRef } from './react';
 import { Search, X, ArrowRight, Clock  } from './lucide-react';
 import Link from './next / link';
 ;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
 interface SearchResult {
 interface SearchResult {;
   title: string;
   description: string;
   url: string;
   category: string;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-interface SearchModalProps  {is_open: boolean;}
-  on_close: () => void;}
-}
-  {title: "Cybersecurity";
-    description: "Security audits, penetration testing, and compliance";
-    url: "/cybersecurity";}
-    category: "Services";}
-  }
-<<<<<<< HEAD
-  {{title: "About Us";
-    description: "Learn about Zion Tech Group and our mission";
-    url: "/about";}
-    category: "Company";}
-=======
-  {{title: \'About Us\';
-    description: \'Learn about Zion Tech Group and our mission\';
-    url: \'/about\';}
-    category: \'Company\';}
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-interface SearchModalProps {
-  is_open: boolean;
-  on_close: () => void;
-}
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-const search_data: SearchResult[] = [;
-  // Services;
-  {
-    title: "AI Services",
-    description: "Machine learning, computer vision, NLP, and AI solutions",
-    url: "/ai - services",
-    category: "Services",
-  },
-  {
-    title: "IT Services",
-    description: "Cloud infrastructure, cybersecurity, and IT solutions",
-    url: "/it - services",
-    category: "Services",
-  },
-  {
-    title: "Micro SaaS",
-    description: "Custom micro SaaS platforms and automation tools",
-    url: "/micro - saas",
-    category: "Services",
-  },
-  {
-    title: "Cloud Solutions",
-    description: "AWS, Azure, GCP migration and cloud infrastructure",
-    url: "/cloud - solutions",
-    category: "Services",
-  },
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  {
-    title: "Cybersecurity"
-    description: "Security audits, penetration testing, and compliance"
-    url: "/cybersecurity"
-    category: "Services"
-  }
-  {
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    title: "Blockchain Solutions",
-    description: "Smart contracts, DeFi, and blockchain development",
-    url: "/blockchain - services",
-    category: "Services",
-  },
-  // Solutions;
-  {
-    title: "Digital Transformation",
-    description: "Complete digital transformation solutions",
-    url: "/digital - transformation",
-    category: "Solutions",
-  },
-  {
-    title: "Enterprise Solutions",
-    description: "Large - scale enterprise technology solutions",
-    url: "/enterprise - solutions",
-    category: "Solutions",
-  },
-  {
-    title: "Startup Solutions",
-    description: "Technology solutions for startups and SMBs",
-    url: "/startup - solutions",
-    category: "Solutions",
-  },
-  // Industries;
-  {
-    title: "Healthcare",
-    description: "Technology solutions for healthcare industry",
-    url: "/industries / healthcare",
-    category: "Industries",
-  },
-  {
-    title: "Finance",
-    description: "Financial technology and fintech solutions",
-    url: "/industries / finance",
-    category: "Industries",
-  },
-  {
-    title: "Education",
-    description: "Educational technology and e - learning solutions",
-    url: "/industries / education",
-    category: "Industries",
-  },
-  {
-    title: "Manufacturing",
-    description: "Industrial IoT and manufacturing automation",
-    url: "/industries / manufacturing",
-    category: "Industries",
-  },
-  // Company;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  {
-    title: "About Us"
-    description: "Learn about Zion Tech Group and our mission"
-    url: "/about"
-    category: "Company"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
   }
   {title: "Contact";
     description: "Get in touch with our team";
@@ -187,230 +42,12 @@ const search_data: SearchResult[] = [;
   }
 ];
 
-<<<<<<< HEAD
-export default function SearchModal() {interface SearchModalProps {
-=======
-<<<<<<< HEAD
-  useEffect(() => {;
-    if (isOpen && inputRef && inputRef.current) {;
-      inputRef && inputRef.current.focus();
-
-export default function SearchModal({ isOpen, onClose }: SearchModalProps) {;
-export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
-
-export default function SearchModal({ isOpen, onClose }: SearchModalProps) {;
-=======
-
-interface SearchModalProps {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-  isOpen: boolean;
-  onClose: () => void;}
-}
-}
-const searchData: SearchResult[] = [;
-  // Services;
-<<<<<<< HEAD
-  {title: "AI Services",,description: "Machine learning, computer vision, NLP, and AI solutions",url: "/ai-services",category: "Services",},{title: "IT Services",,description: "Cloud infrastructure, cybersecurity, and IT solutions",url: "/it-services",category: "Services",},{title: "Micro SaaS",,description: "Custom micro SaaS platforms and automation tools",url: "/micro-saas",category: "Services",},{title: "Cloud Solutions",,description: "AWS, Azure, GCP migration and cloud infrastructure",url: "/cloud-solutions",category: "Services",},{title: "Cybersecurity",,description: "Security audits, penetration testing, and compliance",url: "/cybersecurity",category: "Services",},{title: "Blockchain Solutions",,description: "Smart contracts, DeFi, and blockchain development",url: "/blockchain-services",category: "Services",},// Solutions;
-  {title: "Digital Transformation",,description: "Complete digital transformation solutions",url: "/digital-transformation",category: "Solutions",},{title: "Enterprise Solutions",,description: "Large-scale enterprise technology solutions",url: "/enterprise-solutions",category: "Solutions",},{title: "Startup Solutions",,description: "Technology solutions for startups and SMBs",url: "/startup-solutions",category: "Solutions",},// Industries;
-  {title: "Healthcare",,description: "Technology solutions for healthcare industry",url: "/industries/healthcare",category: "Industries",},{title: "Finance",,description: "Financial technology and fintech solutions",url: "/industries/finance",category: "Industries",},{title: "Education",,description: "Educational technology and e-learning solutions",url: "/industries/education",category: "Industries",},{title: "Manufacturing",,description: "Industrial IoT and manufacturing automation",url: "/industries/manufacturing",category: "Industries",},// Company;
-  {title: "About Us",,description: "Learn about Zion Tech Group and our mission",url: "/about",category: "Company",},{title: "Contact",,description: "Get in touch with our team",url: "/contact",category: "Company",},{title: "Careers",,description: "Join our team and build the future",url: "/careers",category: "Company",},{title: "Blog",,description: "Latest insights and technology trends",url: "/blog",category: "Company",},{title: "Pricing",,description: "Transparent pricing for all our services",url: "/pricing",category: "Company",},];
-=======
-<<<<<<< HEAD
-  {title: \"AI Services\",,description: \"Machine learning, computer vision, NLP, and AI solutions\",url: \"/ai-services\",category: \"Services\",},{title: \"IT Services\",,description: \"Cloud infrastructure, cybersecurity, and IT solutions\",url: \"/it-services\",category: \"Services\",},{title: \"Micro SaaS\",,description: \"Custom micro SaaS platforms and automation tools\",url: \"/micro-saas\",category: \"Services\",},{title: \"Cloud Solutions\",,description: \"AWS, Azure, GCP migration and cloud infrastructure\",url: \"/cloud-solutions\",category: \"Services\",},{title: \"Cybersecurity\",,description: \"Security audits, penetration testing, and compliance\",url: \"/cybersecurity\",category: \"Services\",},{title: \"Blockchain Solutions\",,description: \"Smart contracts, DeFi, and blockchain development\",url: \"/blockchain-services\",category: \"Services\",},// Solutions;
-  {title: \"Digital Transformation\",,description: \"Complete digital transformation solutions\",url: \"/digital-transformation\",category: \"Solutions\",},{title: \"Enterprise Solutions\",,description: \"Large-scale enterprise technology solutions\",url: \"/enterprise-solutions\",category: \"Solutions\",},{title: \"Startup Solutions\",,description: \"Technology solutions for startups and SMBs\",url: \"/startup-solutions\",category: \"Solutions\",},// Industries;
-  {title: \"Healthcare\",,description: \"Technology solutions for healthcare industry\",url: \"/industries/healthcare\",category: \"Industries\",},{title: \"Finance\",,description: \"Financial technology and fintech solutions\",url: \"/industries/finance\",category: \"Industries\",},{title: \"Education\",,description: \"Educational technology and e-learning solutions\",url: \"/industries/education\",category: \"Industries\",},{title: \"Manufacturing\",,description: \"Industrial IoT and manufacturing automation\",url: \"/industries/manufacturing\",category: \"Industries\",},// Company;
-  {title: \"About Us\",,description: \"Learn about Zion Tech Group and our mission\",url: \"/about\",category: \"Company\",},{title: \"Contact\",,description: \"Get in touch with our team\",url: \"/contact\",category: \"Company\",},{title: \"Careers\",,description: \"Join our team and build the future\",url: \"/careers\",category: \"Company\",},{title: \"Blog\",,description: \"Latest insights and technology trends\",url: \"/blog\",category: \"Company\",},{title: \"Pricing\",,description: \"Transparent pricing for all our services\",url: \"/pricing\",category: \"Company\",},];
->>>>>>> merged-prs-20250907-203621
-
-const [query, setQuery] = useState("");
-  const [results, setResults] = useState<SearchResult[] />([])const [recentSearches, setRecentSearches] = useState<string[] />([])const [selectedIndex, setSelectedIndex] = useState(0);
-  const inputRef = useRef<HTMLInputElement />(null))setResults(filtered)} else {setResults([])export default /**;
- * SearchModal - Function description;
- */;
-function SearchModal() {const [query, set_query] = useState ("")const [results, set_results] = useState < SearchResult[]>([])const [recent_searches, setRecentSearches] = useState < string[]>([])const [selected_index, setSelectedIndex] = useState (0)const input_ref = useRef < HTMLInputElement>(null;
-  useEffect (() => {// Check condition;}
-<<<<<<< HEAD
-  if($2) {$2;}
-=======
-if ( {) {$2;}
-=======
-  {;
-    title: "AI Services",;
-    description: "Machine learning, computer vision, NLP, and AI solutions",;
-    url: "/ai-services",;
-    category: "Services",;
-  },;
-  {;
-    title: "IT Services",;
-    description: "Cloud infrastructure, cybersecurity, and IT solutions",;
-    url: "/it-services",;
-    category: "Services",;
-  },;
-  {;
-    title: "Micro SaaS",;
-    description: "Custom micro SaaS platforms and automation tools",;
-    url: "/micro-saas",;
-    category: "Services",;
-  },;
-  {;
-    title: "Cloud Solutions",;
-    description: "AWS, Azure, GCP migration and cloud infrastructure",;
-    url: "/cloud-solutions",;
-    category: "Services",;
-  },;
-  {;
-    title: "Cybersecurity",;
-    description: "Security audits, penetration testing, and compliance",;
-    url: "/cybersecurity",;
-    category: "Services",;
-  },;
-  {;
-    title: "Blockchain Solutions",;
-    description: "Smart contracts, DeFi, and blockchain development",;
-    url: "/blockchain-services",;
-    category: "Services",;
-  },;
-  // Solutions;
-  {;
-    title: "Digital Transformation",;
-    description: "Complete digital transformation solutions",;
-    url: "/digital-transformation",;
-    category: "Solutions",;
-  },;
-  {;
-    title: "Enterprise Solutions",;
-    description: "Large-scale enterprise technology solutions",;
-    url: "/enterprise-solutions",;
-    category: "Solutions",;
-  },;
-  {;
-    title: "Startup Solutions",;
-    description: "Technology solutions for startups and SMBs",;
-    url: "/startup-solutions",;
-    category: "Solutions",;
-  },;
-  // Industries;
-  {;
-    title: "Healthcare",;
-    description: "Technology solutions for healthcare industry",;
-    url: "/industries/healthcare",;
-    category: "Industries",;
-  },;
-  {;
-    title: "Finance",;
-    description: "Financial technology and fintech solutions",;
-    url: "/industries/finance",;
-    category: "Industries",;
-  },;
-  {;
-    title: "Education",;
-    description: "Educational technology and e-learning solutions",;
-    url: "/industries/education",;
-    category: "Industries",;
-  },;
-  {;
-    title: "Manufacturing",;
-    description: "Industrial IoT and manufacturing automation",;
-    url: "/industries/manufacturing",;
-    category: "Industries",;
-  },;
-  // Company;
-  {;
-    title: "About Us",;
-    description: "Learn about Zion Tech Group and our mission",;
-    url: "/about",;
-    category: "Company",;
-  },;
-  {;
-    title: "Contact",;
-    description: "Get in touch with our team",;
-    url: "/contact",;
-    category: "Company",;
-  },;
-  {;
-    title: "Careers",;
-    description: "Join our team and build the future",;
-    url: "/careers",;
-    category: "Company",;
-  },;
-  {;
-    title: "Blog",;
-    description: "Latest insights and technology trends",;
-    url: "/blog",;
-    category: "Company",;
-  },;
-  {;
-    title: "Pricing",;
-    description: "Transparent pricing for all our services",;
-    url: "/pricing",;
-    category: "Company",;
-  },;
-];
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  const [query, setQuery] = useState("");
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [recentSearches, setRecentSearches] = useState<string[]>([]);
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const inputRef = useRef<HTMLInputElement>(null);
-<<<<<<< HEAD
-  useEffect(() => {
-    if (isOpen && inputRef.current) {
-      inputRef.current.focus();
-    }
-  }, [isOpen]);
-=======
 
 
-  useEffect(() => {;
-    if (isOpen && inputRef && inputRef.current) {;
-      inputRef && inputRef.current.focus();
-    }
-  }, [isOpen]);
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  useEffect(() => {;
-    // Load recent searches from localStorage;
-    const saved = localStorage && localStorage.getItem("recent-searches");
-    if (saved) {;
-      setRecentSearches(JSON && JSON.parse(saved));
-    }
-  }, []);
-  useEffect(() => {;
-    if (query && query.trim()) {;
-      const filtered = searchData && searchData.filter(;
-        (item) =>;
-          item && item.title.toLowerCase().includes(query && query.toLowerCase()) ||;
-          item && item.description.toLowerCase().includes(query && query.toLowerCase()) ||;
-          item && item.category.toLowerCase().includes(query && query.toLowerCase()),;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      );
-      setResults(filtered);
-    } else {;
-      setResults([]);
-;
-export default /**
- * SearchModal - Function description
- */
-function SearchModal() {
-  const [query, set_query] = useState ("");
-  const [results, set_results] = useState < SearchResult[]>([]);
-  const [recent_searches, setRecentSearches] = useState < string[]>([]);
-  const [selected_index, setSelectedIndex] = useState (0);
-  const input_ref = useRef < HTMLInputElement>(null);
-;
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
       input_ref.current.focus ()}
   }, [is_open])useEffect (() => {// Load recent searches from local_storage;
->>>>>>> merged-prs-20250907-203621
+
 
 const saved = local_storage.get_item ("recent - searches")// Check condition;}
 if ( {) {$2;}
@@ -418,184 +55,12 @@ if ( {) {$2;}
       setRecentSearches (JSON.parse (saved))}
   }, [])useEffect (() => {if () {) {$2;}
 
-<<<<<<< HEAD
-const filtered = search_data.filter ((item) =>
-          item.title.toLowerCase ().includes (query.toLowerCase ()) ||
-          item.description.toLowerCase ().includes (query.toLowerCase ()) ||
-=======
+
 const filtered = search_data.filter ((item) =>;
           item.title.toLowerCase ().includes (query.toLowerCase ()) ||;
           item.description.toLowerCase ().includes (query.toLowerCase ()) ||;
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-          item.category.toLowerCase ().includes (query.toLowerCase ()),)set_results (filtered)} else {set_results ([])}
-    setSelectedIndex (0)}, [query])onClose()} else if (e && e.key = == "ArrowDown") {e && e.preventDefault()setSelectedIndex((prev) => Math && Math.min(prev + 1, results && results.length - 1))} else if (e && e.key === "ArrowUp") {e && e.preventDefault()setSelectedIndex((prev) => Math && Math.max(prev - 1, 0))} else if (e && e.key === "Enter" && results[selectedIndex]) {handleResultClick(results[selectedIndex])}
-    setQuery(search)}
-  if (!isOpen);
-  return null;
-<<<<<<< HEAD
-  return (<div className="fixed inset-0 z-50 overflow-y-auto" />;
-      <div className="flex min-h-screen items-start justify-center p-4 pt-16" />;
-=======
-  return (<div className=\"fixed inset-0 z-50 overflow-y-auto\"    />;
-      <div className=\"flex min-h-screen items-start justify-center p-4 pt-16\"    />;
-=======
-          item.category.toLowerCase ().includes (query.toLowerCase ()),
-      );
-      set_results (filtered);
-    } else {
-      set_results ([]);
-    }
-    setSelectedIndex (0);
-  }, [query]);
-<<<<<<< HEAD
-  const handleKeyDown = (e: React && React.KeyboardEvent) => {;
-    if (e && e.key === "Escape") {;
-=======
 
 
-  const handleKeyDown = (e: React && React.KeyboardEvent) => {;
-    if (e && e.key === "Escape") {;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      onClose();
-    } else if (e && e.key === "ArrowDown") {;
-      e && e.preventDefault();
-      setSelectedIndex((prev) => Math && Math.min(prev + 1, results && results.length - 1));
-    } else if (e && e.key === "ArrowUp") {;
-      e && e.preventDefault();
-      setSelectedIndex((prev) => Math && Math.max(prev - 1, 0));
-    } else if (e && e.key === "Enter" && results[selectedIndex]) {;
-      handleResultClick(results[selectedIndex]);
-    }
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  };
-  const handleResultClick = (result: SearchResult) => {;
-    // Add to recent searches;
-    const newRecent = [;
-      result && result.title,;
-      ...recentSearches && recentSearches.filter((s) => s !== result && result.title),;
-    ].slice(0, 5);
-    setRecentSearches(newRecent);
-    localStorage && localStorage.setItem("recent-searches", JSON && JSON.stringify(newRecent));
-    // Navigate to result;
-    window && window.location.href = result && result.url;
-  };
-  const handleRecentClick = (search: string) => {;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    setQuery(search);
-  }
-  if (!isOpen) return null;
-  return (
-    <div className="fixed inset-0 z-50 overflow-y-auto">;
-      <div className="flex min-h-screen items-start justify-center p-4 pt-16">;
-        {/* Backdrop */}
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 transition-opacity"
-          onClick={onClose}
-<<<<<<< HEAD
-        />;
-=======
-
-        />;
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        {/* Modal */}
-        <div className="relative w-full max-w-2xl bg-white rounded-lg shadow-xl">;
-          {/* Search Input */}
-          <div className="flex items-center p-4 border-b">;
-            <Search className="w-5 h-5 text-gray-400 mr-3" />;
-            <input
-              ref={inputRef}
-              type="text"
-              value={query}
-              onChange={(e) => setQuery(e && e.target.value)}
-              onKeyDown={handleKeyDown}
-              placeholder="Search services, solutions, industries...";
-              className="flex-1 text-lg outline-none";
-            />;
-            <button
-              onClick={onClose}
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              className="ml-3 p-1 hover:bg-gray-100 rounded">;
-              <X className="w-5 h-5" />;
-            </button>;
-          </div>;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          {/* Results */}
-          <div className="max-h-96 overflow-y-auto">;
-            {query && query.trim() ? (;
-              results && results.length > 0 ? (;
-                <div className="p-2">;
-                  {results && results.map((result, index) => (;
-                    <div
-;
-  const handleKeyDown = (e: React.KeyboardEvent) =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      on_close ();
-    } else // Check condition
-if ( {) {
-  $2
-}
-      e.prevent_default ();
-      setSelectedIndex ((prev) => Math.min (prev + 1, results.length - 1));
-    } else // Check condition
-if ( {) {
-  $2
-}
-      e.prevent_default ();
-      setSelectedIndex ((prev) => Math.max (prev - 1, 0));
-    } else // Check condition
-if ( {) {
-  $2
-}
-      handleResultClick (results[selected_index]);
-    }
-  }
-;
-  const handleResultClick = (result: SearchResult) =>: any {
-    // Add to recent searches;
-    const new_recent = [;
-      result.title,
-      ...recent_searches.filter ((s) => s !== result.title),
-    ].slice (0, 5);
-    setRecentSearches (new_recent);
-    local_storage.set_item ("recent - searches", JSON.stringify (new_recent));
-;
-    // Navigate to result;
-    window.location.href = result.url;
-  }
-;
-  const handleRecentClick = (search: string) =>: any {
-    set_query (search);
-  }
-;
-  // Check condition
-if (return null) {
-  $2
-}
-  return (
-    <div className="fixed inset - 0 z - 50 overflow - y-auto">;
-      <div className="flex min - h-screen items - start justify - center p - 4 pt - 16">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
         {/* Backdrop */}
         <div;
           className="fixed inset-0 bg-black bg-opacity-50 transition-opacity";
@@ -661,57 +126,16 @@ if (return null) {$2;}
             </button>;
           </div>;
           {/* Results */}
-<<<<<<< HEAD
-          <div className="max-h-96 overflow-y-auto" />;
-            {query.trim () ? (results.length > 0 ? (<div className="p-2" />;}
-=======
-<<<<<<< HEAD
-          <div className=\"max-h-96 overflow-y-auto\"    />;
-            {query.trim () ? (results.length > 0 ? (<div className=\"p-2\"    />;}
->>>>>>> merged-prs-20250907-203621
-                  {results.map ((result, index) => (<div;}
-=======
-          <div className="max - h-96 overflow - y-auto">;
-            {query.trim () ? (
-              results.length > 0 ? (
-                <div className="p - 2">;
-                  {results.map ((result, index) => (
-                    <div;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
                       key={index}
                       className={`p - 3 rounded - lg cursor - pointer transition - colors ${index === selected_index;
                           ? "bg - blue - 50 border border - blue - 200";}
                           : "hover:bg - gray - 50";}
                       }`}
-<<<<<<< HEAD
-                      <button
-=======
-<<<<<<< HEAD
-                      <button;
-=======
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                <div>;
-                  <div className="text-sm text-gray-500 mb-3">;
-                    Popular Searches;
-                  </div>;
-                  <div className="grid grid-cols-2 gap-2">;
-                    {[;
-                      "AI Services",;
-                      "Cloud Solutions",;
-                      "Cybersecurity",;
-                      "Digital Transformation",;
-                    ].map((term) => (;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                      <button
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
                         key={term}
                         onClick={() = /> setQuery(term)}
                         className="text-left p-2 hover: bg-gray-50 rounded text-sm text-gray-700">
@@ -728,12 +152,10 @@ if (return null) {$2;}
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD
-  )on_click={() => handleResultClick (result)}
-=======
+
   );
                       on_click={() => handleResultClick (result)}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                     >;
                       <div className="flex items-start justify-between" />;
                         <div className="flex-1" />;
@@ -791,53 +213,10 @@ if (return null) {$2;}
 }
                   </div>;
                 </div>
-<<<<<<< HEAD
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-                      on_click={() => handleResultClick (result)}
 
-                        >
-                          {search}
-                        </button>))}
-                    </div>
-                  </div>)}
-
-                      "Digital Transformation",
-                    ].map ((term) => (
-                      <button
-                        key={term}
-
-                      >
-                        {term}
-                      </button>),
-
-                  </div>
-                </div>
-    </div>
-  )
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-=======
     </div>
   );
 }
           </div>;
         </div>;
-<<<<<<< HEAD
-      </div>
-    </div>
-  );
-=======
-      </div>;
-    </div>);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-}
->>>>>>> merged-prs-20250907-203621
+

@@ -5,48 +5,7 @@ import { MilestoneCard } from './MilestoneCard',;
 import { AddMilestoneForm } from './AddMilestoneForm',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
-<<<<<<< HEAD
-// lucide-react doesn't export PlusIcon, use our icon wrapper;
-import { Plus } from 'lucide-react';
-import { EmptyState } from '@/components/ui/empty-state',;
-;
-interface MilestonesListProps {;
-  milestones:Milestone[],;
-  activities:Record<string MilestoneActivity[]>,;
-  isLoading:boolean,;
-  isClient:boolean,;
-  onCreateMilestone:(data:any) => Promise<Milestone | null>,;
-  onUpdateStatus:(id:string, status:MilestoneStatus, comment?:string) => Promise<boolean>,;
-  onDeleteMilestone:(id:string) => Promise<boolean>,;
-  onUploadDeliverable:(id:string, file:File) => Promise<any>,;
-  isSubmitting:boolean,;
-  onApprove?:(id:string) => Promise<void>,;
-  onReject?:(id:string) => Promise<void>;
-}
-;
-export const MilestonesList:React.FC<MilestonesListProps> = ({;
-  milestones,;
-  activities,;
-  isLoading,;
-  isClient,;
-  onCreateMilestone,;
-  onUpdateStatus,;
-  onDeleteMilestone,;
-  onUploadDeliverable,;
-  isSubmitting,;
-  onApprove,;
-  onReject;
-}) => {;
-  const [showAddForm, setShowAddForm] = useState(false),;
-  ;
-  const handleSubmit = async (data:any) => {;
-    await onCreateMilestone(data),;
-    setShowAddForm(false);
-  },;
-;
-  if (isLoading) {;
-    return (;
-=======
+
 
 // lucide-react doesn't export PlusIcon, use our icon wrapper;
 
@@ -69,43 +28,12 @@ interface MilestonesListProps {;
   onReject?:(id:string) => Promise<void>;
 export const MilestonesList:React.FC<MilestonesListProps> = ({;
 
->>>>>>> merged-prs-20250907-203621
+
       <div className="space-y-4">;
         {[1, 2, 3].map((i) => (;
 
           <Card key={i}>;
-<<<<<<< HEAD
-            <CardContent className="p-6">;
-              <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4"></div>;
-              <div className="h-4 bg-muted rounded animate-pulse w-full mb-2"></div>;
-              <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>;
-            </CardContent>;
-          </Card>;
-        ))}
-      </div>;
-    ),;
-  }
-  ;
-  if (milestones.length === 0 && !showAddForm) {;
-    return (;
-      <EmptyState;
-        icon={<span className="text-3xl">📊</span>}
-        title="No Milestones Yet";
-        description={isClient ? ;
-          "Break down the project into manageable milestones to track progress and payments." :;
-          "No milestones have been created for this project yet."}
-        action={isClient ? ;
-          {;
-            text:"Create First Milestone",;
-            onClick:() => setShowAddForm(true);
-          } undefined;
-        }
-      />;
-    ),;
-  }
-;
-  return (;
-=======
+
 "
             <CardContent className="p-6">;"
               <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4"></div>;""
@@ -113,7 +41,7 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
               <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>;"
       </div>;
 
->>>>>>> merged-prs-20250907-203621
+
     <div className="space-y-6">;
       {isClient && !showAddForm && (;
         <div className="flex justify-end">;
@@ -123,28 +51,14 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
           </Button>;
         </div>;
       )}
-<<<<<<< HEAD
-      ;
-=======
 
->>>>>>> merged-prs-20250907-203621
+
+
       {showAddForm && (;
         <Card>;
           <CardContent className="pt-6">;
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>;
-<<<<<<< HEAD
-            <AddMilestoneForm ;
-              onSubmit={handleSubmit}
-              isSubmitting={isSubmitting}
-              onCancel={() => setShowAddForm(false)}
-            />;
-          </CardContent>;
-        </Card>;
-      )}
-      ;
-      <div className="space-y-4">;
-        {milestones.map((milestone) => (;
-=======
+
 
             <AddMilestoneForm ;
 
@@ -156,7 +70,7 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
       <div className="space-y-4">;
         {milestones.map((milestone) => (;
 
->>>>>>> merged-prs-20250907-203621
+
           <MilestoneCard;
             key={milestone.id}            id={milestone.id}
             projectId={milestone.projectid}
@@ -169,29 +83,18 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
             onApprove={onApprove}
             onReject={onReject}
           />;
-<<<<<<< HEAD
-        ))}
-      </div>;
-    </div>;
-=======
 
->>>>>>> merged-prs-20250907-203621
+
+
   ),;
 
 },; <Card key= {;
-<<<<<<< HEAD
-  i ;
-}> <CardContent className="p-6" > <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4" ></div> <div className="h-4 bg-muted rounded animate-pulse w-full mb-2" ></div> <div className="h-4 bg-muted rounded animate-pulse w-3/4" ></div> </CardContent> </Card>) ) ;
-}</div>) ;
-}
-}/>) ;
-}<Button onClick={;"  () => setShowAddForm (true) ";"}> <Plus className="h-4 w-4 mr-2" /> Add Milestone </Button> </div>) ;
-=======
+
   i ;"
 }> <CardContent className="p-6" > <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4" ></div> <div className="h-4 bg-muted rounded animate-pulse w-full mb-2" ></div> <div className="h-4 bg-muted rounded animate-pulse w-3/4" ></div>  ) ) ;"
 }</div>) ;"
 }<Button onClick={;"  () => setShowAddForm (true) ";"}> <Plus className="h-4 w-4 mr-2" /> Add Milestone  </div>) ;"
->>>>>>> merged-prs-20250907-203621
+
 }<AddMilestoneForm onSubmit= {;
   handleSubmit ;
 }isSubmitting= {;
@@ -203,10 +106,8 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
 }<MilestoneCard key= {;
   milestone.id ;
 }id= {;
-<<<<<<< HEAD
-  milestone.id ;
-=======
->>>>>>> merged-prs-20250907-203621
+
+
 }projectId= {;
   milestone.project id ;
 }title= {;
@@ -223,24 +124,5 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
   onApprove ;
 }onReject= {;
   onReject ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-}/>) ) ;
-=======
->>>>>>> merged-prs-20250907-203621
-}/>) ) ;
-}</div> </div>) ;
-<<<<<<< HEAD
-:temp_broken_files/projects/milestones/MilestonesList.tsx
-};""
-};
-"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/projects/milestones/MilestonesList.tsx
-=======
 
-};
-"
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

@@ -1,37 +1,5 @@
-<<<<<<< HEAD
-"HEAD": src.pages.disabled/RequestQuote.js.jsx import React from 'react'; <div className="min-h-screen bg-background">";" <SEO title="Request Quote - Zion Tech Group" description="Get a custom quote for your AI and tech project needs from Zion Tech Group." keywords="quote,pricing,AI services,tech services,project quote,Zion Tech Group" canonical=""https": import React from 'react'; <div className="min - h-screen bg - background">";" <SEO title="Request Quote - Zion Tech Group" description="Get a custom quote for your AI and tech project needs from Zion Tech Group." keywords="quote,pricing,AI services,tech services,project quote,Zion Tech Group" canonical=""https": "";"
-</div>"
-</div>"
-</div>"
-</div>"
-=======
-<<<<<<< HEAD
-</div>"
-
-</div>"
-</div>"
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-<<<<<<< HEAD
-=======
 
 
-
-</div>"
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-"HEAD": src.pages.disabled/RequestQuote.js.jsx import React from 'react'; <div className="min-h-screen bg-background">";" <SEO title="Request Quote - Zion Tech Group" description="Get a custom quote for your AI and tech project needs from Zion Tech Group." keywords="quote,pricing,AI services,tech services,project quote,Zion Tech Group" canonical=""https": import React from 'react'; <div className="min - h-screen bg - background">";" <SEO title="Request Quote - Zion Tech Group" description="Get a custom quote for your AI and tech project needs from Zion Tech Group." keywords="quote,pricing,AI services,tech services,project quote,Zion Tech Group" canonical=""https": "";"
-
-"HEAD": src.pages.disabled/RequestQuote.js.jsx import React from 'react'; <div className="min-h-screen bg-background">";" <SEO title="Request Quote - Zion Tech Group" description="Get a custom quote for your AI and tech project needs from Zion Tech Group." keywords="quote,pricing,AI services,tech services,project quote,Zion Tech Group" canonical=""https": import React from 'react'; <div className="min - h-screen bg - background">";" <SEO title="Request Quote - Zion Tech Group" description="Get a custom quote for your AI and tech project needs from Zion Tech Group." keywords="quote,pricing,AI services,tech services,project quote,Zion Tech Group" canonical=""https": "";"
-</div>"
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 :src.pages.disabled/RequestQuote.jsx
 </div>"
 </div>"
@@ -49,5 +17,5 @@ ursor/add-new-services-and-deploy-updates-0462
 </div>"
 </div>"
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+

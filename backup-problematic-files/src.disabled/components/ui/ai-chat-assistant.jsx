@@ -1,40 +1,24 @@
 class ErrorBoundary extends React.Component {
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  // TODO: Implement
-}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-<<<<<<< HEAD
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-=======
+
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-<<<<<<< HEAD
-    
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
     return this.props.children;
   }
 }
@@ -75,13 +59,5 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       <p>This component is under development.</p>
     </div>
 
-<<<<<<< HEAD
-    </div>'
-pr-12325
-=======
-<<<<<<< HEAD
-export default Ai-chat-assistant;
-=======
-export default Ai-chat-assistant;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+

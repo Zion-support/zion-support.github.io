@@ -1,131 +1,5 @@
-<<<<<<< HEAD:temp-disabled/src/components/contracts/templates/TemplateList.tsx
-=======
-<<<<<<< HEAD
 
 
-import { useState } from "react";
-interface TemplateListProps {
-  templates: ContractTemplate[],
-  isLoading: boolean,
-  onSelect: (template: ContractTemplate,) => void,
-  onEdit: (template: ContractTemplate,) => void
-}
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import { ContractTemplate } from "@/types/contracts",
-import { Button } from "@/components/ui/button",
-import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react'
-import { useContractTemplates } from "@/hooks/useContractTemplates",
-import { Card, CardContent } from "@/components/ui/card",
-import { Separator } from "@/components/ui/separator",
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
-<<<<<<< HEAD
-import { useAuth } from "@/hooks/useAuth";
-ursor/fix-website-loading-errors-and-merge-6662
-// useRouter replaces the old useLocation hook from react-router
-import { useAuth } from "@/hooks/useAuth";
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/contracts/templates/TemplateList.tsx
-
-import { ContractTemplate } from "@/types/contracts",""
-import { Button } from "@/components/ui/button",""
-import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react'''
-import { useContractTemplates } from "@/hooks/useContractTemplates",""
-import { Card, CardContent } from "@/components/ui/card",""
-import { Separator } from "@/components/ui/separator",""
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",""
-import { useAuth } from "@/hooks/useAuth","
-// useRouter replaces the old useLocation hook from react-router;
-
-<<<<<<< HEAD:temp-disabled/src/components/contracts/templates/TemplateList.tsx
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import { useAuth } from "@/hooks/useAuth",
-
-
-// useRouter replaces the old useLocation hook from react-router
-
-  AlertDialog
-  AlertDialogAction
-  AlertDialogCancel
-  AlertDialogContent
-  AlertDialogDescription
-  AlertDialogFooter
-  AlertDialogHeader
-  AlertDialogTitle} from "@/components/ui/alert-dialog"
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import { ContractTemplate } from "@/types/contracts"
-import { Button } from "@/components/ui/button"
-import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react'
-import { useContractTemplates } from "@/hooks/useContractTemplates"
-import { Card, CardContent } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-import { useAuth } from "@/hooks/useAuth"
-// useRouter replaces the old useLocation hook from react-router
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle} from "@/components/ui/alert-dialog",
-<<<<<<< HEAD
-import { useState } from "react"
-interface TemplateListProps {
-  templates: ContractTemplate[]
-  isLoading: boolean
-  onSelect: (template: ContractTemplate,) => void
-  onEdit: (template: ContractTemplate,) => void
-
-}
-export function TemplateList({
-  templates;
-  isLoading;
-  onSelect;
-  onEdit
-}: TemplateListProps) {
-
-  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null)
-  const { deleteTemplate, setDefaultTemplate } = useContractTemplates()
-  const { user } = useAuth()
-  const router = useRouter()
-  const handleDeleteClick = (templateId: string,) => {
-    setTemplateToDelete(templateId)
-  }
-  const handleDeleteConfirm = async () => {
-    if (templateToDelete) {
-      await deleteTemplate.mutateAsync(templateToDelete)
-      setTemplateToDelete(null)
-    }
-  }
-  const handleSetDefault = async (templateId: string,) => {
-    if (!user) {
-      const currentPath = router.asPath
-      router.push(`/auth/login?returnTo=${encodeURIComponent(currentPath)}`)
-      return;
-    }
-    await setDefaultTemplate.mutateAsync(templateId)
-  }
-import { useAuth } from "@/hooks/useAuth",
-// useRouter replaces the old useLocation hook from react-router
-import { useRouter } from 'next/router',
-=======
-
-
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-// use_router replaces the old use_location hook from react - router;
-import { use_router } from 'next / router';
-import {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/contracts/templates/TemplateList.tsx
   AlertDialog;
   AlertDialogAction;
   AlertDialogCancel;
@@ -174,53 +48,17 @@ import { Separator  } from '@/components/ui/ separator';''
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components/ui/ tooltip';''
 import { use_auth  } from '@/hooks/ use_auth';'
 // use_router replaces the old use_location hook from react - router;
-<<<<<<< HEAD
-import { useAuth } from "@/hooks/useAuth",
-// useRouter replaces the old useLocation hook from react-router
-import { useRouter } from 'next/router',
-import {
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
   AlertDialogFooter,
-<<<<<<< HEAD:temp-disabled/src/components/contracts/templates/TemplateList.tsx
-  AlertDialogHeader,'
-  AlertDialogTitle} from "@/components/ui/ alert - dialog",""
-import { useState  } from './react';'
-=======
-  AlertDialogHeader,
-<<<<<<< HEAD
-  AlertDialogTitle} from "@/components/ui/alert-dialog",
-=======
-  AlertDialogTitle} from "@/components / ui / alert - dialog",
-import { useState  } from './react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/contracts/templates/TemplateList.tsx
-interface TemplateListProps {
-  // TODO: Implement
-}
-  templates: ContractTemplate[],
-  is_loading: boolean,
-  on_select: (template: ContractTemplate, ) => void,
-  on_edit: (template: ContractTemplate, ) => void;
-}
-export /**
- * TemplateList - Function description;
- */
-function TemplateList() {
-  const [templateToDelete, setTemplateToDelete] = useState < string | null>(null);
-  const { delete_template, setDefaultTemplate } = useContractTemplates ();
-  const { user } = use_auth ();
-  const router = use_router ();
-  const handleDeleteClick = (template_id: string, ) =>: any {
-  // TODO: Implement
-}
-    setTemplateToDelete (template_id);
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  AlertDialogHeader,
+
   }
   const handleDeleteConfirm = async () => {
     // Check condition;
@@ -230,28 +68,15 @@ if ( {) {
 }
       await delete_template.mutate_async (templateToDelete)setTemplateToDelete (null)}
   }
-<<<<<<< HEAD:temp-disabled/src/components/contracts/templates/TemplateList.tsx
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/contracts/templates/TemplateList.tsx
   const handleSetDefault = async (template_id: string, ) => {
     // Check condition;
 if ( {) {
   $2;
 
 }
-<<<<<<< HEAD:temp-disabled/src/components/contracts/templates/TemplateList.tsx
 
-
-    }
-    await setDefaultTemplate.mutate_async (template_id);
-  }
-
-
-// useRouter replaces the old useLocation hook from react-router;'
-import { useRouter } from 'next/router';'
-=======
       const current_path = router.as_path,
       router.push (`/auth / login?return_to=${encodeURIComponent (current_path)}`);
       return;
@@ -260,7 +85,7 @@ import { useRouter } from 'next/router';'
   }
 // useRouter replaces the old useLocation hook from react-router;
 import { useRouter } from 'next/router';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/contracts/templates/TemplateList.tsx
+
 import {;
   AlertDialog;
 
@@ -298,10 +123,9 @@ interface TemplateListProps {;
   onSelect: (template: ContractTemplate,) => void,;
   onEdit: (template: ContractTemplate,) => void;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
 export function TemplateList(): any ({;
   templates;
   isLoading;
@@ -309,434 +133,20 @@ export function TemplateList(): any ({;
   onEdit;)
 }: TemplateListProps) {;
   const [templateToDelete, setTemplateToDelete] = useState<string | null>(null);
-<<<<<<< HEAD:temp-disabled/src/components/contracts/templates/TemplateList.tsx
-</string>"
-      <div className="flex justify-center items-center py-8">;"
-</div>"
-        <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />;"
-</Loader2>
-      </div>;"
-      <div className="text-center py-8">;"
-</div>"
-        <p className="text-muted-foreground">No templates found.</p>;""
-        <p className="text-sm text-muted-foreground">Save a contract as a template to reuse it later.</p>;"
-      </div>;"
-    <div className="space-y-3">;"
-</div>"
-        <Card key={template && template.id} className={template && template.is_default ? "border-zion-purple" : ""}>;"
-</Card>"
-          <CardContent className="p-4">;"
-</CardContent>"
-            <div className="flex items-center justify-between">;"
-</div>"
-              <div className="space-y-1">;"
-</div>"
-                <div className="flex items-center gap-2">;"
-</div>"
-                  <h3 className="font-medium">{template && template.title}</h3>;""
-                    <span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0 && 0.5 rounded-full">Default</span>;""
-              <div className="flex items-center gap-2">"
-</div>
-                </div>;"
-                <p className="text-xs text-muted-foreground">;"
-</p>
-                </p>;
-              </div>;"
-              <div className="flex items-center gap-2">;"
-</div>
-                <Button;"
-                  variant="ghost"""
-                  size="icon""
-                  onClick = {() => onEdit(template),}
-</Button>"
-                  <Edit className="h-4 w-4" />;"
-</Edit>
-                </Button>;
-=======
+
   const { deleteTemplate, setDefaultTemplate } = useContractTemplates();
   const { user } = useAuth();
   const router = useRouter();
-<<<<<<< HEAD
-  const handleDeleteClick = (templateId: string,) => {;
-    setTemplateToDelete(templateId);
-  };
-=======
 
-  const handleDeleteClick = (templateId: string,) => {;
-    setTemplateToDelete(templateId);
-  };
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  const handleDeleteConfirm = async () => {;
-    if (templateToDelete) {;
-      await deleteTemplate && deleteTemplate.mutateAsync(templateToDelete);
-      setTemplateToDelete(null);
-    }
-  };
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  const handleSetDefault = async (templateId: string,) => {;
-    if (!user) {;
-      const currentPath = router && router.asPath,;
-      router && router.push(`/auth/login?returnTo=${encodeURIComponent(currentPath)}`);
-      return;
-    }
-<<<<<<< HEAD
-  if (isLoading) {
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    await setDefaultTemplate && setDefaultTemplate.mutateAsync(templateId);
-  };
-
-  if (isLoading) {;
-
-
-  if (isLoading) {
-    return (
-      <div className="flex justify-center items-center py-8">;
-        <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />;
-      </div>;
-    );
-  }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  if (!templates && templates.length) {;
-    return (
-      <div className="text-center py-8">;
-        <p className="text-muted-foreground">No templates found.</p>;
-        <p className="text-sm text-muted-foreground">Save a contract as a template to reuse it later.</p>;
-      </div>;
-    );
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  }
-  return (
-    <div className="space-y-3">;
-      {templates && templates.map((template,) => (;
-        <Card key={template && template.id} className={template && template.is_default ? "border-zion-purple" : ""}>;
-<<<<<<< HEAD
-
-import { useState } from "react",
-interface TemplateListProps {
-  templates: ContractTemplate[],
-  isLoading: boolean,
-  onSelect: (template: ContractTemplate) => void,
-  onEdit: (template: ContractTemplate) => void
-import { ContractTemplate } from "@/types/contracts",;
-import { Button } from "@/components/ui/button",;
-import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react';
-import { useContractTemplates } from "@/hooks/useContractTemplates",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Separator } from "@/components/ui/separator",;
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",;
-import { useAuth } from "@/hooks/useAuth",;
-// useRouter replaces the old useLocation hook from react-router;
-import { useRouter } from 'next/router',;
-import {;
-  AlertDialog,;
-  AlertDialogAction,;
-  AlertDialogCancel,;
-  AlertDialogContent,;
-  AlertDialogDescription,;
-  AlertDialogFooter,;
-  AlertDialogHeader,;
-  AlertDialogTitle} from "@/components/ui/alert-dialog",;
-import { useState } from "react",;
-interface TemplateListProps {;
-  templates: ContractTemplate[],;
-  isLoading: boolean,;
-  onSelect: (template: ContractTemplate) => void,;
-  onEdit: (template: ContractTemplate) => void;
-}
-;
-export function TemplateList({;
-  templates,;
-  isLoading,;
-  onSelect,;
-  onEdit;
-}: TemplateListProps) {;
-  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null),;
-  const { deleteTemplate, setDefaultTemplate } = useContractTemplates(),;
-  const { user } = useAuth(),;
-  const router = useRouter(),;
-  const handleDeleteClick = (templateId: string) => {;
-    setTemplateToDelete(templateId);
-  },;
-  const handleDeleteConfirm = async () => {;
-    if (templateToDelete) {;
-      await deleteTemplate.mutateAsync(templateToDelete),;
-      setTemplateToDelete(null);
-    }
-  },;
-  const handleSetDefault = async (templateId: string) => {;
-    if (!user) {;
-      const currentPath = router.asPath,;
-      router.push(`/auth/login?returnTo=${encodeURIComponent(currentPath)}`);
-      return;
-    }
-    await setDefaultTemplate.mutateAsync(templateId)
-  },
-
-  if (isLoading) {
-    return (
-      <div className="flex justify-center items-center py-8">
-        <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />
-      </div>
-    )
-  }
-  if (!templates.length) {
-    return (
-      <div className="text-center py-8">
-        <p className="text-muted-foreground">No templates found.</p>
-        <p className="text-sm text-muted-foreground">Save a contract as a template to reuse it later.</p>
-      </div>
-    )
-  }
-  return (
-    <div className="space-y-3">
-      {templates.map((template) => (
-        <Card key={template.id} className={template.is_default ? "border-zion-purple" : ""}>
-          <CardContent className="p-4">
-            <div className="flex items-center justify-between">
-              <div className="space-y-1">
-                <div className="flex items-center gap-2">
-                  <h3 className="font-medium">{template.title}</h3>
-                  {template.is_default && (
-                    <span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0.5 rounded-full">Default</span>
-                  )}
-                </div>
-                <p className="text-xs text-muted-foreground">
-                  Last updated: {new Date(template.updated_at).toLocaleDateString()}
-                </p>
-              </div>
-ursor/fix-website-loading-errors-and-merge-6662
-              <div className="flex items-center gap-2">
-=======
-          <CardContent className="p-4">;
-            <div className="flex items-center justify-between">;
-              <div className="space-y-1">;
-                <div className="flex items-center gap-2">;
-                  <h3 className="font-medium">{template && template.title}</h3>;
-                  {template && template.is_default && (;
-                    <span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0 && 0.5 rounded-full">Default</span>;
-                  )}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-
-              
-
-
-              <div className="flex items-center gap-2">
-                </div>;
-                <p className="text-xs text-muted-foreground">;
-                  Last updated: {new Date(template && template.updated_at).toLocaleDateString()}
-                </p>;
-              </div>;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              <div className="flex items-center gap-2">;
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  onClick = {() => onEdit(template),}
-<<<<<<< HEAD
-                  <h3 className="font-medium">{template.title}</h3>;
-                  {template.is_default && (;
-                    <span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0.5 rounded-full">Default</span>;
-                  )}
-                </div>;
-                <p className="text-xs text-muted-foreground">;
-                  Last updated:{new Date(template.updated_at).toLocaleDateString()}
-                </p>;
-              </div>;
-              ;
-              <div className="flex items-center gap-2">;
-                <Button;
-                  variant="ghost";
-                  size="icon";
-                  onClick={() => onEdit(template)}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                  aria-label="Edit template";
-                >;
-                  <Edit className="h-4 w-4" />;
-                </Button>;
-<<<<<<< HEAD
-                {!template.is_default ? (;
-                  <TooltipProvider>;
-                    <Tooltip>;
-                      <TooltipTrigger asChild>;
-                        <Button;
-                          variant="ghost";
-                          size="icon";
-                          onClick={() => handleSetDefault(template.id)}
-=======
-                {!template && template.is_default ? (;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/contracts/templates/TemplateList.tsx
-                  <TooltipProvider>;
-</TooltipProvider>
-                    <Tooltip>;
-</Tooltip>
-                      <TooltipTrigger asChild>;
-</TooltipTrigger>
-                        <Button;"
-                          variant="ghost"""
-                          size="icon""
-                          onClick = {(,) => handleSetDefault(template && template.id),}
-<<<<<<< HEAD:temp-disabled/src/components/contracts/templates/TemplateList.tsx
-</Button>"
-                          <Star className="h-4 w-4" />;"
-</Star>
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                          aria-label="Set as default";
-                        >;
-                          <Star className="h-4 w-4" />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/contracts/templates/TemplateList.tsx
                         </Button>;
                       </TooltipTrigger>;
                         <TooltipContent>;
 </TooltipContent>
                         </TooltipContent>;
                     </Tooltip>;
-<<<<<<< HEAD:temp-disabled/src/components/contracts/templates/TemplateList.tsx
-                  </TooltipProvider>;"
-                  <Button variant="ghost" size="icon" disabled aria-label="Default template">;"
-</Button>"
-                    <StarOff className="h-4 w-4" />;"
-</StarOff>
-                  </Button>;
-                <Button;"
-                  variant="ghost"""
-                  size="icon"""
-            <Separator className="my-3" />"
-</Button>
-            <Button;
-              onClick={() => onSelect(template)} 
-</Button>
-            </Button>
-          </CardContent>
-        </Card>
-=======
+
                   </TooltipProvider>;
-<<<<<<< HEAD
-                ) :(;
-                  <Button variant="ghost" size="icon" disabled aria-label="Default template">;
-                    <StarOff className="h-4 w-4" />;
-                  </Button>;
-                )}
-              
-              <div className="flex items-center gap-2">
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  onClick={() => onEdit(template)}
-                  aria-label="Edit template"
-                >
-                  <Edit className="h-4 w-4" />
-                </Button>
-                {!template.is_default ? (
-                  <TooltipProvider>
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <Button
-                          variant="ghost"
-                          size="icon"
-                          onClick={() => handleSetDefault(template.id)}
-                          aria-label="Set as default"
-                        >
-                          <Star className="h-4 w-4" />
-                        </Button>
-                      </TooltipTrigger>
-                      {!user && (
-                        <TooltipContent>
-                          Please log in to use this feature
-                        </TooltipContent>
-                      )}
-                    </Tooltip>
-                  </TooltipProvider>
-                ) : (
-                  <Button variant="ghost" size="icon" disabled aria-label="Default template">
-                    <StarOff className="h-4 w-4" />
-                  </Button>
-=======
-                ) : (;
-                  <Button variant="ghost" size="icon" disabled aria-label="Default template">;
-                    <StarOff className="h-4 w-4" />;
-                  </Button>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                )}
-                <Button
-                  variant="ghost"
-                  size="icon"
-<<<<<<< HEAD
-                  onClick={() => handleDeleteClick(template.id)}
-                  aria-label="Delete template"
-                >
-                  <Trash className="h-4 w-4 text-destructive" />
-                </Button>
-              </div>
-            </div>
 
-
-
-            
-            <Separator className="my-3" />
-
-            <Button 
-              onClick={() => onSelect(template)} 
-              variant="outline" 
-            <Button
-              onClick = {() => onSelect(template),}
-              variant="outline"
-            
-            <Separator className="my-3" />
-            
-              onClick={() => onSelect(template)} 
-              variant="outline" 
-              className="w-full"
-            <Separator className="my-3" />
-            <Button
-              onClick = {() => onSelect(template),}
-              variant="outline"
-=======
-
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-            
-            <Separator className="my-3" />
-            
-            <Button 
-              onClick={() => onSelect(template)} 
-              variant="outline" 
-              className="w-full"
-            >
-              Use This Template
-            </Button>
-          </CardContent>
-        </Card>
-      ))}
-<<<<<<< HEAD
-      
-      
-=======
-
-
-      
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/contracts/templates/TemplateList.tsx
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>
 </AlertDialog>
         <AlertDialogContent>
@@ -760,45 +170,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
-<<<<<<< HEAD:temp-disabled/src/components/contracts/templates/TemplateList.tsx
-    </div>"
-<CardContent className="p-4"> <div className="flex items-center justify-between"> <div className="space-y-1"> <div className="flex items-center gap-2"> <h3 className="font-medium"> {"
-</CardContent>"
-}</h3> {"""
-  template.is default && (<span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0.5 rounded-full">Default</span>) """
-}</div> <p className="text-xs text-muted-foreground"> Last updated: {"
-</p>"
-}</p> </div> <div className="flex items-center gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> {""
-</div>"
-  !template.is default ? (<TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button variant="ghost" size="icon" onClick={"
-</TooltipProvider>"
-}aria-label="Set as default" > <Star className="h-4 w-4" /> </Button> </TooltipTrigger> {"
-</Star>)"
-  !user && (<TooltipContent> Please log in to use this feature </TooltipContent>) """
-}</Tooltip> </TooltipProvider>) : (<Button variant="ghost" size="icon" disabled aria-label="Default template"> <StarOff className="h-4 w-4" /> </Button>) """
-}<Button > <Trash className="h-4 w-4 text-destructive" /> </Button> </div> </div> <Separator className="my-3" /> <Button className="w-full" > Use This Template </Button> </CardContent> </Card>) )"
-}<AlertDialog open= {
-  !!templateToDelete;
-}onOpenChange= {"
-  () => setTemplateToDelete (null) ""
-</AlertDialog>"
-}> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" onClick={"
-</AlertDialogContent>"
-                  <Trash className="h-4 w-4 text-destructive" />;"
-</Trash>
-                </Button>;
-              </div>;
-            </div>;"
-            <Separator className="my-3" />;"
-</Separator>
-            <Button;
-              onClick = {() => onSelect(template),}
-</Button>
-            </Button>;
-          </CardContent>;
-        </Card>;
-}> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) ;
-=======
+
     </div>
   )
 }
@@ -808,91 +180,7 @@ const handleSetDefault = async (templateId: string) => {
 router.push (`/auth/login?returnTo=$ {
   encodeURIComponent (currentPath)
 }`)
-<<<<<<< HEAD
-return
-}await setDefaultTemplate.mutateAsync (templateId)
-return
-}await setDefaultTemplate.mutateAsync (templateId)
-return;
-}await setDefaultTemplate.mutateAsync (templateId) 
-=======
 
-
-return;
-}await setDefaultTemplate.mutateAsync (templateId) 
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-}
-<CardContent className="p-4"> <div className="flex items-center justify-between"> <div className="space-y-1"> <div className="flex items-center gap-2"> <h3 className="font-medium"> {
-  template.title
-}</h3> {"
-  template.is default && (<span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0.5 rounded-full">Default</span>) "
-}</div> <p className="text-xs text-muted-foreground"> Last updated: {
-  new Date (template.updated at) .toLocaleDateString () "
-}</p> </div> <div className="flex items-center gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> {"
-  !template.is default ? (<TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button variant="ghost" size="icon" onClick={
-  () => handleSetDefault (template.id) "
-}aria-label="Set as default" > <Star className="h-4 w-4" /> </Button> </TooltipTrigger> {
-  !user && (<TooltipContent> Please log in to use this feature </TooltipContent>) "
-}</Tooltip> </TooltipProvider>) : (<Button variant="ghost" size="icon" disabled aria-label="Default template"> <StarOff className="h-4 w-4" /> </Button>) "
-}<Button > <Trash className="h-4 w-4 text-destructive" /> </Button> </div> </div> <Separator className="my-3" /> <Button className="w-full" > Use This Template </Button> </CardContent> </Card>) )
-}<AlertDialog open= {
-  !!templateToDelete
-}onOpenChange= {
-  () => setTemplateToDelete (null) "
-}> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" onClick={
-<<<<<<< HEAD
-  handleDeleteConfirm
-}> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>)
-}'"}
-;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-                  onClick = {() => handleDeleteClick(template && template.id),}
-                <Button;
-                  variant="ghost";
-                  size="icon";
-                  onClick={() => handleDeleteClick(template.id)}
-                  aria-label="Delete template";
-                >;
-                  <Trash className="h-4 w-4 text-destructive" />;
-                </Button>;
-              </div>;
-            </div>;
-            ;
-            <Separator className="my-3" />;
-            ;
-            <Button ;
-              onClick={() => onSelect(template)} ;
-              variant="outline" ;
-              className="w-full";
-            >;
-              Use This Template;
-            </Button>;
-          </CardContent>;
-        </Card>;
-      ))}
-      ;
-  handleDeleteConfirm
-}> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>)
-}'"}
-  handleDeleteConfirm ;
-}> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) ;
-}'"};
-
-
-  handleDeleteConfirm ;
-}> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) ;
-}'"};
-
-;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/contracts/templates/TemplateList.tsx
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>;
 </AlertDialog>
         <AlertDialogContent>;
@@ -907,188 +195,15 @@ return;
           <AlertDialogFooter>;
 </AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>;
-<<<<<<< HEAD:temp-disabled/src/components/contracts/templates/TemplateList.tsx
-            <AlertDialogAction;"
-              className="bg-destructive text-destructive-foreground hover:bg-destructive/90""
-              onClick = {handleDeleteConfirm,}>;
-</AlertDialogAction>
 
-=======
-<<<<<<< HEAD
-            <AlertDialogAction ;
-              className="bg-destructive text-destructive-foreground hover:bg-destructive/90";
-              onClick={handleDeleteConfirm}
-            >;
-            <AlertDialogAction;
-              className="bg-destructive text-destructive-foreground hover:bg-destructive/90";
-              onClick={handleDeleteConfirm}
-            >;
-=======
-            <AlertDialogAction
-              className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
-              onClick = {handleDeleteConfirm,}>;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              Delete;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/contracts/templates/TemplateList.tsx
+
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
-<<<<<<< HEAD:temp-disabled/src/components/contracts/templates/TemplateList.tsx
 
-    </div>;"
-      <div className="flex justify - center items - center py - 8">;"
-</div>"
-        <Loader2 className="h - 8 w - 8 animate - spin text - zion - purple" />;"
-</Loader2>
-      </div>);"
-      <div className="text - center py - 8">;"
-</div>"
-        <p className="text - muted - foreground">No templates found.</p>;""
-        <p className="text - sm text - muted - foreground">Save a contract as a template to reuse it later.</p>;"
-      </div>);"
-    <div className="space - y-3">;"
-</div>"
-        <Card key={template.id} className={template.is_default ? "border - zion - purple" : ""}>;"
-</Card>"
-          <CardContent className="p - 4">;"
-</CardContent>"
-            <div className="flex items - center justify - between">;"
-</div>"
-              <div className="space - y-1">;"
-</div>"
-                <div className="flex items - center gap - 2">;"
-</div>"
-                  <h3 className="font - medium">{template.title}</h3>;""
-                    <span className="bg - zion - purple / 10 text - zion - purple text - xs px - 2 py - 0.5 rounded - full">Default</span>)}"
-                </div>;"
-                <p className="text - xs text - muted - foreground">;"
-</p>
-=======
     </div>;
-<<<<<<< HEAD
-};
-const handleSetDefault = async (templateId: string) => {;
-  if (!user) {;
-  const currentPath = router && router.asPath;
-router && router.push (`/auth/login?returnTo=$ {;
-  encodeURIComponent (currentPath) ;
-}`);
-return ;
-}await setDefaultTemplate && setDefaultTemplate.mutateAsync (templateId) ;
-};
-<CardContent className="p-4"> <div className="flex items-center justify-between"> <div className="space-y-1"> <div className="flex items-center gap-2"> <h3 className="font-medium"> {;
-  template && template.title ;
-}</h3> {";
-  template && template.is default && (<span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0 && 0.5 rounded-full">Default</span>) ";
-}</div> <p className="text-xs text-muted-foreground"> Last updated: {;
-  new Date (template && template.updated at) .toLocaleDateString () ";
-}</p> </div> <div className="flex items-center gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> {";
-  !template && template.is default ? (<TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Buttonvariant="ghost" size="icon" onClick={
-  () => handleSetDefault (template && template.id) ";
-  ),; //useRouter replaces the old useLocation hook from react-router import {;
-  {;
-  {;
-  useRouter ;
-}from 'next/router';
-import {;
-  AlertDialog;
-AlertDialogAction;
-AlertDialogCancel;
-AlertDialogContent;
-AlertDialogDescription;
-AlertDialogFooter;
-AlertDialogHeader;
-interface TemplateListProps {;
-  templates: ContractTemplate[];
-isLoading: boolean;
-onSelect: (template: ContractTemplate) => void;
-onEdit: (template: ContractTemplate) => void ;
-}export function TemplateList ({;
-  templates;
-isLoading;
-onSelect;
-onEdit ;
-}: TemplateListProps) {;
-  const [templateToDelete,  setTemplateToDelete] = useState<string | null> (null);
-const {;
-  deleteTemplate, setDefaultTemplate ;
-}= useContractTemplates ();
-const {;
-  user ;
-}= useAuth ();
-const router = useRouter ();
-const handleDeleteClick = (templateId: string) => {;
-  setTemplateToDelete (templateId) ;
-};
-const handleDeleteConfirm = async () => {;
-  if (templateToDelete) {;
-  await deleteTemplate.mutateAsync (templateToDelete);
-setTemplateToDelete (null) ;
-}
-};
-const handleSetDefault = async (templateId: string) => {;
-  if (!user) {;
-  const currentPath = router.asPath;
-router.push (`/auth/login?returnTo=$ {;
-  encodeURIComponent (currentPath) ;
-}`);
-return ;
-}await setDefaultTemplate.mutateAsync (templateId) ;
-};
-<CardContent className="p-4"> <div className="flex items-center justify-between"> <div className="space-y-1"> <div className="flex items-center gap-2"> <h3 className="font-medium"> {;
-  template.title ;
-}</h3> {";
-  template.is default && (<span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0.5 rounded-full">Default</span>) ";
-}</div> <p className="text-xs text-muted-foreground"> Last updated: {;
-  new Date (template.updated at) .toLocaleDateString () ";
-}</p> </div> <div className="flex items-center gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> {";
-  !template.is default ? (<TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button variant="ghost" size="icon" onClick={;
-  () => handleSetDefault (template.id) ";
-}aria-label="Set as default" > <Star className="h-4 w-4" /> </Button> </TooltipTrigger> {;
-  !user && (<TooltipContent> Please log in to use this feature </TooltipContent>) ";
-}</Tooltip> </TooltipProvider>) : (<Button variant="ghost" size="icon" disabled aria-label="Default template"> <StarOff className="h-4 w-4" /> </Button>) ";
-}<Button > <Trash className="h-4 w-4 text-destructive" /> </Button> </div> </div> <Separator className="my-3" /> <Button className="w-full" > Use This Template </Button> </CardContent> </Card>) ) ;
-=======
-  );
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className="flex justify - center items - center py - 8">;
-        <Loader2 className="h - 8 w - 8 animate - spin text - zion - purple" />;
-      </div>);
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className="text - center py - 8">;
-        <p className="text - muted - foreground">No templates found.</p>;
-        <p className="text - sm text - muted - foreground">Save a contract as a template to reuse it later.</p>;
-      </div>);
-  }
-  return (
-    <div className="space - y-3">;
-      {templates.map ((template, ) => (
-        <Card key={template.id} className={template.is_default ? "border - zion - purple" : ""}>;
-          <CardContent className="p - 4">;
-            <div className="flex items - center justify - between">;
-              <div className="space - y-1">;
-                <div className="flex items - center gap - 2">;
-                  <h3 className="font - medium">{template.title}</h3>;
-                  {template.is_default && (
-                    <span className="bg - zion - purple / 10 text - zion - purple text - xs px - 2 py - 0.5 rounded - full">Default</span>)}
-                </div>;
-                <p className="text - xs text - muted - foreground">;
-                  Last updated: {new Date (template.updated_at).toLocaleDateString ()}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/contracts/templates/TemplateList.tsx
                 </p>;
               </div>;"
               <div className="flex items - center gap - 2">;"
@@ -1187,15 +302,7 @@ if ( {) {
 }<Button > <Trash className="h - 4 w - 4 text - destructive" /> </Button> </div> </div> <Separator className="my - 3" /> <Button className="w - full" > Use This Template </Button> </CardContent> </Card>) );"
 }<AlertDialog open= {
   !!templateToDelete;
-<<<<<<< HEAD:temp-disabled/src/components/contracts/templates/TemplateList.tsx
-}onOpenChange= {"
-  () => setTemplateToDelete (null) ";"
-</AlertDialog>"
-}> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle > Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel > Cancel</AlertDialogCancel> <AlertDialogAction className="bg - destructive text - destructive - foreground hover:bg - destructive / 90" on_click={"
-</AlertDialogContent>
-}> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>);"
 
-=======
 }onOpenChange= {
   () => setTemplateToDelete (null) ";
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle > Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel > Cancel</AlertDialogCancel> <AlertDialogAction className="bg - destructive text - destructive - foreground hover:bg - destructive / 90" on_click={
@@ -1214,9 +321,4 @@ if ( {) {
 }
 ;
 }
-<<<<<<< HEAD
-;
-=======
-;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/contracts/templates/TemplateList.tsx
+

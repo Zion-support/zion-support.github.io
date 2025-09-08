@@ -1,30 +1,13 @@
-<<<<<<< HEAD
-import { Trash2 } from 'lucide-react'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
 
-import { Badge  } from '@/components/ui/badge';
-import { Button  } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge',
-import { Button } from '@/components/ui/button',
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 import { Trash2 } from 'lucide-react'
 '
 import { SkillItemProps } from './types'
-<<<<<<< HEAD:src-disabled/components/resume-builder/forms/skills/SkillItem.tsx
-=======
+
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {
   return (
-<<<<<<< HEAD
-    <Badge
-      key = {skill.id,}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/resume-builder/forms/skills/SkillItem.tsx
+
 
 import { SkillItemProps } from './types';
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {;
@@ -166,24 +149,10 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
     </Badge>
   )
 
-<<<<<<< HEAD
-},
-},
 
-=======
 },
 
-<<<<<<< HEAD:src-disabled/components/resume-builder/forms/skills/SkillItem.tsx
-    </Badge>;
-  );
 
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    </Badge>;
-  );
-} };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/resume-builder/forms/skills/SkillItem.tsx
 };
 
 import { Badge } from '@/components / ui / badge';
@@ -236,8 +205,6 @@ export const SkillItem = ({ skill, category, on_delete }: SkillItemProps) =>: an
       </Button>;
     </Badge>);
 } },
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+

@@ -8,24 +8,8 @@ const BusinessIntelligenceChat: NextPage = () => ;
 
 ;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  return (<div>;
-import type { NextPage } from "next";"
-import Head from "next/head";"
-import Link from "next/link";"
-=======
->>>>>>> merged-prs-20250907-203621
-const BusinessIntelligenceChat: NextPage = () => ;
-  return (<div />;
-import type { NextPage } from \"next\";
-import Head from \"next/head\";
-import Link from \"next/link\";
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
 
 const BusinessIntelligenceChat: NextPage = () => {;
   return (
@@ -105,28 +89,8 @@ name=\"description\"}
 
 export default BusinessIntelligenceChat;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  return (<div>;
-      <Head>;
-        <title>BusinessIntelligenceChat - Zion Tech Solutions</title>;
-        <title>BusinessIntelligenceChat - Zion Tech Solutions</title>;
-        <title>BusinessIntelligenceChat - Zion Tech Solutions</title>;
-        <title>BusinessIntelligenceChat - Zion Tech Solutions</title>;
-=======
->>>>>>> merged-prs-20250907-203621
-const BusinessIntelligenceChat: NextPage = () => ;
-  return (<div />;
-      <Head />;
-        <title />BusinessIntelligenceChat - Zion Tech Solutions</title>;
-        <title />BusinessIntelligenceChat - Zion Tech Solutions</title>;
-        <title />BusinessIntelligenceChat - Zion Tech Solutions</title>;
-        <title />BusinessIntelligenceChat - Zion Tech Solutions</title>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
 ursor/fix-website-loading-errors-and-merge-6662;
   );
 }
@@ -135,15 +99,8 @@ ursor/fix-website-loading-errors-and-merge-6662;
 export default BusinessIntelligenceChat;
 
 
-<<<<<<< HEAD
-const BusinessIntelligenceChat: NextPage = () => {
-=======
-<<<<<<< HEAD
-const "BusinessIntelligenceChat": NextPage = () => {
-=======
-const BusinessIntelligenceChat: NextPage = () => {
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
  ;
   return (
     <div />
@@ -156,28 +113,8 @@ import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  return (<div>;
-}
-return (;
-    <div>;
-      <Head>;
-        <title > BusinessIntelligenceChat - Zion Tech Solutions</title>;
-=======
->>>>>>> merged-prs-20250907-203621
-const BusinessIntelligenceChat: NextPage = () => ;
-  return (<div />;
-const BusinessIntelligenceChat: NextPage = () => {
-  return (
-    <div />;
-      <Head />;
-        <title  /> BusinessIntelligenceChat - Zion Tech Solutions</title>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
         <meta;
           name=\"description\";}
           content=\"BusinessIntelligenceChat service\";}
@@ -205,22 +142,8 @@ export default BusinessIntelligenceChat;<div />;
     </div>;
   )},export default BusinessIntelligenceChat;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  return (<div>;
-      <Head>;
-        <title>BusinessIntelligenceChat - Zion Tech Solutions</title>;
-=======
->>>>>>> merged-prs-20250907-203621
-const BusinessIntelligenceChat: NextPage = () => ;
-  return (<div />;
-      <Head />;
-        <title />BusinessIntelligenceChat - Zion Tech Solutions</title>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
         <meta;
           name=\"description\";
           content=\"BusinessIntelligenceChat service\";
@@ -244,14 +167,8 @@ export default BusinessIntelligenceChat;<title />BusinessIntelligenceChat - Zion
 
 ;
 export default BusinessIntelligenceChat;
-<<<<<<< HEAD
-const BusinessIntelligenceChat: NextPage = () => {
-=======
-<<<<<<< HEAD
-=======
-const BusinessIntelligenceChat: NextPage = () => {
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
  ;
   return (
     <div />
@@ -273,14 +190,8 @@ name=\"description\"}
 
 export default BusinessIntelligenceChat;
 export default BusinessIntelligenceChat;
-<<<<<<< HEAD
-const BusinessIntelligenceChat: NextPage = () => {
-=======
-<<<<<<< HEAD
-=======
-const BusinessIntelligenceChat: NextPage = () => {
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
  ;
   return (
     <div />
@@ -305,14 +216,8 @@ export default BusinessIntelligenceChat;
         <title />BusinessIntelligenceChat - Zion Tech Solutions</title>
         <title />BusinessIntelligenceChat - Zion Tech Solutions</title>
 ;
-<<<<<<< HEAD
-const BusinessIntelligenceChat: NextPage = () => {
-=======
-<<<<<<< HEAD
-=======
-const BusinessIntelligenceChat: NextPage = () => {
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
  ;
   return (
     <div />

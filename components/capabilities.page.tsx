@@ -1,34 +1,5 @@
-<<<<<<< HEAD
-</div>) ) 
-}</div> </EnhancedLayout>) 
-}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-</div>) ) 
-}</div> </EnhancedLayout>) 
-}
-  );
-}
-=======
 
 
-<<<<<<< HEAD
-const CAPABILITIES = [;
-  'Full‑stack Web',;
-  'Mobile (iOS/Android)',;
-  'AI/ML',;
-  'Cloud & DevOps',;
-  'Data Engineering',;
-  'Blockchain',;
-  'IoT',;
-  'Security',];const CAPABILITIES = [;
-  'Full‑stack WebMobile (iOS/Android)AI/MLCloud & DevOpsData EngineeringBlockchainIoTSecurity';
-const CAPABILITIES = [
-  'Full‑stack WebMobile (iOS/Android)AI/MLCloud & DevOpsData EngineeringBlockchainIoTSecurity'
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ];
 export default function CapabilitiesPage() {;
   return (
@@ -36,158 +7,19 @@ export default function CapabilitiesPage() {;
 
         ))}
 
-<<<<<<< HEAD
-    <EnhancedLayout>
-      <h1 className="text-2xl font-semibold">Capabilities</h1>
-      <div className="mt-6 grid md:grid-cols-4 gap-4 text-sm">
-        {CAPABILITIES.map((c) => (
-          <div key={c} className="rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-gray-950">
-{c}
-          </div>
-        ))}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
       </div>;
     </EnhancedLayout>;
   );
 }
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  );
-}
-import EnhancedLayout from '../components / layout / EnhancedLayout';
-const CAPABILITIES = [;
-  'Full‑stack Web',
-  'Mobile (iOS / Android)',
-  'AI / ML',
-  'Cloud & DevOps',
-  'Data Engineering',
-  'Blockchain',
-  'IoT',
-  'Security', ];const CAPABILITIES = [;
-  'Full‑stack WebMobile (iOS / Android)AI / MLCloud & DevOpsData EngineeringBlockchainIoTSecurity';
-];
-;
-export default /**
- * CapabilitiesPage - Function description
- */
-function CapabilitiesPage() {
-  return (
-    <EnhancedLayout>;
-      <h1 className='text - 2xl font - semibold'>Capabilities</h1>;
-      <div className='mt - 6 grid md:grid - cols - 4 gap - 4 text - sm'>;
-        {CAPABILITIES.map (c => (
-          <div;
-            key={c}
-            className='rounded - xl border border - gray - 200 dark:border - gray - 800 px - 4 py - 3 bg - white dark:bg - gray - 950';
-          >            {c}      <h1 className="text - 2xl font - semibold">Capabilities</h1>;
-      <div className="mt - 6 grid md:grid - cols - 4 gap - 4 text - sm">;
-        {CAPABILITIES.map ((c) => (
-          <div key={c} className="rounded - xl border border - gray - 200 dark:border - gray - 800 px - 4 py - 3 bg - white dark:bg - gray - 950">;
-          </div>))}
-      </div>;
-    </EnhancedLayout>);
-import EnhancedLayout from '../components/layout/EnhancedLayout';
 
 
-const CAPABILITIES = [
-  'Full‑stack Web'
-  'Mobile (iOS/Android)'
-  'AI/ML'
-  'Cloud & DevOps'
-  'Data Engineering'
-  'Blockchain'
-  'IoT'
-  'Security',];const CAPABILITIES = [
-  'Full‑stack WebMobile (iOS/Android)AI/MLCloud & DevOpsData EngineeringBlockchainIoTSecurity'
-];
 
-export default function CapabilitiesPage() {
-  return (
-    <EnhancedLayout>
-      <h1 className='text-2xl font-semibold'>Capabilities</h1>
-      <div className='mt-6 grid md:grid-cols-4 gap-4 text-sm'>
-        {CAPABILITIES.map(c => (
-          <div
-            key={c}
-            className='rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-gray-950'
-          >            {c}      <h1 className="text-2xl font-semibold">Capabilities</h1>
-      <div className="mt-6 grid md:grid-cols-4 gap-4 text-sm">
-        {CAPABILITIES.map((c) => (
-          <div key={c} className="rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-gray-950">
-          </div>
-        ))}
-      </div>
-    </EnhancedLayout>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  )
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      </div>
-
-  );
-}
-
-<<<<<<< HEAD
-);
-}
-  );
-}
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     </EnhancedLayout>;
 );
 }
-=======
 
 
-<<<<<<< HEAD
-import EnhancedLayout from '../components/layout/EnhancedLayout';
-
-const CAPABILITIES = null;
-];
 
 
-export default function CapabilitiesPage() {
-  return (
-    <EnhancedLayout    />
-<h1 className='text-2xl font-semibold'    />Capabilities</h1>
-      <div className='mt-6 grid md: grid-cols-4 gap-4 text-sm'    />
-        {CAPABILITIES.map(c => (}
-          <div;}
-key={c}
-            className='rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-gray-950'    />
-
-            {,}
-}
-          </div>;
-        ))}
->>>>>>> origin/chore/fix-lint-and-merge
-
-      </div>
-    </EnhancedLayout>
-
-  );
-}
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621

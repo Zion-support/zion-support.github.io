@@ -1,6 +1,5 @@
 
-<<<<<<< HEAD:src/components/interviews/InterviewCard.tsx
-=======
+
 import React, { useState } from './react;
 import { Card, CardContent, CardFooter, CardHeader, CardTitle   } from @/components / ui / card';
 import { Button   } from '@/components / ui / button;
@@ -70,7 +69,7 @@ import { format, formatDistanceToNow, isPast, parseISO } from date-fns",
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog,
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from @/components/ui/dialog",
 
->>>>>>> merged-prs-20250907-203621:src_disabled_1757239864/components/interviews/InterviewCard.tsx
+
 import React, { useState } from "react";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";

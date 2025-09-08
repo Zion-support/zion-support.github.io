@@ -1,87 +1,5 @@
-<<<<<<< HEAD
-:src/components/listing/AIListingForm.tsx
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Sparkles } from 'lucide-react'
-interface AIListingFormProps {
-  onSubmit: (formData: {
-    title: string;
-    category: string;
-    keyFeatures: string;
-    targetAudience: string
-interface AIListingFormProps {
-  onSubmit: (formData: {
-    title: string
-    category: string
-    keyFeatures: string
-    targetAudience: string;
-  }) => void;
-  isLoading: boolean;  initialValues?: {
-    title?: string
-    category?: string
-    keyFeatures?: string
-    targetAudience?: string
-  };    title: string,
-    category: string,
-    keyFeatures: string,
-    targetAudience: string
-  },) => void,
-  isLoading: boolean,
-    title?: string
-    category?: string
-    keyFeatures?: string
-    targetAudience?: string
-  }
-export function AIListingForm({
-  onSubmit,
-  isLoading,
-  initialValues = {},
-}: AIListingFormProps) {
-  const { toast } = useToast()
-  const [title, setTitle] = useState(initialValues.title || '')
-  const [category, setCategory] = useState(initialValues.category || '')
-  const [keyFeatures, setKeyFeatures] = useState(
-    initialValues.keyFeatures || ''
-  )
-  const [targetAudience, setTargetAudience] = useState(
-    initialValues.targetAudience || ''
-  )
-  const handleSubmit = () => {
-    if (!title || !category) {
-      toast({
-        title: 'Missing required fields',
-        description: 'Please provide at least a title and category.',
-        variant: 'destructive',  const [title, setTitle] = useState(initialValues.title || "")
-  const [category, setCategory] = useState(initialValues.category || "")
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || "")
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || "")
-    if (!title || !category) {
-      toast({
-        title: 'Missing required fields',
-        description: 'Please provide at least a title and category.',
-        variant: 'destructive',
-      return;
-  initialValues?: {
-    title?: string;
-    category?: string;
-    keyFeatures?: string;
-    targetAudience?: string
-  }
-}
 
-export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
-  const { toast } = useToast(),
-  const [title, setTitle] = useState(initialValues.title || ""),
-  const [category, setCategory] = useState(initialValues.category || ""),
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
 
-  }) => void
-=======
->>>>>>> origin/chore/fix-lint-and-merge
 }) => void
   isLoading: boolean;  initialValues?: {
     title?: string
@@ -99,43 +17,8 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
     keyFeatures?: string
     targetAudience?: string
   }
-<<<<<<< HEAD
-:src/components/listing/AIListingForm.tsx
-export function AIListingForm({
-  onSubmit
-  isLoading
-  initialValues = {}
-}: AIListingFormProps) {
-  const [title, setTitle] = useState(initialValues.title |'')
-  const [category, setCategory] = useState(initialValues.category |'')
-    initialValues.keyFeatures |''
-  )
-    initialValues.targetAudience |''
-  )
-    if (!title |!category) {
-      toast({
-        title: 'Missing required fields'
-        description: 'Please provide at least a title and category.'
-        variant: 'destructive',  const [title, setTitle] = useState(initialValues.title |"")
-  const [category, setCategory] = useState(initialValues.category |"")
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures |"")
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience |"")
-    if (!title |!category) {
-      toast({
-        title: 'Missing required fields'
-        description: 'Please provide at least a title and category.'
-        variant: 'destructive'
-      return
-    }
-    onSubmit({
-      title
-      category
-      keyFeatures
-      targetAudience
-    })
-  }
-=======
->>>>>>> origin/chore/fix-lint-and-merge
+
+
 
 import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';

@@ -4,8 +4,7 @@ function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file
 
     } catch (error) {_;
       // Skip files that can't be accessed'};
-<<<<<<< HEAD
-=======
+
       continue
 }
 }
@@ -43,7 +42,7 @@ function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file
       };
     } catch (error) {;
       // Skip files that can't be accessed'};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       continue;
 };
 // Function to fix specific parsing errors;
@@ -58,15 +57,13 @@ function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file
     _,'
 }
 };
-<<<<<<< HEAD
-        fixedCount++}
-=======
+
         fixedCount++}
     } catch (error) {_;
-<<<<<<< HEAD
+
       errorCount++}
 }
-=======
+
   
       errorCount++}
 }
@@ -80,4 +77,4 @@ function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file
   };
 ,
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

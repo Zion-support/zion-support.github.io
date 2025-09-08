@@ -56,15 +56,12 @@ export;
    }) => {
 
 
-<<<<<<< HEAD
 
-const "variantClasses": Record<ButtonVariant, string> = {"primary":, bg-blue-600 text-white "hover": bg-blue-700 "focus":ring-blue-500, "secondary":, bg-gray-200 text-gray-900 "hover": bg-gray-300 "focus":ring-gray-500 "dark":bg-gray-700 "dark":text-white "dark":"hover":bg-gray-600, "ghost":, text-gray-700 "hover": bg-gray-100 "focus":ring-gray-500 "dark":text-gray-300 "dark":"hover":bg-gray-800, "gradient":, bg-gradient-to-r from-blue-600 to-purple-600 text-white "hover": from-blue-700 "hover":to-purple-700 "focus":ring-blue-50,;
-=======
 const [isHovered, setIsHovered] = useState(false);
   const baseClasses = 'relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden';
 }
 const variantClasses: Record<ButtonVariant, string    /> = {primary:, bg-blue-600 text-white hover: bg-blue-700 focus:ring-blue-500, secondary:, bg-gray-200 text-gray-900 hover: bg-gray-300 focus:ring-gray-500 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600, ghost:, text-gray-700 hover: bg-gray-100 focus:ring-gray-500 dark:text-gray-300 dark:hover:bg-gray-800, gradient:, bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: from-blue-700 hover:to-purple-700 focus:ring-blue-50}
->>>>>>> origin/chore/fix-lint-and-merge
+
 }
 
 const sizeClasses: Record<ButtonSize, string    /> = {sm:, px-3 py-2 text-sm;}

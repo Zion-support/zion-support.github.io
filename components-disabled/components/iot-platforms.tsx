@@ -49,18 +49,8 @@ return (
 import React from 'react';
 
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-}
-import React from 'react';'
 
 
-
-  );
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
 export default function IotPlatformsPage() {
   return (
     <div className='container mx-auto px-4 py-10' />

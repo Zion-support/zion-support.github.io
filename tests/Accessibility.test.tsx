@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import { render } from '@testing-library/react';
-import { axe, toHaveNoViolations } from 'jest-axe';
-import { ModeToggle } from '../components/ThemeToggle';
 
-expect.extend(toHaveNoViolations);
-
-test('ModeToggle has no accessibility violations', async () => {
-  const { container } = render(<ModeToggle />);
-  const results = await axe(container);
-  expect(results).toHaveNoViolations();
-});
-=======
 </ModeToggle>'
 </ModeToggle>'
 </ModeToggle>'
@@ -27,4 +14,4 @@ import { render, axe, toHaveNoViolations } from 'lucide-react'; import { ModeTog
 </ModeToggle>'
 </ModeToggle>'
 </ModeToggle>'
->>>>>>> merged-prs-20250907-203621
+

@@ -69,10 +69,7 @@ export function saveProject(project: Project): Project {
 }
 
 export function getProjectById(id: string): Project | undefined {
-<<<<<<< HEAD
-  return db.projects.find((p) => p.id === id)
-}
-=======
+
   const db = readDb()
   return db.projects.find((p) => p.id === id)
->>>>>>> origin/chore/fix-lint-and-merge
+

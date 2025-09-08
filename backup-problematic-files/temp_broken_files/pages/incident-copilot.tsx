@@ -1,29 +1,4 @@
-<<<<<<< HEAD:pages/incident-copilot.tsx
-import React from 'react';
-import Head from 'next/head';
 
-export default function IncidentCopilot() {
-  return (
-    <>
-      <Head>
-        <title>incident-copilot | Zion Tech Group</title>
-        <meta name="description" content="incident-copilot page" />
-      </Head>
-      <div className="min-h-screen bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              incident-copilot
-            </h1>
-            <p className="text-xl text-gray-600">
-              This is the incident-copilot page.
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-=======
 import React from 'react',;
 import Head from 'next/head',;
 import { Phone, Mail, MapPin, Check, ArrowRight, AlarmClock, Star } from 'lucide-react',;
@@ -83,5 +58,5 @@ export default function IncidentCopilotPage() {;
   service.name 
 }- Zion Tech Group</title>) ) 
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-rose-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </Layout>) 
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:backup-problematic-files/temp_broken_files/pages/incident-copilot.tsx
+
 }

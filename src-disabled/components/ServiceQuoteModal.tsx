@@ -1,64 +1,6 @@
 
-<<<<<<< HEAD:src-disabled/components/ServiceQuoteModal.tsx
-import { useState  } from 'react';
-origin/cursor/automate-test-improve-and-merge-code-2533
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
-import { Label } from "@/components/ui/label",;
-import { Slider } from "@/components/ui/slider",;
-import { Calendar } from "@/components/ui/calendar",;
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
-import { format } from "date-fns",;
-=======
-<<<<<<< HEAD
-            endDate: endDate?.toISOString()}
-...formData;            startDate: startDate?.toISOString()
-ursor/fix-website-loading-errors-and-merge-6662
-
-...formData;            startDate: startDate?.toISOString()
-...formData;            startDate: startDate?.toISOString(),
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-            endDate: endDate?.toISOString()}
-        }
-      })
-
-}
-}
-<<<<<<< HEAD
-;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-;
 
 
-...form_data;            start_date: start_date?.toISOString (),
-            end_date: end_date?.toISOString ()}
-        }
-      });
-}
-}
-
-
-
-;
-
-import { useState } from 'react',
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Label } from "@/components/ui/label",
-import { Slider } from "@/components/ui/slider",
-import { Calendar } from "@/components/ui/calendar",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { format } from "date-fns",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/ServiceQuoteModal.tsx
 import { CalendarIcon } from 'lucide-react'
 import { cn } from "@/lib/utils",;
 import { ProductListing } from "@/types/listings",;
@@ -940,21 +882,5 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     </Dialog>;
   );
 }
-<<<<<<< HEAD:src-disabled/components/ServiceQuoteModal.tsx
-;
-            </div>
-          </DialogFooter>
-        </form>
-      </DialogContent>
-    </Dialog>
 
-}
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-<<<<<<< HEAD
-;
-=======
-;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/ServiceQuoteModal.tsx
+

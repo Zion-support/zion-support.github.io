@@ -1,94 +1,12 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD:pages.disabled/protocol/un-bridge.tsx
-export default function UNBridge() {
-  const [form, setForm] = useState({
-    title: 'Zion DAO x Digital Labor Initiative';
-    targetInstitution: 'UN Development Programme';
-    type: 'Workforce Dev';
-    regionalScope: 'Global South';
-    budgetOrResolution: 'USD 3M over 24 months';
-    supportingMultiverses: 'Digital Labor, AI Ethics',
 
-    promptAssist: 'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
-    language: 'en'});
-  const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<any>(null),
-  const [translated, setTranslated] = useState<string>(''),
-
-  const onChange = null;
-      setResult((r: any) => ({ ...r, meta: data.meta }))
-    } finally { setLoading(false) }
-
-=======
 
 
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
     language: 'en',;
 
 
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-    title: 'Zion DAO x Digital Labor Initiative',
-    targetInstitution: 'UN Development Programme',
-    type: 'Workforce Dev',
-    regionalScope: 'Global South',
-    budgetOrResolution: 'USD 3M over 24 months',
-    supportingMultiverses: 'Digital Labor, AI Ethics',
-    promptAssist: 'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
-    language: 'en'}),
-const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<any>(null);
-  const [translated, setTranslated] = useState<string>('');
-  const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setForm((f) => ({ ...f, [name]: value }))
-  };
-import React, { useState } from 'react';
-export default function UNBridge() {
-  const [form, setForm] = useState({
 
-    title: 'Zion DAO x Digital Labor Initiative'
-    targetInstitution: 'UN Development Programme'
-    type: 'Workforce Dev'
-    regionalScope: 'Global South'
-    budgetOrResolution: 'USD 3M over 24 months'
-    supportingMultiverses: 'Digital Labor, AI Ethics'
-    promptAssist:
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'
-    language: 'en'
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
-    language: 'en',;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  });  const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<any>(null);
-  const [translated, setTranslated] = useState<string>('');
-  const onChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    const { name, value } = e.target;
-    setForm(f => ({ ...f, [name]: value }));  }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/protocol/un-bridge.tsx
   async function generate() {
     setLoading(true);
     try {
@@ -96,272 +14,38 @@ export default function UNBridge() {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:pages.disabled/protocol/un-bridge.tsx
-  async function generate() {}
-    setLoading(true);
-    try {'
-      const res = await fetch('/api/proposals/generate', {'
-        method: 'POST''
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({}
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/protocol/un-bridge.tsx
+
+
           ...form;
           supportingMultiverses: form.supportingMultiverses.split().map((s) => s.trim()).filter(Boolean)})}),
       const data = await res.json();
 
-<<<<<<< HEAD:pages.disabled/protocol/un-bridge.tsx
-  const [form, setForm] = useState({;'
-    title: 'Zion DAO x Digital Labor Initiative',;
 
-...form,
 
-          supportingMultiverses: form.supportingMultiverses
-            .split(',')
-            .map(s => s.trim())
-            .filter(Boolean)
-        })
-      });
-
-export default function UNBridge(req, res) {}
-  try {};
-  const [form, setForm] = useState({;'
-    title: 'Zion DAO x Digital Labor Initiative';
-
-      const data = await res.json();
-
-  const [form, setForm] = useState({;
-    title: 'Zion DAO x Digital Labor Initiative',;
-
-=======
-<<<<<<< HEAD
-=======
-  const [form, setForm] = useState({;
-    title: 'Zion DAO x Digital Labor Initiative',;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          ...form
-          supportingMultiverses: form.supportingMultiverses
-            .split(',')
-            .map(s => s.trim())
-            .filter(Boolean)
-        })
-      });
-      const data = await res.json();
-      setResult(data);
-    } finally {
-      setLoading(false);
-    }  }
-  async function translate(targetLanguage: string) {
-    if (!result?.markdown) return;
-    setLoading(true)
-    try {
-      const res = await fetch('/api/proposals/translate', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({ markdown: result.markdown, targetLanguage })
-      });
-      const data = await res.json();
-      setTranslated(data.translated);
-    } finally {
-      setLoading(false);
-    }  }
-  async function exportArtifacts() {
-    if (!result?.meta?.id) return;
-    setLoading(true);
-    try {
-      await fetch('/api/proposals/export', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({ id: result.meta.id })
-      });
-      // Refresh meta
-      const list = await fetch('/api/proposals/list');
-      const { proposals } = await list.json();
-      const updated = proposals.find((p: any) => p.id === result.meta.id)
-      setResult((r: any) => ({ ...r, meta: updated }));
-    } finally {
-      setLoading(false);
-    }  }
-  async function submit(channels: string[]) {
-    if (!result?.meta?.id) return;
-    setLoading(true)
-    try {
-      const res = await fetch('/api/proposals/submit', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({ id: result.meta.id, channels })
-      });
-      const data = await res.json();
-      setResult((r: any) => ({ ...r, meta: data.meta }));
-    } finally {
-      setLoading(false);
-    }
-
-  }
-export default function UNBridge(req, res) {
-  try {
-  const [form, setForm] = useState({;
-    title: 'Zion DAO x Digital Labor Initiative';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/protocol/un-bridge.tsx
     targetInstitution: 'UN Development Programme',;
     type: 'Workforce Dev',;
     regionalScope: 'Global South',;
     budgetOrResolution: 'USD 3M over 24 months',;
     supportingMultiverses: 'Digital Labor, AI Ethics',;
-<<<<<<< HEAD:pages.disabled/protocol/un-bridge.tsx
 
-=======
-<<<<<<< HEAD
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ markdown: result.markdown, targetLanguage })});
-      const data = await res.json();
-      setTranslated(data.translated)
-    } finally { setLoading(false) }
-  }
-  async function translate(): any (targetLanguage: string) {;
-    if (!result?.markdown) return;
-    setLoading(true),;
-=======
-<<<<<<< HEAD
-    promptAssist:;
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
-    language: 'en',;
-  });  const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<any>(null);
-  const [translated, setTranslated] = useState<string>('');
-  const onChange = (;
-    e: React && React.ChangeEvent<;
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
-    >;
-  ) => {;
-    const { name, value } = e && e.target;
-    setForm(f => ({ ...f, [name]: value }));  };
-  async function generate() {;
-    setLoading(true);
-    try {;
-      const res = await fetch('/api/proposals/generate', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({;
-          ...form,;
-          supportingMultiverses: form && form.supportingMultiverses;
-            .split(',');
-            .map(s => s && s.trim());
-            .filter(Boolean),;
-        }),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/protocol/un-bridge.tsx
-      });
-      const data = await res && res.json();
-      setResult(data);
-    } finally {;
-      setLoading(false);
 
-    }  }
-
-<<<<<<< HEAD:pages.disabled/protocol/un-bridge.tsx
-    try {;'
-      const res = await fetch('/api/proposals/translate', {;'
-        method: 'POST',;'
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({ markdown: result && result.markdown, targetLanguage }),;
-
-    }
-  }
-
-  async function translate(targetLanguage: string) {
-    if (!result?.markdown) return;
-    setLoading(true)
-    try {
-      const res = await fetch('/api/proposals/translate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify({ markdown: result.markdown, targetLanguage }),
-
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    try {;
-      const res = await fetch('/api/proposals/translate', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({ markdown: result && result.markdown, targetLanguage }),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/protocol/un-bridge.tsx
       });
       const data = await res && res.json();
       setTranslated(data && data.translated);
     } finally {;
       setLoading(false);
-<<<<<<< HEAD:pages.disabled/protocol/un-bridge.tsx
-=======
+
     }  }
-<<<<<<< HEAD
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id: result.meta.id })}),
-      // Refresh meta
-const list = await fetch('/api/proposals/list');
-      const { proposals } = await list.json();
-      const updated = proposals.find((p: any) => p.id === result.meta.id),
-      setResult((r: any) => ({ ...r, meta: updated }))
-    } finally { setLoading(false) }
-  }
-  async function exportArtifacts() {;
-    if (!result?.meta?.id) return;
-    setLoading(true);
-    try {;
-      await fetch('/api/proposals/export', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({ id: result && result.meta.id }),;
-      });
-      // Refresh meta;
-      const list = await fetch('/api/proposals/list');
-      const { proposals } = await list && list.json();
-      const updated = proposals && proposals.find((p: any) => p && p.id === result && result.meta.id),;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/protocol/un-bridge.tsx
 
-    }
-  }
-
-  async function exportArtifacts() {
-    if (!result?.meta?.id) return;
-    setLoading(true);
-    try {
-      await fetch('/api/proposals/export', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify({ id: result.meta.id }),
-
-      });
-      // Refresh meta;'
-      const list = await fetch('/api/proposals/list');
-
-      const { proposals } = await list && list.json();
-      const updated = proposals && proposals.find((p: any) => p && p.id === result && result.meta.id),;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setResult((r: any) => ({ ...r, meta: updated }));
     } finally {;
       setLoading(false);
 
     }  }
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD:pages.disabled/protocol/un-bridge.tsx
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/protocol/un-bridge.tsx
+
   async function submit(): any (channels: string[]) {;
     if (!result?.meta?.id) return;
     setLoading(true),;
@@ -370,26 +54,9 @@ body: JSON.stringify({ id: result.meta.id }),
         method: 'POST',;'
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ id: result && result.meta.id, channels }),;
-<<<<<<< HEAD:pages.disabled/protocol/un-bridge.tsx
 
-    }
-  }
 
-  async function submit(channels: string[]) {
-    if (!result?.meta?.id) return;
-    setLoading(true)
-    try {
-      const res = await fetch('/api/proposals/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify({ id: result.meta.id, channels }),
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/protocol/un-bridge.tsx
       });
       const data = await res && res.json();
       setResult((r: any) => ({ ...r, meta: data && data.meta }));
@@ -480,10 +147,9 @@ body: JSON.stringify({ id: result.meta.id, channels }),
               disabled={loading}'
               className='px-4 py-2 bg-black text-white rounded'>;'
               {loading ? 'Working…' : 'Generate Proposal'}
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
             </button>;
           </div>;
         </div>;'
@@ -517,25 +183,18 @@ body: JSON.stringify({ id: result.meta.id, channels }),
           </div>;
           {translated && (;'
             <div className='border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50'>;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
               {translated}
             </div>;
           )}'
           <div className='flex items-center gap-2'>;
             <button;
               onClick={exportArtifacts}
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:pages.disabled/protocol/un-bridge.tsx
-              disabled={loading || !result}'
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              disabled={loading || !result}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/protocol/un-bridge.tsx
+
+
               className='px-3 py-2 border rounded'>;
               Export PDF + Sign + IPFS;
             </button>;
@@ -550,14 +209,8 @@ body: JSON.stringify({ id: result.meta.id, channels }),
           {result?.meta && (;'
             <div className='text-sm space-y-1'>;
               <div>;
-<<<<<<< HEAD:pages.disabled/protocol/un-bridge.tsx
-'
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/protocol/un-bridge.tsx
+
                 <span className='font-medium'>Status:</span>{' '}
                 {result && result.meta.status}
               </div>;
@@ -591,121 +244,16 @@ body: JSON.stringify({ id: result.meta.id, channels }),
                 </div>              )}
             </div>;
           )}
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
         </div>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id: result.meta.id, channels })});
-      const data = await res.json();
-      setResult((r: any) => ({ ...r, meta: data.meta }))
-    } finally { setLoading(false) }
-  }
-    promptAssist: 'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
-    language: 'en'});
-  const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<any>(null);
-  const [translated, setTranslated] = useState<string>('');
-  const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
-    const { name, value } = e.target;
-    setForm((f) => ({ ...f, [name]: value }));
-  },;
-  async function generate() {;
-    setLoading(true);
-    try {
-      const res = await fetch('/api/proposals/generate', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON.stringify({;
-          ...form,;
-          supportingMultiverses: form.supportingMultiverses.split().map((s) => s.trim()).filter(Boolean)})}),;
-      const data = await res.json();
-      setResult(data);
-    } finally { setLoading(false)   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  async function translate(targetLanguage: string) {;
-    if (!result?.markdown) return;
-    setLoading(true);
-    try {
-      const res = await fetch('/api/proposals/translate', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON.stringify({ markdown: result.markdown, targetLanguage })}),;
-      const data = await res.json();
-      setTranslated(data.translated);
-    } finally { setLoading(false)   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  async function exportArtifacts() {;
-    if (!result?.meta?.id) return;
-    setLoading(true);
-    try {
-      await fetch('/api/proposals/export', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON.stringify({ id: result.meta.id })}),;
-      // Refresh meta;
-      const list = await fetch('/api/proposals/list');
-      const { proposals } = await list.json();
-      const updated = proposals.find((p: any) => p.id === result.meta.id);
-      setResult((r: any) => ({ ...r, meta: updated }));
-    } finally { setLoading(false)   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  async function submit(channels: string[]) {;
-    if (!result?.meta?.id) return,;
-    setLoading(true);
-    try {
-      const res = await fetch('/api/proposals/submit', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON.stringify({ id: result.meta.id, channels })});
-      const data = await res.json();
-      setResult((r: any) => ({ ...r, meta: data.meta }));
-    } finally { setLoading(false)   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
   return (
     <div className="space-y-6">"
       <h1 className="text-2xl font-semibold">Global Outreach: UN Bridge</h1>"
@@ -759,28 +307,13 @@ body: JSON.stringify({ id: result.meta.id, channels }),
             <textarea name="promptAssist" rows={5} value={form.promptAssist} onChange={onChange} className="w-full border rounded p-2" />
           </label>"
           <div className="flex gap-3">
-<<<<<<< HEAD:pages.disabled/protocol/un-bridge.tsx
-=======
+
             <button onClick={generate} disabled={loading} className="px-4 py-2 bg-black text-white rounded">{loading ? 'Working…' : 'Generate Proposal'}</button>
           </div>
         </div>
 
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/protocol/un-bridge.tsx
 
-        <div className="space-y-3">
-          <div className="text-sm opacity-70">Output</div>
-          <div className="border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50">
-            {result?.markdown || 'No draft yet'}
-<<<<<<< HEAD:pages.disabled/protocol/un-bridge.tsx
-
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/protocol/un-bridge.tsx
         <div className='space-y-3'>
           <div className='text-sm opacity-70'>Output</div>
           <div className='border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50'>
@@ -829,10 +362,8 @@ body: JSON.stringify({ id: result.meta.id, channels }),
             >
               Submit (Email)
             </button>
-<<<<<<< HEAD:pages.disabled/protocol/un-bridge.tsx
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/protocol/un-bridge.tsx
+
         <div className="space-y-3">
           <div className="text-sm opacity-70">Output</div>
           <div className="border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50">
@@ -841,10 +372,8 @@ body: JSON.stringify({ id: result.meta.id, channels }),
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages.disabled/protocol/un-bridge.tsx
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/protocol/un-bridge.tsx
+
           </div>
           <div className="flex items-center gap-2">
             <button onClick={() => translate('fr')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate FR</button>
@@ -852,42 +381,7 @@ body: JSON.stringify({ id: result.meta.id, channels }),
             <button onClick={() => translate('ar')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate AR</button>
           </div>
           {translated && (
-<<<<<<< HEAD
-            <div className='border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50'>
-              {translated}
-            </div>
-          )}
-          <div className='flex items-center gap-2'>
-            <button
-              onClick={exportArtifacts}
-              disabled={loading || !result}
-              className='px-3 py-2 border rounded'
-            >
-              Export PDF + Sign + IPFS
-            </button>
-            <button
-              onClick={() => submit(['email'])}
-              disabled={loading || !result}
-              className='px-3 py-2 border rounded'
-            >
-              Submit (Email)
-            </button>
-            <div className="border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50">
-              {translated  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </div>;
-          )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          <div className="flex items-center gap-2">
-            <button onClick={exportArtifacts} disabled={loading || !result} className="px-3 py-2 border rounded">Export PDF + Sign + IPFS</button>
-            <button onClick={() => submit(['email'])} disabled={loading || !result} className="px-3 py-2 border rounded">Submit (Email)</button>
-=======
+
 
             <div className="border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50">
               {translated  } catch (error) {
@@ -904,7 +398,7 @@ body: JSON.stringify({ id: result.meta.id, channels }),
           </div>
           <div className="flex items-center gap-2">
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
           </div>
           {result?.meta && (
             <div className="text-sm space-y-1">
@@ -914,42 +408,7 @@ body: JSON.stringify({ id: result.meta.id, channels }),
               )}
               {result.meta.artifacts?.pdfPath && (
 
-<<<<<<< HEAD
-                <div><a className="text-blue-600 underline" href={result.meta.artifacts.markdownPath} target="_blank" rel="noreferrer">Markdown</a></div>
-              )}
-              {result.meta.artifacts?.pdfPath && (
-                <div><a className="text-blue-600 underline" href={result.meta.artifacts.pdfPath} target="_blank" rel="noreferrer">PDF</a></div>
-              )}
-                <div><a className="text-blue-600 underline" href={result.meta.artifacts.markdownPath} target="_blank" rel="noreferrer">Markdown</Link></div>
-              )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              {result.meta.artifacts?.pdfPath && (
-                <div>
-                  <a
-                    className='text-blue-600 underline'
-                    href={result.meta.artifacts.pdfPath}
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    PDF
-                  </a>
-                </div>              )}
-              {result.meta.artifacts?.ipfsCid && (
-                <div>IPFS CID: {result.meta.artifacts.ipfsCid}</div>
-              )}
-              {result.meta.artifacts?.signature && (
-                <div>
-                  Signature: {result.meta.artifacts.signature.slice(0, 30)}…
-                </div>              )}
-            </div>
-          )}
-        </div>
-      </div>
-    </div>
-=======
+
 export default /**
  * UNBridge - Function description
  */
@@ -1060,16 +519,7 @@ if (return) {
     } finally {
       set_loading (false);
     }
-<<<<<<< HEAD:pages.disabled/protocol/un-bridge.tsx
 
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-
-}
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/protocol/un-bridge.tsx
                 <div><a className="text-blue-600 underline" href={result.meta.artifacts.pdfPath} target="_blank" rel="noreferrer">PDF</Link></div>
               )  } catch (error) {"
     console.error("Error:", error);"
@@ -1247,43 +697,9 @@ if (return) {
             </div>)}
         </div>;
       </div>;
-<<<<<<< HEAD
-    </div>);
-;
-);
 
-}
-                <div><a className="text-blue-600 underline" href={result.meta.artifacts.pdfPath} target="_blank" rel="noreferrer">PDF</Link></div>
-              )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              {result.meta.artifacts?.ipfsCid && (;
-                <div>IPFS CID: {result.meta.artifacts.ipfsCid}</div>;
-              )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              {result.meta.artifacts?.signature && (;
-                <div>Signature: {result.meta.artifacts.signature.slice(0, 30)}…</div>;
-              )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </div>;
-          )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        </div>;
-      </div>;
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
     </div>;
   );
   } catch (error) {
@@ -1292,51 +708,7 @@ if (return) {
   }
 }
 
-<<<<<<< HEAD:pages.disabled/protocol/un-bridge.tsx
-              </div>
-              {result.meta.artifacts?.markdownPath && (
-                <div>
-                  <a
-                    className='text-blue-600 underline'
-                    href={result.meta.artifacts.markdownPath}
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    Markdown
-                  </a>
-                </div>
-              )}
-              {result.meta.artifacts?.pdfPath && (
-                <div>
-                  <a
-                    className='text-blue-600 underline'
-                    href={result.meta.artifacts.pdfPath}
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    PDF
-                  </a>
-                </div>
-              )}
-              {result.meta.artifacts?.ipfsCid && (
-                <div>IPFS CID: {result.meta.artifacts.ipfsCid}</div>
-              )}
-              {result.meta.artifacts?.signature && (
-<div>
-                  Signature: {result.meta.artifacts.signature.slice(0, 30)}…
-                </div>
-              )}
-            </div>
-          )}
-        </div>
-      </div>
-    </div>
-);
-=======
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/protocol/un-bridge.tsx
+
+

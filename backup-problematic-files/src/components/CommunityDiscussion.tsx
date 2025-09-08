@@ -128,14 +128,10 @@ title: "What AI trends are you most excited for in 2025?";";
 body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?" ;
 };
 {;
-<<<<<<< HEAD
-  }
-  "id": 2;
-  }
-=======
+
   id: 2;
 const handleAddPost = () => {;
->>>>>>> origin/chore/fix-lint-and-merge
+
   if (!newTitle.trim () || !newBody.trim () ) return;
 setPosts ([ {;
   id: Date.now ();";

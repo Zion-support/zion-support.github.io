@@ -1,36 +1,10 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-import {ChevronDown, ChevronUp} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import {Checkbox} from "@/components/ui/checkbox";
-import {SkillsFilterProps} from "@/types/filters";
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-import { ChevronDown, ChevronUp } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { Checkbox } from "@/components/ui/checkbox";
-import { SkillsFilterProps } from "@/types/filters";
-<<<<<<< HEAD
-// Common skills in AI and tech
-const POPULAR_SKILLS = $2;
-=======
-import { Checkbox } from "@/components/ui/checkbox",
-import { SkillsFilterProps } from "@/types/filters",
-=======
-=======
 
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 // Common skills in AI and tech
 
 const POPULAR_SKILLS = [
   "Machine Learning",
->>>>>>> merged-prs-20250907-203621
+
   "Deep Learning",
   "Python",
   "TensorFlow",
@@ -45,39 +19,7 @@ const POPULAR_SKILLS = [
   "Node.js",
   "TypeScript",
   "DevOps",
-<<<<<<< HEAD
-  "Security"
-],
 
-export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {
-  return (
-    <div className="mb-6 border-b border-zion-blue-light pb-6">
-      <button
-        onClick={toggleSection}
-        className="flex w-full items-center justify-between text-white font-medium"
-      >
-        <span>Skills</span>
-        {expanded ? (
-          <ChevronUp className="h-4 w-4 text-zion-slate-light" />
-        ) : (
-          <ChevronDown className="h-4 w-4 text-zion-slate-light" />
-        )}
-      </button>
-      {expanded && (
-        <div className="mt-4 space-y-2">
-          {POPULAR_SKILLS.map(skill => (
-            <div key={skill} className="flex items-center">
-              <Checkbox
-                id={`skill-${skill}`}
-                checked={selectedSkills.includes(skill)}
-                onCheckedChange={() => toggleSkill(skill)}
-                className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
-              />
-              <label
-                htmlFor={`skill-${skill}`}
-                className="ml-2 text-sm text-zion-slate-light cursor-pointer"
-              >
-=======
 
   "Security"
 ],
@@ -110,41 +52,9 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
                 htmlFor={`skill-${skill}`}"
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import { ChevronDown, ChevronUp } from "lucide-react",;
-
-import { Button } from "@/components/ui/button",;
-import { Checkbox } from "@/components/ui/checkbox",;
-import { SkillsFilterProps } from "@/types/filters",;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      </button>;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 // Common skills in AI and tech;
-<<<<<<< HEAD
-  "Machine Learning";"
-  "Deep Learning";"
-  "Python";"
-  "TensorFlow";"
-  "PyTorch";"
-  "Computer Vision";"
-  "NLP";"
-  "Data Science";"
-  "AWS";"
-  "Docker";"
-  "Kubernetes";"
-  "React";"
-  "Node && Node.js";"
-  "TypeScript";"
-  "DevOps";"
-  "Security";"
-=======
+
 const POPULAR_SKILLS = [;
 
   "Machine Learning";
@@ -163,63 +73,17 @@ const POPULAR_SKILLS = [;
   "TypeScript";
   "DevOps";
   "Security";
->>>>>>> origin/chore/fix-lint-and-merge
+
 ];
 
       </button>;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
       {expanded && (;
         <div className="mt-4 space-y-2">;
           {POPULAR_SKILLS && POPULAR_SKILLS.map(skill => (;
             <div key={skill} className="flex items-center">;
-<<<<<<< HEAD
-              <Checkbox
 
-import { ChevronDown, ChevronUp } from "lucide-react",;
-import { Button } from "@/components/ui/button",;
-import { Checkbox } from "@/components/ui/checkbox",;
-import { SkillsFilterProps } from "@/types/filters",;
-;
-// Common skills in AI and tech;
-const POPULAR_SKILLS = [;
-  "Machine Learning",;
-  "Deep Learning",;
-  "Python",;
-  "TensorFlow",;
-  "PyTorch",;
-  "Computer Vision",;
-  "NLP",;
-  "Data Science",;
-  "AWS",;
-  "Docker",;
-  "Kubernetes",;
-  "React",;
-  "Node.js",;
-  "TypeScript",;
-  "DevOps",;
-  "Security";
-];
-export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {;
-  return (;
-    <div className="mb-6 border-b border-zion-blue-light pb-6">;
-      <button;
-        onClick={toggleSection}
-        className="flex w-full items-center justify-between text-white font-medium";
-      >;
-        <span>Skills</span>;
-        {expanded ? (;
-          <ChevronUp className="h-4 w-4 text-zion-slate-light" />;
-        ) : (;
-          <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
-        )}
-      </button>;
-      {expanded && (;
-        <div className="mt-4 space-y-2">;
-          {POPULAR_SKILLS.map(skill => (;
-            <div key={skill} className="flex items-center">;
-              <Checkbox;
-=======
 
               <Checkbox
 
@@ -241,22 +105,17 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
             </div>;
           ))}
         </div>;
-<<<<<<< HEAD
-=======
-      )}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 
     </div>;
   );
 }
 
-<<<<<<< HEAD
-=======
+
     </div>;
   );
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 ;
 export /**
  * SkillsFilter - Function description
@@ -352,102 +211,15 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
 };
 ;
 
-<<<<<<< HEAD
-};
-;
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-              <label;
-                htmlFor={`skill-${skill}`}
-                className="ml-2 text-sm text-zion-slate-light cursor-pointer";
-              >;
-                {skill}
-              </label>;
-<<<<<<< HEAD
-                className="ml-2 text-sm text-zion-slate-light cursor-pointer";"
-            </div>;          ))}
-}className="flex w-full items-center justify-between text-white font-medium" > <span>Skills</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />)"
-}</button> {
-  POPULAR SKILLS.map (skill => (<div key= {
-  skill;"
-}className="flex items-center" > <Checkbox > {"
-</div>)
-}</label> </div>) ) 
-}</div>) 
-    </div>"`;
-pr-12325
-}</div>) 
-              <label;
-                htmlFor={`skill-${skill}`}"
-                className="ml-2 text-sm text-zion-slate-light cursor-pointer""
-              >
-</label>
-              </label>
-            </div>
-=======
-            </div>;          ))}
-        </div>;
-      )}
-    </div>;
-  ),;}
- //Common skills in AI and tech const POPULAR SKILLS = [ "Machine Learning";
-"Deep Learning";
-"Python";
-"TensorFlow";
-"PyTorch";
-"Computer Vision";
-"NLP";
-"Data Science";
-"AWS";
-"Docker";
-"Kubernetes";
-"React";
-"Node.js";
-"TypeScript";
-"DevOps";
-"Security" ];
-toggleSection 
-}className="flex w-full items-center justify-between text-white font-medium" > <span>Skills</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) 
-}</button> {
-  POPULAR SKILLS.map (skill => (<div key= {
-  skill 
-}className="flex items-center" > <Checkbox > {
-  skill 
-}</label> </div>) ) 
-}</div>) 
-}</div>) 
-}
-                id={`skill-${skill}`}
-                checked={selectedSkills.includes(skill)}
-                onCheckedChange={() => toggleSkill(skill)}
-                className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
-              />
-              <label
-                htmlFor={`skill-${skill}`}
-                className="ml-2 text-sm text-zion-slate-light cursor-pointer"
-              >
->>>>>>> merged-prs-20250907-203621
-                {skill}
-              </label>
-            </div>
-          ))}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
         </div>
       )}
     </div>
   )
 }
-<<<<<<< HEAD
-=======
+
 };
-<<<<<<< HEAD
-;
-=======
-;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+
+

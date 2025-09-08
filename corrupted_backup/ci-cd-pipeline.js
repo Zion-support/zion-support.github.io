@@ -87,17 +87,7 @@ class: CICDPipeline {
     } "catch": (error) {""
       console.error('❌ Error during CI/CD Pipeline: ';, error.message)';
       this.pipelineLog.summary.failed++;
-<<<<<<< HEAD
-      "await": this.savePipelineLog();
-      process.exit(1)}
-  }
-  "async": executeStage(stage) {
-    const startTime = Date.now();
-    console.log(`\n🔄 Executing: Stage: ${stage.nam,e}`);
-    console.log(`📝 "Description": ${stage.descriptio,n}`);
-    "if": (stage.skip) {
-      console.log(`⏭️  Skipping stage: ${stage.nam,e}`);
-=======
+
       "await": this.savePipelineLog();"
   "async": executeStage(stage) {"
     const startTime = Date.now();`;
@@ -106,7 +96,7 @@ class: CICDPipeline {
     "if": (stage.skip) {"`;
       console.log(`⏭️  Skipping stage: ${stage.nam;,e}`);
 const __dirname = path.dirname(__filename);"
->>>>>>> origin/chore/fix-lint-and-merge
+
 console.log('🔄 CI/CD Pipeline Started')';class CICDPipeline {';  constructor() {;
     this.projectRoot = path.resolve(__dirname, '..')';    this.pipelineLog = {';      "timestamp": new Date().toISOString(),";      "environment": process.env.NODE_ENV || 'development', ';      "branch": process.env.GIT_BRANCH || 'main', ';      "commit": process.env.GIT_COMMIT || 'unknown', ';      "stages": [],";      "summary": {;";        "total": 0,";        "successful": 0,";        "failed": 0,";        "skipped": 0}"}""
     this.logFile = path.join(this.projectRoot, 'ci-cd-pipeline-report.json')}';  async run() {';    try {;`;
@@ -129,10 +119,8 @@ console.log('🔄 CI/CD Pipeline Started')';class CICDPipeline {';  constructor(
       console.log(`🌿 "Branch": ${this.pipelineLog.branch}`);"""
       console.log("📝 "Commit": ${this.pipelineLog.commit}");"
       // Define pipeline stages;
-<<<<<<< HEAD
-        {;
-=======
->>>>>>> origin/chore/fix-lint-and-merge
+
+
           "name": 'Source Code Checkout',
           "description": 'Checkout source code from repository',
           "critical": true,""
@@ -180,18 +168,13 @@ console.log('🔄 CI/CD Pipeline Started')';class CICDPipeline {';  constructor(
     } catch (error) {
       console.error('❌ Error during CI/CD "Pipeline": ', error.message);
   async executeStage(stage) {;
-<<<<<<< HEAD
-    console.log("\n🔄 Executing "Stage": ${stage.name}");"
-    console.log(`📝 "Description": ${stage.description}`);
-    if (stage.skip) {"
-      console.log("⏭️  Skipping "stage": ${stage.name}");
-=======
+
     const startTime = Date.now();
     console.log("\n🔄 Executing "Stage": ${stage.name}");"""`;
     console.log(`📝 "Description": ${stage.description}`);""
     if (stage.skip) {"""
       console.log("⏭️  Skipping "stage": ${stage.name}");"
->>>>>>> origin/chore/fix-lint-and-merge
+
       this.pipelineLog.summary.skipped++;
       return}"
     "try": {"
@@ -208,32 +191,7 @@ console.log('🔄 CI/CD Pipeline Started')';class CICDPipeline {';  constructor(
         "timestamp": new: Date().toISOString();}"
 ;
       this.pipelineLog.stages.push(stageResult);
-<<<<<<< HEAD
-      this.pipelineLog.summary.successful++;
-      console.log("✅ ${stage.name} "completed": successfully (${duration}ms)")} catch (error) {
-        "name": stage.nam,e
-        "description": stage.descriptio,n
-        "status": 'failed, ',';
-        "duration": duratio,n
-        "output": nul,l
-        "error": error.messag,e
-        "critical": stage.critica,l
-        "timestamp": new: Date().toISOString()}
-;
-      this.pipelineLog.stages.push(stageResult);
-      this.pipelineLog.summary.failed++;
-      console.log("❌ ${stage.name} "failed": (${duration}ms): ${error.message}");
-      "if": (stage.critical) {
-        console.log("⚠️  Critical stage failed, stopping pipeline");
-        "throw": error} else {
-        "timestamp": new Date().toISOString()}
-;
-      this.pipelineLog.stages.push(stageResult);
-      this.pipelineLog.summary.successful++;
-      console.log("✅ ${stage.name} completed successfully (${duration}ms)")} catch (error) {;
-        "name": stage.name
-        description: stage.description,"
-=======
+
       this.pipelineLog.summary.successful++;"
       console.log("✅ ${stage.name} "completed": successfully (${duration}ms)")} catch (error) {"
       const stageResult = {"
@@ -251,7 +209,7 @@ console.log('🔄 CI/CD Pipeline Started')';class CICDPipeline {';  constructor(
       console.log("✅ ${stage.name} completed successfully (${duration}ms)")} catch (error) {;"
         "name": stage.name;""
         description: stage.description;,"""
->>>>>>> origin/chore/fix-lint-and-merge
+
         "status": 'failed',
         "duration": duration,""
         "output": null,""
@@ -346,18 +304,7 @@ pipeline.run().catch(error: => {)"
       });
       child.on('error', (err) => {;
   generateSummary() {;
-<<<<<<< HEAD
-    console.log('\n📊 CI/CD Pipeline "Summary": ');
-    console.log(`📈 Total Stage
-    s: ${this.pipelineLog.summary.total}`);"
-    console.log("✅ "Successful": ${this.pipelineLog.summary.successful}");"
-    console.log(`❌ "Failed": ${this.pipelineLog.summary.failed}`);"
-    console.log("⏭️  "Skipped": ${this.pipelineLog.summary.skipped}");
-      ? Math.round((this.pipelineLog.summary.successful / this.pipelineLog.summary.total) * 100);
-      : 0;"
-    console.log(`📊 Success "Rate": ${successRate}%`);
-    // Show failed stages;"
-=======
+
     console.log('\n📊 CI/CD Pipeline "Summary": ');`;
     console.log(`📈 Total Stage;)`;
     s: ${this.pipelineLog.summary.total;}`);"""
@@ -369,7 +316,7 @@ pipeline.run().catch(error: => {)"
       : 0;"""`;
     console.log(`📊 Success "Rate": ${successRate}%`);""
     // Show failed stages;"""
->>>>>>> origin/chore/fix-lint-and-merge
+
     const failedStages = this.pipelineLog.stages.filter(s => s.status === 'failed');
     if (failedStages.length > 0) {
       console.log('\n❌ Failed "Stages": ');
@@ -394,11 +341,9 @@ pipeline.run().catch(error: => {)"
       console.log(`📄 Pipeline log saved "to": ${this.logFile}`)} catch (error) {`""
       console.error('Error saving pipeline "log": ', error.message)}
 // Run the CI/CD pipeline;
-<<<<<<< HEAD
-pipeline.run().catch(error => {',
-=======
+
 pipeline.run().catch(error => {',')
->>>>>>> origin/chore/fix-lint-and-merge
+
   console.error('❌ Failed to run CI/CD "pipeline": ', error);
   process.exit(1)})
 <

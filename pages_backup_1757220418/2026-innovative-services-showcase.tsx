@@ -1,29 +1,4 @@
-<<<<<<< HEAD:pages_backup_1757220418/2026-innovative-services-showcase.tsx
-//Category filter if (selectedCategory !== 'all') {
-  filtered = filtered.filter (service => {
-  switch (selectedCategory) {
-  case 'ai': return service.category?.includes ('AI')
-case 'quantum': return service.category?.includes ('Quantum')
-case 'enterprise': return service.category?.includes ('Enterprise')
-case 'micro-saas': return service.category?.includes ('Micro SaaS')
-case 'emerging': switch (selectedPriceRange) {
-  case 'low': return price < 500
-case 'medium': return price >= 500 && price <= 1000
-case 'high': 
-}//Search filter if (searchTerm) {
-  filtered = filtered.filter (service => service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.category.toLowerCase () .includes (searchTerm.toLowerCase () ) //Sort filtered.sort ( (a, b) => {
-  switch (sortBy) {
-  case 'price': case 'rating': return b.rating - a.rating
-case 'popularity': return filtered
-}, [allServices, selectedCategory, selectedPriceRange, searchTerm, sortBy])
-const containerVariants = {
-  hidden: {
-  opacity: 0 
-}
-visible: {
-  opacity: 1, transition: {
-  staggerChildren: 0.1 
-=======
+
 import React, { useState, useMemo } from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
@@ -229,7 +204,7 @@ import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/2026-innovative-services-showcase.tsx
+
 }
               animate={{ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);

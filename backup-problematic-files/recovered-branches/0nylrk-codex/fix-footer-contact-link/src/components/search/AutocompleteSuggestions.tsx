@@ -47,14 +47,12 @@ export function AutocompleteSuggestions({ ;
                 <span className="text-xs text-zion-slate-light capitalize">;"
 </span>
                 </span>;
-<<<<<<< HEAD
-              </div>;
-=======
+
               </div>;
             </li>;
           ),;
         })}
-<<<<<<< HEAD
+
       </ul>;
     </div>;
   ),;  if (!searchTerm || searchTerm.length === 0) {
@@ -182,4 +180,4 @@ return (<li key= {
 }) 
 }</ul> </div>) 
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

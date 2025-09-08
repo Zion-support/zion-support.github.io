@@ -1,22 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || 'placeholder-service-key';
-
-let cachedClient: SupabaseClient | null = null;
-
-export function createServerClient() {
-  return createClient(supabaseUrl, supabaseServiceKey);
-}
-
-=======
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 const supabaseUrl = $2;
 const serviceRoleKey = $2;
 let cachedClient: SupabaseClient | null = $2;
->>>>>>> merged-prs-20250907-203621
+
 export function getServerSupabase(): SupabaseClient {
   if (cachedClient) return cachedClient;
   cachedClient = createClient(supabaseUrl, supabaseServiceKey, {
@@ -31,8 +18,7 @@ export function getServerSupabase(): SupabaseClient {
 export function getClientSupabase() {
   return createClient(supabaseUrl, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '');
 }
-<<<<<<< HEAD
-=======
+
 const supabaseUrl ="
   process.env.NEXT_PUBLIC_SUPABASE_URL || "https://placeholder.supabase.co";
 const supabaseKey ="
@@ -92,7 +78,6 @@ function getServerSupabase() {
 
 export function getServerSupabase() {;
   return createClient(supabaseUrl, supabaseKey);
->>>>>>> origin/chore/fix-lint-and-merge
+
 }
-=======
->>>>>>> merged-prs-20250907-203621
+

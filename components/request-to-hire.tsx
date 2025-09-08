@@ -1,141 +1,5 @@
-<<<<<<< HEAD
-</div>) 
-}</button> </form> </div>) 
-}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useEffect, useMemo, useState } from 'react';
-import { useRouter } from 'next/router';
-import { TALENT_PROFILES } from '../data/talent';
-</div>) 
-}</button> </form> </div>) 
-}
-export default function RequestToHirePage() {
-import { useEffect, useMemo, useState  } from 'react';
-export default function RequestToHirePage() {export default function RequestToHirePage() {const router = useRouter()const { talent } = router.query as { talent?: string }
-  const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent)[talent];
-  )export default function RequestToHirePage() {const router = useRouter()const { talent } = router.query as { talent?: string }
-  const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent])const [form, setForm] = useState({name: ',email: ',budget: ',timeline: ',export default function RequestToHirePage() {const router = useRouter()const { talent } = router && router.query as { talent?: string }const selected = useMemo(() => TALENT_PROFILES && TALENT_PROFILES.find(t => t && t.slug === talent),[talent];
-  )export default function RequestToHirePage() {const router = useRouter()const { talent } = router && router.query as { talent?: string }const selected = useMemo(() => TALENT_PROFILES && TALENT_PROFILES.find(t => t && t.slug === talent), [talent])const [form, setForm] = useState({name: ',email: ',budget: ',timeline: ',,description: '})const [submitting, setSubmitting] = useState(false)const [result, setResult] = useState<null| { id: string message: string }>(null;
-  )const [error, setError] = useState<string | null>(null),description: '}),const [submitting, setSubmitting] = useState(false)const [result, setResult]  = useState<null | { id: string, message: string }>(null),const router = null;
-  })const [submitting, setSubmitting] = useState(false)const [result, setResult] = useState<null | { id: string; message: string }>(null;
-  )const [error, setError] = useState<string | null>(null)setError(Please fill in name, email, and description.')return;    }      return;
-      const data = await res.json()if (!res.ok) throw new Error(data.error |'Failed to submit)setResult({ id: data.id, message: Request submitted successfully.' })} catch (err: any) {setError(err.message |'Something went wrong)} finally {setSubmitting(false)}if (result) {return (<div className=max-w-xl mx-auto py-12'>;
 
 
-=======
-
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
-}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
-  render() {if (this.state.hasError) ;}
-  return <div    />Something went wrong.</div>;}
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-
-import { useEffect, useMemo, useState } from 'react';
-<<<<<<< HEAD
-import { useRouter } from 'next/router';
-import { TALENT_PROFILES } from '../data/talent';
-export default function RequestToHirePage() {
-
-
-export default function RequestToHirePage() {;
-  const router = useRouter();
-  const { talent } = router.query as { talent?: string }
-  const selected = useMemo(
-    () => TALENT_PROFILES.find(t => t.slug === talent)
-    [talent]
-  );export default function RequestToHirePage() {;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-<<<<<<< HEAD
-export default function RequestToHirePage() {
-}
-  const router = null;}
-=======
-
-  const router = useRouter();
-  const { talent } = router.query as { talent?: string }
-  const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]);
-
-
-  const [form, setForm] = useState({
-<<<<<<< HEAD
-  const router = useRouter();
-  const { talent } = router.query as { talent?: string }
-  const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]);
-  const [form, setForm] = useState({
-=======
-=======
-import { use_router } from 'next / router';
-import { TALENT_PROFILES } from '../data / talent';
-;
-export default /**
- * RequestToHirePage - Function description
- */
-function RequestToHirePage() {
-  const router = use_router ();
-  const { talent } = router.query as { talent?: string }
-  const selected = useMemo (
-    () => TALENT_PROFILES.find (t => t.slug === talent),
-    [talent]);export default /**
- * RequestToHirePage - Function description
- */
-function RequestToHirePage() {
-  const router = use_router ();
-  const { talent } = router.query as { talent?: string }
-  const selected = useMemo (() => TALENT_PROFILES.find (t => t.slug === talent), [talent]);
-  const [form, set_form] = useState ({
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    name: '',
-    email: '',
-    budget: '',
-    timeline: '',
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-export default function RequestToHirePage() {;
-  const router = useRouter();
-  const { talent } = router && router.query as { talent?: string };
-  const selected = useMemo(;
-    () => TALENT_PROFILES && TALENT_PROFILES.find(t => t && t.slug === talent),;
-    [talent];
-  );export default function RequestToHirePage() {;
-  const router = useRouter();
-  const { talent } = router && router.query as { talent?: string };
-  const selected = useMemo(() => TALENT_PROFILES && TALENT_PROFILES.find(t => t && t.slug === talent), [talent]);
-  const [form, setForm] = useState({;
-    name: '',;
-    email: '',;
-    budget: '',;
-    timeline: '',;
-    description: '',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   });
 
 const [submitting, setSubmitting] = useState(false);
@@ -143,20 +7,7 @@ const [submitting, setSubmitting] = useState(false);
 const [result, setResult] = useState<null | { id: string; message: string,}
 }    />(
     null;
-<<<<<<< HEAD
-  );
 
-const [error, setError] = useState<string | null>(null);
-      setError('Please fill in name, email, and description.');
->>>>>>> origin/chore/fix-lint-and-merge
-
-return;
-
-    }
-
-<<<<<<< HEAD
-
-=======
 const normalizedBudget = form.budget.replace(/[^0-9.\-]/g, '')setSubmitting(true)try ;
   const res = await fetch('/api/requests/create', {method: 'POST';}
         headers: { 'Content-Type': 'application/json',}
@@ -168,128 +19,7 @@ const normalizedBudget = form.budget.replace(/[^0-9.\-]/g, '')setSubmitting(true
   return (<div className='max-w-xl mx-auto py-12'    />;
         <h1 className='text-2xl font-semibold mb-2'    />Thanks!</h1>;
         <p className='text-gray-600 mb-4'    />;
-=======
-  );  const [error, setError] = useState<string | null>(null);    description: ''}),;
-  const [submitting, setSubmitting] = useState(false);
-  const [result, setResult] = useState<null | { id: string, message: string }>(null),;
-  const [error, setError] = useState<string | null>(null);
-  const onSubmit = async (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-    setError(null),;
-    if (!form && form.name || !form && form.email || !form && form.description) {;
-      setError('Please fill in name, email, and description.');
-      return;    }      return;
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    setError(null);
-    if (!form.name || !form.email || !form.description) {
-      setError('Please fill in name, email, and description.');
-      return
-<<<<<<< HEAD
-    }
-          ...form;
-          budget: normalizedBudget,
-          talentSlug: selected?.slug || null})}),
-    name: ''
-    email: ''
-    budget: ''
-    timeline: ''
-    description: ''
-  });
-  const [submitting, setSubmitting] = useState(false);
-  const [result, setResult] = useState<null | { id: string; message: string }>(
-    null
-  );  const [error, setError] = useState<string | null>(null);    description: ''})
-  const [submitting, setSubmitting] = useState(false);
-  const [result, setResult] = useState<null | { id: string, message: string }>(null)
-  const [error, setError] = useState<string | null>(null);
-  const onSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError(null)
-    if (!form.name |!form.email |!form.description) {
-      setError('Please fill in name, email, and description.');
-      return;    }      return
-    }
-    const normalizedBudget = form.budget.replace(/[^0-9.\-]/g, '');
-    setSubmitting(true);
-    try {
-      const res = await fetch('/api/requests/create', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
-          ...form
-          budget: normalizedBudget
-          talentSlug: selected?.slug |null
-        })
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error |'Failed to submit');
-      setResult({ id: data.id, message: 'Request submitted successfully.' });
-    } catch (err: any) {
-      setError(err.message |'Something went wrong');
-    } finally {
-      setSubmitting(false);    }          budget: normalizedBudget
-          talentSlug: selected?.slug |null})})
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    }
-
-          ...form;
-          budget: normalizedBudget,
-          talentSlug: selected?.slug || null})}),
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error |'Failed to submit');
-      setResult({ id: data.id, message: 'Request submitted successfully.' })
-    } catch (err: any) {
-      setError(err.message |'Something went wrong')
-    } finally {
-      setSubmitting(false)
-
-    }
-
-  };
-
-
-
-    const normalizedBudget = form && form.budget.replace(/[^0-9.\-]/g, '');
-    setSubmitting(true);
-    try {;
-      const res = await fetch('/api/requests/create', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({;
-          ...form,;
-          budget: normalizedBudget,;
-          talentSlug: selected?.slug || null,;
-        }),;
-      });
-      const data = await res && res.json();
-      if (!res && res.ok) throw new Error(data && data.error || 'Failed to submit');
-      setResult({ id: data && data.id, message: 'Request submitted successfully.' });
-    } catch (err: any) {;
-      setError(err && err.message || 'Something went wrong');
-    } finally {;
-      setSubmitting(false);    }          budget: normalizedBudget,;
-          talentSlug: selected?.slug || null})}),;
-      const data = await res && res.json();
-      if (!res && res.ok) throw new Error(data && data.error || 'Failed to submit');
-      setResult({ id: data && data.id, message: 'Request submitted successfully.' });
-    } catch (err: any) {;
-      setError(err && err.message || 'Something went wrong');
-    } finally {;
-      setSubmitting(false);
-<<<<<<< HEAD
-=======
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   }
   if (result) {;
@@ -297,7 +27,7 @@ const normalizedBudget = form.budget.replace(/[^0-9.\-]/g, '')setSubmitting(true
       <div className='max-w-xl mx-auto py-12'>;
         <h1 className='text-2xl font-semibold mb-2'>Thanks!</h1>;
         <p className='text-gray-600 mb-4'>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
           We received your request. We will notify the appropriate team.;
         </p>;
         <div className='text-sm text-gray-500'    />;
@@ -319,116 +49,65 @@ const normalizedBudget = form.budget.replace(/[^0-9.\-]/g, '')setSubmitting(true
           <label className='block text-sm font-medium mb-1'    />Your Name</label>;
           <input;
             className='w-full border rounded px-3 py-2';
->>>>>>> origin/chore/fix-lint-and-merge
+
             value={form && form.name}
             onChange={e =    /> setForm({ ...form, name: e && e.target.value },
 }
           />;
         </div>;
-<<<<<<< HEAD
-        <div>;
 
-=======
         <div    />;
           <label className='block text-sm font-medium mb-1'    />Email</label>;
           <input;
             type='email';
             className='w-full border rounded px-3 py-2';
->>>>>>> origin/chore/fix-lint-and-merge
+
             value={form && form.email}
             onChange={e =    /> setForm({ ...form, email: e && e.target.value },
 }
           />;
         </div>;
-<<<<<<< HEAD
-        <div>;
 
-=======
         <div    />;
           <label className='block text-sm font-medium mb-1'    />Budget (USD)</label>;
           <input;
             className='w-full border rounded px-3 py-2';
             placeholder='$5,000';
->>>>>>> origin/chore/fix-lint-and-merge
+
             value={form && form.budget}
             onChange={e =    /> setForm({ ...form, budget: e && e.target.value },
 }
           />;
         </div>;
-<<<<<<< HEAD
-        <div>;
 
-=======
         <div    />;
           <label className='block text-sm font-medium mb-1'    />Timeline</label>;
           <input;
             className='w-full border rounded px-3 py-2';
             placeholder='2-3 months';
->>>>>>> origin/chore/fix-lint-and-merge
+
             value={form && form.timeline}
             onChange={e =    /> setForm({ ...form, timeline: e && e.target.value },
 }
           />;
         </div>;
-<<<<<<< HEAD
-        <div>;
 
-=======
         <div    />;
           <label className='block text-sm font-medium mb-1'    />;
             Project Description;
           </label>;
           <textarea;
             className='w-full border rounded px-3 py-2';
->>>>>>> origin/chore/fix-lint-and-merge
+
             rows={5}
             value={form && form.description}
             onChange={e =    /> setForm({ ...form, description: e && e.target.value },
 }
           />;
         </div>;
-<<<<<<< HEAD
 
-        </button>
-      </form>
-    </div>
-        <button;
-          disabled={submitting}className=px-4 py-2 rounded bg-black text-white'>          {submitting ? 'Submitting… : Submit Request'}      </div>;
-    )}
-  return (<div className="max-w-xl mx-auto>;
-          className='px-4 py-2 rounded bg-black text-white>          {submitting ? Submitting…' : 'Submit Request}      </div>;
-    );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-  };
 
-    }
-  };
-=======
 
-=======
-    }
-  };
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  if (result) {
-    return (
-      <div className="max-w-xl mx-auto py-12">
-        <h1 className="text-2xl font-semibold mb-2">Thanks!</h1>
-        <p className="text-gray-600 mb-4">We received your request. We will notify the appropriate team.</p>
-        <div className="text-sm text-gray-500">Confirmation ID: {result.id}</div>
-<<<<<<< HEAD
-</div>
-    )
-=======
-      </div>
-    )
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   }
   return (
     <div className=max-w-xl mx-auto">;
@@ -454,55 +133,10 @@ const normalizedBudget = form.budget.replace(/[^0-9.\-]/g, '')setSubmitting(true
           <label className=block text-sm font-medium mb-1" htmlFor="input-Project Description>Project Description</label>;
           <textarea className=w-full border rounded px-3 py-2" rows={5} value={form && form.description} onChange={(e) => setForm({ ...form, description: e && e.target.value })} />;
         </div>;
-<<<<<<< HEAD
-        {error && <div className="text-sm text-red-600>{error}</div>}
-  )}
-    description: '})const [submitting, set_submitting] = useState (false)const [result, set_result] = useState < null | { id: string; message: string }>(null)const [error, set_error] = useState < string | null>(null),description: '}),const [submitting, set_submitting] = useState (false)const [result, set_result] = useState < null | { id: string, message: string }>(null),const [error, set_error]  = useState < string | null>(null)const on_submit = async (e: React.FormEvent) => {e.prevent_default ()set_error (null),// Check condition;
-if ( {) {$2;
-}
-      set_error ('Please fill in name, email, and description.)return;    }      return;
-=======
+
         {error && <div className="text-sm text-red-600">{error}</div>}
 
-<<<<<<< HEAD
-        <button disabled={submitting} className="px-4 py-2 rounded bg-black text-white">
-          {submitting ? 'Submitting…' : 'Submit Request'}
-=======
 
-          {submitting ? 'Submitting…' : 'Submit Request'}
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        </button>;
-      </form>;
-    </div>;
-  );
-}
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  );
-}
-    description: '',
-  });
-  const [submitting, set_submitting] = useState (false);
-  const [result, set_result] = useState < null | { id: string; message: string }>(
-    null);  const [error, set_error] = useState < string | null>(null);    description: ''}),
-  const [submitting, set_submitting] = useState (false);
-  const [result, set_result] = useState < null | { id: string, message: string }>(null),
-  const [error, set_error] = useState < string | null>(null);
-;
-  const on_submit = async (e: React.FormEvent) => {
-    e.prevent_default ();
-    set_error (null),
-    // Check condition
-if ( {) {
-  $2
-}
-      set_error ('Please fill in name, email, and description.');
-      return;    }      return;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     }
     const normalized_budget  = form.budget.replace (/[^0 - 9.\-]/g, ')set_submitting (true)try {const res = await fetch ('/api / requests / create, {method: POST',headers: { 'Content - Type: application / json' },body: JSON.stringify ({...form,budget: normalized_budget,talent_slug: selected?.slug || null})})const data = await res.json ()if (throw new Error (data.error || 'Failed to submit)) {$2;
 }
@@ -612,11 +246,7 @@ if ( {) {$2;
       </form>;
     </div>;
     </div>);
-<<<<<<< HEAD
-  )}
-  )
-}
-=======
+
       </div>
     )
   }
@@ -756,34 +386,7 @@ if ( {) {$2;
 
   );
 }
-<<<<<<< HEAD
 
-);
-}
-  );
-}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-=======
-        {error && <div className='text-sm text-red-600'    />{error}</div>}
 
-        <button;
-disabled={submitting}
 
-          className='px-4 py-2 rounded bg-black text-white'
-            />
-          {submitting ? 'Submitting…' : 'Submit Request'}
-        </button>
-      </form>
-    </div>
-  );
-}
 
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621

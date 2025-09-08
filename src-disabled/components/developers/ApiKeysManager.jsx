@@ -30,14 +30,13 @@ const handleScopeToggle = ( setSelectedScopes(prev => prev.includes(scope) ? pre
 ' ' ' ' ' export { function }
 
 export default function ApiKeysManager() { const { apiKeys, loading, newApiKey, fetchApiKeys, createApiKey, deleteApiKey, toggleApiKey, updateApiKeyScopes, regenerateApiKey, revokeApiKey, clearNewApiKey } = useApiKeys() const [showCreateDialog, setShowCreateDialog] = useState(false);
-<<<<<<< HEAD
-=======
+
   const [newKeyName, setNewKeyName] = useState(');
   const [selectedScopes, setSelectedScopes] = useState([]);
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState(null);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(null);
   const scopeOptions = [' { value: 'jobs:read',}
->>>>>>> origin/chore/fix-lint-and-merge
+
   label: 'Read Jobs', description: 'Access to view job listings',}
 }, { value: 'jobs:write',}
   label: 'Write Jobs', description: 'Create and manage job listings',}
@@ -54,11 +53,9 @@ export default function ApiKeysManager() { const { apiKeys, loading, newApiKey, 
   return $3;}
 }
 ;
-<<<<<<< HEAD
-  return `curl -X GET 'https:'''`"'";) => {
-=======
+
   const getExampleCode = ( ';
   return `curl -X GET 'https:'''`\"'\";) => {
->>>>>>> origin/chore/fix-lint-and-merge
+
   return $3;}
 }

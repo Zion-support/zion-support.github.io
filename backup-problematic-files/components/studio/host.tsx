@@ -8,74 +8,9 @@ export default function StudioHostPage() {;
   const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary';, language: 'English' ;}),;
 
   const [episode, setEpisode] = useState<any>(null),;
-<<<<<<< HEAD
-  const [synthesizing, setSynthesizing] = useState(false),;
-  const [publishing, setPublishing] = useState(false),;
-  const handleGenerate = async () => {;
-    }
-    setGenerating(true),;
-    try {;
-      }
-      const res = await fetch('/api/podcast/generate', {;'
-        }
-        "method": 'POST',;'
-        "headers": { 'Content-Type': 'application/json' },;'
-        "body": JSON.stringify({ persona, "invitee": { "name": inviteeName, "bio": inviteeBio }, topic, operatorPrompt })}),;
-      const data = await res.json(),;
-      setEpisode(data.episode);
-    } catch (e) {;
-      }
-      console.error(e),;
-      alert('Failed to generate episode');'
-    } finally {;
-      }
-      setGenerating(false);
-    }
-  },;
-  const handleSynthesize = async () => {;
-    }
-    if (!episode?.id) return,;
-    setSynthesizing(true),;
-    try {;
-      }
-      const res = await fetch('/api/podcast/synthesize', {;'
-        }
-        "method": 'POST',;'
-        "headers": { 'Content-Type': 'application/json' },;'
-        "body": JSON.stringify({ "episodeId": episode.id, persona })}),;
-      setEpisode(data.episode);
-    } catch (e) {;
-      }
-      console.error(e),;
-      alert('Failed to synthesize audio');'
-    } finally {;
-      }
-      setSynthesizing(false);
-    }
-  },;
-  const handlePublishRss = async () => {;
-    }
-    if (!episode?.id) return,;
-    setPublishing(true),;
-    try {;
-      }
-      const res = await fetch('/api/podcast/rss', { "method": 'POST' }),;'
-      await res.json(),;
-      alert('RSS feed updated. Platforms will pull on next refresh.');'
-    } catch (e) {;
-      }
-      console.error(e);
-      alert('Failed to update RSS');'
-    } finally {;
-      }
-      setPublishing(false);
-    }
-  },
 
-return (;
-=======
 </any>
->>>>>>> origin/chore/fix-lint-and-merge
+
     <div className="space-y-8">"
 </div>"
       <h1 className="text-3xl font-bold">Podcast Studio Host</h1>""

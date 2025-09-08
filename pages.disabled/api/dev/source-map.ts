@@ -1,12 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD:pages/api/dev/source-map.ts
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    return res.status(405).json({ message: 'Method not allowed' });
-  }
 
-=======
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Source map endpoint' });
 }
@@ -82,7 +76,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
 import { getGitStatus, requireRoles } from "../../../utils/devAccess";
 export default function handler(req, res) {
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api/dev/source-map.ts
+
   try {
     // TODO: Implement sourcemap logic
     res.status(200).json({ message: 'sourcemap endpoint' });
@@ -90,9 +84,7 @@ export default function handler(req, res) {
     console.error('Error in sourcemap:', error);
     res.status(500).json({ message: 'Internal server error' });
   }
-<<<<<<< HEAD:pages/api/dev/source-map.ts
-}
-=======
+
 }
 ;
   if (req.method === "POST") {;
@@ -235,4 +227,4 @@ export default function handler(req, res) {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api/dev/source-map.ts
+

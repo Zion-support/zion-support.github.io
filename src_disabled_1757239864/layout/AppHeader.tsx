@@ -1,69 +1,26 @@
-<<<<<<< HEAD:src_disabled_1757239864/layout/AppHeader.tsx
-const showTagline = router.pathname === '/
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [loginOpen, setLoginOpen] = useState(false)
-  const isMobile = useIsMobile()
-  const { t } = useTranslation()
-  const { user } = useAuth()
-  const isLoggedIn = useSelector((state: RootState,) => state.auth.isLoggedIn)
-  const router = useRouter()
-  const showTagline = router.pathname === /'
-import React, { useState } from 'react;
-import { useMessaging } from @/context/MessagingContext';
-import Link from 'next/link;
-import { ResponsiveNavigation } from @/components/navigation/ResponsiveNavigation';
-import { Logo } from '@/components/header/Logo;
-import { useTranslation } from react-i18next';
-import { Menu, X } from 'lucide-react
-import { MobileMenu } from @/components/header/MobileMenu';
-import { useIsMobile } from '@/hooks/use-mobile;
-import { MobileBottomNav } from @/components/header/MobileBottomNav';
-import { PointsBadge } from '@/components/loyalty/PointsBadge;
-import { LoginModal } from @/components/auth/LoginModal';
-import { useAuth } from '@/hooks/useAuth;
-import { UserMenu } from @/components/header/UserMenu';
-import { useSelector } from 'react-redux;
-import type { RootState } from @/store';
-import { cn } from '@/lib/utils, // Import cn utility
-import { useRouter } from next/router';
-=======
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 
->>>>>>> origin/main:src/layout/AppHeader.tsx
+
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-<<<<<<< HEAD:src_disabled_1757239864/layout/AppHeader.tsx
-  const [loginOpen, setLoginOpen] = useState(false);
-  const isMobile = useIsMobile();
-  const { t } = useTranslation();
-  const { user } = useAuth();
-  const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn),
-  const router = useRouter();
-  const showTagline = router.pathname === '/;
-=======
+
   const [searchQuery, setSearchQuery] = useState('');
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
->>>>>>> origin/main:src/layout/AppHeader.tsx
+
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };
 
-<<<<<<< HEAD:src_disabled_1757239864/layout/AppHeader.tsx
-  const openLoginModal = (returnToPath?: string) => {
-    // The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)
-    // using router.push with shallow:true before this function is called.
-    // This functions main job is just to open the modal.
-    // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.
-    setLoginOpen(true)
-=======
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -79,7 +36,7 @@ export function AppHeader() {
         setIsSearching(false);
       }
     }
->>>>>>> origin/main:src/layout/AppHeader.tsx
+
   };
 
   const navigation = [
@@ -112,48 +69,7 @@ export function AppHeader() {
 
   return (
     <>
-<<<<<<< HEAD:src_disabled_1757239864/layout/AppHeader.tsx
-      <header
-        style={{ "--nav-height: 64px" } as React.CSSProperties}
-        className={cn(
-          "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground;
-          { bg-red-500": mobileMenuOpen }
-        )}
-      >
-        <div className="container flex h-16 items-center px-4 sm:px-6>
-          <Logo />
-          {showTagline && (
-            <span className=ml-4 hidden text-sm text-muted-foreground md:inline">
-              {t('home.header_tagline')}
-            </span>
-          )}
-          <div className="ml-6 flex-1 hidden md:block">
-            <nav role="navigation" aria-label="Main navigation">
-              <ResponsiveNavigation openLoginModal={openLoginModal} />
-            </nav>
-          </div>
-          
-          {/* Mobile menu button */}
-          <div className="md:hidden ml-auto mr-4">
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring
-              aria-expanded={mobileMenuOpen}
-              aria-label={t(general.toggle_mobile_menu)}
-            >
-              <span className=sr-only">{t('general.open_main_menu')}</span>
-              {mobileMenuOpen ? (
-                <X className="block h-6 w-6 aria-hidden=true" />
-              ) : (
-                <Menu className="block h-6 w-6 aria-hidden=true" />
-              )}
-            </button>
-          </div>
 
-          <PointsBadge />
-          {!isLoggedIn && (
-            <div className="ml-4 relative z-10 flex items-center>
-=======
       <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         scrolled 
           ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10' 
@@ -290,57 +206,26 @@ export function AppHeader() {
               </div>
 
               {/* CTA Button */}
->>>>>>> origin/main:src/layout/AppHeader.tsx
+
               <Link
                 to="/contact"
                 className="hidden md:inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-400/25"
               >
                 Get Started
               </Link>
-<<<<<<< HEAD:src_disabled_1757239864/layout/AppHeader.tsx
-              <Link
-                href=/signup"
-                className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground
-                aria-label={t(auth.signup)}
-                data-testid=signup-nav-link"
-=======
+
 
               {/* Mobile menu button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-slate-800/50 rounded-lg transition-all duration-200"
->>>>>>> origin/main:src/layout/AppHeader.tsx
+
               >
                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
             </div>
-<<<<<<< HEAD:src_disabled_1757239864/layout/AppHeader.tsx
-          )}
-          {/* User avatar menu */}
-          {isLoggedIn && (
-            <div className="ml-4>
-              <UserMenu />
-            </div>
-          )}
-        </div>
-      </header>
-      
-      {/* Mobile menu - positioned outside of header to prevent overlap issues */}
-      {mobileMenuOpen && (
-        <div className=md:hidden fixed inset-0 z-60 pt-16">
-          <div 
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm
-            onClick={() => setMobileMenuOpen(false)}
-            aria-hidden=true"
-          />
-          <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
-            <MobileMenu 
-              unreadCount={unreadCount} 
-              onClose={() => setMobileMenuOpen(false)}
-              openLoginModal={openLoginModal}
-            />
-=======
->>>>>>> origin/main:src/layout/AppHeader.tsx
+
+
           </div>
         </div>
 

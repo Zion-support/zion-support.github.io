@@ -1,49 +1,6 @@
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { Button  } from '@/components/ui/button';
-import { Education  } from '@/types/resume';
-import { useResume  } from '@/hooks/useResume';
-import { format  } from 'date-fns';
-import { EducationFormProps  } from './types';
-import { EducationList  } from './EducationList';
-import { EducationFormFields } from './EducationFormFields';
-export function EducationForm({ 
-  resumeId,
-  educationEntries, 
-  onComplete, 
-  onBack 
-}: EducationFormProps) {
-  const { addEducation, updateEducation, deleteEducation, isLoading } = useResume($2);
-  const [editingId, setEditingId] = useState<string | null>(null),
-  
-  // Helper function to format dates to string
-  const formatDateValue = $2;
-    if (typeof dateValue = $2;
-    return format(dateValue, 'yyyy-MM-dd')
-  },
-
-  const handleAddOrUpdate = $2;
-      degree: data.degree,
-      field_of_study: data.field_of_study,
-      start_date: data.start_date,
-      end_date: data.is_current ? undefined : (data.end_date || undefined),
-      is_current: data.is_current,
-      description: data.description,
-      location: data.location},
-
-    let success,
-=======
-<<<<<<< HEAD
-=======
 
 
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Education} from '@/types / resume';
@@ -90,20 +47,8 @@ export function EducationForm({ ;
       description: data.description;
       location: data.location}
 
-<<<<<<< HEAD
 
-import {useState} from 'react';
-import {Button} from '@/components/ui/button';
-import {Education} from '@/types/resume';
-import {useResume} from '@/hooks/useResume';
-import {format} from 'date-fns';
-import {EducationFormProps} from './types';
-import {EducationList} from './EducationList';
-import {EducationFormFields} from './EducationFormFields';
-export function EducationForm({
-export function EducationForm({ ;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
   resumeId;
   educationEntries
   onComplete
@@ -127,35 +72,8 @@ export function EducationForm({ ;
       is_current: data.is_current
       description: data.description
       location: data.location}
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-    let success;
->>>>>>> merged-prs-20250907-203621
-    if (editingId) {
-      success = await updateEducation(editingId, educationData)
-    } else {
-      success = await addEducation(resumeId, educationData)
-<<<<<<< HEAD
-=======
-import { useState } from 'react',;
-import { Button } from '@/components/ui/button',;
-import { Education } from '@/types/resume',;
-import { useResume } from '@/hooks/useResume',;
-import { format } from 'date-fns',;
-import { EducationFormProps } from './types',;
-import { EducationList } from './EducationList',;
-import { EducationFormFields } from './EducationFormFields',;
-export function EducationForm({;
-  resumeId,;
-  educationEntries,;
-  onComplete,;
-  onBack;
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 export function EducationForm(): any ({ ;
   resumeId;
   educationEntries, ;
@@ -165,20 +83,18 @@ export function EducationForm(): any ({ ;
 }: EducationFormProps) {;
   const { addEducation, updateEducation, deleteEducation, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
   // Helper function to format dates to string;
   const formatDateValue = (dateValue: string | Date | undefined): string => {;
     if (!dateValue) return '';
     if (typeof dateValue === 'string') return dateValue,;
     return format(dateValue, 'yyyy-MM-dd');
   };
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
   const handleAddOrUpdate = async (data: any) => {;
     const educationData: Education = {;
       institution: data && data.institution,;
@@ -189,82 +105,25 @@ export function EducationForm(): any ({ ;
       is_current: data && data.is_current,;
       description: data && data.description,;
       location: data && data.location},;
-<<<<<<< HEAD
-    let success;
-}: EducationFormProps) {;
-  const { addEducation, updateEducation, deleteEducation, isLoading } = useResume(),;
-  const [editingId, setEditingId] = useState<string | null>(null),;
-  // Helper function to format dates to string;
-  const formatDateValue = (dateValue: string | Date | undefined): string => {;
-    if (!dateValue) return '',;
-    if (typeof dateValue === 'string') return dateValue,;
-    return format(dateValue, 'yyyy-MM-dd');
-  },;
-  const handleAddOrUpdate = async (data: any) => {;
-    const educationData: Education = {;
-      institution: data.institution,;
-      degree: data.degree,;
-      field_of_study: data.field_of_study,;
-      start_date: data.start_date,;
-      end_date: data.is_current ? undefined : (data.end_date || undefined),;
-      is_current: data.is_current,;
-      description: data.description,;
-      location: data.location},;
-    let success,;
-=======
 
-<<<<<<< HEAD
-    }
-    if (success) {}
-      setEditingId(null)
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    let success;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
     if (editingId) {;
       success = await updateEducation(editingId, educationData);
     } else {;
       success = await addEducation(resumeId, educationData);
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-    }
-    if (success) {
-      setEditingId(null)
-    }
-<<<<<<< HEAD
-  },
-
-  const handleEdit = (edu: Education) => {
-    setEditingId($2);
-    // Form reset happens in the child component
-  },
-
-  const handleDelete = $2;
-  const handleCancel = $2;
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     }
 
     }
 
   };
 
-<<<<<<< HEAD
-=======
 
 
-<<<<<<< HEAD
-  }
-  };
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   const handleEdit = (edu: Education) => {
     setEditingId(edu.id!)
     // Form reset happens in the child component
@@ -279,35 +138,8 @@ export function EducationForm(): any ({ ;
       setEditingId(null)
     } else {
       onBack()
-<<<<<<< HEAD
 
-    }
 
-  };
-
-  const handleEdit = (edu: Education) => {
-
-    setEditingId(edu.id!)
-    // Form reset happens in the child component;
-  }
-  const handleDelete = async (id: string) => {'
-    if (confirm('Are you sure you want to delete this education entry?')) {}
-      await deleteEducation(id)
-    }
-  }
-  const handleCancel = () => {}
-    if (editingId) {}
-      setEditingId(null)
-    } else {}
-      onBack()
-
-    }
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
     }
     if (success) {;
@@ -315,77 +147,35 @@ export function EducationForm(): any ({ ;
     }
 
   };
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   },;
 
   const handleEdit = (edu: Education) => {;
     setEditingId(edu && edu.id!),;
-<<<<<<< HEAD
 
-=======
     // Form reset happens in the child component;
   };
-<<<<<<< HEAD
-    }
-  }
-  };
-  },;
-  const handleEdit = (edu: Education) => {;
-    setEditingId(edu.id!),;
-    // Form reset happens in the child component;
-  },;
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  const handleDelete = async (id: string) => {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     if (confirm('Are you sure you want to delete this education entry?')) {;
       await deleteEducation(id);
     }
   };
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
   const handleCancel = () => {;
     if (editingId) {;
       setEditingId(null);
     } else {;
       onBack();
-<<<<<<< HEAD
-
-    }
-
-=======
-<<<<<<< HEAD
-    }
-  },
-
->>>>>>> merged-prs-20250907-203621
-  return (
-    <div className="space-y-6">
-      <div>
-        <h2 className="text-xl font-semibold mb-2">Education</h2>
-        <p className="text-muted-foreground">
-          Add your educational background and academic achievements.
-        </p>
-      </div>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    }
-
-  },
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
+
   return (
 
   return (
@@ -437,7 +227,7 @@ pr-12325
         onDelete={handleDelete}
       />
 
->>>>>>> merged-prs-20250907-203621
+
       <EducationList
 
         educationEntries={educationEntries}
@@ -447,144 +237,16 @@ pr-12325
         onDelete={handleDelete}
       />
 
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-      <EducationList
-        educationEntries={educationEntries}
-      <EducationList 
-        educationEntries={educationEntries} 
-        onEdit={handleEdit}
-        onDelete={handleDelete}
-      />
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-      <div className="bg-muted/40 p-6 rounded-lg">
-        <h3 className="text-md font-medium mb-4">
-          {editingId ? 'Update Education' : 'Add Education'}
-        </h3>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-"
-    <div className="space-y-6">;
-      <div>;"
-        <h2 className="text-xl font-semibold mb-2">Education</h2>;"
-        <p className="text-muted-foreground">;
-          Add your educational background and academic achievements.;
-        </p>;
-      </div>;
-
-;
-      <EducationList ;
-        educationEntries={educationEntries} ;
-        onEdit={handleEdit}
-        onDelete={handleDelete}
-      />;
-;"
-      <div className="bg-muted/40 p-6 rounded-lg">;"
-        <h3 className="text-md font-medium mb-4">;'
-          {editingId ? 'Update Education' :'Add Education'}
-        </h3>;
-    }
-    }
-  }
-
-  return (
-        <EducationFormFields;
-          isEditing={!!editingId}
-          onSubmit={handleAddOrUpdate}
-          onCancel={handleCancel}
 
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Education' : 'Add Education'}
         </h3>
-}
-=======
-<<<<<<< HEAD
-  }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-  return (
 
-import { useState } from 'react',;
-import { Button } from '@/components/ui/button',;
-import { Education } from '@/types/resume',;
-import { useResume } from '@/hooks/useResume',;
-import { format } from 'date-fns',;
-import { EducationFormProps } from './types',;
-import { EducationList } from './EducationList',;
-import { EducationFormFields } from './EducationFormFields',;
-;
-export function EducationForm({ ;
-  resumeId,;
-  educationEntries, ;
-  onComplete, ;
-  onBack ;
-} EducationFormProps) {;
-  const { addEducation, updateEducation, deleteEducation, isLoading } = useResume(),;
-  const [editingId, setEditingId] = useState<string | null>(null),;
-  ;
-  // Helper function to format dates to string;
-  const formatDateValue = (dateValue:string | Date | undefined):string => {;
-    if (!dateValue) return '',;
-    if (typeof dateValue === 'string') return dateValue,;
-    return format(dateValue, 'yyyy-MM-dd'),;
-  },;
-;
-  const handleAddOrUpdate = async (data:any) => {;
-    const educationData:Education = {;
-      institution:data.institution,;
-      degree:data.degree,;
-      field_of_study:data.field_of_study,;
-      start_date:data.start_date,;
-      end_date:data.is_current ? undefined :(data.end_date || undefined),;
-      is_current:data.is_current,;
-      description:data.description,;
-      location:data.location},;
-;
-    let success,;
-    if (editingId) {;
-      success = await updateEducation(editingId, educationData),;
-    } else {;
-      success = await addEducation(resumeId, educationData),;
-    }
-;
-    if (success) {;
-      setEditingId(null),;    }
-  },;
-;
-  const handleEdit = (edu:Education) => {;
-    setEditingId(edu.id!),;
-    // Form reset happens in the child component;
-  },;
-;
-  const handleDelete = async (id:string) => {;
-    if (confirm('Are you sure you want to delete this education entry?')) {;
-      await deleteEducation(id);
-    }
-  },;
-;
-  const handleCancel = () => {;
-    if (editingId) {;
-      setEditingId(null),;
-    } else {;
-      onBack(),;
-    }
-  },;
-;
-  return (;
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     <div className="space-y-6">;
       <div>;
         <h2 className="text-xl font-semibold mb-2">Education</h2>;
@@ -603,49 +265,18 @@ export function EducationForm({ ;
         <h3 className="text-md font-medium mb-4">;
           {editingId ? 'Update Education' :'Add Education'}
         </h3>;
-<<<<<<< HEAD
-;
-        <EducationFormFields;
-          isEditing={!!editingId}
-          onSubmit={handleAddOrUpdate}
-          onCancel={handleCancel}
-=======
+
 
         <EducationFormFields
           isEditing={!!editingId}
           onSubmit={handleAddOrUpdate}
           onCancel={handleCancel}
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
         />;
       </div>;
-<<<<<<< HEAD
 
-      {!editingId && educationEntries && educationEntries.length > 0 && (;
-;
-      <EducationList ;
-        educationEntries={educationEntries} ;
-        onEdit={handleEdit}
-        onDelete={handleDelete}
-      />;
-;
-      <div className="bg-muted/40 p-6 rounded-lg">;
-        <h3 className="text-md font-medium mb-4">;
-          {editingId ? 'Update Education' :'Add Education'}
-        </h3>;
-    }
-    }
-  }
 
-  return (
-        <EducationFormFields
-          isEditing={!!editingId}
-          onSubmit={handleAddOrUpdate}
-          onCancel={handleCancel}
-        />;
-      </div>;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
       {!editingId && educationEntries.length > 0 && (;
         <div className="flex justify-end">;
@@ -656,16 +287,12 @@ export function EducationForm({ ;
         </div>;
       )}
     </div>;
-<<<<<<< HEAD
-  );
-}
 
-=======
 export /**
  * EducationForm - Function description
  */
 function EducationForm() {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   const { add_education, update_education, delete_education, is_loading } = use_resume ();
 
 "
@@ -757,48 +384,8 @@ if ( {) {
 
         </div>)}
     </div>);
-<<<<<<< HEAD
+
 }
-=======
-}
-<<<<<<< HEAD
-  ),;}
- return (<div className="space-y-6" > <div> <h2 className="text-xl font-semibold mb-2" >Education</h2> <p className="text-muted-foreground" > Add your educational background and academic achievements. </p> </div> <EducationList educationEntries= {
-  educationEntries 
-}onEdit= {
-  handleEdit 
-}onDelete= {
-  handleDelete 
-}/> </h3> <EducationFormFields isEditing= {
-  !!editingId 
-}onSubmit= {
-  handleAddOrUpdate 
-}onCancel= {
-  handleCancel 
-}/> </div> Next </Button> </div>) 
-}</div>) 
-}
->>>>>>> merged-prs-20250907-203621
-        <EducationFormFields
-          isEditing={!!editingId}
-          onSubmit={handleAddOrUpdate}
-          onCancel={handleCancel}
-        />
-      </div>
-      {!editingId && educationEntries.length > 0 && (
-        <div className="flex justify-end">
-          <Button type="button" onClick={onComplete}>
-            Next
-          </Button>
-        </div>
-      )}
-    </div>
-  )
-}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+
+

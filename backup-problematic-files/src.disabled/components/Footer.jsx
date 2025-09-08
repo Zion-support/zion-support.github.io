@@ -5,16 +5,8 @@ const Footer = ({ className }) => {
       <h1>Footer</h1>
       <p>This component is under development.</p>
     </div>
-<<<<<<< HEAD
-  )
-};
-=======
+
   );
 };
 
-<<<<<<< HEAD
-export default Footer;
-=======
-export default Footer;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

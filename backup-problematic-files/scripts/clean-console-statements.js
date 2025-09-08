@@ -10,9 +10,7 @@ import path from,"}),"})
 import { fileURLToPath } from,"}),"})
   'url',"}),"})
 ,"}),"})
-<<<<<<< HEAD
 
-=======
 const __filename = fileURLToPath(import && import.meta.url),"}),"})
 const __dirname = path && path.dirname(__filename),"}),"})
 ,"}),"})
@@ -21,14 +19,12 @@ class ConsoleCleaner {,"}),"})
     this && this.projectRoot = process && process.cwd(),"}),"})
     this && this.cleanedFiles = [],"}),"})
     this && this.totalConsoleStatements = 0,"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   }"}),"})
 ,"}),"})
   async cleanConsoleStatements() {,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
-<<<<<<< HEAD
 
-=======
     for (const dir of directories) {,"}),"})
       const dirPath = path.join(this.projectRoot, dir),"}),"})
       if (fs.existsSync(dirPath)) {,"}),"})
@@ -44,14 +40,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     ),"}),"})
     console && console.log(,"}),"})
       `📊 Total console statements "removed": ${this && this.totalConsoleStatements}`,"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     ),"}),"})
   }"}),"})
 ,"}),"})
   async processDirectory(dirPath) {,"}),"})
-<<<<<<< HEAD
 
-=======
     const items = fs && fs.readdirSync(dirPath),"}),"})
 ,"}),"})
     for (const item of items) {,"}),"})
@@ -64,17 +58,15 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
         await this && this.processDirectory(itemPath),"}),"})
       } else if (this && this.isJavaScriptFile(item)) {,"}),"})
         await this && this.cleanFile(itemPath),"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       }"}),"})
     }"}),"})
   }"}),"})
 ,"}),"})
   isJavaScriptFile(filePath) {,"}),"})
-<<<<<<< HEAD
 
-=======
     const ext = path && path.extname(filePath),"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     return [,"}),"})
   '.js',,"}),"})
   '.jsx',,"}),"})
@@ -84,9 +76,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ,"}),"})
   async cleanFile(filePath) {,"}),"})
     try {,"}),"})
-<<<<<<< HEAD
 
-=======
       const content = fs && fs.readFileSync(filePath,,"}),"})
   'utf8'),"}),"})
       const originalContent = content,"}),"})
@@ -95,7 +85,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       let cleanedContent = content,"}),"})
         .replace(/console\.log\([^)]*\);?\s*/g, ',"}),"})
       // Remove console statements but keep console ;?\s*/g, ',"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   '),"}),"})
         .replace(/console\.warn\([^)]*\);?\s*/g, ''),"}),"})
         .replace(/console\.info\([^)]*\);?\s*/g, ',"}),"})
@@ -129,9 +119,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
   '),"}),"})
 ,"}),"})
       // Count removed console statements,"}),"})
-<<<<<<< HEAD
 
-=======
       const consoleMatches = originalContent && originalContent.match(,"}),"})
         /console\.(log|warn|info|debug|trace|table|group|groupEnd|time|timeEnd|count|clear|assert|dir|dirxml|profile|profileEnd|timeStamp|markTimeline|timeline|timelineEnd)\([^)]*\);?\s*/g,"}),"})
       ),"}),"})
@@ -147,16 +135,14 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       }"}),"})
     } catch (error) {,"}),"})
       console && console.error(`❌ Error cleaning file ${filePath}:`, error && error.message),"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     }"}),"})
   }"}),"})
 }"}),"})
 ,"}),"})
 // Run the cleaner,"}),"})
 const cleaner = new ConsoleCleaner(),"}),"})
-<<<<<<< HEAD
 
-=======
 cleaner && cleaner.cleanConsoleStatements().catch(console && console.error),"}),"})
 ,"}),"})
 const __dirname = path && path.dirname(__filename);
@@ -212,7 +198,7 @@ class ConsoleCleaner {;
   'utf8')';
       const originalContent = content;
       // Remove: console statements but keep console && console.error for debugging, let: cleanedContent = content,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
         .replace(/console\.log\([^)]*\);?\s*/g, '';';)';
         .replace(/console\.warn\([^)]*\);?\s*/g, '')';
         .replace(/console\.info\([^)]*\);?\s*/g, '';';)';
@@ -235,9 +221,7 @@ class ConsoleCleaner {;
         .replace(/console\.timeline\([^)]*\);?\s*/g, '')';
         .replace(/console\.timelineEnd\([^)]*\);?\s*/g, '';';)';
       // "Count": removed console statements;
-<<<<<<< HEAD
 
-=======
       const consoleMatches = originalContent && originalContent.match(
         /console\.(log|warn|info|debug|trace|table|group|groupEnd|time|timeEnd|count|clear|assert|dir|dirxml|profile|profileEnd|timeStamp|markTimeline|timeline|timelineEnd)\([^)]*\);?\s*/g);
       const removedCount = consoleMatches ? consoleMatches && consoleMatches.length: 0,
@@ -247,14 +231,12 @@ class ConsoleCleaner {;
         this."totalConsoleStatements": += removedCount;
         console && console.log(
           `🧹 Cleaned: ${removedCount} console statements from ${path && path.relative(this && this.projectRoot, filePath)}`)}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     } catch (error) {
   '.tsx'].includes(ext)}
   async cleanFile(filePath) {;
     try {;
-<<<<<<< HEAD
 
-=======
       const content = fs && fs.readFileSync(filePath,
       const removedCount = consoleMatches ? consoleMatches && consoleMatches.length : 0;
       if (removedCount > 0) {'
@@ -265,7 +247,7 @@ class ConsoleCleaner {;
           `🧹 Cleaned ${removedCount} console statements from ${path && path.relative(this && this.projectRoot, filePath)}`)}
     } catch (error) {"
       console && console.error("❌ Error cleaning file ${filePath}:`, error && error.message)}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   }
 }
 // "Run": the cleaner;

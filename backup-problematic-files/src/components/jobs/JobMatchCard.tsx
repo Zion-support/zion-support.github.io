@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-name, ;
-=======
+
 import React from 'react',;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -29,9 +27,9 @@ interface JobMatchProps {;
 export function JobMatchCard({ ;
   matchId,;
   talentId, ;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   name, ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   title, ;
   company, ;
   avatar, ;

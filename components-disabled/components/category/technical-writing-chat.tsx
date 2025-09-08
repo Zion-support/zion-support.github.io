@@ -8,24 +8,8 @@ const TechnicalWritingChat: NextPage = () => ;
 
 ;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  return (<div>;
-import type { NextPage } from "next";"
-import Head from "next/head";"
-import Link from "next/link";"
-=======
->>>>>>> merged-prs-20250907-203621
-const TechnicalWritingChat: NextPage = () => ;
-  return (<div />;
-import type { NextPage } from \"next\";
-import Head from \"next/head\";
-import Link from \"next/link\";
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
 
 const TechnicalWritingChat: NextPage = () => {;
   return (
@@ -105,28 +89,8 @@ name=\"description\"}
 
 export default TechnicalWritingChat;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  return (<div>;
-      <Head>;
-        <title>TechnicalWritingChat - Zion Tech Solutions</title>;
-        <title>TechnicalWritingChat - Zion Tech Solutions</title>;
-        <title>TechnicalWritingChat - Zion Tech Solutions</title>;
-        <title>TechnicalWritingChat - Zion Tech Solutions</title>;
-=======
->>>>>>> merged-prs-20250907-203621
-const TechnicalWritingChat: NextPage = () => ;
-  return (<div />;
-      <Head />;
-        <title />TechnicalWritingChat - Zion Tech Solutions</title>;
-        <title />TechnicalWritingChat - Zion Tech Solutions</title>;
-        <title />TechnicalWritingChat - Zion Tech Solutions</title>;
-        <title />TechnicalWritingChat - Zion Tech Solutions</title>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
 ursor/fix-website-loading-errors-and-merge-6662;
   );
 }
@@ -135,15 +99,8 @@ ursor/fix-website-loading-errors-and-merge-6662;
 export default TechnicalWritingChat;
 
 
-<<<<<<< HEAD
-const TechnicalWritingChat: NextPage = () => {
-=======
-<<<<<<< HEAD
-const "TechnicalWritingChat": NextPage = () => {
-=======
-const TechnicalWritingChat: NextPage = () => {
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
  ;
   return (
     <div />
@@ -156,28 +113,8 @@ import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  return (<div>;
-}
-return (;
-    <div>;
-      <Head>;
-        <title > TechnicalWritingChat - Zion Tech Solutions</title>;
-=======
->>>>>>> merged-prs-20250907-203621
-const TechnicalWritingChat: NextPage = () => ;
-  return (<div />;
-const TechnicalWritingChat: NextPage = () => {
-  return (
-    <div />;
-      <Head />;
-        <title  /> TechnicalWritingChat - Zion Tech Solutions</title>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
         <meta;
           name=\"description\";}
           content=\"TechnicalWritingChat blog post\";}
@@ -205,22 +142,8 @@ export default TechnicalWritingChat;<div />;
     </div>;
   )},export default TechnicalWritingChat;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  return (<div>;
-      <Head>;
-        <title>TechnicalWritingChat - Zion Tech Solutions</title>;
-=======
->>>>>>> merged-prs-20250907-203621
-const TechnicalWritingChat: NextPage = () => ;
-  return (<div />;
-      <Head />;
-        <title />TechnicalWritingChat - Zion Tech Solutions</title>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
         <meta;
           name=\"description\";
           content=\"TechnicalWritingChat blog post\";
@@ -244,14 +167,8 @@ export default TechnicalWritingChat;<title />TechnicalWritingChat - Zion Tech So
 
 ;
 export default TechnicalWritingChat;
-<<<<<<< HEAD
-const TechnicalWritingChat: NextPage = () => {
-=======
-<<<<<<< HEAD
-=======
-const TechnicalWritingChat: NextPage = () => {
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
  ;
   return (
     <div />
@@ -273,14 +190,8 @@ name=\"description\"}
 
 export default TechnicalWritingChat;
 export default TechnicalWritingChat;
-<<<<<<< HEAD
-const TechnicalWritingChat: NextPage = () => {
-=======
-<<<<<<< HEAD
-=======
-const TechnicalWritingChat: NextPage = () => {
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
  ;
   return (
     <div />
@@ -305,14 +216,8 @@ export default TechnicalWritingChat;
         <title />TechnicalWritingChat - Zion Tech Solutions</title>
         <title />TechnicalWritingChat - Zion Tech Solutions</title>
 ;
-<<<<<<< HEAD
-const TechnicalWritingChat: NextPage = () => {
-=======
-<<<<<<< HEAD
-=======
-const TechnicalWritingChat: NextPage = () => {
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
  ;
   return (
     <div />

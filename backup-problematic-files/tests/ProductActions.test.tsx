@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 import { render, screen, fireEvent, waitFor } from '@testing-library/react',;
 import '@testing-library/jest-dom',;
 import { describe, it, expect, vi } from 'vitest',;
@@ -49,4 +48,4 @@ export default function ProductActions.test({ }: ProductActions.testProps) {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

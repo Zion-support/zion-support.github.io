@@ -227,12 +227,10 @@ pr-12325
 ;
       // Here would be the actual code to save the profile to Supabase;
       /*;
-<<<<<<< HEAD
-        .from('talent_profiles');'
-=======
+
       const { error } = await supabase;
         .from('talent_profiles');
->>>>>>> origin/chore/fix-lint-and-merge
+
         .insert({;
           user_id: user.id;,;
           name: values.name;,;

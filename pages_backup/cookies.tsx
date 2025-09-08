@@ -1,29 +1,8 @@
-<<<<<<< HEAD
-import React from 'react;
-import { motion } from framer-motion';
-import MainLayout from '../components/layout/MainLayout;
 
-export default function CookiesPage() {
-  return (
-    <MainLayout
-      title="Cookie Policy - Zion Tech Group
-      description=Cookie policy for Zion Tech Group website"
-    >
-      <div className="min-h-screen bg-gray-50>
-        <div className=container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6>Cookie Policy</h1>
-          <p className=text-xl text-gray-600">This is a placeholder for the cookie policy.</p>
-        </div>
-      </div>
-    </MainLayout>
-
-import React, { useState } from react';
-import MainLayout from '../src / components / layout / MainLayout;
-=======
 import React, { useState } from 'react';
 import MainLayout from '../src / components / layout / MainLayout';
 import { motion } from 'framer-motion';
->>>>>>> origin/chore/fix-lint-and-merge
+
 import {
   Shield,
   Settings,
@@ -351,8 +330,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
   );
 
-<<<<<<< HEAD
- <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className=text-gray-400 text-sm" >Questions? <a className="text-cyan-400 href=mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
-=======
+
  <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
->>>>>>> origin/chore/fix-lint-and-merge
+

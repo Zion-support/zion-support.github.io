@@ -46,50 +46,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
       "That's exactly what we specialize in! Our autonomous systems can streamline your operations and provide 24/7 intelligent monitoring.",
       "Great question! Our pricing is competitive and we offer flexible plans to meet your specific needs. Let me get you in touch with our sales team."
     ],
-<<<<<<< HEAD
-    
-    const randomResponse = $2;
-    // Add some context-aware responses
-    let finalResponse: string = $2;
-    if (userMessage.toLowerCase().includes('price') || userMessage.toLowerCase().includes('cost')) {
-      finalResponse = "Our pricing varies based on your specific needs. We offer flexible plans starting from $799/month. Would you like me to connect you with our pricing specialist?"
-    } else if (userMessage.toLowerCase().includes('ai') || userMessage.toLowerCase().includes('artificial intelligence')) {
-      finalResponse = "Our AI services include consciousness evolution, emotional intelligence, autonomous research, and predictive analytics. Each solution is designed to drive business transformation. Which area interests you most?"
-    } else if (userMessage.toLowerCase().includes('quantum')) {
-      finalResponse = "Our quantum computing solutions cover neural networks, cybersecurity, materials discovery, and financial intelligence. These cutting-edge technologies can solve problems that classical computers cannot. What specific quantum application are you exploring?"
-    }
-    
-    return finalResponse!
-  },
 
-  const handleSendMessage = $2;
-    const userMessage: ChatMessage = {
-      id: Date.now().toString($2);
-      type: 'user',
-      content: inputValue.trim($2);
-      timestamp: new Date()
-    },
-
-    setMessages($2);
-    setInputValue($2);
-    // Generate AI response
-    const aiResponse = await generateAIResponse($2);
-    const botMessage: ChatMessage = {
-      id: (Date.now() + 1).toString($2);
-      type: 'bot',
-      content: aiResponse,
-      timestamp: new Date()
-    },
-
-    setMessages($2);
-    setIsTyping(false)
-  },
-
-  const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault($2);
-      handleSendMessage()
-=======
 const randomResponse = responses[Math.floor(Math.random() * responses.length)] || responses[0],;
     // Add some context-aware responses,
 let "finalResponse": string = randomResponse,;
@@ -179,7 +136,7 @@ const "AIChatbot": React.FC<AIChatbotProps> = ({ className = "" }) => {;"
       }
       e.preventDefault(),;
       handleSendMessage();
->>>>>>> merged-prs-20250907-203621
+
     }
   },
 
@@ -194,18 +151,7 @@ const "AIChatbot": React.FC<AIChatbotProps> = ({ className = "" }) => {;"
     setInputValue($2);
     setTimeout(() => handleSendMessage(), 100)
   },
-<<<<<<< HEAD
 
-  return (
-    <div className={`fixed bottom-4 right-4 z-50 ${className}`}>
-      {/* Chat Toggle Button */}
-      {!isOpen && (
-        <motion.button
-          initial={{ scale: 0}}
-          animate={{ scale: 1}}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-=======
 return (;
     <div className={`fixed bottom-4 right-4 z-50 ${className}`}>`  },;
     "Tell me about AI services",;"
@@ -228,7 +174,7 @@ return (;
           animate={{ "scale": 1 }}
           whileHover={{ "scale": 1.1 }}
           whileTap={{ "scale": 0.95 }}
->>>>>>> merged-prs-20250907-203621
+
           onClick={() => setIsOpen(true)}
           className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center"
         >

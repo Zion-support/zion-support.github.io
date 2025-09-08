@@ -1,64 +1,4 @@
-<<<<<<< HEAD
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === "GET") {
-    try {
-      const content = fs.existsSync(filePath)
-        ? JSON.parse(fs.readFileSync(filePath, "utf8"))
-        : { content: "" }
-        ? JSON.parse(fs.readFileSync(filePath, "utf8"));
-        : { content: "" };
-      res.status(200).json(content);
-    } catch (e: any) {
-      res.status(500).json({ error: e?.message |"Failed to read changelog" });
-    }
-    return;
-
-const content = fs && fs.existsSync(filePath)
-        ? JSON && JSON.parse(fs && fs.readFileSync(filePath, "utf8"))
-        : { content: "" };
-      res && res.status(200).json(content);
-    } catch (e: any) {
-      res && res.status(500).json({ error: e?.message || "Failed to read changelog" });
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === "GET") {
-    try {
-      const content = fs.existsSync(filePath)
-? JSON.parse(fs.readFileSync(filePath, "utf8"))
-        : { content: "" }
-      res.status(200).json(content);
-    } catch (e: any) {
-      res.status(500).json({ error: e?.message |"Failed to read changelog" });
-
-    }
-    return;
-  }
-  if (req && req.method === "POST") {
-    try {
-      const body =
-        typeof req && req.body === "string" ? JSON && JSON.parse(req && req.body) : req && req.body;
-      const payload = { content: body?.content || "" };
-      fs && fs.mkdirSync(path && path.dirname(filePath), { recursive: true });
-      fs && fs.writeFileSync(filePath, JSON && JSON.stringify(payload, null, 2));
-      res && res.status(200).json({ ok: true });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-const filePath = path.join(process.cwd(), 'dataapi-docschangelog.json');
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
-    try {
-const content = fs.existsSync(filePath) ? JSON.parse(fs.readFileSync(filePath, 'utf8')) : { content: '' };
-      res.status(200).json(content)
-    } catch (e: any) {
-      res.status(500).json({ error: e?.message || 'Failed to read changelog' })
-    }
-    return
-  }
-if (req.method === 'POST') {
-    try {
-
-=======
 
 
 }
@@ -105,7 +45,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   if (req.method === 'POST') {
     try {
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
       const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
 const body =
         typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
@@ -114,19 +54,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       fs.mkdirSync(path.dirname(filePath), { recursive: true });
       fs.writeFileSync(filePath, JSON.stringify(payload, null, 2));
       res.status(200).json({ ok: true })
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD:pages.disabled/api/docs/changelog.ts
 
 
 
-
-
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/docs/changelog.ts
     } catch (e: any) {
       res
         .status(500)
@@ -143,21 +73,8 @@ res.setHeader("Allow", "GET, POST");
   res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
 
-<<<<<<< HEAD:pages.disabled/api/docs/changelog.ts
 
 
-  res && res.setHeader("Allow", "GET, POST");
-  res && res.status(405).end("Method Not Allowed");
-
-  res.setHeader("Allow", "GET, POST");
-  res.status(405).end("Method Not Allowed");
-  res.setHeader("Allow", "GET, POST");
-  res.status(405).end("Method Not Allowed");
-
-  res.setHeader("Allow", "GET, POST");
-  res.status(405).end("Method Not Allowed");
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/docs/changelog.ts
 }
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -166,24 +83,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
-<<<<<<< HEAD:pages.disabled/api/docs/changelog.ts
 
 
 
-res && res.setHeader("Allow", "GET, POST");
-  res && res.status(405).end("Method Not Allowed");
-}
-
-=======
-<<<<<<< HEAD
-res && res.setHeader("Allow", "GET, POST");
-  res && res.status(405).end("Method Not Allowed");
-}
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/docs/changelog.ts
 export default /**
  * handler - Function description
  */
@@ -224,49 +126,6 @@ if ( {) {
   res.status (405).end ("Method Not Allowed");
 }
 
-<<<<<<< HEAD:pages.disabled/api/docs/changelog.ts
 
 
 
-
-
-
-=======
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/docs/changelog.ts
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  res.setHeader('AllowGET, POST');
-  res.status(405).end('Method Not Allowed');
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-  res.setHeader('Allow', 'GET, POST');
-  res.status(405).end('Method Not Allowed');
-
-<<<<<<< HEAD:pages.disabled/api/docs/changelog.ts
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/docs/changelog.ts

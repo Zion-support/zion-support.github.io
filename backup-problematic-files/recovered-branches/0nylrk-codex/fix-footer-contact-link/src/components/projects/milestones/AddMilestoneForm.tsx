@@ -38,12 +38,8 @@ scope={projectScope}
                 <FormItem>;
                   <FormLabel>Amount ($)</FormLabel>;
                   <FormControl>;
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                     <Input;
                       type="number";
                       min="0";

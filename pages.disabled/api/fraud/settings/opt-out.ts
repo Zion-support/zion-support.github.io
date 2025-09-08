@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD:pages/api/fraud/settings/opt-out.ts
-=======
+
   if (req.method === "GET") {
     const userId = (req.query.userId as string) |"";
     if (!userId) return res.status(400).json({ error: "Missing userId" });
@@ -82,17 +81,14 @@ export default async function handler(
 ) {;
 
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api/fraud/settings/opt-out.ts
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
     return res.status(405).json({ message: 'Method not allowed' });
   }
 
   try {
-<<<<<<< HEAD:pages/api/fraud/settings/opt-out.ts
-    // TODO: Implement optout logic
-    res.status(200).json({ message: 'optout endpoint' });
-=======
+
 
   const store = getFraudStore();
   if (req.method === 'GET') {
@@ -106,14 +102,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api/fraud/settings/opt-out.ts
+
   } catch (error) {
     console.error('Error in optout:', error);
     res.status(500).json({ message: 'Internal server error' });
   }
-<<<<<<< HEAD:pages/api/fraud/settings/opt-out.ts
-}
-=======
+
 }
 ;
   if (req.method === 'GET') {
@@ -162,4 +156,4 @@ if (!userId || typeof optOut !== 'boolean')
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api/fraud/settings/opt-out.ts
+

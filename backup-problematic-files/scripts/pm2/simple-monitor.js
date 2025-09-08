@@ -26,15 +26,7 @@ class SimpleMonitor {}
       fs && fs.appendFileSync(this && this.logFile, logMessage);,
     } catch (error) {}
       _console && _console.error('Failed to write to log file:', error && error.message);',
-<<<<<<< HEAD
 
-  error(message) {}
-    this && this.log(message, 'ERROR');',
-    try {}`;
-      fs && fs.appendFileSync(this && this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`);,
-    } catch (err) {}
-      _console && _console.error('Failed to write to error file:', err && err.message);',
-=======
     }
   }
 
@@ -46,7 +38,7 @@ class SimpleMonitor {}
       _console && _console.error('Failed to write to error file:', err && err.message);',
     }
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 
   async checkSystemHealth() {}
       const os = require('os');',
@@ -59,9 +51,7 @@ class SimpleMonitor {}
         loadAverage: os && os.loadavg(),
         platform: os && os.platform(),
         nodeVersion: process && process.version,
-<<<<<<< HEAD
 
-=======
 ;      };,
       
       const memoryUsage = ((health.totalMemory - health.freeMemory) / health.totalMemory) * 100;
@@ -75,7 +65,7 @@ class SimpleMonitor {}
       
       return health;
       
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     } catch (error) {}
       this && this.error(`Health check failed: ${error && error.message}`);,
       return null;,
@@ -97,9 +87,7 @@ if (require && require.main === module) {}
   monitor && monitor.start().catch(error => {}),
     _console && _console.error('Simple monitor failed to start:', error);',
     process && process.exit(1);,
-<<<<<<< HEAD
-  });
-=======
+
   });
 }
 
@@ -109,4 +97,4 @@ module.exports = SimpleMonitor;
 module.exports = SimpleMonitor;
 
 module.exports = SimpleMonitor;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

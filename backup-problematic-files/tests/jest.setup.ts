@@ -535,24 +535,7 @@ jest.mock('msw/node', () => ({ setupServer:() => ({ listen:jest.fn(), resetHandl
 ;
 // Extend Vitest shim with timer helpers if not present;
 // @ts-ignore - vi is added by the vitest mock above;
-<<<<<<< HEAD
-if (global.vi) {// @ts-ignore;
-  }
-  if (!global.vi.useFakeTimers) global.vi.useFakeTimers = jest.useFakeTimers.bind(jest),// @ts-ignore;
-  if (!global.vi.useRealTimers) global.vi.useRealTimers = jest.useRealTimers.bind(jest),// @ts-ignore;
-  if (!global.vi.runAllTimers) global.vi.runAllTimers = jest.runAllTimers.bind(jest),// @ts-ignore;
-  if (!global.vi.advanceTimersByTime) global.vi.advanceTimersByTime = jest.advanceTimersByTime.bind(jest)}
-//Polyfill fetch and enable fetch mocks import 'whatwg-fetch';'
-fetchMock.enableMocks ()//Reset fetch mocks before each test to ensure isolation //Polyfill TextEncoder and TextDecoder for JSDOM environment global.TextEncoder = TextEncoder;
-//@ts-expect-error - Node's TextDecoder might not perfectly match DOM's, but it's usually sufficient for tests global.TextDecoder = TextDecoder;'
-//Set up a mock for Vite environment variables accessed via import.meta.env //This assumes that Babel (via babel-plugin-transform-import-meta or similar) //will transform import.meta.env.VITE SOME VAR to something like process.env.VITE SOME VAR //or that import.meta itself is transformed into an object where 'env'can be populated.process.env.VITE REOWN PROJECT ID = 'test project id from jest setup';'
-process.env.NEXT PUBLIC SUPABASE URL = '"http": //"localhost":54321';'
-process.env.NEXT PUBLIC SUPABASE ANON KEY = 'test anon key';'
-//Jest-axe matchers for accessibility //Mock import.meta.env for Jest - This was ineffective for the SyntaxError //global.import = {// //@ts-expect-error //"meta": {//"env": {//VITE SUPABASE "URL": 'mock supabase url', //VITE SUPABASE ANON "KEY": 'mock supabase anon key', //"MODE": 'test', //;'
-}//;
-}//;
-}//Mock the supabase client module to prevent import.meta.env parsing errors jest.mock ('@/integrations/supabase/client', () => ({"supabase": {"auth": {"onAuthStateChange": jest.fn ( () => ({"data": {"subscription": {"unsubscribe": jest.fn ()}'
-=======
+
 if (global.vi) {;
   // @ts-ignore;
 
@@ -586,7 +569,7 @@ process.env.NEXT PUBLIC SUPABASE ANON KEY = 'test anon key';
   data: {
   subscription: {
   unsubscribe: jest.fn () 
->>>>>>> origin/chore/fix-lint-and-merge
+
 }
 }
 }) );

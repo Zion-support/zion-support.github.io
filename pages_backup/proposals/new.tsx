@@ -1,57 +1,16 @@
-<<<<<<< HEAD:pages_backup/proposals/new.tsx
-const [jobBrief, setJobBrief] = useState(''),'
-  const [resumeSummary, setResumeSummary] = useState(''),'
-  const [relevantExperience, setRelevantExperience] = useState(''),'
-=======
 
 
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  const [jobBrief, setJobBrief] = useState(''),
-  const [resumeSummary, setResumeSummary] = useState(''),
-  const [relevantExperience, setRelevantExperience] = useState(''),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/proposals/new.tsx
+
   const [coverLetter, setCoverLetter] = useState(''),
   const operatorToken = process.env.NEXT_PUBLIC_OPERATOR_TOKEN,
   const pitchPrompt = useMemo(() => ('
     `Write a persuasive proposal for a freelance cloud architect applying to this job. Focus on reliability, previous projects, and delivery.\n\nJob Brief:\n${jobBrief || '(Not provided)'}\n\nTalent Resume Summary:\n${resumeSummary || '(Not provided)'}\n\nRelevant Experience:\n${relevantExperience || '(Not provided)'}\n\nReturn markdown only.`
   ), [jobBrief, relevantExperience, resumeSummary]),
 
-<<<<<<< HEAD:pages_backup/proposals/new.tsx
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/proposals/new.tsx
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import React, { useMemo, useState } from 'react';
-import AIAssistant from '../../components/ui/AIAssistant';
 
-<<<<<<< HEAD:pages_backup/proposals/new.tsx
-=======
-const NewProposal: NextPage = () => {
-  const [jobBrief, setJobBrief] = useState('')
-  const [resumeSummary, setResumeSummary] = useState('')
-  const [relevantExperience, setRelevantExperience] = useState('')
-  const [coverLetter, setCoverLetter] = useState('')
-  const operatorToken = process.env.NEXT_PUBLIC_OPERATOR_TOKEN
-  const pitchPrompt = useMemo(() => (
-    `Write a persuasive proposal for a freelance cloud architect applying to this job. Focus on reliability, previous projects, and delivery.\n\nJob Brief:\n${jobBrief |'(Not provided)'}\n\nTalent Resume Summary:\n${resumeSummary |'(Not provided)'}\n\nRelevant Experience:\n${relevantExperience |'(Not provided)'}\n\nReturn markdown only.`
-  ), [jobBrief, relevantExperience, resumeSummary])
-  const [jobBrief, setJobBrief] = useState(''),
-  const [resumeSummary, setResumeSummary] = useState(''),
-  const [relevantExperience, setRelevantExperience] = useState(''),
-  const [coverLetter, setCoverLetter] = useState(''),
-  const operatorToken = process.env.NEXT_PUBLIC_OPERATOR_TOKEN,
-  const pitchPrompt = useMemo(() => (
-    `Write a persuasive proposal for a freelance cloud architect applying to this job. Focus on reliability, previous projects, and delivery.\n\nJob Brief:\n${jobBrief || '(Not provided)'}\n\nTalent Resume Summary:\n${resumeSummary || '(Not provided)'}\n\nRelevant Experience:\n${relevantExperience || '(Not provided)'}\n\nReturn markdown only.`
-  ), [jobBrief, relevantExperience, resumeSummary]),
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/proposals/new.tsx
+
+
   return (
     <div>
       <Head>
@@ -76,16 +35,8 @@ const NewProposal: NextPage = () => {
           buttonLabel="Generate Pitch Based on Profile & Job""
           title="Generate Proposal"
 
-<<<<<<< HEAD:pages_backup/proposals/new.tsx
-=======
-<<<<<<< HEAD
-          defaultPrompt={pitchPrompt}
-          onAccept={setCoverLetter}
-          authorizationToken={operatorToken}
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/proposals/new.tsx
+
           defaultPrompt={pitchPrompt  } catch (error) {
     console.error("Error:", error);
 
@@ -103,21 +54,10 @@ const NewProposal: NextPage = () => {
   }
 }
 
-<<<<<<< HEAD:pages_backup/proposals/new.tsx
-=======
 
-<<<<<<< HEAD
-},
-export default NewProposal,
 
-},
 
-export default NewProposal,
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/proposals/new.tsx
         />
       </div>
 
@@ -126,17 +66,7 @@ export default NewProposal,
       <textarea value={coverLetter} onChange={e => setCoverLetter(e.target.value)} rows={14} className="mt-2 w-full rounded-md border p-3" />
     </div>
   )
-<<<<<<< HEAD
-}
-export default NewProposal;
 
-},
-export default NewProposal,
-},
-
-export default NewProposal,;
-export default NewProposal,
-=======
 
           buttonLabel='Generate Pitch Based on Profile & Job'
           title='Generate Proposal'
@@ -175,13 +105,6 @@ export default NewProposal,
 
 export default NewProposal,
 
-<<<<<<< HEAD:pages_backup/proposals/new.tsx
-  );
-};
 
-export default NewProposal;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/proposals/new.tsx
+
+

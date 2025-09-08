@@ -1,68 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-import Head from; \'next/head\'; export default function TermsPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Terms of Service - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Terms of Service for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Terms of Service</h1> <p className=\'text-gray-700 leading-7\'> These terms govern your use of our website and services. By accessing or; using our site,you agree to these terms. For more details,please reach out via the Contact page. </p> </div> )}
-import React from 'react';
-interface TermsProps {
-  // Add props here as needed
->>>>>>> merged-prs-20250907-203621
-
-=======
-import React from 'react';
-
-interface TermsProps {
-  // Add props here as needed
-
-import * as React from 'react';
-
-interface TermsProps {
-  // Add props here as needed
-}
-
-export default function Terms({ }: TermsProps) {
-  return (
-    <div>
-      <h1>Terms</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-
-}
-<<<<<<< HEAD
-}
-=======
-
-import Head from; \'next/head\'; export default function TermsPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Terms of Service - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Terms of Service for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Terms of Service</h1> <p className=\'text-gray-700 leading-7\'> These terms govern your use of our website and services. By accessing or; using our site,you agree to these terms. For more details,please reach out via the Contact page. </p> </div> )}
-import Head from; \'next/head\'; export default function TermsPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Terms of Service - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Terms of Service for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Terms of Service</h1> <p className=\'text-gray-700 leading-7\'> These terms govern your use of our website and services. By accessing or; using our site,you agree to these terms. For more details,please reach out via the Contact page. </p> </div> )}
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-import Head from; \'next/head\'; export default function TermsPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Terms of Service - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Terms of Service for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Terms of Service</h1> <p className=\'text-gray-700 leading-7\'> These terms govern your use of our website and services. By accessing or; using our site,you agree to these terms. For more details,please reach out via the Contact page. </p> </div> )}
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-import React from 'react';
-interface TermsProps {
-  // Add props here as needed
-
-<<<<<<< HEAD
-export default function Terms({ }: TermsProps) {
-=======
-import Head from; \'next/head\'; export default function TermsPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Terms of Service - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Terms of Service for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Terms of Service</h1> <p className=\'text-gray-700 leading-7\'> These terms govern your use of our website and services. By accessing or; using our site,you agree to these terms. For more details,please reach out via the Contact page. </p> </div> )}
-import Head from; \'next/head\'; export default function TermsPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Terms of Service - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Terms of Service for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Terms of Service</h1> <p className=\'text-gray-700 leading-7\'> These terms govern your use of our website and services. By accessing or; using our site,you agree to these terms. For more details,please reach out via the Contact page. </p> </div> )}
-import React from 'react';
-interface TermsProps {
-  // Add props here as needed
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Head from; \'next/head\'; export default function TermsPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Terms of Service - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Terms of Service for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Terms of Service</h1> <p className=\'text-gray-700 leading-7\'> These terms govern your use of our website and services. By accessing or; using our site,you agree to these terms. For more details,please reach out via the Contact page. </p> </div> )}
 import Head from; \'next/head\'; export default function TermsPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Terms of Service - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Terms of Service for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Terms of Service</h1> <p className=\'text-gray-700 leading-7\'> These terms govern your use of our website and services. By accessing or; using our site,you agree to these terms. For more details,please reach out via the Contact page. </p> </div> )}
 ursor/add-new-services-and-deploy-updates-0462
@@ -74,12 +13,10 @@ interface TermsProps {
   // Add props here as needed
 }
 
-<<<<<<< HEAD
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
 export default function Terms({ }: TermsProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -96,9 +33,7 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
 
       return <div>Something went wrong.</div>;
-<<<<<<< HEAD
-import Head from; \'next/head\'; export default function TermsPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Terms of Service - Zion Tech Solutions</title> <metaname=\'description\' content=\'Terms of Service for Zion Tech Solutions.\'/>  <h1 className=\'text-3xl font-bold mb-6\'>Terms of Service</h1> <p className=\'text-gray-700 leading-7\'> These terms govern your use of our website and services. By accessing or; using our site,you agree to these terms. For more details,please reach out via the Contact page. </p> </div> )}
-=======
+
     }
     return this.props.children;
   }
@@ -113,26 +48,13 @@ interface TermsProps {;
 }
 export default function Terms(): any ({ }: TermsProps) {;
   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     <div>;
       <h1>Terms</h1>;
       <p>This component is currently under development.</p>;
     </div>;
   );
-<<<<<<< HEAD
 
-
-
-}
-}
-}
-}
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
 }
 
@@ -140,10 +62,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 }
 
-<<<<<<< HEAD
-}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+
+

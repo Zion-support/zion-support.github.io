@@ -1,19 +1,5 @@
-<<<<<<< HEAD
-import { useState } from "react";
-import { MatchResultItem } from "@/lib/ai-matchmaking";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons";
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 import {useState} from "react";
 import {MatchResultItem} from "@/lib/ai-matchmaking";
 import {Card, CardContent} from "@/components/ui/card";
@@ -24,25 +10,13 @@ import {BarChart3, BriefcaseIcon, Monitor, User} from "@/components/icons";
 import {Skeleton} from "@/components/ui/skeleton";
 
 import {cn} from "@/lib/utils";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-interface AIMatchingResultsProps {;
-  matches: MatchResultItem[],;
-  onSelectMatch?: (match: MatchResultItem) => void,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
   isLoading?: boolean;
   projectDescription?: string;
   serviceType?: string;
 }
-<<<<<<< HEAD
-export function AIMatchingResults(): any ({;
-  matches;
-  onSelectMatch;
-=======
+
 
 export function AIMatchingResults(): any ({;
 
@@ -50,33 +24,13 @@ export function AIMatchingResults(): any ({;
   matches;
   onSelectMatch;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
   isLoading = false;
   projectDescription = "";
   serviceType: _serviceType = "";
 }: AIMatchingResultsProps) {;
   const [activeTab, setActiveTab] = useState("all");
-<<<<<<< HEAD
-import { useState } from "react",
-import { MatchResultItem } from "@/lib/ai-matchmaking",
-import { Card, CardContent } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons",
->>>>>>> merged-prs-20250907-203621
-import { Skeleton } from "@/components/ui/skeleton";
-import { cn } from "@/lib/utils";
-interface AIMatchingResultsProps {
 
-  matches: MatchResultItem[]
-  onSelectMatch?: (match: MatchResultItem) => void
-
-  isLoading?: boolean;
-  projectDescription?: string;
-import { Skeleton } from "@/components/ui/skeleton",
-import { cn } from "@/lib/utils",
-=======
 
 import { useState } from "react",
 import { MatchResultItem } from "@/lib/ai-matchmaking",
@@ -91,54 +45,15 @@ interface AIMatchingResultsProps {}
   matches: MatchResultItem[]
   onSelectMatch?: (match: MatchResultItem) => void;
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-interface AIMatchingResultsProps {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   matches: MatchResultItem[],
   onSelectMatch?: (match: MatchResultItem) => void,
   isLoading?: boolean,
   projectDescription?: string,
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-  serviceType?: string
-}
-
-export function AIMatchingResults({;
-  matches;
-  onSelectMatch;
-  isLoading = false;
-  projectDescription = "";
-export function AIMatchingResults({
-  matches;
-  onSelectMatch;
-
-  isLoading = false;
-  projectDescription = "";
-  serviceType: _serviceType = ""
-}: AIMatchingResultsProps) {
-  const [activeTab, setActiveTab] = useState("all");
-  matches,
-  onSelectMatch,
-  isLoading = false,
-  projectDescription = "",
-  serviceType: _serviceType = ""
-}: AIMatchingResultsProps) {
-  const [activeTab, setActiveTab] = useState("all"),
-  
-=======
-  serviceType?: string
-}
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   // Group matches by category
   const categories = {
     all: matches
@@ -147,37 +62,9 @@ export function AIMatchingResults({
 
     equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"))
 
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  }
-  // Get the icon for a category
-  const getCategoryIcon = (category: string) => {
-    const lowerCategory = category.toLowerCase();
-    if (lowerCategory.includes("talent")) return User;
-    if (lowerCategory.includes("equipment")) return Monitor
-    return BriefcaseIcon
-  }
-=======
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  },
-  
-  // Get the icon for a category
-  const getCategoryIcon = (category: string) => {
-    const lowerCategory = category.toLowerCase(),
-    if (lowerCategory.includes("talent")) return User,
-    if (lowerCategory.includes("equipment")) return Monitor,
-    return BriefcaseIcon
-  },
-  
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -191,8 +78,7 @@ export function AIMatchingResults({
       </div>
     )
   }
-<<<<<<< HEAD
-=======
+
   if (matches.length === 0) {
     return (
       <Card className="bg-zion-blue-dark border-zion-blue-light text-center p-6">
@@ -207,13 +93,7 @@ export function AIMatchingResults({
               <p className="text-xs text-zion-slate-light">Your search:</p>
               <p className="text-sm text-white">{projectDescription}</p>
             </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from "react",;
 import { MatchResultItem } from "@/lib/ai-matchmaking",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -232,9 +112,7 @@ interface AIMatchingResultsProps {;
   serviceType?: string;
 }
 ;
-<<<<<<< HEAD
 
-=======
 export function AIMatchingResults({;
   matches,;
   onSelectMatch,;
@@ -243,95 +121,21 @@ export function AIMatchingResults({;
   serviceType: _serviceType = "";
 }: AIMatchingResultsProps) {;
   const [activeTab, setActiveTab] = useState("all"),;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  // Group matches by category;
-  const categories = {;
-    all: matches,;
-    talent: matches && matches.filter(match => match && match.category.toLowerCase().includes("talent")),;
-    services: matches && matches.filter(match => match && match.category.toLowerCase().includes("service")),;
-    equipment: matches && matches.filter(match => match && match.category.toLowerCase().includes("equipment"));
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   };
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
   // Get the icon for a category;
   const getCategoryIcon = (category: string) => {;
 
     if (lowerCategory && lowerCategory.includes("equipment")) return Monitor,;
     return BriefcaseIcon;
   };
-<<<<<<< HEAD
-  if (isLoading) {;
-    return (
-import { useState } from "react",;
-import { MatchResultItem } from "@/lib/ai-matchmaking",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons",;
-import { Skeleton } from "@/components/ui/skeleton",;
-import { cn } from "@/lib/utils",;
-;
-interface AIMatchingResultsProps {;
-  matches:MatchResultItem[],;
-  onSelectMatch?:(match:MatchResultItem) => void,;
-  isLoading?:boolean,;
-  projectDescription?:string,;
-  serviceType?:string;
-}
-;
-export function AIMatchingResults({;
-  matches,;
-  onSelectMatch,;
-  isLoading = false,;
-  projectDescription = "",;
-  serviceType:_serviceType = "";
-} AIMatchingResultsProps) {;
-  const [activeTab, setActiveTab] = useState("all"),;
-  ;
-  // Group matches by category;
-  const categories = {;
-    all:matches,;
-    talent:matches.filter(match => match.category.toLowerCase().includes("talent")),;
-    services:matches.filter(match => match.category.toLowerCase().includes("service")),;
-    equipment:matches.filter(match => match.category.toLowerCase().includes("equipment"));
-  },;
-  ;
-  // Get the icon for a category;
-  const getCategoryIcon = (category:string) => {;
-  // Group matches by category;
-  const categories = {;
-    all: matches,;
-    talent: matches.filter(match => match.category.toLowerCase().includes("talent")),;
-    services: matches.filter(match => match.category.toLowerCase().includes("service")),;
-    equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"));
-  },;
-  // Get the icon for a category;
-  const getCategoryIcon = (category: string) => {;
-    const lowerCategory = category.toLowerCase(),;
-    if (lowerCategory.includes("talent")) return User,;
-    if (lowerCategory.includes("equipment")) return Monitor,;
-    return BriefcaseIcon;
-  },;
-  if (isLoading) {;
-    return (;
-=======
+
 
   if (isLoading) {;
-<<<<<<< HEAD
 
-          <Skeleton className="h-[120px] w-full" />;
-        </div>;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    return (
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="space-y-4">;
         <Skeleton className="h-10 w-full" />;
         <div className="space-y-3">;
@@ -349,27 +153,14 @@ export function AIMatchingResults({;
     return (;
     );
   }
-<<<<<<< HEAD
-;
-  if (matches.length === 0) {;
-    return (;
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
 
   if (matches && matches.length === 0) {;
     return (
-<<<<<<< HEAD
-    ),;
-  }
-  ;
-  if (matches.length === 0) {;
-    return (;
-    );
-  }
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
       <Card className="bg-zion-blue-dark border-zion-blue-light text-center p-6">;
         <CardContent className="pt-6">;
           <BarChart3 className="h-12 w-12 mx-auto text-zion-slate-light mb-3" />;
@@ -383,21 +174,10 @@ export function AIMatchingResults({;
               <p className="text-sm text-white">{projectDescription}</p>;
             </div>;
 
-<<<<<<< HEAD
-  
 
 
->>>>>>> merged-prs-20250907-203621
-          )}
-        </CardContent>
-      </Card>
-    )
-  }
-  
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
         </CardContent>;
       </Card>;
@@ -408,8 +188,8 @@ export function AIMatchingResults({;
   
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
   return (
     <div className="space-y-4">
       <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -429,21 +209,8 @@ export function AIMatchingResults({;
             Equipment ({categories.equipment.length})
           </TabsTrigger>
         </TabsList>
-<<<<<<< HEAD
-        
-        {Object.entries(categories).map(([tab, items]) => (
-          <TabsContent key={tab} value={tab} className="mt-4 space-y-3">
-=======
-<<<<<<< HEAD
 
-=======
-        {Object.entries(categories).map(([tab, items]) => (
-          <TabsContent key={tab} value={tab} className="mt-4 space-y-3">
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 import { useState } from './react';
 
 import { cn } from '@/lib / utils';
@@ -503,20 +270,13 @@ if ( {) {}
   }
 
           <TabsContent key={tab} value={tab} className="mt - 4 space - y-3">;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
             {items.length > 0 ? (
               items.map ((match) => {}
                 const CategoryIcon = getCategoryIcon (match.category);
                 return (
-<<<<<<< HEAD
 
-"
-                        "bg-green-500"
-
-=======
   return (
     ),;
   }
@@ -557,42 +317,23 @@ if ( {) {}
                         match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" :;
                         match.category.toLowerCase().includes("service") ? "bg-zion-purple" :;
                         "bg-green-500";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                       )} />;
                       <div className="flex-1 p-4">;
                         <div className="flex items-start gap-4">;
                           <Avatar className="h-12 w-12 border border-zion-blue-light">;
-<<<<<<< HEAD
-                            {match && match.image ? (;
-                              <AvatarImage src={match && match.image} />;
-                            ) : (;
-{match.image ? (;
-                              <AvatarImage src={match.image} />;
-                            ) :(;
-                            {match && match.image ? (;
-                            ) : (;                            {match && match.image ? (;
-                              <AvatarImage src={match && match.image} />;
-                            ) : (;
-=======
+
                             {match.image ? (;
                               <AvatarImage src={match.image} />;
                             ) :(;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                               <AvatarFallback className="bg-zion-purple/20">;
 
                                 <CategoryIcon className="h-6 w-6 text-zion-purple" />;
                               </AvatarFallback>;
 
                             )}
-<<<<<<< HEAD
 
-                            <div className="mt-2 flex flex-wrap gap-1">;
-
-                              <Badge variant="outline" className="text-xs bg-zion-blue text-zion-cyan border-zion-cyan/30">;
-                                {match.category}
-                              </Badge>;
-                              {match.skills && match.skills.slice(0, 3).map((skill:string, i:number) => (;"
-=======
                           </Avatar>;
                           ;
                           <div className="flex-1">;
@@ -616,32 +357,25 @@ if ( {) {}
                                 {match.category}
                               </Badge>;
                               {match.skills && match.skills.slice(0, 3).map((skill:string, i:number) => (;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                                 <Badge key={i} variant="outline" className="text-xs bg-zion-blue-dark text-white border-zion-blue-light">;
                                   {skill}
                                 </Badge>;
                               ))}
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                             </div>;
                           </div>;
                         </div>;
                       </div>;
                     </div>;
-<<<<<<< HEAD
-}
 
-}
-
-=======
                   </Card>;
                 ),;
               });
             ) :(;
               <div className="text-center py-8 text-zion-slate-light">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                 No {tab} matches found.;
               </div>;            )}
           </TabsContent>;
@@ -656,9 +390,7 @@ projectDescription?: string;
 serviceType?: string 
 }export function AIMatchingResults ({
   matches;
-<<<<<<< HEAD
-  onSelectMatch;
-=======
+
 onSelectMatch;
 isLoading = false;
 projectDescription = "";
@@ -684,7 +416,7 @@ if (isLoading) {
 }matches found. </div>) 
 }</TabsContent>) ) 
 }</Tabs> </div>) 
->>>>>>> merged-prs-20250907-203621
+
             {items.length > 0 ? (
               items.map((match) => {
                 const CategoryIcon = getCategoryIcon(match.category),
@@ -700,63 +432,7 @@ if (isLoading) {
                         match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" :
                         match.category.toLowerCase().includes("service") ? "bg-zion-purple" :
 
-<<<<<<< HEAD
-                        "bg-green-500"
-                      )} />
-                      <div className="flex-1 p-4">
-                        <div className="flex items-start gap-4">
-                          <Avatar className="h-12 w-12 border border-zion-blue-light">
-                            {match.image ? (
-                              <AvatarImage src={match.image} />
-                            ) : (
-                              <AvatarFallback className="bg-zion-purple/20">
-                                <CategoryIcon className="h-6 w-6 text-zion-purple" />
-                              </AvatarFallback>
-                            )}
-                          </Avatar>
-                          <div className="flex-1">
-                            <div className="flex justify-between">
-                              <div>
-                                <h3 className="font-medium text-white">{match.title}</h3>
-                                <p className="text-zion-slate-light text-sm">{match.description}</p>
-                              </div>
-                              {match.price && (
-                                <div className="text-right ml-2">
-                                  <div className="font-medium text-white">${match.price}</div>
-                                  <div className="text-xs text-zion-slate-light">
-                                    {match.category.toLowerCase().includes("talent") ? "/hour" : ""}
-                                  </div>
-                                </div>
-                              )}
-                            </div>
-                            <div className="mt-2 flex flex-wrap gap-1">
-                              <Badge variant="outline" className="text-xs bg-zion-blue text-zion-cyan border-zion-cyan/30">
-                                {match.category}
-                              </Badge>
-                              {match.skills && match.skills.slice(0, 3).map((skill: string, i: number) => (
-                                <Badge key={i} variant="outline" className="text-xs bg-zion-blue-dark text-white border-zion-blue-light">
-                                  {skill}
-                                </Badge>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </Card>
-                )
-              })
-            ) : (
-              <div className="text-center py-8 text-zion-slate-light">
-                No {tab} matches found.
-              </div>
-            )}
-          </TabsContent>
-        ))}
-      </Tabs>
-    </div>
-  )
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

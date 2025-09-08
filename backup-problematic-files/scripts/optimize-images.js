@@ -3,15 +3,13 @@ const sharp = // // require('sharp')
 const fs = // // require('fs')
 const path = // // require('path')
 async function optimizeImages() {
-<<<<<<< HEAD
 
-=======
   const publicDir = path && path.join(process && process.cwd(), 'public';);
   const imagesDir = path && path.join(publicDir, 'images';);
   if () {
     console && console.log('No images directory found')) {
     ) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     console.log('No images directory found');
   }
     return;
@@ -25,11 +23,9 @@ async function optimizeImages() {
     console && console.log('No images directory found')}
     return}
   const files = fs && fs.readdirSync(imagesDir;);
-<<<<<<< HEAD
-  const imageFiles = files && files.filter(file =>
-=======
+
   const imageFiles = files && files.filter(file => 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     /.(jpg|jpeg|png|webp)$/i && i.test(file)
   ;);
 
@@ -53,20 +49,16 @@ async function optimizeImages() {
       await sharp(inputPath)
         .webp({ "quality": '80' })
         .toFile(outputPath);
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       console && console.log(`Optimized: ${file}`);} catch (error) {
       console && console.log(`Optimized: ${file}`);} catch (error) {
       console && console.log(`Optimized: ${file}`);} catch (error) {
       console && console.log(`Optimized: ${file}`);} catch (error) {
       console && console.log(`"Optimized": ${file}`)} catch (error) {
       console && console.error(`Error optimizing ${file}:`, error && error.message)}
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   }
 }
 optimizeImages();

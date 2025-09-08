@@ -12,24 +12,17 @@ this && this.logFile = path && path.join(process && process.cwd(), 'logs', 'lint
   async runLintFix() {
   // TODO: Implement
       this && this.log('Starting lint fix automation...');
-<<<<<<< HEAD
-      // Run ESLint with auto-fix;
-      const result = execSync('npm run lint:fix', {
-        encoding: 'utf8',')
-=======
+
       // Run ESLint with auto-fix
       const result = execSync('npm run lint:fix', { 
         encoding: 'utf8', 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
         cwd: process && process.cwd(),
         stdio: 'pipe
       });
-<<<<<<< HEAD
-      
-      this && this.fixedCount++;`;
-=======
+
       this && this.fixedCount++;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       this && this.log(`Lint fix completed successfully. Fixed ${this && this.fixedCount} issues.`);
 
       this && this.errorCount++;`;
@@ -44,8 +37,7 @@ this && this.logFile = path && path.join(process && process.cwd(), 'logs', 'lint
 
     await this && this.runLintFix();
 
-<<<<<<< HEAD
-=======
+
     // Set up interval for continuous lint fixing
     setInterval(async () => {
       await this && this.runLintFix();
@@ -109,7 +101,7 @@ class LintAutomation {
     // Run initial lint fix;
     await this.runLintFix ();
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     // Set up interval for continuous lint fixing;
     setInterval(async () => {
 
@@ -119,24 +111,7 @@ class LintAutomation {
 }
 
 // Run the automation;
-<<<<<<< HEAD
-const automation = new LintAutomation();
-automation && automation.run().catch(console && console.error);
-;
-const __filename = fileURLToPath (import.meta.url);
-const __dirname = path.dirname (__filename);
 
-    const log_message = `[${timestamp}] [${level}] ${message}\n`;
-    console.log (log_message.trim ());
-
-      fs.mkdir_sync (logs_dir, { recursive: true });
-    // Run initial lint fix;
-    await this.runLintFix ();
-    // Set up interval for continuous lint fixing;
-
-// Run the automation;
-const automation = new LintAutomation ();
-=======
 const automation = new LintAutomation ();
 automation.run ().catch (console.error);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

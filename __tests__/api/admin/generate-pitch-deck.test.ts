@@ -1,289 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import { NextApiRequest, NextApiResponse } from 'next'
-import { createMocks, RequestMethod } from 'node-mocks-http'
-import handler from '@/pages/api/admin/generate-pitch-deck'
-import { supabase } from '@/integrations/supabase/client'
-jest && jest.mock('@/integrations/supabase/client'
-describe('/api/admin/generate-pitch-deck API Endpoint'
-    companyMission: 'Test'
-    currentFundingStage: 'Seed'
-    visionGoals: 'Conquer'
-    roundType: 'Seed'
-    targetRaiseAmount: '100k'
-    activeUsers30d: '1000'
-    gmv: '50k'
-    notableClients: '[]'
-  const mockPrompt = 'Test prompt'
-      data: { user: { id: 'test-user-id'
-      error: 'null'
-jest && jest.mock('@/integrations/supabase/client'
-describe('/api/admin/generate-pitch-deck API Endpoint'
-    "companyMission"
-    "currentFundingStage"
-    "visionGoals"
-    "roundType"
-    "targetRaiseAmount"
-    "activeUsers30d"
-    "gmv"
-      "data"
-      "data"
-    const { req, res } = createMocks({ "method"
-      "method"'"
-      '"Unauthorized"
-      "error"
-      "method"
-      "headers"'"
-      '"Unauthorized"
-      "data"
-      "method"
-      "headers"'"
-      '"Forbidden"
-      "data"
-      "data"
-      "method"
-      "headers"
-      "data"
-      "data"
-      "method"
-      "headers"
-      "data"
-            "error"
-      "method"
-<<<<<<< HEAD
-      "headers"
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
 import { NextApiRequest, NextApiResponse } from 'next';
 import { createMocks, RequestMethod } from 'node-mocks-http';
 import handler from '@/pages/api/admin/generate-pitch-deck';
-<<<<<<< HEAD
-import { supabase } from '@/integrations/supabase/client';
 
-<<<<<<< HEAD
-
-
-import { NextApiRequest, NextApiResponse } from 'next''
-import { createMocks, RequestMethod } from 'node-mocks-http''
-import handler from '@/pages/api/admin/generate-pitch-deck''
-import { supabase } from '@/integrations/supabase/client''
-jest && jest.mock('@/integrations/supabase/client''
-describe('/api/admin/generate-pitch-deck API Endpoint''
-    "companyMission": 'Test''
-    "currentFundingStage": 'Seed''
-    "visionGoals": 'Conquer''
-    "roundType": 'Seed''
-    "targetRaiseAmount": '100k''
-    "activeUsers30d": '1000''
-    "gmv": '50k''
-    "notableClients": '[]''
-const mockPrompt = 'Test prompt';'
-      "data": { "user": { "id": 'test-user-id''
-      }
-      "error": 'null''
-jest && jest.mock('@/integrations/supabase/client''
-describe('/api/admin/generate-pitch-deck API Endpoint''
-    "companyMission""
-    "currentFundingStage""
-    "visionGoals""
-    "roundType""
-    "targetRaiseAmount""
-    "activeUsers30d""
-    "gmv""
-      "data""
-      "data""
-   ;
-const { req, res } = createMocks({ "method";"
-      "method""
-      '"Unauthorized""
-      "error""
-      "method""
-      "headers""
-      '"Unauthorized""
-      "data""
-      "method""
-      "headers""
-      '"Forbidden""
-      "data""
-      "data""
-      "method""
-      "headers""
-      "data""
-      "data""
-      "method""
-      "headers""
-      "data""
-            "error""
-      "method""
-
-
-}
-
-
-import { NextApiRequest, NextApiResponse } from 'next';'
-import { createMocks, RequestMethod } from 'node-mocks-http';'
-import handler from '@/pages/api/admin/generate-pitch-deck';'
-import { supabase  } from '@/integrations/supabase/client';'
-jest && jest.mock('@/integrations/supabase/client';'
-describe('/api/admin/generate-pitch-deck API Endpoint';'
-    "companyMission": 'Test';'
-    "currentFundingStage": 'Seed';'
-    "visionGoals": 'Conquer';'
-    "roundType": 'Seed';'
-    "targetRaiseAmount": '100k';'
-    "activeUsers30d": '1000';'
-    "gmv": '50k';'
-    "notableClients": '[]';'
-
-      "data": { "user": { "id": 'test-user-id';'
-      }
-      "error": 'null';'
-jest && jest.mock('@/integrations/supabase/client';'
-describe('/api/admin/generate-pitch-deck API Endpoint';'
-    "companyMission";"
-    "currentFundingStage";"
-    "visionGoals";"
-    "roundType";"
-    "targetRaiseAmount";"
-    "activeUsers30d";"
-    "gmv";"
-      "data";"
-      "data";"
-
-      "method";"
-      '"Unauthorized";"
-      "error";"
-      "method";"
-      "headers";"
-      '"Unauthorized";"
-      "data";"
-      "method";"
-      "headers";"
-      '"Forbidden";"
-      "data";"
-      "data";"
-      "method";"
-      "headers";"
-      "data";"
-      "data";"
-      "method";"
-      "headers";"
-      "data";"
-            "error";"
-      "method";"
-      "headers";"
-      "headers";"
-}
-ursor/automate-test-improve-and-merge-code-646c;
-ursor/automate-test-improve-and-merge-code-646c;
-jest.mock('@/integrations/supabase/client', () => ({"supabase": {"auth": { "getUser": jest.fn(),'
-},"from": jest.fn().mockReturnThis(),"select": jest.fn(),"eq": jest.fn().mockReturnThis(),"single": jest.fn()}
-}))describe('/api/admin/generate-pitch-deck API Endpoint', () => {const mockInputData = {"companyMission": 'Test',"currentFundingStage": 'Seed',"visionGoals": 'Conquer',"roundType": 'Seed',"targetRaiseAmount": '100k';'
-  }
-
-const mockSyncedData = {"activeUsers30d": '1000',"gmv": '50k',"notableClients": '[]';'
-  }
-
-  beforeEach(() => {jest.clearAllMocks()(supabase.auth.getUser as jest.Mock).mockResolvedValue({"data": { "user": { "id": 'test-user-id' },'
-},"error": 'null';'
-    })ursor/automate-test-improve-and-merge-code-646c;
-// Mock Supabase client;
-jest.mock('@/integrations/supabase/client', () => ({"supabase": {"auth": {"getUser": jest.fn(,"
-},"from": jest.fn().mockReturnThis(),"select": jest.fn(),"eq": jest.fn().mockReturnThis(),"single": jest.fn()}}))describe('/api/admin/generate-pitch-deck API Endpoint', () => {const mockInputData = {"companyMission": 'Test',"currentFundingStage": 'Seed',"visionGoals": 'Conquer',"roundType": 'Seed',"targetRaiseAmount": '100k;'
-}
-
-  beforeEach(() => {jest.clearAllMocks()// Default mock implementations for Supabase;
-    (supabase.auth.getUser as jest.Mock).mockResolvedValue({"data": { "user": { "id": 'test-user-id' },'
-},"error": null})// Chainable mocks for Supabase query builder;"
-    (supabase.from as jest.Mock).mockReturnThis()(supabase.select as jest.Mock).mockReturnThis()(supabase.eq as jest.Mock).mockReturnThis()(supabase.single as jest.Mock).mockResolvedValue({"data": { "role": 'admin','
-},"error": null})})test('should return 405 if method is not POST', async () => {const { req, res } = createMocks({ "method": 'GET' as RequestMethod })await handler(req as NextApiRequest, res as NextApiResponse)expect(res._getStatusCode()).toBe(405)expect(res._getHeaders().allow).toContain('POST')})test('should return 401 if Authorization header is missing', async () => {const { req, res } = createMocks({"method": 'POST' as RequestMethod,"headers": {/* No Authorization header */;"
-      },"body": {"prompt": mockPrompt,"inputData": mockInputData,"syncedData": mockSyncedData}})await handler(req as NextApiRequest, res as NextApiResponse)expect(res._getStatusCode()).toBe(401)expect(res._getJSONData().message).toBe('"Unauthorized": Missing or invalid token.';'
-    )})test('should return 401 if token is invalid or user not found', async () => {(supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({"data": { "user": null,"
-},"error": new Error('Invalid token')})const { req, res } = createMocks({"method": 'POST' as RequestMethod,"headers": { "Authorization": 'Bearer invalid-token','
-},"body": {"prompt": mockPrompt,"inputData": mockInputData,"syncedData": mockSyncedData}})await handler(req as NextApiRequest, res as NextApiResponse)expect(res._getStatusCode()).toBe(401)expect(res._getJSONData().message).toBe('"Unauthorized": Invalid token or user not found.';'
-    )})test('should return 403 if user role is not authorized', async () => {(supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({"data": { "user": { "id": 'user-id' },'
-},"error": null})// Mock profile fetch to return a non-authorized role;"
-    (supabase.from as jest.Mock).mockReturnValueOnce({"select": jest.fn().mockReturnValueOnce({"eq": jest.fn().mockReturnValueOnce({"single": jest.fn().mockResolvedValueOnce({"data": { "role": 'user','
-},"error": null})})})})const { req, res } = createMocks({"method": 'POST' as RequestMethod,"headers": { "Authorization": 'Bearer valid-token-for-user-role','
-},"body": {"prompt": mockPrompt,"inputData": mockInputData,"syncedData": mockSyncedData}})await handler(req as NextApiRequest, res as NextApiResponse)expect(res._getStatusCode()).toBe(403)expect(res._getJSONData().message).toBe('"Forbidden": Access denied. Insufficient privileges.';'
-    )})test('should return 400 if required parameters are missing', async () => {// Auth and role are fine for this test;'
-    (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({"data": { "user": { "id": 'user-id' },'
-},"error": null})(supabase.from('profiles').select as jest.Mock).mockResolvedValueOnce({"data": { "role": 'admin','
-},"error": null})const { req, res } = createMocks({"method": 'POST' as RequestMethod,"headers": { "Authorization": 'Bearer valid-token','
-},"body": {/* "prompt": mockPrompt, */ // Missing prompt;"
-        "inputData": mockInputData,"syncedData": mockSyncedData}})await handler(req as NextApiRequest, res as NextApiResponse)expect(res._getStatusCode()).toBe(400)expect(res._getJSONData().message).toContain('Missing required parameters')})test('should return 200 and mock deck data on successful generation', async () => {// Auth and role are fine;'
-    (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({"data": { "user": { "id": 'user-id' },'
-},"error": null})(supabase.from('profiles').select as jest.Mock).mockResolvedValueOnce({"data": { "role": 'admin','
-},"error": null})const { req, res } = createMocks({"method": 'POST' as RequestMethod,"headers": { "Authorization": 'Bearer valid-token','
-},"body": {"prompt": mockPrompt,"inputData": mockInputData,"syncedData": mockSyncedData}})await handler(req as NextApiRequest, res as NextApiResponse)expect(res._getStatusCode()).toBe(200)const responseData = res._getJSONData()expect(responseData.slides).toBeInstanceOf(Array)expect(responseData.slides.length).toBeGreaterThan(0)expect(responseData.slides[0].title).toBeDefined()})test('should;'
-  return 500 if fetching profile fails', async () => {(supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({"data": { "user": { "id": 'user-id' },'
-},"error": null})// Simulate profile fetch error;"
-    (supabase.from as jest.Mock).mockReturnValueOnce({"select": jest.fn().mockReturnValueOnce({"eq": jest.fn().mockReturnValueOnce({"single": jest.fn().mockResolvedValueOnce({"data": null,"error": new Error('Failed to fetch profile')})})})})const { req, res } = createMocks({"method": 'POST' as RequestMethod,"headers": { "Authorization": 'Bearer valid-token','
-},"body": {"prompt": mockPrompt,"inputData": mockInputData,"syncedData": mockSyncedData}})await handler(req as NextApiRequest, res as NextApiResponse)expect(res._getStatusCode()).toBe(500)})})"headers";"
-import { NextApiRequest,NextApiResponse } from 'next'; import { createMocks,RequestMethod } from 'node-mocks-http'; import handler from '@/pages/api/admin/generate-pitch-deck'; import { supabase } from '@/integrations/supabase/client'; jest.mock('@/integrations/supabase/client',() => ({ "supabase": { "auth": { "getUser": jest.fn(),'
-},"from": jest.fn().mockReturnThis(),"select": jest.fn(),"eq": jest.fn().mockReturnThis(),"single": jest.fn()
-}))describe('/api/admin/generate-pitch-deck API Endpoint',() => { const mockInputData = { "companyMission": 'Test',"currentFundingStage": 'Seed',"visionGoals": 'Conquer',"roundType": 'Seed',"targetRaiseAmount": '100k;'
-}
-
-const mockSyncedData = { "activeUsers30d": '1000',"gmv": '50k',"notableClients": [,;'
-}
-;
-  const mockPrompt = 'Test prompt'; beforeEach(() => { jest.clearAllMocks()(supabase.auth.getUser as jest.Mock).mockResolvedValue({ "data": { "user": { "id": 'test-user-id' },'
-},"error": null})(supabase.from as jest.Mock).mockReturnThis()(supabase.select as jest.Mock).mockReturnThis()(supabase.eq as jest.Mock).mockReturnThis()(supabase.single as jest.Mock).mockResolvedValue({ "data": { "role": 'admin','
-},"error": null}
-})test('should return 405 if method is not POST',async () => { const { req,res } = createMocks({ "method": 'GET' as RequestMethod,'
-})await handler(req as NextApiRequest,res as NextApiResponse)expect(res._getStatusCode()).toBe(405)expect(res._getHeaders().allow).toContain('POST')})test('should return 401 if Authorization header is missing',async () => { const { req,res } = createMocks({ "method": 'POST' as RequestMethod,"headers":  ,'
-},"body": { "prompt": mockPrompt,"inputData": mockInputData,"syncedData": mockSyncedData
-})await handler(req as NextApiRequest,res as NextApiResponse)expect(res._getStatusCode()).toBe(401)expect(res._getJSONData().message).toBe( '"Unauthorized": Missing or invalid token.' ,'
-})test('should return 401 if token is invalid or user not found',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ "data": { "user": null,'
-},"error": new Error('Invalid token','
-})const { req,res } = createMocks({ "method": 'POST' as RequestMethod,"headers": { "Authorization": 'Bearer invalid-token','
-},"body": { "prompt": mockPrompt,"inputData": mockInputData,"syncedData": mockSyncedData
-})await handler(req as NextApiRequest,res as NextApiResponse)expect(res._getStatusCode()).toBe(401)expect(res._getJSONData().message).toBe( '"Unauthorized": Invalid token or user not found.' ,'
-})test('should return 403 if user role is not authorized',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ "data": { "user": { "id": 'user-id' },'
-},"error": null})(supabase.from as jest.Mock).mockReturnValueOnce({ "select": jest .fn() .mockReturnValueOnce({ "eq": jest .fn() .mockReturnValueOnce({ "single": jest .fn() .mockResolvedValueOnce({ "data": { "role": 'user','
-},"error": null })})}
-})const { req,res } = createMocks({ "method": 'POST' as RequestMethod,"headers": { "Authorization": 'Bearer valid-token-for-user-role','
-},"body": { "prompt": mockPrompt,"inputData": mockInputData,"syncedData": mockSyncedData
-})await handler(req as NextApiRequest,res as NextApiResponse)expect(res._getStatusCode()).toBe(403)expect(res._getJSONData().message).toBe( '"Forbidden": Access denied. Insufficient privileges.' ,'
-})test('should return 400 if required parameters are missing',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ "data": { "user": { "id": 'user-id' },'
-},"error": null})(supabase.from('profiles').select as jest.Mock).mockResolvedValueOnce({ "data": { "role": 'admin','
-},"error": nul
-})const { req,res } = createMocks({ "method": 'POST' as RequestMethod,"headers": { "Authorization": 'Bearer valid-token','
-},"body": { "inputData": mockInputData,"syncedData": mockSyncedData 
-})await handler(req as NextApiRequest,res as NextApiResponse)expect(res._getStatusCode()).toBe(400)expect(res._getJSONData().message).toContain('Missing required parameters')})test('should return 200 and mock deck data on successful generation',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ "data": { "user": { "id": 'user-id' },'
-},"error": null})(supabase.from('profiles').select as jest.Mock).mockResolvedValueOnce({ "data": { "role": 'admin','
-},"error": nul
-})const { req,res } = createMocks({ "method": 'POST' as RequestMethod,"headers": { "Authorization": 'Bearer valid-token','
-},"body": { "prompt": mockPrompt,"inputData": mockInputData,"syncedData": mockSyncedData
-})await handler(req as NextApiRequest,res as NextApiResponse)expect(res._getStatusCode()).toBe(200)const responseData = res._getJSONData()expect(responseData.slides).toBeInstanceOf(Array)expect(responseData.slides.length).toBeGreaterThan(0)expect(responseData.slides[0].title).toBeDefined()})test('should;'
-  return 500 if fetching profile fails',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ "data": { "user": { "id": 'user-id' },'
-},"error": nul
-})(supabase.from as jest.Mock).mockReturnValueOnce({ "select": jest .fn() .mockReturnValueOnce({ "eq": jest .fn() .mockReturnValueOnce({ "single": jest .fn() .mockResolvedValueOnce({ "data": null,"error": new Error('Failed to fetch profile')})})},'
-};
-const { req,res } = createMocks({ "method": 'POST' as RequestMethod,"headers": { "Authorization": 'Bearer valid-token',;'
-},"body": { "prompt": mockPrompt,"inputData": mockInputData,"syncedData": mockSyncedData
-})await handler(req as NextApiRequest,res as NextApiResponse)expect(res._getStatusCode()).toBe(500)})})"headers";"headers";"
-      "headers";"
-      "headers";"
-ursor/add-new-services-and-deploy-updates-0462;
-ursor/integrate-build-improve-and-re-verify-8f7d;
-      "headers";"
-      "headers";"
-      "headers";"
-ursor/automate-test-improve-and-merge-code-646c;
-      "headers";"
-=======
 jest.mock('@/integrations/supabase/client', () => ({
   supabase: {,)
   auth: { getUser: jest.fn() },
@@ -306,7 +26,7 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
     gmv: '50k',
     notableClients: '[]',
   const mockPrompt = 'Test prompt';
->>>>>>> origin/chore/fix-lint-and-merge
+
   beforeEach(() => {
     jest.clearAllMocks();
     (supabase.auth.getUser as jest.Mock).mockResolvedValue({
@@ -325,19 +45,7 @@ jest.mock('@/integrations/supabase/client', () => ({
     "single": jest.fn()}}));
 describe('/api/admin/generate-pitch-deck API Endpoint', () => {
   const mockInputData = {
-<<<<<<< HEAD
-    "companyMission": 'Test','
-    "currentFundingStage": 'Seed','
-    "visionGoals": 'Conquer','
-    "roundType": 'Seed','
-    "targetRaiseAmount": '100k'};'
 
-const mockSyncedData = {
-    "activeUsers30d": '1000','
-    "gmv": '50k','
-    "notableClients": []};"
-
-=======
 // Mock Supabase client;
   "supabase": {"
     auth: {,)
@@ -355,7 +63,7 @@ const mockSyncedData = {
     "gmv": '50k',
     "notableClients": []};
   const mockPrompt = 'Test prompt';
->>>>>>> origin/chore/fix-lint-and-merge
+
   beforeEach(() => {
     jest.clearAllMocks();
     // Default mock implementations for Supabase
@@ -405,22 +113,13 @@ const mockSyncedData = {
       },
       "body": {
 
-<<<<<<< HEAD
-      "method": 'POST' as RequestMethod,'
-      "headers": { "Authorization": 'Bearer invalid-token','
-},
-      "body": {"
-        }
-        "prompt": mockPrompt,
-        "inputData": mockInputData,"
-        "syncedData": mockSyncedData}});"
-=======
+
         prompt: mockPrompt,
         inputData: 'mockInputData',
         syncedData: 'mockSyncedData',
       },
     });
->>>>>>> origin/chore/fix-lint-and-merge
+
     await handler(req as NextApiRequest, res as NextApiResponse);
     expect(res._getStatusCode()).toBe(401);
     expect(res._getJSONData().message).toBe(
@@ -484,16 +183,7 @@ const mockSyncedData = {
       "error": null});
     // Mock profile fetch to return a non-authorized role
 
-<<<<<<< HEAD
-      "method": 'POST' as RequestMethod,'
-      "headers": { "Authorization": 'Bearer valid-token-for-user-role','
-},
-      "body": {"
-        }
-        "prompt": mockPrompt,
-        "inputData": mockInputData,"
-        "syncedData": mockSyncedData}});"
-=======
+
     (supabase.from as jest.Mock).mockReturnValueOnce({
       select: jest
         .fn()
@@ -519,7 +209,7 @@ const mockSyncedData = {
         syncedData: 'mockSyncedData',
       },
     });
->>>>>>> origin/chore/fix-lint-and-merge
+
     await handler(req as NextApiRequest, res as NextApiResponse);
     expect(res._getStatusCode()).toBe(403);
     expect(res._getJSONData().message).toBe(
@@ -528,26 +218,7 @@ const mockSyncedData = {
   });
   test('should return 400 if required parameters are missing', async () => {
     (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({
-<<<<<<< HEAD
-      "data": { "user": { "id": 'user-id' },'
-},
-      "error": null});"
-    (supabase.from('profiles').select as jest.Mock).mockResolvedValueOnce({'
-      "data": { "role": 'admin','
-},
-      "error": null});"
 
-      "method": 'POST' as RequestMethod,'
-      "headers": { "Authorization": 'Bearer valid-token','
-},
-      "body": {"
-        /* "prompt": mockPrompt, */ // Missing prompt
-        "inputData": mockInputData,"
-        "syncedData": mockSyncedData}});"
-    await handler(req as NextApiRequest, res as NextApiResponse);
-    expect(res._getStatusCode()).toBe(400);
-    expect(res._getJSONData().message).toContain('Missing required parameters');'
-=======
       data: { user: { id: 'user-id' } },
       error: 'null',
     });
@@ -561,7 +232,7 @@ const mockSyncedData = {
       body: { inputData: 'mockInputData', syncedData: 'mockSyncedData' },
     });
     );
->>>>>>> origin/chore/fix-lint-and-merge
+
   });
       '"Unauthorized": Invalid token or user not found.)
   test('should return 403 if user role is not authorized', async () => {
@@ -627,18 +298,8 @@ const mockSyncedData = {
         "inputData": mockInputData,
         "syncedData": mockSyncedData}});
 
-<<<<<<< HEAD
-      "method": 'POST' as RequestMethod,'
-      "headers": { "Authorization": 'Bearer valid-token','
-},
-      "body": {"
-        }
-        "prompt": mockPrompt,
-        "inputData": mockInputData,"
-        "syncedData": mockSyncedData}});"
-    await handler(req as NextApiRequest, res as NextApiResponse);
-=======
->>>>>>> origin/chore/fix-lint-and-merge
+
+
     expect(res._getStatusCode()).toBe(200);
     const responseData = res._getJSONData();
     expect(responseData.slides).toBeInstanceOf(Array);
@@ -702,83 +363,36 @@ import { NextApiRequest,NextApiResponse } from 'next'; import { createMocks,Requ
 
 import { NextApiRequest,NextApiResponse } from 'next'; import { createMocks,RequestMethod } from 'node-mocks-http'; import handler from '@/pages/api/admin/generate-pitch-deck'; import { supabase } from '@/integrations/supabase/client'; jest.mock('@/integrations/supabase/client',() => ({ supabase: { auth: { getUser: jest.fn() },from: jest.fn().mockReturnThis(),select: jest.fn(),eq: jest.fn().mockReturnThis(),single: jest.fn(),},})); describe('/api/admin/generate-pitch-deck API Endpoint',() => { const mockInputData = { companyMission: 'Test',currentFundingStage: 'Seed',visionGoals: 'Conquer',roundType: 'Seed',targetRaiseAmount: '100k',}; const mockSyncedData = { activeUsers30d: '1000',gmv: '50k',notableClients: [],}; const mockPrompt = 'Test prompt'; beforeEach(() => { jest.clearAllMocks(); (supabase.auth.getUser as jest.Mock).mockResolvedValue({ data: { user: { id: 'test-user-id' } },error: null,}); (supabase.from as jest.Mock).mockReturnThis(); (supabase.select as jest.Mock).mockReturnThis(); (supabase.eq as jest.Mock).mockReturnThis(); (supabase.single as jest.Mock).mockResolvedValue({ data: { role: 'admin' },error: null,})}); test('should return 405 if method is not POST',async () => { const { req,res } = createMocks({ method: 'GET' as RequestMethod }); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(405); expect(res._getHeaders().allow).toContain('POST')}); test('should return 401 if Authorization header is missing',async () => { const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: {},body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(401); expect(res._getJSONData().message).toBe( 'Unauthorized: Missing or invalid token.' )}); test('should return 401 if token is invalid or user not found',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: null },error: new Error('Invalid token'),}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer invalid-token' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(401); expect(res._getJSONData().message).toBe( 'Unauthorized: Invalid token or user not found.' )}); test('should return 403 if user role is not authorized',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from as jest.Mock).mockReturnValueOnce({ select: jest .fn() .mockReturnValueOnce({ eq: jest .fn() .mockReturnValueOnce({ single: jest .fn() .mockResolvedValueOnce({ data: { role: 'user' },error: null }),}),}),}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token-for-user-role' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(403); expect(res._getJSONData().message).toBe( 'Forbidden: Access denied. Insufficient privileges.' )}); test('should return 400 if required parameters are missing',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from('profiles').select as jest.Mock).mockResolvedValueOnce({ data: { role: 'admin' },error: null,}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token' },body: { inputData: mockInputData,syncedData: mockSyncedData },}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(400); expect(res._getJSONData().message).toContain('Missing required parameters')}); test('should return 200 and mock deck data on successful generation',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from('profiles').select as jest.Mock).mockResolvedValueOnce({ data: { role: 'admin' },error: null,}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(200); const responseData = res._getJSONData(); expect(responseData.slides).toBeInstanceOf(Array); expect(responseData.slides.length).toBeGreaterThan(0); expect(responseData.slides[0].title).toBeDefined()}); test('should return 500 if fetching profile fails',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from as jest.Mock).mockReturnValueOnce({ select: jest .fn() .mockReturnValueOnce({ eq: jest .fn() .mockReturnValueOnce({ single: jest .fn() .mockResolvedValueOnce({ data: null,error: new Error('Failed to fetch profile'),}),}),}),}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(500)})});
 
-<<<<<<< HEAD
-      "method": 'POST' as RequestMethod,'
-      "headers": { "Authorization": 'Bearer valid-token','
-},
-      "body": {"
-        }
-        "prompt": mockPrompt,
-        "inputData": mockInputData,"
-        "syncedData": mockSyncedData}});"
-=======
->>>>>>> origin/chore/fix-lint-and-merge
+
+
     await handler(req as NextApiRequest, res as NextApiResponse);
     expect(res._getStatusCode()).toBe(500);
   });
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-},"from": jest.fn().mockReturnThis(),"select": jest.fn(),"eq": jest.fn().mockReturnThis(),"single": jest.fn()
-})); describe('/api/admin/generate-pitch-deck API Endpoint',() => { const mockSyncedData = { "activeUsers30d": '1000',"gmv": '50k',"notableClients": [,;'
-};
-=======
+
       "headers"
 import { NextApiRequest,NextApiResponse } from 'next'; import { createMocks,RequestMethod } from 'node-mocks-http'; import handler from '@/pages/api/admin/generate-pitch-deck'; import { supabase } from '@/integrations/supabase/client'; jest.mock('@/integrations/supabase/client',() => ({ supabase: { auth: { getUser: jest.fn() },from: jest.fn().mockReturnThis(),select: jest.fn(),eq: jest.fn().mockReturnThis(),single: jest.fn(),},})); describe('/api/admin/generate-pitch-deck API Endpoint',() => { const mockInputData = { companyMission: 'Test',currentFundingStage: 'Seed',visionGoals: 'Conquer',roundType: 'Seed',targetRaiseAmount: '100k',}; const mockSyncedData = { activeUsers30d: '1000',gmv: '50k',notableClients: [],}; const mockPrompt = 'Test prompt'; beforeEach(() => { jest.clearAllMocks(); (supabase.auth.getUser as jest.Mock).mockResolvedValue({ data: { user: { id: 'test-user-id' } },error: null,}); (supabase.from as jest.Mock).mockReturnThis(); (supabase.select as jest.Mock).mockReturnThis(); (supabase.eq as jest.Mock).mockReturnThis(); (supabase.single as jest.Mock).mockResolvedValue({ data: { role: 'admin' },error: null,})}); test('should return 405 if method is not POST',async () => { const { req,res } = createMocks({ method: 'GET' as RequestMethod }); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(405); expect(res._getHeaders().allow).toContain('POST')}); test('should return 401 if Authorization header is missing',async () => { const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: {},body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(401); expect(res._getJSONData().message).toBe( 'Unauthorized: Missing or invalid token.' )}); test('should return 401 if token is invalid or user not found',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: null },error: new Error('Invalid token'),}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer invalid-token' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(401); expect(res._getJSONData().message).toBe( 'Unauthorized: Invalid token or user not found.' )}); test('should return 403 if user role is not authorized',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from as jest.Mock).mockReturnValueOnce({ select: jest .fn() .mockReturnValueOnce({ eq: jest .fn() .mockReturnValueOnce({ single: jest .fn() .mockResolvedValueOnce({ data: { role: 'user' },error: null }),}),}),}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token-for-user-role' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(403); expect(res._getJSONData().message).toBe( 'Forbidden: Access denied. Insufficient privileges.' )}); test('should return 400 if required parameters are missing',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from('profiles').select as jest.Mock).mockResolvedValueOnce({ data: { role: 'admin' },error: null,}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token' },body: { inputData: mockInputData,syncedData: mockSyncedData },}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(400); expect(res._getJSONData().message).toContain('Missing required parameters')}); test('should return 200 and mock deck data on successful generation',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from('profiles').select as jest.Mock).mockResolvedValueOnce({ data: { role: 'admin' },error: null,}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(200); const responseData = res._getJSONData(); expect(responseData.slides).toBeInstanceOf(Array); expect(responseData.slides.length).toBeGreaterThan(0); expect(responseData.slides[0].title).toBeDefined()}); test('should return 500 if fetching profile fails',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from as jest.Mock).mockReturnValueOnce({ select: jest .fn() .mockReturnValueOnce({ eq: jest .fn() .mockReturnValueOnce({ single: jest .fn() .mockResolvedValueOnce({ data: null,error: new Error('Failed to fetch profile'),}),}),}),}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(500)})});
 import { NextApiRequest,NextApiResponse } from 'next'; import { createMocks,RequestMethod } from 'node-mocks-http'; import handler from '@/pages/api/admin/generate-pitch-deck'; import { supabase } from '@/integrations/supabase/client'; jest.mock('@/integrations/supabase/client',() => ({ supabase: { auth: { getUser: jest.fn() },from: jest.fn().mockReturnThis(),select: jest.fn(),eq: jest.fn().mockReturnThis(),single: jest.fn(),},})); describe('/api/admin/generate-pitch-deck API Endpoint',() => { const mockInputData = { companyMission: 'Test',currentFundingStage: 'Seed',visionGoals: 'Conquer',roundType: 'Seed',targetRaiseAmount: '100k',}; const mockSyncedData = { activeUsers30d: '1000',gmv: '50k',notableClients: [],}; const mockPrompt = 'Test prompt'; beforeEach(() => { jest.clearAllMocks(); (supabase.auth.getUser as jest.Mock).mockResolvedValue({ data: { user: { id: 'test-user-id' } },error: null,}); (supabase.from as jest.Mock).mockReturnThis(); (supabase.select as jest.Mock).mockReturnThis(); (supabase.eq as jest.Mock).mockReturnThis(); (supabase.single as jest.Mock).mockResolvedValue({ data: { role: 'admin' },error: null,})}); test('should return 405 if method is not POST',async () => { const { req,res } = createMocks({ method: 'GET' as RequestMethod }); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(405); expect(res._getHeaders().allow).toContain('POST')}); test('should return 401 if Authorization header is missing',async () => { const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: {},body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(401); expect(res._getJSONData().message).toBe( 'Unauthorized: Missing or invalid token.' )}); test('should return 401 if token is invalid or user not found',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: null },error: new Error('Invalid token'),}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer invalid-token' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(401); expect(res._getJSONData().message).toBe( 'Unauthorized: Invalid token or user not found.' )}); test('should return 403 if user role is not authorized',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from as jest.Mock).mockReturnValueOnce({ select: jest .fn() .mockReturnValueOnce({ eq: jest .fn() .mockReturnValueOnce({ single: jest .fn() .mockResolvedValueOnce({ data: { role: 'user' },error: null }),}),}),}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token-for-user-role' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(403); expect(res._getJSONData().message).toBe( 'Forbidden: Access denied. Insufficient privileges.' )}); test('should return 400 if required parameters are missing',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from('profiles').select as jest.Mock).mockResolvedValueOnce({ data: { role: 'admin' },error: null,}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token' },body: { inputData: mockInputData,syncedData: mockSyncedData },}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(400); expect(res._getJSONData().message).toContain('Missing required parameters')}); test('should return 200 and mock deck data on successful generation',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from('profiles').select as jest.Mock).mockResolvedValueOnce({ data: { role: 'admin' },error: null,}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(200); const responseData = res._getJSONData(); expect(responseData.slides).toBeInstanceOf(Array); expect(responseData.slides.length).toBeGreaterThan(0); expect(responseData.slides[0].title).toBeDefined()}); test('should return 500 if fetching profile fails',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from as jest.Mock).mockReturnValueOnce({ select: jest .fn() .mockReturnValueOnce({ eq: jest .fn() .mockReturnValueOnce({ single: jest .fn() .mockResolvedValueOnce({ data: null,error: new Error('Failed to fetch profile'),}),}),}),}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(500)})});
 ursor/add-new-services-and-deploy-updates-0462
 ursor/integrate-build-improve-and-re-verify-8f7d
       "headers"
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-=======
->>>>>>> origin/chore/fix-lint-and-merge
 
 import { NextApiRequest,NextApiResponse } from 'next'; import { createMocks,RequestMethod } from 'node-mocks-http'; import handler from '@/pages/api/admin/generate-pitch-deck'; import { supabase } from '@/integrations/supabase/client'; jest.mock('@/integrations/supabase/client',() => ({ supabase: { auth: { getUser: jest.fn() },from: jest.fn().mockReturnThis(),select: jest.fn(),eq: jest.fn().mockReturnThis(),single: jest.fn(),},})); describe('/api/admin/generate-pitch-deck API Endpoint',() => { const mockInputData = { companyMission: 'Test',currentFundingStage: 'Seed',visionGoals: 'Conquer',roundType: 'Seed',targetRaiseAmount: '100k',}; const mockSyncedData = { activeUsers30d: '1000',gmv: '50k',notableClients: [],}; const mockPrompt = 'Test prompt'; beforeEach(() => { jest.clearAllMocks(); (supabase.auth.getUser as jest.Mock).mockResolvedValue({ data: { user: { id: 'test-user-id' } },error: null,}); (supabase.from as jest.Mock).mockReturnThis(); (supabase.select as jest.Mock).mockReturnThis(); (supabase.eq as jest.Mock).mockReturnThis(); (supabase.single as jest.Mock).mockResolvedValue({ data: { role: 'admin' },error: null,})}); test('should return 405 if method is not POST',async () => { const { req,res } = createMocks({ method: 'GET' as RequestMethod }); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(405); expect(res._getHeaders().allow).toContain('POST')}); test('should return 401 if Authorization header is missing',async () => { const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: {},body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(401); expect(res._getJSONData().message).toBe( 'Unauthorized: Missing or invalid token.' )}); test('should return 401 if token is invalid or user not found',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: null },error: new Error('Invalid token'),}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer invalid-token' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(401); expect(res._getJSONData().message).toBe( 'Unauthorized: Invalid token or user not found.' )}); test('should return 403 if user role is not authorized',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from as jest.Mock).mockReturnValueOnce({ select: jest .fn() .mockReturnValueOnce({ eq: jest .fn() .mockReturnValueOnce({ single: jest .fn() .mockResolvedValueOnce({ data: { role: 'user' },error: null }),}),}),}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token-for-user-role' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(403); expect(res._getJSONData().message).toBe( 'Forbidden: Access denied. Insufficient privileges.' )}); test('should return 400 if required parameters are missing',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from('profiles').select as jest.Mock).mockResolvedValueOnce({ data: { role: 'admin' },error: null,}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token' },body: { inputData: mockInputData,syncedData: mockSyncedData },}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(400); expect(res._getJSONData().message).toContain('Missing required parameters')}); test('should return 200 and mock deck data on successful generation',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from('profiles').select as jest.Mock).mockResolvedValueOnce({ data: { role: 'admin' },error: null,}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(200); const responseData = res._getJSONData(); expect(responseData.slides).toBeInstanceOf(Array); expect(responseData.slides.length).toBeGreaterThan(0); expect(responseData.slides[0].title).toBeDefined()}); test('should return 500 if fetching profile fails',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from as jest.Mock).mockReturnValueOnce({ select: jest .fn() .mockReturnValueOnce({ eq: jest .fn() .mockReturnValueOnce({ single: jest .fn() .mockResolvedValueOnce({ data: null,error: new Error('Failed to fetch profile'),}),}),}),}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(500)})});
 
 import { NextApiRequest,NextApiResponse } from 'next'; import { createMocks,RequestMethod } from 'node-mocks-http'; import handler from '@/pages/api/admin/generate-pitch-deck'; import { supabase } from '@/integrations/supabase/client'; jest.mock('@/integrations/supabase/client',() => ({ supabase: { auth: { getUser: jest.fn() },from: jest.fn().mockReturnThis(),select: jest.fn(),eq: jest.fn().mockReturnThis(),single: jest.fn(),},})); describe('/api/admin/generate-pitch-deck API Endpoint',() => { const mockInputData = { companyMission: 'Test',currentFundingStage: 'Seed',visionGoals: 'Conquer',roundType: 'Seed',targetRaiseAmount: '100k',}; const mockSyncedData = { activeUsers30d: '1000',gmv: '50k',notableClients: [],}; const mockPrompt = 'Test prompt'; beforeEach(() => { jest.clearAllMocks(); (supabase.auth.getUser as jest.Mock).mockResolvedValue({ data: { user: { id: 'test-user-id' } },error: null,}); (supabase.from as jest.Mock).mockReturnThis(); (supabase.select as jest.Mock).mockReturnThis(); (supabase.eq as jest.Mock).mockReturnThis(); (supabase.single as jest.Mock).mockResolvedValue({ data: { role: 'admin' },error: null,})}); test('should return 405 if method is not POST',async () => { const { req,res } = createMocks({ method: 'GET' as RequestMethod }); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(405); expect(res._getHeaders().allow).toContain('POST')}); test('should return 401 if Authorization header is missing',async () => { const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: {},body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(401); expect(res._getJSONData().message).toBe( 'Unauthorized: Missing or invalid token.' )}); test('should return 401 if token is invalid or user not found',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: null },error: new Error('Invalid token'),}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer invalid-token' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(401); expect(res._getJSONData().message).toBe( 'Unauthorized: Invalid token or user not found.' )}); test('should return 403 if user role is not authorized',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from as jest.Mock).mockReturnValueOnce({ select: jest .fn() .mockReturnValueOnce({ eq: jest .fn() .mockReturnValueOnce({ single: jest .fn() .mockResolvedValueOnce({ data: { role: 'user' },error: null }),}),}),}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token-for-user-role' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(403); expect(res._getJSONData().message).toBe( 'Forbidden: Access denied. Insufficient privileges.' )}); test('should return 400 if required parameters are missing',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from('profiles').select as jest.Mock).mockResolvedValueOnce({ data: { role: 'admin' },error: null,}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token' },body: { inputData: mockInputData,syncedData: mockSyncedData },}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(400); expect(res._getJSONData().message).toContain('Missing required parameters')}); test('should return 200 and mock deck data on successful generation',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from('profiles').select as jest.Mock).mockResolvedValueOnce({ data: { role: 'admin' },error: null,}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(200); const responseData = res._getJSONData(); expect(responseData.slides).toBeInstanceOf(Array); expect(responseData.slides.length).toBeGreaterThan(0); expect(responseData.slides[0].title).toBeDefined()}); test('should return 500 if fetching profile fails',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from as jest.Mock).mockReturnValueOnce({ select: jest .fn() .mockReturnValueOnce({ eq: jest .fn() .mockReturnValueOnce({ single: jest .fn() .mockResolvedValueOnce({ data: null,error: new Error('Failed to fetch profile'),}),}),}),}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(500)})});
 
       "headers"
-<<<<<<< HEAD
-import { NextApiRequest,NextApiResponse } from 'next'; import { createMocks,RequestMethod } from 'node-mocks-http'; import handler from '@/pages/api/admin/generate-pitch-deck'; import { supabase } from '@/integrations/supabase/client'; jest.mock('@/integrations/supabase/client',() => ({ supabase: { auth: { getUser: jest.fn() },from: jest.fn().mockReturnThis(),select: jest.fn(),eq: jest.fn().mockReturnThis(),single: jest.fn(),},})); describe('/api/admin/generate-pitch-deck API Endpoint',() => { const mockInputData = { companyMission: 'Test',currentFundingStage: 'Seed',visionGoals: 'Conquer',roundType: 'Seed',targetRaiseAmount: '100k',}; const mockSyncedData = { activeUsers30d: '1000',gmv: '50k',notableClients: [],}; const mockPrompt = 'Test prompt'; beforeEach(() => { jest.clearAllMocks(); (supabase.auth.getUser as jest.Mock).mockResolvedValue({ data: { user: { id: 'test-user-id' } },error: null,}); (supabase.from as jest.Mock).mockReturnThis(); (supabase.select as jest.Mock).mockReturnThis(); (supabase.eq as jest.Mock).mockReturnThis(); (supabase.single as jest.Mock).mockResolvedValue({ data: { role: 'admin' },error: null,})}); test('should return 405 if method is not POST',async () => { const { req,res } = createMocks({ method: 'GET' as RequestMethod }); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(405); expect(res._getHeaders().allow).toContain('POST')}); test('should return 401 if Authorization header is missing',async () => { const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: {},body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(401); expect(res._getJSONData().message).toBe( 'Unauthorized: Missing or invalid token.' )}); test('should return 401 if token is invalid or user not found',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: null },error: new Error('Invalid token'),}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer invalid-token' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(401); expect(res._getJSONData().message).toBe( 'Unauthorized: Invalid token or user not found.' )}); test('should return 403 if user role is not authorized',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from as jest.Mock).mockReturnValueOnce({ select: jest .fn() .mockReturnValueOnce({ eq: jest .fn() .mockReturnValueOnce({ single: jest .fn() .mockResolvedValueOnce({ data: { role: 'user' },error: null }),}),}),}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token-for-user-role' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(403); expect(res._getJSONData().message).toBe( 'Forbidden: Access denied. Insufficient privileges.' )}); test('should return 400 if required parameters are missing',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from('profiles').select as jest.Mock).mockResolvedValueOnce({ data: { role: 'admin' },error: null,}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token' },body: { inputData: mockInputData,syncedData: mockSyncedData },}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(400); expect(res._getJSONData().message).toContain('Missing required parameters')}); test('should return 200 and mock deck data on successful generation',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from('profiles').select as jest.Mock).mockResolvedValueOnce({ data: { role: 'admin' },error: null,}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(200); const responseData = res._getJSONData(); expect(responseData.slides).toBeInstanceOf(Array); expect(responseData.slides.length).toBeGreaterThan(0); expect(responseData.slides[0].title).toBeDefined()}); test('should return 500 if fetching profile fails',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from as jest.Mock).mockReturnValueOnce({ select: jest .fn() .mockReturnValueOnce({ eq: jest .fn() .mockReturnValueOnce({ single: jest .fn() .mockResolvedValueOnce({ data: null,error: new Error('Failed to fetch profile'),}),}),}),}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(500)})});
 
-<<<<<<< HEAD
-},"body": { "inputData": mockInputData,"syncedData": mockSyncedData 
-}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(400); expect(res._getJSONData().message).toContain('Missing required parameters')}); test('should return 200 and mock deck data on successful generation',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ "data": { "user": { "id": 'user-id' },'
-},"error": nul
-}); (supabase.from('profiles').select as jest.Mock).mockResolvedValueOnce({ "data": { "role": 'admin','
-},"error": nul
-});
-
-},"body": { "prompt": mockPrompt,"inputData": mockInputData,"syncedData": mockSyncedData
-}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(200);
-
-const responseData = res._getJSONData(); expect(responseData.slides).toBeInstanceOf(Array); expect(responseData.slides.length).toBeGreaterThan(0); expect(responseData.slides[0].title).toBeDefined()}); test('should return 500 if fetching profile fails',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ "data": { "user": { "id": 'user-id' },'
-},"error": nul
-}); (supabase.from as jest.Mock).mockReturnValueOnce({ "select": jest .fn() .mockReturnValueOnce({ "eq": jest .fn() .mockReturnValueOnce({ "single": jest .fn() .mockResolvedValueOnce({ "data": null,"error": new Error('Failed to fetch profile')})})},'
-});
-
-},"body": { "prompt": mockPrompt,"inputData": mockInputData,"syncedData": mockSyncedData
-}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(500)})});
-
-      "headers""
-ursor/add-new-services-and-deploy-updates-0462,
-=======
 import { NextApiRequest,NextApiResponse } from 'next'; import { createMocks,RequestMethod } from 'node-mocks-http'; import handler from '@/pages/api/admin/generate-pitch-deck'; import { supabase } from '@/integrations/supabase/client'; jest.mock('@/integrations/supabase/client',() => ({ supabase: { auth: { getUser: jest.fn() },from: jest.fn().mockReturnThis(),select: jest.fn(),eq: jest.fn().mockReturnThis(),single: jest.fn(),},})); describe('/api/admin/generate-pitch-deck API Endpoint',() => { const mockInputData = { companyMission: 'Test',currentFundingStage: 'Seed',visionGoals: 'Conquer',roundType: 'Seed',targetRaiseAmount: '100k',}; const mockSyncedData = { activeUsers30d: '1000',gmv: '50k',notableClients: [],}; const mockPrompt = 'Test prompt'; beforeEach(() => { jest.clearAllMocks(); (supabase.auth.getUser as jest.Mock).mockResolvedValue({ data: { user: { id: 'test-user-id' } },error: null,}); (supabase.from as jest.Mock).mockReturnThis(); (supabase.select as jest.Mock).mockReturnThis(); (supabase.eq as jest.Mock).mockReturnThis(); (supabase.single as jest.Mock).mockResolvedValue({ data: { role: 'admin' },error: null,})}); test('should return 405 if method is not POST',async () => { const { req,res } = createMocks({ method: 'GET' as RequestMethod }); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(405); expect(res._getHeaders().allow).toContain('POST')}); test('should return 401 if Authorization header is missing',async () => { const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: {},body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(401); expect(res._getJSONData().message).toBe( 'Unauthorized: Missing or invalid token.' )}); test('should return 401 if token is invalid or user not found',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: null },error: new Error('Invalid token'),}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer invalid-token' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(401); expect(res._getJSONData().message).toBe( 'Unauthorized: Invalid token or user not found.' )}); test('should return 403 if user role is not authorized',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from as jest.Mock).mockReturnValueOnce({ select: jest .fn() .mockReturnValueOnce({ eq: jest .fn() .mockReturnValueOnce({ single: jest .fn() .mockResolvedValueOnce({ data: { role: 'user' },error: null }),}),}),}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token-for-user-role' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(403); expect(res._getJSONData().message).toBe( 'Forbidden: Access denied. Insufficient privileges.' )}); test('should return 400 if required parameters are missing',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from('profiles').select as jest.Mock).mockResolvedValueOnce({ data: { role: 'admin' },error: null,}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token' },body: { inputData: mockInputData,syncedData: mockSyncedData },}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(400); expect(res._getJSONData().message).toContain('Missing required parameters')}); test('should return 200 and mock deck data on successful generation',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from('profiles').select as jest.Mock).mockResolvedValueOnce({ data: { role: 'admin' },error: null,}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(200); const responseData = res._getJSONData(); expect(responseData.slides).toBeInstanceOf(Array); expect(responseData.slides.length).toBeGreaterThan(0); expect(responseData.slides[0].title).toBeDefined()}); test('should return 500 if fetching profile fails',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from as jest.Mock).mockReturnValueOnce({ select: jest .fn() .mockReturnValueOnce({ eq: jest .fn() .mockReturnValueOnce({ single: jest .fn() .mockResolvedValueOnce({ data: null,error: new Error('Failed to fetch profile'),}),}),}),}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(500)})});
 ursor/add-new-services-and-deploy-updates-0462
->>>>>>> origin/chore/fix-lint-and-merge
+
 ursor/integrate-build-improve-and-re-verify-8f7d
       "headers"
 
 import { NextApiRequest,NextApiResponse } from 'next'; import { createMocks,RequestMethod } from 'node-mocks-http'; import handler from '@/pages/api/admin/generate-pitch-deck'; import { supabase } from '@/integrations/supabase/client'; jest.mock('@/integrations/supabase/client',() => ({ supabase: { auth: { getUser: jest.fn() },from: jest.fn().mockReturnThis(),select: jest.fn(),eq: jest.fn().mockReturnThis(),single: jest.fn(),},})); describe('/api/admin/generate-pitch-deck API Endpoint',() => { const mockInputData = { companyMission: 'Test',currentFundingStage: 'Seed',visionGoals: 'Conquer',roundType: 'Seed',targetRaiseAmount: '100k',}; const mockSyncedData = { activeUsers30d: '1000',gmv: '50k',notableClients: [],}; const mockPrompt = 'Test prompt'; beforeEach(() => { jest.clearAllMocks(); (supabase.auth.getUser as jest.Mock).mockResolvedValue({ data: { user: { id: 'test-user-id' } },error: null,}); (supabase.from as jest.Mock).mockReturnThis(); (supabase.select as jest.Mock).mockReturnThis(); (supabase.eq as jest.Mock).mockReturnThis(); (supabase.single as jest.Mock).mockResolvedValue({ data: { role: 'admin' },error: null,})}); test('should return 405 if method is not POST',async () => { const { req,res } = createMocks({ method: 'GET' as RequestMethod }); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(405); expect(res._getHeaders().allow).toContain('POST')}); test('should return 401 if Authorization header is missing',async () => { const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: {},body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(401); expect(res._getJSONData().message).toBe( 'Unauthorized: Missing or invalid token.' )}); test('should return 401 if token is invalid or user not found',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: null },error: new Error('Invalid token'),}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer invalid-token' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(401); expect(res._getJSONData().message).toBe( 'Unauthorized: Invalid token or user not found.' )}); test('should return 403 if user role is not authorized',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from as jest.Mock).mockReturnValueOnce({ select: jest .fn() .mockReturnValueOnce({ eq: jest .fn() .mockReturnValueOnce({ single: jest .fn() .mockResolvedValueOnce({ data: { role: 'user' },error: null }),}),}),}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token-for-user-role' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(403); expect(res._getJSONData().message).toBe( 'Forbidden: Access denied. Insufficient privileges.' )}); test('should return 400 if required parameters are missing',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from('profiles').select as jest.Mock).mockResolvedValueOnce({ data: { role: 'admin' },error: null,}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token' },body: { inputData: mockInputData,syncedData: mockSyncedData },}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(400); expect(res._getJSONData().message).toContain('Missing required parameters')}); test('should return 200 and mock deck data on successful generation',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from('profiles').select as jest.Mock).mockResolvedValueOnce({ data: { role: 'admin' },error: null,}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(200); const responseData = res._getJSONData(); expect(responseData.slides).toBeInstanceOf(Array); expect(responseData.slides.length).toBeGreaterThan(0); expect(responseData.slides[0].title).toBeDefined()}); test('should return 500 if fetching profile fails',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from as jest.Mock).mockReturnValueOnce({ select: jest .fn() .mockReturnValueOnce({ eq: jest .fn() .mockReturnValueOnce({ single: jest .fn() .mockResolvedValueOnce({ data: null,error: new Error('Failed to fetch profile'),}),}),}),}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(500)})});
 import { NextApiRequest,NextApiResponse } from 'next'; import { createMocks,RequestMethod } from 'node-mocks-http'; import handler from '@/pages/api/admin/generate-pitch-deck'; import { supabase } from '@/integrations/supabase/client'; jest.mock('@/integrations/supabase/client',() => ({ supabase: { auth: { getUser: jest.fn() },from: jest.fn().mockReturnThis(),select: jest.fn(),eq: jest.fn().mockReturnThis(),single: jest.fn(),},})); describe('/api/admin/generate-pitch-deck API Endpoint',() => { const mockInputData = { companyMission: 'Test',currentFundingStage: 'Seed',visionGoals: 'Conquer',roundType: 'Seed',targetRaiseAmount: '100k',}; const mockSyncedData = { activeUsers30d: '1000',gmv: '50k',notableClients: [],}; const mockPrompt = 'Test prompt'; beforeEach(() => { jest.clearAllMocks(); (supabase.auth.getUser as jest.Mock).mockResolvedValue({ data: { user: { id: 'test-user-id' } },error: null,}); (supabase.from as jest.Mock).mockReturnThis(); (supabase.select as jest.Mock).mockReturnThis(); (supabase.eq as jest.Mock).mockReturnThis(); (supabase.single as jest.Mock).mockResolvedValue({ data: { role: 'admin' },error: null,})}); test('should return 405 if method is not POST',async () => { const { req,res } = createMocks({ method: 'GET' as RequestMethod }); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(405); expect(res._getHeaders().allow).toContain('POST')}); test('should return 401 if Authorization header is missing',async () => { const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: {},body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(401); expect(res._getJSONData().message).toBe( 'Unauthorized: Missing or invalid token.' )}); test('should return 401 if token is invalid or user not found',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: null },error: new Error('Invalid token'),}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer invalid-token' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(401); expect(res._getJSONData().message).toBe( 'Unauthorized: Invalid token or user not found.' )}); test('should return 403 if user role is not authorized',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from as jest.Mock).mockReturnValueOnce({ select: jest .fn() .mockReturnValueOnce({ eq: jest .fn() .mockReturnValueOnce({ single: jest .fn() .mockResolvedValueOnce({ data: { role: 'user' },error: null }),}),}),}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token-for-user-role' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(403); expect(res._getJSONData().message).toBe( 'Forbidden: Access denied. Insufficient privileges.' )}); test('should return 400 if required parameters are missing',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from('profiles').select as jest.Mock).mockResolvedValueOnce({ data: { role: 'admin' },error: null,}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token' },body: { inputData: mockInputData,syncedData: mockSyncedData },}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(400); expect(res._getJSONData().message).toContain('Missing required parameters')}); test('should return 200 and mock deck data on successful generation',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from('profiles').select as jest.Mock).mockResolvedValueOnce({ data: { role: 'admin' },error: null,}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(200); const responseData = res._getJSONData(); expect(responseData.slides).toBeInstanceOf(Array); expect(responseData.slides.length).toBeGreaterThan(0); expect(responseData.slides[0].title).toBeDefined()}); test('should return 500 if fetching profile fails',async () => { (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({ data: { user: { id: 'user-id' } },error: null,}); (supabase.from as jest.Mock).mockReturnValueOnce({ select: jest .fn() .mockReturnValueOnce({ eq: jest .fn() .mockReturnValueOnce({ single: jest .fn() .mockResolvedValueOnce({ data: null,error: new Error('Failed to fetch profile'),}),}),}),}); const { req,res } = createMocks({ method: 'POST' as RequestMethod,headers: { Authorization: 'Bearer valid-token' },body: { prompt: mockPrompt,inputData: mockInputData,syncedData: mockSyncedData,},}); await handler(req as NextApiRequest,res as NextApiResponse); expect(res._getStatusCode()).toBe(500)})});
-=======
-=======
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
->>>>>>> pr/11282
+
 
 jest.mock('@/integrations/supabase/client');
 
@@ -791,32 +405,26 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
     targetRaiseAmount: '100k',
     activeUsers30d: '1000',
     gmv: '50k',
-<<<<<<< HEAD
-    notableClients: '[]'
-=======
+
     notableClients: '[]',
->>>>>>> pr/11282
+
   };
 
   it('should return 401 for unauthorized requests', async () => {
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'POST' as RequestMethod,
-<<<<<<< HEAD
-      body: mockRequestData
-=======
+
       body: mockRequestData,
->>>>>>> pr/11282
+
     });
 
     await handler(req, res);
 
     expect(res._getStatusCode()).toBe(401);
     expect(JSON.parse(res._getData())).toEqual({
-<<<<<<< HEAD
-      error: 'Unauthorized'
-=======
+
       error: 'Unauthorized',
->>>>>>> pr/11282
+
     });
   });
 
@@ -824,26 +432,20 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'POST' as RequestMethod,
       headers: {
-<<<<<<< HEAD
-        authorization: 'Bearer invalid-token'
-      },
-      body: mockRequestData
-=======
+
         authorization: 'Bearer invalid-token',
       },
       body: mockRequestData,
->>>>>>> pr/11282
+
     });
 
     await handler(req, res);
 
     expect(res._getStatusCode()).toBe(403);
     expect(JSON.parse(res._getData())).toEqual({
-<<<<<<< HEAD
-      error: 'Forbidden'
-=======
+
       error: 'Forbidden',
->>>>>>> pr/11282
+
     });
   });
 
@@ -851,15 +453,11 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'POST' as RequestMethod,
       headers: {
-<<<<<<< HEAD
-        authorization: 'Bearer valid-token'
-      },
-      body: mockRequestData
-=======
+
         authorization: 'Bearer valid-token',
       },
       body: mockRequestData,
->>>>>>> pr/11282
+
     });
 
     await handler(req, res);
@@ -867,13 +465,8 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
     expect(res._getStatusCode()).toBe(200);
   });
 });
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
-<<<<<<< HEAD
->>>>>>> pr/11282
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+
+
+
+

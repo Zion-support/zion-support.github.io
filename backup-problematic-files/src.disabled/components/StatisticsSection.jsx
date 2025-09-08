@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -29,9 +28,4 @@ const StatisticsSection = ({ className }) => {
   );
 };
 
-<<<<<<< HEAD
-export default StatisticsSection;
-=======
-export default StatisticsSection;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

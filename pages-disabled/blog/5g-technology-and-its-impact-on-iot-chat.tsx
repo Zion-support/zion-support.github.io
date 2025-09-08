@@ -1,14 +1,5 @@
-<<<<<<< HEAD:pages-disabled/blog/5g-technology-and-its-impact-on-iot-chat.tsx
-=======
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/blog/5g-technology-and-its-impact-on-iot-chat.tsx
 const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
 
   return (
@@ -21,31 +12,11 @@ const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
         <h1>5gTechnologyAndItsImpactOnIotChat</h1>
         <p>Blog content coming soon...</p>
 
-<<<<<<< HEAD:pages-disabled/blog/5g-technology-and-its-impact-on-iot-chat.tsx
-"
-        <Link href="/blog"><a>Back to Blog</Link></Link>
 
-"
-        <Link href="/blog"><a>Back to Blog</Link></Link>
 
-=======
 
-<<<<<<< HEAD
-        <Link href="/blog"><a>Back to Blog</Link></Link>
-        <Link href="/blog"><a>Back to Blog</Link></Link>
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-        <Link href="/blog"><a>Back to Blog</Link></Link>
-=======
-=======
-        <Link href="/blog"><a>Back to Blog</Link></Link>
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/blog/5g-technology-and-its-impact-on-iot-chat.tsx
       </main>
     </div>
   )
@@ -53,70 +24,6 @@ const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
 
         <Link href="/blog"><a>Back to Blog</a></Link>
 
-<<<<<<< HEAD:pages-disabled/blog/5g-technology-and-its-impact-on-iot-chat.tsx
-=======
-<<<<<<< HEAD
-        <Link href="/blog"><a>Back to Blog</a></Link>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/blog/5g-technology-and-its-impact-on-iot-chat.tsx
-      </main>
-    </div>
-  )
-}
-export default Chat5gTechnologyAndItsImpactOnIotChat;
-<<<<<<< HEAD:pages-disabled/blog/5g-technology-and-its-impact-on-iot-chat.tsx
 
-"
-        <Link href="/blog"><a>Back to Blog</Link></Link>
 
-      </main>
-    </div>
-  )
-},
-=======
-import type { NextPage } from 'next',
-import Head from 'next / head',
-import Link from 'next / link',
-const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
-  return (
-    <div>;
-      <Head>;
-        <title > 5gTechnologyAndItsImpactOnIotChat - Zion Tech Solutions</title>;
-        <meta name="description" content="5gTechnologyAndItsImpactOnIotChat blog post" />;
-      </Head>;
-      <main>;
-        <h1 > 5gTechnologyAndItsImpactOnIotChat</h1>;
-        <p > Blog content coming soon...</p>;
-        <Link href="/blog"><a > Back to Blog</a></Link>;
-      </main>;
-    </div>);
-},
-export default Chat5gTechnologyAndItsImpactOnIotChat,
-    <div>
-      <Head>
-        <title>5gTechnologyAndItsImpactOnIotChat - Zion Tech Solutions</title>
-        <meta name=&quot;description&quot; content=&quot;5gTechnologyAndItsImpactOnIotChat blog post&quot; />
-      </Head>
-      
-      <main>
-        <h1>5gTechnologyAndItsImpactOnIotChat</h1>
-        <p>Blog content coming soon...</p>
-        <Link href=&quot;/blog&quot;><a>Back to Blog</Link></Link>
-      </main>
-    </div>
-  )
-},
 
-        <Link href="/blog"><a>Back to Blog</Link></Link>
-        <Link href="/blog"><a>Back to Blog</Link></Link>
-      </main>
-    </div>
-  )
-},
-export default Chat5gTechnologyAndItsImpactOnIotChat,
-
-export default Chat5gTechnologyAndItsImpactOnIotChat,;
-export default Chat5gTechnologyAndItsImpactOnIotChat,
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/blog/5g-technology-and-its-impact-on-iot-chat.tsx

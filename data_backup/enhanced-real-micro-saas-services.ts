@@ -1,94 +1,16 @@
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-;
-ursor/integrate-build-improve-and-re-verify-8f7d;
-ursor/fix-syntax-push-and-merge-to-main-40de;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-ursor/integrate-build-improve-and-re-verify-8f7d;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-;
-module.exports = type EnhancedRealMicroSaasService = { id: string; name: string; category?: string; description?: string; tagline?: string; price?: string | number; period?: string; features?: string[]; popular?: boolean; icon?: string; color?: string; textColor?: string; link?: string; marketPosition?: string; targetAudience?: string; trialDays?: number; setupTime?: string; realService?: boolean; technology?: string[]; integrations?: string[]; useCases?: string[]; roi?: string; competitors?: string[]; marketSize?: string; growthRate?: string; variant?: string; contactInfo?: { mobile: string; email: string; address: string; website: strin;,}
-}realImplementation?: boolean; implementationDetails?: string; launchDate?: string; customers?: number; rating?: number; reviews?: number}import { additionalEnhancedServices } from \"./additional-real-services\"; import { realMarketServices } from \"./real-market-services\";
-=======
-<<<<<<< HEAD
 
 
-ursor/integrate-build-improve-and-re-verify-8f7d
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
-const mapToEnhanced = (items: any[]): EnhancedRealMicroSaasService[] => (items | []).map((s) => ({ .s;,}
-}))export;
-  const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [.mapToEnhanced(realMarketServices as unknown as []);,.mapToEnhanced(additionalEnhancedServices as unknown as [])];
 
-export const serviceCategories: string[] = Array.from( new Set( enhancedRealMicroSaasServices .map((s) => s.category) .filter((v): v is string = > Boolean(v)))).sort()export;
-  const getServicesByCategory = (if (!category | category === \"All\");) => {
-  return $3;}
-}
-  return enhancedRealMicroSaasServices; return enhancedRealMicroSaasServices.filter((s) => s.category = == category)}
-
-ursor/integrate-build-improve-and-re-verify-8f7d
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 module.exports = type EnhancedRealMicroSaasService = {; id: string; name: string; category?: string; description?: string; tagline?: string; price?: string | number; period?: string; features?: string[]; popular?: boolean; icon?: string; color?: string; textColor?: string; link?: string; marketPosition?: string; targetAudience?: string; trialDays?: number; setupTime?: string; realService?: boolean; technology?: string[]; integrations?: string[]; useCases?: string[]; roi?: string; competitors?: string[]; marketSize?: string; growthRate?: string; variant?: string; contactInfo?: { mobile: string; email: string; address: string; website: string}; realImplementation?: boolean; implementationDetails?: string; launchDate?: string; customers?: number; rating?: number; reviews?: number}; import { additionalEnhancedServices } from "./additional-real-services"; import { realMarketServices } from "./real-market-services"; const mapToEnhanced = (items: any[]): EnhancedRealMicroSaasService[] => (items | []).map((s) => ({ .s })); export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [.mapToEnhanced(realMarketServices as unknown as []),.mapToEnhanced(additionalEnhancedServices as unknown as []),]; export const serviceCategories: string[] = Array.from( new Set( enhancedRealMicroSaasServices .map((s) => s.category) .filter((v): v is string = > Boolean(v)); ); ).sort(); export const getServicesByCategory = (category: string) => {; if (!category | category === "All") return enhancedRealMicroSaasServices; return enhancedRealMicroSaasServices.filter((s) => s.category === category)}; export const getPopularServices = () => enhancedRealMicroSaasServices .filter((s) => !s.popular);.sort((a,b) => (b.rating | 0) - (a.rating | 0));'"'"
 import React from 'react';
 interface EnhancedrealmicrosaasservicesProps {
   // Add props here as needed
->>>>>>> merged-prs-20250907-203621
 
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-}
-}
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
-}
-export;
-  const getPopularServices = () => enhancedRealMicroSaasServices .filter((s) => !s.popular).sort((a,b) => (b.rating | 0) - (a.rating | 0))'\"'\";
 
-ursor/integrate-build-improve-and-re-verify-8f7d;
-ursor/fix-syntax-push-and-merge-to-main-40de;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-module.exports = type EnhancedRealMicroSaasService = {; id: string; name: string; category?: string; description?: string; tagline?: string; price?: string | number; period?: string; features?: string[]; popular?: boolean; icon?: string; color?: string; textColor?: string; link?: string; marketPosition?: string; targetAudience?: string; trialDays?: number; setupTime?: string; realService?: boolean; technology?: string[]; integrations?: string[]; useCases?: string[]; roi?: string; competitors?: string[]; marketSize?: string; growthRate?: string; variant?: string; contactInfo?: { mobile: string; email: string; address: string; website: string;}; realImplementation?: boolean; implementationDetails?: string; launchDate?: string; customers?: number; rating?: number; reviews?: number}; import { additionalEnhancedServices, realMarketServices } from 'lucide-react'; const mapToEnhanced = (items: any[]): EnhancedRealMicroSaasService[] => (items | []).map((s) => ({ .s ;})); export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [.mapToEnhanced(realMarketServices as unknown as []);,.mapToEnhanced(additionalEnhancedServices as unknown as []),]; export const serviceCategories: string[] = Array.from( new Set( enhancedRealMicroSaasServices .map((s) => s.category) .filter((v): v is string = > Boolean(v)); ); ).sort(); export const getServicesByCategory = (category: string) => {; if (!category | category === "All") return enhancedRealMicroSaasServices; return enhancedRealMicroSaasServices.filter((s) => s.category === category)}; export const getPopularServices = () => enhancedRealMicroSaasServices .filter((s) => !s.popular);.sort((a,b) => (b.rating | 0) - (a.rating | 0));'"'"""
-import React from 'react';
-interface EnhancedrealmicrosaasservicesProps {
-  // TODO: Implement;
-}
-  // Add props here as needed;
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 export default function Enhancedrealmicrosaasservices({ }: EnhancedrealmicrosaasservicesProps) {
 
   return (
@@ -98,28 +20,12 @@ export default function Enhancedrealmicrosaasservices({ }: Enhancedrealmicrosaas
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-}
-}
-}
-ursor/integrate-build-improve-and-re-verify-8f7d
-}
 
-<<<<<<< HEAD
-}
-=======
-=======
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 
 
 
@@ -132,21 +38,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-=======
-}
 
-    </div>)
-ursor/integrate-build-improve-and-re-verify-8f7d;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-module.exports = type EnhancedRealMicroSaasService = { id: string; name: string; category?: string; description?: string; tagline?: string; price?: string | number; period?: string; features?: string[]; popular?: boolean; icon?: string; color?: string; textColor?: string; link?: string; marketPosition?: string; targetAudience?: string; trialDays?: number; setupTime?: string; realService?: boolean; technology?: string[]; integrations?: string[]; useCases?: string[]; roi?: string; competitors?: string[]; marketSize?: string; growthRate?: string; variant?: string; contactInfo?: { mobile: string; email: string; address: string; website: strin;,}
-}; realImplementation?: boolean; implementationDetails?: string; launchDate?: string; customers?: number; rating?: number; reviews?: number}; import { additionalEnhancedServices } from \"./additional-real-services\"; import { realMarketServices } from \"./real-market-services\";
-
-const mapToEnhanced = (items: any[]): EnhancedRealMicroSaasService[] => (items | []).map((s) => ({ .s;,}
->>>>>>> origin/chore/fix-lint-and-merge
 }));
 
 export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [.mapToEnhanced(realMarketServices as unknown as []);,.mapToEnhanced(additionalEnhancedServices as unknown as [])];
@@ -164,123 +57,13 @@ interface EnhancedrealmicrosaasservicesProps  {// Add props here as needed;}
 }module.exports = type EnhancedRealMicroSaasService = { id: string; name: string; category?: string; description?: string; tagline?: string; price?: string | number; period?: string; features?: string[]; popular?: boolean; icon?: string; color?: string; textColor?: string; link?: string; marketPosition?: string; targetAudience?: string; trialDays?: number; setupTime?: string; realService?: boolean; technology?: string[]; integrations?: string[]; useCases?: string[]; roi?: string; competitors?: string[]; marketSize?: string; growthRate?: string; variant?: string; contactInfo?: { mobile: string; email: string; address: string; website: strin;,}
 }realImplementation?: boolean; implementationDetails?: string; launchDate?: string; customers?: number; rating?: number; reviews?: number}import { additionalEnhancedServices } from \"./additional-real-services\"; import { realMarketServices } from \"./real-market-services\";
 
-<<<<<<< HEAD
-}))export;
-
-export const "serviceCategories": string[] = Array.from( new Set( enhancedRealMicroSaasServices .map((s) => s.category) .filter((v): v is string = > Boolean(v)))).sort()export;
-  }
-  return enhancedRealMicroSaasServices; return enhancedRealMicroSaasServices.filter((s) => s.category = == category)}
-
-export;
-
-interface EnhancedrealmicrosaasservicesProps  {// Add props here as needed;
-}
-module.exports = type EnhancedRealMicroSaasService = { "id": string; "name": string; category?: string; description?: string; tagline?: string; price?: string | number; period?: string; features?: string[]; popular?: boolean; icon?: string; color?: string; textColor?: string; link?: string; marketPosition?: string; targetAudience?: string; trialDays?: number; setupTime?: string; realService?: boolean; technology?: string[]; integrations?: string[]; useCases?: string[]; roi?: string; competitors?: string[]; marketSize?: string; growthRate?: string; variant?: string; contactInfo?: { "mobile": string; "email": string; "address": string; "website": strin
-}realImplementation?: boolean; implementationDetails?: string; launchDate?: string; customers?: number; rating?: number; reviews?: number}import { additionalEnhancedServices } from "./additional-real-services"; import { realMarketServices } from "./real-market-services";"
-
-}))export;
-
-export const "serviceCategories": string[] = Array.from( new Set( enhancedRealMicroSaasServices .map((s) => s.category) .filter((v): v is string = > Boolean(v)))).sort()export;
-  }
-  return enhancedRealMicroSaasServices; return enhancedRealMicroSaasServices.filter((s) => s.category = == category)}
-
-export;
-=======
-const mapToEnhanced = (items: any[]): EnhancedRealMicroSaasService[] => (items | []).map((s) => ({ .s;,}
-}))export;
-  const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [.mapToEnhanced(realMarketServices as unknown as []);,.mapToEnhanced(additionalEnhancedServices as unknown as [])];
-
-<<<<<<< HEAD
-export const serviceCategories: string[] = Array.from( new Set( enhancedRealMicroSaasServices .map((s) => s.category) .filter((v): v is string = > Boolean(v)))).sort()export;
-  const getServicesByCategory = (if (!category | category === \"All\");) => {
-  return $3;}
-}
-  return enhancedRealMicroSaasServices; return enhancedRealMicroSaasServices.filter((s) => s.category = == category)}
-
-export;
-  const getPopularServices = () => enhancedRealMicroSaasServices .filter((s) => !s.popular).sort((a,b) => (b.rating | 0) - (a.rating | 0))'\"'\";
->>>>>>> origin/chore/fix-lint-and-merge
-
-interface EnhancedrealmicrosaasservicesProps  {// Add props here as needed;}
-module.exports = type EnhancedRealMicroSaasService = { id: string; name: string; category?: string; description?: string; tagline?: string; price?: string | number; period?: string; features?: string[]; popular?: boolean; icon?: string; color?: string; textColor?: string; link?: string; marketPosition?: string; targetAudience?: string; trialDays?: number; setupTime?: string; realService?: boolean; technology?: string[]; integrations?: string[]; useCases?: string[]; roi?: string; competitors?: string[]; marketSize?: string; growthRate?: string; variant?: string; contactInfo?: { mobile: string; email: string; address: string; website: strin;,}
-}realImplementation?: boolean; implementationDetails?: string; launchDate?: string; customers?: number; rating?: number; reviews?: number}import { additionalEnhancedServices } from \"./additional-real-services\"; import { realMarketServices } from \"./real-market-services\";
 
 const mapToEnhanced = (items: any[]): EnhancedRealMicroSaasService[] => (items | []).map((s) => ({ .s;,}
 }))export;
   const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [.mapToEnhanced(realMarketServices as unknown as []);,.mapToEnhanced(additionalEnhancedServices as unknown as [])];
 
-export const serviceCategories: string[] = Array.from( new Set( enhancedRealMicroSaasServices .map((s) => s.category) .filter((v): v is string = > Boolean(v)))).sort()export;
-  const getServicesByCategory = (if (!category | category === \"All\");) => {
-  return $3;}
-}
-  return enhancedRealMicroSaasServices; return enhancedRealMicroSaasServices.filter((s) => s.category = == category)}
 
-export;
-  const getPopularServices = () => enhancedRealMicroSaasServices .filter((s) => !s.popular).sort((a,b) => (b.rating | 0) - (a.rating | 0))'\"'\";
 
-interface EnhancedrealmicrosaasservicesProps  {// Add props here as needed;}
-}}
-}origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-ursor/integrate-build-improve-and-re-verify-8f7d;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-;
 
-export default function Enhancedrealmicrosaasservices() {export default function Enhancedrealmicrosaasservices() {export default function Enhancedrealmicrosaasservices() {return (<div />;
-      <h1 />Enhancedrealmicrosaasservices</h1>;
-      <p />This component is currently under development.</p>;}
-    </div>;}
-  )}}}
-}
 
-}
-ursor/integrate-build-improve-and-re-verify-8f7d;
-}}ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/integrate-build-improve-and-re-verify-8f7d;
-;
-}}ursor/add-new-services-and-deploy-updates-0462;
-ursor/fix-syntax-push-and-merge-to-main-40de;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-ursor/integrate-build-improve-and-re-verify-8f7d;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-}ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/integrate-build-improve-and-re-verify-8f7d;
-};
-}}
-}
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-ursor/integrate-build-improve-and-re-verify-8f7d;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-export default function Enhancedrealmicrosaasservices({}: EnhancedrealmicrosaasservicesProps) {
-  return (
-    <div />
-      <h1 />Enhancedrealmicrosaasservices</h1>
-      <p />This component is currently under development.</p>
-    </div>});}
-}
-
-}
-
-}
-
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-
-}
-
-}
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-}
-
-}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621

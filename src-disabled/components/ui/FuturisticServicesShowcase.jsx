@@ -52,16 +52,7 @@ const [hoveredService, setHoveredService] = useState(null)' const [selectedCateg
 export default function FuturisticServicesShowcase() ;
 }
 
-<<<<<<< HEAD
-}, " { id: "ai-automation", name: "AI & Automation", icon: <Brain className="w-4 h-4"/>,}
-}," { id: "micro-saas", name: "Micro SaaS", icon: <Zap className="w-4 h-4"/>,}
-}, " { id: "cloud-infrastructure", name: "Cloud & Infrastructure", icon: <Globe className="w-4 h-4"/>,}
-}," { id: "cybersecurity", name: "Cybersecurity", icon: <Shield className="w-4 h-4"/>,}
-}, " { id: "quantum-computing", name: "Quantum Computing", icon: <Rocket className="w-4 h-4"/>,}
-}," { id: "blockchain-web3", name: "Blockchain & Web3", icon: <Star className="w-4 h-4"/>,}
-} ]";
-  return (<section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden" />" {}" <div className="absolute inset-0" />" <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"/>" <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"/>" <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px, rgba(6,182, 212,0.1)_1px, transparent_0)] bg-[size: 50px_50px]"/> </div>" <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8" /> {} <motion.div initial = ,
-=======
+
 const [hoveredService, setHoveredService] = useState(null)\" const [selectedCategory, setSelectedCategory] = useState(\"all\")\" const categories = [\" { id: \"all\", name: \"All Services\", icon: <Star className=\"w-4 h-4\"/>,}
 }, \" { id: \"ai-automation\", name: \"AI & Automation\", icon: <Brain className=\"w-4 h-4\"/>,}
 },\" { id: \"micro-saas\", name: \"Micro SaaS\", icon: <Zap className=\"w-4 h-4\"/>,}
@@ -72,7 +63,7 @@ const [hoveredService, setHoveredService] = useState(null)\" const [selectedCate
 } ]\";
   const filteredServices = selectedCategory === \"all\" ? services\" : services.filter(service => service.id === selectedCategory)\";
   return (<section className=\"py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden\" />\" {}\" <div className=\"absolute inset-0\" />\" <div className=\"absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent\"/>\" <div className=\"absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent\"/>\" <div className=\"absolute inset-0 bg-[radial-gradient(circle_at_1px_1px, rgba(6,182, 212,0.1)_1px, transparent_0)] bg-[size: 50px_50px]\"/> </div>\" <div className=\"relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8\" /> {} <motion.div initial = ,
->>>>>>> origin/chore/fix-lint-and-merge
+
 } { opacity: 0, y: 30 }} whileInView = ,
 } { opacity: 1, y: 0 \" }} transition={{ duration: 0.8 }} className=\"text-center mb-16\" />\" <h2 className=\"text-4xl md:text-6xl font-bold text-white mb-6\" />\" <span className=\"bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent\" /> Revolutionary\" </span>{,}
 }\" \"''\";
@@ -83,10 +74,9 @@ const [hoveredService, setHoveredService] = useState(null)\" const [selectedCate
 export default function FuturisticServicesShowcase() ;
 }
 
-<<<<<<< HEAD
-=======
+
 const [hoveredService, setHoveredService] = useState(null)' const [selectedCategory, setSelectedCategory] = useState('all')' const categories = [' { id: 'all',}
->>>>>>> origin/chore/fix-lint-and-merge
+
   name: 'All Services', icon: <Star className='w-4 h-4'/>,}
 }, ' { id: 'ai-automation',}
   name: 'AI & Automation', icon: <Brain className='w-4 h-4'/>,}

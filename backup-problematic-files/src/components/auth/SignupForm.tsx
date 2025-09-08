@@ -77,14 +77,11 @@ type SignupFormData = z.infer<typeof signupSchema>,;
     return null,;
   },;
 ;
-<<<<<<< HEAD
-  const getFieldClasses = ("fieldName":string) => {;
-    }
-=======
+
   const getFieldClasses = (fieldName:string) => {;
     const state = fieldStates[fieldName],;
     const isTouched = touchedFields[fieldName as keyof SignupFormData],;
->>>>>>> origin/chore/fix-lint-and-merge
+
     ;
     if (!isTouched) return '',;
     ;
@@ -389,11 +386,7 @@ pr-12325
 } </div> </div> {;
 }</p>) ;
 }</div> {;
-<<<<<<< HEAD
-}</div>) ;"
-}<Button > {'";"
-  isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Creating Account... </>) : ('Create Account') ;
-=======
+
   errors.root.message ;
 }</div>) ;
 }{;
@@ -401,9 +394,4 @@ pr-12325
 }<Button > {'";
   isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Creating Account... </>) : ('Create Account') ;
 }</Button> </form>) ;
-<<<<<<< HEAD
-}'"
-=======
-}'"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

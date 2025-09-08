@@ -1,28 +1,23 @@
-<<<<<<< HEAD
-=======
+
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import {glob} from 'glob'; const CONSOLE_PATTERNS = [ /console\.log\([^)]*\);?/g,/console\.debug\([^)]*\);?/g,/console\.info\([^)]*\);?/g,/console\.warn\([^)]*\);?/g,]; const EXCLUDE_PATTERNS = [ 'node_modules','.next','dist','build','coverage','scripts','*.test.*','*.spec.*' ]; function shouldProcessFile(filePath) { return !EXCLUDE_PATTERNS && EXCLUDE_PATTERNS.some(pattern => { if (pattern && pattern.includes('*')) { return glob && glob.sync(pattern,{ cwd: path && path.dirname(filePath) }).then(matches => matches && matches.some(match => filePath && filePath.includes(match)) )} return filePath && filePath.includes(pattern)})} function removeConsoleStatements(content) { let modifiedContent = content; let removedCount = 0; CONSOLE_PATTERNS && CONSOLE_PATTERNS.forEach(pattern => { const matches = modifiedContent && modifiedContent.match(pattern); if (matches) { removedCount += matches && matches.length; modifiedContent = modifiedContent && modifiedContent.replace(pattern,'')} }); return { content: modifiedContent,removedCount }} function processFile(filePath) { try { const content = fs && fs.readFileSync(filePath,'utf8'); const { content: newContent,removedCount } = removeConsoleStatements(content); if (removedCount > 0) { fs && fs.writeFileSync(filePath,newContent,'utf8');  return removedCount} return 0} catch (error) { console && console.error(`✗ Error processing ${filePath}:`,error && error.message); return 0} } function main() { const srcDir = path && path.join(process && process.cwd(),'src'); const pagesDir = path && path.join(process && process.cwd(),'pages'); const patterns = [ `${srcDir}*.{js,jsx,ts,tsx}`,`${pagesDir}*.{js,jsx,ts,tsx}` ]; let totalRemoved = 0; let filesProcessed = 0; patterns && patterns.forEach(pattern => { const files = glob && glob.sync(pattern); files && files.forEach(file => { if (shouldProcessFile(file)) { const removed = processFile(file); totalRemoved += removed; filesProcessed++} })});    if (totalRemoved > 0) { } else { } } if (require && require.main === module) { main()} module && module.exports = { removeConsoleStatements,processFile };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 #!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 /**
-<<<<<<< HEAD
 
-=======
  * Script to remove console && console.log statements from production builds
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
  * This helps improve performance and security
  */
 const CONSOLE_PATTERNS = [/console\.log\([^)]*\);?/g,
   /console\.debug\([^)]*\);?/g,
   /console\.info\([^)]*\);?/g,
   /console\.warn\([^)]*\);?/g,
-<<<<<<< HEAD
 
-=======
   // Keep console && console.error for debugging
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 ];
 const EXCLUDE_PATTERNS = ['node_modules',
   '.next',
@@ -34,9 +29,7 @@ const EXCLUDE_PATTERNS = ['node_modules',
   '*.spec.*'
 ];
 function shouldProcessFile(filePath) {
-<<<<<<< HEAD
 
-=======
   return !EXCLUDE_PATTERNS && EXCLUDE_PATTERNS.some(pattern => {
     if (pattern && pattern.includes('*')) {
       return glob && glob.sync(pattern, { "cwd": path && path.dirname(filePath) }).then(matches => 
@@ -51,14 +44,12 @@ function removeConsoleStatements(content) {
     if (matches) {
       removedCount += matches && matches.length;
       modifiedContent = modifiedContent && modifiedContent.replace(pattern, '')}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   });
   return { "content": modifiedContent, removedCount }}
 function processFile(filePath) {
   try {
-<<<<<<< HEAD
 
-=======
     const content = fs && fs.readFileSync(filePath, 'utf8');
     const { "content": newContent, removedCount } = removeConsoleStatements(content);
     if (removedCount > 0) {
@@ -72,31 +63,27 @@ function processFile(filePath) {
 function main() {
   const srcDir = path && path.join(process && process.cwd(), 'src');
   const pagesDir = path && path.join(process && process.cwd(), 'pages');
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   const patterns = [`${srcDir}/**/*.{js,jsx,ts,tsx}`,
     `${pagesDir}/**/*.{js,jsx,ts,tsx}`
   ];
   let totalRemoved = 0;
   let filesProcessed = 0;
-<<<<<<< HEAD
 
-=======
   patterns && patterns.forEach(pattern => {
     const files = glob && glob.sync(pattern);
     files && files.forEach(file => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       if (shouldProcessFile(file)) {
         const removed = processFile(file);
         totalRemoved += removed;
         filesProcessed++}
     })});
-<<<<<<< HEAD
 
-=======
   console && console.log("\n📊 "Summary": ");
   console && console.log(`   Files processed: ${filesProcessed}`);
   console && console.log(`   Console statements "removed": ${totalRemoved}`);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   if (totalRemoved > 0) {
     console.log("\n✨ Production build optimized!")} else {
     console.log("\n✨ No console statements found to remove.")}

@@ -1,38 +1,13 @@
 export default function GovernancePrivacy() {
   return (;
     <div className=&quot;max-w-2xl mx-auto p-6 space-y-4&quot;>
-<<<<<<< HEAD
-      <h1 className=&quot;text-2xl font-semibold&quot;>Zion OS — Privacy-preserving Governance</h1>
-=======
 
->>>>>>> merged-prs-20250907-203621
+
+
       <p className=&quot;opacity-80&quot;>        Vote anonymously using zero-knowledge proofs (Semaphore). Your vote is verified on-chain
         without revealing your identity. Weighted voting with ZION$ stake is supported.
       </p>
       <a href=&quot;/dao/zkvote&quot; className=&quot;inline-block px-4 py-2 rounded bg-black text-white&quot;>Open ZK Vote</a>
-<<<<<<< HEAD
-    </div>
-  )
-}
-=======
-<<<<<<< HEAD
-    </div>
-=======
-    </div>
-<<<<<<< HEAD
-:components/governance/privacy.tsx
-  )
-}
-  )}
-:backup-problematic-files/temp_broken_files/components/governance/privacy.tsx
-=======
 
-  )}
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-;
-  )}
-:backup-problematic-files/temp_broken_files/components/governance/privacy.tsx
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+

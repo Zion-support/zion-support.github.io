@@ -14,32 +14,14 @@ import {listPublishedPosts} from '@/utils / data / blog_store';
 import BlogCard from '@/components / blog / BlogCard';
 ;
 
-<<<<<<< HEAD
-import { BlogPost   } from '@/utils/types/blog';
-import { listPublishedPosts  } from '@/utils/data/blogStore';
-type Props = { topic: string; posts: BlogPost[];,}
-=======
-<<<<<<< HEAD
 
-import Head from 'next/head';'
-import Link from 'next/link';'
-import { BlogPost   } from '@/utils/types/blog';'
-import PageShareButtons from '@/components/blog/PageShareButtons';'
-import { listPublishedPosts  } from '@/utils/data/blogStore';'
-import BlogCard from '@/components/blog/BlogCard';'
-type Props = { "topic": string; "posts": BlogPost[]
-=======
-import { BlogPost   } from '@/utils/types/blog';
-import { listPublishedPosts  } from '@/utils/data/blogStore';
-type Props = { topic: string; posts: BlogPost[];,}
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
 }
 
 type Props = { topic: string;, posts: BlogPost[];,}
 },
 const TopicPage: NextPage < Props> = ({ topic;, posts    }) => {
-<<<<<<< HEAD
+
 
  ;
   return (}
@@ -53,24 +35,7 @@ type Props = { topic: string; posts: BlogPost[];,}
 type Props = { topic: string;, posts: BlogPost[];,}
 },;
 
-const TopicPage: NextPage<Props /> = ({ topic;, posts    }) => {
 
-}
-;}
-const TopicPage: NextPage<Props /> = ({ topic;, posts }) => {}
-type Props = { topic: string; posts: BlogPost[] ;};type Props = { topic: string;, posts: BlogPost[] ;},;
-const TopicPage: NextPage<Props /> = ({ topic;, posts }) => {;}
-type Props = { topic: string; posts: BlogPost[];,}
-}
-
-type Props = { topic: string;, posts: BlogPost[];,}
-},
-=======
-
- ;
-  return (}
-;}
-  const TopicPage: NextPage<Props /> = ({ topic;, posts    }) => {
 
 }
 type Props = { topic: string; posts: BlogPost[];,}
@@ -79,60 +44,8 @@ type Props = { topic: string; posts: BlogPost[];,}
 type Props = { topic: string;, posts: BlogPost[];,}
 },;
 
-<<<<<<< HEAD
-=======
-const TopicPage: NextPage<Props /> = ({ topic;, posts    }) => {
->>>>>>> origin/chore/fix-lint-and-merge
-
-}
-;}
-const TopicPage: NextPage<Props /> = ({ topic;, posts }) => {}
-type Props = { topic: string; posts: BlogPost[] ;};type Props = { topic: string;, posts: BlogPost[] ;},;
-const TopicPage: NextPage<Props /> = ({ topic;, posts }) => {;}
-type Props = { topic: string; posts: BlogPost[];,}
-}
-
-type Props = { topic: string;, posts: BlogPost[];,}
-},
-<<<<<<< HEAD
 
 
-
- ;
-}
-return (;
-;
-
-
-=======
->>>>>>> merged-prs-20250907-203621
-const TopicPage: NextPage < Props> = ({ topic;, posts    }) => {
-
- ;
-  return (}
-;}
-  const TopicPage: NextPage<Props /> = ({ topic;, posts    }) => {
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
-
-}
-type Props = { topic: string; posts: BlogPost[];,}
-};
-
-type Props = { topic: string;, posts: BlogPost[];,}
-},;
-
-<<<<<<< HEAD
-const TopicPage: NextPage<Props /> = ({ topic;, posts    }) => {
-=======
-<<<<<<< HEAD
-
-=======
-const TopicPage: NextPage<Props /> = ({ topic;, posts    }) => {
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
 
 ;
   return (
@@ -492,14 +405,8 @@ title={`${topic} - Zion Blog`}
   )
 };
 
-<<<<<<< HEAD
-const topic = String(ctx && ctx.params?.topic || '');
-=======
-<<<<<<< HEAD
-=======
-const topic = String(ctx && ctx.params?.topic || '');
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
 
 const posts = listPublishedPosts().filter((p) => p && p.topics.includes(topic))
 };
@@ -507,19 +414,8 @@ const posts = listPublishedPosts().filter((p) => p && p.topics.includes(topic))
 const topic = String(ctx.params?.topic || '');
 
 const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
-<<<<<<< HEAD
-  const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
-const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
-  return { props: { topic;, posts } }
-=======
-<<<<<<< HEAD
-  return { "props": { topic, posts } }
-=======
-  const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
-const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
-  return { props: { topic;, posts } }
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
 }
 
 export default TopicPage;
@@ -597,62 +493,16 @@ const TopicPage: NextPage<Props /> = (_{_topic;, _posts}) => {_return (<div />;}
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
  ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  }
 
-const posts = listPublishedPosts ().filter ((p) => p.topics.includes (topic));
-  return { "props": { topic, posts } }
-=======
->>>>>>> merged-prs-20250907-203621
-  const topic = String (ctx.params?.topic || '');
-}
-const posts = listPublishedPosts ().filter ((p) => p.topics.includes (topic));}
-  return { props: { topic;, posts } }
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
 }
 ;
 
 export default TopicPage;
 ;
 
-<<<<<<< HEAD
-const topic = String(ctx.params?.topic || '');
-
-const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
-  const topic = String(ctx.params?.topic || '');
-  const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
-
-const topic = String(ctx.params?.topic || '');
-
-const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
-  const topic = String(ctx.params?.topic || '');
-  return { props: { topic;, posts } }
-=======
-<<<<<<< HEAD
-
-const posts = listPublishedPosts().filter(p => { return p.topics.includes(topic)); }
 
 
-  return { "props": { topic, posts } }
-=======
-const topic = String(ctx.params?.topic || '');
-
-const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
-  const topic = String(ctx.params?.topic || '');
-  const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
-
-const topic = String(ctx.params?.topic || '');
-
-const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
-  const topic = String(ctx.params?.topic || '');
-  return { props: { topic;, posts } }
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
 }
 
 export default TopicPage;      </Head>
@@ -664,19 +514,8 @@ export const getServerSideProps: GetServerSideProps = async ctx => {;
 
 const topic = String(ctx && ctx.params?.topic || '');
 }
-<<<<<<< HEAD
-const posts = listPublishedPosts().filter(p => p && p.topics.includes(topic));}
-  return { props: { topic;, posts } }
-=======
-<<<<<<< HEAD
 
 
-  return { "props": { topic, posts } }
-=======
-const posts = listPublishedPosts().filter(p => p && p.topics.includes(topic));}
-  return { props: { topic;, posts } }
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
 };
 
 export default TopicPage;      </Head>;
@@ -685,21 +524,8 @@ export default TopicPage;      </Head>;
         <div className=\"mb-6\" />;
 }
 
-<<<<<<< HEAD
-export const getServerSideProps: GetServerSideProps = async ctx => {const topic = String(ctx && ctx.params?.topic || '';}
-  const posts = listPublishedPosts().filter(p => p && p.topics.includes(topic);}
-  return { props: { topic;, posts } ;
-=======
-<<<<<<< HEAD
-export const "getServerSideProps": GetServerSideProps = async (ctx) => {const topic = String(ctx && ctx.params?.topic || '';'
-  }
-  return { "props": { topic, posts } ;
-=======
-export const getServerSideProps: GetServerSideProps = async ctx => {const topic = String(ctx && ctx.params?.topic || '';}
-  const posts = listPublishedPosts().filter(p => p && p.topics.includes(topic);}
-  return { props: { topic;, posts } ;
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
 }
 
 export default TopicPage;      </Head>;
@@ -718,21 +544,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) = /> {const to
 export const getServerSideProps: GetServerSideProps  = async (ctx) => ;
 }
 
-<<<<<<< HEAD
-export const getServerSideProps: GetServerSideProps = async (ctx) => {const topic = String(ctx && ctx.params?.topic || '')const posts  = listPublishedPosts().filter((p) => p && p.topics.includes(topic))const topic = String(ctx.params?.topic || '';}
-  const posts = listPublishedPosts().filter((p) => p.topics.includes(topic);}
-  return { props: { topic;, posts } };
-=======
-<<<<<<< HEAD
-export const "getServerSideProps": GetServerSideProps = async (ctx) => {const topic = String(ctx && ctx.params?.topic || '')const posts  = listPublishedPosts().filter((p) => p && p.topics.includes(topic))const topic = String(ctx.params?.topic || '';'
-  }
-  return { "props": { topic, posts } };
-=======
-export const getServerSideProps: GetServerSideProps = async (ctx) => {const topic = String(ctx && ctx.params?.topic || '')const posts  = listPublishedPosts().filter((p) => p && p.topics.includes(topic))const topic = String(ctx.params?.topic || '';}
-  const posts = listPublishedPosts().filter((p) => p.topics.includes(topic);}
-  return { props: { topic;, posts } };
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
 }
 
 export default TopicPage;return { props: { topic;, posts } }}
@@ -747,28 +560,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;}
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;}
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;}
 };
-<<<<<<< HEAD
-export const getServerSideProps: GetServerSideProps = async (ctx) => {;
-  const topic = String(ctx && ctx.params?.topic || '');
-  const posts = listPublishedPosts().filter((p) => p && p.topics.includes(topic));
-  const topic = String(ctx.params?.topic || '');}
-  const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));}
-  return { props: { topic;, posts } }
-=======
-<<<<<<< HEAD
-export const "getServerSideProps": GetServerSideProps = async (ctx) => {;
-  }
-  const posts = listPublishedPosts().filter((p) => p && p.topics.includes(topic));
-  return { "props": { topic, posts } }
-=======
-export const getServerSideProps: GetServerSideProps = async (ctx) => {;
-  const topic = String(ctx && ctx.params?.topic || '');
-  const posts = listPublishedPosts().filter((p) => p && p.topics.includes(topic));
-  const topic = String(ctx.params?.topic || '');}
-  const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));}
-  return { props: { topic;, posts } }
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
 }
 export default TopicPage;
 export const getServerSideProps: GetServerSideProps = async (ctx) => {const topic = String(ctx.params?.topic |'');}export const getServerSideProps: GetServerSideProps = async (ctx) => {export const getServerSideProps: GetServerSideProps = async (ctx) => {;}export const getServerSideProps: GetServerSideProps = async (ctx) => {;}export const getServerSideProps: GetServerSideProps  = async (ctx) => {;}export const getServerSideProps: GetServerSideProps = async (ctx) => {const topic = String(ctx && ctx.params?.topic || '')const posts  = listPublishedPosts().filter((p) => p && p.topics.includes(topic))const topic = String(ctx.params?.topic || '')const posts = listPublishedPosts().filter((p) => p.topics.includes(topic))return { props: { topic;, posts } }

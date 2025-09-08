@@ -1,332 +1,7 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-;
-ursor/fix-website-loading-errors-and-merge-6662;
-import React from 'react';,import Head from 'next/head';,import Layout from '../../components/layout/Layout';
-import { Check, Mail, MapPin, Phone, ExternalLink   } from 'lucide-react';
-import { enhancedRealMicroSaasServices   } from '../../data/enhanced-real-micro-saas-services';
-import { extraServices   } from '../../data/extra-services';
-import { additionalEnhancedServices   } from '../../data/additional-real-services';
-import { newlyAddedServices   } from '../../data/newly-added-services';
-import { curatedMarketServices   } from '../../data/curated-market-services';
-import { new2025Services   } from '../../data/new-2025-services';
-import { marketValidatedServices   } from '../../data/market-validated-services';
-import { moreRealServices2025   } from '../../data/more-real-services-2025';
-import { verified2025Additions   } from '../../data/verified-2025-additions';
-import { realServicesQ12025   } from '../../data/real-services-q1-2025';
-import { newVerifiedServicesQ22025  } from '../../data/real-verified-services-q2-2025';
-
-<<<<<<< HEAD
-type Service = any;
-
-export default ServiceDetail;
-}function getAllServices () : Service[] {return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[])}return {paths: Array.from (slugs) .map ( (slug) => ({params: {slug;}
-}) )fallback: false;
-}
-
-export default function ServiceDetailPage () {return (<Layout /> <Head /> <title /> {}function getAllServices () : Service[] {return (<Layout /> <Head /> <title /> {service.name;}
-}| Zion Tech Group</title>;
-}
-null;
-2)}/> </Head> </li>) )}</ul> </div>) )}</ul> </div> <div />) )2)}function getAllServices () : Service[] {2)service.name;}
-}| Zion Tech Group</title> ;
-}null;service.name;
-}| Zion Tech Group</title>;
-}
-null;
-2)}/> </Head> </li>) )}</ul> </div>) )}</ul> </div> <div />) )2)}function getAllServices () : Service[] {2)service.name;}
-}| Zion Tech Group</title> ;
-}null;}/> </Head> </li>) )}</ul> </div>) )}</ul> </div> <div />) )2)2)}/> </Head> </li>) )}</ul> </div>) )}</ul> </div> <div />) )ursor/fix-website-loading-errors-and-merge-6662;
-}</div> </div> </div> </div> </div> </div> </div> <div className=\"p-6 bg-black/40 border border-gray-700/50 rounded-lg\"  /> <h3 className=\"text-white font-semibold mb-3\"  />Contact</h3> <div className=\"space-y-3 text-sm\"  /> <div className=\"flex items-center gap-2 text-cyan-400\"  /><Phone className=\"w-4 h-4\" /><a href= {`tel:$ {contactInfo.mobile.replace (/[^+\\d]/g, '')}`;"
-}className=\"hover:underline\"  /> {contactInfo.mobile;}"
-}</a></div> <div className=\"flex items-center gap-2 text-purple-400\"  /><Mail className=\"w-4 h-4\" /><a href= {`mailto:$ {contactInfo.email;}
-}`;"
-}className=\"hover:underline\"  /> {contactInfo.email;}"
-}</a></div> <div className=\"flex items-center gap-2 text-green-400\"  /><MapPin className=\"w-4 h-4\" /><a href= {`https: //maps.google.com/?q=$ {encodeURIComponent (contactInfo.address}
-}`;"
-}target=\"blank\" rel=\"noopener noreferrer\" className=\"hover:underline\"  /> {contactInfo.address;}
-}</a></div> </div> </div> {/* Market Position & ROI */;}"
-}<div className=\"p-6 bg-black/40 border border-gray-700/50 rounded-lg\"  /> <h3 className=\"text-white font-semibold mb-3\"  />Market & ROI</h3> <div className=\"space-y-3 text-sm text-gray-300\"  /> {service.marketPosition && <p className=\"leading-relaxed\"  /><span className=\"text-gray-400\"  />Position:</span> {service.marketPosition;}
-}</p>;"
-}{service.roi && <p className=\"leading-relaxed\"  /><span className=\"text-gray-400\"  />ROI:</span> {service.roi;}
-  service.marketPosition;}
-}</p>;"
-}{service.roi && <p className=\"leading-relaxed\"  /><span className=\"text-gray-400\"  />ROI:</span> {service.roi;}
-  service.marketPosition;}
-}</p>;"
-}{service.roi && <p className=\"leading-relaxed\"  /><span className=\"text-gray-400\"  />ROI:</span> {service.roi;}
-}</p>;
-}{service.competitors?.length ? () : null;}"
-}<a href = \"/market-pricing\" className=\"inline-block mt-2 text-cyan-300 hover: text-cyan-200\" />See average market prices →</a> return (<EnhancedLayout /> <Head /> <title />Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout>;
-  return (<EnhancedLayout /> <Head /> <title /> {}function getAllServices(): any () : Service[] {}</p>;
-}{service.competitors?.length ? () : null;}"
-}<a href = \"/market-pricing\" className=\"inline-block mt-2 text-cyan-300 hover: text-cyan-200\" />See average market prices →</a> return (<EnhancedLayout /> <Head /> <title />Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout>;
-  return (<EnhancedLayout /> <Head /> <title /> {}function getAllServices(): any () : Service[] {}</p>;
-}{service.competitors?.length ? () : null;}"
-}<a href = \"/market-pricing\" className=\"inline-block mt-2 text-cyan-300 hover: text-cyan-200\" />See average market prices →</a> return (<EnhancedLayout /> <Head /> <title />Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout /> <Head /> <title /> 
-}function getAllServices(): any () : Service[] {return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[]);}
-  return {paths: Array && Array.from (slugs) .map ( (slug) => ({params: {slug ;}
-}) )fallback: false ;
-import React from 'react';
-import Head from 'next/head';
-import { Check, Mail, MapPin, Phone, ExternalLink  } from 'lucide-react';
-import { enhancedRealMicroSaasServices  } from '../../data/enhanced-real-micro-saas-services';
-import { extraServices  } from '../../data/extra-services';
-import { additionalEnhancedServices  } from '../../data/additional-real-services';
-import { newlyAddedServices  } from '../../data/newly-added-services';
-import { curatedMarketServices  } from '../../data/curated-market-services';
-import { new2025Services  } from '../../data/new-2025-services';
-import { marketValidatedServices  } from '../../data/market-validated-services';
-import { moreRealServices2025  } from '../../data/more-real-services-2025';
-import { verified2025Additions  } from '../../data/verified-2025-additions';
-import { realServicesQ12025  } from '../../data/real-services-q1-2025';
-import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025';
-type Service = typeof enhancedRealMicroSaasServices[number];
-
-  return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[])
-}return {}
-  paths: Array.from (slugs) .map ( (slug) => ({}
-  params: {}
-  slug}
-}) );
-fallback: false;
-}
-
-export default function ServiceDetailPage ({}
-  service}
-}: {}
-  service: Service}
-}) {}
-  return (<Layout /> <Head /> <title /> {}function getAllServices () : Service[] {
-
-=======
-<<<<<<< HEAD
 
 
 
-
-;
-ursor/fix-website-loading-errors-and-merge-6662;
-import React from 'react',import Head from 'next/head',import Layout from '../../components/layout/Layout';'
-import { Check, Mail, MapPin, Phone, ExternalLink   } from 'lucide-react';'
-import { enhancedRealMicroSaasServices   } from '../../data/enhanced-real-micro-saas-services';'
-import { extraServices   } from '../../data/extra-services';'
-import { additionalEnhancedServices   } from '../../data/additional-real-services';'
-import { newlyAddedServices   } from '../../data/newly-added-services';'
-import { curatedMarketServices   } from '../../data/curated-market-services';'
-import { new2025Services   } from '../../data/new-2025-services';'
-import { marketValidatedServices   } from '../../data/market-validated-services';'
-import { moreRealServices2025   } from '../../data/more-real-services-2025';'
-import { verified2025Additions   } from '../../data/verified-2025-additions';'
-import { realServicesQ12025   } from '../../data/real-services-q1-2025';'
-import { newVerifiedServicesQ22025  } from '../../data/real-verified-services-q2-2025';'
-
-type Service = any;
-}null;}/> </Head> </li>) )}</ul> </div>) )}</ul> </div> <div>) )2)2)}/> </Head> </li>) )}</ul> </div>) )}</ul> </div> <div>) )ursor/fix-website-loading-errors-and-merge-6662;
-}</div> </div> </div> </div> </div> </div> </div> <div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Contact</h3> <div className="space-y-3 text-sm" > <div className="flex items-center gap-2 text-cyan-400" ><Phone className="w-4 h-4" /><a href= {`"tel":$ {contactInfo.mobile.replace (/[^+\\d]/g, '')}`;`}className=""hover":underline" > {contactInfo.mobile;"
-}</a></div> <div className="flex items-center gap-2 text-purple-400" ><Mail className="w-4 h-4" /><a href= {`"mailto":$ {contactInfo.email;`}`;`}className=""hover":underline" > {contactInfo.email;"
-}</a></div> <div className="flex items-center gap-2 text-green-400" ><MapPin className="w-4 h-4" /><a href= {`"https": //maps.google.com/?q=$ {encodeURIComponent (contactInfo.address,`}`;`}target="blank" rel="noopener noreferrer" className=""hover":underline" > {contactInfo.address;"
-}</a></div> </div> </div> {/* Market Position & ROI */;
-}<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Market & ROI</h3> <div className="space-y-3 text-sm text-gray-300" > {service.marketPosition && <p className="leading-relaxed" ><span className="text-gray-400" >"Position":</span> {service.marketPosition;"
-}</p>;
-}{service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >"ROI":</span> {service.roi;"
-  }
-  service.marketPosition;
-}</p>;
-}{service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >"ROI":</span> {service.roi;"
-  }
-  service.marketPosition;
-}</p>;
-}{service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >"ROI":</span> {service.roi;"
-}</p>;
-}{service.competitors?.length ? () : null;
-}<a href = "/market-pricing" className="inline-block mt-2 text-cyan-300 "hover": text-cyan-200">See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout>;"
-  return (<EnhancedLayout> <Head> <title> {}function getAllServices(): any () : Service[] {}</p>;
-}{service.competitors?.length ? () : null;
-}<a href = "/market-pricing" className="inline-block mt-2 text-cyan-300 "hover": text-cyan-200">See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout>;"
-  return (<EnhancedLayout> <Head> <title> {}function getAllServices(): any () : Service[] {}</p>;
-}{service.competitors?.length ? () : null;
-}<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {}function getAllServices(): any () : Service[] {return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[])}return {paths: Array && Array.from (slugs) .map ( (slug) => ({params: {slug ;
-}) )fallback: false ;
-import React from 'react';
-import Head from 'next/head';
-import React from 'react';
-import Head from 'next/head';
-=======
-type Service = any;
-
-export default ServiceDetail;
-}function getAllServices () : Service[] {return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[])}return {paths: Array.from (slugs) .map ( (slug) => ({params: {slug;}
-}) )fallback: false;
-}
-
-export default function ServiceDetailPage () {return (<Layout    /> <Head><title> {}function getAllServices () : Service[] {return (<Layout    /> <Head><title> {service.name;}
-}| Zion Tech Group</title>;
-}
-null;
-2)}/> </Head> </li>) )}</ul> </div>) )}</ul> </div> <div    />) )2)}function getAllServices () : Service[] {2)service.name;}
-}| Zion Tech Group</title> ;
-}null;service.name;
-}| Zion Tech Group</title>;
-}
-null;
-2)}/> </Head> </li>) )}</ul> </div>) )}</ul> </div> <div    />) )2)}function getAllServices () : Service[] {2)service.name;}
-}| Zion Tech Group</title> ;
-}null;}/> </Head> </li>) )}</ul> </div>) )}</ul> </div> <div    />) )2)2)}/> </Head> </li>) )}</ul> </div>) )}</ul> </div> <div    />) )ursor/fix-website-loading-errors-and-merge-6662;
-}</div> </div> </div> </div> </div> </div> </div> <div className=\"p-6 bg-black/40 border border-gray-700/50 rounded-lg\"     /> <h3 className=\"text-white font-semibold mb-3\"     />Contact</h3> <div className=\"space-y-3 text-sm\"     /> <div className=\"flex items-center gap-2 text-cyan-400\"     /><Phone className=\"w-4 h-4\"    /><a href= {`tel:$ {contactInfo.mobile.replace (/[^+\\d]/g, '')}`;"
-}className=\"hover:underline\"     /> {contactInfo.mobile;}"
-}</a></div> <div className=\"flex items-center gap-2 text-purple-400\"     /><Mail className=\"w-4 h-4\"    /><a href= {`mailto:$ {contactInfo.email;}
-}`;"
-}className=\"hover:underline\"     /> {contactInfo.email;}"
-}</a></div> <div className=\"flex items-center gap-2 text-green-400\"     /><MapPin className=\"w-4 h-4\"    /><a href= {`https: //maps.google.com/?q=$ {encodeURIComponent (contactInfo.address}
-}`;"
-}target=\"blank\" rel=\"noopener noreferrer\" className=\"hover:underline\"     /> {contactInfo.address;}
-}</a></div> </div> </div> {/* Market Position & ROI */;}"
-}<div className=\"p-6 bg-black/40 border border-gray-700/50 rounded-lg\"     /> <h3 className=\"text-white font-semibold mb-3\"     />Market & ROI</h3> <div className=\"space-y-3 text-sm text-gray-300\"     /> {service.marketPosition && <p className=\"leading-relaxed\"     /><span className=\"text-gray-400\"     />Position:</span> {service.marketPosition;}
-}</p>;"
-}{service.roi && <p className=\"leading-relaxed\"     /><span className=\"text-gray-400\"     />ROI:</span> {service.roi;}
-  service.marketPosition;}
-}</p>;"
-}{service.roi && <p className=\"leading-relaxed\"     /><span className=\"text-gray-400\"     />ROI:</span> {service.roi;}
-  service.marketPosition;}
-}</p>;"
-}{service.roi && <p className=\"leading-relaxed\"     /><span className=\"text-gray-400\"     />ROI:</span> {service.roi;}
-}</p>;
-}{service.competitors?.length ? () : null;}"
-}<a href = \"/market-pricing\" className=\"inline-block mt-2 text-cyan-300 hover: text-cyan-200\"    />See average market prices →</a> return (<EnhancedLayout    /> <Head><title>Service Not Found - Zion Tech Solutions</title></Head> </div> </EnhancedLayout>;
-  return (<EnhancedLayout    /> <Head><title> {}function getAllServices(): any () : Service[] {}</p>;
-}{service.competitors?.length ? () : null;}"
-}<a href = \"/market-pricing\" className=\"inline-block mt-2 text-cyan-300 hover: text-cyan-200\"    />See average market prices →</a> return (<EnhancedLayout    /> <Head><title>Service Not Found - Zion Tech Solutions</title></Head> </div> </EnhancedLayout>;
-  return (<EnhancedLayout    /> <Head><title> {}function getAllServices(): any () : Service[] {}</p>;
-}{service.competitors?.length ? () : null;}"
-}<a href = \"/market-pricing\" className=\"inline-block mt-2 text-cyan-300 hover: text-cyan-200\"    />See average market prices →</a> return (<EnhancedLayout    /> <Head><title>Service Not Found - Zion Tech Solutions</title></Head> </div> </EnhancedLayout> return (<EnhancedLayout    /> <Head><title> 
-}function getAllServices(): any () : Service[] {return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[]);}
-  return {paths: Array && Array.from (slugs) .map ( (slug) => ({params: {slug ;}
-}) )fallback: false ;
-import React from 'react';
-import Head from 'next/head';
->>>>>>> origin/chore/fix-lint-and-merge
-import { Check, Mail, MapPin, Phone, ExternalLink  } from 'lucide-react';
-import { enhancedRealMicroSaasServices  } from '../../data/enhanced-real-micro-saas-services';
-import { extraServices  } from '../../data/extra-services';
-import { additionalEnhancedServices  } from '../../data/additional-real-services';
-import { newlyAddedServices  } from '../../data/newly-added-services';
-import { curatedMarketServices  } from '../../data/curated-market-services';
-import { new2025Services  } from '../../data/new-2025-services';
-import { marketValidatedServices  } from '../../data/market-validated-services';
-import { moreRealServices2025  } from '../../data/more-real-services-2025';
-import { verified2025Additions  } from '../../data/verified-2025-additions';
-import { realServicesQ12025  } from '../../data/real-services-q1-2025';
-<<<<<<< HEAD
-type Service = typeof enhancedRealMicroSaasServices[number];service.name;
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 "hover":underline">Back to Services</a></Link>;"
-
- 
- 
-
-}function getAllServices () : Service[] {}
-  return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[])
-=======
-
-type Service = typeof enhancedRealMicroSaasServices[number];service.name;"
-}- Zion Tech Solutions</title></Head> </Link> <Link href=\"/services\"    /><a className=\"text-sm text-blue-600 hover:underline\"    />Back to Services</a></Link>;
-
- 
- 
-}function getAllServices () : Service[] {}
-  return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[])}
->>>>>>> origin/chore/fix-lint-and-merge
-}return {
-  paths: Array.from (slugs) .map ( (slug) => ({
-  params: {}
-  slug}
-}) );
-fallback: false;
-}
-
-<<<<<<< HEAD
-2) }
-  service.name }
-}| Zion Tech Group</title> 
-};
-null;
-=======
-export default function ServiceDetailPage ({}
-  service}
-}: {}
-  service: Service}
-}) {}
-  return (<Layout    /> <Head><title> {}function getAllServices () : Service[] {
->>>>>>> origin/chore/fix-lint-and-merge
-
-  service.name
-}| Zion Tech Group</title>
-}
-null
-2) 
-}
-null;
-import { Check, Mail, MapPin, Phone, ExternalLink  } from lucide-react';
-import { enhancedRealMicroSaasServices  } from '../../data/enhanced-real-micro-saas-services;
-import { extraServices  } from ../../data/extra-services';
-import { additionalEnhancedServices  } from '../../data/additional-real-services;
-import { newlyAddedServices  } from ../../data/newly-added-services';
-import { curatedMarketServices  } from '../../data/curated-market-services;
-import { new2025Services  } from ../../data/new-2025-services';
-import { marketValidatedServices  } from '../../data/market-validated-services;
-import { moreRealServices2025  } from ../../data/more-real-services-2025';
-import { verified2025Additions  } from '../../data/verified-2025-additions;
-import { realServicesQ12025  } from ../../data/real-services-q1-2025';
-
-<<<<<<< HEAD
-}
-null;
-
-  service.name
-}| Zion Tech Group</title>
-}
-null
-2) 
-}
-null;
-}) )
-  service.name
-}| Zion Tech Group</title>
-
-null
-2)
-}/> </Head> </li>) )
-}</ul> </div>) )
-}</ul> </div> <div>) )
-2) 
-  return (<Layout> <Head> <title> {
-
-=======
-<<<<<<< HEAD
- 
- 
-}function getAllServices () : Service[] {
-  return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[])
-}return {
-  paths: Array.from (slugs) .map ( (slug) => ({
-  params: {
-  slug
-}) );
-fallback: false
-}export default function ServiceDetailPage ({
-  service
-}: {
-  service: Service
-}) {
-  return (<Layout> <Head> <title> {
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }function getAllServices () : Service[] {
   return (<Layout> <Head> <title> {}function getAllServices () : Service[] {
   return (<Layout> <Head> <title> {}function getAllServices () : Service[] {
@@ -335,26 +10,17 @@ fallback: false
 2) 
   service.name 
 }| Zion Tech Group</title> ;
-=======
->>>>>>> merged-prs-20250907-203621
+
 2) }
   service.name }
 }| Zion Tech Group</title> 
->>>>>>> origin/chore/fix-lint-and-merge
+
 };
 
 null;
 
-<<<<<<< HEAD
-  service.name;
-=======
-<<<<<<< HEAD
-  service.name;
-=======
-<<<<<<< HEAD
-  service.name
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+
 }| Zion Tech Group</title>
 }
 null;
@@ -366,40 +32,8 @@ null
 2)
 }/> </Head> </li>) )
 }</ul> </div>) )
-<<<<<<< HEAD
-}</ul> </div> <div>) )
-2)
-pr-12243
-}function getAllServices () : Service[] {
 
-2)
-  service.name
-}| Zion Tech Group</title>
-}
 
-function extractServiceSlugFromLink(link: string): string | null {
-	try {
-		const url = new URL(link);
-		const path = url.pathname.replace(/^\/+|\/+$/g, '');
-		if (path.startsWith('services/')) {
-			return path.substring('services/'.length)
-		}
-		return null
-	} catch {
-		return null
-	}
-}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}</ul> </div> <div>) )
-=======
-}</ul> </div> <div    />) )
->>>>>>> origin/chore/fix-lint-and-merge
-2) 
-}function getAllServices () : Service[] {
-
->>>>>>> merged-prs-20250907-203621
 
 2) }
   service.name }
@@ -409,141 +43,23 @@ function extractServiceSlugFromLink(link: string): string | null {
 null;
 2)
 2) 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  service.name 
-}| Zion Tech Group</title> ;
-}
-null;
 
 
-
-
-=======
-}</ul> </div> <div>) )
-2) 
-  service.name 
-}| Zion Tech Group</title> ;
-};
-null;
-2)
-2) 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 }/> </Head> </li>) ) 
 }</ul> </div>) ) 
 }</ul> </div> <div>) ) 
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-}</ul> </div> <div    />) )
-2)
-}function getAllServices () : Service[] {
 
-2) }
-  service.name }
-}| Zion Tech Group</title> 
-};
 
-2) 
-  service.name 
-}| Zion Tech Group</title> ;
-};
-null;
 
-pr-12243
-  service.name
-}| Zion Tech Group</title>
-}
-null;
-2)
-}/> </Head> </li>) )
-}</ul> </div>) )
-}</ul> </div> <div>) )
-2) 
-}function getAllServices () : Service[] {}
-2) 
-  service.name;
-}| Zion Tech Group</title> ;
-};
-null;
 
-2)
-2) 
->>>>>>> merged-prs-20250907-203621
-
-}/> </Head> </li>) ) 
-}</ul> </div>) ) 
-}</ul> </div> <div />) ) 
-"
-}</div> </div> </div> </div> </div> </div> </div> <div className = \"p-6 bg-black/40 border border-gray-700/50 rounded-lg\"  /> <h3 className=\"text-white font-semibold mb-3\"  />Contact</h3> <div className=\"space-y-3 text-sm\"  /> <div className=\"flex items-center gap-2 text-cyan-400\"  /><Phone className=\"w-4 h-4\" /><a href= {
-  `tel:$ {}
-  contactInfo.mobile.replace (/[^+\\d]/g, '')}
-}`"
-}className=\"hover: underline\"  /> {}
-  contactInfo.mobile}"
-}</a></div> <div className=\"flex items-center gap-2 text-purple-400\"  /><Mail className=\"w-4 h-4\" /><a href= {
-  `mailto:$ {}
-  contactInfo.email}
-}`"
-}className=\"hover:underline\"  /> {}
-  contactInfo.email}"
-}</a></div> <div className=\"flex items-center gap-2 text-green-400\"  /><MapPin className=\"w-4 h-4\" /><a href= {
-  `https://maps.google.com/?q=$ {}
-  encodeURIComponent (contactInfo.address)}
-}`"
-}target=\"blank\" rel=\"noopener noreferrer\" className=\"hover:underline\"  /> {}
-  contactInfo.address}
-}</a></div> </div> </div> {}
-  /* Market Position & ROI */}"
-}<div className=\"p-6 bg-black/40 border border-gray-700/50 rounded-lg\"  /> <h3 className=\"text-white font-semibold mb-3\"  />Market & ROI</h3> <div className=\"space-y-3 text-sm text-gray-300\"  /> {"
-  service.marketPosition && <p className=\"leading-relaxed\"  /><span className=\"text-gray-400\"  />Position:</span> {
-<<<<<<< HEAD
-
-}
-null
-}/> </Head> </li>) )
-}</ul> </div>) )
-}</ul> </div> <div>) )
-
-=======
-
-}
-null
-}/> </Head> </li>) )
-}</ul> </div>) )
-}</ul> </div> <div>) )
-
-}</ul> </div> <div>) ) 
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
 }</div> </div> </div> </div> </div> </div> </div> <div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Contact</h3> <div className="space-y-3 text-sm" > <div className="flex items-center gap-2 text-cyan-400" ><Phone className="w-4 h-4" /><a href= {
   `tel:$ {
   contactInfo.mobile.replace (/[^+\\d]/g, '')
 }`
 }className="hover:underline" > {
-<<<<<<< HEAD
-  contactInfo.mobile
-}</a></div> <div className="flex items-center gap-2 text-purple-400" ><Mail className="w-4 h-4" /><a href= {
-  `mailto:$ {
-  contactInfo.email
-}`
-}className="hover:underline" > {
-  contactInfo.email
-}</a></div> <div className="flex items-center gap-2 text-green-400" ><MapPin className="w-4 h-4" /><a href= {
-  `https://maps.google.com/?q=$ {
-  encodeURIComponent (contactInfo.address)
-}`
-}target="blank" rel="noopener noreferrer" className="hover:underline" > {
-=======
+
 
 }</ul> </div> <div>) ) 
 
@@ -564,105 +80,15 @@ null
   encodeURIComponent (contactInfo.address)
 }`
 }target=blank" rel="noopener noreferrer className=hover:underline" > {
->>>>>>> merged-prs-20250907-203621
+
   contactInfo.address
 }</a></div> </div> </div> {
   /* Market Position & ROI */
 }<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Market & ROI</h3> <div className="space-y-3 text-sm text-gray-300" > {
   service.marketPosition && <p className="leading-relaxed" ><span className="text-gray-400" >Position:</span> {
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-  service.marketPosition 
-}</p>
-}{
-  service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {
-  service.roi 
-
->>>>>>> merged-prs-20250907-203621
-  service.marketPosition
-}</p>
-}{
-  service.roi && <p className=leading-relaxed" ><span className="text-gray-400 >ROI:</span> {
-  service.roi
-}</p>
-}{
-<<<<<<< HEAD
-  service.competitors?.length ? () : null
-}<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {
-
-pr-12243
-
-}function getAllServices(): any () : Service[] {
-  return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[])
-}return {
-  paths: Array && Array.from (slugs) .map ( (slug) => ({
-  params: {;}
-  slug ;}
-}) )
-fallback: false
-import Layout from '../../components/layout/Layout'
-import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react'
-import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services'
-import { extraServices } from '../../data/extra-services'
-import { additionalEnhancedServices } from '../../data/additional-real-services'
-import { newlyAddedServices } from '../../data/newly-added-services'
-import { curatedMarketServices } from '../../data/curated-market-services'
-import { new2025Services } from '../../data/new-2025-services'
-import { marketValidatedServices } from '../../data/market-validated-services'
-import { moreRealServices2025 } from '../../data/more-real-services-2025'
-import { verified2025Additions } from '../../data/verified-2025-additions'
-import { realServicesQ12025 } from '../../data/real-services-q1-2025'
-import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025'
-type Service = typeof enhancedRealMicroSaasServices[number]
-  service.name
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
-}
-export default ServiceDetail
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-export default ServiceDetail
-export default ServiceDetail
-  service.name
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
-  service.name;"
-}- Zion Tech Solutions</title></Head> </Link> <Link href = \"/services\"    /><a className=\"text-sm text-blue-600 hover:underline\"    />Back to Services</a></Link>
-
-export default ServiceDetail
-export default ServiceDetail
-=======
-
-  service.roi 
 
 
 
-}</p>
-}{
-  }
-  service.competitors?.length ? () : null
-
-
-
-
-
-}function getAllServices(): any () : Service[] {;
-}<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {}function getAllServices(): any () : Service[] {;
-}</p>
-}{
-  service.competitors?.length ? () : null
-}<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {}function getAllServices(): any () : Service[] {;
-  service.marketPosition
-}</p>
-}{
-  service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {
-  service.roi
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   service.marketPosition 
 }</p>
 }{
@@ -670,69 +96,15 @@ export default ServiceDetail
   service.roi 
 
 
-<<<<<<< HEAD
-  service.marketPosition
-}</p>
-}{
-  service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {
-  service.roi
-  service.marketPosition 
-}</p>
-}{
-  service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {
-  service.roi 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
 }</p>
 }{
   service.competitors?.length ? () : null
 }<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-pr-12243
 
 
 
-}</div> </div> </div> </div> </div> </div> </div> <div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Contact</h3> <div className="space-y-3 text-sm" > <div className="flex items-center gap-2 text-cyan-400" ><Phone className="w-4 h-4" /><a href= {}
-  `tel:$ {}
-  contactInfo.mobile.replace (/[^+\\d]/g, '')`
-}`"
-}className="hover:underline" > {}
-  contactInfo.mobile"
-}</a></div> <div className="flex items-center gap-2 text-purple-400" ><Mail className="w-4 h-4" /><a href= {}`
-  `mailto:$ {}
-  contactInfo.email;`
-}`"
-}className="hover:underline" > {}
-  contactInfo.email"
-}</a></div> <div className="flex items-center gap-2 text-green-400" ><MapPin className="w-4 h-4" /><a href= {}`
-  `https://maps.google.com/?q=$ {}
-  encodeURIComponent (contactInfo.address)`
-}`"
-}target="blank" rel="noopener noreferrer" className="hover:underline" > {}
-  contactInfo.address;
-}</a></div> </div> </div> {}
-  /* Market Position & ROI */"
-}<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Market & ROI</h3> <div className="space-y-3 text-sm text-gray-300" > {"
-  service.marketPosition && <p className="leading-relaxed" ><span className="text-gray-400" >Position:</span> {}
-  service.marketPosition;
-}</p>
-}{"
-  service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {}
-  service.roi;
-}</p>
-}{}
-  service.competitors?.length ? () : null}"
-}<a href=\"/market-pricing\" className=\"inline-block mt-2 text-cyan-300 hover: text-cyan-200\" />See average market prices →</a> return (<EnhancedLayout /> <Head> <title />Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout>;
-  return (<EnhancedLayout /> <Head> <title /> {}function getAllServices(): any () : Service[] {;}
-  return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[]) ;}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-}function getAllServices(): any () : Service[] {;
-  return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[]) ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }return {;
   }
   "paths": Array && Array.from (slugs) .map ( (slug) => ({;
@@ -862,35 +234,7 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 pr-12243
   service.name
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
-=======
 
-}/> </Head> </li>) ) 
-}</ul> </div>) ) 
-}</ul> </div> <div    />) ) 
-"
-}</div> </div> </div> </div> </div> </div> </div> <div className = \"p-6 bg-black/40 border border-gray-700/50 rounded-lg\"     /> <h3 className=\"text-white font-semibold mb-3\"     />Contact</h3> <div className=\"space-y-3 text-sm\"     /> <div className=\"flex items-center gap-2 text-cyan-400\"     /><Phone className=\"w-4 h-4\"    /><a href= {
-  `tel:$ {}
-  contactInfo.mobile.replace (/[^+\\d]/g, '')}
-}`"
-}className=\"hover: underline\"     /> {}
-  contactInfo.mobile}"
-}</a></div> <div className=\"flex items-center gap-2 text-purple-400\"     /><Mail className=\"w-4 h-4\"    /><a href= {
-  `mailto:$ {}
-  contactInfo.email}
-}`"
-}className=\"hover:underline\"     /> {}
-  contactInfo.email}"
-}</a></div> <div className=\"flex items-center gap-2 text-green-400\"     /><MapPin className=\"w-4 h-4\"    /><a href= {
-  `https://maps.google.com/?q=$ {}
-  encodeURIComponent (contactInfo.address)}
-}`"
-}target=\"blank\" rel=\"noopener noreferrer\" className=\"hover:underline\"     /> {}
-  contactInfo.address}
-}</a></div> </div> </div> {}
-  /* Market Position & ROI */}"
-}<div className=\"p-6 bg-black/40 border border-gray-700/50 rounded-lg\"     /> <h3 className=\"text-white font-semibold mb-3\"     />Market & ROI</h3> <div className=\"space-y-3 text-sm text-gray-300\"     /> {"
-  service.marketPosition && <p className=\"leading-relaxed\"     /><span className=\"text-gray-400\"     />Position:</span> {
->>>>>>> origin/chore/fix-lint-and-merge
 
 }
   service.marketPosition }
@@ -899,123 +243,7 @@ pr-12243
   service.roi && <p className=\"leading-relaxed\"     /><span className=\"text-gray-400\"     />ROI:</span> {
   service.roi;
 }
-<<<<<<< HEAD
-  service.name
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
 
-
-
-export default ServiceDetail
-}
-  service.name 
-}- Zion Tech Solutions</title> </Head> </Link> <Link href=/services><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
-  service.name;
-}- Zion Tech Solutions</title> </Head> </Link> <Link href = \/services\" /><a className=\"text-sm text-blue-600 hover:underline\ />Back to Services</a></Link>
-;
-}
-export default ServiceDetail;
-export default ServiceDetail;
-}
-  service.name;"
-}- Zion Tech Solutions</title> </Head> </Link> <Link href=\"/services\" /><a className=\"text-sm text-blue-600 hover: underline\" />Back to Services</a></Link>;
-};
-}
-export default ServiceDetail;
-export default ServiceDetail;
-}
-export default function ServiceDetailPage(): any ({}
-  service ;}
-
-export default ServiceDetail
-}
-}</ul> </div> <div>) ) ;
-}</div> </div> </div> </div> </div> </div> </div> <div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Contact</h3> <div className="space-y-3 text-sm" > <div className="flex items-center gap-2 text-cyan-400" ><Phone className="w-4 h-4" /><ahref= {"
-  `"tel":$ {`  }
-  contactInfo && contactInfo.mobile.replace (/[^+\\d]/g, '') '
-}` `}className=""hover":underline"> {;"
-  }
-  contactInfo && contactInfo.mobile ;
-}</a></div> <div className="flex items-center gap-2 text-purple-400" ><Mail className="w-4 h-4" /><ahref= {"
-  `"mailto": $ {`  }
-  contactInfo && contactInfo.email 
-}` ,`}className=""hover":underline"> {;"
-  }
-  contactInfo && contactInfo.email ;
-}</a></div> <div className="flex items-center gap-2 text-green-400" ><MapPin className="w-4 h-4" /><ahref= {"
-  `"https": //maps && maps.google.com/?q=$ {`  }
-  encodeURIComponent (contactInfo && contactInfo.address) 
-}` ,`}target="blank" rel="noopener noreferrer" className=""hover":underline"> {;"
-  }
-  contactInfo && contactInfo.address ;
-}</a></div> </div> </div> {;
-  /* Market Position & ROI */ ;
-}<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Market & ROI</h3> <div className="space-y-3 text-sm text-gray-300" > {;"
-  }
-  service && service.marketPosition && <p className="leading-relaxed" ><span className="text-gray-400" >"Position":</span> {;"
-  }
-  service && service.marketPosition ;
-}</p> ;
-}{;
-  }
-  service && service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >"ROI":</span> {;"
-  }
-  service && service.roi ;
-}</p> ;
-}{;
-  }
-  service && service.competitors?.length ? () : null ;
-}<a href = "/market-pricing" className="inline-block mt-2 text-cyan-300 "hover": text-cyan-200">See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout>;"
-  return (<EnhancedLayout> <Head> <title> {;
-  }
-  service && service.name ;
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link> ;
-};
-export default ServiceDetail ;
-export default ServiceDetail;
-<<<<<<< HEAD
-  service.name
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
-
-  service.name
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
-
-
-
-  service.name
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
-
-
-  service.name
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover: underline">Back to Services</a></Link>;
-
-}
-
-export default ServiceDetail,
-export default ServiceDetail
-
-
-
-  service.name 
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 "hover": underline">Back to Services</a></Link>,"
-};
-
-export default ServiceDetail,
-export default ServiceDetail
-
-};
-
-  service.name 
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover: underline">Back to Services</a></Link>;
-};
-export default ServiceDetail 
-export default ServiceDetail
-};
-;
-}
-pr-12243
-;
-}
-=======
 }
 }</p>
 }{}
@@ -1050,7 +278,7 @@ type Service = typeof enhancedRealMicroSaasServices[number];
 ;
 }
 
->>>>>>> origin/chore/fix-lint-and-merge
+
 export default ServiceDetail;
 export default ServiceDetail;
 }
@@ -1067,92 +295,25 @@ export default function ServiceDetailPage(): any ({;}
 }: {;}
 }: {}
   service: Service ;}
-<<<<<<< HEAD
-}) {
-  return (<Layout /> <Head> <title /> {}
-  service && service.name ;}
-}| Zion Tech Group</title> 
-}
-
-export default ServiceDetail
-}
-
-}</p> ;
-}{
-  service && service.roi && <p className="leading-relaxed" ><span className=text-gray-400 >ROI:</span> {
-  service && service.roi ;
-}</p> ;
-
-}
-export default ServiceDetail ;
-export default ServiceDetail;
-
-  service.name
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className=text-sm text-blue-600 hover: underline>Back to Services</a></Link>;
 
 
-=======
-<<<<<<< HEAD
-  service.name
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
 
 export default ServiceDetail
 
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-export default ServiceDetail
-}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
   service.name 
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className=text-sm text-blue-600 hover: underline>Back to Services</a></Link>;
 }
 export default ServiceDetail 
 export default ServiceDetail
-<<<<<<< HEAD
-};
-;
-}
-=======
 
-<<<<<<< HEAD
-}
-}
-pr-12243
 
-;
-}
-export default ServiceDetail;
-export default ServiceDetail;
-}
->>>>>>> merged-prs-20250907-203621
-  service.name;"
-}- Zion Tech Solutions</title></Head> </Link> <Link href=\"/services\    /><a className=\text-sm text-blue-600 hover: underline\"    />Back to Services</a></Link>
-}
-export default ServiceDetail
-export default ServiceDetail
-export default function ServiceDetailPage(): any ({}
-  service ;}
-}: {}
-  service: Service ;}
-}) {
-  return (<Layout    /> <Head><title> {}
-=======
-}) {;
-  return (<Layout    /> <Head><title> {;}
->>>>>>> origin/chore/fix-lint-and-merge
+
   service && service.name ;}
 }| Zion Tech Group</title> 
 };
@@ -1186,126 +347,17 @@ null;
 }<div className=\"p-6 bg-black/40 border border-gray-700/50 rounded-lg\"     /> <h3 className=\text-white font-semibold mb-3\     />Market & ROI</h3> <div className=\"space-y-3 text-sm text-gray-300\"     /> {
   service && service.marketPosition && <p className=\leading-relaxed\"     /><span className=\"text-gray-400\     />Position:</span> {}
   service && service.marketPosition ;}
-<<<<<<< HEAD
-}</p>
-}{
-  service && service.roi && <p className=\"leading-relaxed\"     /><span className=\text-gray-400\     />ROI:</span> {}
-  service && service.roi ;}
-}</p>
-}{}
-  service && service.competitors?.length ? () : null ;}"
-}<a href = \"/market-pricing\ className=\inline-block mt-2 text-cyan-300 hover: text-cyan-200\"    />See average market prices →</a> return (<EnhancedLayout    /> <Head><title>Service Not Found - Zion Tech Solutions</title></Head> </div> </EnhancedLayout>
-  return (<EnhancedLayout    /> <Head><title> {}
-  service && service.name ;}"
-}- Zion Tech Solutions</title></Head> </Link> <Link href=\/services\    /><a className=\"text-sm text-blue-600 hover: underline\"    />Back to Services</a></Link>
-}
-export default ServiceDetail
-export default ServiceDetail
-  service.name
-}- Zion Tech Solutions</title> </Head> </Link> <Link href=/services><a className="text-sm text-blue-600 hover: underline">Back to Services</a></Link>
-export default ServiceDetail
 
-export default ServiceDetail
-
-  service.name
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover: underline">Back to Services</a></Link>
-}
-export default ServiceDetail
-export default ServiceDetail
-
-}
-pr-12243
-
-<<<<<<< HEAD
-export default ServiceDetail
-export default ServiceDetail
-  service.name;"
-}- Zion Tech Solutions</title></Head> </Link> <Link href=\"/services\"    /><a className=\"text-sm text-blue-600 hover: underline\"    />Back to Services</a></Link>
-}
-export default ServiceDetail
-export default ServiceDetail
-}
-  service.name;"
-}- Zion Tech Solutions</title> </Head> </Link> <Link href=\"/services\" /><a className=\"text-sm text-blue-600 hover: underline\" />Back to Services</a></Link>
-};
-
-export default ServiceDetail;
-=======
 };
   service.name;"
 }- Zion Tech Solutions</title> </Head> </Link> <Link href=\"/services\" /><a className=\"text-sm text-blue-600 hover: underline\" />Back to Services</a></Link>;
-=======
-}</p> ;
-}{;"
-  service && service.roi && <p className=\"leading-relaxed\"     /><span className=\"text-gray-400\"     />ROI:</span> {;}
-  service && service.roi ;}
-}</p> ;
-}{;}
-  service && service.competitors?.length ? () : null ;}"
-}<a href = \"/market-pricing\" className=\"inline-block mt-2 text-cyan-300 hover: text-cyan-200\"    />See average market prices →</a> return (<EnhancedLayout    /> <Head><title>Service Not Found - Zion Tech Solutions</title></Head> </div> </EnhancedLayout>;
-  return (<EnhancedLayout    /> <Head><title> {;}
-  service && service.name ;}"
-}- Zion Tech Solutions</title></Head> </Link> <Link href=\"/services\"    /><a className=\"text-sm text-blue-600 hover: underline\"    />Back to Services</a></Link> 
->>>>>>> origin/chore/fix-lint-and-merge
-};
 
-
-export default ServiceDetail ;
-
-export default ServiceDetail;
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-export default ServiceDetail;
-};
-;
-}
-<<<<<<< HEAD
-=======
-}
-=======
-  service.name;"
-}- Zion Tech Solutions</title></Head> </Link> <Link href = \"/services\"    /><a className=\"text-sm text-blue-600 hover:underline\"    />Back to Services</a></Link>
-;
-}
->>>>>>> origin/chore/fix-lint-and-merge
-
-export default ServiceDetail;
-export default ServiceDetail;
-<<<<<<< HEAD
-export default ServiceDetail;
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-}
-  service.name;"
-<<<<<<< HEAD
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text - sm text - blue - 600 hover:underline">Back to Services</a></Link>;
-=======
-}- Zion Tech Solutions</title></Head> </Link> <Link href=\"/services\"    /><a className=\"text-sm text-blue-600 hover: underline\"    />Back to Services</a></Link>
-};
-
-export default ServiceDetail;
-export default ServiceDetail;
-};
-;
-}
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
 }
   return enhancedRealMicroSaasServices .concat (extra_services as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[]);
 }return {
   paths: Array.from (slugs) .map ( (slug) => ({
-<<<<<<< HEAD
-  params: {}
-  slug;}
-=======
-<<<<<<< HEAD
-  params: {
-  slug;
-=======
-  params: {}
-  slug;}
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
 }) );
 fallback: false;
 }
@@ -1335,125 +387,20 @@ export default /**
  * ServiceDetailPage - Function description;
  */
 function ServiceDetailPage() {
-<<<<<<< HEAD
-  return (<Layout /> <Head /> <title /> {}
-=======
-<<<<<<< HEAD
-  return (<Layout /> <Head> <title /> {}
->>>>>>> merged-prs-20250907-203621
-  service.name;}"
-}- Zion Tech Solutions</title> </Head> </Link> <Link href=\"/services\" /><a className=\"text-sm text-blue-600 hover:underline\" />Back to Services</a></Link>;
-  service.name;"
-}- Zion Tech Solutions</title> </Head> </Link> <Link href=\"/services\" /><a className=\"text-sm text-blue-600 hover:underline\" />Back to Services</a></Link>;
-<<<<<<< HEAD
-=======
-}
-export default ServiceDetail;
-=======
-  return (<Layout    /> <Head><title> {}
-  service.name;}"
-}- Zion Tech Solutions</title></Head> </Link> <Link href=\"/services\"    /><a className=\"text-sm text-blue-600 hover:underline\"    />Back to Services</a></Link>;
-  service.name;"
-}- Zion Tech Solutions</title></Head> </Link> <Link href=\"/services\"    /><a className=\"text-sm text-blue-600 hover:underline\"    />Back to Services</a></Link>;
->>>>>>> origin/chore/fix-lint-and-merge
-}
 
-export default ServiceDetail;
-}
-<<<<<<< HEAD
-  service.name;"
-}- Zion Tech Solutions</title> </Head> </Link> <Link href=\"/services\" /><a className=\"text-sm text-blue-600 hover:underline\" />Back to Services</a></Link>;
->>>>>>> merged-prs-20250907-203621
-}
 
-export default ServiceDetail;
-}
-export default function ServiceDetailPage(): any ({service ;}
-}: {service: Service ;}
-}) {return (<Layout /> <Head> <title /> {service && service.name ;}
-=======
-
-export default ServiceDetail;
-
-export default ServiceDetail;
-}
-  service.name;"
-<<<<<<< HEAD
-}- Zion Tech Solutions</title> </Head> </Link> <Link href=\"/services\" /><a className=\"text-sm text-blue-600 hover:underline\" />Back to Services</a></Link>;
-=======
-}- Zion Tech Solutions</title></Head> </Link> <Link href=\"/services\"    /><a className=\"text-sm text-blue-600 hover:underline\"    />Back to Services</a></Link>;
->>>>>>> merged-prs-20250907-203621
-}
-
-export default ServiceDetail;
-
-export default ServiceDetail;
-}
-
-export default function ServiceDetailPage(): any ({service ;}
-}: {service: Service ;}
-<<<<<<< HEAD
-}) {return (<Layout /> <Head /> <title /> {service && service.name ;}
-}| Zion Tech Group</title> ;
-}null;"
-2)}/> </Head> </li>) )}</ul> </div>) )}</ul> </div> <div />) )}</div> </div> </div> </div> </div> </div> </div> <div className=\"p-6 bg-black/40 border border-gray-700/50 rounded-lg\"  /> <h3 className=\"text-white font-semibold mb-3\"  />Contact</h3> <div className=\"space-y-3 text-sm\"  /> <div className=\"flex items-center gap-2 text-cyan-400\"  /><Phone className=\"w-4 h-4\" /><ahref= {`tel:$ {contactInfo && contactInfo.mobile.replace (/[^+\\d]/g, '')}`;"
-}className=\"hover:underline\" /> {contactInfo && contactInfo.mobile ;}"
-}</a></div> <div className=\"flex items-center gap-2 text-purple-400\"  /><Mail className=\"w-4 h-4\" /><ahref= {`mailto:$ {contactInfo && contactInfo.email;}
-}`;"
-}className=\"hover:underline\" /> {contactInfo && contactInfo.email ;}"
-}</a></div> <div className=\"flex items-center gap-2 text-green-400\"  /><MapPin className=\"w-4 h-4\" /><ahref= {`https: //maps && maps.google.com/?q=$ {encodeURIComponent (contactInfo && contactInfo.address}
-}`;"
-}target=\"blank\" rel=\"noopener noreferrer\" className=\"hover:underline\" /> {contactInfo && contactInfo.address ;}
-}</a></div> </div> </div> {/* Market Position & ROI */ ;}"
-}<div className=\"p-6 bg-black/40 border border-gray-700/50 rounded-lg\"  /> <h3 className=\"text-white font-semibold mb-3\"  />Market & ROI</h3> <div className=\"space-y-3 text-sm text-gray-300\"  /> {service && service.marketPosition && <p className=\"leading-relaxed\"  /><span className=\"text-gray-400\"  />Position:</span> {service && service.marketPosition ;}
-}</p> ;"
-}{service && service.roi && <p className=\"leading-relaxed\"  /><span className=\"text-gray-400\"  />ROI:</span> {service && service.roi ;}
-}</p> ;
-}{service && service.competitors?.length ? () : null ;}"
-}<a href = \"/market-pricing\" className=\"inline-block mt-2 text-cyan-300 hover: text-cyan-200\" />See average market prices →</a> return (<EnhancedLayout /> <Head /> <title />Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout>;
-  return (<EnhancedLayout /> <Head /> <title /> {service && service.name ;}"
-}- Zion Tech Solutions</title> </Head> </Link> <Link href=\"/services\" /><a className=\"text-sm text-blue-600 hover:underline\" />Back to Services</a></Link> ;
-=======
-}) {return (<Layout    /> <Head><title> {service && service.name ;}
->>>>>>> origin/chore/fix-lint-and-merge
-}| Zion Tech Group</title> ;
-}null;"
-2)}/> </Head> </li>) )}</ul> </div>) )}</ul> </div> <div    />) )}</div> </div> </div> </div> </div> </div> </div> <div className=\"p-6 bg-black/40 border border-gray-700/50 rounded-lg\"     /> <h3 className=\"text-white font-semibold mb-3\"     />Contact</h3> <div className=\"space-y-3 text-sm\"     /> <div className=\"flex items-center gap-2 text-cyan-400\"     /><Phone className=\"w-4 h-4\"    /><ahref= {`tel:$ {contactInfo && contactInfo.mobile.replace (/[^+\\d]/g, '')}`;"
-}className=\"hover:underline\"    /> {contactInfo && contactInfo.mobile ;}"
-}</a></div> <div className=\"flex items-center gap-2 text-purple-400\"     /><Mail className=\"w-4 h-4\"    /><ahref= {`mailto:$ {contactInfo && contactInfo.email;}
-}`;"
-}className=\"hover:underline\"    /> {contactInfo && contactInfo.email ;}"
-}</a></div> <div className=\"flex items-center gap-2 text-green-400\"     /><MapPin className=\"w-4 h-4\"    /><ahref= {`https: //maps && maps.google.com/?q=$ {encodeURIComponent (contactInfo && contactInfo.address}
-}`;"
-}target=\"blank\" rel=\"noopener noreferrer\" className=\"hover:underline\"    /> {contactInfo && contactInfo.address ;}
-}</a></div> </div> </div> {/* Market Position & ROI */ ;}"
-}<div className=\"p-6 bg-black/40 border border-gray-700/50 rounded-lg\"     /> <h3 className=\"text-white font-semibold mb-3\"     />Market & ROI</h3> <div className=\"space-y-3 text-sm text-gray-300\"     /> {service && service.marketPosition && <p className=\"leading-relaxed\"     /><span className=\"text-gray-400\"     />Position:</span> {service && service.marketPosition ;}
-}</p> ;"
-}{service && service.roi && <p className=\"leading-relaxed\"     /><span className=\"text-gray-400\"     />ROI:</span> {service && service.roi ;}
-}</p> ;
-}{service && service.competitors?.length ? () : null ;}"
-}<a href = \"/market-pricing\" className=\"inline-block mt-2 text-cyan-300 hover: text-cyan-200\"    />See average market prices →</a> return (<EnhancedLayout    /> <Head><title>Service Not Found - Zion Tech Solutions</title></Head> </div> </EnhancedLayout>;
-  return (<EnhancedLayout    /> <Head><title> {service && service.name ;}"
-}- Zion Tech Solutions</title></Head> </Link> <Link href=\"/services\"    /><a className=\"text-sm text-blue-600 hover:underline\"    />Back to Services</a></Link> ;
->>>>>>> merged-prs-20250907-203621
 }
 
 export default ServiceDetail ;
 
 export default ServiceDetail;service.name;"
-<<<<<<< HEAD
-}- Zion Tech Solutions</title> </Head> </Link> <Link href=\"/services\" /><a className=\"text-sm text-blue-600 hover:underline\" />Back to Services</a></Link>;
-  service.name;"
-}- Zion Tech Solutions</title> </Head> </Link> <Link href=\"/services\" /><a className=\"text-sm text-blue-600 hover:underline\" />Back to Services</a></Link>;
-  service.name;"
-}- Zion Tech Solutions</title> </Head> </Link> <Link href=\"/services\" /><a className=\"text-sm text-blue-600 hover:underline\" />Back to Services</a></Link>;
-=======
+
 }- Zion Tech Solutions</title></Head> </Link> <Link href=\"/services\"    /><a className=\"text-sm text-blue-600 hover:underline\"    />Back to Services</a></Link>;
   service.name;"
 }- Zion Tech Solutions</title></Head> </Link> <Link href=\"/services\"    /><a className=\"text-sm text-blue-600 hover:underline\"    />Back to Services</a></Link>;
   service.name;"
 }- Zion Tech Solutions</title></Head> </Link> <Link href=\"/services\"    /><a className=\"text-sm text-blue-600 hover:underline\"    />Back to Services</a></Link>;
->>>>>>> merged-prs-20250907-203621
+
 }
 
 export default ServiceDetail;
@@ -1463,17 +410,8 @@ export default ServiceDetail;
 
 export default ServiceDetail;
 }
-<<<<<<< HEAD
-  service.name;"
-}- Zion Tech Solutions</title> </Head> </Link> <Link href=\"/services\" /><a className=\"text-sm text-blue-600 hover:underline\" />Back to Services</a></Link>;
-=======
-<<<<<<< HEAD
 
-=======
-  service.name;"
-}- Zion Tech Solutions</title></Head> </Link> <Link href=\"/services\"    /><a className=\"text-sm text-blue-600 hover:underline\"    />Back to Services</a></Link>;
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
 }
 
 export default ServiceDetail;
@@ -1489,87 +427,17 @@ export default ServiceDetail;
 export default /**;
  * ServiceDetailPage - Function description;
  */;
-<<<<<<< HEAD
-function ServiceDetailPage() {return (<Layout /> <Head /> <title /> {service.name;}
-}| Zion Tech Group</title>;
-}
-null;"
-2)}/> </Head> </li>) )}</ul> </div>) )}</ul> </div> <div />) )}</div> </div> </div> </div> </div> </div> </div> <div className=\"p - 6 bg - black / 40 border border - gray - 700 / 50 rounded - lg\"  /> <h3 className=\"text - white font - semibold mb - 3\"  />Contact</h3> <div className=\"space - y-3 text - sm\"  /> <div className=\"flex items - center gap - 2 text - cyan - 400\"  /><Phone className=\"w - 4 h - 4\" /><a href= {`tel:$ {contact_info.mobile.replace (/[^+\\d]/g, '')}`;"
-}className=\"hover:underline\"  /> {contact_info.mobile;}"
-}</a></div> <div className=\"flex items - center gap - 2 text - purple - 400\"  /><Mail className=\"w - 4 h - 4\" /><a href= {`mailto:$ {contact_info.email;}
-}`;"
-}className=\"hover:underline\"  /> {contact_info.email;}"
-}</a></div> <div className=\"flex items - center gap - 2 text - green - 400\"  /><MapPin className=\"w - 4 h - 4\" /><a href= {`https: //maps.google.com/?q=$ {encodeURIComponent (contact_info.address}
-}`;"
-}target=\"blank\" rel=\"noopener noreferrer\" className=\"hover:underline\"  /> {contact_info.address;}
-}</a></div> </div> </div> {/* Market Position & ROI */;}"
-}<div className=\"p - 6 bg - black / 40 border border - gray - 700 / 50 rounded - lg\"  /> <h3 className=\"text - white font - semibold mb - 3\"  />Market & ROI</h3> <div className=\"space - y-3 text - sm text - gray - 300\"  /> {service.market_position && <p className=\"leading - relaxed\"  /><span className=\"text - gray - 400\"  />Position:</span> {service.market_position;}
-}</p>;"
-}{service.roi && <p className=\"leading - relaxed\"  /><span className=\"text - gray - 400\"  />ROI:</span> {service.roi;}
-}</p>;
-}{service.competitors?.length ? () : null;}"
-}<a href = \"/market - pricing\" className=\"inline - block mt - 2 text - cyan - 300 hover: text - cyan - 200\" />See average market prices →</a> return (<EnhancedLayout /> <Head /> <title  /> Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout>;
-  return (<EnhancedLayout /> <Head /> <title /> {service.name;}"
-}- Zion Tech Solutions</title> </Head> </Link> <Link href=\"/services\" /><a className=\"text - sm text - blue - 600 hover:underline\" />Back to Services</a></Link>;
-=======
-<<<<<<< HEAD
-=======
-function ServiceDetailPage() {return (<Layout    /> <Head><title> {service.name;}
->>>>>>> origin/chore/fix-lint-and-merge
-}| Zion Tech Group</title>;
-}
-null;"
-2)}/> </Head> </li>) )}</ul> </div>) )}</ul> </div> <div    />) )}</div> </div> </div> </div> </div> </div> </div> <div className=\"p - 6 bg - black / 40 border border - gray - 700 / 50 rounded - lg\"     /> <h3 className=\"text - white font - semibold mb - 3\"     />Contact</h3> <div className=\"space - y-3 text - sm\"     /> <div className=\"flex items - center gap - 2 text - cyan - 400\"     /><Phone className=\"w - 4 h - 4\"    /><a href= {`tel:$ {contact_info.mobile.replace (/[^+\\d]/g, '')}`;"
-}className=\"hover:underline\"     /> {contact_info.mobile;}"
-}</a></div> <div className=\"flex items - center gap - 2 text - purple - 400\"     /><Mail className=\"w - 4 h - 4\"    /><a href= {`mailto:$ {contact_info.email;}
-}`;"
-}className=\"hover:underline\"     /> {contact_info.email;}"
-}</a></div> <div className=\"flex items - center gap - 2 text - green - 400\"     /><MapPin className=\"w - 4 h - 4\"    /><a href= {`https: //maps.google.com/?q=$ {encodeURIComponent (contact_info.address}
-}`;"
-}target=\"blank\" rel=\"noopener noreferrer\" className=\"hover:underline\"     /> {contact_info.address;}
-}</a></div> </div> </div> {/* Market Position & ROI */;}"
-}<div className=\"p - 6 bg - black / 40 border border - gray - 700 / 50 rounded - lg\"     /> <h3 className=\"text - white font - semibold mb - 3\"     />Market & ROI</h3> <div className=\"space - y-3 text - sm text - gray - 300\"     /> {service.market_position && <p className=\"leading - relaxed\"     /><span className=\"text - gray - 400\"     />Position:</span> {service.market_position;}
-}</p>;"
-}{service.roi && <p className=\"leading - relaxed\"     /><span className=\"text - gray - 400\"     />ROI:</span> {service.roi;}
-}</p>;
-}{service.competitors?.length ? () : null;}"
-<<<<<<< HEAD
-}<a href = \"/market - pricing\" className=\"inline - block mt - 2 text - cyan - 300 hover: text - cyan - 200\" />See average market prices →</a> return (<EnhancedLayout /> <Head> <title  /> Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout>;
-  return (<EnhancedLayout /> <Head> <title /> {service.name;}"
-}- Zion Tech Solutions</title> </Head> </Link> <Link href=\"/services\" /><a className=\"text - sm text - blue - 600 hover:underline\" />Back to Services</a></Link>;
-=======
-}<a href = \"/market - pricing\" className=\"inline - block mt - 2 text - cyan - 300 hover: text - cyan - 200\"    />See average market prices →</a> return (<EnhancedLayout    /> <Head><title> Service Not Found - Zion Tech Solutions</title></Head> </div> </EnhancedLayout>;
-  return (<EnhancedLayout    /> <Head><title> {service.name;}"
-}- Zion Tech Solutions</title></Head> </Link> <Link href=\"/services\"    /><a className=\"text - sm text - blue - 600 hover:underline\"    />Back to Services</a></Link>;
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
 }
 
 export default ServiceDetail;
 
 export default ServiceDetail;
 }
-<<<<<<< HEAD
-}
-"
-=======
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243
 
 
-origin/cursor/automate-test-improve-and-merge-code-2533
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243
-}
-"
-=======
-}
-"
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+
+
+

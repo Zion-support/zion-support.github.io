@@ -135,18 +135,12 @@ async function $1() {;
   // console.log(""\"nCompleted&quot;: ${fixedCount} files fixed, ${errorCount} errors"&quot;)}"
       return match,"
   fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) => {,"
-<<<<<<< HEAD
-  // Check if imports have proper commas
-    }
-    if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) {
-}
-      return match.replace(imports, cleanImports)};
-=======
+
 pr-12325
   // Check if imports have proper commas,
     if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) {,
   const cleanImports = imports.trim().split(/\s+/).join(),
->>>>>>> origin/chore/fix-lint-and-merge
+
   ),
   // Fix missing semicolons after variable declarations,
   fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm, match => {,"
@@ -154,19 +148,7 @@ pr-12325
 ,
 // Main function,
 async function $1() {,
-<<<<<<< HEAD
-  // Get all TypeScript/JavaScript files
-}
-  "ignore": ["node_modules/**"]}),"
-  console.log(""Found ${files.length} files to process...""),"
-  for (const file of files) {
-  }
-  try {
-}
-      if (content !== fixed) {
-  }
-  fs.writeFileSync(file, fixed, "utf8"),"
-=======
+
   // Get all TypeScript/JavaScript files,"
   const files = await glob("src/**/*.{ts,tsx,js,jsx}", {,")"
   "ignore": ["node_modules/**"]}),""
@@ -179,7 +161,7 @@ async function $1() {,
       const fixed = fixLintErrors(content),
       if (content !== fixed) {,"
   fs.writeFileSync(file, fixed, "utf8"),""
->>>>>>> origin/chore/fix-lint-and-merge
+
         console.log("""Fixed": ${file}""),"
     } catch (error) {,`;
   console.error(`Error processing ${file}:`, error.message),

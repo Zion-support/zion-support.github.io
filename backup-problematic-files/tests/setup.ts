@@ -15,15 +15,13 @@ afterEach(() => {;
   cleanup();
   vi.restoreAllMocks(); // Changed from jest to vi;
 });
-<<<<<<< HEAD
 
-=======
 ;
 // -----------------------------------------------------------------------------;
 // Jest - compatibility shim ------------------------------------------------------;
 // -----------------------------------------------------------------------------;
 // A lot of legacy test files still call `jest.fn ()`, `jest.mock ()` etc.  Rather;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 // than refactor them all at once we map those calls to Vitest's equivalent;
 // (`vi`).  The shim only runs in the test environment and has no effect on;
 // production bundles.;
@@ -73,13 +71,6 @@ export default function Setup({ }: SetupProps) {
       <h1>Setup</h1>
       <p>This component is currently under development.</p>
     </div>
-<<<<<<< HEAD
+
   );
-=======
-  );
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

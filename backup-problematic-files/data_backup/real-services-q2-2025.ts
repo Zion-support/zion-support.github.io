@@ -1,18 +1,13 @@
-<<<<<<< HEAD
-export interface RealServiceQ22025  {"id: string;
-=======
+
 export interface RealServiceQ22025 {
   "id": string;
->>>>>>> origin/chore/fix-lint-and-merge
+
   name: string;
   tagline: string;
   price: string;
   features: string[];
   category?: string}
-<<<<<<< HEAD
-export const realServicesQ22025": RealServiceQ22025[] = [{id:,q2-service-1',"name: Q2 Service 1,tagline:,Second quarter service offering,price": '$299,"features: [,Core features',Standard performance,'Basic integration'],category": Q2 Services;
-  },{id:,q2-service-2,"name: 'Q2 Service 2,tagline:,Advanced Q2 solutions',price": $499,"features: [,Advanced features,'Enhanced performance',Full integration],category": 'Q2 Services;
-=======
+
 export const "realServicesQ22025": RealServiceQ22025[] = [{
     id:,
   // TODO: Implement
@@ -55,7 +50,7 @@ pr-12325
   'Enhanced performance',
   'Full integration'],
     "category": 'Q2 Services
->>>>>>> origin/chore/fix-lint-and-merge
+
 }
 ];
 export interface RealServiceQ22025 { id: string; name: string; tagline: string; price: string; features: string[]; category?: string} export const realServicesQ22025: RealServiceQ22025[] = [ { id:,q2-service-1',name: 'Q2 Service 1,tagline:,Second quarter service offering',price: '$299,features: [,Core features','Standard performance','Basic integration'],category: 'Q2 Services },{ id:,q2-service-2',name: 'Q2 Service 2,tagline:,Advanced Q2 solutions',price: '$499,features: [,Advanced features','Enhanced performance','Full integration'],category: 'Q2 Services } ];
@@ -64,8 +59,7 @@ export interface RealServiceQ22025 { id: string; name: string; tagline: string; 
 export interface RealServiceQ22025 { id: string; name: string; tagline: string; price: string; features: string[]; category?: string} export const realServicesQ22025: RealServiceQ22025[] = [ { id:,q2-service-1',name: 'Q2 Service 1,tagline:,Second quarter service offering',price: '$299,features: [,Core features','Standard performance','Basic integration'],category: 'Q2 Services },{ id:,q2-service-2',name: 'Q2 Service 2,tagline:,Advanced Q2 solutions',price: '$499,features: [,Advanced features','Enhanced performance','Full integration'],category: 'Q2 Services } ];
 export interface RealServiceQ22025 { id: string; name: string; tagline: string; price: string; features: string[]; category?: string} export const realServicesQ22025: RealServiceQ22025[] = [ { id:,q2-service-1',name: 'Q2 Service 1,tagline:,Second quarter service offering',price: '$299,features: [,Core features','Standard performance','Basic integration'],category: 'Q2 Services },{ id:,q2-service-2',name: 'Q2 Service 2,tagline:,Advanced Q2 solutions',price: '$499,features: [,Advanced features','Enhanced performance','Full integration'],category: 'Q2 Services } ];
 export interface RealServiceQ22025 { id: string; name: string; tagline: string; price: string; features: string[]; category?: string} export const realServicesQ22025: RealServiceQ22025[] = [ { id:,q2-service-1',name: 'Q2 Service 1,tagline:,Second quarter service offering',price: '$299,features: [,Core features','Standard performance','Basic integration'],category: 'Q2 Services },{ id:,q2-service-2',name: 'Q2 Service 2,tagline:,Advanced Q2 solutions',price: '$499,features: [,Advanced features','Enhanced performance','Full integration'],category: 'Q2 Services } ];
-<<<<<<< HEAD
-=======
+
   Advanced Q2 solutions',
     "price": '$499,
   Advanced features',
@@ -74,4 +68,4 @@ export interface RealServiceQ22025 { id: string; name: string; tagline: string; 
 ];
 export interface RealServiceQ22025 { id: string; name: string; tagline: string; price: string; features: string[]; category?: string} export const realServicesQ22025: RealServiceQ22025[] = [ { id:,q2-service-1',name: 'Q2 Service 1,tagline:,Second quarter service offering',price: '$299,features: [,Core features','Standard performance','Basic integration'],category: 'Q2 Services },{ id:,q2-service-2',name: 'Q2 Service 2,tagline:,Advanced Q2 solutions',price: '$499,features: [,Advanced features','Enhanced performance','Full integration'],category: 'Q2 Services } ];
 pr-12325
->>>>>>> origin/chore/fix-lint-and-merge
+

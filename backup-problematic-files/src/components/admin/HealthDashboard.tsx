@@ -132,34 +132,9 @@ const HealthDashboard:React.FC = () => {;
           </Card>;
         </TabsContent>;
       </Tabs>;
-<<<<<<< HEAD
-    </div>;
-  ),;
-},;
-;export default HealthDashboard, 
-  }
-  try {;
-  }
-  if (!response.ok) {;
-  }
-  throw new Error (`HTTP $ {;`  }
-  response.status ;
-}`) ;`
-}return undefined;
-}, [autoRefresh]);
-const getStatusIcon = ("status": string) => {;
-  }
-  switch (status) {;
-  }
-  case 'healthy': ;'
-}
-};
-const getStatusBadge = ("status": string) => {';'
-  }
-  const variant = status === 'healthy' ? 'default' : status === 'warning' ? 'secondary' : 'destructive';'
-=======
 
->>>>>>> origin/chore/fix-lint-and-merge
+
+
 return (<Badge variant= {;
   variant ;"
 }className="ml-2" > {;"

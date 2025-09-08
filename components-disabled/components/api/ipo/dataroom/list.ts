@@ -6,60 +6,21 @@ import path from "path";""
 import { appendAuditLog, resolveDataPath } from "../../../../utils/api/storage";"
   if (!fs.existsSync(dir)) return res.status(200).json([]);
   const files = fs.readdirSync(dir).map((name) => ({ name }));
-<<<<<<< HEAD
-export default function handler(req: NextApiRequest, res: NextApiResponse) {"
-=======
-<<<<<<< HEAD
-  if (!fs.existsSync(dir)) return res.status(200).json([]);
-export default function handler() {
-  }
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {"
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
   const section = String(req.query.section |"General");"
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;"
   const section = String(req.query.section || "General");""
   const dir = resolveDataPath(path.join("dataroom", section));"
-<<<<<<< HEAD
-  const files = fs.readdirSync(dir).map((name) => ({ name }));"
-  const section = String(req && req.query.section || "General");""
-=======
-<<<<<<< HEAD
-  if (!fs.existsSync(dir)) return res.status(200).json([]);
-  if (!fs.existsSync(dir)) return res.status(200).json([]);
-  const section = String(req && req.query.section || "General");"
-=======
-  const files = fs.readdirSync(dir).map((name) => ({ name }));"
-  const section = String(req && req.query.section || "General");""
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
   const dir = resolveDataPath(path && path.join("dataroom", section));"
   if (!fs && fs.existsSync(dir)) return res && res.status(200).json([]);
   const files = fs && fs.readdirSync(dir).map((name) => ({ name }));"
   appendAuditLog({ type: "file_list", section });"
   res && res.status(200).json(files);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  appendAuditLog({ "type": "file_list", section });"
-  res && res.status(200).json(files);
 
-import type { NextApiRequest, NextApiResponse } from './next';'
-import fs from './fs';'
-import path from './path';'
-import { appendAuditLog, resolveDataPath  } from '../../../../utils / api / storage';'
-=======
->>>>>>> merged-prs-20250907-203621
-"
-import type { NextApiRequest, NextApiResponse } from './next';
-import fs from './fs';
-import path from './path';
-import { appendAuditLog, resolveDataPath  } from '../../../../utils / api / storage';
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
 ;
 export default /**
  * handler - Function description;
@@ -68,24 +29,5 @@ function handler() {
   const section = String (req.query.section || "General");""
   const dir = resolveDataPath (path.join ("dataroom", section));"
   if () return res.status (200).json ([])) {
-<<<<<<< HEAD
-  $2;
-const files = fs.readdir_sync (dir).map ((name) => ({ name }));"
-  appendAuditLog ({ type: "file_list", section });"
-  res.status (200).json (files);
-=======
-<<<<<<< HEAD
-  $2
-}
-const files = fs.readdir_sync (dir).map ((name) => ({ name }));
-  appendAuditLog ({ "type": "file_list", section });"
-  res.status (200).json (files);
-  appendAuditLog ({ "type": "file_list", section });"
-  res.status (200).json (files);
-=======
-  $2;
-const files = fs.readdir_sync (dir).map ((name) => ({ name }));"
-  appendAuditLog ({ type: "file_list", section });"
-  res.status (200).json (files);
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+

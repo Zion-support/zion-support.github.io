@@ -1,19 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/pages.broken/test.tsx
-import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
-const type { NextPage } from "next"; const Test: NextPage = () => {}}; export default Test;'"'"
-import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
-=======
+
 import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;""
 import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""""
 const type { NextPage } from "next"; const Test: NextPage = () => {}}; export default Test;'"'"""
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-=======
 
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
 import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
 import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
@@ -27,4 +17,4 @@ import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export
 import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
 import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages.broken/test.tsx
+

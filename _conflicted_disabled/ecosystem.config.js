@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 = $2;
       script: 'automation/lint-error-fixer.cjs',
       args: 'continuous',
@@ -73,5 +72,5 @@
       log_file: './logs/performance-combined.log',
       time: true}
   ]
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57
+
 },

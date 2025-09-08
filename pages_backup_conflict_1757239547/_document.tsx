@@ -3,7 +3,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-<<<<<<<< HEAD:temp_backup/pages/_document.tsx
+<:temp_backup/pages/_document.tsx
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#0a0a0a" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -25,7 +25,7 @@ export default function Document() {
       </body>
     </Html>
   );
-<<<<<<<< HEAD:temp_backup/pages/_document.tsx
+<:temp_backup/pages/_document.tsx
   )
   } catch (error) {
     console.error("Error:", error);

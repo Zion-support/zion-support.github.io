@@ -102,9 +102,7 @@ export async function generateMilestones(input:MilestoneSuggestionInput):Promise
 }as any;
 const resp = await fetch ("https://api.openai.com/v1/chat/completions", {
   method: "POST", headers: {
-<<<<<<< HEAD
-  "Content-Type": "application/json", Authorization: `Bearer $ {
-=======
+
   "Content-Type": "application/json", Authorization: `Bearer $ {
   OPENAI API KEY 
 }` 
@@ -113,6 +111,4 @@ body: JSON.stringify (body)
 }return milestones 
 }
 }
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

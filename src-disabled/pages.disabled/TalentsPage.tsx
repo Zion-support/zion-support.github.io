@@ -450,12 +450,10 @@ const TalentLoadingGrid: React.FC<{ count?: number }> = ({ count = 8 }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">"
 
 // Loading skeleton for talent grid
-<<<<<<< HEAD
-  <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>
-=======
+
 const TalentLoadingGrid: React.FC<{ count?: number }> = ({ count = 8 }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
->>>>>>> origin/chore/fix-lint-and-merge
+
     {Array.from({ length: count }).map((_, i) => (
       <SkeletonCard key={i} />
         {talent.skills && talent.skills.length > 4 && (;
@@ -596,20 +594,11 @@ export default function TalentsPage() {;
   // Show scroll to top button,
 
   // Get unique specializations
-<<<<<<< HEAD
-    return Array.from(
-      new Set(
-        talents
-          .map(t => t.professional_title?.split(' ')[0] || '')
-          .filter(Boolean)
-      )
-    );
-  }, [talents]);
-=======
+
   const specializations = useMemo(() => {
     return Array.from(new Set(talents.map(t => t.professional_title?.split(' ')[0] || '').filter(Boolean)))
   }, [talents]),
->>>>>>> origin/chore/fix-lint-and-merge
+
 
   // Show scroll to top button
   const [showScrollTop, setShowScrollTop] = useState(false),
@@ -683,11 +672,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     )
   }
-<<<<<<< HEAD
-:src/pages/TalentsPage.tsx
 
-=======
->>>>>>> origin/chore/fix-lint-and-merge
+
     }
 }
 ;

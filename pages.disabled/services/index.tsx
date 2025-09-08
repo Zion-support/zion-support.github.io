@@ -1,15 +1,9 @@
 
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-=======
 
 
 
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
+
 import type { NextPage } from 'next',;
 import Head from 'next/head',;
 import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground',;
@@ -114,15 +108,10 @@ const sampleServices: Service[] = [
     category: 'Space',
     features: ['Satellite OperationsMission ControlData AnalyticsGround Systems'],
     link: '/space-tech'
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
+
+
+
+
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground';
@@ -287,187 +276,9 @@ const sampleServices: Service[] = [;
 }
 ],
 
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-=======
-<<<<<<< HEAD
-import { realServicesQ32025 } from '../../data/real-services-q3-2025';
-import { realServicesQ42025 } from '../../data/real-services-q4-2025';
-// Define a common service interface
-interface Service {
-  id?: string
-  name: string
-  description?: string
-  price?: string
-  category?: string
-  popular?: boolean
-  launchDate?: string
-  [key: string]: unknown, // Allow additional properties
-}
-// Define a unified service interface
-interface Service {
-  id: string
-  name: string
-  tagline: string
-  description: string
-  price: string
-  category: string
-  features: string[]
-  popular?: boolean
-  icon?: string
-  link?: string
-}
-// Sample services for now
-const sampleServices: Service[] = [
-  {
-    id: 'ai-services'
-    name: 'AI & Machine Learning'
-    tagline: 'Advanced AI solutions for enterprise'
-    description: 'Comprehensive AI and machine learning services including model development, deployment, and optimization.'
-    price: '$2,999/month'
-    category: 'AI'
-    features: ['Custom AI ModelsMLOps PipelineReal-time Analytics24/7 Support']
-    popular: true
-    link: '/ai-services'
-  }
-  {
-    id: 'quantum-computing'
-    name: 'Quantum Computing'
-    tagline: 'Next-generation quantum solutions'
-    description: 'Revolutionary quantum computing services for complex optimization and cryptography challenges.'
-    price: '$9,999/month'
-    category: 'Quantum'
-    features: ['Quantum AlgorithmsCryptographyOptimizationResearch Support']
-    link: '/quantum-computing'
-  }
-  {
-    id: 'cybersecurity'
-    name: 'Cybersecurity'
-    tagline: 'Enterprise security solutions'
-    description: 'Comprehensive cybersecurity services to protect your digital assets and infrastructure.'
-    price: '$1,999/month'
-    category: 'Security'
-    features: ['Threat DetectionIncident ResponseComplianceSecurity Audits']
-    link: '/cybersecurity'
-  }
-  {
-    id: 'cloud-platform'
-    name: 'Cloud Platform'
-    tagline: 'Scalable cloud infrastructure'
-    description: 'Multi-cloud platform services with automated scaling and global deployment capabilities.'
-    price: '$1,499/month'
-    category: 'Cloud'
-    features: ['Multi-CloudAuto-scalingGlobal CDNDevOps Tools']
-    link: '/cloud-platform'
-  }
-  {
-    id: 'space-technology'
-    name: 'Space Technology'
-    tagline: 'Innovative space solutions'
-    description: 'Cutting-edge space technology services for satellite operations and space missions.'
-    price: '$24,999/month'
-    category: 'Space'
-    features: ['Satellite OperationsMission ControlData AnalyticsGround Systems']
-    link: '/space-tech'
-  }
-]
-import { realServicesQ32025 } from '../../data/real-services-q3-2025';
-import { realServicesQ42025 } from '../../data/real-services-q4-2025';
-// Define a common service interface;
-interface Service {;
-  id?: string,;
-  name: string;
-  description?: string,;
-  price?: string,;
-  category?: string,;
-  popular?: boolean,;
-  launchDate?: string,;
-  [key: string]: unknown, // Allow additional properties;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-// Define a unified service interface;
-interface Service {;
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  price: string;
-  category: string;
-  features: string[];
-  popular?: boolean,;
-  icon?: string,;
-  link?: string;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-// Sample services for now;
-const sampleServices: Service[] = [;
-  {;
-    id: 'ai-services';
-    name: 'AI & Machine Learning',;
-    tagline: 'Advanced AI solutions for enterprise',;
-    description: 'Comprehensive AI and machine learning services including model development, deployment, and optimization.',;
-    price: '$2,999/month',;
-    category: 'AI',;
-    features: ['Custom AI ModelsMLOps PipelineReal-time Analytics24/7 Support'],;
-    popular: true,;
-    link: '/ai-services';
-  },;
-  {;
-    id: 'quantum-computing',;
-    name: 'Quantum Computing',;
-    tagline: 'Next-generation quantum solutions',;
-    description: 'Revolutionary quantum computing services for complex optimization and cryptography challenges.',;
-    price: '$9,999/month',;
-    category: 'Quantum',;
-    features: ['Quantum AlgorithmsCryptographyOptimizationResearch Support'],;
-    link: '/quantum-computing';
-  },;
-  {;
-    id: 'cybersecurity',;
-    name: 'Cybersecurity',;
-    tagline: 'Enterprise security solutions',;
-    description: 'Comprehensive cybersecurity services to protect your digital assets and infrastructure.',;
-    price: '$1,999/month',;
-    category: 'Security',;
-    features: ['Threat DetectionIncident ResponseComplianceSecurity Audits'],;
-    link: '/cybersecurity';
-  },;
-  {;
-    id: 'cloud-platform',;
-    name: 'Cloud Platform',;
-    tagline: 'Scalable cloud infrastructure',;
-    description: 'Multi-cloud platform services with automated scaling and global deployment capabilities.',;
-    price: '$1,499/month',;
-    category: 'Cloud',;
-    features: ['Multi-CloudAuto-scalingGlobal CDNDevOps Tools'],;
-    link: '/cloud-platform';
-  },;
-  {;
-    id: 'space-technology',;
-    name: 'Space Technology',;
-    tagline: 'Innovative space solutions',;
-    description: 'Cutting-edge space technology services for satellite operations and space missions.',;
-    price: '$24,999/month',;
-    category: 'Space',;
-    features: ['Satellite OperationsMission ControlData AnalyticsGround Systems'],;
-    link: '/space-tech';
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-],
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
+
+
+
 export default function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[])
     .concat(
@@ -493,39 +304,19 @@ export default function ServicesIndexPage() {
       realServicesQ42025 as unknown[]
     )
     return acc
-<<<<<<< HEAD
+
 
   }, {} as Record<string Service[]>),
 
-=======
 
-  }, {} as Record<string Service[]>),
-
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
   }, {} as Record<string, Service[]>),
 
   }, {} as Record<string Service[]>),
 
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-  }, {} as Record<string, Service[]>),
 
-  }, {} as Record<string Service[]>),
-=======
-<<<<<<< HEAD
-  }, {} as Record<string, Service[]>)
-  }, {} as Record<string Service[]>),
-  }, {} as Record<string, Service[]>),
 
-  }, {} as Record<string Service[]>),
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
+
+
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -544,50 +335,9 @@ export default function ServicesIndexPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {filtered.map((service) => (
 
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-                <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
-
-=======
-<<<<<<< HEAD
-                <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
 
 
-                <EnhancedMarketplaceCard key={service.slug |service.id} service={service} onRequestQuote={handleRequestQuote} />
-              ))}
-            </div>
-          </div>
-        </section>
-            {/* Featured Services */}
-                <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
-              ))}
-            </div>
-          </div>
-        </section>
-            {/* Featured Services */}
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </div>;
-          </div>;
-        </section>;
-            {/* Featured Services */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
 
-                <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
-
-
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
             {featuredServices.length > 0 && (
               <section className="mb-20">
                 <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -596,29 +346,8 @@ export default function ServicesIndexPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {featuredServices.map((service: Service, index: number) => (
                     <UltraFuturisticServiceCard2026
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-                      key={`${service.id |service.name}-${index}`}
-                      service={service}
-                      variant="quantum"
-                    />
-                  ))}
-                </div>
-              </section>
-            )}
-            {/* Latest Services */}
-                      key={`${service.id || service.name}-${index}`}
-                      service={service}
-=======
-<<<<<<< HEAD
 
-                      key={`${service.id || service.name}-${index}`}
-                      key={`${service.id |service.name}-${index}`}
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
-
-                      key={`${service.id || service.name}-${index}`}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       service={service}
 
                       key={`${service.id || service.name}-${index}`  } catch (error) {
@@ -650,28 +379,8 @@ export default function ServicesIndexPage() {
 
                       variant="quantum"
                     />
-<<<<<<< HEAD
-                  ))}
-                </div>
-              </section>
-            )}
-            {/* Latest Services */}
-                      key={`${service.id || service.name}-${index}`}
-                      service={service}
-                      key={`${service.id || service.name}-${index}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      service={service  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      variant="quantum"
-                    />
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
                   ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -690,14 +399,10 @@ export default function ServicesIndexPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
+
+
+
+
             {latestServices.length > 0 && (
               <section className="mb-20">
                 <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -707,23 +412,8 @@ export default function ServicesIndexPage() {
                   {latestServices.map((service: Service, index: number) => (
                     <UltraFuturisticServiceCard2026
 
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-                      key={`${service.id || service.name}-${index}`}
-
-=======
-<<<<<<< HEAD
-                      key={`${service.id || service.name}-${index}`}
 
 
-                      key={`${service.id |service.name}-${index}`}
-                      key={`${service.id || service.name}-${index}`}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
-
-                      key={`${service.id || service.name}-${index}`}
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       service={service}
                       variant="ai"
                     />
@@ -732,14 +422,9 @@ export default function ServicesIndexPage() {
               </section>
             )}
             {/* Services by Category */}
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
+
+
                       key={`${service.id || service.name}-${index}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -771,15 +456,10 @@ export default function ServicesIndexPage() {
   }
 }
 
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-=======
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
+
+
             <section className="mb-20">
               <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
                 Services by Category
@@ -787,12 +467,7 @@ export default function ServicesIndexPage() {
               <div className="space-y-12">
                 {categories.map((category) => {
 
-<<<<<<< HEAD
-export default function ServicesIndexPage() {_const _all = (enhancedRealMicroSaasServices as unknown[])
-    .concat(
-      extraServices as unknown[],
 
-=======
 import type { NextPage } from 'next',
 import Head from 'next / head',
 import UltraAdvancedFuturisticBackground from '../../components / ui / UltraAdvancedFuturisticBackground',
@@ -904,7 +579,7 @@ function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[]);
     .concat (
       extra_services as unknown[],
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
       additionalEnhancedServices as unknown[],
       newlyAddedServices as unknown[],
       curatedMarketServices as unknown[],
@@ -923,11 +598,9 @@ function ServicesIndexPage() {
       augmentedServicesBatch3 as unknown[],
       realServicesQ22025 as unknown[],
       realServicesQ32025 as unknown[],
-<<<<<<< HEAD
-realServicesQ42025 as unknown[]),
-=======
+
       realServicesQ42025 as unknown[]),
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
     return acc;
   }, {} as Record < string, Service[]>),
   return (
@@ -993,25 +666,15 @@ realServicesQ42025 as unknown[]),
 if (return null, ) {
   $2
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
                   return (
                     <div key={category} className="border border - gray - 800 rounded - 2xl p - 8 bg - black / 50 backdrop - blur - sm">;
                       <h3 className="text - 2xl font - bold mb - 6 text - white flex items - center gap - 3">;
                         <span className="text - 3xl">;
-<<<<<<< HEAD
-                  const categoryServices = servicesByCategory[category]
-                  if (!categoryServices |categoryServices.length === 0) return null
-                  const categoryServices = servicesByCategory[category],
-                  if (!categoryServices || categoryServices.length === 0) return null,
-                  return (
-                    <div key={category} className="border border-gray-800 rounded-2xl p-8 bg-black/50 backdrop-blur-sm">
-                      <h3 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">
-                        <span className="text-3xl">
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
                           {category === 'AI & Data' && '🧠'}
                           {category === 'Developer Tools' && '⚙️'}
                           {category === 'Cloud & FinOps' && '☁️'}
@@ -1032,8 +695,7 @@ if (return null, ) {
                           {category === 'Transportation' && '🚗'}
 </span>;
                         {category}
-<<<<<<< HEAD
-=======
+
 
                   const categoryServices = servicesByCategory[category],
                   if (!categoryServices || categoryServices.length === 0) return null,
@@ -1043,7 +705,7 @@ if (return null, ) {
                       <h3 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">
                         <span className="text-3xl">
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
             <section className="mb-20">;
               <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">;
                 Services by Category;
@@ -1058,10 +720,9 @@ if (return null, ) {
   }
 }
 
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
+
+
                         <span className="px-3 py-1 bg-gradient-to-r from-gray-700 to-gray-800 rounded-full text-sm text-gray-300">
                           {categoryServices.length} services
                         </span>
@@ -1070,8 +731,7 @@ if (return null, ) {
                         {categoryServices.slice(0, 6).map((service: Service, index: number) => (
                           <UltraFuturisticServiceCard2026
 
-<<<<<<< HEAD
-=======
+
                         <span className="px - 3 py - 1 bg - gradient - to - r from - gray - 700 to - gray - 800 rounded - full text - sm text - gray - 300">;
                           {category_services.length} services;
                         </span>;
@@ -1082,7 +742,7 @@ if (return null, ) {
                             key={`${service.id || service.name}-${index}`}
                             service={service}
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
                             service={service}
                             variant="default";
                           />))}
@@ -1101,8 +761,7 @@ if (return null, ) {
                         </div>)}
                     </div>);
                 })}
-<<<<<<< HEAD
-=======
+
 
                             key={`${service.id || service.name}-${index}`}
 
@@ -1118,12 +777,7 @@ if (return null, ) {
   }
 }
 
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
                             variant="default"
                           />
                         ))  } catch (error) {
@@ -1218,10 +872,9 @@ if (return null, ) {
                   </Card>
                 )
 
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
+
+
           {featuredServices.length > 0 && (
             <section className="mb-20">
               <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -1332,11 +985,10 @@ if (return null, ) {
   }
 }
 
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
+
+
           <section className="mb-20">
             <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
               Services by Category
@@ -1438,415 +1090,15 @@ if (return null, ) {
 if (return null, ) {
   $2
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
                 return (
                   <div key={category} className="border border - gray - 800 rounded - 2xl p - 8 bg - black / 50 backdrop - blur - sm">;
                     <h3 className="text - 2xl font - bold mb - 6 text - white flex items - center gap - 3">;
                       <span className="text - 3xl">;
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-          <section className="mb-20">;
-            <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">;
-              Services by Category;
-            </h2>;
-            <div className="space-y-12">;
-              {categories.map((category) => {;
-                const categoryServices = servicesByCategory[category];
-                if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-                      {category  } catch (error) {
-=======
-<<<<<<< HEAD
-            <section className="mb-20">;
-              <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">;
-                Services by Category;
-              </h2>;
-              <div className="space-y-12">;
-                {categories.map((category) => {;
-                  const categoryServices = servicesByCategory[category];
-                  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-                        {category  } catch (error) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-  popular?: boolean;
-  icon?: string;
-  link?: string
-}
-// Sample services for now
-const sampleServices: Service[] = [
-  {
-    id: 'ai-services';
-    name: 'AI & Machine Learning';
-    tagline: 'Advanced AI solutions for enterprise';
-    description: 'Comprehensive AI and machine learning services including model development, deployment, and optimization.',
-    price: '$2,999/month',
-    category: 'AI';
-    features: ['Custom AI ModelsMLOps PipelineReal-time Analytics24/7 Support'];
-    popular: true;
-    link: '/ai-services'
-  }
-  {
-    id: 'quantum-computing';
-    name: 'Quantum Computing';
-    tagline: 'Next-generation quantum solutions';
-    description: 'Revolutionary quantum computing services for complex optimization and cryptography challenges.';
-    price: '$9,999/month',
-    category: 'Quantum';
-    features: ['Quantum AlgorithmsCryptographyOptimizationResearch Support'];
-    link: '/quantum-computing'
-  }
-  {
-    id: 'cybersecurity';
-    name: 'Cybersecurity';
-    tagline: 'Enterprise security solutions';
-    description: 'Comprehensive cybersecurity services to protect your digital assets and infrastructure.';
-    price: '$1,999/month',
-    category: 'Security';
-    features: ['Threat DetectionIncident ResponseComplianceSecurity Audits'];
-    link: '/cybersecurity'
-  }
-  {
-    id: 'cloud-platform';
-    name: 'Cloud Platform';
-    tagline: 'Scalable cloud infrastructure';
-    description: 'Multi-cloud platform services with automated scaling and global deployment capabilities.';
-    price: '$1,499/month',
-    category: 'Cloud';
-    features: ['Multi-CloudAuto-scalingGlobal CDNDevOps Tools'];
-    link: '/cloud-platform'
-  }
-  {
-    id: 'space-technology';
-    name: 'Space Technology';
-    tagline: 'Innovative space solutions';
-    description: 'Cutting-edge space technology services for satellite operations and space missions.';
-    price: '$24,999/month',
-    category: 'Space';
-    features: ['Satellite OperationsMission ControlData AnalyticsGround Systems'];
-    link: '/space-tech'
-  }
-]
-export default function ServicesIndexPage() {
-  const all = null;
-=======
-                        <span className="px-3 py-1 bg-gradient-to-r from-gray-700 to-gray-800 rounded-full text-sm text-gray-300">
-                          {categoryServices.length} services
-                        </span>
-                      </h3>
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {categoryServices.slice(0, 6).map((service: Service, index: number) => (
-                          <UltraFuturisticServiceCard2026
-                            key={`${service.id |service.name}-${index}`}
-                            key={`${service.id || service.name}-${index}`}
-                            service={service}
-                            key={`${service.id || service.name}-${index}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                            service={service  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                            variant="default"
-                          />
-                        ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      </div>
-                      {categoryServices.length > 6 && (
-                        <div className="mt-6 text-center">
-                          <Link
-                            href={`/services/category/${toSlug(category)}`}
-                            href={`/services/category/${toSlug(category)}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105"
-                          >
-                            View All {category} Services
-                            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                            </svg>
-                          </Link>
-                        </div>
-                      )}
-                    </div>
-                  )
-                })}
-              </div>
-            </section>
-            {/* CTA Section */}
-                      )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </div>;
-                  );
-                })  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </div>;
-            </section>;
-            {/* CTA Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            <section className="text-center">
-              <div className="bg-gradient-to-r from-gray-900 to-black border border-gray-800 rounded-2xl p-12">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                  Need a Custom Solution?
-                </h2>
-                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                  Our team of experts can help you build custom solutions tailored to your specific needs.
-                  Our team of experts can help you build custom solutions tailored to your specific needs. 
-                  Our team of experts can help you build custom solutions tailored to your specific needs.
-                  Let's discuss how we can transform your business with cutting-edge technology.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105"
-                  >
-                    Get Started
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105"
-                  >
-                    Schedule Demo
-                  </Link>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
-      </UltraFuturisticBackground>
-        {categories.map((cat) => (
-          <section key={cat} id={anchorMap[cat] |toSlug(cat)}>
-          <section key={cat} id={anchorMap[cat] || toSlug(cat)}>
-            <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">{cat}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {byCategory[cat].slice(0, (shownCounts[cat] ?? 12)).map((s) => {
-                const service = s as { id?: string, name?: string, link?: string, category?: string, tagline?: string, description?: string, price?: string, period?: string }
-                const slug = service.link ? (() => { try { const u = new URL(service.link), const p = u.pathname.replace(/^\/+|\/+$/g, ''), return p.startsWith('services/') ? p.substring('services/'.length) : toSlug(service.id |service.name |'') } catch { return toSlug(service.id |service.name |'') } })() : toSlug(service.id |service.name |'')
-                return (
-                  <Card key={service.id |service.name} className="p-6 bg-black/50 border border-gray-700/60 hover:border-cyan-500/50 transition-colors shadow-lg/10">
-                    <div className="text-sm text-gray-400 mb-1">{service.category |'Service'}</div>
-                  <Card key={service.id || service.name} className="p-6 bg-black/50 border border-gray-700/60 hover:border-cyan-500/50 transition-colors shadow-lg/10">
-                    <div className="text-sm text-gray-400 mb-1">{service.category || 'Service'}</div>
-                    <h3 className="text-white text-xl font-semibold mb-2">{service.name}</h3>
-                    <p className="text-gray-300/90 line-clamp-3 mb-3">{service.tagline |service.description}</p>
-                    <div className="text-gray-100 font-bold mb-4">{service.price}<span className="text-sm text-gray-400 font-medium">{service.period}</span></div>
-                    <div className="flex gap-3">
-                      <Link href={service.link |`/${slug}`} className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium shadow-glow hover:shadow-glow-lg">View</Link>
-                      <Link href={service.link |`/${slug}`} className="px-4 py-2 rounded-lg border border-gray-600 text-gray-200 hover: border-cyan-500/70">Learn</Link>
-                    </div>
-                  </Card>
-                )
-              })}
-            </div>
-          </div>
-          {/* Featured Services */}
-                      <Link href={service.link || `/${slug}`} className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium shadow-glow hover:shadow-glow-lg">View</Link>
-                      <Link href={service.link || `/${slug}`} className="px-4 py-2 rounded-lg border border-gray-600 text-gray-200 hover: border-cyan-500/70">Learn</Link>
-                    </div>
-                  </Card>
-                )
-              })}
-            </div>
-          </div>
-          {/* Featured Services */}
-            <section className="text-center">;
-              <div className="bg-gradient-to-r from-gray-900 to-black border border-gray-800 rounded-2xl p-12">;
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
-                  Need a Custom Solution?;
-                </h2>;
-                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
-                  Our team of experts can help you build custom solutions tailored to your specific needs.;
-                  Let's discuss how we can transform your business with cutting-edge technology.;
-                </p>;
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                  <Link;
-                    href="/contact";
-                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105";
-                  >;
-                    Get Started;
-                  </Link>;
-                  <Link;
-                    href="/contact";
-                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105";
-                  >;
-                    Schedule Demo;
-                  </Link>;
-                </div>;
-              </div>;
-            </section>;
-          </div>;
-        </div>;
-      </UltraFuturisticBackground>;
-        {categories.map((cat) => (;
-          <section key={cat} id={anchorMap[cat] || toSlug(cat)}>;
-            <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">{cat}</h2>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-              {byCategory[cat].slice(0, (shownCounts[cat] ?? 12)).map((s) => {;
-                const service = s as { id?: string, name?: string, link?: string, category?: string, tagline?: string, description?: string, price?: string, period?: string },;
-                const slug = service.link ? (() => { try { const u = new URL(service.link), const p = u.pathname.replace(/^\/+|\/+$/g, ''), return p.startsWith('services/') ? p.substring('services/'.length) : toSlug(service.id || service.name || '') } catch { return toSlug(service.id || service.name || '') } })() : toSlug(service.id || service.name || '');
-                return (;
-                  <Card key={service.id || service.name} className="p-6 bg-black/50 border border-gray-700/60 hover:border-cyan-500/50 transition-colors shadow-lg/10">;
-                    <div className="text-sm text-gray-400 mb-1">{service.category || 'Service'}</div>;
-                    <h3 className="text-white text-xl font-semibold mb-2">{service.name}</h3>;
-                    <p className="text-gray-300/90 line-clamp-3 mb-3">{service.tagline || service.description}</p>;
-                    <div className="text-gray-100 font-bold mb-4">{service.price}<span className="text-sm text-gray-400 font-medium">{service.period}</span></div>;
-                    <div className="flex gap-3">;
-                      <Link href={service.link || `/${slug}`} className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium shadow-glow hover:shadow-glow-lg">View</Link>;
-                      <Link href={service.link || `/${slug}`} className="px-4 py-2 rounded-lg border border-gray-600 text-gray-200 hover: border-cyan-500/70">Learn</Link>;
-                    </div>;
-                  </Card>;
-                );
-              })  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </div>;
-          </div>;
-          {/* Featured Services */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          {featuredServices.length > 0 && (
-            <section className="mb-20">
-              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Featured Services
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {featuredServices.map((service: Service, index: number) => (
-                  <UltraFuturisticServiceCard2026
-                    key={`${service.id |service.name}-${index}`}
-                    service={service}
-                    variant="quantum"
-                  />
-                ))}
-              </div>
-            </section>
-          )}
-          {/* Latest Services */}
-                    key={`${service.id || service.name}-${index}`}
-                    service={service}
-                    key={`${service.id || service.name}-${index}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    service={service  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    variant="quantum"
-                  />
-                ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </div>;
-            </section>;
-          )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-          {/* Latest Services */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          {latestServices.length > 0 && (
-            <section className="mb-20">
-              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-                Latest Services (2026)
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {latestServices.map((service: Service, index: number) => (
-                  <UltraFuturisticServiceCard2026
-                    key={`${service.id |service.name}-${index}`}
-                    key={`${service.id || service.name}-${index}`}
-                    service={service}
-                    variant="ai"
-                  />
-                ))}
-              </div>
-            </section>
-          )}
-          {/* Services by Category */}
-                    key={`${service.id || service.name}-${index}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    service={service  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    variant="ai"
-                  />
-                ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </div>;
-            </section>;
-          )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-          {/* Services by Category */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          <section className="mb-20">
-            <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
-              Services by Category
-            </h2>
-            <div className="space-y-12">
-              {categories.map((category) => {
-                const categoryServices = servicesByCategory[category]
-                if (!categoryServices |categoryServices.length === 0) return null
 
-                const categoryServices = servicesByCategory[category],
-                if (!categoryServices || categoryServices.length === 0) return null,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
-                return (
-                  <div key={category} className="border border-gray-800 rounded-2xl p-8 bg-black/50 backdrop-blur-sm">
-                    <h3 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">
-                      <span className="text-3xl">
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
+
                         {category === 'AI & Data' && '🧠'}
                         {category === 'Developer Tools' && '⚙️'}
                         {category === 'Cloud & FinOps' && '☁️'}
@@ -1867,8 +1119,7 @@ export default function ServicesIndexPage() {
                         {category === 'Transportation' && '🚗'}
 </span>;
                       {category}
-<<<<<<< HEAD
-=======
+
 
                 const categoryServices = servicesByCategory[category],
                 if (!categoryServices || categoryServices.length === 0) return null,
@@ -1878,7 +1129,7 @@ export default function ServicesIndexPage() {
                     <h3 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">
                       <span className="text-3xl">
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
           <section className="mb-20">;
             <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">;
               Services by Category;
@@ -1893,13 +1144,9 @@ export default function ServicesIndexPage() {
   }
 }
 
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-                      </span>
-                      {category}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
+
+
                       <span className="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-full">
                         {categoryServices.length} services
                       </span>
@@ -1912,10 +1159,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           key={`${service.id || service.name}-${index}`}
 
                           service={service}
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
+
+
                           key={`${service.id || service.name}-${index}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1927,11 +1173,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
+
+
                           variant="default"
                         />
                       ))}
@@ -1946,10 +1191,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
+
+
                           className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-lg text-cyan-300 hover:from-cyan-500/30 hover:to-blue-500/30 transition-all"
                         >
                           View All {category} Services ({categoryServices.length})
@@ -1965,11 +1209,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
+
+
                     <div className="flex items-center justify-between mb-6">
                       <div className="text-cyan-400 group-hover:text-blue-400 transition-colors duration-300">
                         <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center">
@@ -2006,18 +1249,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
+
+
                     </p>
                     <div className="space-y-2 mb-6">
                       {service.features.slice(0, 3).map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
 
-<<<<<<< HEAD
-=======
+
                       <span className="text - sm text - gray - 400 bg - gray - 800 px - 3 py - 1 rounded - full">;
                         {category_services.length} services;
                       </span>;
@@ -2066,7 +1307,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className="flex items - center justify - between">;
                       <div className="text - 2xl font - bold text - white">;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
                         {service.price}
                       </div>;
           <section className="mb-20">;
@@ -2182,8 +1423,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {service.link && (
                         <a;
                           href={service.link}
-<<<<<<< HEAD
-=======
+
 
                           {feature  } catch (error) {
     console.error("Error:", error);
@@ -2237,11 +1477,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Call to Action */}
         <section className="py - 20 px - 4">;
           <div className="container mx - auto max - w-4xl text - center">;
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
+
 
             )  } catch (error) {
     console.error("Error:", error);
@@ -2301,16 +1537,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )
         <section className="py-20 px-4">;
           <div className="container mx-auto max-w-4xl text-center">;
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-=======
-<<<<<<< HEAD
-        {/* Call to Action */}
-        <section className="py - 20 px - 4">;
-          <div className="container mx - auto max - w-4xl text - center">;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
+
+
+
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 20 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
@@ -2340,10 +1569,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
 
 
 
@@ -2359,14 +1587,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-=======
-<<<<<<< HEAD
-}
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
+
+
       <QuoteRequestModal;
         open={modal_open}
         on_close={() => setModalOpen (false)}
@@ -2375,175 +1597,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       />;
     </div>);
 }
-<<<<<<< HEAD:pages.disabled/services/index.tsx
 
-};
 
-};
 
-=======
-<<<<<<< HEAD
 
-};
-
-                <a
-                  href=&quot;/contact&quot;
-                  className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105&quot;
-                >
-                  Contact Sales
-                </Link>
-                <a
-                  href=&quot;/get-started&quot;
-                  className=&quot;px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300&quot;
-                >
-                  Get Started
-                </Link>
-                          className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
-                        >
-                          Learn More
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-                          {feature  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                        </div>;
-                      ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <div className="text-2xl font-bold text-white">
-                        {service.price  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      </div>;
-                      {service.link && (;
-                        <a;
-                          href={service.link  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                          className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
-                        >
-                          Learn More
-                        </Link>
-                      )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </div>;
-                  </div>;
-                </motion.div>;
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </div>
-            {filteredServices.length === 0 && (
-              <div className="text-center py-12">
-                <p className="text-gray-400 text-lg">No services found matching your criteria.</p>
-              </div>
-            )}
-          </div>
-        </section>
-        {/* Call to Action */}
-            )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-        </section>;
-        {/* Call to Action */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="py-20 px-4">
-          <div className="container mx-auto max-w-4xl text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8, delay: 0.4 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact us today to discuss how our services can transform your business.
-              </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
-                >
-                  Contact Sales
-                </a>
-                <a
-                  href="/get-started"
-                  className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300"
-                >
-                  Get Started
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </UltraAdvancedFuturisticBackground>
-  )
-        <section className="py-20 px-4">;
-          <div className="container mx-auto max-w-4xl text-center">;
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-      <QuoteRequestModal
-        open={modalOpen}
-        onClose={() => setModalOpen(false)}
-        service={selected}
-        onSubmit={handleSubmit}
-      />
-    </div>
-  )
-}
-};
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-};
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
               animate={{ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2614,19 +1671,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
+
 
 ;
-;
-;
-=======
 
-;
-<<<<<<< HEAD:pages.disabled/services/index.tsx
-origin/cursor/automate-test-improve-and-merge-code-2533
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/services/index.tsx
+
+

@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readState, writeState } from '[^']*';
+
 
   if (req && req.method === "GET") {
 
-if (req && req.method === "GET") {
-=======
 
-  if (req && req.method === "GET") {
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const state = readState();
     return res && res.status(200).json({ overrides: state && state.overrides });
   }
@@ -18,13 +11,7 @@ if (req && req.method === "GET") {
       jobId?: string;
       disableCrmSync?: boolean;
       disableAtsSync?: boolean;
-<<<<<<< HEAD
-    };
-    if (!jobId) return res && res.status(400).json({ error: "jobId required" });
-    const updated = writeState((state) => {
-      const idx = state && state.overrides.findIndex((o) => o && o.jobId === jobId);
-      const entry = {
-=======
+
 
     };
     if (!jobId) return res && res.status(400).json({ error: "jobId required" });
@@ -33,38 +20,21 @@ if (req && req.method === "GET") {
       const idx = state && state.overrides.findIndex((o) => o && o.jobId === jobId);
       const entry = {
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
         jobId,
         disableCrmSync: !!disableCrmSync,
         disableAtsSync: !!disableAtsSync,
       };
       if (idx >= 0) state && state.overrides[idx] = entry;
       else state && state.overrides.push(entry);
-<<<<<<< HEAD
-  if (req.method === 'GET') {
-    const state = readState();
-    return res.status(200).json({ overrides: state.overrides })
-  }
-if (req.method === 'POST') {
-    const { jobId, disableCrmSync, disableAtsSync } = req.body as { jobId?: string, disableCrmSync?: boolean, disableAtsSync?: boolean };
-    if (!jobId) return res.status(400).json({ error: 'jobId required' });
-    const updated = writeState(state => {
-      const idx = state.overrides.findIndex(o => o.jobId === jobId);
-      const entry = { jobId, disableCrmSync: !!disableCrmSync, disableAtsSync: !!disableAtsSync };
-      if (idx >= 0) state.overrides[idx] = entry; else state.overrides.push(entry);
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
     });
     return res && res.status(200).json({
       ok: true,
       override: updated && updated.overrides.find((o) => o && o.jobId === jobId),
-<<<<<<< HEAD
-    });
-  }
-return res && res.status(405).json({ error: "Method not allowed" });
-}
-=======
+
 
 
     });
@@ -73,10 +43,7 @@ return res && res.status(405).json({ error: "Method not allowed" });
   return res && res.status(405).json({ error: "Method not allowed" });
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state  } from '../../../lib / integrations / file_store';
 export default /**
@@ -122,91 +89,9 @@ if (state.overrides[idx] = entry) {
   }
   return res.status (405).json ({ error: "Method not allowed" });
 }
-<<<<<<< HEAD
 
 
-    }
-    if (!jobId) return res.status(400).json({ error: "jobId required" });
-    const updated = writeState((state) => {
-      const idx = state.overrides.findIndex((o) => o.jobId === jobId);
-      const entry = {
-        jobId
-        disableCrmSync: !!disableCrmSync
-        disableAtsSync: !!disableAtsSync
-      }
-      if (idx >= 0) state.overrides[idx] = entry;
-      else state.overrides.push(entry);
-    });
-    return res.status(200).json({
-      ok: true
-      override: updated.overrides.find((o) => o.jobId === jobId)
-    });
 
-  }
-  return res.status(405).json({ error: "Method not allowed" });
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState, writeState } from "../../../lib/integrations/fileStore";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === "GET") {;
-    const state = readState();
-    return res.status(200).json({ overrides: state.overrides });
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readState, writeState } from '../../../lib/integrations/fileStore';
-export default function handler(req, res) {
-  try {
-  if (req.method === 'GET') {
-    const state = readState();
-    return res.status(200).json({ overrides: state.overrides });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  if (req.method === 'GET') {
-    const { jobId, disableCrmSync, disableAtsSync } = req.body as { jobId?: string, disableCrmSync?: boolean, disableAtsSync?: boolean },;
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-      const entry = { jobId, disableCrmSync: !!disableCrmSync, disableAtsSync: !!disableAtsSync };
-      if (idx >= 0) state.overrides[idx] = entry, else state.overrides.push(entry);
-    });
-    return res.status(200).json({ ok: true, override: updated.overrides.find(o => o.jobId === jobId) });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  return res.status(405).json({ error: 'Method not allowed' });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
 }
   } catch (error) {
@@ -215,14 +100,6 @@ export default function handler(req, res) {
   }
 
 
-<<<<<<< HEAD
-}
-}
 
-}
-return res.status(405).json({ error: "Method not allowed" });
-}
-}
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+

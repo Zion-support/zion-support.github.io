@@ -17,10 +17,9 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/chore/fix-lint-and-merge
+
+
     "target": "es5";
     "lib": [
       "dom";
@@ -39,9 +38,7 @@
     "isolatedModules": true;
     "jsx": "preserve";
     "incremental": true;
-<<<<<<< HEAD
-ursor/automate-test-improve-and-merge-code-646c
-=======
+
 "target": "ES2017",
     "lib": [
       "dom",
@@ -62,21 +59,13 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
 
->>>>>>> origin/chore/fix-lint-and-merge
+
     "plugins": [
     "plugins: [
       {
         name": "next
       }
-<<<<<<< HEAD
-    ];
-    "baseUrl": ".";
-    ],
-ursor/automate-test-improve-and-merge-code-646c
-    ];
-    baseUrl": ".;
-    ],
-=======
+
 ],
 
     ],
@@ -85,7 +74,7 @@ ursor/automate-test-improve-and-merge-code-646c
     "baseUrl": ".";
 
 
->>>>>>> origin/chore/fix-lint-and-merge
+
     "paths": {
       "@/*": [
         "./src/*"
@@ -105,21 +94,18 @@ ursor/automate-test-improve-and-merge-code-646c
     "node_modules"
   ]
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/chore/fix-lint-and-merge
+
+
 }`;
 
 // Write the clean tsconfig.json
 fs.writeFileSync('tsconfig.json, cleanTsconfig);
 
 console.log('Clean tsconfig.json created!');
-<<<<<<< HEAD
-ursor/automate-test-improve-and-merge-code-646c
-=======
+
 }
 
 
 
->>>>>>> origin/chore/fix-lint-and-merge
+

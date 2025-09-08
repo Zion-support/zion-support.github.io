@@ -51,9 +51,7 @@ export function ClientDashboard() {;
               </div>;
             </CardContent>;
           </Card>;
-<<<<<<< HEAD
 
-=======
           ;
           <Card>;
             <CardContent className="p-4">;
@@ -77,7 +75,7 @@ export function ClientDashboard() {;
                 <Badge variant="outline" className="text-xs">AWS</Badge>;
               </div>;
               <div className="flex gap-2 mt-3">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                 <Button size="sm">View Profile</Button>;
                 <Button size="sm" variant="outline">Message</Button>;
               </div>;

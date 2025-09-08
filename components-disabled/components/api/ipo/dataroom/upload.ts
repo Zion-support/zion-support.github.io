@@ -14,19 +14,8 @@ import path from 'path';
     if (err) return res.status(400).json({ error: 'Invalid form data' });
     const section = String(fields.section |'General');
     const file = files.file as formidable.File | undefined;
-<<<<<<< HEAD
-  if (req && req.method !== 'POST')
-    return res && res.status(405).json({ error: 'Method not allowed' });  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
-=======
-<<<<<<< HEAD
-  if (req && req.method !== 'POST')'
-    return res && res.status(405).json({ "error": 'Method not allowed' });  if (req && req.method !== 'POST') return res && res.status(405).json({ "error": 'Method not allowed' });'
 
-=======
-  if (req && req.method !== 'POST')
-    return res && res.status(405).json({ error: 'Method not allowed' });  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
   form && form.parse(req, (err, fields, files) => {
     if (err) return res && res.status(400).json({ error: 'Invalid form data' });
     const section = String(fields && fields.section || 'General');
@@ -60,37 +49,8 @@ function handler() {
 }  if (return res.status (405).json ({ error: 'Method not allowed' })) {
 const form = formidable ({ multiples: false });
   form.parse (req, (err, fields, files) => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-    if (return res.status (400).json ({ "error": 'Invalid form data' })) {'
-  $2
-}
-const section = String (fields.section || 'General');'
-    if (
-      return res.status (400).json ({ "error": 'File missing' })) {'
-  $2
-}
-const target_dir = resolveDataPath (path.join ('dataroom', section));'
-    if () fs.mkdir_sync (target_dir, { "recursive": true })) {
-  $2
-}
-const target_path = path.join (;
-      target_dir,
-=======
->>>>>>> merged-prs-20250907-203621
-    if (return res.status (400).json ({ error: 'Invalid form data' })) {
-const section = String (fields.section || 'General');
-      return res.status (400).json ({ error: 'File missing' })) {
-const target_dir = resolveDataPath (path.join ('dataroom', section));
-    if () fs.mkdir_sync (target_dir, { recursive: true })) {
-const target_path = path.join (
-      target_dir,)
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
       file.original_filename || path.basename (file.filepath));
     fs.copyFileSync (file.filepath, target_path);
     appendAuditLog ({

@@ -1,37 +1,8 @@
-<<<<<<< HEAD
-import React from \"react\"; import { cn } from \"@/lib/utils\"; export const PageLoader = ({ text = \"Loading...\",className }) => {}; return (); <div\"; className={cn(; \"flex flex-col items-center justify-center min-h-screen\',className)}; >; <div className=\"animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> ); export default Component;
-const React from "react"; import { cn } from "@/lib/utils"; export const PageLoader = ({ text = "Loading.",className }) => {}; return (); <div"; className={cn(; "flex flex-col items-center justify-center min-h-screen",className)}; >; <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> ); export default Component;"""
-import _React from "react"; import { cn } from "@/lib/utils"; export const PageLoader = ({ text = "Loading...",className }) => {}; return (); <div"; className={cn(; "flex flex-col items-center justify-center min-h-screen',className)}; >; <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> ); export default Component;
-=======
 
-=======
-import _React from react; import { cn } from "@/lib/utils"; export const PageLoader = ({ text = Loading...,className }) => {} return (); <div"; className={cn(; "flex flex-col items-center justify-center min-h-screen,className)} >; <div className=animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> ); export default Component;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
-import _React from react"; import { cn } from "@/lib/utils; export const PageLoader = ({ text = Loading...",className }) => {}return ()<div"; className={cn(flex flex-col items-center justify-center min-h-screen,className)}>; <div className=animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> )export default Component;class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
-    }return this.props.children;
-  }
-}
-import React from \"react\"; import { cn } from \@/lib/utils\; export const PageLoader = ({ text = \"Loading...\",className }) => {}return ()<div\ className={cn( \flex flex-col items-center justify-center min-h-screen\,className)}>; <div className=\"animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> )export default Component;
-const React from "react; import { cn } from @/lib/utils"; export const PageLoader = ({ text = "Loading.,className }) => {}return ()<div className={cn( "flex flex-col items-center justify-center min-h-screen",className)}>; <div className=animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> )export default Component;"";
-import _React from react; import { cn } from "@/lib/utils"; export const PageLoader = ({ text = Loading...,className }) => {}return ()<div" className={cn( "flex flex-col items-center justify-center min-h-screen,className)}>; <div className=animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> )export default Component;import React from \react\"; import { cn } from \"@/lib/utils\; export const PageLoader = ({ text = \Loading...\",className }) => {}return ()<div\"; className={cn(\flex flex-col items-center justify-center min-h-screen\',className)}>; <div className=\animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> )export default Component;
-const React from "react"; import { cn } from @/lib/utils; export const PageLoader = ({ text = "Loading.",className }) => {}return ()<div; className={cn(flex flex-col items-center justify-center min-h-screen",className)}>; <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> )export default Component;";
-ursor/automate-test-improve-and-merge-code-646c;
-const React from "react; import { cn } from @/lib/utils"; export const PageLoader = ({ text = "Loading.,className }) => {}return ()<div; className={cn("flex flex-col items-center justify-center min-h-screen",className)}>; <div className=animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> )export default Component;"";
-import React from \react\; import { cn } from \"@/lib/utils\"; export const PageLoader = ({ text = \Loading...\,className }) => {} return (); <div\" className={cn( \"flex flex-col items-center justify-center min-h-screen\',className)}>; <div className=\animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> ); export default Component;
-const React from react"; import { cn } from "@/lib/utils; export const PageLoader = ({ text = Loading.",className }) => {} return (); <div" className={cn( flex flex-col items-center justify-center min-h-screen,className)}>; <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> ); export default Component;"
 
-import _React from "react"; import { cn } from @/lib/utils; export const PageLoader = ({ text = "Loading...",className }) => {} return (); <div className={cn( flex flex-col items-center justify-center min-h-screen',className)}>; <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> ); export default Component;
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import React from \"react\; import { cn } from \@/lib/utils\"; export const PageLoader = ({ text = \"Loading...\,className }) => {} return (); <div\; className={cn(; \"flex flex-col items-center justify-center min-h-screen\',className)} >; <div className=\"animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> ); export default Component;
 const React from react; import { cn } from "@/lib/utils"; export const PageLoader = ({ text = Loading.,className }) => {} return (); <div"; className={cn(; "flex flex-col items-center justify-center min-h-screen,className)} >; <div className=animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> ); export default Component;"""
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
+

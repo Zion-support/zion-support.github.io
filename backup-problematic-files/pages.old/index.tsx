@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-return (
-=======
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -27,7 +25,7 @@ interface IndexProps {
 
 const Index: React.FC<IndexProps> = ({ className }) => {
   return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     <div className={className || ''}>
       <h1>Index</h1>
       <p>This component is under development.</p>

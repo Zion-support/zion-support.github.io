@@ -88,8 +88,6 @@ export default function AIMarketResearchPage() {
       </main>
     </Layout>
   )
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> merged-prs-20250907-203621
+

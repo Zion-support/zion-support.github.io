@@ -1,12 +1,11 @@
-<<<<<<< HEAD
-=======
+
 import { GetServerSideProps, GetServerSidePropsContext } from 'next / types';
 import { createServerSideClient } from '../src / utils / supabase / server';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
 import { User, Mail, Calendar, Shield } from 'lucide-react';
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 
 import Link from 'next / link';
 import Head from 'next / head';
@@ -14,34 +13,8 @@ import type { User as SupabaseUser } from '@supabase / supabase - js';
 interface PrivatePageProps {
   user: SupabaseUser;
 
-<<<<<<< HEAD
-interface PrivatePageProps {;
-  user: SupabaseUser;
 
-import { GetServerSideProps, GetServerSidePropsContext } from 'next/types';
-import { createServerSideClient } from '../src/utils/supabase/server';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { User, Mail, Calendar, Shield } from 'lucide-react';
-import Link from 'next/link';
-import Head from 'next/head';
-import type { User as SupabaseUser } from '@supabase/supabase-js';
-interface PrivatePageProps {user: SupabaseUser;
-interface PrivatePageProps {;
-  user: SupabaseUser;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-=======
-=======
 
-interface PrivatePageProps {;
-  user: SupabaseUser;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 export default /**
  * PrivatePage - Function description
@@ -352,60 +325,9 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
   }
   return {
     props: {
-<<<<<<< HEAD
 
 
       user: data.user}}
 }
-=======
-
-      user: data.user}}
-}
-=======
 
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {;
-  const supabase = createServerSideClient(context);
-  const { data, error } = await supabase.auth.getUser();
-  if (error || !data?.user) {;
-    return {;
-      redirect: {;
-        destination: '/auth/login';
-        permanent: false}  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  return {;
-    props: {;
-      user: data.user}  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-
-} ;
-} ;
-} ;
-=======
-
-
-} ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36

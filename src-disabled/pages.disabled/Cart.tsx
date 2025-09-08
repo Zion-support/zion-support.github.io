@@ -422,13 +422,9 @@ import { toast } from '@/hooks/use-toast',
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
 import { Badge } from '@/components/ui/badge',
 export default function CartPage() {
-<<<<<<< HEAD
-:src/pages/Cart.tsx
-  const { t } = useTranslation();
-  const items = null;
-=======
+
   const { t } = useTranslation(),
->>>>>>> origin/chore/fix-lint-and-merge
+
   const items = useSelector((s: RootState) => s.cart.items),
 
   const updateQuantity = (id: string, qty: number) => {

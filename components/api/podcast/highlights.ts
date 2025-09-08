@@ -1,19 +1,5 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json'),
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+
 
 function ensureStorage() {
   const dir = path.dirname($2);
@@ -22,8 +8,7 @@ function ensureStorage() {
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-=======
+
 function ensureStorage() {const dir = path && path.dirname(EPISODES_PATH)if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true })if (!fs && fs.existsSync(EPISODES_PATH))fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8')export default function handler() {if (req && req.method !== 'POST')return res && res.status(405).json({ error: 'Method not allowed' })ensureStorage()}const highlights = segments.map((t: string, i: number) => ({label: `Highlight ${i + 1}`;
     start: t,end: i + 1 < segments.length ? segments[i + 1] : episode?.timeMarkers?.closing || '15:00'}))return res.status(200).json({ episode })}const EPISODES_PATH = path.join (process.cwd (),'data','podcast','episodes.json')/**;
  * ensure_storage - Function description;
@@ -241,64 +226,26 @@ function ensureStorage() {
   if (!fs && fs.existsSync(EPISODES_PATH))
     fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   ensureStorage();
-<<<<<<< HEAD
-}
-
-=======
-<<<<<<< HEAD
-  const { episodeId } = req && req.body || {};
-  const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
-  const idx = episodes && episodes.findIndex(e => e && e.id === episodeId);  if (idx === -1) return res && res.status(404).json({ error: 'Episode not found' });
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
-  ensureStorage();
-  const { episodeId } = req && req.body || {};
-  const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
-  const idx = episodes && episodes.findIndex((e) => e && e.id === episodeId);
-  if (idx === -1) return res && res.status(404).json({ error: 'Episode not found' });
-  const episode = episodes[idx];
-  const segments = episode?.timeMarkers?.segments || [];
-=======
 
 
-}
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const highlights = segments.map((t: string, i: number) => ({
     label: `Highlight ${i + 1}`;
     start: t,
     end: i + 1 < segments.length ? segments[i + 1] : episode?.timeMarkers?.closing || '15:00'}));
-<<<<<<< HEAD
 
-  return res.status(200).json({ episode })
-}
-=======
   episode.highlights = highlights;
   episodes[idx] = episode;
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
   return res.status(200).json({ episode })
 }
-<<<<<<< HEAD
-  return res.status(200).json({ episode })
-}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
 ;
 const EPISODES_PATH = path.join (
   process.cwd (),
@@ -381,137 +328,21 @@ return res.status (200).json ({ episode });  return res.status (200).json ({ epi
     end: i + 1 < segments.length ? segments[i + 1] : episode?.timeMarkers?.closing || '15:00'})),
 
   episode.highlights = highlights,
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-  if (req.method !== 'POST') return res.status(405).json($2);
-  ensureStorage($2);
-  const { episodeId } = req.body || {},
-  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[],
-  const idx = $2;
-  if (idx === -1) return res.status(404).json($2);
-  const episode = $2;
-  const segments = $2;
-  const highlights = segments.map((t: string, i: number) => ({
-    label: `Highlight ${i + 1}`,
-    start: t,
-    end: i + 1 < segments.length ? segments[i + 1] : episode?.timeMarkers?.closing || '15:00'})),
 
-  episode.highlights = $2;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   episodes[idx] = episode,
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8'),
 
   return res.status(200).json({ episode })
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-  fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8')return res.status(200).json({ episode })
-}
-  const idx = episodes.findIndex(e => e.id === episodeId);
-  if (idx === -1) return res.status(404).json({ error: 'Episode not found' });
-  const episode = episodes[idx];
-  const segments = episode?.timeMarkers?.segments |[];
-  const highlights = segments.map((t: string, i: number) => ({
-label: `Highlight ${i + 1}`,
-    start: t,
-    end:
-      i + 1 < segments.length
-        ? segments[i + 1]
-        : episode?.timeMarkers?.closing || '15:00',
-  }));
 
-  episode.highlights = highlights;
-  episodes[idx] = episode;
-  fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
 
-return res.status(200).json({ episode });
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';'
-import fs from 'fs';'
-import path from 'path';
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-
-}
-<<<<<<< HEAD
-
-  return res.status(200).json({ episode });
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-  return res.status(200).json({ episode });
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   return res.status(200).json({ episode });
 
-<<<<<<< HEAD
 
-const EPISODES_PATH = path.join(
-  process.cwd()
-  'data'
-  'podcast'
-  'episodes.json'
-);
-function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  if (!fs.existsSync(EPISODES_PATH))
-    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
-function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  if (!fs.existsSync(EPISODES_PATH))
-    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
-  ensureStorage();
-  const { episodeId } = req.body |{}
-  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
-  const idx = episodes.findIndex(e => e.id === episodeId);  if (idx === -1) return res.status(404).json({ error: 'Episode not found' });
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  ensureStorage();
-  const { episodeId } = req.body |{}
-  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
-  const idx = episodes.findIndex((e) => e.id === episodeId);
-  if (idx === -1) return res.status(404).json({ error: 'Episode not found' });
-  const episode = episodes[idx];
-  const segments = episode?.timeMarkers?.segments |[];
-  const highlights = segments.map((t: string, i: number) => ({
-    label: `Highlight ${i + 1}`
-    start: t
-    end:
-      i + 1 < segments.length
-        ? segments[i + 1]
-        : episode?.timeMarkers?.closing |'15:00'
-  }));    label: `Highlight ${i + 1}`;
-    start: t;
-    end: i + 1 < segments.length ? segments[i + 1] : episode?.timeMarkers?.closing |'15:00'}));
-  episode.highlights = highlights;
-  episodes[idx] = episode;
-  fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
-return res.status(200).json({ episode });  return res.status(200).json({ episode })
-}
 
-  return res.status(200).json({ episode });
 
-return res.status(200).json({ episode });  return res.status(200).json({ episode })
-}
 
-}
-}
-  return res.status(200).json({ episode });
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+

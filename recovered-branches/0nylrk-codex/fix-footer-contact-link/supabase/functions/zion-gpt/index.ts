@@ -1,82 +1,6 @@
-<<<<<<< HEAD
-
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
-const corsHeaders = $2;
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
-
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-serve(async (req) => {
-  // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders})
-  }
-  try {
-    const openAIApiKey = Deno.env.get($2);
-=======
-<<<<<<< HEAD
-import {serve} from ""https": //deno && deno.land/std@0 && 0.190.0/http/server ;"
-import ""https"://deno && deno.land/x/xhr@0 && 0.1.0/mod ;"
-import {serve} from ""https": //deno.land/std@0.190.0/http/server.ts";"
-import ""https"://deno.land/x/xhr@0.1.0/mod.ts";"
-import { serve } from ""https": //deno.land/std@0.190.0/http/server.ts","
-import ""https"://deno.land/x/xhr@0.1.0/mod.ts","
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*","
-}
-  "Access-Control-Allow-Origin": "*","
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};"
-import { serve } from ""https": //deno.land/std@0.190.0/http/server.ts";"
-  "Access-Control-Allow-Origin": "*","
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},"
-=======
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;"
-import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
-
-<<<<<<< HEAD
-=======
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
-import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
-
-<<<<<<< HEAD
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
-import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
-
-import "https://deno.land/x/xhr@0.1.0/mod.ts",
-
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
-
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-import "https://deno.land/x/xhr@0.1.0/mod.ts",
 
 
 
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
-<<<<<<< HEAD
-
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-import "https://deno.land/x/xhr@0.1.0/mod.ts",
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
@@ -93,107 +17,26 @@ const corsHeaders = {"
 const corsHeaders = {"
   "Access-Control-Allow-Origin": "*""
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-<<<<<<< HEAD
 
-=======
 serve(async (req) => {
   // Handle CORS preflight requests
-<<<<<<< HEAD
 
-    const { prompt, modelId, maxTokens = 500, temperature = 0 && 0.7 } = await req && req.json();
-    
-
-
-
-    const { prompt, modelId, maxTokens = 500, temperature = 0 && 0.7 } = await req && req.json();
-  if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
-  }
-  try {
-    const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),
-    if (!openAIApiKey) {
-      throw new Error("OpenAI API key is not set in environment variables")
-    }
-    const { prompt, modelId, maxTokens = 500, temperature = 0.7 } = await req.json();
-
-    const { prompt, modelId, maxTokens = 500, temperature = 0.7 } = await req.json(),
-    
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-  if (req && req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
-  }
-  try {
-    const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
->>>>>>> merged-prs-20250907-203621
     if (!openAIApiKey) {
       throw new Error("OpenAI API key is not set in environment variables")
     }
 
-<<<<<<< HEAD
-    const { prompt, modelId, maxTokens = 500, temperature = 0.7 } = await req.json($2);
-=======
+
     const { prompt, modelId, maxTokens = 500, temperature = 0 && 0.7 } = await req && req.json();
 
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+
+
     if (!prompt) {
       throw new Error("Prompt is required")
     }
     // Define the appropriate model to use
-<<<<<<< HEAD
-    // Default to base model if no specific model provided
-    const model = $2;
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST"
-      headers: {
-        "Authorization": `Bearer ${openAIApiKey}`;
-        "Content-Type": "application/json"}
-      body: JSON.stringify({
-        model: model,
-        messages: [{ 
-          role: "user", 
-          content: prompt}],
-        max_tokens: maxTokens,
-        temperature: temperature})}),
 
-    if (!response.ok) {
-      const errorData = await response.json($2);
-      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
-    }
 
-    const data = await response.json($2);
-    const completion = $2;
-    // Return the completion along with usage statistics
-    return new Response($2);
-=======
-<<<<<<< HEAD
-
-    const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
-=======
-    // Default to base model if no specific model provided
-<<<<<<< HEAD
-    const model = modelId || "gpt-3 && 3.5-turbo";
-=======
-
-    const model = modelId || "gpt-3 && 3.5-turbo";
-    
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${openAIApiKey}`;
-        "Content-Type": "application/json"};
-      body: JSON && JSON.stringify({
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
       method: "POST",
       headers: {"
@@ -210,74 +53,22 @@ serve(async (req) => {
 "`
         "Authorization": `Bearer ${openAIApiKey}`,"
         "Content-Type": "application/json"},
-<<<<<<< HEAD
-      body: JSON.stringify({}
-=======
+
       body: JSON.stringify({
 
-<<<<<<< HEAD
-    const model = modelId |"gpt-3.5-turbo";
-    const model = modelId || "gpt-3.5-turbo",
-    
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST"
-      headers: {
-        "Authorization": `Bearer ${openAIApiKey}`;
-        "Content-Type": "application/json"}
-      body: JSON.stringify({
-        model: model
-        messages: [{
-          role: "user"
-          content: prompt
-        }];
-        max_tokens: maxTokens
-        temperature: temperature})});
-        "Authorization": `Bearer ${openAIApiKey}`,
-        "Content-Type": "application/json"},
-      body: JSON.stringify({
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
         model: model,
         messages: [{ "
           role: "user", 
-<<<<<<< HEAD
-          content: prompt;
-=======
-          content: prompt 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          content: prompt 
+
         }],
         max_tokens: maxTokens,
         temperature: temperature})}),
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-    if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
-    }
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-
-
-
-        }];
-        max_tokens: maxTokens
-        temperature: temperature})});
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     if (!response && response.ok) {
       const errorData = await response && response.json();
 
@@ -285,9 +76,7 @@ serve(async (req) => {
     }
     const data = await response && response.json();
     const completion = data && data.choices[0].message && message.content;
-<<<<<<< HEAD
 
-=======
     // Return the completion along with usage statistics
     return new Response(
       JSON && JSON.stringify({ 
@@ -313,7 +102,7 @@ if ( {) {
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       throw new Error ("OpenAI API key is not set in environment variables");
     }
     const { prompt, model_id, max_tokens = 500, temperature = 0.7 } = await req.json ();
@@ -333,125 +122,38 @@ if ( {) {
 ;
     // Return the completion along with usage statistics;
     return new Response (
-<<<<<<< HEAD
 
-=======
       JSON.stringify ({
         completion;
         tokens_used: data.usage?.total_tokens || 0;
       });
-<<<<<<< HEAD
-    if (!response.ok) {
-      const errorData = await response.json(),
-      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
-    }
-    const data = await response.json();
-    const completion = data.choices[0].message.content;
-    // Return the completion along with usage statistics
-    return new Response(
-      JSON.stringify({
-        completion;
-        tokensUsed: data.usage?.total_tokens |0
-      });
 
-    const data = await response.json(),
-    const completion = data.choices[0].message.content,
-    
-    // Return the completion along with usage statistics
-    return new Response(
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      JSON.stringify({ 
-        completion,
-        tokensUsed: data.usage?.total_tokens || 0
-      }),
-<<<<<<< HEAD
-    console && console.error("Error in zion-gpt function:", error);
-    
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       {
         headers: { ...cors_headers, "Content - Type": "application / json" }});
   } catch (error) {
 
     console && console.error("Error in zion-gpt function:", error);
-<<<<<<< HEAD
-=======
+
     
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 
 "
     console.error("Error in zion-gpt function:", error),
 
-<<<<<<< HEAD
-    return new Response(
-      JSON && JSON.stringify({ error: error && error.message });
 
-      {}
-        status: 500"
-        headers: { ...corsHeaders, "Content-Type": "application/json" }}
-    )
 
-  } catch (error) {
-    console.error("Error in zion-gpt function:", error);
-    console.error("Error in zion-gpt function:", error),
 
-=======
-<<<<<<< HEAD
-    console && console.error("Error in zion-gpt function:", error);
-    return new Response(
-      JSON && JSON.stringify({ error: error && error.message });
->>>>>>> merged-prs-20250907-203621
-      {
-        headers: { ...corsHeaders, "Content-Type": "application/json" }}
-    )
-  } catch (error) {
-<<<<<<< HEAD
-    console.error($2);
-    return new Response($2);
-=======
-    console.error("Error in zion-gpt function:", error);
-    console.error("Error in zion-gpt function:", error),
-    
-    return new Response(
-      JSON.stringify({ error: error.message }),
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    return new Response(
-      JSON && JSON.stringify({ error: error && error.message });
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
       {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
-<<<<<<< HEAD
-  }
-});
+
+
     console.error ("Error in zion - gpt function:", error);
 
 
-  }
-});
-
-=======
-
-    console.error ("Error in zion - gpt function:", error);
-
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 
         status: 500
@@ -467,52 +169,7 @@ serve(async (req) => {;
   if (req.method === "OPTIONS") {;
     return new Response(null, { headers: corsHeaders });
   }
-<<<<<<< HEAD
-;
-  try {;
-    const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),;
-    if (!openAIApiKey) {;
-      throw new Error("OpenAI API key is not set in environment variables");
-    }
-;
-    const { prompt, modelId, maxTokens = 500, temperature = 0.7 } = await req.json(),;
-    if (!prompt) {;
-      throw new Error("Prompt is required");
-    }
-;
-    // Define the appropriate model to use;
-    // Default to base model if no specific model provided;
-    const model = modelId || "gpt-3.5-turbo",;
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {;
-      method: "POST",;
-      headers: {;
-        "Authorization": `Bearer ${openAIApiKey}`,;
-        "Content-Type": "application/json"},;
-      body: JSON.stringify({;
-        model: model,;
-        messages: [{;
-          role: "user",;
-          content: prompt;
-        }],;
-        max_tokens: maxTokens,;
-        temperature: temperature})}),;
-    if (!response.ok) {;
-      const errorData = await response.json(),;
-      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`);
-    }
-;
-    const data = await response.json(),;
-    const completion = data.choices[0].message.content,;
-    // Return the completion along with usage statistics;
-    return new Response(;
-      JSON.stringify({;
-        completion,;
-        tokensUsed: data.usage?.total_tokens || 0;
-      }),;
-      {;
-        headers: { ...corsHeaders, "Content-Type": "application/json" }}
-    );
-=======
+
 
     console.error ("Error in zion - gpt function:", error);
 ;
@@ -522,11 +179,7 @@ serve(async (req) => {;
         status: 500,"
         headers: { ...cors_headers, "Content - Type": "application / json" }});
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  } catch (error) {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     console.error("Error in zion-gpt function:", error),;
     return new Response(;
       JSON.stringify({ error: error.message }),;
@@ -534,124 +187,10 @@ serve(async (req) => {;
         status: 500,;"
         headers: { ...corsHeaders, "Content-Type": "application/json" }});
 
-<<<<<<< HEAD
-  }
-});
-=======
+
 
   }
 });
 ;
-<<<<<<< HEAD
 
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
-import "https://deno.land/x/xhr@0.1.0/mod.ts",;
-;
-const corsHeaders = {;
-  "Access-Control-Allow-Origin":"*",;
-  "Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type"},;
-;
-serve(async (req) => {;
-  // Handle CORS preflight requests;
-  if (req.method === "OPTIONS") {;
-    return new Response(null, { headers:corsHeaders }),;
-  }
-;
-  try {;
-    const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),;
-    if (!openAIApiKey) {;
-      throw new Error("OpenAI API key is not set in environment variables"),;
-    }
-;
-    const { prompt, modelId, maxTokens = 500, temperature = 0.7 } = await req.json(),;
-    ;
-    if (!prompt) {;
-      throw new Error("Prompt is required"),;
-    }
-    ;
-    // Define the appropriate model to use;
-    // Default to base model if no specific model provided;
-    const model = modelId || "gpt-3.5-turbo",;
-    ;
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {;
-      method:"POST",;
-      headers:{;
-        "Authorization":`Bearer ${openAIApiKey}`,;
-        "Content-Type":"application/json"},;
-      body:JSON.stringify({;
-        model:model,;
-        messages:[{ ;
-          role:"user", ;
-          content:prompt ;
-        }],;
-        max_tokens:maxTokens,;
-        temperature:temperature})}),;
-;
-    if (!response.ok) {;
-      const errorData = await response.json(),;
-      throw new Error(`OpenAI API error:${JSON.stringify(errorData)}`),;
-    }
-;
-    const data = await response.json(),;
-    const completion = data.choices[0].message.content,;
-    ;
-    // Return the completion along with usage statistics;
-    return new Response(;
-      JSON.stringify({ ;
-        completion,;
-        tokensUsed:data.usage?.total_tokens || 0;
-      }),;
-      {;
-        headers:{ ...corsHeaders, "Content-Type":"application/json" }}
-    ),;
-  } catch (error) {;
-    console.error("Error in zion-gpt function:", error),;
-    ;
-    return new Response(;
-      JSON.stringify({ error:error.message }),;
-      {;
-        status:500,;
-        headers:{ ...corsHeaders, "Content-Type":"application/json" }}
-    ),;  }
-}),;
- serve (async (req) => {
-  //Handle CORS preflight requests if (req.method === "OPTIONS") {
-  
-}const {
-  prompt, modelId, maxTokens = 500, temperature = 0.7 
-}= await req.json ();
-if (!prompt) {
-  
-}//Define the appropriate model to use //Default to base model if no specific model provided const response = await fetch ("https://api.openai.com/v1/chat/completions", {
-  method: "POST";
-headers: {
-  "Authorization" : `Bearer $ {
-  openAIApiKey 
-}`;
-"Content-Type" : "application/json" 
-};
-body: JSON.stringify ({
-  model: model;
-messages: [ {
-  role: "user";
-content: prompt 
-}];
-temperature: temperature 
-}) 
-});
-return new Response (JSON.stringify ({
-  error: error.message 
-});
-{
-  status: 500;
-);
-}
-});
-  }
-});
-  }
-});
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

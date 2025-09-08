@@ -1,58 +1,11 @@
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-// Initialize Supabase client
-const supabaseUrl = $2;
-const supabaseServiceKey = $2;
-const supabase = createClient($2);
-serve(async (req) => {
-  // Parse the URL to get the tracking parameters
-  const url = new URL($2);
-  const type = url.searchParams.get("type"), // "open" or "click"
-  const campaignId = url.searchParams.get($2);
-  const userId = url.searchParams.get($2);
-  const redirectUrl = url.searchParams.get($2);
-  // Validate required parameters
-  if (!type || !campaignId || !userId) {
-    return new Response("Missing required parameters", { status: 400})
-=======
-<<<<<<< HEAD
 
 
 
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-// Initialize Supabase client
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
-const supabase = createClient(supabaseUrl, supabaseServiceKey);
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
-import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
-
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
-
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-// Initialize Supabase client"
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!;"
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
-<<<<<<< HEAD
-=======
+
 
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
@@ -62,65 +15,30 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey);
 serve(async (req) => {
   // Parse the URL to get the tracking parameters
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
   const url = new URL(req && req.url);
   const type = url && url.searchParams.get("type"), // "open" or "click"
   const campaignId = url && url.searchParams.get("cid");
   const userId = url && url.searchParams.get("uid");
 
   const redirectUrl = url && url.searchParams.get("redirect");
-<<<<<<< HEAD
 
-// Initialize Supabase client
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
-const supabase = createClient(supabaseUrl, supabaseServiceKey),
-
-// Initialize Supabase client
-serve(async (req) => {
-  // Parse the URL to get the tracking parameters
-  const url = new URL(req.url),
-  const type = url.searchParams.get("type"), // "open" or "click"
-  const campaignId = url.searchParams.get("cid");
-  const userId = url.searchParams.get("uid");
-  const redirectUrl = url.searchParams.get("redirect");
-=======
   const url = new URL(req.url),
   const type = url.searchParams.get("type"), // "open" or "click"
 
-<<<<<<< HEAD
-// Initialize Supabase client
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
-const supabase = createClient(supabaseUrl, supabaseServiceKey),
 
-serve(async (req) => {
-  // Parse the URL to get the tracking parameters
-  const url = new URL(req.url),
-  const type = url.searchParams.get("type"), // "open" or "click"
-  const campaignId = url.searchParams.get("cid");
-  const userId = url.searchParams.get("uid");
-  const redirectUrl = url.searchParams.get("redirect");
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const campaignId = url.searchParams.get("cid"),
   const userId = url.searchParams.get("uid"),
   const redirectUrl = url.searchParams.get("redirect"),
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
   // Validate required parameters
   if (!type |!campaignId |!userId) {
 
     return new Response("Missing required parameters", { status: 400 })
->>>>>>> merged-prs-20250907-203621
+
   }
   try {}
     // Update the email campaign record based on event type"
@@ -129,22 +47,15 @@ serve(async (req) => {
         .from("email_campaigns")
         .update({ opened_at: new Date().toISOString() })"
         .eq("id", campaignId)
-<<<<<<< HEAD
-        .eq($2);
-=======
 
->>>>>>> merged-prs-20250907-203621
+
+
       // Return a 1x1 transparent GIF
       return new Response(
         new Uint8Array([
-<<<<<<< HEAD
 
-      return new Response(
-        new Uint8Array([]
-import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,'
-=======
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.45.0';
 // Initialize Supabase client;"
 const supabase_url = Deno.env.get ("SUPABASE_URL")!;"
@@ -181,50 +92,25 @@ if ( {) {}
       // Return a 1x1 transparent GIF;
       return new Response (
         new Uint8Array ([;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
           0x47, 0x49, 0x46, 0x38, 0x39, 0x61, 0x01, 0x00, 0x01, 0x00, 0x80, 0x00;
           0x00, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x21, 0xF9, 0x04, 0x01, 0x00;
           0x00, 0x00, 0x00, 0x2C, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00;
           0x00, 0x02, 0x02, 0x44, 0x01, 0x00, 0x3B]);
-<<<<<<< HEAD
-=======
+
         {
           headers: {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 
             "Content-Type": "image/gif",
             "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
 
             "Pragma": "no-cache",
 
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-        .eq("user_id", userId);
-        .eq("user_id", userId),
 
-      // Return a 1x1 transparent GIF
-      return new Response(
-        new Uint8Array([
-          0x47, 0x49, 0x46, 0x38, 0x39, 0x61, 0x01, 0x00, 0x01, 0x00, 0x80, 0x00,
-          0x00, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x21, 0xF9, 0x04, 0x01, 0x00,
-          0x00, 0x00, 0x00, 0x2C, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00,
-          0x00, 0x02, 0x02, 0x44, 0x01, 0x00, 0x3B]),
-        {
-          headers: {
-            "Content-Type": "image/gif"
-            "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate";
-            "Pragma": "no-cache";
-            "Content-Type": "image/gif",
-            "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
-            "Pragma": "no-cache",
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
             "Expires": "0"}}
 
       )
@@ -234,120 +120,17 @@ if ( {) {}
         .from("email_campaigns")
         .update({ clicked_at: new Date().toISOString() })"
         .eq("id", campaignId)
-<<<<<<< HEAD
-        .eq($2);
-      // Redirect to the specified URL or default to dashboard
-      const destination = $2;
-=======
-<<<<<<< HEAD
-        .eq("user_id", userId);
-      // Redirect to the specified URL or default to dashboard
-      const destination = redirectUrl |`${supabaseUrl}/dashboard`;
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        .eq("user_id", userId),
 
-      // Redirect to the specified URL or default to dashboard
-      const destination = redirectUrl || `${supabaseUrl}/dashboard`,
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-      return new Response(null, {
-        status: 302
-        headers: {
-          Location: destination}})
-    }
-<<<<<<< HEAD
 
-    return new Response("Invalid event type", { status: 400})
-  } catch (error) {
-    console.error($2);
-=======
-    return new Response("Invalid event type", { status: 400 })
-  } catch (error) {
-
-        .eq("user_id", userId),
-
-      // Redirect to the specified URL or default to dashboard;
-      const destination = redirectUrl || `${supabaseUrl}/dashboard`,
-
-      return new Response(null, {
-        status: 302
-        headers: {
-          Location: destination}})
-    }
-    return new Response("Invalid event type", { status: 400 })
-  } catch (error) {
-
-      // Redirect to the specified URL or default to dashboard
-      const destination = redirectUrl || `${supabaseUrl}/dashboard`,
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-      // Redirect to the specified URL or default to dashboard
-      const destination = redirectUrl || `${supabaseUrl}/dashboard`,
-
-      return new Response(null, {
-        status: 302
-            "Content - Type": "image / gif",
-            "Cache - Control": "no - store, no - cache, must - revalidate, proxy - revalidate";
-            "Pragma": "no - cache";
-
-            "Expires": "0"}});
-    } else // Check condition;
-if ( {) {}
-  $2;
-}
-      await supabase;"
-        .from ("email_campaigns");
-        .update ({ clicked_at: new Date ().toISOString () });"
-        .eq ("id", campaign_id);"
-        .eq ("user_id", user_id);
-;
-      // Redirect to the specified URL or default to dashboard;`
-      const destination = redirect_url || `${supabase_url}/dashboard`;
-      return new Response (null, {}
-        status: 302,
-<<<<<<< HEAD
-
-=======
-        headers: {
-          Location: destination}});
-    }
-
-    console.error("Error tracking email event:", error),
-    
-
-<<<<<<< HEAD
-    console && console.error("Error tracking email event:", error);
-    console.error("Error tracking email event:", error);
-    console.error("Error tracking email event:", error),
-    
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
     // If it was a click event, still try to redirect the user
     if (type === "click" && redirectUrl) {
       return new Response(null, {
         status: 302
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-        headers: {
-          Location: redirectUrl}})
-    }
-    return new Response("Error processing event", { status: 500 })
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
     return new Response ("Invalid event type", { status: 400 });
 
   } catch (error) {
@@ -361,9 +144,7 @@ if ( {) {}
 }
       return new Response (null, {}
         status: 302,
-<<<<<<< HEAD
 
-=======
         headers: {
           Location: redirect_url}});
     }
@@ -372,11 +153,7 @@ if ( {) {}
   }
 });
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
@@ -444,120 +221,10 @@ serve(async (req) => {;
 ;"
     return new Response("Error processing event", { status: 500 });
 
-<<<<<<< HEAD
-  }
-});
-=======
+
 
   }
 });
 ;
-<<<<<<< HEAD
-    return new Response ("Error processing event", { status: 500 });
-  }
-});
-;
 
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0",;
-;
-// Initialize Supabase client;
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!,;
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,;
-const supabase = createClient(supabaseUrl, supabaseServiceKey),;
-;
-serve(async (req) => {;
-  // Parse the URL to get the tracking parameters;
-  const url = new URL(req.url),;
-  const type = url.searchParams.get("type"), // "open" or "click";
-  const campaignId = url.searchParams.get("cid"),;
-  const userId = url.searchParams.get("uid"),;
-  const redirectUrl = url.searchParams.get("redirect"),;
-;
-  // Validate required parameters;
-  if (!type || !campaignId || !userId) {;
-    return new Response("Missing required parameters", { status:400 }),;
-  }
-;
-  try {;
-    // Update the email campaign record based on event type;
-    if (type === "open") {;
-      await supabase;
-        .from("email_campaigns");
-        .update({ opened_at:new Date().toISOString() });
-        .eq("id", campaignId);
-        .eq("user_id", userId),;
-;
-      // Return a 1x1 transparent GIF;
-      return new Response(;
-        new Uint8Array([;
-          0x47, 0x49, 0x46, 0x38, 0x39, 0x61, 0x01, 0x00, 0x01, 0x00, 0x80, 0x00,;
-          0x00, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x21, 0xF9, 0x04, 0x01, 0x00,;
-          0x00, 0x00, 0x00, 0x2C, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00,;
-          0x00, 0x02, 0x02, 0x44, 0x01, 0x00, 0x3B]),;
-        {;
-          headers:{;
-            "Content-Type":"image/gif",;
-            "Cache-Control":"no-store, no-cache, must-revalidate, proxy-revalidate",;
-            "Pragma":"no-cache",;
-            "Expires":"0"}}
-      ),;
-    } else if (type === "click") {;
-      await supabase;
-        .from("email_campaigns");
-        .update({ clicked_at:new Date().toISOString() });
-        .eq("id", campaignId);
-        .eq("user_id", userId),;
-;
-      // Redirect to the specified URL or default to dashboard;
-      const destination = redirectUrl || `${supabaseUrl}/dashboard`,;
-      return new Response(null, {;
-        status:302,;
-        headers:{;
-          Location:destination}}),;
-    }
-;
-    return new Response("Invalid event type", { status:400 }),;
-  } catch (error) {;
-    console.error("Error tracking email event:", error),;
-    ;
-    // If it was a click event, still try to redirect the user;
-    if (type === "click" && redirectUrl) {;
-      return new Response(null, {;
-        status:302,;
-        headers:{;
-          Location:redirectUrl}}),;
-    }
-    ;
-    return new Response("Error processing event", { status:500 }),;  }
-}),;
- 
-}try {
-  // Update the email campaign record based on event type if (type === "open") {
-  await supabase .from ("email campaigns") .update ({
-  opened at: new Date () .toISOString () 
-}) .eq ("id", campaignId) .eq ("user id", userId);
-0x00, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x21, 0xF9, 0x04, 0x01, 0x00;
-0x00, 0x00, 0x00, 0x2C, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00;
-0x00, 0x02, 0x02, 0x44, 0x01, 0x00, 0x3B]);
-await supabase .from ("email campaigns") .update ({
-  clicked at: new Date () .toISOString () 
-}) .eq ("id", campaignId) .eq ("user id", userId);
-click" && redirectUrl) {
-  return new Response (null, {
-  status: 302;
-headers: {
-  Location: redirectUrl 
-}
-}) 
-}
-}
-});
-  }
-});
-  }
-});
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

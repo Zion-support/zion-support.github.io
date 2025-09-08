@@ -1,24 +1,5 @@
-<<<<<<< HEAD
-:src/mobile/pages/MobileJobPost.tsx
-export function MobileJobPost() {
-  const [currentStep, setCurrentStep] = useState<JobPostStep>("details")
 
-import React, { useState } from "react"
-import {MobileHeader} from "@/mobile/components/common/MobileHeader"
-import {BottomNavigation} from "@/mobile/components/common/BottomNavigation"
-import {Button} from "@/components/ui/button"
-import {Input} from "@/components/ui/input"
-import {Textarea} from "@/components/ui/textarea"
-import {Label} from "@/components/ui/label"
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select"
-import {Zap, ChevronLeft, ChevronRight} from 'lucide-react'
-import {Badge} from "@/components/ui/badge"
-import {Card, CardContent} from "@/components/ui/card"
-type JobPostStep = "details" | "requirements" | "budget" | "preview"
-export function MobileJobPost() {
-  const goToNextStep = () => {
-=======
->>>>>>> origin/chore/fix-lint-and-merge
+
 import React, { useState } from "react",
 import { MobileHeader } from "@/mobile/components/common/MobileHeader",
 import { BottomNavigation } from "@/mobile/components/common/BottomNavigation",
@@ -285,27 +266,8 @@ export function MobileJobPost() { return null; }
 function RequirementsStep() {}
   const [skills, setSkills] = useState<string[]>(["
     "React", "TypeScript", "Node.js"
-<<<<<<< HEAD
-:src/mobile/pages/MobileJobPost.tsx
-  ]),
-  const [newSkill, setNewSkill] = useState(""),
-  
-    if (newSkill && !skills.includes(newSkill)) {
-      setSkills([...skills, newSkill]),
-      setNewSkill("")
-    }
-  },
-  
-  const removeSkill = (skill: string) => {
-    setSkills(skills.filter(s => s !== skill))
-  },
-  
-  return (
-    <div className="space-y-4">
-      <h2 className="text-lg font-medium">Job Requirements</h2>
-      
-=======
->>>>>>> origin/chore/fix-lint-and-merge
+
+
 
       <div className="space-y-2">
 

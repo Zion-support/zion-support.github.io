@@ -16,16 +16,9 @@ interface Msg { id: string, role: 'user' | 'assistant', message: string }
 
 // Fallback responses when API is unavailable
 
-<<<<<<< HEAD
-:src/components/SupportChatbot.tsx
-  "I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup.com, or try asking your question in a different way."
-  "Thanks for reaching out! While I'm having trouble connecting to my knowledge base, I can suggest checking our FAQ section or contacting our support team directly."
-  'I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup.com.'
-  "I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support."
-  'While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance.'
-=======
+
 const FALLBACK_RESPONSES = [
->>>>>>> origin/chore/fix-lint-and-merge
+
 ]
 export function SupportChatbot() {
   const [open, setOpen] = useState(false)
@@ -498,71 +491,8 @@ export function SupportChatbot() {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-<<<<<<< HEAD
-:src/components/SupportChatbot.tsx
-            messages: [
-              ...messages.map(m => ({ role: m.role, content: m.message }))
-              { role: 'user', content: text }
-            ]
-          })
-        })
-        if (!res.ok) throw new Error(`API error: ${res.status}`)
-        const data = await res.json().catch(() => ({}))
-        const message =
-          data.message |
-          data.choices?.[0]?.message?.content |
-          data.choices?.[0]?.text |
-          data.completion |
-          ''
-        const finalMsg =
-          message.trim() |
-          FALLBACK_RESPONSES[
-            Math.floor(Math.random() * FALLBACK_RESPONSES.length)
-          ] |
-          "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."
-        setMessages(prev => [
-          ...prev
-          {
-            id: Date.now().toString() + '-a'
-            role: 'assistant'
-            message: finalMsg
-          }
-        ]) } else if (res.body) {
-        const botId = Date.now().toString() + '-a'
-        setMessages(prev => [
-          ...prev
-          { id: botId, role: 'assistant', message: '' }
-        ])
-        let buffer = ''
-        let accumulated = ''
-        while (!done) {
-          const result = await reader.read()
-          done = result.done
-          buffer += decoder.decode(result.value |new Uint8Array())
-          const lines = buffer.split('\n')
-          for (let i = 0; i < lines.length - 1; i++) {
-            let line = lines[i]?.trim()
-            if (!line) continue
-            if (line.startsWith('data:')) {
-              line = line.replace(/^data:\s*/, '')
-              if (line === '[DONE]') {
-                done = true
-                break
-              }
-              try {
-                const token =
-                  json.choices?.[0]?.delta?.content |
-                  json.choices?.[0]?.text |
-                  ''
-                if (token) {
-                  accumulated += token
-                  setMessages(prev =>
-                    prev.map(m =>
-                      m.id === botId ? { ...m, message: accumulated } : m
-                    )
-                  )
-=======
->>>>>>> origin/chore/fix-lint-and-merge
+
+
             messages: [...messages.map(m => ({ role: m.role, content: m.message })), { role: 'user', content: text }]
           })
         }),

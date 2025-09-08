@@ -4,133 +4,23 @@ import { Button } from "@/components/ui/button";
 import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSelector";
 import { RolePicker } from "../components/onboarding/RolePicker";
 import { SignUpForm } from "../components/onboarding/SignUpForm";
-<<<<<<< HEAD
-type OnboardingStep = $2;
-export function MobileOnboarding() {
-  const [currentStep, setCurrentStep] = useState<OnboardingStep>("language"),
-  const navigate = useNavigate($2);
-  const goToNextStep = $2;
-  const handleRoleSelect = $2;
-=======
+
 type OnboardingStep = "language" | "role" | "signup";
-<<<<<<< HEAD
-export function MobileOnboarding() {
 
-export function MobileOnboarding() {;
-  const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
-  const navigate = useNavigate();
-import React, { useState } from "react",
-import { useNavigate } from "react-router-dom",
-import { Button } from "@/components/ui/button",
-import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSelector",
-import { RolePicker } from "../components/onboarding/RolePicker",
-import { SignUpForm } from "../components/onboarding/SignUpForm",
-type OnboardingStep = "language" | "role" | "signup",
 
 export function MobileOnboarding() {
-  const [currentStep, setCurrentStep] = useState<OnboardingStep>("language"),
-  const navigate = useNavigate(),
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-export function MobileOnboarding() {;
 
-  const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
-  const navigate = useNavigate();
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { useNavigate } from "react-router-dom",
-import { Button } from "@/components/ui/button",
-import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSelector",
-import { RolePicker } from "../components/onboarding/RolePicker",
-import { SignUpForm } from "../components/onboarding/SignUpForm",
-type OnboardingStep = "language" | "role" | "signup",
-=======
-<<<<<<< HEAD
-  
-  
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  const goToNextStep = () => {
-    if (currentStep === "language") {
-      setCurrentStep("role")
-    } else if (currentStep === "role") {
-      setCurrentStep("signup")
-    } else {
-      navigate("/mobile")
-    }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
-export function MobileOnboarding() {
-<<<<<<< HEAD
-}
-const [currentStep, setCurrentStep] = useState<OnboardingStep>("language"),;"
-const navigate = useNavigate(),;
-export function MobileOnboarding() {;
-  }
 
-  const goToNextStep = () => {
-    }
-    if (currentStep === "language") {"
-      }
-      setCurrentStep("role");"
-    } else if (currentStep === "role") {"
-      }
-      setCurrentStep("signup");"
-    } else {
-      }
-      navigate("/mobile");"
-    }
-  };
-=======
->>>>>>> origin/chore/fix-lint-and-merge
 
-<<<<<<< HEAD
-  }
-  const handleRoleSelect = () => {
-    setCurrentStep("signup")
-  }
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   
   const handleRoleSelect = () => {
-<<<<<<< HEAD
-    }
-    setCurrentStep("signup")"
-};
-import React, { useState } from "react";"
-import { useNavigate } from "react-router-dom";"
-import { Button } from "@/components/ui/button",;"
-import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSelector",;"
-import { RolePicker } from "../components/onboarding/RolePicker",;"
-import { SignUpForm } from "../components/onboarding/SignUpForm",;"
-type OnboardingStep = "language" | "role" | "signup",;"
-export function MobileOnboarding() {;
-  }
-  const goToNextStep = () => {;
-    }
-    if (currentStep === "language") {;"
-      }
-      setCurrentStep("role");"
-    } else if (currentStep === "role") {;"
-      }
-      setCurrentStep("signup");"
-    } else {;
-      }
-      navigate("/mobile");"
-=======
+
     setCurrentStep("signup")
   },
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
->>>>>>> merged-prs-20250907-203621
   return (
     <div className="min-h-screen flex flex-col">
       <div className="flex-1 py-8">
@@ -142,30 +32,16 @@ export function MobileOnboarding() {;
             </div>
             <LanguageThemeSelector />
             <div className="px-4 mt-8">
-<<<<<<< HEAD
-              <Button size="lg" className="w-full py-6" onClick={goToNextStep}>
-                Continue
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
               <Button size="lg" className="w-full py-6" onClick={goToNextStep}>
                 Continue;
->>>>>>> merged-prs-20250907-203621
+
               </Button>
             </div>
           </div>
         )}
-<<<<<<< HEAD
-        {currentStep === "role" && (
-          <div className="space-y-6">
-            <div className="text-center mb-8">
-              <h1 className="text-3xl font-bold mb-2">Tell us about you</h1>
-              <p className="text-muted-foreground">Choose what brought you to Zion</p>
-            </div>
-            <RolePicker onSelect={handleRoleSelect} />
-            <div className="px-4 mt-8">
-              <Button size="lg" className="w-full py-6" onClick={goToNextStep}>
-                Continue
-=======
+
 "
         {currentStep === "role" && ("
           <div className="space-y-6">"
@@ -181,26 +57,12 @@ export function MobileOnboarding() {;
             <div className="px-4 mt-8">"
               <Button size="lg" className="w-full py-6" onClick={goToNextStep}>
                 Continue;
->>>>>>> merged-prs-20250907-203621
+
               </Button>
             </div>
           </div>
         )}
-<<<<<<< HEAD
-        {currentStep === "signup" && (
-          <div className="space-y-6">
-            <div className="text-center mb-6">
-              <h1 className="text-3xl font-bold mb-2">Almost there!</h1>
-              <p className="text-muted-foreground">Create your account to get started</p>
-            </div>
-            <SignUpForm />
-          </div>
-        )}
-      </div>
-    </div>
-  )
-}
-=======
+
 "
         {currentStep === "signup" && ("
           <div className="space-y-6">"
@@ -214,88 +76,22 @@ export function MobileOnboarding() {;
             <SignUpForm />
           </div>
 
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-        )}
-      </div>
-    </div>
-  )
-}
-=======
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import React, { useState } from "react",;
-import { useNavigate } from "react-router-dom",;
-import { Button } from "@/components/ui/button",;
-import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSelector",;
-import { RolePicker } from "../components/onboarding/RolePicker",;
-import { SignUpForm } from "../components/onboarding/SignUpForm",;
-type OnboardingStep = "language" | "role" | "signup",;
-<<<<<<< HEAD
-export function MobileOnboarding() {;
-  const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
-  const navigate = useNavigate();
-export function MobileOnboarding() {;
-  const [currentStep, setCurrentStep] = useState<OnboardingStep>("language"),;
-  const navigate = useNavigate(),;
-=======
-
-export function MobileOnboarding() {;
-  const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
-  const navigate = useNavigate();
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  const goToNextStep = () => {;
-    if (currentStep === "language") {;
-      setCurrentStep("role");
-    } else if (currentStep === "role") {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       setCurrentStep("signup");
     } else {;"
       navigate("/mobile");
->>>>>>> origin/chore/fix-lint-and-merge
+
     }
   };
-<<<<<<< HEAD
-  const handleRoleSelect = () => {;
-    setCurrentStep("signup");
-  };
-  return (;
-=======
 
-<<<<<<< HEAD
-=======
-  const handleRoleSelect = () => {;
-    setCurrentStep("signup");
-  };
 
-  return (
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    <div className="min-h-screen flex flex-col">;
-      <div className="flex-1 py-8">;
-        {currentStep === "language" && (;
-          <div className="space-y-6">;
-            <div className="text-center mb-8">;
-              <h1 className="text-3xl font-bold mb-2">Welcome to Zion</h1>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
               <p className="text-muted-foreground">Let's set up your experience</p>;
             </div>;
-<<<<<<< HEAD
-            <LanguageThemeSelector />;
-=======
+
 
             <LanguageThemeSelector />;
-<<<<<<< HEAD
-"
-            <div className="px-4 mt-8">;"
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-            <div className="px-4 mt-8">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               <Button size="lg" className="w-full py-6" onClick={goToNextStep}>;
                 Continue;
               </Button>;
@@ -303,62 +99,13 @@ export function MobileOnboarding() {;
           </div>;
 
         )}
-<<<<<<< HEAD
-      </div>
-    </div>
-=======
-<<<<<<< HEAD
-;
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        {currentStep === "role" && (;
-          <div className="space-y-6">;
-            <div className="text-center mb-8">;
-              <h1 className="text-3xl font-bold mb-2">Tell us about you</h1>;
-              <p className="text-muted-foreground">Choose what brought you to Zion</p>;
-            </div>;
-<<<<<<< HEAD
-            <RolePicker onSelect={handleRoleSelect} />;
-=======
 
-            <RolePicker onSelect={handleRoleSelect} />;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-            <div className="px-4 mt-8">;
-              <Button size="lg" className="w-full py-6" onClick={goToNextStep}>;
-                Continue;
-              </Button>;
-            </div>;
-          </div>;
-        )}
-<<<<<<< HEAD
-;
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        {currentStep === "signup" && (;
-          <div className="space-y-6">;
-            <div className="text-center mb-6">;
-              <h1 className="text-3xl font-bold mb-2">Almost there!</h1>;
-              <p className="text-muted-foreground">Create your account to get started</p>;
-            </div>;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-            <SignUpForm />;
-          </div>;
-        )}
-      </div>;
-    </div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   );
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
 import React, { useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { Button } from '@/components / ui / button';
@@ -554,27 +301,7 @@ if ( {) {
       </div>;
     </div>);
 
-<<<<<<< HEAD
-"
-import React, { useState } from "react",;"
-import { useNavigate } from "react-router-dom",;"
-import { Button } from "@/components/ui/button",;"
-import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSelector",;"
-import { RolePicker } from "../components/onboarding/RolePicker",;"
-import { SignUpForm } from "../components/onboarding/SignUpForm",;
-;"
-type OnboardingStep = "language" | "role" | "signup",;
-;
-export function MobileOnboarding() { return null; }
-    } else if (currentStep === "role") {;"
-      setCurrentStep("signup"),;
-    } else {;"
 
-              <p className="text-muted-foreground">Let's set up your experience</p>;
-            </div>;
-            <LanguageThemeSelector />;
-
-=======
 import React, { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
@@ -615,47 +342,41 @@ export function MobileOnboarding() {;
             <LanguageThemeSelector />;
             ;
             <div className="px-4 mt-8">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
               <Button size="lg" className="w-full py-6" onClick={goToNextStep}>;
                 Continue;
               </Button>;
             </div>;
           </div>;
         )}
-<<<<<<< HEAD
 
-=======
         ;
         {currentStep === "role" && (;
           <div className="space-y-6">;
             <div className="text-center mb-8">;
               <h1 className="text-3xl font-bold mb-2">Tell us about you</h1>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
               <p className="text-muted-foreground">Choose what brought you to Zion</p>;
             </div>;
             ;
             <RolePicker onSelect={handleRoleSelect} />;
-<<<<<<< HEAD
 
-=======
             ;
             <div className="px-4 mt-8">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
               <Button size="lg" className="w-full py-6" onClick={goToNextStep}>;
                 Continue;
               </Button>;
             </div>;
           </div>;
         )}
-<<<<<<< HEAD
 
-=======
         ;
         {currentStep === "signup" && (;
           <div className="space-y-6">;
             <div className="text-center mb-6">;
               <h1 className="text-3xl font-bold mb-2">Almost there!</h1>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
               <p className="text-muted-foreground">Create your account to get started</p>;
             </div>;
             ;
@@ -664,47 +385,14 @@ export function MobileOnboarding() {;
         )}
       </div>;
     </div>;
-<<<<<<< HEAD
 
-}
-;
-
-};
-
-}/> Continue </Button> </div> </div>) 
-
-}</div> <SignUpForm /> </div>) 
-
-}</div> </div>) "
-pr-12325
-      </div>;
-    </div>);
-}
-;
-=======
   ),; const goToNextStep = () => {
   if (currentStep === "language") {
   
 }
 ;
 
-<<<<<<< HEAD
-};
-const handleRoleSelect = () => {
-  return (<div className="min-h-screen flex flex-col" > <div className="flex-1 py-8" > {
-  currentStep === "language" && (<div className="space-y-6" > <div className="text-center mb-8" > <h1 className="text-3xl font-bold mb-2" >Welcome to Zion</h1> <p className="text-muted-foreground" >Let's set up your experience</p> px-4 mt-8"> <Button size=" lg"className=" w-full py-6" onClick= {
-  goToNextStep 
-}> Continue </Button> </div> </div>) 
-}</div> <RolePicker onSelect= {
-  handleRoleSelect 
-}/> Continue </Button> </div> </div>) 
-}</div> <SignUpForm /> </div>) 
-}</div> </div>) 
-}
-;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+
+
+

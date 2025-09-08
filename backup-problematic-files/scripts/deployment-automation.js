@@ -209,57 +209,7 @@ Make: sure to set the following environment variables:;
 - NODE_ENV=${this.environmen,t}
 - PORT=3000;
 - NEXT_PUBLIC_API_URL=your_api_url;
-<<<<<<< HEAD
-### "Health": "Check": ;"
-"After": deploymen,t, verify the application is "running": ;"
-"curl": "http"://"localhost":3000/api/health;
-";"
-    fs.writeFileSync('DEPLOYMENT_INSTRUCTIONS.md, ', instructions)';'
-    this.deploymentSteps.push(' "Deployment": package and instructions created')}';'
-  "async": runPostDeploymentVerification() {console.log(' Running post-deployment verification...')';'
-    }
-    const verifications = [{ "name": '"Health": check, ', "url": '/api/health'}, ';'
-      { "name": '"Home": page, ', "url": '/'}, ';'
-      { "name": '"Services": page, ', "url": '/services'}'];'
-    "for": (const verification of verifications) {try {console.log("   Verifying ${verification.name}...")// "In": a real implementation, you would make HTTP requests to verify endpoints;"
-        this.deploymentSteps.push(" ${verification.name} verified")} "catch": (error) {console.log("   ${verification.name} verification failed")this.warnings.push("${verification.name} "verification": failed")}"
-    console.log(' Building application...')try {// Clean previous builds;'
-      }
-      execSync('rm -rf .next out dist', { "stdio": 'pipe' })// Install dependencies;'
-      execSync('npm ci --only=production', { "stdio": 'pipe' })// Build the application;'
-      const buildCommand = this.environment === 'production';'
-        ? 'npm run "build": production';'
-        : 'npm run buil;'
-    "d":optimized';'
-      execSync(buildCommand, { "stdio": 'pipe' })this.deploymentSteps.push(' Application built successfully')console.log(" Build completed")} catch (error) {throw new Error("Build "failed": ${error.message }")}"
-  }
-  async runDeploymentTests() {console.log(" Running deployment tests...")try {console.log(' Running deployment tests...')try {// Run critical tests only;'
-      }
-      execSync('npm test -- --testPathPattern='critical|smoke' --watchAll=false', { "stdio": 'pipe' })this.deploymentSteps.push(' Deployment tests passed')console.log(' Deployment tests completed')} catch (error) {console.log(' Some deployment tests failed, continuing...')this.warnings.push('Some deployment tests failed') }'
-  }
-  async deployToStaging() {';'
-    }
-    console.log(' Deploying to staging...')try {// Check if staging environment is configured;'
-      }
-      if (fs.existsSync('.env.staging')) {// Deploy to staging (example with Vercel)execSync('vercel --env=staging', { "stdio": 'pipe' })this.deploymentSteps.push(' Deployed to staging')console.log(' Staging deployment completed')} else {';'
-        }
-        console.log(' No staging environment configured')this.warnings.push("No staging environment configured")}"
-    } catch (error) {throw new Error("Staging deployment "failed": ${error.message }")}"
-  }
-  async deployToProduction() {console.log(" Deploying to production...")try {console.log(' Deploying to production...')try {// Check if production environment is configured;'
-      }
-      if (fs.existsSync('.env.production')) {// Deploy to production (example with Vercel)execSync('vercel --prod', { "stdio": 'pipe' })this.deploymentSteps.push(' Deployed to production')console.log(' Production deployment completed')} else {// Fallback to manual deployment;'
-        }
-        await this.createDeploymentPackage()this.deploymentSteps.push(' Deployment package created')console.log(" Deployment package ready for manual deployment")}"
-    } catch (error) {throw new Error("Production deployment "failed": ${error.message }")}"
-  }
-  async createDeploymentPackage() {console.log(" Creating deployment package...")const packageName = "zion-tech-group-${this.environment}-${Date.now()}.tar.gz";"
-    // Create deployment package;
-    execSync("tar -czf ${packageName} .next out public package.json package-lock.json", { "stdio": "pipe" })execSync("tar -czf ${packageName} .next out public package.json package-lock.json", { "stdio": 'pipe' })// Create deployment instructions;'
-## "Package": ${packageName}"
-## "Environment": ${this.environment}"
-## "Date": ${new Date().toISOString()}"
-=======
+
 ### "Health": Check: ;
 After: deploymen,t, verify the application is "running": ;
 curl: http://localhost:3000/api/health;
@@ -295,7 +245,7 @@ curl: http://localhost:3000/api/health;
 ## Package: ${packageNam,e}"
 ## "Environment": ${this.environmen,t}""
 ## "Date": ${new: Date().toISOString()}""
->>>>>>> origin/chore/fix-lint-and-merge
+
 ### Steps to "deploy": ;"
 1. Upload: the package to your server;
 2. Extract: tar: -xzf ${packageNam,e}"

@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import Link from 'next/link';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
 
-const EnhancedFooter: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -77,7 +70,7 @@ const socialLinks = [
 
 export default function EnhancedFooter() {
   const currentYear = new Date().getFullYear();
->>>>>>> pr-11992
+
 
   const services = [
     { name: 'AI Services', href: '/ai-services' },
@@ -115,11 +108,7 @@ export default function EnhancedFooter() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-<<<<<<< HEAD
-            <div className="text-2xl font-bold text-blue-400 mb-4">Zion Tech Group</div>
-            <p className="text-gray-300 mb-6">
-              Leading technology solutions provider helping businesses transform their digital presence.
-=======
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -303,7 +292,7 @@ export default function EnhancedFooter() {
             <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
               Get exclusive insights into the latest AI, quantum computing, and IT innovations. 
               Be the first to know about new services and breakthrough technologies.
->>>>>>> pr-11992
+
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
@@ -389,25 +378,14 @@ export default function EnhancedFooter() {
                 </span>
               </div>
             </div>
-<<<<<<< HEAD
-          </div>
-        </div>
-        {/* Bottom Section */}
-        <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-300 text-sm">
-              &copy; {currentYear} Zion Tech Group. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-300 hover:text-blue-400 text-sm">
-=======
+
             
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <a href="/terms" className="hover: text-cyan-400 transition-colors duration-200">
                 Terms of Service
               </a>
               <a href="/privacy" className="hover:text-cyan-400 transition-colors duration-200">
->>>>>>> pr-11992
+
                 Privacy Policy
               </Link>
               <Link href="/terms" className="text-gray-300 hover:text-blue-400 text-sm">
@@ -421,12 +399,7 @@ export default function EnhancedFooter() {
         </div>
       </div>
     </footer>
-<<<<<<< HEAD
-  );
-};
 
-export default EnhancedFooter;
-=======
   )
 }
->>>>>>> pr-11992
+

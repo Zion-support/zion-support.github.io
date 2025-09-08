@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-<CardHeader>;
-=======
+
 
 import { useState } from "react",;
 import { BookOpen, Code, Copy, Terminal } from "lucide-react",;
@@ -14,9 +12,9 @@ import CodeBlock from "./CodeBlock",;
 export function ApiDocumentation() {;
   return (;
     <Card className="bg-zinc-900 border-zinc-800 text-white">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
       <CardHeader>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
         <CardTitle className="text-xl flex items-center">;
           <BookOpen className="mr-2" size={20} /> API Documentation;
         </CardTitle>;

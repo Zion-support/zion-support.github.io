@@ -1,119 +1,5 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import fs from "fs-extra";
-import path from "path";
-import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";
-import { v4 as uuidv4 } from "uuid";
-const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json"),
-
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from \"next\";"
-import fs from \"fs-extra\";"
-import path from \"path\";"
-import { authenticateRequest, enforceRateLimit, recordRequest } from \"../../utils/api/partnerAuth\";"
-import { v4 as uuidv4 } from \"uuid\";
-"
-const TALENTS_FILE = path.join(process.cwd(), \"data\", \"talents\", \"talents.json\");
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
-  const started = null;}
-  return res.status(200).json({ ok: true });
-}
-const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");
-export default async function handler(req: NextApiRequest;, res: NextApiResponse) {
-  const started = null;
-return res.status(201).json({ "id": record.id }),;
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs - extra';
-import type { NextApiRequest, NextApiResponse } from 'next';'
-import fs from 'fs - extra';'
-import path from 'path';
-import {
-} from '../../utils/api/partnerAuth';
-import { v4 as uuidv4 } from 'uuid';
-=======
 
 
-import type { NextApiRequest, NextApiResponse } from \'next\';"
-import fs from \'fs-extra\';"
-import path from \'path\';"
-import { authenticateRequest, enforceRateLimit, recordRequest } from \'../../utils/api/partnerAuth\';"
-import { v4 as uuidv4 } from \'uuid\';
-"
-const TALENTS_FILE = path.join(process.cwd(), \"data\", \"talents\", \"talents.json\");
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
-  const started = null;}
-  return res.status(201).json({ id: record.id })
-}
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs - extra';
-import path from 'path';
-import {}
-} from '../../utils/api/partnerAuth';
-import { v4 as uuidv4 } from 'uuid';
-
->>>>>>> origin/chore/fix-lint-and-merge
-
-<<<<<<< HEAD
-=======
-
-
-const TALENTS_FILE = path.join(
-  process.cwd()
-  'data'
-  'talents'
-  'talents.json'
-
-<<<<<<< HEAD
-=======
-const TALENTS_FILE = path && path.join(
-  process && process.cwd(),
-  'data',
-  'talents',
-  'talents && talents.json'
-);
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  try {
-  const auth = await authenticateRequest(req);
-  if (!auth) {
-    return res && res.status(401).json({ error: 'Unauthorized' });
-  }
-  if (!(await enforceRateLimit(auth && auth.apiKey))) {
-    await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 429);
-    return res && res.status(429).json({ error: 'Rate limit exceeded' });
-  }
-  if (req && req.method !== 'POST') {
-    res && res.setHeader('Allow', 'POST');
-    await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 405);
-    return res && res.status(405).json({ error: 'Method Not Allowed' });
-  }
-  const { name, email, skills, programTrack, certificationStatus } =
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-    req && req.body || {};
-  if (!name || !email) {
-    await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 400);
-    return res && res.status(400).json({ error: 'Missing required fields' });
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  }
-  await fs && fs.ensureDir(path && path.dirname(TALENTS_FILE));
-  const records = (await fs && fs.pathExists(TALENTS_FILE))
-    ? await fs && fs.readJSON(TALENTS_FILE)
-  authenticate_request,
-  enforceRateLimit,
-  record_request,
-} from '../../utils / api / partner_auth';
-import { v4 as uuidv4 } from 'uuid';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
@@ -148,22 +34,16 @@ const TALENTS_FILE = path.join (process.cwd (),'data','talents','talents.json')e
 function handler() {const auth = await authenticate_request (req)// Check condition;}
 if ( {) {$2;}
 }
-<<<<<<< HEAD
-if ( {) {$2;
-=======
+
     return res.status (401).json ({ error: 'Unauthorized' }
->>>>>>> origin/chore/fix-lint-and-merge
+
 }
   if ()) {) {$2;}
 }
-<<<<<<< HEAD
-  if ()) {) {$2;
-}
-    await record_request (req, res, auth.partner, auth.api_key, started, 429)return res.status (429).json ({ error: 'Rate limit exceeded' })}
-=======
+
     await record_request (req, res, auth.partner, auth.api_key, started, 429)return res.status (429).json ({ error: 'Rate limit exceeded' }
 }
->>>>>>> origin/chore/fix-lint-and-merge
+
   // Check condition;
 if ( {) {$2;}
 }
@@ -176,84 +56,9 @@ const { name, email, skills, program_track, certification_status } =;
 if ( {) {$2;}
 }
 
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const started = Date.now($2);
-  const auth = await authenticateRequest($2);
-  if (!auth) {
-    return res.status(401).json({ error: "Unauthorized" })
-<<<<<<< HEAD
-  }
-  if (!(await enforceRateLimit(auth.apiKey))) {
-    await recordRequest($2);
-    return res.status(429).json({ error: "Rate limit exceeded" })
-  }
-  if (req.method !== "POST") {
-    res.setHeader($2);
-    await recordRequest($2);
-    return res.status(405).json({ error: "Method Not Allowed" })
-  }
-  const { name, email, skills, programTrack, certificationStatus } = req.body || {},
-  if (!name || !email) {
-    await recordRequest($2);
-    return res.status(400).json({ error: "Missing required fields" })
-  }
-  await fs.ensureDir(path.dirname(TALENTS_FILE)),
-  const records = $2;
-  const now = new Date().toISOString($2);
-  const record = {
-    id: uuidv4($2);
-    name,
-    email,
-    skills: skills || [],
-    programTrack: programTrack || null,
-    certificationStatus: certificationStatus || "pending",
-    partnerId: auth.partner.id,
-    createdAt: now},
-  records.push($2);
-  await fs.writeJSON($2);
-  await recordRequest($2);
-  return res.status(201).json({ id: record.id })
-}
-=======
-  }
-<<<<<<< HEAD
-  if (!(await enforceRateLimit(auth.apiKey))) {
-    await recordRequest($2);
-    return res.status(429).json({ error: "Rate limit exceeded" })
-  }
-  if (req.method !== "POST") {
-    res.setHeader($2);
-    await recordRequest($2);
-    return res.status(405).json({ error: "Method Not Allowed" })
-  }
-  const { name, email, skills, programTrack, certificationStatus } = req.body || {},
-  if (!name || !email) {
-    await recordRequest($2);
-    return res.status(400).json({ error: "Missing required fields" })
-  }
-  await fs.ensureDir(path.dirname(TALENTS_FILE)),
-  const records = $2;
-  const now = new Date().toISOString($2);
-  const record = {
-    id: uuidv4($2);
-=======
-  await fs.ensure_dir (path.dirname (TALENTS_FILE));
-  const records = (await fs.path_exists (TALENTS_FILE));
-    ? await fs.readJSON (TALENTS_FILE);
-    : [];
-  const now = new Date ().toISOString ();
-  const record = {
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  }
 
-
-    id: uuidv4(),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     name,
     email,
     skills: skills || [],
@@ -272,67 +77,14 @@ const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json")
     skills: skills || [], programTrack: programTrack || null,certificationStatus: certificationStatus || "pending", partnerId: auth.partner.id,createdAt: now}records.push(record)await fs.writeJSON(TALENTS_FILE, records, { spaces: 2 })await recordRequest(req, res, auth.partner, auth.apiKey, started, 201)return res.status(201).json({ id: record.id })}
     id: uuidv4 (),name,email,skills: skills || [],program_track: program_track || null,certification_status: certification_status || 'pending',partner_id: auth.partner.id,created_at: now,}
 
-<<<<<<< HEAD
-  return res.status(201).json({ id: record.id })
-}
-=======
+
 
   };
   records && records.push(record);
   await fs && fs.writeJSON(TALENTS_FILE, records, { spaces: 2 });
   await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 201);
   return res && res.status(201).json({ id: record && record.id });  return res && res.status(201).json({ id: record && record.id })
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-}
-import type { NextApiRequest, NextApiResponse } from "next";
-import fs from "fs-extra";
-import path from "path";
-import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";
-import { v4 as uuidv4 } from "uuid";
-const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const started = Date.now();
-  const auth = await authenticateRequest(req);
-  if (!auth) {
-    return res.status(401).json({ error: "Unauthorized" });
-  }
-  if (!(await enforceRateLimit(auth.apiKey))) {
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);
-    return res.status(429).json({ error: "Rate limit exceeded" })
-  }
-  if (req.method !== "POST") {
-    res.setHeader("Allow", "POST");
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
-    return res.status(405).json({ error: "Method Not Allowed" })
-  }
-  const { name, email, skills, programTrack, certificationStatus } = req.body || {};
-  if (!name || !email) {
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
-    return res.status(400).json({ error: "Missing required fields" })
-  }
-  await fs.ensureDir(path.dirname(TALENTS_FILE));
-  const records = (await fs.pathExists(TALENTS_FILE)) ? await fs.readJSON(TALENTS_FILE) : [];
-  const now = new Date().toISOString();
-  const record = {
-    id: uuidv4(), name,
-    email;
-    skills: skills || [], programTrack: programTrack || null,
-    certificationStatus: certificationStatus || "pending", partnerId: auth.partner.id,
-    createdAt: now};
-  records.push(record);
-  await fs.writeJSON(TALENTS_FILE, records, { spaces: 2 });
-  await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
-  return res.status(201).json({ id: record.id })
-}
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     id: uuidv4 (),
     name,
     email,
@@ -479,206 +231,8 @@ const TALENTS_FILE = path.join(
   process.cwd()
   'data'
 
-<<<<<<< HEAD
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs-extra';
-import path from 'path';
-import {
-  authenticateRequest
-  enforceRateLimit
-  recordRequest;
-  authenticateRequest,
-  enforceRateLimit,;
-  recordRequest,;
-} from '../../utils/api/partnerAuth';
-import { v4 as uuidv4 } from 'uuid';
-
-const TALENTS_FILE = path.join(
-  process.cwd()
-  'data'
-  'talents'
-  'talents.json'
-);
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {;
-  const auth = await authenticateRequest(req);
-  if (!auth) {
-    return res.status(401).json({ error: 'Unauthorized' });
-  }
-  if (!(await enforceRateLimit(auth.apiKey))) {
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);
-    return res.status(429).json({ error: 'Rate limit exceeded' });
-  }
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
-    return res.status(405).json({ error: 'Method Not Allowed' });
-  }
-  const { name, email, skills, programTrack, certificationStatus } =
-    req.body |{}
-  if (!name |!email) {
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
-    return res.status(400).json({ error: 'Missing required fields' });
-  }
-  await fs.ensureDir(path.dirname(TALENTS_FILE));
-  const records = (await fs.pathExists(TALENTS_FILE))
-    ? await fs.readJSON(TALENTS_FILE)
-    : [];
-  const now = new Date().toISOString();
-  const record = {
-    id: uuidv4()
-    name
-    email
-    skills: skills |[]
-    programTrack: programTrack |null
-    certificationStatus: certificationStatus |'pending'
-    partnerId: auth.partner.id
-createdAt: now
-  }
-    id: uuidv4(),
-    name,
-    email,
-    skills: skills || [],
-    programTrack: programTrack || null,
-    certificationStatus: certificationStatus || 'pending',
-    partnerId: auth.partner.id,
-    createdAt: now,
-createdAt: now,
-    createdAt: now,
-  };
-  records.push(record);
-  await fs.writeJSON(TALENTS_FILE, records, { spaces: 2 });
-  await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
-  return res.status(201).json({ id: record.id });  return res.status(201).json({ id: record.id })
-}
-
-=======
-=======
-    await record_request (req, res, auth.partner, auth.api_key, started, 400);
-    return res.status (400).json ({ error: 'Missing required fields'}
-});
->>>>>>> origin/chore/fix-lint-and-merge
-  }
-  await fs.ensure_dir (path.dirname (TALENTS_FILE));
-
-const records = (await fs.path_exists (TALENTS_FILE));
-    ? await fs.readJSON (TALENTS_FILE);
-    : [];
-    id: uuidv4(),
-    name,
-    email,
-    skills: skills || [],
-<<<<<<< HEAD
-    programTrack: programTrack || null,'
-    certificationStatus: certificationStatus || 'pending',
 
 
-<<<<<<< HEAD
 
-=======
-    programTrack: programTrack || null,
-    certificationStatus: certificationStatus || 'pending',
 
-    partnerId: auth.partner.id
 
-  };
-  records && records.push(record);
-  await fs && fs.writeJSON(TALENTS_FILE, records, { spaces: 2}
-});
-  await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 201);
-  return res && res.status(201).json({ id: record && record.id}
-});  return res && res.status(201).json({ id: record && record.id })
-}"
-import type { NextApiRequest, NextApiResponse } from \'next\';"
-import fs from \'fs-extra\';"
-import path from \'path\';"
-import { authenticateRequest, enforceRateLimit, recordRequest } from \'../../utils/api/partnerAuth\';"
-import { v4 as uuidv4 } from \'uuid\';
-"
-const TALENTS_FILE = path.join(process.cwd(), \"data\", \"talents\", \"talents.json\");
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const started = Date.now();
->>>>>>> origin/chore/fix-lint-and-merge
-
-const auth = await authenticateRequest(req);
-  if (!auth) {}"
-    return res.status(401).json({ error: \"Unauthorized\"}
-});
-  }
-  if (!(await enforceRateLimit(auth.apiKey))) {}
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);}"
-    return res.status(429).json({ error: \"Rate limit exceeded\" })
- 
-}"
-  if (req.method !== \"POST\") {"
-    res.setHeader(\"Allow\", \"POST\");}
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);}"
-    return res.status(405).json({ error: \"Method Not Allowed\" })
- 
-}
-
-<<<<<<< HEAD
-
-=======
-const { name, email, skills, programTrack, certificationStatus } = req.body || {};
-  if (!name || !email) {}
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);}"
-    return res.status(400).json({ error: \"Missing required fields\" })
- 
->>>>>>> origin/chore/fix-lint-and-merge
-}
-  await fs.ensureDir(path.dirname(TALENTS_FILE));
-
-const records = (await fs.pathExists(TALENTS_FILE)) ? await fs.readJSON(TALENTS_FILE) : [];
-
-const now = new Date().toISOString();
-
-const record = {
-    id: uuidv4(), name,
-    email;
-<<<<<<< HEAD
-
-=======
-    skills: skills || [], programTrack: programTrack || null,"
-    certificationStatus: certificationStatus || \"pending\", partnerId: auth.partner.id}
-    createdAt: no}
-};
->>>>>>> origin/chore/fix-lint-and-merge
-  records.push(record);
-  await fs.writeJSON(TALENTS_FILE, records, { spaces: 2}
-});
-  await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
-<<<<<<< HEAD
-  return res.status(201).json({ id: record.id })
-}
-    id: uuidv4 (),
-    name,
-    email,
-    skills: skills || [],
-    program_track: program_track || null,'
-    certification_status: certification_status || 'pending',
-    partner_id: auth.partner.id,
-created_at: now}
-  records.push (record);
-  await fs.writeJSON (TALENTS_FILE, records, { spaces: 2 });
-  await record_request (req, res, auth.partner, auth.api_key, started, 201);
-  return res.status (201).json ({ id: record.id });  return res.status (201).json ({ id: record.id });
-}
-  return res.status(201).json({ id: record.id });
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
-  return res.status(201).json({ id: record.id}
-});
->>>>>>> origin/chore/fix-lint-and-merge
-
-"
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621

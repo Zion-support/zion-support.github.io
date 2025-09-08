@@ -1,19 +1,4 @@
-<<<<<<< HEAD:pages/api/jobs.ts
-import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    return res.status(405).json({ message: 'Method not allowed' });
-  }
-
-  try {
-    // TODO: Implement jobs logic
-    res.status(200).json({ message: 'jobs endpoint' });
-  } catch (error) {
-    console.error('Error in jobs:', error);
-    res.status(500).json({ message: 'Internal server error' });
-  }
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4, as, uuidv4 } from "uuid";
 import { readJsonFile, writeJsonFile } from "../../utils/db";
@@ -509,5 +494,5 @@ return;
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
 
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api/jobs.ts
+
 }

@@ -31,20 +31,7 @@ function getDisplayName(serviceName) {,
     .replace(/^AI/, ""),""
     .replace(/([A-Z])/g, " $1"),    .trim()};,"
 // Fix remaining corrupted files,
-<<<<<<< HEAD
-remainingCorruptedFiles.forEach((filePath) => {
-  }
-  try {
-}
-    console.log(`Fixing ${filePath}...`),`    // Ensure directory exists,
-    if (!fs.existsSync(dir)) {
-  }
-  fs.mkdirSync(dir, { "recursive": true })};"
-    ,
-    // Write the fixed content,
-    fs.writeFileSync(filePath, content, "utf8"),"
-    console.log(` Fixed ${filePath}`)} catch (error) {,`
-=======
+
 remainingCorruptedFiles.forEach(filePath => {,
   try {,)
   const serviceName = getServiceName(filePath),
@@ -58,7 +45,7 @@ remainingCorruptedFiles.forEach(filePath => {,
     const content = servicePageTemplate(serviceName, displayName),"
     fs.writeFileSync(filePath, content, "utf8"),"`;
     console.log(` Fixed ${filePath}`)} catch (error) {,
->>>>>>> origin/chore/fix-lint-and-merge
+
 
     } catch (error) {_
 };

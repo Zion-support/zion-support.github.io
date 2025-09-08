@@ -1,20 +1,12 @@
-<<<<<<< HEAD
 
-=======
 #!/usr/bin/"env": node ; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); ",class ImprovedPerformanceMonitor {; constructor() { this.projectRoot = path.resolve(__dirname,"..");"; this."metrics": = { timestamp: new Date().toISOString(),"system": '',{},"application": '',{},"build": '',{},"errors": '[',]} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { ";
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env: node ; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); console.log(" Improved: Performance Monitor Started");",class ImprovedPerformanceMonitor {; constructor() { this.projectRoot = path.resolve(__dirname,".");"; this.metrics: = { timestamp: new Date().toISOString(),system: "",{},application: "",{},build: "",{},errors: "[",]} this.logFile: = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { console.log(" Collecting performance metrics.");";'"'"
 #!/usr/bin/"env": node ;   _console.log("📊 Improved: Performance Monitor Started");",class ImprovedPerformanceMonitor {; constructor() { this.projectRoot = path.resolve(__dirname,"..");"; this."metrics": = { timestamp: new Date().toISOString(),"system": '',{},"application": '',{},"build": '',{},"errors": '[',]} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { _console.log("🔍 Collecting performance metrics...");";
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 #!/usr/bin/"env": node ; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); ",class ImprovedPerformanceMonitor {; constructor() { this.projectRoot = path.resolve(__dirname,"..");"; this."metrics": = { timestamp: new Date().toISOString(),"system": '',{},"application": '',{},"build": '',{},"errors": '[',]} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { ";
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env: node ; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); console.log(" Improved: Performance Monitor Started");",class ImprovedPerformanceMonitor {; constructor() { this.projectRoot = path.resolve(__dirname,".");"; this.metrics: = { timestamp: new Date().toISOString(),system: "",{},application: "",{},build: "",{},errors: "[",]} this.logFile: = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { console.log(" Collecting performance metrics.");";'"'"
 #!/usr/bin/"env": node ;   _console.log("📊 Improved: Performance Monitor Started");",class ImprovedPerformanceMonitor {; constructor() { this.projectRoot = path.resolve(__dirname,"..");"; this."metrics": = { timestamp: new Date().toISOString(),"system": '',{},"application": '',{},"build": '',{},"errors": '[',]} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { _console.log("🔍 Collecting performance metrics...");";
-<<<<<<< HEAD
 
-=======
 #!/usr/bin/"env": node ; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); ",class ImprovedPerformanceMonitor {; constructor() { this.projectRoot = path.resolve(__dirname,"..");"; this."metrics": = { timestamp: new Date().toISOString(),"system": '',{},"application": '',{},"build": '',{},"errors": '[',]} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { ";
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env: node ; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); console.log(" Improved: Performance Monitor Started");",class ImprovedPerformanceMonitor {; constructor() { this.projectRoot = path.resolve(__dirname,".");"; this.metrics: = { timestamp: new Date().toISOString(),system: "",{},application: "",{},build: "",{},errors: "[",]} this.logFile: = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { console.log(" Collecting performance metrics.");";'"'"
 #!/usr/bin/"env": node ;   _console.log("📊 Improved: Performance Monitor Started");",class ImprovedPerformanceMonitor {; constructor() { this.projectRoot = path.resolve(__dirname,"..");"; this."metrics": = { timestamp: new Date().toISOString(),"system": '',{},"application": '',{},"build": '',{},"errors": '[',]} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { _console.log("🔍 Collecting performance metrics...");";
@@ -23,112 +15,5 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 #!/usr/bin/"env": node ; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); ",class ImprovedPerformanceMonitor {; constructor() { this.projectRoot = path.resolve(__dirname,"..");"; this."metrics": = { timestamp: new Date().toISOString(),"system": '',{},"application": '',{},"build": '',{},"errors": '[',]} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { ";
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env: node ; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); console.log(" Improved: Performance Monitor Started");",class ImprovedPerformanceMonitor {; constructor() { this.projectRoot = path.resolve(__dirname,".");"; this.metrics: = { timestamp: new Date().toISOString(),system: "",{},application: "",{},build: "",{},errors: "[",]} this.logFile: = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { console.log(" Collecting performance metrics.");";'"'"
 #!/usr/bin/"env": node ;   _console.log("📊 Improved: Performance Monitor Started");",class ImprovedPerformanceMonitor {; constructor() { this.projectRoot = path.resolve(__dirname,"..");"; this."metrics": = { timestamp: new Date().toISOString(),"system": '',{},"application": '',{},"build": '',{},"errors": '[',]} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { _console.log("🔍 Collecting performance metrics...");";
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-const __dirname = path.dirname(__filename)",class ImprovedPerformanceMonitor {constructor() { this.projectRoot = path.resolve(__dirname,"..")"; this."metrics": = { "timestamp": new Date().toISOString(),"system": '',{},"application": '',{},"build": '',{},"errors": '[']} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { ";"
-#!/usr/bin/env node/usr/bin/env node/usr/bin/"env": node ;
 
-}
-
-const __dirname = path.dirname(__filename)console.log(" "Improved": Performance Monitor Started")",class ImprovedPerformanceMonitor {constructor() { this.projectRoot = path.resolve(__dirname,".")"; this."metrics": = { "timestamp": new Date().toISOString(),"system": "",{},"application": "",{},"build": "",{},"errors": "[","
-} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { console.log(" Collecting performance metrics.")";'"'";"
-#!/usr/bin/"env": node ;   _console.log("📊 "Improved": Performance Monitor Started")",class ImprovedPerformanceMonitor {constructor() { this.projectRoot = path.resolve(__dirname,"..")"; this."metrics": = { "timestamp": new Date().toISOString(),"system": '',{},"application": '',{},"build": '',{},"errors": '[']} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { _console.log("🔍 Collecting performance metrics...")";#!/usr/bin/"env": node ;"
-
-}
-
-#!/usr/bin/env node/usr/bin/env node/usr/bin/"env": node ;
-
-}
-
-} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { console.log(" Collecting performance metrics.")";'"'";"
-#!/usr/bin/"env": node ;   _console.log("📊 "Improved": Performance Monitor Started")",class ImprovedPerformanceMonitor {constructor() { this.projectRoot = path.resolve(__dirname,"..")"; this."metrics": = { "timestamp": new Date().toISOString(),"system": '',{},"application": '',{},"build": '',{},"errors": '[']} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { _console.log("🔍 Collecting performance metrics...")";"
-#!/usr/bin/"env": node ;"
-
-}
-
-#!/usr/bin/env node/usr/bin/env node/usr/bin/"env": node ;
-
-}
-
-} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { console.log(" Collecting performance metrics.")";'"'";"
-#!/usr/bin/"env": node ;   _console.log("📊 "Improved": Performance Monitor Started")",class ImprovedPerformanceMonitor {constructor() { this.projectRoot = path.resolve(__dirname,"..")"; this."metrics": = { "timestamp": new Date().toISOString(),"system": '',{},"application": '',{},"build": '',{},"errors": '[']} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { _console.log("🔍 Collecting performance metrics...")";#!/usr/bin/"env": node ;"
-
-}
-
-#!/usr/bin/env node/usr/bin/env node/usr/bin/"env": node ;
-
-}
-
-} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { console.log(" Collecting performance metrics.")";'"'";"
-#!/usr/bin/"env": node ;   _console.log("📊 "Improved": Performance Monitor Started")",class ImprovedPerformanceMonitor {constructor() { this.projectRoot = path.resolve(__dirname,"..")"; this."metrics": = { "timestamp": new Date().toISOString(),"system": '',{},"application": '',{},"build": '',{},"errors": '[']} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { _console.log("🔍 Collecting performance metrics...")";"
-#!/usr/bin/"env": node ;"
-
-}
-
-#!/usr/bin/env node/usr/bin/env node/usr/bin/"env": node ;
-
-}
-
-} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { console.log(" Collecting performance metrics.")";'"'";"
-#!/usr/bin/"env": node ;   _console.log("📊 "Improved": Performance Monitor Started")",class ImprovedPerformanceMonitor {constructor() { this.projectRoot = path.resolve(__dirname,"..")"; this."metrics": = { "timestamp": new Date().toISOString(),"system": '',{},"application": '',{},"build": '',{},"errors": '[']} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { _console.log("🔍 Collecting performance metrics...")";"
-#!/usr/bin/"env": node ;"
-
-}
-
-#!/usr/bin/env node/usr/bin/env node/usr/bin/"env": node ;
-
-}
-
-} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { console.log(" Collecting performance metrics.")";'"'";"
-#!/usr/bin/"env": node ;   _console.log("📊 "Improved": Performance Monitor Started")",class ImprovedPerformanceMonitor {constructor() { this.projectRoot = path.resolve(__dirname,"..")"; this."metrics": = { "timestamp": new Date().toISOString(),"system": '',{},"application": '',{},"build": '',{},"errors": '[']} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { _console.log("🔍 Collecting performance metrics...")";#!/usr/bin/"env": node ;"
-
-}
-
-#!/usr/bin/env node/usr/bin/env node/usr/bin/"env": node ;
-
-}
-
-} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { console.log(" Collecting performance metrics.")";'"'";"
-#!/usr/bin/"env": node ;   _console.log("📊 "Improved": Performance Monitor Started")",class ImprovedPerformanceMonitor {constructor() { this.projectRoot = path.resolve(__dirname,"..")"; this."metrics": = { "timestamp": new Date().toISOString(),"system": '',{},"application": '',{},"build": '',{},"errors": '[']} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { _console.log("🔍 Collecting performance metrics...")";"
-#!/usr/bin/"env": node ;"
-
-}
-
-#!/usr/bin/env node/usr/bin/env node/usr/bin/"env": node ;
-
-}
-
-} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { console.log(" Collecting performance metrics.")";'"'";"
-#!/usr/bin/"env": node ;   _console.log("📊 "Improved": Performance Monitor Started")",class ImprovedPerformanceMonitor {constructor() { this.projectRoot = path.resolve(__dirname,"..")"; this."metrics": = { "timestamp": new Date().toISOString(),"system": '',{},"application": '',{},"build": '',{},"errors": '[']} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { _console.log("🔍 Collecting performance metrics...")";"
-#!/usr/bin/"env": node ;"
-
-}
-
-#!/usr/bin/env node/usr/bin/env node/usr/bin/"env": node ;
-
-}
-
-} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { console.log(" Collecting performance metrics.")";'"'";"
-#!/usr/bin/"env": node ;   _console.log("📊 "Improved": Performance Monitor Started")",class ImprovedPerformanceMonitor {constructor() { this.projectRoot = path.resolve(__dirname,"..")"; this."metrics": = { "timestamp": new Date().toISOString(),"system": '',{},"application": '',{},"build": '',{},"errors": '[']} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { _console.log("🔍 Collecting performance metrics...")";"
-}
-ursor/add-new-services-and-deploy-updates-0462;
-ursor/fix-syntax-push-and-merge-to-main-40de;
-#!/usr/bin/"env": node ;"
-
-#!/usr/bin/env node/usr/bin/env node/usr/bin/"env": node ;
-
-}
-
-} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { console.log(" Collecting performance metrics.")";'"'";"
-#!/usr/bin/"env": node ;   _console.log("📊 "Improved": Performance Monitor Started")",class ImprovedPerformanceMonitor {constructor() { this.projectRoot = path.resolve(__dirname,"..")"; this."metrics": = { "timestamp": new Date().toISOString(),"system": '',{},"application": '',{},"build": '',{},"errors": '[']} this."logFile": = path.join(this.projectRoot,"performance-report.json")}"; async monitor() { try { _console.log("🔍 Collecting performance metrics...")";"
-}
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-ursor/automate-test-improve-and-merge-code-646c;
-=======
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621

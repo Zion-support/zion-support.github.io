@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-import { motion } from 'framer-motion';'
-import Link from 'next/link';'
-import Layout from '../../components/Layout';'
-import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRight, CheckCircle, Users, Shield, Cloud, Brain } from 'lucide-react';'
-import React from 'react';'
-import Link from 'next/link';';'
-import { Heart 
-  }
-=======
+
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -21,7 +12,7 @@ import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import Link from 'next/link';';
 import { Heart, 
->>>>>>> origin/chore/fix-lint-and-merge
+
   DollarSign, 
   Settings, 
   ShoppingCart, 
@@ -70,42 +61,7 @@ const industries = [
     icon: DollarSign,
 
   Brain;
-<<<<<<< HEAD
-} from 'lucide-react';'
-  Brain;
-} from 'lucide-react';'
-const industries = [;
-  {"name": 'Healthcare',,"description": 'Transform healthcare delivery with AI-powered diagnostics, telemedicine platforms, and patient management systems.',"icon": Heart,"href": '/industries/healthcare',"features": ['AI Diagnostics', 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],"color": 'from-red-500 to-pink-500';'
-    }
-    "href": '/industries/healthcare,',"features": ['AI Diagnostics, 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],',"color": 'from-red-500 to-pink-500''},{"name": 'Finance',,"description": 'Secure financial services with blockchain technology, fraud detection, and automated trading systems.',"icon": DollarSign,"href": '/industries/finance',"features": ['Blockchain Solutions', 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],"color": 'from-green-500 to-emerald-500';'
-    }
-    "href": '/industries/finance',"features": ['Blockchain Solutions', 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],"color": 'from-green-500 to-emerald-500';'
-    "href": '/industries/finance',"features": ['Blockchain Solutions', 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],"color": 'from-green-500 to-emerald-500';'
-    "href": '/industries/finance,',"features": ['Blockchain Solutions, 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],',"color": 'from-green-500 to-emerald-500''},{"name": 'Manufacturing',,"description": 'Optimize production with IoT sensors, predictive maintenance, and smart factory solutions.',"icon": Settings,"href": '/industries/manufacturing',"features": ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],"color": 'from-blue-500 to-cyan-500';'
-    }
-    "href": '/industries/manufacturing',"features": ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],"color": 'from-blue-500 to-cyan-500';'
-    "href": '/industries/manufacturing',"features": ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],"color": 'from-blue-500 to-cyan-500';'
-    "href": '/industries/manufacturing,',"features": ['IoT Integration, 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],',"color": 'from-blue-500 to-cyan-500''},{"name": 'Retail',,"description": 'Enhance customer experience with personalized recommendations, inventory management, and omnichannel solutions.',"icon": ShoppingCart,"href": '/industries/retail',"features": ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],"color": 'from-purple-500 to-violet-500';'
-    }
-    "href": '/industries/retail',"features": ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],"color": 'from-purple-500 to-violet-500';'
-    "href": '/industries/retail',"features": ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],"color": 'from-purple-500 to-violet-500';'
-    "href": '/industries/retail,',"features": ['Personalization, 'Inventory Management', 'Omnichannel', 'Customer Analytics'],',"color": 'from-purple-500 to-violet-500''},{"name": 'Education',,"description": 'Revolutionize learning with AI tutoring, virtual classrooms, and personalized education platforms.',"icon": BookOpen,"href": '/industries/education',"features": ['AI Tutoring', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],"color": 'from-orange-500 to-yellow-500';'
-    }
-    "href": '/industries/education',"features": ['AI Tutoring', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],"color": 'from-orange-500 to-yellow-500';'
-    "href": '/industries/education',"features": ['AI Tutoring', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],"color": 'from-orange-500 to-yellow-500';'
-    "href": '/industries/education,',"features": ['AI Tutoring, 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],',"color": 'from-orange-500 to-yellow-500''},{"name": 'Government',,"description": 'Modernize public services with secure citizen portals, data analytics, and digital transformation.',"icon": Building,"href": '/industries/government',"features": ['Citizen Portals', 'Data Analytics', 'Digital Services', 'Security Compliance'],"color": 'from-gray-500 to-slate-500';'
-  {;
-    }
-    "name": 'Healthcare',,'
-  "description": 'Transform healthcare delivery with AI-powered diagnostics, telemedicine platforms, and patient management systems.',;'
-    "icon": Heart,;
-    "href": '/industries/healthcare',;'
-    "features": ['AI Diagnostics', 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],;'
-    "color": 'from-red-500 to-pink-500';'
-    "href": '/industries/healthcare,',;'
-    "features": ['AI Diagnostics, 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],',;'
-    "color": 'from-red-500 to-pink-500'',;'
-=======
+
 } from 'lucide-react';
   Brain;
 } from 'lucide-react';
@@ -168,195 +124,15 @@ import Layout from '../../components/Layout';';
     href: '/industries/government',
     features: ['Citizen Portals', 'Data Analytics', 'Digital Services', 'Security Compliance'],
     color: 'from-gray-500 to-slate-500'
-<<<<<<< HEAD
 
-=======
-  Brain;
-} from 'lucide-react';
-import SimpleLayout from '../../components/SimpleLayout';
-  Brain;
-} from 'lucide-react';
-import Layout from '../../components/Layout';';
-const industries = [;
-  {;
-    name: 'Healthcare',;
-    description: 'Transform healthcare delivery with AI-powered diagnostics, telemedicine platforms, and patient management systems.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-    icon: Heart,;
-    href: '/industries/healthcare',;
-    features: ['AI Diagnostics', 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],;
-    color: 'from-red-500 to-pink-500';
-    href: '/industries/healthcare,',;
-    features: ['AI Diagnostics, 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],',;
-    color: 'from-red-500 to-pink-500'',;
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-  },;
-  {;
-
-=======
-  },;
-  {;
-    name: 'Finance',;
-    description: 'Secure financial services with blockchain technology, fraud detection, and automated trading systems.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-    icon: DollarSign,;
-    href: '/industries/finance',;
-    features: ['Blockchain Solutions', 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],;
-    color: 'from-green-500 to-emerald-500';
-    href: '/industries/finance',;
-    features: ['Blockchain Solutions', 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],;
-    color: 'from-green-500 to-emerald-500';
-    href: '/industries/finance',;
-    features: ['Blockchain Solutions', 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],;
-    color: 'from-green-500 to-emerald-500';
-    href: '/industries/finance,',;
-    features: ['Blockchain Solutions, 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],',;
-    color: 'from-green-500 to-emerald-500'',;
-  },;
-  {;
-<<<<<<< HEAD
-
-=======
-    name: 'Manufacturing',;
-    description: 'Optimize production with IoT sensors, predictive maintenance, and smart factory solutions.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-    icon: Settings,;
-    href: '/industries/manufacturing',;
-    features: ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],;
-    color: 'from-blue-500 to-cyan-500';
-    href: '/industries/manufacturing',;
-    features: ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],;
-    color: 'from-blue-500 to-cyan-500';
-    href: '/industries/manufacturing',;
-    features: ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],;
-    color: 'from-blue-500 to-cyan-500';
-    href: '/industries/manufacturing,',;
-    features: ['IoT Integration, 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],',;
-    color: 'from-blue-500 to-cyan-500'',;
-  },;
-  {;
-<<<<<<< HEAD
-
-=======
-    name: 'Retail',;
-    description: 'Enhance customer experience with personalized recommendations, inventory management, and omnichannel solutions.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-    icon: ShoppingCart,;
-    href: '/industries/retail',;
-    features: ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],;
-    color: 'from-purple-500 to-violet-500';
-    href: '/industries/retail',;
-    features: ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],;
-    color: 'from-purple-500 to-violet-500';
-    href: '/industries/retail',;
-    features: ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],;
-    color: 'from-purple-500 to-violet-500';
-    href: '/industries/retail,',;
-    features: ['Personalization, 'Inventory Management', 'Omnichannel', 'Customer Analytics'],',;
-    color: 'from-purple-500 to-violet-500'',;
-  },;
-  {;
-<<<<<<< HEAD
-
-=======
-    name: 'Education',;
-    description: 'Revolutionize learning with AI tutoring, virtual classrooms, and personalized education platforms.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-    icon: BookOpen,;
-    href: '/industries/education',;
-    features: ['AI Tutoring', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],;
-    color: 'from-orange-500 to-yellow-500';
-    href: '/industries/education',;
-    features: ['AI Tutoring', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],;
-    color: 'from-orange-500 to-yellow-500';
-    href: '/industries/education',;
-    features: ['AI Tutoring', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],;
-    color: 'from-orange-500 to-yellow-500';
-    href: '/industries/education,',;
-    features: ['AI Tutoring, 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],',;
-    color: 'from-orange-500 to-yellow-500'',;
-  },;
-  {;
-<<<<<<< HEAD
-
-=======
-    name: 'Government',;
-    description: 'Modernize public services with secure citizen portals, data analytics, and digital transformation.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-    icon: Building,;
-    href: '/industries/government',;
-    features: ['Citizen Portals', 'Data Analytics', 'Digital Services', 'Security Compliance'],;
-    color: 'from-gray-500 to-slate-500';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-  }
-];
-const stats = [;
-  { number: '500+', label: 'Industry Projects' },;
-  { number: '50+', label: 'Fortune 500 Clients' },;
-  { number: '99 && 99.9%', label: 'Uptime Guarantee' },;
-  { number: '24/7', label: 'Industry Support' }
-];
-
-    href: '/industries/government,',
-    features: ['Citizen Portals, 'Data Analytics', 'Digital Services', 'Security Compliance'],',
-    color: 'from-gray-500 to-slate-500'';
-    href: '/industries/government,',;
-    features: ['Citizen Portals, 'Data Analytics', 'Digital Services', 'Security Compliance'],',;
-    color: 'from-gray-500 to-slate-500'',;
-  }
-;];
-<<<<<<< HEAD
-  { "number": '500+, "label": 'Industry Projects' },',;'
-  { "number": '50+, "label": 'Fortune 500 Clients' },',;'
-  { "number": '99 && 99.9%, "label": 'Uptime Guarantee' },',;'
-  { "number": '24/7, "label": 'Industry Support' }',;'
-=======
-
-const stats = [;
-<<<<<<< HEAD
-  { number: '500+, label: 'Industry Projects' },',
-  { number: '50+, label: 'Fortune 500 Clients' },',
-  { number: '99.9%, label: 'Uptime Guarantee' },',
-  { number: '24/7, label: 'Industry Support' }',
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-  { number: '500+, label: 'Industry Projects' },',;
-  { number: '50+, label: 'Fortune 500 Clients' },',;
-  { number: '99 && 99.9%, label: 'Uptime Guarantee' },',;
-  { number: '24/7, label: 'Industry Support' }',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;];
 
 export default function IndustriesPage() {
   return (;
     <Layout);
-<<<<<<< HEAD
-      title="Industry Solutions - Zion Tech Group"";"
-export default function IndustriesPage() {;
-}
-return (;
-    <Layout)
-      title="Industry Solutions - Zion Tech Group"""
-      description="Specialized technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors."""
-      keywords="industry solutions, healthcare technology, fintech, manufacturing IoT, retail technology, education technology, government services"">;"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";"
-return (;
-    <Layout,
-title="Industry Solutions - Zion Tech Group""
-=======
+
       title="Industry Solutions - Zion Tech Group"";
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-export default function IndustriesPage() {;
-  return (
-    <Layout)
-      title="Industry Solutions - Zion Tech Group""
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       description="Specialized technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors.""
       keywords="industry solutions, healthcare technology, fintech, manufacturing IoT, retail technology, education technology, government services"">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
@@ -590,11 +366,9 @@ export default function Industries() {
                 return (
                   <motion&& motion.div
                     key={index}
-<<<<<<< HEAD
 
-=======
                     className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">";
                 Industries We Serve;
               </h2>;
@@ -738,14 +512,13 @@ export default function Industries() {
             </div>,;
           </div>;
         </section>;
-<<<<<<< HEAD
-=======
+
         {/* Why Choose Us Section */}
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               className="text-center mb-16"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 
         <section className="py-20 bg-white">"
         <section className="py-20 bg-white">";
@@ -961,14 +734,7 @@ export default function Industries() {
         </section>;
 
         {/* CTA Section */}
-<<<<<<< HEAD
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">";
-
-          <div className="container mx-auto px-4 text-center">";
-            <motion.div;
-=======
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
             <motion&& motion.div>,;
@@ -981,7 +747,7 @@ export default function Industries() {
             </div>,;
           </div>;
         </section>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">";
           <div className="container mx-auto px-4 text-center">";
@@ -1033,12 +799,10 @@ export default function Industries() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Ready to Transform Your Industry?
               </h2>
-<<<<<<< HEAD
 
-=======
               <p className="text-xl mb-8 max-w-2xl mx-auto">
                 Let our industry experts help you leverage technology to solve your sector-specific challenges.
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
               </p>
               <Link href="/contact">
                 <a className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
@@ -1053,14 +817,7 @@ export default function Industries() {
 
     </Layout>
   );
-<<<<<<< HEAD
-}
-=======
+
 };
 
-<<<<<<< HEAD
-export default Index;
-=======
-export default Index;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

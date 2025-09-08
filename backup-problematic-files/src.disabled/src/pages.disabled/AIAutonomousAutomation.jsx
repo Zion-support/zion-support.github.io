@@ -5,16 +5,8 @@ const AIAutonomousAutomation = ({ className }) => {
       <h1>AIAutonomousAutomation</h1>
       <p>This component is under development.</p>
     </div>
-<<<<<<< HEAD
-  )
-};
-=======
+
   );
 };
 
-<<<<<<< HEAD
-export default AIAutonomousAutomation;
-=======
-export default AIAutonomousAutomation;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

@@ -1,4 +1,4 @@
-<<<<<<<< HEAD:src_backup/components/auth/SignupForm.tsx
+<:src_backup/components/auth/SignupForm.tsx
 passwordStrength.strength >= 4 ? 'text-green-600' :
 passwordStrength.strength >= 4 ? 'text-green-600 :
 =>
@@ -23,7 +23,7 @@ passwordStrength.strength >= 4 ? text-green-600' :;
             <div className=text-xs text-gray-600 space-y-1">
               <div className="grid grid-cols-2 gap-1>
                 <span className={watchedFields.password?.length >= 8 ? 'text-green-600 : text-gray-400'}>
-<<<<<<<< HEAD:src_backup/components/auth/SignupForm.tsx
+<:src_backup/components/auth/SignupForm.tsx
                   ✓ 8+ characters
                 </span>
                 <span className={/[A-Z]/.test(watchedFields.password || ') ? text-green-600' : 'text-gray-400}>
@@ -51,7 +51,7 @@ passwordStrength.strength >= 4 ? text-green-600' :;
           </p>
         )}
 
-<<<<<<<< HEAD:src_backup/components/auth/SignupForm.tsx
+<:src_backup/components/auth/SignupForm.tsx
 
 
 =>  path: [confirmPassword"]}),
@@ -90,7 +90,7 @@ type SignupFormData = z && z.infer<typeof signupSchema>;
               <span className={cn(font-medium', passwordStrength && passwordStrength.strength >= 4 ? 'text-green-600 :}
 }
 
-<<<<<<<< HEAD:src_backup/components/auth/SignupForm.tsx
+<:src_backup/components/auth/SignupForm.tsx
 
 
 
@@ -106,7 +106,7 @@ type SignupFormData = z.infer < typeof signup_schema>;
     const is_touched = touched_fields[field_name as keyof SignupFormData];
       return <AlertCircle className="h - 4 w - 4 text - red - 500 />;
     }
-<<<<<<<< HEAD:src_backup/components/auth/SignupForm.tsx
+<:src_backup/components/auth/SignupForm.tsx
     return null;
               />;
             </div>;
@@ -228,7 +228,7 @@ type SignupFormData = z.infer < typeof signup_schema>;
       {errors.root && (<div className="p-3 text-sm text-red-600 bg-red-50 border border-red-200 rounded-md flex items-center gap-2>;
           <AlertCircle className=h-4 w-4 flex-shrink-0" />;
           {errors.root.message}
-<<<<<<<< HEAD:src_backup/components/auth/SignupForm.tsx
+<:src_backup/components/auth/SignupForm.tsx
         </div>;
       )}{/* Submit Button */}
       <Button;
@@ -249,7 +249,7 @@ type SignupFormData = z.infer < typeof signup_schema>;
           </>;
         ) : (Create Account';
         )}
-<<<<<<<< HEAD:src_backup/components/auth/SignupForm.tsx
+<:src_backup/components/auth/SignupForm.tsx
       </Button>;
     </form>;
   );

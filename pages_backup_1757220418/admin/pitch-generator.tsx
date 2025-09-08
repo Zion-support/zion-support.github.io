@@ -5,10 +5,7 @@ interface Slide {
   title: string
   content: string
   chart?: {
-<<<<<<< HEAD:pages_backup_1757220418/admin/pitch-generator.tsx
-    type: string
-    data: Array<{ label: string; value: number }>
-=======
+
     type: string;
     data: Array<{ label: string; value: number }>;
   }
@@ -205,7 +202,7 @@ export default function PitchGenerator() {
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/admin/pitch-generator.tsx
+
   }
 }
 

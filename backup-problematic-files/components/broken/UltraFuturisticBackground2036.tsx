@@ -139,14 +139,9 @@ export default function UltraFuturisticBackground2036({;
         ctx.fillStyle = `rgba(0, 255, 255, ${0.6 * multiplier})`,;
         ctx.arc(0, 0, size * 0.3, 0, Math.PI * 2),;
         ctx.restore();
-<<<<<<< HEAD
-      }
-    },;
-    const drawDataStreams = ("ctx": CanvasRenderingContext2D, "canvas": HTMLCanvasElement, "multiplier": number) => {;
-      }
-=======
+
     const drawDataStreams = (ctx: CanvasRenderingContext2D;, canvas: HTMLCanvasElement;, multiplier: number) => {;
->>>>>>> origin/chore/fix-lint-and-merge
+
       for (let i = 0, i < 5, i++) {;
         const x = canvas.width * (0.1 + i * 0.2),;
         const startY = canvas.height * 0.1,;
@@ -158,21 +153,12 @@ export default function UltraFuturisticBackground2036({;
         const streamY = startY + (endY - startY) * ((time * 0.5 + i * 0.2) % 1),;
         ctx.moveTo(x, startY),;
         ctx.lineTo(x, streamY),;
-<<<<<<< HEAD
-        ctx.stroke(),;
-        // Data packets;
-        ctx.fillStyle = `rgba(0, 255, 0, ${0.8 * multiplier})`,;`        ctx.fillRect(x - 3, streamY - 3, 6, 6),;
-        ctx.restore();
-      }
-    },;
-    const drawSpaceElements = ("ctx": CanvasRenderingContext2D, "canvas": HTMLCanvasElement, "multiplier": number) => {;
-      }
-=======
+
         // Data packets;`;
         ctx.fillStyle = `rgba(0, 255, 0, ${0.8 * multiplier})`,;
         ctx.fillRect(x - 3, streamY - 3, 6, 6),;
     const drawSpaceElements = (ctx: CanvasRenderingContext2D;, canvas: HTMLCanvasElement;, multiplier: number) => {;
->>>>>>> origin/chore/fix-lint-and-merge
+
       // Draw stars;
       for (let i = 0, i < 50 * multiplier, i++) {;
         const x = (i * 12345) % canvas.width,;

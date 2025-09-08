@@ -1,68 +1,22 @@
-<<<<<<< HEAD
-import React from \'react\';\''\'; import AdminLayout from \'@/components/admin/AdminLayout\'; export {}; return null} return(); <AdminLayout> <div className=\"space-y-4\"> <h1 className=\"text-2xl font-bold\">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
-const React from "react";"""; import AdminLayout from "@/components/admin/AdminLayout"; export {}; return null} return(); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };"""
-import _React from 'react';'''; import AdminLayout from '@/components/admin/AdminLayout'; export {}; return null} return(); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
-=======
-import _React from 'react';'''; import AdminLayout from '@/components/admin/AdminLayout'; export {}; return null} return(); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
-
-<<<<<<< HEAD
-:src.disabled/src/pages.disabled/AdminDashboard.jsx
-=======
-
-<<<<<<< HEAD
-import React from \'react\';\''\'; import AdminLayout from \'@/components/admin/AdminLayout\'; export {}; return null} return(); <AdminLayout> <div className=\"space-y-4\"> <h1 className=\"text-2xl font-bold\">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
-const React from "react";"""; import AdminLayout from "@/components/admin/AdminLayout"; export {}; return null} return(); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };"""
-:src.disabled/src/pages.disabled/AdminDashboard.jsx
-import React from \'react\';\''\'; import AdminLayout from \'@/components/admin/AdminLayout\'; export {}; return null} return(); <AdminLayout> <div className=\"space-y-4\"> <h1 className=\"text-2xl font-bold\">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
-const React from "react";"""; import AdminLayout from "@/components/admin/AdminLayout"; export {}; return null} return(); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };"""
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-import React from \'react\';\''\'; import AdminLayout from \'@/components/admin/AdminLayout\'; export {}; return null} return(); <AdminLayout> <div className=\"space-y-4\"> <h1 className=\"text-2xl font-bold\">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
-const React from "react";"""; import AdminLayout from "@/components/admin/AdminLayout"; export {}; return null} return(); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };"""
-:temp_exclude/src.disabled/src/pages.disabled/AdminDashboard.jsx
-import _React from 'react';'''; import AdminLayout from '@/components/admin/AdminLayout'; export {}; return null} return(); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
-=======
-=======
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-import React from \'react\';\''\'; import AdminLayout from \'@/components/admin/AdminLayout\'; export {}; return null} return(); <AdminLayout> <div className=\"space-y-4\"> <h1 className=\"text-2xl font-bold\">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
-const React from "react";"""; import AdminLayout from "@/components/admin/AdminLayout"; export {}; return null} return(); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };"""
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-import React from \'react\';\''\'; import AdminLayout from \'@/components/admin/AdminLayout\'; export {}; return null} return(); <AdminLayout> <div className=\"space-y-4\"> <h1 className=\"text-2xl font-bold\">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
-const React from "react";"""; import AdminLayout from "@/components/admin/AdminLayout"; export {}; return null} return(); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };"""
-:temp_exclude/src.disabled/src/pages.disabled/AdminDashboard.jsx
 
 import _React from 'react';'''; import AdminLayout from '@/components/admin/AdminLayout'; export {}; return null} return(); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
-<<<<<<< HEAD
 
-=======
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 import React from \'react\';\''\'; import AdminLayout from \'@/components/admin/AdminLayout\'; export {}; return null} return (); <AdminLayout> <div className=\"space-y-4\"> <h1 className=\"text-2xl font-bold\">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
 const React from "react";"""; import AdminLayout from "@/components/admin/AdminLayout"; export {}; return null} return (); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };"""
 
 import _React from 'react';'''; import AdminLayout from '@/components/admin/AdminLayout'; export {}; return null} return (); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import _React from 'react';'''; import AdminLayout from '@/components/admin/AdminLayout'; export {}; return null} return (); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };import _React from 'react';'''; import AdminLayout from '@/components/admin/AdminLayout'; export {}; return null} return (); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }"
-}
-=======
+
 import React from \'react\';\''\'; import AdminLayout from \'@/components/admin/AdminLayout\'; export {}; return null} return (); <AdminLayout> <div className=\"space-y-4\"> <h1 className=\"text-2xl font-bold\">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
 const React from "react";"""; import AdminLayout from "@/components/admin/AdminLayout"; export {}; return null} return (); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };"""
 import _React from 'react';'''; import AdminLayout from '@/components/admin/AdminLayout'; export {}; return null} return (); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
->>>>>>> origin/chore/fix-lint-and-merge
+
 
 import _React from 'react';'''; import AdminLayout from '@/components/admin/AdminLayout'; export {}; return null} return(); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
 import _React from 'react';'''; import AdminLayout from '@/components/admin/AdminLayout'; export {}; return null} return (); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
 
 import _React from 'react';'''; import AdminLayout from '@/components/admin/AdminLayout'; export {}; return null} return(); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
-=======
-import _React from 'react';'''; import AdminLayout from '@/components/admin/AdminLayout'; export {}; return null} return(); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+
+

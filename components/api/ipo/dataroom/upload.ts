@@ -1,381 +1,16 @@
-<<<<<<< HEAD
-
-import formidable from 'formidable';
-import fs from 'fs';
-import path from 'path';
-
-import formidable from 'formidable';
-import fs from 'fs';
-import path from 'path';
-
-  const form = formidable({ multiples: false }),
-=======
-<<<<<<< HEAD
-;
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
 
 
-import type { NextApiRequest, NextApiResponse } from 'next';
-import type { NextApiRequest, NextApiResponse } from 'next',
-import type { NextApiRequest, NextApiResponse } from 'next';
-=======
-
-pr-12243
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import type { NextApiRequest, NextApiResponse } from 'next',
-import type { NextApiRequest, NextApiResponse } from 'next';
-import formidable from 'formidable';
-=======
-
-;
-import type { NextApiRequest, NextApiResponse } from 'next';
-import type { NextApiRequest, NextApiResponse } from 'next',import formidable from 'formidable';
->>>>>>> origin/chore/fix-lint-and-merge
-import fs from 'fs';
-import path from 'path';
-    )fs && fs.copyFileSync(file && file.filepath, targetPath)appendAuditLog({if (!file || !file.filepath) return res.status(400).json({ error: 'File missing',}
-})import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
-export const config = { api: { bodyParser: false,}
-};
-}
-
-export default function handler() {if (req.method !== 'POST')return res.status(405).json({ error: 'Method not allowed' })if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed',}
-})import { appendAuditLog, resolveDataPath  } from '../../../../utils/api/storage';
-
-export const config  = null;
-
-const form = formidable({ multiples: false,}
-})form.parse(req, (err, fields, files) => {if (err);}
-  return res.status(400).json({ error: 'Invalid form data',}
-})const section = String(fields.section |'General';
-  const file = files.file as formidable.File | undefined;
-  if (req && req.method !== 'POST')return res && res.status(405).json({ error: 'Method not allowed' })if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' })const form = formidable({ multiples: false,}
-})form && form.parse(req, (err, fields, files) => {if (err);}
-  return res && res.status(400).json({ error: 'Invalid form data',}
-})const section = String(fields && fields.section || 'General';
-  const file = files && files.file as formidable && formidable.File | undefined;
-    if (!file || !file && file.filepath)return res && res.status(400).json({ error: 'File missing',}
-})const targetDir = resolveDataPath(path && path.join('dataroom', section))if (!fs && fs.existsSync(targetDir)) fs && fs.mkdirSync(targetDir, { recursive: true,}
-})const targetPath = path && path.join(targetDir,file && file.originalFilename || path && path.basename(file && file.filepath))fs && fs.copyFileSync(file && file.filepath, targetPath)appendAuditLog({res.status(200).json({ ok: true,}
-})type: 'file_upload',section,name: path && path.basename(targetPath)if (!file || !file.filepath;
-  return res.status(400).json({ error: 'File missing',}
-})const targetDir = resolveDataPath(path.join('dataroom', section))if (!fs.existsSync(targetDir)) fs.mkdirSync(targetDir, { recursive: true,}
-};
-  const targetPath = path.join(targetDir;
-      file.originalFilename |path.basename(file.filepath))fs && fs.copyFileSync(file && file.filepath, targetPath)appendAuditLog({if (!file || !file.filepath) return res.status(400).json({ error: 'File missing',}
-})type: 'file_upload';
-      section;
-      name: path.basename(targetPath)})res.status(200).json({ ok: true })})res.status(200).json({ ok: true,}
-})type: 'file_upload',section,name: path && path.basename(targetPath)})res && res.status(200).json({ ok: true },
-})appendAuditLog({ type: 'file_upload', section, name: path && path.basename(targetPath) })res && res.status(200).json({ ok: true })})})}}})})},
-})import { appendAuditLog, resolveDataPath  } from '../../../../utils / api / storage';
-
-export const config = { api: { body_parser: false,}
-};
-}
-
-export default /**;
- * handler - Function description;
- */;
-function handler() {if (return res.status (405).json ({ error: 'Method not allowed',}
-})) {$2;}
-}  if (return res.status (405).json ({ error: 'Method not allowed',}
-})) {$2;
-import formidable from 'formidable';
-import fs from 'fs';
-import path from 'path';
-
-import formidable from 'formidable';
-
-
-pr-12243
-
-<<<<<<< HEAD
-=======
-import formidable from 'formidable';
-
->>>>>>> origin/chore/fix-lint-and-merge
-
-    );
-    fs && fs.copyFileSync(file && file.filepath, targetPath);
-    appendAuditLog({
-<<<<<<< HEAD
-
-    if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
-
-
-import {appendAuditLog, resolveDataPath} from '../../../../utils/api/storage';
-export const config = { api: { bodyParser: false } }
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import formidable from 'formidable';
-import fs from 'fs';
-import path from 'path';
-
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-  const form = formidable({ multiples: false }),
-=======
-<<<<<<< HEAD
-import {appendAuditLog, resolveDataPath} from '../../../../utils/api/storage';
-export const config = { api: { bodyParser: false } }
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-  const form = formidable({ multiples: false });
->>>>>>> merged-prs-20250907-203621
   form.parse(req, (err, fields, files) => {
     if (err) return res.status(400).json({ error: 'Invalid form data' });
     const section = String(fields.section |'General');
     const file = files.file as formidable.File | undefined;
-<<<<<<< HEAD
-  if (req && req.method !== 'POST')
-    return res && res.status(405).json({ error: 'Method not allowed' });  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
-
-=======
-<<<<<<< HEAD
-    if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
 
 
-import {appendAuditLog, resolveDataPath} from '../../../../utils/api/storage;
-export const config = { api: { bodyParser: false } }
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== POST');
-    return res.status(405).json({ error: 'Method not allowed });  if (req.method !== POST') return res.status(405).json({ error: 'Method not allowed });
-
-  form.parse(req, (err, fields, files) => {
-    if (err) return res.status(400).json({ error: Invalid form data' });
-    const section = String(fields.section |'General);
-    const file = files.file as formidable.File | undefined;
-
-
-import formidable from formidable';
-import fs from 'fs;
-import path from path';
-
-import formidable from 'formidable';
-import fs from 'fs';
-import path from 'path';
-import {appendAuditLog, resolveDataPath} from '../../../../utils/api/storage';
-export const config = { api: { bodyParser: false ;} }
-export default function handler(req: NextApiRequest;, res: NextApiResponse) {
-  if (req.method !== 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-import formidable from 'formidable';
-import fs from 'fs';
-import path from 'path';
-import formidable from 'formidable';
-import fs from 'fs';
-import path from 'path';
-import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
-export const config = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243
-=======
-  if (req && req.method !== 'POST')
-    return res && res.status(405).json({ error: 'Method not allowed' });  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
->>>>>>> merged-prs-20250907-203621
-  const form = formidable({ multiples: false });
-  form && form.parse(req, (err, fields, files) => {
-    if (err) return res && res.status(400).json({ error: 'Invalid form data' });
-    const section = String(fields && fields.section || 'General');
-    const file = files && files.file as formidable && formidable.File | undefined;
-    if (!file || !file && file.filepath)
-      return res && res.status(400).json({ error: 'File missing' });
-<<<<<<< HEAD
-
-=======
->>>>>>> merged-prs-20250907-203621
-    const targetDir = resolveDataPath(path && path.join('dataroom', section));
-    if (!fs && fs.existsSync(targetDir)) fs && fs.mkdirSync(targetDir, { recursive: true });
-    const targetPath = path && path.join(
       targetDir,
       file && file.originalFilename || path && path.basename(file && file.filepath)
     );
     fs && fs.copyFileSync(file && file.filepath, targetPath);
-    appendAuditLog({
-<<<<<<< HEAD
 
-=======
-    if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
-    );
-    fs && fs.copyFileSync(file && file.filepath, targetPath);
-    appendAuditLog({
-
-
-
-    if (!file || !file.filepath) return res.status(400).json({ "error": 'File missing','
-});
-
-  const form = formidable({ multiples: false });
-  form.parse(req, (err, fields, files) => {'
-    if (err) return res.status(400).json({ error: 'Invalid form data' });'
-    const section = String(fields.section |'General');
-    const file = files.file as formidable.File | undefined;'
-  if (req && req.method !== 'POST')'
-return res && res.status(405).json({ "error": 'Method not allowed',;'
-});  if (req && req.method !== 'POST') return res && res.status(405).json({ "error": 'Method not allowed','
-});
-
-  const form = formidable({ multiples: false });
-  form && form.parse(req, (err, fields, files) => {'
-    if (err) return res && res.status(400).json({ error: 'Invalid form data' });'
-    const section = String(fields && fields.section || 'General');
-    const file = files && files.file as formidable && formidable.File | undefined;
-    if (!file || !file && file.filepath)'
-      return res && res.status(400).json({ error: 'File missing' });
-'
-    const targetDir = resolveDataPath(path && path.join('dataroom', section));
-    if (!fs && fs.existsSync(targetDir)) fs && fs.mkdirSync(targetDir, { recursive: true });
-    const targetPath = path && path.join(
-      targetDir,
-      file && file.originalFilename || path && path.basename(file && file.filepath)
-if (!file || !file.filepath)
-      return res.status(400).json({ error: 'File missing' });
-    const targetDir = resolveDataPath(path.join('dataroom', section));
-    if (!fs.existsSync(targetDir)) fs.mkdirSync(targetDir, { recursive: true });
-    const targetPath = path.join(
-      targetDir
-      file.originalFilename |path.basename(file.filepath)
-origin/cursor/automate-test-improve-and-merge-code-2533
-    );
-    fs && fs.copyFileSync(file && file.filepath, targetPath);
-    appendAuditLog({
-
-
-    if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
-
-      type: 'file_upload'
-      section
-      name: path.basename(targetPath)
-    });
-    res.status(200).json({ ok: true });
-  });
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243
-  if (req && req.method !== 'POST')
-    return res && res.status(405).json({ error: 'Method not allowed' });  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
-
-  const form = formidable({ multiples: false });
-  form.parse(req, (err, fields, files) => {
-    if (err) return res.status(400).json({ error: 'Invalid form data' });
-    const section = String(fields.section |General');
-
-if (!file || !file.filepath)
-      return res.status(400).json({ error: 'File missing });
-    const targetDir = resolveDataPath(path.join(dataroom', section));
-    if (!fs.existsSync(targetDir)) fs.mkdirSync(targetDir, { recursive: true });
-    const targetPath = path.join(
-      targetDir
-      file.originalFilename |path.basename(file.filepath)
-origin/cursor/automate-test-improve-and-merge-code-2533
-    );
-    fs && fs.copyFileSync(file && file.filepath, targetPath);
-
-  if (req && req.method !== 'POST)
-    return res && res.status(405).json({ error: Method not allowed' });  if (req && req.method !== 'POST) return res && res.status(405).json({ error: Method not allowed' });
-
-  form && form.parse(req, (err, fields, files) => {
-    if (err) return res && res.status(400).json({ error: 'Invalid form data });
-    const section = String(fields && fields.section || General');
-    const file = files && files.file as formidable && formidable.File | undefined;
-    if (!file || !file && file.filepath)
-      return res && res.status(400).json({ error: 'File missing });
-
-    const targetDir = resolveDataPath(path && path.join(dataroom', section));
-    if (!fs && fs.existsSync(targetDir)) fs && fs.mkdirSync(targetDir, { recursive: true });
-    const targetPath = path && path.join(
-=======
-}
-    if (!file || !file.filepath) return res.status(400).json({ error: 'File missing',}
-});
-
-const form = formidable({ multiples: false,}
-});
-  form.parse(req, (err, fields, files) => {}
-    if (err) return res.status(400).json({ error: 'Invalid form data',}
-});
-
-const section = String(fields.section |'General');
-
-const file = files.file as formidable.File | undefined;
-  if (req && req.method !== 'POST')
-    return res && res.status(405).json({ error: 'Method not allowed',}
-});  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed',}
-});
-
-const form = formidable({ multiples: false,}
-});
-  form && form.parse(req, (err, fields, files) => {}
-    if (err) return res && res.status(400).json({ error: 'Invalid form data',}
-});
-
-const section = String(fields && fields.section || 'General');
-
-const file = files && files.file as formidable && formidable.File | undefined;
-    if (!file || !file && file.filepath)
-      return res && res.status(400).json({ error: 'File missing',}
-});
-
-const targetDir = resolveDataPath(path && path.join('dataroom', section));
-    if (!fs && fs.existsSync(targetDir)) fs && fs.mkdirSync(targetDir, { recursive: true,}
-});
-
-const targetPath = path && path.join(
->>>>>>> origin/chore/fix-lint-and-merge
-      targetDir,
-      file && file.originalFilename || path && path.basename(file && file.filepath)
-    );
-    fs && fs.copyFileSync(file && file.filepath, targetPath);
-<<<<<<< HEAD
-    appendAuditLog({
-
-
-
-
-
-      type: 'file_upload'
-      section
-      name: path.basename(targetPath)
-    });
-    res.status(200).json({ ok: true });
-  });
-
-    if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> merged-prs-20250907-203621
-    res.status(200).json({ ok: true })
-      type: 'file_upload',
-      section,
-      name: path && path.basename(targetPath),
-    });
-    res && res.status(200).json({ ok: true });
-  });    appendAuditLog({ type: 'file_upload', section, name: path && path.basename(targetPath) });
-<<<<<<< HEAD
-    res && res.status(200).json({ ok: true })
-=======
     if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
     res.status(200).json({ ok: true })
     appendAuditLog({}
@@ -386,44 +21,7 @@ const targetPath = path && path.join(
     res && res.status(200).json({ ok: true });'
   });    appendAuditLog({ type: 'file_upload, section, name: path && path.basename(targetPath) });
     res && res.status(200).json({ ok: true })
-<<<<<<< HEAD
-  })
-=======
 
-    res.status(200).json({ ok: true })
-    appendAuditLog({}
-    res.status(200).json({ ok: true })'
-      type: 'file_upload',
-      section,
-      name: path && path.basename(targetPath),
-    });
-    res && res.status(200).json({ ok: true });'
-  });    appendAuditLog({ type: 'file_upload', section, name: path && path.basename(targetPath) });
-    res && res.status(200).json({ ok: true })
-  })
-
-  })
-
-=======
-    appendAuditLog({}
-    if (!file || !file.filepath) return res.status(400).json({ error: 'File missing',}
-});
-
-    res.status(200).json({ ok: true,}
-})
-      type: 'file_upload',
-      section,
-      name: path && path.basename(targetPath)
-   ,
-});
-    res && res.status(200).json({ ok: true,}
-});
-  });    appendAuditLog({ type: 'file_upload', section, name: path && path.basename(targetPath),}
-});
-    res && res.status(200).json({ ok: true })
->>>>>>> origin/chore/fix-lint-and-merge
-
->>>>>>> merged-prs-20250907-203621
 
   })
 
@@ -443,57 +41,15 @@ const targetPath = path && path.join(
 
 }
 
-<<<<<<< HEAD
-}
+
+
 
 import {appendAuditLog, resolveDataPath} from '../../../../utils / api / storage';
 ;
-export const config = { api: { body_parser: false } }
-=======
-<<<<<<< HEAD
-}
 
-=======
-<<<<<<< HEAD
-const form = formidable ({ multiples: false,}
-})form.parse (req, (err, fields, files) => {if ;}
-  return res.status (400).json ({ error: 'Invalid form data',}
-})) {$2;}
-}
 
-const section = String (fields.section || 'General';
-  const file = files.file as formidable.File | undefined;
-    if (return res.status (400).json ({ error: 'File missing',}
-})) {$2;}
-}
->>>>>>> origin/chore/fix-lint-and-merge
-  })
-  })
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-import {appendAuditLog, resolveDataPath} from '../../../../utils / api / storage';
-;
 
-<<<<<<< HEAD
-export const config = { "api": { "body_parser": false }
-}
->>>>>>> merged-prs-20250907-203621
-;
-import {appendAuditLog, resolveDataPath} from ../../../../utils / api / storage';
-export const config = { api: { body_parser: false }}
-export default /**
- * handler - Function description
- */
-function handler() {
-  if (
-<<<<<<< HEAD
-    return res.status (405).json ({ error: 'Method not allowed' })) {
-  $2
-}  if (return res.status (405).json ({ error: 'Method not allowed' })) {
-=======
 
->>>>>>> merged-prs-20250907-203621
   $2
 }
   const form = formidable ({ multiples: false });
@@ -511,8 +67,7 @@ function handler() {
   $2
 }
     const target_path = path.join (
-<<<<<<< HEAD
-=======
+
 export default /**
  * handler - Function description
 export const config = { api: { body_parser: false } };
@@ -526,133 +81,15 @@ export default /**;
 }  if (return res.status (405).json ({ error: 'Method not allowed' })) {}
   $2,}
 
-=======
-export const config = { api: { body_parser: false }}
 
-export default /**
- * handler - Function description;
- */
-function handler() {}
-  if (}
-    return res.status (405).json ({ error: 'Method not allowed' })) {}
-  $2}
-}  if (return res.status (405).json ({ error: 'Method not allowed' })) {}
-  $2,}
-}
->>>>>>> origin/chore/fix-lint-and-merge
-
-const target_dir = resolveDataPath (path.join ('dataroom', section))if () fs.mkdir_sync (target_dir, { recursive: true,}
-})) {$2;}
-}
-
-const target_path = path.join (target_dir,file.original_filename || path.basename (file.filepath))fs.copyFileSync (file.filepath, target_path)appendAuditLog ({type: 'file_upload',section,name: path.basename (target_path)name: path.basename (target_path)name: path.basename (target_path)})res.status (200).json ({ ok: true },
-})appendAuditLog ({ type: 'file_upload', section, name: path.basename (target_path) })res.status (200).json ({ ok: true })})}},
-}ursor/fix-website-loading-errors-and-merge-6662;
-}
-}
-}
-
-const section = String (fields.section || 'General');
-
-const file = files.file as formidable.File | undefined;
-    if (
-      return res.status (400).json ({ error: 'File missing' })) {}
-  $2,}
-<<<<<<< HEAD
-
-const target_dir = resolveDataPath (path.join ('dataroom', section))
-    if () fs.mkdir_sync (target_dir, { recursive: true })) {}
-  $2,}
-
-const target_path = path.join (
-  $2;
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-}
-
-const target_dir = resolveDataPath (path.join ('dataroom', section));
-    if () fs.mkdir_sync (target_dir, { recursive: true })) {}
-  $2,}
-}
-<<<<<<< HEAD
-    const target_path = path.join (
-=======
-
-const target_path = path.join (
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
       target_dir,
       file.original_filename || path.basename (file.filepath));
     fs.copyFileSync (file.filepath, target_path);
     appendAuditLog ({
       type: 'file_upload',
       section,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-      name: path.basename (target_path),
-    });
-    res.status (200).json ({ ok: true });
-  });    appendAuditLog ({ type: 'file_upload', section, name: path.basename (target_path) });
-    res.status (200).json ({ ok: true });
-  });
-
-}
-
-<<<<<<< HEAD
-=======
-ursor/fix-website-loading-errors-and-merge-6662
-
-}
 
 
 
 
-=======
-      name: path.basename (target_path)}
-   ,}
-});
-    res.status (200).json ({ ok: true,}
-});
-  });    appendAuditLog ({ type: 'file_upload', section, name: path.basename (target_path),}
-});
-    res.status (200).json ({ ok: true,}
-});
-  });
-}
->>>>>>> origin/chore/fix-lint-and-merge
 
-
-}
-}
-<<<<<<< HEAD
-      name: path.basename (target_path)}
-   }
-})
-    res.status (200).json ({ ok: true}
-})
-  });    appendAuditLog ({ type: 'file_upload', section, name: path.basename (target_path)}
-})
-    res.status (200).json ({ ok: true}
-})
-  })
-}
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-<<<<<<< HEAD
-
-}
-}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621

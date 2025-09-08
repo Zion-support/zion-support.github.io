@@ -86,12 +86,9 @@ class BuildOptimizer {;
     d: optimized';,
       '"build": production': 'NODE_ENV=production npm run buil;
       '"build": fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint',
-<<<<<<< HEAD
-      '"dev": optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo'
-    console.log('🔧 Optimizing package.json scripts...');
-=======
+
       '"dev": optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo
->>>>>>> origin/chore/fix-lint-and-merge
+
     if (fs.existsSync(packagePath)) {;
       // Add optimized build scripts;
       const optimizedScripts = {';"build": optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build', ';"build": analyze': 'ANALYZE=true npm run build: optimized';, ';"build": production': 'NODE_ENV=production npm run build: optimized';, ';"build": fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint', ';"dev": optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo', ';"start": optimized': 'NODE_ENV=production next start -p 3000'}

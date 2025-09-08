@@ -35,26 +35,7 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
             <FileText className="h-12 w-12 text-muted-foreground/50" />;"
 
           </div>;
-<<<<<<< HEAD
-      </div>;"
-      <CardContent className="flex-grow pt-6">;"
-        <div className="space-y-2">;"
-          <h3 className="font-semibold text-lg">{project.title}</h3>;""
-            <p className="text-sm text-muted-foreground line-clamp-3">{project.description}</p>;""
-            <div className="flex flex-wrap gap-1 mt-2">;"
-                <Badge key={index} variant="secondary" className="text-xs">;"
-)
-                ;              ))}
-      ;"
-      <CardFooter className="flex justify-between border-t bg-muted/40 p-4">;"
-        <div className="flex gap-2">;"
-            <a href={project.github_url} target="_blank" rel="noopener noreferrer">;"
-</a>"
-              <Button variant="ghost" size="icon">;"
-                <Github className="h-4 w-4" />;"
 
-            </a>;"
-=======
         )}
       </div>;
       ;
@@ -85,7 +66,7 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
                 <Github className="h-4 w-4" />;
               </Button>;
             </a>;
-<<<<<<< HEAD
+
           )}
           ;
           {project.demo_url && (;
@@ -138,4 +119,4 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
   setDeleteDialogOpen 
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Project</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this project? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) 
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

@@ -1,19 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 
-<<<<<<< HEAD
-<<<<<<< HEAD:pages/guides.tsx
-export default function Guides() {
-=======
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-=======
 
-<<<<<<< HEAD:pages.disabled/guides.tsx
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/guides.tsx
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -32,565 +21,30 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD:pages.disabled/guides.tsx
-=======
 
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/guides.tsx
+
+
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
-<<<<<<< HEAD:pages.disabled/guides.tsx
-return (
-=======
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-ursor/integrate-build-improve-and-re-verify-8f7d
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import Layout from './components/Layout';
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import Layout from "./components/Layout";
-origin/main
-origin/automation-improvements-final
-import {
-  BookOpen
-  Clock
-  User
-  ArrowRight
-  CheckCircle
-  Star
-  Play
-  Download
-  ExternalLink
-  Code
-  Database
-  Cloud
-  Shield
-  Zap
-  Brain
-  Globe
-  Smartphone
-  Monitor
-  Server
-  Bot
-  Microscope
-  Layers
-  Workflow
-  FileText
-  Image
-  Video
-  Music
-  Palette
-  Search
-  Filter
-  Settings
-  Wrench
-  Cog
-  Activity
-  PieChart
-  BarChart
-  TrendingUp
-  DollarSign
-  ShoppingCart
-  Home
-  Trash2
-  Camera
-  Heart
-  ClipboardList
-  TreePine
-  Droplets
-  Award
-  Building
-  Rocket
-  Lightbulb
-  Target
-  Users
-  Phone
-  Mail
-  MapPin
-  MessageSquare
-  HelpCircle
-  Info
-  AlertCircle
-  CheckCircle2
-  XCircle
-  Plus
-  Minus
-  ChevronUp
-  ChevronRight
-  ChevronLeft
-  ChevronDown
-  ArrowUp
-  ArrowDown
-  ArrowLeft
-  Pause
-  Stop
-  SkipForward
-  SkipBack
-  Volume2
-  VolumeX
-  Maximize
-  Minimize
-  RotateCcw
-  RotateCw
-  RefreshCw
-  Upload
-  Share
-  Copy
-  Edit
-  Trash
-  Save
-  Lock
-  Unlock
-  EyeOff
-  Bell
-  BellOff
-  Star as StarIcon
-  Heart as HeartIcon
-  ThumbsUp
-  ThumbsDown
-  MessageCircle
-  Send
-  Paperclip
-  Smile
-  Frown
-  Meh
-  Laugh
-  Angry
-  Sad
-  Surprised
-  Wink
-  Kiss
-  Tongue
-  Wink2
-  KissWinkHeart
-  KissClosedEyes
-  StuckOutTongue
-  StuckOutTongueWinkingEye
-  StuckOutTongueClosedEyes
-  Disappointed
-  Worried
-  Angry2
-  Rage
-  Cry
-  Scream
-  Confounded
-  Hugging
-  Smirk
-  NoMouth
-  NeutralFace
-  Expressionless
-  Unamused
-  RollingEyes
-  Thinking
-  LyingFace
-  HandOverMouth
-  ShushingFace
-  ExplodingHead
-  CowboyHatFace
-  DisguisedFace
-  Sunglasses
-  NerdFace
-  MonocleFace
-  Confused
-  WorriedFace
-  SlightlyFrowningFace
-  OpenMouth
-  Hushed
-  Astonished
-  Flushed
-  PleadingFace
-  FrowningFace
-  AnguishedFace
-  FearfulFace
-  ColdSweat
-  DisappointedRelieved
-  CryFace
-  LoudlyCryingFace
-  ScreamFace
-  StuckOutTongueFace
-  DroolingFace
-  UnamusedFace
-  SweatSmile
-  Sweat
-  WearyFace
-  TiredFace
-  SleepyFace
-  YawningFace
-  DizzyFace
-  ExplodingHeadFace
-  CowboyHatFace2
-  DisguisedFace2
-  SunglassesFace
-  NerdFace2
-  MonocleFace2
-  ConfusedFace
-  WorriedFace2
-  SlightlyFrowningFace2
-  OpenMouthFace
-  HushedFace
-  AstonishedFace
-  FlushedFace
-  PleadingFace2
-  FrowningFace2
-  AnguishedFace2
-  FearfulFace2
-  ColdSweatFace
-  DisappointedRelievedFace
-  CryFace2
-  LoudlyCryingFace2
-  ScreamFace2
-  StuckOutTongueFace2
-  DroolingFace2
-  UnamusedFace2
-  SweatSmileFace
-  SweatFace
-  WearyFace2
-  TiredFace2
-  SleepyFace2
-  YawningFace2
-  DizzyFace2
-  BookOpen,
-  Clock,
-  User,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Play,
-  Download,
-  ExternalLink,
-  Code,
-  Database,
-  Cloud,
-  Shield,
-  Zap,
-  Brain,
-  Globe,
-  Smartphone,
-  Monitor,
-  Server,
-  Bot,
-  Microscope,
-  Layers,
-  Workflow,
-  FileText,
-  Image,
-  Video,
-  Music,
-  Palette,
-  Search,
-  Filter,
-  Settings,
-  Wrench,
-  Cog,
-  Activity,
-  PieChart,
-  BarChart,
-  TrendingUp,
-  DollarSign,
-  ShoppingCart,
-  Home,
-  Trash2,
-  Camera,
-  Heart,
-  ClipboardList,
-  TreePine,
-  Droplets,
-  Award,
-  Building,
-  Rocket,
-  Lightbulb,
-  Target,
-  Users,
-  Phone,
-  Mail,
-  MapPin,
-  MessageSquare,
-  HelpCircle,
-  Info,
-  AlertCircle,
-  CheckCircle2,
-  XCircle,
-  Plus,
-  Minus,
-  ChevronUp,
-  ChevronRight,
-  ChevronLeft,
-  ChevronDown,
-  ArrowUp,
-  ArrowDown,
-  ArrowLeft,
-  Pause,
-  Stop,
-  SkipForward,
-  SkipBack,
-  Volume2,
-  VolumeX,
-  Maximize,
-  Minimize,
-  RotateCcw,
-  RotateCw,
-  RefreshCw,
-  Upload,
-  Share,
-  Copy,
-  Edit,
-  Trash,
-  Save,
-  Lock,
-  Unlock,
-  EyeOff,
-  Bell,
-  BellOff,
-  Star as StarIcon,
-  Heart as HeartIcon,
-  ThumbsUp,
-  ThumbsDown,
-  MessageCircle,
-  Send,
-  Paperclip,
-  Smile,
-  Frown,
-  Meh,
-  Laugh,
-  Angry,
-  Sad,
-  Surprised,
-  Wink,
-  Kiss,
-  Tongue,
-  Wink2,
-  KissWinkHeart,
-  KissClosedEyes,
-  StuckOutTongue,
-  StuckOutTongueWinkingEye,
-  StuckOutTongueClosedEyes,
-  Disappointed,
-  Worried,
-  Angry2,
-  Rage,
-  Cry,
-  Scream,
-  Confounded,
-  Hugging,
-  Smirk,
-  NoMouth,
-  NeutralFace,
-  Expressionless,
-  Unamused,
-  RollingEyes,
-  Thinking,
-  LyingFace,
-  HandOverMouth,
-  ShushingFace,
-  ExplodingHead,
-  CowboyHatFace,
-  DisguisedFace,
-  Sunglasses,
-  NerdFace,
-  MonocleFace,
-  Confused,
-  WorriedFace,
-  SlightlyFrowningFace,
-  OpenMouth,
-  Hushed,
-  Astonished,
-  Flushed,
-  PleadingFace,
-  FrowningFace,
-  AnguishedFace,
-  FearfulFace,
-  ColdSweat,
-  DisappointedRelieved,
-  CryFace,
-  LoudlyCryingFace,
-  ScreamFace,
-  StuckOutTongueFace,
-  DroolingFace,
-  UnamusedFace,
-  SweatSmile,
-  Sweat,
-  WearyFace,
-  TiredFace,
-  SleepyFace,
-  YawningFace,
-  DizzyFace,
-  ExplodingHeadFace,
-  CowboyHatFace2,
-  DisguisedFace2,
-  SunglassesFace,
-  NerdFace2,
-  MonocleFace2,
-  ConfusedFace,
-  WorriedFace2,
-  SlightlyFrowningFace2,
-  OpenMouthFace,
-  HushedFace,
-  AstonishedFace,
-  FlushedFace,
-  PleadingFace2,
-  FrowningFace2,
-  AnguishedFace2,
-  FearfulFace2,
-  ColdSweatFace,
-  DisappointedRelievedFace,
-  CryFace2,
-  LoudlyCryingFace2,
-  ScreamFace2,
-  StuckOutTongueFace2,
-  DroolingFace2,
-  UnamusedFace2,
-  SweatSmileFace,
-  SweatFace,
-  WearyFace2,
-  TiredFace2,
-  SleepyFace2,
-  YawningFace2,
-  DizzyFace2,;
-} from "lucide-react";
-const guides = [;
-  {;
-    id: 1,;
-    title: "Getting Started with AI Development",;
-    description:;
-      "Learn the fundamentals of AI development and how to build your first AI application.",;
-    category: "AI Development",;
-    difficulty: "Beginner",;
-    readTime: "15 min read",;
-    author: "Zion Tech Team",;
-    rating: 4 && 4.8,;
-    students: 1250,;
-    image: "/images/guides/ai-development && development.jpg",;
-    icon: Brain,;
-    tags: ["AI", "Machine Learning", "Python", "TensorFlow"],;
-  },;
-  {;
-    id: 2,;
-    title: "Cloud Infrastructure Setup",;
-    description:;
-      "Complete guide to setting up scalable cloud infrastructure for your applications.",;
-    category: "Cloud Computing",;
-    difficulty: "Intermediate",;
-    readTime: "25 min read",;
-    author: "Cloud Experts",;
-    rating: 4 && 4.9,;
-    students: 980,;
-    image: "/images/guides/cloud-infrastructure && infrastructure.jpg",;
-    icon: Cloud,;
-    tags: ["AWS", "Docker", "Kubernetes", "DevOps"],;
-  },;
-  {;
-    id: 3,;
-    title: "Cybersecurity Best Practices",;
-    description:;
-      "Essential cybersecurity practices to protect your applications and data.",;
-    category: "Security",;
-    difficulty: "Advanced",;
-    readTime: "30 min read",;
-    author: "Security Team",;
-    rating: 4 && 4.7,;
-    students: 750,;
-    image: "/images/guides/cybersecurity && cybersecurity.jpg",;
-    icon: Shield,;
-    tags: ["Security", "Encryption", "Authentication", "Compliance"],;
-  },;
-  {;
-    id: 4,;
-    title: "Mobile App Development",;
-    description:;
-      "Build cross-platform mobile applications with modern frameworks.",;
-    category: "Mobile Development",;
-    difficulty: "Intermediate",;
-    readTime: "20 min read",;
-    author: "Mobile Team",;
-    rating: 4 && 4.6,;
-    students: 1100,;
-    image: "/images/guides/mobile-development && development.jpg",;
-    icon: Smartphone,;
-    tags: ["React Native", "Flutter", "iOS", "Android"],;
-  },;
-  {;
-    id: 5,;
-    title: "Database Design & Optimization",;
-    description:;
-      "Learn database design principles and optimization techniques.",;
-    category: "Database",;
-    difficulty: "Intermediate",;
-    readTime: "22 min read",;
-    author: "Database Team",;
-    rating: 4 && 4.8,;
-    students: 890,;
-    image: "/images/guides/database-design && design.jpg",;
-    icon: Database,;
-    tags: ["SQL", "NoSQL", "Performance", "Scaling"],;
-  },;
-  {;
-    id: 6,;
-    title: "Web Performance Optimization",;
-    description:;
-      "Optimize your web applications for maximum performance and user experience.",;
-    category: "Performance",;
-    difficulty: "Advanced",;
-    readTime: "18 min read",;
-    author: "Performance Team",;
-    rating: 4 && 4.9,;
-    students: 650,;
-    image: "/images/guides/web-performance && performance.jpg",;
-    icon: Zap,;
-    tags: ["Performance", "Optimization", "Caching", "CDN"],;
-  },;
-];
-const categories = [;
-  { name: "All", count: guides && guides.length, icon: Globe },;
-  { name: "AI Development", count: 1, icon: Brain },;
-  { name: "Cloud Computing", count: 1, icon: Cloud },;
-  { name: "Security", count: 1, icon: Shield },;
-  { name: "Mobile Development", count: 1, icon: Smartphone },;
-  { name: "Database", count: 1, icon: Database },;
-  { name: "Performance", count: 1, icon: Zap },;
-];
-export default function GuidesPage() {
-
-interface GuidesProps {
-  className?: string;
-}
-
-const Guides: React.FC<GuidesProps> = ({ className }) => {
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/guides.tsx
     <Layout>;
       <Head>;
         <title>Guides & Tutorials - Zion Tech Group</title>;
         <meta
           name="description"
           content="Master the latest technologies with our comprehensive guides, tutorials, and best practices from industry experts."
-<<<<<<< HEAD
-        />;
-      </Head>;
-      <div className="min-h-screen bg-gray-50">;
-=======
+
 
         />;
       </Head>;
       <div className="min-h-screen bg-gray-50">;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
           <div className="container mx-auto px-4">;
@@ -598,10 +52,9 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
               transition={{ duration: 0 && 0.8 }}>;
               <h1 className="text-5xl font-bold mb-6">;
                 Expert Guides & Tutorials;
@@ -611,10 +64,9 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                 tutorials, and best practices from industry experts.;
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
                 <Link
                   href="#guides"
                   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center">;
@@ -623,10 +75,9 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                 </Link>;
                 <Link
                   href="#categories"
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center">;
                   View Categories;
                   <BookOpen className="ml-2 w-5 h-5" />;
@@ -635,14 +86,9 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
             </motion && motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:pages.disabled/guides.tsx
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/guides.tsx
+
         {/* Categories Section */}
         <section id="categories" className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
@@ -650,10 +96,9 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
               className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">;
                 Explore by Category;
@@ -667,10 +112,9 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
               {categories && categories.map((category, index) => (;
                 <motion&& motion.div
                   key={category && category.name}
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
                   className="bg-gray-50 rounded-lg p-4 text-center hover:bg-blue-50 hover:border-blue-200 border-2 border-transparent transition-all cursor-pointer"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -685,21 +129,13 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                   </p>;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
-            </div>;
-          </div>;
-        </section>;
-=======
+
 
             </div>;
           </div>;
         </section>;
 
-<<<<<<< HEAD:pages.disabled/guides.tsx
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/guides.tsx
         {/* Guides Grid */}
         <section id="guides" className="py-16 bg-gray-50">;
           <div className="container mx-auto px-4">;
@@ -707,10 +143,9 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
               className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">;
                 Featured Guides;
@@ -724,10 +159,9 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
               {guides && guides.map((guide, index) => (;
                 <motion&& motion.div
                   key={guide && guide.title}
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
                   className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -749,10 +183,9 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                             : guide && guide.difficulty === "Intermediate"
                               ? "bg-yellow-100 text-yellow-600"
                               : "bg-red-100 text-red-600"
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
 import React from './react';
 import Head from './next / head';
 import Link from './next / link';
@@ -764,10 +197,9 @@ import React from 'react';
 import Head from 'next/head';
 
 import {
-<<<<<<< HEAD:pages.disabled/guides.tsx
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/guides.tsx
+
+
   BookOpen,
   Clock,
   User,
@@ -1158,30 +590,14 @@ interface GuidesProps {
 }
 
 const Guides: React.FC<GuidesProps> = ({ className }) => {
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/guides.tsx
+
   return (
     <>
       <Head>
         <title>guides | Zion Tech Group</title>
         <meta name="description" content="guides page" />
       </Head>
-<<<<<<< HEAD:pages/guides.tsx
-      <div className="min-h-screen bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              guides
-            </h1>
-            <p className="text-xl text-gray-600">
-              This is the guides page.
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
-=======
+
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 20">;
@@ -1273,43 +689,7 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
               {guides.map((guide, index) => (
                 <motion.div
                   key={guide.title}
-<<<<<<< HEAD:pages.disabled/guides.tsx
-=======
-                  className="bg - white rounded - lg shadow - lg overflow - hidden hover:shadow - xl transition - shadow";
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                >;
-                  <div className="relative">;
-                    <img;
-                      src={guide.image}
-                      alt={guide.title}
-                      className="w - full h - 48 object - cover";
-                    />;
-                    <div className="absolute top - 4 left - 4 flex gap - 2">;
-                      <span className="px - 3 py - 1 rounded - full text - sm font - medium bg - blue - 100 text - blue - 600">;
-                        {guide.category}
-                      </span>;
-                      <span;
-                        className={`px - 3 py - 1 rounded - full text - sm font - medium ${
-                          guide.difficulty === "Beginner";
-                            ? "bg - green - 100 text - green - 600";
-                            : guide.difficulty === "Intermediate";
-                              ? "bg - yellow - 100 text - yellow - 600";
-                              : "bg - red - 100 text - red - 600";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/guides.tsx
-                        }`}
-                      >
-                        {guide.difficulty}
-<<<<<<< HEAD:pages.disabled/guides.tsx
-}`}>;
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                        }`}>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/guides.tsx
                         {guide && guide.difficulty}
                       </span>;
                     </div>;
@@ -1333,13 +713,8 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                       <div className="flex items-center">;
                         <div className="flex items-center">;
                           {[...Array(5)].map((_, i) => (;
-<<<<<<< HEAD:pages.disabled/guides.tsx
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/guides.tsx
+
                             <Star
                               key={i}
                               className={`w-4 h-4 ${
@@ -1348,15 +723,8 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                               fill="currentColor"
                             />;
                           ))}
-<<<<<<< HEAD:pages.disabled/guides.tsx
-</div>;
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                        </div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/guides.tsx
+
                         <span className="ml-2 text-sm text-gray-600">;
                           {guide && guide.rating} ({guide && guide.students} students);
                         </span>;
@@ -1364,33 +732,16 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                     </div>;
                     <div className="flex flex-wrap gap-2 mb-6">;
                       {guide && guide.tags.map((tag) => (;
-<<<<<<< HEAD:pages.disabled/guides.tsx
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/guides.tsx
+
                         <span
                           key={tag}
                           className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">;
                           {tag}
                         </span>;
                       ))}
-<<<<<<< HEAD:pages.disabled/guides.tsx
-</div>;
-                    <div className="flex gap-2">;
-=======
-<<<<<<< HEAD
-                    </div>;
-                    <div className="flex gap-2">;
-=======
 
-                    </div>;
-                    <div className="flex gap-2">;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/guides.tsx
                       <Link
                         href="#"
                         className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center inline-flex items-center justify-center">;
@@ -1406,24 +757,8 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                   </div>;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD:pages.disabled/guides.tsx
-</div>;
-          </div>;
-        </section>;
-=======
-<<<<<<< HEAD
-            </div>;
-          </div>;
-        </section>;
-=======
-
-            </div>;
-          </div>;
-        </section>;
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/guides.tsx
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">;
           <div className="container mx-auto px-4">;
@@ -1447,17 +782,8 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                 </Link>;
                 <Link
                   href="/contact"
-<<<<<<< HEAD:pages.disabled/guides.tsx
-import Layout from '../components/Layout';
 
-=======
-<<<<<<< HEAD
-import Layout from '../components/Layout';
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/guides.tsx
 import Layout from '../components/Layout';
 export default function GuidesPage() {
     >
@@ -1474,38 +800,12 @@ export default function GuidesPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
 
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-=======
 
-<<<<<<< HEAD:pages.disabled/guides.tsx
       </div>
-    </Layout>
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center">;
-                  Request Custom Guide;
-                  <ExternalLink className="ml-2 w-5 h-5" />;
-                </Link>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </div>;
-</div>
-=======
-=======
 
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/guides.tsx
     </Layout>;
   );
                       </span>;
@@ -1611,31 +911,5 @@ origin/automation-improvements-final
         </section>;
       </div>;
     </Layout>);
-<<<<<<< HEAD:pages.disabled/guides.tsx
-}
-import MainLayout from '../src/components/layout/MainLayout';
 
-const Page = () => {
-  return (
-    <MainLayout
-      title="Guides - Zion Tech Group"
-      description="Helpful guides and tutorials from Zion Tech Group"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Guides</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
 
-export default Page;
-<<<<<<< HEAD
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/guides.tsx
-=======
-=======
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/guides.tsx
->>>>>>> merged-prs-20250907-203621

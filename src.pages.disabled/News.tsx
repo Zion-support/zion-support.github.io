@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 import React from \'react\'; import { SEO } from \'../components/SEO\'; const \"News\": React.FC = () => { return ( <> <SEO title=\'News - Zion Tech Group\' />\'; <div: className=\'min-h-screen bg-white py-20\'>\'; <div: className=\'max-w-4xl mx-auto px-4\'>\'; <h1: className=\'text-4xl font-bold text-gray-900 mb-8\'>News</h1>\'; <p: className=\'text-lg text-gray-600\'>Content coming soon...</p>\'; </div> </div> </> )} ; \"export\": default News
 import _React from 'react'; import { SEO } from '../components/SEO'; const "News": _React.FC = () => { return ( <> <SEO title='News - Zion Tech Group' />'; <div: className='min-h-screen bg-white py-20'>'; <div: className='max-w-4xl mx-auto px-4'>'; <h1: className='text-4xl font-bold text-gray-900 mb-8'>News</h1>'; <p: className='text-lg text-gray-600'>Content coming soon...</p>'; </div> </div> </> )} ; "export": default News
 import React from \'react\'; import { SEO } from \'../components/SEO\'; const \"News\": React.FC = () => { return ( <> <SEO title=\'News - Zion Tech Group\' />\'; <div: className=\'min-h-screen bg-white py-20\'>\'; <div: className=\'max-w-4xl mx-auto px-4\'>\'; <h1: className=\'text-4xl font-bold text-gray-900 mb-8\'>News</h1>\'; <p: className=\'text-lg text-gray-600\'>Content coming soon...</p>\'; </div> </div> </> )} ; \"export\": default News
@@ -11,4 +10,4 @@ import _React from 'react'; import { SEO } from '../components/SEO'; const "News
 import React from \'react\'; import { SEO } from \'../components/SEO\'; const \"News\": React.FC = () => { return ( <> <SEO title=\'News - Zion Tech Group\' />\'; <div: className=\'min-h-screen bg-white py-20\'>\'; <div: className=\'max-w-4xl mx-auto px-4\'>\'; <h1: className=\'text-4xl font-bold text-gray-900 mb-8\'>News</h1>\'; <p: className=\'text-lg text-gray-600\'>Content coming soon...</p>\'; </div> </div> </> )} ; \"export\": default News
 import _React from 'react'; import { SEO } from '../components/SEO'; const "News": _React.FC = () => { return ( <> <SEO title='News - Zion Tech Group' />'; <div: className='min-h-screen bg-white py-20'>'; <div: className='max-w-4xl mx-auto px-4'>'; <h1: className='text-4xl font-bold text-gray-900 mb-8'>News</h1>'; <p: className='text-lg text-gray-600'>Content coming soon...</p>'; </div> </div> </> )} ; "export": default News
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

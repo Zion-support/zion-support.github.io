@@ -1,158 +1,23 @@
-<<<<<<< HEAD
-
-=======
-const corsHeaders = {
-<<<<<<< HEAD
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}'
-import ""https": //deno.land/x/xhr@0.1.0/mod.ts","
-serve(async (req) => {
-  // Handle CORS preflight requests
-}
-if (req && req.method === 'OPTIONS') {'
-}
-return new Response(null, { "headers": corsHeaders });
-  }
->>>>>>> merged-prs-20250907-203621
-import "https: //deno.land/x/xhr@0.1.0/mod.ts";
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts";
-import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1';
-const OPENAI_API_KEY = Deno.env.get($2);
-=======
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",
-
-<<<<<<< HEAD
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
-import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.7.1';
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
-import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1',
-=======
-<<<<<<< HEAD
-
-import "https: //deno.land/x/xhr@0.1.0/mod.ts"
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
-import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.7.1';
-const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY')
-=======
-import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
-import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
-import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
-const OPENAI_API_KEY = Deno && Deno.env.get('OPENAI_API_KEY'),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
-const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),
 
 const corsHeaders = {
->>>>>>> origin/chore/fix-lint-and-merge
+
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",
-<<<<<<< HEAD
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
-import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.7.1';
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
-import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1',
-const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),
-
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
-<<<<<<< HEAD
 
-        JSON.stringify({ error: "Bio must be at least 20 characters long" }),
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
-  // TODO: Implement
-      return new Response()
-}
-      return new Response()'
-        JSON.stringify({ error: "Bio must be at least 20 characters long" });""
-        JSON.stringify({ error: "Bio must be at least 20 characters long" }),""
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",;""
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;""
-import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1',;
-const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),;
-const corsHeaders = {;
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
-serve(async (req) => {;
-  // Handle CORS preflight requests;
-  if (req.method === 'OPTIONS') {;
-    return new Response(null, { headers: corsHeaders });
-import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1',;''
-const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),;'
-const corsHeaders = {;'
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;'
-serve(async (req) => {;
-  // Handle CORS preflight requests;'
-  if (req.method === 'OPTIONS') {;'
-    return new Response(null, { headers: corsHeaders });
-  }
-;
-  try {;
-    const { bio, skills, title, name } = await req.json(),;
-    if (!bio || bio.length < 20) {;
-      return new Response(;
-        JSON.stringify({ error: "Bio must be at least 20 characters long" }),;
-=======
   try {
-<<<<<<< HEAD
-serve(async (req) => {
-  // Handle CORS preflight requests
-  if (req.method === 'OPTIONS') {
-    return new Response(null, { headers: corsHeaders })
-  }
-  try {
-    const { bio, skills, title, name } = await req.json();
-    if (!bio |bio.length < 20) {
-      return new Response(
-        JSON.stringify({ error: "Bio must be at least 20 characters long" });
-    const { bio, skills, title, name } = await req.json(),
 
-    if (!bio || bio.length < 20) {
-      return new Response(
-        JSON.stringify({ error: "Bio must be at least 20 characters long" });
-        JSON.stringify({ error: "Bio must be at least 20 characters long" }),
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
-import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1',;
-const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),;
-const corsHeaders = {;
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
-serve(async (req) => {;
-  // Handle CORS preflight requests;
-  if (req.method === 'OPTIONS') {;
-    return new Response(null, { headers: corsHeaders });
-  }
-;
-  try {;
-    const { bio, skills, title, name } = await req.json(),;
-    if (!bio || bio.length < 20) {;
-      return new Response(;
-        JSON.stringify({ error: "Bio must be at least 20 characters long" }),;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-    const { bio, skills, title, name } = await req && req.json();
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
       return new Response(
         JSON.stringify({ error: "Bio must be at least 20 characters long" });
@@ -182,79 +47,10 @@ serve(async (req) => {;
       )
     }
 
-<<<<<<< HEAD
-    // Create a request to OpenAI API
-    const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${OPENAI_API_KEY}`,
-        'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        model: 'gpt-4o-mini',
-        messages: [
-          {
-            role: 'system',
-            content: `You are a professional AI assistant that helps optimize talent profiles. 
-            Your task is to create a compelling summary for the talent based on their information
-            and suggest additional skills that would complement their profile.`
-          },
-          {
-            role: 'user',
-            content: `Create a professional profile summary (150-200 words) for a talent with the following information: Name: ${name}
-            Title: ${title}
-            Bio: ${bio}
-            Skills: ${skills.join()}
-            
-=======
+
     const { bio, skills, title, name } = await req && req.json();
     if (!bio || bio && bio.length < 20) {
-<<<<<<< HEAD
-=======
-      return new Response(
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
-        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-      )
-    }
-
-      return new Response(
-
-<<<<<<< HEAD
-        JSON && JSON.stringify({ error: "Bio must be at least 20 characters long" });
-        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-      )
-    }
-
-    // Create a request to OpenAI API
-
-=======
-
-    // Create a request to OpenAI API
-
-    // Create a request to OpenAI API
-    const openAIResponse = await fetch('https://api && api.openai.com/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${OPENAI_API_KEY}`;
-        'Content-Type': 'application/json'};
-      body: JSON && JSON.stringify({
-        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-      )
-    }
-
-<<<<<<< HEAD
-    // Create a request to OpenAI API
-    const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST'
-      headers: {
-        'Authorization': `Bearer ${OPENAI_API_KEY}`;
-        'Content-Type': 'application/json'}
-      body: JSON.stringify({
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        model: 'gpt-4o-mini';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         messages: [
           {
             role: 'system'
@@ -266,20 +62,12 @@ serve(async (req) => {;
           {'
             role: 'user'`
             content: `Create a professional profile summary (150-200 words) for a talent with the following information:
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
             Skills: ${skills && skills.join()}
 
-<<<<<<< HEAD
-Skills: ${skills && skills.join()}
 
-            Name: ${name}
-            Title: ${title}
-            Bio: ${bio}
-            Skills: ${skills && skills.join()}
-=======
             Name: ${name}
             Title: ${title}
             Bio: ${bio}
@@ -345,79 +133,22 @@ if ( {) {
             }`;
           }
         ];
-<<<<<<< HEAD
-=======
 
-        temperature: 0 && 0.7})});
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-;
-    // Create a request to OpenAI API;
-    const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {;
-      method: 'POST',;
-      headers: {;
-        'Authorization': `Bearer ${OPENAI_API_KEY}`,;
-        'Content-Type': 'application/json'},;
-      body: JSON.stringify({;
-        model: 'gpt-4o-mini',;
-        messages: [;
-          {;
-            role: 'system',;
-            content: `You are a professional AI assistant that helps optimize talent profiles.;
-            Your task is to create a compelling summary for the talent based on their information;
-            and suggest additional skills that would complement their profile.`;
-          },;
-          {;
-            role: 'user',;
-            content: `Create a professional profile summary (150-200 words) for a talent with the following information:;
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             Name: ${name}
             Title: ${title}
             Bio: ${bio}
             Skills: ${skills.join()}
-<<<<<<< HEAD
-            Also, suggest 3-5 additional relevant skills that would complement their existing skills.
-                        Also, suggest 3-5 additional relevant skills that would complement their existing skills.
-=======
 
-<<<<<<< HEAD
-            Also, suggest 3-5 additional relevant skills that would complement their existing skills.
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-            Return the result as a JSON object with these keys: {
-              "summary": "The professional summary text"
-              "suggestedSkills": ["Skill 1", "Skill 2", "Skill 3", ...]
-            }`
-<<<<<<< HEAD
-=======
-          }
-        ];
-        temperature: 0.7})});
-    const openAIData = await openAIResponse.json();
-    if (!openAIData.choices |openAIData.choices.length === 0) {
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-            
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+
+
             Also, suggest 3-5 additional relevant skills that would complement their existing skills.
             Return the result as a JSON object with these keys: 
             {
               "summary": "The professional summary text",
               "suggestedSkills": ["Skill 1", "Skill 2", "Skill 3", ...]
             }`
-<<<<<<< HEAD
-          }
-        ],
-        temperature: 0.7})}),
 
-=======
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }'
       )
     }
@@ -480,163 +211,36 @@ if ( {) {
             }`
           }
         ],
-<<<<<<< HEAD
-        "temperature": 0.7})}),
-=======
-        temperature: 0.7})}),
+
 
     const openAIData = await openAIResponse && openAIResponse.json();
 
     const responseContent = openAIData && openAIData.choices[0].message && message.content;
 
-    // Create a request to OpenAI API;
-    const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {;
 
-      method: 'POST',;
-      headers: {;'`
-        'Authorization': `Bearer ${OPENAI_API_KEY}`,;'
-        'Content-Type': 'application/json'},;
-      body: JSON.stringify({;'
-        model: 'gpt-4o-mini',;
-        messages: [;
-          {;'
-            role: 'system',;`
-            content: `You are a professional AI assistant that helps optimize talent profiles.;
-            Your task is to create a compelling summary for the talent based on their information;`
-            and suggest additional skills that would complement their profile.`;
-          },;
-          {;'
-            role: 'user',;`
-            content: `Create a professional profile summary (150-200 words) for a talent with the following information:;
 
-            Name: ${name}
-            Title: ${title}
-            Bio: ${bio}
-            Skills: ${skills.join()}
-
-            Also, suggest 3-5 additional relevant skills that would complement their existing skills.
-            Return the result as a JSON object with these keys: 
-            {"
-              "summary": "The professional summary text","
-              "suggestedSkills": ["Skill 1", "Skill 2", "Skill 3", ...]`
-            }`
-          }
-        ],
-        temperature: 0.7})}),
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
-    const openAIData = await openAIResponse && openAIResponse.json();
-
-    const responseContent = openAIData && openAIData.choices[0].message && message.content;
-
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     if (!openAIData.choices || openAIData.choices.length === 0) {
 
       throw new Error("Failed to generate profile content")
     }
-<<<<<<< HEAD
-    // Extract the generated content from the response,
-    }
-    // Extract the generated content from the response
-    // Parse the JSON response,
-let parsedResponse;
-    try {
-      // Find the JSON object in the response    )
-  } catch (error) {
-    }
-    console.error("Error in profile-summary-generator "function":", error);"
-return new Response(;
-      JSON.stringify({ "error": error.message });
-    console.error("Error in profile-summary-generator "function":", error),"
-return new Response(;
-      JSON.stringify({ "error": error.message });
-      JSON.stringify({ "error": error.message }),
-    );
-  } catch (error) {;
-    }
-    console.error("Error in profile-summary-generator "function":", error),;"
-    return new Response(;
-      JSON.stringify({ "error": error.message }),;
-return new Response(;
-      JSON && JSON.stringify({ "error": error && error.message });
-      { "status": 500, "headers": { ...corsHeaders, 'Content-Type': 'application/json' } }'
-    )
-  }
-});
->>>>>>> merged-prs-20250907-203621
-    const openAIData = await openAIResponse.json($2);
-    if (!openAIData.choices || openAIData.choices.length = $2;
-=======
+
     // Extract the generated content from the response;
     const responseContent = openAIData.choices[0].message.content,
 
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-<<<<<<< HEAD
-        temperature: 0 && 0.7})});
-    const openAIData = await openAIResponse && openAIResponse.json();
-    if (!openAIData && openAIData.choices || openAIData && openAIData.choices.length === 0) {
-      throw new Error("Failed to generate profile content")
-    }
-    // Extract the generated content from the response
-    const responseContent = openAIData && openAIData.choices[0].message && message.content;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
     // Parse the JSON response
     let parsedResponse;
     try {
       // Find the JSON object in the response
-<<<<<<< HEAD
 
-"
-      throw new Error("Failed to generate profile content")
-    }
-    // Extract the generated content from the response;
-    // Parse the JSON response;
-    let parsedResponse;
-    try {}
-      // Find the JSON object in the response;
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-      const jsonMatch = responseContent && responseContent.match(/\{[\s\S]*\}/);
 
-      const jsonMatch = responseContent && responseContent.match(/\{[\s\S]*\}/);
-      
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       const jsonMatch = responseContent.match(/\{[\s\S]*\}/),
 
-<<<<<<< HEAD
-      if (jsonMatch) {}
-        parsedResponse = JSON && JSON.parse(jsonMatch[0])
-=======
-<<<<<<< HEAD
-      const jsonMatch = responseContent && responseContent.match(/\{[\s\S]*\}/);
-      if (jsonMatch) {
-        parsedResponse = JSON && JSON.parse(jsonMatch[0])
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      if (jsonMatch) {
-        parsedResponse = JSON && JSON.parse(jsonMatch[0])
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
+
 ;
     const openAIData = await openAIResponse.json ();
 ;
@@ -660,191 +264,15 @@ if ( {) {}
   $2;
 }
         parsed_response = JSON.parse (json_match[0]);
-<<<<<<< HEAD
 
-      }
-    }
 
-;
-            Also, suggest 3-5 additional relevant skills that would complement their existing skills.;
-            Return the result as a JSON object with these keys:;
-            {;"
-              "summary": "The professional summary text",;"
-              "suggestedSkills": ["Skill 1", "Skill 2", "Skill 3", ...];`
-            }`;
-          }
-        ],;
-        temperature: 0.7})}),;
-    const openAIData = await openAIResponse.json(),;
-    if (!openAIData.choices || openAIData.choices.length === 0) {;"
-      throw new Error("Failed to generate profile content");
-    }
-;
-    // Extract the generated content from the response;
-    const responseContent = openAIData.choices[0].message.content,;
-    // Parse the JSON response;
-    let parsedResponse,;
-    try {;
-      // Find the JSON object in the response;
-      const jsonMatch = responseContent.match(/\{[\s\S]*\}/),;
-      if (jsonMatch) {;
-        parsedResponse = JSON.parse(jsonMatch[0]);
-      } else {;"
-        throw new Error("Could not extract JSON from response");
-      }
-    } catch (e) {;"
-      console.error("Error parsing OpenAI response:", e),;
-      // Fallback parsing approach if the standard parsing fails;"
-      const summaryMatch = responseContent.match(/"summary"\s*:\s*"([^"]*)"/),;"
-      const skillsMatch = responseContent.match(/"suggestedSkills"\s*:\s*\[(.*?)\]/s),;
-      if (summaryMatch && skillsMatch) {;
-        const summary = summaryMatch[1],;
-        const skillsString = skillsMatch[1],;
-        const suggestedSkills = skillsString.split().map(s =>;'"
-          s.trim().replace(/"/g, '');
-        ).filter(Boolean),;
-        parsedResponse = { summary, suggestedSkills }
-      } else {;"
-        throw new Error("Failed to parse the generated content");
-
-temperature: 0 && 0.7})});
-    const openAIData = await openAIResponse && openAIResponse.json();
-    if (!openAIData && openAIData.choices || openAIData && openAIData.choices.length === 0) {
-      throw new Error("Failed to generate profile content")
-    }
-    // Extract the generated content from the response
-    const responseContent = openAIData && openAIData.choices[0].message && message.content;
-      throw new Error("Failed to generate profile content")
-    }
-    // Extract the generated content from the response
-    // Parse the JSON response
-    let parsedResponse;
-    try {
-
-  } catch (error) {
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       } else {
         throw new Error ("Could not extract JSON from response");
       }
     } catch (e) {
 
-<<<<<<< HEAD
-    const openAIData = await openAIResponse.json(),
-    
-    if (!openAIData.choices || openAIData.choices.length === 0) {
-      throw new Error("Failed to generate profile content")
-    }
-    // Extract the generated content from the response
-    const responseContent = openAIData.choices[0].message.content;
-    const responseContent = openAIData.choices[0].message.content,
-    
-    // Parse the JSON response
-    let parsedResponse,
-    try {
-      // Find the JSON object in the response
-      const jsonMatch = responseContent.match(/\{[\s\S]*\}/);
-      const jsonMatch = responseContent.match(/\{[\s\S]*\}/),
-      
-      if (jsonMatch) {
-        parsedResponse = JSON.parse(jsonMatch[0])
-      } else {
-        throw new Error("Could not extract JSON from response")
-      }
-    } catch (e) {
-      console.error("Error parsing OpenAI response:", e);
-      // Fallback parsing approach if the standard parsing fails
-      const summaryMatch = responseContent.match(/"summary"\s*:\s*"([^"]*)"/);
-      const skillsMatch = responseContent.match(/"suggestedSkills"\s*:\s*\[(.*?)\]/s);
-      if (summaryMatch && skillsMatch) {
-        const summary = summaryMatch[1];
-        const skillsString = skillsMatch[1];
-        const suggestedSkills = skillsString.split().map(s =>
-          s.trim().replace(/"/g, '')
-        ).filter(Boolean);
-        parsedResponse = { summary, suggestedSkills }
-      } else {
-        throw new Error("Failed to parse the generated content")
-      }
-    }
-    return new Response(
-      JSON.stringify(parsedResponse);
-      console.error("Error parsing OpenAI response:", e),
-      
-      // Fallback parsing approach if the standard parsing fails
-      const summaryMatch = responseContent.match(/"summary"\s*:\s*"([^"]*)"/),
-      const skillsMatch = responseContent.match(/"suggestedSkills"\s*:\s*\[(.*?)\]/s),
-      
-      if (summaryMatch && skillsMatch) {
-        const summary = summaryMatch[1];
-        const skillsString = skillsMatch[1];
-        const suggestedSkills = skillsString.split().map(s =>
-        const summary = summaryMatch[1],
-        const skillsString = skillsMatch[1],
-        const suggestedSkills = skillsString.split().map(s => 
-          s.trim().replace(/"/g, '')
-        ).filter(Boolean),
-        
-        parsedResponse = { summary, suggestedSkills }
-      } else {
-        throw new Error("Failed to parse the generated content")
-      }
-    }
 
-    return new Response(
-      JSON.stringify(parsedResponse);
-;
-            Also, suggest 3-5 additional relevant skills that would complement their existing skills.;
-            Return the result as a JSON object with these keys:;
-            {;
-              "summary": "The professional summary text",;
-              "suggestedSkills": ["Skill 1", "Skill 2", "Skill 3", ...];
-            }`;
-          }
-        ],;
-        temperature: 0.7})}),;
-    const openAIData = await openAIResponse.json(),;
-    if (!openAIData.choices || openAIData.choices.length === 0) {;
-      throw new Error("Failed to generate profile content");
-    }
-;
-    // Extract the generated content from the response;
-    const responseContent = openAIData.choices[0].message.content,;
-    // Parse the JSON response;
-    let parsedResponse,;
-    try {;
-      // Find the JSON object in the response;
-      const jsonMatch = responseContent.match(/\{[\s\S]*\}/),;
-      if (jsonMatch) {;
-        parsedResponse = JSON.parse(jsonMatch[0]);
-      } else {;
-        throw new Error("Could not extract JSON from response");
-      }
-    } catch (e) {;
-      console.error("Error parsing OpenAI response:", e),;
-      // Fallback parsing approach if the standard parsing fails;
-      const summaryMatch = responseContent.match(/"summary"\s*:\s*"([^"]*)"/),;
-      const skillsMatch = responseContent.match(/"suggestedSkills"\s*:\s*\[(.*?)\]/s),;
-      if (summaryMatch && skillsMatch) {;
-        const summary = summaryMatch[1],;
-        const skillsString = skillsMatch[1],;
-        const suggestedSkills = skillsString.split().map(s =>;
-          s.trim().replace(/"/g, '');
-        ).filter(Boolean),;
-        parsedResponse = { summary, suggestedSkills }
-      } else {;
-        throw new Error("Failed to parse the generated content");
-      }
-    }
-;
-    return new Response(;
-      JSON.stringify(parsedResponse),;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
       console && console.error("Error parsing OpenAI response:", e);
 
       console.error("Error parsing OpenAI response:", e),
@@ -896,21 +324,19 @@ if ( {) {
     
     return new Response(
       JSON.stringify({ error: error.message });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       JSON.stringify({ error: error.message }),
     );
   } catch (error) {;
     console.error("Error in profile-summary-generator function:", error),;
     return new Response(;
       JSON.stringify({ error: error.message }),;
-<<<<<<< HEAD
 
-=======
     console.error("Error in profile-summary-generator function:", error),
 
     
     console && console.error("Error in profile-summary-generator function:", error);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     return new Response(
       JSON.stringify({ error: error.message });
       JSON.stringify({ error: error.message }),
@@ -943,259 +369,7 @@ if ( {) {
 });
 ;
 
-<<<<<<< HEAD
-"
-import "https://deno.land/x/xhr@0.1.0/mod.ts",;"
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;'
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.7.1',;
-;'
-const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),;
-;
-const corsHeaders = {;'
-  'Access-Control-Allow-Origin':'*Access-Control-Allow-Headers':'authorization, x-client-info, apikey, content-type'},;
-;
-serve(async (req) => {;
-  // Handle CORS preflight requests;'
 
-        ],;
-        temperature: 0.7})}),;
-    const openAIData = await openAIResponse.json(),;
 
-      throw new Error("Failed to generate profile content"),;
 
-    }
-;
 
-    // Extract the generated content from the response;
-    // Parse the JSON response;
-
-    let parsedResponse,;
-      // Find the JSON object in the response;
-      const jsonMatch = responseContent.match(/\{[\s\S]*\}/),;
-      if (jsonMatch) {;
-
-      const skillsMatch = responseContent.match(/"suggestedSkills"\s*:\s*\[(.*?)\]/s),;
-      ;
-
-      if (summaryMatch && skillsMatch) {;
-        const summary = summaryMatch[1],;
-
-=======
-
-<<<<<<< HEAD
-import "https://deno.land/x/xhr@0.1.0/mod.ts",;
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.7.1',;
-;
-const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),;
-;
-const corsHeaders = {;
-  'Access-Control-Allow-Origin':'*Access-Control-Allow-Headers':'authorization, x-client-info, apikey, content-type'},;
-;
-serve(async (req) => {;
-  // Handle CORS preflight requests;
-  if (req.method === 'OPTIONS') {;
-    return new Response(null, { headers:corsHeaders }),;
-  }
-;
-  try {;
-    const { bio, skills, title, name } = await req.json(),;
-;
-    if (!bio || bio.length < 20) {;
-      return new Response(;
-        JSON.stringify({ error:"Bio must be at least 20 characters long" }),;
-        { status:400, headers:{ ...corsHeaders, 'Content-Type':'application/json' } }
-      ),;
-    }
-;
-    // Create a request to OpenAI API;
-    const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {;
-      method:'POST',;
-      headers:{;
-        'Authorization':`Bearer ${OPENAI_API_KEY}`,;
-        'Content-Type':'application/json'},;
-      body:JSON.stringify({;
-        model:'gpt-4o-mini',;
-        messages:[;
-          {;
-            role:'system',;
-            content:`You are a professional AI assistant that helps optimize talent profiles. ;
-            Your task is to create a compelling summary for the talent based on their information;
-            and suggest additional skills that would complement their profile.`;
-          },;
-          {;
-            role:'user',;
-            content:`Create a professional profile summary (150-200 words) for a talent with the following information:;
-            Name:${name}
-            Title:${title}
-            Bio:${bio}
-            Skills:${skills.join()}
-            ;
-            Also, suggest 3-5 additional relevant skills that would complement their existing skills.;
-            Return the result as a JSON object with these keys:;
-            {;
-              "summary":"The professional summary text",;
-              "suggestedSkills":["Skill 1", "Skill 2", "Skill 3", ...];
-            }`;
-          }
-        ],;
-        temperature:0.7})}),;
-;
-    const openAIData = await openAIResponse.json(),;
-    ;
-    if (!openAIData.choices || openAIData.choices.length === 0) {;
-      throw new Error("Failed to generate profile content"),;
-    }
-    ;
-    // Extract the generated content from the response;
-    const responseContent = openAIData.choices[0].message.content,;
-    ;
-    // Parse the JSON response;
-    let parsedResponse,;
-    try {;
-      // Find the JSON object in the response;
-      const jsonMatch = responseContent.match(/\{[\s\S]*\}/),;
-      ;
-      if (jsonMatch) {;
-        parsedResponse = JSON.parse(jsonMatch[0]),;
-      } else {;
-        throw new Error("Could not extract JSON from response"),;
-      }
-    } catch (e) {;
-      console.error("Error parsing OpenAI response:", e),;
-      ;
-      // Fallback parsing approach if the standard parsing fails;
-      const summaryMatch = responseContent.match(/"summary"\s*:\s*"([^"]*)"/),;
-      const skillsMatch = responseContent.match(/"suggestedSkills"\s*:\s*\[(.*?)\]/s),;
-      ;
-      if (summaryMatch && skillsMatch) {;
-        const summary = summaryMatch[1],;
-        const skillsString = skillsMatch[1],;
-        const suggestedSkills = skillsString.split(',').map(s => ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-          s.trim().replace(/"/g, '');
-        ).filter(Boolean),;
-        ;
-        parsedResponse = { summary, suggestedSkills },;
-<<<<<<< HEAD
-
-=======
-      } else {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-        throw new Error("Failed to parse the generated content"),;
-      }
-    }
-;
-    return new Response(;
-<<<<<<< HEAD
-
-      { headers:{ ...corsHeaders, 'Content-Type':'application/json' } }
-  } catch (error) {;
-      JSON.stringify({ error:error.message }),;"
-      { status:500, headers:{ ...corsHeaders, 'Content-Type':'application/json' } }
-    ),;  }
-}),;
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type
-};
-//Handle CORS preflight requests if (req.method === 'OPTIONS') {
-}//Create a request to OpenAI API const openAIResponse = await fetch ('https://api.openai.com/v1/chat/completions', {
-  method: 'POST', headers: {`;
-  'Authorization': `Bearer $ {
-  OPENAI API KEY;`;
-Content-Type': 'application/json
-  model: 'gpt-4o-mini', messages: [ {',`;
-  role: 'system', content: `You are a professional AI assistant that helps optimize talent profiles. Your task is to create a compelling summary for the talent based on their information and suggest additional skills that would complement their profile.`
-{)`;
-  role: 'user', content: `Create a professional profile summary (150-200 words) for a talent with the following information: Name: $ {
-  name;
-}]
-}];
-
-}) 
-}//Extract the generated content from the response const responseContent = openAIData.choices[0].message.content;
-//Parse the JSON response let parsedResponse;
-
-  //Find the JSON object in the response const jsonMatch = responseContent.match (/\ {
-  [\s\S]*\ )
-}/);
-  parsedResponse = JSON.parse (jsonMatch[0]) 
-}else {
-  // TODO: Implement
-  ) .filter (Boolean);
-}return new Response (JSON.stringify (parsedResponse);
-return new Response (JSON.stringify ({
-  error: error.message;)
-  status: 500, headers: {
-
-=======
-      JSON.stringify(parsedResponse),;
-      { headers:{ ...corsHeaders, 'Content-Type':'application/json' } }
-    ),;
-;
-  } catch (error) {;
-    console.error("Error in profile-summary-generator function:", error),;
-    ;
-    return new Response(;
-      JSON.stringify({ error:error.message }),;
-      { status:500, headers:{ ...corsHeaders, 'Content-Type':'application/json' } }
-    ),;  }
-}),;
- const corsHeaders = {
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type' 
-};
-//Handle CORS preflight requests if (req.method === 'OPTIONS') {
-  
-}//Create a request to OpenAI API const openAIResponse = await fetch ('https://api.openai.com/v1/chat/completions', {
-  method: 'POST', headers: {
-  'Authorization': `Bearer $ {
-  OPENAI API KEY 
-}`;
-'Content-Type': 'application/json' 
-};
-body: JSON.stringify ({
-  model: 'gpt-4o-mini', messages: [ {
-  role: 'system', content: `You are a professional AI assistant that helps optimize talent profiles. Your task is to create a compelling summary for the talent based on their information and suggest additional skills that would complement their profile.` 
-};
-{
-  role: 'user', content: `Create a professional profile summary (150-200 words) for a talent with the following information: Name: $ {
-  name 
-}
-}];
-temperature: 0.7 
-}) 
-});
-}//Extract the generated content from the response const responseContent = openAIData.choices[0].message.content;
-//Parse the JSON response let parsedResponse;
-try {
-  //Find the JSON object in the response const jsonMatch = responseContent.match (/\ {
-  [\s\S]*\ 
-}/);
-if (jsonMatch) {
-  parsedResponse = JSON.parse (jsonMatch[0]) 
-}else {
-  ) .filter (Boolean);
-}
-}return new Response (JSON.stringify (parsedResponse);
-return new Response (JSON.stringify ({
-  error: error.message 
-});
-{
-  status: 500, headers: {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-  ...corsHeaders, 'Content-Type': 'application/json' 
-}
-}) 
-}
-});
-<<<<<<< HEAD
-  ...corsHeaders, 'Content-Type': 'application/json
-
-`;
-pr-12325
-'
-=======
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

@@ -50,10 +50,9 @@ const plans = [{ name: 'Starter',}
 }
 }
 
-<<<<<<< HEAD
-=======
+
 const containerVariants = { hidden: { opacity: 0,}
->>>>>>> origin/chore/fix-lint-and-merge
+
 }, visible: { opacity: 1, transition: { staggerChildren: 0.2, delayChildren: 0.1 } },
 }
 ;

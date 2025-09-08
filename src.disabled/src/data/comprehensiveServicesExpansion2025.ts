@@ -4,16 +4,9 @@ const { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listin
 import { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"",
 """;,
 ";";"
-<<<<<<< HEAD
-=======
+
 
 ";";"
 ";";"
 ";";"
-<<<<<<< HEAD
-ursor/add-new-services-and-deploy-updates-0462
-=======
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+

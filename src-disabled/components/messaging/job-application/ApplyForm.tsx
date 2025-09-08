@@ -179,24 +179,10 @@ interface ApplyFormProps {
 };
 
 import React, { useState } from 'react',
-<<<<<<< HEAD
-import { Button  } from "@/components/ui/button";
-:src/components/messaging/job-application/ApplyForm.tsx
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from "@/components/ui/tabs";
-import { useJobApplications  } from "@/hooks/useJobApplications";
-import { useMessaging  } from "@/context/MessagingContext";
-import { toast  } from "@/hooks/use-toast";
-import { ResumeSelector, ResumeOption  } from "../resume-selector";
-import { MessageTab  } from "./MessageTab";
-import { ResumeTab  } from "./ResumeTab";
-interface ApplyFormProps {
-  job: Job;
-  onClose: () => void;
-  onApplySuccess?: (jobId: string) => Promise<void>
-=======
+
 import { Button } from "@/components/ui/button",
 import { Loader2 } from 'lucide-react'
->>>>>>> origin/chore/fix-lint-and-merge
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { useMessaging } from "@/context/MessagingContext",

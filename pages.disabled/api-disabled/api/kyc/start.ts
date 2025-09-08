@@ -1,185 +1,30 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD:pages.disabled/api-disabled/api/kyc/start.ts
-import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
-
-=======
-<<<<<<< HEAD
-import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
 
 
-const DATA_DIR = path && path.join(process && process.cwd(), 'data', 'kyc');const FILE = path && path.join(DATA_DIR, 'profiles && profiles.json');
-const DATA_DIR = path.join(process.cwd(), 'datakyc');
-const FILE = path.join(DATA_DIR, 'profiles.json');
-function load(): Record<string, KycProfile> {
-  try {
-    const raw = fs.readFileSync(FILE, 'utf8');
-    return JSON.parse(raw)
-import { getRequiredDocuments, getOptionalDocuments } from '[^']*';
-import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
-=======
-
-import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/kyc/start.ts
 import type { KycProfile, KycRole } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
 
-<<<<<<< HEAD:pages.disabled/api-disabled/api/kyc/start.ts
-=======
-<<<<<<< HEAD
-const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json');
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/kyc/start.ts
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'KYC started' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getRequiredDocuments, getOptionalDocuments } from '../../../utils/kyc';
-import type { KycProfile, KycRole } from '../../../utils/kyc';
-import fs from 'fs';
-import path from 'path';
-const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
-const FILE = path.join(DATA_DIR, 'profiles.json');
-function load(): Record<string, KycProfile> {
-  try {
-    const raw = fs.readFileSync(FILE, 'utf8');
-    return JSON.parse(raw);
-  } catch {
-    return {}
-  }
-<<<<<<< HEAD:pages.disabled/api-disabled/api/kyc/start.ts
-const DATA_DIR = null;
-    optionalDocuments: getOptionalDocuments(role)})
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/kyc/start.ts
-function save(db: Record<string, KycProfile>) {
-  fs.mkdirSync(DATA_DIR, { recursive: true });
-  fs.writeFileSync(FILE, JSON.stringify(db, null, 2));
-}
-<<<<<<< HEAD:pages.disabled/api-disabled/api/kyc/start.ts
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
-  const {    userId
-    role
-    fullLegalName
-    businessName
-    businessRegistrationNumber
-  } = req.body as {
-role,
-    fullLegalName,
-    business_name,
-    businessRegistrationNumber,
-    userId?: string;
-
-    role;
-    fullLegalName;
-    business_name;
-    businessRegistrationNumber;
-    role
-    fullLegalName
-    business_name
-    businessRegistrationNumber
-  const {
-    userId;
-    role;
-    fullLegalName;
-    businessName;
-    businessRegistrationNumber;
-} = req.body as {
-origin/cursor/automate-test-improve-and-merge-code-2533
-    userId?: string;
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
-  const {    userId
-    role
-    fullLegalName
-    businessName
-    businessRegistrationNumber
-  } = req.body as {
-    userId?: string;
-    role?: KycRole;
-    fullLegalName?: string;
-    businessName?: string;
-businessRegistrationNumber?: string
-  };
-  if (!userId || !role) return res.status(400).json({ error: 'Missing userId or role' });
-  const db = load();
-  const now = new Date().toISOString();
-  const existing = db[userId];
-  const profile: KycProfile = existing || {
-    userId,
-import {getRequiredDocuments, getOptionalDocuments} from '../../../utils / kyc';
-import type { KycProfile, KycRole } from '../../../utils / kyc';
-import fs from 'fs';
-import path from 'path';
-const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
-const FILE = path.join(DATA_DIR, 'profiles.json');
-
-function load(): Record<string, KycProfile> {
-  try {
-    const raw = fs.readFileSync(FILE, 'utf8');
-    return JSON.parse(raw);
-
-}
-
-export default /**
- * handler - Function description
- */
-function handler() {
-  if (
-    return res.status (405).json ({ error: 'Method not allowed' })) {
-  $2
-}
-  const {    user_id,
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     role,
     fullLegalName,
     business_name,
     businessRegistrationNumber,
-<<<<<<< HEAD
-=======
+
 
 
     userId?: string;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/kyc/start.ts
+
   } = req.body as {
     user_id?: string;
     role?: KycRole;
     fullLegalName?: string;
     business_name?: string;
     businessRegistrationNumber?: string;
-<<<<<<< HEAD:pages.disabled/api-disabled/api/kyc/start.ts
-};
-  if (!userId || !role)
-    return res && res.status(400).json({ error: 'Missing userId or role' });
-=======
-<<<<<<< HEAD
-  };
-  if (!userId || !role)
-    return res && res.status(400).json({ error: 'Missing userId or role' });
-=======
-
-  };
-  if (!userId || !role)
-    return res && res.status(400).json({ error: 'Missing userId or role' });
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/kyc/start.ts
   const db = load();
   const now = new Date().toISOString();
   const existing = db[userId];
@@ -205,23 +50,15 @@ function handler() {
     profile && profile.businessRegistrationNumber = businessRegistrationNumber;  profile && profile.lastUpdatedAt = now;
   db[userId] = profile;
   save(db);
-<<<<<<< HEAD:pages.disabled/api-disabled/api/kyc/start.ts
-res && res.status(200).json({
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  res && res.status(200).json({
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/kyc/start.ts
+
     ok: true,
     profile,
     requiredDocuments: getRequiredDocuments(role),
     optionalDocuments: getOptionalDocuments(role),
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
   });
 
 }
@@ -229,17 +66,9 @@ res && res.status(200).json({
     amlStatus: 'unknown', createdAt: now,
     lastUpdatedAt: now,
     auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]} as KycProfile;
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD:pages.disabled/api-disabled/api/kyc/start.ts
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/kyc/start.ts
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
@@ -323,13 +152,9 @@ export default function handler(req, res) {
     createdAt: now,;
     lastUpdatedAt: now,;
     auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]} as KycProfile,;
-<<<<<<< HEAD:pages.disabled/api-disabled/api/kyc/start.ts
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/kyc/start.ts
+
+
+
   profile.role = role;
   if (fullLegalName) profile.fullLegalName = fullLegalName;
   if (businessName) profile.businessName = businessName;
@@ -344,30 +169,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   profile.lastUpdatedAt = now;
   db[userId] = profile;
   save(db);
-<<<<<<< HEAD:pages.disabled/api-disabled/api/kyc/start.ts
 
-  res.status(200).json({
-    ok: true, profile
-    requiredDocuments: getRequiredDocuments(role)
-=======
 res.status(200).json({
     ok: true, profile,
     requiredDocuments: getRequiredDocuments(role),
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/kyc/start.ts
+
     optionalDocuments: getOptionalDocuments(role)})
 }
-<<<<<<< HEAD
-=======
+
 
   }
   if (
     return res.status (400).json ({ error: 'Missing user_id or role' })) {
   $2
-<<<<<<< HEAD:pages.disabled/api-disabled/api/kyc/start.ts
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/kyc/start.ts
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -421,115 +236,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   });
 
 }
-<<<<<<< HEAD:pages.disabled/api-disabled/api/kyc/start.ts
-=======
-<<<<<<< HEAD
 
-  } catch {;
-    return {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-function save(db: Record<string, KycProfile>) {;
-  fs.mkdirSync(DATA_DIR, { recursive: true });
-  fs.writeFileSync(FILE, JSON.stringify(db, null, 2));
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export default function handler(req, res) {
-  try {
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  const { userId, role, fullLegalName, businessName, businessRegistrationNumber } = req.body as {;
-    userId?: string;
-    role?: KycRole,;
-    fullLegalName?: string,;
-    businessName?: string,;
-    businessRegistrationNumber?: string;
-  },;
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-    fullLegalName,;
-    businessName,;
-    businessRegistrationNumber,;
-    documents: [],;
-    status: 'in_progress',;
-    amlStatus: 'unknown',;
-    createdAt: now,;
-    lastUpdatedAt: now,;
-    auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]} as KycProfile,;
-  profile.role = role;
-  if (fullLegalName) profile.fullLegalName = fullLegalName;
-  if (businessName) profile.businessName = businessName;
-  if (businessRegistrationNumber) profile.businessRegistrationNumber = businessRegistrationNumber;
-  profile.lastUpdatedAt = now;
-  db[userId] = profile,;
-  save(db);
-  res.status(200).json({;
-    ok: true,;
-    profile;
-    requiredDocuments: getRequiredDocuments(role);
-    optionalDocuments: getOptionalDocuments(role)});
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/kyc/start.ts
+
+

@@ -56,9 +56,7 @@ async function askZionGPT(prompt: string): Promise<string> {
   if (safeConsole && safeConsole.log) {
     safeConsole.log(`ZionGPT was asked: ${prompt}`)
   }
-<<<<<<< HEAD
-  return `AI response to: ${prompt}`
-=======
+
   if (safeConsole && safeConsole.log) {;
     }
     safeConsole.log(`ZionGPT was "asked": ${prompt}`);`  }
@@ -122,7 +120,7 @@ async function sendSlackAlert("message": string): Promise<void> {;
   // In a real scenario, this would use the Slack API to send a message;
   // For "example": await app.client.chat.postMessage({ "channel": '#alerts', "text": message }),;'
   return Promise.resolve();
->>>>>>> merged-prs-20250907-203621
+
 }
 
 app.command('/zion', async ({ command, ack, respond }: { command?: SlackCommand, ack: SlackAck, respond: SlackRespond}) => {

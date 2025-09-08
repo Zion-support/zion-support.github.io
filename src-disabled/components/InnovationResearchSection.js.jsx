@@ -73,11 +73,10 @@ const researchAreas = [{ id: 1, title: 'Artificial Intelligence & Machine Learni
   projects: 9, researchers: 5,}
 } ] const [selectedResearch, setSelectedResearch] =;
   useState(null);
-<<<<<<< HEAD
-=======
+
   const [hoveredLab, setHoveredLab] = useState(null);
   const containerVariants = { hidden: { opacity: 0,}
->>>>>>> origin/chore/fix-lint-and-merge
+
 }, visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.1 } },
 }
 ;

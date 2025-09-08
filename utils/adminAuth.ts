@@ -1,37 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { NextApiRequest, NextApiResponse } from 'next';
 
-export function setSessionCookie(res: NextApiResponse, token: string) {
-  res.setHeader('Set-Cookie', `admin-session=${token}; Path=/; HttpOnly; SameSite=Strict; Max-Age=86400`);
-}
-
-export function clearSessionCookie(res: NextApiResponse) {
-  res.setHeader('Set-Cookie', `admin-session=; Path=/; HttpOnly; SameSite=Strict; Max-Age=0`);
-}
-
-export function verifyAdminToken(token: string): boolean {
-  // Simple token verification - in production, use JWT or similar
-  return token.startsWith('admin-');
-}
-
-export function getSessionFromReq(req: NextApiRequest): string | null {
-  const cookies = req.headers.cookie;
-  if (!cookies) return null;
-  
-  const sessionCookie = cookies
-    .split(';')
-    .find(c => c.trim().startsWith('admin-session='));
-  
-  if (!sessionCookie) return null;
-  
-  return sessionCookie.split('=')[1];
-}
-
-export function isInternalAgentRequest(req: NextApiRequest): boolean {
-  const userAgent = req.headers['user-agent'] || '';
-  return userAgent.includes('internal-agent') || userAgent.includes('bot');
-=======
 import type { NextApiRequest } from 'next';
 export interface Session {
 
@@ -250,7 +217,7 @@ export function isInternalAgentRequest(req: NextApiRequest): boolean {
   const userAgent = req.headers['user-agent'] || '';'
   const internalAgents = ['zion-bot', 'internal-agent', 'automation'];
   return internalAgents.some(agent => userAgent.toLowerCase().includes(agent));
->>>>>>> origin/chore/fix-lint-and-merge
+
 }
 
 // Stub admin auth utility - placeholder for missing functionality
@@ -259,12 +226,7 @@ export const requireAdminAuth = (req: NextApiRequest, res: NextApiResponse) => {
   return true;
 };
 
-<<<<<<< HEAD
-export const isAdmin = (req: NextApiRequest): boolean => {
-  // Placeholder implementation
-  return true;
-};
-=======
+
 origin/cursor/automate-test-improve-and-merge-code-2533
 export const isAdmin = () => {
   // Placeholder implementation;
@@ -290,9 +252,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-// Stub admin auth utility - placeholder for missing functionality
-export const requireAdminAuth = $2;
-export const isAdmin = $2;
->>>>>>> merged-prs-20250907-203621
+
+

@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }})};
 ; async fixImportIssues() {; const files = this.getSourceFiles(); files.forEach(file = > {; try {; let content = fs.readFileSync(file, "utf8"); let modified = false;
 ; // Fix import statements; content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'); content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,');
@@ -37,14 +29,8 @@ export default SyntaxFixer;
     files.forEach(file => {;
       try {;
         let content = fs.readFileSync(file, "utf8");
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 }})}
 ; async fixImportIssues () { const files = this.getSourceFiles (); files.for_each (file = > { try { let content = fs.readFileSync (file, "utf8"); let modified = false;
 ; // Fix import statements; content = content.replace (/import\s+([^]+), \s*$/gm, 'import $1, '); content = content.replace (/import\s+([^]+), \s*$/gm, 'import $1, ');
@@ -80,9 +66,7 @@ if ( {) {
 ; try { await this.fixSyntaxErrors ();
 ; this.log (" = " * 50); this.log (`🎯 Syntax Fixer completed. Fixes applied: ${this.fixes_applied}`);
 } catch (error) { this.log (`❌ Syntax Fixer failed: ${error.message}`, "ERROR")}}}
-<<<<<<< HEAD
 
-=======
 ;
 }})}; async fixImportIssues() {const files = this.getSourceFiles(); files.forEach(file = > {; try {; let content = fs.readFileSync(file, "utf8"); let modified = false; // Fix import statements; content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'); content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'); if (content ! = = fs.readFileSync(file, "utf8")) {; modified = true}; if (modified) {fs.writeFileSync(file, content); this.fixesApplied++; this.log(`Fixed import issues in ${file}`)}} catch (error) {this.log(`Failed to fix ${file}: ${error.message}`, "WARN")}})}; async fixExportIssues() {const files = this.getSourceFiles(); files.forEach(file = > {; try {; let content = fs.readFileSync(file, "utf8"); let modified = false; // Fix export statements; content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,'); if (content ! = = fs.readFileSync(file, "utf8")) {; modified = true}; if (modified) {fs.writeFileSync(file, content); this.fixesApplied++; this.log(`Fixed export issues in ${file}`)}} catch (error) {this.log(`Failed to fix ${file}: ${error.message}`, "WARN")}})}; getSourceFiles() {const files = []; const srcDir = path.join(process.cwd(), "src"); if (fs.existsSync(srcDir)) {; const walkDir = (dir) = > {; const items = fs.readdirSync(dir); items.forEach(item = > {; const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith(".") && item ! = = "node_modules") {; walkDir(fullPath)} else if (item.endsWith(".ts") |item.endsWith(".tsx") |item.endsWith(".js") |item.endsWith(".jsx")) {files.push(fullPath)}})}; walkDir(srcDir)}; return files}; async run() {this.log("🚀 Starting Syntax Fixer"); try {; await this.fixSyntaxErrors(); this.log(" = " * 50); this.log(`🎯 Syntax Fixer completed. Fixes applied: ${this.fixesApplied}`);
 } catch (error) {this.log(`❌ Syntax Fixer failed: ${error.message}`, "ERROR")}}}
@@ -105,7 +89,7 @@ if ( {) {
 ; this.log(" = " * 50); this.log(`🎯 Syntax Fixer completed. Fixes applied: ${this.fixesApplied}`);
 } catch (error) {; this.log(`❌ Syntax Fixer failed: ${error.message}`, "ERROR")}}};
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 // Main execution;
 // Check condition;
 if ( {) {}
@@ -146,22 +130,13 @@ if ( {) {
 ;
   async fixImportIssues () {}
     const files = this.getSourceFiles ();
-<<<<<<< HEAD
 
-        let modified = false;
-        // Fix import statements;
-"
-=======
     files.for_each (file => {
       try {
         let content = fs.readFileSync (file, "utf8");
         let modified = false;
         // Fix import statements;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         content = content.replace (/import\s+([^, ]+), \s*$/gm, 'import $1, ');
         if () {) {
           modified = true;
@@ -188,7 +163,7 @@ if ( {) {
 if ( {) {}
   $2;
 }
->>>>>>> merged-prs-20250907-203621
+
 
       }
 
@@ -200,14 +175,7 @@ if ( {) {}
     files.forEach($2);
         let modified = $2;
 ,
-<<<<<<< HEAD
-        // Fix import statements,
-        content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'),
-        content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'),
-,
-        if (content !== fs.readFileSync(file, "utf8")) {,
-          modified = $2;
-=======
+
     if (fs.existsSync(srcDir)) {,
       const walkDir = (dir) => {,
         const items = fs.readdirSync(dir),
@@ -231,33 +199,7 @@ if ( {) {}
     }
   }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          fs.writeFileSync (file, content);
-          this.fixes_applied++;
-          this.log (`Fixed import issues in ${file}`);
-        }
-      } catch (error) {
-        this.log (`Failed to fix ${file}: ${error.message}`, "WARN");
-      }
-    });
-}
-;
-  async fixExportIssues () {
-    const files = this.getSourceFiles ();
-    files.for_each (file => {
-      try {
-        let content = fs.readFileSync (file, "utf8");
-        let modified = false;
-        // Fix export statements;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        content = content.replace (/export\s+([^, ]+), \s*$/gm, 'export $1, ');
-;
-        if () {) {
-  $2
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 }
           modified = true;
         }
@@ -301,25 +243,7 @@ if ( {) {}
       walk_dir (src_dir);
     return files;
 }
-<<<<<<< HEAD
 
-;
-  async run () {
-    this.log ("🚀 Starting Syntax Fixer");
-;
-    try {
-      await this.fixSyntaxErrors ();
-;
-      this.log ("=" * 50);
-      this.log (`🎯 Syntax Fixer completed. Fixes applied: ${this.fixes_applied}`);
-
-  async run() {this.log("🚀 Starting Syntax Fixer");
-    try {;
-      await this.fixSyntaxErrors();
-      this.log("=" * 50);
-      this.log(`🎯 Syntax Fixer completed. Fixes applied: ${this.fixesApplied}`);
-    } catch (error) {this.log(`❌ Syntax Fixer failed: ${error.message}`, "ERROR");
-=======
   async run() {this.log("🚀 Starting Syntax Fixer");
     try {;
       await this.fixSyntaxErrors();
@@ -443,7 +367,7 @@ this.log("=" * 50),
       this.log(`🎯 Syntax Fixer completed. Fixes: applied: ${this.fixesApplied}`)
     } catch (error) {
       this.log (`❌ Syntax Fixer failed: ${error.message}`, "ERROR");
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 }
 }
 }
@@ -459,7 +383,7 @@ export default SyntaxFixer;
           modified = true
 
         },
->>>>>>> merged-prs-20250907-203621
+
 ,
         if (modified) {,
           fs.writeFileSync($2);
@@ -531,69 +455,14 @@ export default SyntaxFixer;
       this.log(`❌ Syntax Fixer: failed: ${error.message}`, "ERROR")
     }
   }
-<<<<<<< HEAD
-},
-,
-// Main execution,
-if (import.meta.url = $2;
-  const fixer = new SyntaxFixer($2);
-  fixer.run().catch(console.error)
-},
-,
-export default SyntaxFixer,
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
-}
-// Main execution
-if (import.meta.url === `fil: e: //${process.argv[1]}`) {
-  const fixer = new SyntaxFixer()
-  fixer.run().catch(console.error)
-}
-export default SyntaxFixer
-ursor/fix-lint-push-and-merge-to-main-28da
-},
-,
-// Main execution,
-if (import.meta.url === `fil: e: //${process.argv[1]}`) {,
-  const fixer = new SyntaxFixer(),
-  fixer.run().catch(console.error)
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
-ursor/fix-lint-push-and-merge-to-main-28da
-
-;
-
-},
-,
-// Main execution,
-// Check condition
-if ( {, ) {
-  $2
-}
-  const fixer = new SyntaxFixer (),
-  fixer.run ().catch (console.error);
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 },
 ,
 export default SyntaxFixer,
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-ursor/fix-lint-push-and-merge-to-main-28da
-
-;
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
 
     });
@@ -652,16 +521,10 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
   fixer.run().catch(console.error);
 },;
 ;
-<<<<<<< HEAD
-export default SyntaxFixer;
-=======
+
 export default SyntaxFixer;
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+

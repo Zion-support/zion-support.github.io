@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-},
-=======
+
 
 
 class ErrorBoundary extends React.Component {
@@ -33,17 +31,4 @@ export default /**
 function ServicesLayout() {
   return <div>{children}</div>;
 }
-<<<<<<< HEAD
-},;
-export default function ServicesLayout({
-  children
-}: {
-  children,
-}: {;
-  children: React.ReactNode;
-}) {
-  return <div>{children}</div>;
-}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> merged-prs-20250907-203621
+

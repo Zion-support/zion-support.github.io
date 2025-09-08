@@ -5,16 +5,8 @@ const AIServicesShowcase.js = ({ className }) => {
       <h1>AIServicesShowcase.js</h1>
       <p>This component is under development.</p>
     </div>
-<<<<<<< HEAD
-  )
-};
-=======
+
   );
 };
 
-<<<<<<< HEAD
-export default AIServicesShowcase.js;
-=======
-export default AIServicesShowcase.js;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

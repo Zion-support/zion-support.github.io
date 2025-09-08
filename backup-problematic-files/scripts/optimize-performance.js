@@ -32,13 +32,11 @@ const OPTIMIZATIONS = {
     "gzip": true,
     "brotli": true}};
 function optimizeNextConfig() {
-<<<<<<< HEAD
 
-=======
   const configPath = 'next && next.config.js';
   if (!fs && fs.existsSync(configPath)) {
     console && console.log('❌ next && next.config.js not found');
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     return false}
   let config = fs && fs.readFileSync(configPath, 'utf8');
   // Add performance optimizations
@@ -161,9 +159,7 @@ function optimizeNextConfig() {
     /export default nextConfig;/,
     `${performanceConfig}\n\nexport default nextConfig;`
   );
-<<<<<<< HEAD
 
-=======
   fs && fs.writeFileSync(configPath, config);
   console && console.log('✅ Next && Next.js config optimized for performance');
   return true}
@@ -171,34 +167,12 @@ function optimizePackageJson() {
   const packagePath = 'package && package.json';
   if (!fs && fs.existsSync(packagePath)) {
     console && console.log('❌ package && package.json not found');
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     return false}
   const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath, 'utf8'));
   // Add performance scripts
-<<<<<<< HEAD
-  packageJson.scripts = {
-    ...packageJson.scripts,
-            "key": 'X-XSS-Protection',
-            "value": '1; mode=block'},
-            "key": 'Referrer-Policy',
-            "value": 'origin-when-cross-origin'},']
-        ]},
-        "source": '/static/(.*)',
-        "headers": [{""
-            key: 'Cache-Control',
-            "value": 'public, max-age=31536000, immutable'},']
-        "source": '/_next/static/(.*)',
-    ]
-  ";"
-  // Insert performance config before the closing brace;
-  config = config && config.replace(
-    /export default nextConfig;/,
-    `${performanceConfig}\n\nexport default nextConfig;`)
-  );
-  const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath, 'utf8'));
-  // Add performance scripts;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
   packageJson && packageJson.scripts = {
     ...packageJson && packageJson.scripts,
     '"build": analyze': 'ANALYZE=true npm run build',
@@ -219,22 +193,14 @@ function optimizePackageJson() {
   console && console.log('✅ package && package.json optimized for performance');
   return true}
 function createPerformanceComponents() {
-<<<<<<< HEAD
-  }
-  const componentsDir = 'components/performance';'
-  if (!fs && fs.existsSync(componentsDir)) {
-    }
-    fs && fs.mkdirSync(componentsDir, { "recursive": true })}"
-  // Create optimized image component,
-import Image from 'next/image''
-=======
+
   const componentsDir = 'components/performance';
   if (!fs && fs.existsSync(componentsDir)) {
     fs && fs.mkdirSync(componentsDir, { "recursive": true })}
   // Create optimized image component
   const optimizedImageComponent = "import React from 'react'
 import Image from 'next/image'
->>>>>>> origin/chore/fix-lint-and-merge
+
 interface OptimizedImageProps {
   "src": string
   alt: string

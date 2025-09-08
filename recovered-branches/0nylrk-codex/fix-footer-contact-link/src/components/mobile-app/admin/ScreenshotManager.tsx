@@ -1,436 +1,23 @@
-<<<<<<< HEAD
-import React, { useState, useRef } from "react",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Upload, Trash2, Plus } from "lucide-react",
-import { AppPlatform } from "./MetadataManager";
-import { toast } from "sonner";
-interface ScreenshotManagerProps {
-  platform: AppPlatform}
 
-type Screenshot = $2;
-  url: string,
-  file: File},
 
-export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {
-  const [screenshots, setScreenshots] = useState<Screenshot[]>([]),
-  const [isDragging, setIsDragging] = useState($2);
-  const fileInputRef = $2;
-  const handleFileSelect = $2;
-  const addScreenshots = $2;
-    if (imageFiles.length === 0) {
-      toast.error($2);
-      return
-    }
-    // Limit the number of screenshots
-    const maxScreenshots = $2;
-    const availableSlots = $2;
-    if (availableSlots <= 0) {
-      toast.error($2);
-      return
-    }
-    
-    const filesToAdd = imageFiles.slice($2);
-    const newScreenshots = filesToAdd.map(file => ({
-      id: Math.random().toString(36).substring($2);
-      url: URL.createObjectURL($2);
-      file
-    })),
-    
-    setScreenshots($2);
-    if (filesToAdd.length < imageFiles.length) {
-      toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`)
-    }
-  },
-  
-  const removeScreenshot = (id: string) => {
-    setScreenshots($2);
-      // Revoke object URL to avoid memory leaks
-      const removed = prev.find($2);
-=======
-<<<<<<< HEAD
-
-interface ScreenshotManagerProps {
-  }
-  "platform": AppPlatform
-=======
-import React, { useState, useRef } from "react",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Upload, Trash2, Plus } from "lucide-react",
-import { AppPlatform } from "./MetadataManager";
-import { toast } from "sonner";
-
-import React, { useState, useRef } from "react";
-import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Upload, Trash2, Plus} from "lucide-react";
-import {AppPlatform} from "./MetadataManager";
-
-import {toast} from "sonner";
-interface ScreenshotManagerProps {}
-  platform: AppPlatform;
->>>>>>> origin/chore/fix-lint-and-merge
-}
-
-type Screenshot = {}
-  id: string;
-  url: string;
-  file: File;
-}
-export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {};
-};
-
-  const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
-  const [isDragging, setIsDragging] = useState(false);
-  const fileInputRef = useRef<HTMLInputElement>(null);
-<<<<<<< HEAD
-  const handleFileSelect = ("e": React.ChangeEvent<HTMLInputElement>) => {
-    }
-    if (e.target.files) {
-      }
-
-      return;
-    }
-    // Limit the number of screenshots;
-
-=======
-  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {}
-    if (e.target.files) {}
-      addScreenshots(Array.from(e.target.files))
-    }
-"
-import { AppPlatform } from "./MetadataManager","
-import { toast } from "sonner",
-interface ScreenshotManagerProps {}
-  platform: AppPlatform";
-import React, { useState, useRef } from "react",;"
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;"
-import { Button } from "@/components/ui/button",;"
-import { Upload, Trash2, Plus } from "lucide-react",;"
-import { AppPlatform } from "./MetadataManager",;"
-import { toast } from "sonner",;
-interface ScreenshotManagerProps {;
-  platform: AppPlatform;
-}
-;
-type Screenshot = {;
-  id: string,;
-  url: string,;
-  file: File;
-},;
-export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {;
-  const [screenshots, setScreenshots] = useState<Screenshot[]>([]),;
-  const [isDragging, setIsDragging] = useState(false),;
-  const fileInputRef = useRef<HTMLInputElement>(null),;
-  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {;
-    if (e.target.files) {;
-      addScreenshots(Array.from(e.target.files));
-    }
-
-<<<<<<< HEAD
-import React, { useState, useRef } from "react",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Upload, Trash2, Plus } from "lucide-react",
-import { AppPlatform } from "./MetadataManager";
-import { toast } from "sonner";
-import React, { useState, useRef } from "react";
-import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Upload, Trash2, Plus} from "lucide-react";
-import {AppPlatform} from "./MetadataManager";
-import {toast} from "sonner";
-interface ScreenshotManagerProps {
-  platform: AppPlatform
-}
-
-type Screenshot = {
-  id: string
-  url: string
-  file: File
-}
-export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {
-};
-
-export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {;
-  const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
-  const [isDragging, setIsDragging] = useState(false);
-  const fileInputRef = useRef<HTMLInputElement>(null);
-  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) {
-      addScreenshots(Array.from(e.target.files))
-    }
-  }
-  const addScreenshots = (files: File[]) => {
-    // Filter for image files only
-    const imageFiles = files.filter(file => file.type.startsWith('image/'));
-  };
-import React, { useState, useRef } from "react",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Upload, Trash2, Plus } from "lucide-react",
-import { AppPlatform } from "./MetadataManager",
-import { toast } from "sonner",
-interface ScreenshotManagerProps {
-  platform: AppPlatform
-import React, { useState, useRef } from "react",;
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { Upload, Trash2, Plus } from "lucide-react",;
-import { AppPlatform } from "./MetadataManager",;
-import { toast } from "sonner",;
-interface ScreenshotManagerProps {;
-  platform: AppPlatform;
-}
-;
-type Screenshot = {;
-  id: string,;
-  url: string,;
-  file: File;
-},;
-export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {;
-  const [screenshots, setScreenshots] = useState<Screenshot[]>([]),;
-  const [isDragging, setIsDragging] = useState(false),;
-  const fileInputRef = useRef<HTMLInputElement>(null),;
-  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {;
-    if (e.target.files) {;
-      addScreenshots(Array.from(e.target.files));
-    }
-  },
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import React, { useState, useRef } from './react';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { Upload, Trash2, Plus } from './lucide-react';
-import { AppPlatform } from './MetadataManager';
-
-import { toast } from './sonner';
-
-interface ScreenshotManagerProps {
-  platform: AppPlatform
-}
-
-  const addScreenshots = (files: File[]) => {
-    // Filter for image files only
-    const imageFiles = files.filter(file => file.type.startsWith('image/')),
-<<<<<<< HEAD
-
-    if (imageFiles.length === 0) {
-=======
-    
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (imageFiles.length === 0) {
       toast.error("Please select valid image files")
       return
     }
     // Limit the number of screenshots
-<<<<<<< HEAD
-    const maxScreenshots = platform === "ios" ? 10 : 8;
-    const availableSlots = maxScreenshots - screenshots.length;
-    if (availableSlots <= 0) {
-      toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
-      return
-    }
-    const filesToAdd = imageFiles.slice(0, availableSlots);
-    const newScreenshots = filesToAdd.map(file => ({
-      id: Math.random().toString(36).substring(2, 9);
-      url: URL.createObjectURL(file)
-      file
-    }));
-    setScreenshots(prev => [...prev, ...newScreenshots]);
-    if (filesToAdd.length < imageFiles.length) {
-      toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`)
-    }
-  }
-  const removeScreenshot = (id: string) => {
-    setScreenshots(prev => {
-      const filtered = prev.filter(screenshot => screenshot.id !== id);
-      // Revoke object URL to avoid memory leaks
-      const removed = prev.find(screenshot => screenshot.id === id)
-      if (removed) {
-        URL.revokeObjectURL(removed.url)
-      }
-      return filtered
-    })
-  }
-  const handleDragOver = (e: React.DragEvent) => {
-    e.preventDefault()
-    setIsDragging(true)
-  }
-  const handleDragLeave = () => {
-    setIsDragging(false)
-  }
-  const handleDrop = (e: React.DragEvent) => {
-    e.preventDefault();
-    setIsDragging(false)
-    if (e.dataTransfer.files) {
-      addScreenshots(Array.from(e.dataTransfer.files))
-    }
-  }
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
 
       toast.error("Please select valid image files")
       return;
     }
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    const maxScreenshots = platform === "ios" ? 10 : 8,
-    const availableSlots = maxScreenshots - screenshots.length,
-    
-    if (availableSlots <= 0) {
-<<<<<<< HEAD
-      toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
-      return
-    }
-    
-    const filesToAdd = imageFiles.slice(0, availableSlots);
-    
-    const newScreenshots = filesToAdd.map(file => ({
-      id: Math.random().toString(36).substring(2, 9);
-      url: URL.createObjectURL(file),
-      file
-    }));
-    
-    setScreenshots(prev => [...prev, ...newScreenshots]);
-    
-    if (filesToAdd.length < imageFiles.length) {
-      toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`)
-    }
-  };
-  
-  const removeScreenshot = (id: string) => {
-    setScreenshots(prev => {
-      const filtered = prev.filter(screenshot => screenshot.id !== id);
-      
-      // Revoke object URL to avoid memory leaks
-      const removed = prev.find(screenshot => screenshot.id === id),
-      if (removed) {
-        URL.revokeObjectURL(removed.url)
-      }
-      
-      return filtered
-    })
-  };
-  
-  const handleDragOver = (e: React.DragEvent) => {
-    e.preventDefault(),
-    setIsDragging(true)
-  };
-  
-  const handleDragLeave = () => {
-    setIsDragging(false)
-  };
-  
-  const handleDrop = (e: React.DragEvent) => {
-    e.preventDefault();
-    setIsDragging(false),
-    
-    if (e.dataTransfer.files) {
-      addScreenshots(Array.from(e.dataTransfer.files))
-    }
-  };
-      toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`),
-      return
-  },;
-  const addScreenshots = (files: File[]) => {;
-    // Filter for image files only;
-    const imageFiles = files.filter(file => file.type.startsWith('image/')),;
-    if (imageFiles.length === 0) {;
-      toast.error("Please select valid image files"),;
-      return;
-    }
-;
-    // Limit the number of screenshots;
-    const maxScreenshots = platform === "ios" ? 10 : 8,;
-    const availableSlots = maxScreenshots - screenshots.length,;
-    if (availableSlots <= 0) {;
-      toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`),;
-      return;
-    }
-;
-    const filesToAdd = imageFiles.slice(0, availableSlots),;
-    const newScreenshots = filesToAdd.map(file => ({;
-      id: Math.random().toString(36).substring(2, 9),;
-      url: URL.createObjectURL(file),;
-      file;
-    })),;
-    setScreenshots(prev => [...prev, ...newScreenshots]),;
-    if (filesToAdd.length < imageFiles.length) {;
-      toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`);
-    }
-  },;
-  const removeScreenshot = (id: string) => {;
-    setScreenshots(prev => {;
-      const filtered = prev.filter(screenshot => screenshot.id !== id),;
-      // Revoke object URL to avoid memory leaks;
-      const removed = prev.find(screenshot => screenshot.id === id),;
-      if (removed) {;
-        URL.revokeObjectURL(removed.url);
-      }
-;
-      return filtered;
-    });
-  },;
-  const handleDragOver = (e: React.DragEvent) => {;
-    e.preventDefault(),;
-    setIsDragging(true);
-  },;
-  const handleDragLeave = () => {;
-    setIsDragging(false);
-  },;
-  const handleDrop = (e: React.DragEvent) => {;
-    e.preventDefault(),;
-    setIsDragging(false),;
-    if (e.dataTransfer.files) {;
-      addScreenshots(Array.from(e.dataTransfer.files));
-    }
-  },
 
     const maxScreenshots = platform === "ios" ? 10 : 8,
     const availableSlots = maxScreenshots - screenshots.length,
     
     if (availableSlots <= 0) {
 
-      return
-    }
-    
-    const filesToAdd = imageFiles.slice(0, availableSlots);
-    
-    const newScreenshots = filesToAdd.map(file => ({
-      id: Math.random().toString(36).substring(2, 9);
-      url: URL.createObjectURL(file),
-      file
-    }));
-    
-    setScreenshots(prev => [...prev, ...newScreenshots]);
-    
-    if (filesToAdd.length < imageFiles.length) {
-      toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`)
-    }
-  };
-  
-  const removeScreenshot = (id: string) => {
-    setScreenshots(prev => {
-      const filtered = prev.filter(screenshot => screenshot.id !== id);
-      
-      // Revoke object URL to avoid memory leaks
-      const removed = prev.find(screenshot => screenshot.id === id),
->>>>>>> merged-prs-20250907-203621
-      if (removed) {
-        URL.revokeObjectURL(removed.url)
-      }
-      
-      return filtered
-    })
-<<<<<<< HEAD
-=======
   };
   
   const handleDragOver = (e: React.DragEvent) => {
@@ -487,14 +74,12 @@ interface ScreenshotManagerProps {
       // Revoke object URL to avoid memory leaks;
       const removed = prev.find(screenshot => screenshot.id === id),;
       if (removed) {;
->>>>>>> origin/chore/fix-lint-and-merge
+
         URL.revokeObjectURL(removed.url);
       }
       return filtered;
     });
-<<<<<<< HEAD
 
-=======
   },;
   const handleDragOver = (e: React.DragEvent) => {;
     e.preventDefault(),;
@@ -511,17 +96,8 @@ interface ScreenshotManagerProps {
     }
   },
 
-<<<<<<< HEAD
-=======
-  
-  
-=======
 
-  
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   return (
 
     <Card className="bg-zion-blue border-zion-purple/30">
@@ -529,14 +105,8 @@ interface ScreenshotManagerProps {
         <CardTitle className="text-lg">App Screenshots</CardTitle>
       </CardHeader>
       <CardContent>
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 import React, { useState, useRef } from "react";
 
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
@@ -562,16 +132,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       addScreenshots(Array && Array.from(e && e.target.files));
     }
   };
-<<<<<<< HEAD
-    if (imageFiles && imageFiles.length === 0) {;"
-      toast && toast.error("Please select valid image files"),;
-      return;
-    }
-    if (availableSlots <= 0) {;"`
-      toast && toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
-      return;
-    }
-=======
+
   const addScreenshots = (files: File[]) => {;
     // Filter for image files only;
     const imageFiles = files && files.filter(file => file && file.type.startsWith('image/'));
@@ -587,18 +148,13 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       return;
     }
     const filesToAdd = imageFiles && imageFiles.slice(0, availableSlots);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     const newScreenshots = filesToAdd && filesToAdd.map(file => ({;
       id: Math && Math.random().toString(36).substring(2, 9);
       url: URL && URL.createObjectURL(file),;
       file;
     }));
-<<<<<<< HEAD
-    if (filesToAdd && filesToAdd.length < imageFiles && imageFiles.length) {;`
-      toast && toast.warning(`Only added ${filesToAdd && filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`);
-    }
-  };
-=======
+
     setScreenshots(prev => [...prev, ...newScreenshots]);
     if (filesToAdd && filesToAdd.length < imageFiles && imageFiles.length) {;
       toast && toast.warning(`Only added ${filesToAdd && filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`);
@@ -607,38 +163,34 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
   const removeScreenshot = (id: string) => {;
     setScreenshots(prev => {;
       const filtered = prev && prev.filter(screenshot => screenshot && screenshot.id !== id);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       // Revoke object URL to avoid memory leaks;
       const removed = prev && prev.find(screenshot => screenshot && screenshot.id === id),;
       if (removed) {;
         URL && URL.revokeObjectURL(removed && removed.url);
       }
-<<<<<<< HEAD
-=======
+
       return filtered;
     });
   };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   const handleDragOver = (e: React && React.DragEvent) => {;
     e && e.preventDefault(),;
     setIsDragging(true);
   };
-<<<<<<< HEAD
-=======
+
   const handleDragLeave = () => {;
     setIsDragging(false);
   };
   const handleDrop = (e: React && React.DragEvent) => {;
     e && e.preventDefault();
     setIsDragging(false),;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     if (e && e.dataTransfer.files) {;
       addScreenshots(Array && Array.from(e && e.dataTransfer.files));
     }
   };
-<<<<<<< HEAD
 
-=======
   return (
 
 import React, { useState, useRef } from "react",;
@@ -735,24 +287,14 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
   ;
   return (;
     <Card className="bg-zion-blue border-zion-purple/30">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       <CardHeader>;
         <CardTitle className="text-lg">App Screenshots</CardTitle>;
->>>>>>> origin/chore/fix-lint-and-merge
+
       </CardHeader>;
       <CardContent>;
-<<<<<<< HEAD
 
-            isDragging "
-              ? "border-zion-cyan bg-zion-cyan/10" 
 
-        <div
-          className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
-
-            isDragging
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
     // Check condition
 }
@@ -819,186 +361,17 @@ if ( {) {
           on_drop={handle_drop}
         >;
 
-=======
-              ? "border-zion-cyan bg-zion-cyan/10"
-            isDragging 
-              ? "border-zion-cyan bg-zion-cyan/10" 
 
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-        <div
-          className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
-            isDragging
-              ? "border-zion-cyan bg-zion-cyan/10"
-            isDragging 
-              ? "border-zion-cyan bg-zion-cyan/10" 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-              : "border-zion-purple/30"
-
-          }`}
-          onDragOver={handleDragOver}
-          onDragLeave={handleDragLeave}
-<<<<<<< HEAD
-          onDrop={handleDrop}
-        >
-          <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />
-          <p className="text-sm mb-2">Drag & drop screenshots here</p>
-=======
-          onDrop={handleDrop}>;
-          <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />;
-          <p className="text-sm mb-2">Drag & drop screenshots here</p>;
-<<<<<<< HEAD
-          onDrop={handleDrop}>;
-          <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />;
-          <p className="text-sm mb-2">Drag & drop screenshots here</p>;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-          <input
-            ref={fileInputRef}
-            type="file"
-            multiple
-            accept="image/*"
-            onChange={handleFileSelect}
-            className="hidden"
-<<<<<<< HEAD
-        <div ;
-          className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${;
-            isDragging ;
-              ? "border-zion-cyan bg-zion-cyan/10" ;
-              :"border-zion-purple/30";
-          }`}
-          onDragOver={handleDragOver}
-          onDragLeave={handleDragLeave}
-          onDrop={handleDrop}
-        >;
-          <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />;
-          <p className="text-sm mb-2">Drag & drop screenshots here</p>;
-          <input;
-            ref={fileInputRef}
-            type="file";
-            multiple;
-            accept="image/*";
-            onChange={handleFileSelect}
-            className="hidden";
-=======
-
-<<<<<<< HEAD
-          onDrop={handleDrop}>;"
-          <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />;"
-          <p className="text-sm mb-2">Drag & drop screenshots here</p>;
-
-          <input;
-            ref={fileInputRef}"
-            type="file"
-            multiple"
-            accept="image/*"
-            onChange={handleFileSelect}"
-            className="hidden"
-"
-            className="mt-2";
-          >;"
-            <Plus className="mr-2 h-4 w-4" />;
-            Select Files;
-          </Button>;
-        </div>;
-
-"
-                alt="App screenshot""
-                className="w-full h-auto rounded border border-zion-purple/20"
-              />;
-              <button;
-                onClick={() => removeScreenshot(screenshot && screenshot.id)}
-
-"
-                className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity";
-              >;"
-                <Trash2 className="h-3 w-3" />;
-              </button>;
-            </div>;
-          ))}
-
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-          />;
-          <Button ;
-            variant="outline" ;
-            onClick={() => fileInputRef.current?.click()}
-            className="mt-2";
-          >;
-            <Plus className="mr-2 h-4 w-4" />;
-            Select Files;
-          </Button>;
-        </div>;
-                alt="App screenshot"
-                className="w-full h-auto rounded border border-zion-purple/20"
-              />;
-              <button
-                onClick={() => removeScreenshot(screenshot && screenshot.id)}
-        ;
-        <div className="text-xs text-gray-400 mb-4">;
-          {platform === "ios" ;
-            ? "Recommended size:1290x2796 pixels for iPhone. Max 10 screenshots.";
-            :"Vary by device. Include phone and tablet screenshots. Max 8 per device type.";
-          }
-        </div>;
-        ;
-        <div className="grid grid-cols-2 gap-3">;
-          {screenshots.map((screenshot) => (;
-            <div key={screenshot.id} className="relative group">;
-              <img ;
-                src={screenshot.url}
-                alt="App screenshot";
-                className="w-full h-auto rounded border border-zion-purple/20";
-              />;
-              <button;
-                onClick={() => removeScreenshot(screenshot.id)}
-                className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity";
->>>>>>> origin/chore/fix-lint-and-merge
               >;
                 <Trash2 className="h-3 w-3" />;
               </button>;
             </div>;
           ))}
 
-<<<<<<< HEAD
-=======
-
-
-<<<<<<< HEAD
-        </div>;
-      </CardContent>;
-    </Card>;
 
 
 
-};
-=======
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
-
-};
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string,
   url: string,
   file: File;
@@ -1098,7 +471,7 @@ if ( {) {
     <Card className="bg - zion - blue border - zion - purple / 30">;
       <CardHeader>;
         <CardTitle className="text - lg">App Screenshots</CardTitle>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       </CardHeader>;
       <CardContent>;
         <div;`
@@ -1128,110 +501,7 @@ if ( {) {
       </CardContent>;
     </Card>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-  },
-  
-  const handleDragOver = (e: React.DragEvent) => {
-    e.preventDefault($2);
-    setIsDragging(true)
-  },
-  
-  const handleDragLeave = $2;
-  const handleDrop = (e: React.DragEvent) => {
-    e.preventDefault($2);
-    setIsDragging($2);
-    if (e.dataTransfer.files) {
-      addScreenshots(Array.from(e.dataTransfer.files))
-    }
-  },
-  
-  return (
-<<<<<<< HEAD
-    <Card className = $2;
-=======
-    <Card className = $2;
-=======
-=======
-;
-<<<<<<< HEAD
-  ),;
-},; interface ScreenshotManagerProps {
-  platform: AppPlatform 
-}type Screenshot = {
-  id: string;
-url: string;
-file: File 
-};
-export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({
-  platform 
-}) => {
-  const [screenshots, setScreenshots] = useState<Screenshot[]> ([]);
-const [isDragging, setIsDragging] = useState (false);
-const fileInputRef = useRef<HTMLInputElement> (null);
-if (e.target.files) {
-  return;
-}setScreenshots (prev => [...prev, ...newScreenshots]);
-}
-};
-return filtered;
-}) 
-};
-<CardHeader> <CardTitle className="text-lg" >App Screenshots</CardTitle> </CardHeader> <CardContent> <div className= {
-  `border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors $ {
-  isDragging > <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" /> <p className="text-sm mb-2" >Drag & drop screenshots here</p> <input > <Plus className="mr-2 h-4 w-4" /> Select Files </Button> </div> > <Trash2 className="h-3 w-3" /> </button> </div>) ) 
-}</div> </CardContent> </Card>) 
-};
-          />
-          <Button
-            variant="outline"
-            onClick={() => fileInputRef.current?.click()}
-            className="mt-2"
-          >
-            <Plus className="mr-2 h-4 w-4" />
-            Select Files
-          </Button>
-        </div>
-        <div className="text-xs text-gray-400 mb-4">
-          {platform === "ios"
-            ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots."
-            : "Vary by device. Include phone and tablet screenshots. Max 8 per device type."
-          }
-        </div>
-        <div className="grid grid-cols-2 gap-3">
-          {screenshots.map((screenshot) => (
-            <div key={screenshot.id} className="relative group">
-              <img
-                src={screenshot.url}
-                alt="App screenshot"
-                className="w-full h-auto rounded border border-zion-purple/20"
-              />
-              <button
-                onClick={() => removeScreenshot(screenshot.id)}
-                className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
-              >
-                <Trash2 className="h-3 w-3" />
-              </button>
-            </div>
-          ))}
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
-};
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+    <Card className = $2;
+
+

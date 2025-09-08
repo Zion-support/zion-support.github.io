@@ -5,16 +5,8 @@ const PricingPage = ({ className }) => {
       <h1>PricingPage</h1>
       <p>This component is under development.</p>
     </div>
-<<<<<<< HEAD
-  )
-};
-=======
+
   );
 };
 
-<<<<<<< HEAD
-export default PricingPage;
-=======
-export default PricingPage;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

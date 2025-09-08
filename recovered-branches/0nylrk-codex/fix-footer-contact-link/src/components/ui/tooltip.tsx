@@ -1,42 +1,16 @@
 import * as React from 'react';
 import * as TooltipPrimitive from '@radix-ui/react-tooltip';
-<<<<<<< HEAD
-import {cn} from '@/lib/utils';
-=======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import * as React from 'react';
-import * as TooltipPrimitive from '@radix-ui/react-tooltip';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-import {cn} from '@/lib/utils';
-const TooltipProvider = TooltipPrimitive.Provider;
-const Tooltip = TooltipPrimitive.Root;
-const TooltipTrigger = TooltipPrimitive.Trigger;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
+
 import * as React from "react"
 import * as TooltipPrimitive from "@radix-ui/react-tooltip"
 import * as React from "react"
 import * as TooltipPrimitive from "@radix-ui/react-tooltip"
->>>>>>> origin/chore/fix-lint-and-merge
-
-=======
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import * as React from "react"
-import * as TooltipPrimitive from "@radix-ui/react-tooltip"
-import * as React from "react"
-import * as TooltipPrimitive from "@radix-ui/react-tooltip"
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
 
 import { cn } from "@/lib/utils"
 
@@ -46,29 +20,17 @@ const Tooltip = TooltipPrimitive.Root
 
 const TooltipTrigger = TooltipPrimitive.Trigger
 
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
+
+
+
 const TooltipContent = React.forwardRef<
   React.ElementRef<typeof TooltipPrimitive.Content>
   React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content>
 ></typeof>(({ className, sideOffset = 4, ...props }, ref) => (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-const TooltipContent = React.forwardRef<
-  React.ElementRef<typeof TooltipPrimitive.Content>
-  React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content>
->(({ className, sideOffset = 4, ...props }, ref) => (
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
   <TooltipPrimitive.Content
     ref={ref}
     sideOffset={sideOffset}
@@ -97,73 +59,11 @@ const TooltipContent = React.forwardRef<
   <TooltipPrimitive.Content;
     ref={ref}
 
-<<<<<<< HEAD
-    sideOffset={sideOffset}
-    className={cn(
 
-pr-12325
-=======
-<<<<<<< HEAD
-      "z-50 overflow-hidden rounded-md border bg-popover px-3 py-1.5 text-sm text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
 
-      className
-import * as React from "react";
-import * as TooltipPrimitive from "@radix-ui/react-tooltip";
-;
-import { cn } from "@/lib/utils";
-;
->>>>>>> merged-prs-20250907-203621
-const TooltipProvider = TooltipPrimitive.Provider;
-const Tooltip = TooltipPrimitive.Root;
-const TooltipTrigger = TooltipPrimitive.Trigger;
-<<<<<<< HEAD
-=======
-;
-const TooltipContent = React.forwardRef<;
-  React.ElementRef<typeof TooltipPrimitive.Content>,;
-  React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content>;
->(({ className, sideOffset = 4, ...props }, ref) => (;
-  <TooltipPrimitive.Content;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-const TooltipProvider = TooltipPrimitive && TooltipPrimitive.Provider;
-
-const Tooltip = TooltipPrimitive && TooltipPrimitive.Root;
-
-const TooltipTrigger = TooltipPrimitive && TooltipPrimitive.Trigger;
-
-const TooltipContent = React && React.forwardRef<;
-
-  React && React.ElementRef<typeof TooltipPrimitive && TooltipPrimitive.Content>,;
-  React && React.ComponentPropsWithoutRef<typeof TooltipPrimitive && TooltipPrimitive.Content>;
-></typeof>(({ className, sideOffset = 4, ...props }, ref) => (;
-  <TooltipPrimitive&& TooltipPrimitive.Content
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    ref={ref}
-    sideOffset={sideOffset}
-<<<<<<< HEAD
-    className={cn(
-      'z-50 overflow-hidden rounded-md border bg-popover px-3 py-1 && 1.5 text-sm text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
-
-import { cn } from "@/lib/utils";
-;
-const TooltipProvider = TooltipPrimitive.Provider;
-;
-;
-;
-const TooltipContent = React.forwardRef<;
-  React.ElementRef<typeof TooltipPrimitive.Content>,;
-  React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content>;
->(({ className, sideOffset = 4, ...props }, ref) => (;
-  <TooltipPrimitive.Content;
     ref={ref}
     sideOffset={sideOffset}
 
-    {...props}
-  />;
-));
-export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
-=======
     className={cn(;
       "z-50 overflow-hidden rounded-md border bg-popover px-3 py-1.5 text-sm text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",;
       className;
@@ -178,14 +78,13 @@ export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
 ;
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 
 TooltipContent && TooltipContent.displayName = TooltipPrimitive && TooltipPrimitive.Content.displayName;
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider };
-<<<<<<< HEAD
-=======
+
 import * as TooltipPrimitive from '@radix - ui / react - tooltip';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 ;
 
 TooltipContent && TooltipContent.displayName = TooltipPrimitive && TooltipPrimitive.Content.displayName;
@@ -263,66 +162,11 @@ const TooltipContent = React.forward_ref<;
   />));
 TooltipContent.display_name = TooltipPrimitive.Content.display_name;
 ;
->>>>>>> merged-prs-20250907-203621
+
 
 TooltipContent.displayName = TooltipPrimitive.Content.displayName;
 ;
-<<<<<<< HEAD
-export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }import * as React from "react" import * as TooltipPrimitive from "@radix-ui/react-tooltip" const TooltipProvider = TooltipPrimitive.Provider const Tooltip = TooltipPrimitive.Root const TooltipTrigger = TooltipPrimitive.Trigger const TooltipContent = React.forwardRef< React.ElementRef<typeof TooltipPrimitive.Content>;
-    side_offset={side_offset}
 
-    className={cn ("
-      'z - 50 overflow - hidden rounded - md border bg - popover px - 3 py - 1.5 text - sm text - popover - foreground shadow - md animate - in fade - in - 0 zoom - in - 95 data-[state = closed]:animate - out data-[state = closed]:fade - out - 0 data-[state = closed]:zoom - out - 95 data-[side = bottom]:slide - in - from - top - 2 data-[side = left]:slide - in - from - right - 2 data-[side = right]:slide - in - from - left - 2 data-[side = top]:slide - in - from - bottom - 2',')
-      class_name)}
-  />));
 
-export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }import * as React from "react" import * as TooltipPrimitive from "@radix-ui/react-tooltip" const TooltipProvider = TooltipPrimitive.Provider const Tooltip = TooltipPrimitive.Root const TooltipTrigger = TooltipPrimitive.Trigger const TooltipContent = React.forwardRef< React.ElementRef<typeof TooltipPrimitive.Content>;"
-React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content> > ( ({
-}, ref) => (<TooltipPrimitive.Content) 
-}{
-  ...props;
-}/>) ) TooltipContent.displayName = TooltipPrimitive.Content.displayName export {
 
-=======
-<<<<<<< HEAD
-TooltipContent.displayName = TooltipPrimitive.Content.displayName;
-;
-export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }import * as React from "react" import * as TooltipPrimitive from "@radix-ui/react-tooltip" const TooltipProvider = TooltipPrimitive.Provider const Tooltip = TooltipPrimitive.Root const TooltipTrigger = TooltipPrimitive.Trigger const TooltipContent = React.forwardRef< React.ElementRef<typeof TooltipPrimitive.Content>;
-React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content> > ( ({
-  className, sideOffset = 4, ...props 
-}, ref) => (<TooltipPrimitive.Content) 
-}{
-  ...props 
-}/>) ) TooltipContent.displayName = TooltipPrimitive.Content.displayName export {
-  Tooltip, TooltipTrigger, TooltipContent, TooltipProvider 
-}
-      'z-50 overflow-hidden rounded-md border bg-popover px-3 py-1.5 text-sm text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2'
-      "z-50 overflow-hidden rounded-md border bg-popover px-3 py-1.5 text-sm text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-      className
-    )}
-    {...props}
-  />
-));
-TooltipContent.displayName = TooltipPrimitive.Content.displayName;
-<<<<<<< HEAD
-export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
-=======
-<<<<<<< HEAD
 
-export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
-export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
-;
-=======
-export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
-export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
-;
-
-export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider };
-export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
-;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621

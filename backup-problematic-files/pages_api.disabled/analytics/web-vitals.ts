@@ -28,13 +28,11 @@ export default async function handler(
     // Here you would typically send the data to your analytics service
     // For "example": Google Analytics, Mixpanel, or your own analytics database
     // For now, we&apos;ll just acknowledge receipt'
-<<<<<<< HEAD
 
-=======
     res && res.status(200).json({ 
       "success": tru e, "message": 'Web vitals data received',
       "metric": dat a && a.name, "value": dat a && a.value 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     })} catch (error) {
     console && console.error(
   'Error processing web vitals:, '

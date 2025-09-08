@@ -1,30 +1,5 @@
-<<<<<<< HEAD
-const path = require($2);
-const { spawnSync } = require($2);
-function runNode(relPath, args = []) {
-  const abs = path.resolve($2);
-  const res = spawnSync($2);
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
-=======
-<<<<<<< HEAD
-const { spawnSync } = require('child_process');
-function runNode(relPath, args = []) {
-<<<<<<< HEAD
-function runNode(relPath, args = []) {
-=======
-<<<<<<< HEAD
-const path = require('path');
-const { spawnSync } = require('child_process');
-function runNode(relPath, args = []) {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
-;
 
-const { spawnSync } = require('child_process')function runNode() {const abs = path.resolve(__dirname, '....', relPath)const res = spawnSync('node', [abs, ...args], { "stdio": 'pipe', "encoding": 'utf8', "shell": true,'
-};
-  return { "status": res.status || 0, "stdout": res.stdout || '', "stderr": res.stderr || '' }'
->>>>>>> merged-prs-20250907-203621
 }
 
 exports.config = $2;
@@ -40,24 +15,7 @@ exports.handler = $2;
   // Generate sitemap for crawling
   logStep('sitemap:generate', () => runNode('scripts/generate-sitemap.js')),
 
-<<<<<<< HEAD
-  // Build search index if available
-  try {
-    logStep('search:index', () => runNode('scripts/generate-search-index.js'))
-  } catch (error) {
-    logs.push(`Search index generation skipped: ${String(error)}`)
-  }
-  // Commit and push
-  logStep('git:sync', () => runNode('automation/git-sync.cjs')),
-=  // Run the automation guardian
-  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs')),
 
-  // Attempt to push any changes
-  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
-
-  return { statusCode: 200, body: logs.join('\n') }
-},
-=======
 function runNode() {
 }
 const abs = path && path.resolve(__dirname, '....', relPath),;'
@@ -110,126 +68,17 @@ const res = spawn_sync ('node', [abs, ...args], { "stdio": 'pipe', "encoding": '
 }),
  ;
   return { "status": res.status || 0, "stdout": res.stdout || '', "stderr": res.stderr || '' }'
-=======
 
-  const abs = path.resolve(__dirname, '....', relPath);
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true });
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
->>>>>>> origin/chore/fix-lint-and-merge
-}
-exports.config = {
-  schedule: '*/10 * * * *'};
-exports.handler = async () => {
-  const logs = [];
-  function logStep(name, fn) {
-    logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = fn();
-    if (stdout) logs.push(stdout);
-    if (stderr) logs.push(stderr);
-    logs.push(`exit=${status}`);
-origin/cursor/automate-test-improve-and-merge-code-2533
-    return status
-  }
-  // Generate sitemap for crawling
-
-const { spawnSync } = require('child_process');
-function runNode(relPath, args = []) {
-
-<<<<<<< HEAD
-ursor/expand-services-advertise-and-build-project-4b36
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const abs = path && path.resolve(__dirname, '....', relPath),
 
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true }),
 
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  /**
- * log_step - Function description
-=======
+
 
   function logStep(name, fn) {}
-=======
-exports && exports.config = {
-  schedule: '*/10 * * * *'},
-exports && exports.handler = async () => {
-  const logs = [],
-  function logStep(name, fn) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-    logs && logs.push(`\n=== ${name} ===`),
-    const { status, stdout, stderr } = fn(),
-    if (stdout) logs && logs.push(stdout),
-    if (stderr) logs && logs.push(stderr),`
-    logs && logs.push(`exit=${status}`),
-<<<<<<< HEAD
-    return status
-  }
-  // Generate sitemap for crawling
-  logStep('sitemap:generate', () => runNode('scripts/generate-sitemap && sitemap.js')),
-=======
 
-    return status
-  }
-  // Generate sitemap for crawling
-
-  logStep('sitemap:generate', () => runNode('scripts/generate-sitemap && sitemap.js')),
-
-ursor/expand-services-advertise-and-build-project-4b36
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  // Build search index if available
-
-  try {
-
-    logStep('search:index', () => runNode('scripts/generate-search-index && index.js'))
-  } catch (error) {}`
-    logs && logs.push(`Search index generation skipped: ${String(error)}`)
-  }
-<<<<<<< HEAD
-=======
-  // Commit and push
-<<<<<<< HEAD
-  logStep('git:sync', () => runNode('automation/git-sync && sync.cjs')),
-=  // Run the automation guardian
-  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min && 10min.cjs')),
-  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs'))
-  // Attempt to push any changes
-  logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
-  return { statusCode: 200, body: logs && logs.join('\n') }
-},
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
-  logStep('git:sync', () => runNode('automation/git-sync && sync.cjs')),
-=  // Run the automation guardian
-  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min && 10min.cjs')),
-
-  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs'))
-  // Attempt to push any changes
-
-  logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
-  return { statusCode: 200, body: logs && logs.join('\n') }
-},
-
-<<<<<<< HEAD
-ursor/expand-services-advertise-and-build-project-4b36
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-const { spawn_sync } = require ('child_process');
-
-/**
-
->>>>>>> origin/chore/fix-lint-and-merge
  */
 function run_node() { return null; }
   const res = spawn_sync ('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true }),'
@@ -270,15 +119,7 @@ function log_step() {}`
   // Attempt to push any changes;'
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),'
   return { status_code: 200, body: logs.join ('\n') }
-<<<<<<< HEAD
 
-  logStep('git:sync', () => runNode('automation/git-sync.cjs'))
-=  // Run the automation guardian
-  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs'));
-  // Attempt to push any changes
-  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-  return { statusCode: 200, body: logs.join('\n') }
-=======
 },
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+

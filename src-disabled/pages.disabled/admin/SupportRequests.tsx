@@ -1,21 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-import React, { useState } from "react,
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from @/components/ui/card",
-import { Input } from "@/components/ui/input,
-import { Button } from @/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs,
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from @/components/ui/select",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table,
-import { Badge } from @/components/ui/badge";
-import React, { useState } from 'react
-=======
->>>>>>> merged-prs-20250907-203621
-import { Badge } from "@/components/ui/badge";
-import React, { useState } from 'react'
->>>>>>> origin/chore/fix-lint-and-merge
+
 import {
   Card
   CardContent
@@ -913,13 +897,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</TableCell> <TableCell> <Button variant= ghostsize=" sm">View</Button> <Button variant= ghostsize=" sm">Assign</Button> </TableCell> </TableRow>) ) ;
 }</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value= escalated"className=" mt-6> <div className= bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4>Escalated Requests</h3> <p className= text-zion-slate-light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai-flaggedclassName= mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center> <h3 className= text-xl font-medium mb-4">AI Flagged Issues</h3> <p className=" text-zion-slate-light> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value= need-response"className=" mt-6> <div className= bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4>Awaiting Response</h3> <p className= text-zion-slate-light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>) ;
 }'"
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+

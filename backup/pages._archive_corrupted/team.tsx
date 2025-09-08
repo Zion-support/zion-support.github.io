@@ -1,8 +1,7 @@
 
 
 }
-<<<<<<< HEAD
-=======
+
 import React from 'react';
 interface TeamProps {
   // Add props here as needed
@@ -62,4 +61,4 @@ export default function Team({}: TeamProps) {
 
 }
 
->>>>>>> merged-prs-20250907-203621
+

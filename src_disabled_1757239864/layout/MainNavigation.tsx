@@ -1,4 +1,4 @@
-<<<<<<<< HEAD:src_backup/layout/MainNavigation.tsx
+<:src_backup/layout/MainNavigation.tsx
 import Link from "next/link",
 import { useRouter } from "next/router",
 import { useState } from "react",
@@ -458,7 +458,7 @@ export default function Page() {[])const baseLinks: NavigationLink[]  = [{key: h
                           on_click={() => setActiveDropdown (active_dropdown === link.key ? null : link.key)}`;
                           className={`w - full flex items - center justify - between px - 4 py - 3 text - left text - sm font - medium rounded - md transition - colors ${is_active (link)? 'bg - zion - cyan text - white';
                               : text - zion - slate - light hover:text - white hover:bg - white / 10'`;
-<<<<<<<< HEAD:src_backup/layout/MainNavigation.tsx
+<:src_backup/layout/MainNavigation.tsx
 }`}{/* Wishlist link */}
             {isAuthenticated && (<li className="nav-item">;
                 <Link;
@@ -483,7 +483,7 @@ export default function Page() {[])const baseLinks: NavigationLink[]  = [{key: h
                       {count}
                     </span>
                   )}
-<<<<<<<< HEAD:src_backup/layout/MainNavigation.tsx
+<:src_backup/layout/MainNavigation.tsx
                 </Link>;
               </li>;
             )}{/* Wallet link */}
@@ -553,7 +553,7 @@ export default function Page() {[])const baseLinks: NavigationLink[]  = [{key: h
                       {unreadCount > 9 ? '9+ : unreadCount}
                     </span>
                   )}
-<<<<<<<< HEAD:src_backup/layout/MainNavigation.tsx
+<:src_backup/layout/MainNavigation.tsx
                 </Link>;
               </li>;
             )}{/* Cart icon with badge */}
@@ -695,7 +695,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </nav>;
-<<<<<<<< HEAD:src_backup/layout/MainNavigation.tsx
+<:src_backup/layout/MainNavigation.tsx
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
                         {link && link.name}

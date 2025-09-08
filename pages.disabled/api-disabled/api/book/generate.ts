@@ -1,15 +1,4 @@
-<<<<<<< HEAD:pages/api/book/generate.ts
-import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    return res.status(405).json({ message: 'Method not allowed' });
-  }
-
-  try {
-    // TODO: Implement generate logic
-    res.status(200).json({ message: 'generate endpoint' });
-=======
 const { meta, chapters } = req.body as { meta: any, chapters: { title: string, content?: string }[] };
   const apiKey = process.env.OPENAI_API_KEY;
 import type { NextApiRequest, NextApiResponse } from 'next',;
@@ -221,14 +210,12 @@ export default async function handler(req, res) {
 
 ;
   res.status(200).json({ chapters: drafted });
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/book/generate.ts
+
   } catch (error) {
     console.error('Error in generate:', error);
     res.status(500).json({ message: 'Internal server error' });
   }
-<<<<<<< HEAD:pages/api/book/generate.ts
-}
-=======
+
 
 
 }
@@ -246,4 +233,4 @@ res.status(200).json({ chapters: drafted });
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/book/generate.ts
+

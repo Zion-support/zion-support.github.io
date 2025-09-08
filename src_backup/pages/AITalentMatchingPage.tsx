@@ -92,39 +92,8 @@ function AITalentMatchingPage() {}
     { label: "Time to Hire", value: "50% faster" }
   ];
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-      title: 'Scalable Talent Pools',
-      description:
-        'Access a global network of vetted professionals ready for your projects.',
-      icon: <TrendingUp className='h-8 w-8' />,
-    },
-  ];
 
-    {
-      name: 'Emily Stone',
-      role: 'HR Director',
-      text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.",
-      avatar: '/placeholder.svg',
-    },
-    {
-      name: 'Raj Patel',
-      role: 'Startup Founder',
-      text: "The quality of candidates has improved dramatically since using Zion's platform.",
-      avatar: '/placeholder.svg',
-    },
-  ];
-
-  
-    />
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
   return (
     <ServiceLandingTemplate"
       title="AI Talent Matching""

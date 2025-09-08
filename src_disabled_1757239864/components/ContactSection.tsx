@@ -4,7 +4,7 @@
 
 
 import React, { useState } from 'react;
-<<<<<<<< HEAD:src_backup/components/ContactSection.tsx
+<:src_backup/components/ContactSection.tsx
 =
 
 >import React, { useState } from react';
@@ -52,7 +52,7 @@ const ContactSection: React.FC = () => {
     }
   }
 
-<<<<<<<< HEAD:src_backup/components/ContactSection.tsx
+<:src_backup/components/ContactSection.tsx
 =fetch(/api/contact", {
       method: "POST
       headers: { Content-Type": "application/json }
@@ -394,7 +394,7 @@ const ContactSection: React.FC = () => {const [formData, setFormData] = useState
 
 
 
-<<<<<<<< HEAD:src_backup/components/ContactSection.tsx
+<:src_backup/components/ContactSection.tsx
 export default ContactSection;
 =                  className="w-full px-4 py-3 bg-blue-800/50 border border-blue-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent text-white placeholder-blue-300;
                   placeholder=Your company name";

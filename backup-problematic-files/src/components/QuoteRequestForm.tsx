@@ -194,80 +194,7 @@ pr-12325
         open={autoFillOpen}
         onOpenChange={setAutoFillOpen}
         onSubmit={handleAutoFill}
-<<<<<<< HEAD
-        loading={autoFillLoading} />;
-    </div>;
-  ),; export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary";"
-const [autoFillLoading, setAutoFillLoading] = useState (false);
-const [autoFillOpen, setAutoFillOpen] = useState (false);
-}setCurrentStep ("details");"
-break;";"
-}case "details" : setCurrentStep ("timeline");"
-break;";"
-case "timeline" : setCurrentStep ("budget");"
-break;";"
-case "budget" : setCurrentStep ("summary");"
-break;
-}
-};";"
-case "timeline": setCurrentStep ("details");"
-break;";"
-case "budget": setCurrentStep ("timeline");"
-break;";"
-case "summary": setCurrentStep ("budget");"
-break;
-}
-};
-  }
-  setIsSubmitting (true);
-try {";"
-  //In a real application,  you would send the data to your backend logDebug ("Submitting form "data":", {;"
-  }
-  "data": formData ;
-});
-}finally {;
-  }
-  setIsSubmitting (false) ;
-}
-};
-const handleAutoFill = async ("description": string) => {;
-  }
-  setAutoFillLoading (true);
-try {;
-  }
-  updateFormData ({;
-  }
-  "projectDescription": description;
-"serviceType": category;
-"serviceCategory": category;
-"specificItem": itemId ? {";"
-  }
-  "id": itemId,  "title": "AI Selected Item", category ;"
-}: formData.specificItem;
-"timeline": timeline || formData.timeline;
-}finally {;
-  }
-  setAutoFillLoading (false) ;
-}
-};
-  }
-  switch (currentStep) {;
-  }
-  "default": return null;
-}
-};";"
-<GradientHeading>Request a Quote</GradientHeading> <p className="text-zion-slate-light mt-4" > Tell us about your project and we'll create a customized quote for you </p> <div className="inline-flex items-center bg-zion-blue-dark py-1 px-3 rounded-full mt-3 border border-zion-purple/20" > <Sparkles className="h-4 w-4 text-zion-cyan mr-1" /> <span className="text-sm text-white" >AI-powered matching</span> </div> <Button) ";"
-}Auto Fill with AI </Button> </div> <Button variant="outline" onClick={;"
-  }
-  handleBack ";"
-}className="border-zion-purple text-zion-cyan "hover":bg-zion-purple/10" > Back </Button>) ;"
-}<Button onClick={;
-  }
-  handleNext ";"
-}className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark "hover":from-zion-purple-light "hover":to-zion-purple text-white" > Continue </Button>) : (<Button </Button>) ;"
-}</div> </CardContent> </Card> </div> <AutoFillModal open= {;
-  }
-=======
+
         loading={autoFillLoading}
       />;
 
@@ -279,7 +206,7 @@ try {;
   handleNext ";""
 }className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" > Continue ) : (<Button ) ;"
 }</div>   </div> <AutoFillModal open= {;
->>>>>>> origin/chore/fix-lint-and-merge
+
   autoFillOpen ;
 }onOpenChange= {;
   setAutoFillOpen ;
@@ -287,13 +214,6 @@ try {;
   handleAutoFill ;
 }loading= {;
   autoFillLoading ;
-<<<<<<< HEAD
+
 }/> </div>) ;
-=======
-}/> </div>) ;
-<<<<<<< HEAD
-}'"
-=======
-}'"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

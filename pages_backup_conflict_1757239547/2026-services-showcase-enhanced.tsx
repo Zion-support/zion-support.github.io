@@ -14,7 +14,7 @@ import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-
 import { emergingTech2026ServicesV3 } from ../data/emerging-tech-2026-services-v3';
 import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3;
 export default function Services2026ShowcaseEnhancedPage() {
-<<<<<<<< HEAD:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
+<:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
   const [searchTerm, setSearchTerm] = useState($2);
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
@@ -149,7 +149,7 @@ export default function Services2026ShowcaseEnhancedPage() {
     { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' }
     { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' }
     { id: 'premium', name: '$20K+/month', range: '$20K+' }
-<<<<<<<< HEAD:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
+<:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
   ],
 
   ]
@@ -160,7 +160,7 @@ export default function Services2026ShowcaseEnhancedPage() {
     { id: 'popularity', name: 'Most Popular' }
     { id: 'newest', name: 'Newest First' }
     { id: 'rating', name: 'Highest Rated' }
-<<<<<<<< HEAD:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
+<:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
   ],
 
   // Filter and sort services
@@ -182,7 +182,7 @@ export default function Services2026ShowcaseEnhancedPage() {
       if (selectedCategory === 'ai') {
         filtered = filtered.filter(service => service.category.includes('AI'))
       } else if (selectedCategory === 'quantum') {
-<<<<<<<< HEAD:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
+<:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
         filtered = filtered.filter(service => service.category.includes('Quantum') || service.category.includes('Emerging'))
       } else if (selectedCategory === 'enterprise') {
         filtered = filtered.filter(service => service.category.includes('Enterprise') || service.category.includes('IT'))
@@ -210,7 +210,7 @@ export default function Services2026ShowcaseEnhancedPage() {
     // Price filter
     if (selectedPriceRange !== 'all) {
       filtered = filtered.filter(service => {
-<<<<<<<< HEAD:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
+<:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
         const price = parseInt(service.price.replace(/[^0-9]/g, '')),
         if (selectedPriceRange = $2;
         if (selectedPriceRange = $2;
@@ -228,7 +228,7 @@ export default function Services2026ShowcaseEnhancedPage() {
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price-low':
-<<<<<<<< HEAD:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
+<:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
           return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, '')),
         case 'price-high':
           return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, '')),
@@ -274,7 +274,7 @@ export default function Services2026ShowcaseEnhancedPage() {
     return filtered
   }, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
   // Service statistics
-<<<<<<<< HEAD:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
+<:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
   const serviceStats = $2;
     aiServices: all2026Services.filter(s = $2;
     quantumServices: all2026Services.filter(s = $2;
@@ -307,7 +307,7 @@ export default function Services2026ShowcaseEnhancedPage() {
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase-enhanced" />
           <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
-<<<<<<<< HEAD:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
+<:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
           
           {/* Twitter */}
           <meta name=twitter:card" content="summary_large_image />
@@ -320,7 +320,7 @@ export default function Services2026ShowcaseEnhancedPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 via-transparent to-cyan-900/30></div>
           <div className=max-w-7xl mx-auto relative z-10 text-center">
             <motion.div
-<<<<<<<< HEAD:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
+<:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
               initial={{ opacity: 0, y: 20}}
               animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
@@ -667,7 +667,7 @@ export default function Services2026ShowcaseEnhancedPage() {
       </div>
     </UltraFuturisticBackground>
   )
-<<<<<<<< HEAD:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
+<:pages_backup_1757220418/2026-services-showcase-enhanced.tsx
 }
 }
   )

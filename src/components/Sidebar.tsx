@@ -1,8 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
+
+
 import { X } from 'lucide-react';
 
 interface SidebarProps {
@@ -28,55 +26,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         </div>
         
         <nav className="p-4">
-<<<<<<< HEAD
-          <ul className="space-y-2">
-            <li>
-              <Link
-                to="/"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
-                onClick={onClose}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/about"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
-                onClick={onClose}
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/services"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
-                onClick={onClose}
-              >
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/pricing"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
-                onClick={onClose}
-              >
-                Pricing
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/contact"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg"
-                onClick={onClose}
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
-=======
+
           <div className="space-y-2">
             <a href="/" className="block text-gray-300 hover:text-white py-2">Home</a>
             <a href="/about" className="block text-gray-300 hover:text-white py-2">About</a>
@@ -84,7 +34,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <a href="/pricing" className="block text-gray-300 hover:text-white py-2">Pricing</a>
             <a href="/contact" className="block text-gray-300 hover:text-white py-2">Contact</a>
           </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
+
         </nav>
       </div>
     </div>

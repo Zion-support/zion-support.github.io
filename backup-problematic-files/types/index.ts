@@ -1,20 +1,6 @@
 export interface ContactInfo {
-<<<<<<< HEAD
-  // TODO: Implement
-=======
-<<<<<<< HEAD
-export interface ContactInfo {;
-export interface ContactInfo {
-  phone: string, email: string,
-  address: string, site: string,
-export interface Service {;
-=======
-  phone: string;
-  email: string;
-  address: string;
-  site: string;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
 }
   phone: string;,
   email: string;
@@ -38,11 +24,9 @@ export interface Service {
   features: string[];,
 pr-12325
   technologies: string[];
-<<<<<<< HEAD
-  deliveryTime: string;,
-=======
+
   delivery_time: string;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   support: string;
   image?: string;
   popular?: boolean;
@@ -55,98 +39,8 @@ pr-12325
 
 // SEO and performance;
 export interface SEOProps {
-<<<<<<< HEAD
-  // TODO: Implement
-=======
-<<<<<<< HEAD
-  title?: string;
-  description?: string;
-  title: string;
-  href: string;
-  icon: string;
-  color: string;
-}
-export interface ServiceCategory {
-  title: string;
-  description: string;
-  count: number;
-  features: string[];
-  href: string;
-  color: string;
-  title: string, description: string,
-  features: string[], href: string,
-  icon: string, color: string,
-export interface ServiceCategory {;
-}
-export interface ServiceCategory {
-  title: string, description: string,
-  count: number, features: string[],
-  href: string, color: string,
-export interface SEOProps {;
-  title: string, description: string,
-  keywords?: string;
-  canonical?: string;
-  og_image?: string;
-  url?: string;
-  type?: string;
-  noindex?: boolean;
-export interface LoadingState {;
-  isLoading: boolean, error?: string,
-export interface AnimationState {;
-  isLoaded: boolean, hasError: boolean,
-export interface ContactInfo {,
-  phone: string,
-  email: string,
-  address: string,
-  site: string,
-};
-,
-export interface Service {,
-  title: string,
-  description: string,
-  features: string[],
-  href: string,
-  icon: string,
-  color: string,
-};
-,
-export interface ServiceCategory {,
-  title: string,
-  description: string,
-  count: number,
-  features: string[],
-  href: string,
-  color: string,
-};
-,
-export interface SEOProps {,
-  title: string,
-  description: string,
-  keywords?: string,
-  canonical?: string,
-  ogImage?: string,
-  noindex?: boolean,
-};
-,
-export interface LoadingState {,
-  isLoading: boolean,
-  error?: string,
-};
-,
-export interface AnimationState {,
-  isLoaded: boolean,
-  hasError: boolean,
-};
-=======
-  title: string;
-  description: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  noindex?: boolean;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
 
 export interface PerformanceMetrics {
   // TODO: Implement
@@ -209,15 +103,8 @@ export interface User {
     experience: number;
     location: string;
     timezone: string;
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-  }
-=======
-  };
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   preferences: {
     theme: 'light' | 'dark' | 'auto';
     language: string;
@@ -225,43 +112,8 @@ export interface User {
       email: boolean;
       push: boolean;
       sms: boolean;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-  }
-  activity: {
-    last_login: Date;
-    login_count: number;
-    projects: string[];
-    tasks: string[];
-  }
-  subscription: {
-    plan: 'free' | 'basic' | 'premium' | 'enterprise';
-    status: 'active' | 'inactive' | 'cancelled' | 'expired';
-    start_date: Date;
-    end_date: Date;
-    features: string[];
-  }
-=======
-    };
-  };
-  activity: {
-    lastLogin: Date;
-    loginCount: number;
-    projects: string[];
-    tasks: string[];
-  };
-  subscription: {
-    plan: 'free' | 'basic' | 'premium' | 'enterprise';
-    status: 'active' | 'inactive' | 'cancelled' | 'expired';
-    startDate: Date;
-    endDate: Date;
-    features: string[];
-  };
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
 
 export interface Notification {
   id: string;
@@ -273,22 +125,14 @@ export interface Notification {
   action?: {
     label: string;
     url: string;
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-  }
-=======
-  };
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   category: 'system' | 'project' | 'team' | 'client' | 'billing';
   priority: 'low' | 'medium' | 'high';
   expires?: Date;
 }
 
-<<<<<<< HEAD
-=======
+
 // Project management
 export interface Project {
   id: string;
@@ -345,51 +189,13 @@ export interface Project {
 
 // Component props
 export interface BaseComponentProps {
-<<<<<<< HEAD
-  class_name?: string;
-=======
-  className?: string;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   children?: React.ReactNode;
   id?: string;
   disabled?: boolean;
   loading?: boolean;
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-  on_click?: () => void;
-  type?: 'button' | 'submit' | 'reset';
-}
-export interface InputProps {
-  class_name?: string;
-=======
-  onClick?: () => void;
-  type?: 'button' | 'submit' | 'reset';
-}
 
-export interface InputProps {
-  className?: string;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  children?: React.ReactNode;
-  id?: string;
-  disabled?: boolean;
-  loading?: boolean;
-<<<<<<< HEAD
-  on_click?: () => void;
-  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number';
-  placeholder?: string;
-  value?: string;
-  on_change?: (value: string) => void;
-=======
-  onClick?: () => void;
-  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number';
-  placeholder?: string;
-  value?: string;
-  onChange?: (value: string) => void;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   error?: string;
   required?: boolean;
 }
@@ -399,13 +205,6 @@ export interface Environment {
   NEXT_PUBLIC_API_URL?: string;
   NEXT_PUBLIC_APP_URL?: string;
   NEXT_PUBLIC_GA_ID?: string;
-<<<<<<< HEAD
+
   NEXT_PUBLIC_SENTRY_DSN?: string;
-=======
-  NEXT_PUBLIC_SENTRY_DSN?: string;
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

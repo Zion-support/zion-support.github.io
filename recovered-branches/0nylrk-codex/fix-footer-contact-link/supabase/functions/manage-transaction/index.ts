@@ -1,107 +1,10 @@
-<<<<<<< HEAD
 
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-import Stripe from "https://esm.sh/stripe@14.21.0";
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-const corsHeaders = $2;
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
-serve(async (req) => {
-  if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders})
-  }
-
-  const supabaseClient = $2;
-    Deno.env.get("SUPABASE_ANON_KEY") ?? ""
-  ),
-  
-  // Create service client for admin operations
-  const supabaseAdmin = $2;
-    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
-    { auth: { persistSession: false} }
-  ),
-
-  try {
-    // Authenticate the user
-    const authHeader = $2;
-    const token = authHeader.replace($2);
-    const { data: { user } } = await supabaseClient.auth.getUser($2);
-    if (!user?.id) throw new Error($2);
-    // Get request data
-    const { 
-      transactionId, 
-      action, // 'releaserefundcancel'
-    } = await req.json($2);
-    if (!transactionId) {
-      throw new Error("Transaction ID is required")
-    }
-    // Get transaction details
-    const { data: transaction, error: fetchError} = await supabaseAdmin
-      .from("transactions")
-      .select("*")
-      .eq("id", transactionId)
-      .single($2);
-    if (fetchError || !transaction) {
-      throw new Error("Transaction not found")
-    }
-    // Verify user is authorized to manage this transaction
-    const isClient = $2;
-    const isProvider = $2;
-    // Clients can cancel or request refunds, providers can only release funds
-    if (!isClient && !isProvider) {
-      throw new Error("You are not authorized to manage this transaction")
-    }
-
-    const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
-      apiVersion: "2023-10-16"}),
-
-    let result,
-    
-    switch (action) {
-      case 'release':
-        // Only providers or admins can release escrow funds
-        if (!isProvider) {
-          throw new Error("Only service providers can release funds from escrow")
-        }
-        // Update transaction status
-        await supabaseAdmin
-          .from("transactions")
-          .update({
-            status: "completed";
-            in_escrow: false
-            completed_at: new Date().toISOString()
-          })
-          .eq($2);
-        result = $2;
-        break,
-        
-      case 'refund':
-        // Check if transaction can be refunded
-        if (transaction.status !== "completed" && transaction.status !== "pending") {
-          throw new Error("This transaction cannot be refunded")
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import Stripe from "https://esm && esm.sh/stripe@14 && 14.21.0",
 
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 
-<<<<<<< HEAD
 
-
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-import Stripe from "https://esm.sh/stripe@14.21.0"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-=======
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -109,52 +12,9 @@ import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 import Stripe from "https://esm.sh/stripe@14.21.0",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 
-<<<<<<< HEAD
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-import Stripe from "https://esm.sh/stripe@14.21.0"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-import Stripe from "https://esm.sh/stripe@14.21.0",
 
-const corsHeaders = {"
-  "Access-Control-Allow-Origin": "*""
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}";
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";"
-import Stripe from "https://esm.sh/stripe@14.21.0"";
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-import Stripe from "https://esm.sh/stripe@14.21.0",
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 
-const corsHeaders = {
-
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-import Stripe from "https://esm.sh/stripe@14.21.0",
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
-
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-import Stripe from "https://esm.sh/stripe@14.21.0",;
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-import Stripe from "https://esm.sh/stripe@14.21.0",
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
-
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 serve(async (req) => {
 
     return new Response(null, { headers: corsHeaders })
@@ -196,55 +56,8 @@ serve(async (req) => {
     const { data: { user } } = await supabaseClient && supabaseClient.auth.getUser(token);
     if (!user?.id) throw new Error("User not authenticated");
 
-<<<<<<< HEAD
-serve(async (req) => {
-  if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
-  }
-  const supabaseClient = createClient(
-    Deno.env.get("SUPABASE_URL") ?? "",
-    Deno.env.get("SUPABASE_ANON_KEY") ?? ""
-  );
-  ),
-  
-  // Create service client for admin operations
-  const supabaseAdmin = createClient(
-    Deno.env.get("SUPABASE_URL") ?? "",
-    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
-    { auth: { persistSession: false } }
-  );
-  try {
-    // Authenticate the user
-    const authHeader = req.headers.get("Authorization")!;
-    const token = authHeader.replace("Bearer ", "");
-    const { data: { user } } = await supabaseClient.auth.getUser(token);
-    if (!user?.id) throw new Error("User not authenticated");
-<<<<<<< HEAD
 
-serve(async (req) => {
-  if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
-  }
-  const supabaseClient = createClient(
-    Deno.env.get("SUPABASE_URL") ?? "",
-    Deno.env.get("SUPABASE_ANON_KEY") ?? ""
-  );
-  ),
-  // Create service client for admin operations
-  const supabaseAdmin = createClient(
-    Deno.env.get("SUPABASE_URL") ?? "",
-    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
-    { auth: { persistSession: false } });
-  try {
-    // Authenticate the user
-    const authHeader = req.headers.get("Authorization")!;
-    const token = authHeader.replace("Bearer ", "");
-    const { data: { user } } = await supabaseClient.auth.getUser(token);
-    if (!user?.id) throw new Error("User not authenticated");
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   ),
 
   try {
@@ -254,21 +67,15 @@ serve(async (req) => {
     const { data: { user } } = await supabaseClient.auth.getUser(token),
     if (!user?.id) throw new Error("User not authenticated"),
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
     // Get request data
     const {
       transactionId
       action, // 'releaserefundcancel'
 
-<<<<<<< HEAD
-=======
+
     } = await req && req.json();
 
 
@@ -276,14 +83,8 @@ serve(async (req) => {
     } = await req.json(),
 
 
-<<<<<<< HEAD
-    } = await req.json();
-    } = await req.json(),
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     if (!transactionId) {
       throw new Error("Transaction ID is required")
     }
@@ -292,287 +93,8 @@ serve(async (req) => {
       .from("transactions")
       .select("*")
       .eq("id", transactionId)
-<<<<<<< HEAD
-    } = await req && req.json();
-    if (!transactionId) {
-      throw new Error("Transaction ID is required")
-=======
-<<<<<<< HEAD
-    } = await req && req.json();
-    if (!transactionId) {
-      throw new Error("Transaction ID is required")
 
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
-import Stripe from "https://esm.sh/stripe@14.21.0",;
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0",;
-;
-const corsHeaders = {;
-  "Access-Control-Allow-Origin":"*",;
-  "Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type"},;
-;
-serve(async (req) => {;
-  if (req.method === "OPTIONS") {;
-    return new Response(null, { headers:corsHeaders }),;
-  }
-;
-  const supabaseClient = createClient(;
-    Deno.env.get("SUPABASE_URL") ?? "",;
-    Deno.env.get("SUPABASE_ANON_KEY") ?? "";
-  ),;
-  ;
-  // Create service client for admin operations;
-  const supabaseAdmin = createClient(;
-    Deno.env.get("SUPABASE_URL") ?? "",;
-    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",;
-    { auth:{ persistSession:false } }
-  ),;
-;
-  try {;
-    // Authenticate the user;
-    const authHeader = req.headers.get("Authorization")!,;
-    const token = authHeader.replace("Bearer ", ""),;
-    const { data:{ user } } = await supabaseClient.auth.getUser(token),;
-    ;
-    if (!user?.id) throw new Error("User not authenticated"),;
-;
-    // Get request data;
-    const { ;
-      transactionId, ;
-      action, // 'releaserefund', 'cancel';
-    } = await req.json(),;
-;
-    if (!transactionId) {;
-      throw new Error("Transaction ID is required"),;
-    }
-;
-    // Get transaction details;
-    const { data:transaction, error:fetchError } = await supabaseAdmin;
-      .from("transactions");
-      .select("*");
-      .eq("id", transactionId);
-      .single(),;
-    ;
-    if (fetchError || !transaction) {;
-      throw new Error("Transaction not found"),;
-    }
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
-import Stripe from "https://esm.sh/stripe@14.21.0",;
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0",;
-;
-const corsHeaders = {;
-  "Access-Control-Allow-Origin":"*",;
-  "Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type"},;
-;
-serve(async (req) => {;
-  if (req.method === "OPTIONS") {;
-    return new Response(null, { headers:corsHeaders }),;
-  }
-;
-<<<<<<< HEAD
-    Deno.env.get("SUPABASE_URL") ?? "",;"
-    Deno.env.get("SUPABASE_ANON_KEY") ?? "";"
-  ),;
-  // Create service client for admin operations;
-    Deno.env.get("SUPABASE_URL") ?? "",;"
-=======
-  const supabaseClient = createClient(;
-    Deno.env.get("SUPABASE_URL") ?? "",;
-    Deno.env.get("SUPABASE_ANON_KEY") ?? "";
-  ),;
-  ;
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;""
-import Stripe from "https://esm && esm.sh/stripe@14 && 14.21.0",""
-import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;"
-const corsHeaders = {"
-  "Access-Control-Allow-Origin": "*"""
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}""
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",""
-import Stripe from "https://esm.sh/stripe@14.21.0",""
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0","
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";""
-import Stripe from "https://esm.sh/stripe@14.21.0"""
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";""
-import Stripe from "https://esm.sh/stripe@14.21.0",;""
-  "Access-Control-Allow-Origin": "*",""
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},"
-serve(async (req) => {"
-  if (req && req.method === "OPTIONS") {"
-    return new Response(null, { headers: corsHeaders })
-  }
-  const supabaseClient = createClient(
-  // Create service client for admin operations;
-  const supabaseAdmin = createClient()"
-    Deno && Deno.env.get("SUPABASE_URL") ?? "";""
-    Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";"
-    { auth: { persistSession: false } }
-"
-    const authHeader = req && req.headers.get("Authorization")!;""
-    const token = authHeader && authHeader.replace("Bearer ", "");"
-    const { data: { user } } = await supabaseClient && supabaseClient.auth.getUser(token);
-    if (!user?.id) throw new Error("User not authenticated");"
-  ),
-
-  try {
-  // TODO: Implement
-    // Authenticate the user;"
-    const authHeader = req.headers.get("Authorization")!,""
-    const token = authHeader.replace("Bearer ", ""),"
-    const { data: { user } } = await supabaseClient.auth.getUser(token),
-    if (!user?.id) throw new Error("User not authenticated"),"
-    // Get request data;
-    const {
-  // TODO: Implement
-      transactionId;"
-      action, // 'releaserefundcancel
-    if (!transactionId) {
-      throw new Error("Transaction ID is required")"
-    // Get transaction details;
-    const { data: transaction, error: fetchError } = await supabaseAdmin;"
-      .from("transactions")""
-      .select("*")""
-      .eq("id", transactionId)"
-    } = await req && req.json();
-    if (!transactionId) {"
-      throw new Error("Transaction ID is required")""
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;""
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0",;"
-;
-const corsHeaders = {;"
-  "Access-Control-Allow-Origin":"*",;""
-  "Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type"},;"
-serve(async (req) => {;"
-  if (req.method === "OPTIONS") {;"
-    return new Response(null, { headers:corsHeaders }),;
-  const supabaseClient = createClient(;)"
-    Deno.env.get("SUPABASE_URL") ?? "",;""
-    Deno.env.get("SUPABASE_ANON_KEY") ?? "";"
-  ),;
-  // Create service client for admin operations;
-  const supabaseAdmin = createClient(;)"
->>>>>>> origin/chore/fix-lint-and-merge
-    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",;"
-    { auth:{ persistSession:false } }
-  try {;
-    // Authenticate the user;"
-    const authHeader = req.headers.get("Authorization")!,;""
-    const token = authHeader.replace("Bearer ", ""),;"
-    const { data:{ user } } = await supabaseClient.auth.getUser(token),;
-    ;"
-    if (!user?.id) throw new Error("User not authenticated"),;"
-    // Get request data;
-    const { ;
-      transactionId, ;"
-      action, // 'releaserefund', 'cancel';
-    } = await req.json(),;
-    if (!transactionId) {;
-      throw new Error("Transaction ID is required"),;"
-
-    }
-    // Get transaction details;
-<<<<<<< HEAD
-      .from("transactions");"
-      .select("*");"
-=======
-
-    const { data:transaction, error:fetchError } = await supabaseAdmin;"
-      .from("transactions");""
-      .select("*");""
->>>>>>> origin/chore/fix-lint-and-merge
-      .eq("id", transactionId);"
-      .single(),;
-    if (fetchError || !transaction) {;"
-      throw new Error("Transaction not found"),;"
-pr-12325
-    }
-<<<<<<< HEAD
-;
-    // Verify user is authorized to manage this transaction;
-    // Clients can cancel or request refunds, providers can only release funds;
-    if (!isClient && !isProvider) {;
-      }
-      throw new Error("You are not authorized to manage this transaction");"
-    }
-;
-      }
-      "apiVersion": "2023-10-16"}),;"
-    switch (action) {;
-      }
-      case 'release':;'
-        // Only providers or admins can release escrow funds;
-        if (!isProvider) {;
-          }
-          throw new Error("Only service providers can release funds from escrow");"
->>>>>>> merged-prs-20250907-203621
-        }
-        // Process refund via Stripe
-        if (transaction.stripe_session_id) {
-          // Retrieve payment intent from session
-          const session = await stripe.checkout.sessions.retrieve($2);
-          if (session.payment_intent) {
-            const refund = await stripe.refunds.create($2);
-              reason: "requested_by_customer"
-            }),
-            
-            // Update transaction status
-            await supabaseAdmin
-              .from("transactions")
-              .update({ 
-                status: "refunded",
-                refunded_at: new Date().toISOString($2);
-                refund_id: refund.id
-              })
-              .eq("id", transactionId)
-          }
-        }
-        
-        result = $2;
-        break,
-        
-      case 'cancel':
-        // Only allow cancellation for pending transactions
-        if (transaction.status !== "pending") {
-          throw new Error("Only pending transactions can be cancelled")
-        }
-<<<<<<< HEAD
-=======
-;
-        // Update transaction status;
-        await supabaseAdmin;
-          .from("transactions");"
-          .update({;
-            }
-            "status": "cancelled",;"
-            "cancelled_at": new Date().toISOString();
-          });
-          .eq("id", transactionId),;"
-        result = { "message": "Transaction cancelled successfully" },;"
-        break,;
-      "default": throw new Error("Invalid action");"
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-      .single(),
-    if (fetchError || !transaction) {
-
-    if (!transactionId) {
-      throw new Error("Transaction ID is required")
-    }
-    // Get transaction details
-    const { data: transaction, error: fetchError } = await supabaseAdmin
-      .from("transactions")
-      .select("*")
-
-    // Get request data;
-    const {}
-      transactionId;
-      action, // 'releaserefundcancel'
-
-    if (!transactionId) {"
-      throw new Error("Transaction ID is required")
->>>>>>> origin/chore/fix-lint-and-merge
     }
     // Get transaction details;
     const { data: transaction, error: fetchError } = await supabaseAdmin"
@@ -593,39 +115,12 @@ pr-12325
     const isClient = transaction && transaction.user_id === user && user.id;
     const isProvider = transaction && transaction.provider_id === user && user.id;
 
-<<<<<<< HEAD
-      .single();
-    if (fetchError |!transaction) {
-      .single(),
-    
-    if (fetchError || !transaction) {
-      throw new Error("Transaction not found")
-    }
-    // Verify user is authorized to manage this transaction
-    const isClient = transaction.user_id === user.id;
-    const isProvider = transaction.provider_id === user.id;
-    const isClient = transaction.user_id === user.id,
-    const isProvider = transaction.provider_id === user.id,
-    
-    const isClient = transaction.user_id === user.id,
-    const isProvider = transaction.provider_id === user.id,
-    
-=======
+
     const isClient = transaction.user_id === user.id,
     const isProvider = transaction.provider_id === user.id,
 
-<<<<<<< HEAD
-    const isClient = transaction.user_id === user.id;
-    const isProvider = transaction.provider_id === user.id;
-    const isClient = transaction.user_id === user.id,
-    const isProvider = transaction.provider_id === user.id,
-    const isClient = transaction.user_id === user.id,
-    const isProvider = transaction.provider_id === user.id,
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     // Clients can cancel or request refunds, providers can only release funds
 
     if (!isClient && !isProvider) {
@@ -641,12 +136,8 @@ pr-12325
     const stripe = new Stripe(Deno && Deno.env.get("STRIPE_SECRET_KEY") || "", {
       apiVersion: "2023-10-16"});
     let result;
-<<<<<<< HEAD
-const stripe = new Stripe(Deno && Deno.env.get("STRIPE_SECRET_KEY") || "", {
-      apiVersion: "2023-10-16"});
-    let result;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
 import Stripe from "https://esm.sh / stripe@14.21.0",
 
@@ -830,36 +321,19 @@ if ( {) {}
     let result;
 ;
 
-<<<<<<< HEAD
-    const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") |"", {
-      apiVersion: "2023-10-16"});
-    let result;
-=======
-<<<<<<< HEAD
 
-    const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") |"", {
-      apiVersion: "2023-10-16"});
-    let result;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
 
       apiVersion: "2023-10-16"}),
 
     let result,
-<<<<<<< HEAD
 
-=======
     
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     switch (action) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       case 'release':;
         // Only providers or admins can release escrow funds;
         // Check condition;
@@ -868,25 +342,7 @@ if ( {) {}
 }"
           throw new Error ("Only service providers can release funds from escrow");
 
-<<<<<<< HEAD
-    switch (action) {
-      case 'release':
-        // Only providers or admins can release escrow funds
-        if (!isProvider) {
-          throw new Error("Only service providers can release funds from escrow")
-        }
->>>>>>> merged-prs-20250907-203621
-        // Update transaction status
-        await supabaseAdmin
-          .from("transactions")
-          .update({
-<<<<<<< HEAD
-            status: "cancelled"
-            cancelled_at: new Date().toISOString()
-          })
-          .eq($2);
-        result = $2;
-=======
+
             status: "completed";
             in_escrow: false
             completed_at: new Date().toISOString()
@@ -894,271 +350,11 @@ if ( {) {}
           .eq("id", transactionId);
         result = { message: "Funds released from escrow" }
         break;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          .update({ 
 
-            status: "completed",
-            in_escrow: false,
-            completed_at: new Date().toISOString() 
-          })"
-          .eq("id", transactionId),
-        "
-        result = { message: "Funds released from escrow" },
-        break,
-<<<<<<< HEAD
-=======
-        
-
-<<<<<<< HEAD
-          const session = await stripe.checkout.sessions.retrieve(transaction.stripe_session_id),
-          
-
-
-          if (session.payment_intent) {
-            const refund = await stripe.refunds.create({
-              payment_intent: session.payment_intent.toString()
-          const session = await stripe && stripe.checkout.sessions && sessions.retrieve(transaction && transaction.stripe_session_id);
-          if (session && session.payment_intent) {
-            const refund = await stripe && stripe.refunds.create({
-              payment_intent: session && session.payment_intent.toString(),
-              reason: "requested_by_customer"
-
-
-      case 'refund':
-        // Check if transaction can be refunded
-        if (transaction.status !== "completed" && transaction.status !== "pending") {
-          throw new Error("This transaction cannot be refunded")
-        }
-        // Process refund via Stripe
-        if (transaction.stripe_session_id) {
-          // Retrieve payment intent from session
-          const session = await stripe.checkout.sessions.retrieve(transaction.stripe_session_id);
-          const session = await stripe.checkout.sessions.retrieve(transaction.stripe_session_id),
-          
-          if (session.payment_intent) {
-            const refund = await stripe.refunds.create({
-              payment_intent: session.payment_intent.toString()
-              reason: "requested_by_customer"
-            });
-            // Update transaction status
-            await supabaseAdmin
-              .from("transactions")
-              .update({
-                status: "refunded";
-                refunded_at: new Date().toISOString()
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
-      case 'refund':
-        // Check if transaction can be refunded"
-        if (transaction && transaction.status !== "completed" && transaction && transaction.status !== "pending") {"
-          throw new Error("This transaction cannot be refunded")
-        }
-
-          if (session.payment_intent) {
-            const refund = await stripe.refunds.create({
-              payment_intent: session.payment_intent.toString()
-
-              reason: "requested_by_customer"
-            });
-            // Update transaction status
-            await supabaseAdmin
-              .from("transactions")
-              .update({
-                status: "refunded";
-                refunded_at: new Date().toISOString()
-
-          const session = await stripe.checkout.sessions.retrieve(transaction.stripe_session_id),
-
-          if (session.payment_intent) {}
-            const refund = await stripe.refunds.create({}
-              payment_intent: session.payment_intent.toString()
-
-          const session = await stripe && stripe.checkout.sessions && sessions.retrieve(transaction && transaction.stripe_session_id);
-          
-          if (session && session.payment_intent) {}
-            const refund = await stripe && stripe.refunds.create({}
-              payment_intent: session && session.payment_intent.toString(),
-"
-              reason: "requested_by_customer"
-
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-            }),
-            // Update transaction status
-            await supabaseAdmin
-              .from("transactions")
-<<<<<<< HEAD
-              .update({
-                status: "refunded";
-=======
-              .update({ 
-                status: "refunded",
-                refunded_at: new Date().toISOString(),
-
-              reason: "requested_by_customer"
-            });
-            // Update transaction status;
-            await supabaseAdmin"
-              .from("transactions")
-              .update({"
-                status: "refunded";
-
-<<<<<<< HEAD
-                refunded_at: new Date().toISOString(),
-
-=======
-                refund_id: refund.id
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                refunded_at: new Date().toISOString(),
-                refund_id: refund && refund.id
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-              })
-
-              .eq("id", transactionId)
-        // Update transaction status;
-        await supabase_admin;"
-          .from ("transactions");
-          .update ({"
-            status: "completed";
-            in_escrow: false,
-            completed_at: new Date ().toISOString ();
-          });"
-          .eq ("id", transaction_id);
-;"
-        result = { message: "Funds released from escrow" }
-        break;
-;'
-      case 'refund':;
-        // Check if transaction can be refunded;
-        // Check condition;
-if ( {) {}
-  $2;
-}"
-          throw new Error ("This transaction cannot be refunded");
-        }
-        // Process refund via Stripe;
-        // Check condition;
-if ( {) {}
-  $2;
-
-}
-          // Retrieve payment intent from session;
-          const session = await stripe.checkout.sessions.retrieve (transaction.stripe_session_id);
-;
-
-              reason: "requested_by_customer";
-            });
-;
-            // Update transaction status;
-<<<<<<< HEAD
-
-=======
-            await supabase_admin;
-              .from ("transactions");
-              .update ({
-                status: "refunded";
-                refunded_at: new Date ().toISOString (),
-                refund_id: refund.id;
-              });
-              .eq ("id", transaction_id);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-          }
-        }"
-        result = { message: "Refund processed successfully" }
-        break;
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              .update({ 
-                status: "refunded",
-                refunded_at: new Date().toISOString(),
-                refund_id: refund.id
-              })
-              .eq("id", transactionId)
-          }
-        }
-        result = { message: "Refund processed successfully" }
-        break;
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-        result = { message: "Refund processed successfully" },
-        break,
-
-      case 'cancel':
-        // Only allow cancellation for pending transactions"
-        if (transaction && transaction.status !== "pending") {}
-"
-          throw new Error("Only pending transactions can be cancelled")
-        }
-        // Update transaction status;
-        await supabaseAdmin"
-          .from("transactions")
-          .update({"
-            status: "cancelled"
-            cancelled_at: new Date().toISOString()
-          })
-"
-          .eq("id", transactionId),
-        "
-        result = { message: "Transaction cancelled successfully" },
->>>>>>> merged-prs-20250907-203621
         break,
         
-<<<<<<< HEAD
-"
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-=======
-<<<<<<< HEAD
-      case 'cancel':
-        // Only allow cancellation for pending transactions
-        if (transaction.status !== "pending") {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
-      status: 200})
 
-    console.error("Transaction management error:", error.message);
-    return new Response(JSON.stringify({ error: error.message }), {
-
-      status: 200})
-  } catch (error) {
-    console.error("Transaction management error:", error.message),
-    return new Response(JSON.stringify({ error: error.message }), {
-
-      status: 500})
-  }
-});
-
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
-import Stripe from "https://esm.sh/stripe@14.21.0",;
-
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
-const corsHeaders = {;"
-  "Access-Control-Allow-Origin": "*",;"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
-serve(async (req) => {;"
-  if (req.method === "OPTIONS") {;
-
-      case 'cancel':
-        // Only allow cancellation for pending transactions
-        if (transaction && transaction.status !== "pending") {
-case 'cancel':
-        // Only allow cancellation for pending transactions
-        if (transaction.status !== "pending") {
-      case 'cancel':
-        // Only allow cancellation for pending transactions
-        if (transaction && transaction.status !== "pending") {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           throw new Error("Only pending transactions can be cancelled")
         }
         // Update transaction status
@@ -1169,34 +365,14 @@ case 'cancel':
             cancelled_at: new Date().toISOString()
           })
 
-<<<<<<< HEAD
-.eq("id", transactionId);
-        result = { message: "Transaction cancelled successfully" }
-        break;
-=======
-<<<<<<< HEAD
-          .eq("id", transactionId);
-        result = { message: "Transaction cancelled successfully" }
-        break;
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
           .eq("id", transactionId),
         result = { message: "Transaction cancelled successfully" },
         break,
-<<<<<<< HEAD
-=======
+
         
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
-      default: throw new Error("Invalid action")
-    }
-    return new Response(JSON.stringify(result), {
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       headers: { ...corsHeaders, "Content-Type": "application/json" },
 
       status: 200})
@@ -1210,55 +386,17 @@ case 'cancel':
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 200})
   } catch (error) {
-<<<<<<< HEAD
-    console.error("Transaction management error:", error.message),
-    return new Response(JSON.stringify({ error: error.message }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" }
-=======
+
     console && console.error("Transaction management error:", error && error.message);
     return new Response(JSON && JSON.stringify({ error: error && error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      status: 500})
-  }
-});
-
-<<<<<<< HEAD
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 500})
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
-import Stripe from "https://esm.sh/stripe@14.21.0",;
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
-const corsHeaders = {;
-  "Access-Control-Allow-Origin": "*",;
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
-serve(async (req) => {;
-  if (req.method === "OPTIONS") {;
-    return new Response(null, { headers: corsHeaders });
-  }
-
-<<<<<<< HEAD
-default: throw new Error("Invalid action")
-    }
-    return new Response(JSON.stringify(result), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" }
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 200})
-  } catch (error) {
-    console.error("Transaction management error:", error.message),
-    return new Response(JSON.stringify({ error: error.message }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" }
-        }  } catch (error) {
-    console.error("Transaction management error:", error.message);
-    return new Response(JSON.stringify({ error: error.message }), {
 
       status: 500})
   }
 });
 
-;
-=======
+
 
         result = { message: "Refund processed successfully" }
         break;
@@ -1272,200 +410,13 @@ default: throw new Error("Invalid action")
       status: 500})
   }
 });
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-;
-      case 'cancel':;
-        // Only allow cancellation for pending transactions;
-        // Check condition
-if ( {) {
-  $2
-}
-          throw new Error ("Only pending transactions can be cancelled");
-        }
-        // Update transaction status;
-        await supabase_admin;
-          .from ("transactions");
-          .update ({
-            status: "cancelled",
-            cancelled_at: new Date ().toISOString ();
-          });
-          .eq ("id", transaction_id);
-;
-        result = { message: "Transaction cancelled successfully" }
-        break;
-;
-      default: throw new Error ("Invalid action");
-    }
-    return new Response (JSON.stringify (result), {
-      headers: { ...cors_headers, "Content - Type": "application / json" }
-      status: 200});
-  } catch (error) {
-    console.error ("Transaction management error:", error.message);
-    return new Response (JSON.stringify ({ error: error.message }), {
-      headers: { ...cors_headers, "Content - Type": "application / json" }
-      status: 500});
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 
 "
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
-<<<<<<< HEAD
-    // Check condition;
-=======
 
-<<<<<<< HEAD
-  }
-});
-;
-    ;
-    // Verify user is authorized to manage this transaction;
-    const isClient = transaction.user_id === user.id,;
-    const isProvider = transaction.provider_id === user.id,;
-    ;
-    // Clients can cancel or request refunds, providers can only release funds;
-    if (!isClient && !isProvider) {;
-      throw new Error("You are not authorized to manage this transaction"),;
-    }
-;
-    const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {;
-      apiVersion:"2023-10-16"}),;
-;
-    let result,;
-    ;
-;
-  const supabaseClient = createClient(;
-    Deno.env.get("SUPABASE_URL") ?? "",;
-    Deno.env.get("SUPABASE_ANON_KEY") ?? "";
-  ),;
-  // Create service client for admin operations;
-  const supabaseAdmin = createClient(;
-    Deno.env.get("SUPABASE_URL") ?? "",;
-    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",;
-    { auth: { persistSession: false } }
-  ),;
-  try {;
-    // Authenticate the user;
-    const authHeader = req.headers.get("Authorization")!,;
-    const token = authHeader.replace("Bearer ", ""),;
-    const { data: { user } } = await supabaseClient.auth.getUser(token),;
-    if (!user?.id) throw new Error("User not authenticated"),;
-    // Get request data;
-    const {;
-      transactionId,;
-      action, // 'releaserefundcancel';
-    } = await req.json(),;
-    if (!transactionId) {;
-      throw new Error("Transaction ID is required");
-    }
-;
-    // Get transaction details;
-    const { data: transaction, error: fetchError } = await supabaseAdmin;
-      .from("transactions");
-      .select("*");
-      .eq("id", transactionId);
-      .single(),;
-    if (fetchError || !transaction) {;
-      throw new Error("Transaction not found");
-    }
-;
-    // Verify user is authorized to manage this transaction;
-    const isClient = transaction.user_id === user.id,;
-    const isProvider = transaction.provider_id === user.id,;
-    // Clients can cancel or request refunds, providers can only release funds;
-    if (!isClient && !isProvider) {;
-      throw new Error("You are not authorized to manage this transaction");
-    }
-;
-    const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {;
-      apiVersion: "2023-10-16"}),;
-    let result,;
-    switch (action) {;
-      case 'release':;
-        // Only providers or admins can release escrow funds;
-        if (!isProvider) {;
-          throw new Error("Only service providers can release funds from escrow");
-        }
-;
-        // Update transaction status;
-        await supabaseAdmin;
-          .from("transactions");
-          .update({;
-            status: "completed",;
-            in_escrow: false,;
-            completed_at: new Date().toISOString();
-          });
-          .eq("id", transactionId),;
-        result = { message: "Funds released from escrow" },;
-        break,;
-      case 'refund':;
-        // Check if transaction can be refunded;
-        if (transaction.status !== "completed" && transaction.status !== "pending") {;
-          throw new Error("This transaction cannot be refunded");
-        }
-;
-        // Process refund via Stripe;
-        if (transaction.stripe_session_id) {;
-          // Retrieve payment intent from session;
-          const session = await stripe.checkout.sessions.retrieve(transaction.stripe_session_id),;
-          if (session.payment_intent) {;
-            const refund = await stripe.refunds.create({;
-              payment_intent: session.payment_intent.toString(),;
-              reason: "requested_by_customer";
-            }),;
-            // Update transaction status;
-            await supabaseAdmin;
-              .from("transactions");
-              .update({;
-                status: "refunded",;
-                refunded_at: new Date().toISOString(),;
-                refund_id: refund.id;
-              });
-              .eq("id", transactionId);
-          }
-        }
-;
-        result = { message: "Refund processed successfully" },;
-        break,;
-      case 'cancel':;
-        // Only allow cancellation for pending transactions;
-        if (transaction.status !== "pending") {;
-          throw new Error("Only pending transactions can be cancelled");
-        }
-;
-        // Update transaction status;
-        await supabaseAdmin;
-          .from("transactions");
-          .update({;
-            status: "cancelled",;
-            cancelled_at: new Date().toISOString();
-          });
-          .eq("id", transactionId),;
-        result = { message: "Transaction cancelled successfully" },;
-        break,;
-      default: throw new Error("Invalid action");
-    }
-;
-    return new Response(JSON.stringify(result), {;
-      headers: { ...corsHeaders, "Content-Type": "application/json" },;
-      status: 200});
-  } catch (error) {;
-    console.error("Transaction management error:", error.message),;
-    return new Response(JSON.stringify({ error: error.message }), {;
-      headers: { ...corsHeaders, "Content-Type": "application/json" },;
-      status: 500});
-  }
-});
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  }
-});
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
+
+

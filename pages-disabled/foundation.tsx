@@ -1,61 +1,5 @@
-<<<<<<< HEAD:pages-disabled/foundation.tsx
-import Head from 'next/head';
-import Link from 'next/link';
-import CharterGenerator from '../components/foundation/CharterGenerator';
-=======
-<<<<<<< HEAD
-import Head from 'next/head',
-import Link from 'next/link';
-import CharterGenerator from '../components/foundation/CharterGenerator';
-import Head from 'next/head';
-import Link from 'next/link';
-import CharterGenerator from '../components/foundation/CharterGenerator';
-import Head from 'next/head',
-import Link from 'next/link',
-import CharterGenerator from '../components/foundation/CharterGenerator',
-export default function FoundationPage() {
-  return (
-    <>
-      <Head>
-        <title>Zion Foundation</title>
-        <meta name="description" content="Public-facing Zion Foundation: neutrality, transparency, grants, and governance." />
-      </Head>
-      <div className="space-y-12">
-        <section className="space-y-3">
-          <h1 className="text-3xl font-bold">Zion Foundation</h1>
-          <p className="text-gray-600 dark:text-gray-300 max-w-3xl">Stewarding the protocol’s vision, maintaining global neutrality, and operating outside of any one jurisdiction. This portal provides the charter, transparency reports, grants, and partnership MOUs.</p>
-          <div className="flex flex-wrap gap-3 text-sm">
-            <Link href="/governance/trust"><a className="underline">Governance & Trust</a></Link>
-            <a className="underline" href="#reports">Transparency Reports</a>
-            <a className="underline" href="#grants">Grants</a>
-            <a className="underline" href="#mou">Partnership MOUs</a>
-          </div>
-        </section>
 
-            <Link href="/governance/trust"><a className="underline">Governance & Trust</Link></Link>
-            <a className="underline" href="#reports">Transparency Reports</Link>
-            <a className="underline" href="#grants">Grants</Link>
-            <a className="underline" href="#mou">Partnership MOUs</Link>
-          </div>
-        </section>
-        <section className="space-y-4" id="charter">
-          <h2 className="text-2xl font-semibold">Foundation Charter</h2>
-          <p className="text-gray-600 dark:text-gray-300">Legal-neutral charter for a decentralized AI protocol committed to sovereignty, open knowledge, and trust.</p>
-          <CharterGenerator />
-        </section>
 
-        <section className="space-y-4" id="reports">
-          <h2 className="text-2xl font-semibold">Transparency Reports</h2>
-          <p className="text-gray-600 dark:text-gray-300">Quarterly financials, grants, and impact metrics. Initial placeholders shown until reports are published.</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[1,2,3].map((q) => (
-              <div key={q} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
-                <div className="font-medium">Report Q{q} 2025</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Status: Draft</div>
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/foundation.tsx
 
               </div>
             ))}
@@ -67,10 +11,9 @@ export default function FoundationPage() {
           <p className="text-gray-600 dark:text-gray-300">Cross-multiverse grants across chains, rollups, and alternate compute realms.</p>
           <ul className="list-disc list-inside space-y-2 text-sm">
 
-<<<<<<< HEAD:pages-disabled/foundation.tsx
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/foundation.tsx
+
+
             <li>Seed safety tooling and evals R&D — Milestone 1 (Pending)</li>
             <li>
               Open dataset creation for multilingual benchmarks — Milestone 0;
@@ -80,110 +23,19 @@ export default function FoundationPage() {
         </section>
 
               </div>;
-<<<<<<< HEAD
-              </div>
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>
-        </section>
-=======
+
             ))}
           </div>;
         </section>;
-<<<<<<< HEAD:pages-disabled/foundation.tsx
-        <section className='space-y-4' id='grants'>;'
-          <h2 className='text-2xl font-semibold'>Grants Issued</h2>;'
-=======
-        <section className='space-y-4' id='grants'>;
-          <h2 className='text-2xl font-semibold'>Grants Issued</h2>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/foundation.tsx
-          <p className='text-gray-600 dark:text-gray-300'>;
-            Cross-multiverse grants across chains, rollups, and alternate;
-            compute realms.;
-          </p>;'
-          <ul className='list-disc list-inside space-y-2 text-sm'>;
-            <li>Seed safety tooling and evals R&D — Milestone 1 (Pending)</li>;
-            <li>;
-              Open dataset creation for multilingual benchmarks — Milestone 0;
-              (Planned);
-            </li>            <li>Agent interoperability standards and sandbox — RFP (Open)</li>;
-          </ul>;
-<<<<<<< HEAD:pages-disabled/foundation.tsx
-        </section>;'
-        <section className='space-y-4' id='mou'>;'
-          <h2 className='text-2xl font-semibold'>Partnership MOU Archive</h2>;'
-=======
-        </section>;
-        <section className='space-y-4' id='mou'>;
-          <h2 className='text-2xl font-semibold'>Partnership MOU Archive</h2>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/foundation.tsx
-          <p className='text-gray-600 dark: text-gray-300'>;
-            Public archive of Memoranda of Understanding (MOUs). Redactions may;
-            apply where legally required.;
-          </p>;'
-          <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 text-sm text-gray-600 dark:text-gray-400'>;
-<<<<<<< HEAD:pages-disabled/foundation.tsx
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/foundation.tsx
-import Head from 'next / head';
-import Link from 'next / link';
-
-import CharterGenerator from '../components / foundation / CharterGenerator';
-              </div>))}
-          </div>;
-        </section>;'
-        <section className='space - y-4' id='grants'>;'
-          <h2 className='text - 2xl font - semibold'>Grants Issued</h2>;'
-          <p className='text - gray - 600 dark:text - gray - 300'>;
-            Cross - multiverse grants across chains, rollups, and alternate;
-            compute realms.;
-          </p>;'
-          <ul className='list - disc list - inside space - y-2 text - sm'>;
-            <li > Seed safety tooling and evals R & D — Milestone 1 (Pending)</li>;
-            <li>;
-              Open dataset creation for multilingual benchmarks — Milestone 0;
-              (Planned);
-            </li>            <li > Agent interoperability standards and sandbox — RFP (Open)</li>;
-          </ul>;
-        </section>;'
-        <section className='space - y-4' id='mou'>;'
-          <h2 className='text - 2xl font - semibold'>Partnership MOU Archive</h2>;'
-          <p className='text - gray - 600 dark: text - gray - 300'>;
-            Public archive of Memoranda of Understanding (MOUs). Redactions may;
-            apply where legally required.;
-          </p>;'
-          <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4 text - sm text - gray - 600 dark:text - gray - 400'>;
-<<<<<<< HEAD:pages-disabled/foundation.tsx
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/foundation.tsx
-            No MOUs published yet.;
-          </div>;
-        </section>;
-      </div>;
-
-<<<<<<< HEAD:pages-disabled/foundation.tsx
-=======
-
-=======
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        <section className='space-y-4' id='grants'>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/foundation.tsx
           <h2 className='text-2xl font-semibold'>Grants Issued</h2>
           <p className='text-gray-600 dark:text-gray-300'>
             Cross-multiverse grants across chains, rollups, and alternate
             compute realms.
           </p>
           <ul className='list-disc list-inside space-y-2 text-sm'>
-<<<<<<< HEAD:pages-disabled/foundation.tsx
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/foundation.tsx
+
         <section className="space-y-4" id="grants">
           <h2 className="text-2xl font-semibold">Grants Issued</h2>
           <p className="text-gray-600 dark:text-gray-300">Cross-multiverse grants across chains, rollups, and alternate compute realms.</p>
@@ -194,17 +46,11 @@ import CharterGenerator from '../components / foundation / CharterGenerator';
             <li>Agent interoperability standards and sandbox — RFP (Open)</li>
           </ul>
         </section>
-<<<<<<< HEAD:pages-disabled/foundation.tsx
 
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 
         <section className='space-y-4' id='mou'>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/foundation.tsx
+
           <h2 className='text-2xl font-semibold'>Partnership MOU Archive</h2>
           <p className='text-gray-600 dark: text-gray-300'>
             Public archive of Memoranda of Understanding (MOUs). Redactions may
@@ -213,13 +59,7 @@ import CharterGenerator from '../components / foundation / CharterGenerator';
           <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 text-sm text-gray-600 dark:text-gray-400'>
             No MOUs published yet.
           </div>
-<<<<<<< HEAD:pages-disabled/foundation.tsx
-        </section>
-      </div>
-    </>
-  );
 
-=======
         </section>
       </div>
     </>
@@ -232,61 +72,8 @@ import CharterGenerator from '../components / foundation / CharterGenerator';
       </div>
     </>
   )
-<<<<<<< HEAD
-    </>);
-;
-import Head from 'next/head';
-import Link from 'next/link';
-import CharterGenerator from '../components/foundation/CharterGenerator';
-export default function FoundationPage(req, res) {
-  try {
-  return (;
-    <>;
-      <Head>;
-        <title>Zion Foundation</title>;
-        <meta name="description" content="Public-facing Zion Foundation: neutrality, transparency, grants, and governance." />;
-      </Head>;
-      <div className="space-y-12">;
-        <section className="space-y-3">;
-          <h1 className="text-3xl font-bold">Zion Foundation</h1>;
-          <p className="text-gray-600 dark:text-gray-300 max-w-3xl">Stewarding the protocol’s vision, maintaining global neutrality, and operating outside of any one jurisdiction. This portal provides the charter, transparency reports, grants, and partnership MOUs.</p>;
-          <div className="flex flex-wrap gap-3 text-sm">;
-            <Link href="/governance/trust"><a className="underline">Governance & Trust</a></Link>;
-            <a className="underline" href="#reports">Transparency Reports</a>;
-            <a className="underline" href="#grants">Grants</a>;
-            <a className="underline" href="#mou">Partnership MOUs</a>;
-          </div>;
-        </section>;
-        <section className="space-y-4" id="charter">;
-          <h2 className="text-2xl font-semibold">Foundation Charter</h2>;
-          <p className="text-gray-600 dark:text-gray-300">Legal-neutral charter for a decentralized AI protocol committed to sovereignty, open knowledge, and trust.</p>;
-          <CharterGenerator />;
-        </section>;
-        <section className="space-y-4" id="reports">;
-          <h2 className="text-2xl font-semibold">Transparency Reports</h2>;
-          <p className="text-gray-600 dark:text-gray-300">Quarterly financials, grants, and impact metrics. Initial placeholders shown until reports are published.</p>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">;
-            {[1,2,3].map((q) => (;
-              <div key={q} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">;
-                <div className="font-medium">Report Q{q} 2025</div>;
-                <div className="text-sm text-gray-600 dark:text-gray-400">Status: Draft</div>;
-              </div>;
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
-<<<<<<< HEAD
-}
 
-    </>);
-;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/foundation.tsx
           </div>;
         </section>;"
         <section className="space-y-4" id="grants">;"
@@ -310,14 +97,8 @@ export default function FoundationPage(req, res) {
     console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD:pages-disabled/foundation.tsx
-}
-=======
-}
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/foundation.tsx
+}
+
+
+

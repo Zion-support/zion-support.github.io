@@ -121,20 +121,11 @@ class: TestSyntaxErrorFixer {
         "file": filePath,
         "error": error.message})}
   }
-<<<<<<< HEAD
-  async fixTestFile(filePath) {try {const fullPath = path.join(this.projectRoot, filePath)const content = fs.readFileSync(fullPath, "utf8")// Check if file has syntax errors;"
-      }
-      if (this.hasSyntaxErrors(content)) {',console.log(` "Fixing": ${filePath}`)let fixedContent = content;`        // Fix common syntax errors;
-        fixedContent = this.fixImportStatements(fixedContent)fixedContent = this.fixStringLiterals(fixedContent)fixedContent = this.fixTestStructure(fixedContent)fixedContent = this.fixJSXSyntax(fixedContent)// Write fixed content back;
-        fs.writeFileSync(fullPath, fixedContent)this.fixedFiles.push(filePath)}
-    } catch (error) {console.error(` Error fixing ${filePath }:`, error.message)this.errors.push({"file": filePath,console.error(` Error fixing ${filePath}:`, error.message)this.errors.push({"file": filePath,"error": error.message})}"  }
-  hasSyntaxErrors(content) {// Check for common syntax error patterns;
-    }
-=======
+
   hasSyntaxErrors(content) {;
     // Check for common syntax error patterns;
     const errorPatterns = [;
->>>>>>> origin/chore/fix-lint-and-merge
+
       /import.*from\s*;/g,  // Missing quotes in import;
       /from\s*;\s*[""]/g,   // Semicolon instead of quotes;
       /['']\s*;\s*['']/g,   // Semicolon in string literal;

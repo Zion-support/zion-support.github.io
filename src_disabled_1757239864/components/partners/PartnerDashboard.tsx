@@ -1,6 +1,6 @@
 
 
-<<<<<<<< HEAD:src_backup/components/partners/PartnerDashboard.tsx
+<:src_backup/components/partners/PartnerDashboard.tsx
 
 
 
@@ -68,7 +68,7 @@ export function PartnerDashboard() {
           </CardContent>
         </Card>
 
-<<<<<<<< HEAD:src_backup/components/partners/PartnerDashboard.tsx
+<:src_backup/components/partners/PartnerDashboard.tsx
 
         
 
@@ -104,7 +104,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </CardContent>
         </Card>
-<<<<<<<< HEAD:src_backup/components/partners/PartnerDashboard.tsx
+<:src_backup/components/partners/PartnerDashboard.tsx
 
 
         
@@ -123,7 +123,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="text-2xl font-bold>${stats.totalRevenue}</div>
             <p className=text-xs text-zion-slate-light">
 
-<<<<<<<< HEAD:src_backup/components/partners/PartnerDashboard.tsx
+<:src_backup/components/partners/PartnerDashboard.tsx
               ${stats.pendingRevenue} pending payout
 
 
@@ -160,7 +160,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className="text-zion-slate-light>Detailed analytics will be available soon</p>
           </div>
 
-<<<<<<<< HEAD:src_backup/components/partners/PartnerDashboard.tsx
+<:src_backup/components/partners/PartnerDashboard.tsx
 
       
       {/* Recent Referrals */}
@@ -173,7 +173,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
           <Button variant=outline" size="sm>View All</Button>
 
-<<<<<<<< HEAD:src_backup/components/partners/PartnerDashboard.tsx
+<:src_backup/components/partners/PartnerDashboard.tsx
 
 {/* Performance Chart */}
       <Card className='bg-zion-blue-dark border-zion-blue-light>
@@ -195,7 +195,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </CardContent>
       </Card>
 
-<<<<<<<< HEAD:src_backup/components/partners/PartnerDashboard.tsx
+<:src_backup/components/partners/PartnerDashboard.tsx
 
 
 =>        </CardContent>
@@ -203,7 +203,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Recent Referrals */}
       <Card className=bg-zion-blue-dark border-zion-blue-light">
         <CardHeader className="flex flex-row items-center justify-between>
-<<<<<<<< HEAD:src_backup/components/partners/PartnerDashboard.tsx
+<:src_backup/components/partners/PartnerDashboard.tsx
       {/* Recent Referrals */}
       <Card className=bg-zion-blue-dark border-zion-blue-light'>
         <CardHeader className='flex flex-row items-center justify-between>
@@ -212,7 +212,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <CardTitle>Recent Referrals</CardTitle>
             <CardDescription>Your latest partner referrals</CardDescription>
           </div>
-<<<<<<<< HEAD:src_backup/components/partners/PartnerDashboard.tsx
+<:src_backup/components/partners/PartnerDashboard.tsx
 
           <Button variant=outline" size="sm>View All</Button>
         </CardHeader>

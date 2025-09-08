@@ -1,24 +1,13 @@
-<<<<<<< HEAD
-=======
+
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> merged-prs-20250907-203621
+
 // Integration test setup
 import { setupServer } from 'msw/node';
 import { rest } from 'msw';
 const server = setupServer(
-<<<<<<< HEAD
-  rest.get('/api/*', (req, res, ctx) => {
-    return res(ctx.json({ "message": 'Mock response' }))})
-);
-beforeAll(() => server.listen());
-afterEach(() => server.resetHandlers());
-afterAll(() => server.close());
-export { server };
-import { setupServer } from 'msw/node'; import { rest } from 'msw'; const server = setupServer( rest.get('/api/*',(req,res,ctx) => { return res(ctx.json({ message: 'Mock response' }))}) ); beforeAll(() => server.listen()); afterEach(() => server.resetHandlers()); afterAll(() => server.close()); export { server };
-import { setupServer } from 'msw/node'; import { rest } from 'msw'; const server = setupServer( rest.get('/api/*',(req,res,ctx) => { return res(ctx.json({ message: 'Mock response' }))}) ); beforeAll(() => server.listen()); afterEach(() => server.resetHandlers()); afterAll(() => server.close()); export { server };
-=======
+
   rest && rest.get('/api/*', (req, res, ctx) => {
     return res(ctx && ctx.json({ "message": 'Mock response' }))})
 );
@@ -39,4 +28,4 @@ import { setupServer } from 'msw/node'; import { rest } from 'msw'; const server
 import { setupServer } from 'msw/node'; import { rest } from 'msw'; const server = setupServer( rest.get('/api/*',(req,res,ctx) => { return res(ctx.json({ message: 'Mock response' }))}) ); beforeAll(() => server.listen()); afterEach(() => server.resetHandlers()); afterAll(() => server.close()); export { server };
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> merged-prs-20250907-203621
+

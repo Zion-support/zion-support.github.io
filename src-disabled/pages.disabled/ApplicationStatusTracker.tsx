@@ -1,36 +1,10 @@
-<<<<<<< HEAD:src-disabled/pages.disabled/ApplicationStatusTracker.tsx
 
 
-  return (
-    <>
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-<<<<<<< HEAD
-  const isMobile = null;
-import { SEO } from "@/components/SEO",
-import { ApplicationsTracker } from "@/components/jobs/applications",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { Briefcase, Inbox } from 'lucide-react'
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { useIsMobile } from "@/hooks/use-mobile",
-function ApplicationStatusTrackerContent() {
-  const isMobile = useIsMobile(),
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-return (
-    <>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/pages/ApplicationStatusTracker.tsx
       <SEO
         title='Application Status Tracker | Zion AI Marketplace'
         description='Track the status of your job applications in the Zion AI marketplace.'
 
-<<<<<<< HEAD:src-disabled/pages.disabled/ApplicationStatusTracker.tsx
-import { SEO } from "@/components/SEO",;
-import { ApplicationsTracker } from "@/components/jobs/applications",;
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
-import { ProtectedRoute } from "@/components/ProtectedRoute",;
-import { useIsMobile } from "@/hooks/use-mobile",;
-=======
+
   const isMobile = useIsMobile();
 
 
@@ -54,7 +28,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Briefcase, Inbox } from 'lucide-react'
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { useIsMobile } from "@/hooks/use-mobile",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/pages/ApplicationStatusTracker.tsx
+
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
 
@@ -65,20 +39,8 @@ function ApplicationStatusTrackerContent() {
         title="Application Status Tracker | Zion AI Marketplace" 
         description="Track the status of your job applications in the Zion AI marketplace." 
       />
-<<<<<<< HEAD:src-disabled/pages.disabled/ApplicationStatusTracker.tsx
-=======
-<<<<<<< HEAD
-      <div className='container mx-auto px-4 py-8'>
-        <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8'>
-ursor/fix-website-loading-errors-and-merge-6662
-      <div className='container mx-auto px-4 py-8'>
-        <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8'>
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/pages/ApplicationStatusTracker.tsx
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
 
@@ -87,34 +49,16 @@ ursor/fix-website-loading-errors-and-merge-6662
             <p className="text-muted-foreground mt-1">Track where you stand in the hiring process</p>
           </div>
         </div>
-<<<<<<< HEAD
-        <div className='grid grid-cols-1 gap-6'>
-          <Card>
-            <CardHeader className='border-b bg-muted/50'>
-              <CardTitle className='flex items-center text-lg'>
-                <Inbox className='mr-2 h-5 w-5' /> Your Applications
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-<<<<<<< HEAD:src-disabled/pages.disabled/ApplicationStatusTracker.tsx
-        <div className="grid grid-cols-1 gap-6">
-          <Card>
-            <CardHeader className="border-b bg-muted/50">
-              <CardTitle className="flex items-center text-lg">
-                <Inbox className="mr-2 h-5 w-5" /> Your Applications
-              </CardTitle>
-            </CardHeader>
-=======
+
+
+
               <CardTitle className="flex items-center text-lg">
                 <Inbox className="mr-2 h-5 w-5" /> Your Applications
 
           <Card>
             <CardHeader className="border-b bg-muted/50">
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/pages/ApplicationStatusTracker.tsx
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Card>
             <CardHeader className='border-b bg-muted/50'>
               <CardTitle className='flex items-center text-lg'>
@@ -135,35 +79,8 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
       </div>
     </>
-<<<<<<< HEAD:src-disabled/pages.disabled/ApplicationStatusTracker.tsx
-  );
-=======
-<<<<<<< HEAD
-  )
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/pages/ApplicationStatusTracker.tsx
-}
-export default function ApplicationStatusTracker() {
-  return (
-    <ProtectedRoute>
-}))
-  )
-<<<<<<< HEAD:src-disabled/pages.disabled/ApplicationStatusTracker.tsx
-<<<<<<< HEAD
-:src/pages/ApplicationStatusTracker.tsx
-}
-=======
-=======
-}
-      <ApplicationStatusTrackerContent />;
-    </ProtectedRoute>;
-  );
-};
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/pages/ApplicationStatusTracker.tsx
-import { SEO } from "@/components/SEO",;
-import { ApplicationsTracker } from "@/components/jobs/applications",;
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
->>>>>>> origin/chore/fix-lint-and-merge
+
 import { Briefcase, Inbox } from 'lucide-react';
 function ApplicationStatusTrackerContent() {;
   const isMobile = useIsMobile();
@@ -210,13 +127,7 @@ export default function ApplicationStatusTracker() {;
 
 export default function ApplicationStatusTracker() {
   return (
-<<<<<<< HEAD:src-disabled/pages.disabled/ApplicationStatusTracker.tsx
-    <ProtectedRoute>
-      <ApplicationStatusTrackerContent />
-    </ProtectedRoute>
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
+
     <>;
       <SEO;
         title='Application Status Tracker | Zion AI Marketplace';
@@ -260,14 +171,4 @@ function ApplicationStatusTracker() {
     </ProtectedRoute>);
 }
 ;
-=======
 
-  );
-}
-
-
-export default function ApplicationStatusTracker() {
-  return (
-    <ProtectedRoute>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/pages/ApplicationStatusTracker.tsx

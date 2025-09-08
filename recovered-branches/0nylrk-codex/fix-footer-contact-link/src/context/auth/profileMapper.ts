@@ -1,78 +1,16 @@
-<<<<<<< HEAD
-import type { UserProfile } from "@/types/auth";
-=======
+
 // We cannot rely on the Supabase SDK types here because the project
 // declares `@supabase/supabase-js` as an untyped external module. Define
 // a minimal user shape that includes only the properties we actually use
 
-<<<<<<< HEAD
-// in this file.
-=======
-<<<<<<< HEAD
-import type { UserProfile } from "@/types/auth",
 
 
-
-import type { UserProfile } from "@/types/auth";
-import type { UserProfile } from "@/types/auth",
-=======
-
-
-import type { UserProfile } from "@/types/auth",
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> merged-prs-20250907-203621
 // We cannot rely on the Supabase SDK types here because the project
 // declares `@supabase/supabase-js` as an untyped external module. Define
 // a minimal user shape that includes only the properties we actually use
 // in this file.
-<<<<<<< HEAD
-export interface SupabaseUser {
-  id: string,
-  email?: string | null
-}
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export interface SupabaseUser {
->>>>>>> merged-prs-20250907-203621
 
-  id: string
 
-  email?: string | null
-}
-/**
- * Maps Supabase profile data to our app's user model
- */
-export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile {
-  return {
-<<<<<<< HEAD
-    id: user.id,
-    email: user.email || "",
-    displayName: profile.display_name || "",
-    userType: (profile.user_type as "creator" | "jobSeeker" | "employer" | "buyer" | "admin" | null) || null,
-    profileComplete: Boolean($2);
-    createdAt: new Date(profile.created_at).toISOString($2);
-    updatedAt: new Date(profile.updated_at).toISOString($2);
-    bio: profile.bio || undefined,
-    headline: profile.headline || undefined,
-    avatar_url: profile.avatar_url || undefined,
-    avatarUrl: profile.avatar_url || undefined, // Add for compatibility
-    bio: profile.bio |undefined;
-    headline: profile.headline |undefined;
-    avatar_url: profile.avatar_url |undefined
-    avatarUrl: profile.avatar_url |undefined, // Add for compatibility
-
-    role: profile.user_type // Map user_type to role for backward compatibility
-  }
-}
-=======
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 export interface SupabaseUser {
 
   id: string,
@@ -85,20 +23,8 @@ export function mapProfileToUser (user: SupabaseUser, profile: any): UserProfile
 
   return {
 
-<<<<<<< HEAD
-/**
- * Maps Supabase profile data to our app's user model;
- */
 
-  return {;
-    id: user.id;
 
-import type { UserProfile } from "@/types/auth",;
-;
-  return {;
-    id: user.id;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id: user && user.id;
     email: user && user.email || "";
     displayName: profile && profile.display_name || "";
@@ -111,12 +37,9 @@ import type { UserProfile } from "@/types/auth",;
     avatar_url: profile && profile.avatar_url || undefined,
     avatarUrl: profile && profile.avatar_url || undefined, // Add for compatibility
     role: profile && profile.user_type // Map user_type to role for backward compatibility
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
     email: user.email || "";
     displayName: profile.display_name || "";
     userType: (profile.user_type as "creator" | "jobSeeker" | "employer" | "buyer" | "admin" | null) || null;
@@ -126,109 +49,11 @@ import type { UserProfile } from "@/types/auth",;
     bio: profile.bio || undefined;
     headline: profile.headline || undefined;
     avatar_url: profile.avatar_url || undefined,
-<<<<<<< HEAD
-    avatarUrl: profile.avatar_url || undefined, // Add for compatibility
-    role: profile.user_type // Map user_type to role for backward compatibility
-  }
-}
-  }
-}
-  }
-}
-;
-=======
+
     avatar_url: profile.avatar_url || undefined, // Add for compatibility;
     role: profile.user_type // Map user_type to role for backward compatibility;
-<<<<<<< HEAD
-  }
-}
 
-import type { UserProfile } from "@/types/auth",;
-;
-  return {;
-    id: user.id;
-    email: user.email || "";
-    displayName: profile.display_name || "";
-    userType: (profile.user_type as "creator" | "jobSeeker" | "employer" | "buyer" | "admin" | null) || null;
-    profileComplete: Boolean(profile.profile_complete);
-    createdAt: new Date(profile.created_at).toISOString();
-    updatedAt: new Date(profile.updated_at).toISOString();
-    bio: profile.bio || undefined;
-    headline: profile.headline || undefined;
-    avatar_url: profile.avatar_url || undefined,
-    avatarUrl: profile.avatar_url || undefined, // Add for compatibility
-    role: profile.user_type // Map user_type to role for backward compatibility
-  }
-}
-  return {
-    id: user.id;
-    email: user.email |"";
-    displayName: profile.display_name |"";
-    userType: (profile.user_type as "creator" | "jobSeeker" | "employer" | "buyer" | "admin" | null) |null;
-    profileComplete: Boolean(profile.profile_complete);
-    createdAt: new Date(profile.created_at).toISOString();
-    updatedAt: new Date(profile.updated_at).toISOString();
 
-    bio: profile.bio |undefined;
-    headline: profile.headline |undefined;
-    avatar_url: profile.avatar_url |undefined
-    avatarUrl: profile.avatar_url |undefined, // Add for compatibility
 
-    role: profile.user_type // Map user_type to role for backward compatibility
-  }
-}
-    id: user.id,
-    email: user.email || "",
-    displayName: profile.display_name || "",
-    userType: (profile.user_type as "creator" | "jobSeeker" | "employer" | "buyer" | "admin" | null) || null,
-    profileComplete: Boolean(profile.profile_complete),
-    createdAt: new Date(profile.created_at).toISOString(),
-    updatedAt: new Date(profile.updated_at).toISOString(),
-    bio: profile.bio || undefined,
-    headline: profile.headline || undefined,
-    avatar_url: profile.avatar_url || undefined,
-    avatarUrl: profile.avatar_url || undefined, // Add for compatibility
-    role: profile.user_type // Map user_type to role for backward compatibility
-import type { UserProfile } from "@/types/auth",;
-// We cannot rely on the Supabase SDK types here because the project;
-// declares `@supabase/supabase-js` as an untyped external module. Define;
-// a minimal user shape that includes only the properties we actually use;
-// in this file.;
-export interface SupabaseUser {;
-  id: string,;
-  email?: string | null;
-}
-;
-/**;
- * Maps Supabase profile data to our app's user model;
- */;
-export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile {;
-  return {;
-    id: user.id,;
-    email: user.email || "",;
-    displayName: profile.display_name || "",;
-    userType: (profile.user_type as "creator" | "jobSeeker" | "employer" | "buyer" | "admin" | null) || null,;
-    profileComplete: Boolean(profile.profile_complete),;
-    createdAt: new Date(profile.created_at).toISOString(),;
-    updatedAt: new Date(profile.updated_at).toISOString(),;
-    bio: profile.bio || undefined,;
-    headline: profile.headline || undefined;
-    avatar_url: profile.avatar_url || undefined;
-    avatarUrl: profile.avatar_url || undefined, // Add for compatibility;
-    role: profile.user_type // Map user_type to role for backward compatibility;
-  }
-}
-;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  }
-}
-=======
 
-  return {
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621

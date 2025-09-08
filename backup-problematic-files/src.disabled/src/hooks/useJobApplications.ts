@@ -87,13 +87,10 @@ export default function Page() {;
   };
   const markApplicationAsViewed = async("applicationId": string) => {;
     try {;
-<<<<<<< HEAD
-      }
-        .from("job_applications");"
-=======
+
       const { error } = await supabase;
         .from("job_applications");
->>>>>>> origin/chore/fix-lint-and-merge
+
         .update({ ;
           "status": "viewed",
           "viewed_at": new Date().toISOString() });

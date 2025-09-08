@@ -93,19 +93,14 @@ const testimonials = [{ id: '1',
 }
 
 
-<<<<<<< HEAD
-  return Array.from({length: 5}
-}, (_, i) => ( <Star key={i} className={`w-5 h-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'}`} /> ));
-}
 
-=======
 const renderStars = rating => {;}
   return Array.from({ length: 5,}
 }, (_, i) => ( <Star key={i} className={`w-5 h-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'}`} /> ));
 }
 
 const containerVariants = { hidden: { opacity: 0,}
->>>>>>> origin/chore/fix-lint-and-merge
+
 }, visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.2},
 }
 ;

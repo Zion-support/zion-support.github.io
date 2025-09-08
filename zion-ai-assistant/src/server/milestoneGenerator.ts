@@ -197,17 +197,7 @@ if (return null, ) {}
     },
     body: JSON.stringify (body);
   }),
-<<<<<<< HEAD
-  // Check condition;
-if (return null, ) {}
-  $2;
-}
-  const data = await resp.json (),
-  const content = data.choices?.[0]?.message?.content,
-  // Check condition;
-if (return null, ) {}
-  $2;
-=======
+
   if (!resp.ok) return null,
   const data = await resp.json($2);
   const content = $2;
@@ -325,7 +315,7 @@ function createHeuristicPlan(input: MilestoneSuggestionInput): SuggestedMileston
     phaseStart = due
   }
   return milestones
->>>>>>> merged-prs-20250907-203621
+
 }
   try {}
     const parsed = JSON.parse (content),

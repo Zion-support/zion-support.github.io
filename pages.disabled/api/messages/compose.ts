@@ -1,30 +1,10 @@
-<<<<<<< HEAD:pages.disabled/api/messages/compose.ts
-=======
-<<<<<<< HEAD
-import { NextApiRequest, NextApiResponse } from '[^']*';
-import { requireUser } from '[^']*';
-import { sendMessage } from '[^']*';
-import { ConversationContext } from '[^']*';
-import { NextApiRequest, NextApiResponse } from 'next';
-import { requireUser } from '../../../utils/auth';
-import { sendMessage } from '../../../utils/messaging/storage';
-import { ConversationContext } from '../../../utils/messaging/types';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-import { NextApiRequest, NextApiResponse } from "next";
-import { requireUser } from "../../../utils/auth";
-import { sendMessage } from "../../../utils/messaging/storage";
-import { ConversationContext } from "../../../utils/messaging/types";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/messages/compose.ts
+
   const user = requireUser(req, res);
   if (!user) return;
   if (req.method !== "POST")
     return res.status(405).json({ error: "Method not allowed" });
-<<<<<<< HEAD:pages.disabled/api/messages/compose.ts
-=======
+
   const {
     recipientId
     body
@@ -119,21 +99,15 @@ export default function handler(req, res) {
   }
 }
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/messages/compose.ts
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const user = requireUser(req, res);
   if (!user) return;
 
     recipientId,
-<<<<<<< HEAD:pages.disabled/api/messages/compose.ts
-=======
-<<<<<<< HEAD
-recipientId,
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/messages/compose.ts
+
+
 import { NextApiRequest, NextApiResponse  } from './next';
 import { require_user  } from '../../../utils / auth';
 import { send_message  } from '../../../utils / messaging / storage';
@@ -152,149 +126,24 @@ if (return) {
   $2
 }
   const {
-<<<<<<< HEAD:pages.disabled/api/messages/compose.ts
-    recipient_id
 
-    body
-    link_url
-    attachmentBase64
-    attachment_name
-    context
-=======
     recipient_id,
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    body,
-    link_url,
-    attachmentBase64,
-    attachment_name,
-    context,
-<<<<<<< HEAD
-  } = req.body as {
-    recipient_id: string;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/messages/compose.ts
-
-  } = req.body as {
-    recipient_id: string;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     body: string;
     link_url?: string;
     attachmentBase64?: string;
     attachment_name?: string;
     context?: ConversationContext;
-<<<<<<< HEAD:pages.disabled/api/messages/compose.ts
 
-    senderId: user.id
+
     recipientId
     body
     linkUrl
     attachmentBase64
     attachmentName
     context
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/messages/compose.ts
-import { NextApiRequest, NextApiResponse } from 'next';
-import { requireUser } from '../../../utils/auth';
-import { sendMessage } from '../../../utils/messaging/storage';
-import { ConversationContext } from '../../../utils/messaging/types';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const user = requireUser(req, res);
-  if (!user) return;
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { recipientId, body, linkUrl, attachmentBase64, attachmentName, context } = req.body as {
-    recipientId: string, body: string,
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-import { NextApiRequest, NextApiResponse } from "next";
-import { requireUser } from "../../../utils/auth";
-import { sendMessage } from "../../../utils/messaging/storage";
-import { ConversationContext } from "../../../utils/messaging/types";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
-  const user = requireUser(req, res);
-  if (!user) return;
-if (req.method !== "POST")
-    return res.status(405).json({ error: "Method not allowed" });
-  const {
-=======
-
-    senderId: user.id
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    recipientId
-    body
-    linkUrl
-    attachmentBase64
-    attachmentName
-    context
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import { NextApiRequest, NextApiResponse } from 'next';
-import { requireUser } from '../../../utils/auth';
-import { sendMessage } from '../../../utils/messaging/storage';
-import { ConversationContext } from '../../../utils/messaging/types';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const user = requireUser(req, res);
-  if (!user) return;
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-<<<<<<< HEAD
-  } = req.body as {
-    recipientId: string;
-    body: string;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-    linkUrl?: string;
-    attachmentBase64?: string;
-    attachmentName?: string;
-    context?: ConversationContext
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  };
-  if (!recipientId || !body)
-    return res && res.status(400).json({ error: "Missing required fields" });
-  const { conversation, message } = sendMessage({
-<<<<<<< HEAD
-    senderId: user.id, recipientId,
-=======
-
-    senderId: user.id, recipientId,
-
-<<<<<<< HEAD:pages.disabled/api/messages/compose.ts
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/messages/compose.ts
-  }
-  if (
-    return res.status (400).json ({ error: "Missing required fields" })) {
-  $2
-}
-  const { conversation, message } = send_message ({
-    sender_id: user.id,
-    recipient_id,
-<<<<<<< HEAD:pages.disabled/api/messages/compose.ts
-=======
-<<<<<<< HEAD
-    body,
-    link_url,
-    attachmentBase64,
-    attachment_name,
-    context,
-  });
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/messages/compose.ts
     body,
     link_url,
     attachmentBase64,
@@ -304,29 +153,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 }
 
-<<<<<<< HEAD:pages.disabled/api/messages/compose.ts
-context});
 
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    context});
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/messages/compose.ts
+
   res.status(200).json({ conversation, message })
 
 }
   res.status (200).json ({ conversation, message });
 
 }
-<<<<<<< HEAD:pages.disabled/api/messages/compose.ts
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/messages/compose.ts
+
+
+
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { recipientId, body, linkUrl, attachmentBase64, attachmentName, context } = req.body as {
     recipientId: string
@@ -363,12 +201,8 @@ attachmentName,
   });
   res.status(200).json({ conversation, message })
 }
-<<<<<<< HEAD:pages.disabled/api/messages/compose.ts
-=======
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/messages/compose.ts
+
+
+
+

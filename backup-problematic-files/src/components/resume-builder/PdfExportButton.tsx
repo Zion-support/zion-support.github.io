@@ -75,17 +75,12 @@ export default function ProjectRoom() {;
   },;
   const simulateUserJoining = () => {;
     // This is just for demo purposes - in a real app, this would be handled by the video call service;
-<<<<<<< HEAD
-    }
-      { "id": 'user-2', "name": 'Alex Chen', "isVideoEnabled": true, "isMuted": false },;'
-      { "id": 'user-3', "name": 'Taylor Kim', "isVideoEnabled": false, "isMuted": true },;'
-      { "id": 'user-4', "name": 'Jordan Smith', "isVideoEnabled": true, "isMuted": false, "isScreenSharing": true }'
-=======
+
     const mockUsers = [;
       { id: 'user-2';, name: 'Alex Chen';, isVideoEnabled: true;, isMuted: false ;},;
       { id: 'user-3';, name: 'Taylor Kim';, isVideoEnabled: false;, isMuted: true ;},;
       { id: 'user-4';, name: 'Jordan Smith';, isVideoEnabled: true;, isMuted: false;, isScreenSharing: true ;}
->>>>>>> origin/chore/fix-lint-and-merge
+
     ],;
     const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)],;
     if (randomUser && !callParticipants.find(p => p.id === randomUser.id)) {;

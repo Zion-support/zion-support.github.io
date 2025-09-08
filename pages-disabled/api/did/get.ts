@@ -1,19 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD:pages/api/did/get.ts
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    return res.status(405).json({ message: 'Method not allowed' });
-  }
 
-  try {
-    // TODO: Implement get logic
-    res.status(200).json({ message: 'get endpoint' });
-  } catch (error) {
-    console.error('Error in get:', error);
-    res.status(500).json({ message: 'Internal server error' });
-  }
-=======
 ;
 const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {}
 
@@ -57,5 +44,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {};
 }
 
 }
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages-disabled/api/did/get.ts
+
 }

@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -302,7 +301,7 @@ export default function CybersecurityPage() {;
 import Layout from '../../components/Layout';
 import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
 import Layout from "../../components/Layout";";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Eye, Shield, Lock, AlertTriangle } from 'lucide-react';
@@ -553,15 +552,7 @@ export default function CybersecurityPage() {;
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {securityServices && securityServices.map((service, index) => {}
-<<<<<<< HEAD
-                return (<motion&& motion.div)key={index}
-                    className="bg-white p-6 rounded-lg shadow-lg "hover":shadow-xl transition-all duration-300"";"
-                    initial={{ "opacity": 0, "y": 30 }}
-                    whileInView={{ "opacity": 1, "y": 0 }}
-                    transition={{ "duration": 0 && 0.8, "delay": index * 0 && 0.1 }}
-                    viewport={{ "once": true }}>,<div className="text-red-600 mb-4">";"
-                      <IconComponent className="w-10 h-10" />";"
-=======
+
                 const IconComponent = service && service.icon;
                 return (
                   <motion&& motion.div)
@@ -573,7 +564,7 @@ export default function CybersecurityPage() {;
                     viewport={{ once: true ;}}>,;
                     <div className="text-red-600 mb-4">";
                       <IconComponent className="w-10 h-10" />";
->>>>>>> origin/chore/fix-lint-and-merge
+
                     </div>;
                     <h3 className="text-xl font-bold text-gray-900 mb-4">";
                       {service.title}
@@ -657,17 +648,8 @@ const features = [
     title: 'Data Protection',
     description: 'Advanced encryption and data protection solutions'
   },
-<<<<<<< HEAD
 
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Eye, Shield, Lock, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
 
-const securityServices = [
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   {
     title: "Security Assessment",
     description: "Comprehensive security evaluation of your systems",
@@ -690,13 +672,7 @@ const securityServices = [
     pricing: "$1,000 - $5,000/month"
   },
   {
-<<<<<<< HEAD
-    title: "Security Training",
-    description: "Employee security awareness and training programs",
-    icon: Shield,
-    features: ["Security training", "Phishing simulations", "Best practices", "Certification"],
-    pricing: "$500 - $2,000/month"
-=======
+
     icon: ArrowRight,
     title: 'Security Training',
     description: 'Employee security awareness and training programs'
@@ -730,7 +706,7 @@ const features = [;
     icon: ArrowRight,;
     title: 'Security Training',;
     description: 'Employee security awareness and training programs';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   }
 ];
 
@@ -743,19 +719,7 @@ const benefits = [
   'Peace of mind with 24/7 monitoring'
 ];
 export default function CybersecurityServices() {
-<<<<<<< HEAD
 
-export default function CybersecurityPage() {
-  return (
-    <>
-      <Head>
-        <title>Cybersecurity Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive cybersecurity services including threat detection, data protection, security assessment, and training programs." />
-      </Head>
-
-      <div className="min-h-screen bg-gray-50">
-
-=======
 export default function CybersecurityPage() {;
 const benefits = [;
   'Protection against cyber threats and attacks',;
@@ -772,7 +736,7 @@ export default function CybersecurityServices() {;
       description="Comprehensive cybersecurity services to protect your business from threats. Advanced security solutions, compliance, and 24/7 monitoring."
       keywords="cybersecurity, security services, data protection, threat monitoring, compliance, security audit">;
       <div className="min-h-screen bg-white">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
@@ -902,23 +866,7 @@ export default function CybersecurityServices() {;
       </div>
 
     </>
-<<<<<<< HEAD
-  );
-}
-
-<<<<<<< HEAD
-    </Layout>
-    </Layout>
-    </>
-    </>
-=======
-export default Cybersecurity;
-=======
-<<<<<<< HEAD
-    </Layout>
-  );
-};
 
 export default Cybersecurity;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+

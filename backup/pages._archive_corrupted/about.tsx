@@ -1,8 +1,7 @@
 
 
-<<<<<<< HEAD
-=======
-=======
+
+
   const values = [{
       title: \'Innovation\',
       \"description\": \'We constantly push the boundaries of technology to deliver cutting-edge solutions.\',
@@ -62,9 +61,9 @@
   ];
 
 
-=======
-=======
-=======
+
+
+
 const \"About\": NextPage = () => {
 const \"About\": NextPage = () => {
 const \"About\": NextPage = () => {
@@ -176,7 +175,7 @@ export default function AboutPage() {
               <div key={v.title} className="bg-white rounded-lg p-8 shadow text-center">
                 <h3 className="text-xl font-semibold mb-3">{v.title}</h3>
                 <p className="text-gray-600">{v.desc}</p>
->>>>>>> merged-prs-20250907-203621
+
     <MainLayout
       title=\"About Us - Zion Tech Group\
       description=\Learn about Zion Tech Group\'s mission, values, and the team behind our innovative technology solutions.\"
@@ -231,10 +230,9 @@ export default function AboutPage() {
             {stats.map((stat) => (
 
 
-<<<<<<< HEAD
-=======
-=======
-=======
+
+
+
   ];
   const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },
   ];
@@ -516,7 +514,7 @@ ursor/automate-test-improve-and-merge-code-646c;
                 <div className="text-gray-600">{stat.label}</div>
               </div>
                 <div className="text-gray-600">{stat.label}</div>
->>>>>>> merged-prs-20250907-203621
+
               </div>
             ))}
           </div>
@@ -524,14 +522,13 @@ ursor/automate-test-improve-and-merge-code-646c;
       </section>
 
 
-<<<<<<< HEAD
-=======
-=======
-=======
+
+
+
     </main>
 
 
->>>>>>> merged-prs-20250907-203621
+
       {/* Values Section */}
       <section className=\"py-20\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
@@ -548,8 +545,7 @@ ursor/automate-test-improve-and-merge-code-646c;
           </div>
 
 
-<<<<<<< HEAD
-=======
+
             {values.map((value) => (
 
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
@@ -567,7 +563,7 @@ ursor/automate-test-improve-and-merge-code-646c;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value) => (
 
-=======
+
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
@@ -575,7 +571,7 @@ ursor/automate-test-improve-and-merge-code-646c;
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value) => (
->>>>>>> merged-prs-20250907-203621
+
               <div key={value.title} className=\"text-center\">
                 <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">
                   <value.icon className=\"h-8 w-8\" />
@@ -607,9 +603,8 @@ ursor/automate-test-improve-and-merge-code-646c;
           </div>
 
 
-<<<<<<< HEAD
-=======
-=======
+
+
       <section className=\"py-20 bg-gray-50\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8\">;
@@ -697,7 +692,7 @@ ursor/automate-test-improve-and-merge-code-646c;
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
->>>>>>> merged-prs-20250907-203621
+
             {team.map((member) => (
               <div key={member.name} className=\bg-white rounded-lg shadow-lg overflow-hidden\">
                 <div className=\"h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center\>
@@ -785,10 +780,9 @@ ursor/automate-test-improve-and-merge-code-646c;
       </Helmet>
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> merged-prs-20250907-203621
+
+
+
         {/* Hero Section */}
         <section className=\relative py-20 px-4\">
           <div className=\"max-w-7xl mx-auto\>
@@ -924,8 +918,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 
 }
 }
-<<<<<<< HEAD
-=======
+
       <Helmet>;
         <title>About Us - Zion Tech Group | Leading Technology Solutions Provider</title>;
         <meta name=\"description\" content=\"Learn about Zion Tech Group, a leading provider of AI, cybersecurity, cloud infrastructure, and emerging technology solutions. Discover our mission, values, and team.\" />;
@@ -1125,4 +1118,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 }
 }
->>>>>>> merged-prs-20250907-203621
+

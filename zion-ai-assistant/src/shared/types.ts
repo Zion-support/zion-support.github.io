@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",
-export interface MilestoneSuggestionInput {}
-=======
+
 
 ;
 export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",export interface MilestoneSuggestionInput  {scopeOfWork: string,export type ProjectType = "Web Dev" | "AI/ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",export interface MilestoneSuggestionInput  {scopeOfWork: string,export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",export interface MilestoneSuggestionInput  {scopeOfWork: string,startDateIso: string, // ISO 8601;
@@ -27,7 +24,7 @@ export interface MilestoneSuggestionInput {
   project_type: ProjectType;
 export type ProjectType = $2;
 export interface MilestoneSuggestionInput {
->>>>>>> merged-prs-20250907-203621
+
   scopeOfWork: string,
 
 }
@@ -85,32 +82,7 @@ export interface SuggestedMilestoneItem {;
 export interface SuggestedMilestoneItem {
   title: string,
   description: string,
-<<<<<<< HEAD
 
-;
-export interface SuggestedMilestoneItem {;
-  title: string;
-  description: string;
-  suggestedDueDateIso: string;
-
-  estimatedEffortHours: number, // estimated hours;
-  tags?: string[], // e.g., ["AI Suggested"];
-}
-
-export interface MilestoneSuggestionResponse {
-  // TODO: Implement
-  milestones: SuggestedMilestoneItem[];
-
-;
-export interface MilestoneSuggestionResponse {;
-
-export interface MilestoneSuggestionResponse {
-
-  milestones: SuggestedMilestoneItem[];
-
-}
-
-=======
 }  suggestedDueDateIso: string;
   estimatedEffortHours: number, // estimated hours;
   tags?: string[], // e.g., ["AI Suggested"];
@@ -135,23 +107,13 @@ export interface MilestoneSuggestionResponse {;
   milestones: SuggestedMilestoneItem[];
 
 }
->>>>>>> merged-prs-20250907-203621
+
 ;
 export interface SuggestedMilestoneItem {;
   title:string,;
   description:string,;
   suggestedDueDateIso:string,;
-<<<<<<< HEAD
-  estimatedEffortHours:number, // estimated hours;"
-  tags?:string[], // e.g., ["AI Suggested"];"
-  milestones:SuggestedMilestoneItem[];
-export interface MilestoneSuggestionResponse {milestones: SuggestedMilestoneItem[];
 
-;
-export interface MilestoneSuggestionResponse {;
-  milestones: SuggestedMilestoneItem[];
-}
-=======
   estimatedEffortHours:number, // estimated hours;
   tags?:string[], // e.g., ["AI Suggested"];
 }
@@ -175,4 +137,4 @@ export interface MilestoneSuggestionResponse {;
 export interface MilestoneSuggestionResponse {
   milestones: SuggestedMilestoneItem[]
 }
->>>>>>> merged-prs-20250907-203621
+

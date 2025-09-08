@@ -7,88 +7,16 @@ const NetworkSecurityChat: NextPage = () => ;
   return (<div />;
       <Head />;
 
-<<<<<<< HEAD
-const NetworkSecurityChat: NextPage = () => ;
-  return (<div />;
-      <Head />;
-        <title />NetworkSecurityChat - Zion Tech Solutions</title>;
-        <meta name = \"description\" content=\"NetworkSecurityChat service\" />{\" \"}
-;
-  const NetworkSecurityChat: NextPage = () => ;
-  return (<div />;
-      <Head /></Head>;<meta name=\"description\" content=\"NetworkSecurityChat service\" />;
-      </Head>;
-      </Head>;<meta name=\"description\" content=\"NetworkSecurityChat service\" />;
-      </Head>;
 
-import type { NextPage } from \"next\";
-import Head from \"next/head\";
-import Link from \"next/link\";
 
-const NetworkSecurityChat: NextPage = () => {
- ;
-  return (
-    <div />
-      <Head />
-;
-=======
-<<<<<<< HEAD
-  return (<div>;
-      <Head>;
-        <title>NetworkSecurityChat - Zion Tech Solutions</title>;
-        <meta name = "description" content="NetworkSecurityChat service" />{" "}"
-;
-  return (<div>;
-      <Head></Head>;<meta name="description" content="NetworkSecurityChat service" />;"
-=======
-const NetworkSecurityChat: NextPage = () => ;
-  return (<div />;
-      <Head />;
-        <title />NetworkSecurityChat - Zion Tech Solutions</title>;
-        <meta name = \"description\" content=\"NetworkSecurityChat service\" />{\" \"}
-;
-  const NetworkSecurityChat: NextPage = () => ;
-  return (<div />;
-      <Head /></Head>;<meta name=\"description\" content=\"NetworkSecurityChat service\" />;
->>>>>>> origin/chore/fix-lint-and-merge
-      </Head>;
-      </Head>;<meta name=\"description\" content=\"NetworkSecurityChat service\" />;
-      </Head>;
-
-import type { NextPage } from \"next\";
-import Head from \"next/head\";
-import Link from \"next/link\";
-
-const NetworkSecurityChat: NextPage = () => {
- ;
-  return (
-    <div />
-      <Head />
-;
->>>>>>> merged-prs-20250907-203621
   const NetworkSecurityChat: NextPage = () => {;
   return (
     <div />;
       <Head />;
         <title />NetworkSecurityChat - Zion Tech Solutions</title>;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-}
-return (;
-=======
->>>>>>> merged-prs-20250907-203621
-import type { NextPage } from "next";""
-import Head from "next/head";""
-import Link from "next/link";""
-const NetworkSecurityChat: NextPage = () => {
-  return (
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
     <div>
 </div>
       <Head>
@@ -98,22 +26,8 @@ const NetworkSecurityChat: NextPage = () => {
 
         <title>NetworkSecurityChat - Zion Tech Solutions</title>;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> merged-prs-20250907-203621
-const NetworkSecurityChat: NextPage = () => {
-  return (
-    <div />
-      <Head />
 
-      </Head>;
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
       <main>
         <h1>NetworkSecurityChat</h1>
         <p>Service details coming soon...</p>
@@ -151,24 +65,8 @@ import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  return (<div>;
-      <Head>;
-        <title > NetworkSecurityChat - Zion Tech Solutions</title>;
-        <meta name="description" content="NetworkSecurityChat service" />{" "}"
-=======
->>>>>>> merged-prs-20250907-203621
-const NetworkSecurityChat: NextPage = () => ;
-  return (<div />;
-      <Head />;
-        <title  /> NetworkSecurityChat - Zion Tech Solutions</title>;
-        <meta name=\"description\" content=\"NetworkSecurityChat service\" />{\" \"}
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
       </Head>;
       <main />;
         <h1  /> NetworkSecurityChat</h1>;
@@ -192,24 +90,8 @@ export default NetworkSecurityChat;<div />;
     </div>;
   )},export default NetworkSecurityChat;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  return (<div>;
-      <Head>;
-        <title>NetworkSecurityChat - Zion Tech Solutions</title>;
-        <meta name="description" content="NetworkSecurityChat service" />{" "}"
-=======
->>>>>>> merged-prs-20250907-203621
-const NetworkSecurityChat: NextPage = () => ;
-  return (<div />;
-      <Head />;
-        <title />NetworkSecurityChat - Zion Tech Solutions</title>;
-        <meta name=\"description\" content=\"NetworkSecurityChat service\" />{\" \"}
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
       </Head>;
       <main />;
         <h1 />NetworkSecurityChat</h1>;
@@ -225,14 +107,8 @@ export default NetworkSecurityChat;<title />NetworkSecurityChat - Zion Tech Solu
 };
 
 export default NetworkSecurityChat;
-<<<<<<< HEAD
-const NetworkSecurityChat: NextPage = () => {
-=======
-<<<<<<< HEAD
-=======
-const NetworkSecurityChat: NextPage = () => {
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
  ;
   return (
     <div />
@@ -254,14 +130,8 @@ export default NetworkSecurityChat;
         <title />NetworkSecurityChat - Zion Tech Solutions</title>
         <title />NetworkSecurityChat - Zion Tech Solutions</title>
 ;
-<<<<<<< HEAD
-const NetworkSecurityChat: NextPage = () => {
-=======
-<<<<<<< HEAD
-=======
-const NetworkSecurityChat: NextPage = () => {
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
  ;
   return (
     <div />

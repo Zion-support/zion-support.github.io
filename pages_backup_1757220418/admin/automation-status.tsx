@@ -1,9 +1,8 @@
-<<<<<<< HEAD:pages_backup_1757220418/admin/automation-status.tsx
-=======
+
 import Head from 'next/head',
 import Link from 'next/link';
 
->>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/blog/ai-automation-trends-2025.tsx
+
 import React from 'react'
 import Head from 'next/head'
 const AutomationStatus: React.FC = () => {

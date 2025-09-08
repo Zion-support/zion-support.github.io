@@ -454,10 +454,9 @@ interface Deployment {;
 }
 ;
 // Mock data - replace with actual API calls;
-<<<<<<< HEAD
-=======
+
 const mockDeployments: Deployment[] = [;
->>>>>>> origin/chore/fix-lint-and-merge
+
   {;
     id: "deploy-001",;
     instanceName: "Zion Health Network",;
@@ -503,104 +502,7 @@ const mockDeployments: Deployment[] = [;
 ],;
 export default function DeploymentsPage() {;
   const [deployments, setDeployments] = useState<Deployment[]>(mockDeployments),;
-<<<<<<< HEAD
-  const [filter, setFilter] = useState<'all' | 'pending' | 'deploying' | 'completed' | 'failed'>('all'),;'
-  const getStatusColor = ("status": string) => {;
-    }
-    switch (status) {;
-      }
-      case 'completed': return 'text-green-400',;'
-      case 'deploying': return 'text-blue-400',;'
-      case 'pending': return 'text-yellow-400',;'
-      case 'failed': return 'text-red-400',;'
-      case 'paused': return 'text-orange-400',;'
-      "default": return 'text-gray-400';'
-    }
-  },;
-  const getStatusIcon = ("status": string) => {;
-    }
-    switch (status) {;
-      }
-      case 'completed': return <CheckCircle className="w-5 h-5" />,;"
-      case 'deploying': return <Activity className="w-5 h-5" />,;"
-      case 'pending': return <Clock className="w-5 h-5" />,;"
-      case 'failed': return <AlertCircle className="w-5 h-5" />,;"
-      case 'paused': return <Pause className="w-5 h-5" />,;"
-      "default": return <Clock className="w-5 h-5" />;"
-    }
-  },;
-  const getVerticalIcon = ("vertical": string) => {;
-    }
-    switch (vertical) {;
-      }
-      case "HEALTH": return <Shield className="w-4 h-4 text-blue-400" />,;"
-      case "EDUCATION": return <Building2 className="w-4 h-4 text-green-400" />,;"
-      case "LAW": return <Shield className="w-4 h-4 text-purple-400" />,;"
-      case "GOV": return <Users className="w-4 h-4 text-red-400" />,;"
-      "default": return <Globe className="w-4 h-4 text-gray-400" />;"
-    }
-  },;
-  const getGovernanceIcon = ("type": string) => {;
-    }
-    switch (type) {;
-      }
-      case "ADMIN": return <User className="w-4 h-4 text-yellow-400" />,;"
-      case "DAO_LITE": return <Users className="w-4 h-4 text-blue-400" />,;"
-      case "DAO_FULL": return <Zap className="w-4 h-4 text-purple-400" />,;"
-      "default": return <User className="w-4 h-4 text-gray-400" />;"
-    }
-  },;
-  const formatDate = ("dateString": string) => {;
-    }
-    return new Date(dateString).toLocaleDateString('en-US', {;'
-      }
-      "month": 'short',;'
-      "day": 'numeric',;'
-      "hour": '2-digit',;'
-      "minute": '2-digit';'
-    });
-  },;
-  const filteredDeployments = deployments.filter(deployment =>;
-    filter === 'all' || deployment.status === filter;'
-  ),;
-  const getStatusCount = ("status": string) => {;
-    }
-    return deployments.filter(d => { return d.status === status).length; }
-  },;
-  return (;
-    <div className="space-y-8">;"
-      {/* Header Section */}
-          <button,
-key={key}
-            onClick={() => setFilter(key as any)}
-            className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${;`              }
-              filter === key;
-                ? 'bg-blue-600 text-white shadow-lg';'
-                : 'bg-white/5 text-white/70 "hover":bg-white/10 "hover":text-white/90'            }`}              filter === key ? 'bg-blue-600 text-white shadow-lg' : 'bg-white/5 text-white/70 "hover":bg-white/10 "hover":text-white/90';'
-            }`}`          >;
-            {label} ({count})</button>;
-"use client",import { useState, useEffect } from "react",import {Rocket,Clock,CheckCircle,AlertCircle,Play,Eye,Settings,Globe,Activity,Calendar,User,Building2,Shield,TrendingUp,Users,Zap,Sparkles,ArrowRight,RefreshCw,Pause,StopCircle,MapPin;"
-} from "lucide-react",interface Deployment  {"id": string,"instanceName": string,"status": 'pending' | 'deploying' | 'completed' | 'failed' | 'paused',"createdAt": string,"updatedAt": string,"progress": number,"features": string[],"vertical": string,"governanceType": string,domain?: string,subdomain?: string,region?: string,country?: string;'
-}// Mock data - replace with actual API calls;
-  {"id": "deploy-001","instanceName": "Zion Health Network","status": "completed","createdAt": "2024-01-"15T10":"30":00Z","updatedAt": "2024-01-"15T11":"45":00Z","progress": 100,"features": ["marketplace", "zion_gpt", "kyc_aml", "dao_voting"],"vertical": "HEALTH","governanceType": "DAO_FULL","domain": "health.zion.network","region": "North America","country": "United States";"
-  },{"id": "deploy-002","instanceName": "EduDAO Academy","status": "deploying","createdAt": "2024-01-"15T14":"20":00Z","updatedAt": "2024-01-"15T15":"10":00Z","progress": 65,"features": ["academy", "zion_gpt", "incubator_grants"],"vertical": "EDUCATION","governanceType": "DAO_LITE","subdomain": "edu","region": "Europe","country": "Germany";"
-  },{"id": "deploy-003","instanceName": "LegalTech DAO","status": "pending","createdAt": "2024-01-"15T16":"00":00Z","updatedAt": "2024-01-"15T16":"00":00Z","progress": 0,"features": ["marketplace", "onchain_contracts", "web3_login"],"vertical": "LAW","governanceType": "DAO_FULL","domain": "legal.zion.network","region": "Asia Pacific","country": "Singapore";"
-  }
-],export default function DeploymentsPage() {const [deployments, setDeployments] = useState<Deployment[]>(mockDeployments),const [filter, setFilter] = useState<'all' | 'pending' | 'deploying' | 'completed' | 'failed'>('all'),const getStatusColor = ("status": string) => {switch (status) {case 'completed': return 'text-green-400',case 'deploying': return 'text-blue-400',case 'pending': return 'text-yellow-400',case 'failed': return 'text-red-400',case 'paused': return 'text-orange-400',"default": return 'text-gray-400';'
-    }
-  },const getStatusIcon = ("status": string) => {switch (status) {case 'completed': return <CheckCircle className="w-5 h-5" />,case 'deploying': return <Activity className="w-5 h-5" />,case 'pending': return <Clock className="w-5 h-5" />,case 'failed': return <AlertCircle className="w-5 h-5" />,case 'paused': return <Pause className="w-5 h-5" />,"default": return <Clock className="w-5 h-5" />;"
-    }
-  },const getVerticalIcon = ("vertical": string) => {switch (vertical) {case "HEALTH": return <Shield className="w-4 h-4 text-blue-400" />,case "EDUCATION": return <Building2 className="w-4 h-4 text-green-400" />,case "LAW": return <Shield className="w-4 h-4 text-purple-400" />,case "GOV": return <Users className="w-4 h-4 text-red-400" />,"default": return <Globe className="w-4 h-4 text-gray-400" />;"
-    }
-  },const getGovernanceIcon = ("type": string) => {switch (type) {case "ADMIN": return <User className="w-4 h-4 text-yellow-400" />,case "DAO_LITE": return <Users className="w-4 h-4 text-blue-400" />,case "DAO_FULL": return <Zap className="w-4 h-4 text-purple-400" />,"default": return <User className="w-4 h-4 text-gray-400" />;"
-    }
-  },const formatDate = ("dateString": string) => {return new Date(dateString).toLocaleDateString('en-US', {"month": 'short',"day": 'numeric',"hour": '2-digit',"minute": '2-digit';'
-    })},const filteredDeployments = deployments.filter(deployment =>;
-    filter === 'all' || deployment.status === filter;'
-  ),const getStatusCount = ("status": string) => {return deployments.filter(d => { return d.status === status).length; }
-  },return (<div className="space-y-8">;"
-      {/* Header Section */}
-=======
+
             <div className='p-2 bg-blue-500/20 rounded-lg'>;
               <Activity className='w-5 h-5 text-blue-400' />;
 
@@ -654,7 +556,7 @@ key={key}
               <p className="text-2xl font-bold">{getStatusCount('failed')}</p>
               <p className="text-sm text-white/60">Failed</p>"
       <div className='flex flex-wrap gap-2'>
->>>>>>> origin/chore/fix-lint-and-merge
+
           <button;
             key={key}
             onClick={() => setFilter(key as any)}

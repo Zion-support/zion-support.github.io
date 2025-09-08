@@ -55,14 +55,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-:src/components/enterprise/EnterpriseTrustBadges.tsx
-    </section>;
-  );
-};
-}
-=======
->>>>>>> origin/chore/fix-lint-and-merge
+
+
 
     </section>
 

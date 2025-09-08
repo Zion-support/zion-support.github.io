@@ -131,11 +131,10 @@ const caseStudies = [{ id: 'healthcare-ai',
   count: 8, icon: <Building className='w-5 h-5'/>,}
 } ] const [selectedCase, setSelectedCase] =;
   useState(null);
-<<<<<<< HEAD
-=======
+
   const [hoveredCase, setHoveredCase] = useState(null);
   const containerVariants = { hidden: { opacity: 0,}
->>>>>>> origin/chore/fix-lint-and-merge
+
 }, visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.1 } },
 }
 ;

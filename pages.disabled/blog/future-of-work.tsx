@@ -1,28 +1,12 @@
-<<<<<<< HEAD:pages/blog/future-of-work.tsx
-import React from 'react';
-import Head from 'next/head';
-=======
 
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/blog/future-of-work.tsx
+
+
 
 export default function FutureOfWork() {
   return (
     <>
       <Head>
-<<<<<<< HEAD:pages/blog/future-of-work.tsx
-        <title>future-of-work | Zion Tech Group</title>
-        <meta name="description" content="future-of-work page" />
-      </Head>
-      <div className="min-h-screen bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              future-of-work
-            </h1>
-            <p className="text-xl text-gray-600">
-              This is the future-of-work page.
-            </p>
-=======
+
         <title>
           The Future of Work: Human-AI Collaboration | Zion Tech Group
         </title>
@@ -213,16 +197,13 @@ export default function FutureOfWork() {
                 </div>
               </div>
             </article>
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/blog/future-of-work.tsx
+
           </div>
         </div>
       </div>
     </>
-<<<<<<< HEAD:pages/blog/future-of-work.tsx
-  );
-}
-=======
+
   )
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/blog/future-of-work.tsx
+

@@ -1,132 +1,14 @@
-<<<<<<< HEAD
+
+
+
 import React, { useState } from 'react';
+
 import { motion } from 'framer-motion';
-import {;
-  ChevronDown,;
-  Star,;
-  TrendingUp,;
-  Zap,;
-  Brain,;
-  Cpu,;
-  Shield,;
-  Rocket,;
-  Globe,;
-  Database,;
-  Lock,;
-  Cloud,;
-  Eye,;
-  Timer,;
-  Sparkles,;
-=======
-
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
-import React, { useState } from 'react';
-import { motion   } from 'framer-motion';
-import { ChevronDown, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Eye, Timer, Sparkles   } from 'lucide-react';
-import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
-import { CuttingEdgeInnovation2029  } from '../../data/2029-cutting-edge-innovations';
-
-type Service = any;
-
-<<<<<<< HEAD
-import { motion } from 'framer-motion';'
-import {
-origin/cursor/automate-test-improve-and-merge-code-2533
-  ChevronDown
-  Star
-  TrendingUp
-  Zap
-  Brain
-  Cpu
-  Shield
-  Rocket
-  Globe
-  Database
-  Lock
-  Cloud
-  Eye
-  Timer
-  Sparkles;
 
 
-} from 'lucide-react';'
-import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';'
-import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';'
 
-type Service = CuttingEdgeInnovation2029 | any;
-  ChevronDown,Star,TrendingUp,Zap,Brain,Cpu,Shield,Rocket,Globe,Database,Lock,Cloud,Eye} from 'lucide-react';'
-import UltraFuturisticServiceCard from '../ui / UltraFuturisticServiceCard';'
-import { CuttingEdgeInnovation2029   } from '../../data / 2029 - cutting - edge - innovations';'
-
-type Service = CuttingEdgeInnovation2029 | any;
-
-interface UltraFuturistic2029ServiceShowcaseProps  {interface UltraFuturistic2029ServiceShowcaseProps  {"services": Service[];
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-  }
-  title?: string;
-  subtitle?: string;
-
-const "categoryColors": { ["key": string]: string,;
-} = {'AI & Consciousness': 'from-purple-600 to-pink-600';'
-  'Quantum & Neuroscience': 'from-indigo-600 to-purple-600';'
-  'Space Colonization': 'from-red-600 to-orange-600';'
-  'Space Mining': 'from-yellow-600 to-orange-600';'
-  'Space Architecture': 'from-green-600 to-teal-600';'
-  'Space Energy': 'from-yellow-500 to-orange-500';'
-  'AI & Business': 'from-blue-600 to-cyan-600';'
-  'Quantum & Time': 'from-green-600 to-emerald-600';'
-  'AI & Augmented Reality': 'from-orange-600 to-red-600';'
-}
->>>>>>> merged-prs-20250907-203621
-import React, { useState } from 'react';
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import {
-  ChevronDown;
-Star,
-TrendingUp;
-Zap,
-Brain;
-Cpu,
-Shield;
-Rocket,
-Globe;
-Database,
-Lock;
-Cloud,
-Eye;
-Timer,
-Sparkles;
-}
-}
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 } from 'lucide-react';
 import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
 import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
@@ -137,30 +19,7 @@ import UltraFuturisticServiceCard from '../ui / UltraFuturisticServiceCard';
 import { CuttingEdgeInnovation2029   } from '../../data / 2029 - cutting - edge - innovations';
 
 type Service = CuttingEdgeInnovation2029 | any;
-<<<<<<< HEAD
-import React, { useState } from 'react';
 
-import { motion } from 'framer-motion';
-import {
-
-
-import {
-  ChevronDown
-  Star
-  TrendingUp
-  Zap
-  Brain
-  Cpu
-  Shield
-  Rocket
-  Globe
-  Database
-  Lock
-  Cloud
-  Eye
-  Timer
-  Sparkles;
-=======
 
 interface UltraFuturistic2029ServiceShowcaseProps  {interface UltraFuturistic2029ServiceShowcaseProps  {services: Service[];
   title?: string;
@@ -178,51 +37,7 @@ const categoryColors: { [key: string]: string}
   'AI & Augmented Reality': 'from-orange-600 to-red-600';}
 }
 
-<<<<<<< HEAD
-const categoryColors: { [key: string]: string } = {
-  'AI & Consciousness': 'from-purple-600 to-pink-600Quantum & Neuroscience': 'from-indigo-600 to-purple-600Space Colonization': 'from-red-600 to-orange-600Space Mining': 'from-yellow-600 to-orange-600Space Architecture': 'from-green-600 to-teal-600Space Energy': 'from-yellow-500 to-orange-500AI & Business': 'from-blue-600 to-cyan-600Quantum & Time': 'from-green-600 to-emerald-600AI & Augmented Reality': 'from-orange-600 to-red-600'
-},
 
-const categoryIcons: { [key: string]: any } = {
-  'AI & Consciousness': Brain,
-  'Quantum & Neuroscience': Cpu,
-  'Space Colonization': Rocket,
-  'Space Mining': Zap,
-  'Space Architecture': Globe,
-  'Space Energy': Sparkles,
-  'AI & Business': Database,
-  'Quantum & Time': Timer,
-  'AI & Augmented Reality': Eye
-},
-<<<<<<< HEAD
-
-const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceShowcaseProps> = ({
-  services,
-  title = $2;
-  subtitle = $2;
-  maxServices = 12
-=======
-
-const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceShowcaseProps> = ({
-  services,
-  title = $2;
-  subtitle = $2;
-  maxServices = 12
-}) => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [sortBy, setSortBy] = useState<'innovation' | 'price' | 'rating'>('innovation'),
-
-  Sparkles;
-
-
-<<<<<<< HEAD
-} from 'lucide-react';'
-import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';'
-import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
-type Service = CuttingEdgeInnovation2029 | any;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   ChevronDown,
   Star,
   TrendingUp,
@@ -235,93 +50,16 @@ type Service = CuttingEdgeInnovation2029 | any;
   Database,
   Lock,
   Cloud,
-<<<<<<< HEAD
-  Eye,'
-} from 'lucide-react';'
-import UltraFuturisticServiceCard from '../ui / UltraFuturisticServiceCard';'
-=======
+
   Eye,
-<<<<<<< HEAD
-  Timer,;
-  Sparkles,;
-} from 'lucide-react';
-import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
-import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
-type Service = CuttingEdgeInnovation2029 | any;
-interface UltraFuturistic2029ServiceShowcaseProps {
-  services: Service[];
-  title?: string;
-  subtitle?: string;
-  maxServices?: number;
-=======
-
-  Timer,;
-  Sparkles,;
-
-
-} from 'lucide-react';
-import UltraFuturisticServiceCard from '../ui / UltraFuturisticServiceCard';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-import { CuttingEdgeInnovation2029 } from '../../data / 2029 - cutting - edge - innovations';
-;
-type Service = CuttingEdgeInnovation2029 | any;
-;
-<<<<<<< HEAD
-interface UltraFuturistic2029ServiceShowcaseProps {}
-=======
-interface UltraFuturistic2029ServiceShowcaseProps {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-interface UltraFuturistic2029ServiceShowcaseProps {;
-  services: Service[];
-  title?: string;
-  subtitle?: string;
-<<<<<<< HEAD
-const categoryColors: { [key: string]: string } = {'
-  'AI & Consciousness': 'from-purple-600 to-pink-600''
-  'Quantum & Neuroscience': 'from-indigo-600 to-purple-600''
-  'Space Colonization': 'from-red-600 to-orange-600''
-  'Space Mining': 'from-yellow-600 to-orange-600''
-  'Space Architecture': 'from-green-600 to-teal-600''
-  'Space Energy': 'from-yellow-500 to-orange-500''
-  'AI & Business': 'from-blue-600 to-cyan-600''
-  'Quantum & Time': 'from-green-600 to-emerald-600''
-  'AI & Augmented Reality': 'from-orange-600 to-red-600'
-}
-const categoryIcons: { [key: string]: any } = {'
-  'AI & Consciousness': Brain'
-  'Quantum & Neuroscience': Cpu'
-  'Space Colonization': Rocket'
-  'Space Mining': Zap'
-  'Space Architecture': Globe'
-  'Space Energy': Sparkles'
-  'AI & Business': Database'
-  'Quantum & Time': Timer'
-  'AI & Augmented Reality': Eye'
-=======
-const categoryIcons: { [key: string]: any } = {
-  'AI & Consciousness': Brain;
-  'Quantum & Neuroscience': Cpu;
-  'Space Colonization': Rocket;
-  'Space Mining': Zap;
-  'Space Architecture': Globe;
-  'Space Energy': Sparkles;
-  'AI & Business': Database;
-  'Quantum & Time': Timer}
-  'AI & Augmented Reality': Eye}
->>>>>>> origin/chore/fix-lint-and-merge
-}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 const categoryColors: { [key: string]: string } = {
   'AI & Consciousness': 'from-purple-600 to-pink-600'
   'Quantum & Neuroscience': 'from-indigo-600 to-purple-600'
@@ -352,11 +90,8 @@ const UltraFuturistic2029ServiceShowcase: React.FC<
   subtitle = 'Experience the future of technology with our revolutionary services'
   maxServices = 12
 }) => {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
 
 const UltraFuturistic2029ServiceShowcase: React.FC<
   UltraFuturistic2029ServiceShowcaseProps;
@@ -365,22 +100,12 @@ title = '2029 Ultra-Futuristic Innovations'
   subtitle = 'Experience the future of technology with our revolutionary services'
   maxServices = 12}
   }
->>>>>>> merged-prs-20250907-203621
+
 }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [sortBy, setSortBy] = useState<'innovation' | 'price' | 'rating'>('innovation'),
 
-<<<<<<< HEAD
-  // Get unique categories
-  const categories = ['all', ...Array.from(new Set(services.map(service = $2;
-  // Filter and sort services
-  const filteredServices = services
-    .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
-    .sort((a, b) => {
-      switch (sortBy) {
-        case 'innovation':
-          // Default to 'Advanced' if innovationLevel is not available
-=======
+
 
 
 ;}
@@ -411,31 +136,13 @@ const categoryIcons: { [key: string]: any}
   'AI & Augmented Reality': Eye}
 };
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-  // Get unique categories;
-  const categories = [;'
-=======
-const UltraFuturistic2029ServiceShowcase: React.FC<;
-  UltraFuturistic2029ServiceShowcaseProps;
-> = ({;
-  services,;
-  title = '2029 Ultra-Futuristic Innovations',;
-  subtitle = 'Experience the future of technology with our revolutionary services',;
-  maxServices = 12,;
-}) => {;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [sortBy, setSortBy] = useState<'innovation' | 'price' | 'rating'>(
     'innovation'
   );
 
-<<<<<<< HEAD
-=======
+
   max_services?: number;
 ;
 const category_colors: { [key: string]: string } = {
@@ -491,12 +198,7 @@ type Service = CuttingEdgeInnovation2029 | any;
 
 interface UltraFuturistic2029ServiceShowcaseProps {
   services: Service[]
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  // Get unique categories;
-  const categories = [;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     'all',;
     ...Array && Array.from(new Set(services && services.map(service => service && service.category))),;
   ];
@@ -507,34 +209,17 @@ interface UltraFuturistic2029ServiceShowcaseProps {
       service =>;
         selectedCategory === 'all' || service && service.category === selectedCategory;
     )    .sort((a, b) => {import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-import { ChevronDown, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Eye, Timer, Sparkles } from 'lucide-react';
-import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
 
-=======
-=======
-import { ChevronDown, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Eye, Timer, Sparkles } from 'lucide-react';
-import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
 type Service = CuttingEdgeInnovation2029 | any;
 
 interface UltraFuturistic2029ServiceShowcaseProps {;
   services: Service[],;
-<<<<<<< HEAD
-  title?: string;
-  subtitle?: string;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
   title?: string;
   subtitle?: string;
 
@@ -545,11 +230,8 @@ const categoryColors: { [key: string]: string } = {;
 
 const categoryIcons: { [key: string]: any } = {;
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
   max_services?: number;
 }
 const category_colors: { [key: string]: string } = {
@@ -557,36 +239,9 @@ const category_colors: { [key: string]: string } = {
 }
 ;
 const category_icons: { [key: string]: any } = {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  // Get unique categories
-  const categories = [
-    'all'
-    ...Array.from(new Set(services.map(service => service.category)))
-  ];
-  // Filter and sort services
-  const filteredServices = services
-    .filter(
-      service =>
-        selectedCategory === 'all' |service.category === selectedCategory
-    )    .sort((a, b) => {import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
-import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
-type Service = CuttingEdgeInnovation2029 | any;
-interface UltraFuturistic2029ServiceShowcaseProps {
-  services: Service[]
-  title?: string;
-  subtitle?: string;
-  maxServices?: number
-}
-const categoryColors: { [key: string]: string } = {
-  'AI & Consciousness': 'from-purple-600 to-pink-600Quantum & Neuroscience': 'from-indigo-600 to-purple-600Space Colonization': 'from-red-600 to-orange-600Space Mining': 'from-yellow-600 to-orange-600Space Architecture': 'from-green-600 to-teal-600Space Energy': 'from-yellow-500 to-orange-500AI & Business': 'from-blue-600 to-cyan-600Quantum & Time': 'from-green-600 to-emerald-600AI & Augmented Reality': 'from-orange-600 to-red-600'
-}
-const categoryIcons: { [key: string]: any } = {
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
+
   'AI & Consciousness': Brain;
   'Quantum & Neuroscience': Cpu;
   'Space Colonization': Rocket;
@@ -595,18 +250,8 @@ const categoryIcons: { [key: string]: any } = {
   'Space Energy': Sparkles;
   'AI & Business': Database;
   'Quantum & Time': Timer;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-  'AI & Augmented Reality': Eye;
-};
-const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceShowcaseProps> = ({;
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   'AI & Augmented Reality': Eye;
 }
 
@@ -646,8 +291,7 @@ const categoryIcons: { [key: string]: any}
   'AI & Augmented Reality': Eye}
 };
 
-=======
->>>>>>> origin/chore/fix-lint-and-merge
+
 const UltraFuturistic2029ServiceShowcase: React.FC<;
   UltraFuturistic2029ServiceShowcaseProps;
 > = ({ ;
@@ -659,73 +303,17 @@ const UltraFuturistic2029ServiceShowcase: React.FC<;
 
 
 ;
-<<<<<<< HEAD
-  services: Service[];
-  title?: string;
-  subtitle?: string;
-=======
+
 const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceShowcaseProps> = ({
   services;
   title = "2029 Ultra - Futuristic Innovations";
   subtitle = "Experience the future of technology with our revolutionary services";
-<<<<<<< HEAD
-    .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
-  'AI & Augmented Reality': Eye
-}
-const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceShowcaseProps> = ({
-  services;
-  title = "2029 Ultra-Futuristic Innovations";
-  subtitle = "Experience the future of technology with our revolutionary services";
-  maxServices = 12
-}) => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<'innovation' | 'price' | 'rating'>('innovation');
-  // Get unique categories
-  const categories = ['all', ...Array.from(new Set(services.map(service => service.category)))];
-  // Filter and sort services
-  const filteredServices = services
-    .filter(service => selectedCategory === 'all' |service.category === selectedCategory)
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
-const [selectedCategory, setSelectedCategory] = useState<string    />('all');
-
-<<<<<<< HEAD
-const [sortBy, setSortBy] = useState<'innovation' | 'price' | 'rating'>(;
-    'innovation';
-  );
-
-interface UltraFuturistic2029ServiceShowcaseProps {
-  services: Service[]
-
-  // Get unique categories;
-
-const categories = [
-  'all',;
-    ...Array && Array.from(new Set(services && services.map(service => service && service.category)))
-];
 
 
-  // Filter and sort services;
-const filteredServices = services;
-    .filter(
-      service =>
-        selectedCategory === 'all' || service.category === selectedCategory;
-    )
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     .sort((a, b) => {
       switch (sortBy) {
         case 'innovation':
-<<<<<<< HEAD
-          // Default to 'Advanced' if innovationLevel is not available
 
-=======
           // Default to 'Advanced' if innovationLevel is not available;
          ;
   const aLevel = (a as any).innovationLevel || 'Advanced';
@@ -740,237 +328,7 @@ const innovationOrder = {
           };
           return (
             (innovationOrder[bLevel] |0) - (innovationOrder[aLevel] |0)
-<<<<<<< HEAD
 
->>>>>>> origin/chore/fix-lint-and-merge
-          );
-        case 'price':
-          return (
-            parseFloat(a.price.replace(/[^0-9.]/g, '')) -
-            parseFloat(b.price.replace(/[^0-9.]/g, ''))
-          );
-        case 'rating':
-<<<<<<< HEAD
-const categoryIcons: { [key: string]: any } = {'AI & Consciousness': Brain;
-  'Quantum & Neuroscience': Cpu;
-  'Space Colonization': Rocket;
-  'Space Mining': Zap;
-  'Space Architecture': Globe;
-  'Space Energy': Sparkles;
-  'AI & Business': Database;
-  'Quantum & Time': Timer;
-  'AI & Augmented Reality': Eye;
-}
-const UltraFuturistic2029ServiceShowcase: React.FC<;
-  UltraFuturistic2029ServiceShowcaseProps;
-> = ({services;
-  title = '2029 Ultra-Futuristic Innovations';
-  subtitle = 'Experience the future of technology with our revolutionary services';
-  maxServices = 12;
-}) => {const categoryColors: { [key: string]: string } = {'AI & Consciousness': 'from-purple-600 to-pink-600','Quantum & Neuroscience': 'from-indigo-600 to-purple-600','Space Colonization': 'from-red-600 to-orange-600','Space Mining': 'from-yellow-600 to-orange-600','Space Architecture': 'from-green-600 to-teal-600','Space Energy': 'from-yellow-500 to-orange-500','AI & Business': 'from-blue-600 to-cyan-600','Quantum & Time': 'from-green-600 to-emerald-600','AI & Augmented Reality': 'from-orange-600 to-red-600',}const categoryIcons: { [key: string]: any } = {'AI & Consciousness': Brain,'Quantum & Neuroscience': Cpu,'Space Colonization': Rocket,'Space Mining': Zap,'Space Architecture': Globe,'Space Energy': Sparkles,'AI & Business': Database,'Quantum & Time': Timer,'AI & Augmented Reality': Eye,}const UltraFuturistic2029ServiceShowcase: React.FC<;
-  UltraFuturistic2029ServiceShowcaseProps;
-> = ({services,title = '2029 Ultra-Futuristic Innovations',subtitle = 'Experience the future of technology with our revolutionary services',maxServices = 12,}) => {services: Service[];
-  title?: string;
-  subtitle?: string;
-  const [selectedCategory, setSelectedCategory] = useState<string>('all')const [sortBy, setSortBy] = useState<'innovation' | 'price' | 'rating'>('innovation';
-  )interface UltraFuturistic2029ServiceShowcaseProps  {services: Service[];
-  // Get unique categories;
-  const categories = [;
-    'all',...Array && Array.from(new Set(services && services.map(service => service && service.category))),];// Filter and sort services;
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  // Get unique categories;
-  const categories = ['all', ...Array && Array.from(new Set(services && services.map(service => service && service.category)))];
-  // Filter and sort services;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-  const filteredServices = services;
-    .filter(service =>;
-        selectedCategory === 'all' || service && service.category === selectedCategory;
-    )    .sort((a, b) => {import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
-type Service = CuttingEdgeInnovation2029 | any;interface UltraFuturistic2029ServiceShowcaseProps  {services: Service[],title?: string;
-  subtitle?: string;
-  max_services?: number;
-}
-const category_colors: { [key: string]: string } = {'AI & Consciousness': 'from - purple - 600 to - pink - 600Quantum & Neuroscience': 'from - indigo - 600 to - purple - 600Space Colonization': 'from - red - 600 to - orange - 600Space Mining': 'from - yellow - 600 to - orange - 600Space Architecture': 'from - green - 600 to - teal - 600Space Energy': 'from - yellow - 500 to - orange - 500AI & Business': 'from - blue - 600 to - cyan - 600Quantum & Time': 'from - green - 600 to - emerald - 600AI & Augmented Reality': 'from - orange - 600 to - red - 600';
-}const category_icons: { [key: string]: any } = {'AI & Consciousness': Brain;
-  'Quantum & Neuroscience': Cpu;
-  'Space Colonization': Rocket;
-  'Space Mining': Zap;
-  'Space Architecture': Globe;
-  'Space Energy': Sparkles;
-  'AI & Business': Database;
-  'Quantum & Time': Timer;
-  'AI & Augmented Reality': Eye;
-}const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceShowcaseProps> = ({services;
-  title = "2029 Ultra - Futuristic Innovations";
-  subtitle = "Experience the future of technology with our revolutionary services";// Filter and sort services;
-  const filteredServices = services;
-    .filter(service =>;
-        selectedCategory === 'all' || service.category === selectedCategory;
-    ).sort((a, b) => {switch (sortBy) {case 'innovation':;
-          // Default to 'Advanced' if innovationLevel is not available;
-          const aLevel = (a as any).innovationLevel || 'Advanced';
-          const bLevel = (b as any).innovationLevel || 'Advanced';
-const innovationOrder = {Revolutionary: 4,Breakthrough: 3,Advanced: 2,Emerging: 1,}return ((innovationOrder[bLevel] |0) - (innovationOrder[aLevel] |0))case 'price':;
-          return (parseFloat(a.price.replace(/[^0-9.]/g, '')) -;
-            parseFloat(b.price.replace(/[^0-9.]/g, '')))case 'rating':;
-  ChevronDown
-  Star
-  TrendingUp
-  Zap
-  Brain
-  Cpu
-  Shield
-  Rocket
-  Globe
-  Database
-  Lock
-  Cloud
-  Eye
-  Timer
-
-<<<<<<< HEAD
-  Sparkles;
-
-
-} from 'lucide-react;
-import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
-import { CuttingEdgeInnovation2029 } from ../../data/2029-cutting-edge-innovations';
-type Service = CuttingEdgeInnovation2029 | any;
-  ChevronDown,
-  Star,
-  TrendingUp,
-  Zap,
-  Brain,
-  Cpu,
-  Shield,
-  Rocket,
-  Globe,
-  Database,
-  Lock,
-  Cloud,
-  Eye,'
-} from lucide-react;'
-import UltraFuturisticServiceCard from '../ui / UltraFuturisticServiceCard;
-import { CuttingEdgeInnovation2029 } from '../../data / 2029 - cutting - edge - innovations';
-type Service = CuttingEdgeInnovation2029 | any;
-interface UltraFuturistic2029ServiceShowcaseProps {}
-interface UltraFuturistic2029ServiceShowcaseProps {
-  services: Service[];
-  title?: string;
-  subtitle?: string;
-const categoryColors: { [key: string]: string } = {
-  AI & Consciousness': 'from-purple-600 to-pink-600
-  'Quantum & Neuroscience': from-indigo-600 to-purple-600'
-  'Space Colonization: from-red-600 to-orange-600''
-  Space Mining: 'from-yellow-600 to-orange-600'
-  Space Architecture': 'from-green-600 to-teal-600
-  'Space Energy': from-yellow-500 to-orange-500'
-  'AI & Business: from-blue-600 to-cyan-600''
-  Quantum & Time: 'from-green-600 to-emerald-600'
-  AI & Augmented Reality': 'from-orange-600 to-red-600
-}
-const categoryIcons: { [key: string]: any } = {
-  'AI & Consciousness': Brain
-  Quantum & Neuroscience': Cpu'
-  Space Colonization: Rocket'
-  'Space Mining: Zap
-  'Space Architecture': Globe
-  Space Energy': Sparkles'
-  AI & Business: Database'
-  'Quantum & Time: Timer
-  'AI & Augmented Reality': Eye;
-}
-const UltraFuturistic2029ServiceShowcase: React.FC<
-  UltraFuturistic2029ServiceShowcaseProps;
-> = ({}
-  services
-  title = 2029 Ultra-Futuristic Innovations''
-  subtitle = Experience the future of technology with our revolutionary services
-  maxServices = 12;
-}) => {}
-const categoryColors: { [key: string]: string } = {'
-  'AI & Consciousness: from-purple-600 to-pink-600','
-  Quantum & Neuroscience: 'from-indigo-600 to-purple-600',
-  Space Colonization': 'from-red-600 to-orange-600,
-  'Space Mining': from-yellow-600 to-orange-600,'
-  'Space Architecture: from-green-600 to-teal-600','
-  Space Energy: 'from-yellow-500 to-orange-500',
-  AI & Business': 'from-blue-600 to-cyan-600,
-  'Quantum & Time': from-green-600 to-emerald-600,'
-  'AI & Augmented Reality: from-orange-600 to-red-600'}
-
-const categoryIcons: { [key: string]: any } = {'
-  AI & Consciousness: Brain,'
-  'Quantum & Neuroscience: Cpu,
-  'Space Colonization': Rocket,
-  Space Mining': Zap,'
-  Space Architecture: Globe,'
-  'Space Energy: Sparkles,
-  'AI & Business': Database,
-  Quantum & Time': Timer,'
-  AI & Augmented Reality: Eye}
-
-const UltraFuturistic2029ServiceShowcase: React.FC<;
-  UltraFuturistic2029ServiceShowcaseProps;
-> = ({
-  services,'
-  title = '2029 Ultra-Futuristic Innovations,
-  subtitle = 'Experience the future of technology with our revolutionary services',
-  maxServices = 12}) => {
-  services: Service[];
-  title?: string;
-  subtitle?: string;
-  const [selectedCategory, setSelectedCategory] = useState<string>(all');'
-  const [sortBy, setSortBy] = useState<innovation | 'price' | rating>(;'
-    'innovation;
-  );
-interface UltraFuturistic2029ServiceShowcaseProps {}
-  services: Service[]
-
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          const innovationOrder = { 'Revolutionary': 4, 'Breakthrough': 3, 'Advanced': 2, 'Emerging': 1 };
-          return (innovationOrder[bLevel] || 0) - (innovationOrder[aLevel] || 0);
-        case 'price':
-          );
-        case 'price':
-          return (
-            parseFloat(a.price.replace(/[^0-9.]/g, '')) -
-            parseFloat(b.price.replace(/[^0-9.]/g, ''))
-          );
-        case 'rating':
-          return b.rating - a.rating;
-        default:
-          return 0;      }        case 'price':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
-        case 'rating':
-          return b.rating - a.rating;
-        default: return 0
-<<<<<<< HEAD
-      }
-  const containerVariants = {
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-      }
-<<<<<<< HEAD
-    });
-    .slice(0, maxServices);
-
-
-  const containerVariants = {
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  max_services = 12;
-}) => {
-  const [selected_category, setSelectedCategory] = useState < string>('all');
-  const [sort_by, setSortBy] = useState<'innovation' | 'price' | 'rating'>('innovation');
-;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   // Get unique categories;
   const categories = [;
     'all',
@@ -997,261 +355,40 @@ interface UltraFuturistic2029ServiceShowcaseProps {
             parseFloat(b.price.replace(/[^0-9.]/g, ''))
           );
         case rating:
-=======
->>>>>>> origin/chore/fix-lint-and-merge
+
 
           return b.rating - a.rating;
         default:;
           return 0;
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-          const aLevel = $2;
-          const bLevel = $2;
-          const innovationOrder = { 'Revolutionary': 4, 'Breakthrough': 3, 'Advanced': 2, 'Emerging': 1 },
-          return (innovationOrder[bLevel] || 0) - (innovationOrder[aLevel] || 0),
-        case 'price':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
-        case 'rating':
-          return b.rating - a.rating,
-        default: return 0
-      }
-    })
-    .slice($2);
-  const containerVariants = $2;
-    visible: {
-      opacity: 1,
-=======
+
     });
     .slice (0, max_services);
 ;
   const container_variants = {
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-  };
-    })
-    .slice(0, maxServices);
-  const containerVariants = {
-    hidden: { opacity: 0 }
-    visible: {
-      opacity: 1
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       transition: {
         staggerChildren: 0.1
       }
     }
   },
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-  };
 
 
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        staggerChildren: 0.1,
-      },
-    },  };
-
-  };
-
-
-<<<<<<< HEAD
-        staggerChildren: 0.1
-      }
-    },  };        staggerChildren: 0.1
-      }
-    }
-  }
-        staggerChildren: 0.1,
-      },
-    },  };
-
-  };
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const itemVariants = {
     hidden: { opacity: 0, y: 20},
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  return (
-    <section className="py-20 relative overflow-hidden">;
-      {/* Background Elements */}
-        {/* Header */}
-        duration: 0.6,
-        ease: "easeOut as const
-      }
-    }
-  },
-    })
-    .slice(0, maxServices);
 
 
-origin/cursor/automate-test-improve-and-merge-code-2533
-  return (
-=======
-=======
-<<<<<<< HEAD
-=======
-
-
-  const containerVariants = {;
-    hidden: { opacity: 0 },;
-    visible: {;
-      opacity: 1,;
-      transition: {;
-        staggerChildren: 0 && 0.1,;
-      },;
-    },  };        staggerChildren: 0 && 0.1;
-      }
-    }
-  };
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  const itemVariants = {;
-    hidden: { opacity: 0, y: 20 },;
-    visible: {;
-      opacity: 1,;
-      y: 0,;
-      transition: {;
-        duration: 0 && 0.6,;
-        ease: 'easeOut' as const,;
-      },;
-    },;
-  };
-<<<<<<< HEAD
-  return (
-    <section className='py-20 relative overflow-hidden'>;
-      {/* Background Elements */}
-      <div className='absolute inset-0 pointer-events-none'>;
-        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>;
-        <div className='absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'></div>;
-        <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'></div>;
-      </div>;
         duration: 0.6,
         ease: "easeOut" as const
       }
     }
-  };
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
-  return (
-    <section className="py-20 relative overflow-hidden">;
-      {/* Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">;
-        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>;
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>;
-        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>;
-      </div>;
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-        {/* Header */}
-        <motion&& motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
 
-  // Filter and sort services
-  const _filteredServices = services
-    .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
-    .sort(_(a, _b) => {
-      switch (sortBy) {
-        case 'innovation':
-          // Default to 'Advanced' if innovationLevel is not available
-          const aLevel = (a as any).innovationLevel || 'Advanced'
-          const bLevel = (b as any).innovationLevel || 'Advanced'
-          const innovationOrder = { 'Revolutionary': 4, 'Breakthrough': 3, 'Advanced': 2, 'Emerging': 1 },
-          return (innovationOrder[bLevel] || 0) - (innovationOrder[aLevel] || 0),
-
-        case 'price':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
-        case 'rating':
-          return b.rating - a.rating,
-        default: return 0
-      }
-    })
-    .slice(0, maxServices),
-
-  const _containerVariants = {_hidden: { opacity: 0}
-    visible: {_opacity: 1, _transition: {
-        staggerChildren: 0.1}
-    }
-  },
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: &quot;easeOut&quot; as const
-      }
-    }
-  },
-
-  return (
-    <section className=&quot;py-20 relative overflow-hidden&quot;>
-      {/* Background Elements */}
-      <div className=&quot;absolute inset-0 pointer-events-none&quot;>
-        <div className=&quot;absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl&quot;></div>
-        <div className=&quot;absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl&quot;></div>
-        <div className=&quot;absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl&quot;></div>
-      </div>
-
-      <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
-        duration: 0.6
-        ease: 'easeOut' as const
-      }
-    }
-  }
-  return (
-    <section className='py-20 relative overflow-hidden'>
-      {/* Background Elements */}
-      <div className='absolute inset-0 pointer-events-none'>
-        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>
-        <div className='absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'></div>
-        <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'></div>
-      </div>
-=======
-
-
-  return (
-    <section className='py-20 relative overflow-hidden'>
-      {/* Background Elements */}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-      <div className='absolute inset-0 pointer-events-none'>;
-        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>;
-        <div className='absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'></div>;
-        <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'></div>;
-      </div>;
->>>>>>> merged-prs-20250907-203621
-        duration: 0.6,
-        ease: "easeOut" as const
-      }
-    }
-<<<<<<< HEAD
-  },
-
-=======
   };
 
 
@@ -1271,7 +408,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         {/* Header */}
         <motion&& motion.div
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 
     })
     .slice(0, maxServices);
@@ -1287,175 +424,22 @@ staggerChildren: 0.1}
     }
   };
 
-<<<<<<< HEAD
-const itemVariants = {}
-    hidden: { opacity: 0, y: 20}
-}
-    visible: {
-      opacity: 1;
-y: 0;
-transition: {
->>>>>>> origin/chore/fix-lint-and-merge
 
-        duration: 0.6}
-ease: 'easeOut' as const}
-      }
-    }
-  };
-
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> merged-prs-20250907-203621
-  return (
-    <section className="py-20 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
-<<<<<<< HEAD
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30}}
-          whileInView={{ opacity: 1, y: 0}}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <motion.h2
-            initial={{ opacity: 0, y: 20}}
-            whileInView={{ opacity: 1, y: 0}}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6"
-=======
     <section className="py-20 relative overflow-hidden">;
-=======
-  return (
-    <section className=\"py-20 relative overflow-hidden\"    />;
->>>>>>> origin/chore/fix-lint-and-merge
-      {/* Background Elements */}
 
-<<<<<<< HEAD
-  return ("
-    <section className="py-20 relative overflow-hidden">
-      {/* Background Elements */}"
-      <div className="absolute inset-0 pointer-events-none">"
-        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>"
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>"
-        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
-      </div>"
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className='absolute inset-0 pointer-events-none'>
-        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>
-        <div className='absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'></div>
-        <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'></div>
-=======
-      <div className='absolute inset-0 pointer-events-none'    />
-        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'    /></div>
-        <div className='absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'    /></div>
-        <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'    /></div>
->>>>>>> origin/chore/fix-lint-and-merge
-      </div>
-
-<<<<<<< HEAD
-=======
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'    />
-        {/* Header */}
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'    />        {/* Header */}
->>>>>>> origin/chore/fix-lint-and-merge
-
-        {/* Header *}
-}
-
-        <motion.div;
-initial={{ opacity: 0, y: 30 }
-}
-=======
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-className='text-center mb-16''
-=======
 
-<<<<<<< HEAD
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  }
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
 
-  return (
-    <section className="py-20 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
-      </div>
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
 
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}
-
-        {/* Header */}
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className='text-center mb-16'        >          className="text-center mb-16"
-          className='text-center mb-16'        >
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-<<<<<<< HEAD
-    }).slice(0, maxServices)const containerVariants = {hidden: { opacity: 0 }
-    visible: {opacity: 1;
-      transition: {staggerChildren: 0.1,},},}const itemVariants = {hidden: { opacity: 0, y: 20 }
-    visible: {opacity: 1;
-      y: 0;
-      transition: {duration: 0.6,ease: 'easeOut' as const,},},}return (<section className="py-20 relative overflow-hidden">;
-      {/* Background Elements */}{/* Header */}return (<section className="py-20 relative overflow-hidden">;
-      {/* Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">;
-        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>;
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>;
-        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>;
-      </div>;
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-      <div className='absolute inset-0 pointer-events-none'>;
-        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>;
-        <div className='absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'></div>;
-        <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'></div>;
-      </div>;
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-        {/* Header */}
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}{/* Header */}<motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}className='text-center mb-16'        >          className="text-center mb-16";
-          className='text-center mb-16'        >;
-className='text-center mb-16';
-        >;
-          <motion.h2;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.8 }}
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}
-=======
+
 className='text-center mb-16'
             />
           <motion.h2;
@@ -1464,89 +448,23 @@ initial={{ opacity: 0, y: 20 }
             whileInView={{ opacity: 1, y: 0 }
 }
             transition={{ duration: 0.8, delay: 0.1 }}
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-<<<<<<< HEAD
 
 
-
-
-            {title}
-            className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6'          >            className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6"
-=======
-            className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          >
-
-            {title}
-<<<<<<< HEAD
-=======
-          </motion && motion.h2>;
-          <motion&& motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6'
               />
 
-<<<<<<< HEAD
-        <motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}'"
-          className='text-center mb-16'        >          className="text-center mb-16"'
-          className='text-center mb-16'        >
 
-
-className='text-center mb-16'
-origin/cursor/automate-test-improve-and-merge-code-2533
-        >
-          <motion.h2;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.8 }}'"
-          className='text-center mb-16'>          className="text-center mb-16";
-        >;
-          <motion&& motion.h2;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
-            className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6'>            className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6";
-          >;
-            {title}
-          </motion && motion.h2>;
-          <motion&& motion.p;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6';
-          >;
-            {title}
-=======
             {titl}
 }
->>>>>>> origin/chore/fix-lint-and-merge
+
           </motion.h2>;
           <motion.p;
             initial={{ opacity: 0, y: 20 }
 }
             whileInView={{ opacity: 1, y: 0 }
 }
-<<<<<<< HEAD
-            transition={{ "duration": 0.8, "delay": 0.2 }}
 
-className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed''
-          >
-
-            {subtitl
-}
-          </motion.p>;
-        </motion.div>;
-            className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'          >>'
-=======
             transition={{ duration: 0.8, delay: 0.2 }}
 
 className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'
@@ -1557,85 +475,33 @@ className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'
           </motion.p>;
         </motion.div>;
             className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'          >>
->>>>>>> origin/chore/fix-lint-and-merge
+
 
             {subtitle}
-<<<<<<< HEAD
-          </motion.p>;
-        </motion.div>;
-<<<<<<< HEAD
-            className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'          >;
-          >;
-=======
+
 
           </motion && motion.p>;
         </motion && motion.div>;
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-            className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'          >
-
->>>>>>> merged-prs-20250907-203621
           >
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 
             {subtitle}
           </motion.p>
         </motion.div>
 
-<<<<<<< HEAD
-            {subtitle}
-=======
 
-<<<<<<< HEAD
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
-          >
-            {subtitle}
-          </motion && motion.p>;
-        </motion && motion.div>;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
+
+
         {/* Filters and Controls */}
         <motion&& motion.div;
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-12"
-        >
-          {/* Category Filter */}
-          <div className='flex items-center space-x-2'>
-            <span className='text-gray-300 text-sm font-medium'>
-              Filter by:
-            </span>
-            <div className='flex flex-wrap gap-2'>
-              {categories.map(category => (                <button          <div className="flex items-center space-x-2">
-            <span className="text-gray-300 text-sm font-medium">Filter by:</span>
-            <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
 
-
-
-
-
-                <button
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20}}
-            whileInView={{ opacity: 1, y: 0}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-<<<<<<< HEAD
-            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
-          >
-=======
             className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'          >            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
           >
             {subtitle}
@@ -1645,35 +511,12 @@ className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'
 
           >
 
->>>>>>> merged-prs-20250907-203621
+
             {subtitle}
           </motion.p>
         </motion.div>
 
-<<<<<<< HEAD
-        {/* Filters and Controls */}
-        <motion.div
-          initial={{ opacity: 0, y: 20}}
-          whileInView={{ opacity: 1, y: 0}}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-12"
-        >
-          {/* Category Filter */}
-          <div className="flex items-center space-x-2">
-            <span className="text-gray-300 text-sm font-medium">Filter by:</span>
-            <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                    selectedCategory === category
-                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                      : 'bg-gray-900/50 text-gray-300 hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50'
-                  }`}
-                >
-                  {category === 'all' ? 'All Categories' : category}
-=======
+
         {/* Filters and Controls */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1694,72 +537,8 @@ className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'
 
                 <button
 
-=======
 
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30}}
-          whileInView={{ opacity: 1, y: 0}}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <motion.h2
-            initial={{ opacity: 0, y: 20}}
-            whileInView={{ opacity: 1, y: 0}}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6"
-          >
-            {title}
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20}}
-            whileInView={{ opacity: 1, y: 0}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
-          >
-            {subtitle}
-          </motion.p>
-        </motion.div>
-
-        {/* Filters and Controls */}
-        <motion.div
-          initial={{ opacity: 0, y: 20}}
-          whileInView={{ opacity: 1, y: 0}}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-12"
-        >
-          {/* Category Filter */}
-          <div className='flex items-center space-x-2' />
-            <span className='text-gray-300 text-sm font-medium' />
-              Filter by:
-            </span>
-            <div className='flex flex-wrap gap-2' />
-              {categories.map(category => (}
-                <button;}
-key={category}
-                  onClick={() = /> setSelectedCategory(category}
-=======
-            {subtitle}
-        {/* Filters and Controls */}
-        <motion&& motion.div;
-          initial={{ opacity: 0, y: 20 }
->>>>>>> origin/chore/fix-lint-and-merge
-}
-
-          whileInView={{ opacity: 1, y: 0 }
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                <button
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${;
@@ -1769,27 +548,25 @@ key={category}
                   }`}
                 >;
                   {category === 'all' ? 'All Categories' : category}
-<<<<<<< HEAD
-=======
+
                 </button>;
               ))}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 
             </div>;
           </div>;
 
 
-<<<<<<< HEAD
-=======
+
           {/* Sort Options */}
           <div className='flex items-center space-x-2'>;
             <span className='text-gray-300 text-sm font-medium'>Sort by:</span>;
           {/* Sort Options */}
           <div className="flex items-center space-x-2">
             <span className="text-gray-300 text-sm font-medium">Sort by:</span>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
+
             <select
                   {category === 'all' ? 'All Categories' : category}<select;
               value={sortBy}
@@ -1800,216 +577,24 @@ key={category}
               <option value='price'>Price</option>;
               <option value='rating'>Rating</option>            </select>            <select;
               value={sortBy}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              onChange={(e) => setSortBy(e && e.target.value as any)}
-              className="px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 focus:outline-none focus:border-purple-500";
-        stagger_children: 0.1,
-      },
-    },  }        stagger_children: 0.1;
-      }
-    }
-  }
-;
-  const item_variants = {
-    hidden: { opacity: 0, coordinate_y: 20 },
-    visible: {
-      opacity: 1,
-      coordinate_y: 0,
-      transition: {
-        duration: 0.6,
-        ease: 'ease_out' as const,
-      },
-    },
-  }
-;
-  return (
-    <section className='py - 20 relative overflow - hidden'>;
-      {/* Background Elements */}
-      <div className='absolute inset - 0 pointer - events - none'>;
-        <div className='absolute top - 0 left - 0 w - 96 h - 96 bg - purple - 500 / 5 rounded - full blur - 3xl'></div>;
-        <div className='absolute top - 0 right - 0 w - 96 h - 96 bg - blue - 500 / 5 rounded - full blur - 3xl'></div>;
-        <div className='absolute bottom - 0 left - 1/2 w - 96 h - 96 bg - pink - 500 / 5 rounded - full blur - 3xl'></div>;
-      </div>;
-      <div className='relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>        {/* Header */}  }
-;
-  return (
-    <section className="py - 20 relative overflow - hidden">;
-      {/* Background Elements */}
-      <div className="absolute inset - 0 pointer - events - none">;
-        <div className="absolute top - 0 left - 0 w - 96 h - 96 bg - purple - 500 / 5 rounded - full blur - 3xl"></div>;
-        <div className="absolute top - 0 right - 0 w - 96 h - 96 bg - blue - 500 / 5 rounded - full blur - 3xl"></div>;
-        <div className="absolute bottom - 0 left - 1/2 w - 96 h - 96 bg - pink - 500 / 5 rounded - full blur - 3xl"></div>;
-      </div>;
-      <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-        {/* Header */}
-        <motion.div;
-          initial={{ opacity: 0, coordinate_y: 30 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8 }}
-          className='text - center mb - 16'        >          className="text - center mb - 16";
-        >;
-          <motion.h2;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className='text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - purple - 400 via - pink - 400 to - blue - 400 bg - clip - text text - transparent mb - 6'          >            className="text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - purple - 400 via - pink - 400 to - blue - 400 bg - clip - text text - transparent mb - 6";
-          >;
-            {title}
-          </motion.h2>;
-          <motion.p;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className='text - xl text - gray - 300 max - w-3xl mx - auto leading - relaxed'          >            className="text - xl text - gray - 300 max - w-3xl mx - auto leading - relaxed";
-          >;
-            {subtitle}
-          </motion.p>;
-        </motion.div>;
-        {/* Filters and Controls */}
-        <motion.div;
-          initial={{ opacity: 0, coordinate_y: 20 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className='flex flex - col sm:flex - row items - center justify - between gap - 4 mb - 12';
-        >;
-          {/* Category Filter */}
-          <div className='flex items - center space - x-2'>;
-            <span className='text - gray - 300 text - sm font - medium'>;
-              Filter by:;
-            </span>;
-            <div className='flex flex - wrap gap - 2'>;
-              {categories.map (category => (                <button          <div className="flex items - center space - x-2">;
-            <span className="text - gray - 300 text - sm font - medium">Filter by:</span>;
-            <div className="flex flex - wrap gap - 2">;
-              {categories.map ((category) => (
-                  key={category}
-                  on_click={() => setSelectedCategory (category)}
-                  className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - all duration - 200 ${
-                    selected_category === category;
-                      ? 'bg - gradient - to - r from - purple - 600 to - pink - 600 text - white shadow - lg';
-                      : 'bg - gray - 900 / 50 text - gray - 300 hover:bg - purple - 900 / 30 border border - gray - 700 hover:border - purple - 500 / 50';
-                  }`}
-                >;
-                  {category === 'all' ? 'All Categories' : category}
-                </button>))}
-            </div>;
-          </div>;
-          {/* Sort Options */}
-          <div className='flex items - center space - x-2'>;
-            <span className='text - gray - 300 text - sm font - medium'>Sort by:</span>;
-            <select;
-              value={sort_by}
-              on_change={e => setSortBy (e.target.value as any)}
-              className='px - 4 py - 2 bg - gray - 900 / 50 border border - gray - 700 rounded - lg text - gray - 300 focus:outline - none focus:border - purple - 500';
-            >;
-              <option value='innovation'>Innovation Level</option>;
-              <option value='price'>Price</option>;
-              <option value='rating'>Rating</option>            </select>            <select;
-              value={sort_by}
-              on_change={(e) => setSortBy (e.target.value as any)}
-              className="px - 4 py - 2 bg - gray - 900 / 50 border border - gray - 700 rounded - lg text - gray - 300 focus:outline - none focus:border - purple - 500";
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             >;
               <option value="innovation">Innovation Level</option>;
               <option value="price">Price</option>;
               <option value="rating">Rating</option>;
             </select>;
-<<<<<<< HEAD
-          </div>;</button>;
-=======
+
           </div>;
 
 
-<<<<<<< HEAD
-          initial="hidden"
->>>>>>> merged-prs-20250907-203621
-                </button>
-              ))}
-            </div>
-          </div>
-<<<<<<< HEAD
 
           {/* Sort Options */}
-          <div className="flex items-center space-x-2">
-            <span className="text-gray-300 text-sm font-medium">Sort by:</span>
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as any)}
-              className="px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 focus:outline-none focus:border-purple-500"
-            >
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-=======
-          transition={{ duration: 0.6, delay: 0.3 }}
-className='flex flex-col sm:flex-row items-center justify-between gap-4 mb-12'
-            />
-          {/* Category Filter */}
-          <div className='flex items-center space-x-2'    />
-            <span className='text-gray-300 text-sm font-medium'    />
-              Filter by:
-            </span>
-            <div className='flex flex-wrap gap-2'    />
-              {categories.map(category => (}
-                <button;}
-key={category}
-                  onClick={() =    /> setSelectedCategory(category}
-}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${selectedCategory === category;
-                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg';}
-                      : 'bg-gray-900/50 text-gray-300 hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50';}
-                  }`}>
 
 
-<<<<<<< HEAD
-                  {category === 'all' ? 'All Categories' : category}
 
-                </button>
 
->>>>>>> origin/chore/fix-lint-and-merge
-              ))}
-            </div>;
-          </div>;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-          {/* Sort Options */}
-<<<<<<< HEAD
-          </div>;
-                >
-                  {category === 'all' ? 'All Categories' : category}
-                </button>
-              ))}
-            </div>
-          </div>
-=======
->>>>>>> origin/chore/fix-lint-and-merge
 
-<<<<<<< HEAD
-<div className='flex items-center space-x-2'    />
-            <span className='text-gray-300 text-sm font-medium'    />Sort by: </span>
-            <select;
-value={sortBy}
-              onChange={e =    /> setSortBy(e.target.value as any)}
-              className='px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 focus:outline-none focus:border-purple-500'
-            >
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          {/* Sort Options */}
-          <div className='flex items-center space-x-2'>
-            <span className='text-gray-300 text-sm font-medium'>Sort by:</span>
-
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <select
               value={sortBy}
               onChange={e => setSortBy(e.target.value as any)}
@@ -2018,22 +603,9 @@ value={sortBy}
               <option value='innovation'>Innovation Level</option>
               <option value='price'>Price</option>
 
-<<<<<<< HEAD
-              <option value='rating'>Rating</option>            </select>            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as any)}
-              className="px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 focus:outline-none focus:border-purple-500"
-            >
->>>>>>> merged-prs-20250907-203621
-              <option value="innovation">Innovation Level</option>
-              <option value="price">Price</option>
-              <option value="rating">Rating</option>
-            </select>
-          </div>
-        </motion.div>
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
+
               <option value='rating'>Rating</option>            </select>
 
               <option value="innovation">Innovation Level</option>
@@ -2048,53 +620,13 @@ value={sortBy}
 
               <option value='rating'>Rating</option>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-              <option value='innovation'    />Innovation Level</option>
-              <option value='price'    />Price</option>
 
-              <option value='rating'    />Rating</option>
->>>>>>> origin/chore/fix-lint-and-merge
             </select>
 
           </div>
         </motion.div>
 
-<<<<<<< HEAD
-        {/* Services Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial='hidden'
-          whileInView='visible'
-          viewport={{ once: true }}
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          {filteredServices.map((service, index) => (
-            <motion.div
-              key={service.id}
-              variants={itemVariants}
 
-<<<<<<< HEAD
-        {/* Services Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true}}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {filteredServices.map((service, index) => (
-            <motion.div
-              key={service.id}
-              variants={itemVariants}
-              className="group"
-            >
-              <UltraFuturisticServiceCard
-                service={service}
-                className="h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300"
-              />
-=======
 
           ))}
 
@@ -2131,113 +663,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-=======
 
-        {/* Services Grid *}
-}
-        <motion&& motion.div;
-          variants={containerVariants}
-initial='hidden';
-          whileInView='visible';
-          viewport={{ once: true }}className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          initial="hidden";
-          whileInView="visible";
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
-          {filteredServices && filteredServices.map((service, index) => (<motion&& motion.div;
-              key={service && service.id}
-              variants={itemVariants}
-        {/* Services Grid */}
-        <motion&& motion.div
-          variants={containerVariants}
-<<<<<<< HEAD
-initial='hidden'
-          whileInView='visible'
-          viewport={{ once: true }}
-
-<<<<<<< HEAD
-'"
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          initial="hidden";"
-          whileInView="visible";
-          viewport={{ once: true }}"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
-          {filteredServices && filteredServices.map((service, index) => (;
-            <motion&& motion.div;
-              key={service && service.id}
-              variants={itemVariants}'
-              className='group'>;
-              <UltraFuturisticServiceCard;
-                service={service}'"
-                className='h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300'              />              className="group";
-            >;
-              <UltraFuturisticServiceCard;
-                service={service}"
-                className="h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300"
-            </motion && motion.div>;
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
-        >
-          {filteredServices.map((service, index) => (
-            <motion.div
-}
-key={service.id}
-              variants={itemVariants}
-className='group'
-            >
-              <UltraFuturisticServiceCard
-                service={service}
-                className='h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300'              />              className="group";
-            >;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-
-
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-=======
-initial='hidden'
-          whileInView='visible'
-          viewport={{ once: true }
-}
-
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
-            />
-          {filteredServices.map((service, index) => (}
-            <motion.div;}
-key={service.id}
-              variants={itemVariants}
-className='group'    />
-
->>>>>>> origin/chore/fix-lint-and-merge
-              <UltraFuturisticServiceCard;
-                service={service}
-
-                className='h-full transform group-hover: shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300'
-                 />
->>>>>>> merged-prs-20250907-203621
             </motion.div>
 
-<<<<<<< HEAD
-          ))}
-<<<<<<< HEAD
-        </motion.div>
 
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30}}
-          whileInView={{ opacity: 1, y: 0}}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-center mt-16"
-        >
-          <div className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Ready to Experience the Future?
-            </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of forward-thinking companies already using our revolutionary 2029 technology solutions.
-            </p>
-=======
         {/* Call to Action *}
 }
         <motion&& motion.div;
@@ -2258,26 +687,7 @@ className='text-center mt-16'
               Join thousands of forward-thinking companies already using our;
 revolutionary 2029 technology solutions.
             </p>
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25"
-              >
-                Get Started Today
-              </a>
-              <a
-                href="/pricing"
-                className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold"
-<<<<<<< HEAD
-=======
-          transition={{ duration: 0.8, delay: 0.4 }}
-className='text-center mt-16'
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
         >
           <div className='bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -2288,121 +698,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               revolutionary 2029 technology solutions.
             </p>'
             <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
-<<<<<<< HEAD
-              <a'
-                href='/contact''
-                className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25'              >
-                Get Started Today;
-              </a>
-              <a'
-                href='/pricing''
-                className='px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold'>        >;"
-          <div className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm">;"
-            <h3 className="text-3xl font-bold text-white mb-4">;
-              Ready to Experience the Future?;
-            </h3>;"
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
-              Join thousands of forward-thinking companies already using our revolutionary 2029 technology solutions.;
-            </p>;"
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">;
-              <a"
-                href="/contact""
-                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25">;
-                Get Started Today;
-              </a>;
-              <a'
-                href='/pricing''"
-                className='px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold'                href="/pricing"
-                View Pricing;
-              </a>;
-            </div>;
-          </div>;
-        {/* Innovation Stats */}
-        <motion&& motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}'
-          <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
-            {[]
-              {'
-                label: 'Revolutionary Services'
-                value: services.filter('
-                  s => s.innovationLevel === 'Revolutionary'
-                ).length;
-                icon: Rocket'
-                color: 'from-purple-500 to-pink-500'
-              }
-              {'
-                label: 'Patent Pending''
-                value: services.filter(s => s.patentStatus === 'Patent Pending')
-                  .length;
-                icon: Shield'
-                color: 'from-blue-500 to-cyan-500'
-              }
-              {'
-                label: 'Total Customers'
-                value: services.reduce((sum, s) => sum + s.customers, 0)
-                icon: Star'
-                color: 'from-yellow-500 to-orange-500'
-              }
-        </motion.div>;
-        {/* Innovation Stats */}
-        <motion.div;
-          initial={{ opacity: 0, coordinate_y: 30 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}'
-          className='mt - 20';'
-          <div className='grid grid - cols - 1 md:grid - cols - 4 gap - 8'>;
-            {[;
-              {'
-                label: 'Revolutionary Services',
-                value: services.filter ('
-                  string => s.innovation_level === 'Revolutionary').length,
-                icon: Rocket,'
-                color: 'from - purple - 500 to - pink - 500',
-              },
-              {'
-                label: 'Patent Pending','
-                value: services.filter (string => s.patent_status === 'Patent Pending');
-                  .length,
-                icon: Shield,'
-                color: 'from - blue - 500 to - cyan - 500',
-              },
-              {'
-                label: 'Total Customers',
-                value: services.reduce ((sum, s) => sum + s.customers, 0),
-                icon: Star,'
-                color: 'from - yellow - 500 to - orange - 500',
-              },
-              {'
-                label: 'Average Rating'
-                value: (
-                  services.reduce((sum, s) => sum + s.rating, 0) /
-                  services.length;
-                ).toFixed(1)
-                icon: TrendingUp'
-                color: 'from-green-500 to-teal-500''
-              },            ].map((stat, index) => (              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' }'
-              { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' }'
-              { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' }'
-              { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
-                ).toFixed(1),
-                icon: TrendingUp,'
-                color: 'from-green-500 to-teal-500','
-              },            ].map((stat, index) => (              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' },'
-              { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },'
-              { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },'
-              { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
-              <motion.div
-                className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25'
-              >
-                Get Started Today
-              </a>
-              <a
-href='/pricing'
-                className='px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold'
-              >
-                View Pricing
-=======
+
             <div className='flex flex-col sm:flex-row items-center justify-center gap-4'    />
               <a;
 href='/contact'
@@ -2416,7 +712,7 @@ href='/pricing'
                 className='px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold'
                   />
                 View Pricing;
->>>>>>> origin/chore/fix-lint-and-merge
+
               </a>
             </div>
           </div>
@@ -2440,437 +736,20 @@ className='text-center mt-16';
               </a>;
               <a;
                 href='/pricing';
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
               <a
                 href='/contact'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                 className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25'              >
                 Get Started Today
               </a>
               <a
                 href='/pricing'
-<<<<<<< HEAD
-                className='px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold'              >        >
-          <div className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Ready to Experience the Future?
-            </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of forward-thinking companies already using our revolutionary 2029 technology solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25"
-              >
-                Get Started Today
-              </a>
-              <a
-                href='/pricing'
-                className='px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold'                href="/pricing"
-                className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold"
->>>>>>> merged-prs-20250907-203621
-              >
-                View Pricing
-              </a>
-            </div>
-          </div>
-        </motion.div>
-<<<<<<< HEAD
-
-        {/* Innovation Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 30}}
-          whileInView={{ opacity: 1, y: 0}}
-          transition={{ duration: 0.8, delay: 0.5 }}
-=======
-=======
-                className='px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold'>        >;
-          <div className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm">;
-            <h3 className="text-3xl font-bold text-white mb-4">;
-              Ready to Experience the Future?;
-            </h3>;
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
-              Join thousands of forward-thinking companies already using our revolutionary 2029 technology solutions.;
-            </p>;
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">;
-              <a
-                href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25">;
-                Get Started Today;
-              </a>;
-              <a
-                href='/pricing'
-                className='px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold'                href="/pricing"
-                View Pricing;
-              </a>;
-            </div>;
-          </div>;
-<<<<<<< HEAD
-=======
 
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-        {/* Innovation Stats */}
-        <motion&& motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
-            {[
-              {
-                label: 'Revolutionary Services'
-                value: services.filter(
-                  s => s.innovationLevel === 'Revolutionary'
-                ).length
-                icon: Rocket
-                color: 'from-purple-500 to-pink-500'
-              }
-              {
-                label: 'Patent Pending'
-                value: services.filter(s => s.patentStatus === 'Patent Pending')
-                  .length
-                icon: Shield
-                color: 'from-blue-500 to-cyan-500'
-              }
-              {
-                label: 'Total Customers'
-                value: services.reduce((sum, s) => sum + s.customers, 0)
-                icon: Star
-                color: 'from-yellow-500 to-orange-500'
-              }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-        </motion.div>;
-        {/* Innovation Stats */}
-        <motion.div;
-          initial={{ opacity: 0, coordinate_y: 30 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className='mt - 20';
-          <div className='grid grid - cols - 1 md:grid - cols - 4 gap - 8'>;
-            {[;
-              {
-                label: 'Revolutionary Services',
-                value: services.filter (
-                  string => s.innovation_level === 'Revolutionary').length,
-                icon: Rocket,
-                color: 'from - purple - 500 to - pink - 500',
-              },
-              {
-                label: 'Patent Pending',
-                value: services.filter (string => s.patent_status === 'Patent Pending');
-                  .length,
-                icon: Shield,
-                color: 'from - blue - 500 to - cyan - 500',
-              },
-              {
-                label: 'Total Customers',
-                value: services.reduce ((sum, s) => sum + s.customers, 0),
-                icon: Star,
-                color: 'from - yellow - 500 to - orange - 500',
-              },
-              {
-                label: 'Average Rating'
-                value: (
-                  services.reduce((sum, s) => sum + s.rating, 0) /
-                  services.length
-                ).toFixed(1)
-                icon: TrendingUp
-                color: 'from-green-500 to-teal-500'
-              },            ].map((stat, index) => (              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' }
-              { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' }
-              { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' }
-              { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
-<<<<<<< HEAD
-=======
-            ].map((stat, index) => (
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-                ).toFixed(1),
-                icon: TrendingUp,
-                color: 'from-green-500 to-teal-500',
-              },            ].map((stat, index) => (              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' },
-              { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },
-              { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },
-              { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
-<<<<<<< HEAD
-              <motion.div
-
-        {/* Innovation Stats *}
-}
-        <motion.div;
-          initial={{ opacity: 0, y: 30 }
-}
-          whileInView={{ opacity: 1, y: 0 }
-}
-          transition={{ duration: 0.8, delay: 0.5 }
-}
-className='mt-20'    />
-
-          <div className='grid grid-cols-1 md:grid-cols-4 gap-8'    />;
-=======
-
-              <motion.div
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-        {/* Innovation Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className='mt-20'
-
-        >
-          <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
-            {[
-              {
-                label: 'Revolutionary Services'
-                value: services.filter(
-                  s => s.innovationLevel === 'Revolutionary'
-                ).length
-                icon: Rocket
-                color: 'from-purple-500 to-pink-500'
-              }
-              {
-                label: 'Patent Pending'
-                value: services.filter(s => s.patentStatus === 'Patent Pending')
-                  .length
-                icon: Shield
-                color: 'from-blue-500 to-cyan-500'
-              }
-              {
-                label: 'Total Customers'
-                value: services.reduce((sum, s) => sum + s.customers, 0)
-                icon: Star
-                color: 'from-yellow-500 to-orange-500'
-              }
-              {
-                label: 'Average Rating'
-                value: (
-                  services.reduce((sum, s) => sum + s.rating, 0) /
-                  services.length
-                ).toFixed(1)
-                icon: TrendingUp
-                color: 'from-green-500 to-teal-500'
-              },            ].map((stat, index) => (              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' }
-              { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' }
-              { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' }
-              { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
-                ).toFixed(1),
-                icon: TrendingUp,
-                color: 'from-green-500 to-teal-500',
-              },            ].map((stat, index) => (              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' },
-              { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },
-              { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },
-              { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
-
-            ].map((stat, index) => (
-
-
-            ].map((stat, index) => (
-
-              <motion.div
-<div className='grid grid-cols-1 md:grid-cols-4 gap-8'>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-            {[;
-              {label: 'Revolutionary Services';
-                value: services.filter(s => s.innovationLevel === 'Revolutionary';
-                ).length;
-                icon: Rocket;}
-                color: 'from-purple-500 to-pink-500';}
-              }
-              {label: 'Patent Pending';
-                value: services.filter(s => s.patentStatus === 'Patent Pending').length;
-                icon: Shield;}
-                color: 'from-blue-500 to-cyan-500';}
-              }
-              {label: 'Total Customers';
-                value: services.reduce((sum, s) => sum + s.customers, 0)icon: Star;}
-                color: 'from-yellow-500 to-orange-500';}
-              }
-
-<<<<<<< HEAD
-              <motion.div
-              {label: 'Average Rating';
-                value: (services.reduce((sum, s) => sum + s.rating, 0) /;
-                  services.length;
-                ).toFixed(1),icon: TrendingUp,color: 'from-green-500 to-teal-500',},].map((stat, index) => (<motion.div;
-<div className='grid grid-cols-1 md:grid-cols-4 gap-8'>;
-            {[;
-              {label: 'Revolutionary Services',value: services && services.filter(s => s && s.innovationLevel === 'Revolutionary';
-                ).length,icon: Rocket,color: 'from-purple-500 to-pink-500',},{label: 'Patent Pending',value: services && services.filter(s => s && s.patentStatus === 'Patent Pending').length,icon: Shield,color: 'from-blue-500 to-cyan-500',},{label: 'Total Customers',value: services && services.reduce((sum, s) => sum + s && s.customers, 0),icon: Star,color: 'from-yellow-500 to-orange-500',},{label: 'Average Rating',value: (services && services.reduce((sum, s) => sum + s && s.rating, 0) /;
-                  services && services.length;
-                ).toFixed(1),icon: TrendingUp,color: 'from-green-500 to-teal-500',},            ].map((stat, index) => (              { label: 'Revolutionary Services', value: services && services.filter(s => s && s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' },{ label: 'Patent Pending', value: services && services.filter(s => s && s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },{ label: 'Total Customers', value: services && services.reduce((sum, s) => sum + s && s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },{ label: 'Average Rating', value: (services && services.reduce((sum, s) => sum + s && s.rating, 0) / services && services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
-        {/* Innovation Stats */}
-        <motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-className='mt-20'
-        >
-          <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
-            {[]
-              {'
-                label: 'Revolutionary Services'
-                value: services.filter('
-                  s => s.innovationLevel === 'Revolutionary'
-                ).length;
-                icon: Rocket'
-                color: 'from-purple-500 to-pink-500'
-              }
-              {'
-                label: 'Patent Pending''
-                value: services.filter(s => s.patentStatus === 'Patent Pending')
-                  .length;
-                icon: Shield'
-                color: 'from-blue-500 to-cyan-500'
-              }
-              {'
-                label: 'Total Customers'
-                value: services.reduce((sum, s) => sum + s.customers, 0)
-                icon: Star'
-                color: 'from-yellow-500 to-orange-500'
-              }
-              {'
-                label: 'Average Rating'
-                value: (
-                  services.reduce((sum, s) => sum + s.rating, 0) /
-                  services.length
-
-=======
-              {
-                label: 'Average Rating',
-  value: (
-                  services.reduce((sum, s) => sum + s.rating, 0) /
-                  services.length;
->>>>>>> origin/chore/fix-lint-and-merge
-                ).toFixed(1),
-                icon: TrendingUp}
-                color: 'from-green-500 to-teal-500'}
-              }
-            ].map((stat, index) => (
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-              <motion.div
-<div className='grid grid-cols-1 md:grid-cols-4 gap-8'>;
-            {[;
-              {"label": 'Revolutionary Services',"value": services && services.filter(s => { return s && s.innovationLevel === 'Revolutionary'; }'
-                ).length,"icon": Rocket,"color": 'from-purple-500 to-pink-500'},{"label": 'Patent Pending',"value": services && services.filter(s => s && s.patentStatus === 'Patent Pending').length,"icon": Shield,"color": 'from-blue-500 to-cyan-500'},{"label": 'Total Customers',"value": services && services.reduce((sum, s) => sum + s && s.customers, 0),"icon": Star,"color": 'from-yellow-500 to-orange-500'},{"label": 'Average Rating',"value": (services && services.reduce((sum, s) => sum + s && s.rating, 0) /;'
-                  }
-                  services && services.length;
-                ).toFixed(1),;
-                icon: TrendingUp,;'
-                color: 'from-green-500 to-teal-500',;'
-              },            ].map((stat, index) => (              { label: 'Revolutionary Services', value: services && services.filter(s => s && s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' },;'
-              { label: 'Patent Pending', value: services && services.filter(s => s && s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },;'
-              { label: 'Total Customers', value: services && services.reduce((sum, s) => sum + s && s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },;'
-              { label: 'Average Rating', value: (services && services.reduce((sum, s) => sum + s && s.rating, 0) / services && services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
-<<<<<<< HEAD
-=======
-              <motion.div;
-<div className='grid grid-cols-1 md:grid-cols-4 gap-8'    />;
-            {[;
-              {label: 'Revolutionary Services'}
-  value: services && services.filter(s => s && s.innovationLevel === 'Revolutionary';}
-                ).length,icon: Rocket,color: 'from-purple-500 to-pink-500'},{label: 'Patent Pending'}
-  value: services && services.filter(s => s && s.patentStatus === 'Patent Pending').length,icon: Shield,color: 'from-blue-500 to-cyan-500'},{label: 'Total Customers'}
-  value: services && services.reduce((sum, s) => sum + s && s.customers, 0),icon: Star,color: 'from-yellow-500 to-orange-500'},{label: 'Average Rating',
-  value: (services && services.reduce((sum, s) => sum + s && s.rating, 0) /;}
-                  services && services.length;}
-                ).toFixed(1),icon: TrendingUp,color: 'from-green-500 to-teal-500'}            ].map((stat, index) => (              { label: 'Revolutionary Services'}
-  value: services && services.filter(s => s && s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500'}
-},{ label: 'Patent Pending'}
-  value: services && services.filter(s => s && s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500'}
-},{ label: 'Total Customers'}
-  value: services && services.reduce((sum, s) => sum + s && s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500'}
-},{ label: 'Average Rating'}
-  value: (services && services.reduce((sum, s) => sum + s && s.rating, 0) / services && services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500'}
-}
->>>>>>> origin/chore/fix-lint-and-merge
-              <motion&& motion.div;
-                key={index}
-                initial={{ opacity: 0, y: 20 }
-}
-=======
-              <motion&& motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-
-<<<<<<< HEAD
-
-
-              >
-                <div
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className='text-center'
-
-              >
-                <div
-                  className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}
-                >
-                  <stat.icon className='w-8 h-8 text-white' />
-                </div>
-                <div className='text-3xl font-bold text-white mb-2'>
-                  {stat.value}
-                </div>
-                <div className='text-gray-400'>{stat.label}</div>              </motion.div>              >
-                <div className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
-                  <stat.icon className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-400">{stat.label}</div>
-              </motion.div>
-=======
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className='text-center'
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
-<<<<<<< HEAD
-
-}
-
-              >
-<<<<<<< HEAD
-                <div,
-className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4,`
-}>
-
-                  <stat.icon className='w-8 h-8 text-white' />;'
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                <div
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   className={`w-16 h-16 bg-gradient-to-br ${stat && stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>;
                   <stat && stat.icon className='w-8 h-8 text-white' />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                 </div>;
                 <div className='text-3xl font-bold text-white mb-2'>;'
                   {stat.value}
@@ -2891,8 +770,7 @@ export default UltraFuturistic2029ServiceShowcase;
               </motion.div>
 
 
-<<<<<<< HEAD
-=======
+
                 whileInView={{ opacity: 1, y: 0 }
 }
 
@@ -2910,88 +788,18 @@ className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-cen
                 </div>;
                 <div className='text-gray-400'    />{stat.label}</div>;
               </motion.div>;
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-<<<<<<< HEAD
 
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             ))}
 
           </div>
         </motion.div>
       </div>
     </section>
-<<<<<<< HEAD
-  );
-  );
-}
-};
 
-export default UltraFuturistic2029ServiceShowcase;  )
-}
-export default UltraFuturistic2029ServiceShowcase;
 
-=======
 
-<<<<<<< HEAD
-export default UltraFuturistic2029ServiceShowcase;
-export default UltraFuturistic2029ServiceShowcase;
 
-}
-export default UltraFuturistic2029ServiceShowcase;
-                  services.reduce ((sum, s) => sum + s.rating, 0) /;
-                  services.length).to_fixed (1),
-                icon: TrendingUp,'
-                color: from - green - 500 to - teal - 500,'
-              }].map ((stat, index) => (              { label: 'Revolutionary Services, value: services.filter (string => s.innovation_level === Revolutionary').length, icon: Rocket, color: 'from - purple - 500 to - pink - 500 },
-              { label: 'Patent Pending', value: services.filter (string => s.patent_status === Patent Pending).length, icon: Shield, color: 'from - blue - 500 to - cyan - 500' },
-              { label: Total Customers', value: services.reduce ((sum, s) => sum + s.customers, 0), icon: Star, color: 'from - yellow - 500 to - orange - 500 },
-              { label: 'Average Rating', value: (services.reduce ((sum, s) => sum + s.rating, 0) / services.length).to_fixed (1), icon: TrendingUp, color: from - green - 500 to - teal - 500 }
-              <motion.div;
-                key={index}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}'
-                className='text - center;
-              >;
-                <div;`
-                  className={`w - 16 h - 16 bg - gradient - to - br ${stat.color} rounded - 2xl flex items - center justify - center mx - auto mb - 4`}
-                >;'
-                  <stat.icon className='w - 8 h - 8 text - white' />;
-                </div>;'
-                <div className='text - 3xl font - bold text - white mb - 2'>;
-                  {stat.value}
-                </div>;'
-                <div className='text - gray - 400'>{stat.label}</div>              </motion.div>              >;`
-                <div className={`w - 16 h - 16 bg - gradient - to - br ${stat.color} rounded - 2xl flex items - center justify - center mx - auto mb - 4`}>;"
-                  <stat.icon className="w - 8 h - 8 text - white" />;
-                </div>;"
-                <div className="text - 3xl font - bold text - white mb - 2">{stat.value}</div>;"
-                <div className="text - gray - 400">{stat.label}</div>;
-              </motion.div>))}
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>);
-}
-;
-export default UltraFuturistic2029ServiceShowcase);
-}
-;
-export default UltraFuturistic2029ServiceShowcase;
-;
-<<<<<<< HEAD
-);
-};
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-  );
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 export default UltraFuturistic2029ServiceShowcase;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -3036,7 +844,7 @@ export default UltraFuturistic2029ServiceShowcase);
 export default UltraFuturistic2029ServiceShowcase;
 ;
     </section>)}export default UltraFuturistic2029ServiceShowcase)}export default UltraFuturistic2029ServiceShowcase;)}export default UltraFuturistic2029ServiceShowcase;
->>>>>>> merged-prs-20250907-203621
+
           className="mt-20"
         >
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -3051,56 +859,13 @@ export default UltraFuturistic2029ServiceShowcase;
                 initial={{ opacity: 0, y: 20}}
                 whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-                className='text-center'
-              >
-                <div
-className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4
-}    />
 
-                  <stat.icon className='w-8 h-8 text-white'    />
-                </div>
-                <div className='text-3xl font-bold text-white mb-2'    />
-                  {stat.value}
-
-              </motion.div>
-            ))}
-
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
-}
-export default UltraFuturistic2029ServiceShowcase;  )
-}
-export default UltraFuturistic2029ServiceShowcase;
-
-"
-=======
                 className = $2;
 export default UltraFuturistic2029ServiceShowcase,
 
 "
 '"`
 
-=======
-)
-};
 
 
-<<<<<<< HEAD
-export default UltraFuturistic2029ServiceShowcase;
 
-"
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-<<<<<<< HEAD
-export default UltraFuturistic2029ServiceShowcase;
-export default UltraFuturistic2029ServiceShowcase;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621

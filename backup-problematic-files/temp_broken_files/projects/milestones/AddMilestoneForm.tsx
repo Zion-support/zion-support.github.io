@@ -14,16 +14,11 @@ import {;
   FormField,;
   FormItem,;
   FormLabel,;
-<<<<<<< HEAD
-  FormMessage} from '@/components/ui/form',;'
-import { Input } from '@/components/ui/input',;'
-import { Textarea } from '@/components/ui/textarea',;'
-  }
-=======
+
   FormMessage} from '@/components/ui/form',;
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
->>>>>>> origin/chore/fix-lint-and-merge
+
   Popover,;
   PopoverContent,;
   PopoverTrigger} from '@/components/ui/popover',;

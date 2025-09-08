@@ -1,62 +1,4 @@
-<<<<<<< HEAD
-import Head from 'next/head';
-import Link from 'next/link';
-export default function AISalesForecastingInventory() {return (<>;
-      <Head>;
-        <title>AI Sales Forecasting & Inventory Optimizer | Zion Tech Group</title>;
-        <meta name="description content=Demand forecasting with ML, automated replenishment, and pricing optimization for retail, ecommerce, and B2B." />;
-        <link rel="canonical href="https": //ziontechgroup.com/services/ai-sales-forecasting-inventory />;
-      </Head>;
-      <main className=min-h-screen bg-white">;
-        <section className="mx-auto max-w-5xl px-6 py-14>;
-          <h1 className=text-3xl md:text-4xl font-bold mb-3">AI Sales Forecasting & Inventory Optimizer</h1>;
-          <p className="text-gray-600 mb-6>Reduce stockouts and overstock with ML-based demand planning, dynamic safety stock, and automated purchase recommendations.</p>;
-          <div className=grid "md": grid-cols-2 gap-8>;
-            <div className=space-y-3">;
-              <h2 className="text-xl font-semibold>Capabilities</h2>;
-              <ul className=list-disc pl-5 space-y-2 text-gray-700">;
-                <li>Time-series ML forecasting (Prophet/XGBoost/LSTM)</li>;
-                <li>Seasonality and promotions adjustments</li>;
-                <li>Automated replenishment and lead time modeling</li>;
-                <li>Supplier constraints and MOQ optimization</li>;
-                <li>Price elasticity and markdown simulation</li>;
-                <li>Warehouse/DC allocation and transfer suggestions</li>;
-              </ul>;
-            </div>;
-            <div className="space-y-3>;
-              <h2 className=text-xl font-semibold">Integrations</h2>;
-              <ul className="list-disc pl-5 space-y-2 text-gray-700>;
-                <li>Shopify, Magento, BigCommerce</li>;
-                <li>Netsuite, QuickBooks, Odoo, SAP</li>;
-                <li>Snowflake, BigQuery, Redshift</li>;
-                <li>CSV/S3/GCS/Azure Blob batch feeds</li>;
-              </ul>;
-              <h2 className=text-xl font-semibold mt-6">Pricing</h2>;
-              <p className="text-gray-700>From <strong>$2,500/month</strong> SaaS or <strong>$25,000</strong> fixed-scope pilot (6-8 weeks). Enterprise POA.</p>;
-            </div>;
-          </div>;
-          <div className=mt-10 p-5 border rounded-xl bg-gray-50">;
-            <h3 className="font-semibold mb-2>Talk to us</h3>;
-            <p className=text-gray-700">"Phone: <a className=text-blue-600" href="tel:+13024640950>+1 302 464 0950</a>  Email: <a className=text-blue-600" href="mailto:kleber@ziontechgroup.com>kleber@ziontechgroup.com</a></p>;
-            <p className=text-gray-700">Address: 364 E Main St STE 1008, Middletown, DE 19709</p>;
-            <div className="mt-4 flex gap-3>;
-              <Link href=/contact" className="px-5 py-2 rounded-lg bg-blue-600 text-white>Contact</Link>;
-              <a href="https": //ziontechgroup.com/services className=px-5 py-2 rounded-lg border">All Services</a>;
-            </div>;
-          </div>;
-        </section>;
-      </main>;
-    </>;
-  )}
-:corrupted_backup/ai-sales-forecasting-inventory.page.tsx;
-:backup-problematic-files/pages._archive_corrupted/services/ai-sales-forecasting-inventory.page.tsx;
-import Head from 'next/head; import Link from next/link'; export default function AISalesForecastingInventory() { return ( <> <Head> <title>AI Sales Forecasting & Inventory Optimizer | Zion Tech Group</title> <meta name="description content=Demand forecasting with ML,automated replenishment,and pricing optimization for retail,ecommerce,and B2B." /> <link rel="canonical href=https: </Head> <main className="min-h-screen bg-white"> <section className=mx-auto max-w-5xl px-6 py-14> <h1 className="text-3xl md:text-4xl font-bold mb-3">AI Sales Forecasting & Inventory Optimizer</h1> <p className=text-gray-600 mb-6>Reduce stockouts and overstock with ML-based demand planning,dynamic safety stock,and automated purchase recommendations.</p> <div className="grid md:grid-cols-2 gap-8"> <div className=space-y-3> <h2 className="text-xl font-semibold">Capabilities</h2> <ul className=list-disc pl-5 space-y-2 text-gray-700> <li>Time-series ML forecasting (Prophet/XGBoost/LSTM)</li> <li>Seasonality and promotions adjustments</li> <li>Automated replenishment and lead time modeling</li> <li>Supplier constraints and MOQ optimization</li> <li>Price elasticity and markdown simulation</li> <li>Warehouse/DC allocation and transfer suggestions</li> </ul> </div> <div className="space-y-3"> <h2 className=text-xl font-semibold>Integrations</h2> <ul className="list-disc pl-5 space-y-2 text-gray-700"> <li>Shopify,Magento,BigCommerce</li> <li>Netsuite,QuickBooks,Odoo,SAP</li> <li>Snowflake,BigQuery,Redshift</li> <li>CSV/S3/GCS/Azure Blob batch feeds</li> </ul> <h2 className=text-xl font-semibold mt-6>Pricing</h2> <p className="text-gray-700">From <strong>$2,500/month</strong> SaaS or <strong>$25,000</strong> fixed-scope pilot (6-8 weeks). Enterprise POA.</p> </div> </div> <div className=mt-10 p-5 border rounded-xl bg-gray-50> <h3 className="font-semibold mb-2">Talk to us</h3> <p className=text-gray-700>Phone: <a className="text-blue-600" href=tel:+13024640950>+1 302 464 0950</a>  Email: <a className="text-blue-600" href=mailto:kleber@ziontechgroup.com>kleber@ziontechgroup.com</a></p> <p className="text-gray-700">Address: 364 E Main St STE 1008,Middletown,DE 19709</p> <div className=mt-4 flex gap-3> <Link href="/contact" className=px-5 py-2 rounded-lg bg-blue-600 text-white>Contact</Link> <a href="https: </div> </div> </section> </main> </> )}
-:pages._archive_corrupted/services/ai-sales-forecasting-inventory.page.tsx;
-import Head from 'next/head; import Link from next/link'; export default function AISalesForecastingInventory() { return ( <> <Head> <title>AI Sales Forecasting & Inventory Optimizer | Zion Tech Group</title> <meta name="description content=Demand forecasting with ML,automated replenishment,and pricing optimization for retail,ecommerce,and B2B." /> <link rel="canonical href=https: </Head> <main className="min-h-screen bg-white"> <section className=mx-auto max-w-5xl px-6 py-14> <h1 className="text-3xl md:text-4xl font-bold mb-3">AI Sales Forecasting & Inventory Optimizer</h1> <p className=text-gray-600 mb-6>Reduce stockouts and overstock with ML-based demand planning,dynamic safety stock,and automated purchase recommendations.</p> <div className="grid md:grid-cols-2 gap-8"> <div className=space-y-3> <h2 className="text-xl font-semibold">Capabilities</h2> <ul className=list-disc pl-5 space-y-2 text-gray-700> <li>Time-series ML forecasting (Prophet/XGBoost/LSTM)</li> <li>Seasonality and promotions adjustments</li> <li>Automated replenishment and lead time modeling</li> <li>Supplier constraints and MOQ optimization</li> <li>Price elasticity and markdown simulation</li> <li>Warehouse/DC allocation and transfer suggestions</li> </ul> </div> <div className="space-y-3"> <h2 className=text-xl font-semibold>Integrations</h2> <ul className="list-disc pl-5 space-y-2 text-gray-700"> <li>Shopify,Magento,BigCommerce</li> <li>Netsuite,QuickBooks,Odoo,SAP</li> <li>Snowflake,BigQuery,Redshift</li> <li>CSV/S3/GCS/Azure Blob batch feeds</li> </ul> <h2 className=text-xl font-semibold mt-6>Pricing</h2> <p className="text-gray-700">From <strong>$2,500/month</strong> SaaS or <strong>$25,000</strong> fixed-scope pilot (6-8 weeks). Enterprise POA.</p> </div> </div> <div className=mt-10 p-5 border rounded-xl bg-gray-50> <h3 className="font-semibold mb-2">Talk to us</h3> <p className=text-gray-700>Phone: <a className="text-blue-600" href=tel:+13024640950>+1 302 464 0950</a> · Email: <a className="text-blue-600" href=mailto:kleber@ziontechgroup.com>kleber@ziontechgroup.com</a></p> <p className="text-gray-700">Address: 364 E Main St STE 1008,Middletown,DE 19709</p> <div className=mt-4 flex gap-3> <Link href="/contact" className=px-5 py-2 rounded-lg bg-blue-600 text-white>Contact</Link> <a href="https: </div> </div> </section> </main> </> )}:corrupted_backup/ai-sales-forecasting-inventory.page.tsx;
-:backup-problematic-files/pages._archive_corrupted/services/ai-sales-forecasting-inventory.page.tsx;
-ursor/automate-test-improve-and-merge-code-646c;
-:backup-problematic-files/pages._archive_corrupted/services/ai-sales-forecasting-inventory.page.tsx;
-=======
+
 
 
 
@@ -71,26 +13,14 @@ import Head from 'next/head'; import Link from 'next/link'; export default funct
 :backup-problematic-files/pages._archive_corrupted/services/ai-sales-forecasting-inventory.page.tsx
 import Head from 'next/head';
 import Link from 'next/link';
->>>>>>> origin/chore/fix-lint-and-merge
+
 export default function AISalesForecastingInventory() {
   return (
     <>
       <Head>
 
         <title>AI Sales Forecasting & Inventory Optimizer | Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description content=Demand forecasting with ML, automated replenishment, and pricing optimization for retail, ecommerce, and B2B." />
-        <link rel="canonical href="https": //ziontechgroup.com/services/ai-sales-forecasting-inventory />
-      </Head>
-      <main className=min-h-screen bg-white">
-        <section className="mx-auto max-w-5xl px-6 py-14>
-          <h1 className=text-3xl md:text-4xl font-bold mb-3">AI Sales Forecasting & Inventory Optimizer</h1>
-          <p className="text-gray-600 mb-6>Reduce stockouts and overstock with ML-based demand planning, dynamic safety stock, and automated purchase recommendations.</p>
-          <div className=grid "md": grid-cols-2 gap-8>
-            <div className=space-y-3">
-              <h2 className="text-xl font-semibold>Capabilities</h2>
-              <ul className=list-disc pl-5 space-y-2 text-gray-700">
-=======
+
         <meta name="description" content="Demand forecasting with ML, automated replenishment, and pricing optimization for retail, ecommerce, and B2B." />"
 </meta>"
         <link rel="canonical" href=""https": //ziontechgroup.com/services/ai-sales-forecasting-inventory" />"
@@ -108,7 +38,7 @@ export default function AISalesForecastingInventory() {
               <h2 className="text-xl font-semibold">Capabilities</h2>""
               <ul className="list-disc pl-5 space-y-2 text-gray-700">"
 </ul>)
->>>>>>> origin/chore/fix-lint-and-merge
+
                 <li>Time-series ML forecasting (Prophet/XGBoost/LSTM)</li>
                 <li>Seasonality and promotions adjustments</li>
                 <li>Automated replenishment and lead time modeling</li>
@@ -116,34 +46,14 @@ export default function AISalesForecastingInventory() {
                 <li>Price elasticity and markdown simulation</li>
                 <li>Warehouse/DC allocation and transfer suggestions</li>
               </ul>
-<<<<<<< HEAD
-            </div>
-            <div className="space-y-3>
-              <h2 className=text-xl font-semibold">Integrations</h2>
-              <ul className="list-disc pl-5 space-y-2 text-gray-700>
-=======
+
               <h2 className="text-xl font-semibold">Integrations</h2>""
->>>>>>> origin/chore/fix-lint-and-merge
+
                 <li>Shopify, Magento, BigCommerce</li>
                 <li>Netsuite, QuickBooks, Odoo, SAP</li>
                 <li>Snowflake, BigQuery, Redshift</li>
                 <li>CSV/S3/GCS/Azure Blob batch feeds</li>
-<<<<<<< HEAD
-              </ul>
-              <h2 className=text-xl font-semibold mt-6">Pricing</h2>
-              <p className="text-gray-700>From <strong>$2,500/month</strong> SaaS or <strong>$25,000</strong> fixed-scope pilot (6-8 weeks). Enterprise POA.</p>
-            </div>
-          </div>
-          <div className=mt-10 p-5 border rounded-xl bg-gray-50">
-            <h3 className="font-semibold mb-2>Talk to us</h3>
-            <p className=text-gray-700">"Phone: <a className=text-blue-600" href="tel:+13024640950>+1 302 464 0950</a>  Email: <a className=text-blue-600" href="mailto:kleber@ziontechgroup.com>kleber@ziontechgroup.com</a></p>
-            <p className=text-gray-700">Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
-            <div className="mt-4 flex gap-3>
-              <Link href=/contact" className="px-5 py-2 rounded-lg bg-blue-600 text-white>Contact</Link>
-              <a href="https": //ziontechgroup.com/services className=px-5 py-2 rounded-lg border">All Services</a>
-            </div>
-          </div>
-=======
+
               </ul>"
               <h2 className="text-xl font-semibold mt-6">Pricing</h2>""
               <p className="text-gray-700">From <strong>$2,500/month</strong> SaaS or <strong>$25,000</strong> fixed-scope pilot (6-8 weeks). Enterprise POA.</p>"
@@ -155,17 +65,13 @@ export default function AISalesForecastingInventory() {
             <div className="mt-4 flex gap-3">"
               <Link href="/contact" className="px-5 py-2 rounded-lg bg-blue-600 text-white">Contact""
               <a href=""https": //ziontechgroup.com/services" className="px-5 py-2 rounded-lg border">All Services</a>"
->>>>>>> origin/chore/fix-lint-and-merge
+
         </section>
       </main>
     </>
   );
 }
-<<<<<<< HEAD
-import Head from 'next/head'; import Link from 'next/link'; export default function AISalesForecastingInventory() { return ( <> <Head> <title>AI Sales Forecasting & Inventory Optimizer | Zion Tech Group</title> <meta name="description" content="Demand forecasting with ML,automated replenishment,and pricing optimization for retail,ecommerce,and B2B." /> <link rel="canonical" href="https: </Head> <main className="min-h-screen bg-white"> <section className="mx-auto max-w-5xl px-6 py-14"> <h1 className="text-3xl md:text-4xl font-bold mb-3">AI Sales Forecasting & Inventory Optimizer</h1> <p className="text-gray-600 mb-6">Reduce stockouts and overstock with ML-based demand planning,dynamic safety stock,and automated purchase recommendations.</p> <div className="grid md:grid-cols-2 gap-8"> <div className="space-y-3"> <h2 className="text-xl font-semibold">Capabilities</h2> <ul className="list-disc pl-5 space-y-2 text-gray-700"> <li>Time-series ML forecasting (Prophet/XGBoost/LSTM)</li> <li>Seasonality and promotions adjustments</li> <li>Automated replenishment and lead time modeling</li> <li>Supplier constraints and MOQ optimization</li> <li>Price elasticity and markdown simulation</li> <li>Warehouse/DC allocation and transfer suggestions</li> </ul> </div> <div className="space-y-3"> <h2 className="text-xl font-semibold">Integrations</h2> <ul className="list-disc pl-5 space-y-2 text-gray-700"> <li>Shopify,Magento,BigCommerce</li> <li>Netsuite,QuickBooks,Odoo,SAP</li> <li>Snowflake,BigQuery,Redshift</li> <li>CSV/S3/GCS/Azure Blob batch feeds</li> </ul> <h2 className="text-xl font-semibold mt-6">Pricing</h2> <p className="text-gray-700">From <strong>$2,500/month</strong> SaaS or <strong>$25,000</strong> fixed-scope pilot (6-8 weeks). Enterprise POA.</p> </div> </div> <div className="mt-10 p-5 border rounded-xl bg-gray-50"> <h3 className="font-semibold mb-2">Talk to us</h3> <p className="text-gray-700">Phone: <a className="text-blue-600" href="tel:+13024640950">+1 302 464 0950</a> · Email: <a className="text-blue-600" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p> <p className="text-gray-700">Address: 364 E Main St STE 1008,Middletown,DE 19709</p> <div className="mt-4 flex gap-3"> <Link href="/contact" className="px-5 py-2 rounded-lg bg-blue-600 text-white">Contact</Link> <a href="https: </div> </div> </section> </main> </> )}
-import Head from 'next/head'; import Link from 'next/link'; export default function AISalesForecastingInventory() { return ( <> <Head> <title>AI Sales Forecasting & Inventory Optimizer | Zion Tech Group</title> <meta name="description" content="Demand forecasting with ML,automated replenishment,and pricing optimization for retail,ecommerce,and B2B." /> <link rel="canonical" href="https: </Head> <main className="min-h-screen bg-white"> <section className="mx-auto max-w-5xl px-6 py-14"> <h1 className="text-3xl md:text-4xl font-bold mb-3">AI Sales Forecasting & Inventory Optimizer</h1> <p className="text-gray-600 mb-6">Reduce stockouts and overstock with ML-based demand planning,dynamic safety stock,and automated purchase recommendations.</p> <div className="grid md:grid-cols-2 gap-8"> <div className="space-y-3"> <h2 className="text-xl font-semibold">Capabilities</h2> <ul className="list-disc pl-5 space-y-2 text-gray-700"> <li>Time-series ML forecasting (Prophet/XGBoost/LSTM)</li> <li>Seasonality and promotions adjustments</li> <li>Automated replenishment and lead time modeling</li> <li>Supplier constraints and MOQ optimization</li> <li>Price elasticity and markdown simulation</li> <li>Warehouse/DC allocation and transfer suggestions</li> </ul> </div> <div className="space-y-3"> <h2 className="text-xl font-semibold">Integrations</h2> <ul className="list-disc pl-5 space-y-2 text-gray-700"> <li>Shopify,Magento,BigCommerce</li> <li>Netsuite,QuickBooks,Odoo,SAP</li> <li>Snowflake,BigQuery,Redshift</li> <li>CSV/S3/GCS/Azure Blob batch feeds</li> </ul> <h2 className="text-xl font-semibold mt-6">Pricing</h2> <p className="text-gray-700">From <strong>$2,500/month</strong> SaaS or <strong>$25,000</strong> fixed-scope pilot (6-8 weeks). Enterprise POA.</p> </div> </div> <div className="mt-10 p-5 border rounded-xl bg-gray-50"> <h3 className="font-semibold mb-2">Talk to us</h3> <p className="text-gray-700">Phone: <a className="text-blue-600" href="tel:+13024640950">+1 302 464 0950</a> · Email: <a className="text-blue-600" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p> <p className="text-gray-700">Address: 364 E Main St STE 1008,Middletown,DE 19709</p> <div className="mt-4 flex gap-3"> <Link href="/contact" className="px-5 py-2 rounded-lg bg-blue-600 text-white">Contact</Link> <a href="https: </div> </div> </section> </main> </> )}
-import Head from 'next/head'; import Link from 'next/link'; export default function AISalesForecastingInventory() { return ( <> <Head> <title>AI Sales Forecasting & Inventory Optimizer | Zion Tech Group</title> <meta name="description" content="Demand forecasting with ML,automated replenishment,and pricing optimization for retail,ecommerce,and B2B." /> <link rel="canonical" href="https: </Head> <main className="min-h-screen bg-white"> <section className="mx-auto max-w-5xl px-6 py-14"> <h1 className="text-3xl md:text-4xl font-bold mb-3">AI Sales Forecasting & Inventory Optimizer</h1> <p className="text-gray-600 mb-6">Reduce stockouts and overstock with ML-based demand planning,dynamic safety stock,and automated purchase recommendations.</p> <div className="grid md:grid-cols-2 gap-8"> <div className="space-y-3"> <h2 className="text-xl font-semibold">Capabilities</h2> <ul className="list-disc pl-5 space-y-2 text-gray-700"> <li>Time-series ML forecasting (Prophet/XGBoost/LSTM)</li> <li>Seasonality and promotions adjustments</li> <li>Automated replenishment and lead time modeling</li> <li>Supplier constraints and MOQ optimization</li> <li>Price elasticity and markdown simulation</li> <li>Warehouse/DC allocation and transfer suggestions</li> </ul> </div> <div className="space-y-3"> <h2 className="text-xl font-semibold">Integrations</h2> <ul className="list-disc pl-5 space-y-2 text-gray-700"> <li>Shopify,Magento,BigCommerce</li> <li>Netsuite,QuickBooks,Odoo,SAP</li> <li>Snowflake,BigQuery,Redshift</li> <li>CSV/S3/GCS/Azure Blob batch feeds</li> </ul> <h2 className="text-xl font-semibold mt-6">Pricing</h2> <p className="text-gray-700">From <strong>$2,500/month</strong> SaaS or <strong>$25,000</strong> fixed-scope pilot (6-8 weeks). Enterprise POA.</p> </div> </div> <div className="mt-10 p-5 border rounded-xl bg-gray-50"> <h3 className="font-semibold mb-2">Talk to us</h3> <p className="text-gray-700">Phone: <a className="text-blue-600" href="tel:+13024640950">+1 302 464 0950</a> · Email: <a className="text-blue-600" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p> <p className="text-gray-700">Address: 364 E Main St STE 1008,Middletown,DE 19709</p> <div className="mt-4 flex gap-3"> <Link href="/contact" className="px-5 py-2 rounded-lg bg-blue-600 text-white">Contact</Link> <a href="https: </div> </div> </section> </main> </> )}
-=======
+
 import Head from 'next/head'; import Link from 'next/link'; export default function AISalesForecastingInventory() { return ( <> <Head> <title>AI Sales Forecasting & Inventory Optimizer | Zion Tech Group</title> <meta name="description" content="Demand forecasting with ML,automated replenishment,and pricing optimization for retail,ecommerce,and B2B." /> <link rel="canonical" href="https: </Head> <main className="min-h-screen bg-white"> <section className="mx-auto max-w-5xl px-6 py-14"> <h1 className="text-3xl md:text-4xl font-bold mb-3">AI Sales Forecasting & Inventory Optimizer</h1> <p className="text-gray-600 mb-6">Reduce stockouts and overstock with ML-based demand planning,dynamic safety stock,and automated purchase recommendations.</p> <div className="grid md:grid-cols-2 gap-8"> <div className="space-y-3"> <h2 className="text-xl font-semibold">Capabilities</h2> <ul className="list-disc pl-5 space-y-2 text-gray-700"> <li>Time-series ML forecasting (Prophet/XGBoost/LSTM)</li> <li>Seasonality and promotions adjustments</li> <li>Automated replenishment and lead time modeling</li> <li>Supplier constraints and MOQ optimization</li> <li>Price elasticity and markdown simulation</li> <li>Warehouse/DC allocation and transfer suggestions</li> </ul> </div> <div className="space-y-3"> <h2 className="text-xl font-semibold">Integrations</h2> <ul className="list-disc pl-5 space-y-2 text-gray-700"> <li>Shopify,Magento,BigCommerce</li> <li>Netsuite,QuickBooks,Odoo,SAP</li> <li>Snowflake,BigQuery,Redshift</li> <li>CSV/S3/GCS/Azure Blob batch feeds</li> </ul> <h2 className="text-xl font-semibold mt-6">Pricing</h2> <p className="text-gray-700">From <strong>$2,500/month</strong> SaaS or <strong>$25,000</strong> fixed-scope pilot (6-8 weeks). Enterprise POA.</p> </div> </div> <div className="mt-10 p-5 border rounded-xl bg-gray-50"> <h3 className="font-semibold mb-2">Talk to us</h3> <p className="text-gray-700">Phone: <a className="text-blue-600" href="tel:+13024640950">+1 302 464 0950</a>  Email: <a className="text-blue-600" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p> <p className="text-gray-700">Address: 364 E Main St STE 1008,Middletown,DE 19709</p> <div className="mt-4 flex gap-3"> <Link href="/contact" className="px-5 py-2 rounded-lg bg-blue-600 text-white">Contact</Link> <a href="https: </div> </div> </section> </main> </> )}
 import Head from 'next/head'; import Link from 'next/link'; export default function AISalesForecastingInventory() { return ( <> <Head> <title>AI Sales Forecasting & Inventory Optimizer | Zion Tech Group</title> <meta name="description" content="Demand forecasting with ML,automated replenishment,and pricing optimization for retail,ecommerce,and B2B." /> <link rel="canonical" href="https: </Head> <main className="min-h-screen bg-white"> <section className="mx-auto max-w-5xl px-6 py-14"> <h1 className="text-3xl md:text-4xl font-bold mb-3">AI Sales Forecasting & Inventory Optimizer</h1> <p className="text-gray-600 mb-6">Reduce stockouts and overstock with ML-based demand planning,dynamic safety stock,and automated purchase recommendations.</p> <div className="grid md:grid-cols-2 gap-8"> <div className="space-y-3"> <h2 className="text-xl font-semibold">Capabilities</h2> <ul className="list-disc pl-5 space-y-2 text-gray-700"> <li>Time-series ML forecasting (Prophet/XGBoost/LSTM)</li> <li>Seasonality and promotions adjustments</li> <li>Automated replenishment and lead time modeling</li> <li>Supplier constraints and MOQ optimization</li> <li>Price elasticity and markdown simulation</li> <li>Warehouse/DC allocation and transfer suggestions</li> </ul> </div> <div className="space-y-3"> <h2 className="text-xl font-semibold">Integrations</h2> <ul className="list-disc pl-5 space-y-2 text-gray-700"> <li>Shopify,Magento,BigCommerce</li> <li>Netsuite,QuickBooks,Odoo,SAP</li> <li>Snowflake,BigQuery,Redshift</li> <li>CSV/S3/GCS/Azure Blob batch feeds</li> </ul> <h2 className="text-xl font-semibold mt-6">Pricing</h2> <p className="text-gray-700">From <strong>$2,500/month</strong> SaaS or <strong>$25,000</strong> fixed-scope pilot (6-8 weeks). Enterprise POA.</p> </div> </div> <div className="mt-10 p-5 border rounded-xl bg-gray-50"> <h3 className="font-semibold mb-2">Talk to us</h3> <p className="text-gray-700">Phone: <a className="text-blue-600" href="tel:+13024640950">+1 302 464 0950</a>  Email: <a className="text-blue-600" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p> <p className="text-gray-700">Address: 364 E Main St STE 1008,Middletown,DE 19709</p> <div className="mt-4 flex gap-3"> <Link href="/contact" className="px-5 py-2 rounded-lg bg-blue-600 text-white">Contact</Link> <a href="https: </div> </div> </section> </main> </> )}
 
@@ -198,4 +104,4 @@ import Head from 'next/head'; import Link from 'next/link'; export default funct
 import Head from 'next/head'; import Link from 'next/link'; export default function AISalesForecastingInventory() { return ( <> <Head> <title>AI Sales Forecasting & Inventory Optimizer | Zion Tech Group</title> <meta name="description" content="Demand forecasting with ML,automated replenishment,and pricing optimization for retail,ecommerce,and B2B." /> <link rel="canonical" href="https: <main className="min-h-screen bg-white"> <section className="mx-auto max-w-5xl px-6 py-14"> <h1 className="text-3xl md:text-4xl font-bold mb-3">AI Sales Forecasting & Inventory Optimizer</h1> <p className="text-gray-600 mb-6">Reduce stockouts and overstock with ML-based demand planning;,dynamic safety stock,and automated purchase recommendations.</p> <div className="grid md: grid-cols-2 gap-8"> <div className="space-y-3"> <h2 className="text-xl font-semibold">Capabilities</h2> <ul className="list-disc pl-5 space-y-2 text-gray-700"> <li>Time-series ML forecasting (Prophet/XGBoost/LSTM)</li> <li>Seasonality and promotions adjustments</li> <li>Automated replenishment and lead time modeling</li> <li>Supplier constraints and MOQ optimization</li> <li>Price elasticity and markdown simulation</li> <li>Warehouse/DC allocation and transfer suggestions</li> </ul> </div> <div className="space-y-3"> <h2 className="text-xl font-semibold">Integrations</h2> <ul className="list-disc pl-5 space-y-2 text-gray-700"> <li>Shopify;,Magento,BigCommerce</li> <li>Netsuite,QuickBooks,Odoo,SAP</li> <li>Snowflake,BigQuery,Redshift</li> <li>CSV/S3/GCS/Azure Blob batch feeds</li> </ul> <h2 className="text-xl font-semibold mt-6">Pricing</h2> <p className="text-gray-700">From <strong>$2,500/month</strong> SaaS or <strong>$25,000</strong> fixed-scope pilot (6-8 weeks). Enterprise POA.</p> </div> </div> <div className="mt-10 p-5 border rounded-xl bg-gray-50"> <h3 className="font-semibold mb-2">Talk to us</h3> <p className="text-gray-700">Phone: <a className="text-blue-600" href="tel:+13024640950">+1 302 464 0950</a>  Email: <a className="text-blue-600" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p> <p className="text-gray-700">Address: 364 E Main St STE 1008;,Middletown,DE 19709</p> <div className="mt-4 flex gap-3"> <Link href="/contact" className="px-5 py-2 rounded-lg bg-blue-600 text-white">Contact <a href="https: </div> </div> </section> </main> </> );}""
 import Head from 'next/head'; import Link from 'next/link'; export default function AISalesForecastingInventory() { return ( <> <Head> <title>AI Sales Forecasting & Inventory Optimizer | Zion Tech Group</title> <meta name="description" content="Demand forecasting with ML,automated replenishment,and pricing optimization for retail,ecommerce,and B2B." /> <link rel="canonical" href="https: <main className="min-h-screen bg-white"> <section className="mx-auto max-w-5xl px-6 py-14"> <h1 className="text-3xl md:text-4xl font-bold mb-3">AI Sales Forecasting & Inventory Optimizer</h1> <p className="text-gray-600 mb-6">Reduce stockouts and overstock with ML-based demand planning;,dynamic safety stock,and automated purchase recommendations.</p> <div className="grid md: grid-cols-2 gap-8"> <div className="space-y-3"> <h2 className="text-xl font-semibold">Capabilities</h2> <ul className="list-disc pl-5 space-y-2 text-gray-700"> <li>Time-series ML forecasting (Prophet/XGBoost/LSTM)</li> <li>Seasonality and promotions adjustments</li> <li>Automated replenishment and lead time modeling</li> <li>Supplier constraints and MOQ optimization</li> <li>Price elasticity and markdown simulation</li> <li>Warehouse/DC allocation and transfer suggestions</li> </ul> </div> <div className="space-y-3"> <h2 className="text-xl font-semibold">Integrations</h2> <ul className="list-disc pl-5 space-y-2 text-gray-700"> <li>Shopify;,Magento,BigCommerce</li> <li>Netsuite,QuickBooks,Odoo,SAP</li> <li>Snowflake,BigQuery,Redshift</li> <li>CSV/S3/GCS/Azure Blob batch feeds</li> </ul> <h2 className="text-xl font-semibold mt-6">Pricing</h2> <p className="text-gray-700">From <strong>$2,500/month</strong> SaaS or <strong>$25,000</strong> fixed-scope pilot (6-8 weeks). Enterprise POA.</p> </div> </div> <div className="mt-10 p-5 border rounded-xl bg-gray-50"> <h3 className="font-semibold mb-2">Talk to us</h3> <p className="text-gray-700">Phone: <a className="text-blue-600" href="tel:+13024640950">+1 302 464 0950</a> · Email: <a className="text-blue-600" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p> <p className="text-gray-700">Address: 364 E Main St STE 1008;,Middletown,DE 19709</p> <div className="mt-4 flex gap-3"> <Link href="/contact" className="px-5 py-2 rounded-lg bg-blue-600 text-white">Contact <a href="https: </div> </div> </section> </main> </> );}""
 pr-12325
->>>>>>> origin/chore/fix-lint-and-merge
+

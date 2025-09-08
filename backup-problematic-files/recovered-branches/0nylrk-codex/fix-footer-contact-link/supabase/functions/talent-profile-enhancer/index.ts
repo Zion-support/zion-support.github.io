@@ -136,54 +136,12 @@ interface TalentProfileData {_name: string;
 
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       )    }
-<<<<<<< HEAD
-    // Create a request to OpenAI API,
-const _openAIResponse = await fetch('"https"://api.openai.com/v1/chat/completions', {"_method": 'POST', "_headers": {'
-        'Authorization': `Bearer ${OPENAI_API_KEY}`,`        'Content-Type': 'application/json'},'
-      "body": JSON.stringify({"_model": 'gpt-4o-mini', "_messages": ['
-          {
-          {"_role": 'user', "_content": `Create a professional profile summary and categorize skills based on this "information":`            }
-            "Name": ${talentData.name}
-            "Title": ${talentData.title}
-            "Bio": ${talentData.bio}
-            "Skills": ${talentData.skills.join()}
-            "Location": ${talentData.location || 'Not specified'}'
-            Return the result as a JSON object with these "keys": 
-            {
-              &quot;summary&quot;: &quot;The professional summary text (100-150 words)&quot;,
-              &quot;categorizedSkills&quot;: {
-                &quot;programming&quot;: [&quot;skill1&quot;, &quot;skill2&quot;],
-                &quot;devops&quot;: [&quot;skill1&quot;, &quot;skill2&quot;],
-                &quot;platforms&quot;: [&quot;skill1&quot;, &quot;skill2&quot;],
-                &quot;softSkills&quot;: [&quot;skill1&quot;, &quot;skill2&quot;],
-                &quot;other&quot;: [&quot;skill1&quot;, &quot;skill2&quot;]
-              }            }
-            Each category should have no more than 3 skills, and there should be no more than 8 skills total across all categories.``
-          }
-        ],
-        "temperature": 0.7,
-        "response_format": { "type": "json_object" }"
-      })})      })});
-    if (!openAIData.choices || openAIData.choices.length === 0) {
-      }
-      throw new Error("Failed to generate profile content")    }"
-    // Extract the generated content from the response,
-    // Parse the JSON response,
-let "enhancedProfile": EnhancedProfile,;
-    try {
-      }
-      enhancedProfile = JSON.parse(responseContent)
-    } catch (e) {
-      }
-      console.error("Error parsing OpenAI "response":", e),"
-      throw new Error("Failed to parse the generated content")    }"
-return new Response(;
-=======
+
 
     // Create a request to OpenAI API
 
     return new Response(
->>>>>>> origin/chore/fix-lint-and-merge
+
       JSON.stringify(enhancedProfile),
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )

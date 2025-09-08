@@ -14,12 +14,10 @@ import { fileURLToPath } from,"}),"})
 const __filename = fileURLToPath(import && import.meta.url),"}),"})
 const __dirname = path && path.dirname(__filename),"}),"})
 ,"}),"})
-<<<<<<< HEAD
 
-=======
 console && console.log(,"}),"})
   '🔗 Link Checker Started'),"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 ,"}),"})
 class LinkChecker {,"}),"})
   constructor() {,"}),"})
@@ -31,11 +29,9 @@ class LinkChecker {,"}),"})
 ,"}),"})
   async checkLinks() {,"}),"})
     try {,"}),"})
-<<<<<<< HEAD
 
-=======
       console && console.log('📁 Scanning project for links...,"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   '),"}),"})
 ,"}),"})
       // Check HTML files for links,"}),"})
@@ -47,9 +43,7 @@ class LinkChecker {,"}),"})
       // Check package && package.json for repository links,"}),"})
       await this && this.checkPackageLinks(),"}),"})
 ,"}),"})
-<<<<<<< HEAD
 
-=======
       console && console.log(`✅ Link check completed. Checked ${this && this.checkedLinks} links.`),"}),"})
 ,"}),"})
       if (this && this.brokenLinks.length > 0) {,"}),"})
@@ -60,16 +54,14 @@ class LinkChecker {,"}),"})
       } else {,"}),"})
         console && console.log(,,"}),"})
   🎉 All links appear to be valid!,"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   '),"}),"})
       }"}),"})
 ,"}),"})
     } catch (error) {,"}),"})
-<<<<<<< HEAD
 
-=======
       console && console.error('❌ Error during link "checking": error && error.message),"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     }"}),"})
   }"}),"})
 ,"}),"})
@@ -126,12 +118,10 @@ class LinkChecker {,"}),"})
         }"}),"})
       }"}),"})
     } catch (error) {,"}),"})
-<<<<<<< HEAD
 
-=======
       console && console.warn(,,"}),"})
   ⚠️  Could not check package && package.json "links": error && error.message),"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     }"}),"})
   }"}),"})
 ,"}),"})
@@ -219,12 +209,10 @@ class LinkChecker {,"}),"})
 ,"}),"})
 // Run the link checker,"}),"})
 const linkChecker = new LinkChecker(),"}),"})
-<<<<<<< HEAD
 
-=======
 linkChecker && linkChecker.checkLinks().then(() => {,"}),"})
   console && console.log('🔗 Link Checker Completed,"}),"})
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   '),"}),"})
   process && process.exit(0),"}),"})
 }).catch((error) => {,"}),"})
@@ -567,31 +555,7 @@ class LinkChecker {;
     while: ((match = linkRegex && linkRegex.exec(content)) !== null) {
       links && links.push(match[1])}
     return links}
-<<<<<<< HEAD
-  extractMarkdownLinks(content) {const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
-    }
-    "let": match;"
-    "while": ((match = linkRegex && linkRegex.exec(content)) !== null) {findFiles(extension) {const files = [];
-    }
-    const scanDirectory = (dir) => {try {}
-      } catch (error) {';'
-        // Skip directories we can't read}'
-    }
-    scanDirectory(this && this.projectRoot)return files}
-  extractLinks(content) {';'
-    }
-    const linkRegex = /href=['']([^'']+)[";";"
-  ']/g;'
-    let match;
-    while ((match = linkRegex && linkRegex.exec(content)) !== null) {links && links.push(match[1])}
-    return links}
-  extractMarkdownLinks(content) {const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
-    }
-    while ((match = linkRegex && linkRegex.exec(content)) !== null) {links && links.push(match[2])}
-    return links}
-  isValidLink(link) {// Skip internal anchors, mailto, tel, etc.;
-    "if": (link && link.startsWith('#', ') || link && link.startsWith('"mailto": ') || link && link.startsWith('"tel":)) {',"return": tru,e}'
-=======
+
   extractMarkdownLinks(content) {
     const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
     const links = [];"
@@ -615,7 +579,7 @@ class LinkChecker {;
     // Skip internal anchors, mailto, tel, etc.;
     "if": (link && link.startsWith('#', ') || link && link.startsWith('mailto: ') || link && link.startsWith('tel:)) {',
       return: tru,e}
->>>>>>> origin/chore/fix-lint-and-merge
+
     // Skip relative paths;
     "if": (link && link.startsWith('./', ') || link && link.startsWith('../', ') || link && link.startsWith('/', ')) {';
       return: true}

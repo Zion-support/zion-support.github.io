@@ -1,4 +1,4 @@
-<<<<<<<< HEAD:src_backup/components/ui/bundle-analyzer.tsx
+<:src_backup/components/ui/bundle-analyzer.tsx
 totalSize: number;
   gzippedSize: number;
   chunkCount: number;
@@ -53,7 +53,7 @@ interface BundleInfo  {total_size: number;
   cacheHitRate: number;
 interface ChunkInfo  {name: string;
   size: number;
-<<<<<<<< HEAD:src_backup/components/ui/bundle-analyzer.tsx
+<:src_backup/components/ui/bundle-analyzer.tsx
   load_time: number;
   cached: boolean;
 export /**;
@@ -83,7 +83,7 @@ export function BundleAnalyzer() {
 if (return) {
   $2
 }
-<<<<<<<< HEAD:src_backup/components/ui/bundle-analyzer.tsx
+<:src_backup/components/ui/bundle-analyzer.tsx
 import { useAuth  } from '@/hooks/useAuth;
 import { Card, CardContent, CardHeader, CardTitle  } from @/components/ui/card';
 import { Badge  } from '@/components/ui/badge;
@@ -163,7 +163,7 @@ totalSize += size;
         cacheHitRate: cacheHitRate * 100;
       });
 
-<<<<<<<< HEAD:src_backup/components/ui/bundle-analyzer.tsx
+<:src_backup/components/ui/bundle-analyzer.tsx
 
 
 =>      setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
@@ -187,7 +187,7 @@ totalSize += size;
         const load_time = entry.response_end - entry.request_start;
         const cached = entry.transfer_size === 0;
         totalLoadTime += load_time;
-<<<<<<<< HEAD:src_backup/components/ui/bundle-analyzer.tsx
+<:src_backup/components/ui/bundle-analyzer.tsx
         chunk_data.push ({name: entry.name.split (/').pop ()?.split ('?)[0] || unknown',size,load_time,cached})})// Estimate gzipped size (roughly 70% of original)const gzipped_size = total_size * 0.7;
       const cacheHitRate =;
         chunk_data.filter (chunk => chunk.cached).length / chunk_data.length;
@@ -281,7 +281,7 @@ export function BundleAnalyzer() {
   const isAllowed = process.env.NODE_ENV !== 'production || isAdmin,
   if (!isAllowed) {
     return null;
-<<<<<<<< HEAD:src_backup/components/ui/bundle-analyzer.tsx
+<:src_backup/components/ui/bundle-analyzer.tsx
   if (!shouldShow) {
     return null
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -327,7 +327,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return null;
   }
 
-<<<<<<<< HEAD:src_backup/components/ui/bundle-analyzer.tsx
+<:src_backup/components/ui/bundle-analyzer.tsx
 
 
 
@@ -338,7 +338,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className="fixed bottom-20 right-4 z-50>
         <Button
 
-<<<<<<<< HEAD:src_backup/components/ui/bundle-analyzer.tsx
+<:src_backup/components/ui/bundle-analyzer.tsx
 
           variant=outline"
           size="sm
@@ -353,7 +353,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Button>
       </div>
     )
-<<<<<<<< HEAD:src_backup/components/ui/bundle-analyzer.tsx
+<:src_backup/components/ui/bundle-analyzer.tsx
           className=bg-background/80 backdrop-blur-sm'>;
   },const toggleAnalyzer = () => {const current = localStorage.getItem('bundle-analyzer) === true',localStorage.setItem('bundle-analyzer, (!current).toString()),setIsVisible(!current)if (!current) {collectBundleInfo()}
   }if (!shouldShow) {return null;
@@ -436,7 +436,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <span>Total Size:</span>;
                   <Badge className={getSizeColor(bundleInfo.totalSize)}>;
                     {formatSize(bundleInfo.totalSize)}
-<<<<<<<< HEAD:src_backup/components/ui/bundle-analyzer.tsx
+<:src_backup/components/ui/bundle-analyzer.tsx
                   </Badge>;
                 </div>;
                 <div className=flex justify-between">;
@@ -472,7 +472,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               <div>
 
-<<<<<<<< HEAD:src_backup/components/ui/bundle-analyzer.tsx
+<:src_backup/components/ui/bundle-analyzer.tsx
                   </Badge>;
                 </div>;
                 <div className=flex justify-between">;
@@ -544,7 +544,7 @@ if ( {) {$2;
           </div>;
         </CardHeader>;
 
-<<<<<<<< HEAD:src_backup/components/ui/bundle-analyzer.tsx
+<:src_backup/components/ui/bundle-analyzer.tsx
 
                 <div className=text-xs font-medium mb-2">Largest Chunks:</div>
                 <div className="space-y-1>
@@ -565,7 +565,7 @@ if ( {) {$2;
                         )}
                       </div>
 
-<<<<<<<< HEAD:src_backup/components/ui/bundle-analyzer.tsx
+<:src_backup/components/ui/bundle-analyzer.tsx
                       <Badge className={getSizeColor(chunk.size)} variant=outline">
 
 
@@ -617,7 +617,7 @@ if ( {) {$2;
 } 
 
 }
-<<<<<<<< HEAD:src_backup/components/ui/bundle-analyzer.tsx
+<:src_backup/components/ui/bundle-analyzer.tsx
 
 
 }
@@ -630,7 +630,7 @@ if ( {) {$2;
           )}}</CardContent>;
       </Card>;
     </div>;
-<<<<<<<< HEAD:src_backup/components/ui/bundle-analyzer.tsx
+<:src_backup/components/ui/bundle-analyzer.tsx
   )}<CardContent className=pt - 0 space - y-3'>;
           {bundle_info ? (<>;
 =  );
@@ -711,7 +711,7 @@ if ( {) {$2;
         </CardContent>;
       </Card>;
     </div>);
-<<<<<<<< HEAD:src_backup/components/ui/bundle-analyzer.tsx
+<:src_backup/components/ui/bundle-analyzer.tsx
 }
 
         </CardContent>

@@ -287,78 +287,7 @@ export function useAuth() { return null; }
 
   return context;
 
-<<<<<<< HEAD
-  const login = async (email: string, password: string) => {
-    try {
-      const result = await signIn($2);
-      if (result?.error) {
-        throw new Error(result.error)
-      }
 
-      router.push("/dashboard")
-    } catch (error) {
-      throw error
-    }
-  },
-
-    await signOut($2);
-    router.push("/")
-  },
-
-  const register = async (name: string, email: string, password: string) => {
-    try {
-      const response = await fetch("/api/auth/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"},
-        body: JSON.stringify({ name, email, password })}),
-
-      if (!response.ok) {
-        const error = await response.json($2);
-        throw new Error(error.message)
-      }
-
-      // Auto-login after successful registration
-      await login(email, password)
-    } catch (error) {
-      throw error
-    }
-  },
-
-  const completeOnboarding = async () => {
-    try {
-      const response = await fetch($2);
-      if (!response.ok) {
-        throw new Error("Failed to complete onboarding")
-      }
-
-      if (user) {
-        setUser({ ...user, onboardingCompleted: true})
-      }
-    } catch (error) {
-      throw error
-    }
-  },
-
-  const value: AuthContextType = $2;
-    isLoading,
-    isAuthenticated: !!user,
-    login,
-    logout,
-    register,
-    completeOnboarding},
-
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
-}
-
-export function useAuth() {
-  const context = useContext($2);
-  if (context === undefined) {
-    throw new Error("useAuth must be used within an AuthProvider")
-  }
-  return context
-}
-=======
   return context;
 }
->>>>>>> origin/chore/fix-lint-and-merge
+

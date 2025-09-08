@@ -9,61 +9,8 @@ export default function GlobalSearchBar() {;
 
       return <div>Something went wrong.</div>;
 
-<<<<<<< HEAD
-      <input;
-        value={query}
-=======
-<<<<<<< HEAD
-import React from 'react';'
-import { useEffect, useMemo, useRef, useState } from 'react';'
-import { useRouter } from 'next/router';'
-export default function GlobalSearchBar() {;
 
-    }
 
-    controller && controller.current?.abort();
-    controller && controller.current = new AbortController();
-    const run = async () => {;
-      }
-      try {;
-        }
-        const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {;`          }
-          "signal": controller && controller.current!.signal,;
-        });
-        const j = await r && r.json();
-        setSuggestions(j && j.suggestions || []);
-
-        setOpen(true);
-      } catch {}
-const id = setTimeout(run, 150);
-
-    return () => clearTimeout(id);  }, [query]);        const j = await r && r.json();
-        setSuggestions(j && j.suggestions || []);
-        setOpen(true);
-
-      } catch {}
-
-  const [open, setOpen] = useState(false);
-      setSuggestions([]);
-      return;      return;
-      setSuggestions([]);
-return;
-
-        setOpen(true);
-      } catch {}
-  }, [query]);
-    if (!Speech) return;
-    const rec = new Speech();
-    rec.lang = 'en-US';'
-    rec.onresult = ("e": any) => {
-      <input
-}
-value={query}
-=======
-      <input;
-        value={query}
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
         onChange={e => setQuery(e && e.target.value)}
 </input>
       <div className='absolute inset-y-0 right-2 flex items-center gap-2'>;
@@ -95,69 +42,8 @@ value={query}
       </div>;"
         <div className="absolute z-50 mt-1 w-full rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-lg">;"
           <ul className="max-h-64 overflow-auto py-1 text-sm">;"
-<<<<<<< HEAD
-        <button;"
-          aria-label='Voice search
-=======
-<<<<<<< HEAD
-            {suggestions && suggestions.map((s, i) => (;
-              <li key={i}>;
 
-    controller.current?.abort();
-    controller.current = new AbortController();
-    const run = async () => {
-      }
-      try {
-        }
-        const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {`          }
-          "signal": controller.current!.signal
-        });
-        const j = await r.json();
-        setSuggestions(j.suggestions |[]);
-        setOpen(true);
-      } catch {}
-    return () => clearTimeout(id);  }, [query]);        const j = await r.json();
-        setSuggestions(j.suggestions |[]);
-        setOpen(true);
-      } catch {}
-    return () => clearTimeout(id);
-  }, [query]);
-  const onSubmit = (e?: React.FormEvent) => {
-    }
-    e?.preventDefault();
-    if (!query.trim()) return;
-    fetch('/api/telemetry/search', {'
-      }
-      "method": 'POST''
-      "headers": { 'Content-Type': 'application/json' }'
-      "body": JSON.stringify({ "q": query });
-    }).catch(() => {});
-    router.push(`/search?q=${encodeURIComponent(query)}`);`    setOpen(false);  
-const startVoice = () => {
-    }
-    if (typeof window === 'undefined') return;'
-const "Speech": any =;
-      (window as any).SpeechRecognition |
-      (window as any).webkitSpeechRecognition;    if (!Speech) return;    fetch('/api/telemetry/search', { "method": 'POST', "headers": { 'Content-Type': 'application/json' }, "body": JSON.stringify({ "q": query }) }).catch(() => {})'
-    router.push(`/search?q=${encodeURIComponent(query)}`);`    setOpen(false);
-    }
-    if (typeof window === 'undefined') return;'
-      (window as any).SpeechRecognition |
-      (window as any).webkitSpeechRecognition;    const "Speech": any = (window as any).SpeechRecognition |(window as any).webkitSpeechRecognition,
-if (!Speech) return;
-    rec.lang = 'en-US';'
-    rec.onresult = ("e": any) => {
-        <button
-}
-type='button''
-          onClick={startVoice}
-          className='inline-flex "sm":hidden text-gray-500 "hover":text-gray-800 "dark":"hover":text-gray-200''
-          aria-label='Voice search''
-=======
-        <button;"
-          aria-label='Voice search
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
         >
           className='text-sm font-medium text-indigo-600 hover:text-indigo-700
         <div className='absolute z-50 mt-1 w-full rounded-md border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-lg'>
@@ -187,15 +73,8 @@ if ( {) {
 
     controller.current?.abort ();
     controller.current = new AbortController ();
-<<<<<<< HEAD
-    const run = async () => {
-=======
-<<<<<<< HEAD
-      }
-=======
-    const run = async () => {
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
       try {
   // TODO: Implement
 }
@@ -225,46 +104,15 @@ const id = set_timeout (run, 150);
   // TODO: Implement
     // Check condition;
 if (return) {
-<<<<<<< HEAD
-const Speech: any =;
-=======
-<<<<<<< HEAD
-  $2
-}
-=======
-const Speech: any =;
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
       (window as any).SpeechRecognition ||;
       (window as any).webkitSpeechRecognition;    // Check condition;
 }    fetch ('/api / telemetry / search', { method: 'POST', headers: { 'Content - Type': 'application / json' }, body: JSON.stringify ({ q: query }) }).catch (() => {}),`;
     set_open (false);
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-;
-    // Check condition
-}
-if (return) {
-  $2
-}
-      (window as any).SpeechRecognition ||;
-      (window as any).webkitSpeechRecognition;    const "Speech": any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,
-    // Check condition,
-if (return) {
-  $2
-}
-=======
->>>>>>> merged-prs-20250907-203621
-  // TODO: Implement
-    // Check condition;
-      (window as any).webkitSpeechRecognition;    const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,
-    // Check condition;
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
 const rec = new Speech ();
     rec.lang = 'en - US';
     rec.onresult = (e: any) => {

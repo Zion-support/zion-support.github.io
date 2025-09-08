@@ -11,10 +11,7 @@ import {
   Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon
 } from 'lucide-react',
 import Layout from '../components/layout/Layout';
-<<<<<<< HEAD:pages_backup_1757220418/advanced-ai-automation-services.tsx
-import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
-const contactInfo = $2;
-=======
+
 
 const contactInfo = {
   mobile: '+1 302 464 0950'
@@ -158,20 +155,12 @@ const testimonials = [
     avatar: '👨‍🔒'
   },];
   mobile: '+1 302 464 0950',
->>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/advanced-ai-automation-services.tsx
+
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-<<<<<<< HEAD:pages_backup_1757220418/advanced-ai-automation-services.tsx
 
-const heroStats = [
-  { label: 'AI Services Delivered', value: '200+', icon: <Brain className = $2;
-  { label: 'Happy AI Clients', value: '500+', icon: <Users className = $2;
-  { label: 'AI Success Rate', value: '99.8%', icon: <Award className = $2;
-  { label: 'AI ROI Average', value: '500%', icon: <TrendingUp className = $2;
-const serviceCategories = $2;
-=======
   { label: 'AI Services Delivered', value: '200+', icon: <Brain className="w-5 h-5" /> },
   { label: 'Happy AI Clients', value: '500+', icon: <Users className="w-5 h-5" /> },
   { label: 'AI Success Rate', value: '99.8%', icon: <Award className="w-5 h-5" /> },
@@ -183,7 +172,7 @@ const serviceCategories = $2;
 ],
   {
     title: 'AI Development Tools',
->>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/advanced-ai-automation-services.tsx
+
     description: 'Advanced AI-powered development and testing automation',
     services: advancedAIAutomationServices2025.filter($2);
     icon: Code,
@@ -224,15 +213,12 @@ const serviceCategories = $2;
   }
 ],
 
-<<<<<<< HEAD:pages_backup_1757220418/advanced-ai-automation-services.tsx
-const heroFeatures = $2;
-    description: 'Advanced AI algorithms that automate complex development, testing, and operations tasks.',
-=======
+
   {
     title: 'AI-Powered Automation',
     description:
       'Advanced AI algorithms that automate complex development, testing, and operations tasks.',
->>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/advanced-ai-automation-services.tsx
+
     icon: Brain,
     gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600'
   },
@@ -256,12 +242,10 @@ const heroFeatures = $2;
   }
 ],
 
-<<<<<<< HEAD:pages_backup_1757220418/advanced-ai-automation-services.tsx
-const testimonials = $2;
-=======
+
   {
     name: 'Dr. Michael Chen',
->>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/advanced-ai-automation-services.tsx
+
     role: 'CTO, TechFlow Solutions',
     company: 'TechFlow Solutions',
     content: 'Zion Tech Group\'s AI automation platform has revolutionized our development process. We\'ve reduced testing time by 90% and improved code quality significantly.',
@@ -282,9 +266,7 @@ const testimonials = $2;
     company: 'SecureNet Corp.',
     content: 'Their AI security platform provides proactive threat detection that has prevented multiple security incidents. The ROI has been incredible.',
     rating: 5,
-<<<<<<< HEAD:pages_backup_1757220418/advanced-ai-automation-services.tsx
-    avatar: '👨‍🔒'
-=======
+
     avatar: '👨‍🔒',
   },
 ];
@@ -315,7 +297,7 @@ const heroStats = [;
   { label: 'AI ROI Average', value: '500%', icon: <TrendingUp className="w-5 h-5" />   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/advanced-ai-automation-services.tsx
+
   }
 ],
 

@@ -19,45 +19,6 @@ export function formatCurrency(amount: number, currency = "USD"): string {
     currency;
   }).format(amount);
 }
-<<<<<<< HEAD
 
-export function slugify(text: string): string {
-  return text
-    .toLowerCase()
-    .replace(/[^\w\s-]/g, "")
-    .replace(/[\s_-]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-}
-
-export function truncateText(text: string, maxLength: number): string {
-  if (text.length <= maxLength) return text;
-  return text.slice(0, maxLength).trim() + "...";
-}
-
-export function debounce<T extends (...args: any[]) => any>(
-  func: T;
-  wait: number
-): (...args: Parameters<T>) => void {
-  let timeout: ReturnType<typeof setTimeout>;
-  return (..._args: Parameters<T>) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(..._args), wait);
-  };
-}
-
-export function throttle<T extends (...args: any[]) => any>(
-  func: T;
-  limit: number
-): (...args: Parameters<T>) => void {
-  let inThrottle: boolean;
-  return (..._args: Parameters<T>) => {
-    if (!inThrottle) {
-      func(..._args);
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
-    }
-  };
-}
-=======
 };
->>>>>>> pr-11992
+

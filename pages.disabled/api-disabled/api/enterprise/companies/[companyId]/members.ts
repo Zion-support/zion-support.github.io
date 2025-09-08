@@ -1,15 +1,4 @@
-<<<<<<< HEAD:pages/api/enterprise/companies/[companyId]/members.ts
-import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    return res.status(405).json({ message: 'Method not allowed' });
-  }
-
-  try {
-    // TODO: Implement members logic
-    res.status(200).json({ message: 'members endpoint' });
-=======
 }
 
   return res && res.status(405).json({ error: "method_not_allowed" });
@@ -225,14 +214,12 @@ return res.status (405).json ({ error: "method_not_allowed" });
 }
 
 }
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/enterprise/companies/[companyId]/members.ts
+
   } catch (error) {
     console.error('Error in members:', error);
     res.status(500).json({ message: 'Internal server error' });
   }
-<<<<<<< HEAD:pages/api/enterprise/companies/[companyId]/members.ts
-}
-=======
+
 }
 
 ;
@@ -276,4 +263,4 @@ if (!memberId || typeof memberId !== 'string')
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/enterprise/companies/[companyId]/members.ts
+

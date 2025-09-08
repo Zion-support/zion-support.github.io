@@ -68,70 +68,8 @@ const SearchBar: React.FC = () => {
                       <p className="text-sm text-gray-500 truncate">"
                 
             <div className="px-4 py-3 text-sm text-gray-500">"
-<<<<<<< HEAD
-const SearchBar: React.FC<SearchBarProps> = ({
-    <div className={'relative ' + className}>
-=======
-<<<<<<< HEAD
-              No results found for &quot;{query}&quot;
-            </div>
-          ) : null}
-        </div>
-      )}
-    </div>
-  );
-};
 
-export default SearchBar;
 
-const "SearchBar": React.FC<SearchBarProps> = ({
-  }
-  onSearch,
-  placeholder = 'Search...','
-  className = '''
-}) => {
-  }
-
-  const handleSubmit = ("e": React.FormEvent) => {
-    }
-    e.preventDefault();
-    if (onSearch && query.trim()) {
-      }
-      onSearch(query.trim());
-
-    {
-      }
-      "title": 'Contact Us''
-      "description": 'Get in touch with our experts for consultation and quotes''
-      "url": '/contact''
-      "type": 'page''
-
-    {
-      }
-      "title": 'Pricing''
-      "description": 'View our transparent pricing for all services''
-      "url": '/pricing''
-      "type": 'page''
-
-  ];
-    );
-    setResults(filteredResults);
-    setIsOpen(true);
-    setIsLoading(false);
-  };
-
-  const handleClear = () => {
-    }
-    setQuery('');'
-  };
-
-return (;
-    <div className={'relative ' + className}>'
-=======
-const SearchBar: React.FC<SearchBarProps> = ({
-    <div className={'relative ' + className}>
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
       <form onSubmit={handleSubmit} className="relative">"
 </form>"
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />"

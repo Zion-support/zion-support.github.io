@@ -1,110 +1,21 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-
-<<<<<<< HEAD
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Zap, DollarSign, TrendingUp, Users } from 'lucide-react';
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
 import React from 'react;
 import Link from next/link';';
-=======
-=======
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-import React from 'react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-import Link from 'next/link';';
->>>>>>> origin/chore/fix-lint-and-merge
+
 
 import { motion } from framer-motion;
 
 import { Rocket, Zap, DollarSign, Users, ArrowRight, CheckCircle, Clock, Target, TrendingUp } from 'lucide-react';
 import Layout from "../../components/Layout;;
 
-<<<<<<< HEAD
-const features = [;
-  {}
-    title: Rapid Prototyping,','
-    description: Quick MVP development to validate your ideas and get to market fast,,
-    icon: Zap,'
-    benefits: ['2-4 Week MVPs, Agile Development, 'User Feedback Integration', Iterative Improvement]'},
-  {}'
-    title: Cost Optimization,,'
-    description: 'Budget-friendly solutions that maximize your startup resources,,
-    icon: DollarSign,
-    benefits: ['Flexible Pricing, 'Pay-as-you-grow, No Hidden Costs', 'ROI Focused]},
-  {}'
-    title: 'Scalable Infrastructure,,
-    description: 'Technology that grows with your startup from day one,',
-    icon: TrendingUp,
-    benefits: [Auto-scaling, 'Cloud-native', Performance Optimized, 'Future-proof']},
-  {}
-    title: 'Expert Guidance,',
-    description: Mentorship and technical guidance from experienced entrepreneurs,',
-    icon: Users,'
-    benefits: [Technical Mentorship, Best Practices', 'Industry Insights, Ongoing Support']'}];
 
-const services = [;
-  { title: MVP Development, description: Minimum viable product development in 2-4 weeks' },',
-  { title: Tech Stack Selection, description: Choose the right technologies for your startup' },',
-  { title: UI/UX Design, description: User-centered design that converts visitors to customers' },',
-  { title: API Development, description: Robust APIs for your mobile and web applications' },',
-  { title: Cloud Setup, description: Scalable cloud infrastructure from day one' },',
-
-  { title: Growth Hacking, description: Technical solutions to accelerate user acquisition' }'];
-
-const stats = [;
-  { number: 100+, label: Startups Helped' },',
-  { number: 300+, label: Projects Delivered' },',
-  { number: 300%, label: Average Growth' },',
-
-<<<<<<< HEAD
-  { number: 2-4, label: Weeks to MVP' }'];
-}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
-=======
   { number: '2-4, label: 'Weeks to MVP' }',
 ;];
 
@@ -121,167 +32,7 @@ export default function StartupSolutionsPage() {
         <section className="relative bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white py-20 overflow-hidden">""
           <div className="absolute inset-0">";"
             <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";"
-=======
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-const features = [;
-  {}
-    title: 'Rapid Prototyping,',
-    description: 'Quick MVP development to validate your ideas and get to market fast,',
-    icon: Zap,
-    benefits: ['2-4 Week MVPs, 'Agile Development', 'User Feedback Integration', 'Iterative Improvement']',
-  },
-  {}
-    title: 'Cost Optimization,',
-    description: 'Budget-friendly solutions that maximize your startup resources,',
-    icon: DollarSign,
-    benefits: ['Flexible Pricing, 'Pay-as-you-grow', 'No Hidden Costs', 'ROI Focused']',
-  },
-  {}
-    title: 'Scalable Infrastructure,',
-    description: 'Technology that grows with your startup from day one,',
-    icon: TrendingUp,
-    benefits: ['Auto-scaling, 'Cloud-native', 'Performance Optimized', 'Future-proof']',
-  },
-  {}
-    title: 'Expert Guidance,',
-    description: 'Mentorship and technical guidance from experienced entrepreneurs,',
-    icon: Users,
-    benefits: ['Technical Mentorship, 'Best Practices', 'Industry Insights', 'Ongoing Support']',
-  }
-;];
-const services = [;
-  { title: 'MVP Development, description: 'Minimum viable product development in 2-4 weeks' },',
-  { title: 'Tech Stack Selection, description: 'Choose the right technologies for your startup' },',
-  { title: 'UI/UX Design, description: 'User-centered design that converts visitors to customers' },',
-  { title: 'API Development, description: 'Robust APIs for your mobile and web applications' },',
-  { title: 'Cloud Setup, description: 'Scalable cloud infrastructure from day one' },',
-  { title: 'Growth Hacking, description: 'Technical solutions to accelerate user acquisition' }',
-;];
-const stats = [;
-  { number: '100+, label: 'Startups Helped' },',
-  { number: '300+, label: 'Projects Delivered' },',
-  { number: '300%, label: 'Average Growth' },',
-  { number: '2-4, label: 'Weeks to MVP' }',
-;];
-export default function StartupSolutionsPage() {
-  return (;
-    <Layout);
-      title="Startup Solutions - Zion Tech Group"";
-      description="Rapid development and scaling solutions for startups. MVP development, tech stack selection, and growth-focused technology solutions.""
-      keywords="startup solutions, MVP development, rapid prototyping, startup technology, scaling solutions""
-    >;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white py-20 overflow-hidden">"
-          <div className="absolute inset-0">";
-            <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-            <div className="absolute top-40 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
-          </div>;
-
-          <div className="container mx-auto px-4 relative z-10">";
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}"
-              className="text-center max-w-4xl mx-auto""
-=======
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto""
-            >;
-              <div className="flex items-center justify-center mb-6">";
-                <Rocket className="w-16 h-16 text-green-400 mr-4" />";
-<<<<<<< HEAD
-                <h1 className="text-5xl md:text-6xl font-bold">";
-                  Startup <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">Solutions</span>";
-                </h1>;
-              </div>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">";
-                Rapid development and scaling solutions designed specifically for startups and growing businesses;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link;
-                  href="/contact"";
-                  className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center"";
-                >;
-                  Start Your MVP;
-                  <ArrowRight className="ml-2 w-5 h-5" />";
-                </Link>;
-                <Link;
-                  href="/case-studies"";
-                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-gray-900 rounded-lg font-semibold transition-colors"";
-                >;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
-                <h1 className="text-5xl md:text-6xl font-bold">";
-
-                  Startup <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">Solutions</span>";
-                </h1>;
-              </div>;"
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">";
-                Rapid development and scaling solutions designed specifically for startups and growing businesses;
-              </p>;"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link;"
-                  href="/contact"";"
-                  className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center"";
-                >;
-                  Start Your MVP;"
-                  <ArrowRight className="ml-2 w-5 h-5" />";
-                </Link>;
-                <Link;"
-                  href="/case-studies"";"
-                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-gray-900 rounded-lg font-semibold transition-colors"";
-                >;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                  Success Stories;
-                </Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-<<<<<<< HEAD
-=======
-        {/* Stats Section */}
-        <section className="py-16 bg-white">"
-          <div className="container mx-auto px-4">";
-<<<<<<< HEAD
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
-              {stats.map((stat, index) => (,
-                <motion.div}),
-                  key={stat.label}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
->>>>>>> origin/chore/fix-lint-and-merge
-              {stats.map((stat, index) => (,
-                <motion.div}),
-                  key={stat.label}
-
-<<<<<<< HEAD
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="text-center"
-                >;
-                  <div className="text-4xl md:text-5xl font-bold text-green-600 mb-2">{stat.number}</div>
-                  <div className="text-gray-600 font-medium">{stat.label}</div>
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="text-center""
-                >;
-                  <div className="text-4xl md:text-5xl font-bold text-green-600 mb-2">{stat.number}</div>"
-                  <div className="text-gray-600 font-medium">{stat.label}</div>"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                 </motion.div>;
               ))}
             </div>,
@@ -289,24 +40,14 @@ export default function StartupSolutionsPage() {
         </section>;
 
         {/* Features Section */}
-<<<<<<< HEAD
-        <section className=py-20 bg-gray-50">"
 
-          <div className=container mx-auto px-4>";
-=======
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16""
-            >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Startup <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">Advantages</span>";
-=======
+
 
               transition={{ duration: 0.8 }}
 
@@ -315,47 +56,22 @@ export default function StartupSolutionsPage() {
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6>;"
                 Startup <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600>Advantages</span>;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
               </h2>;
-<<<<<<< HEAD
 
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-                We understand the unique challenges startups face and provide solutions that help you move fast, stay lean, and scale efficiently,
-              </p>;
-            </motion.div>;
-
-            <div className=grid grid-cols-1 md:grid-cols-2 gap-8">";
-=======
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 We understand the unique challenges startups face and provide solutions that help you move fast, stay lean, and scale efficiently,
               </p>;
             </motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
               {features.map((feature, index) => (,
                 <motion.div}),
                   key={feature.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
-<<<<<<< HEAD
-                  className=bg-white rounded-2xl shadow-xl p-8""
-                >;
-                  <div className=flex items-center mb-6">";
-                    <div className=w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl flex items-center justify-center mr-4">";
-                      <feature.icon className=w-8 h-8 text-white" />";
-                    </div>;
-                    <div>;
-                      <h3 className=text-2xl font-bold text-gray-900">{feature.title}</h3>"
-                      <p className=text-gray-600">{feature.description}</p>"
-                    </div>;
-                  </div>;
 
-                  <ul className=space-y-3>";
-                    {feature.benefits.map((benefit, benefitIndex) => (,"
-                      <li key={benefitIndex} className=flex items-center text-gray-600>""
-                        <CheckCircle className=w-5 h-5 text-green-500 mr-3 flex-shrink-0 />";
-=======
                   className="bg-white rounded-2xl shadow-xl p-8""
                 >;
                   <div className="flex items-center mb-6">";
@@ -371,7 +87,7 @@ export default function StartupSolutionsPage() {
                     {feature.benefits.map((benefit, benefitIndex) => (,
                       <li key={benefitIndex} className="flex items-center text-gray-600">"
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                         {benefit}
                       </li>,
                     ))}
@@ -383,59 +99,27 @@ export default function StartupSolutionsPage() {
         </section>;
 
         {/* Services Section */}
-<<<<<<< HEAD
-        <section className="py-20 bg-white>
 
-          <div className="container mx-auto px-4">;
-=======
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16""
-            >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">Services</span>";
-=======
+
 
               className=text-center mb-16""
             >;
               <h2 className=text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Our <span className=text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">Services</span>";
 
-<<<<<<< HEAD
-              <p className=text-xl text-gray-600 max-w-3xl mx-auto>";
-                Comprehensive startup services designed to help you build, launch, and scale your business,
-              </p>;
-            </motion.div>;
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8>;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              </h2>;
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Comprehensive startup services designed to help you build, launch, and scale your business,
-              </p>;
-            </motion.div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               {services.map((service, index) => (,
                 <motion.div}),
                   key={service.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300""
-                >;
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>"
-                  <p className="text-gray-600">{service.description}</p>"
-                </motion.div>;
-=======
+
 
                   transition={{ duration: 0.8, delay: index * 0.1 }}
 
@@ -445,57 +129,29 @@ export default function StartupSolutionsPage() {
                   <p className="text-gray-600">{service.description}</p>
                 </motion.div>;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
               ))}
             </div>,
           </div>;
         </section>;
 
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className=py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">"
 
-          <div className=container mx-auto px-4 text-center>";
-=======
         <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-            >,
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
-                Ready to Launch Your Startup?;
-=======
 
-<<<<<<< HEAD
-=======
-              transition={{ duration: 0 && 0.8 }}>,;
-              <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Launch Your Startup?,;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
               </h2>;
 
               <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto>;
                 Let's turn your idea into a successful product with our rapid development and scaling solutions';
               </p>;
-<<<<<<< HEAD
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link;
-                  href="/contact"";
-                  className="px-8 py-4 bg-white text-green-600 hover:bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"";
-                >;
-                  Start Your Project;
-                  <ArrowRight className="ml-2 w-5 h-5" />";
-                </Link>;
-                <Link;
-                  href="/solutions"";
-                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-green-600 rounded-lg font-semibold transition-colors"";
-                >;
-=======
+
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
                 <Link;
@@ -510,7 +166,7 @@ export default function StartupSolutionsPage() {
                   className="px-8 py-4 border border-white text-white hover:bg-white hover:text-green-600 rounded-lg font-semibold transition-colors"";
                 >;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
                   View All Solutions;
                 </Link>;
               </div>;

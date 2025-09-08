@@ -245,24 +245,14 @@ pr-12325
                     onClick={() => setActiveEndpoint(endpoint.id)}
 
                   </button>;
-<<<<<<< HEAD
 
-=======
                 </li>;              ))}
             </ul>;
           </div>;
         </div>;
 ;
         {/* Endpoint details */}
-=======
-                </li>;              ))}
-            </ul>;
-          </div>;
-        </div>;
-;
-        {/* Endpoint details */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
         <div className="md:col-span-4">;
           {activeEndpointData ? (;
             <div>;

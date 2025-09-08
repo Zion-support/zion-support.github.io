@@ -1,119 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-import { useState  } from 'react';
-import { useForm  } from 'react-hook-form';
-import { zodResolver  } from '@hookform/resolvers/zod';
-import { z  } from 'zod';
-import { Button  } from '@/components/ui/button';
-import { Textarea  } from '@/components/ui/textarea';
-import { Input  } from '@/components/ui/input';
-import { Checkbox  } from '@/components/ui/checkbox';
-<<<<<<< HEAD
-import { format } from 'date-fns';
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage} from '@/components/ui/form',
-import { WorkExperience } from '@/types/resume';
-import { Loader2, Edit, Trash2 } from 'lucide-react';
-import { useResume } from '@/hooks/useResume';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Card, CardContent } from '@/components/ui/card';
-import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
-// Define schema for form validation
 
-const workExperienceSchema = z.object({
-  company_name: z.string().min($2);
-  role_title: z.string().min($2);
-  start_date: z.string().min($2);
-  end_date: z.string().optional($2);
-  is_current: z.boolean().default($2);
-  description: z.string().optional($2);
-  location: z.string().optional()}),
-
-type WorkExperienceFormValues = $2;
-interface WorkExperienceFormProps {
-  resumeId: string,
-  workExperiences: WorkExperience[],
-  onComplete: () => void,
-  onBack: () => void
-}
-export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {
-  const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume($2);
-  const [editingId, setEditingId] = useState<string | null>(null),
-  const [error, setError] = useState<string | null>(null),
-
-  // Helper function to format dates to string
-  const formatDateValue = $2;
-    if (typeof dateValue = $2;
-    return format(dateValue, 'yyyy-MM-dd')
-  },
-
-  const form = useForm<WorkExperienceFormValues>({
-    resolver: zodResolver($2);
-    defaultValues: {
-      company_name: '',
-      role_title: '',
-      start_date: format(new Date(), 'yyyy-MM-dd'),
-      is_current: false,
-      description: '',
-      location: ''}}),
-
-  const handleAddOrUpdate = async (data: WorkExperienceFormValues) => {
-    try {
-      setError($2);
-      let success,
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-import { format } from 'date-fns';
-import { Form;
-  FormControl;
-  FormField;
-<<<<<<< HEAD
-=======
-  FormItem;
-  FormLabel;
-  FormMessage } from '@/components/ui/form';
-import { WorkExperience  } from '@/types/resume';
-import { Loader2, Edit, Trash2  } from 'lucide-react';
-import { useResume  } from '@/hooks/useResume';
-import { Alert, AlertDescription  } from '@/components/ui/alert';
-import { Card, CardContent  } from '@/components/ui/card';
-import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import {useState} from 'react';
-import {useForm} from 'react-hook-form';
-import {zodResolver} from '@hookform/resolvers/zod';
-import {z} from 'zod';
-import {Button} from '@/components/ui/button';
-import {Textarea} from '@/components/ui/textarea';
-import {Input} from '@/components/ui/input';
-import {Checkbox} from '@/components/ui/checkbox';
-import {format} from 'date-fns';
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components/ui/form';
-import {WorkExperience} from '@/types/resume';
-import {Loader2, Edit, Trash2} from 'lucide-react';
-import {useResume} from '@/hooks/useResume';
-import {Alert, AlertDescription} from '@/components/ui/alert';
-import {Card, CardContent} from '@/components/ui/card';
-import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Define schema for form validation
 
 const workExperienceSchema = z.object({
@@ -133,20 +19,13 @@ interface WorkExperienceFormProps {}
   onBack: () => void;
 }
 
-<<<<<<< HEAD
-=======
 
 
-export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
-
-
-<<<<<<< HEAD
-export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {
 
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
+
   const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -168,28 +47,19 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
   const handleAddOrUpdate = async (data: WorkExperienceFormValues) => {}
     try {}
       setError(null);
-<<<<<<< HEAD
-      let success;
-      const experienceData: WorkExperience = {}
-=======
+
       let success
->>>>>>> merged-prs-20250907-203621
+
       const experienceData: WorkExperience = {
         company_name: data.company_name, // Required field
         role_title: data.role_title, // Required field
         start_date: data.start_date, // Required field
-<<<<<<< HEAD
-        end_date: data.is_current ? undefined : (data.end_date || undefined),
-        is_current: data.is_current,
-        description: data.description,
-        location: data.location},
 
-=======
         end_date: data.is_current ? undefined : (data.end_date |undefined)
         is_current: data.is_current
         description: data.description
         location: data.location}
->>>>>>> merged-prs-20250907-203621
+
       if (editingId) {
         success = await updateWorkExperience(editingId, experienceData)
       } else {
@@ -197,28 +67,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       }
       if (success) {
         form.reset({
-<<<<<<< HEAD
-          company_name: '',
-          role_title: '',
-          start_date: format(new Date(), 'yyyy-MM-dd'),
-          is_current: false,
-          description: '',
-          location: ''}),
-        setEditingId(null)
-      }
-    } catch (err: any) {
-      setError(err.message || 'An error occurred')
-    }
-  },
 
-  const handleEdit = (work: WorkExperience) => {
-    setEditingId($2);
-    form.reset($2);
-      end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined})
-  },
-
-  const handleDelete = $2;
-=======
           company_name: ''
           role_title: ''
           start_date: format(new Date(), 'yyyy-MM-dd');
@@ -226,75 +75,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           description: ''
           location: ''})
         setEditingId(null)
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import { useState } from 'react',;
-import { useForm } from 'react-hook-form',;
-import { zodResolver } from '@hookform/resolvers/zod',;
-import { z } from 'zod',;
-import { Button } from '@/components/ui/button',;
-import { Textarea } from '@/components/ui/textarea',;
-import { Input } from '@/components/ui/input',;
-import { Checkbox } from '@/components/ui/checkbox',;
-import { format } from 'date-fns',;
-import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage} from '@/components/ui/form',;
-import { WorkExperience } from '@/types/resume',;
-import { Loader2, Edit, Trash2 } from 'lucide-react',;
-import { useResume } from '@/hooks/useResume',;
-import { Alert, AlertDescription } from '@/components/ui/alert',;
-import { Card, CardContent } from '@/components/ui/card',;
-import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton',;
-// Define schema for form validation;
-const workExperienceSchema = z.object({;
-  company_name: z.string().min(1, 'Company name is required'),;
-  role_title: z.string().min(1, 'Job title is required'),;
-  start_date: z.string().min(1, 'Start date is required'),;
-  end_date: z.string().optional(),;
-  is_current: z.boolean().default(false),;
-  description: z.string().optional(),;
-  location: z.string().optional()}),;
-type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>,;
-interface WorkExperienceFormProps {;
-  resumeId: string,;
-  workExperiences: WorkExperience[],;
-  onComplete: () => void,;
-  onBack: () => void;
-}
-;
-export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
-  const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume(),;
-  const [editingId, setEditingId] = useState<string | null>(null),;
-  const [error, setError] = useState<string | null>(null),;
-  // Helper function to format dates to string;
-  const formatDateValue = (dateValue: string | Date | undefined): string => {;
-    if (!dateValue) return '',;
-    if (typeof dateValue === 'string') return dateValue,;
-    return format(dateValue, 'yyyy-MM-dd');
-  },;
-  const form = useForm<WorkExperienceFormValues>({;
-    resolver: zodResolver(workExperienceSchema),;
-    defaultValues: {;
-      company_name: '',;
-      role_title: '',;
-      start_date: format(new Date(), 'yyyy-MM-dd'),;
-      is_current: false,;
-      description: '',;
-      location: ''}}),;
-  const handleAddOrUpdate = async (data: WorkExperienceFormValues) => {;
-    try {;
-      setError(null),;
-      let success,;
-      const experienceData: WorkExperience = {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         company_name: data.company_name, // Required field;
         role_title: data.role_title, // Required field;
         start_date: data.start_date, // Required field;
@@ -317,34 +98,22 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           location: ''})
         setEditingId(null)
 
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
       }
     } catch (err: any) {'
       setError(err.message |'An error occurred')
     }
 
-<<<<<<< HEAD
-=======
+
 
   };
 
 
 
-<<<<<<< HEAD
-  }
-  };
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const handleEdit = (work: WorkExperience) => {
 
     setEditingId(work.id!);
@@ -358,25 +127,8 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       await deleteWorkExperience(id)
     }
 
-<<<<<<< HEAD
-  };
 
-=======
-<<<<<<< HEAD
-  };
 
-  }
-  const handleEnhanceDescription = (enhancedContent: string) => {
-    form.setValue('description', enhancedContent)
-  }
-  };
-=======
-
-  };
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   },;
   const handleEdit = (work: WorkExperience) => {;
     setEditingId(work.id!),;
@@ -390,68 +142,27 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       await deleteWorkExperience(id);
     }
   },
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-  const handleEnhanceDescription = (enhancedContent: string) => {'
-    form.setValue('description', enhancedContent)
-  },
-
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
->>>>>>> merged-prs-20250907-203621
   const handleEnhanceDescription = (enhancedContent: string) => {
     form.setValue('description', enhancedContent)
   },
 
-<<<<<<< HEAD
-  return (
-    <div className="space-y-6">
-      <div>
-        <h2 className="text-xl font-semibold mb-2">Work Experience</h2>
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
+
+
   return (
     <div className="space-y-6">
       <div>"
         <h2 className="text-xl font-semibold mb-2">Work Experience</h2>"
->>>>>>> merged-prs-20250907-203621
+
         <p className="text-muted-foreground">
           Add your work history to showcase your professional experience.
         </p>
       </div>
-<<<<<<< HEAD
-      {workExperiences.length > 0 && (
-        <div className="space-y-4">
-          <h3 className="text-md font-medium">Added Experience</h3>
-          {workExperiences.map((work) => (
-            <Card key={work.id} className="bg-muted/40">
-              <CardContent className="pt-6">
-                <div className="flex justify-between">
-                  <div>
-                    <h4 className="font-medium">{work.role_title}</h4>
-                    <p className="text-sm text-muted-foreground">{work.company_name}</p>
-                    <p className="text-xs text-muted-foreground mt-1">
-                      {typeof work.start_date === 'string'
-                        ? work.start_date
-                        : format(work.start_date, 'MMM yyyy')} - {work.is_current
-                        ? 'Present'
-                        : (work.end_date ? (typeof work.end_date === 'string'
-                          ? work.end_date
-                          : format(work.end_date, 'MMM yyyy')) : '')}
-                    </p>
-                    {work.location && (
-                      <p className="text-xs text-muted-foreground">{work.location}</p>
-=======
+
       {workExperiences.length > 0 && ("
         <div className="space-y-4">"
           <h3 className="text-md font-medium">Added Experience</h3>
@@ -473,547 +184,19 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     </p>
                     {work.location && ("
                       <p className="text-xs text-muted-foreground">{work.location}</p>
-<<<<<<< HEAD
-                    <Button"
-                      variant="ghost""
-                      size="icon"
-                      onClick={() => handleEdit(work)}"
-      <div className="bg-muted/40 p-6 rounded-lg">"
-        <h3 className="text-md font-medium mb-4">'
-=======
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-                    )}
-                  </div>
-                  <div className="flex gap-2">
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      onClick={() => handleEdit(work)}
-                    >
-                      <Edit className="h-4 w-4" />
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      onClick={() => handleDelete(work.id!)}
-                    >
-                      <Trash2 className="h-4 w-4" />
-                    </Button>
-                  </div>
-                </div>
-                {work.description && (
-                  <p className="text-sm mt-3 line-clamp-2">{work.description}</p>
-                )}
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      )}
-<<<<<<< HEAD
-      <div className="bg-muted/40 p-6 rounded-lg">
-        <h3 className="text-md font-medium mb-4">
-          {editingId ? 'Update Experience' : 'Add Experience'}
-        </h3>
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-=======
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import {useState} from 'react';
-import {use_form} from 'react - hook - form';
-import {zod_resolver} from '@hookform / resolvers / zod';
-import {z} from 'zod';
-import {Button} from '@/components / ui / button';
-import {Textarea} from '@/components / ui / textarea';
-import {Input} from '@/components / ui / input';
-import {Checkbox} from '@/components / ui / checkbox';
-import {format} from 'date - fns';
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components / ui / form';
-import {WorkExperience} from '@/types / resume';
-import {Loader2, Edit, Trash2} from 'lucide-react';
 
-
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      <div className="bg-muted/40 p-6 rounded-lg">
-        <h3 className="text-md font-medium mb-4">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           {editingId ? 'Update Experience' : 'Add Experience'}
         </h3>
         <Form {...form}>"
           <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">"
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-<<<<<<< HEAD
-                    >;"
-                      <Edit className="h-4 w-4" />;
-                    </Button>;
-                    <Button"
-                      variant="ghost""
-                      size="icon"
-                      onClick={() => handleDelete(work && work.id!)}
-                    >;"
-=======
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-              <FormField
-                control={form.control}
-                name="company_name"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Company Name</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Google, Microsoft, etc." {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="role_title"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Job Title</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Software Engineer, Product Manager, etc." {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-<<<<<<< HEAD
-                )}
-              />
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <FormField
-                control={form.control}
-                name="start_date"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Start Date</FormLabel>
-                    <FormControl>
-                      <Input
-                        type="date"
-                        {...field}
-                        value={field.value |''}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <div className="space-y-4">
-                <FormField
-                  control={form.control}
-                  name="is_current"
-                  render={({ field }) => (
-                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
-                      <FormControl>
-                        <Checkbox
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
-                        />
-                      </FormControl>
-                      <div className="space-y-1 leading-none">
-                        <FormLabel>I currently work here</FormLabel>
-                      </div>
-                    </FormItem>
-                  )}
-                />
-                {!form.watch('is_current') && (
-                  <FormField
-                    control={form.control}
-                    name="end_date"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>End Date</FormLabel>
-                        <FormControl>
-                          <Input
-                            type="date"
-                            {...field}
-                            value={field.value |''}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                )}
-              </div>
-            </div>
-            <FormField
-              control={form.control}
-              name="location"
-              render={({ field }) => (
-=======
-                )}
-              />
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <FormField
-                control={form.control}
-                name="start_date"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Start Date</FormLabel>
-                    <FormControl>
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-      <div className="bg-muted/40 p-6 rounded-lg">;
-        <h3 className="text-md font-medium mb-4">;
-          {editingId ? 'Update Experience' : 'Add Experience'}
-        </h3>;
 
-        <Form {...form}>;
-          <form onSubmit={form && form.handleSubmit(handleAddOrUpdate)} className="space-y-4">;
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-              <FormField
-                control={form && form.control}
-                name="company_name"
-                render={({ field }) => (;
-                  <FormItem>;
-                    <FormLabel>Company Name</FormLabel>;
-import {use_resume} from '@/hooks / use_resume';
-import {Alert, AlertDescription} from '@/components / ui / alert';
-import {Card, CardContent} from '@/components / ui / card';
-import {AIEnhancementButton} from '@/components / resume - builder / forms / AIEnhancementButton';
-// Define schema for form validation;
-const workExperienceSchema = z.object ({
-  company_name: z.string ().min (1, 'Company name is required');
-  role_title: z.string ().min (1, 'Job title is required');
-  start_date: z.string ().min (1, 'Start date is required');
-  end_date: z.string ().optional (),
-  is_current: z.boolean ().default (false),
-  description: z.string ().optional (),
-  location: z.string ().optional ()}),
-type WorkExperienceFormValues = z.infer < typeof workExperienceSchema>;
-;
-interface WorkExperienceFormProps {
-  resume_id: string,
-  work_experiences: WorkExperience[],
-  on_complete: () => void,
-  on_back: () => void;
-}
-export /**
- * WorkExperienceForm - Function description
- */
-function WorkExperienceForm() {
-  const { addWorkExperience, updateWorkExperience, deleteWorkExperience, is_loading } = use_resume ();
-  const [editing_id, setEditingId] = useState < string | null>(null);
-  const [error, set_error] = useState < string | null>(null);
-;
-  // Helper function to format dates to string;
-  const formatDateValue = (date_value: string | Date | undefined): string => {
-    // Check condition
-if (return '') {
-  $2
-}
-    // Check condition
-if (return date_value, ) {
-  $2
-}
-    return format (date_value, 'yyyy - MM - dd');
-  }
-;
-  const form = use_form < WorkExperienceFormValues>({
-    resolver: zod_resolver (workExperienceSchema),
-    default_values: {
-      company_name: '',
-      role_title: '',
-      start_date: format (new Date (), 'yyyy - MM - dd');
-      is_current: false,
-      description: '',
-      location: ''}}),
-  const handleAddOrUpdate = async (data: WorkExperienceFormValues) => {
-    try {
-      set_error (null);
-      let success,
-      const experience_data: WorkExperience = {
-        company_name: data.company_name, // Required field;
-        role_title: data.role_title, // Required field;
-        start_date: data.start_date, // Required field;
-        end_date: data.is_current ? undefined : (data.end_date || undefined),
-        is_current: data.is_current,
-        description: data.description,
-        location: data.location},
-      // Check condition
-if ( {) {
-  $2
-}
-        success = await updateWorkExperience (editing_id, experience_data);
-      } else {
-        success = await addWorkExperience (resume_id, experience_data);
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        form.reset ({
-          company_name: '',
-          role_title: '',
-          start_date: format (new Date (), 'yyyy - MM - dd');
-          is_current: false,
-          description: '',
-          location: ''}),
-        setEditingId (null);
-      }
-    } catch (err: any) {
-      set_error (err.message || 'An error occurred');
-    }
-  }
-;
-  const handle_edit = (work: WorkExperience) =>: any {
-    setEditingId (work.id!);
-    form.reset ({
-      ...work,
-      start_date: formatDateValue (work.start_date),
-      end_date: work.end_date && !work.is_current ? formatDateValue (work.end_date) : undefined});
-  }
-;
-  const handle_delete = async (id: string) => {
-    if () {) {
-  $2
-}
-      await deleteWorkExperience (id);
-    }
-  }
-;
-  const handleEnhanceDescription = (enhanced_content: string) =>: any {
-    form.set_value ('description', enhanced_content);
-  }
-;
-  return (
-    <div className="space - y-6">;
-      <div>;
-        <h2 className="text - xl font - semibold mb - 2">Work Experience</h2>;
-        <p className="text - muted - foreground">;
-          Add your work history to showcase your professional experience.;
-        </p>;
-      </div>;
-      {work_experiences.length > 0 && (
-        <div className="space - y-4">;
-          <h3 className="text - md font - medium">Added Experience</h3>;
-          {work_experiences.map ((work) => (
-            <Card key={work.id} className="bg - muted / 40">;
-              <CardContent className="pt - 6">;
-                <div className="flex justify - between">;
-                  <div>;
-                    <h4 className="font - medium">{work.role_title}</h4>;
-                    <p className="text - sm text - muted - foreground">{work.company_name}</p>;
-                    <p className="text - xs text - muted - foreground mt - 1">;
-                      {typeof work.start_date === 'string';
-                        ? work.start_date;
-                        : format (work.start_date, 'MMM yyyy')} - {work.is_current;
-                        ? 'Present';
-                        : (work.end_date ? (typeof work.end_date === 'string';
-                          ? work.end_date;
-                          : format (work.end_date, 'MMM yyyy')) : '')}
-                    </p>;
-                    {work.location && (
-                      <p className="text - xs text - muted - foreground">{work.location}</p>)}
-                  </div>;
-                  <div className="flex gap - 2">;
-                    <Button;
-                      variant="ghost";
-                      size="icon";
-                      on_click={() => handle_edit (work)}
-                    >;
-                      <Edit className="h - 4 w - 4" />;
-import { useState } from 'react',;
-import { useForm } from 'react-hook-form',;
-import { zodResolver } from '@hookform/resolvers/zod',;
-import { z } from 'zod',;
-import { Button } from '@/components/ui/button',;
-import { Textarea } from '@/components/ui/textarea',;
-import { Input } from '@/components/ui/input',;
-import { Checkbox } from '@/components/ui/checkbox',;
-import { format } from 'date-fns',;
-import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage} from '@/components/ui/form',;
-import { WorkExperience } from '@/types/resume',;
-import { Loader2, Edit, Trash2 } from 'lucide-react',;
-import { useResume } from '@/hooks/useResume',;
-import { Alert, AlertDescription } from '@/components/ui/alert',;
-import { Card, CardContent } from '@/components/ui/card',;
-import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton',;
-;
-// Define schema for form validation;
-const workExperienceSchema = z.object({;
-  company_name:z.string().min(1, 'Company name is required'),;
-  role_title:z.string().min(1, 'Job title is required'),;
-  start_date:z.string().min(1, 'Start date is required'),;
-  end_date:z.string().optional(),;
-  is_current:z.boolean().default(false),;
-  description:z.string().optional(),;
-  location:z.string().optional()}),;
-;
-type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>,;
-;
-interface WorkExperienceFormProps {;
-  resumeId:string,;
-  workExperiences:WorkExperience[],;
-  onComplete:() => void,;
-  onBack:() => void;
-}
-;
-export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack } WorkExperienceFormProps) {;
-  const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume(),;
-  const [editingId, setEditingId] = useState<string | null>(null),;
-  const [error, setError] = useState<string | null>(null),;
-;
-  // Helper function to format dates to string;
-  const formatDateValue = (dateValue:string | Date | undefined):string => {;
-    if (!dateValue) return '',;
-    if (typeof dateValue === 'string') return dateValue,;
-    return format(dateValue, 'yyyy-MM-dd'),;
-  },;
-;
-  const form = useForm<WorkExperienceFormValues>({;
-    resolver:zodResolver(workExperienceSchema),;
-    defaultValues:{;
-      company_name:'',;
-      role_title:'',;
-      start_date:format(new Date(), 'yyyy-MM-dd'),;
-      is_current:false,;
-      description:'',;
-      location:''}}),;
-;
-  const handleAddOrUpdate = async (data:WorkExperienceFormValues) => {;
-    try {;
-      setError(null),;
-      let success,;
-;
-      const experienceData:WorkExperience = {;
-        company_name:data.company_name, // Required field;
-        role_title:data.role_title, // Required field;
-        start_date:data.start_date, // Required field;
-        end_date:data.is_current ? undefined :(data.end_date || undefined),;
-        is_current:data.is_current,;
-        description:data.description,;
-        location:data.location},;
-;
-      if (editingId) {;
-        success = await updateWorkExperience(editingId, experienceData),;
-      } else {;
-        success = await addWorkExperience(resumeId, experienceData),;
-      }
-;
-      if (success) {;
-        form.reset({;
-          company_name:'',;
-          role_title:'',;
-          start_date:format(new Date(), 'yyyy-MM-dd'),;
-          is_current:false,;
-          description:'',;
-          location:''}),;
-        setEditingId(null),;      }
-    } catch (err:any) {;
-      setError(err.message || 'An error occurred');
-    }
-  },;
-;
-  const handleEdit = (work:WorkExperience) => {;
-    setEditingId(work.id!),;
-    form.reset({;
-      ...work,;
-      start_date:formatDateValue(work.start_date),;
-      end_date:work.end_date && !work.is_current ? formatDateValue(work.end_date) :undefined}),;
-  },;
-;
-  const handleDelete = async (id:string) => {;
-    if (confirm('Are you sure you want to delete this work experience?')) {;
-      await deleteWorkExperience(id);
-    }
-  },;
-;
-  const handleEnhanceDescription = (enhancedContent:string) => {;
-    form.setValue('description', enhancedContent),;
-  },;
-;
-  return (;
-    <div className="space-y-6">;
-      <div>;
-        <h2 className="text-xl font-semibold mb-2">Work Experience</h2>;
-        <p className="text-muted-foreground">;
-          Add your work history to showcase your professional experience.;
-        </p>;
-      </div>;
-;
-      {workExperiences.length > 0 && (;
-        <div className="space-y-4">;
-          <h3 className="text-md font-medium">Added Experience</h3>;
-          {workExperiences.map((work) => (;
-            <Card key={work.id} className="bg-muted/40">;
-              <CardContent className="pt-6">;
-                <div className="flex justify-between">;
-                  <div>;
-                    <h4 className="font-medium">{work.role_title}</h4>;
-                    <p className="text-sm text-muted-foreground">{work.company_name}</p>;
-                    <p className="text-xs text-muted-foreground mt-1">;
-                      {typeof work.start_date === 'string' ;
-                        ? work.start_date ;
-                        :format(work.start_date, 'MMM yyyy')} - {work.is_current ;
-                        ? 'Present' ;
-                        :(work.end_date ? (typeof work.end_date === 'string' ;
-                          ? work.end_date ;
-                          :format(work.end_date, 'MMM yyyy')) :'')}
-                    </p>;
-                    {work.location && (;
-                      <p className="text-xs text-muted-foreground">{work.location}</p>;
-                    )}
-                  </div>;
-                  <div className="flex gap-2">;
-                    <Button;
-                      variant="ghost";
-                      size="icon";
-                      onClick={() => handleEdit(work)}
-                    >;
-                      <Edit className="h-4 w-4" />;
-                    </Button>;
-                    <Button;
-                      variant="ghost";
-                      size="icon";
-                      onClick={() => handleDelete(work.id!)}
-                    >;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                       <Trash2 className="h-4 w-4" />;
                     </Button>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-              <FormField;
-                control={form && form.control}"
-                name="company_name"
-                render={({ field }) => (
-                    <FormControl>;"
-                      <Input placeholder="Google, Microsoft, etc." {...field} />;
-                    </FormControl>;
-                    <FormMessage />;
-              <FormField;
-                control={form && form.control}"
-                name="role_title"
-                    <FormControl>;"
-                      <Input placeholder="Software Engineer, Product Manager, etc." {...field} />;
-                    </FormControl>;
-                    <FormMessage />;
-              <FormField;
-                control={form && form.control}"
-                name="start_date"
 
-=======
                 {work.description && (;
                   <p className="text-sm mt-3 line-clamp-2">{work.description}</p>;
                 )}
@@ -1043,106 +226,15 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
               />;
             </div>;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-<<<<<<< HEAD
-                      <Input
-                        type="date"
-                        {...field}
-                        value={field.value |''}
-=======
 
-              <FormField
-                control={form && form.control}
-                name="start_date"
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                       <Input 
 
                         type="date" 
                         {...field} '
                         value={field.value || ''}
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <div className="space-y-4">
-<<<<<<< HEAD
-              <FormField
-                control={form && form.control}
-                name="start_date"
-                  </FormItem>;                )}
-              />;
-;
-              <FormField;
-                control={form.control}
-                name="role_title";
-                render={({ field }) => (;
-                  <FormItem>;
-                    <FormLabel>Job Title</FormLabel>;
-                    <FormControl>;
-                      <Input placeholder="Software Engineer, Product Manager, etc." {...field} />;
-                    </FormControl>;
-                    <FormMessage />;
-                  </FormItem>;
-                )}
-              />;
-            </div>;
-;
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-              <FormField;
-                control={form.control}
-                name="start_date";
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                render={({ field }) => (;
-                  <FormItem>;
-                    <FormLabel>Start Date</FormLabel>;
-                    <FormControl>;
-<<<<<<< HEAD
-                      <Input ;
-                        type="date" ;
-                        {...field} ;
-                        value={field.value || ''}
-=======
-                      <Input
-                        type="date" 
-                        {...field} 
-                        value={field && field.value || ''}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                      />;
-                    </FormControl>;
-                    <FormMessage />;
-                  </FormItem>;
-                )}
-              />;
-<<<<<<< HEAD
-;
-              <div className="space-y-4">;
-                <FormField;
-                  control={form.control}
-                  name="is_current";
-                  render={({ field }) => (;
-                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">;
-                      <FormControl>;
-                        <Checkbox;
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
-=======
 
-              <div className="space-y-4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                 <FormField
                   control={form && form.control}
 
@@ -1153,7 +245,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                         <Checkbox;
                           checked={field && field.value}
                           onCheckedChange={field && field.onChange}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
                         />;
                       </FormControl>;"
                       <div className="space-y-1 leading-none">;
@@ -1161,390 +253,43 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       </div>;
                     </FormItem>;
                   )}
-<<<<<<< HEAD
-                />;
-                  <FormField
-                    control={form && form.control}
-                    name="end_date"
-;
-                {!form.watch('is_current') && (;
-                  <FormField;
-                    control={form.control}
-                    name="end_date";
-=======
-
-<<<<<<< HEAD
-=======
-                />;
-
-                {!form && form.watch('is_current') && (;
-
-                  <FormField
-                    control={form && form.control}
-                    name="end_date"
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                    render={({ field }) => (;
-                      <FormItem>;
-                        <FormLabel>End Date</FormLabel>;
-                        <FormControl>;
-<<<<<<< HEAD
-                    )}
-                          <Input ;
-                            type="date" ;
-                            {...field} ;
-                            value={field.value || ''} ;
-                          />;
-                        </FormControl>;
-                        <FormMessage />;
-                      </FormItem>;                    )}
-                  />;
-                )}
-              </div>;
-            </div>;
-            />;
-            <FormField
-              control={form && form.control}
-              name="description"
-;
-            <FormField;
-              control={form.control}
-              name="location";
-              render={({ field }) => (;
-                <FormItem>;
-                  <FormLabel>Location (Optional)</FormLabel>;
-=======
-                          <Input
-                            type="date" 
-                            {...field} 
-                            value={field && field.value || ''} 
-                          />;
-                        </FormControl>;
-                        <FormMessage />;
-                      </FormItem>;
-
-                    )}
-                  />;
-                )}
-
-              </div>;
-            </div>;
 
 
-            <FormField
-              control={form && form.control}
-              name="location"
-              render={({ field }) => (;
-                <FormItem>;
-                  <FormLabel>Location (Optional)</FormLabel>;
-=======
-                  </FormItem>)}
-              />;
-            </div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-              <FormField;
-                control={form.control}
-                name="start_date";
-                render={({ field }) => (
-                  <FormItem>;
-                    <FormLabel > Start Date</FormLabel>;
-                    <FormControl>;
-                      <Input;
-                        type="date";
-                        {...field}
-                        value={field.value || ''}
-                      />;
-                    </FormControl>;
-                    <FormMessage />;
-                  </FormItem>)}
-              />;
-              <div className="space - y-4">;
-                <FormField;
-                  control={form.control}
-                  name="is_current";
-                  render={({ field }) => (
-                    <FormItem className="flex flex - row items - start space - x-3 space - y-0 py - 2">;
-                      <FormControl>;
-                        <Checkbox;
-                          checked={field.value}
-                          onCheckedChange={field.on_change}
-                        />;
-                      </FormControl>;
-                      <div className="space - y-1 leading - none">;
-                        <FormLabel > I currently work here</FormLabel>;
-                      </div>;
-                    </FormItem>)}
-                />;
-                {!form.watch ('is_current') && (
-                  <FormField;
-                    control={form.control}
-                    name="end_date";
-                    render={({ field }) => (
-                      <FormItem>;
-                        <FormLabel > End Date</FormLabel>;
-                        <FormControl>;
-                          <Input;
-                            type="date";
-                            {...field}
-                            value={field.value || ''}
-                          />;
-                        </FormControl>;
-                        <FormMessage />;
-                      </FormItem>)}
-                  />)}
-              </div>;
-            </div>;
-            <FormField;
-              control={form.control}
-              name="location";
-              render={({ field }) => (
-                <FormItem>;
-                  <FormLabel > Location (Optional)</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
                   <FormControl>;
 
                     <Input placeholder="San Francisco, CA (Remote)" {...field} />;
                   </FormControl>;
                   <FormMessage />;
-<<<<<<< HEAD
-            <FormField;
-              control={form && form.control}"
-=======
-<<<<<<< HEAD
-                </FormItem>;              )}
-            />;
-;
-            <FormField;
-              control={form.control}
-              name="description";
-=======
-
-            />;
 
 
-            <FormField
-              control={form && form.control}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-              name="description"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               render={({ field }) => (;
                 <FormItem>;"
                   <FormLabel className="flex justify-between">;
                     <span>Job Description</span>;
-<<<<<<< HEAD
-                    <AIEnhancementButton"
-                      enhancementType="work-description"'
-=======
-<<<<<<< HEAD
-                    <AIEnhancementButton;
-                      currentContent={field.value || ''}
-                      enhancementType="work-description";
-                      context={`Role:${form.getValues('role_title')} at ${form.getValues('company_name')}`}
-=======
-                    <AIEnhancementButton
 
-                      currentContent={field && field.value || ''}
 
-                      enhancementType="work-description"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-                      context={`Role: ${form && form.getValues('role_title')} at ${form && form.getValues('company_name')}`}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       onEnhanced={handleEnhanceDescription}
                     />;
                   </FormLabel>;
                   <FormControl>;
-<<<<<<< HEAD
-                    <Textarea"
-                      placeholder="Describe your responsibilities and accomplishments...""
-=======
-<<<<<<< HEAD
-                    <Textarea;
-                      placeholder="Describe your responsibilities and accomplishments...";
-                      className="min-h-[100px]";
-=======
-                    <Textarea
-                      placeholder="Describe your responsibilities and accomplishments..."
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-                      className="min-h-[100px]"
 
-                    <span > Job Description</span>;
-                    <AIEnhancementButton;'
-                      current_content={field.value || ''}"
-                      enhancement_type="work - description";'`
-                      context={`Role: ${form.get_values ('role_title')} at ${form.get_values ('company_name')}`}
-                      on_enhanced={handleEnhanceDescription}
-                    />;
-                  </FormLabel>;
-                  <FormControl>;
 
-                      className="min - h-[100px]";
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                       {...field}
                     />;
                   </FormControl>;
                   <FormMessage />;
-<<<<<<< HEAD
-              <Button"
-                type="button""
-                variant="outline"
-                    form.reset({'
-                      company_name: '''
-                      role_title: '''
-=======
-<<<<<<< HEAD
-                <FormField
-                  control={form.control}
-                  name="is_current"
-                  render={({ field }) => (
-                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
-                      <FormControl>
-                        <Checkbox
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
-                        />
-                      </FormControl>
-                      <div className="space-y-1 leading-none">
-                        <FormLabel>I currently work here</FormLabel>
-                      </div>
-                    </FormItem>
-                  )}
-                />
-                {!form.watch('is_current') && (
-                  <FormField
-                    control={form.control}
-                    name="end_date"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>End Date</FormLabel>
-                        <FormControl>
-                          <Input
-                            type="date"
-                            {...field}
-                            value={field.value |''}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                )}
-              </div>
-            </div>
-            <FormField
-              control={form.control}
-              name="location"
-              render={({ field }) => (
->>>>>>> merged-prs-20250907-203621
-                <FormItem>
-                  <FormLabel>Location (Optional)</FormLabel>
-                  <FormControl>
-                    <Input placeholder="San Francisco, CA (Remote)" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="description"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="flex justify-between">
-                    <span>Job Description</span>
-                    <AIEnhancementButton
-                      currentContent={field.value |''}
-                      enhancementType="work-description"
-                      context={`Role: ${form.getValues('role_title')} at ${form.getValues('company_name')}`}
-                      onEnhanced={handleEnhanceDescription}
-                    />
-                  </FormLabel>
-                  <FormControl>
-                    <Textarea
-                      placeholder="Describe your responsibilities and accomplishments..."
-                      className="min-h-[100px]"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-            <div className="flex justify-between pt-2">
-              <Button
-                type="button"
-                variant="outline"
-<<<<<<< HEAD
-                onClick={() => {
-                  if (editingId) {
-                    setEditingId($2);
-                    form.reset({
-=======
-=======
 
-            />;
 
-            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-
-            <div className="flex justify-between pt-2">;
-
-              <Button
-                type="button"
-                variant="outline"
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                onClick={() => {
-                  if (editingId) {
-                    setEditingId(null),
-                    form.reset({
-<<<<<<< HEAD
-                      company_name: ''
-                      role_title: ''
-                      start_date: format(new Date(), 'yyyy-MM-dd');
-                      is_current: false
-                      description: ''
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
->>>>>>> merged-prs-20250907-203621
                       company_name: '',
                       role_title: '',
                       start_date: format(new Date(), 'yyyy-MM-dd'),
                       is_current: false,
                       description: '',
-<<<<<<< HEAD
-                      location: ''})
-                  } else {
-                    onBack()
-                  }
-                }}
-=======
-<<<<<<< HEAD
-              <Button
-                type="button"
-                variant="outline"
-                onClick={() => {;
-                  if (editingId) {;
-                    setEditingId(null);
-=======
 
 
-                      location: ''})
-                  } else {
-                    onBack()
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                    form && form.reset({;
-                      company_name: '',;
-                      role_title: '',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                       start_date: format(new Date(), 'yyyy-MM-dd');
                       is_current: false'
                       description: ''
@@ -1552,24 +297,13 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       location: ''});
                   } else {;
                     onBack();
-<<<<<<< HEAD
-                onClick={() => {;
-                  if (editingId) {;
-                    setEditingId(null);
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                   }
                 }}
               >;'
                 {editingId ? 'Cancel' : 'Back'}
-<<<<<<< HEAD
 
-              </div>;
-            </div>;
-          </form>;
-        </Form>;
-=======
               </Button>;
               <div className="flex gap-2">;
                 <Button type="submit" disabled={isLoading}>;
@@ -1653,99 +387,17 @@ if ( {) {
                     Next;
                   </Button>)}
 
-<<<<<<< HEAD
-                      location: ''})
-                  } else {
-                    onBack()
-                  }
-                }}
->>>>>>> merged-prs-20250907-203621
-              >
-                {editingId ? 'Cancel' : 'Back'}
-              </Button>
-              <div className="flex gap-2">
-                <Button type="submit" disabled={isLoading}>
-                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                  {editingId ? 'Update' : 'Add'} Experience
-                </Button>
-                {!editingId && workExperiences.length > 0 && (
-                  <Button type="button" onClick={onComplete}>
-                    Next
-                  </Button>
-                )}
-              </div>
-            </div>
-          </form>
-        </Form>
-      </div>
-    </div>
-  )
-}
-<<<<<<< HEAD
-=======
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </div>;
             </div>;
           </form>;
         </Form>;
       </div>;
-<<<<<<< HEAD
-    </div>;
-  ),; type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
-<div> <h2 className="text-xl font-semibold mb-2" >Work Experience</h2> <p className="text-muted-foreground" > Add your work history to showcase your professional experience. </p> </div> {
-  workExperiences.map ( (work) => (<Card key= {
-  work.id 
-}className="bg-muted/40" > <CardContent className="pt-6" > <div className="flex justify-between" > <div> ? work.start date : format (work.start date, 'MMM yyyy') 
-}- {
-  work.is current ? 'Present' : (work.end date ? (typeof work.end date === 'string' ? work.end date : format (work.end date, 'MMM yyyy') ) : '') 
-}</p>) 
-}</div> <div className="flex gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> <Button > <Trash2 className="h-4 w-4" /> </Button> </div> </div>) 
-}</CardContent> </Card>) ) 
-}</div>) 
-}</FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Start Date</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
-}/> <div className="space-y-4" > <FormField <FormControl> <Checkbox checked= {
-  field.value 
-}onCheckedChange= {
-  field.onChange 
-}/> </FormControl> <div className="space-y-1 leading-none" > <FormLabel>I currently work here</FormLabel> </div> </FormItem>) 
-}/> {
-  !form.watch ('is current') && (<FormField control= {
-  form.control 
-}<FormItem> <FormLabel>End Date</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
-}/>) 
-}</div> </div> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel className="flex justify-between" > <span>Job Description</span> <AIEnhancementButton /> </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
-}/> <div className="flex justify-between pt-2" > <Button if (editingId) {
-  setEditingId (null);
-form.reset ({
-  
-}
-;
 
-}> {
-  editingId ? 'Cancel': 'Back' 
-}</Button> Next </Button>) 
-}</div> </div> </form> </Form> </div> </div>) 
-}
-    </div>;
-  );
-}
-;
-=======
 
     </div>);
 }
 
-=======
-;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+

@@ -1,405 +1,50 @@
-<<<<<<< HEAD
-=======
+
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {ChatBotPanel} from "./ChatBotPanel";
 import {MessageSquare, Info, X} from "lucide-react";
 import {cn} from "@/lib/utils";
-<<<<<<< HEAD
-=======
-import {useTheme} from "@/hooks/useTheme";
-export function SupportWidget() {;
-  const [isOpen, setIsOpen] = useState(false);
-  const { theme } = useTheme();
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
-import {useTheme} from "@/hooks/useTheme";
-export function SupportWidget() { return null; }
-  const { theme } = useTheme();
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>;
 
       {/* Fixed button in the bottom right */}
       {!isOpen && (;
-<<<<<<< HEAD
-=======
+
         <Button
 
-<<<<<<< HEAD
 
 
-      {/* Fixed button in the bottom right */}
-      {!isOpen && (
-        <Button
-  
-  return (
-    <>
->>>>>>> merged-prs-20250907-203621
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { ChatBotPanel } from "./ChatBotPanel",
-import { MessageSquare, Info, X } from "lucide-react",
-import { cn } from "@/lib/utils";
-import { useTheme } from "@/hooks/useTheme";
-<<<<<<< HEAD
-export function SupportWidget() {
-  const [isOpen, setIsOpen] = useState($2);
-  const { theme } = useTheme($2);
-  return (
-=======
-export function SupportWidget() {
-  const [isOpen, setIsOpen] = useState(false);
-  const { theme } = useTheme();
-  return (
-    <>
-      {/* Fixed button in the bottom right */}
-      {!isOpen && (
-        <Button
-
-import { cn } from "@/lib/utils",
-import { useTheme } from "@/hooks/useTheme",
-export function SupportWidget() {
-  const [isOpen, setIsOpen] = useState(false),
-  const { theme } = useTheme(),
-  
-  return (
-    <>
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { ChatBotPanel } from "./ChatBotPanel",;
-import { MessageSquare, Info, X } from "lucide-react",;
-import { cn } from "@/lib/utils",;
-import { useTheme } from "@/hooks/useTheme",;
-      ;
-      {/* Support panel */}
-      {isOpen && (;
-            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col"
-            theme === "dark" 
-              ? "bg-zion-blue-dark border border-zion-blue-light" 
-
-            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",
-            theme === "dark" 
-              ? "bg-zion-blue-dark border border-zion-blue-light" 
-
-              : "bg-white border border-gray-200"
-          )}
-          style={{ height: "600px", maxHeight: "80vh" }}>;
-          <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">;
-            <div className="flex items-center">;
-              <MessageSquare className="h-5 w-5 text-zion-cyan mr-2" />;
-              <h3 className={cn("font-semibold", theme === "dark" ? "text-white" : "text-gray-800")}>;
-        <div ;
-          className={cn(;
-            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",;
-            theme === "dark" ;
-              ? "bg-zion-blue-dark border border-zion-blue-light" ;
-              :"bg-white border border-gray-200";
-          )}
-          style={{ height:"600px", maxHeight:"80vh" }}
-        >;
-          <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">;
-            <div className="flex items-center">;
-              <MessageSquare className="h-5 w-5 text-zion-cyan mr-2" />;
-              <h3 className={cn("font-semibold", theme === "dark" ? "text-white" :"text-gray-800")}>;
-                Zion Support;
-              </h3>;
-            </div>;
-            <div className="flex items-center gap-2">;
-export function SupportWidget() {;
-  const [isOpen, setIsOpen] = useState(false),;
-  const { theme } = useTheme();
-  return (;
-    <>;
-      {/* Fixed button in the bottom right */}
-      {!isOpen && (
-        <Button
-          onClick={() => setIsOpen(true)}
-          size="icon"
-          className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50"
-          aria-label="Open support"
-        >
-          <MessageSquare className="h-6 w-6" />
-        </Button>
-      )}
-      {/* Support panel */}
-      {isOpen && (
-        <div
-          className={cn(
-            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col";
-            theme === "dark"
-              ? "bg-zion-blue-dark border border-zion-blue-light"
-=======
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
-      {/* Fixed button in the bottom right */}
-      {!isOpen && (
-        <Button
-
-          onClick={() => setIsOpen(true)}
-          size="icon";
-          className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50";
-          aria-label="Open support";
-        >;
-          <MessageSquare className="h-6 w-6" />;
-        </Button>;
-      )}
-
-      {/* Support panel */}
-      {isOpen && (;
-        <div
-          className={cn(
-
-            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col"
-            theme === "dark" 
-              ? "bg-zion-blue-dark border border-zion-blue-light" 
-
-import React, { useState } from "react",
-
-import { Button } from "@/components/ui/button",
-import { ChatBotPanel } from "./ChatBotPanel",
-import { MessageSquare, Info, X } from "lucide-react",
-
-import { cn } from "@/lib/utils";
-
-import { useTheme } from "@/hooks/useTheme";
-export function SupportWidget() {};
-  const [isOpen, setIsOpen] = useState(false);
-  const { theme } = useTheme();
-<<<<<<< HEAD
-return (;
-import React, { useState } from "react","
-import { Button } from "@/components/ui/button","
-import { ChatBotPanel } from "./ChatBotPanel","
-import { MessageSquare, Info, X } from "lucide-react","
-import { cn } from "@/lib/utils";"
-import { useTheme } from "@/hooks/useTheme";"
-export function SupportWidget() {
-  }
-return (;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-<<<<<<< HEAD
-  return (
->>>>>>> origin/chore/fix-lint-and-merge
-    <>  return (
-    <>;
-      {/* Fixed button in the bottom right */}
-      {!isOpen && (;
-        <Button;
-      {/* Fixed button in the bottom right */}
-      {!isOpen && (
-=======
-            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",
-            theme === "dark" 
-              ? "bg-zion-blue-dark border border-zion-blue-light" 
-<<<<<<< HEAD
-              : "bg-white border border-gray-200"
-          )}
-          style={{ height: "600px", maxHeight: "80vh" }}
-        >
-          <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">
-            <div className="flex items-center">
-              <MessageSquare className="h-5 w-5 text-zion-cyan mr-2" />
-              <h3 className={cn("font-semibold", theme === "dark" ? "text-white" : "text-gray-800")}>
-                Zion Support
-              </h3>
-            </div>
-            <div className="flex items-center gap-2">
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
-<<<<<<< HEAD
-      {/* Fixed button in the bottom right */}
-      {!isOpen && (
-        <Button
-}
-onClick={() => setIsOpen(true)}
-          size="icon";"
-          className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple "hover":bg-zion-purple-light text-white z-50";"
-          aria-label="Open support";"
-        >;
-          <MessageSquare className="h-6 w-6" />;"
-        </Button>;
-      )}
-export function SupportWidget() {
-  }
-return (;
->>>>>>> merged-prs-20250907-203621
-    <>
-      {/* Fixed button in the bottom right */}
-      {!isOpen && (
-        <Button
-<<<<<<< HEAD
-          onClick = $2;
-            theme === "dark" 
-              ? "bg-zion-blue-dark border border-zion-blue-light" 
-              : "bg-white border border-gray-200"
-          )}
-=======
-}
-import { cn } from "@/lib/utils","
-import { useTheme } from "@/hooks/useTheme","
-export function SupportWidget() {
-}
-const [isOpen, setIsOpen] = useState(false),;
-const { theme } = useTheme(),;
-return (;
-    <>
-import { Button } from "@/components/ui/button";"
-import { ChatBotPanel } from "./ChatBotPanel",;"
-import { MessageSquare, Info, X } from "lucide-react",;"
-import { cn } from "@/lib/utils",;"
-import { useTheme } from "@/hooks/useTheme",;"
-      ;
-      {/* Support panel */}
-      {isOpen && (;
-            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col""
-            }
-            theme === "dark" "
-              ? "bg-zion-blue-dark border border-zion-blue-light" "
-            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col","
-            theme === "dark" "
-              ? "bg-zion-blue-dark border border-zion-blue-light" "
-              : "bg-white border border-gray-200""
-          )}
-          style={{ "height": "600px", "maxHeight": "80vh" }}>;"
-=======
-              : "bg-white border border-gray-200"
-          )}"
-          style={{ height: "600px", maxHeight: "80vh" }}>;"
->>>>>>> origin/chore/fix-lint-and-merge
-          <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">;"
-            <div className="flex items-center">;"
-              <MessageSquare className="h-5 w-5 text-zion-cyan mr-2" />;"
-              <h3 className={cn("font-semibold", theme === "dark" ? "text-white" : "text-gray-800")}>;
-
-                Zion Support;
-              </h3>;
-            </div>;"
-            <div className="flex items-center gap-2">;
-<<<<<<< HEAD
-
-export function SupportWidget() {;
-  const [isOpen, setIsOpen] = useState(false),;
-  const { theme } = useTheme();
-  return (;
-    <>;
-      {/* Fixed button in the bottom right */}
-      {!isOpen && (
-        <Button
-          onClick={() => setIsOpen(true)}
-          size="icon"
-          className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50"
-          aria-label="Open support"
-        >
-          <MessageSquare className="h-6 w-6" />
-        </Button>
-      )}
-      {/* Support panel */}
-      {isOpen && (
-        <div
-          className={cn(
-            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col";
-            theme === "dark"
-              ? "bg-zion-blue-dark border border-zion-blue-light"
-
-              : "bg-white border border-gray-200"
-          )}
->>>>>>> merged-prs-20250907-203621
-          style={{ height: "600px", maxHeight: "80vh" }}
-        >
-          <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">
-            <div className="flex items-center">
-              <MessageSquare className="h-5 w-5 text-zion-cyan mr-2" />
-              <h3 className={cn("font-semibold", theme === "dark" ? "text-white" : "text-gray-800")}>
-                Zion Support
-              </h3>
-            </div>
-            <div className="flex items-center gap-2">
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
               <Button
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 rounded-full"
-<<<<<<< HEAD
-                onClick={() => window.location.href = "/help"}
-=======
-<<<<<<< HEAD
-              <Button;
-                variant="ghost";
-                size="icon";
-                className="h-8 w-8 rounded-full";
-                onClick={() => window.location.href = "/help"}
-=======
-                onClick={() => window && window.location.href = "/help"}
-<<<<<<< HEAD
-<Button;
-                variant="ghost";
-                size="icon";
-                className="h-8 w-8 rounded-full";
-                onClick={() => window.location.href = "/help"}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
                 aria-label="Help center";
               >;
                 <Info className="h-5 w-5" />;
               </Button>;
-<<<<<<< HEAD
-onClick={() => window.location.href = "/help"}
-=======
-<<<<<<< HEAD
-                onClick={() => window.location.href = "/help"}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+
                 aria-label="Help center"
               >
                 <Info className="h-5 w-5" />
               </Button>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+
+
               <Button
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 rounded-full"
-<<<<<<< HEAD
-=======
-              <Button;
-                variant="ghost";
-                size="icon";
-                className="h-8 w-8 rounded-full";
-                onClick={() => setIsOpen(false)}
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
               <Button;
                 variant="ghost";
                 size="icon";
                 className="h-8 w-8 rounded-full";
                 onClick={() => setIsOpen(false)}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                 aria-label="Close support";
               <Button
                 variant="ghost"
@@ -456,9 +101,7 @@ onClick={() => window.location.href = "/help"}
         </div>;
       )}
     </>;
-<<<<<<< HEAD
 
-=======
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { ChatBotPanel } from './ChatBotPanel';
@@ -469,7 +112,7 @@ export /**
  * SupportWidget - Function description
  */
 function SupportWidget() {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   const [is_open, setIsOpen] = useState (false);
   const { theme } = use_theme ();
       {!is_open && (
@@ -495,47 +138,8 @@ function SupportWidget() {
 
         </div>)}
     </>);
-<<<<<<< HEAD
+
 }
-=======
-}
-<<<<<<< HEAD
-  ),;}
- export function SupportWidget () {
-  const [isOpen, setIsOpen] = useState (false);
-const {
-  theme 
-}= useTheme ();
-/* Fixed button in the bottom right */ 
-}{
-  !isOpen && (<Button onClick= {
-  () => setIsOpen (true) 
-}size="icon" className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50" aria-label="Open support" > <MessageSquare className="h-6 w-6" /> </Button>) 
-}{
-  /* Support panel */ 
-}{
-  isOpen && (<div className= {
-  cn (Zion Support </h3> </div> <div className="flex items-center gap-2" > <Button > <Info className="h-5 w-5" /> </Button> <Button > <X className="h-5 w-5" /> </Button> </div> </div> <ChatBotPanel /> </div>) 
-}</>) 
-}
->>>>>>> merged-prs-20250907-203621
-                onClick={() => setIsOpen(false)}
-                aria-label="Close support"
-              >
-                <X className="h-5 w-5" />
-              </Button>
-            </div>
-          </div>
-          <ChatBotPanel />
-        </div>
-      )}
-    </>
-  )
-}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+
+

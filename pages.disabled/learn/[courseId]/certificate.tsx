@@ -1,44 +1,13 @@
 
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:pages.disabled/learn/[courseId]/certificate.tsx
-export default function CertificatePage() {
-  const router = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import { useRouter } from 'next/router';
-import CertificatePreview from '../../../components/learn/CertificatePreview';
-export default function CertificatePage() {
-  const router = useRouter()
-  const { courseId } = router.query as { courseId: string }
-  if (!courseId) return null
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/learn/[courseId]/certificate.tsx
+
   return (
     <div className="space-y-4">
       <h1 className="text-2xl font-semibold">Certificate</h1>
       <CertificatePreview courseId={courseId} />
     </div>
-<<<<<<< HEAD
-}
 
-  );
-};
-  )
-
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-}
-=======
 
 )
   )
@@ -84,10 +53,5 @@ if (return null, ) {
 }
 }
 
-<<<<<<< HEAD:pages.disabled/learn/[courseId]/certificate.tsx
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/learn/[courseId]/certificate.tsx
+
+

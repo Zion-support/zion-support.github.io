@@ -1,120 +1,5 @@
-<<<<<<< HEAD
-<Head> <title>Guide — Implementation</title> <meta name="description" content="Step-by-step guidance derived from live research signals." /> <meta property="og:title" content="Guide — Implementation" /> <meta property="og:description" content="Step-by-step guidance derived from live research signals." /> <meta name="twitter:card" content="summary large image" /> </Head> 
-}
-=======
-<<<<<<< HEAD
-<Head> <title>Guide — Implementation</title> <meta name="description" content="Step-by-step guidance derived from live research signals." /> <meta property="og:title" content="Guide — Implementation" /> <meta property="og:description" content="Step-by-step guidance derived from live research signals." /> <meta name="twitter:card" content="summary large image" /> </Head> 
-}
-import Head from 'next/head';
-export default function Page() {
-<<<<<<< HEAD
-  );export default function Page() {
-  return (
-    <div className="min-h-screen bg-slate-950 text-white>
-      <Head>
-        <title>Guide —  Implementation</title>
-        <meta name=description" content="Step-by-step guidance derived from live research signals. />
-        <meta property=og:title" content="Guide —  Implementation />
-        <meta property=og:description" content="Step-by-step guidance derived from live research signals. />
-        <meta name=twitter:card" content="summary_large_image />
-      </Head>
-      <main className="container mx-auto px-6 py-12 prose prose-invert">
-        <h1 className="text-3xl font-extrabold">Guide —  Implementation</h1>
-        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/explore\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/explore</a></p><h2>Overview</h2><p>Focus: autonomous content systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com</a></p>" }} />
-=======
-export default function Page() {};
-export default function Page() { return null; }
-          dangerouslySetInnerHTML={{}
-=======
 
-export default function Page() {;
-  return (
-    <div className='min-h-screen bg-slate-950 text-white'>;
-      <Head>;
-        <title>Guide — Implementation</title>;
-import Head from 'next/head';
 
-export default function Page() {
-  return (
-    <div className='min-h-screen bg-slate-950 text-white'>
-      <Head>
-        <title>Guide — Implementation</title>
-        <meta
-          name='description'
-          content='Step-by-step guidance derived from live research signals.'
-        />;
-        <meta property='og:title' content='Guide —  Implementation' />;
-        <meta
-          property='og:description'
-          content='Step-by-step guidance derived from live research signals.'
-        />;
-        <meta name='twitter:card' content='summary_large_image' />;
-      </Head>;
-      <main className='container mx-auto px-6 py-12 prose prose-invert'>;
-        <h1 className='text-3xl font-extrabold'>Guide — Implementation</h1>;
-        <div
-          className='mt-4'
-          dangerouslySetInnerHTML={{
-<<<<<<< HEAD
-              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/explore</a></p><h2>Overview</h2><p>Focus: autonomous content systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p>',;
-
-            __html:
-              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup.com/explore</a></p><h2>Overview</h2><p>Focus: autonomous content systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>'
-            __html:;
-              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup.com/explore</a></p><h2>Overview</h2><p>Focus: autonomous content systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>',
-=======
-
-              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/explore</a></p><h2>Overview</h2><p>Focus: autonomous content systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p>',;
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-          }}
-        />;'
-        <p className='mt-6 text-white/60 text-sm'>;
-          Auto-generated by Cloud Deep Research Factory.;
-        </p>;
-      </main>;
-    </div>;
-<<<<<<< HEAD
-  );export default function Page() { return null; }
-        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/explore\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup && ziontechgroup.com/explore</a></p><h2>Overview</h2><p>Focus: autonomous content systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup && ziontechgroup.com</a></p>" }} />;"
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>;
-      </main>;
-    </div>;
-  );'
-=======
-  );export default function Page() {;
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-export default function Page() {
-
-  return (
-<<<<<<< HEAD
-export default function Page() {
-  return (
-}
-=======
-    <div className="min-h-screen bg-slate-950 text-white">;
-      <Head>;
-        <title>Guide —  Implementation</title>;
-        <meta name="description" content="Step-by-step guidance derived from live research signals." />;
-        <meta property="og:title" content="Guide —  Implementation" />;
-        <meta property="og:description" content="Step-by-step guidance derived from live research signals." />;
-        <meta name="twitter:card" content="summary_large_image" />;
-      </Head>;
-      <main className="container mx-auto px-6 py-12 prose prose-invert">;
-        <h1 className="text-3xl font-extrabold">Guide —  Implementation</h1>;
-        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/explore\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup && ziontechgroup.com/explore</a></p><h2>Overview</h2><p>Focus: autonomous content systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup && ziontechgroup.com</a></p>" }} />;
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>;
-      </main>;
-    </div>;
-  );
-
-}
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import Head from 'next / head';
 export default /**;
  * Page - Function description;
@@ -168,14 +53,9 @@ function Page() {}
       </main>;
     </div>);
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
+
 
             __html:;'"
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup.com/explore</a></p><h2>Overview</h2><p>Focus: autonomous content systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>',
@@ -198,15 +78,9 @@ function Page() {}
       <main className="container mx-auto px-6 py-12 prose prose-invert">"
         <h1 className="text-3xl font-extrabold">Guide —  Implementation</h1>"
         <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/explore\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/explore</a></p><h2>Overview</h2><p>Focus: autonomous content systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com</a></p>" }} />"
->>>>>>> origin/chore/fix-lint-and-merge
+
         <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
-<<<<<<< HEAD
-      </main>;
-    </div>;
-  );
-}
-<<<<<<< HEAD
-=======
+
 
   )'
 import Head from 'next/head';
@@ -234,61 +108,7 @@ export default function Page(req, res) {}
   }
 }
 ;
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-      </main>
-    <div className="min-h-screen bg-slate-950 text-white">
-      <Head>
-        <title>Guide —  Implementation</title>
-        <meta name=&quot;description&quot; content=&quot;Step-by-step guidance derived from live research signals.&quot; />
-        <meta property=&quot;og:title&quot; content=&quot;Guide —  Implementation&quot; />
-        <meta property=&quot;og:description&quot; content=&quot;Step-by-step guidance derived from live research signals.&quot; />
-        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
-      </Head>
-      <main className="container mx-auto px-6 py-12 prose prose-invert">
-        <h1 className="text-3xl font-extrabold">Guide —  Implementation</h1>
-        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/explore\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/explore</a></p><h2>Overview</h2><p>Focus: autonomous content systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com</a></p>" }} />
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
-      </main>
-    </div>
-  );
-}
-    </div>;
-  );
-}
 
-}
-    </div>
-  )
-import Head from 'next/head';
-export default function Page(req, res) {
-  try {
-  return (;
-    <div className="min-h-screen bg-slate-950 text-white">;
-      <Head>;
-        <title>Guide —  Implementation</title>;
-        <meta name="description" content="Step-by-step guidance derived from live research signals." />;
-        <meta property="og:title" content="Guide —  Implementation" />;
-        <meta property="og:description" content="Step-by-step guidance derived from live research signals." />;
-        <meta name="twitter:card" content="summary_large_image" />;
-      </Head>;
-      <main className="container mx-auto px-6 py-12 prose prose-invert">;
-        <h1 className="text-3xl font-extrabold">Guide —  Implementation</h1>;
-        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/explore\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/explore</a></p><h2>Overview</h2><p>Focus: autonomous content systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com</a></p>" }} />;
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>;
-      </main>;
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+

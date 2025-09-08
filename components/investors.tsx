@@ -1,60 +1,7 @@
 description"content=" Investor relations and key metrics overview."/> <link rel=" canonical"href=" https://ziontechgroup.com/investors"/> </Head> <div className=" max-w-5xl mx-auto space-y-6"> <h1 className=" text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Investors</h1> <p className=" text-slate-300">We pursue durable growth via product‑led innovation and customer outcomes.</p> <div className=" grid sm:grid-cols-3 gap-4"> <div className=" p-4 rounded-xl bg-black/40 border border-cyan-500/20"><div className=" text-2xl font-bold text-white">500+</div><div className=" text-slate-400 text-sm">Services shipped</div></div> <div className=" p-4 rounded-xl bg-black/40 border border-cyan-500/20"><div className=" text-2xl font-bold text-white">200+</div><div className=" text-slate-400 text-sm">Happy clients</div></div> <div className=" p-4 rounded-xl bg-black/40 border border-cyan-500/20"><div className=" text-2xl font-bold text-white">15+</div><div className=" text-slate-400 text-sm">Years experience</div></div> </div> <div className=" pt-4 text-slate-300">Contact IR: <a className=" text-cyan-400"href=" mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</a></div> </div> </div>
-<<<<<<< HEAD
-=======
-=======
 
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
-}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
-  render() {if (this.state.hasError) ;}
-  return <div    />Something went wrong.</div>;}
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-<<<<<<< HEAD
-export default function InvestorsPage() {;
-import React from 'react';
-import Head from 'next/head';
 
-export default function InvestorsPage() {
-=======
 
-<<<<<<< HEAD
-export default function InvestorsPage() {export default function InvestorsPage() {return (<div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'    />;
-      <Head    />;
-        <title    />Investors | Zion Tech Group</title>;
-=======
-
-export default function InvestorsPage() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default function InvestorsPage() {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -96,15 +43,12 @@ export default function InvestorsPage() {
       </div>
     </div>;
   );	return (
-<<<<<<< HEAD
-export default function InvestorsPage() {
-	return (
-=======
+
 
 export default function InvestorsPage() {
 	return (
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">
 			<Head>
 				<title>Investors | Zion Tech Group</title>
@@ -138,8 +82,7 @@ export default function InvestorsPage() {
 
 			</div>
 		</div>
-<<<<<<< HEAD
-=======
+
 
 		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">;
 			<Head>;
@@ -161,10 +104,7 @@ export default function InvestorsPage() {
 	),;
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 import Head from 'next / head';
 export default /**
  * InvestorsPage - Function description
@@ -174,7 +114,7 @@ function InvestorsPage() {
     <div className='min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8'>;
       <Head>;
         <title > Investors | Zion Tech Group</title>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
         <meta;
           name='description';
           content='Investor relations and key metrics overview.';
@@ -210,15 +150,7 @@ function InvestorsPage() {
 
           <a className='text-cyan-400' href='mailto:kleber@ziontechgroup.com'    />
             kleber@ziontechgroup.com;
-<<<<<<< HEAD
-          </a>
-        </div>
-      </div>
-    </div>
-  );
 
->>>>>>> origin/chore/fix-lint-and-merge
-=======
           </a>;
         </div>;
       </div>;
@@ -241,25 +173,13 @@ function InvestorsPage() {
   </div>;
   </div>),
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 
 	),
 }
 
-<<<<<<< HEAD
 
-	),
-}
-	)
-}
-	),
-}
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+
+
+

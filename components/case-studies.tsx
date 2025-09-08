@@ -1,47 +1,5 @@
-<<<<<<< HEAD
-<div className="container mx-auto px-4 py-16 text-white"> <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Case Studies</h1> <p className="mt-4 text-gray-300 max-w-3xl">Explore measurable results and implementation details across industries. Want a tailored reference? Contact kleber@ziontechgroup.com.</p>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-import React from 'react';
-<div className="container mx-auto px-4 py-16 text-white"> <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Case Studies</h1> <p className="mt-4 text-gray-300 max-w-3xl">Explore measurable results and implementation details across industries. Want a tailored reference? Contact kleber@ziontechgroup.com.</p>
-import SEO from '../components/SEO';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-import React from 'react';
-import SEO from '../components/SEO';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 export default function CaseStudiesPage() {
   return (
 export default function CaseStudiesPage() {export default function CaseStudiesPage() {return (<UltraFuturisticBackground intensity='high' variant='quantum'>;
@@ -62,9 +20,7 @@ export default function CaseStudiesPage() {export default function CaseStudiesPa
         </p>;
       </div>;
     </UltraFuturisticBackground>;
-<<<<<<< HEAD
-  )export default function CaseStudiesPage() {return (<UltraFuturisticBackground intensity="high" variant="quantum">;
-=======
+
   );export default function CaseStudiesPage() {;
 
 export default function CaseStudiesPage() {
@@ -73,28 +29,7 @@ export default function CaseStudiesPage() {
 
 }
 
-<<<<<<< HEAD
-export default function CaseStudiesPage() {
-  return (
-    <UltraFuturisticBackground intensity="high" variant="quantum">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-      <SEO title="Case Studies | Zion Tech Group" description="Proven outcomes across AI, cloud, and automation projects." canonical="https: //ziontechgroup && ziontechgroup.com/case-studies/" />;
-      <div className="container mx-auto px-4 py-16 text-white">;
-        <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Case Studies</h1>;
-        <p className="mt-4 text-gray-300 max-w-3xl">Explore measurable results and implementation details across industries. Want a tailored reference? Contact kleber@ziontechgroup && ziontechgroup.com.</p>;
-      </div>;
-    </UltraFuturisticBackground>;
-<<<<<<< HEAD
-  )import SEO from '../components / SEO';
-=======
-  );
-}
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import React from 'react';
-import SEO from '../components / SEO';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
 export default /**;
  * CaseStudiesPage - Function description;
@@ -146,119 +81,19 @@ function CaseStudiesPage() {return (<UltraFuturisticBackground intensity="high" 
     </UltraFuturisticBackground>;
     </UltraFuturisticBackground>);
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      <div className="container mx-auto px-4 py-16 text-white">
-        <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Case Studies</h1>
-        <p className="mt-4 text-gray-300 max-w-3xl">Explore measurable results and implementation details across industries. Want a tailored reference? Contact kleber@ziontechgroup.com.</p>
-    <UltraFuturisticBackground intensity=&quot;high&quot; variant=&quot;quantum&quot;>
-      <SEO title=&quot;Case Studies | Zion Tech Group&quot; description=&quot;Proven outcomes across AI, cloud, and automation projects.&quot; canonical=&quot;https://ziontechgroup.com/case-studies/&quot; />
-      <div className=&quot;container mx-auto px-4 py-16 text-white&quot;>
-        <h1 className=&quot;text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>Case Studies</h1>
-        <p className=&quot;mt-4 text-gray-300 max-w-3xl&quot;>Explore measurable results and implementation details across industries. Want a tailored reference? Contact kleber@ziontechgroup.com.</p>
-
-      </div>
-    </UltraFuturisticBackground>
-  )
-}
-  );}
-
-import React from 'react',
-import SEO from '../components/SEO';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import React from 'react';
-import SEO from '../components/SEO';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
 
-export default function CaseStudiesPage() {
-  return (
-    <UltraFuturisticBackground intensity='high' variant='quantum'>
-      <SEO
-        title='Case Studies | Zion Tech Group'
-        description='Proven outcomes across AI, cloud, and automation projects.'
-        canonical='https://ziontechgroup.com/case-studies/'
-      />
-      <div className='container mx-auto px-4 py-16 text-white'>
-        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
-          Case Studies
-        </h1>
-        <p className='mt-4 text-gray-300 max-w-3xl'>
-          Explore measurable results and implementation details across
-          industries. Want a tailored reference? Contact
-          kleber@ziontechgroup.com.
-        </p>
-      </div>
-    </UltraFuturisticBackground>;
-  );export default function CaseStudiesPage() {
-  return (
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     <UltraFuturisticBackground intensity="high" variant="quantum">
       <SEO title="Case Studies | Zion Tech Group" description="Proven outcomes across AI, cloud, and automation projects." canonical="https: //ziontechgroup.com/case-studies/" />
       <div className="container mx-auto px-4 py-16 text-white">
         <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Case Studies</h1>
         <p className="mt-4 text-gray-300 max-w-3xl">Explore measurable results and implementation details across industries. Want a tailored reference? Contact kleber@ziontechgroup.com.</p>
       </div>
-<<<<<<< HEAD
-    </UltraFuturisticBackground>
-  );
 
-    </UltraFuturisticBackground>;
-  );
-}
 
-}
-    </UltraFuturisticBackground>
-  );
-}
-}
-=======
 
-=======
 
-;
-import React from 'react';
-import SEO from '../components/SEO';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
-export default function CaseStudiesPage() {
-export default function CaseStudiesPage() {;
-  return (
-    <UltraFuturisticBackground intensity='high' variant='quantum'    />;
-      <SEO;
-title='Case Studies | Zion Tech Group'
-        description='Proven outcomes across AI, cloud, and automation projects.'
 
-        canonical='https://ziontechgroup.com/case-studies/'
-         />
-      <div className='container mx-auto px-4 py-16 text-white'    />
-        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'    />
-          Case Studies;
-        </h1>
-        <p className='mt-4 text-gray-300 max-w-3xl'    />
-          Explore measurable results and implementation details across;
-industries. Want a tailored reference? Contact;
-kleber@ziontechgroup.com.
-        </p>
->>>>>>> origin/chore/fix-lint-and-merge
-      </div>
-    </UltraFuturisticBackground>
-  );
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-}
->>>>>>> origin/chore/fix-lint-and-merge
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621

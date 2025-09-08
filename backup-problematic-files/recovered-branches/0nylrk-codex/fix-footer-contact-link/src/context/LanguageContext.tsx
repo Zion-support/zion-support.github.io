@@ -73,17 +73,12 @@ export const LanguageProvider:React.FC<LanguageProviderProps> = ({ ;
       ;
       // If user is authenticated, update their profile;
       if (isAuthenticated && user?.id) {;
-<<<<<<< HEAD
-        }
-          .from('profiles');'
-          .update({ "preferred_language":lang });
-          .eq('id', user.id),;'
-=======
+
         const { error } = await supabase;
           .from('profiles');
           .update({ preferred_language: lang ;});
           .eq('id', user.id),;
->>>>>>> origin/chore/fix-lint-and-merge
+
           ;
         if (error) {;
           console.error('Error updating language preference: ';, error),;
@@ -111,39 +106,12 @@ pr-12325
  const defaultLanguageContext: LanguageContextType = {;,
   currentLanguage: 'en';, changeLanguage: async () => {;
 };
-<<<<<<< HEAD
-"isRTL": false;
-supportedLanguages 
-};
-const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage> ( (i18n.language?.substring (0, 2) as SupportedLanguage) || 'en');'
-const [isRTL, setIsRTL] = useState (i18n.dir () === 'rtl');'
-// Sync language preference with user profile when authenticated useEffect ( () => {
-  }
-  const syncLanguageWithProfile = async () => {
-  }
-  if (isAuthenticated && user?.id) {
-  }
-  try {
-  }
-  const {
-  }
-  error 
-}= await supabase .from ('profiles') '
-}
-};
-syncLanguageWithProfile () 
-}, [currentLanguage, isAuthenticated, user]);
-// If user is authenticated, update their profile if (isAuthenticated && user?.id) {
-  }
-  }
-  error 
-}= await supabase .from ('profiles') return (<LanguageContext.Provider value= {'
-=======
+
 isRTL: false;
 const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage> ( (i18n.language?.substring (0, 2) as SupportedLanguage) || 'en');
 
 }= await supabase .from ('profiles') return (<LanguageContext.Provider value= {
->>>>>>> origin/chore/fix-lint-and-merge
+
   {
   currentLanguage, changeLanguage, isRTL, supportedLanguages;
 }

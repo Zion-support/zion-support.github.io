@@ -5,84 +5,9 @@ import Layout from '../../components/Layout';';
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
 const features = [;
   {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "icon": Cloud,"title": 'Cloud Migration,',,"description": 'Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with zero downtime.',import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight  } from 'lucide-react';'
-import Head from 'next/head';'
-import Link from 'next/link';'
-import { motion  } from 'framer-motion';'
-  {"icon": Cloud,"title": 'Cloud Migration',"description": 'Seamless migration to cloud platforms with zero downtime';'
-  },import { motion } from 'framer-motion';'
-import { Cloud,, Server,, Database,, Shield,, Zap,, ArrowRight,, CheckCircle } from 'lucide-react';'
-  {"icon": Cloud,"title": 'Cloud Migration',,"description": 'Seamless migration to cloud platforms with zero downtime';'
-  },{}
-    "icon": Server,"title": 'Infrastructure as Code,',,"description": 'Automate infrastructure provisioning and management using Terraform, Ansible, and CloudFormation.'},{}'
-    "icon": Database,"title": 'Database Management,',,"description": 'Optimize database performance, implement backup strategies, and ensure data integrity.'},{}'
-    "icon": Shield,"title": 'Security & Compliance,',,"description": 'Implement robust security measures and maintain compliance with industry standards.''},{}'
-    "icon": Zap,"title": 'CI/CD Pipelines,',,"description": 'Build automated deployment pipelines for faster, more reliable software delivery.'}];'
-=======
 
-=======
-    icon: Cloud,;
-    title: 'Cloud Migration,',;
-    description: 'Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with zero downtime.',;
-import Layout from '../../components/Layout';
-import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-import React from 'react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
 
-const features = [
-  {
-    icon: Cloud,
-    title: 'Cloud Migration',
 
-    description: 'Seamless migration to cloud platforms with zero downtime'
-  },
-<<<<<<< HEAD
-
-=======
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import {motion} from 'framer-motion';
-import {Cloud,, Server,, Database,, Shield,, Zap,, ArrowRight,, CheckCircle} from 'lucide-react';
-const features = [;
-  {;
-    icon: Cloud,;
-    title: 'Cloud Migration',;
-    description: 'Seamless migration to cloud platforms with zero downtime';
-  },;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-  {}
-    icon: Server,;
-    title: 'Infrastructure as Code,',;
-    description: 'Automate infrastructure provisioning and management using Terraform, Ansible, and CloudFormation.',;
-  },;
-  {}
-    icon: Database,;
-    title: 'Database Management,',;
-    description: 'Optimize database performance, implement backup strategies, and ensure data integrity.',;
-  },;
-  {}
-    icon: Shield,;
-    title: 'Security & Compliance,',;
-    description: 'Implement robust security measures and maintain compliance with industry standards.'',;
-  },;
-  {}
-<<<<<<< HEAD
-
-=======
-    icon: Zap,;
-    title: 'CI/CD Pipelines,',;
-    description: 'Build automated deployment pipelines for faster, more reliable software delivery.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-  }
-;];
->>>>>>> origin/chore/fix-lint-and-merge
 const services = [;
   'Cloud Architecture Design',',;
   'Container Orchestration (Kubernetes)',',;
@@ -278,15 +203,7 @@ export default function CloudDevOpsPage() {
                 </motion.div>
 
   return (
-<<<<<<< HEAD
-    <>
-      <Head>
-        <title>Cloud & DevOps Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive cloud and DevOps services including migration, infrastructure as code, CI/CD pipelines, and monitoring solutions." />
-      </Head>
 
-      <div className="min-h-screen bg-gray-50">
-=======
     <Layout
       title="Cloud & DevOps Services - Zion Tech Group"
       description="Comprehensive cloud migration and DevOps services. Transform your infrastructure with modern cloud technologies and automated processes."
@@ -295,7 +212,7 @@ export default function CloudDevOpsPage() {
       <div className="min-h-screen bg-white">
       keywords="cloud services, DevOps, cloud migration, infrastructure as code, CI/CD, cloud optimization">;
       <div className="min-h-screen bg-white">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
@@ -348,9 +265,7 @@ export default function CloudDevOpsPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
-=======
         {/* Benefits Section */}
         <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -369,7 +284,7 @@ export default function CloudDevOpsPage() {
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />;
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                   ))}
                 </ul>
               </div>
@@ -489,22 +404,7 @@ export default function CloudDevOpsPage() {
       </div>
     </Layout>
     </Layout>
-<<<<<<< HEAD
-    </>
-=======
-    </>
-    </>
-<<<<<<< HEAD
-  );
-};
 
-export default Cloud-devops;
-=======
-<<<<<<< HEAD
-    </Layout>
-  );
-};
+    </>
+    </>
 
-export default Cloud-devops;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

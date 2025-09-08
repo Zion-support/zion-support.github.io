@@ -102,76 +102,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
 
     </div>);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-  } catch (error) {
-    }
-    console.error(""Error":", error);"
-    return res.status(500).json({ "error": "Internal server error" });"
 
-}
-return (;
-    <main className="min-h-screen">"
-      {children  } catch (error) {
-    }
-    console.error(""Error":", error);"
-    return res.status(500).json({ "error": "Internal server error" });"
-    } catch (error) {
-    }
-    console.error(""Error":", error);"
-    return res.status(500).json({ "error": "Internal server error" });"
-
-  } catch (error) {
-    }
-    console.error(""Error":", error);"
-    return res.status(500).json({ "error": "Internal server error" });"
-
-    </main>
-  );
-};
-export default Layout;
-import React, { useState } from 'react';'
-import Header from './Header';'
-import Footer from './Footer';'
-import Sidebar from './Sidebar';'
-import Link from 'next/link';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { 
-  }
-  Home, 
-  Users, 
-  Briefcase, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Menu, 
-  X, 
-  ChevronDown,
-  Star,
-  CheckCircle
-} from 'lucide-react';'
-
-interface LayoutProps {
-  }
-  title?: string;
-  description?: string;
-  keywords?: string;
-  ogImage?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogUrl?: string;
-  "children": React.ReactNode;
-
-export default function Layout() {
-  }
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
-return (;
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
     <>
       <Head>
 

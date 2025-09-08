@@ -5,16 +5,8 @@ const AgenticRagHelpdesk = ({ className }) => {
       <h1>AgenticRagHelpdesk</h1>
       <p>This component is under development.</p>
     </div>
-<<<<<<< HEAD
-  )
-};
-=======
+
   );
 };
 
-<<<<<<< HEAD
-export default AgenticRagHelpdesk;
-=======
-export default AgenticRagHelpdesk;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

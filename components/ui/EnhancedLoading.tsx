@@ -1,16 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-type EnhancedLoadingProps = $2;
-export default function EnhancedLoading({ lines = 3 }: EnhancedLoadingProps) {
-  return (
-    <div className="space-y-2">
-      {Array.from({ length: lines}).map((_, idx) => (
-        <div key={idx} className="skeleton h-4 rounded" />
-      ))}
-    </div>
-  )
-}
-=======
+
 
 
 class ErrorBoundary extends React.Component {
@@ -31,15 +19,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
 
-
-=======
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react";
 type EnhancedLoadingProps = {;
   lines?: number;
@@ -66,26 +46,7 @@ function EnhancedLoading() {
         <div key={idx} className="skeleton h - 4 rounded" />))}
     </div>);
 
-<<<<<<< HEAD
-=======
-}
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    </div>
-
-  );
 
 }
 
-<<<<<<< HEAD
-      ))}
-    </div>;
-    </div>
-  );
-}
-}
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> merged-prs-20250907-203621
+

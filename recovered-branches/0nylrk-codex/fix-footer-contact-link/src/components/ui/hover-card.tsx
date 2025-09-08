@@ -5,104 +5,41 @@ import * as React from &quot;react&quot;
 import * as HoverCardPrimitive from &quot;@radix-ui/react-hover-card&quot;
 import { cn } from &quot;@/lib/utils&quot;
 
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-import * as React from &quot;react&quot;
-import * as HoverCardPrimitive from &quot;@radix-ui/react-hover-card&quot;
-import { cn } from &quot;@/lib/utils&quot;
-import * as React from &quot;react&quot;
-import * as HoverCardPrimitive from &quot;@radix-ui/react-hover-card&quot;
-import { cn } from &quot;@/lib/utils&quot;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import * as React from "react"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
 import * as HoverCardPrimitive from "@radix-ui/react-hover-card"
 "
 import { cn } from "@/lib/utils"
 
-<<<<<<< HEAD
-const HoverCard = $2;
-  React.ComponentPropsWithoutRef<typeof HoverCardPrimitive.Content>
->(({ className, align = "center", sideOffset = 4, ...props }, ref) => (
-  <HoverCardPrimitive.Content
-    ref = $2;
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const HoverCard = HoverCardPrimitive.Root
 const HoverCardTrigger = HoverCardPrimitive.Trigger
 const HoverCardContent = React.forwardRef<
   React.ElementRef<typeof HoverCardPrimitive.Content>
   React.ComponentPropsWithoutRef<typeof HoverCardPrimitive.Content>
-<<<<<<< HEAD
->(({ className, align = "center", sideOffset = 4, ...props }, ref) => (
-=======
+
 >(({ className, align = &quot;center&quot;, sideOffset = 4, ...props }, ref) => (
-<<<<<<< HEAD
->(({ className, align = "center", sideOffset = 4, ...props }, ref) => (
->(({ className, align = "center", sideOffset = 4, ...props }, ref) => (
->(({ className, align = "center", sideOffset = 4, ...props }, ref) => (>(({ className, align = "center", sideOffset = 4, ...props }, ref) => (
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   <HoverCardPrimitive.Content
 
     ref={ref}
     align={align}
     sideOffset={sideOffset}
-<<<<<<< HEAD
-=======
+
     className={cn(
 
-<<<<<<< HEAD
-      "z-50 w-64 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
 
 
-      &quot;z-50 w-64 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
-      "z-50 w-64 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
-=======
-
-      "z-50 w-64 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> merged-prs-20250907-203621
       className
-<<<<<<< HEAD
 
-export { HoverCard, HoverCardTrigger, HoverCardContent }
-
-export { HoverCard, HoverCardTrigger, HoverCardContent }
-export { HoverCard, HoverCardTrigger, HoverCardContent };
-;
-export { HoverCard, HoverCardTrigger, HoverCardContent };
-export { HoverCard, HoverCardTrigger, HoverCardContent };
-;
-=======
     )}
     {...props}
   />;
 ));
 HoverCardContent.displayName = HoverCardPrimitive.Content.displayName;
-<<<<<<< HEAD
-export { HoverCard, HoverCardTrigger, HoverCardContent }
-;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import * as React from &quot;react & quot;
 import * as HoverCardPrimitive from &quot;@radix - ui / react - hover - card & quot;
 ;
@@ -111,73 +48,25 @@ import { cn } from &quot;@/lib / utils & quot;
 export { HoverCard, HoverCardTrigger, HoverCardContent };
 ;
 
-<<<<<<< HEAD
-export { HoverCard, HoverCardTrigger, HoverCardContent };
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-export { HoverCard, HoverCardTrigger, HoverCardContent }
-export { HoverCard, HoverCardTrigger, HoverCardContent }
-;
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
 export { HoverCard, HoverCardTrigger, HoverCardContent };
 export { HoverCard, HoverCardTrigger, HoverCardContent }
-<<<<<<< HEAD
-export { HoverCard, HoverCardTrigger, HoverCardContent }
-import * as React from "react";
-import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
-;
-import { cn } from "@/lib/utils";
-=======
 
-<<<<<<< HEAD
-;
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
 ;
 const HoverCard = HoverCardPrimitive.Root;
 ;
 const HoverCardTrigger = HoverCardPrimitive.Trigger;
-<<<<<<< HEAD
-import * as React from "react"""
-import * as HoverCardPrimitive from "@radix-ui/react-hover-card"""
-import { cn } from "@/lib/utils""
-const HoverCard = HoverCardPrimitive.Root;
-const HoverCardTrigger = HoverCardPrimitive.Trigger;
-const HoverCardContent = React.forwardRef<
-  React.ElementRef<typeof HoverCardPrimitive.Content>
-</typeof>
-  React.ComponentPropsWithoutRef<typeof HoverCardPrimitive.Content>
-  <HoverCardPrimitive.Content;
-    ref={ref}
-    align={align}
-    sideOffset={sideOffset}
-    className={cn(
 
-"
-      "z-50 w-64 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2","
-      className;)
-    )}
-    {...props}
-  />;
-
-pr-12325
-const HoverCardContent = React.forward_ref<;
-  React.ElementRef < typeof HoverCardPrimitive.Content>,
-  React.ComponentPropsWithoutRef < typeof HoverCardPrimitive.Content>;
->(({ class_name, align = &quot;center & quot;, side_offset = 4, ...props }, ref) => (
-=======
 ;
 const HoverCardContent = React.forwardRef<;
   React.ElementRef<typeof HoverCardPrimitive.Content>,;
   React.ComponentPropsWithoutRef<typeof HoverCardPrimitive.Content>;
 >(({ className, align = "center", sideOffset = 4, ...props }, ref) => (;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   <HoverCardPrimitive.Content;
     ref={ref}
     align={align}
@@ -187,66 +76,11 @@ const HoverCardContent = React.forwardRef<;
       className;
     )}
     {...props}
-<<<<<<< HEAD
-  />;
-));
-HoverCardContent.displayName = HoverCardPrimitive.Content.displayName;
-;
-export { HoverCard, HoverCardTrigger, HoverCardContent }import * as React from "react" import * as HoverCardPrimitive from "@radix-ui/react-hover-card" const HoverCard = HoverCardPrimitive.Root const HoverCardTrigger = HoverCardPrimitive.Trigger const HoverCardContent = React.forwardRef< React.ElementRef<typeof HoverCardPrimitive.Content>;
-React.ComponentPropsWithoutRef<typeof HoverCardPrimitive.Content>) 
-}{
-  ...props 
-}/>) ) HoverCardContent.displayName = HoverCardPrimitive.Content.displayName export {
-  HoverCard, HoverCardTrigger, HoverCardContent 
-}
-;
-;
-=======
+
   />));
 HoverCardContent.display_name = HoverCardPrimitive.Content.display_name;
-<<<<<<< HEAD
-<<<<<<< HEAD
-import * as React from "react";
-import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
-;
-import { cn } from "@/lib/utils";
-;
-;
-;
-const HoverCardContent = React.forwardRef<;
-  React.ElementRef<typeof HoverCardPrimitive.Content>,;
-  React.ComponentPropsWithoutRef<typeof HoverCardPrimitive.Content>;
->(({ className, align = "center", sideOffset = 4, ...props }, ref) => (;
-  <HoverCardPrimitive.Content;
-    ref={ref}
-    align={align}
-    sideOffset={sideOffset}
-    className={cn(;
-      "z-50 w-64 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",;
-      className;
-    )}
-    {...props}
-  />;
-));
-HoverCardContent.displayName = HoverCardPrimitive.Content.displayName;
-;
-export { HoverCard, HoverCardTrigger, HoverCardContent }import * as React from "react" import * as HoverCardPrimitive from "@radix-ui/react-hover-card" const HoverCard = HoverCardPrimitive.Root const HoverCardTrigger = HoverCardPrimitive.Trigger const HoverCardContent = React.forwardRef< React.ElementRef<typeof HoverCardPrimitive.Content>;
-React.ComponentPropsWithoutRef<typeof HoverCardPrimitive.Content>) 
-}{
-  ...props 
-}/>) ) HoverCardContent.displayName = HoverCardPrimitive.Content.displayName export {
-  HoverCard, HoverCardTrigger, HoverCardContent 
-}
-;
-;
-=======
 
->>>>>>> origin/chore/fix-lint-and-merge
 export { HoverCard, HoverCardTrigger, HoverCardContent }
-export { HoverCard, HoverCardTrigger, HoverCardContent }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-export { HoverCard, HoverCardTrigger, HoverCardContent }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+
+

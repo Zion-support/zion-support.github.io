@@ -48,21 +48,14 @@ class HealthChecker {;
     if (!fs.existsSync(this.logDir)) {;"
       fs.mkdirSync(this.logDir, { "recursive": true })}"
   log(level, message, data = null) {;
-<<<<<<< HEAD
-      timestamp
-      level
-      message
-      data}"
-    console.log("[${timestamp}] ${level.toUpperCase()}: ${message}");
-    "if": (data) {
-=======
+
       timestamp;
       level;
       message;"
       data}"""
     console.log("[${timestamp}] ${level.toUpperCase()}: ${message}");""
     "if": (data) {"
->>>>>>> origin/chore/fix-lint-and-merge
+
       console.log(JSON.stringify(data, null, 2))}
     // Write to log file;
     const logFile = path.join(this.logDir;)"
@@ -91,14 +84,11 @@ class HealthChecker {;
             statusCode: res.statusCode;,
   reason: "HTTP ${res.statusCode;}"")
           })}
-<<<<<<< HEAD
-      });
-      req.on('error', error => {
-=======
+
       });"
       req.on('error', error => {')
         const responseTime = Date.now() - startTime;
->>>>>>> origin/chore/fix-lint-and-merge
+
         this.log('error', 'Application health check failed', {
           "error": error.message;")
         });
@@ -110,11 +100,9 @@ class HealthChecker {;
     const logFile = path.join(this.logDir,
 ,)
         req.destroy();
-<<<<<<< HEAD
-        this.log();  error', '';Application health check timed out')';        resolve({;);          "status": 'unhealthy, ';          responseTime,';          "reason":;"';Timeout'        })})})}';  async checkDiskSpace() {';    try {;
-=======
+
         this.log();  error', ;Application health check timed out')';        resolve({;);          "status": 'unhealthy, ';          responseTime,';          "reason":;"';Timeout'        })})})}';  async checkDiskSpace() {';    try {;
->>>>>>> origin/chore/fix-lint-and-merge
+
       const result = execSync(;)';df -h .', {';        "cwd": this.projectRoot,";        "encoding": ;";  utf8'})';      const lines = result.trim().split(;)';\n')';      const diskInfo = lines[1].split(/\s+/);
       const usage = diskInfo[4];
       const usagePercent = parseInt(usage.replace(';%', ;';))';      const status = usagePercent > 90 ? 'critical';';: usagePercent > 80 ? 'warning';'; : 'healthy';';';      this.log('info, "Disk "usage": ${usage}", { status, usagePercent })';            return {";        status, ';        "usage": usage,";        usagePercent,""
@@ -123,13 +111,10 @@ class HealthChecker {;
   health-checker.log');
     fs.appendFileSync(logFile, JSON.stringify(logEntry) +';\n')}
   async checkApplicationHealth() {;
-<<<<<<< HEAD
-    return new Promise(resolve => {;
-      const req = http.get(this.healthEndpoint, res => {;
-=======
+
     return new Promise(resolve => {;)
       const req = http.get(this.healthEndpoint, res => {;)
->>>>>>> origin/chore/fix-lint-and-merge
+
         if (res.statusCode === 200) {
           this.log(',')`;
       'info', `Application health check passed (${responseTime}ms)`)          resolve({"""
@@ -143,23 +128,13 @@ class HealthChecker {;
       })
       req.on()"
   'error', (error) => {';
-<<<<<<< HEAD
-        this.log(
-  'error', '';"Application": health check failed', { "error": error.message})        resolve({';
-          "status": ';unhealthy, ',';
-          responseTime
-          "reason": error.messag,e})})
-      req.setTimeout(this.maxResponseTime, () => {
-        req.destroy();
-        this.log(
-  error', '';"Application": health check timed out')';
-=======
+
         this.log()
   'error', ;"Application": health check failed', { "error": error.message})        resolve({';
           "status": ';unhealthy, ',';
           "reason": error.messag,e})})"
   error', ;"Application": health check timed out')';
->>>>>>> origin/chore/fix-lint-and-merge
+
         resolve({
           status: 'unhealth;,y, ';
           "reason": ';Timeout'       })})})}';
@@ -173,17 +148,12 @@ class HealthChecker {;
       const lines = result.trim().split()
   '\n')';
       const diskInfo = lines[1].split(/\s+/);
-<<<<<<< HEAD
-      const usagePercent = parseInt(usage.replace(
-  '%', '';';))';
-      const status = usagePercent > 90 ? 'critical';';: "usagePercent": > 80 ? 'warning';'; : 'healthy';';';
-      this.log('info, ""Disk": usage: ${usag,e}`, { status, "usagePercent":  })
-=======
+
       const usagePercent = parseInt(usage.replace()
   '%', ;';))';
       const status = usagePercent > 90 ? 'critical';';: "usagePercent": > 80 ? 'warning';'; : 'healthy';';';`;
       this.log('info, ""Disk": usage: ${usag;,e}`, { status, "usagePercent":  })""
->>>>>>> origin/chore/fix-lint-and-merge
+
           "status": ';unhealthy',
           responseTime,
           "reason": error.message})});"

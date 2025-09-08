@@ -35,10 +35,9 @@ export const FuturisticLoader = (
 }
 }
 
-<<<<<<< HEAD
-=======
+
 const textSizes = { small: 'text - sm',}
->>>>>>> origin/chore/fix-lint-and-merge
+
   medium: 'text - lg', large: 'text - xl',}
 }
 ;

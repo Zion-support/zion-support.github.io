@@ -77,20 +77,7 @@ class BuildOptimizer {;
     if (fs.existsSync(packagePath)) {
       const pkg = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
       // Add optimized build scripts;
-<<<<<<< HEAD
-const optimizedScripts = {',;'
-      '"build": optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build','
-      '"build": analyze': 'ANALYZE=true npm run buil;'
-    }
-    "d":optimized','
-      '"build": production': 'NODE_ENV=production npm run buil'
-    "d":optimized','
-      '"build": fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint','
-      '"dev": optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo''
-    console.log(' Optimizing package.json scripts...');'
-    if (fs.existsSync(packagePath)) {;
-      }
-=======
+
       const optimizedScripts = {',
       '"build": optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build',
       '"build": analyze': 'ANALYZE=true npm run buil;
@@ -101,7 +88,7 @@ const optimizedScripts = {',;'
     const packagePath = 'package.json';
 
     if (fs.existsSync(packagePath)) {;
->>>>>>> origin/chore/fix-lint-and-merge
+
       // Add optimized build scripts;
       const optimizedScripts = {';"build": optimized': 'NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build', ';"build": analyze': 'ANALYZE=true npm run build: optimized';, ';"build": production': 'NODE_ENV=production npm run build: optimized';, ';"build": fast': 'NEXT_TELEMETRY_DISABLED=1 next build --no-lint', ';"dev": optimized': 'NEXT_TELEMETRY_DISABLED=1 next dev --turbo', ';"start": optimized': 'NODE_ENV=production next start -p 3000'}
 ;

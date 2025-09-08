@@ -175,84 +175,9 @@ export function ApiKeysManager() {;
             <AlertDialogTitle>Revoke API Key?;"
 
               onClick={() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm)}
-<<<<<<< HEAD
-              className="bg-red-600 "hover":bg-red-700";"
-            >;
-              Revoke;
-            </AlertDialogAction>;
-          </AlertDialogFooter>;
-        </AlertDialogContent>;
-      </AlertDialog>;
-    </Card>;
-  );}
- import {;
-  {;
-  {;
-  }
-  Button ;
-}from "@/components/ui/button";"
-  {;
-  {;
-  }
-  Card, CardContent, CardDescription, CardFooter,  CardHeader, CardTitle ";"
-}from "@/components/ui/card";"
-  {;
-  {;
-  }
-  Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader,  DialogTitle, DialogTrigger ";"
-}from "@/components/ui/dialog";"
-  {;
-  {;
-  }
-  Input ";"
-}from "@/components/ui/input";"
-  {;
-  {;
-  }
-  Checkbox ";"
-}from "@/components/ui/checkbox";"
-  {;
-  {;
-  }
-  Label ";"
-}from "@/components/ui/label";"
-  {;
-  {;
-  }
-  Badge ";"
-}from "@/components/ui/badge";"
-  {;
-  {;
-  }
-  Popover,  PopoverContent, PopoverTrigger ";"
-}from "@/components/ui/popover";"
-  {;
-  {;
-  }
-  DropdownMenu, DropdownMenuContent,  DropdownMenuItem, DropdownMenuTrigger ";"
-}from "@/components/ui/dropdown-menu";"
-  {;
-  {;
-  }
-  AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter,  AlertDialogHeader, AlertDialogTitle ";"
-}from "@/components/ui/alert-dialog";"
-const [showCreateDialog, setShowCreateDialog] = useState (false)const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null> (null)const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null> (null)//Create key form state //Load keys on mount await createApiKey (keyName, selectedScopes)setShowCreateDialog (false)//Toggle a scope selection const toggleScope = ("scope": ApiKeyScope) => {";"
-  }
-  setSelectedScopes (prev => prev.includes (scope) ? prev.filter (s => s !== scope) -H ""Authorization": Bearer $ {key ";"
-}" \\ -H "Content-"Type": application/json"`;`}//Reset form when dialog closes const handleDialogClose = () => {";"
-  }
-  setKeyName ("")setSelectedScopes ([])setShowCreateDialog (false)}";"
- return `curl -X GET " "https"://api.ziontechgroup.com/v1/jobs"\\ -H " "Authorization": Bearer $ {key ";"
-}"\\ -H " Content-"Type": application/json"`;`}";"
-//Reset form when dialog closes </CardTitle> <CardDescription className=" text-zinc-400"> Create and manage API keys for accessing the Zion APIs. </CardDescription> </CardHeader> <CardContent> </p> <Dialog open= {showCreateDialog ;"
-}onOpenChange= {setShowCreateDialog ";"
-}> <DialogTrigger asChild> <Button variant=" default">Create New API Key</Button> </DialogTrigger> <DialogContent className=" bg-zinc-900 border-zinc-800 text-white"> <DialogHeader> <DialogTitle>Create API Key</DialogTitle> <DialogDescription className=" text-zinc-400"> Generate a new API key for accessing the Zion APIs. </DialogDescription> </DialogHeader> <div className=" space-y-4 py-4"> <div className=" space-y-2"> <Label htmlFor=" key-name">Key Name</Label> <Input /> </div> <div className=" space-y-2"> <Label>Scopes</Label> <Checkbox id= {scope.value ;"
-}checked= {selectedScopes.includes (scope.value)}onCheckedChange= {() => toggleScope (scope.value)}/> <Label </Label> </div>) )}</div> </div> </div> <DialogFooter> Create Key </Button> </DialogFooter> </DialogContent> </Dialog> </div> {/* New API Key Alert */ ;
-}
-const [showCreateDialog, setShowCreateDialog] = useState (false);
-=======
 
->>>>>>> origin/chore/fix-lint-and-merge
+
+
 const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null> (null);
 const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null> (null);
 //Create key form state //Load keys on mount await createApiKey (keyName, selectedScopes);

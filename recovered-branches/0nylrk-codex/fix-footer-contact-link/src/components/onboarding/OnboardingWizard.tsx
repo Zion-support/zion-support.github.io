@@ -1,32 +1,17 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
 import { useState, useEffect  } from 'react';
 import { useNavigate  } from 'react-router-dom';
 import { useAuth  } from '@/hooks/useAuth';
 import { Button  } from '@/components/ui/button';
-<<<<<<< HEAD
-import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
-=======
-<<<<<<< HEAD
-=======
-import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 import {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {useAuth} from '@/hooks/useAuth';
 import {Button} from '@/components/ui/button';
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from '@/components/ui/card';
-<<<<<<< HEAD
-=======
+
 
 import Rocket from 'lucide-react/dist/esm/icons/rocket';
 '
@@ -38,25 +23,18 @@ import {Card, CardContent, CardFooter, CardHeader, CardTitle} from '@/components
 import Rocket from 'lucide-react / dist / esm / icons / rocket';'
 import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';'
 import {cn} from '@/lib / utils';
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-<<<<<<< HEAD
-  title: string,
-  description: string,
-  icon: React.ReactNode,
 
-=======
+
 interface WizardStep {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   title: string
   description: string
   icon: React.ReactNode
   action: {
-<<<<<<< HEAD
 
-=======
 import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 import {cn} from '@/lib/utils';
   action: {'
 import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';''
@@ -72,20 +50,7 @@ interface WizardStep {;
     url: string;
   };
   skipText?: string;
-<<<<<<< HEAD
-pr-12325
 
-interface OnboardingWizardProps {;
-  type: 'client' | 'talent',;
-interface OnboardingWizardProps {;'
-  type: 'client' | 'talent',;'
-
-  onComplete: () => void,;
-  onSkip: () => void,;}
-  className?: string;}
-}
-
-=======
 }
 interface OnboardingWizardProps {;
   type: 'client' | 'talent',;
@@ -94,35 +59,18 @@ interface OnboardingWizardProps {;
   className?: string;
 }
 export function OnboardingWizard(): any ({ type, onComplete, onSkip, className }: OnboardingWizardProps) {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   const [currentStep, setCurrentStep] = useState(0);
   const navigate = useNavigate();
   const { user } = useAuth();
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-import Rocket from 'lucide-react/dist/esm/icons/rocket';
-import { FileText, Users, Calendar, Eye, MessageSquare  } from 'lucide-react';
-import { cn } from '@/lib/utils';
-interface WizardStep {
-<<<<<<< HEAD
-=======
-=======
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
   title: string,
   description: string,
   icon: React.ReactNode,
   action: {
     text: string,
-<<<<<<< HEAD
-    url: string},
-  skipText?: string
-=======
+
     url: string
   };
   skipText?: string
@@ -138,14 +86,7 @@ interface OnboardingWizardProps {
 
 export function OnboardingWizard() { return null; }
   const { user } = useAuth();
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import { useState, useEffect } from 'react',;
 
 import { useNavigate } from 'react-router-dom',;
@@ -173,13 +114,8 @@ interface OnboardingWizardProps {;'
   onSkip: () => void,;
   className?: string;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 }
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
 
@@ -191,78 +127,16 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const navigate = useNavigate(),
   const { user } = useAuth(),
 
-<<<<<<< HEAD
-=======
+
   
 
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-}
 
-  title: string
-  description: string
-  icon: React.ReactNode
-  action: {
-    text: string
 
-    url: string
-  }
-  skipText?: string
-}
-interface OnboardingWizardProps {
 
-  type: 'client' | 'talent'
-  onComplete: () => void
-  onSkip: () => void
-
-  className?: string
-}
-export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
-  const [currentStep, setCurrentStep] = useState(0);
-
-  const navigate = useNavigate();
-  const { user } = useAuth();
-  const [currentStep, setCurrentStep] = useState(0),
-  const navigate = useNavigate(),
-  const { user } = useAuth(),
-  
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
     {
-<<<<<<< HEAD
-      title: "Post your first job",
-      description: "Describe the talent you need for your project",
-      icon: <FileText className = $2;
-      action: {
-        text: "Post a Job"
-        url: "/post-job"
-      }
-      skipText: "I'll do this later"
-    }
-    {
-      title: "View suggested matches",
-      description: "Our AI system will find the best talent matches",
-      icon: <Users className = $2;
-      action: {
-        text: "View Matches"
-        url: "/talent"
-      }
-      skipText: "Skip for now"
-    }
-    {
-      title: "Contact talent",
-      description: "Reach out to the talent that fits your needs",
-      icon: <MessageSquare className = $2;
-      action: {
-        text: "Browse Talent"
-        url: "/talent"
-      }
-    }
-=======
+
       title: "Post your first job"
       description: "Describe the talent you need for your project"
       icon: <FileText className="h-6 w-6 text-zion-purple" />
@@ -270,30 +144,14 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         text: "Post a Job"
         url: "/post-job"
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       },
       skipText: "I'll do this later"
     },
 
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-      }
-      skipText: "I'll do this later"
-    }
-      },
-      skipText: "I'll do this later"
-    },
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
     {
       title: "View suggested matches"
       description: "Our AI system will find the best talent matches"
@@ -302,30 +160,15 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         text: "View Matches"
         url: "/talent"
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       },
       skipText: "Skip for now"
     },
 
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-      }
-      skipText: "Skip for now"
-    }
-      },
-      skipText: "Skip for now"
-    },
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
     {
       title: "Contact talent"
       description: "Reach out to the talent that fits your needs"
@@ -337,18 +180,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
     }
 
   // Define steps based on user type;
-<<<<<<< HEAD
-  const clientSteps: WizardStep[] = []
-    {}
-      title: "Post your first job""
-      description: "Describe the talent you need for your project""
-      icon: <FileText className="h-6 w-6 text-zion-purple" />
-      action: {"
-        text: "Post a Job""
-        url: "/post-job"
 
-      },'"
-=======
   const client_steps: WizardStep[] = [;
     {
       title: "Post your first job",
@@ -387,105 +219,16 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
     {
       title: "Complete your profile"
       description: "Add your skills, experience, and preferences";
-<<<<<<< HEAD
-      icon: <FileText className="h-6 w-6 text-zion-purple" />
-=======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> merged-prs-20250907-203621
   ],
 
   const talentSteps: WizardStep[] = [
     {
       title: "Complete your profile",
       description: "Add your skills, experience, and preferences",
-<<<<<<< HEAD
-      icon: <FileText className = $2;
-=======
-      icon: <FileText className="h-6 w-6 text-zion-purple" />,
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-      action: {
-        text: "Edit Profile"
-        url: "/profile"
-      }
-      skipText: "I'll do this later"
-    }
-<<<<<<< HEAD
-    {
-      title: "Define skills & availability",
-      description: "Let clients know when you're available and what you can do",
-      icon: <Calendar className = $2;
-      action: {
-        text: "Set Availability",
-        url: "/profile?tab = $2;
-      skipText: "Skip for now"
-    }
-    {
-      title: "Preview your profile",
-      description: "See how clients will view your profile",
-      icon: <Eye className = $2;
-      action: {
-        text: "Preview Profile"
-        url: `/talent/${user?.id}`
-      }
-      skipText: "Skip for now"
-    }
-    {
-      title: "Enable AI matchmaking",
-      description: "Let our AI find the perfect opportunities for you",
-      icon: <Rocket className = $2;
-      action: {
-=======
-      },
-      skipText: "I'll do this later"
-    },
-      },
-      skipText: "I'll do this later"
-    },
-=======
 
-      action: {
-        text: "Edit Profile"
-        url: "/profile"
-
-      },
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-      skipText: "I'll do this later"
-    },
-
-    {"
-      title: "View suggested matches""
-      description: "Our AI system will find the best talent matches""
-      icon: <Users className="h-6 w-6 text-zion-cyan" />
-      action: {"
-        text: "View Matches""
-        url: "/talent"
-
-      },"
-      skipText: "Skip for now"
-    },
-
-    {"
-      title: "Contact talent""
-      description: "Reach out to the talent that fits your needs""
-      icon: <MessageSquare className="h-6 w-6 text-zion-purple" />
-      action: {"
-        text: "Browse Talent""
-        url: "/talent"
-      }
-    }
-
-  ],
-
-  const talentSteps: WizardStep[] = []
-    {"
-      title: "Complete your profile","
-      description: "Add your skills, experience, and preferences","
       icon: <FileText className="h-6 w-6 text-zion-purple" />,
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       title: "Define skills & availability"
       description: "Let clients know when you're available and what you can do"
@@ -495,31 +238,16 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         text: "Set Availability""
         url: "/profile?tab=skills"
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       },
 
       skipText: "Skip for now"
     },
 
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-      }
-      skipText: "Skip for now"
-    }
-      },
-      skipText: "Skip for now"
-    },
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
     {
       title: "Preview your profile"
       description: "See how clients will view your profile"
@@ -528,71 +256,15 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       action: {"
         text: "Preview Profile"
         url: `/talent/${user?.id}`
-<<<<<<< HEAD
-      }
-      skipText: "Skip for now"
-    }
-      },
-      skipText: "Skip for now"
-    },
-=======
-
-<<<<<<< HEAD
-      },"
-      skipText: "Skip for now"
-    },
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-      },
-      skipText: "Skip for now"
-    },
 
 
-<<<<<<< HEAD
-      },
-      skipText: "Skip for now"
-    },
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     {
       title: "Enable AI matchmaking"
       description: "Let our AI find the perfect opportunities for you"
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />
       action: {
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-        text: "Enable Matchmaking"
-        url: "/talent-dashboard"
-      }
-    }
-<<<<<<< HEAD
-  ],
-  
-  const steps = $2;
-  // Navigate to the specified URL
-  const handleAction = () => {
-    if (currentStep < steps.length - 1) {
-      navigate($2);
-      setCurrentStep(currentStep + 1)
-    } else {
-      // Last step
-      navigate($2);
-      onComplete()
-    }
-  },
-  
-  // Skip the current step
-  const handleSkip = $2;
-  return (
-    <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
-      <CardHeader>
-        <CardTitle className="text-center text-white">
-          {type === 'client' ?
-            "Ready to find top IT talent?" :
-=======
+
   ];
   const steps = type === 'client' ? clientSteps : talentSteps;
   // Navigate to the specified URL
@@ -642,77 +314,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       onSkip();
     }
   },
-=======
 
-<<<<<<< HEAD
-        text: "Enable Matchmaking"
-        url: "/talent-dashboard"
-      }
-    }
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
-  ];
-
-  const steps = type === 'client' ? clientSteps : talentSteps;
-  // Navigate to the specified URL;
-  const handleAction = () => {}
-    if (currentStep < steps.length - 1) {}
-      navigate(steps[currentStep].action.url);
-      setCurrentStep(currentStep + 1)
-    } else {}
-      // Last step;
-      navigate(steps[currentStep].action.url);
-      onComplete()
-    }
-  }
-  // Skip the current step;
-  const handleSkip = () => {}
-    if (currentStep < steps.length - 1) {}
-      setCurrentStep(currentStep + 1)
-    } else {}
-      // Last step;
-      onSkip()
-    }
-  }"
-        text: "Enable Matchmaking","
-        url: "/talent-dashboard"
-      }
-    }
-  };
-  ],;'
-  const steps = type === 'client' ? clientSteps : talentSteps,;
-  // Navigate to the specified URL;
-  const handleAction = () => {;
-    if (currentStep < steps.length - 1) {;
-      navigate(steps[currentStep].action.url),;
-      setCurrentStep(currentStep + 1);
-    } else {;
-      // Last step;
-      navigate(steps[currentStep].action.url),;
-      onComplete();
-    }
-  },;
-  // Skip the current step;
-  const handleSkip = () => {;
-    if (currentStep < steps.length - 1) {;
-      setCurrentStep(currentStep + 1);
-    } else {;
-      // Last step;
-      onSkip();
-    }
-  },
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  
-  
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   return (
 
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
@@ -720,13 +322,8 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         <CardTitle className="text-center text-white">'
           {type === 'client' ?"
             "Ready to find top IT talent?" :
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
 
     {
       title: "Complete your profile"
@@ -771,14 +368,11 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       }
     }
   ];
-<<<<<<< HEAD
-=======
+
   const steps = type === 'client' ? clientSteps : talentSteps;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   // Navigate to the specified URL;
-<<<<<<< HEAD
-    }
-=======
+
   const handleAction = () => {;
 
   return ()'
@@ -803,7 +397,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />,;"
 </Rocket>
 
->>>>>>> origin/chore/fix-lint-and-merge
+
     if (currentStep < steps && steps.length - 1) {;
       navigate(steps[currentStep].action && action.url);
       setCurrentStep(currentStep + 1);
@@ -814,11 +408,9 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
     }
   };
   // Skip the current step;
-<<<<<<< HEAD
-    }
-=======
+
   const handleSkip = () => {;
->>>>>>> origin/chore/fix-lint-and-merge
+
     if (currentStep < steps && steps.length - 1) {;
       setCurrentStep(currentStep + 1);
     } else {;
@@ -826,17 +418,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       onSkip();
     }
   };
-<<<<<<< HEAD
 
-      <CardHeader>;
-        <CardTitle className="text-center text-white">;
-          {type === 'client' ? ;
-            "Ready to find top IT talent?" : ;
-"Ready to find top IT talent?" :;
-    {
-      title: "Complete your profile"
-
-=======
   return (
 
 import { useState, useEffect } from 'react',;
@@ -975,7 +557,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className } Onboard
         <CardTitle className="text-center text-white">;
           {type === 'client' ? ;
             "Ready to find top IT talent?" :;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
             "Let's build your professional profile"}
         </CardTitle>;
       </CardHeader>;
@@ -983,72 +565,23 @@ export function OnboardingWizard({ type, onComplete, onSkip, className } Onboard
         <div className="flex items-center mb-6">;
           {/* Step dots */}"
           <div className="flex items-center justify-center flex-1">;
-<<<<<<< HEAD
 
-            {steps && steps.map((_, index) => (;
-
-                  "h-2 w-2 rounded-full mx-1",
-
-=======
 
 
                   "h-2 w-2 rounded-full mx-1"
 
                   "h-2 w-2 rounded-full mx-1",
 
-<<<<<<< HEAD
-                  "h-2 w-2 rounded-full mx-1"
->>>>>>> merged-prs-20250907-203621
-            "Let's build your professional profile"}
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="flex items-center mb-6">
-          {/* Step dots */}
-          <div className="flex items-center justify-center flex-1">
-            {steps.map((_, index) => (
-              <div
-<<<<<<< HEAD
-                key = $2;
-=======
-                key={index}
-                className={cn(
-                  "h-2 w-2 rounded-full mx-1";
 
-                  "h-2 w-2 rounded-full mx-1",
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> merged-prs-20250907-203621
+
                   index === currentStep
                     ? "bg-zion-purple scale-125"
                     : index < currentStep
                     ? "bg-zion-cyan"
                     : "bg-zion-blue-light"
                 )}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            {steps.map((_, index) => (;
-              <div;
-                key={index}
-                className={cn(;
-                  "h-2 w-2 rounded-full mx-1",;
-                  index === currentStep;
-                    ? "bg-zion-purple scale-125";
-                    :index < currentStep;
-                    ? "bg-zion-cyan";
-                    :"bg-zion-blue-light";                )}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              />;
-            ))}
-          </div>;
-        </div>;
-;
-        <div className="flex flex-col items-center text-center p-4">;
-          <div className="bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
             {steps[currentStep].icon}
           </div>;"
           <h3 className="text-xl font-bold text-white mb-2">{steps[currentStep].title}</h3>;"
@@ -1056,20 +589,12 @@ export function OnboardingWizard({ type, onComplete, onSkip, className } Onboard
         </div>;
       </CardContent>;"
       <CardFooter className="flex flex-col space-y-2">;
-<<<<<<< HEAD
 
-        {steps[currentStep].skipText && (;
-
-onClick={handleAction}>;
-          {steps[currentStep].action && action.text}
-        </Button>;
-        {steps[currentStep].skipText && (;
-=======
           onClick={handleAction}>;
           {steps[currentStep].action && action.text}
         </Button>;
         {steps[currentStep].skipText && (;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
           <Button
             variant="ghost"
             className="text-zion-slate-light hover:text-white"
@@ -1092,30 +617,8 @@ onClick={handleAction}>;
         )}
       </CardFooter>;
     </Card>;
-<<<<<<< HEAD
-  );
-}
 
-<Button;
-          className="w-full bg-zion-purple hover:bg-zion-purple-light";
-          onClick={handleAction}
-        >;
-          {steps[currentStep].action.text}
-        </Button>;
-        ;
-        {steps[currentStep].skipText && (;
-          <Button;
-            variant="ghost";
-            className="text-zion-slate-light hover:text-white";
-            onClick={handleSkip}
-          >;
-            {steps[currentStep].skipText}
-          </Button>;
-        )}
-      </CardFooter>;
-    </Card>;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       icon: <FileText className="h - 6 w - 6 text - zion - purple" />,
       action: {
         text: "Edit Profile",
@@ -1271,102 +774,7 @@ if ( {) {
       </CardFooter>;
     </Card>);
 }
-<<<<<<< HEAD
-  ),;}
-=======
-<<<<<<< HEAD
-  ),;}
- 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-}];
-const talentSteps: WizardStep[] = [ 
-};
-skipText: "Skip for now" 
-};
-}];
-: index < currentStep ? "bg-zion-cyan" : "bg-zion-blue-light") 
-}/>) ) 
-}</div> </div> </div> </CardContent> <CardFooter className="flex flex-col space-y-2" > <Button > {
-  steps[currentStep].action.text 
-}</Button> {
-  steps[currentStep].skipText && (<Button variant="ghost" className="text-zion-slate-light hover:text-white" onClick= {
-  handleSkip 
-<<<<<<< HEAD
 
-    );"
-: index < currentStep ? "bg-zion-cyan" : "bg-zion-blue-light")"
-}/>) ) "
-}</div> </div> </div>  <CardFooter className="flex flex-col space-y-2" > <Button > {"
 
-} {"
-  steps[currentStep].skipText && (<Button variant="ghost" className="text-zion-slate-light hover:text-white" onClick= {"
-  handleSkip;
-}> {
-)
-}) 
-} ) 
-        <div className="flex flex-col items-center text-center p-4">"
-          <div className="bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4">"
-          <h3 className="text-xl font-bold text-white mb-2">{steps[currentStep].title}</h3>""
-          <p className="text-zion-slate-light mb-6">{steps[currentStep].description}</p>"
-      <CardFooter className="flex flex-col space-y-2">"
 
-          onClick={handleAction}
-        >
 
-            onClick={handleSkip}
-
-pr-12325
-          >
-</Button>
-          </Button>
-      </CardFooter>
-    </Card>
-  )
-}
-=======
-}> {
-  steps[currentStep].skipText 
-}</Button>) 
-}</CardFooter> </Card>) 
-}
->>>>>>> merged-prs-20250907-203621
-              />
-            ))}
-          </div>
-        </div>
-        <div className="flex flex-col items-center text-center p-4">
-          <div className="bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4">
-            {steps[currentStep].icon}
-          </div>
-          <h3 className="text-xl font-bold text-white mb-2">{steps[currentStep].title}</h3>
-          <p className="text-zion-slate-light mb-6">{steps[currentStep].description}</p>
-        </div>
-      </CardContent>
-      <CardFooter className="flex flex-col space-y-2">
-        <Button
-          className="w-full bg-zion-purple hover:bg-zion-purple-light"
-          onClick={handleAction}
-        >
-          {steps[currentStep].action.text}
-        </Button>
-        {steps[currentStep].skipText && (
-          <Button
-            variant="ghost"
-            className="text-zion-slate-light hover:text-white"
-            onClick={handleSkip}
-          >
-            {steps[currentStep].skipText}
-          </Button>
-        )}
-      </CardFooter>
-    </Card>
-  )
-}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621

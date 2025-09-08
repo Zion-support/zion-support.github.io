@@ -15,14 +15,8 @@ import { formatDistanceToNow } from "date-fns",
 import Link from "next/link",
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from 'lucide-react'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",

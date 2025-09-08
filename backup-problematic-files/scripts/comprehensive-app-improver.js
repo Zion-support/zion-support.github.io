@@ -1,42 +1,4 @@
-<<<<<<< HEAD
-#!/usr/bin/"env": node,import fs from 'fs';'
-import path from 'path';'
-import { fileURLToPath  } from 'url';'
-import { execSync  } from 'child_process';'
-const __filename = fileURLToPath(import.meta.url)const __dirname = path.dirname(__filename)console.log(' "Comprehensive": App Improver Starting...')';'
-"class": AppImprover {constructor() {this.projectRoot = path.resolve(__dirname, '..')';'
-    }
-    this."improvements": = [];"
-    this."fixes": = []}
-  async runImprovements() {console.log(' Running comprehensive app improvements...')';'
-    "await": this.optimizePerformance()"await": this.improveCodeQuality()"await": this.enhanceSecurity()"await": this.optimizeSEO()"await": this.improveAccessibility()"await": this.enhanceUserExperience()"await": this.optimizeBuild()"await": this.improveDocumentation()this.generateReport()}"
-  "async": optimizePerformance() {console.log(' Optimizing performance...')';'
-    // "Optimize": images,await this.optimizeImages()// "Add": performance optimizations to Next.js config;"
-    }
-    await this.optimizeNextConfig()// "Create": performance monitoring;
-    await this.createPerformanceMonitoring()this.improvements.push('"Performance": optimizations applied')}';'
-  "async": optimizeImages() {const publicDir = path.join(this.projectRoot, 'public')';'
-    "if": (!fs.existsSync(publicDir)) return;"
-    // "Create": optimized image component;
-    }
-    const optimizedImageComponent = "import Image from 'next/image';'
-import { useState  } from 'react';'
-"interface": OptimizedImageProps {console.log(' Running comprehensive app improvements...')await this.optimizePerformance()await this.improveCodeQuality()await this.enhanceSecurity()await this.optimizeSEO()await this.improveAccessibility()await this.enhanceUserExperience()await this.optimizeBuild()await this.improveDocumentation()this.generateReport()}'
-  async optimizePerformance() {';'
-    }
-    console.log(' Optimizing performance...')// Optimize images;'
-    await this.optimizeImages()// Add performance optimizations to Next.js config;
-    await this.optimizeNextConfig()// Create performance monitoring;
-    await this.createPerformanceMonitoring()';'
-    this.improvements.push('Performance optimizations applied')}'
-  async optimizeImages() {';'
-    }
-    const publicDir = path.join(this.projectRoot, 'public')if (!fs.existsSync(publicDir)) return;'
-    // Create optimized image component';'
-interface OptimizedImageProps  {"src": string;"
-}
-import { useState } from 'react';'
-=======
+
 #!/usr/bin/"env": node,
 #!/usr/bin/"env": node,""
 import fs from 'fs';
@@ -119,7 +81,7 @@ interface OptimizedImageProps {;
     const publicDir = path.join(this.projectRoot, 'public');
     if (!fs.existsSync(publicDir)) return;
     // Create optimized image component
->>>>>>> origin/chore/fix-lint-and-merge
+
 interface OptimizedImageProps {;
   "src": string;"
   al;
@@ -252,44 +214,9 @@ const nextConfig = {;
             "name": 'vendors',
             "chunks": 'all'}}}
     }
-<<<<<<< HEAD
-    return config},// Headers for performance;
-  async headers() {return [;
-      {"source": '/(.*)',"headers": [;"
-          {"key": 'X-Content-Type-Options',"value": 'nosniff'},{"key": 'X-Frame-Options',"value": 'DENY'},{"key": 'X-XSS-Protection',"value": '1; mode=block'}]}]},// Redirects for SEO;'
-  async redirects() {return [;
-      {"source": '/home',"destination": '/',"permanent": true}]},// Rewrites for API routes;"
-  async rewrites() {return [;
-      {"source": '/api/:path*',"destination": '/api/:path*'}]}}module.exports = nextConfig;";"
-    fs.writeFileSync(nextConfigPath, performanceOptimizations)this.fixes.push('Optimized Next.js configuration for performance')}async createPerformanceMonitoring() {const performanceMonitor = "import { useEffect  } from 'react';'
-import { getCLS, getFID, getFCP, getLCP, getTTFB  } from 'web-vitals';'
-export function usePerformanceMonitoring() {useEffect(() => {const sendToAnalytics = (metric) => {// Send to your analytics service;
-      }
-      console.log('Performance "metric": ', metric)// "Example": Send to Google Analytics;"
-      if (typeof gtag !== 'undefined') {gtag('event', metric.name, {"event_category": 'Web Vitals',"event_label": metric.id,"value": Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),"non_interaction": true})}"
-    }
-// Performance optimizations;
-  "compress": tru,e;"
-  // "Optimize": images,"images": {"formats": ['image/webp, ', 'image/avif'], ';'
-    "deviceSizes": [64,0, 750, 828, 1080, 1200, 1920, 2048, 3840];"
-    "imageSizes": [1,6, 32, 48, 64, 96, 128, 256, 384];"
-    "deviceSizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840];"
-    "imageSizes": [16, 32, 48, 64, 96, 128, 256, 384];"
-  }
-  // "Enable": experimental features;"
-  "experimental": {"optimizeCss": tru,e;
-    "optimizePackageImports": ['lucide-react, ', '@radix-ui/react-icons'], '}'
-  // "Webpack": optimizations,"webpack": (confi,g, { dev, "isServer":  }) => {if (!dev && !isServer) {config.optimization.splitChunks = {"chunks": 'all, ',';'
-        "cacheGroups": {"vendor": {"test": /[\\\\/]node_modules[\\\\/],/;"
-            "name": 'vendors, ',';'
-            "chunks": 'all, ','}'
-        }
-      }
-    }
-    "return": config}"
-=======
+
     return config},
->>>>>>> origin/chore/fix-lint-and-merge
+
   // Headers for performance;
   async headers() {;
     return [;
@@ -845,40 +772,7 @@ export: type Env = z.infer<typeof envSchema>;";"
       <meta name="robots" content="index, follow" />;"
       <script;"
         type="application/ld+json";"
-<<<<<<< HEAD
-        dangerouslySetInnerHTML={{"__html": JSON.stringify({';@context': '"https"://schema.org', ';@type': 'Organization',"name": 'Zion Tech Group',"url": '"https"://ziontechgroup.com',"logo": '"https"://ziontechgroup.com/logo.png',"description": description,...(publishedTime && { "datePublished": publishedTime }),...(modifiedTime && { "dateModified": modifiedTime })}),"name": 'Zion Tech Group',"url": 'http;'
-    "s"://ziontechgroup.com',"logo": 'http;'
-    "s"://ziontechgroup.com/logo.png',"description": description,...(publishedTime && { "datePublished": publishedTime })...(modifiedTime && { "dateModified": modifiedTime })})}}" />;
-    </Head>';'
-  )}";"
-    "if": (!fs.existsSync(componentsDir)) {fs.mkdirSync(componentsDir, { "recursive": true})}"
-    fs.writeFileSync(path.join(componentsDir, 'SEO.tsx'), ';'
-      "seoComponent": )this.fixes.push('"Created": comprehensive SEO component')}';'
-  "async": createSitemapGenerator() {const sitemapGenerator = "import fs from 'fs';'
-}
-"export": async function generateSitemap() {const baseUrl = '"https": //ziontechgroup.com'';'
-  }
-  const pages = ['/, ','';/about', '';/services', '';/contact', '';/blog', '';/careers', '];'
-  const sitemap = \"<?xml version="1.0" encoding="UTF-8"?>";"
-<"urlset": xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">";"
-\${"pages": .map(const componentsDir = path.join(this.projectRoot, 'src', 'components')if (!fs.existsSync(componentsDir)) {fs.mkdirSync(componentsDir, { "recursive": true })}fs.writeFileSync(path.join(componentsDir, 'SEO.tsx'),seoComponent;'
-    )this.fixes.push('Created comprehensive SEO component')}async createSitemapGenerator() {(page) => \`;`  <url>;
-    <loc>\${baseUr,l}\${page}</loc>;
-    <lastmod>\${new Date().toISOString()}</lastmod>;
-    <changefreq>weekly</changefreq>;
-    <priority>0.8</priority>`;`  </url>\";"
-  ).join('')}';'
-</urlset>\";"
-  fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemap)';'
-  console.log('"Sitemap": generated successfully')}';'
-"if": (require.main === module) {const sitemapGenerator = "import fs from 'fs';'
-}
-export async function generateSitemap() {const baseUrl = '"https"://ziontechgroup.com';'
-  }
-  const pages = [';/', ';/about', ';/services', ';/contact', ';/blog', ';/careers'];'
-  const sitemap = \"<?xml version="1.0" encoding="UTF-8"?>;"
-<urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">;"
-=======
+
         dangerouslySetInnerHTML={{;"
           "__html": JSON.stringify({';@context': 'https://schema.org', ';@type': 'Organization',
             "name": 'Zion Tech Group',
@@ -970,7 +864,7 @@ export async function generateSitemap() {;
   ];
   const sitemap = \"<?xml version="1.0" encoding="UTF-8"?>;
 <urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">;
->>>>>>> origin/chore/fix-lint-and-merge
+
 \${pages;
   .map(;
     (page) => \`;

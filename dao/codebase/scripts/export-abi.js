@@ -1,63 +1,13 @@
-<<<<<<< HEAD
-const fs = require($2);
-const path = require($2);
-function main() {
-  const outDir = path.join($2);
-  if (!fs.existsSync(outDir)) fs.mkdirSync($2);
-  const artifactsDir = path.join($2);
-  const abis = $2;
-=======
-<<<<<<< HEAD
-function main() {
-
-function main() {}
-'
-=======
-<<<<<<< HEAD
-}else {
-  console && console.warn ('Missing artifact for', name) 
 
 
-=======
-
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
- 
-}else {
-  console.warn ('Missing artifact for', name) 
-<<<<<<< HEAD
- 
-}else {
-  console.warn ('Missing artifact for', name) 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 }else {
   console.warn ('Missing artifact for', name)
 }main ();
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-const fs = require('fs'),
-const path = require('path'),
 
 
-function main() {
 
-<<<<<<< HEAD
-const fs = require('fs'),
-const path = require('path'),
-function main() {
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const outDir = path && path.join(__dirname, '../abi'),
   if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir),'
   const artifactsDir = path && path.join(__dirname, '../artifacts/contracts'),
@@ -71,107 +21,15 @@ function main() {
     ['Treasure/Disbursements.solDisbursements']
     ['Treasure/EpochManager.solEpochManager']]
   for (const [rel, name] of abis) {
-<<<<<<< HEAD
 
-function main() {
-  const outDir = path.join(__dirname, '../abi');
-  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir);
-  const artifactsDir = path.join(__dirname, '../artifacts/contracts');
-    ['VoteToken.solVoteToken'],
->>>>>>> merged-prs-20250907-203621
-    ['ZionDAO.solZionDAO'],
-    ['QuorumEngine.solQuorumEngine'],
-    ['DelegateRegistry.solDelegateRegistry'],
-    ['ConstitutionStorage.solConstitutionStorage'],
-    ['Treasure/Disbursements.solDisbursements'],
-    ['Treasure/EpochManager.solEpochManager']],
-  for (const [rel, name] of abis) {
-    const p = path.join($2);
-    if (fs.existsSync(p)) {
-      const json = JSON.parse(fs.readFileSync(p, 'utf8')),
-      fs.writeFileSync(path.join(outDir, `${name}.json`), JSON.stringify(json.abi, null, 2)),
-      console.log('Exported ABI for', name)
-<<<<<<< HEAD
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-    const p = path && path.join(artifactsDir, rel, `${name}.json`),
-    if (fs && fs.existsSync(p)) {
-      const json = JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')),
-      fs && fs.writeFileSync(path && path.join(outDir, `${name}.json`), JSON && JSON.stringify(json && json.abi, null, 2)),
-      console && console.log('Exported ABI for', name)
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> merged-prs-20250907-203621
     } else {
       console.warn('Missing artifact for', name)
     }
   }
-<<<<<<< HEAD
-}
-
-main($2);
-=======
-<<<<<<< HEAD
-}
-=======
-}
 
 
 
-<<<<<<< HEAD
-}main ();main(),
 
-main(),
-;
-}else {
-  console.warn ('Missing artifact for', name);
-}main ();
-/**
- * main - Function description
- */
-function main() {
-  const out_dir = path.join (__dirname, '../abi'),
-  if () fs.mkdir_sync (out_dir), ) {
-  $2
-}
-  const artifacts_dir = path.join (__dirname, '../artifacts / contracts'),
-  const abis = [;
-    ['VoteToken.solVoteToken'],
-    ['ZionDAO.solZionDAO'],
-    ['QuorumEngine.solQuorumEngine'],
-    ['DelegateRegistry.solDelegateRegistry'],
-    ['ConstitutionStorage.solConstitutionStorage'],
-    ['Treasure / Disbursements.sol_disbursements'],
-    ['Treasure / EpochManager.solEpochManager']],
-  for (const [rel, name] of abis) {
-    const p = path.join (artifacts_dir, rel, `${name}.json`),
-    if () {) {
-  $2
-}
-      const json = JSON.parse (fs.readFileSync (p, 'utf8')),
-      fs.writeFileSync (path.join (out_dir, `${name}.json`), JSON.stringify (json.abi, null, 2)),
-      console.log ('Exported ABI for', name);
-    } else {
-      console.warn ('Missing artifact for', name);
-    }
-  }
-}
-}main ();main (),
 
-}main ();main()
-
-}main ();main(),
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-}main ();main(),
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621

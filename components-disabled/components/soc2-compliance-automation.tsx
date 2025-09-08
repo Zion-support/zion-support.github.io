@@ -102,13 +102,8 @@ export default function SOC2ComplianceAutomationPage() {return (<>;}
           </h1>;
           <p className='mt-6 text-lg text-gray-300 max-w-3xl' />;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
             Automate SOC 2 readiness with continuous controls, evidence;
             pipelines, and prebuilt auditor workflows. Integrates with cloud;
             providers and ticketing systems.;

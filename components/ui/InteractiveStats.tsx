@@ -1,201 +1,14 @@
-<<<<<<< HEAD
-import { useEffect, useState } from 'react';
-import {useEffect, useState} from 'react';
-function useCounter(): any (target: number, durationMs: number) {;
-=======
 
 
-<<<<<<< HEAD
-    let start: number | null;
-    let start: number | null = null;
-    let raf: number;    const step = (ts: number) => {
-      if (start === null) start = ts;
-      const progress = Math.min(1, (ts - start) / durationMs);
-      setValue(Math.floor(progress * target));
-      if (progress < 1) raf = requestAnimationFrame(step);    let start: number | null = null
-    let raf: number
-    const step = (ts: number) => {
-      if (start === null) start = ts
-      const progress = Math.min(1, (ts - start) / durationMs);
-      setValue(Math.floor(progress * target));
-      if (progress < 1) raf = requestAnimationFrame(step);
-    }
-    raf = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(raf);
-  }, [target, durationMs]);
-  return value;}
-    }
-    raf = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(raf)
-  }, [target, durationMs]),
-  return value
-}
-
-export default function InteractiveStats() {
-  const hires = useCounter($2);
-  const experts = useCounter($2);
-  const partners = useCounter($2);
-  const satisfaction = useCounter($2);
-  return (
-    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-      <Stat label="Successful Hires" value={hires} suffix="+" />
-      <Stat label="AI Experts" value={experts} suffix="+" />
-      <Stat label="Partners" value={partners} suffix="+" />
-      <Stat label="Satisfaction" value={satisfaction} suffix="%" />
-    </div>
-  )
-}
-
-function Stat({ label, value, suffix = '' }: { label: string, value: number, suffix?: string }) {
-  return (
-    <div className="p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 backdrop-blur">
-      <div className="text-3xl font-bold">{value}{suffix}</div>
-      <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
-    </div>
-);
-function Stat({
-  label
-  value
-  suffix = ''
-}: {
-  label: string;
-  value: number;
-  suffix?: string;
-}) {
-  return (
-    <div className='p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 backdrop-blur'>
-      <div className='text-3xl font-bold'>
-        {value}
-        {suffix}
-      </div>
-      <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
-    </div>
-  );
-
-"
-}
-=======
-<<<<<<< HEAD
-    let "start": number | null;
-
-export default function InteractiveStats() {
-
-  description?: string;
-}
-
-interface InteractiveStatsProps {
-  }
-  "stats": StatItem[];
-  className?: string;
-
-}
-
-export default function InteractiveStats() {return (<div className={className}>;
-      {stats.map((stat, index) => (<div;
-          }
-          key={index}
-
-          )}
-    </div>
-  );
-}
-function Stat() {'
- ;
-=======
-import {useEffect, useState} from 'react';
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-function useCounter(target: number, durationMs: number) {
-  const [value, setValue] = useState(0);
-  useEffect(() => {
-
-import {useEffect, useState} from 'react';
-
-function useCounter(target: number, durationMs: number) {
-  const [value, setValue] = useState(0);
-  useEffect(() => {;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    let start: number | null = null;
-    let raf: number;    const step = (ts: number) => {;
-    let start: number | null = null,
-    let raf: number,
-    const step = (ts: number) => {
-      if (start === null) start = ts;
-
-<<<<<<< HEAD
-      if (start === null) start = ts;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      const progress = Math && Math.min(1, (ts - start) / durationMs);
-      setValue(Math && Math.floor(progress * target));
-      if (progress < 1) raf = requestAnimationFrame(step);    let start: number | null = null,;
-    let raf: number,;
-    const step = (ts: number) => {;
-      if (start === null) start = ts,;
-      const progress = Math && Math.min(1, (ts - start) / durationMs);
-      setValue(Math && Math.floor(progress * target));
-<<<<<<< HEAD
-      if (start === null) start = ts
-      const progress = Math.min(1, (ts - start) / durationMs);
-      setValue(Math.floor(progress * target));
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      if (progress < 1) raf = requestAnimationFrame(step);
-    }
-    raf = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(raf);
-  }, [target, durationMs]);
-  return value;}
-
-    }
-
-    raf = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(raf);
-  }, [target, durationMs]);
-  return value;
-}
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      if (progress < 1) raf = requestAnimationFrame(step)
-    };
-    raf = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(raf)
-  }, [target, durationMs]);
-  return value
-}
-
-<<<<<<< HEAD
-
-
-export default function InteractiveStats() {;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-export default function InteractiveStats() {
-
-export default function InteractiveStats() {;
-<<<<<<< HEAD
-
-export default function InteractiveStats() {;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const hires = useCounter(1200, 1200);
   const experts = useCounter(450, 1200);
   const partners = useCounter(85, 1200);
   const satisfaction = useCounter(98, 1200);
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
 import {useEffect, useState} from 'react';
 /**
  * use_counter - Function description
@@ -246,18 +59,16 @@ function InteractiveStats() {
   const satisfaction = use_counter (98, 1200);
   return (
     <div className='grid sm:grid - cols - 2 lg:grid - cols - 4 gap - 4'>;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
       <Stat label='Successful Hires' value={hires} suffix='+' />;
       <Stat label='AI Experts' value={experts} suffix='+' />;
       <Stat label='Partners' value={partners} suffix='+' />;
       <Stat label='Satisfaction' value={satisfaction} suffix='%' />;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
   return (
     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
       <Stat label="Successful Hires" value={hires} suffix="+" />
@@ -266,22 +77,13 @@ function InteractiveStats() {
       <Stat label="Satisfaction" value={satisfaction} suffix="%" />
     </div>
   )
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-<<<<<<< HEAD
-}: {
-    </div>);
-    </div>);
+
 }
-/**
- * Stat - Function description
- */
-=======
+
+
+
 
   );
 
@@ -291,63 +93,7 @@ function Stat({
   value
   suffix = ''
 }: {
-<<<<<<< HEAD
 
-}
-}
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
-  return (
-    <div className="p - 5 rounded - xl border border - gray - 200 dark:border - gray - 800 bg - white / 60 dark:bg-black / 40 backdrop-blur>;
-        </div>;
-      ))}</div>;
-  )}
-      <div className=text-3xl font-bold">{value}{suffix}</div>;
-      <div className="text-sm text-gray-600 dark:text-gray-300>{label}</div>;
-    </div>;
-<<<<<<< HEAD
-)function Stat({label;
-  value;
-  suffix = ';
-}: {</div>)</div>)}
-/**;
- * Stat - Function description;
- */;
-      <div className=text-3xl font-bold">{value}{suffix}</div>;
-      <div className="text - sm text - gray - 600 dark:text-gray-300">{label}</div>;
-    </div>)/**;
- * Stat - Function description;
- */;
-      <div className=text - 3xl font - bold'>;
-=======
-  );
-
-}
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    </div>);
-    </div>);
-}
-/**
- * Stat - Function description
- */
-function Stat() {
-  return (
-    <div className="p - 5 rounded - xl border border - gray - 200 dark:border - gray - 800 bg - white / 60 dark:bg - black / 40 backdrop - blur">;
-      <div className="text - 3xl font - bold">{value}{suffix}</div>;
-      <div className="text - sm text - gray - 600 dark:text - gray - 300">{label}</div>;
-    </div>);
-/**
- * Stat - Function description
- */
-function Stat() {
-  return (
-    <div className='p - 5 rounded - xl border border - gray - 200 dark:border - gray - 800 bg - white / 60 dark:bg - black / 40 backdrop - blur'>;
-      <div className='text - 3xl font - bold'>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         {value}
         {suffix}
       </div>;
@@ -357,59 +103,17 @@ function Stat() {
   )
   )
 }
-<<<<<<< HEAD
 
-"
-}
-}
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
       </div>
       <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
     </div>
 
   );
 
-<<<<<<< HEAD
-    </div>
-  )
-}
 
-function Stat({ label, value, suffix = '' }: { label: string, value: number, suffix?: string }) {
-  return (
-    <div className="p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 backdrop-blur">
-      <div className="text-3xl font-bold">{value}{suffix}</div>
-      <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
-    </div>
-);
-  );
-function Stat({
-  label
-  value
-  suffix = ''
-}: {
-  label: string;
-  value: number;
-  suffix?: string;
-}) {
-  return (
-    <div className='p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 backdrop-blur'>
-      <div className='text-3xl font-bold'>
-        {value}
-        {suffix}
-      </div>
-      <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
-    </div>
-  );
-}
-  );
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+
+
+
+

@@ -109,13 +109,11 @@ class PerformanceOptimizer {
   }
     console && console.log(`[${timestamp}] ${message}`)}
   async optimizePerformance() {
-<<<<<<< HEAD
 
-=======
     this && this.log('⚡ Starting performance optimization');
     const files = glob && glob.sync('**/*.{js,jsx,ts,tsx}', {
       "cwd": this && this.srcDir,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       "ignore": ['**/*.test.*', '**/*.spec.*', '**/node_modules/**']
     });
     const results = {
@@ -189,13 +187,11 @@ class PerformanceOptimizer {
         results && results.processed++;
         results && results.optimizations += fileOptimizations;
       } catch (error) {
-<<<<<<< HEAD
 
-=======
         results && results.errors.push({ file, error: error && error.message });
         this && this.log(`❌ Error optimizing ${file}: ${error && error.message}`);
       }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
           this.log(`✅ "Optimized": ${file} (${fileOptimizations} optimizations)`)}
         results.processed++;
         results.optimizations += fileOptimizations} catch (error) {
@@ -206,16 +202,8 @@ class PerformanceOptimizer {
         results && results.optimizations += fileOptimizations} catch (error) {
         results && results.errors.push({ file, "error": error && error.message });
         this && this.log(`❌ Error optimizing ${file}: ${error && error.message}`)}
-<<<<<<< HEAD
 
-      }
-          this.log(`✅ "Optimized": ${file} (${fileOptimizations} optimizations)`)}
-        results.processed++;
-        results.optimizations += fileOptimizations} catch (error) {
-        results.errors.push({ file, "error": error.message });
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     }
     // Generate report
     const report = {
@@ -363,13 +351,11 @@ export default PerformanceMonitor;";
     if (!fs && fs.existsSync(utilsDir)) {
       fs && fs.mkdirSync(utilsDir, { recursive: true });
     }
-<<<<<<< HEAD
 
-=======
     fs && fs.writeFileSync(scriptPath, monitoringScript);
     this && this.log(`✅ Performance monitoring script created: ${scriptPath}`);
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       fs.mkdirSync(utilsDir, { "recursive": true })}
     fs.writeFileSync(scriptPath, monitoringScript);
     this.log(`✅ Performance monitoring script "created": ${scriptPath}`)}

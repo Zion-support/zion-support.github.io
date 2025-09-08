@@ -1,56 +1,9 @@
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, ChevronDown, Brain, Network, Cloud, Shield, Code, Zap } from 'lucide-react';
-import { useRouter } from 'next/router';
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
 
-const servicesDropdown = [
-  {
-    icon: Brain,
-    title: 'AI & Machine Learning',
-    description: 'Intelligent solutions for business automation',
-    href: '/ai-services',
-  },
-  {
-    icon: Shield,
-    title: 'Cybersecurity',
-    description: 'Advanced security and threat protection',
-    href: '/it-services',
-  },
-  {
-    icon: Cloud,
-    title: 'Cloud Infrastructure',
-    description: 'Scalable cloud solutions and migration',
-    href: '/it-services',
-  },
-  {
-    icon: Code,
-    title: 'Custom Software Development',
-    description: 'Tailored applications to meet your specific business needs',
-    href: '/services',
-  },
-  {
-    icon: Network,
-    title: 'System Integration',
-    description: 'Seamless integration of existing systems',
-    href: '/services',
-  },
-  {
-    icon: Zap,
-    title: 'Digital Transformation',
-    description: 'Complete digital overhaul of your business processes',
-    href: '/services',
-  }
-];
-
-const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
-=======
 import React, { useState } from 'react';
 import Link from 'next/link';
 
 const Header = () => {
->>>>>>> 9e52e46f57e53278f6e8f46f78a33c4d92654ea6
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [

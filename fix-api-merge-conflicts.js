@@ -2,22 +2,12 @@
 const fs = require('fs');
 const path = require(path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
 
-console.log(🔧 Fixing merge conflicts in API files...');
-
-// Find all files with merge conflicts
-const findConflictedFiles = () => {
-  try {
-    
-    // Clean up any remaining conflict markers
-    content = content.replace(/[^\n]+\n?/g, '');
-=======
 console.log('🔧 Fixing merge conflicts in API files...');
 // Find all files with merge conflicts;
 const findConflictedFiles = () => {
   try {
->>>>>>> origin/chore/fix-lint-and-merge
+
     const result = execSync('grep -r "" pages/api/ --include="*.ts" --include="*.js" | cut -d: -f1 | sort -u', { encoding: 'utf8' });
   // TODO: Implement
 }
@@ -26,14 +16,7 @@ pr-12325
     return result.trim().split('\n').filter(file => file);
   } catch (error) {
     return [];
-<<<<<<< HEAD
-  }
-}
 
-const fixMergeConflicts = (filePath) => {
-  try {
-    let content = fs.readFileSync(filePath, utf8');
-=======
 };
 
 const fixMergeConflicts = (filePath) => {
@@ -41,21 +24,13 @@ const fixMergeConflicts = (filePath) => {
     let content = fs.readFileSync(filePath, 'utf8');
     // Remove merge conflict markers and keep the main branch content;
     content = content.replace(/
->>>>>>> origin/chore/fix-lint-and-merge
+
     
     // Remove merge conflict markers and keep the main branch content
     content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)[^\n]+\n?/g, '$1');
     
     // Clean up any remaining conflict markers
-<<<<<<< HEAD
-    content = content.replace(/\n?/g, ');
-    content = content.replace(/\n?/g, ');
-    content = content.replace(/
-    
-    // Fix common syntax issues
-    content = content.replace(/,\s*;/g, ';); // Remove trailing commas before semicolons
-    content = content.replace(/import\s+([^;]+),\s*;/g, import $1;'); // Fix import statements
-=======
+
     content = content.replace(/\n?/g, '');
     content = content.replace(/\n?/g, '');
     content = content.replace(/[^\n]+\n?/g, '');
@@ -65,7 +40,7 @@ const fixMergeConflicts = (filePath) => {
     content = content.replace(/import\s+([^;]+),\s*;/g, 'import $1;'); // Fix import statements
     // Clean up any remaining conflict markers;
 pr-12325
->>>>>>> origin/chore/fix-lint-and-merge
+
     
     // Fix common syntax issues;)
     content = content.replace(/,\s*;/g, ';'); // Remove trailing commas before semicolons;
@@ -76,11 +51,8 @@ pr-12325
   } catch (error) {`;
     console.log(`❌ Failed to fix: ${filePath} - ${error.message}`);
     return false;
-<<<<<<< HEAD
-  }
-}
-=======
->>>>>>> origin/chore/fix-lint-and-merge
+
+
 
 const main = () => {
   const conflictedFiles = findConflictedFiles();
@@ -98,9 +70,7 @@ const main = () => {
       fixed++;
   });
   console.log(`\n🎉 Fixed ${fixed}/${conflictedFiles.length} files`);
-<<<<<<< HEAD
-}
-=======
->>>>>>> origin/chore/fix-lint-and-merge
+
+
 
 main();`;

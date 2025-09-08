@@ -1,39 +1,21 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
-<<<<<<< HEAD
-export default tseslint.config($2);
-=======
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import js from "@eslint/js",
 import globals from "globals",
 import reactHooks from "eslint-plugin-react-hooks",
 import reactRefresh from "eslint-plugin-react-refresh",
 import tseslint from "typescript-eslint",
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
 export default tseslint.config(
   { ignores: ["dist"] }
   {
@@ -41,15 +23,9 @@ export default tseslint.config(
     files: ["**/*.{ts,tsx}"]
     languageOptions: {
       ecmaVersion: 2020
-<<<<<<< HEAD
 
-=======
       globals: globals.browser}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 export default tseslint && tseslint.config(
 
   { ignores: ["dist"] },
@@ -59,35 +35,19 @@ export default tseslint && tseslint.config(
     languageOptions: {}
       ecmaVersion: 2020,
       globals: globals && globals.browser},
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
     plugins: {
 
       "react-hooks": reactHooks
       "react-refresh": reactRefresh}
     rules: {
-<<<<<<< HEAD
-      ...reactHooks && reactHooks.configs.recommended && recommended.rules,
-      "react-refresh/only-export-components": [
-        "warn"
-        { allowConstantExport: true }]
-      "@typescript-eslint/no-unused-vars": "off"}}
-      ...reactHooks.configs.recommended.rules
-=======
+
 
       ...reactHooks && reactHooks.configs.recommended && recommended.rules,
 
-<<<<<<< HEAD
-...reactHooks && reactHooks.configs.recommended && recommended.rules,
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       "react-refresh/only-export-components": [
         "warn"
         { allowConstantExport: true }]
@@ -102,47 +62,26 @@ export default tseslint && tseslint.config(
         "warn"
         { allowConstantExport: true }]
       "@typescript-eslint/no-unused-vars": "off"}}
-<<<<<<< HEAD
-)
 
-<<<<<<< HEAD
-=======
 ),
 ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 import js from "@eslint/js",;
 import globals from "globals",;
 import reactHooks from "eslint-plugin-react-hooks",;
 import reactRefresh from "eslint-plugin-react-refresh",;
-<<<<<<< HEAD
 
-import tseslint from "typescript-eslint",;
-export default tseslint.config(;"
-  { ignores: ["dist"] },;
-  {;
-    extends: [js.configs.recommended, ...tseslint.configs.recommended],;"
-=======
 import tseslint from "typescript-eslint",;
 export default tseslint.config(;
   { ignores: ["dist"] },;
   {;
     extends: [js.configs.recommended, ...tseslint.configs.recommended],;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     files: ["**/*.{ts,tsx}"],;
     languageOptions: {;
       ecmaVersion: 2020,;
       globals: globals.browser},;
-<<<<<<< HEAD
-    plugins: {;"
-      "react-hooks": reactHooks,;"
-      "react-refresh": reactRefresh},;
-    rules: {;
-      ...reactHooks.configs.recommended.rules,;"
-      "react-refresh/only-export-components": [;"
-        "warn",;
-        { allowConstantExport: true }];"
-      "@typescript-eslint/no-unused-vars": "off"}});
-=======
+
     plugins: {;
       "react-hooks": reactHooks,;
       "react-refresh": reactRefresh},;
@@ -153,9 +92,7 @@ export default tseslint.config(;
         { allowConstantExport: true }];
       "@typescript-eslint/no-unused-vars": "off"}}
 );
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 
 )
 import js from "@eslint / js";
@@ -244,70 +181,8 @@ export default tseslint.config (
       "@typescript - eslint / no - unused - vars": "off"}}
 ),
 
-<<<<<<< HEAD
-),
-<<<<<<< HEAD
-import js from "js";"
-=======
+
 ),
 
-=======
-),
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-import js from "@eslint/js",;
-import globals from "globals",;
-import reactHooks from "eslint-plugin-react-hooks",;
-import reactRefresh from "eslint-plugin-react-refresh",;
-<<<<<<< HEAD
 
-import tseslint from "typescript-eslint",;
->>>>>>> origin/chore/fix-lint-and-merge
-;
-export default tseslint.config(;"
-  { ignores:["dist"] },;
-  {;
-    extends:[js.configs.recommended, ...tseslint.configs.recommended],;"
-=======
-import tseslint from "typescript-eslint",;
-;
-export default tseslint.config(;
-  { ignores:["dist"] },;
-  {;
-    extends:[js.configs.recommended, ...tseslint.configs.recommended],;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-    files:["**/*.{ts,tsx}"],;
-    languageOptions:{;
-      ecmaVersion:2020,;
-      globals:globals.browser},;
-<<<<<<< HEAD
-    plugins:{;"
-      "react-hooks":reactHooks,;"
-      "react-refresh":reactRefresh},;
-    rules:{;
-      ...reactHooks.configs.recommended.rules,;"
-      "react-refresh/only-export-components":[;"
-        "warn",;
-
-),; export default tseslint.config ("@typescript-eslint/no-unused-vars": "off" 
-};
-});
-=======
-    plugins:{;
-      "react-hooks":reactHooks,;
-      "react-refresh":reactRefresh},;
-    rules:{;
-      ...reactHooks.configs.recommended.rules,;
-      "react-refresh/only-export-components":[;
-        "warn",;
-        { allowConstantExport:true }],;
-      "@typescript-eslint/no-unused-vars":"off"}}
-),; export default tseslint.config ("@typescript-eslint/no-unused-vars": "off" 
-}
-});
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621

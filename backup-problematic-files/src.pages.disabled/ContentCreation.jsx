@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-}
-}
-<
-=======
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -22,7 +18,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 
 import React from 'react';
 interface EmailautomationProps {

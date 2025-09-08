@@ -1,85 +1,5 @@
-<<<<<<< HEAD:src_backup/components/projects/reviews/ProjectReviewSection.tsx
-import { Button } from "@/components/ui/button,
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from @/components/ui/card",
-import { ReviewsList } from "@/components/reviews/ReviewsList,
-import { LeaveReviewModal } from @/components/reviews/LeaveReviewModal",
-import { useReviews } from "@/hooks/useReviews;
-import { useAuth } from @/hooks/useAuth";
-interface ProjectReviewSectionProps {
-  project: Project
-=======
-<<<<<<< HEAD
-import { Project  } from '@/types/projects';
-import { useState } from "react",
-import { Project } from '@/types/projects'
-import { useState } from 'react'
-import { Project  } from '@/types/projects';
-import { useState } from "react",
-import { Project } from '@/types/projects'
-import { useState } from 'react'
-import { Star } from 'lucide-react'
-
-import { Button } from '@/components/ui/button'
-import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-import { ReviewsList } from '@/components/reviews/ReviewsList'
-import { LeaveReviewModal } from '@/components/reviews/LeaveReviewModal'
-import { useReviews } from '@/hooks/useReviews'
-import { useAuth } from '@/hooks/useAuth'
-interface ProjectReviewSectionProps {
-  project: Project
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
-  const { user } = useAuth()
-  const { reviews, userReview, isLoading, reportReview } = useReviews(
-    project.id
-  )
-  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false)
-  const isCompleted = project.status === 'completed'
-  const isClient = user?.id === project.client_id
-  const isTalent = user?.id === project.talent_id
-  const clientProfile = project?.talent_profile
-  const talentProfile = project.talent_profile
-  // Determine who the current user needs to review
-<<<<<<< HEAD
-  const revieweeId = isClient ? project.talent_id : project.client_id
-  const revieweeName = isClient
-    ? talentProfile?.full_name |'Talent'
-    : clientProfile?.full_name |'Client'
-  const canLeaveReview = isCompleted && (isClient |isTalent) && !userReview
-  const hasLeftReview = userReview != null
-import { Project } from '@/types/projects',
-import { useState } from "react",
-import { Star } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { ReviewsList } from "@/components/reviews/ReviewsList",
-import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",
-import { useReviews } from "@/hooks/useReviews",
-import { useAuth } from "@/hooks/useAuth",
-interface ProjectReviewSectionProps {
-  project: Project
-}
-=======
-  const revieweeId = isClient ? project.talent_id : project.client_id,
-  const revieweeName = isClient 
-    ? talentProfile?.full_name || "Talent" 
-    : clientProfile?.full_name || "Client",
 
 
-  const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
-  const hasLeftReview = userReview != null,
-  
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/projects/reviews/ProjectReviewSection.tsx
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const { user } = useAuth();
   const { reviews, userReview, isLoading, reportReview } = useReviews(project.id);
@@ -111,20 +31,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const clientProfile = project?.talent_profile
   const talentProfile = project.talent_profile
   // Determine who the current user needs to review
-<<<<<<< HEAD:src_backup/components/projects/reviews/ProjectReviewSection.tsx
-  const revieweeId = isClient ? project.talent_id : project.client_id
-  const revieweeName = isClient
-    ? talentProfile?.full_name |Talent'
-    : clientProfile?.full_name |'Client
-  const canLeaveReview = isCompleted && (isClient |isTalent) && !userReview
-  const hasLeftReview = userReview != null
-origin/cursor/automate-test-improve-and-merge-code-2533
-  return (
-    <Card className=mt-6'>
-      <CardHeader>
-        <CardTitle className='flex items-center gap-2>
-          <Star className=h-5 w-5 text-yellow-400' />
-=======
+
   const revieweeId = isClient ? project.talent_id : project.client_id,
   const revieweeName = isClient 
     ? talentProfile?.full_name || "Talent" 
@@ -133,24 +40,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null,
   
-<<<<<<< HEAD
-  const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
-  const hasLeftReview = userReview != null,
-  
-    <Card className="mt-6">
 
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  return (
-    <Card className='mt-6'>
-        <CardTitle className='flex items-center gap-2'>
-          <Star className='h-5 w-5 text-yellow-400' />
-    <Card className="mt-6">
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <Star className="h-5 w-5 text-yellow-400" />
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/projects/reviews/ProjectReviewSection.tsx
           Reviews
         </CardTitle>
         <CardDescription>
@@ -163,42 +53,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       
 
       <CardContent>
-<<<<<<< HEAD
-      <CardContent>
-        {isCompleted ? (
-          <div className='space-y-6'>
-            {(isClient |isTalent) && (
-              <div className='border-b pb-4 mb-4'>
-      
-      <CardContent>
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
         {isCompleted ? (
           <div className="space-y-6>
             {(isClient || isTalent) && (
-<<<<<<< HEAD:src_backup/components/projects/reviews/ProjectReviewSection.tsx
-              <div className=border-b pb-4 mb-4">
-                {canLeaveReview ? (
-                  <div className='bg-muted/20 rounded-lg p-4 text-center>
-                    <h3 className=font-medium mb-2'>Share your experience</h3>
-                    <p className='text-sm text-muted-foreground mb-3>
-=======
+
               <div className="border-b pb-4 mb-4">
-<<<<<<< HEAD
-                  <div className="bg-muted/20 rounded-lg p-4 text-center">
-                    <h3 className="font-medium mb-2">Share your experience</h3>
-                    <p className="text-sm text-muted-foreground mb-3">
-                {canLeaveReview ? (
-                  <div className='bg-muted/20 rounded-lg p-4 text-center'>
-                    <h3 className='font-medium mb-2'>Share your experience</h3>
-                    <p className='text-sm text-muted-foreground mb-3'>
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                {canLeaveReview ? (
-                  <div className="bg-muted/20 rounded-lg p-4 text-center">
-                    <h3 className="font-medium mb-2">Share your experience</h3>
-                    <p className="text-sm text-muted-foreground mb-3">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/projects/reviews/ProjectReviewSection.tsx
+
                       Your review will help build a trustworthy community
                     </p>
                     <Button onClick={() => setIsReviewModalOpen(true)}>
@@ -206,260 +68,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </Button>
                   </div>
                 ) : hasLeftReview ? (
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:src_backup/components/projects/reviews/ProjectReviewSection.tsx
-import { useState } from react';
-                  <div className="bg-muted/20 rounded-lg p-4 text-center>
-                    <h3 className=font-medium mb-2">Thank you for your review!</h3>
-                    <p className="text-sm text-muted-foreground mb-3>
-                      Your review is {userReview.status === approved" ? "published : pending approval"}
-=======
-import { useState } from 'react';
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                  <div className="bg-muted/20 rounded-lg p-4 text-center">
-                    <h3 className="font-medium mb-2">Thank you for your review!</h3>
-                    <p className="text-sm text-muted-foreground mb-3">
-                      Your review is {userReview.status === "approved" ? "published" : "pending approval"}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/projects/reviews/ProjectReviewSection.tsx
+
+
                     </p>
-<<<<<<< HEAD
-                    {userReview.status === 'pending' && (
-                      <Button
-                        variant='outline'
-                        onClick={() => setIsReviewModalOpen(true)}
-                      >                        Edit Review
-                      </Button>
-=======
 
-<<<<<<< HEAD:src_backup/components/projects/reviews/ProjectReviewSection.tsx
-                    {userReview.status === "pending && (
-                      <Button variant=outline" onClick={() => setIsReviewModalOpen(true)}>
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                    {userReview.status === "pending" && (
-                      <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/projects/reviews/ProjectReviewSection.tsx
+
+
                         Edit Review
                       </Button>
 import { Project } from '@/types/projects,
 import { useState } from "react,
 
-<<<<<<< HEAD:src_backup/components/projects/reviews/ProjectReviewSection.tsx
-import { Star } from lucide-react';
-import { Button } from @/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card,
-import { ReviewsList } from @/components/reviews/ReviewsList",
-import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal,
-import { useReviews } from @/hooks/useReviews",
-import { useAuth } from "@/hooks/useAuth,
-interface ProjectReviewSectionProps {
-=======
-<<<<<<< HEAD
-import { Star } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
-  CardTitle,;
-} from '@/components/ui/card';
-import { ReviewsList } from '@/components/reviews/ReviewsList';
-import { LeaveReviewModal } from '@/components/reviews/LeaveReviewModal';
-import { useReviews } from '@/hooks/useReviews';
-import { useAuth } from '@/hooks/useAuth';
-interface ProjectReviewSectionProps {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/projects/reviews/ProjectReviewSection.tsx
-  project: Project;
-}
-export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
-  const { user } = useAuth(),
-  const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),
-  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),
-  const isCompleted = project.status === completed",
-  const isClient = user?.id === project.client_id,
-  const isTalent = user?.id === project.talent_id,
-  const clientProfile = project?.talent_profile,
-  const talentProfile = project.talent_profile,
-  // Determine who the current user needs to review;
-  const revieweeId = isClient ? project.talent_id : project.client_id,
-  const revieweeName = isClient;
-    ? talentProfile?.full_name || "Talent;
-    : clientProfile?.full_name || Client",
-  const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview;
-  const hasLeftReview = userReview != null;
-  return (;
-    <Card className="mt-6>;
-      <CardHeader>;
-        <CardTitle className=flex items-center gap-2">;
-          <Star className="h-5 w-5 text-yellow-400 />;
-          Reviews;
-        </CardTitle>;
-        <CardDescription>;
-          Reviews are visible once the project is completed and both parties submit feedback;
-        </CardDescription>;
-      </CardHeader>;
-      <CardContent>;
-        {isCompleted ? (;
-          <div className=space-y-6">;
-            {(isClient || isTalent) && (;
-              <div className="border-b pb-4 mb-4>;
-                {canLeaveReview ? (;
-                  <div className=bg-muted/20 rounded-lg p-4 text-center">;
-                    <h3 className="font-medium mb-2>Share your experience</h3>;
-                    <p className=text-sm text-muted-foreground mb-3">;
-                      Your review will help build a trustworthy community;
-                    </p>;
-                    <Button onClick={() => setIsReviewModalOpen(true)}>;
-
-                      Leave Review;
-                    </Button>;
-                  </div>;
-                ) : hasLeftReview ? (;
-                  <div className='bg-muted/20 rounded-lg p-4 text-center>;
-                    <h3 className=font-medium mb-2'>;
-                      Thank you for your review!;
-                    </h3>;
-                    <p className='text-sm text-muted-foreground mb-3>;
-                      Your review is{ '}
-                      {userReview && userReview.status === 'approved;
-                        ? published';
-                        : 'pending approval'}
-                    </p>;
-                    {userReview.status === "pending && (;
-                      <Button variant=outline" onClick={() => setIsReviewModalOpen(true)}>;
-                        Edit Review;
-                      </Button>;
 
 
-
-                    )}
-                  </div>
-                ) : null}
-              </div>
-<<<<<<< HEAD:src_backup/components/projects/reviews/ProjectReviewSection.tsx
-=======
-            )}
-ursor/fix-website-loading-errors-and-merge-6662
-                    {userReview.status === "pending" && (
-                      <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>
-                        Edit Review
-                      </Button>
-import { Project } from '@/types/projects',;
-import { useState } from "react",;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import { Star } from 'lucide-react';
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { ReviewsList } from "@/components/reviews/ReviewsList",;
-import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",;
-import { useReviews } from "@/hooks/useReviews",;
-import { useAuth } from "@/hooks/useAuth",;
-interface ProjectReviewSectionProps {;
-  project: Project;
-}
-;
-export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
-  const { user } = useAuth(),;
-  const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),;
-  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),;
-  const isCompleted = project.status === "completed",;
-  const isClient = user?.id === project.client_id,;
-  const isTalent = user?.id === project.talent_id,;
-  const clientProfile = project?.talent_profile,;
-  const talentProfile = project.talent_profile,;
-  // Determine who the current user needs to review;
-  const revieweeId = isClient ? project.talent_id : project.client_id,;
-  const revieweeName = isClient;
-    ? talentProfile?.full_name || "Talent";
-    : clientProfile?.full_name || "Client",;
-  const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview;
-  const hasLeftReview = userReview != null;
-  return (;
-    <Card className="mt-6">;
-      <CardHeader>;
-        <CardTitle className="flex items-center gap-2">;
-          <Star className="h-5 w-5 text-yellow-400" />;
-          Reviews;
-        </CardTitle>;
-        <CardDescription>;
-          Reviews are visible once the project is completed and both parties submit feedback;
-        </CardDescription>;
-      </CardHeader>;
-      <CardContent>;
-        {isCompleted ? (;
-          <div className="space-y-6">;
-            {(isClient || isTalent) && (;
-              <div className="border-b pb-4 mb-4">;
-                {canLeaveReview ? (;
-                  <div className="bg-muted/20 rounded-lg p-4 text-center">;
-                    <h3 className="font-medium mb-2">Share your experience</h3>;
-                    <p className="text-sm text-muted-foreground mb-3">;
-                      Your review will help build a trustworthy community;
-                    </p>;
-                    <Button onClick={() => setIsReviewModalOpen(true)}>;
-                      Leave Review;
-                    </Button>;
-                  </div>;
-                ) : hasLeftReview ? (;
-<<<<<<< HEAD
-                  <div className="bg-muted/20 rounded-lg p-4 text-center">;
-                    <h3 className="font-medium mb-2">Thank you for your review!</h3>;
-                    <p className="text-sm text-muted-foreground mb-3">;
-                      Your review is {userReview.status === "approved" ? "published" : "pending approval"}
-=======
-                  <div className='bg-muted/20 rounded-lg p-4 text-center'>;
-                    <h3 className='font-medium mb-2'>;
-                      Thank you for your review!;
-                    </h3>;
-                    <p className='text-sm text-muted-foreground mb-3'>;
-                      Your review is{' '}
-                      {userReview && userReview.status === 'approved';
-                        ? 'published';
-                        : 'pending approval'}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                    </p>;
-                    {userReview.status === "pending" && (;
-                      <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>;
-                        Edit Review;
-                      </Button>;
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                    )}
-                  </div>
-                ) : null}
-              </div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/projects/reviews/ProjectReviewSection.tsx
             )}
 
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
             <ReviewsList
-<<<<<<< HEAD:src_backup/components/projects/reviews/ProjectReviewSection.tsx
-              reviews = {reviews}
-              isLoading = {isLoading}
-              onReportReview = {reportReview}
-=======
+
               reviews = {reviews,}
               isLoading = {isLoading,}
               onReportReview = {reportReview,}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/projects/reviews/ProjectReviewSection.tsx
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </CardContent>;
 
       {/* Review Modal */}
@@ -605,28 +241,8 @@ function ProjectReviewSection() {
               able to leave reviews;
             </p>;
           </div>)}
-<<<<<<< HEAD
-      </CardContent>
-      {/* Review Modal */}
-      {(isClient |isTalent) && (
-        <LeaveReviewModal
-          projectId = {project.id,}
-          revieweeId = {revieweeId,}
-          revieweeName = {revieweeName,}
-          isOpen = {isReviewModalOpen,}
-          onClose = {(,) => setIsReviewModalOpen(false),}
-        />
-      )}
-    </Card>
-  )
-}
-}
-    </Card>;
-  );
-};
-};
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
       </CardContent>;
       {/* Review Modal */}
       {(isClient || isTalent) && (;
@@ -641,17 +257,7 @@ function ProjectReviewSection() {
     </Card>;
   );
 }
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-;
-;
-=======
+
 
 ;
-<<<<<<< HEAD:src_backup/components/projects/reviews/ProjectReviewSection.tsx
-    </Card>
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/projects/reviews/ProjectReviewSection.tsx
+

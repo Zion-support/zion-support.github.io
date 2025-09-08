@@ -10,8 +10,7 @@ const ScrollToTop: React.FC = () => {
         setIsVisible(false);
       }
     };
-<<<<<<< HEAD
-=======
+
 
     window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);
@@ -37,6 +36,6 @@ const ScrollToTop: React.FC = () => {
       )}
     </>
   );
->>>>>>> origin/chore/fix-lint-and-merge
+
 };
 export default ScrollToTop;

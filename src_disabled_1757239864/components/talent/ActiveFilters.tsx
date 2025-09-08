@@ -1,4 +1,4 @@
-<<<<<<<< HEAD:src_backup/components/talent/ActiveFilters.tsx
+<:src_backup/components/talent/ActiveFilters.tsx
 import React from 'react';
 import { ClickableBadge } from '@/components/ui/clickable-badge';
 import { Button } from '@/components/ui/button';
@@ -125,7 +125,7 @@ export function ActiveFilters({
 }
     </div>);
 }
-<<<<<<<< HEAD:src_backup/components/talent/ActiveFilters.tsx
+<:src_backup/components/talent/ActiveFilters.tsx
 ;
   );
 origin/cursor/automate-test-improve-and-merge-code-2533

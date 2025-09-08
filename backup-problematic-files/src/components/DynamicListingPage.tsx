@@ -110,13 +110,10 @@ export function DynamicListingPage({;
                     onValueChange={(value:string) =>;
 
                     min={0}
-<<<<<<< HEAD
-                    max={priceRange && priceRange.max}
-                    step={priceRange && priceRange.max / 100}
-=======
+
                     max={priceRange.max}
                     step={priceRange.max / 100}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
                     value={currentPriceFilter}
 
                     <span>${currentPriceFilter[0].toLocaleString()}</span>;
@@ -199,9 +196,7 @@ export function DynamicListingPage({;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </div>;
-=======
+
     </div>;
   ),; import {;
   Select;
@@ -300,9 +295,4 @@ setCurrentPriceFilter ([0, priceRange.max]);
 setSelectedRating (null);
 > Clear All </Button> </div>) ;
 }</div> </div> </div> </div>) ;
-<<<<<<< HEAD
-}'"
-=======
-}'"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

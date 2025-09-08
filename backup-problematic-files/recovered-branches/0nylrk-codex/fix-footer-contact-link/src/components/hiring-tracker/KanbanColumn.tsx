@@ -39,11 +39,9 @@ export function KanbanColumn({;
       case "rejected":;
         return "bg-red-50",;
       default:;
-<<<<<<< HEAD
+
         return "bg-muted/30";
-=======
-        return "bg-muted/30";
-<<<<<<< HEAD
+
     }
   },;
   ;
@@ -134,4 +132,4 @@ return (<Card className= {
 }</div>) 
 }</Droppable> </CardContent> </Card>) 
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

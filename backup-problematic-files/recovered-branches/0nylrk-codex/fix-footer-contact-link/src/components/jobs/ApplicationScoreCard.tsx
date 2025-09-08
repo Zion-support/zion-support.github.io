@@ -2,10 +2,8 @@ case "Low Match":;
         return "bg-orange-100 text-orange-800",;
       default:;
         return "bg-gray-100 text-gray-800";
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
+
     }
   },;
 ;
@@ -67,7 +65,7 @@ case "Low Match":;
 ;
   // Render the score result or button to score;
   return (;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     <Card className="overflow-hidden">;
       <CardHeader className="pb-3">;
         <CardTitle className="text-lg font-medium flex items-center justify-between">;

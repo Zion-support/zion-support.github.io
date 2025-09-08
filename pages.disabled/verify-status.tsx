@@ -1,6 +1,5 @@
 
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-=======
+
 
 
 
@@ -11,145 +10,7 @@ import { Button } from '@/components/ui/button',;
 import { Alert, AlertDescription } from '@/components/ui/alert',;
 import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react';
 import { AuthLayout } from '@/layout',;
-<<<<<<< HEAD
-import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react'
-import { AuthLayout } from '@/layout';
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import { supabase } from '@/integrations/supabase/client', // Import Supabase client
-import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger',;
-;
-export default function VerifyStatus() {
 
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-
-
-import { supabase } from '@/integrations/supabase/client', // Import Supabase client
-import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
-export default function VerifyStatus() {
-
-  const router = useRouter()
-  const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext
-
-  const { email: emailParam } = router.query,
-import { supabase } from '@/integrations/supabase/client', // Import Supabase client;
-import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state;
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
-export default function VerifyStatus(req, res) {
-  try {
-  const router = useRouter();
-  const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext;
-  const { email: emailParam } = router.query;
-
-<<<<<<< HEAD
-  const router = useRouter()
-  const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext
-  const { email: emailParam } = router.query,
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [error, setError] = useState('');
-  const [isResending, setIsResending] = useState(false);
-  const [isCheckingStatus, setIsCheckingStatus] = useState(false);
-  const [lastSentTime, setLastSentTime] = useState<Date | null>(null);
-  const [countdown, setCountdown] = useState(0);
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
-import { useState, useEffect } from 'react',;
-import { useRouter } from 'next/router',;
-import { Input } from '@/components/ui/input',;
-import { Button } from '@/components/ui/button',;
-import { Alert, AlertDescription } from '@/components/ui/alert',;
-import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react';
-import { AuthLayout } from '@/layout',;
-import {
-  Mail,
-  AlertCircle,
-  CheckCircle,
-  Clock,
-  RefreshCw,
-  ArrowLeft,
-  Eye,;
-} from 'lucide-react';
-import { AuthLayout } from '@/layout';
-import { supabase } from '@/integrations/supabase/client'; // Import Supabase client
-import { useAuth } from '@/hooks/useAuth'; // Import useAuth to access user state
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
-
-export default function VerifyStatus() {
-  const router = useRouter();
-  const { user: authUser, isLoading: authLoading } = useAuth(); // Get user from AuthContext
-  const { email: emailParam } = router.query;
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [error, setError] = useState('');
-  const [isResending, setIsResending] = useState(false);
-  const [isCheckingStatus, setIsCheckingStatus] = useState(false);
-  const [lastSentTime, setLastSentTime] = useState<Date | null>(null);
-  const [countdown, setCountdown] = useState(0);
-
-  useEffect(() => {
-    if (typeof emailParam === 'string') {
-setEmail(emailParam);
-origin/cursor/automate-test-improve-and-merge-code-2533
-import { supabase } from '@/integrations/supabase/client', // Import Supabase client
-import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger',;
-;
-
-export default function VerifyStatus() {
-
-  const router = useRouter(),
-  const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext
-  const { email: emailParam } = router.query,
-  const [email, setEmail] = useState(''),
-  const [message, setMessage] = useState(''),
-  const [error, setError] = useState(''),
-  const [isResending, setIsResending] = useState(false),
-  const [isCheckingStatus, setIsCheckingStatus] = useState(false),
-  const [lastSentTime, setLastSentTime] = useState<Date | null>(null),
-  const [countdown, setCountdown] = useState(0),
-
-  useEffect(() => {
-    if (typeof emailParam === 'string') {
-      setEmail(emailParam)
-  const router = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-    }
-  }, [emailParam]),
-
-  // Countdown timer for resend button
-  useEffect(() => {
-    let interval: NodeJS.Timeout,
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    if (countdown > 0) {
-      interval = setInterval(() => {
-        setCountdown(prev => prev - 1)
-      }, 1000)
-<<<<<<< HEAD
-=======
-    }
-    return () => clearInterval(interval)
-
-
-      return
-    }
-    setIsResending(true)
-    setError('')
-    setMessage('')
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     return () => clearInterval(interval)
   }, [countdown]),
@@ -164,93 +25,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     setError(''),
     setMessage(''),
 
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Alert, AlertDescription } from '@/components/ui/alert';
 
-import { supabase } from '@/integrations/supabase/client', // Import Supabase client
-import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
-export default function VerifyStatus() {
 
-  const router = useRouter()
-  const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext
-
-  const { email: emailParam } = router.query,
-import { supabase } from '@/integrations/supabase/client', // Import Supabase client;
-import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state;
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
-export default function VerifyStatus(req, res) {
-  try {
-  const router = useRouter();
-  const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext;
-  const { email: emailParam } = router.query;
-
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [error, setError] = useState('');
-  const [isResending, setIsResending] = useState(false);
-  const [isCheckingStatus, setIsCheckingStatus] = useState(false);
-  const [lastSentTime, setLastSentTime] = useState<Date | null>(null);
-  const [countdown, setCountdown] = useState(0);
-
-    if (countdown > 0) {
-      interval = setInterval(() => {
-        setCountdown(prev => prev - 1)
-      }, 1000)
-    }
-    return () => clearInterval(interval)
-
-      return
-    }
-    setIsResending(true)
-    setError('')
-    setMessage('')
-    }
-    return () => clearInterval(interval)
-  }, [countdown]),
-
-  const handleResendEmail = async () => {
-    if (!email) {
-      setError('Please enter your email address'),
-      return
-    }
-
-    setIsResending(true),
-    setError(''),
-    setMessage(''),
-
-=======
-<<<<<<< HEAD
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email })
-});
-      const data = await response.json();
-      if (response.ok) {
-        setMessage('Verification email sent successfully! Please check your inbox.');
-        setLastSentTime(new Date());
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
-    try {
-      const response = await fetch('/api/resend-verification-email', {
-
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email })
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setMessage('Verification email sent successfully! Please check your inbox.');
-        setLastSentTime(new Date());
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         setCountdown(60), // 60 second cooldown
       } else {
         setError(data.message |'Failed to resend verification email')
@@ -327,29 +103,8 @@ if ( {) {
         set_countdown (60), // 60 second cooldown;
       } else {
         set_error (data.message || 'Failed to resend verification email');
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-let interval: NodeJS.Timeout;
-origin/cursor/automate-test-improve-and-merge-code-2533
-    if (countdown > 0) {
-      interval = setInterval(() => {
-        setCountdown(prev => prev - 1);
-      }, 1000);
-    }
-    return () => clearInterval(interval)
-  }, [countdown]),
 
-  const handleResendEmail = async () => {
-    if (!email) {
-      setError('Please enter your email address'),
-      return
-    }
 
-    setIsResending(true),
-    setError(''),
-    setMessage(''),
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { Input } from '@/components/ui/input';
@@ -365,28 +120,7 @@ export default function VerifyStatus() {
 
   const router = useRouter()
   const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
 
-  const { email: emailParam } = router.query,
-import { supabase } from '@/integrations/supabase/client', // Import Supabase client;
-import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state;
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
-export default function VerifyStatus(req, res) {
-  try {
-  const router = useRouter();
-  const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext;
-  const { email: emailParam } = router.query;
-
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [error, setError] = useState('');
-  const [isResending, setIsResending] = useState(false);
-  const [isCheckingStatus, setIsCheckingStatus] = useState(false);
-  const [lastSentTime, setLastSentTime] = useState<Date | null>(null);
-  const [countdown, setCountdown] = useState(0);
-
-
-=======
   const { email: emailParam } = router.query
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
@@ -403,49 +137,26 @@ export default function VerifyStatus(req, res) {
   // Countdown timer for resend button
   useEffect(() => {
     let interval: NodeJS.Timeout
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
+
     if (countdown > 0) {
       interval = setInterval(() => {
         setCountdown(prev => prev - 1)
       }, 1000)
     }
     return () => clearInterval(interval)
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
 
-      return
-
-      return
-    return () => clearInterval(interval);
-  }, [countdown]);
-
-  const handleResendEmail = async () => {
-    if (!email) {
-      setError('Please enter your email address');
-return;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   }, [countdown])
   const handleResendEmail = async () => {
     if (!email) {
       setError('Please enter your email address')
       return
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
+
     }
     setIsResending(true)
     setError('')
     setMessage('')
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-    }
-    return () => clearInterval(interval)
-  }, [countdown]),
 
-  const handleResendEmail = async () => {
-    if (!email) {
-      setError('Please enter your email address'),
-      return
-    }
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
+
     try {
       const response = await fetch('/api/resend-verification-email', {
         method: 'POST'
@@ -467,18 +178,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setIsResending (false);
 
     }
-<<<<<<< HEAD
-  }
-  const handleCheckStatus = async () => {
-    if (!email) {
-      setError('Please enter your email address')
-=======
 
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
+
       return
       return
     try {
@@ -516,17 +218,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     setMessage('')
     try {
       // Attempt to refresh the session to get the latest user status
-<<<<<<< HEAD
-      const { error: refreshError } = await supabase.auth.refreshSession()
-      if (refreshError) {
-        // Don't treat all refresh errors as critical for this check
-=======
 
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
+
         // as user might not have a session yet or it might be invalid.
         logWarn('Error during session refresh:', { data: refreshError.message })
       }
@@ -597,19 +291,14 @@ router.push(`/auth/login?email=${encodeURIComponent(email)}`);
     } catch (err: any) {
       logErrorToProduction('Error checking verification status:', { data: err })
       setError('An unexpected error occurred while checking status. Please try again.')
-<<<<<<< HEAD
-=======
+
 
   },
   const handleCheckStatus = async () => {
     // Check condition
 if ( {) {
   $2
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
+
   useEffect(() => {;
     if (typeof emailParam === 'string') {;
       setEmail(emailParam);
@@ -721,69 +410,17 @@ if ( {) {
     } finally {
       setIsCheckingStatus (false);
     }
-<<<<<<< HEAD
-  };
-  },
-  const handleTryLogin = () =>: any {
-    router.push (`/auth / login?email=${encodeURIComponent (email)}`);
-  },
-  const handleGoBack = () =>: any {
-    router.back ();
-  },
-=======
 
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
+
   return (
     <AuthLayout>;
       <div className="flex min - h-screen items - center justify - center p - 4">;
         <div className="w - full max - w-md space - y-6">;
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-          {/* Header */}
-      logErrorToProduction('Error checking verification status:', {
-        data: err,
-      });
-      setError(
-        'An unexpected error occurred while checking status. Please try again.'
-      );
-    } finally {
-      setIsCheckingStatus(false);
-    }
-  }
-  const handleTryLogin = () => {
-router.push(`/auth/login?email=${encodeURIComponent(email)}`);
-  };
 
-  const handleGoBack = () => {
-    router.back();
-  };
 
-  return (
-    <AuthLayout>
-<div className='flex min-h-screen items-center justify-center p-4'>
-        <div className='w-full max-w-md space-y-6'>
           {/* Header */}
-          <div className='text-center'>
-            <div className='mx-auto h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4'>
-              <Mail className='h-6 w-6 text-blue-600' />
-            </div>
-            <h1 className='text-2xl font-bold text-gray-900'>
-              Email Verification
-            </h1>
-            <p className='text-sm text-gray-600 mt-2'>
-  return (
-    <AuthLayout>
-      <div className="flex min-h-screen items-center justify-center p-4">
-        <div className="w-full max-w-md space-y-6">
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
-          {/* Header */}
-<<<<<<< HEAD
-=======
+
 
 
           {/* Header */  } catch (error) {
@@ -801,21 +438,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
           </div>
 
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
           {/* Success Message */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
+
+
           {message && (
             <Alert className="border-green-500 bg-green-50 text-green-900">
               <CheckCircle className="h-4 w-4" />
@@ -846,10 +478,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
+
+
           <div className="space-y-2">
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
               Email Address
@@ -859,13 +490,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               type="email"
               value={email}
 
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
+
+
           <div className="text - center">;
             <div className="mx - auto h - 12 w - 12 bg - blue - 100 rounded - full flex items - center justify - center mb - 4">;
               <Mail className="h - 6 w - 6 text - blue - 600" />;
@@ -887,10 +513,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <AlertCircle className="h - 4 w - 4" />;
               <AlertDescription>{error}</AlertDescription>;
             </Alert>)}
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
           {/* Email Input */}
           <div className="space - y-2">;
             <label html_for="email" className="block text - sm font - medium text - gray - 700">;
@@ -899,406 +524,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Input;
               id="email";
               type="email";
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-=======
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
+
+
+
               value={email}
               on_change={(e) => set_email (e.target.value)}
               placeholder="Enter your email address";
               className="w - full";
             />;
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
 
-          <div className="space-y-2">
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-          )}
-          {/* Email Input */}
-<div className='space-y-2'>
-            <label
-              htmlFor='email'
-              className='block text-sm font-medium text-gray-700'
-            >
-origin/cursor/automate-test-improve-and-merge-code-2533
-              Email Address
-            </label>
-            <Input
-              id='email'
-              type='email'
-              value={email}
-              value={email  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              onChange={(e) => setEmail(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-=======
 
-              placeholder="Enter your email address"
-              className="w-full"
-            />
-            {email && (
-            {email && (
-              <p className="text - xs text - gray - 500">;
-                We'll check the verification status for this email address;
-              </p>)}
-          </div>;
-          {/* Status Info */}
-          {email && (
-            <div className="bg - blue - 50 dark:bg - slate - 800 border border - blue - 200 dark:border - slate - 700 rounded - lg p - 4">;
-              <h3 className="text - sm font - medium text - slate - 900 dark:text - slate - 100 mb - 2">Verification Status</h3>;
-              <div className="text - sm text - slate - 700 dark:text - slate - 300 space - y-1">;
-                <p>• Check your email inbox for a verification link</p>;
-                <p>• Click the link in the email to verify your account</p>;
-                <p>• Return here or try logging in after verification</p>;
-              </div>;
-              {lastSentTime && (
-                <p className="text - xs text - slate - 600 dark:text - slate - 400 mt - 2 flex items - center">;
-                  <Clock className="h - 3 w - 3 mr - 1" />;
-                  Last email sent: {lastSentTime.toLocaleTimeString ()}
-                </p>)}
-            </div>)}
-          {/* Action Buttons */}
-          <div className="space - y-3">;
-            {/* Check Status Button */}
-              disabled={!email || isCheckingStatus}
-              className="w-full"
-              variant="outline"
-            >
-              {isCheckingStatus ? (
-                <>
-                  <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
-
-    setIsCheckingStatus(true),
-    setError(''),
-    setMessage(''),
-
-    try {
-      // Attempt to refresh the session to get the latest user status
-      const { error: refreshError } = await supabase.auth.refreshSession()
-
-      if (refreshError) {
-        // Don't treat all refresh errors as critical for this check,
-        // as user might not have a session yet or it might be invalid.
-        logWarn('Error during session refresh:', { data: refreshError.message })
-      }
-
-      // Get the current user details from Supabase
-      const { data: { user }, error: getUserError } = await supabase.auth.getUser(),
-
-      if (getUserError) {
-        setError(`Failed to get user status: ${getUserError.message}. Please try logging in directly.`),
-        setIsCheckingStatus(false),
-        return
-            </div>
-            <h1 className=&quot;text-2xl font-bold text-gray-900&quot;>Email Verification</h1>
-            <p className=&quot;text-sm text-gray-600 mt-2&quot;>
-              Check and manage your email verification status
-            </p>
-          </div>
-
-          {/* Success Message */}
-          {message && (
-            <Alert className=&quot;border-green-500 bg-green-50 text-green-900&quot;>
-              <CheckCircle className=&quot;h-4 w-4&quot; />
-              <AlertDescription>{message}</AlertDescription>
-            </Alert>
-          )}
-
-          {/* Error Message */}
-          {error && (
-            <Alert variant=&quot;destructive&quot;>
-              <AlertCircle className=&quot;h-4 w-4&quot; />
-              <AlertDescription>{error}</AlertDescription>
-            </Alert>
-          )}
-
-          {/* Email Input */}
-          <div className=&quot;space-y-2&quot;>
-            <label htmlFor=&quot;email&quot; className=&quot;block text-sm font-medium text-gray-700&quot;>
-              Email Address
-            </label>
-            <Input
-              id=&quot;email&quot;
-              type=&quot;email&quot;
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder=&quot;Enter your email address&quot;
-              className=&quot;w-full&quot;
-            />
-            {email && (
-              <p className=&quot;text-xs text-gray-500&quot;>
-    } finally {
-      setIsCheckingStatus(false)
-    }
-  }
-  const handleTryLogin = () => {
-    router.push(`/auth/login?email=${encodeURIComponent(email)}`)
-  }
-  const handleGoBack = () => {
-    router.back()
-  }
-
-import { supabase } from '@/integrations/supabase/client', // Import Supabase client;
-import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state;
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
-export default function VerifyStatus(req, res) {
-  try {
-  const router = useRouter();
-  const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext;
-  const { email: emailParam } = router.query;
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [error, setError] = useState('');
-  const [isResending, setIsResending] = useState(false);
-  const [isCheckingStatus, setIsCheckingStatus] = useState(false);
-  const [lastSentTime, setLastSentTime] = useState<Date | null>(null);
-  const [countdown, setCountdown] = useState(0);
-  useEffect(() => {;
-    if (typeof emailParam === 'string') {;
-      setEmail(emailParam);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  }, [emailParam]),;
-  // Countdown timer for resend button;
-  useEffect(() => {;
-    let interval: NodeJS.Timeout,;
-    if (countdown > 0) {;
-      interval = setInterval(() => {;
-        setCountdown(prev => prev - 1);
-      }, 1000);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    return () => clearInterval(interval);
-  }, [countdown]),;
-  const handleResendEmail = async () => {;
-    if (!email) {;
-      setError('Please enter your email address');
-      return;
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-    setIsResending(true);
-    setError('');
-    setMessage('');
-    try {
-      const response = await fetch('/api/resend-verification-email', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON.stringify({ email });
-      }),;
-      const data = await response.json();
-      if (response.ok) {;
-        setMessage('Verification email sent successfully! Please check your inbox.');
-        setLastSentTime(new Date());
-        setCountdown(60), // 60 second cooldown;
-      } else {;
-        setError(data.message || 'Failed to resend verification email');
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-      setError('Network error. Please try again.');
-    } finally {;
-      setIsResending(false);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  },;
-  const handleCheckStatus = async () => {;
-    if (!email) {;
-      setError('Please enter your email address');
-      return;
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-    setIsCheckingStatus(true);
-    setError('');
-    setMessage('');
-    try {
-      // Attempt to refresh the session to get the latest user status;
-      const { error: refreshError } = await supabase.auth.refreshSession();
-      if (refreshError) {;
-        // Don't treat all refresh errors as critical for this check;
-        // as user might not have a session yet or it might be invalid.;
-        logWarn('Error during session refresh:', { data: refreshError.message });
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-      // Get the current user details from Supabase;
-      const { data: { user }, error: getUserError } = await supabase.auth.getUser();
-      if (getUserError) {;
-        setError(`Failed to get user status: ${getUserError.message}. Please try logging in directly.`);
-        setIsCheckingStatus(false);
-        return;
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-      if (user && user.email_confirmed_at) {;
-        setMessage('Email is verified! Redirecting to login...');
-        // The onAuthStateChange listener in AuthProvider should ideally handle redirection.;
-        // But we can also push them to login page directly.;
-        setTimeout(() => {;
-          router.push(`/auth/login?email=${encodeURIComponent(email)}`);
-        }, 2000);
-      } else if (user) {;
-        setMessage('Email is not yet verified. Please check your inbox for the verification link and click it. If you have already clicked it, try logging in.');
-        setMessage('Email is not yet verified. Please check your inbox for the verification link. If you have just clicked it, please wait a few moments and try again, or attempt to log in.');
-        setError(''), // Clear previous errors;
-      } else {;
-        // This case means there's no active user session found by Supabase client.;
-        // This is expected if they haven't clicked the link from a different browser/device context yet.;
-        setMessage('No active session found. Please click the verification link in your email. If you have just done so, please wait a few moments and try again, or attempt to log in.');
-        setError('');
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-      logErrorToProduction('Error checking verification status:', { data: err });
-      setError('An unexpected error occurred while checking status. Please try again.');
-    } finally {;
-      setIsCheckingStatus(false);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  },
-  const handleTryLogin = () => {
-    router.push(`/auth/login?email=${encodeURIComponent(email)}`)
-  },
-  const handleGoBack = () => {
-    router.back()
-  },
-  return (
-    <AuthLayout>
-      <div className="flex min-h-screen items-center justify-center p-4">
-        <div className="w-full max-w-md space-y-6">
-          {/* Header */}
-          {/* Header */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          <div className="text-center">
-            <div className="mx-auto h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-              <Mail className="h-6 w-6 text-blue-600" />
-            </div>
-            <h1 className="text-2xl font-bold text-gray-900">Email Verification</h1>
-            <p className="text-sm text-gray-600 mt-2">
-              Check and manage your email verification status
-            </p>
-          </div>
-          {/* Success Message */}
-          {/* Success Message */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          {message && (
-            <Alert className="border-green-500 bg-green-50 text-green-900">
-              <CheckCircle className="h-4 w-4" />
-              <AlertDescription>{message}</AlertDescription>
-            </Alert>
-          )}
-          {/* Error Message */}
-          )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-          {/* Error Message */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          {error && (
-            <Alert variant="destructive">
-              <AlertCircle className="h-4 w-4" />
-              <AlertDescription>{error}</AlertDescription>
-            </Alert>
-          )}
-          {/* Email Input */}
-          )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-          {/* Email Input */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          <div className="space-y-2">
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-              Email Address
-            </label>
-            <Input
-              id="email"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-=======
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              value={email  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              onChange={(e) => setEmail(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-              placeholder="Enter your email address"
-              className="w-full"
-            />
-            {email && (
-              <p className="text-xs text-gray-500">
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
               placeholder="Enter your email address"
               className="w-full"
             />
@@ -1321,25 +556,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className="w-full"
             />
             {email && (
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 
               <p className="text - xs text - gray - 500">;
                 We'll check the verification status for this email address;
               </p>)}
           </div>;
-<<<<<<< HEAD
-                We'll check the verification status for this email address
-              </p>
-            )}
-          </div>
-=======
+
 
           {/* Status Info */}
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
+
 
             )  } catch (error) {
     console.error("Error:", error);
@@ -1355,52 +581,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           {email && (
 
-<<<<<<< HEAD
-            {/* Check Status Button */}
 
-
-
-              disabled={!email || isCheckingStatus}
-
-            <div className=&quot;bg-blue-50 dark:bg-slate-800 border border-blue-200 dark:border-slate-700 rounded-lg p-4&quot;>
-              <h3 className=&quot;text-sm font-medium text-slate-900 dark:text-slate-100 mb-2&quot;>Verification Status</h3>
-              <div className=&quot;text-sm text-slate-700 dark:text-slate-300 space-y-1&quot;>
-          {/* Status Info */}
-            )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-          {/* Status Info */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          {email && (
-            <div className="bg-blue-50 dark:bg-slate-800 border border-blue-200 dark:border-slate-700 rounded-lg p-4">
-              <h3 className="text-sm font-medium text-slate-900 dark:text-slate-100 mb-2">Verification Status</h3>
-              <div className="text-sm text-slate-700 dark:text-slate-300 space-y-1">
-                <p>• Check your email inbox for a verification link</p>
-                <p>• Click the link in the email to verify your account</p>
-                <p>• Return here or try logging in after verification</p>
-              </div>
-              {lastSentTime && (
-                <p className="text-xs text-slate-600 dark:text-slate-400 mt-2 flex items-center">
-                  <Clock className="h-3 w-3 mr-1" />
-                  Last email sent: {lastSentTime.toLocaleTimeString()}
-                </p>
-              )}
-            </div>
-          )}
-          {/* Action Buttons */}
-          <div className="space-y-3">
-            {/* Check Status Button */}
-            <Button
-              onClick={handleCheckStatus}
-              disabled={!email |isCheckingStatus}
-              disabled={!email || isCheckingStatus}
-=======
             <div className="bg - blue - 50 dark:bg - slate - 800 border border - blue - 200 dark:border - slate - 700 rounded - lg p - 4">;
               <h3 className="text - sm font - medium text - slate - 900 dark:text - slate - 100 mb - 2">Verification Status</h3>;
               <div className="text - sm text - slate - 700 dark:text - slate - 300 space - y-1">;
@@ -1440,11 +621,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               disabled={!email || isCheckingStatus}
 
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
+
                   Last email sent: {lastSentTime.toLocaleTimeString()  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1486,15 +663,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
+
+
+
               className="w-full"
               variant="outline"
             >
@@ -1521,33 +693,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <Eye className='h-4 w-4 mr-2' />
                   Check Verification Status
                 </>
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-              disabled={!email |isResending |countdown > 0}
-              disabled={!email || isResending || countdown > 0}
-=======
-<<<<<<< HEAD
-              )}
-            </Button>
-            {/* Resend Email Button */}
-            <Button
-              onClick={handleResendEmail}
 
 
-              disabled={!email || isResending || countdown > 0}
-              disabled={!email |isResending |countdown > 0}
-              disabled={!email || isResending || countdown > 0}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
-
-
-
-              disabled={!email || isResending || countdown > 0}
-
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
               )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1571,15 +718,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
+
+
+
               className="w-full"
               variant="secondary"
             >
@@ -1611,14 +753,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </>
               ) : (
                 <>
-<<<<<<< HEAD
-            <Button;
-                  <Mail className="h-4 w-4 mr-2" />
-                  Resend Verification Email
-                </>
-              )}
-            </Button>
-=======
+
                   <Mail className="h-4 w-4 mr-2" />
                   Resend Verification Email
                 </>
@@ -1661,22 +796,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </>)}
             </Button>;
 
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-<Mail className='h-4 w-4 mr-2' />
-                  Resend Verification Email
-                </>
-              )}
-            </Button>
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
+
             {/* Try Login Button */}
             <Button;
               on_click={handleTryLogin}
               disabled={!email}
-<<<<<<< HEAD
-=======
+
 
               className="w-full"
 className='w-full'
@@ -1685,21 +810,16 @@ className='w-full'
             </Button>
           </div>
 
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
           {/* Help Text */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
+
+
           <div className="text-center text-sm text-gray-500 space-y-2">
             <p>
               Can't find the verification email? Check your spam folder or try a different email address.
@@ -1712,10 +832,9 @@ className='w-full'
   }
 }
 
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
+
+
               variant="ghost"
               size="sm"
               className="text-blue-600 hover:text-blue-500"
@@ -1738,10 +857,9 @@ className='w-full'
   }
 }
 
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
+
+
               variant="ghost"
               className="w-full text-sm"
           <div className="text-center text-sm text-gray-500 space-y-2">
@@ -1786,10 +904,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
 
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
+
+
               variant="ghost"
               className="w-full text-sm"
               variant="ghost"
@@ -1807,181 +924,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </AuthLayout>
   )
 
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-};
 
 }
 
-=======
-}
 
-<<<<<<< HEAD
-
-};
-
-              )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </Button>;
-            {/* Try Login Button */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            <Button;
-              onClick={handleTryLogin  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              disabled={!email  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              className="w-full"
-            >
-              Try Login
-            </Button>
-          </div>
-          {/* Help Text */}
-          {/* Help Text */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          <div className="text-center text-sm text-gray-500 space-y-2">
-            <p>
-              Can't find the verification email? Check your spam folder or try a different email address.
-            </p>
-            <Button
-              onClick={handleGoBack}
-              onClick={handleGoBack  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              variant="ghost"
-              size="sm"
-              className="text-blue-600 hover:text-blue-500"
-            >
-              <ArrowLeft className="h-4 w-4 mr-1" />
-              Go Back
-            </Button>
-          </div>
-          {/* Additional Options */}
-          <div className="border-t pt-4 space-y-2">
-            <Button
-              onClick={() => router.push('/signup')}
-          {/* Additional Options */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          <div className="border-t pt-4 space-y-2">
-            <Button
-              onClick={() => router.push('/signup')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              variant="ghost"
-              className="w-full text-sm"
-            >
-              Use Different Email Address
-            </Button>
-            <Button
-              onClick={() => router.push('/contact')}
-              onClick={() => router.push('/contact')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              variant="ghost"
-              className="w-full text-sm"
-            >
-              Contact Support
-            </Button>
-          </div>
-        </div>
-      </div>
-    </AuthLayout>
-  )
-}
-};
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
-              className="w - full";
-            >;
-              Try Login;
-            </Button>;
-          </div>;
-          {/* Help Text */}
-          <div className="text - center text - sm text - gray - 500 space - y-2">;
-            <p>;
-              Can't find the verification email? Check your spam folder or try a different email address.;
-            </p>;
-            <Button;
-              on_click={handleGoBack}
-              variant="ghost";
-              size="sm";
-              className="text - blue - 600 hover:text - blue - 500";
-            >;
-              <ArrowLeft className="h - 4 w - 4 mr - 1" />;
-              Go Back;
-            </Button>;
-          </div>;
-          {/* Additional Options */}
-          <div className="border - t pt - 4 space - y-2">;
-            <Button;
-              on_click={() => router.push ('/signup')}
-              variant="ghost";
-              className="w - full text - sm";
-            >;
-              Use Different Email Address;
-            </Button>;
-            <Button;
-              on_click={() => router.push ('/contact')}
-              variant="ghost";
-              className="w - full text - sm";
-            >;
-              Contact Support;
-            </Button>;
-          </div>;
-        </div>;
-      </div>;
-    </AuthLayout>);
-}
-
-
-};
-
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
+
 
 ;
-;
-;
-=======
 
-;
-<<<<<<< HEAD:pages.disabled/verify-status.tsx
-);
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/verify-status.tsx
+
+

@@ -1,72 +1,15 @@
-<<<<<<< HEAD
-import { useState, useEffect } from 'react'
-import { Globe } from 'lucide-react'
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select'
-  CountryPricing,
-  onsiteServicePricing,
-} from '@/data/onsiteServicePricing'
-
-import { useState, useEffect } from "react",
-import { Globe } from 'lucide-react'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",
 
 
-import {
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue
-} from '@/components/ui/select'
-  CountryPricing
-  onsiteServicePricing
-} from '@/data/onsiteServicePricing'
-interface CountrySelectorProps {
-  onCountryChange: (country: CountryPricing | null) => void
-  selectedCountry: CountryPricing | null
-export function CountrySelector({
-  onCountryChange
-  selectedCountry
-}: CountrySelectorProps) {
-interface CountrySelectorProps {
-  onCountryChange: (country: CountryPricing | null) => void
-  selectedCountry: CountryPricing | null
-export function CountrySelector({;
-  onCountryChange,;
-  selectedCountry;
-}: CountrySelectorProps) {;
-ursor/fix-website-loading-errors-and-merge-6662
-  const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface CountrySelectorProps {
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null,) => void
 
-<<<<<<< HEAD:src-disabled/components/services/CountrySelector.tsx
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing";
-interface CountrySelectorProps {
-  onCountryChange: (country: CountryPricing | null) => void;
-=======
+
   selectedCountry: CountryPricing | null
 }
   // Set top/popular countries
   useEffect(() => {
 
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/services/CountrySelector.tsx
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const popular = [
       'United States'
       'United Kingdom'
@@ -79,93 +22,16 @@ interface CountrySelectorProps {
     const top = onsiteServicePricing
       .filter(item => popular.includes(item.country))
       .sort((a, b) => a.country.localeCompare(b.country))
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
     const popular = ["United States", "United Kingdom", "Canada", "Germany", "Australia", "Japan", "Singapore"],
     const top = onsiteServicePricing.filter(item => 
       popular.includes(item.country)
     ).sort((a, b) => a.country.localeCompare(b.country)),
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD:src-disabled/components/services/CountrySelector.tsx
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    setTopCountries(top)
-  }, [])
-  // Handle country selection
-  const handleCountryChange = (countryName: string) => {
-<<<<<<< HEAD
-    const country =
-      onsiteServicePricing.find(item => item.country === countryName) |null
-    const country = null;
-      onsiteServicePricing.find(item => item.country === countryName) || null
-    onCountryChange(country)
-  }
 
-    setTopCountries(top)
-  }, [])
-  // Handle country selection
-  const handleCountryChange = (countryName: string) => {
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-
-import { useState, useEffect } from 'react';
-import { Globe } from 'lucide-react';
-import {;
-  Select,;
-  SelectContent,;
-  SelectItem,;
-  SelectTrigger,;
-  SelectValue,;
-} from '@/components/ui/select';
-import {;
-  CountryPricing,;
-  onsiteServicePricing,;
-} from '@/data/onsiteServicePricing';
-
-interface CountrySelectorProps {;
-  onCountryChange: (country: CountryPricing | null) => void;
-  selectedCountry: CountryPricing | null;
-
-export function CountrySelector(): any ({;
-  onCountryChange,;
-  selectedCountry,;
-}: CountrySelectorProps) {;
-  const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface CountrySelectorProps {;
-  onCountryChange: (country: CountryPricing | null,) => void,;
-  selectedCountry: CountryPricing | null;
-}
-
-  // Set top/popular countries;
-  useEffect(() => {;
-    const popular = [;
-      'United States',;
-      'United Kingdom',;
-      'Canada',;
-      'Germany',;
-      'Australia',;
-      'Japan',;
-      'Singapore',;
-    ];
-    const top = onsiteServicePricing;
-      .filter(item => popular && popular.includes(item && item.country));
-      .sort((a, b) => a && a.country.localeCompare(b && b.country));
-    setTopCountries(top);
-  }, []);
-
-  // Handle country selection;
-  const handleCountryChange = (countryName: string) => {;
-    const country =;
-      onsiteServicePricing && onsiteServicePricing.find(item => item && item.country === countryName) || null;
-    onCountryChange(country);
-  };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/services/CountrySelector.tsx
   return (
 
       </h3>;
@@ -184,74 +50,13 @@ export function CountrySelector(): any ({;
             {topCountries && topCountries.map(item => (;
               <SelectItem
 
-<<<<<<< HEAD:src-disabled/components/services/CountrySelector.tsx
-=======
+
         </SelectContent>;
       </Select>;
     </div>;
 
   return (
-<<<<<<< HEAD
-  },
 
-  return (
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    <div className="mb-6">
-      <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
-        <Globe className="mr-2 h-5 w-5 text-zion-cyan" />
-        {selectedCountry ? `IT Onsite Service in ${selectedCountry.country}` : "Select Country for IT Onsite Service"}
-      </h3>
-<<<<<<< HEAD
-      <Select
-        onValueChange={handleCountryChange}
-        value={selectedCountry?.country}      >
-        <SelectTrigger className='bg-zion-blue border-zion-blue-light text-white'>
-          <SelectValue placeholder='Select a country' />
-        </SelectTrigger>
-        <SelectContent className='bg-zion-blue-dark border-zion-blue-light max-h-80'>
-          <div className='p-2 border-b border-zion-blue-light'>
-            <p className='text-sm text-zion-slate-light pb-1'>
-              Popular Countries
-            </p>
-            {topCountries.map(item => (
-              <SelectItem
-                key={item.country}
-                value={item.country}
-                className='text-white'
-              >                {item.country} - ${item.pricePerIncident.toFixed(2)}
-              </SelectItem>
-            ))}
-          </div>        <SelectContent className="bg-zion-blue-dark border-zion-blue-light max-h-80">
-          <div className="p-2 border-b border-zion-blue-light">
-            <p className="text-sm text-zion-slate-light pb-1">Popular Countries</p>
-            {topCountries.map((item,) => (
-              <SelectItem key={item.country} value={item.country} className="text-white">
-              </SelectItem>
-            ))}
-          </div>
-          <div className='p-2'>
-            <p className='text-sm text-zion-slate-light pb-1'>All Countries</p>
-            {onsiteServicePricing
-              .sort((a, b) => a.country.localeCompare(b.country))
-              .map(item => (
-                <SelectItem
-                  key={item.country}
-                  value={item.country}
-                  className='text-white'
-                >
-                  {item.country} - ${item.pricePerIncident.toFixed(2)}
-                </SelectItem>
-              ))}          </div>              .map((item) => (
-              .sort((a, b,) => a.country.localeCompare(b.country))
-              .map((item,) => (
-=======
-
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/services/CountrySelector.tsx
       <Select 
         onValueChange={handleCountryChange} 
         value={selectedCountry?.country}
@@ -259,15 +64,7 @@ export function CountrySelector(): any ({;
         <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
           <SelectValue placeholder="Select a country" />
         </SelectTrigger>
-<<<<<<< HEAD:src-disabled/components/services/CountrySelector.tsx
-        <SelectContent className="bg-zion-blue-dark border-zion-blue-light max-h-80">
-          <div className="p-2 border-b border-zion-blue-light">
-            <p className="text-sm text-zion-slate-light pb-1">Popular Countries</p>
-            {topCountries.map((item) => (
-              <SelectItem key={item.country} value={item.country} className="text-white">
 
-                {item.country} - ${item.pricePerIncident.toFixed(2)}
-=======
         <SelectContent className='bg-zion-blue-dark border-zion-blue-light max-h-80'>
           <div className='p-2 border-b border-zion-blue-light'>
             <p className='text-sm text-zion-slate-light pb-1'>
@@ -279,7 +76,7 @@ export function CountrySelector(): any ({;
                 value={item.country}
                 className='text-white'
               >                {item.country} - ${item.pricePerIncident.toFixed(2)}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/services/CountrySelector.tsx
+
               </SelectItem>
 
             ))}
@@ -334,8 +131,7 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
               </SelectItem>;
             ))}
           </div>
-<<<<<<< HEAD:src-disabled/components/services/CountrySelector.tsx
-=======
+
           <div className='p-2'>
             <p className='text-sm text-zion-slate-light pb-1'>All Countries</p>
             {onsiteServicePricing
@@ -348,11 +144,7 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>
             ))}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/services/CountrySelector.tsx
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState, useEffect } from 'react';
 import { Globe } from 'lucide-react';
 import {
@@ -431,22 +223,8 @@ function CountrySelector() {
             {top_countries.map ((item, ) => (
               <SelectItem key={item.country} value={item.country} className="text - white">;
               </SelectItem>))}
-<<<<<<< HEAD:src-disabled/components/services/CountrySelector.tsx
 
-=======
-<<<<<<< HEAD
-        </SelectContent>
-      </Select>
-    </div>
-  )
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/services/CountrySelector.tsx
-          </div>;
-        </SelectContent>;
-      </Select>;
-    </div>;
-  );
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 }
 
 ;
@@ -457,32 +235,5 @@ function CountrySelector() {
     </div>;
   );
 }
-<<<<<<< HEAD:src-disabled/components/services/CountrySelector.tsx
 
-<div className='p-2'>
-            <p className='text-sm text-zion-slate-light pb-1'>All Countries</p>
-            {onsiteServicePricing
-              .sort((a, b) => a.country.localeCompare(b.country))
-              .map(item => (
-                <SelectItem
-                  key={item.country}
-                  value={item.country}
-                  className='text-white'
-                >
-                  {item.country} - ${item.pricePerIncident.toFixed(2)}
-                </SelectItem>
-              ))}
-          </div>
-        </SelectContent>
-      </Select>
-    </div>
-  );
-}
-=======
-<<<<<<< HEAD
-;
-;
-=======
-;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/services/CountrySelector.tsx
+

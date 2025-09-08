@@ -59,17 +59,8 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
-<<<<<<< HEAD
 
-import React from './react';
-import SEO from "../components / SEO";
-import { Check, ExternalLink  } from './lucide-react';
-export default /**
- * SecretsRotationAutomationPage - Function description
- */
-function SecretsRotationAutomationPage() {
-=======
->>>>>>> merged-prs-20250907-203621
+
 
 import React from './react';
 import SEO from "../components / SEO";
@@ -79,74 +70,15 @@ export default /**
  */
 function SecretsRotationAutomationPage() {
 
-<<<<<<< HEAD
-=======
 
->>>>>>> merged-prs-20250907-203621
+
+
 import React from \"react\";}
 import SEO from \"../components/SEO\";}
 import { Check, ExternalLink } from \"lucide-react\";
 export default function SecretsRotationAutomationPage() {
-<<<<<<< HEAD
-  const features = [
-  export default function SecretsRotationAutomationPage() {
-
-  const features = [;
-
-=======
-<<<<<<< HEAD
-}
-  export default function SecretsRotationAutomationPage() {
-
-  }
 
 
-    "Automated key and secret rotation""
-    "JIT credentials with expirations""
-    "Policy approvals and audit trails""
-    "CI/CD integration (GitHub Actions, CircleCI)""
-    "Cloud KMS and Vault support""
-=======
-  const features = [
-  export default function SecretsRotationAutomationPage() {
-
-  const features = [;
-
->>>>>>> merged-prs-20250907-203621
-  const features = [
-    \"Automated key and secret rotation\"
-    \"JIT credentials with expirations\"
-    \"Policy approvals and audit trails\"
-    \"CI/CD integration (GitHub Actions, CircleCI)\"
-    \"Cloud KMS and Vault support\"
-<<<<<<< HEAD
-  ];
-  return (
-export default function SecretsRotationAutomationPage() {
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-  ];
-  return (
-export default function SecretsRotationAutomationPage() {
-<<<<<<< HEAD
-}
-    "Automated key and secret rotation","
-    "JIT credentials with expirations","
-    "Policy approvals and audit trails","
-    "CI / CD integration (GitHub Actions, CircleCI)","
-    "Cloud KMS and Vault support""
-=======
->>>>>>> merged-prs-20250907-203621
-  const features = [
-    \"Automated key and secret rotation\",
-    \"JIT credentials with expirations\",
-    \"Policy approvals and audit trails\",
-    \"CI / CD integration (GitHub Actions, CircleCI)\",
-    \"Cloud KMS and Vault support\"
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
   ];
 ;
   return (
@@ -384,17 +316,8 @@ key={,}
       </main>;</>)}}</>)}ursor/fix-website-loading-errors-and-merge-6662;
     </>)}
 
-<<<<<<< HEAD
-const features = [
-  'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support'
-=======
-<<<<<<< HEAD
-  'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support''
-=======
-const features = [
-  'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support'
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
 ];
 
 const features  = null;return (<>;
@@ -448,17 +371,8 @@ const features  = null;return (<>;
     </>);
 }
 
-<<<<<<< HEAD
-const features = [
-		'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support'
-=======
-<<<<<<< HEAD
-		'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support''
-=======
-const features = [
-		'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support'
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
 	];
 	return (
 		<>

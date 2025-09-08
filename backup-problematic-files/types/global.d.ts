@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 /// <reference types="next" />
 /// <reference types="next/image-types/global" />
 /// <reference types="next/navigation-types/navigation" />
@@ -74,9 +73,4 @@ declare namespace NodeJS {
   }
 }
 
-<<<<<<< HEAD
-export {};
-=======
-export {};
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

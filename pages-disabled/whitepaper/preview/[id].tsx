@@ -1,13 +1,5 @@
-<<<<<<< HEAD:pages-disabled/whitepaper/preview/[id].tsx
-import { useRouter  } from 'next/router';
-import { useEffect, useState } from 'react';
-export default function WhitepaperPreview() {
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/whitepaper/preview/[id].tsx
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 import {useRouter} from 'next/router';
 
 import {useEffect, useState} from 'react';
@@ -16,10 +8,9 @@ import {useEffect, useState} from 'react';
 import {useRouter} from 'next/router';'
 import {useEffect, useState} from 'react';
 
-<<<<<<< HEAD:pages-disabled/whitepaper/preview/[id].tsx
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/whitepaper/preview/[id].tsx
+
+
 import { useRouter } from 'next/router',
 
 import { useEffect, useState } from 'react',
@@ -70,69 +61,19 @@ export default function WhitepaperPreview() {}
 
       .catch(() => setNotFound(true));
   }, [id]);
-<<<<<<< HEAD:pages-disabled/whitepaper/preview/[id].tsx
-=======
-  if (notFound);
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/whitepaper/preview/[id].tsx
+  if (notFound);
+
     return (
       <div className='container mx-auto px-4 py-6'>;
         Preview not available or expired.;
       </div>;
     );
-<<<<<<< HEAD:pages-disabled/whitepaper/preview/[id].tsx
 
-=======
   if (!markdown);
     return <div className='container mx-auto px-4 py-6'>Loading…</div>;
   return (
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    <div className='container mx-auto px-4 py-6'>;
-      <h1 className='text-xl font-semibold mb-4'>Whitepaper Preview</h1>;
-      <pre className='whitespace-pre-wrap text-sm leading-6'>{markdown}</pre>;
-    </div>;
-  );
-<<<<<<< HEAD
-      .then((r) => (r.ok ? r.json() : Promise.reject()))
-      .then((d) => setMarkdown(d.markdown || ''))
-      .catch(() => setNotFound(true))
-  }, [id]);
-  if (notFound) return <div className="container mx-auto px-4 py-6">Preview not available or expired.</div>;
-  if (!markdown) return <div className="container mx-auto px-4 py-6">Loading…</div>;
-  return (
-    <div className="container mx-auto px-4 py-6">
-      <h1 className="text-xl font-semibold mb-4">Whitepaper Preview</h1>
-      <pre className="whitespace-pre-wrap text-sm leading-6">{markdown}</pre>
-    </div>
-  )
-}
-import {use_router} from 'next / router';
-import {useEffect, useState} from 'react';
-export default /**
- * WhitepaperPreview - Function description
- */
-function WhitepaperPreview() {
-  const router = use_router ();
-  const { id } = router.query;
-  const [markdown, set_markdown] = useState < string>('');
-  const [not_found, setNotFound] = useState (false);
-;
-  useEffect (() => {
-    if () return) {
-  $2
-}
-    // Simple client fetch from a volatile in - memory store endpoint (for demo we echo in query);
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    // In a production app, this would fetch from a real DB.;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/whitepaper/preview/[id].tsx
     fetch (`/api / whitepaper / get?id=${id}`);
       .then (r => (r.ok ? r.json () : Promise.reject ()));'
       .then (d => set_markdown (d.markdown || ''));
@@ -145,112 +86,8 @@ if (
   $2;
 }
 
-<<<<<<< HEAD:pages-disabled/whitepaper/preview/[id].tsx
-    <div className='container mx-auto px-4 py-6'>
-      <h1 className='text-xl font-semibold mb-4'>Whitepaper Preview</h1>
-      <pre className='whitespace-pre-wrap text-sm leading-6'>{markdown}</pre>
-    </div>
-=======
 
 
-<<<<<<< HEAD
-      <div className='container mx - auto px - 4 py - 6'>;
-        Preview not available or expired.;
-      </div>);
-  // Check condition
-if (
-    return <div className='container mx - auto px - 4 py - 6'>Loading…</div>) {
-  $2
-}
-  return (
-    <div className='container mx - auto px - 4 py - 6'>;
-      <h1 className='text - xl font - semibold mb - 4'>Whitepaper Preview</h1>;
-      <pre className='whitespace - pre - wrap text - sm leading - 6'>{markdown}</pre>;
-    </div>);
-;
-import { useRouter  } from 'next/router';
-import { useEffect, useState } from 'react';
-export default function WhitepaperPreview() {
 
-import {useRouter} from 'next/router';
-import {useEffect, useState} from 'react';
-export default function WhitepaperPreview() {;
-import { useRouter } from 'next/router',
-import { useEffect, useState } from 'react',
-export default function WhitepaperPreview() {
-  const router = useRouter(),
-  const { id } = router.query,
-  const [markdown, setMarkdown] = useState<string>(''),
-  const [notFound, setNotFound] = useState(false),
-  useEffect(() => {
-    if (!id || Array.isArray(id)) return,
-    // Simple client fetch from a volatile in-memory store endpoint (for demo we echo in query)
-    // In a production app, this would fetch from a real DB.
-    fetch(`/api/whitepaper/get?id=${id}`)
-      .then((r) => (r.ok ? r.json() : Promise.reject()))
-      .then((d) => setMarkdown(d.markdown || ''))
-      .catch(() => setNotFound(true))
-  }, [id]),
-  if (notFound) return <div className="container mx-auto px-4 py-6">Preview not available or expired.</div>,
-  if (!markdown) return <div className="container mx-auto px-4 py-6">Loading…</div>,
-  return (
-    <div className="container mx-auto px-4 py-6">
-      <h1 className="text-xl font-semibold mb-4">Whitepaper Preview</h1>
-      <pre className="whitespace-pre-wrap text-sm leading-6">{markdown}</pre>
-    </div>
-  )
-import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
-export default function WhitepaperPreview(req, res) {
-  try {
-  const router = useRouter();
-  const { id } = router.query;
-  const [markdown, setMarkdown] = useState<string>('');
-  const [notFound, setNotFound] = useState(false);
 
-  useEffect(() => {
-    if (!id |Array.isArray(id)) return;
-    // Simple client fetch from a volatile in-memory store endpoint (for demo we echo in query)
-    // In a production app, this would fetch from a real DB.
-    fetch(`/api/whitepaper/get?id=${id}`)
-      .then(r => (r.ok ? r.json() : Promise.reject()))
-      .then(d => setMarkdown(d.markdown |''))
-      .catch(() => setNotFound(true));
-  }, [id]);
-  if (notFound)
-    return (
-      <div className='container mx-auto px-4 py-6'>
-        Preview not available or expired.
-      </div>
-    );
-  if (!markdown)
-    return <div className='container mx-auto px-4 py-6'>Loading…</div>;
 
-  return (
-    <div className='container mx-auto px-4 py-6'>
-      <h1 className='text-xl font-semibold mb-4'>Whitepaper Preview</h1>
-      <pre className='whitespace-pre-wrap text-sm leading-6'>{markdown}</pre>
-    </div>
-);
-
-}
-  useEffect(() => {;
-    if (!id || Array.isArray(id)) return,;
-    // Simple client fetch from a volatile in-memory store endpoint (for demo we echo in query);
-    // In a production app, this would fetch from a real DB.;
-    fetch(`/api/whitepaper/get?id=${id}`);
-      .then((r) => (r.ok ? r.json() : Promise.reject()));
-      .then((d) => setMarkdown(d.markdown || ''));
-      .catch(() => setNotFound(true));
-  }, [id]),;
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/whitepaper/preview/[id].tsx

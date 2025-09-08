@@ -113,12 +113,11 @@ const globalStats = [{ icon: <Globe className='w-6 h-6' />, value: '25+',}
   projects: 65, countries: 12, satisfaction: '96%',}
 }] export function GlobalPresenceSection() { const [selectedOffice, setSelectedOffice] =;
   useState(null);
-<<<<<<< HEAD
-=======
+
   const [selectedPartnership, setSelectedPartnership] = useState(null);
   const [hoveredIndustry, setHoveredIndustry] = useState(null);}
   const containerVariants = { hidden: { opacity: 0,}
->>>>>>> origin/chore/fix-lint-and-merge
+
 }, visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.1},
 }
 ;

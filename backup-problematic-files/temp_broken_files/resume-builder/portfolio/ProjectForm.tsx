@@ -5,11 +5,9 @@ import { z } from 'zod',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
 import { Textarea } from '@/components/ui/textarea',;
-<<<<<<< HEAD
-import {logErrorToProduction} from '@/utils/productionLogger',;
-=======
 
->>>>>>> merged-prs-20250907-203621
+
+
 import {;
   Form,;
   FormControl,;
@@ -17,50 +15,16 @@ import {;
   FormItem,;
   FormLabel,;
   FormMessage} from '@/components/ui/form',;
-<<<<<<< HEAD
-import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react';
-=======
 
->>>>>>> merged-prs-20250907-203621
+
+
 import { PortfolioProject } from '@/types/resume',;
 import { usePortfolio } from '@/hooks/usePortfolio',;
 import { useAuth } from '@/hooks/useAuth',;
 ;
 // Define schema for form validation;
 const projectSchema = z.object({;
-<<<<<<< HEAD
-  title:z.string().min(1, 'Project title is required'),;
-  description:z.string().optional(),;
-  technologies:z.string().optional(),;
-  image_url:z.string().optional(),;
-  github_url:z;
-    .union([z.string().url('Please enter a valid URL'), z.literal('')]);
-    .optional(),;
-  demo_url:z;
-    .union([z.string().url('Please enter a valid URL'), z.literal('')]);
-    .optional(),;
-  pdf_url:z.string().optional()}),;
-;
-type ProjectFormValues = z.infer<typeof projectSchema>,;
-;
-interface ProjectFormProps {;
-  project?:PortfolioProject,;
-  onSuccess:() => void,;
-  onCancel:() => void;
-}
-;
-export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {;
-  const { user } = useAuth(),;
-  const { addProject, updateProject } = usePortfolio(),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const isEditing = !!project,;
-  ;
-  const form = useForm<ProjectFormValues>({;
-    resolver:zodResolver(projectSchema),;
-    defaultValues:{;
-      title:project?.title || '',;
-      description:project?.description || '',;
-=======
+
 
   description:z.string().optional(),;
   technologies:z.string().optional(),;
@@ -77,16 +41,15 @@ type ProjectFormValues = z.infer<typeof projectSchema>,;
     resolver: zodResolver(projectSchema);,;
     defaultValues:{;
 
->>>>>>> merged-prs-20250907-203621
+
       technologies:project?.technologies ? project.technologies.join() :'',;
       image_url:project?.image_url || '',;
       github_url:project?.github_url || '',;
       demo_url:project?.demo_url || '',;
       pdf_url:project?.pdf_url || ''}
-<<<<<<< HEAD
-=======
 
->>>>>>> merged-prs-20250907-203621
+
+
   }),;
   ;
   const onSubmit = async (data:ProjectFormValues) => {;
@@ -96,16 +59,7 @@ type ProjectFormValues = z.infer<typeof projectSchema>,;
     ;
     try {;
       const projectData:PortfolioProject = {;
-<<<<<<< HEAD
-        title:data.title,;
-        description:data.description,;
-        technologies:data.technologies ? ;
-          data.technologies.split().map(tech => tech.trim()) :[],;
-        image_url:data.image_url,;
-        github_url:data.github_url || undefined,;
-        demo_url:data.demo_url || undefined,;
-        pdf_url:data.pdf_url},;
-=======
+
 
         technologies:data.technologies ? ;
           data.technologies.split().map(tech => tech.trim()) :[],;
@@ -113,7 +67,7 @@ type ProjectFormValues = z.infer<typeof projectSchema>,;
         github_url: data.github_url || undefined;,;
         demo_url: data.demo_url || undefined;,;
         pdf_url: data.pdf_url;},;
->>>>>>> merged-prs-20250907-203621
+
       ;
       let success = false,;
       ;
@@ -129,11 +83,9 @@ type ProjectFormValues = z.infer<typeof projectSchema>,;
         form.reset(),;
       }
     } catch (error) {;
-<<<<<<< HEAD
-      logErrorToProduction('Error saving project:', { data:error }),;
-=======
 
->>>>>>> merged-prs-20250907-203621
+
+
     } finally {;
       setIsLoading(false),;
     }
@@ -143,62 +95,18 @@ type ProjectFormValues = z.infer<typeof projectSchema>,;
 
 pr-12325
     <Form {...form}>;
-<<<<<<< HEAD
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">;
-        <FormField;
-          control={form.control}
-          name="title";
-          render={({ field } { field:any }) => (;
-=======
+
 )
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">;"
 </form>
         <FormField;
 
->>>>>>> merged-prs-20250907-203621
+
             <FormItem>;
 
               <FormLabel>Project Title;
               <FormControl>;
-<<<<<<< HEAD
-                <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;          )}
-        />;
-        ;
-        <FormField;
-          control={form.control}
-          name="description";
-          render={({ field } { field:any }) => (;
-            <FormItem>;
-              <FormLabel>Project Description</FormLabel>;
-              <FormControl>;
-                <Textarea ;
-                  placeholder="Describe what the project does and your role in it...";
-                  className="min-h-[100px]";
-                  {...field} ;
-                />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;          )}
-        />;
-        ;
-        <FormField;
-          control={form.control}
-          name="technologies";
-          render={({ field } { field:any }) => (;
-            <FormItem>;
-              <FormLabel>Technologies Used</FormLabel>;
-              <FormControl>;
-                <Input placeholder="React, Node.js, MongoDB, etc. (comma separated)" {...field} />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
-          )}
-        />;
-        ;
-=======
+
 "
                 <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />;"
 
@@ -215,26 +123,24 @@ pr-12325
                 />;
 
         ;
->>>>>>> merged-prs-20250907-203621
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
           <FormField;
             control={form.control}
             name="github_url";
             render={({ field } { field:any }) => (;
-<<<<<<< HEAD
-=======
 
->>>>>>> merged-prs-20250907-203621
+
+
               <FormItem>;
                 <FormLabel className="flex items-center gap-2">;
                   <Github className="h-4 w-4" />;
                   GitHub URL;
                 </FormLabel>;
                 <FormControl>;
-<<<<<<< HEAD
-=======
 
->>>>>>> merged-prs-20250907-203621
+
+
                   <Input placeholder="https://github.com/yourusername/project" {...field} />;
                 </FormControl>;
                 <FormMessage />;
@@ -245,20 +151,18 @@ pr-12325
             control={form.control}
             name="demo_url";
             render={({ field } { field:any }) => (;
-<<<<<<< HEAD
-=======
 
->>>>>>> merged-prs-20250907-203621
+
+
               <FormItem>;
                 <FormLabel className="flex items-center gap-2">;
                   <Link className="h-4 w-4" />;
                   Demo URL;
                 </FormLabel>;
                 <FormControl>;
-<<<<<<< HEAD
-=======
 
->>>>>>> merged-prs-20250907-203621
+
+
                   <Input placeholder="https://your-project-demo.com" {...field} />;
                 </FormControl>;
                 <FormMessage />;
@@ -270,44 +174,33 @@ pr-12325
           control={form.control}
           name="image_url";
           render={({ field } { field:any }) => (;
-<<<<<<< HEAD
-=======
 
->>>>>>> merged-prs-20250907-203621
+
+
             <FormItem>;
               <FormLabel className="flex items-center gap-2">;
                 <FileImage className="h-4 w-4" />;
                 Screenshot URL;
               </FormLabel>;
               <FormControl>;
-<<<<<<< HEAD
-                <Input placeholder="https://example.com/screenshot.jpg" {...field} />;
-=======
 
->>>>>>> merged-prs-20250907-203621
+
+
               </FormControl>;
               <FormMessage />;
             </FormItem>;
           )}
         />;
-<<<<<<< HEAD
-        ;
-        {/* Future file upload field would go here */}
-        ;
-=======
 
->>>>>>> merged-prs-20250907-203621
+
+
         <div className="flex justify-end space-x-2 pt-4">;
           <Button type="button" variant="outline" onClick={onCancel}>;
             Cancel;
           </Button>;
           <Button type="submit" disabled={isLoading}>;
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-<<<<<<< HEAD
-            {isEditing ? 'Update' :'Add'} Project;
-          </Button>;
-        </div>;
-=======
+
 
           </Button>;
 
@@ -325,7 +218,7 @@ pr-12325
           <Button type="submit" disabled={isLoading}>;"
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}"
 </Loader2>
->>>>>>> merged-prs-20250907-203621
+
       </form>;
 
   ),;}
@@ -341,27 +234,6 @@ try {;
 }/> </div> <FormField </FormControl> <FormMessage /> </FormItem>) ;
 }/> {;
   /* Future file upload field would go here */ ;
-<<<<<<< HEAD
-}</Button> </div> </form> </Form>) ;"}"
-=======
-<<<<<<< HEAD
-:temp_broken_files/resume-builder/portfolio/ProjectForm.tsx
-}</Button> </div> </form> </Form>) ;"}"
-}</Button> </div> </form> </Form>) ;
-}"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/portfolio/ProjectForm.tsx
-=======
-<<<<<<< HEAD
-:temp_broken_files/resume-builder/portfolio/ProjectForm.tsx
-}</Button> </div> </form> </Form>) ;"}"
-}</Button> </div> </form> </Form>) ;
-}"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/portfolio/ProjectForm.tsx
-=======
 
-}</Button> </div> </form> </Form>) ;
-}"
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+

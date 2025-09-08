@@ -15,73 +15,7 @@ import React from 'react';
   RocketLaunchIcon
 } from '@heroicons/react/24/outline'
 
-<<<<<<< HEAD
-const values = [
 
-  {
-    name: 'Innovation First',
-    description: 'We push the boundaries of what's possible, constantly exploring new frontiers in AI and technology.',
-    icon: LightBulbIcon},
-  {
-    name: 'Global Impact'
-    description: 'Our solutions reach across borders, transforming industries and improving lives worldwide.'
-    icon: GlobeAltIcon}
-  {
-    name: 'Trust & Security'
-    description: 'We maintain the highest standards of security and ethical AI development.'
-    icon: ShieldCheckIcon}
-  {
-
-const values = [
-  {
-    name: 'Innovation First',
-    description: 'We push the boundaries of what\'s possible, constantly exploring new frontiers in AI and technology.',
-    icon: LightBulbIcon},
-  {
-    name: 'Global Impact',
-    description: 'Our solutions reach across borders, transforming industries and improving lives worldwide.',
-    icon: GlobeAltIcon},
-  {
-    name: 'Trust & Security',
-    description: 'We maintain the highest standards of security and ethical AI development.',
-    icon: ShieldCheckIcon},
-  {
-
-    name: 'Research Excellence',
-    description: 'Our team of world-class researchers drives breakthrough discoveries and innovations.',
-    icon: AcademicCapIcon}]
-
-const team = [
-  {
-    name: 'Dr. Sarah Chen',
-    role: 'Chief Executive Officer',
-    bio: 'Former AI researcher at Stanford, leading Zion Tech Group\'s vision for the future of technology.',
-    image: '/images/team/sarah-chen.jpg'},
-  {
-    name: 'Dr. Marcus Rodriguez',
-    role: 'Chief Technology Officer',
-    bio: 'Quantum computing expert with 15+ years in advanced AI systems and neural network architecture.',
-    image: '/images/team/marcus-rodriguez.jpg'},
-  {
-    name: 'Dr. Elena Petrov',
-    role: 'Head of Research',
-    bio: 'Leading researcher in autonomous systems and AI ethics, with publications in top-tier journals.',
-    image: '/images/team/elena-petrov.jpg'},
-  {
-
-      {/* Hero section */}
-      <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
-          <div className=&quot;text - center & quot;>;
-            <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
-              About{' '}
-
-              dedicated to transforming industries and advancing human potential through technology.
-            </p>
-          </div>
-        </div>
-      </div>
-=======
 import React from 'react';'
 
 export default function AboutPage() {return (<div className="min-h-screen bg-white">;"
@@ -156,7 +90,7 @@ const team = [
   return (<div className="bg-black">;"
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 "lg":px - 8&quot>
->>>>>>> merged-prs-20250907-203621
+
 
       {/* Mission & Vision */}
 
@@ -557,15 +491,7 @@ export default function AboutPage() {
                 <div className="group relative">
                   <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-blue-400 transition-colors duration-200">
                     {person.name}
-<<<<<<< HEAD
 
-                  </h3>
-                  <p className="mt-2 text-sm text-blue-400">{person.role}</p>
-                  <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-300">{person.bio}</p>
-                </div>
-              </div>
-            </article>
-=======
                   </h3>;
                   <p className=&quot;mt - 2 text - sm text - blue - 400 & quot;>{person.role}</p>;
                   <p className=&quot;mt - 5 line - clamp - 3 text - sm leading - 6 text - gray - 300 & quot;>{person.bio}</p>;
@@ -628,36 +554,12 @@ export default function AboutPage() {
                 </div>;
               </div>;
             </article>;
->>>>>>> merged-prs-20250907-203621
+
           ))}
         </div>;
       </div>;
       {/* CTA section */}
-<<<<<<< HEAD
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Join us in shaping the future
-          </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
-            Ready to be part of the AI revolution? Let's discuss how we can work together to 
-            transform your organization.
-          </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a
-              href="/contact"
-              className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
-            >
-              Get in Touch
-            </Link>
-            <a href="/careers" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
-              View Careers <span aria-hidden="true">→</span>
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-=======
+
       <div className="mx-auto mt-32 max-w-7xl px-6 "sm":mt-40 "lg":px-8">;"
         <div className="mx-auto max-w-2xl text-center">;"
           <h2 className="text-3xl font-bold tracking-tight text-white "sm":text-4xl">;"
@@ -683,4 +585,4 @@ export default function AboutPage() {
   )}
 
 export default Page;
->>>>>>> merged-prs-20250907-203621
+

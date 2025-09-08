@@ -1,187 +1,7 @@
-<<<<<<< HEAD
-
-import { useState, useEffect } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { useResume } from '@/hooks/useResume';
-import { Tabs } from '@/components/ui/tabs';
-import { Card, CardContent } from '@/components/ui/card';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { AlertCircle, FilePlus, Loader2 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Resume } from '@/types/resume';
-// Import components
-import { ResumeProgress  } from './ResumeProgress';
-import { EmptyResumeState  } from './EmptyResumeState';
-import { CreateResumeForm  } from './CreateResumeForm';
-import { ResumeSteps  } from './ResumeSteps';
-import { ResumeStepContent  } from './ResumeStepContent';
-import { useResumeProgress  } from './useResumeProgress';
-import { ResumeVersionSelector  } from './ResumeVersionSelector';
-import { RESUME_STEPS } from './constants';
-export function ResumeWizard() {
-  const { user } = useAuth($2);
-  const { 
-    isLoading,
-    error, 
-    resume, 
-    fetchResume,
-    createResume
-  } = useResume($2);
-  const [activeTab, setActiveTab] = useState($2);
-  const [showNewResumeForm, setShowNewResumeForm] = useState($2);
-  // Use the extracted hook for progress calculation
-  const progress = useResumeProgress($2);
-  useEffect(() => {
-    if (user) {
-      fetchResume()
-    }
-  }, [user, fetchResume]),
-  
-  const handleCreateNewResume = $2;
-    if (resumeId) {
-      await fetchResume($2);
-      setShowNewResumeForm(false)
-    }
-  },
-  
-  const nextStep = () => {
-    const currentIndex = RESUME_STEPS.findIndex($2);
-    if (currentIndex < RESUME_STEPS.length - 1) {
-      setActiveTab(RESUME_STEPS[currentIndex + 1].id)
-    }
-  },
-  
-  const prevStep = () => {
-    const currentIndex = RESUME_STEPS.findIndex($2);
-    if (currentIndex > 0) {
-      setActiveTab(RESUME_STEPS[currentIndex - 1].id)
-    }
-  },
-
-  const handleResumeChange = $2;
-  if (isLoading) {
-    return (
-=======
-import {useState, useEffect} from 'react';
-
-<<<<<<< HEAD
-import {use_auth} from '@/hooks / use_auth';
-import {use_resume} from '@/hooks / use_resume';
-import {Tabs} from '@/components / ui / tabs';
-import {Card, CardContent} from '@/components / ui / card';
-import {Alert, AlertDescription, AlertTitle} from '@/components / ui / alert';
-
-import {AlertCircle, FilePlus, Loader2} from 'lucide-react';
-'
-import {Button} from '@/components / ui / button';'
-<<<<<<< HEAD
-import {Resume} from '@/types / resume';'
-// Import components;import { useState, useEffect  } from 'react';'
-import { useAuth  } from '@/hooks/useAuth';'
-import { useResume  } from '@/hooks/useResume';'
-import { Tabs  } from '@/components/ui/tabs';'
-import { Card, CardContent  } from '@/components/ui/card';'
-import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';'
-import { AlertCircle, FilePlus, Loader2  } from 'lucide-react';'
-import { Button  } from '@/components/ui/button';'
-import { Resume  } from '@/types/resume';'
-// Import components,
-import { ResumeProgress  } from './ResumeProgress';'
-import { EmptyResumeState  } from './EmptyResumeState';'
-import { CreateResumeForm  } from './CreateResumeForm';'
-import { ResumeSteps  } from './ResumeSteps';'
-import { ResumeStepContent  } from './ResumeStepContent';'
-import { useResumeProgress  } from './useResumeProgress';'
-import { ResumeVersionSelector  } from './ResumeVersionSelector';'
-import { RESUME_STEPS } from './constants';'
-export function ResumeWizard() {
-}
-import {useState, useEffect} from 'react';'
-import {Button} from '@/components/ui/button';'
-import {Resume} from '@/types/resume';'
-// Import components,
-import {EmptyResumeState} from './EmptyResumeState';'
-import {CreateResumeForm} from './CreateResumeForm';'
-import {ResumeSteps} from './ResumeSteps';'
-import {ResumeStepContent} from './ResumeStepContent';'
-import {useResumeProgress} from './useResumeProgress';'
-import {ResumeVersionSelector} from './ResumeVersionSelector';'
-import {RESUME_STEPS} from './constants';  // Use the extracted hook for progress calculation'
-=======
-<<<<<<< HEAD
-
-
-import {Button} from '@/components / ui / button';
-import {Resume} from '@/types / resume';
-// Import components;
-
-import { useState, useEffect  } from 'react';
-import { useAuth  } from '@/hooks/useAuth';
-import { useResume  } from '@/hooks/useResume';
-import { Tabs  } from '@/components/ui/tabs';
-import { Card, CardContent  } from '@/components/ui/card';
-import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
-import { AlertCircle, FilePlus, Loader2  } from 'lucide-react';
-import { Button  } from '@/components/ui/button';
-import { Resume  } from '@/types/resume';
-// Import components
-import { ResumeProgress  } from './ResumeProgress';
-import { EmptyResumeState  } from './EmptyResumeState';
-import { CreateResumeForm  } from './CreateResumeForm';
-import { ResumeSteps  } from './ResumeSteps';
-import { ResumeStepContent  } from './ResumeStepContent';
-import { useResumeProgress  } from './useResumeProgress';
-import { ResumeVersionSelector  } from './ResumeVersionSelector';
-import { RESUME_STEPS } from './constants';
-export function ResumeWizard() {
-import {useState, useEffect} from 'react';
-import {useAuth} from '@/hooks/useAuth';
-import {useResume} from '@/hooks/useResume';
-import {Tabs} from '@/components/ui/tabs';
-import {Card, CardContent} from '@/components/ui/card';
-import {Alert, AlertDescription, AlertTitle} from '@/components/ui/alert';
-import {AlertCircle, FilePlus, Loader2} from 'lucide-react';
-import {Button} from '@/components/ui/button';
-import {Resume} from '@/types/resume';
-// Import components
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-=======
-import {Resume} from '@/types / resume';
-
-import { useState, useEffect  } from 'react';
-
-import { useState, useEffect  } from 'react';
-
-import { useAuth  } from '@/hooks/useAuth';
-import { useResume  } from '@/hooks/useResume';
-import { Tabs  } from '@/components/ui/tabs';
-import { Card, CardContent  } from '@/components/ui/card';
-import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
-import { AlertCircle, FilePlus, Loader2  } from 'lucide-react';
-import { Button  } from '@/components/ui/button';
-
-import { Resume  } from '@/types/resume';
 
 import {useState, useEffect} from 'react';
-import {use_auth} from '@/hooks / use_auth';
-import {use_resume} from '@/hooks / use_resume';
-import {Tabs} from '@/components / ui / tabs';
-import {Card, CardContent} from '@/components / ui / card';
-import {Alert, AlertDescription, AlertTitle} from '@/components / ui / alert';
-import {AlertCircle, FilePlus, Loader2} from 'lucide-react';
-<<<<<<< HEAD
-import {Button} from '@/components/ui/button';
-import {Resume} from '@/types/resume';
-// Import components
-=======
 
-import {Button} from '@/components / ui / button';
-import {Resume} from '@/types / resume';
 
-// Import components;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import {ResumeProgress} from './ResumeProgress';
 import {EmptyResumeState} from './EmptyResumeState';
 import {CreateResumeForm} from './CreateResumeForm';
@@ -191,56 +11,7 @@ import {useResumeProgress} from './useResumeProgress';
 import {ResumeVersionSelector} from './ResumeVersionSelector';
 
 import {RESUME_STEPS} from './constants';
-<<<<<<< HEAD
-export function ResumeWizard() {;
-  const { user } = useAuth();
-  const {
-    isLoading;
 
-    error
-    resume
-
-    fetchResume;
-    createResume
-  } = useResume();
-  const [activeTab, setActiveTab] = useState('basic-info');
-  const [showNewResumeForm, setShowNewResumeForm] = useState(false);
-  // Use the extracted hook for progress calculation
-
-  const progress = useResumeProgress(resume);
-  useEffect(() => {
-    if (user) {
-      fetchResume()
-    }
-  }, [user, fetchResume]);
-  const handleCreateNewResume = async (title: string) => {
-    const resumeId = await createResume({ title: title.trim() })
-    if (resumeId) {
-      await fetchResume(resumeId);
-      setShowNewResumeForm(false)
-    }
-  }
-  const nextStep = () => {
-    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
-    if (currentIndex < RESUME_STEPS.length - 1) {
-      setActiveTab(RESUME_STEPS[currentIndex + 1].id)
-    }
-  }
-  const prevStep = () => {
-    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
-    if (currentIndex > 0) {
-      setActiveTab(RESUME_STEPS[currentIndex - 1].id)
-    }
-
-  };
-
-  }
-  const handleResumeChange = (resumeId: string) => {
-    fetchResume(resumeId)
-  }
-
-  };
-=======
 
   const { user } = useAuth();
   const { ;
@@ -286,7 +57,7 @@ export function ResumeWizard() {;
 
   // Use the extracted hook for progress calculation
 
->>>>>>> origin/chore/fix-lint-and-merge
+
   }
   const nextStep = () => {
     const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
@@ -306,11 +77,8 @@ export function ResumeWizard() {;
 
   };
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
 import { useState, useEffect } from 'react',;
 
 import { useAuth } from '@/hooks/useAuth',;
@@ -350,34 +118,17 @@ import { RESUME_STEPS } from './constants',;
     }
 
   const [showNewResumeForm, setShowNewResumeForm] = useState(false),;
-<<<<<<< HEAD
-  const [activeTab, setActiveTab] = useState('basic-info');
-  const [showNewResumeForm, setShowNewResumeForm] = useState(false);
-  // Use the extracted hook for progress calculation;
-  const progress = useResumeProgress(resume);
-  // Use the extracted hook for progress calculation;
-  const progress = useResumeProgress(resume),;
-=======
+
 
   // Use the extracted hook for progress calculation;
   const progress = useResumeProgress(resume);
 
-<<<<<<< HEAD
-const [activeTab, setActiveTab] = useState('basic-info');
-  const [showNewResumeForm, setShowNewResumeForm] = useState(false);
-  // Use the extracted hook for progress calculation;
-  const progress = useResumeProgress(resume);
-  // Use the extracted hook for progress calculation;
-  const progress = useResumeProgress(resume),;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   useEffect(() => {;
     if (user) {;
       fetchResume();
     }
-<<<<<<< HEAD
-=======
+
   }, [user, fetchResume]);
 
   const handleCreateNewResume = async (title: string) => {;
@@ -400,42 +151,23 @@ const [activeTab, setActiveTab] = useState('basic-info');
     if (currentIndex > 0) {;
       setActiveTab(RESUME_STEPS[currentIndex - 1].id);
     }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 
   },
 
-<<<<<<< HEAD
-=======
 
 
-<<<<<<< HEAD
 
-  };
-  const handleResumeChange = (resumeId: string) => {;
-    fetchResume(resumeId);
-  };
-  if (isLoading) {;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   const handleResumeChange = (resumeId: string) => {;
     fetchResume(resumeId);
   };
 
   if (isLoading) {;
-<<<<<<< HEAD
 
-  };
-  const handleResumeChange = (resumeId: string) => {;
-    fetchResume(resumeId);
-  };
-  if (isLoading) {;
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
     return (
       <div className="flex justify-center items-center h-64">;"
 
@@ -443,17 +175,11 @@ const [activeTab, setActiveTab] = useState('basic-info');
       </div>;
     );
   }
-<<<<<<< HEAD
-  if (error) {;
-=======
+
 
   if (error) {;
 
-<<<<<<< HEAD
-if (error) {;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     return (
       <Alert variant="destructive" className="mb-6">;
 
@@ -463,85 +189,23 @@ if (error) {;
       </Alert>;
     );
   }
-<<<<<<< HEAD
-  }, [user, fetchResume]),;
-  const handleCreateNewResume = async (title: string) => {;
-    const resumeId = await createResume({ title: title.trim() }),;
-    if (resumeId) {;
-      await fetchResume(resumeId),;
-      setShowNewResumeForm(false);
-    }
-  },;
-  const nextStep = () => {;
-    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab),;
-    if (currentIndex < RESUME_STEPS.length - 1) {;
-      setActiveTab(RESUME_STEPS[currentIndex + 1].id);
-    }
-  },;
-  const prevStep = () => {;
-    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab),;
-    if (currentIndex > 0) {;
-      setActiveTab(RESUME_STEPS[currentIndex - 1].id);
-    }
-  },
 
-<<<<<<< HEAD
-}, [user, fetchResume]),;
-  const handleCreateNewResume = async (title: string) => {;
-    const resumeId = await createResume({ title: title.trim() }),;
-    if (resumeId) {;
-      await fetchResume(resumeId),;
-      setShowNewResumeForm(false);
-    }
-  },;
-  const nextStep = () => {;
-    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab),;
-    if (currentIndex < RESUME_STEPS.length - 1) {;
-      setActiveTab(RESUME_STEPS[currentIndex + 1].id);
-    }
-  },;
-  const prevStep = () => {;
-    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab),;
-    if (currentIndex > 0) {;
-      setActiveTab(RESUME_STEPS[currentIndex - 1].id);
-    }
-  },
-
-  const handleResumeChange = (resumeId: string) => {
-    fetchResume(resumeId)
-
-  },
-  },
-
-  if (isLoading) {
-    return (
-
-=======
   const handleResumeChange = (resumeId: string) => {
     fetchResume(resumeId)
   },
   
   if (isLoading) {
     return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+
       <div className="flex justify-center items-center h-64">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
       </div>
     )
   }
-<<<<<<< HEAD
-  if (error) {
-=======
-<<<<<<< HEAD
 
-=======
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  if (error) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
     return (
       <Alert variant="destructive" className="mb-6">
         <AlertCircle className="h-4 w-4" />
@@ -550,517 +214,36 @@ if (error) {;
       </Alert>
     )
 
-<<<<<<< HEAD
-  if (showNewResumeForm) {
-=======
 
-<<<<<<< HEAD
-  }
-<<<<<<< HEAD
-  if (!resume && !showNewResumeForm) {
-    return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
-  }
-  if (showNewResumeForm) {
-    return (
-      <CreateResumeForm
-        onCreateResume={handleCreateNewResume}
-        onCancel={() => setShowNewResumeForm(false)}
-        isLoading={isLoading}
-=======
-  if (showNewResumeForm) {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  }
-  if (showNewResumeForm) {
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
 
   if (!resume && !showNewResumeForm) {;
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
   }
-<<<<<<< HEAD
-  if (showNewResumeForm) {;
 
-      <CreateResumeForm
-
-import { useState, useEffect } from 'react',;
-import { useAuth } from '@/hooks/useAuth',;
-import { useResume } from '@/hooks/useResume',;
-import { Tabs } from '@/components/ui/tabs',;
-import { Card, CardContent } from '@/components/ui/card',;
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert',;
-import { AlertCircle, FilePlus, Loader2 } from 'lucide-react',;
-import { Button } from '@/components/ui/button',;
-import { Resume } from '@/types/resume',;
-    return ('
-      <div className="flex justify-center items-center h-64">;"
-</div>"
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />;"
-</Loader2>
-      </div>;"
-      <Alert variant="destructive" className="mb-6">;"
-</Alert>"
-        <AlertCircle className="h-4 w-4" />;"
-</AlertCircle>
-        <AlertTitle>Error</AlertTitle>;
-        <AlertDescription>{error}</AlertDescription>;
-      </Alert>;"
-      <div className="flex justify-center items-center h-64">"
-</div>"
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />"
-</Loader2>
-      </div>"
-      <Alert variant="destructive" className="mb-6">"
-</Alert>"
-        <AlertCircle className="h-4 w-4" />"
-</AlertCircle>
-        <AlertTitle>Error</AlertTitle>
-        <AlertDescription>{error}</AlertDescription>
-      </Alert>)
-    return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
-</EmptyResumeState>
-      <CreateResumeForm;"
-import { useState, useEffect } from 'react',;''
-import { useAuth } from '@/hooks/useAuth',;''
-import { useResume } from '@/hooks/useResume',;''
-import { Tabs } from '@/components/ui/tabs',;''
-import { Card, CardContent } from '@/components/ui/card',;''
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert',;''
-import { AlertCircle, FilePlus, Loader2 } from 'lucide-react',;''
-import { Button } from '@/components/ui/button',;''
-import { Resume } from '@/types/resume',;'
-;
-// Import components;'
-import { ResumeProgress } from './ResumeProgress',;''
-import { EmptyResumeState } from './EmptyResumeState',;''
-import { CreateResumeForm } from './CreateResumeForm',;''
-import { ResumeSteps } from './ResumeSteps',;''
-import { ResumeStepContent } from './ResumeStepContent',;''
-import { useResumeProgress } from './useResumeProgress',;''
-import { ResumeVersionSelector } from './ResumeVersionSelector',;''
-import { RESUME_STEPS } from './constants',;'
-;
-export function ResumeWizard() {;
-  const { user } = useAuth(),;
-  const { ;
-    isLoading,;
-    error, ;
-    resume, ;
-    fetchResume,;
-    createResume;
-  } = useResume(),;
-  ;'
-  const [activeTab, setActiveTab] = useState('basic-info'),;'
-  const [showNewResumeForm, setShowNewResumeForm] = useState(false),;
-  ;
-  // Use the extracted hook for progress calculation;
-  const progress = useResumeProgress(resume),;
-  ;
-  useEffect(() => {;
-</CreateResumeForm>
-    if (currentIndex < RESUME_STEPS.length - 1) {;
-      setActiveTab(RESUME_STEPS[currentIndex + 1].id),;
-    }
-  },;
-  ;
-  const prevStep = () => {;
-    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab),;
-    if (currentIndex > 0) {;
-      setActiveTab(RESUME_STEPS[currentIndex - 1].id),;
-    }
-  },;
-;
-  const handleResumeChange = (resumeId:string) => {;
-    fetchResume(resumeId);
-  },;
-  ;
-  if (isLoading) {;
-    return (;
-      <div className="flex justify-center items-center h-64">;
-
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />;
-      </div>;
-    );
-  }"
-      <Alert variant="destructive" className="mb-6">;"
-        <AlertCircle className="h-4 w-4" />;
-        <AlertTitle>Error</AlertTitle>;
-        <AlertDescription>{error}</AlertDescription>;
-      </Alert>;
-  }
-
-  if (!resume && !showNewResumeForm) {;
-
-    return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
-  }
-<<<<<<< HEAD
-;
-  const next_step = () =>: any {
-    }
-    const current_index = RESUME_STEPS.find_index (step => { return step.id === active_tab); }
-    // Check condition,
-if ( {) {
-  $2
-}
-      setActiveTab (RESUME_STEPS[current_index + 1].id);
-    }
-  }
-;
-  const prev_step = () =>: any {
-    }
-    // Check condition,
-if ( {) {
-  $2
-}
-      setActiveTab (RESUME_STEPS[current_index - 1].id);
-    }
-  }
-;
-  const handleResumeChange = ("resume_id": string) =>: any {
-    }
-    fetch_resume (resume_id);
-  }
-;
-  // Check condition,
-if ( {) {
-  $2
-}
-return (;
-      <div className="flex justify - center items - center h-64">;"
-        <Loader2 className="h - 8 w - 8 animate - spin text-primary" />;"
-      </div>);
-  }
-  // Check condition,
-if ( {) {
-  $2
-}
-return (;
-      <Alert variant="destructive" className="mb-6">;"
-        <AlertCircle className="h - 4 w-4" />;"
-        <AlertTitle > Error</AlertTitle>;
-        <AlertDescription>{error}</AlertDescription>;
-      </Alert>);
-  }
-  // Check condition,
-if ( {) {
-  $2
-}
-    return <EmptyResumeState onCreateClick={() => setShowNewResumeForm (true)} />;
-  }
-  // Check condition,
-if ( {) {
-  $2
-}
-return (;
-=======
 
   if (showNewResumeForm) {;
 
-=======
-  if (showNewResumeForm) {;
-<<<<<<< HEAD
+
     return (
-      <CreateResumeForm
 
-import { useState, useEffect } from 'react',;
-import { useAuth } from '@/hooks/useAuth',;
-import { useResume } from '@/hooks/useResume',;
-import { Tabs } from '@/components/ui/tabs',;
-import { Card, CardContent } from '@/components/ui/card',;
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert',;
-import { AlertCircle, FilePlus, Loader2 } from 'lucide-react',;
-import { Button } from '@/components/ui/button',;
-import { Resume } from '@/types/resume',;
-;
-// Import components;
-import { ResumeProgress } from './ResumeProgress',;
-import { EmptyResumeState } from './EmptyResumeState',;
-import { CreateResumeForm } from './CreateResumeForm',;
-import { ResumeSteps } from './ResumeSteps',;
-import { ResumeStepContent } from './ResumeStepContent',;
-import { useResumeProgress } from './useResumeProgress',;
-import { ResumeVersionSelector } from './ResumeVersionSelector',;
-import { RESUME_STEPS } from './constants',;
-;
-export function ResumeWizard() {;
-  const { user } = useAuth(),;
-  const { ;
-    isLoading,;
-    error, ;
-    resume, ;
-    fetchResume,;
-    createResume;
-  } = useResume(),;
-  ;
-  const [activeTab, setActiveTab] = useState('basic-info'),;
-  const [showNewResumeForm, setShowNewResumeForm] = useState(false),;
-  ;
-  // Use the extracted hook for progress calculation;
-  const progress = useResumeProgress(resume),;
-  ;
-  useEffect(() => {;
-    if (user) {;
-      fetchResume(),;
-    }
-  }, [user, fetchResume]),;
-  ;
-  const handleCreateNewResume = async (title:string) => {;
-    const resumeId = await createResume({ title:title.trim() }),;
-    if (resumeId) {;
-      await fetchResume(resumeId),;
-      setShowNewResumeForm(false),;
-    }
-  },;
-  ;
-  const nextStep = () => {;
-    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab),;
-    if (currentIndex < RESUME_STEPS.length - 1) {;
-      setActiveTab(RESUME_STEPS[currentIndex + 1].id),;
-    }
-  },;
-  ;
-  const prevStep = () => {;
-    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab),;
-    if (currentIndex > 0) {;
-      setActiveTab(RESUME_STEPS[currentIndex - 1].id),;
-    }
-  },;
-;
-  const handleResumeChange = (resumeId:string) => {;
-    fetchResume(resumeId);
-  },;
-  ;
-  if (isLoading) {;
-    return (;
-      <div className="flex justify-center items-center h-64">;
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />;
-      </div>;
-    ),;
-  }
-  ;
-  if (error) {;
-    return (;
-      <Alert variant="destructive" className="mb-6">;
-        <AlertCircle className="h-4 w-4" />;
-        <AlertTitle>Error</AlertTitle>;
-        <AlertDescription>{error}</AlertDescription>;
-      </Alert>;
-    ),;
-  }
-  ;
-  if (!resume && !showNewResumeForm) {;
-    return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />,;
-  }
-  ;
-  if (showNewResumeForm) {;
-    return (;
-      <CreateResumeForm ;
-        onCreateResume={handleCreateNewResume}
-        onCancel={() => setShowNewResumeForm(false)}
-        isLoading={isLoading}
-      />;
-
-
-
-  
-
-  return (
-    ),;
-  }
-  ;
-  return (;
-    <div className="space-y-6">;
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">;
-        <h1 className="text-2xl font-bold">Resume Builder</h1>;
-        <div className="flex gap-4 flex-wrap items-center">;
-          {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
-          <Button ;
-            onClick={() => setShowNewResumeForm(true)}
-            variant="outline";
-            size="sm";
-            className="gap-2";
-          >;
-            <FilePlus className="h-4 w-4" /> ;
-            Create New;
-          </Button>;
-        </div>;
-      </div>;
-      ;
-      <Card>;
-        <CardContent className="pt-6">;
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">;
-            <h2 className="text-xl font-semibold">{resume?.basic_info?.title || 'My Resume'}</h2>;
-            <ResumeProgress resume={resume} progress={progress} />;
-          </div>;
-  }
-  if (!resume && !showNewResumeForm) {
-    return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
-  }
-  if (showNewResumeForm) {
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-    return (
->>>>>>> origin/chore/fix-lint-and-merge
       <CreateResumeForm;
         onCreateResume={handleCreateNewResume}
         onCancel={() => setShowNewResumeForm(false)}
         isLoading={isLoading}
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-      />
-    )
-  }
-  
-  return (
-    <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-        <h1 className="text-2xl font-bold">Resume Builder</h1>
-        <div className="flex gap-4 flex-wrap items-center">
-          {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
-          <Button
-            onClick={() => setShowNewResumeForm(true)}
-            variant="outline"
-            size="sm"
-            className="gap-2"
-          >
-            <FilePlus className="h-4 w-4" />
-            Create New
-          </Button>
-        </div>
-      </div>
-      <Card>
-        <CardContent className="pt-6">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
-            <h2 className="text-xl font-semibold">{resume?.basic_info?.title |'My Resume'}</h2>
-            <ResumeProgress resume={resume} progress={progress} />
-          </div>
-          <Tabs value={activeTab} onValueChange={setActiveTab}>
-            <ResumeSteps
-              steps={RESUME_STEPS}
-              activeTab={activeTab}
-              onChange={setActiveTab}
-            />
-            {resume && (
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-      />;
-    );
-  }
 
-  return (
-    <div className="space-y-6">;
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">;
-        <h1 className="text-2xl font-bold">Resume Builder</h1>;
-
-        <div className="flex gap-4 flex-wrap items-center">;
-          {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
-          <Button;
-            onClick={() => setShowNewResumeForm(true)}
-
-            variant="outline";
-            size="sm";
-            className="gap-2";
-          >;
-            <FilePlus className="h-4 w-4" /> ;
-            Create New;
-</Button>"
-            <FilePlus className="h-4 w-4" /> ;"
-</FilePlus>
-          </Button>;
-        </div>;
-      </div>;
-      <Card>;
-</Card>"
-        <CardContent className="pt-6">;"
-</CardContent>"
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">;"
-</div>"
-            <h2 className="text-xl font-semibold">{resume?.basic_info?.title || 'My Resume'}</h2>;'
-            <ResumeProgress resume={resume} progress={progress} />;
-</ResumeProgress>
-          </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <Tabs value={active_tab} onValueChange={setActiveTab}>;
-            <ResumeSteps;
-              steps={RESUME_STEPS}
-              active_tab={active_tab}
-              on_change={setActiveTab} />;
-            {resume && (
-              <ResumeStepContent;
-                }
-                active_tab={active_tab}
-                resume={resume as Resume}
-                onNextStep={next_step}
-                onPrevStep={prev_step} />)}
-          </Tabs>;
-        </CardContent>;
-      </Card>;
-    </div>);
-  ),; const [activeTab, setActiveTab] = useState ('basic-info');'
-//Use the extracted hook for progress calculation <AlertTitle>Error</AlertTitle> <AlertDescription> {
-  }
-=======
-
-          <Tabs value={activeTab} onValueChange={setActiveTab}>;
-            <ResumeSteps
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              steps={RESUME_STEPS} 
-              activeTab={activeTab} 
-              onChange={setActiveTab} 
-            />;
-            {resume && (;
-              <ResumeStepContent
-
-              <ResumeStepContent 
-
-<<<<<<< HEAD
-                activeTab={activeTab}
-                resume={resume as Resume}
-          ;
-          <Tabs value={activeTab} onValueChange={setActiveTab}>;
-            <ResumeSteps ;
-              steps={RESUME_STEPS} ;
-              activeTab={activeTab} ;
-              onChange={setActiveTab} ;
-            />;
-            ;
-            {resume && (;
-              <ResumeStepContent ;
-                activeTab={activeTab}                resume={resume as Resume}
-                onNextStep={nextStep}
-                onPrevStep={prevStep}
-              />;
-            )}
-              <ResumeStepContent
-              <ResumeStepContent 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 activeTab={activeTab}
                 resume={resume as Resume}
                 onNextStep={nextStep}
                 onPrevStep={prevStep}
-<<<<<<< HEAD
-              />
-            )}
-          </Tabs>
-        </CardContent>
-      </Card>
-    </div>
-  )
-}
-=======
+
               />;
             )}
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
           </Tabs>;
         </CardContent>;
       </Card>;
@@ -1195,57 +378,19 @@ if ( {) {
   ),; const [activeTab, setActiveTab] = useState ('basic-info');
 const [showNewResumeForm, setShowNewResumeForm] = useState (false);
 //Use the extracted hook for progress calculation <AlertTitle>Error</AlertTitle> <AlertDescription> {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   error 
 }</AlertDescription> </Alert>) 
 }
 }if (showNewResumeForm) {
-<<<<<<< HEAD
-  }
+
   return (<CreateResumeForm onCreateResume= {
-  }
-=======
-  return (<CreateResumeForm onCreateResume= {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   handleCreateNewResume 
 }onCancel= {
   () => setShowNewResumeForm (false) 
 }isLoading= {
-<<<<<<< HEAD
-  }
-  isLoading 
-}/>) 
-}> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {"
-  }
-  activeTab 
-}onValueChange= {
-  }
-  setActiveTab 
-}> <ResumeSteps steps= {
-  }
-  RESUME STEPS 
-}activeTab= {
-  }
-  activeTab 
-}onChange= {
-  }
-  setActiveTab 
-} /> {
-  }
-  resume && (<ResumeStepContent activeTab= {
-  }
-  activeTab 
-}resume= {
-  }
-  resume as Resume 
-}onNextStep= {
-  }
-  nextStep 
-}onPrevStep= {
-  }
-  prevStep 
-} />) 
-=======
+
   isLoading 
 }/>) 
 }> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {
@@ -1268,19 +413,13 @@ const [showNewResumeForm, setShowNewResumeForm] = useState (false);
 }onPrevStep= {
   prevStep 
 }/>) 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 }</Tabs> </CardContent> </Card> </div>) 
 }
   );
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
 export /**
  * ResumeWizard - Function description
  */
@@ -1296,15 +435,11 @@ function ResumeWizard() {
     create_resume;
   } = use_resume ();
 ;
->>>>>>> merged-prs-20250907-203621
+
       />
     )
   }
-=======
-          <Tabs value={activeTab} onValueChange={setActiveTab}>;
-            <ResumeSteps
 
->>>>>>> origin/chore/fix-lint-and-merge
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
@@ -1338,233 +473,6 @@ function ResumeWizard() {
 
               steps={RESUME_STEPS} 
 
-<<<<<<< HEAD
-              activeTab={activeTab} 
-              onChange={setActiveTab} 
-            />;
-            {resume && (;
 
-                activeTab={activeTab}
-                resume={resume as Resume}
-          ;
-          <Tabs value={activeTab} onValueChange={setActiveTab}>;
-</ResumeStepContent>
-            <ResumeSteps ;
-              steps={RESUME_STEPS} ;
-              activeTab={activeTab} ;
-              onChange={setActiveTab} ;
-            />;
-</ResumeSteps>
-              <ResumeStepContent ;
-                activeTab={activeTab}                resume={resume as Resume}
-                onNextStep={nextStep}
-                onPrevStep={prevStep}
-              />;
-            )}
-              <ResumeStepContent
 
-                activeTab={activeTab}
 
-                resume={resume as Resume}
-                onNextStep={nextStep}
-                onPrevStep={prevStep}
-
-      </div>);
-  }
-  // Check condition;
-if ( {) {}
-  $2;
-}
-
-        <AlertTitle > Error</AlertTitle>;
-        <AlertDescription>{error}</AlertDescription>;
-      </Alert>);
-  }
-  // Check condition;
-if ( {) {}
-  $2;
-}
-    return <EmptyResumeState onCreateClick={() => setShowNewResumeForm (true)} />;
-  }
-  // Check condition;
-if ( {) {}
-  $2;
-}
-    return (
-      <CreateResumeForm;
-        onCreateResume={handleCreateNewResume}
-        on_cancel={() => setShowNewResumeForm (false)}
-        is_loading={is_loading}
-      />);
-  }
-
-            Create New;
-
-</ResumeStepContent>
-          </Tabs>;
-        </CardContent>;
-      </Card>;
-    </div>;'
-      <div className="flex justify - center items - center h - 64">;"
-</div>"
-        <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;"
-</Loader2>
-      </div>);"
-      <Alert variant="destructive" className="mb - 6">;"
-</Alert>"
-        <AlertCircle className="h - 4 w - 4" />;"
-</AlertCircle>
-        <AlertTitle > Error</AlertTitle>;
-        <AlertDescription>{error}</AlertDescription>;
-      </Alert>);
-    return <EmptyResumeState onCreateClick={() => setShowNewResumeForm (true)} />;
-</EmptyResumeState>
-      <CreateResumeForm;
-        onCreateResume={handleCreateNewResume}
-        on_cancel={() => setShowNewResumeForm (false)}
-</CreateResumeForm>"
-    <div className="space - y-6">;"
-</div>"
-      <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4">;"
-</div>"
-        <h1 className="text - 2xl font - bold">Resume Builder</h1>;""
-        <div className="flex gap - 4 flex - wrap items - center">;"
-</div>
-
-          {resume && <ResumeVersionSelector current_resume={resume} onResumeChange={handleResumeChange} />}
-</ResumeVersionSelector>
-          <Button;
-
-            on_click={() => setShowNewResumeForm (true)}
-</Button>"
-            <FilePlus className="h - 4 w - 4" />;"
-</FilePlus>
-          </Button>;
-        </div>;
-      </div>;
-
-            <ResumeProgress resume={resume} progress={progress} />;
-          </div>;
-          <Tabs value={active_tab} onValueChange={setActiveTab}>;
-</Card>"
-        <CardContent className="pt - 6">;"
-</CardContent>"
-          <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4 mb - 6">;"
-</div>"
-            <h2 className="text - xl font - semibold">{resume?.basic_info?.title || 'My Resume'}</h2>;'
-
-            <ResumeProgress resume={resume} progress={progress} />;
-</ResumeProgress>
-          </div>;
-
-          <Tabs value={active_tab} onValueChange={setActiveTab}>;
-</Tabs>
-
-            <ResumeSteps;
-              steps={RESUME_STEPS}
-              active_tab={active_tab}
-              on_change={setActiveTab}
-            />;
-            {resume && (
-
-</ResumeSteps>
-              <ResumeStepContent;
-
-                active_tab={active_tab}
-                resume={resume as Resume}
-                onNextStep={next_step}
-                onPrevStep={prev_step}
-              />)}
-</ResumeStepContent>
-          </Tabs>;
-        </CardContent>;
-      </Card>;
-    </div>);'
-  ),; const [activeTab, setActiveTab] = useState ('basic-info');
-const [showNewResumeForm, setShowNewResumeForm] = useState (false);
-//Use the extracted hook for progress calculation <AlertTitle>Error</AlertTitle> <AlertDescription> {}
-  error;
-}</AlertDescription> </Alert>) 
-}
-}if (showNewResumeForm) {}
-  return (<CreateResumeForm onCreateResume= {}
-  handleCreateNewResume;
-}onCancel= {}
-  () => setShowNewResumeForm (false) 
-}isLoading= {}
-  isLoading;
-}/>) "
-}> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {}
-  activeTab;
-}onValueChange= {}
-  setActiveTab;
-}> <ResumeSteps steps= {}
-  RESUME STEPS;
-}activeTab= {}
-  activeTab;
-}onChange= {}
-  setActiveTab;
-}/> {}
-  resume && (<ResumeStepContent activeTab= {}
-  activeTab;
-}resume= {}
-  resume as Resume;
-}onNextStep= {}
-  nextStep;
-}onPrevStep= {}
-  prevStep;
-}/>) 
-}</Tabs> </CardContent> </Card> </div>) 
-});
-}
-
-            )}
-
-export /**
- * ResumeWizard - Function description
-
- */
-function ResumeWizard() {}
-  const { user } = use_auth ();
-  const {}
-    is_loading;
-    error,
-    resume,
-    fetch_resume;
-    create_resume;
-  } = use_resume ();
-
-;
-
-;
-  } = useResume(),;
-  const [activeTab, setActiveTab] = useState('basic-info'),;
-  const [showNewResumeForm, setShowNewResumeForm] = useState(false),;
-
-  // Use the extracted hook for progress calculation;
-  const progress = useResumeProgress(resume);
-
-  useEffect(() => {;
-    if (user) {;
-      fetchResume();
-  }, [user, fetchResume]);
-
-  const handleCreateNewResume = async (title: string) => {;
-    const resumeId = await createResume({ title: title && title.trim() }),;
-    if (resumeId) {;
-      await fetchResume(resumeId);
-      setShowNewResumeForm(false);
-
-  const nextStep = () => {;
-    const currentIndex = RESUME_STEPS && RESUME_STEPS.findIndex(step => step && step.id === activeTab);
-    if (currentIndex < RESUME_STEPS && RESUME_STEPS.length - 1) {;
-      setActiveTab(RESUME_STEPS[currentIndex + 1].id);
-
-  const prevStep = () => {;
-    if (currentIndex > 0) {;
-      setActiveTab(RESUME_STEPS[currentIndex - 1].id);
-
-  },
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

@@ -1,56 +1,7 @@
-<<<<<<< HEAD:src_backup/components/support/HelpArticleView.tsx
-import React, { useState } from 'react;
-import { Button } from @/components/ui/button';
-import { Card } from '@/components/ui/card;
-import { ThumbsUp, ThumbsDown } from lucide-react';
-import { toast } from '@/components/ui/use-toast;
-import { HELP_CATEGORIES } from ./help-content';
 
-import React, { useState } from "react,
-import { Button } from @/components/ui/button",
-import { Card } from "@/components/ui/card,
-import { ThumbsUp, ThumbsDown } from 'lucide-react
-import { toast } from @/components/ui/use-toast",
-import { HELP_CATEGORIES } from "./help-content;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-<<<<<<< HEAD
-import React, { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { ThumbsUp, ThumbsDown } from 'lucide-react'import { toast } from "@/components/ui/use-toast"
-import { HELP_CATEGORIES } from "./help-content"
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card } from "@/components/ui/card",
-import { ThumbsUp, ThumbsDown } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast",
-interface HelpArticleViewProps {
-import { HELP_CATEGORIES } from "./help-content";
-  articleId: string
-}
-export function HelpArticleView({ articleId }: HelpArticleViewProps) {
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
-import { HELP_CATEGORIES } from "./help-content";
-import { HELP_CATEGORIES } from "./help-content",
-interface HelpArticleViewProps {
-  articleId: string
-}
-export function HelpArticleView({ articleId }: HelpArticleViewProps) {
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null)
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/support/HelpArticleView.tsx
-interface HelpArticleViewProps {
-  articleId: string
-}
 
-  const [feedbackGiven, setFeedbackGiven] = useState<helpful" | "not-helpful | null>(null)
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Find the article in all categories
-<<<<<<< HEAD:src_backup/components/support/HelpArticleView.tsx
-=======
+
   let article = null;
   for (const category of HELP_CATEGORIES) {
 
@@ -66,53 +17,7 @@ interface HelpArticleViewProps {
   const handleFeedback = (type: "helpful" | "not-helpful") => {
     setFeedbackGiven(type)
   return new Date(date).toLocaleDateString("en-US", {
-<<<<<<< HEAD
-    year: "numeric"
-    month: "long"
-    day: "numeric", })
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-
-export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
-
-
-    year: "numeric",;
-    month: "long",;
-    day: "numeric", });
-};
-}
-
-    year: "numeric",;
-    month: "long",;
-    day: "numeric", });
-}
-
-import React, { useState } from './react';
-import { Button  } from '@/components / ui / button';
-import { Card  } from '@/components / ui / card';
-import { ThumbsUp, ThumbsDown } from 'lucide-react'import { toast  } from '@/components / ui / use - toast';
-import { HELP_CATEGORIES  } from './help - content';
-interface HelpArticleViewProps {
-  article_id: string;
-}
-export /**
- * HelpArticleView - Function description
- */
-function HelpArticleView() {
-  const [feedback_given, setFeedbackGiven] = useState<"helpful" | "not - helpful" | null>(null);
-  // Find the article in all categories;
-  let article;
-<<<<<<< HEAD
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),
-  
-  // Find the article in all categories
-  let article,
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  for (const category of HELP_CATEGORIES) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/support/HelpArticleView.tsx
     const found = category.articles.find(a => a.id === articleId),
     if (found) {
       article = found,
@@ -275,47 +180,10 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
   );
 }
 
-<<<<<<< HEAD:src_backup/components/support/HelpArticleView.tsx
 
-
-import React, { useState } from './react';
-import { Button  } from '@/components/ui/ button';
-import { Card  } from '@/components/ui/ card';
-import { ThumbsUp, ThumbsDown } from 'lucide-react'import { toast  } from '@/components/ui/ use - toast';
-import { HELP_CATEGORIES  } from './help - content';
-interface HelpArticleViewProps {
-  article_id: string;
-}
-export /**
- * HelpArticleView - Function description
- */
-function HelpArticleView() {
-  const [feedback_given, setFeedbackGiven] = useState<"helpful" | "not - helpful" | null>(null);
-  // Find the article in all categories;
-  let article;
-  for (const category of HELP_CATEGORIES) {
-    const found = category.articles.find (array => a.id === article_id);
-    // Check condition
-if ( {) {
-  $2
-}
-      article = found;
-      break;
-    }
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    return <div > Article not found</div>;
-  }
-  const handle_feedback = (type: "helpful" | "not - helpful") =>: any {
-    setFeedbackGiven (type);
-  return new Date (date).toLocaleDateString ("en - US", {
-=======
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/support/HelpArticleView.tsx
+
     year: "numeric",
     month: "long",
     day: "numeric"
@@ -328,19 +196,5 @@ function formatDate(date: string): string {;
     day: "numeric";
   });
 }
-<<<<<<< HEAD:src_backup/components/support/HelpArticleView.tsx
-    const found = null;
-    day: "numeric"
-  })
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-;
-;
-=======
 
-;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/support/HelpArticleView.tsx
+

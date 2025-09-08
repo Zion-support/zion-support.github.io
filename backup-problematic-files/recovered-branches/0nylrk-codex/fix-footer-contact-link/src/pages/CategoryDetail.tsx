@@ -99,12 +99,10 @@ export default function CategoryDetail() {;
       listing.category.toLowerCase() === categoryTitle.toLowerCase();
     ),;
     ;
-<<<<<<< HEAD
-    // If we don't have real listings for this category, generate placeholder listings;'
-=======
+
     // If we don't have real listings for this category, generate placeholder listings;
     const listingsToShow = filteredListings.length > 0 ? filteredListings :;
->>>>>>> origin/chore/fix-lint-and-merge
+
       Array(4).fill(null).map((_, index) => ({;
 
         category:currentCategory.title,;

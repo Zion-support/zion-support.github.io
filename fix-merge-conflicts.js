@@ -90,43 +90,7 @@ function findFilesWithMergeConflicts(dir, fileList = []) {}
 
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); const lines = content.split('\n'); const cleanedLines = []; const seenImports = new Set(); for (let i = 0; i < lines.length; i++) { const line = lines[i].trim(); if (line === '' || line.startsWith('import') && seenImports.has(line)) { continue} if (line.startsWith('import')) { seenImports.add(line)} const cleanedLine = line .replace(/,,+/g,',') .replace(/;+/g,';') .replace(/\{\s*,/g,'{') .replace(/,\s*\}/g,'}') .replace(/\(\s*,/g,'(') .replace(/,\s*\)/g,')') .replace(/\s+/g,' ') .trim(); if (cleanedLine) { cleanedLines.push(cleanedLine)} } const finalContent = cleanedLines.join('\n'); fs.writeFileSync(filePath,finalContent,'utf8'); } catch (error) { console.error(`Error fixing ${filePath}:`,error.message)} } function findFilesWithConflicts(dir) { const files = []; function traverse(currentDir) { const items = fs.readdirSync(currentDir); for (const item of items) { const fullPath = path.join(currentDir,item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { traverse(fullPath)} else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) { const content = fs.readFileSync(fullPath,'utf8');
 #!/usr/bin/env node
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
-// Function to recursively find all files with merge conflict markers
-function findFilesWithMergeConflicts(dir, fileList = []) {
-  try {
-    const files = fs.readdirSync(dir);
-    for (const file of files) {
-      const filePath = path.join(dir, file);
-      try {
-        const stat = fs.statSync(filePath);
-        if (stat.isDirectory()) {
-          // Skip node_modules, .git, and other common directories
-          if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(file)) {
-            findFilesWithMergeConflicts(filePath, fileList);
-          }
-        } else if (stat.isFile()) {
-          // Check if file contains merge conflict markers
-          try {
-            const content = fs.readFileSync(filePath, 'utf8');
-            if (content.includes('                content.includes('') || 
-                content.includes('')) {
-              fileList.push(filePath);
-            }
-          } catch (error) {
-            // Skip files that can't be read
-            console.log(`Skipping file: ${filePath} (${error.message})`);
 
-          }
-        }
-      } catch (error) {
-        // Skip files/directories that can't be accessed (broken symlinks, etc.)
-        console.log(`Skipping path: ${filePath} (${error.message})`);
-      }
-    }
-=======
 
 const fs = require('fs');
 const path = require('path');
@@ -188,18 +152,15 @@ function fixMergeConflicts(filePath) {
     // Write the cleaned content back
     fs.writeFileSync(filePath, content, 'utf8');
     return true;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   } catch (error) {
     console.log(`Skipping directory: ${dir} (${error.message})`);
   }
   return fileList;
 const fs = require('fs');
-<<<<<<< HEAD
-const path = require(path');
 
-=======
 const path = require('path');
->>>>>>> origin/chore/fix-lint-and-merge
+
 function findFilesWithConflicts(dir) {
   const files = [];
 
@@ -216,41 +177,26 @@ function findFilesWithConflicts(dir) {
           const stat = fs.statSync(fullPath);
 
           if (stat.isDirectory()) {
-<<<<<<< HEAD
-            // Skip certain directories
-            if (!['node_modules, .git', 'dist, build', 'coverage].includes(item)) {
-=======
+
             // Skip certain directories;
             if (!['node_modules', '.git', 'dist', 'build', 'coverage'].includes(item)) {
->>>>>>> origin/chore/fix-lint-and-merge
+
               scanDirectory(fullPath);
           } else if (stat.isFile()) {
             // Check for common source file extensions;
             const ext = path.extname(item);
-<<<<<<< HEAD
-            if ([.js', '.jsx, .ts', '.tsx, .json', '.md].includes(ext)) {
-              try {
-                const content = fs.readFileSync(fullPath, utf8');
-                if (content.includes('<<<<<<<) || content.includes(') || content.includes('>>>>>>>)) {
-=======
+
             if (['.js', '.jsx', '.ts', '.tsx', '.json', '.md'].includes(ext)) {
   // TODO: Implement
                 const content = fs.readFileSync(fullPath, 'utf8');
                 if (content.includes('<<<<<<<') || content.includes() || content.includes('>>>>>>>')) {
->>>>>>> origin/chore/fix-lint-and-merge
+
                   files.push(fullPath);
               } catch (error) {
-<<<<<<< HEAD
-                // Skip files that cant be read
-              }
-            }
-          }
-        } catch (error) {
-          // Skip broken symlinks or inaccessible files
-=======
+
                 // Skip files that can't be read;
           // Skip broken symlinks or inaccessible files;
->>>>>>> origin/chore/fix-lint-and-merge
+
           continue;
       // Skip directories that can't be read;
       return;
@@ -261,22 +207,14 @@ function findFilesWithConflicts(dir) {
 function resolveConflicts(filePath) {
   // TODO: Implement
     let content = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
-    
-    // Remove merge conflict markers and keep the main branch version
-    content = content.replace(/    
-    // Remove any remaining conflict markers
-    content = content.replace(/    content = content.replace(/\n?/g, ');
-    content = content.replace(/    
-    fs.writeFileSync(filePath, content, 'utf8);
-=======
+
     // Remove merge conflict markers and keep the main branch version;
     content = content.replace(/    
     // Remove any remaining conflict markers;)
     content = content.replace(/    content = content.replace(/\n?/g, );
     content = content.replace(/    )
     fs.writeFileSync(filePath, content, 'utf8');
->>>>>>> origin/chore/fix-lint-and-merge
+
     console.log(`Fixed conflicts in: ${filePath}`);
     return true;
   } catch (error) {`;
@@ -286,23 +224,10 @@ function resolveConflicts(filePath) {
     console.error(`Error fixing ${filePath}: ${error.message}`);
     return false;
   }
-<<<<<<< HEAD
 
-// Main execution
-console.log('Finding files with merge conflict markers...');
-const filesWithConflicts = findFilesWithMergeConflicts('.');
-console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
-
-// Main execution;
-const workspaceDir = process.cwd();
-<<<<<<< HEAD
-console.log(Scanning for files with merge conflicts...');
-
-const filesWithConflicts = findFilesWithConflicts(workspaceDir);
-=======
 console.log('Scanning for files with merge conflicts...');
 const filesWithConflicts = findFilesWithConflicts(workspaceDir);`;
->>>>>>> origin/chore/fix-lint-and-merge
+
 console.log(`Found ${filesWithConflicts.length} files with conflicts`);
 
 let fixedCount = 0;
@@ -328,122 +253,4 @@ console.log('\nRunning TypeScript check...');
   console.log('TypeScript check found some issues, but continuing...');
 }
 console.log('\nMerge conflict fixing complete!');
-=======
-}
-  traverse(dir);
-  return files}
-// Find and fix files with merge conflicts
-const conflictedFiles = findFilesWithConflicts('.');
-console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
-for (const file of conflictedFiles) {
-  fixMergeConflicts(file)}
-console.log('Merge conflict resolution complete!');
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content.replace(/[\s\S]*?[\s\S]*?}
 
-// Function to find all files with merge conflicts
-function findFilesWithConflicts(dir) {
-  const files = [];
-  
-  function walkDir(currentPath) {
-    const items = fs.readdirSync(currentPath);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentPath, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        // Skip node_modules and other irrelevant directories
-        if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
-          walkDir(fullPath);
-        }
-      } else if (stat.isFile()) {
-        const ext = path.extname(item);
-        if (['.ts', '.tsx', '.js', '.jsx', '.json', '.css', '.html'].includes(ext)) {
-          try {
-            const content = fs.readFileSync(fullPath, 'utf8');
-            if (content.includes('')) {
-              files.push(fullPath);
-            }
-          } catch (error) {
-            // Skip files that can't be read
-          }
-        }
-      }
-    }
-  }
-  
-  walkDir(dir);
-  return files;
-}
-
-// Main execution
-console.log('Finding files with merge conflicts...');
-const conflictedFiles = findFilesWithConflicts('/workspace');
-
-console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
-
-let fixedCount = 0;
-for (const file of conflictedFiles) {
-  if (fixMergeConflicts(file)) {
-    fixedCount++;
-#!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-function resolveMergeConflicts(content) {
-  return content
-    .replace(/([\s\S]*?)
-    .replace(/
-}
-
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const resolvedContent = resolveMergeConflicts(content);
-    
-    if (content !== resolvedContent) {
-      fs.writeFileSync(filePath, resolvedContent, 'utf8');
-      console.log(`Fixed merge conflicts in: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-  }
-}
-console.log(`Fixed merge conflicts in ${fixedCount} files`);
-
-// Try to build after fixing conflicts
-console.log('Attempting build after fixing conflicts...');
-try {
-  execSync('npm run build', { stdio: 'inherit', cwd: '/workspace' });
-  console.log('Build successful!');
-} catch (error) {
-};
-};
-console.log('\nMerge conflict fixing complete!');
-console.log('\nMerge conflict fixing complete!');
-console.log('\nMerge conflict fixing complete!');
-console.log('\nMerge conflict fixing complete!');
-}),;
-console.log('\nMerge conflict fixing complete!'),;
-console.log('\nMerge conflict fixing complete!'),;
-,;
-console.log(`Fixed merge conflicts in ${fixedCount} files`),;
-,),;
-
-console.log('Starting merge conflict resolution...');
-const totalFixed = processDirectory('/workspace');
-console.log(`Fixed merge conflicts in ${totalFixed} files.`);
-  console.error('Build failed:', error.message);
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

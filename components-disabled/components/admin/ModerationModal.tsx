@@ -536,16 +536,8 @@ onAction}
   onAction}
 }: ModerationModalProps) {;
 
-<<<<<<< HEAD
-const [adminNotes, setAdminNotes] = useState('');
-=======
-<<<<<<< HEAD
-}
 
-=======
-const [adminNotes, setAdminNotes] = useState('');
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
   if (!flag) return null;
 
   return (

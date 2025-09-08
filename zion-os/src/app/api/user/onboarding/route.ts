@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-import { NextRequest, NextResponse } from 'next/server';
 
-=======
 import { NextRequest, NextResponse } from "next/server";
 
 import { getServerSession } from "next-auth";
 import { prisma } from "@/lib/prisma";
->>>>>>> origin/chore/fix-lint-and-merge
+
 export async function POST(request: NextRequest) {
   try {
 
@@ -195,11 +192,9 @@ export async function POST(request: NextRequest) { try {
       role: 'user',
       onboardingCompleted: true,
       preferences
-<<<<<<< HEAD
 
-=======
     };
->>>>>>> origin/chore/fix-lint-and-merge
+
     return NextResponse.json({
       message: "Onboarding completed successfully",
       user: {
@@ -213,12 +208,7 @@ export async function POST(request: NextRequest) { try {
   } catch (_error) {
     return NextResponse.json(
       { error: 'Failed to complete onboarding' },
-<<<<<<< HEAD
-      { status: 500 }
-    );
-  }
-}
-=======
+
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
       { status: 500 }
@@ -228,4 +218,4 @@ main
   }
 }
 }
->>>>>>> origin/chore/fix-lint-and-merge
+

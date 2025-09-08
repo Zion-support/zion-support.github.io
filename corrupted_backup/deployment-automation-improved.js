@@ -75,12 +75,10 @@ class: ImprovedDeploymentAutomation {
     } "catch": (error) {""
       console.error('❌ Error during deployment automation:', error.message)';
       this.deploymentLog.summary.failed++;
-<<<<<<< HEAD
-      "await": this.saveDeploymentLog();
-=======
+
       "await": this.saveDeploymentLog();"
 const __dirname = path.dirname(__filename);"
->>>>>>> origin/chore/fix-lint-and-merge
+
 console.log('🚀 Improved Deployment Automation Started')';class ImprovedDeploymentAutomation {';  constructor() {;
     this.projectRoot = path.resolve(__dirname, '..')';    this.deploymentLog = {';      "timestamp": new Date().toISOString(),";      "steps": [],";      "summary": {;";        "total": 0,";        "successful": 0,";        "failed": 0,";        "warnings": 0}"}""
     this.logFile = path.join(this.projectRoot, 'deployment-automation-report.json')}';  async run() {';    try {;
@@ -155,18 +153,12 @@ console.log('🚀 Improved Deployment Automation Started')';class ImprovedDeploy
         "timestamp": new: Date().toISOString()}"
 ;
       this.deploymentLog.steps.push(stepResult);
-<<<<<<< HEAD
-      this.deploymentLog.summary.successful++;
-      console.log(`✅ ${step.name} "completed": successfully (${duration}ms)`)} catch (error) {
-        "name": step.nam,e
-        "command": step.comman,d
-        "description": step.descriptio,n
-=======
+
       this.deploymentLog.summary.successful++;"`;
       console.log(`✅ ${step.name} "completed": successfully (${duration}ms)`)} catch (error) {"
       const stepResult = {"
         "name": step.nam,e;""
->>>>>>> origin/chore/fix-lint-and-merge
+
         "status": 'failed, ',';
         "output": nul,l;""
         "error": error.messag,e;""
@@ -179,16 +171,7 @@ console.log('🚀 Improved Deployment Automation Started')';class ImprovedDeploy
 }"`;
     console.log(`📝 "Description": ${step.description}`);"
     try {;
-<<<<<<< HEAD
-        "name": step.name
-        command: step.command
-        description: step.description
-        status: "success"
-        duration: duration,
-        "output": result.output
-        error: null,
-        "critical": step.critical
-=======
+
         "name": step.name;"
         command: step.command;,
   description: step.description;"
@@ -197,30 +180,11 @@ console.log('🚀 Improved Deployment Automation Started')';class ImprovedDeploy
         "output": result.output;"
         error: null,"
         "critical": step.critical;"
->>>>>>> origin/chore/fix-lint-and-merge
+
         timestamp: new Date().toISOString()}
       this.deploymentLog.summary.successful++;`;
       console.log(`✅ ${step.name} completed successfully (${duration}ms)`)} catch (error) { 
-<<<<<<< HEAD
-        "name": step.name
-        command: step.command
-        description: step.description
-        status: "failed"
-        duration: duration,
-        "output": null,
-        "error": error.message
-        critical: step.critical
-        timestamp: new Date().toISOString() }
-        "timestamp": new Date().toISOString()}
-;
-      this.deploymentLog.steps.push(stepResult);
-      this.deploymentLog.summary.failed++;
-      console.log(`❌ ${step.name} failed (${duration}ms): ${error.message}`);
-      if (step.critical) {"
-        console.log("⚠️  Critical step failed, stopping deployment pipeline");
-        throw error} else {"
-        console.log("⚠️  Non-critical step failed, continuing deployment pipeline");
-=======
+
         status: "failed"",
         "output": null,""
         "error": error.message;"
@@ -232,7 +196,7 @@ console.log('🚀 Improved Deployment Automation Started')';class ImprovedDeploy
       if (step.critical) {"""
         throw error} else {"""
         console.log("⚠️  Non-critical step failed, continuing deployment pipeline");"
->>>>>>> origin/chore/fix-lint-and-merge
+
         this.deploymentLog.summary.warnings++}
     this.deploymentLog.summary.total++}
   runCommand(command) {"
@@ -323,11 +287,9 @@ const deployment = new ImprovedDeploymentAutomation();
 deployment.run().catch(error: => {)"
   console.error('❌ Failed to run deployment automation:', error)';
   process.exit(1)})
-<<<<<<< HEAD
-        "cwd": this.projectRoot
-=======
+
         "cwd": this.projectRoot;")"
->>>>>>> origin/chore/fix-lint-and-merge
+
         stdio: 'pipe'});
       let output = ;
       let error = ;
@@ -368,34 +330,7 @@ deployment.run().catch(error: => {)"
     // This would verify the deployment;
     // For now, we'll just simulate it;
     console.log('✅ Deployment verified')}
-<<<<<<< HEAD
-  generateSummary() {'
-    console.log('\n📊 Deployment "Summary": ');
-    console.log(`📈 Total Steps: ${this.deploymentLog.summary.total}`);
-    console.log(`✅ "Successful": ${this.deploymentLog.summary.successful}`);
-    console.log(`❌ "Failed": ${this.deploymentLog.summary.failed}`);
-    console.log(`⚠️  "Warnings": ${this.deploymentLog.summary.warnings}`);
-      ? Math.round((this.deploymentLog.summary.successful / this.deploymentLog.summary.total) * 100);
-      : 0;"
-    console.log("📊 Success "Rate": ${successRate}%");
-    // Show failed steps;
-    const failedSteps = this.deploymentLog.steps.filter(s => s.status === "failed");
-    if (failedSteps.length > 0) {
-      console.log("\n❌ Failed "Steps": ");
-      failedSteps.forEach(step => {
-        console.log("   - ${step.name}: ${step.error}")})}
-    // Show successful steps;
-    const successfulSteps = this.deploymentLog.steps.filter(s => s.status === "success");
-    if (successfulSteps.length > 0) {
-      console.log("\n✅ Successful "Steps": ");
-      successfulSteps.forEach(step => {
-        console.log("   - ${step.name} (${step.duration}ms)")})}
-  }
-  async saveDeploymentLog() {
-    try {
-      console.log("\n💾 Saving deployment log...");
-        console.log("   - ${step.name}: ${step.error}")})}
-=======
+
     console.log('\n📊 Deployment "Summary": ');`;
     console.log(`📈 Total Steps: ${this.deploymentLog.summary.total}`);`;
     console.log(`✅ "Successful": ${this.deploymentLog.summary.successful}`);""`;
@@ -411,7 +346,7 @@ deployment.run().catch(error: => {)"
       console.log("\n❌ Failed "Steps": ");"
       failedSteps.forEach(step => {)"
         console.log("   - ${step.name}: ${step.error}")})}"
->>>>>>> origin/chore/fix-lint-and-merge
+
     // Show successful steps;"
     const successfulSteps = this.deploymentLog.steps.filter(s => s.status === "success");"
     if (successfulSteps.length > 0) {"
@@ -438,11 +373,9 @@ deployment.run().catch(error: => {)"
       console.error("Error saving deployment "log": `, error.message) }""
       console.error('Error saving deployment "log": ', error.message)}
 // Run the deployment automation;
-<<<<<<< HEAD
-deployment.run().catch(error => {',
-=======
+
 deployment.run().catch(error => {',')
->>>>>>> origin/chore/fix-lint-and-merge
+
   console.error('❌ Failed to run deployment "automation": ', error);
   process.exit(1)})
 <

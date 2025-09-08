@@ -208,11 +208,10 @@ const successStories = [{ id: 1, client: \"TechFlow Solutions\",\" industry: \"F
   label: 'Avg.Delivery Time',}
 } ] const [selectedStory, setSelectedStory] =;
   useState(null);
-<<<<<<< HEAD
-=======
+
   const [hoveredIndustry, setHoveredIndustry] = useState(null);
   const containerVariants = { hidden: { opacity: 0,}
->>>>>>> origin/chore/fix-lint-and-merge
+
 }, visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.1 } },
 }
 ;

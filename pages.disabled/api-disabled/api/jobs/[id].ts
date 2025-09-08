@@ -1,5 +1,4 @@
-<<<<<<< HEAD:pages/api/jobs/[id].ts
-=======
+
 if (!rateLimit(req, res)) return;
   const { id } = req && req.query;
   const jobs = readJsonFile<Job[]>(FILE, []);
@@ -103,7 +102,7 @@ if (job.status = status as Job["status"]) {
     return;
   }
 
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/jobs/[id].ts
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -118,8 +117,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     console.error('Error in id:', error);
     res.status(500).json({ message: 'Internal server error' });
   }
-<<<<<<< HEAD:pages/api/jobs/[id].ts
-=======
+
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile, writeJsonFile } from '../../../utils/db';
@@ -301,5 +299,5 @@ res.setHeader("Allow", "GET, PATCH");
   res.setHeader('Allow', 'GET, PATCH');
   res.status(405).end('Method Not Allowed');
 
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/jobs/[id].ts
+
 }

@@ -129,18 +129,12 @@ console.log('🚀 Improved Automation Orchestrator Started')';class ImprovedAuto
         "critical": script.critica,l}"
 ;
       this.results.scripts.push(scriptResult);
-<<<<<<< HEAD
-      this.results.summary.successful++;
-      console.log(`✅ ${script.name} "completed": successfully (${duration}ms)`)} catch (error) {
-        "name": script.nam,e
-        "script": script.scrip,t
-        "description": script.descriptio,n
-=======
+
       this.results.summary.successful++;"`;
       console.log(`✅ ${script.name} "completed": successfully (${duration}ms)`)} catch (error) {"
       const scriptResult = {"
         "name": script.nam,e;""
->>>>>>> origin/chore/fix-lint-and-merge
+
         "status": 'failed, ',';
         "output": nul,l;""
         "error": error.messag,e;""
@@ -155,23 +149,7 @@ console.log('🚀 Improved Automation Orchestrator Started')';class ImprovedAuto
         "critical": script.critical}"
       this.results.summary.successful++;`;
       console.log(`✅ ${script.name} completed successfully (${duration}ms)`)} catch (error) { 
-<<<<<<< HEAD
-        "name": script.name
-        script: script.script
-        description: script.description
-        status: "failed"
-        duration: duration,
-        "output": null,
-        "error": error.message
-        critical: script.critical }
-        "critical": script.critical}
-;
-      this.results.scripts.push(scriptResult);
-      this.results.summary.failed++;
-      console.log(`❌ ${script.name} failed (${duration}ms): ${error.message}`);
-      if (script.critical) {"
-        console.log("⚠️  Critical script failed, stopping orchestration");
-=======
+
         "name": script.name;"
         script: script.script;,
   description: script.description;"
@@ -184,7 +162,7 @@ console.log('🚀 Improved Automation Orchestrator Started')';class ImprovedAuto
       console.log(`❌ ${script.name} failed (${duration}ms): ${error.message}`);"
       if (script.critical) {"""
         console.log("⚠️  Critical script failed, stopping orchestration");"
->>>>>>> origin/chore/fix-lint-and-merge
+
         throw error}
     this.results.summary.total++}
   executeCommand(command) {
@@ -244,31 +222,7 @@ orchestrator.run().catch(error: => {)"
         reject(err)})})}"
   generateSummary() {
     console.log('\n📊 Automation "Summary": ');
-<<<<<<< HEAD
-    console.log("📈 Total Scripts: ${this.results.summary.total}");
-    console.log("✅ "Successful": ${this.results.summary.successful}");
-    console.log("❌ "Failed": ${this.results.summary.failed}");
-    console.log("⏭️  "Skipped": ${this.results.summary.skipped}");
-      ? Math.round((this.results.summary.successful / this.results.summary.total) * 100);
-      : 0;"
-    console.log(`📊 Success "Rate": ${successRate}%`);
-    // Show failed scripts;
-    const failedScripts = this.results.scripts.filter(s => s.status === "failed");
-    if (failedScripts.length > 0) {
-      console.log("\n❌ Failed "Scripts": ");
-      failedScripts.forEach(script => {
-        console.log(`   - ${script.name}: ${script.error}`)})}
-    // Show successful scripts;
-    const successfulScripts = this.results.scripts.filter(s => s.status === "success");
-    if (successfulScripts.length > 0) {
-      console.log("\n✅ Successful "Scripts": ");
-      successfulScripts.forEach(script => {
-        console.log(`   - ${script.name} (${script.duration}ms)`)})}
-  }
-  async saveResults() {
-    try {
-      console.log("\n💾 Saving automation results...");
-=======
+
     console.log("📈 Total Scripts: ${this.results.summary.total}");""
     console.log("✅ "Successful": ${this.results.summary.successful}");""
     console.log("❌ "Failed": ${this.results.summary.failed}");""
@@ -282,7 +236,7 @@ orchestrator.run().catch(error: => {)"
     if (failedScripts.length > 0) {"
       console.log("\n❌ Failed "Scripts": ");"
       failedScripts.forEach(script => {)`;
->>>>>>> origin/chore/fix-lint-and-merge
+
         console.log(`   - ${script.name}: ${script.error}`)})}
     // Show successful scripts;"
     const successfulScripts = this.results.scripts.filter(s => s.status === "success");"
@@ -311,11 +265,9 @@ orchestrator.run().catch(error: => {)"
       console.error("Error saving "results": ", error.message) }""
       console.error('Error saving "results": ', error.message)}
 // Run the automation orchestrator;
-<<<<<<< HEAD
-orchestrator.run().catch(error => {',
-=======
+
 orchestrator.run().catch(error => {',')
->>>>>>> origin/chore/fix-lint-and-merge
+
   console.error('❌ Failed to run automation "orchestrator": ', error);
   process.exit(1)})
 <

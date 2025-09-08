@@ -1,87 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
-import React from "react,
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from @/components/ui/card",
-import { Button } from "@/components/ui/button,
-import { Badge } from @/components/ui/badge";
->>>>>>> merged-prs-20250907-203621
-:src/mobile/components/dashboard/TalentDashboard.tsx
-import React from 'react
-import {
-  Card
-  CardContent
-  CardHeader
-  CardTitle
-  CardDescription
-} from @/components/ui/card'
-import { Button } from '@/components/ui/button
-import { Badge } from @/components/ui/badge'
-  ChevronRight
-  FileText
-  Image
-  Clock
-  Zap
-  BookOpen
-} from 'lucide-react
-import Link from next/link'
-import React from "react
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from @/components/ui/card"
-import { Button } from "@/components/ui/button
-import { Badge } from @/components/ui/badge"
-
-<<<<<<< HEAD
-import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react'
-import Link from "next/link";
-=======
-import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react
-import Link from "next/link;
-
->>>>>>> merged-prs-20250907-203621
-export function TalentDashboard() {
-  return (
-    <div className=space-y-6 px-4 pb-24">
-      <section>
-        <div className="flex items-center justify-between mb-4>
-          <h2 className=text-lg font-medium">New Job Matches</h2>
-          <Link href="/mobile/marketplace>
-            <Button variant=ghost" size="sm className=h-8 gap-1">
-              View all <ChevronRight className="h-4 w-4 />
-            </Button>
-          </Link>
-        </div>
-        <div className=space-y-3'>
-          <Card>
-            <CardContent className=p-4">
-              <div className="flex justify-between items-start>
-                <div className=space-y-1">
-                  <h3 className="font-medium>Senior React Developer</h3>
-                  <div className=text-sm text-muted-foreground">TechCorp Inc.</div>
-                  <div className="flex items-center gap-1 mt-1>
-                    <Badge variant=secondary" className="text-xs>Remote</Badge>
-                    <Badge variant=secondary" className="text-xs>Full-time</Badge>
-                  </div>
-                </div>
-                <div className=flex flex-col items-end">
-                  <div className="bg-primary/10 text-primary font-medium rounded-full px-2 py-1 text-xs>
-                    92% match
-                  </div>
-                  <span className=text-xs text-muted-foreground mt-1">2 days ago</span>
-                </div>
-              </div>
-              <div className="flex gap-2 mt-3>
-                <Button size=sm">Apply Now</Button>
-                <Button size="sm variant=outline">View Details</Button>
-              </div>
-            </CardContent>
-          </Card>
-=======
-import React from "react",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
->>>>>>> origin/chore/fix-lint-and-merge
 
           <Card>
             <CardContent className=p-4">
@@ -101,21 +19,8 @@ import { Button } from "@/components/ui/button",
                   <span className=text-xs text-muted-foreground mt-1">4 hours ago</span>
                 </div>
               </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              <div className='flex gap-2 mt-3'>
-                <Button size='sm'>Apply Now</Button>
-                <Button size='sm' variant='outline'>
-              <div className='flex gap-2 mt-3>
-                <Button size=sm'>Apply Now</Button>
-                <Button size='sm variant=outline'>
-                  View Details
-                </Button>
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
 
                 <Button size="sm>Apply Now</Button>
                 <Button size=sm" variant="outline>View Details</Button>
@@ -124,13 +29,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Button size=sm'>Apply Now</Button>
                 <Button size='sm variant=outline'>
                   View Details
-<<<<<<< HEAD
-:src/mobile/components/dashboard/TalentDashboard.tsx
-                </Button>              </div>              <div className=flex gap-2 mt-3">
-                <Button size="sm>Apply Now</Button>
-                <Button size=sm" variant="outline>View Details</Button>
-=======
->>>>>>> origin/chore/fix-lint-and-merge
+
+
                 </Button>
 origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
@@ -138,10 +38,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Card>
         </div>
       </section>
-<<<<<<< HEAD
-:src/mobile/components/dashboard/TalentDashboard.tsx
-=======
->>>>>>> merged-prs-20250907-203621
+
+
 
       <section>
         <h2 className=text-lg font-medium mb-4">Application Tracker</h2>
@@ -201,278 +99,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </CardContent>
         </Card>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-:src/mobile/components/dashboard/TalentDashboard.tsx
-      <section>
-        <h2 className="text-lg font-medium mb-4>Quick Actions</h2>
-        <div className=grid grid-cols-2 gap-4">
-          <Button
-            variant="outline
-            className=h-auto py-4 flex flex-col gap-1"
-            aria-label="Update Resume
-          >
-            <FileText className=h-5 w-5 mb-1" aria-hidden="true />
-            <span>Update Resume</span>
-          </Button>
-          <Button
-            variant=outline"
-            className="h-auto py-4 flex flex-col gap-1
-            aria-label=View Portfolio"
-          >
-            <Image className="h-5 w-5 mb-1 aria-hidden=true" />
-            <span>Portfolio</span>
-          </Button>
-          <Button
-            variant="outline
-            className=h-auto py-4 flex flex-col gap-1"
-            aria-label="Set Availability
-          >
-            <Clock className=h-5 w-5 mb-1" aria-hidden="true />
-            <span>Availability</span>
-          </Button>
-          <Button
-            variant=outline'
-            className='h-auto py-4 flex flex-col gap-1
-            aria-label=AI Resume Boost'
-          >
-            <Zap className='h-5 w-5 mb-1 aria-hidden=true' />            <span>AI Resume Boost</span>
-          </Button>
-        </div>
-      </section>      <section>
-        <h2 className=text-lg font-medium mb-4">Quick Actions</h2>
-        <div className="grid grid-cols-2 gap-4>
-          <Button
-            variant=outline"
-            className="h-auto py-4 flex flex-col gap-1
-            aria-label=Update Resume"
-          >
-            <FileText className="h-5 w-5 mb-1 aria-hidden=true" />
-            <span>Update Resume</span>
-          </Button>
-          <Button
-            variant="outline
-            className=h-auto py-4 flex flex-col gap-1"
-            aria-label="View Portfolio
-          >
-            <Image className=h-5 w-5 mb-1" aria-hidden="true />
-            <span>Portfolio</span>
-          </Button>
-          <Button
-            variant=outline"
-            className="h-auto py-4 flex flex-col gap-1
-            aria-label=Set Availability"
-          >
-            <Clock className="h-5 w-5 mb-1 aria-hidden=true" />
-            <span>Availability</span>
-          </Button>
-          <Button variant="outline className=h-auto py-4 flex flex-col gap-1" aria-label="AI Resume Boost>
-            <Zap className=h-5 w-5 mb-1" aria-hidden="true />
-            <span>AI Resume Boost</span>
-          </Button>
-        </div>
-      </section>
-      <section>
-        <div className='flex items-center justify-between mb-4>
-          <h2 className=text-lg font-medium'>Learning Hub</h2>
-          <Button variant='ghost size=sm' className='h-8>            View all
-          </Button>
-        </div>
-        <Card>
-      <section>
-        <div className=flex items-center justify-between mb-4">
-          <h2 className="text-lg font-medium>Learning Hub</h2>
-          <Button variant=ghost" size="sm className=h-8">
-          </Button>
-        </div>
-        <Card>
-          <CardContent className=p-4'>
-            <div className='flex items-center gap-3>
-              <div
-                className=bg-primary/10 p-3 rounded-full'
-                aria-hidden='true
-              >
-                <BookOpen className=h-6 w-6 text-primary' />
-              </div>
-              <div>
-                <h3 className='font-medium>Improve your profile visibility</h3>
-                <p className=text-sm text-muted-foreground'>
-                  5 tips for getting noticed by clients
-                </p>              </div>          <CardContent className="p-4>
-            <div className=flex items-center gap-3">
-              <div className="bg-primary/10 p-3 rounded-full aria-hidden=true">
-                <BookOpen className="h-6 w-6 text-primary />
-              </div>
-              <div>
-                <h3 className=font-medium">Improve your profile visibility</h3>
-                <p className="text-sm text-muted-foreground>5 tips for getting noticed by clients</p>
-            </div>
-          </CardContent>
-        </Card>
-      </section>
-    </div>;
-  );
-}
-import React from react",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card,
-import { Button } from @/components/ui/button",
-import { Badge } from "@/components/ui/badge,
-import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react;
-import Link from next/link";
-export function TalentDashboard() {
-  return (;
-<<<<<<< HEAD
-    <div className="space-y-6 px-4 pb-24">;
 
-=======
-    <div className="space-y-6 px-4 pb-24>;
-import React from react",import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card,import { Button } from @/components/ui/button",import { Badge  } from @/components/ui/badge';
-import React from 'react;
-import { Card;
-  CardContent;
-  CardHeader;
-  CardTitle;
-  CardDescription;
- } from @/components/ui/card';
-import { Button  } from '@/components/ui/button;
-  ChevronRight;
-  FileText;
-  Image;
-  Clock;
-  Zap;
-  BookOpen;
-} from lucide-react';
-import Link from 'next/link;
-import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from @/components/ui/card';
-import { ChevronRight, FileText, Image, Clock, Zap, BookOpen  } from 'lucide-react;
-export function TalentDashboard() {return (<div className="space-y-6 px-4 pb-24>;
-      <section>;
-        <div className=flex items-center justify-between mb-4">;
-          <h2 className="text-lg font-medium>New Job Matches</h2>;
-          <Link href=/mobile/marketplace">;
-            <Button variant="ghost size=sm" className="h-8 gap-1>;
-              View all <ChevronRight className=h-4 w-4" />;
-            </Button>;
-          </Link>;
-        </div>;
-          <Card>;
-            <CardContent className="p-4>;
-              <div className=flex justify-between items-start">;
-                <div className="space-y-1>;
-                  <h3 className=font-medium">Senior React Developer</h3>;
-                  <div className="text-sm text-muted-foreground>TechCorp Inc.</div>;
-                  <div className=flex items-center gap-1 mt-1">;
-                    <Badge variant="secondary className=text-xs">Remote</Badge>;
-                    <Badge variant="secondary className=text-xs">Full-time</Badge>;
-                  </div>;
-                </div>;
-                <div className="flex flex-col items-end>;
-                  <div className=bg-primary/10 text-primary font-medium rounded-full px-2 py-1 text-xs">;
-                    92% match;
-                  </div>;
-                  <span className="text-xs text-muted-foreground mt-1>2 days ago</span>;
-                </div>;
-              </div>;
-              <div className=flex gap-2 mt-3">;
-                <Button size="sm>Apply Now</Button>;
-                <Button size=sm" variant="outline>View Details</Button>;
-              </div>;
-            </CardContent>;
-          </Card>;
-          <Card>;
-            <CardContent className=p-4">;
-              <div className="flex justify-between items-start>;
-                <div className=space-y-1">;
-                  <h3 className="font-medium>UX/UI Designer</h3>;
-                  <div className=text-sm text-muted-foreground">Creative Studios</div>;
-                  <div className="flex items-center gap-1 mt-1>;
-                    <Badge variant=secondary" className="text-xs>Hybrid</Badge>;
-                    <Badge variant=secondary" className="text-xs>Contract</Badge>;
-                  </div>;
-                </div>;
-                <div className=flex flex-col items-end">;
-                  <div className="bg-primary/10 text-primary font-medium rounded-full px-2 py-1 text-xs>;
-                    87% match;
-                  </div>;
-                  <span className=text-xs text-muted-foreground mt-1">4 hours ago</span>;
-                </div>;
-              </div>;
-              <div className="flex gap-2 mt-3>;
-                <Button size=sm">Apply Now</Button>;
-                <Button size="sm variant=outline">View Details</Button>;
-              <div className=flex gap-2 mt-3'>;
-                <Button size='sm>Apply Now</Button>;
-                <Button size=sm' variant='outline>;
-                  View Details;
-                </Button>;
-              </div>;
-            </CardContent>;
-          </Card>;
-        </div>;
-      </section>;
-      <section>;
-        <h2 className="text-lg font-medium mb-4>Application Tracker</h2>;
-        <Card>;
-          <CardContent className=p-4">;
-            <div className="grid grid-cols-2 gap-4>;
-              <div className=text-center p-3 bg-primary/5 rounded-lg">;
-                <div className="text-2xl font-bold text-primary>3</div>;
-                <div className=text-xs text-muted-foreground">Active Applications</div>;
-              </div>;
-              <div className="text-center p-3 bg-primary/5 rounded-lg>;
-                <div className=text-2xl font-bold text-primary">2</div>;
-                <div className="text-xs text-muted-foreground>Interviews Scheduled</div>;
-              </div>;
-              <div className=text-center p-3 bg-primary/5 rounded-lg">;
-                <div className="text-2xl font-bold text-primary>5</div>;
-                <div className=text-xs text-muted-foreground">Jobs Saved</div>;
-              </div>;
-              <div className="text-center p-3 bg-primary/5 rounded-lg>;
-                <div className=text-2xl font-bold text-primary">12</div>;
-                <div className="text-xs text-muted-foreground>Jobs Viewed</div>;
-              </div>;
-            </div>;
-            <Button variant=outline" className="w-full mt-4>;
-<section>;
-        <h2 className=text-lg font-medium mb-4'>Application Tracker</h2>;
-        <Card>;
-          <CardContent className='p-4>;
-            <div className=grid grid-cols-2 gap-4'>;
-              <div className='text-center p-3 bg-primary/5 rounded-lg>;
-                <div className=text-2xl font-bold text-primary'>3</div>;
-                <div className='text-xs text-muted-foreground>;
-                  Active Applications;
-                </div>;
-              </div>;
-              <div className=text-center p-3 bg-primary/5 rounded-lg'>;
-                <div className='text-2xl font-bold text-primary>2</div>;
-                <div className=text-xs text-muted-foreground'>;
-                  Interviews Scheduled;
-                </div>;
-              </div>;
-              <div className='text-center p-3 bg-primary/5 rounded-lg>;
-                <div className=text-2xl font-bold text-primary'>5</div>;
-                <div className='text-xs text-muted-foreground>Jobs Saved</div>;
-              </div>;
-              <div className=text-center p-3 bg-primary/5 rounded-lg'>;
-                <div className='text-2xl font-bold text-primary>12</div>;
-                <div className=text-xs text-muted-foreground'>Jobs Viewed</div>;
-              </div>;
-            </div>;
-            <Button variant='outline className=w-full mt-4'>;
-              View All Applications;
-            </Button>;
-          </CardContent>;
-        </Card>;
-      </section>;
-    <div className='space-y-6 px-4 pb-24>;
-=======
->>>>>>> merged-prs-20250907-203621
-    <div className='space-y-6 px-4 pb-24'>;
->>>>>>> origin/chore/fix-lint-and-merge
+
       <section>;
         <div className=flex items-center justify-between mb-4'>;
           <h2 className='text-lg font-medium>New Job Matches</h2>;
@@ -481,19 +110,8 @@ export function TalentDashboard() {return (<div className="space-y-6 px-4 pb-24>
               View all <ChevronRight className=h-4 w-4' />;
             </Button>;
           </Link>;
-<<<<<<< HEAD
-        </div>;
 
-        <div className='space-y-3'>;
-=======
-<<<<<<< HEAD
-        </div>;<div className='space-y-3>;
-=======
-        </div>;
 
-        <div className='space-y-3'>;
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
           <Card>;
             <CardContent className=p-4'>;
               <div className='flex justify-between items-start>;
@@ -535,28 +153,8 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from @/com
 import { Button  } from '@/components / ui / button;
 import { Badge  } from @/components / ui / badge';
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import Link from ./next / link';
-export /**;
- * TalentDashboard - Function description;
- */;
-function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24>;
-=======
->>>>>>> merged-prs-20250907-203621
-import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react';
-import Link from './next / link';
-export /**
- * TalentDashboard - Function description
- */
-function TalentDashboard() {
-  return (
-    <div className='space - y-6 px - 4 pb - 24'>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
       <section>;
         <div className=flex items - center justify - between mb - 4'>;
           <h2 className='text - lg font - medium>New Job Matches</h2>;
@@ -656,30 +254,8 @@ function TalentDashboard() {
             <span>Update Resume</span>;
           </Button>;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      </section>;<section>;
-        <h2 className=text-lg font-medium mb-4">Quick Actions</h2>;
-        <div className="grid grid-cols-2 gap-4>;
-          <Button;
-            variant=outline";
-            className="h-auto py-4 flex flex-col gap-1;
-            aria-label=Update Resume">;
-            <FileText className="h-5 w-5 mb-1 aria-hidden=true" />;
-            <span>Update Resume</span>;
-          </Button>;<Button;
-            variant="outline";
-            className="h-auto py-4 flex flex-col gap-1";
-            aria-label="View Portfolio">;<Button;
-            variant="outline";
-            className="h-auto py-4 flex flex-col gap-1";
-            aria-label="View Portfolio";
-          >;
 
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
           <Button;
             variant="outline;
             className=h-auto py-4 flex flex-col gap-1";
@@ -700,17 +276,10 @@ function TalentDashboard() {
             <span>Availability</span>
           </Button>
 
-<<<<<<< HEAD
-          <Button variant="outline className=h-auto py-4 flex flex-col gap-1" aria-label="AI Resume Boost>
-            <Zap className=h-5 w-5 mb-1" aria-hidden="true />
 
-=======
           <Button variant="outline" className="h-auto py-4 flex flex-col gap-1" aria-label="AI Resume Boost">
             <Zap className="h-5 w-5 mb-1" aria-hidden="true" />
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
 <section>
         <h2 className=text-lg font-medium mb-4'>Quick Actions</h2>
         <div className='grid grid-cols-2 gap-4>
@@ -749,17 +318,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Button>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<section>
-        <div className=flex items-center justify-between mb-4'>
-          <h2 className='text-lg font-medium>Learning Hub</h2>
-          <Button variant=ghost' size='sm className=h-8'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
 
       <section>
         <div className=flex items-center justify-between mb-4">
@@ -775,13 +335,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Button>
         </div>
         <Card>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          <CardContent className="p-4>
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
 
 <CardContent className=p-4'>
             <div className='flex items-center gap-3>
@@ -803,104 +358,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Card>
       </section>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          >;<Image className=h-5 w-5 mb-1" aria-hidden="true />;
-            <span>Portfolio</span>;
-          </Button>;
-          <Button;
-            variant=outline";
-            className="h-auto py-4 flex flex-col gap-1;
-            aria-label=Set Availability";
-          >;
-            <Clock className="h-5 w-5 mb-1 aria-hidden=true" />;
-            <span>Availability</span>;
-          </Button>;
-          <Button variant="outline className=h-auto py-4 flex flex-col gap-1" aria-label="AI Resume Boost>;
-            <Zap className=h-5 w-5 mb-1" aria-hidden="true />;
-<section>;
-        <h2 className='text-lg font-medium mb-4>Quick Actions</h2>;
-        <div className=grid grid-cols-2 gap-4'>;
-          <Button;
-            variant='outline;
-            className=h-auto py-4 flex flex-col gap-1';
-            aria-label='Update Resume;
-          >;
-            <FileText className=h-5 w-5 mb-1' aria-hidden='true />;
-            <span>Update Resume</span>;
-          </Button>;
-          <Button;
-            variant=outline';
-            className='h-auto py-4 flex flex-col gap-1;
-            aria-label=View Portfolio';
-          >;
-            <Image className='h-5 w-5 mb-1 aria-hidden=true' />;
-            <span>Portfolio</span>;
-          </Button>;
-          <Button;
-            variant='outline;
-            className=h-auto py-4 flex flex-col gap-1';
-            aria-label='Set Availability;
-          >;
-            <Clock className=h-5 w-5 mb-1' aria-hidden='true />;
-            <span>Availability</span>;
-          </Button>;
-          <Button;
-            variant=outline';
-            className='h-auto py-4 flex flex-col gap-1;
-            aria-label=AI Resume Boost';
-          >;
-            <Zap className='h-5 w-5 mb-1 aria-hidden=true' />;
-            <span>AI Resume Boost</span>;
-          </Button>;
-        </div>;
-      </section>;
-      <section>;
-        <div className=flex items-center justify-between mb-4">;
-          <h2 className="text-lg font-medium>Learning Hub</h2>;
-          <Button variant=ghost" size="sm className=h-8">;
-<section>;
-        <div className='flex items-center justify-between mb-4>;
-          <h2 className=text-lg font-medium'>Learning Hub</h2>;
-          <Button variant='ghost size=sm' className='h-8>;
-            View all;
-          </Button>;
-        </div>;
-        <Card>;
-          <CardContent className="p-4>;
-            <div className=flex items-center gap-3">;
-              <div className="bg-primary/10 p-3 rounded-full aria-hidden=true">;
-                <BookOpen className="h-6 w-6 text-primary />;
-              </div>;
-              <div>;
-                <h3 className=font-medium">Improve your profile visibility</h3>;
-                <p className="text-sm text-muted-foreground>5 tips for getting noticed by clients</p>;
-              </div>;
-              </div>;
-<CardContent className=p-4'>;
-            <div className='flex items-center gap-3>;
-              <div;
-                className=bg-primary/10 p-3 rounded-full';
-                aria-hidden='true;
-              >;
-                <BookOpen className=h-6 w-6 text-primary' />;
-              </div>;
-              <div>;
-                <h3 className='font-medium>Improve your profile visibility</h3>;
-                <p className=text-sm text-muted-foreground'>;
-                  5 tips for getting noticed by clients;
-                </p>;
-              </div>;
-            </div>;
-          </CardContent>;
-        </Card>;
-      </section>;
-            aria-label=Set Availability">;
-=======
->>>>>>> merged-prs-20250907-203621
-            aria-label="Set Availability">;
->>>>>>> origin/chore/fix-lint-and-merge
+
+
 
             <Clock className="h-5 w-5 mb-1 aria-hidden=true" />;
             <span>Availability</span>;
@@ -934,16 +393,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-:src/mobile/components/dashboard/TalentDashboard.tsx
-}
-}
-<<<<<<< HEAD
-=======
+
       </section>;)}</div>)}</div>;
   ))}
   )
-=======
-}
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+

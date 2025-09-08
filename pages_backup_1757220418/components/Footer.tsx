@@ -1,66 +1,4 @@
-<<<<<<< HEAD:pages_backup_1757220418/components/Footer.tsx
-import React from 'react'
-import Link from 'next/link'
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Globe, 
-  ArrowRight,
-  Brain,
-  Network,
-  Cloud,
-  Shield,
-  BarChart3,
-  Users,
-  Settings,
-  FileText,
-  MessageSquare,
-  Calendar,
-  ShoppingCart,
-  BookOpen,
-  Building,
-  Heart,
-  DollarSign,
-  Target,
-  Zap,
-  Award,
-  Star,
-  CheckCircle,
-  Clock,
-  TrendingUp,
-  Eye,
-  Lock,
-  Code,
-  Home,
-  Camera,
-  Music,
-  Gamepad2,
-  Truck,
-  Calculator,
-  CreditCard,
-  Paintbrush,
-  HardDrive,
-  Activity,
-  Lightbulb,
-  Wrench,
-  PieChart,
-  ClipboardList,
-  Layers
-} from 'lucide-react'
-const footerSections = [
-  {
-    title: 'Services',
-    links: [
-      { title: 'AI Services', href: '/ai-services', icon: Brain },
-      { title: 'IT Services', href: '/it-services', icon: Network },
-      { title: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
-      { title: 'Quantum Computing', href: '/quantum-computing', icon: Code },
-      { title: 'Blockchain', href: '/blockchain', icon: Lock },
-      { title: 'IoT Solutions', href: '/iot', icon: Globe },
-      { title: 'AR/VR Solutions', href: '/ar-vr', icon: Eye },
-      { title: 'Space Technology', href: '/space-tech', icon: Settings }
-=======
+
 } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -78,7 +16,7 @@ import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } f
       { name: "Cloud Solutions", href: "/cloud-solutions" }
       { name: "Cybersecurity", href: "/cybersecurity" }
       { name: "Database Solutions", href: "/database-solutions" }
->>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/components/Footer.tsx
+
     ]
   },
   {

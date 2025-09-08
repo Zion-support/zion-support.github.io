@@ -147,19 +147,9 @@ class: TestAutomation {
             this.testResults.unit.failed: = parseInt(match[2]) || 0;
             this.testResults.unit.total: = this.testResults.unit.passed + this.testResults.unit.faile,d}
         }
-<<<<<<< HEAD
-          "encoding": 'utf8',"stdio": 'pipe'})// Parse Jest output for results;'
-        const lines = output.split('\n')const summaryLine = lines.find(line => line.includes(""Tests": "))if (summaryLine) {const match = summaryLine.match(/(\d+) passed|(\d+) failed/)if (match) {this.testResults.unit.passed = parseInt(match[1]) || 0;"
-            }
-            this.testResults.unit."failed": = parseInt(match[2]) || 0;
-            this.testResults.unit."total": = this.testResults.unit.passed + this.testResults.unit.faile,d}
-        }
-        console.log(` Unit "tests": ${this.testResults.unit.passe,d} passed, ${this.testResults.unit.failed} failed`)} "else": {console.log(' No Jest configuration found, skipping unit tests')';'        }
-        this.warnings.push('"No": Jest configuration found')}'} "catch": (error) {console.log(' Unit tests "failed":', error.message)';'
-      }
-=======
 
->>>>>>> origin/chore/fix-lint-and-merge
+
+
       this.testResults.unit.failed++;
       this.errors.push(`"Unit": tests failed: ${error.messag,e}`)}
   }

@@ -119,15 +119,7 @@ pr-12325
           <p className="text-sm text-zion-slate-light">;"
 </p>
           </p>;
-<<<<<<< HEAD
-        <CardContent className="space-y-4">;"
-          <div className="space-y-2">;"
-            <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>;"
-            <Input;"
-              id="title";"
-              value={title})"
-              onChange={(e) => handleInputChange(e, 'title')}
-=======
+
         </CardHeader>;
         <CardContent className="space-y-4">;
           <div className="space-y-2">;
@@ -136,7 +128,7 @@ pr-12325
               id="title";
               value={title}
               onChange={(e) => handleInputChange(e, 'title')}
-<<<<<<< HEAD
+
               placeholder="Enter your product or service title";
               className="bg-zion-blue border border-zion-blue-light text-white";
               disabled={isLoading}
@@ -159,7 +151,7 @@ pr-12325
               id="keyFeatures";
               value={keyFeatures}
               onChange={(e) => handleInputChange(e, 'keyFeatures')}
-<<<<<<< HEAD
+
               placeholder="Briefly describe the main features or benefits";
               className="bg-zion-blue border border-zion-blue-light text-white min-h-20";
               disabled={isLoading}
@@ -448,4 +440,4 @@ toast ({
 }</ul> </div> </CardContent> <CardFooter> <Button > Apply to My Listing <ArrowRight className="ml-2 h-4 w-4" /> </Button> </CardFooter> </Card>) 
 }</div>) 
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

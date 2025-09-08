@@ -1,12 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD:pages/api/figma/wireframe-suggest.ts
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    return res.status(405).json({ message: 'Method not allowed' });
-  }
-
-=======
 import OpenAI from 'openai';
 
 
@@ -84,7 +77,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/figma/wireframe-suggest.ts
+
   try {
     // TODO: Implement wireframesuggest logic
     res.status(200).json({ message: 'wireframesuggest endpoint' });
@@ -92,9 +85,7 @@ export default async function handler(req, res) {
     console.error('Error in wireframesuggest:', error);
     res.status(500).json({ message: 'Internal server error' });
   }
-<<<<<<< HEAD:pages/api/figma/wireframe-suggest.ts
-}
-=======
+
 }
   const { screenName, role } = req.body || {  } catch (error) {
     console.error("Error:", error);
@@ -348,4 +339,4 @@ export default async function handler(req, res) {
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> b1bd2160a740f8569656e96922b453e70de0f5db:pages.disabled/api-disabled/api/figma/wireframe-suggest.ts
+

@@ -1,95 +1,28 @@
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-      const res = null;
-      setStatus('')
-    }
-<<<<<<< HEAD
-=======
-
-const data = await res.json();
-      if (!res.ok) throw new Error(data?.error |'Deploy failed');
-      setCid(data.cid);
-      setProvider(data.provider || '');
-setStatus('Deployed successfully');
-    } catch (e: any) {
-      setError(e.message);}
-      setStatus('');}
-    }
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import { useState } from 'react';
-import Head from 'next/head';
-
-  const [error, setError] = useState<string>('');
-  const [provider, setProvider] = useState<string>('');
-  async function handleDeploy() {
-import {useState} from 'react';
 
 
-<<<<<<< HEAD
-=======
-    try {;
-      const res = await fetch('/api/offworld/deploy', { method: 'POST' });      const res = await fetch('/api/offworld/deploy', { method: 'POST' }),;
-      const data = await res && res.json();
-      if (!res && res.ok) throw new Error(data?.error || 'Deploy failed');
-      setCid(data && data.cid);
-      setProvider(data && data.provider || '');
-      setStatus('Deployed successfully');
-    } catch (e: any) {;
-      setError(e && e.message);
-      setStatus('');    }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
   }
 
-<<<<<<< HEAD
-  return (
-    <div className="min-h-screen p-8">
-      <Head>
-        <title>Zion Offworld Deploy</title>
-<<<<<<< HEAD
-      </Head>
-      <h1 className="text-2xl font-bold mb-4">Zion OS Offworld Deploy</h1>
-      <p className="mb-6">Export the site and pin it to IPFS for disconnected/offworld use.</p>
-      <button className="px-4 py-2 bg-black text-white rounded" onClick={handleDeploy}>Deploy to IPFS</button>
-      {status && <p className="mt-4 text-green-600">{status}</p>}
-      {error && <p className="mt-4 text-red-600">{error}</p>}
-      {cid && (
-        <div className="mt-6 space-y-2">
-          <div>CID: <code className="break-all">{cid}</code></div>
-          {provider && <div>Provider: {provider}</div>}
-          <div className="text-sm text-gray-600">You can open via any IPFS gateway or offline node.</div>
-        </div>
-      )}
-    </div>
-  )
-}      <Head>
-=======
+
   return ('
     <div className='min-h-screen p-8'>      setStatus('Deployed successfully')
     } catch (e: any) {}
       setError(e.message)'
       setStatus('')
 '
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     <div className='min-h-screen p-8'>      setStatus('Deployed successfully');
     } catch (e: any) {;
       setError(e && e.message),;'
       setStatus('');
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
   }
   return (
 <div className='min-h-screen p-8'>
       <Head>
->>>>>>> merged-prs-20250907-203621
+
         <title>Zion Offworld Deploy</title>
       </Head>
       <h1 className="text-2xl font-bold mb-4">Zion OS Offworld Deploy</h1>;"
@@ -101,9 +34,7 @@ import {useState} from 'react';
         <div className="mt-6 space-y-2">;"
           <div>CID: <code className="break-all">{cid}</code></div>
           {provider && <div>Provider: {provider}</div>}'
-<<<<<<< HEAD
-import Head from 'next / head'
-=======
+
 <div className='min-h-screen p-8' />
       <Head>
         <title />Zion Offworld Deploy</title>
@@ -128,132 +59,17 @@ export default function OffworldDeploy() {const [cid, setCid] = useState<string 
       <button;
         className='px-4 py-2 bg-black text-white rounded;
         onClick={handleDeploy}>;
-=======
-  return (
-    <div className='min-h-screen p-8'    />      setStatus('Deployed successfully')
-    } catch (e: any) {
-      setError(e.message)
-      setStatus('')
-}
-    <div className='min-h-screen p-8'    />      setStatus('Deployed successfully');}
-    } catch (e: any) {;
-      setError(e && e.message),;
-      setStatus('');}
-}
-  }
-  return (
-<div className='min-h-screen p-8'    />
-      <Head><title>Zion Offworld Deploy</title></Head>
-      <h1 className='text-2xl font-bold mb-4'    />Zion OS Offworld Deploy</h1>
-      <p className='mb-6'    />
-        Export the site and pin it to IPFS for disconnected/offworld use.
-      </p>
-      <button;
-className='px-4 py-2 bg-black text-white rounded'
 
-        onClick={handleDeploy}    />;
->>>>>>> origin/chore/fix-lint-and-merge
-        Deploy to IPFS;
-      </button>;
-      {status && <p className='mt-4 text-green-600'    />{status}</p>}
-      {error && <p className='mt-4 text-red-600'    />{error}</p>}
-      {cid && (<div className='mt-6 space-y-2'    />;
-          <div    />;}
-            CID: <code className='break-all'    />{ci,}
-}</code>;
-          </div>;
-          {provider && <div>Provider: {provider}</div>}<div className='text-sm text-gray-600'>;
-            You can open via any IPFS gateway or offline node.;
-          </div>        </div>;
-      )}
-    </div>;
-  )}      <Head>;
-        <title>Zion Offworld Deploy</title>;
-      </Head>;
-      <h1 className="text-2xl font-bold mb-4">Zion OS Offworld Deploy</h1>;
-      <p className="mb-6">Export the site and pin it to IPFS for disconnected/offworld use.</p>;
-      <button className="px-4 py-2 bg-black text-white rounded" onClick={handleDeploy}>Deploy to IPFS</button>;
-      {status && <p className="mt-4 text-green-600">{status}</p>}
-      {error && <p className="mt-4 text-red-600">{error}</p>}
-      {cid && (<div className="mt-6 space-y-2">;
-          <div>CID: <code className="break-all">{cid}</code></div>;
-          {provider && <div>Provider: {provider}</div>}
-import Head from 'next / head';
-export default /**;
- * OffworldDeploy - Function description;
- */;
-function OffworldDeploy() {const [cid, set_cid] = useState < string | null>(null)const [status, set_status] = useState < string>('')const [error, set_error] = useState < string>('')const [provider, set_provider]  = useState < string>('')async /**;
- * handle_deploy - Function description;
- */;
-function handle_deploy() {set_status ('Exporting and deploying to IPFS...')set_error ('')set_cid (null)set_provider ('')try {const res = await fetch ('/api / offworld / deploy', { method: 'POST' })const res = await fetch ('/api / offworld / deploy', { method: 'POST' }),const data = await res.json ()if (throw new Error (data?.error || 'Deploy failed')) {$2;
-}}
-      set_cid (data.cid)set_provider (data.provider || '')set_status ('Deployed successfully')} catch (e: any) {set_error (e.message)set_status ('')}
-  }
-  return (<div className='text-sm text-gray-600'>;
-            You can open via any IPFS gateway or offline node.;
-          </div>;
-        </div>;
-      )}
-    </div>;
-          {provider && <div>Provider: {provider}</div>}
-          <div className='text-sm text-gray-600'>;
-            You can open via any IPFS gateway or offline node.;
-          </div>        </div>;
-      )}
-    </div>;
-  );
-}      <Head>;
-        <title>Zion Offworld Deploy</title>;
-      </Head>;
-      <h1 className="text-2xl font-bold mb-4">Zion OS Offworld Deploy</h1>;
-      <p className="mb-6">Export the site and pin it to IPFS for disconnected/offworld use.</p>;
-      <button className="px-4 py-2 bg-black text-white rounded" onClick={handleDeploy}>Deploy to IPFS</button>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    <div className="min-h-screen p-8">
-      <Head>
-        <title>Zion Offworld Deploy</title>
-      </Head>
-      <h1 className="text-2xl font-bold mb-4">Zion OS Offworld Deploy</h1>
-      <p className="mb-6">Export the site and pin it to IPFS for disconnected/offworld use.</p>
-      <button className="px-4 py-2 bg-black text-white rounded" onClick={handleDeploy}>Deploy to IPFS</button>
-<<<<<<< HEAD
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       {status && <p className="mt-4 text-green-600">{status}</p>}
       {error && <p className="mt-4 text-red-600">{error}</p>}
       {cid && (;
         <div className="mt-6 space-y-2">;
           <div>CID: <code className="break-all">{cid}</code></div>;
           {provider && <div>Provider: {provider}</div>}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    </div>;
-  );
-}
-          <div className="text-sm text-gray-600">You can open via any IPFS gateway or offline node.</div>
-        </div>
-      )}
-    </div>
-  );
-}
-=======
 
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import Head from 'next / head';
->>>>>>> merged-prs-20250907-203621
+
 export default /**
  * OffworldDeploy - Function description
  */
@@ -270,8 +86,7 @@ function handle_deploy() { return null; }
       const data = await res.json ();'
       if (throw new Error (data?.error || 'Deploy failed')) {}
   $2
-<<<<<<< HEAD
-=======
+
     }
       set_cid (data.cid);'
       set_provider (data.provider || '');'
@@ -281,217 +96,8 @@ function handle_deploy() { return null; }
       set_status ('');    }
   }
   return (
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
->>>>>>> merged-prs-20250907-203621
-          <div className='text-sm text-gray-600'>
-          <div className='text-sm text-gray-600' />
-            You can open via any IPFS gateway or offline node.
-          </div>
-        </div>
-<<<<<<< HEAD
-=======
-      }
-=======
-    <div className='min - h-screen p - 8'>      set_status ('Deployed successfully');
-    } catch (e: any) {
-      set_error (e.message),
-      set_status ('');
-  }
-  return (
-    <div className='min - h-screen p - 8'>;
-      <Head>;
-        <title > Zion Offworld Deploy</title>;
-      </Head>;
-      <h1 className='text - 2xl font - bold mb - 4'>Zion OS Offworld Deploy</h1>;
-      <p className='mb - 6'>;
-        Export the site and pin it to IPFS for disconnected / offworld use.;
-      </p>;
-      <button;
-        className='px - 4 py - 2 bg - black text - white rounded';
-        on_click={handle_deploy}
-      >;
-        Deploy to IPFS;
-      </button>;
-      {status && <p className='mt - 4 text - green - 600'>{status}</p>}
-      {error && <p className='mt - 4 text - red - 600'>{error}</p>}
-      {cid && (
-        <div className='mt - 6 space - y-2'>;
-          <div>;
-            CID: <code className='break - all'>{cid}</code>;
-          </div>;
-          {provider && <div > Provider: {provider}</div>}
-          <div className='text - sm text - gray - 600'>;
-            You can open via any IPFS gateway or offline node.;
-          </div>        </div>)}
-    </div>);
-}      <Head>;
-        <title > Zion Offworld Deploy</title>;
-      </Head>;
-      <h1 className="text - 2xl font - bold mb - 4">Zion OS Offworld Deploy</h1>;
-      <p className="mb - 6">Export the site and pin it to IPFS for disconnected / offworld use.</p>;
-      <button className="px - 4 py - 2 bg - black text - white rounded" on_click={handle_deploy}>Deploy to IPFS</button>;
-      {status && <p className="mt - 4 text - green - 600">{status}</p>}
-      {error && <p className="mt - 4 text - red - 600">{error}</p>}
-      {cid && (
-        <div className="mt - 6 space - y-2">;
-          <div > CID: <code className="break - all">{cid}</code></div>;
-          {provider && <div > Provider: {provider}</div>}
-          <div className="text - sm text - gray - 600">You can open via any IPFS gateway or offline node.</div>;
-        </div>)}
-    </div>);
-
-  async function handleDeploy() {
-    setStatus('Exporting and deploying to IPFS...'),
-    setError(''),
-    setCid(null),
-    setProvider(''),
-    try {
-      const res = await fetch('/api/offworld/deploy', { method: 'POST' }),
-      const data = await res.json()
-      if (!res.ok) throw new Error(data?.error || 'Deploy failed'),
-      setCid(data.cid),
-      setProvider(data.provider || ''),
-      setStatus('Deployed successfully')
-    } catch (e: any) {
-      setError(e.message),
-      setStatus('')
-    }
-
-  }
-
-  return (
-    <div className=&quot;min-h-screen p-8&quot;>
-      <Head>
-        <title>Zion Offworld Deploy</title>
-      </Head>
-      <h1 className=&quot;text-2xl font-bold mb-4&quot;>Zion OS Offworld Deploy</h1>
-      <p className=&quot;mb-6&quot;>Export the site and pin it to IPFS for disconnected/offworld use.</p>
-      <button className=&quot;px-4 py-2 bg-black text-white rounded&quot; onClick={handleDeploy}>Deploy to IPFS</button>
-      {status && <p className=&quot;mt-4 text-green-600&quot;>{status}</p>}
-      {error && <p className=&quot;mt-4 text-red-600&quot;>{error}</p>}
-      {cid && (
-        <div className=&quot;mt-6 space-y-2&quot;>
-          <div>CID: <code className=&quot;break-all&quot;>{cid}</code></div>
-          {provider && <div>Provider: {provider}</div>}
-          <div className=&quot;text-sm text-gray-600&quot;>You can open via any IPFS gateway or offline node.</div>
-        </div>
-      )}
-    </div>
-  )
-
-}
-<<<<<<< HEAD
 
 
-import { useState  } from 'react';
-import Head from 'next/head',
-import {useState} from 'react';
-import Head from 'next/head';
-
-export default function OffworldDeploy() {
-  const [cid, setCid] = useState<string | null>(null),
-  const [status, setStatus] = useState<string>(''),
-export default function OffworldDeploy() {;
-  const [cid, setCid] = useState<string | null>(null);
-  const [status, setStatus] = useState<string>('');
-  const [error, setError] = useState<string>('');
-  const [provider, setProvider] = useState<string>('');
-  async function handleDeploy() {
-    setStatus('Exporting and deploying to IPFS...');
-    setError('');
-    setCid(null);
-    setProvider('');
-    try {
-
-      const res = await fetch('/api/offworld/deploy', { method: 'POST' });      const res = await fetch('/api/offworld/deploy', { method: 'POST' })
-      const data = await res.json();
-      if (!res.ok) throw new Error(data?.error |'Deploy failed');
-      setCid(data.cid);
-      setProvider(data.provider |'');
-      setStatus('Deployed successfully');
-    } catch (e: any) {
-      setError(e.message);
-      setStatus('');    }
-
-  }
-  return (
-    <div className='min-h-screen p-8'>      setStatus('Deployed successfully')
-    } catch (e: any) {
-      setError(e.message)
-      setStatus('')
-  }
-  return (
-    <div className='min-h-screen p-8'>
-      <Head>
-        <title>Zion Offworld Deploy</title>
-      </Head>
-      <h1 className='text-2xl font-bold mb-4'>Zion OS Offworld Deploy</h1>
-      <p className='mb-6'>
-        Export the site and pin it to IPFS for disconnected/offworld use.
-      </p>
-      <button
-        className='px-4 py-2 bg-black text-white rounded'
-        onClick={handleDeploy}
-      >
-        Deploy to IPFS
-      </button>
-      {status && <p className='mt-4 text-green-600'>{status}</p>}
-      {error && <p className='mt-4 text-red-600'>{error}</p>}
-      {cid && (
-        <div className='mt-6 space-y-2'>
-          <div>
-            CID: <code className='break-all'>{cid}</code>
-          </div>
-          {provider && <div>Provider: {provider}</div>}
-          <div className='text-sm text-gray-600'>
-            You can open via any IPFS gateway or offline node.
-          </div>        </div>
-      )}
-    </div>
-  );
-}      <Head>
-        <title>Zion Offworld Deploy</title>
-      </Head>
-      <h1 className="text-2xl font-bold mb-4">Zion OS Offworld Deploy</h1>
-      <p className="mb-6">Export the site and pin it to IPFS for disconnected/offworld use.</p>
-      <button className="px-4 py-2 bg-black text-white rounded" onClick={handleDeploy}>Deploy to IPFS</button>
-      {status && <p className="mt-4 text-green-600">{status}</p>}
-      {error && <p className="mt-4 text-red-600">{error}</p>}
-      {cid && (
-        <div className="mt-6 space-y-2">
-          <div>CID: <code className="break-all">{cid}</code></div>
-          {provider && <div>Provider: {provider}</div>}
-          <div className="text-sm text-gray-600">You can open via any IPFS gateway or offline node.</div>
-        </div>
-      )}
-    </div>
-);
-}
-    <div className='min-h-screen p-8'>
-
-    }
-  }
-
-  return (
-
-        </div>
-      )}
-    </div>
-  );
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-=======
-          {provider && <div    />Provider: {provider}</div>}
-
-          <div className='text-sm text-gray-600'    />
-            You can open via any IPFS gateway or offline node.
-          </div>
-        </div>
->>>>>>> merged-prs-20250907-203621
       ,
 
     </div>
@@ -507,13 +113,9 @@ export default function OffworldDeploy() {;
       )}
     </div>
   );
-<<<<<<< HEAD
-=======
+
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+
+

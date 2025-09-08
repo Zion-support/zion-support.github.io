@@ -1,36 +1,6 @@
-<<<<<<< HEAD
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/ActionButtons.tsx
-import React from "react,
-import { Button } from @/components/ui/button";
-import { Eye, Info, AlertTriangle, Ban } from "lucide-react;
-interface ActionButtonsProps {
-  flagId: string;
-  status: string;
 
-  onAction: (
-    flagId: string
-    action: warning" | "suspension | ban" | "ignore
-  ) => void;
-}
-export const ActionButtons: React.FC<ActionButtonsProps> = ({
-  flagId
-  status
-  onAction
-}) => {
-
-import React from react",
-import { Button } from "@/components/ui/button,
-import { Eye, Info, AlertTriangle, Ban } from lucide-react",
-
-interface ActionButtonsProps {
-  flagId: string,
-  status: string,
-  onAction: (flagId: string, action: 'warning | suspension' | 'ban | ignore') => void
-}
-import { Eye, Info, AlertTriangle, Ban } from 'lucide-react
-=======
 import { Eye, Info, AlertTriangle, Ban } from 'lucide-react'
->>>>>>> origin/chore/fix-lint-and-merge
+
 interface ActionButtonsProps {
 
 export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
@@ -57,24 +27,10 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         variant="ghost"
         size=icon
         title="Send Warning"
-<<<<<<< HEAD
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/ActionButtons.tsx
-        onClick={() => onAction(flagId, warning)}
-        disabled={status === "actioned" |status === ignored}
-        aria-label="Send warning"
-        onClick={() => onAction(flagId, 'warning')}
 
-<<<<<<< HEAD
-=======
 
         disabled={status === actioned || status === 'ignored'}
-=======
-        aria-label="Send warning"
-        onClick={() => onAction(flagId, 'warning')}
 
->>>>>>> merged-prs-20250907-203621
-        disabled={status === 'actioned' || status === 'ignored'}
->>>>>>> origin/chore/fix-lint-and-merge
       >
         <Info className=h-4 w-4 />
       </Button>
@@ -82,13 +38,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         variant="ghost"
         size=icon
         title="Suspend User"
-<<<<<<< HEAD
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/ActionButtons.tsx
-        onClick={() => onAction(flagId, suspension)}
-        disabled={status === "actioned" |status === ignored}
-        aria-label="Suspend user"
-<<<<<<< HEAD
-=======
+
 
 ;
 import { Eye, Info, AlertTriangle, Ban  } from lucide-react;
@@ -122,28 +72,16 @@ interface ActionButtonsProps  {export const ActionButtons: React.FC<ActionButton
         aria-label=Suspend user";
         onClick={() => onAction(flagId, suspension')}
         disabled={status === 'actioned || status === ignored'}
-=======
-        aria-label="Suspend user"
->>>>>>> merged-prs-20250907-203621
-        onClick={() => onAction(flagId, 'suspension')}
-        disabled={status === 'actioned' || status === 'ignored'}
->>>>>>> origin/chore/fix-lint-and-merge
+
       >
         <AlertTriangle className="h-4 w-4 />
       </Button>
       <Button
-<<<<<<< HEAD
-        variant=ghost"
-        size="icon
-        title=Ban User"
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/ActionButtons.tsx
-        onClick={() => onAction(flagId, "ban")}
-        disabled={status === "actioned" |status === "ignored"}
-=======
+
         variant="ghost"
         size="icon"
         title="Ban User"
->>>>>>> origin/chore/fix-lint-and-merge
+
         aria-label="Ban user"
         onClick={() => onAction(flagId, 'ban')}
         disabled={status === 'actioned' || status === 'ignored'}
@@ -170,28 +108,9 @@ interface ActionButtonsProps {
           Ignore
         </Button>
       )}
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-    </div>
-  )
 
 
-  );
->>>>>>> merged-prs-20250907-203621
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/ActionButtons.tsx
-    </div>
-  );
-}
 
-}
-    </div>
-  );
-
-=======
->>>>>>> origin/chore/fix-lint-and-merge
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Button } from @/components / ui / button';
@@ -203,31 +122,8 @@ interface ActionButtonsProps {
 }
 export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
   return (;
-<<<<<<< HEAD
-    <div className="flex space-x-2">;
-=======
-<<<<<<< HEAD
-    <div className=flex space-x-2">;
-      >;
-        <Ban className="h-4 w-4 />;
-      </Button>;
-      {status === pending' && (<Button;
-          variant=ghost";
-          size="sm;
-import { Button  } from @/components/ui/button';
-interface ActionButtonsProps  {size='sm;
-          onClick={() => onAction(flagId, ignore')}
-        >;
-          Ignore;
-        </Button>;
-      )}</div>;
-  ))}import { Button  } from '@/components / ui / button;
-import React from react",import { Button } from "@/components/ui/button,interface ActionButtonsProps  {flagId: string,status: string,onAction: (flagId: string, action: warning' | 'suspension | ban' | 'ignore) => void;
-}export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {return (<div className=flex space-x-2">;
-=======
-    <div className="flex space-x-2">;
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
       <Button;
         variant="ghost;
         size=icon";
@@ -267,111 +163,20 @@ import React from react",import { Button } from "@/components/ui/button,interfac
       >;
         <Ban className="h-4 w-4 />;
       </Button>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      {status === 'pending && (<Button;
-          variant=ghost";
-          size="sm;
-          onClick={() => onAction(flagId, ignore')}
-=======
->>>>>>> merged-prs-20250907-203621
-      {status === 'pending' && (;
-        <Button;
-          variant="ghost";
-          size="sm";
-          onClick={() => onAction(flagId, 'ignore')}
->>>>>>> origin/chore/fix-lint-and-merge
+
+
         >;
           Ignore;
         </Button>;
       )}
     </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { Button } from '@/components/ui/ button;
-import { Eye, Info, AlertTriangle, Ban } from lucide-react';
-interface ActionButtonsProps {
-  flag_id: string;
-  )}interface ActionButtonsProps  {flag_id: string;
-  status: string;
-  on_action: (flag_id: string,action: 'warning | suspension' | 'ban | ignore') => void;
-export const ActionButtons: React.FC < ActionButtonsProps> = ({flag_id,status,on_action}) => {  return (<div className='flex space - x-2>;
-      <Button;
-        variant=ghost';
-        size='icon;
-        title=View Details';
-        aria - label='View details;
-        on_click={() => alert (View details (would open a detailed view)')}        variant=ghost";
-        size="icon;
-        title=View Details";
-        aria - label="View details;
-        on_click = {(, ) => alert (View details (would open a detailed view)") }
-      >;
-        <Eye className='h - 4 w - 4 />;
-      </Button>;
-      <Button;
-        variant=ghost';
-        size='icon;
-        title=Send Warning';
-        aria - label='Send warning;
-        on_click={() => on_action (flag_id, warning')}
-        disabled={status === 'actioned || status === ignored'}      >;
-        <Info className='h - 4 w - 4 />;
-      </Button>;
-      <Button;
-        variant=ghost';
-        size='icon;
-        title=Suspend User';
-        aria - label='Suspend user;
-        on_click={() => on_action (flag_id, suspension')}
-        disabled={status === 'actioned || status === ignored'}      >;
-        <AlertTriangle className='h - 4 w - 4 />;
-      </Button>;
-      <Button;
-        variant=ghost';
-        size='icon;
-        title=Ban User';
-        aria - label='Ban user;
-        on_click={() => on_action (flag_id, ban')}
-        disabled={status === 'actioned || status === ignored'}      >;
-        <Ban className='h - 4 w - 4 />;
-      </Button>;
-      {status === pending' && (<Button;
-          variant='ghost;
-          size=sm'          on_click={() => on_action (flag_id, 'ignore)}          variant="ghost;
-          size=sm";
-          on_click={() => on_action (flag_id, ignore')}
-          on_click = {(, ) => on_action (flag_id, 'ignore) }
-        >;
-          Ignore;
-        </Button>)}
-    </div>);
-}
-"},
-  );
-}
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
 
 }
 
 '},
   );
 });
-<<<<<<< HEAD
-};
-'"
-=======
-<<<<<<< HEAD
-}
-    </div>)}
-'},)})}'";
-'"
-=======
-};
-'"
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+

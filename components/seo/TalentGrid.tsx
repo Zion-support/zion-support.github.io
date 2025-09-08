@@ -1,313 +1,26 @@
 
 
-<<<<<<< HEAD
-type Props = {
-  region?: string;
-  service?: string;
-}
-=======
-<<<<<<< HEAD
-type Props = {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import React from "react";
-import { TALENT_PROFILES } from "../../data/talent";
-import type { TalentProfile } from "../../data/talent";
-type Props = {;
-  region?: string;
-  service?: string;
-<<<<<<< HEAD
-import React from 'react';
-import { TALENT_PROFILES } from '../../data/talent';
-import type { TalentProfile } from '../../data/talent';
-type Props = {
-region?: string;
-  service?: string
-};
-function matchesRegion(): any (profile: TalentProfile, region?: string) {;
-  if (!region) return true;
-function matchesService(): any (profile: TalentProfile, service?: string) {;
-  if (!service) return true;
-  const s = service && service.toLowerCase();
-  return (
-    profile && profile.title.toLowerCase().includes(s) ||;
-    profile && profile.skills.some((sk) => sk && sk.toLowerCase().includes(s));
-  );
-}
-export default function TalentGrid(): any ({ region, service }: Props) {;
-  const items = React && React.useMemo(;
-    () =>;
-      TALENT_PROFILES && TALENT_PROFILES.filter(;
-        (p) => matchesRegion(p, region) && matchesService(p, service),;
-      ),;
-    [region, service],;
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> merged-prs-20250907-203621
 function matchesRegion(profile: TalentProfile, region?: string) {
   if (!region) return true,
   const r = region.toLowerCase($2);
   return profile.location.toLowerCase().includes(r)
-<<<<<<< HEAD
-}
-
-function matchesService(profile: TalentProfile, service?: string) {
-=======
-=======
-  region?: string;}
-  service?: string}
-};
-<<<<<<< HEAD
 
 
-function matchesRegion(profile: TalentProfile, region?: string) {
-=======
-function matchesRegion(): any (profile: TalentProfile, region?: string) {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-  if (!region) return true;
-
-const r = region.toLowerCase();
-return profile.location.toLowerCase().includes(r);
-
-<<<<<<< HEAD
-function matchesService(profile: TalentProfile, service?: string) {
-  if (!service) return true;
-
-const s = service.toLowerCase();
-return (
-    profile.title.toLowerCase().includes(s) ||
-    profile.skills.some(sk => sk.toLowerCase().includes(s))}
-  );}
->>>>>>> origin/chore/fix-lint-and-merge
-}
-
-export default function TalentGrid({ region, service }: Props) {
-  const items = React.useMemo(
-    () =>
-      TALENT_PROFILES.filter(
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
-        p => matchesRegion(p, region) && matchesService(p, service)
-      ),
-    [region, service]
-  );
-<<<<<<< HEAD
-;
-  );
-  // Check condition
-if ( {) {
-  $2
-}
-return (;
-      <div className='text-sm text-gray-400'>'
-        No matching talent found. Try broadening filters.
-      </div>
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  );
-  if (items && items.length === 0) {;
-    return (
-      <div className="text-sm text-gray-400">;
-        No matching talent found. Try broadening filters.;
-      </div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-    );
-  }
-  return (
-    <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 4">;
-      {items.map ((p) => (
-        <div;
-
-          }
-
-          key={p.slug}
-          className="rounded - lg border border - gray - 200 "dark":border - gray - 800 bg - white "dark":bg - gray - 900 p - 4">"
-
-          <div className="flex items - start justify - between">;"
-            <div>;
-              <div className="font - semibold">{p.name}</div>;"
-              <div className="text - sm text - gray - 500 "dark":text - gray - 400">;"
-                {p.title}
-              </div>;
-            </div>;
-            <div className="text - xs px - 2 py - 1 rounded bg - gray - 100 "dark":bg - gray - 800 text - gray - 600 "dark":text - gray - 300">;"
-              {p.location}
-            </div>;
-          </div>;
-          <div className="mt - 3 text - sm text - gray - 700 "dark":text - gray - 300">;"
-            {p.bio}
-          </div>;
-          <div className="mt - 3 flex flex - wrap gap - 2">;"
-            {p.skills.slice (0, 6).map ((sk) => (<span;
-                }
-                key={sk}
-                className="text - xs px - 2 py - 1 rounded bg - gray - 100 "dark": bg - gray - 800 text - gray - 600 "dark":text - gray - 300">"
-
-                {sk}
-              </span>))}
-          </div>;
-          <div className="mt - 3 text - sm">;
-              </span>))}
-          </div>;
-          <div className="mt - 3 text - sm">;
-              </span>;
-            ))}
-          </div>;
-          <div className="mt-3 text-sm">;
-  return ("
-    <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 4">;
-      {items.map ((p) => (
-        <div;
-          key={p.slug}"
-          className="rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - gray - 900 p - 4";
-        >;"
-          <div className="flex items - start justify - between">;
-            <div>;"
-              <div className="font - semibold">{p.name}</div>;"
-              <div className="text - sm text - gray - 500 dark:text - gray - 400">;
-                {p.title}
-              </div>;
-            </div>;"
-            <div className="text - xs px - 2 py - 1 rounded bg - gray - 100 dark:bg - gray - 800 text - gray - 600 dark:text - gray - 300">;
-              {p.location}
-            </div>;
-          </div>;"
-          <div className="mt - 3 text - sm text - gray - 700 dark:text - gray - 300">;
-            {p.bio}
-          </div>;"
-          <div className="mt - 3 flex flex - wrap gap - 2">;
-            {p.skills.slice (0, 6).map ((sk) => (
-              <span;
-                key={sk}"
-                className="text - xs px - 2 py - 1 rounded bg - gray - 100 dark:bg - gray - 800 text - gray - 600 dark:text - gray - 300";
-              >;
-
-                {sk}
-              </span>))}
-          </div>;"
-          <div className="mt - 3 text - sm">
-=======
-  if (items.length = == 0) {;
-  return (
-      <div className='text-sm text-gray-400'    />
-        No matching talent found. Try broadening filters.
-      </div>}
-    );}
-  }
-  return (
-    <div className=\"grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 4\"    />;
-      {items.map ((p) => (
-        <div;}
-}
-          key={p.slug}"
-          className=\"rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - gray - 900 p - 4\"    />
-"
-          <div className=\"flex items - start justify - between\"    />;
-            <div    />;"
-              <div className=\"font - semibold\"    />{p.name}</div>;"
-              <div className=\"text - sm text - gray - 500 dark:text - gray - 400\"    />;
-                {p.title}
-              </div>;
-            </div>;"
-            <div className=\"text - xs px - 2 py - 1 rounded bg - gray - 100 dark:bg - gray - 800 text - gray - 600 dark:text - gray - 300\"    />;
-              {p.location}
-            </div>;
-          </div>;"
-          <div className=\"mt - 3 text - sm text - gray - 700 dark:text - gray - 300\"    />;
-            {p.bio}
-          </div>;"
-          <div className=\"mt - 3 flex flex - wrap gap - 2\"    />;
-            {p.skills.slice (0, 6).map ((sk) => (<span;}
-                key={sk}"
-                className=\"text - xs px - 2 py - 1 rounded bg - gray - 100 dark: bg - gray - 800 text - gray - 600 dark:text - gray - 300\"    />
-
-                {sk}
-
-
-              </span>
-
-            )
-}
-          </div>;"
-          <div className=\"mt-3 text-sm\"    />;
->>>>>>> origin/chore/fix-lint-and-merge
             ${p.hourlyRateUsd}/hr • {p.availability}
           </div>;
         </div>;
-<<<<<<< HEAD
-      ))}
-<<<<<<< HEAD
-    </div>;
-  )}
-              </span>))}
-          </div>;
-          <div className="mt - 3 text - sm">;
-  )}
->>>>>>> merged-prs-20250907-203621
-  if (!service) return true,
-  const s = service.toLowerCase($2);
-  return profile.title.toLowerCase().includes(s) || profile.skills.some((sk) => sk.toLowerCase().includes(s))
-}
-<<<<<<< HEAD
 
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-=======
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  const r = region.toLowerCase();
-  return profile.location.toLowerCase().includes(r)
-}
-function matchesService(profile: TalentProfile, service?: string) {
-  if (!service) return true;
-  const s = service.toLowerCase();
-  return profile.title.toLowerCase().includes(s) || profile.skills.some((sk) => sk.toLowerCase().includes(s))
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
 export default function TalentGrid({ region, service }: Props) {
   const items = React.useMemo(
     () => TALENT_PROFILES.filter((p) => matchesRegion(p, region) && matchesService(p, service)),
     [region, service]
-<<<<<<< HEAD
-  ),
-=======
-<<<<<<< HEAD
-);
-=======
-  );
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
   if (items.length === 0) {
     return <div className="text-sm text-gray-400">No matching talent found. Try broadening filters.</div>
   }
@@ -330,40 +43,17 @@ export default function TalentGrid({ region, service }: Props) {
           </div>
           <div className="mt-3 text-sm">${p.hourlyRateUsd}/hr • {p.availability}</div>
         </div>
-<<<<<<< HEAD
-      ))}
-=======
 
->>>>>>> origin/chore/fix-lint-and-merge
+
+
     </div>
   );
 }
 
-<<<<<<< HEAD
+
 "
-"
-=======
-"
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-<<<<<<< HEAD
-      ))}
-    </div>;
-  );
-}
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-      ))}
-    </div>;
-  );
 
-}
-
-}
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from './react';
 import { TALENT_PROFILES  } from '../../data / talent';
 import type { TalentProfile } from "../../data / talent";
@@ -513,102 +203,11 @@ export default function TalentGrid(_{_region, _service}: Props) {_const _items =
         </div>
       ))}
     </div>
-<<<<<<< HEAD
-  );
-}
 
-"
-=======
   )
 
 }
-<<<<<<< HEAD
 
-import React from "react";
-import { TALENT_PROFILES } from "../../data/talent";
-import type { TalentProfile } from "../../data/talent";
-type Props = {
-  region?: string;
-  service?: string;
-}
-function matchesRegion(profile: TalentProfile, region?: string) {
-  if (!region) return true;
-  const r = region.toLowerCase();
-  return profile.location.toLowerCase().includes(r);
-}
-function matchesService(profile: TalentProfile, service?: string) {
-  if (!service) return true;
-  const s = service.toLowerCase();
-  return (
-    profile.title.toLowerCase().includes(s) |
-    profile.skills.some((sk) => sk.toLowerCase().includes(s))
-  );
-}
 
-export default function TalentGrid({ region, service }: Props) {
-  const items = React.useMemo(
-    () =>
-      TALENT_PROFILES.filter(
-        (p) => matchesRegion(p, region) && matchesService(p, service)
-      )
-    [region, service]
-        (p) => matchesRegion(p, region) && matchesService(p, service),
-      ),
-    [region, service],;
-  );
 
-  if (items.length === 0) {
-    return (
-      <div className="text-sm text-gray-400">
-        No matching talent found. Try broadening filters.
-      </div>
-    );
-  }
-  return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {items.map((p) => (
-        <div
-          key={p.slug}
-          className="rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-4"
-        >
-          <div className="flex items-start justify-between">
-            <div>
-              <div className="font-semibold">{p.name}</div>
-              <div className="text-sm text-gray-500 dark:text-gray-400">
-                {p.title}
-              </div>
-            </div>
-            <div className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">
-              {p.location}
-            </div>
-          </div>
-          <div className="mt-3 text-sm text-gray-700 dark:text-gray-300">
-            {p.bio}
-          </div>
-          <div className="mt-3 flex flex-wrap gap-2">
-            {p.skills.slice(0, 6).map((sk) => (
-              <span
-                key={sk}
-                className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300"
-              >
-                {sk}
-              </span>
-            ))}
-          </div>
-          <div className="mt-3 text-sm">
-            ${p.hourlyRateUsd}/hr • {p.availability}
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}
-}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621

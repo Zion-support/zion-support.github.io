@@ -15,9 +15,7 @@ export const contentSecurityPolicy = {
     objectSrc: ["'none'"],
     mediaSrc: ["'self'"],
     frameSrc: ["'none'"],
-<<<<<<< HEAD
-  }}
-=======
+
   }
 };
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+

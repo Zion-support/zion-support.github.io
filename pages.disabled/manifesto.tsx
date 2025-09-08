@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-import Head from 'next/head';
-import React from 'react';
+
+
 export default function ManifestoPage(): JSX.Element {
   return (
     <>
@@ -9,25 +8,6 @@ export default function ManifestoPage(): JSX.Element {
 
 
 
-
-
-        <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
-=======
-
-export default function ManifestoPage(): JSX.Element {
-  return (
-    <>
-      <Head>
-        <title>Zion Manifesto</title>
-
-<<<<<<< HEAD:pages.disabled/manifesto.tsx
-=======
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/manifesto.tsx
         <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
       </Head>
       <main className="min-h-screen bg-gray-50 text-gray-900">
@@ -79,13 +59,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </main>
     </>
   )
-<<<<<<< HEAD
-}
 
-
-
-};
-=======
 
 }
 
@@ -144,24 +118,12 @@ export default function ManifestoPage (): JSX.Element {
     </>);
 }
 
-<<<<<<< HEAD:pages.disabled/manifesto.tsx
-}
-};
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/manifesto.tsx
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages.disabled/manifesto.tsx
-);
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/manifesto.tsx
+
+

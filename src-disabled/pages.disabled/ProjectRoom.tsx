@@ -24,13 +24,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </p>
       </div>
     </>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  );
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+
 
 }
 const endVideoCall = () => {}
@@ -51,13 +46,5 @@ return (<> End Call </Button>) ;
 }'"
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-}
-}
-=======
-}
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
+
+

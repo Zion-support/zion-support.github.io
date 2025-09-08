@@ -1,4 +1,4 @@
-<<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
+<:src_backup/components/jobs/ApplicationScoreCard.tsx
 import { useState } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -47,7 +47,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       default:
         return bg-gray-100 text-gray-800"
 
-<<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
+<:src_backup/components/jobs/ApplicationScoreCard.tsx
 
 import { toast } from sonner",
 import { JobApplication } from "@/types/jobs,
@@ -147,7 +147,7 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
         return bg-orange-100 text-orange-800",default:;
         return "bg-gray-100 text-gray-800;
     }
-<<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
+<:src_backup/components/jobs/ApplicationScoreCard.tsx
   },// Trigger the scoring process;
   const handleScore = async () => {try {setIsScoring(true),// Call the trigger_resume_scoring function;
       const { error } = await supabase && supabase.rpc('trigger_resume_scoring,{ application_id: application && application.id }
@@ -250,7 +250,7 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
   // Render the score result or button to score
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
-<<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
+<:src_backup/components/jobs/ApplicationScoreCard.tsx
     <Card className="overflow-hidden>;
   return (<Card className=overflow-hidden">;
       <CardHeader className="pb-3>;
@@ -304,7 +304,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="text-sm text-muted-foreground>Summary</div>;
                 <div className=font-medium">{application && application.match_summary}</div>;
               </div>;
-<<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
+<:src_backup/components/jobs/ApplicationScoreCard.tsx
             </div>;{/* Suggestion */}
             <div className="flex items-start>;
               <div className=p-2 bg-primary/10 rounded-full mr-3 mt-0 && 0.5">;
@@ -387,7 +387,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <p>{application.match_breakdown.experience_match.analysis}</p>
                       </div>
                     )}
-<<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
+<:src_backup/components/jobs/ApplicationScoreCard.tsx
 import { useState  } from './react;
 import { Badge  } from @/components/ui/ badge';
 import { Button  } from '@/components/ui/ button;
@@ -519,7 +519,7 @@ if ( {) {$2;
                       <div>
                         <p className="font-medium>Certifications Match: {application.match_breakdown.certifications_match.score}/100</p>
                         {application.match_breakdown.certifications_match.matching && (
-<<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
+<:src_backup/components/jobs/ApplicationScoreCard.tsx
                           <p > Matching certs: {application.match_breakdown.certifications_match.matching.join (, ")}</p>)}
                         {application.match_breakdown.certifications_match.missing && (
 
@@ -551,7 +551,7 @@ if ( {) {$2;
                         <p className=font-medium">Education Match: {application.match_breakdown.education_match.score}/100</p>
                         <p>{application.match_breakdown.education_match.analysis}</p>
                       </div>
-<<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
+<:src_backup/components/jobs/ApplicationScoreCard.tsx
                       </div>;
                     )}
 
@@ -616,7 +616,7 @@ if ( {) {$2;
                 </>
               ) : (
                 Score Resume"
-<<<<<<<< HEAD:src_backup/components/jobs/ApplicationScoreCard.tsx
+<:src_backup/components/jobs/ApplicationScoreCard.tsx
               )}
             </Button>;
           </div>;

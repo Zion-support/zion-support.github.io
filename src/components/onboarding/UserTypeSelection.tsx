@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 
-import { useState } from "react";
-import { Briefcase, Star, User } from 'lucide-react'
-import { Button } from "@/components/ui/button";
-interface UserTypeOption {
-=======
 id: 'serviceProvider'
       name: 'Service Provider'
       description: 'I want to offer services on the platform'
@@ -74,7 +68,7 @@ interface UserTypeOption {
     {
   const userTypes: UserTypeOption[] = [
     {
->>>>>>> merged-prs-20250907-203621
+
   id: "serviceProvider" | "talent" | "client",
   name: string,
   description: string,
@@ -87,32 +81,26 @@ interface UserTypeSelectionProps {
 }
 
 export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {
-<<<<<<< HEAD
-=======
+
 }
 
 export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {
->>>>>>> merged-prs-20250907-203621
+
   const userTypes: UserTypeOption[] = [
     {
       id: "serviceProvider",
       name: "Service Provider",
       description: "I want to offer services on the platform",
       icon: Briefcase
-<<<<<<< HEAD
-    };
-=======
+
     },
->>>>>>> merged-prs-20250907-203621
+
     {
       id: "talent",
       name: "Talent",
       description: "I want to showcase my skills and find opportunities",
       icon: Star
-<<<<<<< HEAD
-    };
-    {
-=======
+
     },
     {
       id: 'client',
@@ -121,16 +109,13 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       icon: User,
     },
   ]
->>>>>>> merged-prs-20250907-203621
+
       id: "client",
       name: "Client",
       description: "I want to discover and hire talent or services",
       icon: User
     }
-<<<<<<< HEAD
-  ];
 
-=======
   ],
 
       id: 'serviceProvider'
@@ -151,7 +136,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       icon: User
     }
   ]
->>>>>>> merged-prs-20250907-203621
+
   return (
     <div className="space-y-6">
       <div className="text-center mb-6">
@@ -160,13 +145,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
           This helps us personalize your experience
         </p>
       </div>
-<<<<<<< HEAD
-      
-      <div className="grid gap-4 md: grid-cols-3">
-        {userTypes.map((type) => {
-          const Icon = type.icon;
-          const isSelected = selectedType === type.id;
-=======
+
       <div className='grid gap-4 md:grid-cols-3'>
         {userTypes.map(type => {
           const Icon = type.icon
@@ -293,7 +272,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
         {userTypes.map((type) => {
           const Icon = type.icon,
           const isSelected = selectedType === type.id,
->>>>>>> merged-prs-20250907-203621
+
           
           return (
             <Button
@@ -309,24 +288,14 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>
                 <Icon className={`h-6 w-6 ${isSelected ? "text-white" : "text-zion-slate-light"}`} />
               </div>
-<<<<<<< HEAD
-              <div className="text-center">
-                <h4 className="font-medium">{type.name}</h4>
-                <p className="text-sm text-zion-slate-light mt-1">
-                  {type.description}
-                </p>
-              </div>
-            </Button>
-          )
-=======
->>>>>>> merged-prs-20250907-203621
+
+
         })}
       </div>
     </div>
   )
 }
-<<<<<<< HEAD
-=======
+
 
 
               <div className="text-center">
@@ -407,28 +376,4 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
     </div>;
   );
 
-<<<<<<< HEAD
-      </div>;
-    </div>;
-  );
-};
-}
-};
-}
-}
-}
-;
 
-}
-;
-=======
-
-
-      </div>;
-    </div>);
-}
-
-}
-;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> merged-prs-20250907-203621

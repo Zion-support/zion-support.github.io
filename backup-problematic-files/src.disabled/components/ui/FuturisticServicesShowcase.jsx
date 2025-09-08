@@ -54,13 +54,5 @@ const FuturisticServicesShowcase = ({ className }) => {
   )
 };
 
-<<<<<<< HEAD
-    </div>)'
-pr-12325
-=======
-<<<<<<< HEAD
-export default FuturisticServicesShowcase;
-=======
-export default FuturisticServicesShowcase;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+

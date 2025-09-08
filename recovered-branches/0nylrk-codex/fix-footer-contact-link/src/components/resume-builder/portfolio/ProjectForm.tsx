@@ -1,34 +1,7 @@
-<<<<<<< HEAD
-=======
 
 
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { useForm  } from 'react-hook-form';
-import { zodResolver  } from '@hookform/resolvers/zod';
-import { z  } from 'zod';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-import { Textarea } from '@/components/ui/textarea';
-<<<<<<< HEAD
-=======
-import { Form;
-  FormControl;
-  FormField;
-  FormItem;
-<<<<<<< HEAD
-=======
-  FormLabel;
-  FormMessage } from '@/components/ui/form';
-import { Loader2, Link, FileImage, Github, Edit  } from 'lucide-react';
-import { PortfolioProject  } from '@/types/resume';
-import { usePortfolio  } from '@/hooks/usePortfolio';
-import { useAuth } from '@/hooks/useAuth';
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
@@ -41,14 +14,9 @@ import {Loader2, Link, FileImage, Github, Edit} from 'lucide-react';
 import {PortfolioProject} from '@/types/resume';
 import {usePortfolio} from '@/hooks/usePortfolio';
 import {useAuth} from '@/hooks/useAuth';
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 // Define schema for form validation
 
 const projectSchema = z.object({
@@ -57,27 +25,9 @@ const projectSchema = z.object({
   technologies: z.string().optional()
   image_url: z.string().optional()
   github_url: z
-<<<<<<< HEAD
 
-=======
     .union([z.string().url('Please enter a valid URL'), z.literal('')])
-<<<<<<< HEAD
-    .optional();
-  demo_url: z
-    .union([z.string().url('Please enter a valid URL'), z.literal('')])
-    .optional();
-  pdf_url: z.string().optional()})
-type ProjectFormValues = z.infer<typeof projectSchema>;
-interface ProjectFormProps {
-  project?: PortfolioProject;
-  onSuccess: () => void
-  onCancel: () => void
-}
-=======
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 import {useState} from 'react';
 
 import {use_form} from 'react - hook - form';
@@ -90,23 +40,12 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/
 
 import {Loader2, Link, FileImage, Github, Edit} from 'lucide-react';
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
   pdf_url: z && z.string().optional()}),;
 type ProjectFormValues = z && z.infer<typeof projectSchema>;
 interface ProjectFormProps {;
   project?: PortfolioProject;
-<<<<<<< HEAD
 
-export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {
-
-export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {;
-
-    .optional();
-  demo_url: z;
-    .union([z && z.string().url('Please enter a valid URL'), z && z.literal('')]);
-    .optional();
-
-=======
   onSuccess: () => void,;
   onCancel: () => void;
 }
@@ -115,267 +54,32 @@ export function ProjectForm(): any ({ project, onSuccess, onCancel }: ProjectFor
 
 export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {;
 
-<<<<<<< HEAD
-export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {
 
-export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
   const { user } = useAuth();
   const { addProject, updateProject } = usePortfolio();
   const [isLoading, setIsLoading] = useState(false);
   const isEditing = !!project;
-<<<<<<< HEAD
-  const form = useForm<ProjectFormValues>({
-    resolver: zodResolver(projectSchema)
-    defaultValues: {
-      title: project?.title |''
-      description: project?.description |''
-      technologies: project?.technologies ? project.technologies.join() : ''
-      image_url: project?.image_url |''
-      github_url: project?.github_url |''
-      demo_url: project?.demo_url |''
-      pdf_url: project?.pdf_url |''}
-  });
-  const onSubmit = async (data: ProjectFormValues) => {
-    if (!user) return;
-    setIsLoading(true)
-    try {
-      const projectData: PortfolioProject = {
-        title: data.title
-        description: data.description
-        technologies: data.technologies ?
-          data.technologies.split().map(tech => tech.trim()) : []
-        image_url: data.image_url
-        github_url: data.github_url |undefined
-        demo_url: data.demo_url |undefined
-        pdf_url: data.pdf_url}
-      let success = false;
-      if (isEditing && project?.id) {
-        success = await updateProject(project.id, projectData)
-      } else {
-        const projectId = await addProject(projectData);
-        success = !!projectId
-      }
-      if (success) {
-        onSuccess();
-        form.reset()
-import { useState } from 'react',;
-import { useForm } from 'react-hook-form',;
-import { zodResolver } from '@hookform/resolvers/zod',;
-import { z } from 'zod',;
-import { Button } from '@/components/ui/button',;
-import { Input } from '@/components/ui/input',;
-import { Textarea } from '@/components/ui/textarea',;
-import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage} from '@/components/ui/form',;
-import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react',;
-import { PortfolioProject } from '@/types/resume',;
-import { usePortfolio } from '@/hooks/usePortfolio',;
-import { useAuth } from '@/hooks/useAuth',;
-// Define schema for form validation;
-const projectSchema = z.object({;
-  title: z.string().min(1, 'Project title is required'),;
-  description: z.string().optional(),;
-  technologies: z.string().optional(),;
-  image_url: z.string().optional(),;
-  github_url: z;
-    .union([z.string().url('Please enter a valid URL'), z.literal('')]);
-    .optional(),;
-  demo_url: z;
-    .union([z.string().url('Please enter a valid URL'), z.literal('')]);
-    .optional(),;
-  pdf_url: z.string().optional()}),;
-type ProjectFormValues = z.infer<typeof projectSchema>,;
-interface ProjectFormProps {;
-  project?: PortfolioProject,;
-  onSuccess: () => void,;
-  onCancel: () => void;
-}
-;
-export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {;
-  const { user } = useAuth(),;
-  const { addProject, updateProject } = usePortfolio(),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const isEditing = !!project,;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
 
   const form = useForm<ProjectFormValues>({;
     resolver: zodResolver(projectSchema),;
-<<<<<<< HEAD
-=======
+
     defaultValues: {;
       title: project?.title || '',;
       description: project?.description || '',;
-<<<<<<< HEAD
-      technologies: project?.technologies ? project.technologies.join() : '',;
-=======
-      technologies: project?.technologies ? project && project.technologies.join() : '',;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      image_url: project?.image_url || '',;
-      github_url: project?.github_url || '',;
-      demo_url: project?.demo_url || '',;
-      pdf_url: project?.pdf_url || ''}
-<<<<<<< HEAD
-        const projectId = await addProject(projectData);
-        success = !!projectId;
-      }
-      if (success) {;
-        onSuccess();
-        form && form.reset();
-  }),;
-  const onSubmit = async (data: ProjectFormValues) => {;
-    if (!user) return,;
-    setIsLoading(true),;
-    try {;
-      const projectData: PortfolioProject = {;
-        title: data.title,;
-        description: data.description,;
-        technologies: data.technologies ?;
-          data.technologies.split().map(tech => tech.trim()) : [],;
-        image_url: data.image_url,;
-        github_url: data.github_url || undefined,;
-        demo_url: data.demo_url || undefined,;
-        pdf_url: data.pdf_url},;
-      let success = false,;
-      if (isEditing && project?.id) {;
-        success = await updateProject(project.id, projectData);
-      } else {;
-        const projectId = await addProject(projectData),;
-        success = !!projectId;
-      }
-=======
-  });
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
-  });
-  const onSubmit = async (data: ProjectFormValues) => {
-    if (!user) return;
 
-      let success = false;
-<<<<<<< HEAD
-
-      if (isEditing && project?.id) {;
-        success = await updateProject(project && project.id, projectData);
-      } else {;
-
-        const projectId = await addProject(projectData);
-        success = !!projectId;
-      }
-
-      if (success) {;
-
-        onSuccess();
-        form && form.reset();;
-      if (success) {;
-        onSuccess();
-        form.reset()
-};
-  },
-
-  
-    <Form {...form}>;
-      <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;
-        <FormField
-          control={form && form.control}
-          name="title"        <div className="flex justify-end space-x-2 pt-4">
->>>>>>> merged-prs-20250907-203621
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage} from '@/components/ui/form',
-import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react';
-import { PortfolioProject } from '@/types/resume';
-import { usePortfolio } from '@/hooks/usePortfolio';
-import { useAuth } from '@/hooks/useAuth';
-// Define schema for form validation
-
-  title: z.string().min($2);
-  description: z.string().optional($2);
-  technologies: z.string().optional($2);
-  image_url: z.string().optional($2);
-  github_url: z
-    .union([z.string().url('Please enter a valid URL'), z.literal('')])
-    .optional($2);
-  demo_url: z
-    .union([z.string().url('Please enter a valid URL'), z.literal('')])
-    .optional($2);
-  pdf_url: z.string().optional()}),
-
-type ProjectFormValues = $2;
-interface ProjectFormProps {
-  project?: PortfolioProject,
-  onSuccess: () => void,
-  onCancel: () => void
-}
-export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {
-  const { user } = useAuth($2);
-  const { addProject, updateProject } = usePortfolio($2);
-  const [isLoading, setIsLoading] = useState($2);
-  const isEditing = $2;
-  const form = useForm<ProjectFormValues>({
-    resolver: zodResolver($2);
-    defaultValues: {
-      title: project ?.title || '',
-      description: project ?.description || '',
-      technologies: project ?.technologies ? project.technologies.join() : '',
-      image_url: project ?.image_url || '',
-      github_url: project ?.github_url || '',
-      demo_url: project ?.demo_url || '',
-      pdf_url: project ?.pdf_url || ''}
-  }),
-  
-  const onSubmit = $2;
-    setIsLoading($2);
-    try {
-      const projectData: PortfolioProject = $2;
-        description: data.description,
-        technologies: data.technologies ? 
-          data.technologies.split().map(tech = $2;
-        image_url: data.image_url,
-        github_url: data.github_url || undefined,
-        demo_url: data.demo_url || undefined,
-        pdf_url: data.pdf_url},
-      
-      let success = $2;
-=======
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-      if (isEditing && project?.id) {
-        success = await updateProject(project.id, projectData)
-      } else {
-        const projectId = await addProject(projectData);
-        success = !!projectId
-      }
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
       if (success) {;
         onSuccess();
         form.reset();
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
+
       }
     } catch (error) {;'
       console && console.error('Error saving project:', error);
@@ -383,217 +87,27 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       setIsLoading(false);
     }
 
-<<<<<<< HEAD
-  },
-
-  return (
-
-      pdf_url:project?.pdf_url || ''}
-  }),;
-  ;
-  const onSubmit = async (data:ProjectFormValues) => {;
-    if (!user) return,;
-    ;
-    setIsLoading(true),;
-    ;
-    try {;
-      const projectData:PortfolioProject = {;
-        title:data.title,;
-        description:data.description,;
-        technologies:data.technologies ? ;
-          data.technologies.split().map(tech => tech.trim()) :[],;
-        image_url:data.image_url,;
-        github_url:data.github_url || undefined,;
-        demo_url:data.demo_url || undefined,;
-        pdf_url:data.pdf_url},;
-      ;
-      let success = false,;
-      ;
-      if (isEditing && project?.id) {;
-        success = await updateProject(project.id, projectData),;
-      } else {;
-        const projectId = await addProject(projectData);
-        success = !!projectId;
-      }
-        onSuccess();
-        form && form.reset();
-      }
-
-      console.error('Error saving project:', error),;
-    } finally {;
-      setIsLoading(false),;
-    }
-  }
-
-  },
-  };
-  },
-  };
-  },
 
   };
-  },
-
-  return (
-    <Form {...form}>;
-=======
-  };
 
 
 
-<<<<<<< HEAD
-      }
-    } catch (error) {
-      console.error('Error saving project:', error)
-    } finally {
-      setIsLoading(false)
-    }
-  }
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  },
-  };
-  },
-<<<<<<< HEAD
-  };
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;
         <FormField
           control={form && form.control}
           name="title"
-<<<<<<< HEAD
 
-import { useState } from 'react',;
-import { useForm } from 'react-hook-form',;
-import { zodResolver } from '@hookform/resolvers/zod',;
-import { z } from 'zod',;
-import { Button } from '@/components/ui/button',;
-import { Input } from '@/components/ui/input',;
-import { Textarea } from '@/components/ui/textarea',;
-import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage} from '@/components/ui/form',;
-import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react',;
-import { PortfolioProject } from '@/types/resume',;
-import { usePortfolio } from '@/hooks/usePortfolio',;
-import { useAuth } from '@/hooks/useAuth',;
-;
-// Define schema for form validation;
-const projectSchema = z.object({;
-  title:z.string().min(1, 'Project title is required'),;
-  description:z.string().optional(),;
-  technologies:z.string().optional(),;
-  image_url:z.string().optional(),;
-  github_url:z;
-    .union([z.string().url('Please enter a valid URL'), z.literal('')]);
-    .optional(),;
-  demo_url:z;
-    .union([z.string().url('Please enter a valid URL'), z.literal('')]);
-    .optional(),;
-  pdf_url:z.string().optional()}),;
-;
-type ProjectFormValues = z.infer<typeof projectSchema>,;
-;
-interface ProjectFormProps {;
-  project?:PortfolioProject,;
-  onSuccess:() => void,;
-  onCancel:() => void;
-}
-;
-export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {;
-  const { user } = useAuth(),;
-  const { addProject, updateProject } = usePortfolio(),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const isEditing = !!project,;
-  ;
-  const form = useForm<ProjectFormValues>({;
-    resolver:zodResolver(projectSchema),;
-    defaultValues:{;
-      title:project?.title || '',;
-      description:project?.description || '',;
-      technologies:project?.technologies ? project.technologies.join() :'',;
-      image_url:project?.image_url || '',;
-      github_url:project?.github_url || '',;
-      demo_url:project?.demo_url || '',;
-      pdf_url:project?.pdf_url || ''}
-  }),;
-  ;
-  const onSubmit = async (data:ProjectFormValues) => {;
-    if (!user) return,;
-    ;
-    setIsLoading(true),;
-    ;
-    try {;
-      const projectData:PortfolioProject = {;
-        title:data.title,;
-        description:data.description,;
-        technologies:data.technologies ? ;
-          data.technologies.split().map(tech => tech.trim()) :[],;
-        image_url:data.image_url,;
-        github_url:data.github_url || undefined,;
-        demo_url:data.demo_url || undefined,;
-        pdf_url:data.pdf_url},;
-      ;
-      let success = false,;
-      ;
-      if (isEditing && project?.id) {;
-        success = await updateProject(project.id, projectData),;
-      } else {;
-        const projectId = await addProject(projectData),;
-        success = !!projectId,;
-      }
-      ;
-      if (success) {;
-        onSuccess(),;
-        form.reset(),;
-      }
-    } catch (error) {;
-      console.error('Error saving project:', error),;
-    } finally {;
-      setIsLoading(false),;
-    }
-  },;
-  ;
-  return (;
-    <Form {...form}>;
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">;
-        <FormField;
-          control={form.control}
-          name="title";
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Project Title</FormLabel>;
               <FormControl>;
-<<<<<<< HEAD
-        />;
-        <FormField
-          control={form && form.control}
-          name="description"
-                <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;          )}
-        />;
-        ;
-        <FormField;
-          control={form.control}
-          name="description";
-=======
+
                 <Input placeholder="E && E.g., AI Chatbot, E-commerce Website" {...field} />;
               </FormControl>;
               <FormMessage />;
@@ -602,204 +116,40 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
 
         />;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 
 />;
         <FormField
           control={form && form.control}
           name="description"
-<<<<<<< HEAD
-                <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;          )}
-        />;
-        ;
-        <FormField;
-          control={form.control}
-          name="description";
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
+
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Project Description</FormLabel>;
               <FormControl>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        <FormField
-          control={form && form.control}
-          name="technologies"
-                <Textarea ;
-                  placeholder="Describe what the project does and your role in it...";
-                  className="min-h-[100px]";
-                  {...field} ;
-                />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;          )}
-        />;
-        ;
-        <FormField;
-          control={form.control}
-          name="technologies";
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel>Technologies Used</FormLabel>;
-              <FormControl>;
-                <Input placeholder="React, Node.js, MongoDB, etc. (comma separated)" {...field} />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
-          )}
-        />;
-          <FormField
-            control={form && form.control}
-            name="github_url"
-        ;
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-          <FormField;
-            control={form.control}
-            name="github_url";
-=======
-                <Textarea
-                  placeholder="Describe what the project does and your role in it..."
-                  className="min-h-[100px]"
-                  {...field} 
-                />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
-          )}
-        />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel>Technologies Used</FormLabel>;
-              <FormControl>;
 
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
-          )}
-
-<<<<<<< HEAD
-=======
-        />;
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-
-          <FormField
-            control={form && form.control}
-            name="github_url"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-            render={({ field }) => (;
-              <FormItem>;
-                <FormLabel className="flex items-center gap-2">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                   <Github className="h-4 w-4" />;
                   GitHub URL;
                 </FormLabel>;
                 <FormControl>;
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-          />;
-          <FormField
-            control={form && form.control}
-            name="demo_url"
-                  <Input placeholder="https://github.com/yourusername/project" {...field} />;
-                </FormControl>;
-                <FormMessage />;
-              </FormItem>;            )}
-          />;
-          ;
-          <FormField;
-            control={form.control}
-            name="demo_url";
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-                  <Input placeholder="https://github && github.com/yourusername/project" {...field} />;
-                </FormControl>;
-                <FormMessage />;
-              </FormItem>;
-            )}
-
-<<<<<<< HEAD
-=======
-          />;
 
 
-          <FormField
-            control={form && form.control}
-            name="demo_url"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-            render={({ field }) => (;
-              <FormItem>;
-                <FormLabel className="flex items-center gap-2">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                   <Link className="h-4 w-4" />;
                   Demo URL;
                 </FormLabel>;
                 <FormControl>;
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-          />;
-        </div>;
-        <FormField
-          control={form && form.control}
-          name="image_url"
-                  <Input placeholder="https://your-project-demo.com" {...field} />;
-                </FormControl>;
-                <FormMessage />;
-              </FormItem>;            )}
-          />;
-        </div>;
-        ;
-        <FormField;
-          control={form.control}
-          name="image_url";
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-                  <Input placeholder="https://your-project-demo && demo.com" {...field} />;
-                </FormControl>;
-                <FormMessage />;
-              </FormItem>;
-            )}
-
-<<<<<<< HEAD
-=======
-          />;
-        </div>;
 
 
-        <FormField
-          control={form && form.control}
-          name="image_url"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel className="flex items-center gap-2">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                 <FileImage className="h-4 w-4" />;
                 Screenshot URL;
               </FormLabel>;
               <FormControl>;
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-                <Input placeholder="https://example.com/screenshot.jpg" {...field} />;
-=======
-                <Input placeholder="https://example && example.com/screenshot && screenshot.jpg" {...field} />;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
               </FormControl>;
               <FormMessage />;
             </FormItem>;
@@ -902,108 +252,8 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
         />
         {/* Future file upload field would go here */}
 
-<<<<<<< HEAD
-  
-  return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-        <FormField
-          control={form.control}
-          name="title"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Project Title</FormLabel>
-              <FormControl>
-                <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="description"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Project Description</FormLabel>
-              <FormControl>
-                <Textarea
-                  placeholder="Describe what the project does and your role in it..."
-                  className="min-h-[100px]"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="technologies"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Technologies Used</FormLabel>
-              <FormControl>
-                <Input placeholder="React, Node.js, MongoDB, etc. (comma separated)" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <FormField
-            control={form.control}
-            name="github_url"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="flex items-center gap-2">
-                  <Github className="h-4 w-4" />
-                  GitHub URL
-                </FormLabel>
-                <FormControl>
-                  <Input placeholder="https://github.com/yourusername/project" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="demo_url"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="flex items-center gap-2">
-                  <Link className="h-4 w-4" />
-                  Demo URL
-                </FormLabel>
-                <FormControl>
-                  <Input placeholder="https://your-project-demo.com" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </div>
-        <FormField
-          control={form.control}
-          name="image_url"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel className="flex items-center gap-2">
-                <FileImage className="h-4 w-4" />
-                Screenshot URL
-              </FormLabel>
-              <FormControl>
-                <Input placeholder="https://example.com/screenshot.jpg" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        {/* Future file upload field would go here */}
-        
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
         <div className="flex justify-end space-x-2 pt-4">
 
           <Button type="button" variant="outline" onClick={onCancel}>
@@ -1017,51 +267,28 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
       </form>
     </Form>
   )
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        />;
-        ;
-        {/* Future file upload field would go here */}
-        ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
         <div className="flex justify-end space-x-2 pt-4">;
           <Button type="button" variant="outline" onClick={onCancel}>;
             Cancel;
           </Button>;
           <Button type="submit" disabled={isLoading}>;
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-<<<<<<< HEAD
 
-        />;
-        ;
-        {/* Future file upload field would go here */}
-        ;"
-        <div className="flex justify-end space-x-2 pt-4">;"
-          <Button type="button" variant="outline" onClick={onCancel}>;
-            Cancel;
-          </Button>;"
-          <Button type="submit" disabled={isLoading}>;"
-            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}'
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             {isEditing ? 'Update' :'Add'} Project;
           </Button>;
         </div>;
       </form>;
     </Form>;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
 
 }
-<<<<<<< HEAD
-=======
+
 import {PortfolioProject} from '@/types / resume';
 import {use_portfolio} from '@/hooks / use_portfolio';
 import {use_auth} from '@/hooks / use_auth';
@@ -1081,298 +308,5 @@ const project_schema = z.object ({
 type ProjectFormValues = z.infer < typeof project_schema>;
 
 ;
-<<<<<<< HEAD
-interface ProjectFormProps {
-  project?: PortfolioProject;
-  on_success: () => void,
-  on_cancel: () => void;
-}
-export /**
- * ProjectForm - Function description
- */
-function ProjectForm() {
-  const { user } = use_auth ();
-  const { add_project, update_project } = use_portfolio ();
-  const [is_loading, setIsLoading] = useState (false);
-  const is_editing = !!project;
-;
-  const form = use_form < ProjectFormValues>({
-    resolver: zod_resolver (project_schema),
-    default_values: {
-      title: project?.title || '',
-      description: project?.description || '',
-      technologies: project?.technologies ? project.technologies.join () : '',
-      image_url: project?.image_url || '',
-      github_url: project?.github_url || '',
-      demo_url: project?.demo_url || '',
-      pdf_url: project?.pdf_url || ''}
-  });
-;
-  const on_submit = async (data: ProjectFormValues) => {
-    // Check condition
-if (return) {
-  $2
-}
-    setIsLoading (true),
-    try {
-      const project_data: PortfolioProject = {
-        title: data.title,
-        description: data.description,
-        technologies: data.technologies ?;
-          data.technologies.split ().map (tech => tech.trim ()) : [],
-        image_url: data.image_url,
-        github_url: data.github_url || undefined,
-        demo_url: data.demo_url || undefined,
-        pdf_url: data.pdf_url},
-      let success = false;
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        success = await update_project (project.id, project_data);
-      } else {
-        const project_id = await add_project (project_data);
-        success = !!project_id;
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        on_success ();
-        form.reset ();
-      }
-    } catch (error) {
-      console.error ('Error saving project:', error);
-    } finally {
-      setIsLoading (false);
-    }
-  }
-;
-  return (
-    <Form {...form}>;
-      <form on_submit={form.handle_submit (on_submit)} className="space - y-4">;
-        <FormField;
-          control={form.control}
-          name="title";
-          render={({ field }) => (
-            <FormItem>;
-              <FormLabel > Project Title</FormLabel>;
-              <FormControl>;
-                <Input placeholder="E.g., AI Chatbot, E - commerce Website" {...field} />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>)}
-        />;
-        <FormField;
-          control={form.control}
-          name="description";
-          render={({ field }) => (
-            <FormItem>;
-              <FormLabel > Project Description</FormLabel>;
-              <FormControl>;
-                <Textarea;
-                  placeholder="Describe what the project does and your role in it...";
-                  className="min - h-[100px]";
-                  {...field}
-                />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>)}
-        />;
-        <FormField;
-          control={form.control}
-          name="technologies";
-          render={({ field }) => (
-            <FormItem>;
-              <FormLabel > Technologies Used</FormLabel>;
-              <FormControl>;
-                <Input placeholder="React, Node.js, MongoDB, etc. (comma separated)" {...field} />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>)}
-        />;
-        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-          <FormField;
-            control={form.control}
-            name="github_url";
-            render={({ field }) => (
-              <FormItem>;
-                <FormLabel className="flex items - center gap - 2">;
-                  <Github className="h - 4 w - 4" />;
-                  GitHub URL;
-                </FormLabel>;
-                <FormControl>;
-                  <Input placeholder="https://github.com / yourusername / project" {...field} />;
-                </FormControl>;
-                <FormMessage />;
-              </FormItem>)}
-          />;
-          <FormField;
-            control={form.control}
-            name="demo_url";
-            render={({ field }) => (
-              <FormItem>;
-                <FormLabel className="flex items - center gap - 2">;
-                  <Link className="h - 4 w - 4" />;
-                  Demo URL;
-                </FormLabel>;
-                <FormControl>;
-                  <Input placeholder="https://your - project - demo.com" {...field} />;
-                </FormControl>;
-                <FormMessage />;
-              </FormItem>)}
-          />;
-        </div>;
-        <FormField;
-          control={form.control}
-          name="image_url";
-          render={({ field }) => (
-            <FormItem>;
-              <FormLabel className="flex items - center gap - 2">;
-                <FileImage className="h - 4 w - 4" />;
-                Screenshot URL;
-              </FormLabel>;
-              <FormControl>;
-                <Input placeholder="https://example.com / screenshot.jpg" {...field} />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>)}
-        />;
-        {/* Future file upload field would go here */}
-        <div className="flex justify - end space - x-2 pt - 4">;
-          <Button type="button" variant="outline" on_click={on_cancel}>;
-            Cancel;
-          </Button>;
-          <Button type="submit" disabled={is_loading}>;
-            {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />}
-            {is_editing ? 'Update' : 'Add'} Project;
-          </Button>;
-        </div>;
-      </form>;
-    </Form>);
-}
-  ),;}
- type ProjectFormValues = z.infer<typeof projectSchema>;
-setIsLoading (true);
-try {
-  const projectData: PortfolioProject = {
-  </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel>Project Description</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> </div> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> {
-  /* Future file upload field would go here */ 
-}</Button> </div> </form> </Form>) 
-}
-}
-}
-;
-=======
 
-interface ProjectFormProps {
-  project?: PortfolioProject;
-  on_success: () => void,
-  on_cancel: () => void;
-}
-export /**
- * ProjectForm - Function description
- */
-function ProjectForm() {
-  const { user } = use_auth ();
-  const { add_project, update_project } = use_portfolio ();
-  const [is_loading, setIsLoading] = useState (false);
-  const is_editing = !!project;
-;
-  const form = use_form < ProjectFormValues>({
-    resolver: zod_resolver (project_schema),
-    default_values: {
-      title: project?.title || '',
-      description: project?.description || '',
-      technologies: project?.technologies ? project.technologies.join () : '',
-      image_url: project?.image_url || '',
-      github_url: project?.github_url || '',
-      demo_url: project?.demo_url || '',
-      pdf_url: project?.pdf_url || ''}
-  });
-;
-  const on_submit = async (data: ProjectFormValues) => {
-    // Check condition
-if (return) {
-  $2
-}
-    setIsLoading (true),
-    try {
-      const project_data: PortfolioProject = {
-        title: data.title,
-        description: data.description,
-        technologies: data.technologies ?;
-          data.technologies.split ().map (tech => tech.trim ()) : [],
-        image_url: data.image_url,
-        github_url: data.github_url || undefined,
-        demo_url: data.demo_url || undefined,
-        pdf_url: data.pdf_url},
-      let success = false;
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        success = await update_project (project.id, project_data);
-      } else {
-        const project_id = await add_project (project_data);
-        success = !!project_id;
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        on_success ();
-        form.reset ();
-      }
-    } catch (error) {
-      console.error ('Error saving project:', error);
-    } finally {
-      setIsLoading (false);
-    }
-  }
-;
-  return (
-  pdf_url: z && z.string().optional()}),;
 
-type ProjectFormValues = z && z.infer<typeof projectSchema>;
-</typeof>
-  const form = useForm<ProjectFormValues>({;
-
-<<<<<<< HEAD
-    <Form {...form}>;
-)
-      <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;"
-</form>
-        <FormField;
-          control={form && form.control}"
-          name="title""
-
-)"
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">;"
-          control={form.control}"
-          name="title";"
-          render={({ field }) => (;
-
-            <FormItem>;
-
-              <FormLabel>Project Title;
-              <FormControl>;
-"
-                <Input placeholder="E && E.g., AI Chatbot, E-commerce Website" {...field} />;"
-
-              ;
-              <FormMessage />;
-
-          name="description"")
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621

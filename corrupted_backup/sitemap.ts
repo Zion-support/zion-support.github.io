@@ -1,6 +1,5 @@
 
-<<<<<<< HEAD
-=======
+
 const Sitemap = () => {;
   }
   return nul;
@@ -246,4 +245,4 @@ const allRoutes = [;
  
 }));
 }
->>>>>>> merged-prs-20250907-203621
+

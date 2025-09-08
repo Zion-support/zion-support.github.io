@@ -1,58 +1,8 @@
-<<<<<<< HEAD
-
-
->>>>>>> 5d987fe43090d7728810c06da2fede859a7f3c62
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 
 
 
 
 
-
-<<<<<<< HEAD
-main
-main
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-main
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import React from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
@@ -93,12 +43,10 @@ import {
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
-<<<<<<< HEAD
-export default function Services() {;
-=======
+
 export default function Services() {
 	const title = 'Services — Zion Tech Group';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
 
 	return (
@@ -306,9 +254,7 @@ export default function Services() {
 								<Link
 									href='/contact'
 									className='inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group'
-<<<<<<< HEAD
 
-=======
 									aria-label='Get started with custom software services'
 								>
 									Get started with SaaS
@@ -327,7 +273,7 @@ export default function Services() {
 						<p className='mt-6 text-lg leading-8 text-gray-600'>
 							Zion Tech Group delivers cutting-edge, production-ready services across AI, IT infrastructure, and Micro SaaS platforms. 
 							Our solutions are designed for enterprise scalability with transparent pricing and measurable outcomes. 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 							Explore our full capabilities at{' '}
 							<a href='https://ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline font-semibold' target='_blank' rel='noreferrer'>ziontechgroup.com</a>.{' '}
 							Check our latest additions in the{' '}
@@ -364,11 +310,9 @@ export default function Services() {
 							</div>
 						</div>
 						<p className='mt-6 text-sm text-gray-500'>
-<<<<<<< HEAD
 
-=======
 							Pricing based on market research from leading technology consultancies and enterprise software vendors. 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 							For custom enterprise solutions and volume discounts, see our{' '}
 							<Link href='/pricing' className='text-blue-600 hover:text-blue-500 underline'>Enterprise Pricing Guide</Link>.
 						</p>
@@ -934,11 +878,9 @@ export default function Services() {
 					<div className='mx-auto max-w-3xl text-center mb-16'>
 						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Innovative AI & Automation Services</h2>
 						<p className='mt-6 text-lg leading-8 text-gray-600'>
-<<<<<<< HEAD
 
-=======
 							Cutting-edge AI solutions and automation tools that transform how businesses operate. 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 							Visit <a href='https://ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline' target='_blank' rel='noreferrer'>ziontechgroup.com</a> for live demos.
 						</p>
 					</div>
@@ -1083,11 +1025,9 @@ export default function Services() {
 					<div className='mx-auto max-w-3xl text-center mb-16'>
 						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Advanced IT & Infrastructure Services</h2>
 						<p className='mt-6 text-lg leading-8 text-gray-600'>
-<<<<<<< HEAD
 
-=======
 							Enterprise-grade IT solutions and infrastructure management services. 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 							Professional implementation with 99.9% uptime guarantee.
 						</p>
 					</div>
@@ -1232,11 +1172,9 @@ export default function Services() {
 					<div className='mx-auto max-w-3xl text-center mb-16'>
 						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Micro SaaS Solutions</h2>
 						<p className='mt-6 text-lg leading-8 text-gray-600'>
-<<<<<<< HEAD
 
-=======
 							Specialized software solutions designed to solve specific business challenges. 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 							Ready-to-deploy tools with customizable features and integrations.
 						</p>
 					</div>
@@ -1429,11 +1367,9 @@ export default function Services() {
 							Our pricing reflects the true value of cutting-edge technology solutions, with transparent costs and exceptional ROI.
 						</p>
 					</div>
-<<<<<<< HEAD
 
-=======
 					
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 					{/* Pricing Tiers */}
 					<div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16'>
 						<div className='bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition-all duration-300'>
@@ -1538,11 +1474,9 @@ export default function Services() {
 								We combine cutting-edge technology with proven expertise to deliver solutions that drive real business value.
 							</p>
 						</div>
-<<<<<<< HEAD
 
-=======
 						
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 						<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
 							<div className='text-center'>
 								<div className='mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 mb-4'>
@@ -1578,18 +1512,7 @@ export default function Services() {
 			</section>
 
 			{/* CTA Section */}
-<<<<<<< HEAD
-			<section className='bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm:py-32'>
-				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
-					<div className='mx-auto max-w-2xl text-center'>
-						<h2 className='text-3xl font-bold tracking-tight text-white sm:text-4xl'>
-							Ready to get started?
-						</h2>
-						<p className='mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100'>
-							Let&aposs discuss your project requirements and how we can help you achieve your goals.
-						</p>
-						<div className='mt-10 flex items-center justify-center gap-x-6'>
-=======
+
 
 			<section className='bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm: py-32'>;
 				<div className='mx-auto max-w-7xl px-6 lg:px-8'>;
@@ -1602,7 +1525,7 @@ export default function Services() {
 						</p>;
 						<div className='mt-10 flex items-center justify-center gap-x-6'>;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 							<Link
 								href='/contact'
 								className='group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-all duration-200 hover:scale-105'
@@ -1614,20 +1537,8 @@ export default function Services() {
 							<Link
 								href='/'
 								className='text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group'
-<<<<<<< HEAD
-								aria-label='Back to homepage'
-							>
-								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>
-							</Link>
-						</div>
-					</div>
-				</div>
-			</section>
-		</PageTransition>
-		</Layout>
-	);
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
 
 								aria-label='Back to homepage'>;
 								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>;
@@ -1636,28 +1547,14 @@ export default function Services() {
 						</div>;
 					</div>;
 				</div>;
-<<<<<<< HEAD
-			</section>;
-=======
+
 			</section>;
 		</PageTransition>;
 		</Layout>;
 	),;
 
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/merge-open-prs
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
 
 
 }
@@ -1665,20 +1562,11 @@ export default function Services() {
 
 
 
-<<<<<<< HEAD
-ursor/integrate-build-improve-and-re-verify-8f7d
-}
-origin/chore/merge-open-prs
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+
+
+
+
+
+
+
