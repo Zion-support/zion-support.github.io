@@ -35,6 +35,7 @@ export interface NextGenMicroSaasService2025 {
     uptime: string;
     security: string[];
   };
+  tags: string[];
 }
 
 export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = [
@@ -97,7 +98,8 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
       apiEndpoints: 150,
       uptime: '99.9%',
       security: ['End-to-end encryption', 'Two-factor authentication', 'Regular security audits']
-    }
+    },
+    tags: ['AI', 'Content Creation', 'Marketing', 'SEO', 'Automation', '2025']
   },
 
   // Blockchain-Based Supply Chain Management
@@ -159,7 +161,8 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
       apiEndpoints: 200,
       uptime: '99.95%',
       security: ['Blockchain encryption', 'Multi-signature wallets', 'Regular security audits']
-    }
+    },
+    tags: ['Blockchain', 'Supply Chain', 'IoT', 'Transparency', 'Automation', '2025']
   },
 
   // AI-Powered Cybersecurity Threat Detection
@@ -221,7 +224,8 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
       apiEndpoints: 300,
       uptime: '99.99%',
       security: ['End-to-end encryption', 'Zero-trust architecture', 'Regular penetration testing']
-    }
+    },
+    tags: ['AI', 'Cybersecurity', 'Threat Detection', 'Machine Learning', 'Automation', '2025']
   },
 
   // IoT Edge Computing Platform
@@ -283,7 +287,8 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
       apiEndpoints: 250,
       uptime: '99.9%',
       security: ['Edge security', 'Data encryption', 'Access control', 'Regular updates']
-    }
+    },
+    tags: ['IoT', 'Edge Computing', 'AI', 'Real-time Analytics', 'Automation', '2025']
   },
 
   // AI-Powered Healthcare Analytics
@@ -345,7 +350,8 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
       apiEndpoints: 400,
       uptime: '99.99%',
       security: ['HIPAA compliance', 'Data encryption', 'Access controls', 'Audit logging']
-    }
+    },
+    tags: ['AI', 'Healthcare', 'Analytics', 'Predictive Medicine', 'HIPAA', '2025']
   },
 
   // Quantum-Secure Communication Platform
@@ -407,7 +413,8 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
       apiEndpoints: 500,
       uptime: '99.99%',
       security: ['Quantum encryption', 'Post-quantum algorithms', 'Quantum key management', 'Regular security audits']
-    }
+    },
+    tags: ['Quantum', 'Security', 'Communication', 'Encryption', 'Post-Quantum', '2025']
   },
 
   // AI-Powered Financial Trading Platform
@@ -469,7 +476,8 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
       apiEndpoints: 600,
       uptime: '99.99%',
       security: ['Financial-grade encryption', 'Multi-factor authentication', 'Regular security audits', 'Compliance monitoring']
-    }
+    },
+    tags: ['AI', 'Finance', 'Trading', 'Machine Learning', 'Automation', '2025']
   },
 
   // Sustainable Energy Management Platform
@@ -531,7 +539,8 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
       apiEndpoints: 300,
       uptime: '99.9%',
       security: ['Data encryption', 'Access controls', 'Regular security audits', 'Compliance monitoring']
-    }
+    },
+    tags: ['Sustainability', 'Energy Management', 'IoT', 'AI', 'Renewable Energy', '2025']
   },
 
   // AI-Powered Education Platform
@@ -593,6 +602,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
       apiEndpoints: 400,
       uptime: '99.9%',
       security: ['FERPA compliance', 'Data encryption', 'Access controls', 'Regular security audits']
-    }
+    },
+    tags: ['AI', 'Education', 'Personalized Learning', 'Machine Learning', 'Adaptive Learning', '2025']
   }
 ];

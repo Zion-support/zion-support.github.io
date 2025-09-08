@@ -1,5 +1,12 @@
 
 import React from 'react';
+import QuoteRequestForm from "@/components/QuoteRequestForm";
+import { SEO } from "@/components/SEO";
+import { MainNavigation } from "@/layout/MainNavigation";
+import { Footer } from "@/components/Footer";
+
+export default function RequestQuote() {
+  return (
     <div className="min-h-screen bg-background">
       <SEO 
         title="Request Quote - Zion Tech Group" 

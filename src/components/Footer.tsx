@@ -1,128 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Twitter, 
-  Linkedin, 
-  Facebook, 
-  Instagram, 
-  Github, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  ArrowUp, 
-  Globe, 
-  Heart,
-  Zap,
-  Shield,
-  Cloud,
-  Brain,
-  Rocket,
-  Code,
-  Users,
-  Building,
-  Award,
-  Clock,
-  CheckCircle,
-  TrendingUp,
-  Network,
-  Smartphone
-} from 'lucide-react';
-
-const footerNavigation = {
-  services: {
-    title: 'Services',
-    items: [
-      { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain },
-      { name: 'AI & Marketing', href: '/services/ai-marketing', icon: TrendingUp },
-      { name: 'AI & Customer Experience', href: '/services/ai-customer-experience', icon: Users },
-      { name: 'AI & Security', href: '/services/ai-security', icon: Shield },
-      { name: 'AI & Supply Chain', href: '/services/ai-supply-chain', icon: Network },
-      { name: 'AI & Healthcare', href: '/services/ai-healthcare', icon: Heart },
-      { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
-      { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket },
-      { name: 'Blockchain & Web3', href: '/services/blockchain', icon: Code },
-      { name: 'IoT & Edge Computing', href: '/services/iot-edge', icon: Zap },
-      { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
-      { name: 'Digital Transformation', href: '/services/digital-transformation', icon: TrendingUp },
-      { name: 'Metaverse & VR', href: '/services/metaverse-vr', icon: Globe },
-      { name: 'Enterprise Software', href: '/services/enterprise-software', icon: Building },
-      { name: 'Mobile Development', href: '/services/mobile-development', icon: Smartphone }
-    ],
-  },
-  microSaas: {
-    title: 'Micro SAAS',
-    items: [
-      { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence' },
-      { name: 'Customer Experience', href: '/micro-saas/customer-experience' },
-      { name: 'Quantum Computing', href: '/micro-saas/quantum-computing' },
-      { name: 'Supply Chain', href: '/micro-saas/supply-chain' },
-      { name: 'Cybersecurity', href: '/micro-saas/cybersecurity' },
-      { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge' },
-      { name: 'Content Creation', href: '/micro-saas/content-creation' },
-      { name: 'HR Platform', href: '/micro-saas/hr-platform' },
-      { name: 'Metaverse Business', href: '/micro-saas/metaverse-business' },
-      { name: 'Quantum Finance', href: '/micro-saas/quantum-finance' },
-      { name: 'AI Healthcare', href: '/micro-saas/ai-healthcare' },
-      { name: 'Blockchain Identity', href: '/micro-saas/blockchain-identity' }
-    ],
-  },
-  marketplace: {
-    title: 'Marketplace',
-    items: [
-      { name: 'Products', href: '/marketplace' },
-      { name: 'Services', href: '/services' },
-      { name: 'Talent', href: '/talent' },
-      { name: 'Equipment', href: '/equipment' },
-      { name: 'Categories', href: '/categories' },
-      { name: 'Green IT', href: '/green-it' },
-      { name: 'IT Onsite Services', href: '/it-onsite-services' },
-    ],
-  },
-  company: {
-    title: 'Company',
-    items: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Blog', href: '/blog' },
-      { name: 'Partners', href: '/partners' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'Contact', href: '/contact' },
-      { name: 'FAQ', href: '/faq' },
-      { name: 'Sitemap', href: '/sitemap' },
-    ],
-  },
-  support: {
-    title: 'Support & Resources',
-    items: [
-      { name: 'Help Center', href: '/help' },
-      { name: 'Contact Support', href: '/contact' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Security', href: '/security' },
-      { name: 'System Status', href: '/status' },
-    ],
-  },
-};
-
-const socialLinks = [
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-marketplace', icon: Linkedin },
-  { name: 'Facebook', href: 'https://www.facebook.com/zionmarketplace', icon: Facebook },
-  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
-  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
-];
-
-const contactInfo = {
-  phone: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
+import { ArrowUpIcon } from '@heroicons/react/24/outline';
 
 export function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+  const currentYear = new Date().getFullYear();
 
   const serviceCategories = [
     {

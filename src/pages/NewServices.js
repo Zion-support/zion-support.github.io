@@ -4,44 +4,51 @@ import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
 import { ADVANCED_INNOVATIVE_SERVICES } from '../data/advancedInnovativeServices';
 import { EMERGING_TECH_SERVICES } from '../data/emergingTechServices';
 export function NewServices() {
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [searchTerm, setSearchTerm] = useState('');
-    const [selectedService, setSelectedService] = useState(null);
-    // Combine all services
-    const allServices = [
-        ...COMPREHENSIVE_SERVICES,
-        ...ADVANCED_INNOVATIVE_SERVICES,
-        ...EMERGING_TECH_SERVICES
-    ];
-    // Get unique categories
-    const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))];
-    const filteredServices = allServices.filter(service => {
-        const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-        const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            (('tags' in service && 'tags' in service && service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))) || false);
-        return matchesCategory && matchesSearch;
-    });
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1
-            }
-        }
-    };
-    const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.5
-            }
-        }
-    };
-    return (<div className="min-h-screen bg-zion-blue-dark text-white relative overflow-hidden">
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchTerm, setSearchTerm] = useState<string>('');
+  const [selectedService, setSelectedService] = useState<any>(null);
+
+  // Combine all services
+  const allServices: any[] = [
+    ...COMPREHENSIVE_SERVICES,
+    ...ADVANCED_INNOVATIVE_SERVICES,
+    ...EMERGING_TECH_SERVICES
+  ];
+  
+  // Get unique categories
+  const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))];
+  
+  const filteredServices = allServices.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         ('tags' in service && service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
+    return matchesCategory && matchesSearch;
+  });
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-zion-blue-dark text-white relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-quantum-gradient opacity-20 animate-pulse"></div>
       <div className="absolute inset-0 bg-quantum-mesh"></div>
