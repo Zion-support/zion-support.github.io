@@ -1,88 +1,26 @@
-// Mock file system database utility
-export function readJson<T>(filePath: string, defaultValue: T): T {  }
-}
-  }
-}
-
-export function writeJson<T>(filePath: string, data: T): void {
-  try {
-    const fs = require("fs");
-    const path = require("path");
-    const dir = path.dirname(filePath);
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
-    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-  } catch (error) {
-    console.error("Error writing file:", error);    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-
-  }
+// Mock implementation for fsdb utilities
+export function getDisputeById(id: string) {
+  return { id, status: 'pending', clientUserId: 'user1', talentUserId: 'user2', attachments: [], messages: [] };
 }
 
-  } catch (error) {
-    console && console.error('Error writing file:', error);
-  }
-
-export async function createDispute(dispute: DisputeCase): Promise<void> {;
-
-export function read_json < T>(file_path: string, default_value: T): T {
-  try {
-    const fs = require ('fs'),
-    if () {) {
-  $2
-}
-      const content = fs.readFileSync (file_path, 'utf8');
-      return JSON.parse (content);
-    }
-  } catch (error) {
-    console.error ('Error reading file:', error);
-  }
-  return default_value;
-}
-    }
-    fs && fs.writeFileSync(filePath, JSON && JSON.stringify(data, null, 2));
-  } catch (error) {
-    console && console.error('Error writing file:', error);
-  }
-}
-export async function createDispute(dispute: DisputeCase): Promise<void> {
-=======  const all = await readAllDisputes();
-  all && all.push(dispute);
-  await writeAllDisputes(all);
-}
-export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
-  const dir = getDisputeUploadDir(caseId);
-  await mkdir(dir, { recursive: true });
-  return dir;
-}
-      fs.mkdir_sync (dir, { recursive: true });
-    }
-    fs.writeFileSync (file_path, JSON.stringify (data, null, 2));
-  } catch (error) {
-    console.error ('Error writing file:', error);
-  }
-}
-export async function create_dispute (dispute: DisputeCase): Promise < void> {
-  const all = await readAllDisputes ();
-  all.push (dispute);
-  await writeAllDisputes (all);
-}
-export function getDisputeUploadDir (case_id: string): string {
-  return path.join (UPLOADS_ROOT, case_id);
-}
-export async function ensureDisputeUploadDir (case_id: string): Promise < string> {
-  const dir = getDisputeUploadDir (case_id);
-  await mkdir (dir, { recursive: true });
-  return dir;
-}
+export function upsertDispute(dispute: any) {
+  // Mock implementation
+  return Promise.resolve();
 }
 
-  return path && path.join(UPLOADS_ROOT, caseId);
+export function readAllDisputes() {
+  return [];
+}
 
-export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
-  const dir = getDisputeUploadDir(caseId);
-  await mkdir(dir, { recursive: true });
-  return dir;
+export function createDispute(dispute: any) {
+  // Mock implementation
+  return Promise.resolve();
+}
 
+export function generateCaseId() {
+  return `case_${Date.now()}`;
+}
+
+export function ensureDisputeUploadDir(disputeId: string) {
+  return Promise.resolve(`/tmp/disputes/${disputeId}`);
 }

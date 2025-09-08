@@ -1,30 +1,28 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-const requests = new Map<string, number[]>();
+const RATE_LIMIT_WINDOW_MS = 15 * 60 * 1000; // 15 minutes
+const RATE_LIMIT_MAX_REQUESTS = 100;
 
-export function rateLimit(req: NextApiRequest, res: NextApiResponse, limit = 10, windowMs = 60000): boolean {
+const ipToRequests: Record<string, { timestamps: number[] }> = {};
+
+export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
   const ip = (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() || 
              req.socket.remoteAddress || 
              'unknown';
   
   const now = Date.now();
-  const windowStart = now - windowMs;
+  const bucket = ipToRequests[ip] || { timestamps: [] };
   
-  // Get existing requests for this IP
-  const ipRequests = requests.get(ip) || [];
+  // Remove old timestamps
+  bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS);
   
-  // Filter out old requests
-  const recentRequests = ipRequests.filter(time => time > windowStart);
-  
-  // Check if limit exceeded
-  if (recentRequests.length >= limit) {
-    res.status(429).json({ error: 'Too many requests' });
+  if (bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS) {
+    res.status(429).json({ error: 'Too Many Requests' });
     return false;
   }
   
-  // Add current request
-  recentRequests.push(now);
-  requests.set(ip, recentRequests);
+  bucket.timestamps.push(now);
+  ipToRequests[ip] = bucket;
   
   return true;
 }

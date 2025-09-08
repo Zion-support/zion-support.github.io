@@ -2,12 +2,13 @@ export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | '
 
 export interface ModerationFlag {
   id: string;
-  contentType: 'post' | 'comment' | 'user';
-  contentId: string;
-  reason: string;
-  userEmail: string;
+  type: 'content' | 'user' | 'spam' | 'inappropriate';
   status: ModerationStatus;
-  createdAt: string;
-  updatedAt: string;
+  reportedBy: string;
+  reportedAt: string;
+  content: string;
+  reason: string;
   adminNotes?: string;
+  resolvedAt?: string;
+  resolvedBy?: string;
 }

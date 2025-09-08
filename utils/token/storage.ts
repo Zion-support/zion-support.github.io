@@ -1,21 +1,17 @@
 import { TokenConfig } from './service';
 
-class TokenStore {
-  private config: TokenConfig = {
-    name: 'Zion Token',
-    symbol: 'ZION',
-    totalSupply: 1000000,
-    circulatingSupply: 500000,
-    exchangeRate: 0.1
-  };
+let config: TokenConfig = {
+  totalSupply: 1000000,
+  issued: 0,
+  reserved: 100000
+};
 
+export const tokenStore = {
   getConfig(): TokenConfig {
-    return this.config;
+    return { ...config };
+  },
+  
+  setConfig(newConfig: Partial<TokenConfig>): void {
+    config = { ...config, ...newConfig };
   }
-
-  setConfig(config: Partial<TokenConfig>): void {
-    this.config = { ...this.config, ...config };
-  }
-}
-
-export const tokenStore = new TokenStore();
+};

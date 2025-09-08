@@ -2,69 +2,75 @@ export interface TokenTransaction {
   id: string;
   userId: string;
   amount: number;
-  type: 'earn' | 'spend' | 'transfer';
-  description: string;
-  timestamp: string;
+  type: 'issue' | 'revoke' | 'transfer';
+  reason: string;
+  timestamp: number;
 }
 
 export interface TokenConfig {
-  name: string;
-  symbol: string;
   totalSupply: number;
-  circulatingSupply: number;
-  exchangeRate: number;
+  issued: number;
+  reserved: number;
 }
 
-// Mock data for development
-const mockTransactions: TokenTransaction[] = [
-  {
-    id: '1',
-    userId: 'user1',
-    amount: 100,
-    type: 'earn',
-    description: 'Task completion reward',
-    timestamp: new Date().toISOString()
-  }
-];
-
-const mockConfig: TokenConfig = {
-  name: 'Zion Token',
-  symbol: 'ZION',
+const transactions: TokenTransaction[] = [];
+let config: TokenConfig = {
   totalSupply: 1000000,
-  circulatingSupply: 500000,
-  exchangeRate: 0.1
+  issued: 0,
+  reserved: 100000
 };
 
-export function getAllTransactions(): TokenTransaction[] {
-  return mockTransactions;
+export function getConfig(): TokenConfig {
+  return { ...config };
 }
 
-export function getConfig(): TokenConfig {
-  return mockConfig;
+export function getAllTransactions(): TokenTransaction[] {
+  return [...transactions];
 }
 
 export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
+  if (config.issued + amount > config.totalSupply - config.reserved) {
+    throw new Error('Insufficient token supply');
+  }
+  
   const tx: TokenTransaction = {
-    id: Date.now().toString(),
+    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
-    type: 'earn',
-    description: reason,
-    timestamp: new Date().toISOString()
+    type: 'issue',
+    reason,
+    timestamp: Date.now()
   };
-  mockTransactions.push(tx);
+  
+  transactions.push(tx);
+  config.issued += amount;
+  
   return tx;
 }
 
 export function revokeTokens(userId: string, amount: number, reason: string): TokenTransaction {
+  const userBalance = getUserBalance(userId);
+  if (userBalance < amount) {
+    throw new Error('Insufficient user balance');
+  }
+  
   const tx: TokenTransaction = {
-    id: Date.now().toString(),
+    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount: -amount,
-    type: 'spend',
-    description: reason,
-    timestamp: new Date().toISOString()
+    type: 'revoke',
+    reason,
+    timestamp: Date.now()
   };
-  mockTransactions.push(tx);
+  
+  transactions.push(tx);
+  config.issued -= amount;
+  
   return tx;
+}
+
+export function getUserBalance(userId: string): number {
+  return transactions
+    .filter(tx => tx.userId === userId)
+    .reduce((sum, tx) => sum + tx.amount, 0);
 }

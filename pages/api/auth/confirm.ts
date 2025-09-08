@@ -1,14 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(,
-    req: NextApiRequest, r,
-    es: NextApiResponse) {
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET' && req.method !== 'POST') {
     res.status(405).end();
-    return
+    return;
   }
   
-  //,
-    TODO: Implement confirmation logic here
-  res.status(200).json({,
-    message: 'Confirm endpoint placeholder' });
+  // TODO: Implement confirmation logic here
+  res.status(200).json({ message: 'Confirm endpoint placeholder' });
 } 

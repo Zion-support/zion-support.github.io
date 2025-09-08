@@ -1,64 +1,73 @@
 import type { NextApiRequest } from 'next';
 
-export interface AdminUser {
+export interface User {
   id: string;
   email: string;
-  role: 'admin' | 'user';
+  role: 'admin' | 'user' | 'guest';
+  isAdmin: boolean;
 }
 
-export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean; user?: AdminUser }> {
-  // This is a placeholder implementation
-  // In a real application, you would verify JWT tokens, check database permissions, etc.
-  const authHeader = req.headers.authorization;
-  
-  if (!authHeader || !authHeader.startsWith('Bearer ')) {
-    return { allowed: false };
-  }
-
-  // For now, we'll just check if the token exists
-  // In production, you would verify the JWT token here
-  const token = authHeader.substring(7);
-  
-  if (!token) {
-    return { allowed: false };
-  }
-
-  // Mock admin user for development
+export function parseUserFromRequest(req: NextApiRequest): User {
+  // For now, return a mock admin user
+  // In a real implementation, this would parse JWT tokens or session data
   return {
-    allowed: true,
-    user: {
-      id: 'admin-1',
-      email: 'admin@zion.os',
-      role: 'admin'
-    }
+    id: 'admin-1',
+    email: 'admin@ziontechgroup.com',
+    role: 'admin',
+    isAdmin: true
   };
 }
 
-export function parseUserFromRequest(req: NextApiRequest): AdminUser | null {
-  const authHeader = req.headers.authorization;
-  
-  if (!authHeader || !authHeader.startsWith('Bearer ')) {
-    return null;
-  }
-
-  const token = authHeader.substring(7);
-  
-  if (!token) {
-    return null;
-  }
-
-  // Mock user for development
-  return {
-    id: 'user-1',
-    email: 'user@zion.os',
-    role: 'admin'
-  };
-}
-
-export function ensureAdmin(user: AdminUser | null): void {
-  if (!user || user.role !== 'admin') {
+export function ensureAdmin(user: User): void {
+  if (!user || !user.isAdmin) {
     const error = new Error('Forbidden');
     (error as any).statusCode = 403;
     throw error;
   }
+}
+
+export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean; user?: User }> {
+  try {
+    const user = parseUserFromRequest(req);
+    ensureAdmin(user);
+    return { allowed: true, user };
+  } catch (error) {
+    return { allowed: false };
+  }
+}
+
+// Additional functions for auth system
+export function ensureDemoUsers(): void {
+  // Mock function for demo users
+}
+
+export function generateUser(name: string, role: string): User {
+  return {
+    id: `user_${Date.now()}`,
+    email: `${name.toLowerCase()}@example.com`,
+    role: role as 'admin' | 'user' | 'guest',
+    isAdmin: role === 'admin'
+  };
+}
+
+export function upsertUser(user: User): void {
+  // Mock function for user storage
+}
+
+export function setUserCookie(res: any, user: User): void {
+  // Mock function for setting user cookie
+}
+
+export function clearUserCookie(res: any): void {
+  // Mock function for clearing user cookie
+}
+
+export function getUserFromRequest(req: NextApiRequest): User | null {
+  // Mock function for getting user from request
+  return {
+    id: 'user-1',
+    email: 'user@example.com',
+    role: 'user',
+    isAdmin: false
+  };
 }

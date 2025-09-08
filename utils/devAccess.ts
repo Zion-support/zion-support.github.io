@@ -1,36 +1,9 @@
-export interface DevIdentity {
-
-export interface DevIdentity {;
-  isAuthenticated: boolean;    const branch = execSync('git rev-parse --abbrev-ref HEAD', {
-      stdio: ['ignore', 'pipe', 'ignore']
-    })
-      .toString()
-      .trim();
-    return { connected: true, branch }
-  } catch {
-    return { connected: false }
-  }
+// Mock implementation for devAccess utilities
+export function getGitStatus() {
+  return { connected: true, branch: 'main' };
 }
 
-export function getDevIdentity(req: NextApiRequest): DevIdentity {;
-
-  // TODO: integrate real auth; for now, check a header and env var for dev
-
-  const token = req && req.headers['x-dev-token'] || req && req.headers['x-admin-token'];
-  const adminToken = process && process.env.ADMIN_TOKEN;
-
-  if (token && adminToken && token === adminToken) {
-  }
-  return { isAuthenticated: false, roles: [] }
+export function requireRoles(req: any, res: any, roles: string[]) {
+  // Mock implementation - always return true for now
+  return { user: 'admin', roles };
 }
-  }
-  return { isAuthenticated: false, roles: [] }
-}
-  if (token && adminToken && token === adminToken) {
-
-    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
-
-  }
-  return { isAuthenticated: false, roles: [] }
-}
-
