@@ -39,8 +39,8 @@ const queryClient = new QueryClient({
 const appConfig: AppConfig = {
   name: 'Zion Tech Group',
   version: '1.0.0',
-  environment: (import.meta.env.MODE as any) || 'development',
-  apiUrl: import.meta.env.VITE_API_URL || '/api',
+  environment: (process.env.NODE_ENV as any) || 'development',
+  apiUrl: process.env.REACT_APP_API_URL || '/api',
   features: {
     analytics: true,
     notifications: true,
