@@ -46,11 +46,38 @@ export default defineConfig({
     },
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          animations: ['framer-motion'],
-          ui: ['lucide-react', 'clsx', 'tailwind-merge']
+        manualChunks: (id) => {
+          // Vendor chunks
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'vendor-react';
+            }
+            if (id.includes('react-router')) {
+              return 'vendor-router';
+            }
+            if (id.includes('framer-motion')) {
+              return 'vendor-animations';
+            }
+            if (id.includes('lucide-react') || id.includes('clsx') || id.includes('tailwind-merge')) {
+              return 'vendor-ui';
+            }
+            if (id.includes('@tanstack/react-query')) {
+              return 'vendor-query';
+            }
+            if (id.includes('axios') || id.includes('swr')) {
+              return 'vendor-api';
+            }
+            // All other node_modules
+            return 'vendor';
+          }
+          // Page chunks
+          if (id.includes('/pages/')) {
+            return 'pages';
+          }
+          // Component chunks
+          if (id.includes('/components/')) {
+            return 'components';
+          }
         }
       }
     }

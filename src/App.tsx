@@ -17,19 +17,19 @@ const Contact = lazy(() => import('./pages/Contact'));
 const Pricing = lazy(() => import('./pages/Pricing'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
-// Service Pages
-import AIServices from './pages/AIServices';
-import ITServices from './pages/ITServices';
-import MicroSaaS from './pages/MicroSaaS';
-import Cybersecurity from './pages/Cybersecurity';
-import CloudMigration from './pages/CloudMigration';
-import MobileDevelopment from './pages/MobileDevelopment';
+// Service Pages - Lazy loaded for better performance
+const AIServices = lazy(() => import('./pages/AIServices'));
+const ITServices = lazy(() => import('./pages/ITServices'));
+const MicroSaaS = lazy(() => import('./pages/MicroSaaS'));
+const Cybersecurity = lazy(() => import('./pages/Cybersecurity'));
+const CloudMigration = lazy(() => import('./pages/CloudMigration'));
+const MobileDevelopment = lazy(() => import('./pages/MobileDevelopment'));
 
-// Additional Pages
-import FAQ from './pages/FAQ';
-import Privacy from './pages/Privacy';
-import Terms from './pages/Terms';
-import Support from './pages/Support';
+// Additional Pages - Lazy loaded for better performance
+const FAQ = lazy(() => import('./pages/FAQ'));
+const Privacy = lazy(() => import('./pages/Privacy'));
+const Terms = lazy(() => import('./pages/Terms'));
+const Support = lazy(() => import('./pages/Support'));
 
 function App() {
   return (
