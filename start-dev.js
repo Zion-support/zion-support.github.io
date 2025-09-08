@@ -27,5 +27,4 @@ process.on('SIGTERM', () => {
   console.log('Stopping development server...');
   devProcess.kill('SIGTERM');
   process.exit(0);
-});=======
-});>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+});

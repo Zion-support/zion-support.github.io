@@ -1,15 +1,4 @@
-=======import Link from 'next/link';
-import MainLayout from './components/layout/MainLayout';
 
-const Home = () => {
-  return (
-    <MainLayout =======
-import Link from 'next/link';
-import MainLayout from './components/layout/MainLayout';
-
-const Home = () => {
-  return (
-    <MainLayout >>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
       title="Zion Tech Group - Leading Technology Solutions Provider"
       description="Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence."
     >
@@ -20,9 +9,7 @@ const Home = () => {
               Welcome to Zion Tech Group
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-==============
-              Leading technology solutions provider helping businesses transform their digital presence 
-              with cutting-edge AI, cloud architecture, and innovative development services.>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-6 mb-12">
@@ -37,35 +24,7 @@ const Home = () => {
             <div className="grid md:grid-cols-3 gap-8 mt-16">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-colors">
                 <div className="text-4xl mb-4">🤖</div>
-=======                <h3 className="text-2xl font-semibold mb-4">
-                  AI & Machine Learning
-                </h3>
-                <p className="text-lg">
-                  Custom AI solutions, chatbots, predictive analytics, and
-                  machine learning models tailored to your business needs.
-                </p>
-                <Link
-                  href="/services/ai-services"
-                  className="text-blue-200 hover:text-white mt-4 inline-block font-semibold"
-                >
-=======
-              Leading technology solutions provider helping businesses transform their digital presence 
-              with cutting-edge AI, cloud architecture, and innovative development services.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row justify-center gap-6 mb-12">
-              <Link href="/services" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
-                Explore Our Services
-              </Link>
-              <Link href="/contact" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
-                Get Free Consultation
-              </Link>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8 mt-16">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-colors">
-                <div className="text-4xl mb-4">🤖</div>
-=======>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+
                 <h3 className="text-2xl font-semibold mb-4">AI & Machine Learning</h3>
                 <p className="text-lg">Custom AI solutions, chatbots, predictive analytics, and machine learning models tailored to your business needs.</p>
                 <div className="mt-4 text-sm text-blue-200">
@@ -75,23 +34,21 @@ const Home = () => {
                   <p>• Computer Vision Solutions</p>
                 </div>
                 <Link href="/services" className="text-blue-200 hover:text-white mt-4 inline-block font-semibold">
->>>>>>> origin/main=======
->>>>>>> origin/main
-=======
->>>>>>> origin/main
->>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+
+
+
                   Learn More →
                 </Link>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-colors">
                 <div className="text-4xl mb-4">☁️</div>
                 <h3 className="text-2xl font-semibold mb-4">Cloud Solutions</h3>
-=======>>>>>>> origin/main                  Learn More →
+
                 </Link>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-colors">
                 <div className="text-4xl mb-4">🚀</div>
-=======>>>>>>> origin/main                  Learn More →
+
                 </Link>
               </div>
             </div>
@@ -138,8 +95,7 @@ const Home = () => {
                 <div className="text-lg">Happy Clients</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-blue-200 mb-2">24/7</div>=======
-                <div className="text-4xl font-bold text-blue-200 mb-2">24/7</div>>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+                <div className="text-4xl font-bold text-blue-200 mb-2">24/7</div>
                 <div className="text-lg">Support Available</div>
               </div>
               <div className="text-center">
@@ -171,5 +127,4 @@ const Home = () => {
   );
 };
 
-export default Home;=======
-export default Home;>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+export default Home;

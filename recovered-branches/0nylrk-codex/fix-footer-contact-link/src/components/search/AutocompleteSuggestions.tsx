@@ -6,7 +6,7 @@ import { SearchSuggestion, SearchHighlight } from "@/types/search",;
 import {SearchSuggestion, SearchHighlight} from "@/types/search";""
 import React from "react";""
 import { SearchSuggestion, SearchHighlight } from "@/types/search";""
-import React from "react",""
+import React from "react";""
 import { SearchSuggestion, SearchHighlight } from "@/types/search",""
 import { SearchSuggestion, SearchHighlight } from "@/types/search","
 interface AutocompleteSuggestionsProps {
@@ -16,7 +16,7 @@ interface AutocompleteSuggestionsProps {
   searchTerm: string;
   onSelectSuggestion: (suggestion: string) => void;,
   visible: boolean;"
-import React from "react",;""
+import React from "react";;""
 import { SearchSuggestion, SearchHighlight } from "@/types/search",;"
 pr-12325
 interface AutocompleteSuggestionsProps {;

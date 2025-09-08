@@ -16,7 +16,7 @@ export function ApiErrorCodes() {;
 
     {
       "field": "budget.min";
-      "error": "Budget minimum must be greater than 0"import React from "react",
+      "error": "Budget minimum must be greater than 0"import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { CodeBlock } from "@/components/developers/CodeBlock";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",

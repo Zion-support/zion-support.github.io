@@ -93,7 +93,7 @@ export function EnterpriseTestimonials() {;
                         src={testimonial && testimonial.image}
                         alt={testimonial && testimonial.author}
                         className="h-full w-full object-cover"
-import React from "react",;
+import React from "react";;
 import { Quote } from "lucide-react",;
 import {;
   Carousel,;

@@ -245,7 +245,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';
         
       if (productError) {
         throw new Error(productError.message)
-import React from "react",;
+import React from "react";;
 import { useForm, ControllerRenderProps } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import z from "zod",;

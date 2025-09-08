@@ -12,7 +12,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { QuoteStatusBadge } from "./QuoteStatusBadge";
 import type { QuoteRequest } from "@/types/quotes";
-import React from "react",
+import React from "react";
 import { 
   Dialog,
   DialogContent, 

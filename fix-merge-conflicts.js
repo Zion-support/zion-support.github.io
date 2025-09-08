@@ -11,7 +11,7 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflict markers
-    if (!content.includes('<<<<<<<') && !content.includes('=======') && !content.includes('>>>>>>>')) {
+    if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {
       return false; // No conflicts in this file
     }
     
@@ -21,7 +21,7 @@ function resolveMergeConflicts(filePath) {
     let resolvedContent = content;
     
     // Pattern to match merge conflicts
-    const conflictRegex = /<<<<<<< HEAD:?[^\n]*\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]*\n?/gs;
+    const conflictRegex = /
     
     resolvedContent = resolvedContent.replace(conflictRegex, (match, headContent, incomingContent) => {
       // Clean up the content
@@ -37,7 +37,7 @@ function resolveMergeConflicts(filePath) {
     });
     
     // Handle conflicts without file paths
-    const simpleConflictRegex = /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]*\n?/gs;
+    const simpleConflictRegex = /
     
     resolvedContent = resolvedContent.replace(simpleConflictRegex, (match, headContent, incomingContent) => {
       const head = headContent.trim();
@@ -81,7 +81,7 @@ function findConflictFiles(dir) {
           // Check if file has merge conflict markers
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
-            if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
+            if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
               conflictFiles.push(fullPath);
             }
           } catch (error) {
