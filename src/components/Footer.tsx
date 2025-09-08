@@ -41,25 +41,12 @@ import { Twitter,
   Eye,
   Atom,
   Code,
-  Database,
-  Network,
-  Server,
-  Leaf,
-  Satellite,
-  Link as LinkIcon,
-  Brain as BrainIcon,
-  Atom as AtomIcon,
-  Rocket as RocketIcon,
-  Leaf as LeafIcon,
-  Shield as ShieldIcon,
-  Zap as ZapIcon,
-  Cpu as CpuIcon,
-  Database as DatabaseIcon,
-  Users as UsersIcon,
-  Workflow,
-  MessageCircle,
-  BarChart3,
-  Smartphone
+  BookOpen,
+  Truck,
+  ExternalLink,
+  ChevronDown,
+  Copyright,
+  LifeBuoy
 } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 
@@ -84,118 +71,45 @@ const footerSections = [
       { name: 'About Us', path: '/about', icon: Users },
       { name: 'Partners', path: '/partners', icon: Users },
       { name: 'Careers', path: '/careers', icon: Briefcase },
-      { name: 'Contact', path: '/contact', icon: Phone },
       { name: 'Blog', path: '/blog', icon: Newspaper },
-      { name: 'Case Studies', path: '/case-studies', icon: FileText },
       { name: 'News', path: '/news', icon: Newspaper },
-      { name: 'FAQ', path: '/faq', icon: HelpCircle },
-      { name: 'Help Center', path: '/help', icon: HelpCircle }
+      { name: 'Contact', path: '/contact', icon: Phone }
     ]
   },
   {
-    title: 'AI & Machine Learning',
+    title: 'Services',
     icon: Brain,
     links: [
-      { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
-      { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: Shield },
-      { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
-      { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: TrendingUp },
-      { name: 'AI Financial Analytics', path: '/services/ai-financial-analytics', icon: DollarSign },
-      { name: 'AI Customer Support Automation', path: '/services/ai-customer-support-automation', icon: MessageCircle }
-    ]
-  },
-  {
-    title: 'AI Autonomous Services',
-    icon: Shield,
-    links: [
-      { name: 'AI Autonomous Forensics', path: '/ai-autonomous-forensics', icon: Shield },
-      { name: 'AI Threat Intelligence', path: '/ai-autonomous-threat-intelligence', icon: AlertTriangle },
-      { name: 'AI Mobile Security', path: '/ai-autonomous-mobile-security', icon: Smartphone },
-      { name: 'AI Governance', path: '/ai-autonomous-governance', icon: Gavel }
-    ]
-  },
-  {
-    title: 'Advanced Technology',
-    icon: Cpu,
-    links: [
-      { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Cpu },
-      { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: Shield },
-      { name: 'Quantum Computing', path: '/services/quantum-computing', icon: Atom },
-      { name: 'Space Technology', path: '/space-tech', icon: Satellite },
-      { name: 'Digital Twin', path: '/services/digital-twin', icon: Eye },
-      { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Network },
-      { name: 'Zero Trust Network', path: '/services/zero-trust-network-access', icon: Lock },
-      { name: 'Sustainable Technology', path: '/services/sustainable-technology', icon: Leaf },
-      { name: 'AI Predictive Maintenance', path: '/services/ai-predictive-maintenance', icon: TrendingUp }
-    ]
-  },
-  {
-    title: 'Cloud & Infrastructure',
-    icon: Cloud,
-    links: [
-      { name: 'Cloud DevOps', path: '/services/cloud-devops', icon: Server },
-      { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building },
-      { name: 'FinOps Advisor', path: '/services/finops-advisor', icon: DollarSign },
-      { name: 'Cloud FinOps Optimizer', path: '/services/cloud-finops-optimizer', icon: BarChart3 },
-      { name: 'Cloud Migration', path: '/services/cloud-migration', icon: Truck },
-      { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-      { name: 'Data Analytics', path: '/services/data-analytics', icon: BarChart3 },
-      { name: 'IoT Solutions', path: '/services/iot-edge-computing', icon: Activity }
+      { name: 'AI Services', path: '/ai-services', icon: Brain },
+      { name: 'IT Services', path: '/it-services', icon: Cpu },
+      { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
+      { name: 'Cybersecurity', path: '/services/ai-cybersecurity-platform', icon: Shield },
+      { name: 'Micro SaaS', path: '/micro-saas', icon: ShoppingCart },
+      { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Zap }
     ]
   },
   {
     title: 'Solutions',
     icon: Target,
     links: [
-      { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
-      { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart }
+      { name: 'Enterprise', path: '/solutions/enterprise', icon: Building },
+      { name: 'Healthcare', path: '/solutions/healthcare', icon: Heart },
+      { name: 'Financial Services', path: '/solutions/financial', icon: DollarSign },
+      { name: 'Manufacturing', path: '/solutions/manufacturing', icon: Truck },
+      { name: 'Retail & E-commerce', path: '/solutions/retail', icon: ShoppingCart },
+      { name: 'Government', path: '/solutions/government', icon: Building }
     ]
   },
   {
-    title: 'Micro SaaS Solutions',
-    icon: ShoppingCart,
+    title: 'Resources',
+    icon: BookOpen,
     links: [
-      { name: 'Micro SaaS Platform', path: '/micro-saas', icon: ShoppingCart },
-      { name: 'Micro CRM', path: '/services/micro-crm', icon: Users },
-      { name: 'Helpdesk Platform', path: '/services/helpdesk', icon: MessageCircle },
-      { name: 'Website Analytics', path: '/services/website-analytics', icon: BarChart3 },
-      { name: 'IT Helpdesk', path: '/services/it-helpdesk', icon: HelpCircle },
-      { name: 'Affiliate Tracking', path: '/services/affiliate-tracking', icon: TrendingUp },
-      { name: 'Mobile Survey', path: '/services/mobile-survey', icon: Smartphone },
-      { name: 'Email Sequencer', path: '/services/email-sequencer', icon: Mail },
-      { name: 'Podcast Transcription', path: '/services/podcast-transcription', icon: Video },
-      { name: 'Returns Management', path: '/services/returns-management', icon: Truck }
-    ]
-  },
-  {
-    title: 'Solutions',
-    icon: Target,
-    links: [
-      { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
-      { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart },
-      { name: 'Financial Solutions', path: '/solutions/financial', icon: DollarSign },
-      { name: 'Government Solutions', path: '/solutions/government', icon: Building },
-      { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', icon: Cpu },
-      { name: 'Retail Solutions', path: '/solutions/retail', icon: ShoppingCart }
-    ]
-  },
-  {
-    title: 'Support & Resources',
-    icon: HelpCircle,
-    links: [
-      { name: 'Help Center', path: '/help', icon: HelpCircle },
-      { name: 'FAQ', path: '/faq', icon: HelpCircle },
-      { name: 'Documentation', path: '/documentation', icon: BookOpen },
-      { name: 'API Documentation', path: '/api-docs', icon: Code },
-      { name: 'Developer Portal', path: '/developer', icon: Cpu },
-      { name: 'Training', path: '/training', icon: GraduationCap },
-      { name: 'Blog', path: '/blog', icon: BookOpen },
-      { name: 'News', path: '/news', icon: Newspaper },
       { name: 'Case Studies', path: '/case-studies', icon: FileText },
+      { name: 'FAQ', path: '/faq', icon: HelpCircle },
+      { name: 'Help Center', path: '/help', icon: LifeBuoy },
       { name: 'Pricing', path: '/pricing', icon: DollarSign },
-      { name: 'Contact Support', path: '/contact', icon: MessageCircle },
       { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart },
-      { name: 'Sitemap', path: '/sitemap', icon: FileText }
+      { name: 'Sitemap', path: '/sitemap', icon: Globe }
     ]
   }
 ];
