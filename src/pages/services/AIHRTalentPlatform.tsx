@@ -1,4 +1,4 @@
-
+import { Search, CheckCircle, ExternalLink, Phone, Mail, Sparkles, Target, TrendingUp, Briefcase, Award } from 'lucide-react';
 
 export default function AIHRTalentPlatform() {
   const features = [

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Loader2, Zap, Brain, Atom } from 'lucide-react';
 
 
 interface EnhancedLoadingSpinnerProps {

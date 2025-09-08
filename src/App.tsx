@@ -1,20 +1,7 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { HelmetProvider } from 'react-helmet-async';
-
-// Layout Components
-import { AppHeader } from './layout/AppHeader';
-import { Footer } from './components/Footer';
-
-// Enhanced Components
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
-import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
-import { SEO } from './components/SEO';
-import { FloatingActionButton } from './components/FloatingActionButton';
-import { AdvancedAnalytics } from './components/AdvancedAnalytics';
-import { SmartNotificationSystem } from './components/SmartNotificationSystem';
+import { Routes, Route } from 'react-router-dom';import { AppHeader } from './layout/AppHeader';
+import { Sidebar } from './components/Sidebar';
+import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
 import LoadingSpinner from './components/ui/LoadingSpinner';
 import { ErrorBoundary } from './components/ErrorBoundary';

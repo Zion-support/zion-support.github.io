@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-
+import { Brain, TrendingUp, PenTool, Zap, CheckCircle, Target, Eye, Search, Phone, Mail, MapPin, BarChart3, Users, BookOpen, Image, Video, FileText, ShoppingCart, Building, DollarSign } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
 export default function AIContentMarketingSuite() {

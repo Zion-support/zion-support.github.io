@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-
+import { Search, BookOpen, MessageCircle, Phone, Mail, Clock, Video, Download, ChevronDown, ChevronRight, Settings, Zap, Cloud, Users, Rocket } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function Help() {

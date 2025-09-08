@@ -1,4 +1,4 @@
-
+import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Briefcase } from 'lucide-react';
 
 export default function AIHRRecruitment() {
   const features = [

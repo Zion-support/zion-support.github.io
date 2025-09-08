@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-
-import { motion, AnimatePresence } from 'framer-motion';
-
+import { Sun, Moon, Monitor } from 'lucide-react';
+import { motion } from 'framer-motion';
 type Theme = 'light' | 'dark' | 'system';
 
 interface ThemeToggleProps {

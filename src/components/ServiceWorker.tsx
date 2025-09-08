@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
+import { Wifi, WifiOff } from 'lucide-react';
 
 interface ServiceWorkerState {
   isInstalled: boolean;

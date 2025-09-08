@@ -1,4 +1,4 @@
-
+import { TrendingUp, Shield, CheckCircle, ExternalLink, Phone, Mail, Target, Zap, PieChart } from 'lucide-react';
 
 export default function AIFinancialAnalytics() {
   const features = [

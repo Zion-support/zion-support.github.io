@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
+import { Brain, Shield, Cloud, TrendingUp, Zap, Globe, Cpu, Network, Code, Rocket, FileText, Heart, ShoppingCart, CheckCircle, ArrowRight, Star, Clock, DollarSign, Search, Filter } from 'lucide-react';
 
 const solutionCategories = [
   {

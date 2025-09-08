@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-
+import { PenTool, Image, Video, CheckCircle, Search, Target, BarChart3 } from 'lucide-react';
 
 export default function AIContentGenerator() {
   const features = [

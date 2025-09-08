@@ -1,7 +1,7 @@
 
 
 import React, { useState } from 'react';
-
+import { GraduationCap, BookOpen, Users, Clock, Star, Search, Play, Brain, Cloud, Shield, Database, Zap, Globe, Target, Calendar, MapPin, DollarSign, FileText, Network, Star as StarIcon } from 'lucide-react';
 
 export default function Training() {
   const [searchQuery, setSearchQuery] = useState('');

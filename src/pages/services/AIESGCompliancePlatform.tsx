@@ -1,4 +1,4 @@
-
+import { Leaf, TrendingUp, CheckCircle, ExternalLink, Phone, Mail, Database, Award } from 'lucide-react';
 
 export default function AIESGCompliancePlatform() {
   const features = [

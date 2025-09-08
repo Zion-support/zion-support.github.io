@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useMemo } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-
+import React, { useState, useEffect, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Search, Filter, X, ChevronDown, Star, Tag, MapPin, Calendar, Users, Zap, Brain, Cloud, Globe } from 'lucide-react';
 
 interface SearchResult {
   id: string;

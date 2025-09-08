@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Brain, Zap, Globe, ArrowRight, CheckCircle, Server, Cloud, Code, Rocket, Phone, Mail, DollarSign, Target, Image, Calculator, Plus, Key, TrendingUp } from 'lucide-react';
 
 
 export default function ComprehensivePricingGuide2028() {

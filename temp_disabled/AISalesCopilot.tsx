@@ -1,4 +1,7 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+import { Users, TrendingUp, Target, Zap, MessageCircle, BarChart3, Clock, Award, Star, Cpu, Search, Download, Share2, CheckCircle, ShoppingCart, Home, DollarSign, Heart } from 'lucide-react';
 
 import { SEO } from '@/components/SEO';
 

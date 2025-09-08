@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { Home, Briefcase, Users, Phone, Mail, MapPin, Linkedin, Twitter, Shield, Handshake, ChevronDown, ChevronRight, Brain, Database, Code, Target, Rocket, DollarSign, Cloud, Search, Building, Zap, Heart, BarChart3, CheckCircle, Building2, FileText, Quote, Newspaper, HelpCircle, Store, BookOpen } from 'lucide-react';
 
 
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen: unknown, onClose }: unknown) => {

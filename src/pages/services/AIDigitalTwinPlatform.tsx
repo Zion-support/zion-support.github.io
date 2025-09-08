@@ -1,4 +1,4 @@
-
+import { Cpu, TrendingUp, CheckCircle, ExternalLink, Phone, Mail, Target, Monitor, Network } from 'lucide-react';
 
 export default function AIDigitalTwinPlatform() {
   const features = [

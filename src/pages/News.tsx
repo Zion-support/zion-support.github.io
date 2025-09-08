@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-
+import { Newspaper, Calendar, User, ArrowRight, Search, Clock, Share2, Bookmark } from 'lucide-react';
 
 export default function News() {
   const [selectedCategory, setSelectedCategory] = useState('all');

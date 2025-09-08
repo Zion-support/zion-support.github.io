@@ -1,9 +1,9 @@
-import React, { useState, useMemo } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-
-import { Link  } from 'react-router-dom.ts';
-import { EXPANDED_INNOVATIVE_SERVICES_2025  } from '../data/expandedInnovativeServices2025';
-import { EMERGING_TECH_SERVICES_2025  } from '../data/emergingTechServices2025';
+import React, { useState, useMemo } from 'react';
+import { motion } from 'framer-motion';
+import { Brain, Cpu, Shield, Rocket, Zap, ArrowRight, CheckCircle, Star, Users, Target, Globe, Settings, Database, Network, Eye, TrendingUp, Clock, Phone, Mail, Search } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { EXPANDED_INNOVATIVE_SERVICES_2025 } from '../data/expandedInnovativeServices2025';
+import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
 interface Service {
   id: string;
   title: string;

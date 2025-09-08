@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
+import { CheckCircle, Star, Brain, Network, PenTool, Code, Shield, Cpu, Cloud, Warehouse, Route, Sparkles, ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
 
 const ComprehensivePricing2028 = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');

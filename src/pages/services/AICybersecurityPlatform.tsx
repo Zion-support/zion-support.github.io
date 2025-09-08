@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-
+import { Brain, Shield, Zap, Globe, Cloud, CheckCircle, Activity, Target, Eye, Phone, Mail, MapPin, Cpu, Network, Laptop } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
 export default function AICybersecurityPlatform() {

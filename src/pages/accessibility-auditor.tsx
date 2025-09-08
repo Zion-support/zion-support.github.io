@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-
+import { Accessibility } from 'lucide-react';
 
 const AccessibilityAuditor: React.FC = () => {
   const features = [

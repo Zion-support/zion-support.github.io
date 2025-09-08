@@ -1,4 +1,4 @@
-
+import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Users } from 'lucide-react';
 
 export default function AIGaming() {
   const features = [

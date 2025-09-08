@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
-
+import { ArrowRight, Brain, Zap, Shield, Cloud, Cpu, Rocket, Heart, Users, BarChart3, Star, CheckCircle, Phone, Mail, MapPin, Globe, TrendingUp, Award, Target, Zap as Lightning, Cpu as Chip, Rocket as SpaceRocket, Star as StarShape, Infinity } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from '../data/innovativeMicroSaasServices2026';
 

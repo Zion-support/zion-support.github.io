@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
+import { Brain, Shield, Server, Zap, Globe, Cpu, Database, Network, Lock, Rocket, Filter, MessageCircle, Phone, Globe as GlobeIcon, Atom, Satellite, Eye, EyeOff, Zap as ZapIcon, Brain as BrainIcon, Dna, Space, Layers, Monitor, Smartphone, Leaf, Shield as ShieldIcon, Lock as LockIcon, Database as DatabaseIcon, Server as ServerIcon, Smartphone as SmartphoneIcon, Monitor as MonitorIcon, Globe as GlobeIcon2, Cpu as CpuIcon, Brain as BrainIcon2, Atom as AtomIcon, Rocket as RocketIcon, Satellite as SatelliteIcon, Dna as DnaIcon, Layers as LayersIcon, Monitor as MonitorIcon2, Smartphone as SmartphoneIcon2, Globe as GlobeIcon3, Cpu as CpuIcon2, Network as NetworkIcon, Leaf as LeafIcon } from 'lucide-react';
 import { SEO } from "@/components/SEO";
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
 

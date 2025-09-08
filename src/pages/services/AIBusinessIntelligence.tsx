@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
-
+import { Brain, BarChart3, TrendingUp, Users, Target, Zap, Shield, Cloud, CheckCircle, Star, Award, Globe } from 'lucide-react';
 
 export default function AIBusinessIntelligence() {
   const features = [

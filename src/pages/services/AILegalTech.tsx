@@ -1,4 +1,4 @@
-
+import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Zap, Gavel } from 'lucide-react';
 
 export default function AILegalTech() {
   const features = [

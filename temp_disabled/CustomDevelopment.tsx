@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-
+import { Smartphone, Globe, Database, Shield, Target, CheckCircle, TrendingUp, Settings, Workflow, Monitor, Cpu, Network, GitFork } from 'lucide-react';
 
 export default function CustomDevelopment() {
   const services = [

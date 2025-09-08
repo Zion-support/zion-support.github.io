@@ -1,31 +1,8 @@
-  Shield, 
-  Zap, 
-  Brain, 
-  TrendingUp, 
-  Users, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Award,
-  Lightbulb,
-  Database,
-  Network,
-  Server,
-  Globe,
-  Clock,
-  BarChart3,
-  Cpu,
-  Lock,
-  Eye,
-  Target,
-  Rocket,
-  Sparkles,
-  AlertTriangle,
-  Fingerprint,
-  Key,
-  Monitor,
-  Activity
-} from 'lucide-react';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '@/components/SEO';
+import { Shield, Zap, Brain, CheckCircle, ArrowRight, Eye, Target } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
 export default function AICybersecuritySuite() {
   const features = [

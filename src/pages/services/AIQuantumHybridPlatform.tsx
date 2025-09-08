@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-
-import { SEO } from '../../components/SEO';
+import { Atom, Brain, Shield, TrendingUp, Globe, ArrowRight, CheckCircle, BarChart3, Network, Phone, Mail, MapPin, TestTube } from 'lucide-react';
 
 const AIQuantumHybridPlatform: React.FC = () => {
   const features = [

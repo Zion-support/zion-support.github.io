@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
+import { BookOpen, Target, FileText, Users, Code, HelpCircle, DollarSign, ArrowRight, Star, Cloud, Play, Phone, Mail, MapPin, ExternalLink, Award, GitBranch, GitCommit } from 'lucide-react';
 
 export default function Resources() {
   const resourceCategories = [

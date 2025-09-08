@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Volume2, Contrast, Keyboard, Monitor, Settings, X, Check } from 'lucide-react';
 
 interface AccessibilitySettings {
   highContrast: boolean;

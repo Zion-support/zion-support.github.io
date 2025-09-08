@@ -1,6 +1,6 @@
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-
+import { Shield, Brain, Lock, Eye, Key, CheckCircle } from 'lucide-react';
 
 const AICybersecurity: React.FC = () => {
   const features = [

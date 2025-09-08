@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
+import { Sparkles, Target, CheckCircle, ArrowRight, Star, Zap, Brain, Shield, Cloud, Cpu, Database, Search, Filter, Settings, Settings as SettingsIcon } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 const Match: React.FC = () => {

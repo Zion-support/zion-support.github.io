@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';import { Users, Calendar, Clock, Target, AlertCircle, CheckCircle, XCircle, Plus, Edit, Trash2, Eye, Download, Share2, Filter, Search, BarChart3, Cloud, Globe, Briefcase, Building, Server, Database } from 'lucide-react';
 
 interface Resource {
   id: string;

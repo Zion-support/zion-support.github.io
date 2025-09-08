@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-
+import { Server, Network, Shield, Zap, ArrowRight, Cloud } from 'lucide-react';
 
 export default function Infrastructure() {
   const features = [

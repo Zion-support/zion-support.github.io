@@ -1,4 +1,4 @@
-
+import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Users } from 'lucide-react';
 
 export default function AIPredictiveAnalytics() {
   const features = [

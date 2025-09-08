@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
+import { TrendingUp, Shield, Brain, Globe, ArrowRight, CheckCircle, Clock, Users, Target, Sparkles, BarChart3, MessageSquare, Mail, Database, Network, Leaf, Wallet, Box, Phone, Mail as MailIcon, Globe as GlobeIcon } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { INNOVATIVE_SERVICES_2025 } from '../data/innovativeServices2025';
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-
+import { Eye, EyeOff, Mail, Lock, Shield, Zap, Brain, Cloud, ArrowRight, Github, Linkedin, Building, AlertCircle, MessageCircle, Phone, MapPin, Mail as MailIcon, Shield as ShieldIcon, Activity, Atom, Network, Leaf, Lock as LockIcon } from 'lucide-react';
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-
+import { TrendingUp, Shield, Clock, Zap, Search, Eye, CheckCircle, Phone, Mail, Globe, DollarSign } from 'lucide-react';
 
 export default function AIFinancialTradingRiskManagement() {
   const features = [

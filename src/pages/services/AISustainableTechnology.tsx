@@ -1,4 +1,4 @@
-
+import { Leaf, ArrowRight, Check, ExternalLink, Phone, Mail, Globe, Zap, Target, Sun } from 'lucide-react';
 
 export default function AISustainableTechnology() {
   const features = [

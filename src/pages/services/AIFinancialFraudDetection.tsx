@@ -1,6 +1,6 @@
 import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
-
+import { Shield, Brain, BarChart3, Target, CheckCircle, ArrowRight, Star, Clock, DollarSign, TrendingUp } from 'lucide-react';
 
 const AIFinancialFraudDetection: React.FC = () => {
   const features = [

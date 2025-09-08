@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
+import { Brain, Rocket, Zap, Shield, Cpu, ArrowRight, Star, Phone, Mail, MapPin, Award, Users, Target, BarChart3, Lightbulb, Heart, Zap as Lightning } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { emergingTechServices2030 } from '../data/emergingTechServices2030';
 

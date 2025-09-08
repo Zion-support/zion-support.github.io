@@ -1,5 +1,5 @@
 import { SEO } from '../components/SEO';
-
+import { Code, Zap, Users, TrendingUp, Shield, Building, Rocket, Cpu, BarChart3, Cloud, Target, CheckCircle } from 'lucide-react';
 
 export default function MicroSAASSolutions() {
   const services = [

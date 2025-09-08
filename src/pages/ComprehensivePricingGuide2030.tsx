@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Brain, Shield, Cloud, Star, CheckCircle, Phone, Mail, MapPin, ExternalLink, TrendingUp, Users, Award, Clock, DollarSign, Zap, Target, Search } from 'lucide-react';
+import { innovativeAIServices2030 } from '../data/innovativeAIServices2030';
+import { innovativeCybersecurityServices2030 } from '../data/innovativeCybersecurityServices2030';
+import { innovativeCloudDevOpsServices2030 } from '../data/innovativeCloudDevOpsServices2030';
 
 import { INNOVATIVE_SERVICES_2025 } from '@/data/innovativeServices2025';
 import { SEO } from '@/components/SEO';

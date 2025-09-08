@@ -1,6 +1,6 @@
 import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
-
+import { Atom, Cpu, Shield, Zap, Target, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink, Activity, Users, Clock, DollarSign, Lock, TrendingUp, Brain } from 'lucide-react';
 
 const QuantumComputingAsAService: React.FC = () => {
   const features = [

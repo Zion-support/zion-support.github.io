@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { useAdminQuotes } from "@/hooks/useAdminQuotes";
 import { useAuth } from "@/hooks/useAuth";
-import { Card } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card } from '@/components/ui/card';import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Navigate } from "react-router-dom";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { QuoteDetails } from "@/components/quotes/QuoteDetails";

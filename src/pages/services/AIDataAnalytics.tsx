@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
-
+import { BarChart3, Brain, Target, Zap, TrendingUp, Award, Star, Globe, Database, CheckCircle, Users, Shield, Search, Activity } from 'lucide-react';
 
 export default function AIDataAnalytics() {
   const features = [

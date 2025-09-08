@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-
+import { Cpu, Zap, Globe, Server, Network, Shield, Clock, CheckCircle, TrendingUp, Users, Satellite, Car, Factory, Building, Heart, MapPin } from 'lucide-react';
 
 const EdgeComputingPlatform: React.FC = () => {
   const features = [

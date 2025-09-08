@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Calendar, Clock, MapPin, Users, ArrowRight, Video, Globe } from 'lucide-react';
 
 
 export default function EventsPage() {

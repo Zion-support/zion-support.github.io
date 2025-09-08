@@ -1,5 +1,6 @@
-import Link from 'next/link';
-import { Brain, Shield, Cloud, Rocket, Users, BarChart3, Building, ArrowRight, CheckCircle, Phone, Mail, MapPin, Award, Users as UsersIcon, Globe as GlobeIcon, TrendingUp as TrendingUpIcon, Sparkles } from 'lucide-react';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Brain, Shield, Cloud, Rocket, Users, BarChart3, Building, ArrowRight, CheckCircle, Phone, Mail, MapPin, Award, Users as UsersIcon, Sparkles } from 'lucide-react';
 export default function NewServicesOverview() {
     const serviceCategories = [
         {

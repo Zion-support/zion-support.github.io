@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { Mail, ArrowLeft, CheckCircle, AlertCircle, Shield, Lock, Brain, Cloud, Rocket, ArrowRight, RefreshCw } from 'lucide-react';
 
 
 export default function ForgotPassword() {

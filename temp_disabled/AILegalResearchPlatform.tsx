@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-
+import { Brain, TrendingUp, CheckCircle, Scale } from 'lucide-react';
 
 export default function AILegalResearchPlatform() {
   const features = [

@@ -1,6 +1,6 @@
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-
+import { Brain, Zap, Target, CheckCircle, Database } from 'lucide-react';
 
 const QuantumMachineLearning: React.FC = () => {
   const features = [

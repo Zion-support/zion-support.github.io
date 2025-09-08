@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-
+import { Search, ArrowRight, GitFork, MessageSquare, Brain, Shield, Cpu, Zap, Rocket, Heart, Users, BarChart3, Star, Phone, Mail, MapPin } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2026, SPECIALIZED_SERVICES_2026 } from '../data/innovativeMicroSaasServices2026';
 

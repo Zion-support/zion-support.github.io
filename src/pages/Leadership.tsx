@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-
+import { Globe, Shield, Brain, Heart, ArrowRight, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function Leadership() {

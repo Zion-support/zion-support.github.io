@@ -454,11 +454,11 @@ const optimizeForPerformance = (code) => {
         return code
             .replace(/<div>/g, '<div role="main">')
             .replace(/<button>/g, '<button aria-label="Action button">')
-            .replace(/<img/g, '<img alt="Description"')};
-    // Helper functions for test generation;
-const generateJestTests = (_code) => {
-        return `import { render, screen, fireEvent } from '@testing-library/react';
-import GeneratedComponent from './GeneratedComponent';
+            .replace(/<img/g, '<img alt="Description"');
+    };
+    // Helper functions for test generation
+    const generateJestTests = (_code) => {
+        return `import { render, screen } from '@testing-library/react';import GeneratedComponent from './GeneratedComponent';
 
 describe('GeneratedComponent', () => {
   it('renders without crashing', () => {

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
-
+import { Shield, Search, AlertTriangle, CheckCircle, ArrowRight, Lock, Globe, Award, Lightbulb, Code, Bug } from 'lucide-react';
 
 export default function SmartContractRiskScanner() {
   const features = [

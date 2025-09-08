@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-
+import { Shield, Lock, Eye, Search, FileText, Users, CheckCircle, Zap, Globe, Cpu, ShieldCheck, FileCheck, Clock, TrendingUp, DollarSign, Building } from 'lucide-react';
 
 const AIDataGovernance: React.FC = () => {
   const features = [

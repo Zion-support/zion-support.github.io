@@ -1,6 +1,6 @@
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-
+import { Lock, Shield, Database, Zap, Network, TrendingUp, Bitcoin, FileText, CheckCircle } from 'lucide-react';
 
 export default function BlockchainEnterpriseSolutions() {
   const features = [

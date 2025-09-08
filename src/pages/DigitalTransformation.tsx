@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Rocket, Zap, Shield, Users, Star, Cpu, Database, Cloud, Clock, Check } from 'lucide-react';
 
 
 const transformationServices = [

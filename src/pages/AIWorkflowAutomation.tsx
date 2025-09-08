@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-
+import { Brain, Zap, CheckCircle, ArrowRight, Star, Code, FileText, Wrench, Target, Rocket, Gauge, Network, Cog, BarChart3, TrendingUp, Financial, Healthcare, Manufacturing, Data, Array,  } from 'lucide-react';
 
 const workflowSolutions = [
   {

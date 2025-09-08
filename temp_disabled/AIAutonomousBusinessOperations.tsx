@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
-
+import { Brain, Zap, TrendingUp, Shield, Users, BarChart3, Clock, DollarSign, CheckCircle, ArrowRight, Play, Target, Rocket, Globe, Cpu, Phone, Mail, MapPin, Star, Bot, Cog, Key, Video, Mail as MailIcon, Users as UsersIcon, Briefcase, Heart, Globe as GlobeIcon, Video as VideoIcon, ArrowRight as ArrowRightIcon, Link as LinkIcon, Star as StarIcon, Heart as HeartIcon, Angry, Angry as AngryIcon,  } from 'lucide-react';
 
 const AIAutonomousBusinessOperations = () => {
   const features = [

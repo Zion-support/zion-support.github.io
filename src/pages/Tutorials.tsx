@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Clock, Star, Users, BookOpen, Target } from 'lucide-react';
 
 
 const Tutorials: React.FC = () => {

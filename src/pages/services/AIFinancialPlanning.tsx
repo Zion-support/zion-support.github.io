@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
-
+import { DollarSign, TrendingUp, Users, Zap, Globe, Lock, Star, Download, Share2, Play, CheckCircle, Clock, Brain, Target, PieChart, Activity, Calculator, CreditCard, AlertCircle, PiggyBank, Wallet, Receipt } from 'lucide-react';
 
 export default function AIFinancialPlanning() {
   const features = [

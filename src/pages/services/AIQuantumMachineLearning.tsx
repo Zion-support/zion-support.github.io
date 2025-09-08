@@ -1,4 +1,4 @@
-
+import { Atom, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, Brain, Target, Shield } from 'lucide-react';
 
 export default function AIQuantumMachineLearning() {
   const features = [

@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
+import { Brain, Shield, Globe, Cpu, Network, Search, Filter, Star, DollarSign, CheckCircle, Play, BookOpen, Phone, Mail, MapPin, Globe as GlobeIcon, Atom, Factory, Satellite, Eye, Download, Lightbulb, X } from 'lucide-react';
 
 // Import our existing service data
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data/ultimateInnovativeServices2026';

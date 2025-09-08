@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Users, Check, Phone, Mail, Zap, Target, Globe } from 'lucide-react';
 
 export default function AIHRTalentAcquisition() {
   const features = [

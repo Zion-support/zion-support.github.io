@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
+import { Search, Filter, Star, Globe, Zap, Shield, Brain, Users, TrendingUp, Award, DollarSign, CheckCircle, Rocket, Cpu, Network, BarChart3, Code, ShieldCheck, Phone, Mail, BarChart, FileText, MessageCircle, Truck, Car, Clipboard, Link, Microscope, X, Atom, Heart, Leaf } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 
 interface ServiceContact {

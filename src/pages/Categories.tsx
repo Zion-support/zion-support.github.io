@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 =======
 import React, { useState } from 'react';
-
+import { Database, Cloud, Shield, Brain, Zap, Globe, Cpu, Lock, BarChart3, Smartphone, Rocket, Target, Code, Network, Eye, Star, ArrowRight } from 'lucide-react';
 
 export default function Categories() {
   const [activeCategory, setActiveCategory] = useState('all');

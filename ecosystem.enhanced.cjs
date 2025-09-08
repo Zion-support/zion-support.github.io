@@ -35,10 +35,38 @@ module.exports = {
       }
     },
 
-    // 🚨 NEW: Comprehensive Error Fixer - HIGHEST PRIORITY (runs every 10 minutes)
+    // 🆕 NEW: Unused Import Cleaner - runs every 30 minutes (HIGH PRIORITY)
     {
-      name: 'comprehensive-error-fixer',
-      script: './scripts/automation/comprehensive-error-fixer.cjs',
+      name: 'unused-import-cleaner',
+      script: './scripts/automation/unused-import-cleaner.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      }
+    },
+
+    // 🆕 NEW: TypeScript Error Fixer - runs every 15 minutes (HIGHEST PRIORITY)
+    {
+      name: 'typescript-error-fixer',
+      script: './scripts/automation/typescript-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '900000' // 15 minutes
+      }
+    },
+
+    // 🆕 NEW: Code Quality Automator - runs every 10 minutes (HIGHEST PRIORITY)
+    {
+      name: 'code-quality-automator',
+      script: './scripts/automation/code-quality-automator.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -46,48 +74,6 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '600000' // 10 minutes
-      }
-    },
-
-    // 🔧 NEW: TypeScript Syntax Fixer - HIGH PRIORITY (runs every 15 minutes)
-    {
-      name: 'typescript-syntax-fixer',
-      script: './scripts/automation/typescript-syntax-fixer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '900000' // 15 minutes
-      }
-    },
-
-    // 🧹 NEW: ESLint Auto Fixer - HIGH PRIORITY (runs every 20 minutes)
-    {
-      name: 'eslint-auto-fixer',
-      script: './scripts/automation/eslint-auto-fixer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1200000' // 20 minutes
-      }
-    },
-
-    // 🏗️ NEW: Build Error Fixer - HIGH PRIORITY (runs every 30 minutes)
-    {
-      name: 'build-error-fixer',
-      script: './scripts/automation/build-error-fixer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1800000' // 30 minutes
       }
     },
 

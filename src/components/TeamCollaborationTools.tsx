@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';import { Users, MessageCircle, FileText, CheckCircle, Plus, Download, Share2, Edit, Trash2, Eye, Star, Cloud, Video, Send, Paperclip, File, Folder, ThumbsUp, Reply, MoreHorizontal, Target } from 'lucide-react';
 
 interface TeamMember {
   id: string;

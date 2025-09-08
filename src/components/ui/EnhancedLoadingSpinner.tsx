@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-
-
-interface EnhancedLoadingSpinnerProps extends React.PropsWithChildren<{}> {
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Loader2, Zap, Brain, Globe } from 'lucide-react';
 
 interface EnhancedLoadingSpinnerProps {
   message?: string;

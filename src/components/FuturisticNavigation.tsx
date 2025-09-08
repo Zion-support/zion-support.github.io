@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react.ts';
-import { Link, useLocation  } from 'react-router-dom.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { MobileSidebarToggle  } from './MobileSidebarToggle';
-
-export const FuturisticNavigation: React.FC = (): JSX.Element => {
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { MobileSidebarToggle } from './MobileSidebarToggle';
+import { Menu, Search, User, Bell, ChevronDown, Brain, Cloud, Zap, Network, Rocket, Users, FileText, Heart, ShoppingCart, Server, Calculator, DollarSign, Handshake } from 'lucide-react';
+export const FuturisticNavigation: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);

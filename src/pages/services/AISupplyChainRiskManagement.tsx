@@ -1,4 +1,4 @@
-
+import { Shield, AlertTriangle, TrendingUp, CheckCircle, ExternalLink, Phone, Mail, Database } from 'lucide-react';
 
 export default function AISupplyChainRiskManagement() {
   const features = [

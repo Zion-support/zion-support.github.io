@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
+import { Brain, Lock, Heart, MessageCircle, Star, TrendingUp, Zap, Eye, Car, Leaf, Satellite, Banknote, Building, Phone } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';
 import { SEO } from '../components/SEO';
 

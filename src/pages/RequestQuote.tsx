@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-
+import { Calculator, Send, CheckCircle, Users, FileText, MessageCircle, Phone, Building, Target, Star, ArrowRight, Cloud, Users as Team, Award, TrendingUp, Info } from 'lucide-react';
 
 interface QuoteForm {
   // Comp Information

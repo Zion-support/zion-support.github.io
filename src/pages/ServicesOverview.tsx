@@ -2,8 +2,7 @@ import React from 'react';
 import { SEO } from "@/components/SEO";
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-
+import { Search, Filter, Brain, Shield, Cloud, Zap, Globe, Star, CheckCircle, ArrowRight, Phone, Award, Clock, Target, Lock, ShoppingCart, Server, Sparkles, DollarSign, Users, Eye, Grid, List, ChevronRight, ChevronDown, Info, Globe, Zap, Target, Award, Clock, Users, Shield, Lock, Key, Eye, Info as InfoIcon } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { servicesCatalog } from '../data/servicesCatalog';
 

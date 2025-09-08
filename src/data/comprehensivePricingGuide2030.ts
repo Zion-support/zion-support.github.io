@@ -1,4 +1,6 @@
-import { ProductListing } from "@/types/listings";
+
+// Comprehensive Pricing Guide 2030 - Zion Tech Group
+// Complete pricing information for all services with market analysis and ROI projections
 
 export interface PricingTier {
   name: string;

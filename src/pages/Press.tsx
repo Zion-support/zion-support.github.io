@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-
+import { Newspaper, Calendar, ArrowRight, Download, Mail, Phone, Globe, Award, Users } from 'lucide-react';
 
 export default function Press() {
   const [selectedCategory, setSelectedCategory] = useState('all');

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-
+import { Atom, Zap, CheckCircle, ArrowRight, Brain, Globe, Shield, TrendingUp } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 export default function QuantumComputingSolutions() {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowUp, Globe, Heart, Zap, Shield, Cloud, Award } from 'lucide-react';
 
 const footerNavigation = {
 	services: {

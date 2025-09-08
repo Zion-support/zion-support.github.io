@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 
 import { SEO } from '../../components/SEO';
+import { Shield, Brain, Eye, Star, CheckCircle, ArrowRight, Search, Activity, Clock, DollarSign, Target, Network, Database } from 'lucide-react';
 
 export default function AICybersecurityThreatIntelligence() {
   const features = [

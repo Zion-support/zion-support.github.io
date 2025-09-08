@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
+import { TrendingUp, Users, BarChart3, Target, Zap, Shield, Globe, CheckCircle } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 export default function AffiliateMarketingTracker() {

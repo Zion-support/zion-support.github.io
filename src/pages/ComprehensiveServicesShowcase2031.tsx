@@ -1,7 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-
-import { SEO } from '../components/SEO';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Search, Cloud, CheckCircle, Target, X } from 'lucide-react';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2031 } from '../data/innovativeMicroSaasServices2031';
+import { SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031 } from '../data/specializedITInfrastructureServices2031';
+import { SPECIALIZED_AI_SERVICES_2031 } from '../data/specializedAIServices2031';
 
 interface ServiceContact {
   mobile: string;

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { ArrowRight, Zap, Shield, Cloud, Brain, Users, CheckCircle, Star, Clock } from 'lucide-react';
 
 
 const stats = [

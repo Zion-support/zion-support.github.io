@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-
+import { Shield, Lock, Eye, CheckCircle, ArrowRight, Play, Settings, Target, Network, Key, Fingerprint, Monitor, Globe2, Database } from 'lucide-react';
 
 const ZeroTrustNetworkAccess = () => {
   const features = [

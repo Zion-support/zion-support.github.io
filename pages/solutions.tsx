@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { Brain, Cloud, Shield, Zap, Users, TrendingUp, CheckCircle } from 'lucide-react';
 
 
 const solutions = [

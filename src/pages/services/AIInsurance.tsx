@@ -1,4 +1,4 @@
-
+import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, FileText } from 'lucide-react';
 
 export default function AIInsurance() {
   const features = [

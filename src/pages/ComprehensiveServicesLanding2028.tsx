@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-
+import { Cloud, Shield, Rocket, Heart, Globe, Users, CheckCircle, Star, TrendingUp, Award, Lightbulb, Scale, Truck, Target, Home, Wrench, FileText, Phone, Mail, MapPin, Clock, Target as TargetIcon, X, ChevronRight, ChevronLeft } from 'lucide-react';
 import { 
   revolutionaryMicroSaasServices2028, 
   revolutionaryITInfrastructureServices2028, 

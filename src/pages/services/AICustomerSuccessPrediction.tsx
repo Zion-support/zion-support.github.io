@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-
+import { Brain, TrendingUp, Users, Zap, Database, CheckCircle, Activity, Target, Phone, Mail, MapPin } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
 export default function AICustomerSuccessPrediction() {

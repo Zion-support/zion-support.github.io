@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-
+import { Flask, Brain, Atom, Shield, TrendingUp, Lightbulb, Code, Database, Microscope, Rocket, BookOpen, Users, ArrowRight } from 'lucide-react';
 
 const ResearchDevelopment: React.FC = () => {
   const [selectedArea, setSelectedArea] = useState('all');

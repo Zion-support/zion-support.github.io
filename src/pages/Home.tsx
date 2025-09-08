@@ -2,18 +2,7 @@
 import React, { Suspense, useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Users, 
-  Rocket, 
-  TrendingUp, 
-  Star, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Award, 
-  Globe, 
-  Heart 
-} from 'lucide-react';
+import { Users, TrendingUp, Award, Globe, Brain, Cloud, Zap, ArrowRight, CheckCircle, ChevronLeft, ChevronRight, Rocket, Sparkles, Zap as ZapIcon, Phone, Mail, MapPin, Atom, Zap as ZapIcon2 } from 'lucide-react';
 
 import { SEO } from '@/components/SEO';
 import { HeroSection } from '@/components/HeroSection';

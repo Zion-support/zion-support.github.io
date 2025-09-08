@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { ArrowRight, Cloud, Zap, Users, Globe, Search, Filter, Star, TrendingUp, Clock, Users2 } from 'lucide-react';
 
 
 <<<<<<< HEAD

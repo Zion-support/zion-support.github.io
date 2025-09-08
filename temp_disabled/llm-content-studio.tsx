@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-
+import { BookOpen, PenTool, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Mail, Target, Activity, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function LLMContentStudio() {

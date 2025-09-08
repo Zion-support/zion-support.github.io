@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
+import { BarChart3, TrendingUp, Activity, Zap, Users, CheckCircle, ArrowRight, Globe, Target, DollarSign } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 const Analytics: React.FC = () => {

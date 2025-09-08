@@ -1,4 +1,4 @@
-
+import { Mail, Check } from 'lucide-react';
 
 export default function EmailSequencer() {
 	const features = [

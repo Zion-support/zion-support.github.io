@@ -1,3 +1,6 @@
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Users, MessageCircle, TrendingUp, Star, Search, Filter, Plus, Heart, Share2, Bookmark, MoreHorizontal, User, Calendar, Tag, Eye } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 

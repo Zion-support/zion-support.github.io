@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
+import { Menu, X, Search, User, ChevronDown, Zap, Brain, Shield, Rocket, Globe, Heart, Atom, Star, TrendingUp, Network, ArrowRight, Sparkles, Satellite, Sparkles as SparklesIcon } from 'lucide-react';
 import { enhancedServicesCatalog2025 } from '../data/enhancedServicesCatalog2025';
 
 export const EnhancedHeader: React.FC = () => {

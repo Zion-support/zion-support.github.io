@@ -1,6 +1,6 @@
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-
+import { Leaf, Globe, CheckCircle, Sun, Recycle } from 'lucide-react';
 
 const SustainableTechnology: React.FC = () => {
   const features = [

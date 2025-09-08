@@ -5,9 +5,7 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { FilterSidebar } from "@/components/search/FilterSidebar";
 import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar";
 import { ProductListingCard } from "@/components/ProductListingCard";
-import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from "@/data/marketplaceData";
-import { generateRandomListing } from "@/utils/generateRandomListing";
-import { toast } from "@/hooks/use-toast";
+import { marketplaceItems } from '@/data/marketplaceData';import { generateRandomListing } from "@/utils/generateRandomListing";
 import { useNavigate } from "react-router-dom";
 export default function Marketplace() {
     const navigate = useNavigate();

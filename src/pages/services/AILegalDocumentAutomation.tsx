@@ -1,21 +1,4 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
-import { FileText, 
-  Shield, 
-  Clock, 
-  Zap, 
-  Search, 
-  Eye,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  Globe,
-  Users,
-  BarChart3,
-  Lock
- } from 'lucide-react';
+import { FileText, Shield, Check, ExternalLink, Phone, Mail, Zap, Scale, Lock } from 'lucide-react';
 
 export default function AILegalDocumentAutomation(...args[]):  {
   const features = [

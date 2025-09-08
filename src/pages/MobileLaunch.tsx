@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
+import { Smartphone, Download, Zap, Shield, Cloud, CheckCircle, ArrowRight, Star, Wifi, Battery, Settings, Bell, Home, User, BarChart3, MessageCircle, Play, Wifi as WifiIcon, Battery as BatteryIcon, Signal } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 const MobileLaunch: React.FC = () => {

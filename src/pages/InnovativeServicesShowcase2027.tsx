@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
+import { Brain, Rocket, Star, CheckCircle, ArrowRight, Search, Filter, Grid, List, ChevronDown } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '@/data/innovativeMicroSaasServices2027';
 import { EMERGING_TECH_SERVICES_2027 } from '@/data/emergingTechServices2027';
 export default function InnovativeServicesShowcase2027() {

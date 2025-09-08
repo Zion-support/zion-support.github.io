@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import { Search as SearchIcon, Filter, MapPin, Server, Users, Building, Star, ArrowRight } from 'lucide-react';
 import { useSearchParams } from 'react-router-dom';
 
 export default function SearchPage() {

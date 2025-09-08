@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
-
+import { PenTool, Brain, Shield, Users, Star, CheckCircle, ArrowRight, Palette, Video, Code, TrendingUp, Clock, DollarSign, Target } from 'lucide-react';
 
 export default function AIContentGenerationPlatform() {
   const features = [

@@ -4,56 +4,7 @@ import { Cloud, DollarSign, Gauge, CheckCircle, BarChart3, ArrowRight } from 'lu
 =======
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  DollarSign, 
-  TrendingDown, 
-  CheckCircle, 
-  Users, 
-  Clock, 
-  ArrowRight,
-  Play,
-  Settings,
-  Target,
-  Cpu,
-  Activity,
-  Sparkles,
-  Search,
-  Zap,
-  Globe,
-  Building,
-  BarChart3,
-  TrendingUp,
-  Network,
-  Key,
-  Fingerprint,
-  Monitor,
-  AlertTriangle,
-  ShieldCheck,
-  Globe2,
-  Server,
-  Database,
-  Smartphone,
-  Code,
-  FileText,
-  AlertCircle,
-  CheckSquare,
-  Calculator,
-  PieChart,
-  LineChart,
-  Target2,
-  Wallet,
-  PiggyBank,
-  CreditCard,
-  Receipt,
-  Cloud,
-  Zap,
-  Gauge,
-  BarChart4,
-  TrendingUp,
-  Lightbulb,
-  Rocket
-} from 'lucide-react';
->>>>>>> e220500ccca44de2253ff84a9759db22263da039
+import { Cpu, Network, CheckCircle, ArrowRight, Play, Settings, Target, Monitor, Database, Cloud, Shield, Scale, Wifi, Bluetooth, Sensor, Chip, Circuit } from 'lucide-react';
 
 const CloudFinOpsOptimizer = () => {
   const features = [

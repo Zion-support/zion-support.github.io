@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
+import { Brain, Cloud, Shield, Zap, Code, TrendingUp, Rocket, Network, BarChart3, Sparkles, Target, Users, CheckCircle } from 'lucide-react';
 
 
 const products = [

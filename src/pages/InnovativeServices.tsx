@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-
+import { Brain, Atom, Lock, Wifi, Shield, Eye, Globe2, Leaf, Rocket, TrendingUp, Award } from 'lucide-react';
 
 const InnovativeServices: React.FC = () => {
   const innovations = [

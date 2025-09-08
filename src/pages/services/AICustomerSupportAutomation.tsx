@@ -1,5 +1,5 @@
 import { SEO } from '@/components/SEO';
-
+import { MessageCircle, Bot, Check, ExternalLink, Phone, Mail, ArrowRight, Users, TrendingUp, Headphones } from 'lucide-react';
 
 export default function AICustomerSupportAutomation() {
   const features = [

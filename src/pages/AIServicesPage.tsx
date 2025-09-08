@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
+import { Brain, CheckCircle, Heart } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 const AIServicesPage = () => {

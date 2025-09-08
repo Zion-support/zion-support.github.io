@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-
+import { Brain, TrendingUp, CheckCircle, Building } from 'lucide-react';
 
 export default function AIHRPlatform() {
   const features = [

@@ -1,4 +1,4 @@
-
+import { Database, Shield, ArrowRight, Check, ExternalLink, Phone, Mail, Lock, Eye, FileText, Zap } from 'lucide-react';
 
 export default function AIDataGovernancePlatform() {
   const features = [

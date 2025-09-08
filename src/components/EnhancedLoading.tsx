@@ -1,8 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-
-
-interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';

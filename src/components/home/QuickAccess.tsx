@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';import { Link } from 'react-router-dom';
+import { Brain, Shield, Cloud, Globe, Code, Rocket, Server, ChevronRight, Star, Sparkles } from 'lucide-react';
 
 
   const quickLinks = [

@@ -1,4 +1,4 @@
-
+import { TrendingUp, CheckCircle, ExternalLink, Phone, Mail, Target, Monitor, Network, Wifi } from 'lucide-react';
 
 export default function AIEdgeComputingPlatform() {
   const features = [

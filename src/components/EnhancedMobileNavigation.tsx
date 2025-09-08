@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-
+import { Menu, X, ChevronDown, Home, Users, Briefcase, Phone, Info, HelpCircle, FileText, Zap, Shield, Cloud, Brain, Server, Rocket, MessageCircle, Mail, MapPin, Clock } from 'lucide-react';
 
 interface NavigationItem {
   label: string;

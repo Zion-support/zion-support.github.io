@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-
+import { motion } from 'framer-motion';import { Link } from 'react-router-dom';
+import { Globe, ArrowRight, CheckCircle, BarChart3, Eye, MessageSquare, Rocket, Star, Cloud, Satellite, Microscope, Flask, TestTube, Syringe, Stethoscope, HeartPulse, BrainCircuit, Leaf, Space, Handshake, Calendar, CreditCard, Wallet, Banknote, Coins, PiggyBank, Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode, Barcode, Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX, Building, Truck, Search, Phone, Mail, FileText, Image, Video, Music, Code, Palette, ShoppingCart, Truck, Rocket, Satellite, Microscope, Flask, TestTube, Syringe, Stethoscope, HeartPulse, BrainCircuit, Eye, Plus, CreditCard, Wallet, Banknote, Coins, PiggyBank, Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode, Barcode, Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX, Building, Leaf, Space, Handshake, Calendar } from 'lucide-react';
 
 const microSAASServices2028 = [
   // AI-Powered Content Creation

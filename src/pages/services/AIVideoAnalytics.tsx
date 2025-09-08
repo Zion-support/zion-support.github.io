@@ -1,4 +1,4 @@
-
+import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, Users } from 'lucide-react';
 
 export default function AIVideoAnalytics() {
   const features = [

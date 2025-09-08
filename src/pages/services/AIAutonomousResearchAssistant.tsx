@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-
-import { SEO } from '../../components/SEO';
+import { Brain, Search, BookOpen, TrendingUp, Zap, Shield, CheckCircle, ArrowRight, Lightbulb, Target } from 'lucide-react';
 
 const AIAutonomousResearchAssistant = () => {
   const features = [

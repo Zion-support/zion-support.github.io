@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
+import { Eye, Volume2, Type, Contrast, ZoomIn, ZoomOut, RotateCcw, Accessibility, Settings, X, CheckCircle, Info, Keyboard, MousePointer } from 'lucide-react';
 
 interface AccessibilitySettings {
   highContrast: boolean;

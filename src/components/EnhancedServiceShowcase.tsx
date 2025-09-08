@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { Brain, Cloud, Shield, Users, Globe, Code, Rocket, TrendingUp, Star, ArrowRight, Play, CheckCircle } from 'lucide-react';
 
 interface Service {
   id: string;

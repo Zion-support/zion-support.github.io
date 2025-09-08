@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-
+import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowUp, Globe, Shield, Zap, Brain, Cloud, Building, Users, FileText, Video, TestTube, TrendingUp, CheckCircle, Briefcase, Newspaper, Target, Heart, DollarSign, HelpCircle, Cpu, BarChart3, Lock, Eye, Atom, Network, Satellite, MessageCircle, Server, ShoppingCart, Smartphone, BookOpen, Copyright } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 
 interface FooterLink {

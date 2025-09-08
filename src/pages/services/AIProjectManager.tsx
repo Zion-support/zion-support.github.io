@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-
+import { CheckCircle, TrendingUp } from 'lucide-react';
 
 export default function AIProjectManager() {
   const features = [

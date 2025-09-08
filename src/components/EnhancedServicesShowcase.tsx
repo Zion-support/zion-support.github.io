@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
+import { Brain, GitFork, Shield, Atom, Cpu, Cloud, Zap, ArrowRight, Star, CheckCircle } from 'lucide-react';
 
 export const EnhancedServicesShowcase: React.FC = () => {
   const services = [

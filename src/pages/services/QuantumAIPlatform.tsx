@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import { SEO } from '@/components/SEO';
+import { Brain, Zap, Shield, TrendingUp, CheckCircle, ArrowRight, Star, Network, Atom, CpuIcon } from 'lucide-react';
 
 export default function QuantumAIPlatform() {
   const features = [

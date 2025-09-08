@@ -1,7 +1,7 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { Brain, Cloud, Code, Zap, Star, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
 // Import the new services
 import { ultimateInnovativeServices2025 } from '../../data/2025-ultimate-innovative-services-expansion';

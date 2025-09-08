@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import { Users, Heart, Zap, Globe, Award, ArrowRight, MapPin } from 'lucide-react';
 
 
 export default function Careers() {

@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { SEO } from "@/components/SEO";
 import { Link } from 'react-router-dom';
-
-import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE_SERVICE_SUBCATEGORIES_2025, ULTIMATE_PRICING_TIERS_2025, ULTIMATE_CONTACT_INFO_2025, ULTIMATE_SERVICE_GUARANTEES_2025 } from '@/data/ultimateRealServices2025';
-
+import { Rocket, ArrowRight, Phone, Mail, MapPin, Search } from 'lucide-react';
+import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025 } from '@/data/ultimateRealServices2025';
 export default function UltimateServicesShowcase2025() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-
+import { Zap, Shield, CheckCircle, ArrowRight, Star, Lock, Eye, Code, FileText, Wrench, Gauge, Network, Building, TrendingUp, Package, Financial, Healthcare, Manufacturing, Fintech, Platform, Data, Security, Decentralized, Array,  } from 'lucide-react';
 
 const blockchainSolutions = [
   {

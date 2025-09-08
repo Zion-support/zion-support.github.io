@@ -2,8 +2,7 @@ export default Blog;
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-
+import { Calendar, User, Search, Filter, ArrowRight, BookOpen, Eye } from 'lucide-react';
 
 function Blog() {
   const [selectedCategory, setSelectedCategory] = useState('all');

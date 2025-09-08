@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, useAnimation  } from 'framer-motion.ts';
-import { useInView  } from 'react-intersection-observer.ts';
-
+import React, { useState, useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { Users, TrendingUp, Star, Zap, Shield, Award, Rocket } from 'lucide-react';
 
 interface Stat {
   id: string;

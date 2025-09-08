@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react.ts';
-import { Link, useLocation  } from 'react-router-dom.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, Search, User, Bell, ChevronDown, Brain, Shield, Zap, Globe, Cpu, Network, Lock, Code, Rocket, Users, BarChart3, TrendingUp, FileText, Heart, ShoppingCart, Briefcase, Lightbulb, ShieldCheck, Server, Monitor, Wifi, Satellite, Atom, Dna, Microscope, Eye, Calculator, Home, Info, Phone, Crown } from 'lucide-react';
 
 export const EnhancedFuturisticNavigation: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

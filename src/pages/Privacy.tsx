@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-
+import { Shield, Lock, Eye, Users, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function Privacy() {

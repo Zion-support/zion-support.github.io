@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { MessageCircle, Send, Bot, User, Sparkles, X, Settings, Mic, MicOff, Paperclip, RefreshCw, ThumbsUp, ThumbsDown, Clock, CheckCircle } from 'lucide-react';
 
 interface ChatMessage {
   id: string;

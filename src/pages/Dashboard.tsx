@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-
+import { BarChart3, Shield, Cloud, Brain, Zap, Activity, DollarSign, CheckCircle, Settings, Bell, Plus, ArrowRight, Calendar, Database, Network, HelpCircle, Atom } from 'lucide-react';
 
 export default function Dashboard() {
   const stats = [

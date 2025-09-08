@@ -1,4 +1,4 @@
-
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, FileText } from 'lucide-react';
 
 export default function AIComplianceMonitoring() {
   const features = [

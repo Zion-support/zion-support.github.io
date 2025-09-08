@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-
+import { Shield, CheckCircle, Award, FileText, Users, Globe, Lock, Eye, Database, Network, Cloud, Monitor, AlertTriangle } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function Compliance() {

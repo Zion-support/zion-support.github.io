@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Search, AlertTriangle, Info, Settings, ArrowUpRight, RefreshCw } from 'lucide-react';
 
 interface SEOAnalysis {
   score: number;

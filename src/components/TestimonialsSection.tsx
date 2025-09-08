@@ -1,6 +1,5 @@
-import React, { useState } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';import { Quote, Star } from 'lucide-react';
 const testimonials = [
   {
     id: 1,

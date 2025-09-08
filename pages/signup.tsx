@@ -1,22 +1,7 @@
-import React from 'react';
-import Head from 'next/head.ts'
-import { motion  } from 'framer-motion.ts'
-import { useState  } from 'react.ts'
-import { User,
-  Mail,
-  Lock,
-  Eye,
-  EyeOff,
-  CheckCircle,
-  AlertCircle,
-  Building,
-  Phone,
-  Globe,
-  Shield,
-  Zap,
-  Brain,
-  Cloud
- } from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion'
+import { useState } from 'react'
+import { User, Mail, Lock, Eye, EyeOff, AlertCircle, Building, Phone, Globe, Shield, Zap, Brain, Cloud } from 'lucide-react';
 
 export default function Signup(...args[]: any):  {
   const [formData, setFormData] = useState({

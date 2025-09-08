@@ -52,7 +52,7 @@ import {
 } from 'lucide-react';
 import { Link as RouterLink } from 'react-router-dom';
 import { COMPREHENSIVE_SERVICES_INDEX_2030, SERVICE_CATEGORIES_2030, SERVICE_STATISTICS_2030 } from '../data/comprehensiveServicesIndex2030';
-
+import { COMPREHENSIVE_PRICING_GUIDE_2030, PRICING_CONTACT_2030 } from '../data/comprehensivePricingGuide2030';
 export default function ComprehensiveServicesLanding2030() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');

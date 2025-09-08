@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-
+import { Video, Calendar, Clock, Users, Play, Search, ExternalLink, Brain, Cloud, Shield, Database, Zap, Target } from 'lucide-react';
 
 export default function Webinars() {
   const [searchQuery, setSearchQuery] = useState('');

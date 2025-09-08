@@ -1,4 +1,5 @@
-
+import React from 'react';
+import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb } from 'lucide-react';
 
 const DigitalTransformation = () => {
   const transformationServices = [

@@ -1,4 +1,4 @@
-
+import { Shield, ArrowRight, Check, ExternalLink, Phone, Mail, TrendingUp, AlertTriangle, Zap, Target, Clock } from 'lucide-react';
 
 export default function AIFinancialRiskManagement() {
   const features = [

@@ -1,6 +1,6 @@
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-
+import { Users, Brain, Target, CheckCircle, Shield } from 'lucide-react';
 
 const AIHRPlatform: React.FC = () => {
   const features = [

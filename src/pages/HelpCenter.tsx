@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-
+import { Search, BookOpen, Video, FileText, MessageCircle, Mail, Phone, Users, Shield, Cloud, Brain, ArrowRight, Play, Star } from 'lucide-react';
 
 export default function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState('');

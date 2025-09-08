@@ -1,6 +1,6 @@
 import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
-
+import { Code, Terminal, BookOpen, Download } from 'lucide-react';
 
 const DeveloperPortal: React.FC = () => {
   const tools = [

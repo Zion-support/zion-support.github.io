@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
+import { Eye, Volume2, MousePointer, Keyboard, Settings, X, Plus, Minus, Contrast, Accessibility } from 'lucide-react';
 
 interface AccessibilitySettings {
   fontSize: number;

@@ -1,6 +1,6 @@
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-
+import { Heart, Shield, Database, Zap, Activity, FileText, Microscope, Pill, Brain } from 'lucide-react';
 
 export default function HealthcareTech() {
   const features = [

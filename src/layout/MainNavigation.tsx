@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-
+import { ChevronDown, Menu, X, Home, Cloud } from 'lucide-react';
 
 interface NavigationLink {
   key: string;

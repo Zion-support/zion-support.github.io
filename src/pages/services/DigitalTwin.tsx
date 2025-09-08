@@ -1,6 +1,6 @@
 
 import { motion } from 'framer-motion';
-
+import { Eye, ArrowRight, CheckCircle, Cloud, Server, Database, Lock, Globe, Cpu, Monitor } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
 

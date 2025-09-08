@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { SEO } from "../components/SEOHead";
-import { innovativeServices2027 } from '../data/innovativeServices2027';
-
+import { INNOVATIVE_SERVICES_2027 } from '@/data/innovativeServices2027';
+import { Brain, Shield, Zap, Code, Signal, Users, ArrowRight, Phone, Mail, MapPin, CheckCircle, Globe } from 'lucide-react';
 
 const AllServices2027: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');

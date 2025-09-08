@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Smartphone, Monitor, RotateCw, Touch, Hand, Wifi, Battery, Settings, X, CheckCircle, Zap, Shield, Target, RotateCcw, Save, Loader2, Smartphone as PhoneIcon, Wifi as WifiIcon, Battery as BatteryIcon, ArrowLeft, RotateCw as Rotate, MousePointer, Clock } from 'lucide-react';
 
 
 interface MobileOptimization {

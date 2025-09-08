@@ -1,6 +1,6 @@
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-
+import { PenTool, Brain, Image, Video, CheckCircle } from 'lucide-react';
 
 const AIContentCreation: React.FC = () => {
   const features = [

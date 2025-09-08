@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-
-import { servicesCatalog  } from '../data/servicesCatalog';
-import { innovativeServices2027  } from '../data/innovativeServices2027';
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';import { DollarSign, ArrowRight, ExternalLink, Search, Filter, Phone, Mail, MapPin, Calculator, BarChart3, Target, Zap, Shield, Brain, Rocket } from 'lucide-react';
+import { servicesCatalog } from '../data/servicesCatalog';
+import { innovativeServices2027 } from '../data/innovativeServices2027';
 
 export const ComprehensivePricingGuide2027: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');

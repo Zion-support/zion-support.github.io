@@ -1,34 +1,7 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
-import { 
-  Building, 
-  Users, 
-  BarChart3, 
-  MessageSquare, 
-  Calendar, 
-  FileText, 
-  CreditCard, 
-  Globe,
-  Lock,
-  Zap,
-  TrendingUp,
-  CheckCircle,
-  Star,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Shield,
-  Database,
-  Search,
-  Video,
-  Code,
-  Server,
-  Network,
-  Cloud,
-  Smartphone,
-  Settings} from "lucide-react";
+import { Building, Users, BarChart3, MessageSquare, Calendar, FileText, CreditCard, Globe, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink, Search, Video, Cloud, BarChart } from 'lucide-react';
 export default function MicroSAASServicesPage() {
     const microSAASServices = [
         {

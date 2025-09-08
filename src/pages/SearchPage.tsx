@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-
+import { Search, Filter, ArrowRight, TrendingUp, Brain, Cloud, Shield, Zap, Users, Server, Network, Lock, FileText, Code, BookOpen, Calendar, Atom, TrendingUp as TrendingUpIcon, Tag, Bookmark, Share2, Eye, Calendar as CalendarIcon, Tag as TagIcon } from 'lucide-react';
 
 interface SearchResult {
   id: string;

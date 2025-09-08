@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { Calendar, Clock, MapPin, Users, Filter, Search, ArrowRight, Globe, Zap, Brain, Shield, Cloud, TrendingUp, BookOpen, CheckCircle } from 'lucide-react';
 
 const events = [
   {

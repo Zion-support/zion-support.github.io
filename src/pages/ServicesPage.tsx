@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
+import { Brain, Shield, Server, Zap, Globe, Cpu, Lock, Rocket, Users, Search, Filter, Star, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, MessageCircle, Phone, Globe as GlobeIcon } from 'lucide-react';
 import { SEO } from "@/components/SEO";
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "@/data/innovativeMicroSaasServices2025";
 import { ADDITIONAL_MICRO_SAAS_SERVICES_2025, ADDITIONAL_SPECIALIZED_SERVICES } from "@/data/additionalServices2025";
