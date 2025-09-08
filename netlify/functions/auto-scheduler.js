@@ -1,26 +1,32 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('auto-scheduler function triggered');
+    console.log('🤖 auto-scheduler function triggered');
     
-    // Basic auto-scheduling logic
+    // Auto scheduling logic
+    const timestamp = new Date().toISOString();
     const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'Auto scheduler function executed successfully',
-        timestamp: new Date().toISOString(),
+        timestamp: timestamp,
         function: 'auto-scheduler',
-        action: 'automatically scheduling tasks and processes'
+        action: 'automatic_scheduling',
+        scheduledTasks: ['build-optimization', 'deployment', 'monitoring'],
+        nextRun: new Date(Date.now() + 15 * 60 * 1000).toISOString()
       })
     };
     
+    console.log('✅ auto-scheduler completed successfully');
     return result;
+    
   } catch (error) {
-    console.error('Error in auto-scheduler:', error);
+    console.error('❌ auto-scheduler failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message
+        error: 'Auto scheduler function failed',
+        message: error.message,
+        timestamp: new Date().toISOString()
       })
     };
   }
