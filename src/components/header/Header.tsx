@@ -248,9 +248,26 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
                 <span>kleber@ziontechgroup.com</span>
               </div>
             </div>
-            <div className="flex items-center space-x-2">
-              <Globe className="w-3 h-3 text-zion-cyan" />
-              <span>Middletown, DE</span>
+            <div className="flex items-center space-x-4">
+              <Link to="/support" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                Support
+              </Link>
+              <Link to="/careers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                Careers
+              </Link>
+              <Link to="/pricing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                Pricing
+              </Link>
+              <Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                Contact
+              </Link>
+              <div className="flex items-center space-x-2">
+                <span className="text-zion-slate-light text-xs">Follow us:</span>
+                <a href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer" 
+                   className="text-zion-slate-light hover:text-zion-cyan transition-colors">LinkedIn</a>
+                <a href="https://twitter.com/ziontechgroup" target="_blank" rel="noopener noreferrer" 
+                   className="text-zion-slate-light hover:text-zion-cyan transition-colors">Twitter</a>
+              </div>
             </div>
           </div>
         </div>

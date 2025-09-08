@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Database, 
+  Factory, 
   Cpu, 
   Zap, 
   Brain, 
@@ -14,6 +14,7 @@ import {
   Gauge,
   BarChart3,
   Workflow,
+  Database,
   Lock,
   Globe,
   Clock,
@@ -301,14 +302,14 @@ import {
   CalendarFlipVertical100
 } from 'lucide-react';
 
-export default function AIEnterpriseResourcePlanning() {
+export default function AIAutonomousManufacturingPlatform() {
   return (
     <>
       <Helmet>
-        <title>AI Enterprise Resource Planning | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered ERP platform that autonomously manages enterprise resources, processes, and operations with unprecedented efficiency." />
-        <meta name="keywords" content="AI ERP, enterprise resource planning, business automation, AI business management, enterprise AI, business intelligence" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-enterprise-resource-planning" />
+        <title>AI Autonomous Manufacturing Platform | Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered manufacturing platform that autonomously optimizes production processes, quality control, and supply chain management." />
+        <meta name="keywords" content="AI manufacturing, autonomous manufacturing, smart factory, Industry 4.0, predictive maintenance, quality control, supply chain optimization" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-autonomous-manufacturing-platform" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate-darker to-zion-slate-dark">
@@ -318,14 +319,14 @@ export default function AIEnterpriseResourcePlanning() {
           <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-4xl mx-auto">
               <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-full text-sm font-medium mb-6">
-                <Database className="w-4 h-4 mr-2" />
-                AI-Powered ERP
+                <Factory className="w-4 h-4 mr-2" />
+                AI-Powered Manufacturing
               </div>
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                AI Enterprise Resource Planning
+                AI Autonomous Manufacturing Platform
               </h1>
               <p className="text-xl lg:text-2xl text-zion-slate-light mb-8 leading-relaxed">
-                Revolutionizing enterprise management with autonomous AI that optimizes resources, processes, and operations across your entire organization.
+                Revolutionizing manufacturing with autonomous AI that optimizes production processes, quality control, and supply chain management in real-time.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
@@ -344,61 +345,61 @@ export default function AIEnterpriseResourcePlanning() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Revolutionary ERP Capabilities
+                Revolutionary Manufacturing Capabilities
               </h2>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-                Our AI platform autonomously manages and optimizes every aspect of enterprise operations, from finance to human resources.
+                Our AI platform autonomously manages and optimizes every aspect of manufacturing operations, from production planning to quality assurance.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-zion-slate-dark p-8 rounded-xl border border-zion-purple/20 hover:border-zion-cyan/40 transition-all duration-300 group">
                 <div className="w-16 h-16 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zion-cyan/30 transition-all duration-300">
-                  <Brain className="w-8 h-8 text-zion-cyan" />
+                  <Cpu className="w-8 h-8 text-zion-cyan" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">AI-Powered Business Intelligence</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Autonomous Production Control</h3>
                 <p className="text-zion-slate-light">
-                  Advanced AI algorithms analyze business data, identify patterns, and provide actionable insights for strategic decision-making.
+                  AI autonomously manages production schedules, machine operations, and workflow optimization for maximum efficiency.
                 </p>
               </div>
 
               <div className="bg-zion-slate-dark p-8 rounded-xl border border-zion-purple/20 hover:border-zion-cyan/40 transition-all duration-300 group">
                 <div className="w-16 h-16 bg-zion-purple/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zion-purple/30 transition-all duration-300">
-                  <Workflow className="w-8 h-8 text-zion-purple" />
+                  <Settings className="w-8 h-8 text-zion-purple" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Automated Process Management</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Predictive Maintenance</h3>
                 <p className="text-zion-slate-light">
-                  Intelligent workflow automation that streamlines business processes and eliminates manual tasks across all departments.
+                  Advanced AI algorithms predict equipment failures and maintenance needs, preventing costly downtime and production delays.
                 </p>
               </div>
 
               <div className="bg-zion-slate-dark p-8 rounded-xl border border-zion-purple/20 hover:border-zion-cyan/40 transition-all duration-300 group">
                 <div className="w-16 h-16 bg-zion-blue/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zion-blue/30 transition-all duration-300">
-                  <BarChart3 className="w-8 h-8 text-zion-blue" />
+                  <Eye className="w-8 h-8 text-zion-blue" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Real-time Analytics</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Quality Control Automation</h3>
                 <p className="text-zion-slate-light">
-                  Comprehensive dashboards and real-time reporting provide instant visibility into all aspects of your business operations.
+                  AI-powered vision systems and sensors automatically detect defects and ensure consistent product quality across all production lines.
                 </p>
               </div>
 
               <div className="bg-zion-slate-dark p-8 rounded-xl border border-zion-purple/20 hover:border-zion-cyan/40 transition-all duration-300 group">
                 <div className="w-16 h-16 bg-zion-green/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zion-green/30 transition-all duration-300">
-                  <Users className="w-8 h-8 text-zion-green" />
+                  <Workflow className="w-8 h-8 text-zion-green" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Human Resource Management</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Supply Chain Optimization</h3>
                 <p className="text-zion-slate-light">
-                  AI-powered HR management with automated recruitment, performance tracking, and employee development planning.
+                  Intelligent supply chain management with real-time inventory tracking, demand forecasting, and automated procurement.
                 </p>
               </div>
 
               <div className="bg-zion-slate-dark p-8 rounded-xl border border-zion-purple/20 hover:border-zion-cyan/40 transition-all duration-300 group">
                 <div className="w-16 h-16 bg-zion-orange/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zion-orange/30 transition-all duration-300">
-                  <DollarSign className="w-8 h-8 text-zion-orange" />
+                  <BarChart3 className="w-8 h-8 text-zion-orange" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Financial Management</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Real-time Analytics</h3>
                 <p className="text-zion-slate-light">
-                  Intelligent financial planning, budgeting, and forecasting with AI-powered risk assessment and compliance monitoring.
+                  Comprehensive dashboards and analytics provide real-time insights into production performance, efficiency metrics, and optimization opportunities.
                 </p>
               </div>
 
@@ -406,9 +407,9 @@ export default function AIEnterpriseResourcePlanning() {
                 <div className="w-16 h-16 bg-zion-red/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zion-red/30 transition-all duration-300">
                   <Shield className="w-8 h-8 text-zion-red" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Security & Compliance</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Safety & Compliance</h3>
                 <p className="text-zion-slate-light">
-                  Enterprise-grade security with automated compliance monitoring and regulatory reporting across all business functions.
+                  AI monitors safety protocols, ensures regulatory compliance, and maintains secure manufacturing environments.
                 </p>
               </div>
             </div>
@@ -420,10 +421,10 @@ export default function AIEnterpriseResourcePlanning() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                How Our AI ERP Platform Works
+                How Our AI Manufacturing Platform Works
               </h2>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-                A seamless, intelligent process that transforms traditional enterprise management into a fully autonomous, AI-driven operation.
+                A seamless, intelligent process that transforms traditional manufacturing into a fully autonomous, AI-driven operation.
               </p>
             </div>
 
@@ -434,7 +435,7 @@ export default function AIEnterpriseResourcePlanning() {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Data Integration</h3>
                 <p className="text-zion-slate-light">
-                  Connect all business systems, databases, and applications to our unified AI platform for comprehensive data collection.
+                  Connect all manufacturing systems, sensors, and equipment to our unified AI platform for comprehensive data collection.
                 </p>
               </div>
 
@@ -444,7 +445,7 @@ export default function AIEnterpriseResourcePlanning() {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">AI Analysis</h3>
                 <p className="text-zion-slate-light">
-                  Our AI autonomously analyzes business data, identifies patterns, and generates optimization recommendations.
+                  Our AI autonomously analyzes production data, identifies patterns, and generates optimization recommendations.
                 </p>
               </div>
 
@@ -454,7 +455,7 @@ export default function AIEnterpriseResourcePlanning() {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Autonomous Execution</h3>
                 <p className="text-zion-slate-light">
-                  AI automatically implements optimizations, manages workflows, and coordinates operations across all departments.
+                  AI automatically implements optimizations, adjusts production parameters, and manages manufacturing workflows.
                 </p>
               </div>
 
@@ -464,7 +465,7 @@ export default function AIEnterpriseResourcePlanning() {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Continuous Learning</h3>
                 <p className="text-zion-slate-light">
-                  Platform continuously learns from business data, improving efficiency and optimization over time.
+                  Platform continuously learns from production data, improving efficiency and optimization over time.
                 </p>
               </div>
             </div>
@@ -476,10 +477,10 @@ export default function AIEnterpriseResourcePlanning() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Why Choose Our AI ERP Platform?
+                Why Choose Our AI Manufacturing Platform?
               </h2>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-                Transform your enterprise operations with cutting-edge AI technology that maximizes efficiency, productivity, and profitability.
+                Transform your manufacturing operations with cutting-edge AI technology that maximizes efficiency, quality, and profitability.
               </p>
             </div>
 
@@ -490,9 +491,9 @@ export default function AIEnterpriseResourcePlanning() {
                     <CheckCircle className="w-4 h-4 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">40% Efficiency Increase</h3>
+                    <h3 className="text-lg font-semibold text-white mb-2">30% Production Increase</h3>
                     <p className="text-zion-slate-light">
-                      AI optimization increases operational efficiency while reducing manual work and human error.
+                      AI optimization increases production output while maintaining or improving quality standards.
                     </p>
                   </div>
                 </div>
@@ -502,9 +503,9 @@ export default function AIEnterpriseResourcePlanning() {
                     <CheckCircle className="w-4 h-4 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">Real-time Visibility</h3>
+                    <h3 className="text-lg font-semibold text-white mb-2">50% Cost Reduction</h3>
                     <p className="text-zion-slate-light">
-                      Get instant insights into all aspects of your business with comprehensive real-time dashboards and reporting.
+                      Reduce operational costs through predictive maintenance, optimized workflows, and waste elimination.
                     </p>
                   </div>
                 </div>
@@ -514,9 +515,9 @@ export default function AIEnterpriseResourcePlanning() {
                     <CheckCircle className="w-4 h-4 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">Automated Compliance</h3>
+                    <h3 className="text-lg font-semibold text-white mb-2">99.9% Quality Assurance</h3>
                     <p className="text-zion-slate-light">
-                      Automated regulatory compliance monitoring and reporting across all business functions and jurisdictions.
+                      AI-powered quality control ensures consistent product quality and reduces defect rates.
                     </p>
                   </div>
                 </div>
@@ -528,9 +529,21 @@ export default function AIEnterpriseResourcePlanning() {
                     <CheckCircle className="w-4 h-4 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">Cost Reduction</h3>
+                    <h3 className="text-lg font-semibold text-white mb-2">Zero Downtime</h3>
                     <p className="text-zion-slate-light">
-                      Reduce operational costs through process automation, resource optimization, and waste elimination.
+                      Predictive maintenance and autonomous operations minimize unplanned downtime and production interruptions.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-6 h-6 bg-zion-cyan rounded-full flex items-center justify-center mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-2">Real-time Optimization</h3>
+                    <p className="text-zion-slate-light">
+                      Continuous monitoring and adjustment of production parameters for optimal performance.
                     </p>
                   </div>
                 </div>
@@ -542,19 +555,7 @@ export default function AIEnterpriseResourcePlanning() {
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">Scalable Solution</h3>
                     <p className="text-zion-slate-light">
-                      Platform scales from small businesses to large enterprises with enterprise-grade reliability and performance.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-6 h-6 bg-zion-cyan rounded-full flex items-center justify-center mt-1">
-                    <CheckCircle className="w-4 h-4 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">24/7 Operations</h3>
-                    <p className="text-zion-slate-light">
-                      AI-powered systems operate continuously, ensuring business operations never stop and always remain optimized.
+                      Platform scales from small workshops to large industrial complexes with enterprise-grade reliability.
                     </p>
                   </div>
                 </div>
@@ -567,10 +568,10 @@ export default function AIEnterpriseResourcePlanning() {
         <section className="py-20 bg-gradient-to-r from-zion-purple/20 via-zion-blue/20 to-zion-cyan/20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Enterprise?
+              Ready to Transform Your Manufacturing?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Join leading enterprises who are already using our AI ERP platform to revolutionize their operations and achieve unprecedented efficiency.
+              Join leading manufacturers who are already using our AI platform to revolutionize their operations and achieve Industry 4.0 excellence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
