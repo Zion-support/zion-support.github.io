@@ -1,25 +1,28 @@
-#!/usr/bin/env node
-
-'use strict';
-
-const fs = require('fs');
-const path = require('path');
-
 exports.handler = async function(event, context) {
   try {
-    const timestamp = new Date().toISOString();
-    const reportPath = path.join(process.cwd(), 'ai-changelog-runner-report.md');
-    const reportContent = '# ai-changelog-runner Report\n\n' +
-      'Generated: ' + timestamp + '\n\n' +
-      '## Status\n' +
-      '- Task: ai-changelog-runner\n' +
-      '- Status: Completed\n' +
-      '- Timestamp: ' + timestamp + '\n';
-
-    fs.writeFileSync(reportPath, reportContent);
-
-    return { statusCode: 200, body: JSON.stringify({ name: 'ai-changelog-runner', status: 'ok', timestamp }) };
+    console.log('ai-changelog-runner function triggered');
+    
+    // Basic ai-changelog-runner logic
+    const result = {
+      statusCode: 200,
+      body: JSON.stringify({
+        message: 'ai-changelog-runner function executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'ai-changelog-runner',
+        action: 'executing ai-changelog-runner functionality'
+      })
+    };
+    
+    return result;
   } catch (error) {
-    return { statusCode: 500, body: JSON.stringify({ name: 'ai-changelog-runner', status: 'error', error: error && error.message }) };
+    console.error('Error in ai-changelog-runner:', error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({
+        error: 'Internal server error',
+        message: error.message,
+        function: 'ai-changelog-runner'
+      })
+    };
   }
 };

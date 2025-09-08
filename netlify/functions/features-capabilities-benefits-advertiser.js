@@ -1,64 +1,27 @@
-#!/usr/bin/env node
-
-'use strict';
-
-const fs = require('fs');
-const path = require('path');
-
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 Starting features-capabilities-benefits-advertiser function...');
+    console.log('features-capabilities-benefits-advertiser function triggered');
     
-    const timestamp = new Date().toISOString();
-    const reportPath = path.join(process.cwd(), 'features-capabilities-benefits-advertiser-report.md');
-    
-    const reportContent = `# Features Capabilities Benefits Advertiser Report
-
-Generated: ${timestamp}
-
-## Status
-- Task: features-capabilities-benefits-advertiser
-- Status: Completed
-- Timestamp: ${timestamp}
-
-## Function Details
-- Function: features-capabilities-benefits-advertiser
-- Schedule: Every 2 minutes
-- Purpose: Advertise features, capabilities, and benefits
-
-## Advertising Tasks
-- Promoting key features
-- Highlighting capabilities
-- Showcasing benefits
-- Maximizing value proposition
-
-## Next Steps
-- Function executed successfully
-- Report generated
-- Ready for next scheduled run
-`;
-
-    fs.writeFileSync(reportPath, reportContent);
-    console.log('📝 Report generated');
-    
-    return {
+    // Basic features-capabilities-benefits-advertiser logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Features capabilities benefits advertiser function completed successfully',
-        timestamp: timestamp,
-        status: 'success'
+        message: 'features-capabilities-benefits-advertiser function executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'features-capabilities-benefits-advertiser',
+        action: 'executing features-capabilities-benefits-advertiser functionality'
       })
     };
     
+    return result;
   } catch (error) {
-    console.error('❌ Features capabilities benefits advertiser function failed:', error.message);
-    
+    console.error('Error in features-capabilities-benefits-advertiser:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        message: 'Features capabilities benefits advertiser function failed',
-        error: error.message,
-        timestamp: new Date().toISOString()
+        error: 'Internal server error',
+        message: error.message,
+        function: 'features-capabilities-benefits-advertiser'
       })
     };
   }

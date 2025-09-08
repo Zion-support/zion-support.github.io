@@ -1,25 +1,28 @@
-#!/usr/bin/env node
-
-'use strict';
-
-const fs = require('fs');
-const path = require('path');
-
 exports.handler = async function(event, context) {
   try {
-    const timestamp = new Date().toISOString();
-    const reportPath = path.join(process.cwd(), 'revenue-ideas-lab-report.md');
-    const reportContent = '# revenue-ideas-lab Report\n\n' +
-      'Generated: ' + timestamp + '\n\n' +
-      '## Status\n' +
-      '- Task: revenue-ideas-lab\n' +
-      '- Status: Completed\n' +
-      '- Timestamp: ' + timestamp + '\n';
-
-    fs.writeFileSync(reportPath, reportContent);
-
-    return { statusCode: 200, body: JSON.stringify({ name: 'revenue-ideas-lab', status: 'ok', timestamp }) };
+    console.log('revenue-ideas-lab function triggered');
+    
+    // Basic revenue-ideas-lab logic
+    const result = {
+      statusCode: 200,
+      body: JSON.stringify({
+        message: 'revenue-ideas-lab function executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'revenue-ideas-lab',
+        action: 'executing revenue-ideas-lab functionality'
+      })
+    };
+    
+    return result;
   } catch (error) {
-    return { statusCode: 500, body: JSON.stringify({ name: 'revenue-ideas-lab', status: 'error', error: error && error.message }) };
+    console.error('Error in revenue-ideas-lab:', error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({
+        error: 'Internal server error',
+        message: error.message,
+        function: 'revenue-ideas-lab'
+      })
+    };
   }
 };

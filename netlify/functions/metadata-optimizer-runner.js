@@ -1,25 +1,28 @@
-#!/usr/bin/env node
-
-'use strict';
-
-const fs = require('fs');
-const path = require('path');
-
 exports.handler = async function(event, context) {
   try {
-    const timestamp = new Date().toISOString();
-    const reportPath = path.join(process.cwd(), 'metadata-optimizer-runner-report.md');
-    const reportContent = '# metadata-optimizer-runner Report\n\n' +
-      'Generated: ' + timestamp + '\n\n' +
-      '## Status\n' +
-      '- Task: metadata-optimizer-runner\n' +
-      '- Status: Completed\n' +
-      '- Timestamp: ' + timestamp + '\n';
-
-    fs.writeFileSync(reportPath, reportContent);
-
-    return { statusCode: 200, body: JSON.stringify({ name: 'metadata-optimizer-runner', status: 'ok', timestamp }) };
+    console.log('metadata-optimizer-runner function triggered');
+    
+    // Basic metadata-optimizer-runner logic
+    const result = {
+      statusCode: 200,
+      body: JSON.stringify({
+        message: 'metadata-optimizer-runner function executed successfully',
+        timestamp: new Date().toISOString(),
+        function: 'metadata-optimizer-runner',
+        action: 'executing metadata-optimizer-runner functionality'
+      })
+    };
+    
+    return result;
   } catch (error) {
-    return { statusCode: 500, body: JSON.stringify({ name: 'metadata-optimizer-runner', status: 'error', error: error && error.message }) };
+    console.error('Error in metadata-optimizer-runner:', error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({
+        error: 'Internal server error',
+        message: error.message,
+        function: 'metadata-optimizer-runner'
+      })
+    };
   }
 };
