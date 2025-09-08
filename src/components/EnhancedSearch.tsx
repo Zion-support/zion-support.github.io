@@ -225,37 +225,75 @@ export function EnhancedSearch({
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         setIsOpen(false);
+        setSelectedIndex(-1);
       } else if (event.key === 'k' && (event.metaKey || event.ctrlKey)) {
         event.preventDefault();
         setIsOpen(true);
-        inputRef.current?.focus();      }
+        inputRef.current?.focus();
+      } else if (isOpen) {
+        switch (event.key) {
+          case 'ArrowDown':
+            event.preventDefault();
+            setSelectedIndex(prev => 
+              prev < results.length - 1 ? prev + 1 : 0
+            );
+            break;
+          case 'ArrowUp':
+            event.preventDefault();
+            setSelectedIndex(prev => 
+              prev > 0 ? prev - 1 : results.length - 1
+            );
+            break;
+          case 'Enter':
+            event.preventDefault();
+            if (selectedIndex >= 0 && results[selectedIndex]) {
+              handleResultClick(results[selectedIndex]);
+            } else if (query.trim()) {
+              handleSearch();
+            }
+            break;
+        }
+      }
     };
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
+  }, [isOpen, results, selectedIndex, query]);
 
-  const handleSearch = useCallback((searchQuery: string) => {
-    if (searchQuery.trim()) {
-      // Add to recent searches
-      const updated = [searchQuery, ...recentSearches.filter(s => s !== searchQuery)].slice(0, 5);
-      setRecentSearches(updated);
-      localStorage.setItem('zion-recent-searches', JSON.stringify(updated));
-      
-      // Navigate to search results or close search
-      setIsOpen(false);
-      setQuery('');
-    }
-  }, [recentSearches]);
+  const handleSearch = useCallback(async (searchQuery?: string) => {
+    const queryToSearch = searchQuery || query;
+    if (!queryToSearch.trim()) return;
+
+    setIsLoading(true);
+    
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 500));
+    
+    // Filter results based on query
+    const filteredResults = searchData.filter(result =>
+      result.title.toLowerCase().includes(queryToSearch.toLowerCase()) ||
+      result.description.toLowerCase().includes(queryToSearch.toLowerCase())
+    );
+
+    setResults(filteredResults);
+    setIsLoading(false);
+    setIsOpen(true);
+    
+    // Add to recent searches
+    const updated = [queryToSearch, ...recentSearches.filter(s => s !== queryToSearch)].slice(0, 5);
+    setRecentSearches(updated);
+    localStorage.setItem('zion-recent-searches', JSON.stringify(updated));
+  }, [query, recentSearches]);
 
   const handleResultClick = (result: SearchResult) => {
     handleSearch(result.title);
     navigate(result.url);
     setIsOpen(false);
     setQuery('');
-  };
-    setIsOpen(false);
-    setQuery('');
+    
+    if (onSearch) {
+      onSearch(query);
+    }
   };
 
   const toggleFilter = (filterType: keyof SearchFilter, value: string) => {
@@ -269,16 +307,6 @@ export function EnhancedSearch({
 
   const clearFilters = () => {
     setFilters({ type: [], category: [], tags: [] });
-  };
-
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'service': return <Code className="h-4 w-4" />;
-      case 'page': return <Globe className="h-4 w-4" />;
-      case 'blog': return <TrendingUp className="h-4 w-4" />;
-      case 'case-study': return <Building className="h-4 w-4" />;
-      default: return <Search className="h-4 w-4" />;
-    }
   };
 
   const handleSuggestionClick = (suggestion: SearchSuggestion) => {
@@ -308,6 +336,16 @@ export function EnhancedSearch({
     return <Search className="w-5 h-5" />;
   };
 
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'service': return <Code className="h-4 w-4" />;
+      case 'page': return <Globe className="h-4 w-4" />;
+      case 'blog': return <TrendingUp className="h-4 w-4" />;
+      case 'case-study': return <Building className="h-4 w-4" />;
+      default: return <Search className="h-4 w-4" />;
+    }
+  };
+
   const getVariantClasses = () => {
     switch (variant) {
       case 'futuristic':
@@ -316,8 +354,6 @@ export function EnhancedSearch({
         return 'bg-gray-100 border border-gray-200 hover:border-gray-300 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20';
       default:
         return 'bg-white border border-gray-300 hover:border-gray-400 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20';
-    }
-  };
     }
   };
 
@@ -674,4 +710,4 @@ export function EnhancedSearch({
       </AnimatePresence>
     </div>
   );
-}
+};

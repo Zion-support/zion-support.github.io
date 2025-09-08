@@ -16,7 +16,49 @@ module.exports = {
       }
     },
 
-    // TypeScript Error Fixer - runs every 5 minutes
+    // Continuous error fixer - runs every 10 minutes (HIGHEST PRIORITY)
+    {
+      name: 'error-fixer',
+      script: './scripts/automation/error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '600000' // 10 minutes
+      }
+    },
+
+    // TypeScript error fixer - runs every 15 minutes
+    {
+      name: 'typescript-fixer',
+      script: './scripts/automation/typescript-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '900000' // 15 minutes
+      }
+    },
+
+    // Code quality fixer - runs every 20 minutes
+    {
+      name: 'code-quality-fixer',
+      script: './scripts/automation/code-quality-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1200000' // 20 minutes
+      }
+    },
+
+    // Continuous console error fixer - runs every 15 minutes (LEGACY)
     {
       name: 'typescript-error-fixer',
       script: 'scripts/automation/robust-typescript-fixer.cjs',
