@@ -7,7 +7,8 @@ import { Toaster as HotToaster } from "react-hot-toast";
 //     <HotToaster position="top-right" />
 //   );
 // }
-import { cn } from '@/lib/utils';
+// import { cn } from '@/lib/utils';
+const cn = (...classes: (string | undefined)[]) => classes.filter(Boolean).join(' ');
 
 export interface Toast {
   id: string;
