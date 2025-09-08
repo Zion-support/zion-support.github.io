@@ -1,8 +1,9 @@
 import NextHead from 'next/head';
-import { Bot, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
+// import Card from '../components/ui/Card';
+import UIButton from '../components/ui/Button';
+import { ArrowRight, Check as CheckIcon } from 'lucide-react';
+import { innovativeAIServices } from '../data/innovative-ai-services';
 
 export default function AIAgentsPage() {
   const service = enhancedRealMicroSaasServices.find(s => (s.link || '').endsWith('/ai-agents'));
@@ -38,28 +39,23 @@ export default function AIAgentsPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
-          {plans.map((p) => (
-            <div key={p.name} className="bg-black/30 border border-gray-700/50 rounded-2xl p-6">
-              <h3 className="text-2xl font-bold text-white mb-2">{p.name}</h3>
-              <div className="text-cyan-400 font-semibold mb-4">{p.price}</div>
-              <ul className="space-y-2 text-gray-300 text-sm">
-                {p.items.map((i) => (
-                  <li key={i} className="flex items-start gap-2"><Check className="w-4 h-4 mt-0.5 text-emerald-400" /> <span>{i}</span></li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        <div className="max-w-3xl mx-auto mt-4 bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
-            <div className="flex items-center justify-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /><span>{contactInfo.mobile}</span></div>
-            <div className="flex items-center justify-center gap-2 text-purple-400"><Mail className="w-4 h-4" /><span>{contactInfo.email}</span></div>
-            <div className="flex items-center justify-center gap-2 text-green-400"><MapPin className="w-4 h-4" /><span className="text-xs">{contactInfo.address}</span></div>
-          </div>
-          <div className="text-center">
-            <Button href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</Button>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {agentServices.map((svc) => (
+              <div key={svc.id} className="p-6 bg-gray-900/50 border border-gray-700/60 hover:border-cyan-500/40 transition-colors rounded-lg">
+                <div className="text-2xl font-semibold text-white mb-1">{svc.name}</div>
+                <div className="text-gray-400 text-sm mb-4">{svc.tagline}</div>
+                <div className="text-cyan-300 text-xl font-bold mb-3">{svc.price}<span className="text-gray-400 text-base">{svc.period}</span></div>
+                <ul className="text-gray-300 text-sm space-y-1 mb-5">
+                  {(svc.features || []).slice(0, 5).map((f) => (
+                    <li key={f} className="flex items-start gap-2"><CheckIcon className="w-4 h-4 text-emerald-400 mt-0.5" /><span>{f}</span></li>
+                  ))}
+                </ul>
+                <div className="flex gap-3">
+                  <UIButton href="/contact" className="flex-1 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Talk to Sales</UIButton>
+                  <UIButton href="/services-advertising" variant="outline" className="flex-1 border border-gray-600 text-gray-200">Learn More</UIButton>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import ServiceAds from '../components/sections/ServiceAds';
+// import ServiceAds from '../components/sections/ServiceAds';
 
 
 export default function ApiMockContractTestingPage() {
@@ -44,7 +44,10 @@ export default function ApiMockContractTestingPage() {
       </Head>
 
       <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
-        <ServiceAds heading="API Quality Fast-Track" subheading="Mock, validate, and ship with confidence." items={adItems} />
+        			<div className="bg-black/20 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-8 text-center">
+				<h2 className="text-2xl font-bold text-white mb-2">API Quality Fast-Track</h2>
+				<p className="text-gray-300 mb-6">Mock, validate, and ship with confidence.</p>
+			</div>
 
         <div className="max-w-5xl mx-auto mt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

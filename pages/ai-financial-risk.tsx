@@ -1,8 +1,7 @@
-import NextHead from 'next/head';
-import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react';
+import React from 'react';
+import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-import { innovativeAIServices } from '../data/innovative-ai-services';
+
 
 export default function AIFinancialRiskPage() {
   const service = innovativeAIServices.find(s => (s.link || '').endsWith('/ai-financial-risk'));
@@ -13,10 +12,10 @@ export default function AIFinancialRiskPage() {
   };
 
   return (
-    <UltraAdvancedFuturisticBackground>
-      <NextHead>
-        <title>{service?.name || 'AI Financial Risk Management'} - Zion Tech Group</title>
-        <meta name="description" content={service?.description || 'Advanced risk models, stress testing, and anomaly detection for financial institutions.'} />
+    	<UltraAdvancedFuturisticBackground>
+      <Head>
+        <title>AI Financial Risk Analytics | Zion Tech Group</title>
+        <meta name="description" content="Scenario stress-tests, risk scoring with explainability, drift monitoring and governance for lending and trading models." />
         <link rel="canonical" href="https://ziontechgroup.com/ai-financial-risk" />
       </NextHead>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -53,7 +52,7 @@ export default function AIFinancialRiskPage() {
           </div>
         </div>
       </div>
-    </UltraAdvancedFuturisticBackground>
+    	</UltraAdvancedFuturisticBackground>
   );
 }
 

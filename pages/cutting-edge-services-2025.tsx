@@ -5,9 +5,8 @@ import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, ExternalLink } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
-import { cuttingEdgeITServices2025 } from '../data/2025-cutting-edge-it-services';
-import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
-import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-emerging-tech';
+import { cuttingEdgeITInfrastructureInnovations2025 } from '../data/2025-cutting-edge-it-infrastructure-innovations';
+import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -27,32 +26,27 @@ const serviceCategories = [
     borderColor: 'border-violet-500/30'
   },
   {
-    title: 'Quantum & Emerging Tech',
-    description: 'Breakthrough quantum computing and space technology solutions',
-    services: cuttingEdgeEmergingTechServices2025,
-    icon: Atom,
-    color: 'from-indigo-500 to-blue-600',
-    bgColor: 'from-indigo-900/20 to-blue-900/20',
-    borderColor: 'border-indigo-500/30'
-  },
-  {
-    title: 'Enterprise IT',
-    description: 'Advanced enterprise infrastructure and security solutions',
-    services: cuttingEdgeITServices2025,
-    icon: Shield,
+    title: 'IT Infrastructure',
+    description: 'Next-generation infrastructure with quantum computing and edge computing',
+    		services: cuttingEdgeITInfrastructureInnovations2025,
+    icon: Cloud,
     color: 'from-blue-500 to-cyan-600',
-    bgColor: 'from-blue-900/20 to-cyan-900/20',
-    borderColor: 'border-blue-500/30'
+    		count: cuttingEdgeITInfrastructureInnovations2025.length
   },
   {
     title: 'Micro SAAS',
     description: 'Innovative business solutions for modern enterprises',
-    services: cuttingEdgeMicroSaasServices2025,
+    		services: innovativeMicroSaasSolutions2025,
     icon: Rocket,
     color: 'from-teal-500 to-emerald-600',
-    bgColor: 'from-teal-900/20 to-emerald-900/20',
-    borderColor: 'border-teal-500/30'
+    		count: innovativeMicroSaasSolutions2025.length
   }
+];
+
+const allServices = [
+  ...cuttingEdgeAIServices2025,
+  	...cuttingEdgeITInfrastructureInnovations2025,
+  	...innovativeMicroSaasSolutions2025
 ];
 
 export default function CuttingEdgeServices2025() {

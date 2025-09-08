@@ -1,5 +1,13 @@
-import React from 'react';
-import Layout from '../components/Layout';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+import { useState } from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/layout/Footer';
+
+const Blog: NextPage = () => {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchTerm, setSearchTerm] = useState('');
 
 const BlogPage: React.FC = () => {
   const blogPosts = [

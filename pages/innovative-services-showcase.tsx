@@ -7,11 +7,10 @@ import {
   Brain, Globe, Lock, Code, Database, Cloud,
   Phone, Mail, MapPin
 } from 'lucide-react';
-import Button from '../components/ui/Button';
-import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground';
-import { nextGenAIServices } from '../data/next-gen-ai-services';
-import { emergingTechServices } from '../data/emerging-tech-services';
-import { enterpriseBlockchainServices } from '../data/enterprise-blockchain-services';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import { innovativeAIServices } from '../data/innovative-ai-services';
+import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
+import { innovativeMicroSaas } from '../data/innovative-micro-saas';
 
 export default function InnovativeServicesShowcase() {
   const allInnovativeServices = [
@@ -299,8 +298,127 @@ export default function InnovativeServicesShowcase() {
                   </Button>
                 </div>
 
-                {/* Contact Information */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-400 max-w-2xl mx-auto">
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            >
+              {innovativeAIServices.map((service, index) => (
+                <ServiceCard key={service.id} service={service} index={index} />
+              ))}
+            </motion.div>
+          </div>
+        </section>
+
+        {/* IT Services Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900/30">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <div className="flex items-center justify-center mb-4">
+                <Cpu className="w-8 h-8 text-purple-400 mr-3" />
+                <h2 className="text-4xl font-bold text-white">Enterprise IT Solutions</h2>
+              </div>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Next-generation IT infrastructure and security solutions designed for modern enterprises, 
+                featuring quantum computing, blockchain, and zero-trust security architectures.
+              </p>
+            </motion.div>
+
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            >
+              				{innovativeITServicesEnhanced2025.map((service, index) => (
+                <ServiceCard key={service.id} service={service} index={index} />
+              ))}
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Micro SaaS Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <div className="flex items-center justify-center mb-4">
+                <Rocket className="w-8 h-8 text-pink-400 mr-3" />
+                <h2 className="text-4xl font-bold text-white">Micro SaaS Solutions</h2>
+              </div>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Specialized software solutions that address specific business needs with AI-powered automation, 
+                smart contracts, and intelligent workflows designed for maximum efficiency and ROI.
+              </p>
+            </motion.div>
+
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            >
+              {innovativeMicroSaas.map((service, index) => (
+                <ServiceCard key={service.id} service={service} index={index} />
+              ))}
+            </motion.div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/20 to-purple-900/20">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Ready to Experience the Future?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Join thousands of businesses already transforming their operations with our innovative services. 
+                Start your journey today and unlock unprecedented growth potential.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a
+                  href="/contact"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
+                >
+                  <Zap className="w-6 h-6 inline mr-2" />
+                  Get Started Today
+                </a>
+                
+                <a
+                  href="/pricing"
+                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105"
+                >
+                  <DollarSign className="w-6 h-6 inline mr-2" />
+                  View Pricing
+                </a>
+              </div>
+
+              {/* Contact Details */}
+              <div className="mt-12 bg-gray-900/50 backdrop-blur-xl rounded-2xl p-6 border border-gray-800">
+                <h3 className="text-white font-semibold mb-4">Contact Our Team</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                   <div className="flex items-center justify-center">
                     <Phone className="w-4 h-4 mr-2 text-cyan-400" />
                     <span className="text-cyan-400">{contactInfo.mobile}</span>

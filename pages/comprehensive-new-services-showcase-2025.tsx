@@ -9,10 +9,10 @@ import {
   Clock, Heart, Lightbulb, ArrowRight, CheckCircle, ChevronRight
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { innovativeNewMicroSaasServices2025 } from '../data/2025-innovative-new-micro-saas-services';
-import { innovativeNewAIServices2025 } from '../data/2025-innovative-new-ai-services';
-import { innovativeNewITServices2025 } from '../data/2025-innovative-new-it-services';
-import { innovativeNewBusinessSolutions2025 } from '../data/2025-innovative-new-business-solutions';
+import { innovativeNewServices2025 } from '../data/2025-innovative-new-services';
+import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced';
+import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
+import { cuttingEdgeEnterpriseSolutions2025 } from '../data/2025-cutting-edge-enterprise-solutions';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -22,37 +22,37 @@ const contactInfo = {
 };
 
 const allServices = [
-  ...innovativeNewMicroSaasServices2025,
-  ...innovativeNewAIServices2025,
-  ...innovativeNewITServices2025,
-  ...innovativeNewBusinessSolutions2025
+  	...innovativeNewServices2025,
+  	...innovativeAIServicesEnhanced2025,
+  	...innovativeITServicesEnhanced2025,
+  	...cuttingEdgeEnterpriseSolutions2025
 ];
 
 const serviceCategories = [
   {
     name: 'New Micro SAAS Services',
-    services: innovativeNewMicroSaasServices2025,
+    		services: innovativeNewServices2025,
     icon: Rocket,
     color: 'from-teal-500 to-emerald-600',
     description: 'Innovative business solutions with AI-powered automation'
   },
   {
     name: 'New AI Services',
-    services: innovativeNewAIServices2025,
+    		services: innovativeAIServicesEnhanced2025,
     icon: Brain,
     color: 'from-pink-500 to-rose-600',
     description: 'Cutting-edge AI services with autonomous capabilities'
   },
   {
     name: 'New IT Services',
-    services: innovativeNewITServices2025,
+    		services: innovativeITServicesEnhanced2025,
     icon: Shield,
     color: 'from-cyan-500 to-blue-600',
     description: 'Next-generation IT infrastructure and security'
   },
   {
     name: 'New Business Solutions',
-    services: innovativeNewBusinessSolutions2025,
+    		services: cuttingEdgeEnterpriseSolutions2025,
     icon: Target,
     color: 'from-emerald-500 to-teal-600',
     description: 'AI-powered business intelligence and automation'

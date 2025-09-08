@@ -5,9 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Brain, Atom, Sparkles, Shield, Zap, Globe, Cpu, Database, Cloud, Smartphone, Palette, Search as SearchIcon, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles as SparklesIcon, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain as BrainIcon, Atom as AtomIcon, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon2, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as CodeIcon2, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon2, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon2, Atom as AtomIcon2, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon } from 'lucide-react';
 
 
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-<<<<<<< HEAD
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import FuturisticCard from '../components/ui/FuturisticCard';
 import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
 =======
 import { innovative2026MicroSaasV2Services } from '../data/innovative-2026-micro-saas-v2';
@@ -154,7 +153,7 @@ export default function Services2026ShowcasePage() {
   }, [searchTerm, selectedCategory, selectedPriceRange, sortBy, all2026Services]);
 
   return (
-    <UltraFuturisticBackground 
+    	<UltraAdvancedFuturisticBackground 
       intensity="high" 
       
     >
@@ -303,7 +302,7 @@ export default function Services2026ShowcasePage() {
                       exit={{ opacity: 0, y: -20 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                     >
-                      <UltraFuturisticCard className="h-full group hover:scale-105 transition-transform duration-300">
+                      <FuturisticCard className="h-full group hover:scale-105 transition-transform duration-300">
                         <div className="p-6 h-full flex flex-col">
                           {/* Service Header */}
                           <div className="flex items-start justify-between mb-4">
@@ -377,7 +376,7 @@ export default function Services2026ShowcasePage() {
                             </Link>
                           </div>
                         </div>
-                      </UltraFuturisticCard>
+                      </FuturisticCard>
                     </motion.div>
                   ))}
                 </div>
@@ -423,6 +422,6 @@ export default function Services2026ShowcasePage() {
           </div>
         </section>
       </div>
-    </UltraFuturisticBackground>
+    	</UltraAdvancedFuturisticBackground>
   );
 }

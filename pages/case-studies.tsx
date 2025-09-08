@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 import Navigation from '../components/layout/Navigation';
-import Footer from '../components/Footer';
+import Footer from '../components/layout/Footer';
 <<<<<<< HEAD
 
 const CaseStudies: NextPage = () => {
