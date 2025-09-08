@@ -1,15 +1,13 @@
-name: Cloud Automations
+name: Automations
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: '*/30 * * * *' # every 30 minutes
-
-permissions:
-  contents: write
-
-permissions:
-  contents: write
+    - cron: '0 * * * *'  # Every hour
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/**'
+      - 'requirements.txt'
 
 permissions:
   contents: write
@@ -18,34 +16,33 @@ jobs:
   run-automations:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Check out repository
         uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          fetch-depth: 0
-      - name: Use Node.js 20
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-      - name: Install deps
-        run: npm ci
-      - name: Run automations
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: node scripts/run-automations.mjs
-      - name: Commit and push changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          python-version: '3.11'
+
+      - name: Install dependencies
         run: |
-          git config user.name "automation-bot"
-          git config user.email "bot@users.noreply.github.com"
-          if [ -n "$(git status --porcelain)" ]; then
-            git add -A
-            git commit -m "chore(automation): update AI trends and talent summaries [skip ci]"
-            git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
-          else
-            echo "No changes to commit"
-          else
-            git commit -m "chore(automation): update reports [skip ci]"
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run automations
+        run: |
+          python scripts/fetch_trending.py
+          python scripts/aggregate_feeds.py
+          python scripts/uptime_check.py
+
+      - name: Commit and push changes (if any)
+        run: |
+          if [ -n "$(git status --porcelain data)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data
+            git commit -m "chore: update automation data"
             git push
+          else
+            echo "No changes to commit."
           fi
