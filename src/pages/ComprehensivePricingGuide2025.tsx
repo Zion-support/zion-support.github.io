@@ -1,69 +1,20 @@
 import React, { useState } from 'react';
-import { 
-  CheckCircle, 
-  Star, 
-  TrendingUp, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Cpu, 
-  Database,
-  Globe,
-  Users,
-  Target,
-  DollarSign,
-  Clock,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Filter,
-  Search
+import { motion } from 'framer-motion';
+import {
+  Brain, Shield, Cloud, Server, BarChart3, Users, ShoppingCart,
+  MessageCircle, HelpCircle, DollarSign, Target, TrendingUp,
+  Atom, Network, Eye, PenTool, Heart, Building, Truck,
+  Lock, Smartphone, Mail, Video, Satellite, Leaf, Code,
+  Zap, Star, Rocket, Globe, Cpu, ArrowRight, FileText,
+  CheckCircle, Clock, Users as UsersIcon, Zap as ZapIcon,
+  Award, TrendingUp as TrendingUpIcon, Globe as GlobeIcon,
+  Calculator, PieChart, BarChart
 } from 'lucide-react';
-import enhancedInnovativeServices2025 from '../data/enhancedInnovativeServices2025';
-import enhancedITandAIServices2025 from '../data/enhancedITandAIServices2025';
-
-interface Service {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
-  roi: string;
-  innovationLevel: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-    address: string;
-  };
-  technicalSpecs?: {
-    technology: string[];
-    integrations: string[];
-    apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
-  competitors?: string[];
-  marketSize?: string;
-  freeTier?: boolean;
-  trialPeriod?: string;
-  setupTime?: string;
-  growthRate?: string;
-  compliance?: string[];
-}
+import {
+  revolutionaryMicroSaasServices2025,
+  advancedITInfrastructureServices2025,
+  revolutionaryAIServices2025
+} from '../data/comprehensiveServices2025';
 
 export default function ComprehensivePricingGuide2025() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -115,21 +66,51 @@ export default function ComprehensivePricingGuide2025() {
       case 'Advanced':
         return 'text-green-400 border-green-400';
       default:
-        return 'text-gray-400 border-gray-400';
+        return [
+          ...revolutionaryMicroSaasServices2025,
+          ...advancedITInfrastructureServices2025,
+          ...revolutionaryAIServices2025
+        ];
     }
   };
 
-  const getSupportLevelColor = (level: string) => {
-    switch (level) {
-      case 'enterprise':
-        return 'bg-purple-500 text-white';
-      case 'premium':
-        return 'bg-blue-500 text-white';
-      case 'standard':
-        return 'bg-green-500 text-white';
-      default:
-        return 'bg-gray-500 text-white';
+  const getFilteredServices = () => {
+    let services = getServicesByCategory();
+
+    if (selectedPricingModel !== 'all') {
+      services = services.filter(service => {
+        if (selectedPricingModel === 'monthly') return service.pricingModel === 'monthly';
+        if (selectedPricingModel === 'hourly') return service.hourlyRate;
+        if (selectedPricingModel === 'project') return service.projectRate;
+        return true;
+      });
     }
+
+    return services;
+  };
+
+  const services = getFilteredServices();
+
+  const calculateTotalInvestment = () => {
+    return services.reduce((total, service) => {
+      if (service.price) return total + service.price;
+      if (service.hourlyRate) return total + (service.hourlyRate * 160); // 160 hours per month
+      if (service.projectRate) return total + service.projectRate;
+      return total;
+    }, 0);
+  };
+
+  const calculateTotalROI = () => {
+    return services.reduce((total, service) => {
+      if (service.roi) {
+        const roiPercentage = parseInt(service.roi.split('%')[0]);
+        if (service.price) return total + (service.price * roiPercentage / 100);
+        if (service.hourlyRate) return total + ((service.hourlyRate * 160) * roiPercentage / 100);
+        if (service.projectRate) return total + (service.projectRate * roiPercentage / 100);
+      }
+
+      return total;
+    }, 0);
   };
 
   return (

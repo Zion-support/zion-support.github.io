@@ -1,7 +1,9 @@
 import React, { useEffect, useMemo, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
+
 export const PerformanceOptimizer = ({ children }) => {
     const location = useLocation();
+    
     // Preload critical resources
     useEffect(() => {
         const preloadCriticalResources = () => {
@@ -11,6 +13,7 @@ export const PerformanceOptimizer = ({ children }) => {
             criticalCSS.as = 'style';
             criticalCSS.href = '/src/index.css';
             document.head.appendChild(criticalCSS);
+            
             // Preload critical fonts
             const criticalFonts = document.createElement('link');
             criticalFonts.rel = 'preload';
@@ -21,6 +24,7 @@ export const PerformanceOptimizer = ({ children }) => {
         };
         preloadCriticalResources();
     }, []);
+    
     // Optimize images on route change
     useEffect(() => {
         const optimizeImages = () => {
@@ -30,24 +34,28 @@ export const PerformanceOptimizer = ({ children }) => {
                 if (img.getBoundingClientRect().top > window.innerHeight) {
                     img.loading = 'lazy';
                 }
+                
                 // Add decoding="async" for better performance
                 img.decoding = 'async';
+                
                 // Add error handling
                 img.onerror = () => {
                     img.style.display = 'none';
                 };
             });
         };
+        
         // Use requestIdleCallback for non-critical optimization
         if ('requestIdleCallback' in window) {
             requestIdleCallback(optimizeImages);
-        }
-        else {
+        } else {
             setTimeout(optimizeImages, 100);
         }
     }, [location.pathname]);
+    
     // Memoize expensive computations
     const optimizedChildren = useMemo(() => children, [children]);
+    
     // Optimize scroll performance
     const handleScroll = useCallback(() => {
         // Throttle scroll events for better performance
@@ -58,23 +66,39 @@ export const PerformanceOptimizer = ({ children }) => {
             }, 16); // ~60fps
         }
     }, []);
+    
     useEffect(() => {
         window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, [handleScroll]);
+    
     // Service Worker registration for caching
     useEffect(() => {
         if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
             navigator.serviceWorker
                 .register('/sw.js')
                 .then((registration) => {
-                console.log('SW registered: ', registration);
-            })
+                    // // // console.log('SW registered: ', registration);
+                    
+                    // Check for updates
+                    registration.addEventListener('updatefound', () => {
+                        const newWorker = registration.installing;
+                        if (newWorker) {
+                            newWorker.addEventListener('statechange', () => {
+                                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                    // New service worker available
+                                    // // // console.log('New service worker available');
+                                }
+                            });
+                        }
+                    });
+                })
                 .catch((registrationError) => {
-                console.log('SW registration failed: ', registrationError);
-            });
+                    // // // console.warn('SW registration failed: ', registrationError);
+                });
         }
     }, []);
+    
     // Intersection Observer for lazy loading
     useEffect(() => {
         if ('IntersectionObserver' in window) {
@@ -93,14 +117,18 @@ export const PerformanceOptimizer = ({ children }) => {
                 rootMargin: '50px',
                 threshold: 0.1,
             });
+            
             // Observe all images with data-src
             const lazyImages = document.querySelectorAll('img[data-src]');
             lazyImages.forEach((img) => observer.observe(img));
+            
             return () => observer.disconnect();
         }
     }, [location.pathname]);
+    
     return <>{optimizedChildren}</>;
 };
+
 // Add global performance optimizations
 if (typeof window !== 'undefined') {
     // Optimize long tasks
@@ -109,6 +137,7 @@ if (typeof window !== 'undefined') {
             // Run non-critical tasks during idle time
         }, { priority: 'background' });
     }
+    
     // Optimize memory usage
     if ('memory' in performance) {
         const memoryThreshold = 50 * 1024 * 1024; // 50MB
@@ -120,4 +149,3 @@ if (typeof window !== 'undefined') {
         }
     }
 }
-export default PerformanceOptimizer;

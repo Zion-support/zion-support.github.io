@@ -51,11 +51,19 @@ const ITInfrastructure = () => {
       features: ["Storage Design", "Data Backup", "Disaster Recovery", "Cloud Storage"],
       icon: "💾"
     },
-    {title}: "Security Infrastructure",
-      description: "Multi-layered security infrastructure protection",
-      features: ["Firewall Management", "Intrusion Detection", "Access Control", "Security Monitoring"],
-      icon: "🔒"
+    {
+      title: "Performance Optimization",
+      description: "System and network performance analysis and improvement",
+      features: ["Performance Monitoring", "Bottleneck Analysis", "Optimization Strategies", "Capacity Planning"],
+      icon: "⚡"
     }
+  ];
+
+  const infrastructureFeatures = [
+    { name: "High Availability", icon: "🔄", description: "99.9% uptime guarantee with redundancy" },
+    { name: "Scalable Solutions", icon: "📈", description: "Infrastructure that grows with your business" },
+    { name: "Proactive Monitoring", icon: "👁️", description: "24/7 monitoring and alerting" },
+    { name: "Expert Support", icon: "👨‍💻", description: "Certified engineers and technicians" }
   ];
 
   const infrastructureAreas = [
@@ -224,5 +232,4 @@ const ITInfrastructure = () => {
   );
 };
 
-export default ITInfrastructure;</>);
-};
+export default ITInfrastructure;

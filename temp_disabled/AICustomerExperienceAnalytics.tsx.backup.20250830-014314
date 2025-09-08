@@ -27,10 +27,9 @@ import {
 } from 'lucide-react';
 =======
 import React from 'react';
-import { Users, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Heart, TrendingUp, MessageSquare, Eye, Zap, Target, Globe } from 'lucide-react';
->>>>>>> e220500ccca44de2253ff84a9759db22263da039
+import { Truck, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, Target, Clock, Package, Globe } from 'lucide-react';
 
-export default function AICustomerExperienceAnalytics() {
+export default function AISupplyChainOptimization() {
   const features = [
     'AI-powered customer journey mapping and analysis',
     'Real-time sentiment analysis and emotion detection',

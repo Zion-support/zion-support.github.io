@@ -4,7 +4,12 @@ import { Helmet } from
   image?: string;
   canonical?: string;
   ogImage?: string;
-  url?: string; // For backward compatibility
+  canonicalUrl?: string;
+  ogType?: 'website' | 'article' | 'product' | 'profile' | 'book';
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
+  noindex?: boolean;
+  nofollow?: boolean;
+  author?: string;
 }
 
 export const SEO: React.FC<SEOProps> = ({

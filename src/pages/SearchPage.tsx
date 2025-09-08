@@ -1,40 +1,22 @@
-import { useEffect, useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
-import { generateSearchSuggestions } from "@/data/marketplaceData";
-import { useAISearch } from "@/hooks/useAISearch";
-export default function SearchPage() {
-    const [params] = useSearchParams();
-    const navigate = useNavigate();
-    const initial = params.get("q") || "";
-    const [query, setQuery] = useState(initial);
-    const { results, loading, search } = useAISearch();
-    const suggestions = generateSearchSuggestions();
-    useEffect(() => {
-        if (initial) {
-            search(initial);
-        }
-    }, [initial]);
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        navigate(`/search?q=${encodeURIComponent(query)}`);
-        search(query);
-    };
-    return (<main className="container mx-auto px-4 py-8">
-        <form onSubmit={handleSubmit} className="mb-6">
-          <EnhancedSearchInput value={query} onChange={setQuery} searchSuggestions={suggestions} placeholder="Search talent, jobs, and projects..."/>
-        </form>
+import React, { useState } from 'react';
+import { SEO } from '@/components/SEO';
 
-        {loading && <p className="text-zion-slate-light">Searching...</p>}
-        {!loading && results.length === 0 && (<p className="text-zion-slate-light">No results found.</p>)}
-        {!loading && results.length > 0 && (<div className="space-y-4">
-            {results.map((r) => (<div key={`${r.type}-${r.id}`} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">
-                <p className="text-xs uppercase text-zion-slate-light mb-1">
-                  {r.type}
-                </p>
-                <h3 className="text-lg font-bold text-white">{r.title}</h3>
-                <p className="text-zion-slate-light">{r.description}</p>
-              </div>))}
-          </div>)}
-      </main>);
-}
+const SearchPage: React.FC = () => {
+	const [query, setQuery] = useState('');
+	return (
+		<div className="min-h-screen bg-slate-950 text-white py-16">
+			<SEO title="Search" description="Search Zion Tech Group content and services." />
+			<div className="container mx-auto max-w-3xl px-6">
+				<h1 className="text-3xl font-bold mb-6">Search</h1>
+				<input
+					value={query}
+					onChange={(e) => setQuery(e.target.value)}
+					placeholder="Search..."
+					className="w-full rounded-md bg-slate-900 border border-slate-700 px-4 py-2 outline-none focus:ring-2 focus:ring-sky-600"
+				/>
+			</div>
+		</div>
+	);
+};
+
+export default SearchPage;

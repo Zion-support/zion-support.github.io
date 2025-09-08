@@ -1,3 +1,13 @@
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import {
+  Calendar, Clock, User, Tag, Search, Filter,
+  ArrowRight, BookOpen, TrendingUp, Star, Eye
+} from 'lucide-react';
+
+function Blog() {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
 
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -12,21 +22,86 @@ import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost";
 import { BLOG_POSTS } from "@/data/blog-posts";
 import { Search } from "lucide-react";
 
-// Categories for filtering
-const CATEGORIES = [
-  "All Categories",
-  "Trends",
-  "Marketing",
-  "Sustainability",
-  "Ethics",
-  "Recruitment",
-  "Infrastructure"
-];
-
-export default function Blog() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All Categories");
-  const [posts, setPosts] = useState<BlogPost[]>([...BLOG_POSTS]);
+  const blogPosts = [
+    {
+      id: 1,
+      title: 'The Future of AI in Business: 2025 Trends and Predictions',
+      excerpt: 'Discover how artificial intelligence is reshaping business operations and what to expect in the coming year.',
+      category: 'ai',
+      author: 'Dr. Sarah Chen',
+      date: '2025-01-15',
+      readTime: '8 min read',
+      views: 1247,
+      featured: true,
+      tags: ['AI', 'Business', 'Trends', '2025'],
+      image: '/images/blog/ai-business-trends.jpg'
+    },
+    {
+      id: 2,
+      title: 'Quantum Computing Breakthroughs: What\'s New in 2025',
+      excerpt: 'Explore the latest developments in quantum computing and their implications for the tech industry.',
+      category: 'quantum',
+      author: 'Prof. Michael Rodriguez',
+      date: '2025-01-12',
+      readTime: '12 min read',
+      views: 892,
+      featured: true,
+      tags: ['Quantum Computing', 'Research', 'Innovation'],
+      image: '/images/blog/quantum-breakthroughs.jpg'
+    },
+    {
+      id: 3,
+      title: 'Building Secure Cloud Infrastructure: Best Practices',
+      excerpt: 'Learn the essential security practices for building and maintaining robust cloud infrastructure.',
+      category: 'cloud',
+      author: 'Alex Thompson',
+      date: '2025-01-10',
+      readTime: '6 min read',
+      views: 567,
+      featured: false,
+      tags: ['Cloud Security', 'Infrastructure', 'Best Practices'],
+      image: '/images/blog/cloud-security.jpg'
+    },
+    {
+      id: 4,
+      title: 'AI-Powered Cybersecurity: The Next Generation of Protection',
+      excerpt: 'How artificial intelligence is revolutionizing cybersecurity and threat detection.',
+      category: 'cybersecurity',
+      author: 'Dr. Emily Watson',
+      date: '2025-01-08',
+      readTime: '10 min read',
+      views: 734,
+      featured: false,
+      tags: ['AI', 'Cybersecurity', 'Threat Detection'],
+      image: '/images/blog/ai-cybersecurity.jpg'
+    },
+    {
+      id: 5,
+      title: 'Micro SaaS Success Stories: Lessons from the Field',
+      excerpt: 'Real-world examples of successful micro SaaS businesses and the strategies that made them thrive.',
+      category: 'ai',
+      author: 'David Kim',
+      date: '2025-01-05',
+      readTime: '7 min read',
+      views: 445,
+      featured: false,
+      tags: ['Micro SaaS', 'Success Stories', 'Business Strategy'],
+      image: '/images/blog/micro-saas-success.jpg'
+    },
+    {
+      id: 6,
+      title: 'The Impact of Edge Computing on IoT Applications',
+      excerpt: 'Understanding how edge computing is transforming IoT deployments and improving performance.',
+      category: 'cloud',
+      author: 'Lisa Chen',
+      date: '2025-01-03',
+      readTime: '9 min read',
+      views: 389,
+      featured: false,
+      tags: ['Edge Computing', 'IoT', 'Performance'],
+      image: '/images/blog/edge-computing-iot.jpg'
+    }
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -51,85 +126,59 @@ export default function Blog() {
   const featuredPosts = posts.filter(post => post.isFeatured);
   
   return (
-    <>
-      <SEO 
-        title="Blog - AI & Tech Insights" 
-        description="Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation." 
-        keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT"
-        canonical="https://ziontechgroup.com/blog"
-      />
-
-      {/* Hero Section */}
-      <section className="relative py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800"></div>
-        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
-        
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <motion.h1 
-            className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
-            initial={{ opacity: 0, y: 30 }}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* Header Section */}
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
           >
-            Our Blog
-          </motion.h1>
-          <motion.p 
-            className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Insights, trends, and expert perspectives on technology innovation
-          </motion.p>
-          
-          {/* Search Bar */}
-          <motion.div 
-            className="max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
-              <input
-                type="text"
-                placeholder="Search articles, authors, or topics..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-700 rounded-2xl text-white placeholder-slate-400 focus:outline-none focus:border-cyan-500 transition-colors duration-300"
-              />
-            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Zion Tech Blog
+            </h1>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Insights, trends, and expert analysis on AI, quantum computing, cybersecurity,
+              and the latest technology innovations shaping the future of business.
+            </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Categories Filter */}
-      <section className="py-12 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="flex flex-wrap justify-center gap-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            {categories.map((category)  => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`flex items-center space-x-2 px-6 py-3 rounded-2xl font-semibold transition-all duration-300 ${
-                  selectedCategory === category.id
-                    ? 'bg-cyan-500 text-white shadow-lg'
-                    : 'bg-slate-700 text-slate-300 hover:bg-slate-600 hover:text-white'
-                }`}
-              >
-                <category.icon className="w-4 h-4" />
-                <span>{category.name}</span>
-                <span className="bg-slate-800/50 px-2 py-1 rounded-full text-xs">
-                  {category.count}
-                </span>
-              </button>
-            ))}
-          </motion.div>
+      {/* Search and Filter Section */}
+      <section className="py-12 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+            {/* Search Bar */}
+            <div className="relative flex-1 max-w-md">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
+              <input
+                type="text"
+                placeholder="Search articles..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+            </div>
+
+            {/* Category Filter */}
+            <div className="flex flex-wrap gap-2">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                    selectedCategory === category.id
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-slate-700/50 text-slate-300 hover:bg-slate-700 hover:text-white'
+                  }`}
+                >
+                  {category.name} ({category.count})
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -142,29 +191,26 @@ export default function Blog() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
+              className="text-3xl font-bold text-white mb-12 text-center"
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Featured Articles
-              </h2>
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Our most popular and insightful content on technology trends and innovations
-              </p>
-            </motion.div>
-            
-            <div className="grid lg: grid-cols-3 gap-8">
-              {featuredPosts.map((post, index)  => (
-                <motion.article
-                  key={post.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="group"
-                >
-                  <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 overflow-hidden">
-                    <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
-                      <div className="text-6xl">📱</div>
+              Featured Articles
+            </motion.h2>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {filteredPosts
+                .filter(post => post.featured)
+                .map((post, index) => (
+                  <motion.article
+                    key={post.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300 group"
+                  >
+                    <div className="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
+                      <BookOpen className="w-16 h-16 text-blue-400 opacity-60" />
                     </div>
                     
                     <div className="p-6">
@@ -194,10 +240,109 @@ export default function Blog() {
                             <p className="text-xs text-slate-400">{post.date}</p>
                           </div>
                         </div>
-                        
-                        <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform duration-300" />
+
+                        <div className="flex items-center gap-2 text-slate-400 text-sm">
+                          <Eye className="w-4 h-4" />
+                          {post.views}
+                        </div>
+                      </div>
+
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        {post.tags.slice(0, 3).map((tag) => (
+                          <span
+                            key={tag}
+                            className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded"
+                          >
+                            {tag}
+                          </span>
+                        ))}
                       </div>
                     </div>
+                  </motion.article>
+                ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* All Posts Grid */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl font-bold text-white mb-12 text-center"
+          >
+            Latest Articles
+          </motion.h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredPosts
+              .filter(post => !post.featured)
+              .map((post, index) => (
+                <motion.article
+                  key={post.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300 group hover:transform hover:-translate-y-2"
+                >
+                  <div className="aspect-video bg-gradient-to-br from-slate-600/20 to-slate-700/20 flex items-center justify-center">
+                    <BookOpen className="w-12 h-12 text-slate-400 opacity-60" />
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs font-medium rounded">
+                        {categories.find(c => c.id === post.category)?.name}
+                      </span>
+                      <span className="text-slate-400 text-sm">•</span>
+                      <span className="text-slate-400 text-sm">{post.readTime}</span>
+                    </div>
+
+                    <h3 className="text-lg font-bold text-white mb-3 group-hover:text-blue-400 transition-colors line-clamp-2">
+                      {post.title}
+                    </h3>
+
+                    <p className="text-slate-300 mb-4 line-clamp-3 text-sm">
+                      {post.excerpt}
+                    </p>
+
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center gap-3 text-xs text-slate-400">
+                        <span className="flex items-center gap-1">
+                          <User className="w-3 h-3" />
+                          {post.author}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Calendar className="w-3 h-3" />
+                          {formatDate(post.date)}
+                        </span>
+                      </div>
+
+                      <div className="flex items-center gap-1 text-slate-400 text-xs">
+                        <Eye className="w-3 h-3" />
+                        {post.views}
+                      </div>
+                    </div>
+
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {post.tags.slice(0, 2).map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    <button className="w-full bg-slate-700/50 hover:bg-slate-700 text-slate-300 hover:text-white py-2 px-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-2 group">
+                      Read More
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </button>
                   </div>
                 </motion.article>
                 ))}
@@ -214,10 +359,11 @@ export default function Blog() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
+            className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              {searchQuery ? `Search Results for "${searchQuery}"` : 'Recent Articles'}
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Stay Updated with Our Latest Insights
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               {searchQuery 
@@ -393,284 +539,4 @@ export default function Blog() {
       </div>
     </>
   );
-}
-
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Search, 
-  Filter, 
-  Calendar, 
-  User, 
-  Tag, 
-  ArrowRight,
-  Clock,
-  Eye,
-  BookOpen
-} from 'lucide-react';
-
-const Blog: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const categories = [
-    { id: 'all', name: 'All Categories', count: 25 },
-    { id: 'ai', name: 'AI & Machine Learning', count: 8 },
-    { id: 'quantum', name: 'Quantum Computing', count: 5 },
-    { id: 'cybersecurity', name: 'Cybersecurity', count: 6 },
-    { id: 'cloud', name: 'Cloud & DevOps', count: 4 },
-    { id: 'business', name: 'Business & Strategy', count: 2 }
-  ];
-
-  const blogPosts = [
-export default function Blog() {
-  const [posts, setPosts] = useState<BlogPost[]>([
-    {
-      id: 1,
-      title: 'The Future of AI: Autonomous Business Operations in 2025',
-      excerpt: 'Explore how autonomous AI systems are revolutionizing business operations and what this means for the future of work.',
-      category: 'ai',
-      author: 'Dr. Sarah Chen',
-      date: '2025-01-15',
-      readTime: '8 min read',
-      views: '2.4k',
-      tags: ['AI', 'Automation', 'Business', 'Future'],
-      featured: true,
-      image: '/api/placeholder/400/250'
-    },
-    {
-      id: 2,
-      title: 'Quantum Computing: Breaking Down the Barriers to Enterprise Adoption',
-      excerpt: 'Understanding the practical applications of quantum computing and how businesses can start preparing for the quantum revolution.',
-      category: 'quantum',
-      author: 'Dr. James Kim',
-      date: '2025-01-12',
-      readTime: '12 min read',
-      views: '1.8k',
-      tags: ['Quantum Computing', 'Enterprise', 'Technology', 'Innovation'],
-      featured: false,
-      image: '/api/placeholder/400/250'
-    },
-    {
-      id: 3,
-      title: 'Zero-Trust Security: The New Standard for Enterprise Protection',
-      excerpt: 'Why zero-trust security architecture is becoming essential for modern enterprises and how to implement it effectively.',
-      category: 'cybersecurity',
-      author: 'Michael Rodriguez',
-      date: '2025-01-10',
-      readTime: '10 min read',
-      views: '3.1k',
-      tags: ['Cybersecurity', 'Zero-Trust', 'Enterprise', 'Security'],
-      featured: false,
-      image: '/api/placeholder/400/250'
-    },
-    {
-      id: 4,
-      title: 'DevOps Transformation: From Theory to Practice',
-      excerpt: 'Real-world strategies for implementing DevOps practices and achieving faster, more reliable software delivery.',
-      category: 'cloud',
-      author: 'Emily Watson',
-      date: '2025-01-08',
-      readTime: '15 min read',
-      views: '2.7k',
-      tags: ['DevOps', 'Cloud', 'Automation', 'Software Development'],
-      featured: false,
-      image: '/api/placeholder/400/250'
-    },
-    {
-      id: 5,
-      title: 'AI-Powered Decision Making: Transforming Business Intelligence',
-      excerpt: 'How artificial intelligence is enhancing business intelligence and enabling data-driven decision making at scale.',
-      category: 'ai',
-      author: 'Dr. Sarah Chen',
-      date: '2025-01-05',
-      readTime: '9 min read',
-      views: '1.9k',
-      tags: ['AI', 'Business Intelligence', 'Data', 'Decision Making'],
-      featured: false,
-      image: '/api/placeholder/400/250'
-    },
-    {
-      id: 6,
-      title: 'The Rise of Edge Computing: Bringing Intelligence Closer to Data',
-      excerpt: 'Exploring the benefits of edge computing and how it\'s reshaping the future of IoT and real-time applications.',
-      category: 'cloud',
-      author: 'David Chen',
-      date: '2025-01-03',
-      readTime: '11 min read',
-      views: '1.6k',
-      tags: ['Edge Computing', 'IoT', 'Cloud', 'Real-time'],
-      featured: false,
-      image: '/api/placeholder/400/250'
-    },
-    {
-      id: 7,
-      title: 'Blockchain in Enterprise: Beyond Cryptocurrency',
-      excerpt: 'Practical applications of blockchain technology in enterprise environments and real-world use cases.',
-      category: 'business',
-      author: 'Alex Thompson',
-      date: '2025-01-01',
-      readTime: '13 min read',
-      views: '2.2k',
-      tags: ['Blockchain', 'Enterprise', 'Innovation', 'Technology'],
-      featured: false,
-      image: '/api/placeholder/400/250'
-    },
-    {
-      id: 8,
-      title: 'Machine Learning in Healthcare: Improving Patient Outcomes',
-      excerpt: 'How machine learning is transforming healthcare delivery and improving patient care and outcomes.',
-      category: 'ai',
-      author: 'Dr. Lisa Park',
-      date: '2024-12-28',
-      readTime: '14 min read',
-      views: '3.5k',
-      tags: ['AI', 'Healthcare', 'Machine Learning', 'Patient Care'],
-      featured: false,
-      image: '/api/placeholder/400/250'
-    }
-  ];
-
-  const featuredPost = blogPosts.find(post => post.featured);
-  const regularPosts = blogPosts.filter(post => !post.featured);
-
-  const filteredPosts = selectedCategory === 'all' 
-    ? regularPosts 
-    : regularPosts.filter(post => post.category === selectedCategory);
-
-  const searchFilteredPosts = filteredPosts.filter(post =>
-    post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-  );
-
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
-    });
-  };
-
-  const recentArticles = [
-    {
-      id: 4,
-      title: "Building Autonomous Business Operations: A Step-by-Step Guide",
-      excerpt: "Transform your business processes with AI-powered automation. Learn the key steps to implement autonomous operations that can reduce costs by 40% and improve efficiency by 60%.",
-      author: "David Kim",
-      authorAvatar: "DK",
-      publishDate: "2025-01-08",
-      readTime: "15 min read",
-      category: "ai",
-      tags: ["AI", "Automation", "Business Operations", "Digital Transformation"],
-      image: "/api/placeholder/400/250",
-      views: "5.8k",
-      likes: 312
-    },
-    {
-      id: 5,
-      title: "Quantum Neural Networks: The Next Frontier in AI",
-      excerpt: "Dive deep into quantum neural networks and discover how they're solving complex problems in cryptography, optimization, and scientific research that classical computers cannot handle.",
-      author: "Dr. Elena Petrov",
-      authorAvatar: "EP",
-      publishDate: "2025-01-06",
-      readTime: "18 min read",
-      category: "quantum",
-      tags: ["Quantum Computing", "Neural Networks", "AI", "Research"],
-      image: "/api/placeholder/400/250",
-      views: "4.6k",
-      likes: 289
-    },
-    {
-      id: 6,
-      title: "Micro SAAS Solutions: Scaling Your Business with Custom Software",
-      excerpt: "Discover how micro SAAS solutions can help small and medium businesses compete with enterprise-level technology while maintaining flexibility and cost-effectiveness.",
-      author: "Alex Johnson",
-      authorAvatar: "AJ",
-      publishDate: "2025-01-04",
-      readTime: "11 min read",
-      category: "industry",
-      tags: ["SAAS", "Business", "Software", "Scaling"],
-      image: "/api/placeholder/400/250",
-      views: "3.9k",
-      likes: 201
-    },
-    {
-      id: 7,
-      title: "Edge Computing in IoT: Reducing Latency for Real-Time Applications",
-      excerpt: "Learn how edge computing is revolutionizing IoT applications by bringing computation closer to data sources, enabling real-time decision making in autonomous vehicles and smart cities.",
-      author: "Rachel Green",
-      authorAvatar: "RG",
-      publishDate: "2025-01-02",
-      readTime: "9 min read",
-      category: "infrastructure",
-      tags: ["Edge Computing", "IoT", "Real-Time", "Infrastructure"],
-      image: "/api/placeholder/400/250",
-      views: "3.2k",
-      likes: 178
-    },
-    {
-      id: 8,
-      title: "AI-Powered IT Asset Management: Maximizing ROI on Technology Investments",
-      excerpt: "Discover how AI can transform your IT asset management, from predictive maintenance to cost optimization, helping you get more value from your technology investments.",
-      author: "Carlos Mendez",
-      authorAvatar: "CM",
-      publishDate: "2024-12-30",
-      readTime: "13 min read",
-      category: "ai",
-      tags: ["AI", "IT Management", "Asset Management", "ROI"],
-      image: "/api/placeholder/400/250",
-      views: "2.8k",
-      likes: 156
-    },
-    {
-      id: 9,
-      title: "The Rise of Quantum-Safe Cryptography: Preparing for the Future",
-      excerpt: "As quantum computers become more powerful, traditional encryption methods are at risk. Learn about quantum-safe cryptography and how to future-proof your security infrastructure.",
-      author: "Dr. James Wilson",
-      authorAvatar: "JW",
-      publishDate: "2024-12-28",
-      readTime: "16 min read",
-      category: "cybersecurity",
-      tags: ["Quantum", "Cryptography", "Security", "Future-Proofing"],
-      image: "/api/placeholder/400/250",
-      views: "2.5k",
-      likes: 134
-    }
-  ];
-
-  const allArticles = [...featuredArticles, ...recentArticles];
-
-  const filteredArticles = allArticles.filter(article => {
-    const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;
-    const matchesSearch = 
-      article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      article.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
-
-  const sortedArticles = filteredArticles.sort((a, b) => {
-    switch (sortBy) {
-      case 'latest':
-        return new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime();
-      case 'popular':
-        return b.views.localeCompare(a.views, undefined, { numeric: true });
-      case 'trending':
-        return b.likes - a.likes;
-      default:
-        return 0;
-    }
-  });
-
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
-    });
-  };
-
 }

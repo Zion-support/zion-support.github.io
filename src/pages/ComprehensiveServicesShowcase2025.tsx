@@ -1,8 +1,70 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Sparkles, ArrowRight, CheckCircle, Phone, Mail, MapPin, TrendingUp, Play, Download, ExternalLink, Search } from 'lucide-react';
-import { CUTTING_EDGE_SERVICES_2025 } from '../data/enhanced-2025-cutting-edge-services';
-import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from '../data/specialized-industry-solutions-2025';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Search,
+  Filter,
+  Star,
+  ArrowRight,
+  ChevronDown,
+  Globe,
+  Zap,
+  Shield,
+  Brain,
+  Cloud,
+  Lock,
+  Users,
+  TrendingUp,
+  Award,
+  Clock,
+  DollarSign,
+  CheckCircle,
+  Rocket,
+  Cpu,
+  Database,
+  Network,
+  Smartphone,
+  BarChart3,
+  Code,
+  Server,
+  Chip,
+  Wifi,
+  ShieldCheck,
+  Bot,
+  Workflow,
+  Eye,
+  Sparkles,
+  Phone,
+  Mail,
+  MapPin,
+  Target,
+  Lightbulb,
+  BarChart,
+  PieChart,
+  LineChart,
+  Activity,
+  FileText,
+  MessageCircle,
+  Calendar,
+  Settings,
+  Monitor,
+  Truck,
+  Car,
+  Clipboard,
+  Link,
+  Microscope,
+  X,
+  Atom,
+  Heart,
+  Leaf
+} from 'lucide-react';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+
+interface ServiceContact {
+  mobile: string;
+  email: string;
+  address: string;
+  website: string;
+}
 
 const ComprehensiveServicesShowcase2025: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -25,6 +87,30 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
     
     return matchesCategory && matchesIndustry && matchesSearch;
   });
+
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'price-low':
+        return a.price - b.price;
+      case 'price-high':
+        return b.price - a.price;
+      case 'name':
+        return a.title.localeCompare(b.title);
+      case 'innovation':
+        const innovationOrder = { 'Breakthrough': 3, 'Revolutionary': 2, 'Advanced': 1 };
+        return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0);
+      default:
+        return 0;
+    }
+  });
+
+  const handleServiceClick = (service: any) => {
+    setSelectedService(service);
+  };
+
+  const closeModal = () => {
+    setSelectedService(null);
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },

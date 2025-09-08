@@ -1,8 +1,47 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { Search, Filter, Star, Zap, Brain, Shield, Cloud, Rocket, Globe, Heart, Crown, Sparkles, ArrowRight, Phone, Mail, MapPin, ExternalLink, Check, DollarSign, TrendingUp, Clock, Users, Target } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import {
+  Search,
+  Filter,
+  Star,
+  TrendingUp,
+  Zap,
+  Shield,
+  Brain,
+  Globe,
+  Cpu,
+  Lock,
+  ArrowRight,
+  CheckCircle,
+  DollarSign,
+  Clock,
+  Users,
+  Target,
+  Award,
+  Sparkles,
+  Rocket,
+  BarChart3,
+  MessageSquare,
+  Mail,
+  Database,
+  Network,
+  Cloud,
+  Smartphone,
+  Palette,
+  Leaf,
+  Code,
+  Wallet,
+  Box,
+  ChevronDown,
+  ChevronUp,
+  ExternalLink,
+  Phone,
+  Mail as MailIcon,
+  MapPin,
+  Globe as GlobeIcon
+} from 'lucide-react';
+import { SEO } from '../components/SEO';
+import { INNOVATIVE_SERVICES_2025, InnovativeService2025 } from '../data/innovativeServices2025';
 
 const ComprehensivePricingGuide2027: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -38,34 +77,77 @@ const ComprehensivePricingGuide2027: React.FC = () => {
   }, [services, searchQuery, selectedCategory, priceRange]);
 
   const getCategoryIcon = (category: string) => {
-    const iconMap: { [key: string]: any } = {
-      'AI & Analytics': Brain,
-      'AI & Sales': Brain,
-      'Quantum & AI': Zap,
-      'AI & Healthcare': Heart,
-      'Blockchain & IoT': Shield,
-      'AI & Cybersecurity': Shield,
-      'IoT & Smart Cities': Globe,
-      'AI & Legal Tech': Crown,
-      'AI & Content': Sparkles,
-      'AI & Edge Computing': Cloud
-    };
-    return iconMap[category] || Zap;
+    switch (category) {
+      case 'AI & Automation':
+        return <Brain className="w-6 h-6" />;
+      case 'AI & Security':
+        return <Shield className="w-6 h-6" />;
+      case 'AI & Marketing':
+        return <BarChart3 className="w-6 h-6" />;
+      case 'AI & Sales':
+        return <TrendingUp className="w-6 h-6" />;
+      case 'AI & Customer Experience':
+        return <MessageSquare className="w-6 h-6" />;
+      case 'AI & Analytics':
+        return <Database className="w-6 h-6" />;
+      case 'Quantum Computing':
+        return <Box className="w-6 h-6" />;
+      case 'IoT & Edge Computing':
+        return <Network className="w-6 h-6" />;
+      case 'Blockchain & Web3':
+        return <Wallet className="w-6 h-6" />;
+      case 'Sustainability & Technology':
+        return <Leaf className="w-6 h-6" />;
+      default:
+        return <Sparkles className="w-6 h-6" />;
+    }
   };
 
-  const getPriceRangeLabel = (price: number) => {
-    if (price <= 2000) return { label: 'Starter', color: 'text-green-400 bg-green-400/10' };
-    if (price <= 5000) return { label: 'Professional', color: 'text-blue-400 bg-blue-400/10' };
-    return { label: 'Enterprise', color: 'text-purple-400 bg-purple-400/10' };
+  const getPriceRangeFilter = (range: string) => {
+    switch (range) {
+      case 'Under $1,000':
+        return (service: InnovativeService2025) => service.price < 1000;
+      case '$1,000 - $2,999':
+        return (service: InnovativeService2025) => service.price >= 1000 && service.price <= 2999;
+      case '$3,000 - $4,999':
+        return (service: InnovativeService2025) => service.price >= 3000 && service.price <= 4999;
+      case '$5,000+':
+        return (service: InnovativeService2025) => service.price >= 5000;
+      default:
+        return () => true;
+    }
   };
 
   const getInnovationColor = (level: string) => {
     switch (level) {
-      case 'Revolutionary': return 'text-purple-400 border-purple-400';
-      case 'Advanced': return 'text-blue-400 border-blue-400';
-      case 'Standard': return 'text-green-400 border-green-400';
-      default: return 'text-gray-400 border-gray-400';
+      case 'Revolutionary':
+        return 'bg-gradient-to-r from-purple-500 to-pink-500';
+      case 'Advanced':
+        return 'bg-gradient-to-r from-blue-500 to-cyan-500';
+      case 'Innovative':
+        return 'bg-gradient-to-r from-green-500 to-emerald-500';
+      default:
+        return 'bg-gradient-to-r from-gray-500 to-slate-500';
     }
+  };
+
+  const toggleServiceExpansion = (serviceId: string) => {
+    const newExpanded = new Set(expandedServices);
+    if (newExpanded.has(serviceId)) {
+      newExpanded.delete(serviceId);
+    } else {
+      newExpanded.add(serviceId);
+    }
+
+    setExpandedServices(newExpanded);
+  };
+
+  const getROIColor = (roi: string) => {
+    const roiValue = parseInt(roi.replace('%', ''));
+    if (roiValue >= 500) return 'text-green-400';
+    if (roiValue >= 300) return 'text-blue-400';
+    if (roiValue >= 200) return 'text-yellow-400';
+    return 'text-gray-400';
   };
 
   return (
@@ -78,18 +160,22 @@ const ComprehensivePricingGuide2027: React.FC = () => {
       />
       
       {/* Hero Section */}
-      <section className="relative py-20 sm:py-32">
-        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-5"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6"
-            >
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Comprehensive Pricing Guide 2027
+      <section className="pt-20 pb-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center">
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-full border border-green-400/30 mb-6">
+              <DollarSign className="w-5 h-5 text-green-400 mr-2" />
+              <span className="text-green-300 font-medium">Comprehensive Pricing Guide 2027</span>
+            </div>
+
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Complete Pricing
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-400">
+                & Service Guide
               </span>
             </motion.h1>
             <motion.p 
@@ -146,61 +232,53 @@ const ComprehensivePricingGuide2027: React.FC = () => {
               </div>
             </div>
 
-            {/* Category Filter */}
-            <div className="flex gap-2">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                    selectedCategory === category
-                      ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'
-                      : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 hover:text-white border border-slate-600/50'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
+              {/* Category Filter */}
+              <div className="relative">
+                <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-500/50 focus:border-transparent appearance-none cursor-pointer">
+                  {categories.map(category => (
+                    <option key={category} value={category}>{category}</option>
+                  ))}
+                </select>
+              </div>
 
-            {/* Price Range Filter */}
-            <div className="flex items-center gap-2">
-              <DollarSign className="w-4 h-4 text-slate-400" />
-              <select
-                value={priceRange}
-                onChange={(e) => setPriceRange(e.target.value)}
-                className="bg-slate-800/70 border border-slate-600/50 rounded-lg px-3 py-2 text-sm text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none"
-              >
-                <option value="all">All Prices</option>
-                <option value="low">$1,299 - $2,000</option>
-                <option value="medium">$2,001 - $5,000</option>
-                <option value="high">$5,001+</option>
-              </select>
+              {/* Price Range Filter */}
+              <div className="relative">
+                <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <select
+                  value={selectedPriceRange}
+                  onChange={(e) => setSelectedPriceRange(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-500/50 focus:border-transparent appearance-none cursor-pointer">
+                  {priceRanges.map(range => (
+                    <option key={range} value={range}>{range}</option>
+                  ))}
+                </select>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Pricing Grid */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid gap-8 grid-cols-1 lg:grid-cols-2">
-            {filteredServices.map((service, index) => {
-              const CategoryIcon = getCategoryIcon(service.category);
-              const priceRange = getPriceRangeLabel(service.price);
-              return (
-                <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group bg-slate-900/60 backdrop-blur border border-cyan-400/15 hover:border-cyan-400/40 transition-all duration-300 rounded-2xl p-8 hover:shadow-2xl hover:shadow-cyan-400/10 hover:-translate-y-1"
-                >
-                  {/* Service Header */}
-                  <div className="flex items-start justify-between mb-6">
-                    <div className="flex items-center gap-4">
-                      <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <CategoryIcon className="w-8 h-8 text-white" />
+      {/* Services List */}
+      <section className="px-4 pb-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="space-y-6">
+            {filteredServices.map((service, index) => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 hover:border-green-500/50 transition-all duration-300">
+                {/* Service Header */}
+                <div className="p-6">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center space-x-4">
+                      <div className="p-3 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl border border-green-400/30">
+                        {getCategoryIcon(service.category)}
                       </div>
                       <div>
                         <div className="text-sm uppercase tracking-wide text-cyan-300/70 font-medium mb-1">

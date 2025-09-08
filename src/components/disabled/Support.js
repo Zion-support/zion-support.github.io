@@ -127,4 +127,66 @@ export default function Support() {
             link: '/community'
         }
     ];
+
+    return (
+        <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+            <div className="container mx-auto px-4 py-8">
+                <h1 className="text-4xl font-bold text-white mb-8 text-center">Support Center</h1>
+                
+                {/* FAQ Section */}
+                <div className="mb-12">
+                    <h2 className="text-3xl font-semibold text-white mb-6">Frequently Asked Questions</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                        {Object.keys(faqCategories).map((category) => (
+                            <button
+                                key={category}
+                                onClick={() => setActiveCategory(category)}
+                                className={`px-4 py-2 rounded-lg transition-colors ${
+                                    activeCategory === category
+                                        ? 'bg-zion-purple text-white'
+                                        : 'bg-zion-slate-dark text-zion-slate-light hover:bg-zion-slate'
+                                }`}
+                            >
+                                {category.charAt(0).toUpperCase() + category.slice(1)}
+                            </button>
+                        ))}
+                    </div>
+                    
+                    <div className="space-y-4">
+                        {faqCategories[activeCategory].map((faq, index) => (
+                            <div key={index} className="bg-zion-slate-dark p-6 rounded-lg">
+                                <h3 className="text-xl font-semibold text-white mb-2">{faq.question}</h3>
+                                <p className="text-zion-slate-light">{faq.answer}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                
+                {/* Support Channels */}
+                <div className="mb-12">
+                    <h2 className="text-3xl font-semibold text-white mb-6">Support Channels</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {supportChannels.map((channel, index) => (
+                            <div key={index} className="bg-zion-slate-dark p-6 rounded-lg">
+                                <div className="text-3xl mb-3">{channel.icon}</div>
+                                <h3 className="text-xl font-semibold text-white mb-2">
+                                    {channel.name || channel.title}
+                                </h3>
+                                <p className="text-zion-slate-light mb-3">{channel.description}</p>
+                                {channel.response && (
+                                    <p className="text-zion-cyan text-sm mb-3">Response: {channel.response}</p>
+                                )}
+                                <a
+                                    href={channel.link}
+                                    className="inline-block px-4 py-2 bg-zion-purple text-white rounded-lg hover:bg-zion-purple-dark transition-colors"
+                                >
+                                    Access
+                                </a>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 }

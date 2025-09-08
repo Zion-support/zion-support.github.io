@@ -1,26 +1,10 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  Clock, 
-  Users, 
-  TrendingUp, 
-  Shield, 
-  Zap,
-  Brain,
-  Globe,
-  Building,
-  Car,
-  GraduationCap,
-  Home,
-  Truck,
-  Phone,
-  Mail,
-  ExternalLink
+import React from 'react';
+import { motion } from 'framer-motion';
+import {
+  Brain, Database, Users, Truck, Shield, Briefcase, Cpu, Wrench, Leaf, Atom,
+  ArrowRight, ExternalLink, Phone, Mail, Zap, Target, Clock, Globe, Check
 } from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import { SEO } from '@/components/SEO';
 
 const InnovativeServicesShowcase2025: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');

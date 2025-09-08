@@ -24,9 +24,9 @@ import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {QuoteRequestForm} from "@/components/QuoteRequestForm";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {CheckCircle, Clock, Users, Zap} from "lucide-react";
+import {CheckCircle, Clock, Users, Zap} from 'lucide-react';
 
-export default function RequestQuote() {}
+export default function RequestQuote() {
   return (
     <div className="min-h-screen bg-zion-blue">
       <SEO title="Request a Quote | Zion Tech Group" description="Get customized quotes for AI services, IT solutions, talent hiring, and equipment. Fast, reliable, and tailored to your needs." keywords="request quote, AI services, IT solutions, talent hiring, equipment quotes" canonical="https://ziontechgroup.com/request-quote"/>
@@ -272,4 +272,3 @@ export default function RequestQuote() {}
     </>
   );
 }
-</></>;
