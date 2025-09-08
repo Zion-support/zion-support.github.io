@@ -99,12 +99,15 @@ import {
       title: "Industry Solutions",
       icon: Building2,
       links: [
-        { name: "Healthcare & Biotech", href: "/solutions/healthcare" },
-        { name: "Financial Services", href: "/solutions/financial" },
-        { name: "Manufacturing", href: "/solutions/manufacturing" },
-        { name: "Government & Public", href: "/solutions/government" },
-        { name: "Retail & E-commerce", href: "/solutions/retail" },
-        { name: "Enterprise Solutions", href: "/enterprise" }
+        { name: "About Zion Tech Group", href: "/about", icon: Users },
+        { name: "Leadership Team", href: "/leadership", icon: Award },
+        { name: "Careers & Jobs", href: "/careers", icon: Users },
+        { name: "Partners & Alliances", href: "/partners", icon: Handshake },
+        { name: "News & Press", href: "/news", icon: FileText },
+        { name: "Events & Webinars", href: "/events", icon: Calendar },
+        { name: "Contact Us", href: "/contact", icon: Phone },
+        { name: "Get Started", href: "/get-started", icon: Rocket },
+        { name: "Sign Up", href: "/signup", icon: Users }
       ]
     },
     {

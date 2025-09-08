@@ -46,66 +46,75 @@ const ModernSidebar: React.FC = () => {
 
   const navigation = {
     main: [
-      { name: 'Home', href: '/', icon: Home, badge: null },
-      { name: 'About Us', href: '/about', icon: Users, badge: null },
-      { name: 'Contact', href: '/contact', icon: Phone, badge: null },
-      { name: 'Pricing', href: '/pricing', icon: BarChart3, badge: null },
-      { name: 'Get Quote', href: '/request-quote', icon: MessageCircle, badge: 'Popular' },
+      { name: 'Home', href: '/', icon: Home },
+      { name: 'About', href: '/about', icon: Users },
+      { name: 'Contact', href: '/contact', icon: Phone },
+      { name: 'Pricing', href: '/pricing', icon: BarChart3 },
+      { name: 'Leadership', href: '/leadership', icon: Users },
+      { name: 'Partners', href: '/partners', icon: Users },
     ],
     services: [
-      { name: 'All Services', href: '/services', icon: Zap, badge: null },
-      { name: 'AI & ML Services', href: '/ai-services', icon: Brain, badge: 'Hot' },
-      { name: 'IT Infrastructure', href: '/it-services', icon: Cpu, badge: null },
-      { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, badge: null },
-      { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, badge: null },
-      { name: 'Quantum Computing', href: '/services/quantum-computing-solutions', icon: Rocket, badge: 'New' },
-      { name: 'Blockchain & Web3', href: '/services/blockchain-enterprise-solutions', icon: Lock, badge: null },
-      { name: 'Edge Computing', href: '/services/edge-computing-solutions', icon: Smartphone, badge: null },
-      { name: 'Micro SaaS', href: '/micro-saas', icon: Zap, badge: null },
-    ],
-    ai: [
-      { name: 'Enterprise Automation', href: '/services/ai-enterprise-automation-platform', icon: Brain, badge: null },
-      { name: 'Business Intelligence', href: '/services/ai-business-intelligence', icon: BarChart3, badge: null },
-      { name: 'Supply Chain AI', href: '/services/ai-supply-chain-optimization', icon: Globe, badge: null },
-      { name: 'Customer Support AI', href: '/services/ai-customer-support-automation', icon: MessageCircle, badge: null },
-      { name: 'Sales Copilot', href: '/services/ai-sales-copilot', icon: Users, badge: 'Popular' },
-      { name: 'Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield, badge: null },
+      { name: 'All Services', href: '/services', icon: Zap },
+      { name: 'AI Services', href: '/ai-services', icon: Brain },
+      { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
+      { name: 'IT Services', href: '/it-services', icon: Cpu },
+      { name: 'Micro SaaS', href: '/micro-saas', icon: Zap },
+      { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
+      { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+      { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Globe },
+      { name: 'Blockchain Enterprise', href: '/services/blockchain-enterprise-solutions', icon: Lock },
+      { name: 'Quantum Computing', href: '/services/quantum-edge-computing-solutions', icon: Rocket },
+      { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence-dashboard', icon: BarChart3 },
+      { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle },
     ],
     solutions: [
-      { name: 'Healthcare & Biotech', href: '/solutions/healthcare', icon: Users, badge: null },
-      { name: 'Financial Services', href: '/solutions/financial', icon: BarChart3, badge: null },
-      { name: 'Manufacturing', href: '/solutions/manufacturing', icon: Settings, badge: null },
-      { name: 'Government & Public', href: '/solutions/government', icon: Shield, badge: null },
-      { name: 'Retail & E-commerce', href: '/solutions/retail', icon: Database, badge: null },
-      { name: 'Enterprise Solutions', href: '/enterprise', icon: Globe, badge: null },
-    ],
-    innovation: [
-      { name: '2026 Innovation Showcase', href: '/innovative-services-showcase-2026', icon: Rocket, badge: 'New' },
-      { name: '2025 Services Showcase', href: '/comprehensive-services-showcase-2025', icon: Zap, badge: null },
-      { name: 'AI Services 2025', href: '/innovative-ai-services-showcase-2025', icon: Brain, badge: null },
-      { name: 'Emerging Technologies', href: '/emerging-tech', icon: Cpu, badge: 'Trending' },
-      { name: 'Digital Transformation', href: '/digital-transformation', icon: Globe, badge: null },
+      { name: 'All Solutions', href: '/solutions', icon: Database },
+      { name: 'Enterprise', href: '/enterprise', icon: Database },
+      { name: 'Industry Solutions', href: '/industry-solutions', icon: Globe },
+      { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud },
+      { name: 'Emerging Tech', href: '/emerging-tech', icon: Rocket },
+      { name: 'Healthcare', href: '/solutions/healthcare', icon: MessageCircle },
+      { name: 'Financial', href: '/solutions/financial', icon: BarChart3 },
+      { name: 'Manufacturing', href: '/solutions/manufacturing', icon: Settings },
+      { name: 'Government', href: '/solutions/government', icon: Shield },
+      { name: 'Retail', href: '/solutions/retail', icon: Smartphone },
     ],
     resources: [
-      { name: 'Documentation', href: '/docs', icon: FileText, badge: null },
-      { name: 'Case Studies', href: '/case-studies', icon: FileText, badge: null },
-      { name: 'White Papers', href: '/white-papers', icon: FileText, badge: null },
-      { name: 'Webinars', href: '/webinars', icon: Calendar, badge: null },
-      { name: 'Training', href: '/training', icon: Users, badge: null },
-      { name: 'Research & Development', href: '/research-development', icon: Cpu, badge: null },
-      { name: 'Support Center', href: '/help', icon: MessageCircle, badge: null },
+      { name: 'Documentation', href: '/docs', icon: FileText },
+      { name: 'Blog', href: '/blog', icon: FileText },
+      { name: 'Case Studies', href: '/case-studies', icon: FileText },
+      { name: 'White Papers', href: '/white-papers', icon: FileText },
+      { name: 'Webinars', href: '/webinars', icon: Calendar },
+      { name: 'Training', href: '/training', icon: Users },
+      { name: 'Research & Development', href: '/research-development', icon: Rocket },
+      { name: 'News', href: '/news', icon: FileText },
+      { name: 'Events', href: '/events', icon: Calendar },
+      { name: 'Support', href: '/support', icon: MessageCircle },
+      { name: 'Help Center', href: '/help', icon: MessageCircle },
     ],
-    company: [
-      { name: 'Leadership Team', href: '/leadership', icon: Users, badge: null },
-      { name: 'News & Updates', href: '/news', icon: FileText, badge: null },
-      { name: 'Events & Webinars', href: '/events', icon: Calendar, badge: null },
-      { name: 'Partners', href: '/partners', icon: Users, badge: null },
-      { name: 'Careers', href: '/careers', icon: Users, badge: 'Hiring' },
-      { name: 'Blog', href: '/blog', icon: FileText, badge: null },
+    showcases: [
+      { name: 'Services Showcase 2025', href: '/comprehensive-services-showcase-2025', icon: Rocket },
+      { name: 'AI Services 2025', href: '/innovative-ai-services-showcase-2025', icon: Brain },
+      { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Zap },
+      { name: 'Services Hub', href: '/innovative-services-hub', icon: Globe },
+      { name: 'Services 2026', href: '/innovative-services-showcase-2026', icon: Rocket },
+      { name: 'Services 2032', href: '/innovative-services-showcase-2032', icon: Rocket },
+      { name: 'Pricing Guide 2025', href: '/comprehensive-pricing-guide-2025', icon: BarChart3 },
+      { name: 'Pricing Guide 2032', href: '/comprehensive-pricing-guide-2032', icon: BarChart3 },
     ],
-    marketplace: [
-      { name: 'Marketplace Home', href: '/marketplace', icon: Database, badge: null },
-      { name: 'Sign Up', href: '/signup', icon: Users, badge: 'Free' },
+    legal: [
+      { name: 'Privacy Policy', href: '/privacy', icon: Lock },
+      { name: 'Terms of Service', href: '/terms', icon: FileText },
+      { name: 'Cookie Policy', href: '/cookies', icon: Lock },
+      { name: 'Accessibility', href: '/accessibility', icon: Users },
+      { name: 'Security', href: '/security', icon: Shield },
+      { name: 'Compliance', href: '/compliance', icon: Shield },
+    ],
+    account: [
+      { name: 'Sign Up', href: '/signup', icon: Users },
+      { name: 'Get Started', href: '/get-started', icon: Rocket },
+      { name: 'Request Quote', href: '/request-quote', icon: Mail },
+      { name: 'Marketplace', href: '/marketplace', icon: Globe },
     ]
   };
 
@@ -278,11 +287,14 @@ const ModernSidebar: React.FC = () => {
             {/* Resources Section */}
             {renderNavSection('Resources', navigation.resources, 'resources')}
 
-            {/* Company Section */}
-            {renderNavSection('Company', navigation.company, 'company')}
+            {/* Showcases Section */}
+            {renderNavSection('Showcases', navigation.showcases, 'showcases')}
 
-            {/* Marketplace Section */}
-            {renderNavSection('Marketplace', navigation.marketplace, 'marketplace')}
+            {/* Account Section */}
+            {renderNavSection('Account', navigation.account, 'account')}
+
+            {/* Legal Section */}
+            {renderNavSection('Legal', navigation.legal, 'legal')}
           </nav>
 
           {/* Contact Information */}

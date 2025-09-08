@@ -1,13 +1,182 @@
 import React, { useState } from 'react';
-import { Link  } from 'react-router-dom.ts';
-import { cn  } from '@/lib/utils';
-import { NavLink  } from 'react-router-dom.ts';
-import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp  } from 'lucide-react';
-export function MainNavigation(...args[]):  {
-    const [isServicesOpen, setIsServicesOpen] = useState(false);
-    const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-    return (<nav className={cn("hidden md:flex items-center space-x-6", className)}>
-      <NavLink to="/" className={({ isActive }) => cn("text-sm font-medium transition-colors hover:text-primary", isActive ? "text-zion-cyan" : "text-muted-foreground")}>
+import { Link, NavLink } from 'react-router-dom';
+import { cn } from "@/lib/utils";
+import { 
+  ChevronDown, 
+  Zap, 
+  Brain, 
+  Shield, 
+  Users, 
+  HardDrive, 
+  TrendingUp, 
+  Building2, 
+  FileText, 
+  HelpCircle, 
+  BarChart3,
+  Server,
+  Cloud,
+  Lock,
+  BarChart,
+  Cpu,
+  Workflow,
+  Database,
+  Globe,
+  Target,
+  Rocket,
+  Lightbulb,
+  Code,
+  Monitor,
+  Smartphone,
+  Network,
+  Wifi,
+  Activity,
+  Eye,
+  Search,
+  Settings,
+  Palette,
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  DollarSign,
+  Atom,
+  Leaf,
+  Gamepad2,
+  Coins,
+  Satellite,
+  MessageCircle,
+  Star,
+  Users2,
+  Cog,
+  Menu,
+  X,
+  ArrowRight,
+  Video,
+  GraduationCap,
+  Handshake,
+  ShoppingCart,
+  Heart,
+  Factory,
+  Briefcase,
+  Award,
+  Truck,
+  Layers,
+  Calendar,
+  PenTool,
+  Sparkles
+} from 'lucide-react';
+
+interface MainNavigationProps {
+  className?: string;
+}
+
+export function MainNavigation({ className }: MainNavigationProps) {
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+
+  const servicesCategories = [
+    {
+      title: "AI & Automation",
+      icon: Brain,
+      services: [
+        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence-dashboard", icon: BarChart3 },
+        { name: "AI Customer Support", href: "/services/ai-customer-support-automation", icon: MessageCircle },
+        { name: "AI Project Management", href: "/services/ai-project-management-platform", icon: Workflow },
+        { name: "AI Marketing Automation", href: "/services/ai-marketing-automation-platform", icon: TrendingUp },
+        { name: "AI HR Platform", href: "/services/ai-hr-platform", icon: Users },
+        { name: "AI Financial Trading", href: "/services/ai-financial-trading-platform", icon: TrendingUp },
+        { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform", icon: Heart },
+        { name: "AI Legal Automation", href: "/services/ai-legal-document-automation-platform", icon: FileText },
+        { name: "AI Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform", icon: Truck },
+        { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-threat-intelligence", icon: Shield }
+      ]
+    },
+    {
+      title: "Cloud & Infrastructure",
+      icon: Cloud,
+      services: [
+        { name: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud },
+        { name: "Infrastructure Management", href: "/services/it-infrastructure-management", icon: Server },
+        { name: "Cybersecurity Solutions", href: "/services/cybersecurity", icon: Shield },
+        { name: "Blockchain Enterprise", href: "/services/blockchain-enterprise-solutions", icon: Network },
+        { name: "Quantum Edge Computing", href: "/services/quantum-edge-computing-solutions", icon: Atom },
+        { name: "Cloud FinOps Optimizer", href: "/services/cloud-finops-optimizer", icon: DollarSign }
+      ]
+    },
+    {
+      title: "Emerging Technologies",
+      icon: Rocket,
+      services: [
+        { name: "Digital Transformation", href: "/services/digital-transformation", icon: Sparkles },
+        { name: "IT Infrastructure", href: "/services/it-infrastructure", icon: Server },
+        { name: "AI Autonomous Manufacturing", href: "/services/ai-autonomous-manufacturing-platform", icon: Factory },
+        { name: "AI Space Technology", href: "/services/ai-space-technology-platform", icon: Satellite },
+        { name: "AI Smart Home Energy", href: "/services/ai-smart-home-energy-management-platform", icon: Leaf },
+        { name: "AI Carbon Footprint Management", href: "/services/ai-carbon-footprint-management-platform", icon: Leaf },
+        { name: "AI Mental Health Support", href: "/services/ai-mental-health-support-platform", icon: Heart }
+      ]
+    }
+  ];
+
+  const solutionsCategories = [
+    {
+      title: "Industry Solutions",
+      icon: Target,
+      solutions: [
+        { name: "Healthcare Solutions", href: "/solutions/healthcare", icon: Heart },
+        { name: "Financial Solutions", href: "/solutions/financial", icon: DollarSign },
+        { name: "Manufacturing Solutions", href: "/solutions/manufacturing", icon: Factory },
+        { name: "Government Solutions", href: "/solutions/government", icon: Building2 },
+        { name: "Retail Solutions", href: "/solutions/retail", icon: ShoppingCart }
+      ]
+    },
+    {
+      title: "Technology Solutions",
+      icon: Cpu,
+      solutions: [
+        { name: "Quantum Edge Computing", href: "/solutions/quantum-edge-computing", icon: Atom },
+        { name: "AI Autonomous Business", href: "/solutions/ai-autonomous-business", icon: Brain },
+        { name: "Blockchain & Web3", href: "/solutions/blockchain-web3", icon: Network },
+        { name: "IoT Edge Computing", href: "/solutions/iot-edge-computing", icon: Wifi },
+        { name: "Space Technology", href: "/solutions/space-tech", icon: Satellite }
+      ]
+    }
+  ];
+
+  const companyLinks = [
+    { name: "About Us", href: "/about", icon: Building2 },
+    { name: "Leadership", href: "/leadership", icon: Users },
+    { name: "Careers", href: "/careers", icon: Briefcase },
+    { name: "Partners", href: "/partners", icon: Handshake },
+    { name: "News", href: "/news", icon: FileText },
+    { name: "Events", href: "/events", icon: Calendar }
+  ];
+
+  const resourceLinks = [
+    { name: "Documentation", href: "/docs", icon: FileText },
+    { name: "Blog", href: "/blog", icon: PenTool },
+    { name: "White Papers", href: "/white-papers", icon: FileText },
+    { name: "Webinars", href: "/webinars", icon: Video },
+    { name: "Training", href: "/training", icon: GraduationCap },
+    { name: "Case Studies", href: "/case-studies", icon: Award },
+    { name: "Research & Development", href: "/research-development", icon: Lightbulb },
+    { name: "Support", href: "/support", icon: HelpCircle },
+    { name: "Help Center", href: "/help", icon: HelpCircle }
+  ];
+
+  return (
+    <nav className={cn("hidden lg:flex items-center space-x-8", className)}>
+      {/* Home */}
+      <NavLink 
+        to="/" 
+        className={({ isActive }) => 
+          cn("text-sm font-medium transition-colors hover:text-primary px-3 py-2 rounded-md", 
+            isActive ? "text-zion-cyan bg-zion-cyan/10" : "text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5"
+          )
+        }
+      >
         Home
       </NavLink>
       {/* Services Dropdown */}

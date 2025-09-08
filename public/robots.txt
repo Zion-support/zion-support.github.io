@@ -1,31 +1,46 @@
+# Robots.txt for Zion Tech Group
+# Website: https://ziontechgroup.com
+# Generated: 2025-08-29
+
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://ziontechgroup.com/sitemap.xml
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
 
 # Disallow admin and private areas
 Disallow: /admin/
-Disallow: /dashboard/
-Disallow: /login/
-Disallow: /private/
 Disallow: /api/
+Disallow: /private/
 Disallow: /_next/
-Disallow: /static/
+Disallow: /node_modules/
+Disallow: /.git/
 
-# Allow important pages
-Allow: /services/
-Allow: /solutions/
-Allow: /about/
-Allow: /contact/
-Allow: /blog/
-Allow: /case-studies/
-Allow: /white-papers/
-Allow: /webinars/
-Allow: /pricing/
-Allow: /partners/
-Allow: /careers/
-Allow: /resources/
+# Allow access to static assets
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /assets/
+Allow: /favicon.ico
+Allow: /logo192.png
+Allow: /manifest.json
 
-# Crawl delay for respectful crawling
+# Sitemap locations
+Sitemap: https://ziontechgroup.com/sitemap.xml
+Sitemap: https://ziontechgroup.com/sitemap.json
+
+# Crawl-delay for respectful crawling
 Crawl-delay: 1
+
+# Host directive
+Host: https://ziontechgroup.com
