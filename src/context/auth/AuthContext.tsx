@@ -1,31 +1,24 @@
-import React, { createContext, useContext } from 'react.ts';
-
-interface User {
-
-  id: anystring;
-  email: string;
-  displayName?: string;
-  avatar?: string;
-  role?: string;
-  isEmailVerified?: boolean;
-  createdAt?: string;
-  updatedAt?: string;
-
-}
-
-interface AuthTokens {
-
-  accessToken: string | null;
-  refreshToken: string | null;
-
-}
+import React, { createContext, useContext } from 'react';
 
 interface AuthContextType {
-
-  user: User | null;
+  user: any;
+  setUser: (user: any) => void;
   isLoading: boolean;
+  setIsLoading: (loading: boolean) => void;
   onboardingStep: number;
-  tokens: AuthTokens;
+  setOnboardingStep: (step: number) => void;
+  tokens: any;
+  setTokens: (tokens: any) => void;
+  login: (email: string, password: string) => Promise<any>;
+  register: (name: string, email: string, password: string) => Promise<any>;
+  signup: (email: string, password: string, userData: any) => Promise<any>;
+  logout: () => void;
+  resetPassword: (email: string) => Promise<any>;
+  updateProfile: (data: any) => Promise<any>;
+  loginWithGoogle: () => Promise<any>;
+  loginWithFacebook: () => Promise<any>;
+  loginWithTwitter: () => Promise<any>;
+  loginWithWeb3: () => Promise<any>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -39,4 +32,3 @@ export const useAuth = () => {
 };
 
 export { AuthContext };
-export type { User, AuthTokens, AuthContextType };
