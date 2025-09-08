@@ -1,6 +1,5 @@
-import React, { useEffect, useMemo } from 'react';
-import { Helmet  } from 'react-helmet-async.ts';
-import { useLocation  } from 'react-router-dom.ts';
+
+import { NextSeo } from 'next-seo';
 
 interface SEOProps {
   title: string;
@@ -496,48 +495,37 @@ export const SEO: React.FC<SEOProps> = ({
   }, [finalMetadata, currentUrl, canonical, structuredData, type, publishedTime, modifiedTime, author, tags]);
 
   return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
-      <meta name="author" content={author} />
-      
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={url} />
-      <meta property="og:image" content={image} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={fullCanonical} />
-      
-      {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData || pageStructuredData)}
-      </script>
-      
-      {/* Organization Structured Data */}
-      <script type="application/ld+json">
-<<<<<<< HEAD
-        {JSON.stringify(defaultStructuredData)}
-      </script>
-    </Helmet>
+    <NextSeo
+      title={fullTitle}
+      description={description}
+      canonical={canonical}
+      noindex={noindex}
+      openGraph={{
+        url: ogUrl || canonical,
+        title: fullTitle,
+        description,
+        images: [
+          {
+            url: ogImage,
+          },
+        ],
+      }}
+      twitter={{
+        handle: '@lovable_dev',
+        site: '@lovable_dev',
+        cardType: 'summary_large_image',
+      }}
+      additionalMetaTags={
+        keywords
+          ? [
+              {
+                name: 'keywords',
+                content: keywords,
+              },
+            ]
+          : undefined
+      }
+    />
   );
 }
 

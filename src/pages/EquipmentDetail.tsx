@@ -20,7 +20,9 @@ import { Switch } from '@/components/ui/switch';
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { getStripe } from "@/utils/getStripe";
-import { apiClient } from "@/utils/apiClient";
+import { safeStorage } from '@/utils/safeStorage';
+import { SEO } from "@/components/SEO";
+import { StructuredData } from "@/components/StructuredData";
 
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
 =======
@@ -286,9 +288,34 @@ export default function EquipmentDetail() {
     }
   };
 
+  const pageUrl = `https://app.ziontechgroup.com/equipment/${equipment.id}`;
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: equipment.name,
+    description: equipment.description,
+    image: equipment.images,
+    brand: equipment.brand,
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: equipment.currency,
+      price: equipment.price,
+      availability: equipment.inStock
+        ? 'https://schema.org/InStock'
+        : 'https://schema.org/OutOfStock',
+      url: pageUrl
+    }
+  };
+
   return (
     <>
-      <FuturisticNavigation />
+      <SEO
+        title={equipment.name}
+        description={equipment.description}
+        ogImage={equipment.images[0]}
+        canonical={pageUrl}
+      />
+      <StructuredData data={structuredData} />
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

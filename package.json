@@ -6,12 +6,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "generate": "prisma generate",
-    "build": "NODE_ENV=production npx next build",
-    "deploy:ipfs": "node scripts/deploy-zion-ipfs.js",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md}\"",
-    "lint-format": "npm run format && npm run lint -- --fix",
+    "build": "NODE_ENV=production tsc && NODE_ENV=production vite build",
+    "postbuild": "next-sitemap",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "NODE_ENV=production vite preview",
     "test": "jest",
     "test:watch": "vitest --watch",
@@ -168,7 +165,9 @@
     "tailwind-merge": "^2.2.1",
     "vaul": "^0.9.0",
     "zod": "^3.22.4",
-    "axios": "^1.6.2"
+    "yup": "^1.2.0",
+    "next-seo": "^6.0.0",
+    "next-sitemap": "^4.1.0"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^15.5.2",
