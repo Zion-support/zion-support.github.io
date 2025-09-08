@@ -6,7 +6,13 @@
 
 [build.environment]
   NODE_VERSION = "20"
+<<<<<<< HEAD
+  PYTHON_VERSION = "3.12"
+  PIP_USE_PEP517 = "false"
+  PIP_NO_CACHE_DIR = "true"
+=======
   PYTHON_VERSION = "3.10"
+>>>>>>> origin/cursor/install-python-dependencies-and-build-image-cdea
 
 [[plugins]]
   package = "netlify-plugin-compress"
