@@ -148,4 +148,88 @@ export const AuthProvider: React.FC<PropsWithChildren> = ({ children }) => {
 	);
 };
 
-export default AuthProvider;
+  // Wrapper for signup to match the AuthContextType interface
+  const signup = async (email: string, password: string, userData?: any) => {
+    return signupImpl({ email, password, display_name: userData });
+  };
+
+  useEffect(() => {
+    // Clean up any potential stale auth state before setting up listeners
+    cleanupAuthState();
+    
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      async (event, session) => {
+        if (session?.user) {
+          try {
+            const { data: profile, error } = await getFromProfiles()
+              .select('*')
+              .eq('id', session.user.id)
+              .single();
+
+            if (profile) {
+              const mappedUser = mapProfileToUser(session.user, profile);
+              setUser(mappedUser);
+              
+              // Show welcome toast when user logs in
+              if (event === 'SIGNED_IN') {
+                handleSignedIn(mappedUser);
+              }
+            } else if (error) {
+              console.error("Error fetching user profile:", error);
+              setUser(null);
+            }
+          } catch (error) {
+            console.error("Error fetching user profile:", error);
+            setUser(null);
+          }
+        } else {
+          setUser(null);
+          
+          // Show logout toast when user logs out
+          if (event === 'SIGNED_OUT') {
+            handleSignedOut();
+          }
+        }
+        setIsLoading(false);
+      }
+    );
+
+    // Initial session check
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (!session) {
+        setIsLoading(false);
+      }
+    }).catch(error => {
+      console.error("Error during initial Supabase getSession:", error);
+      setUser(null); // Explicitly set user to null on error
+      setIsLoading(false);
+    });
+
+    return () => {
+      subscription.unsubscribe();
+    };
+  }, [navigate]);
+
+  const authContextValue = {
+    user,
+    isLoading,
+    isAuthenticated: !!user,
+    login,
+    signup,
+    logout,
+    resetPassword,
+    updateProfile,
+    loginWithGoogle,
+    loginWithFacebook,
+    loginWithTwitter,
+    loginWithWeb3,
+    onboardingStep,
+    tokens
+  };
+
+  return (
+    <AuthContext.Provider value={authContextValue}>
+      {children}
+    </AuthContext.Provider>
+  );
+};

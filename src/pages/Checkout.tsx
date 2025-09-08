@@ -4,14 +4,14 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Input } from '@/components/ui/input';
 import { safeStorage } from '@/utils/safeStorage';
 import { Button } from '@/components/ui/button';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { Input } from '@/components/ui/input';
+import { useNavigate } from 'react-router-dom';
 import { getStripe } from '@/utils/getStripe';
 import { apiClient } from '@/utils/apiClient';
 
 
 export default function Checkout() {
   const navigate = useNavigate();
-  const { user } = useAuth();
   const [items, setItems] = useState<CartItem[]>([]);
   const { user } = useAuth();
   const [showGuest, setShowGuest] = useState(false);
@@ -19,9 +19,7 @@ export default function Checkout() {
   const [guestAddress, setGuestAddress] = useState('');
 
   useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const productParam = params.get('product');
-    const stored = localStorage.getItem('cart');
+    const stored = safeStorage.getItem('cart');
     if (stored) {
       try {
         const parsed = JSON.parse(stored) as CartItem[];
@@ -33,22 +31,7 @@ export default function Checkout() {
         // ignore parsing errors
       }
     }
-    if (productParam) {
-      setItems([
-        { id: productParam, name: 'Test Item', price: 25, quantity: 1 },
-      ]);
-    } else {
-      // Provide mock data if cart empty
-      setItems([
-        {
-          id: 'prod_mock',
-          name: 'Test Item',
-          price: 25,
-          quantity: 1,
-        },
-      ]);
-    }
-  }, [location.search]);
+  }, []);
 
   const createSession = async (body: any) => {
     try {
