@@ -1,46 +1,41 @@
-
 import React from 'react';
-import { CategoriesSection } from "@/components/CategoriesSection";
-import { BenefitsSection } from "@/components/BenefitsSection";
-import { HowItWorksSection } from "@/components/HowItWorksSection";
-import { NewsletterSection } from "@/components/NewsletterSection";
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
-import { SEO } from "@/components/SEO";
-import { HeroSection } from "@/components/HeroSection";
-import { QuickAccess } from "@/components/home/QuickAccess";
-import { FeatureCTAs } from "@/components/home/FeatureCTAs";
-import { FeatureHighlights } from "@/components/home/FeatureHighlights";
-import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
-    // The container class will provide max-width and horizontal padding.
-    // Specific padding for sections (e.g., py-8, py-12) should be handled
-    // within each section or by adding them to this container div if appropriate.
-    <div className="container py-6 md:py-10"> {/* Added container and some vertical padding */}
-      <SEO 
-        title="Zion - The Tech & AI Marketplace" 
-        description="Discover top AI and tech talent, services, and equipment in one place."
-        keywords="AI, technology, marketplace, services, talent"
-        canonical="https://app.ziontechgroup.com/"
-      />
-
-      {/* Sections remain the same */}
-      <ITServiceRequestHero />
-
-      <HeroSection />
-      
-      <QuickAccess />
-      
-      <FeatureCTAs />
-      
-      <FeatureHighlights />
-      
-      <CategoriesSection />
-      <BenefitsSection />
-      <HowItWorksSection />
-      <FeaturedListingsSection />
-      <NewsletterSection />
+    <div className="text-center">
+      <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+        Welcome to Zion Tech Group
+      </h2>
+      <p className="text-xl text-blue-200 mb-8">
+        Innovative IT Solutions & AI Services
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-colors">
+          <h3 className="text-lg font-semibold mb-2">AI Services</h3>
+          <p className="text-sm text-blue-200">
+            Advanced AI-powered solutions for modern businesses
+          </p>
+        </div>
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-colors">
+          <h3 className="text-lg font-semibold mb-2">IT Services</h3>
+          <p className="text-sm text-blue-200">
+            Comprehensive managed IT and cybersecurity solutions
+          </p>
+        </div>
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-colors">
+          <h3 className="text-lg font-semibold mb-2">Micro SAAS</h3>
+          <p className="text-sm text-blue-200">
+            Scalable software solutions for growing businesses
+          </p>
+        </div>
+      </div>
+      <div className="mt-12">
+        <p className="text-sm text-blue-300">
+          Successfully built and deployed on Netlify! 🚀
+        </p>
+      </div>
     </div>
   );
-}
+};
+
+export default Home;

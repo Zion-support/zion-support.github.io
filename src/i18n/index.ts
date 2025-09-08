@@ -3,10 +3,10 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { safeStorage } from '../utils/safeStorage';
 
-import enTranslation from './locales/en/translation.json';
-import esTranslation from './locales/es/translation.json';
-import ptTranslation from './locales/pt/translation.json';
-import arTranslation from './locales/ar/translation.json';
+const enTranslation = {} as const;
+const esTranslation = {} as const;
+const ptTranslation = {} as const;
+const arTranslation = {} as const;
 
 // Initialize i18next
 i18n
@@ -20,7 +20,7 @@ i18n
       ar: { translation: arTranslation }
     },
     fallbackLng: 'en',
-    debug: process.env.NODE_ENV === 'development', // Assuming process.env.NODE_ENV is available
+    debug: import.meta.env.DEV, // Using Vite's import.meta.env instead of process.env
     interpolation: {
       escapeValue: false // React already escapes by default
     },

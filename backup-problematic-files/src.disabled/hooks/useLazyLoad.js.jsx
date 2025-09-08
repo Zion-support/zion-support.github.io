@@ -1,1 +1,0 @@
-export default UseLazyLoad.js;

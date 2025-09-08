@@ -1,6 +1,6 @@
 import React from 'react';
 import { TalentProfile } from '@/types/talent';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 
 interface TalentDetailsProps {
   talent: TalentProfile;
