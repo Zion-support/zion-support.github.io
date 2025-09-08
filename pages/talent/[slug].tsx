@@ -1,6 +1,12 @@
-import { useRouter } from 'next/router';
+import React from 'react';
 
-export default function TalentSlug() {
-  const { query } = useRouter();
-  return <div>Talent: {String(query.slug || '')}</div>;
-}
+const Component = () => {
+  return (
+    <div>
+      <h1>Page Content</h1>
+      <p>This page is under construction.</p>
+    </div>
+  );
+};
+
+export default Component;

@@ -1,11 +1,12 @@
-import Link from 'next/link';
+import React from 'react';
 
-export default function Home() {
+const Component = () => {
   return (
     <div>
-      <h1>Zion</h1>
-      <p>Welcome.</p>
-      <Link href="/nft/mint"><a>Mint Origin NFT</a></Link>
+      <h1>Page Content</h1>
+      <p>This page is under construction.</p>
     </div>
   );
-}
+};
+
+export default Component;
