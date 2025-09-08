@@ -21,7 +21,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "NODE_ENV=production vite build",
+    "build": "vite build",
     "build:analyze": "NODE_ENV=production vite build --mode analyze",
     "build:preview": "npm run build && npm run preview",
     "lint": "eslint .",
@@ -39,7 +39,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "clean": "rm -rf dist node_modules/.vite",
-    "prebuild": "echo 'Skipping lint for build compatibility'",
+    "prebuild": "echo 'Skipping type-check and lint for build compatibility'",
     "postbuild": "echo 'Build completed successfully'"
   },
   "dependencies": {
@@ -140,6 +140,7 @@
     "@commitlint/config-conventional": "^19.8.1",
     "@eslint/js": "^9.32.0",
     "@tailwindcss/postcss": "^4.1.12",
+    "@tanstack/react-query-devtools": "^5.87.3",
     "@testing-library/jest-dom": "^6.6.4",
     "@testing-library/react": "^16.3.0",
     "@types/node": "^24.2.1",
