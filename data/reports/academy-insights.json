@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-09T17:25:27.365Z",
+  "generatedAt": "2025-09-08T04:38:39.101Z",
   "featuredCourses": [
     {
       "slug": "ai-engineering-foundations",
@@ -12,44 +12,44 @@
   ],
   "trendingTopics": [
     {
-      "title": "Mexico to US Livestock Trade halted due to Screwworm spread",
-      "url": "https://www.usda.gov/about-usda/news/press-releases/2025/07/09/secretary-rollins-takes-decisive-action-and-shuts-down-us-southern-border-ports-livestock-trade-due"
+      "title": "Using Claude Code to modernize a 25-year-old kernel driver",
+      "url": "https://dmitrybrant.com/2025/09/07/using-claude-code-to-modernize-a-25-year-old-kernel-driver"
     },
     {
-      "title": "Show HN: The current sky at your approximate location, as a CSS gradient",
-      "url": "https://sky.dlazaro.ca"
+      "title": "The MacBook has a sensor that knows the exact angle of the screen hinge",
+      "url": "https://twitter.com/samhenrigold/status/1964428927159382261"
     },
     {
-      "title": "Long-term exposure to outdoor air pollution linked to increased risk of dementia",
-      "url": "https://www.cam.ac.uk/research/news/long-term-exposure-to-outdoor-air-pollution-linked-to-increased-risk-of-dementia"
+      "title": "GPT-5 Thinking in ChatGPT (a.k.a. Research Goblin) is good at search",
+      "url": "https://simonwillison.net/2025/Sep/6/research-goblin/"
     },
     {
-      "title": "OpenFreeMap survived 100k requests per second",
-      "url": "https://blog.hyperknot.com/p/openfreemap-survived-100000-requests"
+      "title": "Everything from 1991 Radio Shack ad I now do with my phone (2014)",
+      "url": "https://www.trendingbuffalo.com/life/uncle-steves-buffalo/everything-from-1991-radio-shack-ad-now/"
     },
     {
-      "title": "Simon Willison's Lethal Trifecta Talk at the Bay Area AI Security Meetup",
-      "url": "https://simonwillison.net/2025/Aug/9/bay-area-ai/"
+      "title": "Formatting code should be unnecessary",
+      "url": "https://maxleiter.com/blog/formatting"
     },
     {
-      "title": "Quickshell – building blocks for your desktop",
-      "url": "https://quickshell.org/"
+      "title": "GitHub Community Discussions: Two most upvoted requests are to disable Copilot",
+      "url": "https://github.com/orgs/community/discussions"
     },
     {
-      "title": "Empire of the Absurd: A Brief History of the Absurdities of the Soviet Union",
-      "url": "https://laurivahtre.ee/empire-of-the-absurd/"
+      "title": "Analog optical computer for AI inference and combinatorial optimization",
+      "url": "https://www.nature.com/articles/s41586-025-09430-z"
     },
     {
-      "title": "ChatGPT Agent – EU Launch",
-      "url": "https://help.openai.com/en/articles/11752874-chatgpt-agent"
+      "title": "Forty-Four Esolangs: The Art of Esoteric Code",
+      "url": "https://spectrum.ieee.org/esoteric-programming-languages-daniel-temkin"
     },
     {
-      "title": "A CT scanner reveals surprises inside the 386 processor's ceramic package",
-      "url": "https://www.righto.com/2025/08/intel-386-package-ct-scan.html"
+      "title": "Default musl allocator considered harmful to performance",
+      "url": "https://nickb.dev/blog/default-musl-allocator-considered-harmful-to-performance/"
     },
     {
-      "title": "Accessibility and the Agentic Web",
-      "url": "https://tetralogical.com/blog/2025/08/08/accessibility-and-the-agentic-web/"
+      "title": "'Make invalid states unrepresentable' considered harmful",
+      "url": "https://www.seangoedecke.com/invalid-states/"
     }
   ],
   "recommendations": [
