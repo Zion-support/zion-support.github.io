@@ -1,40 +1,21 @@
 [build]
-  # Build the Vite app and deploy from dist/
-  command = "npm run build"
+  # Node-only build (no Python requirements used)
+  command = "npm ci && npm run build"
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "20"
-  PYTHON_VERSION = "3.11"
-  # Avoid optional binary downloads (electron, playwright, cypress)
-  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"
-  PUPPETEER_SKIP_DOWNLOAD = "1"
-  CYPRESS_INSTALL_BINARY = "0"
-  ELECTRON_SKIP_DOWNLOAD = "1"
+  # Disable Netlify's auto dependency installers; we handle installs in the build command
+  NETLIFY_SKIP_INSTALL = "true"
 
-## Disable Next.js runtime plugin since we're deploying a static export
 [[plugins]]
-  package = "@netlify/plugin-nextjs"
-  enabled = false
+  package = "netlify-plugin-compress"
+  [plugins.inputs]
+    gzip = true
+    brotli = true
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
-# Set basic cache headers for static assets for better performance
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/_next/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Cache-Control = "public, max-age=300"
