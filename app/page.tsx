@@ -23,6 +23,31 @@ const Card: React.FC<CardProps> = ({ title, description, icon, href }) => (
 );
 
 export default function Home() {
+  const features = [
+    {
+      title: 'AI-Powered Solutions',
+      description: 'Cutting-edge artificial intelligence to automate and optimize your business processes.',
+      icon: '🤖'
+    },
+    {
+      title: 'Cloud Infrastructure',
+      description: 'Scalable and secure cloud solutions tailored to your business needs.',
+      icon: '☁️'
+    },
+    {
+      title: '24/7 Support',
+      description: 'Round-the-clock technical support to keep your systems running smoothly.',
+      icon: '🛠️'
+    }
+  ]
+
+  const stats = [
+    { label: 'Projects Completed', value: '500+' },
+    { label: 'Happy Clients', value: '200+' },
+    { label: 'Years Experience', value: '10+' },
+    { label: 'Team Members', value: '50+' }
+  ]
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}

@@ -7,6 +7,36 @@ export const metadata = {
 }
 
 export default function AboutPage() {
+  const values = [
+    {
+      title: 'Innovation',
+      description: 'We constantly push the boundaries of what\'s possible with cutting-edge technology and creative solutions.',
+      icon: '💡'
+    },
+    {
+      title: 'Excellence',
+      description: 'We maintain the highest standards in everything we do, from code quality to customer service.',
+      icon: '⭐'
+    },
+    {
+      title: 'Collaboration',
+      description: 'We work closely with our clients as partners, ensuring solutions that truly meet their needs.',
+      icon: '🤝'
+    },
+    {
+      title: 'Integrity',
+      description: 'We conduct business with honesty, transparency, and respect for all stakeholders.',
+      icon: '🛡️'
+    }
+  ]
+
+  const stats = [
+    { label: 'Years of Experience', value: '10+' },
+    { label: 'Projects Delivered', value: '500+' },
+    { label: 'Happy Clients', value: '200+' },
+    { label: 'Team Members', value: '50+' }
+  ]
+
   return (
     <div className="animate-fade-in">
       <div className="max-w-4xl mx-auto">
