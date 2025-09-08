@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-  "name": "Zion Tech Group - Micro SAAS Services",
-  "short_name": "Zion Tech",
-  "description": "Transform your business with Zion Tech Group's micro SAAS services. AI-powered solutions for productivity, finance, marketing, CRM, analytics, and more.",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#10B981",
-<<<<<<< HEAD
-<<<<<<< HEAD
+{
   "name": "Zion Tech Group - Micro SAAS Services",
   "short_name": "Zion Tech",
   "description": "Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative micro SAAS services.",
@@ -15,22 +6,22 @@
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#10B981",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+  "icons": [
+    {
       "src": "/icons/icon-192x192.png",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
       "src": "/screenshots/desktop-1280x720.png",
       "sizes": "1280x720",
       "type": "image/png",
@@ -43,94 +34,12 @@
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Zion Tech Group Mobile View"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "name": "Micro SAAS Services",
-      "short_name": "Services",
-      "description": "Browse our micro SAAS services",
-      "url": "/micro-saas-services",
-<<<<<<< HEAD
-      "icons": [
-        {
-          "src": "/icons/icon-96x96.png",
-          "sizes": "96x96"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "icons": [
-        {
-          "src": "/icons/icon-96x96.png",
-          "sizes": "96x96"
-<<<<<<< HEAD
-          "src": "/images/services-icon.png",
-<<<<<<< HEAD
-      "description": "Get in touch with us",
-      "url": "/#contact",
-      "icons": [
-        {
-          "src": "/icons/icon-96x96.png",
-          "sizes": "96x96"
-<<<<<<< HEAD
-      "description": "Get in touch with us",
-      "url": "/contact",
-      "icons": [
-        {
-<<<<<<< HEAD
-          "src": "/images/contact-icon.png",
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "screenshots": [
-    {
-      "src": "/screenshots/desktop-1.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "Homepage - Desktop View"
-    },
-    {
-      "src": "/screenshots/mobile-1.png",
-      "sizes": "390x844",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Homepage - Mobile View"
     }
   ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "capture_links": "new-client",
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".webp"]
-      }
-    }
-  ],
-<<<<<<< HEAD
-  "protocol_handlers": [
-    {
-      "protocol": "web+zion",
-      "url": "/protocol-handler?protocol=%s"
-    }
-  ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "permissions": [
-    "notifications",
-    "background-sync",
-    "storage"
-  ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "responsive",
-    "offline-capable"
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "responsive",
-    "offline-capable"
-<<<<<<< HEAD
-  }
+  "categories": ["business", "productivity", "ai", "technology"],
+  "lang": "en",
+  "dir": "ltr",
+  "scope": "/",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false
+}
