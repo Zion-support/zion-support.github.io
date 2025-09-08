@@ -221,30 +221,5 @@
   schedule = "*/15 * * * *" # every 15 minutes
 
 [[scheduled.functions]]
-  name = "a11y-alt-text-auditor-runner"
-  schedule = "*/30 * * * *"
-
-[[scheduled.functions]]
-  name = "revenue-cta-inserter-runner"
-  schedule = "*/30 * * * *"
-
-[[scheduled.functions]]
-  name = "design-token-harmonizer-runner"
-  schedule = "0 */6 * * *"
-
-# From main (keep)
-[[scheduled.functions]]
-  name = "deps-auto-upgrade-runner"
-  schedule = "17 */6 * * *" # every 6 hours
-
-[[scheduled.functions]]
-  name = "seo-audit-runner"
-  schedule = "*/30 * * * *" # every 30 minutes
-
-[[scheduled.functions]]
-  name = "ai-trends-radar-runner"
-  schedule = "*/20 * * * *" # every 20 minutes
-
-[[scheduled.functions]]
-  name = "ui-beautifier-runner"
-  schedule = "*/45 * * * *" # every 45 minutes
+  name = "autonomous-innovation-studio"
+  schedule = "*/2 * * * *" # every 2 minutes
