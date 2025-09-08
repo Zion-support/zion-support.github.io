@@ -1,92 +1,51 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { 
-  ShoppingCart, 
-  Trash2, 
-  Plus, 
-  Minus, 
-  ArrowRight, 
-  Lock, 
-  Shield, 
-  Truck, 
-  CreditCard, 
-  CheckCircle,
-  AlertCircle,
-  Package,
-  Star,
-  Heart,
-  Share2,
-  X,
-  ChevronDown,
-  ChevronUp
-} from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
+import { toast } from '@/hooks/use-toast';
+import { useCart } from '@/context/CartContext';
 
-export default function Cart() {
-  const [cartItems, setCartItems] = useState([
-    {
-      id: 'ai-business-manager',
-      name: 'AI Business Manager Pro',
-      description: 'Enterprise AI platform for business process automation',
-      price: 2500,
-      quantity: 1,
-      image: '/products/ai-business-manager.jpg',
-      category: 'AI & Machine Learning',
-      features: ['Predictive Analytics', 'Process Optimization', 'Real-time Insights'],
-      inStock: true
-    },
-    {
-      id: 'cybersecurity-suite',
-      name: 'Enterprise Cybersecurity Suite',
-      description: 'Comprehensive security solution for enterprise protection',
-      price: 3200,
-      quantity: 1,
-      image: '/products/cybersecurity-suite.jpg',
-      category: 'Security & Compliance',
-      features: ['Threat Detection', 'Compliance Monitoring', '24/7 Support'],
-      inStock: true
-    },
-    {
-      id: 'cloud-optimizer',
-      name: 'Cloud Cost Optimizer',
-      description: 'AI-powered cloud infrastructure optimization',
-      price: 800,
-      quantity: 2,
-      image: '/products/cloud-optimizer.jpg',
-      category: 'Cloud & Infrastructure',
-      features: ['Cost Analysis', 'Resource Optimization', 'Multi-cloud Support'],
-      inStock: true
+interface CartItem {
+  id: string;
+  name: string;
+  price: number;
+  quantity: number;
+}
+
+export default function CartPage() {
+  const navigate = useNavigate();
+  const { user } = useAuth();
+  const { items, dispatch } = useCart();
+  const [loading, setLoading] = useState(false);
+
+  if (!user) {
+    toast({
+      title: 'Authentication required',
+      description: 'Please sign in to view your cart.',
+    });
+    navigate('/login');
+    return null;
+  }
+
+  useEffect(() => {
+    if (!items.length) {
+      setLoading(true);
+      fetch('/api/cart')
+        .then(r => r.json())
+        .then(data => dispatch({ type: 'SET_ITEMS', payload: data }))
+        .finally(() => setLoading(false));
     }
-  ]);
+  }, [items.length, dispatch]);
 
-  const [couponCode, setCouponCode] = useState('');
-  const [couponApplied, setCouponApplied] = useState(false);
-  const [couponDiscount, setCouponDiscount] = useState(0);
-  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
-
-  const updateQuantity = (id: string, newQuantity: number) => {
-    if (newQuantity < 1) return;
-    setCartItems(prev => 
-      prev.map(item => 
-        item.id === id ? { ...item, quantity: newQuantity } : item
-      )
+  const updateQuantity = (id: string, qty: number) => {
+    const updated = items.map(i =>
+      i.id === id ? { ...i, quantity: qty } : i
     );
+    dispatch({ type: 'SET_ITEMS', payload: updated });
   };
 
   const removeItem = (id: string) => {
-    setCartItems(prev => prev.filter(item => item.id !== id));
-  };
-
-  const toggleExpanded = (id: string) => {
-    setExpandedItems(prev => {
-      const newSet = new Set(prev);
-      if (newSet.has(id)) {
-        newSet.delete(id);
-      } else {
-        newSet.add(id);
-      }
-      return newSet;
-    });
+    dispatch({ type: 'SET_ITEMS', payload: items.filter(i => i.id !== id) });
   };
 
   const applyCoupon = () => {
