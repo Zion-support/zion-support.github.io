@@ -14,6 +14,8 @@
   NETLIFY_SKIP_INSTALL = "true"
   NETLIFY_USE_YARN = "false"
   NPM_FLAGS = "--omit=optional"
+  # Disable Next.js runtime plugin since we deploy a prebuilt static dist
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 
 
