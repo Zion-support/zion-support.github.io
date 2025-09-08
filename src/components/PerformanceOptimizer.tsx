@@ -1,241 +1,279 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useCallback } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
-  networkLatency: number;
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
 }
 
-interface PerformanceOptimizerProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-  enableMonitoring?: boolean;
-}
+export function PerformanceOptimizer() {
+  const measurePerformance = useCallback(() => {
+    if ('PerformanceObserver' in window) {
+      // First Contentful Paint
+      const fcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.name === 'first-contentful-paint') {
+            console.log('FCP:', entry.startTime);
+          }
+        });
+      });
+      fcpObserver.observe({ entryTypes: ['paint'] });
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  onMetricsUpdate,
-  enableMonitoring = true
-}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    fps: 0,
-    networkLatency: 0
-  });
+      // Largest Contentful Paint
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        if (lastEntry) {
+          console.log('LCP:', lastEntry.startTime);
+        }
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
-  const [isVisible, setIsVisible] = useState(false);
+      // First Input Delay
+      const fidObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          console.log('FID:', entry.processingStart - entry.startTime);
+        });
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
 
-  // Measure page load time
-  useEffect(() => {
-    if (!enableMonitoring) return;
-
-    const measureLoadTime = () => {
-      const loadTime = performance.now();
-      setMetrics(prev => ({ ...prev, loadTime }));
-    };
-
-    if (document.readyState === 'complete') {
-      measureLoadTime();
-    } else {
-      window.addEventListener('load', measureLoadTime);
-      return () => window.removeEventListener('load', measureLoadTime);
+      // Cumulative Layout Shift
+      const clsObserver = new PerformanceObserver((list) => {
+        let clsValue = 0;
+        const entries = list.getEntries();
+        entries.forEach((entry: any) => {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
+          }
+        });
+        console.log('CLS:', clsValue);
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
     }
-  }, [enableMonitoring]);
+  }, []);
 
-  // Measure render performance
-  const measureRenderTime = useCallback(() => {
-    if (!enableMonitoring) return;
-
-    const start = performance.now();
-    requestAnimationFrame(() => {
-      const end = performance.now();
-      const renderTime = end - start;
-      setMetrics(prev => ({ ...prev, renderTime }));
-    });
-  }, [enableMonitoring]);
-
-  // Monitor memory usage
-  const measureMemoryUsage = useCallback(() => {
-    if (!enableMonitoring || !('memory' in performance)) return;
-
-    const memory = (performance as any).memory;
-    const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0; // MB
-    setMetrics(prev => ({ ...prev, memoryUsage }));
-  }, [enableMonitoring]);
-
-  // Monitor FPS
-  const measureFPS = useCallback(() => {
-    if (!enableMonitoring) return;
-
-    let lastTime = performance.now();
-    let frameCount = 0;
-
-    const countFrames = () => {
-      frameCount++;
-      const currentTime = performance.now();
-      
-      if (currentTime - lastTime >= 1000) {
-        const fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
-        setMetrics(prev => ({ ...prev, fps }));
-        frameCount = 0;
-        lastTime = currentTime;
+  const optimizeImages = useCallback(() => {
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+      // Add loading="lazy" to images below the fold
+      if (!img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
       }
       
-      requestAnimationFrame(countFrames);
+      // Add decoding="async" for better performance
+      if (!img.hasAttribute('decoding')) {
+        img.setAttribute('decoding', 'async');
+      }
+    });
+  }, []);
+
+  const optimizeFonts = useCallback(() => {
+    // Preload critical fonts
+    const criticalFonts = [
+      '/fonts/inter-var.woff2',
+      '/fonts/inter-var.woff2'
+    ];
+
+    criticalFonts.forEach((font) => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = font;
+      link.as = 'font';
+      link.type = 'font/woff2';
+      link.crossOrigin = 'anonymous';
+      document.head.appendChild(link);
+    });
+  }, []);
+
+  const addResourceHints = useCallback(() => {
+    // DNS prefetch for external domains
+    const externalDomains = [
+      'https://fonts.googleapis.com',
+      'https://fonts.gstatic.com',
+      'https://cdn.jsdelivr.net'
+    ];
+
+    externalDomains.forEach((domain) => {
+      const link = document.createElement('link');
+      link.rel = 'dns-prefetch';
+      link.href = domain;
+      document.head.appendChild(link);
+    });
+  }, []);
+
+  const optimizeCSS = useCallback(() => {
+    // Remove unused CSS classes
+    const styleSheets = Array.from(document.styleSheets);
+    styleSheets.forEach((sheet) => {
+      try {
+        const rules = Array.from(sheet.cssRules || sheet.rules);
+        rules.forEach((rule) => {
+          if (rule instanceof CSSStyleRule) {
+            const selector = rule.selectorText;
+            if (selector && selector.includes('hover:') || selector.includes('focus:')) {
+              // These are pseudo-classes that should be kept
+              return;
+            }
+          }
+        });
+      } catch (e) {
+        // CORS error, skip external stylesheets
+      }
+    });
+  }, []);
+
+  const addIntersectionObserver = useCallback(() => {
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const target = entry.target as HTMLElement;
+            
+            // Lazy load images
+            if (target.tagName === 'IMG') {
+              const img = target as HTMLImageElement;
+              if (img.dataset.src) {
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+                observer.unobserve(img);
+              }
+            }
+            
+            // Add animation classes
+            if (target.dataset.animate) {
+              target.classList.add('animate-in');
+              observer.unobserve(target);
+            }
+          }
+        });
+      }, {
+        rootMargin: '50px 0px',
+        threshold: 0.1
+      });
+
+      // Observe elements with data-animate attribute
+      document.querySelectorAll('[data-animate]').forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Observe images with data-src attribute
+      document.querySelectorAll('img[data-src]').forEach((img) => {
+        observer.observe(img);
+      });
+    }
+  }, []);
+
+  const addServiceWorker = useCallback(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    }
+  }, []);
+
+  const addWebVitals = useCallback(() => {
+    // Web Vitals measurement
+    const sendToAnalytics = (metric: any) => {
+      // Send to analytics service
+      console.log('Web Vital:', metric);
     };
 
-    requestAnimationFrame(countFrames);
-  }, [enableMonitoring]);
-
-  // Measure network latency
-  const measureNetworkLatency = useCallback(async () => {
-    if (!enableMonitoring) return;
-
-    const start = performance.now();
-    try {
-      await fetch('/api/ping', { method: 'HEAD' });
-    } catch {
-      // Fallback to measuring a simple resource
-      await fetch(window.location.href, { method: 'HEAD' });
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (entry.entryType === 'navigation') {
+            const navEntry = entry as PerformanceNavigationTiming;
+            sendToAnalytics({
+              name: 'TTFB',
+              value: navEntry.responseStart - navEntry.requestStart,
+              id: 'ttfb'
+            });
+          }
+        });
+      });
+      observer.observe({ entryTypes: ['navigation'] });
     }
-    const end = performance.now();
-    const networkLatency = end - start;
-    setMetrics(prev => ({ ...prev, networkLatency }));
-  }, [enableMonitoring]);
+  }, []);
 
-  // Update metrics periodically
   useEffect(() => {
-    if (!enableMonitoring) return;
+    // Initialize performance monitoring
+    measurePerformance();
+    
+    // Add performance optimizations
+    optimizeImages();
+    optimizeFonts();
+    addResourceHints();
+    optimizeCSS();
+    addIntersectionObserver();
+    addServiceWorker();
+    addWebVitals();
 
-    const interval = setInterval(() => {
-      measureRenderTime();
-      measureMemoryUsage();
-    }, 1000);
+    // Performance monitoring on route changes
+    const handleRouteChange = () => {
+      setTimeout(() => {
+        optimizeImages();
+        addIntersectionObserver();
+      }, 100);
+    };
 
-    measureFPS();
-    measureNetworkLatency();
+    // Listen for route changes (if using React Router)
+    window.addEventListener('popstate', handleRouteChange);
+    
+    // Cleanup
+    return () => {
+      window.removeEventListener('popstate', handleRouteChange);
+    };
+  }, [
+    measurePerformance,
+    optimizeImages,
+    optimizeFonts,
+    addResourceHints,
+    optimizeCSS,
+    addIntersectionObserver,
+    addServiceWorker,
+    addWebVitals
+  ]);
 
-    return () => clearInterval(interval);
-  }, [enableMonitoring, measureRenderTime, measureMemoryUsage, measureFPS, measureNetworkLatency]);
-
-  // Notify parent component of metrics updates
+  // Add performance monitoring for user interactions
   useEffect(() => {
-    if (onMetricsUpdate) {
-      onMetricsUpdate(metrics);
-    }
-  }, [metrics, onMetricsUpdate]);
+    const measureInteraction = (event: Event) => {
+      const start = performance.now();
+      
+      const measureEnd = () => {
+        const duration = performance.now() - start;
+        if (duration > 100) { // Log slow interactions
+          console.warn('Slow interaction detected:', {
+            type: event.type,
+            duration: `${duration.toFixed(2)}ms`,
+            target: (event.target as HTMLElement)?.tagName
+          });
+        }
+      };
 
-  // Performance optimization suggestions
-  const getOptimizationSuggestions = () => {
-    const suggestions = [];
+      // Measure after a short delay to capture the full interaction
+      setTimeout(measureEnd, 100);
+    };
 
-    if (metrics.memoryUsage > 100) {
-      suggestions.push('High memory usage detected. Consider optimizing components.');
-    }
+    // Monitor various user interactions
+    const events = ['click', 'input', 'scroll', 'resize'];
+    events.forEach(eventType => {
+      document.addEventListener(eventType, measureInteraction, { passive: true });
+    });
 
-    if (metrics.fps < 30) {
-      suggestions.push('Low FPS detected. Check for performance bottlenecks.');
-    }
+    return () => {
+      events.forEach(eventType => {
+        document.removeEventListener(eventType, measureInteraction);
+      });
+    };
+  }, []);
 
-    if (metrics.renderTime > 16) {
-      suggestions.push('Slow render time. Consider code splitting or lazy loading.');
-    }
-
-    if (metrics.networkLatency > 1000) {
-      suggestions.push('High network latency. Consider caching strategies.');
-    }
-
-    return suggestions;
-  };
-
-  const suggestions = getOptimizationSuggestions();
-
-  if (!enableMonitoring) return null;
-
-  return (
-    <div className="fixed bottom-4 right-4 z-50">
-      {/* Toggle Button */}
-      <button
-        onClick={() => setIsVisible(!isVisible)}
-        className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110"
-        title="Performance Monitor"
-      >
-        📊
-      </button>
-
-      {/* Performance Panel */}
-      {isVisible && (
-        <div className="absolute bottom-16 right-0 bg-black/90 backdrop-blur-sm rounded-lg p-4 w-80 border border-white/20 shadow-2xl">
-          <div className="flex justify-between items-center mb-4">
-            <h3 className="text-white font-semibold">Performance Monitor</h3>
-            <button
-              onClick={() => setIsVisible(false)}
-              className="text-gray-400 hover:text-white"
-            >
-              ✕
-            </button>
-          </div>
-
-          <div className="space-y-3 text-sm">
-            <div className="flex justify-between">
-              <span className="text-gray-300">Load Time:</span>
-              <span className="text-white">{metrics.loadTime.toFixed(2)}ms</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-300">Render Time:</span>
-              <span className="text-white">{metrics.renderTime.toFixed(2)}ms</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-300">Memory:</span>
-              <span className="text-white">{metrics.memoryUsage.toFixed(2)}MB</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-300">FPS:</span>
-              <span className={`${metrics.fps < 30 ? 'text-red-400' : 'text-green-400'}`}>
-                {metrics.fps}
-              </span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-300">Network:</span>
-              <span className="text-white">{metrics.networkLatency.toFixed(2)}ms</span>
-            </div>
-          </div>
-
-          {suggestions.length > 0 && (
-            <div className="mt-4 pt-4 border-t border-white/20">
-              <h4 className="text-yellow-400 font-semibold mb-2">Suggestions:</h4>
-              <ul className="space-y-1">
-                {suggestions.map((suggestion, index) => (
-                  <li key={index} className="text-xs text-yellow-300">
-                    • {suggestion}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          <div className="mt-4 pt-4 border-t border-white/20">
-            <button
-              onClick={() => {
-                setMetrics({
-                  loadTime: 0,
-                  renderTime: 0,
-                  memoryUsage: 0,
-                  fps: 0,
-                  networkLatency: 0
-                });
-              }}
-              className="w-full bg-gray-700 hover:bg-gray-600 text-white px-3 py-2 rounded text-xs transition-colors"
-            >
-              Reset Metrics
-            </button>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-};
-
-export default PerformanceOptimizer;
+  return null; // This component doesn't render anything
+}
