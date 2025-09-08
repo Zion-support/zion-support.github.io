@@ -10434,3 +10434,32 @@ fatal: couldn't find remote ref cursor/build-nextjs-app-and-deploy-b5a7
 [2025-09-08T21:03:20.067Z] ✅ Success: Get git status
 [2025-09-08T21:03:20.067Z] 📄 Found 0 conflicted files
 [2025-09-08T21:03:20.067Z] 🚀 Add resolved files: git add .
+[2025-09-08T21:03:20.183Z] ✅ Success: Add resolved files
+[2025-09-08T21:03:20.183Z] 🚀 Commit merge for cursor/build-nextjs-app-and-deploy-b5a7: git commit -m "Resolve conflicts and merge cursor/build-nextjs-app-and-deploy-b5a7"
+[2025-09-08T21:03:20.249Z] ✅ Success: Commit merge for cursor/build-nextjs-app-and-deploy-b5a7
+[2025-09-08T21:03:20.250Z] ✅ Successfully resolved conflicts and merged: cursor/build-nextjs-app-and-deploy-b5a7
+[2025-09-08T21:03:20.250Z] 🔄 Attempting to merge branch: cursor/build-nextjs-app-and-handle-errors-5869
+[2025-09-08T21:03:20.250Z] 🚀 Fetch origin/cursor/build-nextjs-app-and-handle-errors-5869: git fetch origin cursor/build-nextjs-app-and-handle-errors-5869
+[2025-09-08T21:03:20.591Z] ✅ Success: Fetch origin/cursor/build-nextjs-app-and-handle-errors-5869
+[2025-09-08T21:03:20.591Z] 🚀 Merge cursor/build-nextjs-app-and-handle-errors-5869: git merge origin/cursor/build-nextjs-app-and-handle-errors-5869 --no-ff -m "Merge branch cursor/build-nextjs-app-and-handle-errors-5869 into main"
+[2025-09-08T21:03:21.028Z] ✅ Success: Merge cursor/build-nextjs-app-and-handle-errors-5869
+[2025-09-08T21:03:21.028Z] ✅ Successfully merged: cursor/build-nextjs-app-and-handle-errors-5869
+[2025-09-08T21:03:21.028Z] 🔄 Attempting to merge branch: cursor/build-nextjs-app-and-handle-publish-error-1f35
+[2025-09-08T21:03:21.028Z] 🚀 Fetch origin/cursor/build-nextjs-app-and-handle-publish-error-1f35: git fetch origin cursor/build-nextjs-app-and-handle-publish-error-1f35
+[2025-09-08T21:03:21.353Z] ✅ Success: Fetch origin/cursor/build-nextjs-app-and-handle-publish-error-1f35
+[2025-09-08T21:03:21.353Z] 🚀 Merge cursor/build-nextjs-app-and-handle-publish-error-1f35: git merge origin/cursor/build-nextjs-app-and-handle-publish-error-1f35 --no-ff -m "Merge branch cursor/build-nextjs-app-and-handle-publish-error-1f35 into main"
+[2025-09-08T21:03:21.781Z] ✅ Success: Merge cursor/build-nextjs-app-and-handle-publish-error-1f35
+[2025-09-08T21:03:21.781Z] ✅ Successfully merged: cursor/build-nextjs-app-and-handle-publish-error-1f35
+[2025-09-08T21:03:21.781Z] 🔄 Attempting to merge branch: cursor/build-nextjs-app-with-dependency-installation-d447
+[2025-09-08T21:03:21.781Z] 🚀 Fetch origin/cursor/build-nextjs-app-with-dependency-installation-d447: git fetch origin cursor/build-nextjs-app-with-dependency-installation-d447
+[2025-09-08T21:03:21.920Z] ❌ Error in Fetch origin/cursor/build-nextjs-app-with-dependency-installation-d447: Command failed: git fetch origin cursor/build-nextjs-app-with-dependency-installation-d447
+fatal: couldn't find remote ref cursor/build-nextjs-app-with-dependency-installation-d447
+
+[2025-09-08T21:03:21.920Z] ❌ Failed to merge cursor/build-nextjs-app-with-dependency-installation-d447: Command failed: git fetch origin cursor/build-nextjs-app-with-dependency-installation-d447
+fatal: couldn't find remote ref cursor/build-nextjs-app-with-dependency-installation-d447
+
+[2025-09-08T21:03:21.920Z] 🔧 Attempting to resolve conflicts for: cursor/build-nextjs-app-with-dependency-installation-d447
+[2025-09-08T21:03:21.920Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T21:03:21.974Z] ✅ Success: Get git status
+[2025-09-08T21:03:21.974Z] 📄 Found 0 conflicted files
+[2025-09-08T21:03:21.974Z] 🚀 Add resolved files: git add .
