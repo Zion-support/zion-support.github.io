@@ -37,128 +37,29 @@ interface SEOProps {
   keywords?: string[] | string;
   image?: string;
   url?: string;
-  type?: 'website' | 'article' | 'product' | 'service';
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-  canonical?: string;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-60a2
-  noindex?: boolean;
-  nofollow?: boolean;
-=======
-  ogType?: string;
-  twitterCard?: string;
-  article?: boolean;
+  type?: 'website' | 'article' | 'service';
   publishedTime?: string;
   modifiedTime?: string;
   author?: string;
   section?: string;
   tags?: string[];
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
+  structuredData?: object;
 }
 
 export function SEO({
   title,
   description,
-  keywords = [],
-  canonical,
-  ogImage = '/images/zion-og-image.jpg',
-=======
-export function SEO({
-  title = 'Zion Tech Group - AI-Powered Innovation & Enterprise IT Solutions',
-  description = 'Transform your business with cutting-edge AI solutions, enterprise IT services, and innovative technology consulting. Expert cybersecurity, cloud solutions, and digital transformation.',
-  keywords = [
-    'AI solutions',
-    'artificial intelligence',
-    'enterprise IT',
-    'cybersecurity',
-    'cloud computing',
-    'digital transformation',
-    'machine learning',
-    'micro SAAS',
-    'IT consulting',
-    'technology services',
-    'business automation',
-    'data analytics',
-    'quantum technology',
-    'blockchain solutions',
-    'IoT platforms'
-  ],
-  author = 'Zion Tech Group',
-  canonical,
-  ogImage = '/images/zion-tech-group-og.jpg',
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-<<<<<<< HEAD
-  structuredData,
-  noindex = false,
-<<<<<<< HEAD
-  nofollow = false,
-}) => {
-  const siteName = 'Zion Tech Group';
-  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
-  const defaultKeywords = 'AI, technology, marketplace, services, talent, micro SAAS, cloud computing, digital transformation';
-  const finalKeywords = keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords;
-  
-=======
-  nofollow = false
-=======
-  article = false,
-  publishedTime,
-  modifiedTime,
-  author = 'Zion Tech Group',
-  section,
-  tags = []
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
-}: SEOProps) {
-  const siteName = 'Zion Tech Group';
-  const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
-  const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
-  
-  // Default structured data for organization
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
-  const defaultStructuredData = {
-=======
-  title = 'Zion Tech Group - AI-Powered Innovation & Enterprise IT Solutions',
-  description = 'Transform your business with cutting-edge AI solutions, cybersecurity, cloud computing, and enterprise IT services. Expert technology consulting for modern businesses.',
-  keywords = [
-    'AI solutions',
-    'artificial intelligence',
-    'cybersecurity',
-    'cloud computing',
-    'enterprise IT',
-    'digital transformation',
-    'machine learning',
-    'IT consulting',
-    'business technology',
-    'Zion Tech Group'
-  ],
+  keywords,
   image = '/images/zion-tech-group-og.jpg',
-  url = 'https://ziontechgroup.com',
+  url = window.location.href,
   type = 'website',
-  author = 'Zion Tech Group',
   publishedTime,
   modifiedTime,
+  author = 'Zion Tech Group',
   section,
-<<<<<<< HEAD
   tags = [],
-  canonical,
-  noindex = false,
-  nofollow = false
-}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullUrl = canonical || url;
-=======
-  tags = []
-}: SEOProps) => {
-  const siteName = 'Zion Tech Group';
-  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
-  const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : 'https://ziontechgroup.com');
-
-  // Default structured data for organization
+  structuredData
+}: SEOProps) {
   const defaultStructuredData = {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6b26
 =======
@@ -169,70 +70,16 @@ export function SEO({
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "logo": "https://ziontechgroup.com/images/zion-logo.png",
-    "description": "Leading technology solutions provider specializing in AI, micro SAAS, and digital transformation services.",
-=======
-    "logo": "https://ziontechgroup.com/logo.png",
-    "description": "Transform your business with cutting-edge AI services, Micro SAAS solutions, and comprehensive IT services.",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6b26
-=======
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://ziontechgroup.com/logo.png",
-      "width": 512,
-      "height": 512
-    },
-    "description": "Leading technology solutions provider specializing in AI, cloud computing, micro SAAS services, and digital transformation for modern enterprises.",
-    "foundingDate": "2020",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
-    "description": "Leading provider of AI-powered solutions, enterprise IT services, and innovative technology consulting.",
-    "foundingDate": "2020",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "US",
-      "addressRegion": "DE",
-      "addressLocality": "Middletown"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
-=======
-    "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
-    "description": "Leading provider of AI-powered innovation and enterprise IT solutions",
-    "foundingDate": "2015",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "US",
-      "addressRegion": "Delaware"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-60a2
-=======
-    "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
-    "description": "Transform Your Business With AI & Tech - Discover cutting-edge AI services, Micro SAAS solutions, and comprehensive IT services.",
+    "description": "Leading provider of AI-powered business solutions, IT services, and digital transformation consulting.",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "US"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6b26
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
+      "availableLanguage": "English"
     },
     "sameAs": [
 <<<<<<< HEAD
@@ -411,60 +258,44 @@ export function SEO({
     }
   };
 
-  // Merge with custom structured data
-  const finalStructuredData = structuredData || defaultStructuredData;
-
   return (
     <Helmet>
-      <title>{fullTitle}</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
+      {/* Basic Meta Tags */}
+      <title>{title}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
+      <meta name="author" content={author} />
       
-      {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
       <meta property="og:type" content={type} />
-      <meta property="og:site_name" content={siteName} />
-      <meta property="og:url" content={fullCanonical} />
+      <meta property="og:url" content={url} />
+      <meta property="og:image" content={image} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       
       {/* Canonical URL */}
       <link rel="canonical" href={fullCanonical} />
       
-      {/* Additional meta tags */}
-      <meta name="robots" content={noindex || nofollow ? `${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}` : 'index, follow'} />
-      <meta name="author" content={author || siteName} />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      
-      {/* Article specific meta tags */}
-      {type === 'article' && (
-        <>
-          {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-          {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-          {author && <meta property="article:author" content={author} />}
-          {section && <meta property="article:section" content={section} />}
-          {tags.map((tag, index) => (
-            <meta key={index} property="article:tag" content={tag} />
-          ))}
-        </>
-      )}
+      {/* Favicon */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       
       {/* Structured Data */}
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData || pageStructuredData)}
+      </script>
       
-      {/* Default Structured Data */}
+      {/* Organization Structured Data */}
       <script type="application/ld+json">
 <<<<<<< HEAD
         {JSON.stringify(defaultStructuredData)}

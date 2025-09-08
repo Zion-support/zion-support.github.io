@@ -2,227 +2,60 @@
 
   const footerSections = [
     {
-      title: '🚀 Innovative Services 2025',
-      featured: true,
-      highlight: true,
+      title: 'AI & Analytics Services',
+      icon: Brain,
+      color: 'from-purple-600 to-pink-600',
       links: [
-        { name: '🚀 Innovative Services 2025', href: '/innovative-services-2025', featured: true, highlight: true },
-        { name: '📋 AI Contract Analysis Platform', href: '/innovative-services-2025#ai-contract-analysis', featured: true },
-        { name: '🔗 AI Supply Chain Optimization', href: '/innovative-services-2025#ai-supply-chain', featured: true },
-        { name: '🛡️ AI Cybersecurity Intelligence', href: '/innovative-services-2025#ai-cybersecurity', featured: true },
-        { name: '💊 AI Healthcare Diagnostics', href: '/innovative-services-2025#ai-healthcare', featured: true },
-        { name: '✍️ AI Content Creation Studio', href: '/innovative-services-2025#ai-content-creation', featured: true },
-        { name: '🎯 AI Sales Intelligence', href: '/innovative-services-2025#ai-sales', featured: true },
-        { name: '🤖 AI Customer Support Automation', href: '/innovative-services-2025#ai-support', featured: true },
-        { name: '📊 AI Data Analytics & BI', href: '/innovative-services-2025#ai-analytics', featured: true },
-        { name: '👥 AI HR & Recruitment', href: '/innovative-services-2025#ai-hr', featured: true },
-        { name: '📋 AI Project Management', href: '/innovative-services-2025#ai-project-management', featured: true },
-        { name: '💰 AI Financial Trading', href: '/innovative-services-2025#ai-financial', featured: true },
-        { name: '📚 AI Education & Learning', href: '/innovative-services-2025#ai-education', featured: true },
-        { name: '🔬 AI Research & Development', href: '/innovative-services-2025#ai-research', featured: true },
-        { name: '🌍 AI Metaverse & VR', href: '/innovative-services-2025#ai-metaverse', featured: true },
-        { name: '🛰️ AI Space Technology', href: '/innovative-services-2025#ai-space', featured: true },
-        { name: '🌱 AI Green Technology', href: '/innovative-services-2025#ai-green', featured: true },
-        { name: '💻 AI Development & Code Generation', href: '/innovative-services-2025#ai-development', featured: true }
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
+        { name: 'AI Data Governance', href: '/services/ai-data-governance' },
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
+        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' }
       ]
     },
     {
       title: '🤖 AI & Business Intelligence',
       featured: true,
       links: [
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', featured: true },
-        { name: 'AI Legal Document Analyzer', href: '/services/ai-legal-document-analysis', featured: true },
-        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', featured: true },
-        { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading', featured: true },
-        { name: 'AI Development Platform', href: '/services/ai-development', featured: true },
-        { name: 'AI Autonomous Research Assistant', href: '/services/ai-autonomous-research-assistant', featured: true }
+        { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions' },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
+        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
+        { name: 'FinOps Advisor', href: '/services/finops-advisor' },
+        { name: 'Digital Transformation', href: '/services/digital-transformation' }
       ]
     },
     {
-      title: '🧠 Comprehensive Services 2030',
-      featured: true,
+      title: 'Edge & IoT Services',
+      icon: Server,
+      color: 'from-blue-600 to-cyan-600',
       links: [
-        { name: 'Comprehensive Services 2030', href: '/comprehensive-services-2030', featured: true },
-        { name: 'AI Autonomous Business Operations', href: '/comprehensive-services-2030#ai-autonomous-business-2030' },
-        { name: 'Quantum AI Cybersecurity', href: '/comprehensive-services-2030#quantum-ai-cybersecurity-2030' },
-        { name: 'AI Content Creation Studio', href: '/comprehensive-services-2030#ai-content-creation-studio-2030' },
-        { name: 'AI Sales Intelligence', href: '/comprehensive-services-2030#ai-sales-intelligence-2030' },
-        { name: 'AI Customer Support Automation', href: '/comprehensive-services-2030#ai-customer-support-automation-2030' },
-        { name: 'AI Data Analytics & BI', href: '/comprehensive-services-2030#ai-data-analytics-bi-2030' },
-        { name: 'Cloud Infrastructure & DevOps', href: '/comprehensive-services-2030#cloud-infrastructure-devops-2030' },
-        { name: 'IoT Edge Computing', href: '/comprehensive-services-2030#iot-edge-computing-2030' },
-        { name: 'Digital Twin Platform', href: '/comprehensive-services-2030#digital-twin-platform-2030' },
-        { name: 'Blockchain Web3 Platform', href: '/comprehensive-services-2030#blockchain-web3-platform-2030' }
+        { name: 'IoT & Edge Computing', href: '/services/iot-edge' },
+        { name: 'Edge Computing Platform', href: '/services/edge-computing-platform' },
+        { name: 'Digital Twin', href: '/services/digital-twin' },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
+        { name: 'Digital Transformation', href: '/services/digital-transformation' },
+        { name: 'IT Consulting', href: '/services/it-consulting' },
+        { name: 'Onsite Support', href: '/services/onsite-support' },
+        { name: 'Green IT Solutions', href: '/services/green-it' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge' }
       ]
     },
     {
-      title: 'AI & Operations',
-      featured: true,
+      title: 'Quantum & Emerging Tech',
+      icon: Crown,
+      color: 'from-indigo-600 to-purple-600',
       links: [
-        { name: 'AI Project Management', href: '/services/ai-project-management', featured: true },
-        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', featured: true },
-        { name: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance', featured: true },
-        { name: 'AI Supply Chain Optimizer', href: '/services/ai-supply-chain-optimization', featured: true },
-        { name: 'Digital Twin Platform', href: '/services/digital-twin', featured: true },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', featured: true }
-      ]
-    },
-    {
-      title: 'AI & Marketing',
-      featured: true,
-      links: [
-        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', featured: true },
-        { name: 'AI Content Creation Studio', href: '/services/ai-content-creation', featured: true },
-        { name: 'AI Customer Support Automation', href: '/services/ai-customer-support-automation', featured: true },
-        { name: 'AI HR Platform', href: '/services/ai-hr-platform', featured: true },
-        { name: 'AI Education Platform', href: '/services/ai-education', featured: true },
-        { name: 'AI Entertainment Platform', href: '/services/ai-entertainment', featured: true }
-      ]
-    },
-    {
-      title: 'Advanced Technologies',
-      featured: true,
-      links: [
-        { name: 'Quantum Computing', href: '/services/quantum-computing', featured: true },
-        { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', featured: true },
-        { name: 'AI Space Technology Platform', href: '/services/ai-space-technology', featured: true },
-        { name: 'AI Sustainable Technology', href: '/services/ai-sustainable-technology', featured: true },
-        { name: 'AI Metaverse Platform', href: '/services/ai-metaverse', featured: true },
-        { name: 'AI Green Technology Platform', href: '/services/ai-green-technology', featured: true }
-      ]
-    },
-    {
-      title: 'Enterprise Solutions',
-      featured: true,
-      links: [
-        { name: 'Enterprise AI Transformation', href: '/solutions', featured: true },
-        { name: 'AI-Powered Cybersecurity', href: '/services/ai-cybersecurity', featured: true },
-        { name: 'Data Analytics & BI', href: '/services/data-analytics', featured: true },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure', featured: true },
-        { name: 'Cloud DevOps', href: '/services/cloud-devops', featured: true },
-        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030', featured: true }
-      ]
-    },
-    {
-
-      title: 'AI & Technology Services',
-      featured: true,
-      links: [
-        { name: 'Comprehensive Services 2025', href: '/comprehensive-services-showcase-2025', featured: true },
-        { name: 'Innovative AI Services 2025', href: '/innovative-ai-services-2025', featured: true },
-        { name: 'Innovative Micro SAAS 2025', href: '/innovative-micro-saas-services-2025', featured: true },
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', featured: true },
-        { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', featured: true },
-        { name: 'AI Content Creation', href: '/services/ai-content-creation', featured: true },
-        { name: 'AI Healthcare Diagnostics', href: '/services#ai-healthcare', featured: true },
-        { name: 'AI Legal Tech Platform', href: '/services#ai-legal-tech', featured: true },
-        { name: 'AI Research & Discovery', href: '/services#ai-research', featured: true },
-        { name: 'AI Green Technology', href: '/services#ai-green-tech', featured: true },
-        { name: 'AI Metaverse Platform', href: '/services#ai-metaverse', featured: true },
-        { name: 'AI Space Technology', href: '/services#ai-space-tech', featured: true },
-        { name: 'AI FinTech Platform', href: '/services#ai-fintech', featured: true },
-        { name: 'AI Supply Chain', href: '/services#ai-supply-chain', featured: true },
-        { name: 'AI Quality Assurance', href: '/services#ai-qa', featured: true },
-        { name: 'AI Autonomous Operations', href: '/services/ai-autonomous-business-operations-platform', featured: true },
-        { name: 'Quantum AI Cybersecurity', href: '/services/quantum-ai-cybersecurity-platform', featured: true },
-        { name: 'AI Content Creation Studio', href: '/services/ai-content-creation-studio', featured: true },
-        { name: 'AI Sales Intelligence', href: '/services/ai-sales-intelligence-platform', featured: true },
-        { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', featured: true },
-        { name: 'AI Data Analytics & BI', href: '/services/ai-data-analytics-bi', featured: true },
-        { name: 'AI Healthcare Diagnostics', href: '/services/ai-healthcare-diagnostics-platform', featured: true },
-        { name: 'AI Education Platform', href: '/services/ai-education-platform', featured: true }
-      ]
-    },
-    {
-      title: 'Core Services',
-      featured: true,
-      links: [
-        { name: 'Cloud Infrastructure & DevOps', href: '/services/cloud-infrastructure-devops', featured: true },
-        { name: 'IoT Edge Computing Platform', href: '/services/iot-edge-computing-platform', featured: true },
-        { name: 'Digital Twin Platform', href: '/services/digital-twin-platform', featured: true },
-        { name: 'Blockchain Web3 Platform', href: '/services/blockchain-web3-platform', featured: true },
-        { name: 'AI Research Assistant', href: '/services/ai-autonomous-research-assistant', featured: true },
-        { name: 'AI Legal Tech Platform', href: '/services/ai-legal-tech-platform', featured: true },
-        { name: 'AI Green Technology', href: '/services/ai-green-technology-platform', featured: true },
-        { name: 'AI Development Platform', href: '/services/ai-development-platform', featured: true },
-        { name: 'AI Entertainment Platform', href: '/services/ai-entertainment-platform', featured: true },
-        { name: 'Micro SaaS Products', href: '/services/micro-saas', featured: true }
-      ]
-    },
-    {
-      title: 'Industry Solutions',
-      featured: false,
-      links: [
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise', featured: true },
-        { name: 'Healthcare Solutions', href: '/solutions/healthcare', featured: true },
-        { name: 'Financial Solutions', href: '/solutions/financial', featured: true },
-        { name: 'Government Solutions', href: '/solutions/government', featured: true },
-        { name: 'SMB Solutions', href: '/solutions/smb', featured: true },
-        { name: 'Startup Solutions', href: '/solutions/startup', featured: true },
-        { name: 'Manufacturing Solutions', href: '/solutions/manufacturing', featured: true },
-        { name: 'Retail Solutions', href: '/solutions/retail', featured: true },
-        { name: 'Education Solutions', href: '/solutions/education', featured: true },
-        { name: 'Energy Solutions', href: '/solutions/energy', featured: true }
-      ]
-    },
-    {
-      title: 'Resources & Learning',
-      featured: false,
-      links: [
-        { name: 'Blog & Insights', href: '/blog', featured: true },
-        { name: 'Case Studies', href: '/case-studies', featured: true },
-        { name: 'White Papers', href: '/white-papers', featured: true },
-        { name: 'Webinars', href: '/webinars', featured: true },
-        { name: 'Documentation', href: '/docs', featured: false },
-        { name: 'FAQ & Support', href: '/faq', featured: false },
-        { name: 'Research & Development', href: '/research', featured: false },
-        { name: 'Training Programs', href: '/training', featured: false }
-      ]
-    },
-    {
-      title: 'Company & Support',
-      featured: false,
-      links: [
-        { name: 'About Us', href: '/about', featured: false },
-        { name: 'Contact Sales', href: '/contact', featured: false },
-        { name: 'Request Quote', href: '/request-quote', featured: false },
-        { name: 'Pricing', href: '/pricing', featured: false },
-        { name: 'Partners', href: '/partners', featured: false },
-        { name: 'Careers', href: '/careers', featured: false },
-        { name: 'Privacy Policy', href: '/privacy', featured: false },
-        { name: 'Terms of Service', href: '/terms', featured: false }
-      ]
-    },
-    {
-      title: '📞 Contact & Support',
-      featured: true,
-      highlight: true,
-      links: [
-        { name: '📱 Mobile: +1 302 464 0950', href: 'tel:+13024640950', featured: true, highlight: true },
-        { name: '✉️ Email: kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com', featured: true, highlight: true },
-        { name: '📍 Address: 364 E Main St STE 1008 Middletown DE 19709', href: '#', featured: true },
-        { name: '🌐 Website: https://ziontechgroup.com', href: 'https://ziontechgroup.com', featured: true },
-        { name: '📋 Request Quote', href: '/request-quote', featured: true },
-        { name: '📅 Schedule Demo', href: '/schedule-demo', featured: true },
-        { name: '❓ FAQ', href: '/faq', featured: true },
-        { name: '📚 Documentation', href: '/documentation', featured: true },
-        { name: '🆘 Support', href: '/support', featured: true }
-      ]
-    },
-    {
-      title: '🔗 Quick Links',
-      featured: true,
-      links: [
-        { name: '🏠 Home', href: '/', featured: true },
-        { name: '📊 All Services', href: '/services', featured: true },
-        { name: '🎯 Solutions', href: '/solutions', featured: true },
-        { name: '📚 Resources', href: '/resources', featured: true },
-        { name: '📰 Blog', href: '/blog', featured: true },
-        { name: '📖 Case Studies', href: '/case-studies', featured: true },
-        { name: '👥 About Us', href: '/about', featured: true },
-        { name: '🤝 Partners', href: '/partners', featured: true },
-        { name: '💰 Pricing', href: '/pricing', featured: true },
-        { name: '📞 Contact', href: '/contact', featured: true }
+        { name: 'Quantum Computing', href: '/services/quantum-computing' },
+        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
+        { name: 'Space Technology', href: '/services/space-tech' },
+        { name: 'Sustainability', href: '/services/sustainability' },
+        { name: 'Digital Twin', href: '/services/digital-twin' },
+        { name: 'Cloud DevOps', href: '/services/cloud-devops' }
       ]
     }
   ];
@@ -391,8 +224,101 @@
                 </Link>
               ))}
             </div>
-            
-            <div className="text-gray-400 text-sm">
+          </div>
+
+          {/* Contact Information */}
+          <div>
+            <h4 className="font-semibold text-white mb-4">Contact Us</h4>
+            <div className="space-y-3">
+              <a 
+                href="tel:+13024640950" 
+                className="flex items-center space-x-3 text-sm text-slate-300 hover:text-cyan-400 transition-colors"
+              >
+                <Phone className="w-4 h-4" />
+                <span>+1 302 464 0950</span>
+              </a>
+              <a 
+                href="mailto:kleber@ziontechgroup.com" 
+                className="flex items-center space-x-3 text-sm text-slate-300 hover:text-cyan-400 transition-colors"
+              >
+                <Mail className="w-4 h-4" />
+                <span>kleber@ziontechgroup.com</span>
+              </a>
+              <div className="flex items-start space-x-3 text-sm text-slate-300">
+                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                <span>
+                  364 E Main St STE 1008<br />
+                  Middletown DE 19709
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-slate-700/50">
+        <div className="container mx-auto px-4 py-8">
+          <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
+            {/* Company Info */}
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-3">
+                <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                  <Zap className="w-4 h-4 text-white" />
+                </div>
+                <span className="text-lg font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                  Zion Tech Group
+                </span>
+              </div>
+              <span className="text-slate-400">|</span>
+              <span className="text-sm text-slate-400">
+                Transforming businesses through innovation
+              </span>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex items-center space-x-4">
+              <a 
+                href="https://ziontechgroup.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-cyan-400 transition-colors"
+              >
+                <Globe className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://linkedin.com/company/ziontechgroup" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-cyan-400 transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://twitter.com/ziontechgroup" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-cyan-400 transition-colors"
+                aria-label="Twitter"
+              >
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://github.com/ziontechgroup" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-cyan-400 transition-colors"
+                aria-label="GitHub"
+              >
+                <Github className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Copyright & Additional Info */}
+          <div className="mt-6 pt-6 border-t border-slate-700/50 text-center">
+            <div className="text-sm text-slate-400 mb-2">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
           </div>

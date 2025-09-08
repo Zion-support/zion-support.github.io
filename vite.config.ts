@@ -65,14 +65,61 @@ export default defineConfig({
 <<<<<<< HEAD
     target: 'es2020',
     minify: 'terser',
+    sourcemap: process.env.NODE_ENV === 'production' ? false : 'hidden',
+    reportCompressedSize: false,
+    outDir: 'dist',
+    cssCodeSplit: true,
+    modulePreload: {
+      polyfill: true,
+    },
+    assetsInlineLimit: 4096,
+    cssMinify: true,
+    rollupOptions: {
+      input: path.resolve(__dirname, 'index.html'),
+      output: {
+        manualChunks: (id) => {
+          // More granular chunking for better caching
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'react-core';
+            }
+            if (id.includes('@radix-ui')) {
+              return 'radix-ui';
+            }
+            if (id.includes('framer-motion')) {
+              return 'framer-motion';
+            }
+            if (id.includes('lucide-react')) {
+              return 'lucide-icons';
+            }
+            return 'vendor';
+          }
+        },
+        chunkFileNames: 'js/[name]-[hash].js',
+        entryFileNames: 'js/[name]-[hash].js',
+        assetFileNames: (assetInfo) => {
+          const name = assetInfo.name || ''
+          if (/\.(css)$/.test(name)) return 'css/[name]-[hash].[ext]'
+          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) return 'images/[name]-[hash].[ext]'
+          if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]'
+          return 'assets/[name]-[hash].[ext]'
+        },
+      },
+      external: [],
+    },
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
-<<<<<<< HEAD
+        passes: 3,
         pure_funcs: ['console.log', 'console.info', 'console.debug'],
-<<<<<<< HEAD
-        passes: 2,
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_Function: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        unsafe_regexp: true,
+        unsafe_undefined: true
       },
       mangle: {
         toplevel: true,
@@ -211,178 +258,15 @@ export default defineConfig({
         entryFileNames: 'js/[name]-[hash].js',
         assetFileNames: 'assets/[name]-[hash].[ext]'
       }
-    },
-    // Enable CSS code splitting
-    cssCodeSplit: true,
-    // Optimize dependencies
-    commonjsOptions: {
-      include: [/node_modules/],
-=======
-    chunkSizeWarningLimit: 500, // Reduced from 1000 for better optimization
-=======
-          'react-vendor': ['react', 'react-dom'],
-          'utils-vendor': ['clsx', 'tailwind-merge'],
-          'animation-vendor': ['framer-motion'],
-          'ui-vendor': ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-tabs'],
-          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
-          'chart-vendor': ['recharts'],
-          'icon-vendor': ['lucide-react', 'react-icons']
-        }
-      }
-    },
-    chunkSizeWarningLimit: 1000,
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-<<<<<<< HEAD
-        pure_funcs: ['console.log', 'console.info', 'console.debug'],
-        passes: 2
-      },
-      mangle: {
-        toplevel: true
-      }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-    target: 'es2015',
-    minify: 'esbuild',
-    esbuildOptions: {
-      drop: ['console', 'debugger'],
-<<<<<<< HEAD
-    },
-    rollupOptions: {
-      output: {
-        // Optimize chunk splitting for better caching
-        manualChunks: {
-          // Vendor chunks
-          'react-vendor': ['react', 'react-dom'],
-          'animation-vendor': ['framer-motion'],
-          'utils-vendor': ['lucide-react'],
-        },
-        // Optimize asset naming for better caching
-        chunkFileNames: (chunkInfo) => {
-          const facadeModuleId = chunkInfo.facadeModuleId
-            ? chunkInfo.facadeModuleId.split('/').pop()?.split('.')[0]
-            : 'chunk'
-          return `js/${facadeModuleId}-[hash].js`
-        },
-        entryFileNames: 'js/[name]-[hash].js',
-        assetFileNames: (assetInfo) => {
-          const info = assetInfo.name?.split('.') || []
-          const ext = info[info.length - 1]
-          if (/\.(css)$/.test(assetInfo.name || '')) {
-            return `css/[name]-[hash].${ext}`
-          }
-          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.name || '')) {
-            return `images/[name]-[hash].${ext}`
-          }
-          if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name || '')) {
-            return `fonts/[name]-[hash].${ext}`
-          }
-          return `assets/[name]-[hash].${ext}`
-        },
-      },
-    },
-    // Optimize chunk size warnings
-    chunkSizeWarningLimit: 1000,
-    // Enable source maps for debugging
-    sourcemap: false
-  }
-})
-=======
->>>>>>> origin/cursor/build-and-fix-errors-e276
-    },
-=======
-    chunkSizeWarningLimit: 500,
-    sourcemap: false,
-    reportCompressedSize: false,
-    cssCodeSplit: true,
-    assetsInlineLimit: 4096,
-            return `images/[name]-[hash].[ext]`;
-          }
-          if (/css/i.test(ext)) {
-            return `css/[name]-[hash].[ext]`;
-          }
-          return `assets/[name]-[hash].[ext]`;
-        },
-      },
-    },
-    esbuild: {
-      drop: process.env.DEBUG ? [] : ['console', 'debugger'],
-    },
-    chunkSizeWarningLimit: 1000,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn']
-      }
-    },
-    sourcemap: false,
-    target: 'es2015'
-  },
-  optimizeDeps: {
-    include: [
-      'react',
-      'react-dom',
-    // Exclude problematic packages from optimization
-    exclude: ['@cypress/request'],
-=======
-    chunkSizeWarningLimit: 500,
-    reportCompressedSize: true,
-    emptyOutDir: true,
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        passes: 3,
-        unsafe: true,
-        unsafe_comps: true,
-        unsafe_Function: true,
-        unsafe_math: true,
-        unsafe_proto: true,
-        unsafe_regexp: true,
-        unsafe_undefined: true
-      },
-      mangle: {
-        safari10: true
-      }
-    }
-=======
-=======
-    exclude: ['@stripe/stripe-js'], // Exclude Stripe from pre-bundling
-  },
-  optimizeDeps: {
-    esbuildOptions: {
-      target: 'esnext',
-      treeShaking: true
     }
   },
   esbuild: {
-    minifyIdentifiers: true,
-    minifySyntax: true,
-    minifyWhitespace: true
-  },
-    __PROD__: JSON.stringify(process.env.NODE_ENV === 'production')
-  }
-});
-=======
-  // Performance optimizations
-  define: {
-    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
-  },
-  // Experimental features for better performance
-  experimental: {
-    renderBuiltUrl(filename, { hostType }) {
-      if (hostType === 'js') {
-        return { js: `/${filename}` }
-      } else {
-        return { relative: true }
-      }
-    }
-=======
-      'framer-motion',
-      'clsx',
-      'tailwind-merge'
-    ]
+    legalComments: 'none',
+    logOverride: { 'this-is-undefined-in-esm': 'silent' },
+    // Additional ESBuild optimizations
+    target: 'es2019',
+    minify: true,
+    treeShaking: true
   },
   server: {
     port: 5173,
@@ -419,11 +303,11 @@ export default defineConfig({
     host: true,
     open: true,
   },
-  // PostCSS configuration removed due to ES module compatibility issues
-  define: {
-    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
-    __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
-  },
+  // Performance optimizations
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'framer-motion'],
+    exclude: ['@radix-ui/react-accordion']
+  }
 })
 =======
   },

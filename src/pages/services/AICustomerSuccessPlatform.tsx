@@ -1,7 +1,8 @@
 import React from 'react';
-import { motion   } from 'framer-motion';
-import { SEO   } from '@/components/SEO';
-import { Users, 
+import { motion } from 'framer-motion';
+import { SEO } from '@/components/SEO';
+import { 
+  Users, 
   Heart, 
   MessageCircle, 
   TrendingUp, 
@@ -106,7 +107,7 @@ import { Users,
   Chi,
   Psi,
   Omega
-  } from 'lucide-react';
+} from 'lucide-react';
 
 const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
   const features = [
@@ -358,8 +359,8 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)   => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

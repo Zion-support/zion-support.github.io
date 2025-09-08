@@ -2,7 +2,7 @@ export type ServiceItem = {
 	id: string;
 	title: string;
 	description: string;
-	category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps';
+	category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems';
 	price: string; // average market starting price
 	billing: 'month' | 'project' | 'hour';
 	features: string[];
@@ -118,7 +118,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Optimize Supply Chain',
 				href: 'https://ziontechgroup.com/contact'
 			}
-  {/* Removed stray comma */}
+			,
 			{
 				id: 'soc2-compliance-automation-saas',
 				title: 'SOC 2 Compliance Automation SaaS',
@@ -160,21 +160,9 @@ export const servicesCatalog: ServiceCategory[] = [
 		slug: 'ai-solutions',
 		items: [
 			{
-				id: 'genai-knowledge-assistant',
-				title: 'GenAI Knowledge Assistant',
-				description: 'RAG chatbot over your docs with SOC2 logging and redaction.',
-				category: 'AI Solutions',
-				price: 'From $299/month',
-				billing: 'month',
-				features: ['Multi-tenant vector index', 'Retrieval policies', 'Human-in-the-loop'],
-				ctaLabel: 'Deploy Assistant',
-				href: 'https://ziontechgroup.com',
-				external: true
-			},
-			{
-				id: 'ai-code-reviewer',
-				title: 'AI Code Reviewer & Pair',
-				description: 'LLM-powered code review with repository policies and risk scoring.',
+				id: 'autonomous-business-manager',
+				title: 'Autonomous Business Manager',
+				description: 'AI-powered business management system that autonomously handles operations, decision-making, and strategic planning.',
 				category: 'AI Solutions',
 				price: 'From $199/month',
 				billing: 'month',
@@ -217,7 +205,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Vehicle Integration',
 				href: 'https://ziontechgroup.com/contact'
 			}
-  {/* Removed stray comma */}
+			,
 			{
 				id: 'enterprise-rag-search',
 				title: 'Enterprise RAG Search Platform',
@@ -259,20 +247,9 @@ export const servicesCatalog: ServiceCategory[] = [
 		slug: 'it-services',
 		items: [
 			{
-				id: 'msp-care',
-				title: 'Managed IT Care',
-				description: 'Proactive monitoring, patching, and helpdesk with SLAs.',
-				category: 'IT Services',
-				price: 'From $80/user/month',
-				billing: 'month',
-				features: ['24/7 monitoring', 'Remote & onsite support', 'Asset inventory'],
-				ctaLabel: 'Talk to Sales',
-				href: '/contact'
-			},
-			{
-				id: 'migrations-cloud',
-				title: 'Cloud Migration Factory',
-				description: 'Lift-and-shift or re-platform to AWS/Azure/GCP with IaC.',
+				id: 'zero-trust-architecture',
+				title: 'Zero Trust Network Architecture',
+				description: 'Comprehensive zero trust security implementation with continuous verification and adaptive access control.',
 				category: 'IT Services',
 				price: 'From $8,000/project',
 				billing: 'project',
@@ -339,11 +316,28 @@ export const servicesCatalog: ServiceCategory[] = [
 		slug: 'cybersecurity',
 		items: [
 			{
-				id: 'vapt',
-				title: 'Vulnerability & Pen Test',
-				description: 'External, internal, web app, and API testing with remediation plan.',
+				id: 'ai-threat-intelligence',
+				title: 'AI Threat Intelligence Suite',
+				description: 'Advanced threat detection and response system using AI to identify and neutralize cyber threats in real-time.',
 				category: 'Cybersecurity',
-				price: 'From $6,000/project',
+				price: '$3,999',
+				billing: 'month',
+				features: [
+					'AI threat detection',
+					'Behavioral analysis',
+					'Automated response',
+					'Threat hunting',
+					'Incident management'
+				],
+				ctaLabel: 'Security Demo',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'quantum-cryptography',
+				title: 'Quantum Cryptography Solutions',
+				description: 'Future-proof cryptography using quantum key distribution for unbreakable security in the quantum era.',
+				category: 'Cybersecurity',
+				price: '$12,000',
 				billing: 'project',
 				features: ['OWASP ASVS', 'Authenticated scans', 'Executive + technical reports'],
 				ctaLabel: 'Request Scope',
@@ -402,9 +396,9 @@ export const servicesCatalog: ServiceCategory[] = [
 		slug: 'data-analytics',
 		items: [
 			{
-				id: 'modern-bi',
-				title: 'Modern BI Stack',
-				description: 'ELT, warehouse modeling, and governed dashboards.',
+				id: 'quantum-data-analytics',
+				title: 'Quantum Data Analytics Platform',
+				description: 'Revolutionary data analytics platform leveraging quantum computing for complex pattern recognition and insights.',
 				category: 'Data & Analytics',
 				price: '$6,999',
 				billing: 'month',
@@ -482,22 +476,28 @@ export const servicesCatalog: ServiceCategory[] = [
 		slug: 'cloud-devops',
 		items: [
 			{
-				id: 'platform-engineering',
-				title: 'Internal Developer Platform',
-				description: 'Golden paths, templates, and paved road with Backstage/Port.',
+				id: 'autonomous-devops-platform',
+				title: 'Autonomous DevOps Platform',
+				description: 'Self-managing DevOps platform that automatically optimizes deployments, scaling, and infrastructure management.',
 				category: 'Cloud & DevOps',
-				price: 'From $20,000/project',
-				billing: 'project',
-				features: ['Self-service scaffolding', 'Guardrails', 'Scorecards'],
-				ctaLabel: 'Design IDP',
-				href: '/contact'
+				price: '$4,999',
+				billing: 'month',
+				features: [
+					'Automated deployments',
+					'Self-healing infrastructure',
+					'Performance optimization',
+					'Cost management',
+					'Continuous monitoring'
+				],
+				ctaLabel: 'DevOps Demo',
+				href: 'https://ziontechgroup.com/contact'
 			},
 			{
-				id: 'finops',
-				title: 'FinOps Program',
-				description: 'Cost visibility, allocation, and savings automation across clouds.',
+				id: 'quantum-cloud-infrastructure',
+				title: 'Quantum Cloud Infrastructure',
+				description: 'Next-generation cloud infrastructure optimized for quantum computing workloads and hybrid classical-quantum applications.',
 				category: 'Cloud & DevOps',
-				price: 'From $8,000/project',
+				price: '$18,000',
 				billing: 'project',
 				features: [
 					'Quantum cloud services',

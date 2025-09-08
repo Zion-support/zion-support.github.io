@@ -2301,7 +2301,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: 149,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "AI-powered recruitment",
       "Employee onboarding automation",
       "Performance analytics",
@@ -2335,7 +2335,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
@@ -2347,7 +2347,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: 199,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Real-time tracking",
       "Blockchain verification",
       "Compliance reporting",
@@ -2381,7 +2381,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
@@ -2393,7 +2393,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: 299,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Quantum-inspired algorithms",
       "Portfolio optimization",
       "Risk assessment",
@@ -2481,42 +2481,127 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       'Operational optimization',
       'Market analysis'
     ],
-    targetAudience: ['Business analysts', 'Data scientists', 'Executives', 'Operations managers'],
-    contactInfo: {
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950'
+    benefits: [
+      "Reduce review time by 80%",
+      "Improve accuracy",
+      "Risk mitigation",
+      "Cost savings",
+      "Better compliance"
+    ],
+    targetAudience: ["Law firms", "Legal departments", "Compliance officers", "Contract managers", "Risk managers"],
+    marketPrice: "$179-499/month",
+    website: "https://ziontechgroup.com/ai-legal-document-review",
+    contactEmail: "kleber@ziontechgroup.com",
+    tags: ["AI Legal", "Document Review", "Contract Analysis", "Compliance", "Risk Assessment"],
+    aiScore: 93,
+    rating: 4.8,
+    reviewCount: 156,
+    featured: true,
+    location: "Global",
+    availability: "Immediate",
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      verified: true
     },
-    status: 'available',
-    tags: ['AI', 'Business Intelligence', 'Predictive Analytics', 'Machine Learning', 'Data Science']
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/build-and-fix-errors-e276
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-15T10:00:00.000Z"
+  },
+  {
+    id: "quantum-cybersecurity-suite",
+    title: "Quantum Cybersecurity Suite",
+    description: "Future-proof cybersecurity platform using quantum-resistant encryption and AI-powered threat detection.",
+    category: "Quantum Computing",
+    subcategory: "Cybersecurity",
+    price: 399,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Quantum-resistant encryption",
+      "AI threat detection",
+      "Zero-trust architecture",
+      "Compliance monitoring",
+      "Incident response",
+      "Security analytics",
+      "24/7 monitoring",
+      "Expert support"
+    ],
+    benefits: [
+      "Future-proof security",
+      "Advanced threat protection",
+      "Compliance assurance",
+      "Risk reduction",
+      "Peace of mind"
+    ],
+    targetAudience: ["Enterprises", "Financial institutions", "Healthcare", "Government", "Critical infrastructure"],
+    marketPrice: "$399-1,199/month",
+    website: "https://ziontechgroup.com/quantum-cybersecurity",
+    contactEmail: "kleber@ziontechgroup.com",
+    tags: ["Quantum Security", "Cybersecurity", "Encryption", "Threat Detection", "Compliance"],
+    aiScore: 96,
+    rating: 4.9,
+    reviewCount: 134,
+    featured: true,
+    location: "Global",
+    availability: "Immediate",
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      verified: true
+    },
+    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-15T10:00:00.000Z"
+  },
+  {
+    id: "ai-powered-project-management",
+    title: "AI-Powered Project Management Platform",
+    description: "Intelligent project management platform using AI for task optimization, resource allocation, and risk prediction.",
+    category: "AI Services",
+    subcategory: "Project Management",
+    price: 119,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI task optimization",
+      "Resource allocation",
+      "Risk prediction",
+      "Progress tracking",
+      "Team collaboration",
+      "Time management",
+      "Budget tracking",
+      "Reporting tools"
+    ],
+    benefits: [
+      "Improve project success rate",
+      "Optimize resources",
+      "Reduce delays",
+      "Better collaboration",
+      "Data-driven decisions"
+    ],
+    targetAudience: ["Project managers", "Teams", "Consultants", "Agencies", "Enterprises"],
+    marketPrice: "$119-349/month",
+    website: "https://ziontechgroup.com/ai-project-management",
+    contactEmail: "kleber@ziontechgroup.com",
+    tags: ["AI Project Management", "Task Optimization", "Resource Management", "Risk Assessment", "Collaboration"],
+    aiScore: 89,
+    rating: 4.6,
+    reviewCount: 278,
+    featured: false,
+    location: "Global",
+    availability: "Immediate",
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      verified: true
+    },
+    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-15T10:00:00.000Z"
   }
 ];
-
-export const getServiceByCategory = (category: string) => {
-  return MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase() === category.toLowerCase());
-};
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export const getServiceBySubcategory = (subcategory: string) => {
-  return MICRO_SAAS_SERVICES.filter(service => service.subcategory === subcategory);
-};
-
-export const getServiceByPricingTier = (tier: string) => {
-  return MICRO_SAAS_SERVICES.filter(service => service.pricingTier === tier);
-};
-
-export const getFeaturedServices = () => {
-  return MICRO_SAAS_SERVICES.filter(service => service.rating >= 4.7).slice(0, 6);
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-
-
-export const getServiceById = (id: string) => {
+export const getMicroSaasServiceById = (id: string): MicroSaasService | undefined => {
   return MICRO_SAAS_SERVICES.find(service => service.id === id);
 <<<<<<< HEAD
 =======

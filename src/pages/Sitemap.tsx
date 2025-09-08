@@ -1,157 +1,120 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
-import { 
-  ArrowRight, 
-  Building, 
-  Cloud, 
-  Code, 
-  Database, 
-  Globe, 
-  Shield, 
-  Users, 
-  Zap,
-  Brain,
-  Rocket,
-  Heart,
-  PenTool,
-  Atom,
-  Cpu,
-  Server,
-  BarChart3,
-  FileText,
-  BookOpen,
-  Target,
-  MessageCircle,
-  HelpCircle,
-  DollarSign,
-  ShoppingCart,
-  Award,
-  Lock,
-  Settings
-} from 'lucide-react';
+import { Sitemap, Home, Users, Settings, FileText, Shield, Mail, HelpCircle, Building, Briefcase, Brain, Cloud, Rocket, Heart, Globe, Lock, Cpu, Zap, Star, TrendingUp, MessageCircle, DollarSign, BookOpen, Phone, MapPin } from 'lucide-react';
 
-export default function Sitemap() {
-  const currentYear = new Date().getYear() + 1900;
-
-  const mainPages = [
-    { name: 'Home', href: '/', icon: Globe, description: 'Main landing page' },
-    { name: 'About', href: '/about', icon: Building, description: 'Company information' },
-    { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch' },
-    { name: 'Services', href: '/services', icon: Zap, description: 'Our service offerings' },
-    { name: 'Solutions', href: '/solutions', icon: Target, description: 'Industry solutions' },
-    { name: 'Resources', href: '/resources', icon: BookOpen, description: 'Knowledge base' },
-    { name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Service pricing' },
-    { name: 'Blog', href: '/blog', icon: FileText, description: 'Latest insights' },
-    { name: 'Case Studies', href: '/case-studies', icon: Target, description: 'Success stories' },
-    { name: 'White Papers', href: '/white-papers', icon: FileText, description: 'Research papers' },
-    { name: 'Webinars', href: '/webinars', icon: Users, description: 'Live events' },
-    { name: 'FAQ', href: '/faq', icon: HelpCircle, description: 'Frequently asked questions' },
-    { name: 'Documentation', href: '/docs', icon: BookOpen, description: 'Technical guides' },
-    { name: 'Partners', href: '/partners', icon: Users, description: 'Partnership opportunities' },
-    { name: 'Careers', href: '/careers', icon: Award, description: 'Job opportunities' },
-    { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart, description: 'Product marketplace' },
-    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get a quote' },
-    { name: 'Dashboard', href: '/dashboard', icon: BarChart3, description: 'Client dashboard' },
-    { name: 'Login', href: '/login', icon: Lock, description: 'Client login' },
-    { name: 'Privacy Policy', href: '/privacy', icon: Shield, description: 'Privacy information' },
-    { name: 'Terms of Service', href: '/terms', icon: FileText, description: 'Terms and conditions' },
-    { name: 'Cookie Policy', href: '/cookies', icon: Settings, description: 'Cookie information' },
-    { name: 'Legal', href: '/legal', icon: Shield, description: 'Legal information' }
+export default function SitemapPage() {
+  const siteStructure = [
+    {
+      title: "Main Pages",
+      icon: Home,
+      links: [
+        { name: "Home", path: "/", description: "Welcome to Zion Tech Group" },
+        { name: "About Us", path: "/about", description: "Learn about our company and mission" },
+        { name: "Contact", path: "/contact", description: "Get in touch with our team" },
+        { name: "Services Overview", path: "/services-overview", description: "Explore all our services" },
+        { name: "Partners", path: "/partners", description: "Strategic partnerships and collaborations" },
+        { name: "Careers", path: "/careers", description: "Join our team of experts" },
+        { name: "Team", path: "/team", description: "Meet our leadership and experts" },
+        { name: "Press", path: "/press", description: "Media resources and press releases" }
+      ]
+    },
+    {
+      title: "Core Services",
+      icon: Settings,
+      links: [
+        { name: "AI Services", path: "/ai-services", description: "Comprehensive AI solutions" },
+        { name: "IT Services", path: "/it-services", description: "Enterprise IT solutions" },
+        { name: "Micro SaaS", path: "/micro-saas", description: "Scalable software solutions" },
+        { name: "Cloud & DevOps", path: "/services/cloud-devops", description: "Infrastructure & automation" },
+        { name: "Digital Twin", path: "/services/digital-twin", description: "Simulation & monitoring" },
+        { name: "Data Analytics", path: "/services/data-analytics", description: "Business intelligence" },
+        { name: "IoT & Edge", path: "/services/iot-edge", description: "Connected ecosystems" },
+        { name: "Blockchain Solutions", path: "/services/blockchain-enterprise-solutions", description: "DeFi & smart contracts" }
+      ]
+    },
+    {
+      title: "Specialized Services",
+      icon: Brain,
+      links: [
+        { name: "AI Business Intelligence", path: "/services/ai-business-intelligence", description: "Machine Learning & Data Science" },
+        { name: "AI Sales Copilot", path: "/services/ai-sales-copilot", description: "AI-powered sales automation" },
+        { name: "AI Compliance Assistant", path: "/services/ai-compliance-assistant", description: "Regulatory compliance automation" },
+        { name: "AI Auto Email Responder", path: "/services/ai-auto-email-responder", description: "Faster replies, CRM logging" },
+        { name: "LLM Content Studio", path: "/services/llm-content-studio", description: "AI content generation" },
+        { name: "FinOps Advisor", path: "/services/finops-advisor", description: "Cloud cost optimization" },
+        { name: "Healthcare Tech", path: "/services/healthcare-tech", description: "AI medicine & diagnostics" },
+        { name: "Sustainability", path: "/services/sustainability", description: "Green IT solutions" }
+      ]
+    },
+    {
+      title: "Advanced Solutions",
+      icon: Rocket,
+      links: [
+        { name: "Quantum AI Platform", path: "/services/quantum-ai-platform", description: "Next-gen quantum computing" },
+        { name: "AI Cybersecurity Suite", path: "/services/ai-cybersecurity-suite", description: "Advanced security solutions" },
+        { name: "AI Healthcare Analytics", path: "/services/ai-healthcare-analytics", description: "Healthcare data insights" },
+        { name: "Zero Trust Architecture", path: "/services/zero-trust-network-architecture", description: "Advanced security framework" },
+        { name: "IT Infrastructure", path: "/services/it-infrastructure", description: "Enterprise infrastructure" },
+        { name: "Space Technology", path: "/services/space-tech", description: "Aerospace innovation" },
+        { name: "Innovative Services 2025", path: "/innovative-services-showcase-2025", description: "Latest cutting-edge solutions" },
+        { name: "Revolutionary Services 2030", path: "/revolutionary-services-showcase-2030", description: "Future-ready services" }
+      ]
+    },
+    {
+      title: "Pricing & Solutions",
+      icon: DollarSign,
+      links: [
+        { name: "Pricing Guide", path: "/pricing-guide", description: "Comprehensive pricing information" },
+        { name: "Pricing 2027", path: "/pricing", description: "Current year pricing strategies" },
+        { name: "Pricing 2030", path: "/pricing-2030", description: "Advanced pricing strategies" },
+        { name: "Request Quote", path: "/request-quote", description: "Get custom pricing" },
+        { name: "Marketplace", path: "/marketplace", description: "Explore our solutions" }
+      ]
+    },
+    {
+      title: "Support & Resources",
+      icon: HelpCircle,
+      links: [
+        { name: "Help Center", path: "/help", description: "Find answers to common questions" },
+        { name: "FAQ", path: "/faq", description: "Frequently asked questions" },
+        { name: "Support Portal", path: "/support", description: "Technical support and assistance" },
+        { name: "Documentation", path: "/docs", description: "Technical guides and API references" },
+        { name: "Training", path: "/training", description: "Learning resources and courses" },
+        { name: "Webinars", path: "/webinars", description: "Educational sessions and workshops" },
+        { name: "Blog", path: "/blog", description: "Latest insights and news" },
+        { name: "Case Studies", path: "/case-studies", description: "Success stories and projects" }
+      ]
+    },
+    {
+      title: "Legal & Compliance",
+      icon: Shield,
+      links: [
+        { name: "Privacy Policy", path: "/privacy", description: "How we protect your data" },
+        { name: "Terms of Service", path: "/terms", description: "Terms and conditions" },
+        { name: "Cookie Policy", path: "/cookies", description: "Cookie usage information" },
+        { name: "Accessibility", path: "/accessibility", description: "Accessibility statement" },
+        { name: "Security", path: "/security", description: "Security practices" },
+        { name: "Compliance", path: "/compliance", description: "Regulatory compliance" }
+      ]
+    }
   ];
 
-  const aiServices = [
-    { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
-    { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', icon: Heart, description: 'Medical AI & Diagnostics' },
-    { name: 'AI Content Creation', href: '/services/ai-content-creation', icon: PenTool, description: 'Content Generation & Optimization' },
-    { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity', icon: Shield, description: 'AI-Powered Security' },
-    { name: 'AI Legal Document Analyzer', href: '/services/ai-legal-document-analyzer', icon: FileText, description: 'Legal document processing' },
-    { name: 'AI Real Estate Investment Analyzer', href: '/services/ai-real-estate-investment-analyzer', icon: Building, description: 'Real estate analysis' },
-    { name: 'AI Restaurant Management System', href: '/services/ai-restaurant-management-system', icon: ShoppingCart, description: 'Restaurant automation' },
-    { name: 'AI Fitness Coaching Platform', href: '/services/ai-fitness-coaching-platform', icon: Heart, description: 'Fitness and health coaching' },
-    { name: 'AI E-commerce Personalization Engine', href: '/services/ai-ecommerce-personalization-engine', icon: ShoppingCart, description: 'E-commerce optimization' },
-    { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', icon: Database, description: 'Supply chain management' },
-    { name: 'AI Video Content Creation Studio', href: '/services/ai-video-content-creation-studio', icon: PenTool, description: 'Video content creation' },
-    { name: 'AI Customer Churn Prediction', href: '/services/ai-customer-churn-prediction', icon: Users, description: 'Customer retention analysis' },
-    { name: 'AI Financial Fraud Detection', href: '/services/ai-financial-fraud-detection', icon: Shield, description: 'Financial security' },
-    { name: 'AI Energy Management System', href: '/services/ai-energy-management-system', icon: Zap, description: 'Energy optimization' }
+  const quickLinks = [
+    { name: "Get Started", path: "/contact", description: "Start your project with us", icon: MessageCircle },
+    { name: "Request Quote", path: "/request-quote", description: "Get a custom quote", icon: DollarSign },
+    { name: "Services Overview", path: "/services-overview", description: "Explore all services", icon: Settings },
+    { name: "AI Solutions", path: "/ai-services", description: "Discover AI capabilities", icon: Brain },
+    { name: "Pricing Guide", path: "/pricing-guide", description: "View pricing options", icon: DollarSign },
+    { name: "Support Center", path: "/help", description: "Get help and support", icon: HelpCircle },
+    { name: "Documentation", path: "/docs", description: "Technical resources", icon: BookOpen },
+    { name: "Contact Sales", path: "/contact", description: "Talk to our experts", icon: Phone }
   ];
 
-  const coreServices = [
-    { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
-    { name: 'Digital Twin Platform', href: '/services/digital-twin', icon: Globe, description: 'Virtual Replicas & Simulation' },
-    { name: 'Data Analytics & BI', href: '/services/data-analytics', icon: BarChart3, description: 'Business Intelligence & Analytics' },
-    { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Server, description: 'Server & Network Management' },
-    { name: 'Micro SaaS Products', href: '/services/micro-saas', icon: Zap, description: 'Specialized Software Solutions' },
-    { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom, description: 'Quantum AI & Optimization' },
-    { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Cpu, description: 'IoT & Real-time Processing' }
+  const contactInfo = [
+    { icon: Phone, text: "+1 302 464 0950", href: "tel:+13024640950" },
+    { icon: Mail, text: "kleber@ziontechgroup.com", href: "mailto:kleber@ziontechgroup.com" },
+    { icon: MapPin, text: "364 E Main St STE 1008, Middletown DE 19709", href: "#" }
   ];
-
-  const solutions = [
-    { name: 'Enterprise AI', href: '/solutions/enterprise-ai', icon: Building, description: 'Large-scale AI implementation' },
-    { name: 'SMB Solutions', href: '/solutions/smb-solutions', icon: Building, description: 'Affordable tech for small business' },
-    { name: 'Startup Accelerator', href: '/solutions/startup-accelerator', icon: Rocket, description: 'Tech solutions for startups' },
-    { name: 'Government & Defense', href: '/solutions/government-defense', icon: Shield, description: 'Secure government solutions' },
-    { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: Heart, description: 'Medical & health technology' },
-    { name: 'Financial Services', href: '/solutions/financial', icon: DollarSign, description: 'Fintech & banking solutions' }
-  ];
-
-  const resources = [
-    { name: 'Documentation', href: '/docs', icon: BookOpen, description: 'Technical guides & APIs' },
-    { name: 'Blog', href: '/blog', icon: FileText, description: 'Industry insights & updates' },
-    { name: 'Case Studies', href: '/case-studies', icon: Target, description: 'Success stories & results' },
-    { name: 'Webinars', href: '/webinars', icon: Users, description: 'Live events & training' },
-    { name: 'White Papers', href: '/white-papers', icon: FileText, description: 'In-depth research & analysis' },
-    { name: 'FAQ', href: '/faq', icon: HelpCircle, description: 'Frequently asked questions' },
-    { name: 'Pricing', href: '/pricing', description: 'Transparent pricing plans' },
-    { name: 'Support', href: '/support', icon: MessageCircle, description: 'Technical support & help' }
-  ];
-
-  const specialPages = [
-    { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030', icon: Rocket, description: 'Future Technology Solutions' },
-    { name: 'Comprehensive Services 2030', href: '/comprehensive-services-2030', icon: Brain, description: 'Complete AI & Tech Solutions' },
-    { name: 'Enhanced Services Landing', href: '/services/enhanced', icon: Zap, description: 'Enhanced service offerings' },
-    { name: 'Comprehensive Services 2025', href: '/comprehensive-services-showcase-2025', icon: Brain, description: '2025 service showcase' },
-    { name: 'Innovative AI Services 2025', href: '/innovative-ai-services-2025', icon: Brain, description: '2025 AI innovations' },
-    { name: 'Innovative Micro SAAS 2025', href: '/innovative-micro-saas-services-2025', icon: Zap, description: '2025 Micro SAAS' }
-  ];
-
-  const renderSection = (title: string, items: any[], icon?: React.ComponentType<any>) => (
-    <div className="mb-8">
-      <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
-        {icon && <icon.type {...icon.props} className="w-5 h-5 mr-2 text-cyan-400" />}
-        {title}
-      </h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {items.map((item) => (
-          <Link
-            key={item.name}
-            to={item.href}
-            className="group p-4 rounded-lg bg-slate-800/50 border border-slate-700/50 hover:border-cyan-400/50 hover:bg-slate-800/70 transition-all duration-300"
-          >
-            <div className="flex items-start space-x-3">
-              {item.icon && (
-                <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <item.icon className="w-4 h-4 text-white" />
-                </div>
-              )}
-              <div className="flex-1 min-w-0">
-                <h4 className="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors duration-200">
-                  {item.name}
-                </h4>
-                {item.description && (
-                  <p className="text-xs text-gray-400 mt-1 group-hover:text-gray-300 transition-colors duration-200">
-                    {item.description}
-                  </p>
-                )}
-              </div>
-              <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all duration-200" />
-            </div>
-          </Link>
-        ))}
-      </div>
-    </div>
-  );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

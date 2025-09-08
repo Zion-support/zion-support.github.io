@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { 
   Target, 
@@ -476,35 +477,36 @@ export default function CaseStudies() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
-        <div className="container-responsive text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Create Your Success Story?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our AI-powered solutions can transform your business 
-            and deliver measurable results like the ones you see here.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              to="/request-quote"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-            >
-              Start Your Project
-            </Link>
-            <Link
-              to="/contact"
-              className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 font-semibold rounded-lg transition-all duration-300"
-            >
-              Talk to Our Team
-            </Link>
-          </div>
+      <section className="py-20 px-4 bg-slate-800/30">
+        <div className="container mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl mx-auto"
+          >
+            <h2 className="text-3xl font-bold mb-6 text-white">Ready to Start Your Success Story?</h2>
+            <p className="text-slate-300 mb-8">
+              Let's discuss how our AI and technology solutions can transform your business 
+              and deliver measurable results like the ones you've seen here.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+              <a 
+                href="/contact"
+                className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started Today
+              </a>
+              <a 
+                href="/request-quote"
+                className="px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
+              >
+                Request a Quote
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
   );
-};
-
-export default CaseStudies;
->>>>>>> origin/cursor/website-audit-and-enhancement-ac08
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+}

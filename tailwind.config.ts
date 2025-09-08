@@ -1,11 +1,6 @@
-import type { Config } from 'tailwindcss';
-import defaultTheme from 'tailwindcss/defaultTheme';
-import plugin from 'tailwindcss/plugin';
+import type { Config } from 'tailwindcss'
 
-const config: Config = {
-=======
-=======
-  darkMode: "class",
+export default {
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -13,7 +8,7 @@ const config: Config = {
     "./src/**/*.{ts,tsx}",
 =======
   ],
-  safelist: ['border-border'],
+  darkMode: ["class"],
   theme: {
     extend: {
 
@@ -113,9 +108,9 @@ const config: Config = {
           dark: "#090c1a",
         },
         "zion-purple": {
-          DEFAULT: "#a855f7",
-          light: "#d8b4fe",
-          dark: "#9333ea",
+          DEFAULT: "#8c15e9",
+          light: "#b971f2",
+          dark: "#530c8b",
         },
         "zion-cyan": {
           DEFAULT: "#00e5ff",
@@ -123,9 +118,14 @@ const config: Config = {
           dark: "#00c4cc",
         },
         "zion-slate": {
-          DEFAULT: "#94A3B8",
-          light: "#CBD5E1",
-          dark: "#64748B",
+          DEFAULT: "#17072b",
+          light: "#451582",
+          dark: "#000000",
+        },
+        "zion-neon": {
+          DEFAULT: "#22ddd2",
+          light: "#7aeae4",
+          dark: "#14847e",
         },
 <<<<<<< HEAD
 =======
@@ -146,16 +146,6 @@ const config: Config = {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
-      fontFamily: {
-        sans: ['var(--font-inter)', 'Inter Fallback', ...defaultTheme.fontFamily.sans],
-        heading: [
-          'var(--font-poppins)',
-          'Poppins Fallback',
-          ...defaultTheme.fontFamily.sans
-        ],
-        futuristic: ['Orbitron', 'monospace'],
-        neon: ['Rajdhani', 'sans-serif'],
-      },
       keyframes: {
         'accordion-down': {
           from: { height: '0' },
@@ -165,188 +155,24 @@ const config: Config = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
         },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
-=======
-=======
-=======
->>>>>>> origin/cursor/build-and-fix-errors-e276
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-        'neon-pulse': {
-          '0%, 100%': { 
-            textShadow: '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor',
-            opacity: '1'
-          },
-          '50%': { 
-            textShadow: '0 0 2px currentColor, 0 0 5px currentColor, 0 0 7px currentColor',
-            opacity: '0.8'
-          },
-        },
-        'quantum-float': {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' },
-        },
-        'holographic-shift': {
-          '0%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-          '100%': { backgroundPosition: '0% 50%' },
-        },
-        'matrix-rain': {
-          '0%': { transform: 'translateY(-100%)' },
-          '100%': { transform: 'translateY(100vh)' },
-        },
-        'neon-flicker': {
-          '0%, 100%': { opacity: '1' },
-          '50%': { opacity: '0.8' },
-        },
-        'quantum-spin': {
-          '0%': { transform: 'rotate(0deg)' },
-          '100%': { transform: 'rotate(360deg)' },
-        },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434d
-=======
-        'gradient-x': {
-          '0%, 100%': {
-            'background-size': '200% 200%',
-            'background-position': 'left center'
-          },
-          '50%': {
-            'background-size': '200% 200%',
-            'background-position': 'right center'
-          },
-        },
-        'float': {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' },
-        },
-        'glow': {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(0, 229, 255, 0.5)' },
-          '50%': { boxShadow: '0 0 40px rgba(0, 229, 255, 0.8)' },
-        },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d2d6
-        'neon-pulse': {
-          '0%, 100%': { 
-            textShadow: '0 0 5px #00e5ff, 0 0 10px #00e5ff, 0 0 15px #00e5ff, 0 0 20px #00e5ff',
-            opacity: '1'
-          },
-          '50%': { 
-            textShadow: '0 0 2px #00e5ff, 0 0 5px #00e5ff, 0 0 7px #00e5ff, 0 0 10px #00e5ff',
-            opacity: '0.8'
-          },
-        },
-        'holographic-shift': {
-          '0%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-          '100%': { backgroundPosition: '0% 50%' },
-        },
-<<<<<<< HEAD
-        'matrix-rain': {
-          '0%': { transform: 'translateY(-100%)' },
-          '100%': { transform: 'translateY(100vh)' },
-        },
-        'neon-flicker': {
-          '0%, 100%': { opacity: '1' },
-          '50%': { opacity: '0.8' },
-        },
-        'quantum-spin': {
-          '0%': { transform: 'rotate(0deg)' },
-          '100%': { transform: 'rotate(360deg)' },
-        },
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
-        'gradient-x': {
-          '0%, 100%': {
-            'background-size': '200% 200%',
-            'background-position': 'left center'
-          },
-          '50%': {
-            'background-size': '200% 200%',
-            'background-position': 'right center'
-          },
-        },
-        'float': {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' },
-        },
-        'glow': {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(0, 229, 255, 0.5)' },
-          '50%': { boxShadow: '0 0 40px rgba(0, 229, 255, 0.8)' },
-        },
-=======
-        'shimmer': {
-          '0%': { transform: 'translateX(-100%)' },
-          '100%': { transform: 'translateX(100%)' },
-        },
-=======
-=======
-=======
-=======
-        'neon-pulse': {
-          '0%, 100%': { 
-            textShadow: '0 0 5px #00e5ff, 0 0 10px #00e5ff, 0 0 15px #00e5ff, 0 0 20px #00e5ff' 
-          },
-          '50%': { 
-            textShadow: '0 0 2px #00e5ff, 0 0 5px #00e5ff, 0 0 7px #00e5ff, 0 0 10px #00e5ff' 
-          },
-        }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-      },
-      animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
-=======
-=======
-=======
-        'gradient-x': 'gradient-x 15s ease infinite',
-        'float': 'float 6s ease-in-out infinite',
-        'glow': 'glow 2s ease-in-out infinite alternate',
-        'neon-pulse': 'neon-pulse 2s ease-in-out infinite alternate',
-        'shimmer': 'shimmer 2s ease infinite',
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434d
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
-=======
+        // Performance-optimized animations
         "fade-in": {
           "0%": { opacity: "0", transform: "translateY(10px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
-        "slide-in-left": {
-          "0%": { opacity: "0", transform: "translateX(-20px)" },
-          "100%": { opacity: "1", transform: "translateX(0)" },
+        "slide-up": {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
         },
-        "slide-in-right": {
-          "0%": { opacity: "0", transform: "translateX(20px)" },
-          "100%": { opacity: "1", transform: "translateX(0)" },
+        "scale-in": {
+          "0%": { opacity: "0", transform: "scale(0.95)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
         },
-        "float": {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-10px)" },
-        },
-        "glow": {
-          "0%, 100%": { boxShadow: "0 0 5px currentColor" },
-          "50%": { boxShadow: "0 0 20px currentColor, 0 0 30px currentColor" },
+        "bounce-in": {
+          "0%": { opacity: "0", transform: "scale(0.3)" },
+          "50%": { opacity: "1", transform: "scale(1.05)" },
+          "70%": { transform: "scale(0.9)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
         },
       },
       animation: {
@@ -355,45 +181,42 @@ const config: Config = {
 <<<<<<< HEAD
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-        'neon-pulse': 'neon-pulse 2s ease-in-out infinite',
-        'quantum-float': 'quantum-float 6s ease-in-out infinite',
-        'holographic-shift': 'holographic-shift 3s ease infinite',
-        'matrix-rain': 'matrix-rain 20s linear infinite',
-        'neon-flicker': 'neon-flicker 0.15s ease-in-out infinite alternate',
-        'quantum-spin': 'quantum-spin 20s linear infinite',
-<<<<<<< HEAD
-=======
-        'gradient-x': 'gradient-x 15s ease infinite',
-        'float': 'float 6s ease-in-out infinite',
-        'glow': 'glow 2s ease-in-out infinite alternate',
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
-        'gradient-x': 'gradient-x 15s ease infinite',
-        'float': 'float 6s ease-in-out infinite',
-        'glow': 'glow 2s ease-in-out infinite alternate',
-        'neon-pulse': 'neon-pulse 2s ease-in-out infinite alternate',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        'holographic-shift': 'holographic-shift 3s ease infinite',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d2d6
-=======
-        'shimmer': 'shimmer 2s ease infinite',
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434d
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+        // Performance-optimized animation classes
+        "fade-in": "fade-in 0.3s ease-out forwards",
+        "slide-up": "slide-up 0.4s ease-out forwards",
+        "scale-in": "scale-in 0.3s ease-out forwards",
+        "bounce-in": "bounce-in 0.6s ease-out forwards",
+      },
+      // Performance optimizations
+      transitionProperty: {
+        'transform': 'transform',
+        'opacity': 'opacity',
+        'colors': 'color, background-color, border-color, text-decoration-color, fill, stroke',
+      },
+      transitionTimingFunction: {
+        'bounce-in': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+      },
+      // Optimized spacing scale
+      spacing: {
+        '18': '4.5rem',
+        '88': '22rem',
+        '128': '32rem',
+      },
+      // Performance-focused typography
+      fontSize: {
+        'xs': ['0.75rem', { lineHeight: '1rem' }],
+        'sm': ['0.875rem', { lineHeight: '1.25rem' }],
+        'base': ['1rem', { lineHeight: '1.5rem' }],
+        'lg': ['1.125rem', { lineHeight: '1.75rem' }],
+        'xl': ['1.25rem', { lineHeight: '1.75rem' }],
+        '2xl': ['1.5rem', { lineHeight: '2rem' }],
+        '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
+        '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
+        '5xl': ['3rem', { lineHeight: '1' }],
+        '6xl': ['3.75rem', { lineHeight: '1' }],
+        '7xl': ['4.5rem', { lineHeight: '1' }],
+        '8xl': ['6rem', { lineHeight: '1' }],
+        '9xl': ['8rem', { lineHeight: '1' }],
       },
       backgroundImage: {
         'quantum-gradient': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
@@ -420,36 +243,30 @@ const config: Config = {
 >>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     }
   },
-  plugins: [
-    plugin(function ({ addUtilities }) {
-      const newUtilities = {
-        '.rtl': {
-          direction: 'rtl',
-          textAlign: 'right',
-        },
-        '.ltr': {
-          direction: 'ltr',
-          textAlign: 'left',
-        },
-        '.text-neon': {
-          textShadow: '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor',
-        },
-        '.border-neon': {
-          boxShadow: '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor',
-        },
-        '.bg-holographic': {
-          background: 'linear-gradient(45deg, #ff0080, #00ff41, #00e5ff, #a855f7)',
-          backgroundSize: '400% 400%',
-          animation: 'holographic-shift 3s ease infinite',
-        },
-        '.quantum-border': {
-          border: '1px solid transparent',
-          background: 'linear-gradient(45deg, #00e5ff, #a855f7) border-box',
-          backgroundClip: 'border-box',
-        },
-      };
-      addUtilities(newUtilities);
-    })
-  ]
-};
-
+  plugins: [require("tailwindcss-animate")],
+  // Performance optimizations
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
+  // Enable JIT mode for better performance
+  mode: 'jit',
+  // Optimize content purging
+  purge: {
+    enabled: process.env.NODE_ENV === 'production',
+    content: [
+      "./pages/**/*.{ts,tsx}",
+      "./components/**/*.{ts,tsx}",
+      "./app/**/*.{ts,tsx}",
+      "./src/**/*.{ts,tsx}",
+      "./index.html",
+    ],
+    options: {
+      safelist: [
+        'animate-fade-in',
+        'animate-slide-up',
+        'animate-scale-in',
+        'animate-bounce-in',
+      ],
+    },
+  },
+} satisfies Config

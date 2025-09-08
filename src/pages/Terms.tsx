@@ -1,18 +1,4 @@
-<<<<<<< HEAD
-import { SEO } from "@/components/SEO";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import TermsOfService from "@/legal/TermsOfService";
-
-export default function Terms() {
-  return (
-    <>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Shield, FileText, CheckCircle, AlertTriangle, Users, Globe, Scale } from 'lucide-react';

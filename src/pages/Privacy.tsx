@@ -1,28 +1,4 @@
-<<<<<<< HEAD
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-
-export default function Privacy() {
-  return (
-    <>
-      <SEO
-        title="Privacy Policy"
-        description="Learn how Zion Tech Group handles your data and protects your privacy."
-        canonical="https://ziontechgroup.com/privacy"
-      />
-      <Header />
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Shield, Lock, Eye, Users, Database, Globe, CheckCircle } from 'lucide-react';

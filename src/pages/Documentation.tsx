@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { BookOpen, Search, FileText, Code, Download, ArrowRight, ExternalLink, Users, Clock, Star } from 'lucide-react';
 
