@@ -1,7 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Users, 
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '../../components/SEO';
+import { Users, 
   BarChart3, 
   Eye, 
   Brain, 

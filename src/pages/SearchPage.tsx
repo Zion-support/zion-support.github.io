@@ -1,9 +1,29 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Search,
-  Filter,
+import React, { useState, useEffect } from 'react';
+import { useSearchParams, Link  } from 'react-router-dom.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Search, 
+  Filter, 
+  Grid, 
+  List, 
+  Star, 
+  MapPin, 
+  Clock, 
+  DollarSign,
+  Users,
+  Code,
+  Shield,
+  Cloud,
+  Brain,
+  Rocket,
+  Zap,
+  Heart,
+  Building,
+  Cpu,
+  Lock,
+  Globe,
+  TrendingUp,
+  Award,
+  CheckCircle,
   X,
   Clock,
   TrendingUp,

@@ -1,4 +1,4 @@
-  {
+import React from 'react';
 
     id: "getting-hired"
     name: "Getting Hired"

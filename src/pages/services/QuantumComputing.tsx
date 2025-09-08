@@ -1,20 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
-import { 
-  Atom, 
-  Cpu, 
-  Brain, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Rocket, 
-  Target,
-  BarChart3,
-  Users,
-  Clock,
-  TrendingUp
-} from 'lucide-react';
+import { motion  } from 'framer-motion.ts';
+import { Rocket, Atom, Zap, Brain, BarChart3, ArrowRight, Shield, Cloud, Database, Cpu  } from 'lucide-react';
 
 const QuantumComputing: React.FC = () => {
   const features = [

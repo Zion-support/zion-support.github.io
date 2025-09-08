@@ -1,6 +1,6 @@
 import React from 'react';
-import { motion   } from 'framer-motion';
-import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users, TrendingUp, Target   } from 'lucide-react';
+import { motion  } from 'framer-motion.ts';
+import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users, TrendingUp, Target  } from 'lucide-react';
 
 export default function AIBusinessIntelligence(...args: any[]): any {
   const features = [

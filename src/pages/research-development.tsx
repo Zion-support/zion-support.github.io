@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { motion   } from 'framer-motion';
-import Link from 'next/link';
+import { motion  } from 'framer-motion.ts';
+import Link from 'next/link.ts';
 import { FlaskConical,
   Brain,
   Shield,

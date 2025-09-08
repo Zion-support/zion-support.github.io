@@ -1,10 +1,26 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Building, Users, Target, Award, Globe, Zap, Brain, Shield, 
-  Cloud, Rocket, Heart, Star, CheckCircle, ArrowRight, 
-  Phone, Mail, MapPin, Linkedin, Twitter, Github
-} from 'lucide-react';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { SEO  } from '@/components/SEO';
+import { Users, 
+  Target, 
+  Award, 
+  Globe, 
+  Zap, 
+  Shield, 
+  Rocket, 
+  Heart,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Lightbulb,
+  Cpu,
+  Brain,
+  Cloud,
+  Lock,
+  Database
+ } from 'lucide-react';
 
 export default function AboutPage() {
   const companyStats = [

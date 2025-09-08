@@ -1,5 +1,5 @@
-import React from 'react';
-import {SEO } from '@/components/SEO';
+import React, { Suspense, lazy } from 'react'
+import { LoadingSpinner  } from './ui/LoadingSpinner'
 
 export default function LazyLoader() {return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">

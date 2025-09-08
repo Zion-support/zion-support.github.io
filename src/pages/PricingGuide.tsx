@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  CheckCircle, 
+import React, { useState } from 'react';
+import { Link  } from 'react-router-dom.ts';
+import { Calculator, 
+  Check, 
+  X, 
   Star, 
   TrendingUp, 
   Zap, 

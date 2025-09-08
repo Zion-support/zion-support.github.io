@@ -1,181 +1,67 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, Shield, Cloud, Zap, Rocket, Cpu, TrendingUp, 
-  Target, Users, CheckCircle, ArrowRight, Star, Globe,
-  Lock, Leaf, Heart, Database, Network, Eye, Search,
-  Filter, Grid, List, Play, ExternalLink, Award, Calendar
-} from 'lucide-react';
-
-const ComprehensiveServicesShowcase2026: React.FC = () => {
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const categories = ['All', 'AI & Machine Learning', 'Cybersecurity', 'Cloud & Infrastructure', 'Digital Transformation', 'Healthcare Tech', 'Sustainability', 'Micro SaaS'];
-
-  const comprehensiveServices = [
-    {
-      id: 'ai-enterprise-orchestrator',
-      name: 'AI Enterprise Orchestrator',
-      category: 'AI & Machine Learning',
-      description: 'Multi-agent AI coordination platform for enterprise workflow automation',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-600',
-      features: ['Multi-agent coordination', 'Workflow automation', 'Process optimization'],
-      benefits: ['40% efficiency increase', 'Real-time decision making', 'Scalable AI operations'],
-      demo: 'https://demo.ziontechgroup.com/ai-orchestrator',
-      caseStudy: '/case-studies/ai-enterprise-orchestrator',
-      pricing: 'Starting at $15,000/month',
-      roi: '300-500%',
-      delivery: '8-12 weeks',
-      availability: 'Q1 2026'
-    },
-    {
-      id: 'ai-cybersecurity-suite',
-      name: 'AI Cybersecurity Suite',
-      category: 'Cybersecurity',
-      description: 'Next-generation AI-powered threat detection and response',
-      icon: Shield,
-      color: 'from-red-500 to-orange-600',
-      features: ['Advanced threat detection', 'Automated response', 'Predictive security'],
-      benefits: ['99.9% threat detection rate', 'Zero false positives', '24/7 protection'],
-      demo: 'https://demo.ziontechgroup.com/ai-cybersecurity',
-      caseStudy: '/case-studies/ai-cybersecurity-suite',
-      pricing: 'Starting at $12,000/month',
-      roi: '400-600%',
-      delivery: '6-10 weeks',
-      availability: 'Q1 2026'
-    },
-    {
-      id: 'cloud-devops-revolution',
-      name: 'Cloud DevOps Revolution',
-      category: 'Cloud & Infrastructure',
-      description: 'Next-generation cloud infrastructure and DevOps automation',
-      icon: Cloud,
-      color: 'from-cyan-500 to-blue-600',
-      features: ['Infrastructure as code', 'Automated deployment', 'Multi-cloud support'],
-      benefits: ['90% faster deployments', '99.99% uptime', 'Cost optimization'],
-      demo: 'https://demo.ziontechgroup.com/cloud-devops',
-      caseStudy: '/case-studies/cloud-devops-revolution',
-      pricing: 'Starting at $10,000/month',
-      roi: '200-350%',
-      delivery: '6-10 weeks',
-      availability: 'Q2 2026'
-    },
-    {
-      id: 'digital-transformation-2026',
-      name: 'Digital Transformation 2026',
-      category: 'Digital Transformation',
-      description: 'Comprehensive digital transformation strategy and implementation',
-      icon: Rocket,
-      color: 'from-orange-500 to-red-600',
-      features: ['Strategy development', 'Process optimization', 'Technology roadmap'],
-      benefits: ['Complete digital overhaul', 'Competitive advantage', 'Future readiness'],
-      demo: 'https://demo.ziontechgroup.com/digital-transformation',
-      caseStudy: '/case-studies/digital-transformation-2026',
-      pricing: 'Starting at $50,000/month',
-      roi: '600-1000%',
-      delivery: '16-24 weeks',
-      availability: 'Q2 2026'
-    },
-    {
-      id: 'healthcare-tech-platform',
-      name: 'Healthcare Tech Platform',
-      category: 'Healthcare Tech',
-      description: 'AI-powered healthcare technology platform for modern medical facilities',
-      icon: Heart,
-      color: 'from-pink-500 to-red-600',
-      features: ['Patient data management', 'AI diagnostics', 'Telemedicine integration'],
-      benefits: ['Improved patient outcomes', 'Reduced medical errors', 'Operational efficiency'],
-      demo: 'https://demo.ziontechgroup.com/healthcare-tech',
-      caseStudy: '/case-studies/healthcare-tech-platform',
-      pricing: 'Starting at $20,000/month',
-      roi: '350-500%',
-      delivery: '12-16 weeks',
-      availability: 'Q3 2026'
-    },
-    {
-      id: 'sustainability-solutions',
-      name: 'Sustainability Solutions',
-      category: 'Sustainability',
-      description: 'Green technology solutions for environmental sustainability',
-      icon: Leaf,
-      color: 'from-green-500 to-emerald-600',
-      features: ['Carbon footprint tracking', 'Energy optimization', 'Sustainable reporting'],
-      benefits: ['Environmental compliance', 'Cost savings', 'Brand reputation'],
-      demo: 'https://demo.ziontechgroup.com/sustainability',
-      caseStudy: '/case-studies/sustainability-solutions',
-      pricing: 'Starting at $8,000/month',
-      roi: '250-400%',
-      delivery: '8-12 weeks',
-      availability: 'Q3 2026'
-    },
-    {
-      id: 'micro-saas-suite',
-      name: 'Micro SaaS Suite',
-      category: 'Micro SaaS',
-      description: 'Collection of focused, AI-powered micro SaaS solutions',
-      icon: Zap,
-      color: 'from-indigo-500 to-purple-600',
-      features: ['AI Lead Scoring', 'Website Chatbot', 'Content Optimizer'],
-      benefits: ['Quick implementation', 'Affordable pricing', 'Immediate ROI'],
-      demo: 'https://demo.ziontechgroup.com/micro-saas',
-      caseStudy: '/case-studies/micro-saas-suite',
-      pricing: 'Starting at $500/month',
-      roi: '150-300%',
-      delivery: '2-4 weeks',
-      availability: 'Q4 2026'
-    },
-    {
-      id: 'ai-business-intelligence',
-      name: 'AI Business Intelligence',
-      category: 'AI & Machine Learning',
-      description: 'Predictive analytics and intelligent business insights',
-      icon: TrendingUp,
-      color: 'from-green-500 to-emerald-600',
-      features: ['Predictive analytics', 'Real-time insights', 'Automated reporting'],
-      benefits: ['Data-driven decisions', 'Market trend prediction', 'ROI optimization'],
-      demo: 'https://demo.ziontechgroup.com/ai-bi',
-      caseStudy: '/case-studies/ai-business-intelligence',
-      pricing: 'Starting at $8,000/month',
-      roi: '250-400%',
-      delivery: '4-8 weeks',
-      availability: 'Q1 2026'
-    }
-  ];
-
-  const filteredServices = comprehensiveServices.filter(service => {
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-
-  const roadmap2026 = [
-    {
-      quarter: 'Q1 2026',
-      services: ['AI Enterprise Orchestrator', 'AI Cybersecurity Suite', 'AI Business Intelligence'],
-      focus: 'AI & Machine Learning Foundation'
-    },
-    {
-      quarter: 'Q2 2026',
-      services: ['Cloud DevOps Revolution', 'Digital Transformation 2026'],
-      focus: 'Infrastructure & Transformation'
-    },
-    {
-      quarter: 'Q3 2026',
-      services: ['Healthcare Tech Platform', 'Sustainability Solutions'],
-      focus: 'Specialized Industry Solutions'
-    },
-    {
-      quarter: 'Q4 2026',
-      services: ['Micro SaaS Suite', 'Advanced AI Tools'],
-      focus: 'Micro Solutions & AI Enhancement'
-    }
-  ];
-
+import React, { useState, useMemo } from 'react';
+import { motion  } from 'framer-motion.ts';
+import { Search, 
+  Filter, 
+  Star, 
+  Zap, 
+  Brain, 
+  Shield, 
+  Cpu, 
+  Network,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  TrendingUp,
+  Users,
+  Clock,
+  CheckCircle,
+  ArrowRight
+ } from 'lucide-react';
+import { SEO  } from '../components/SEO';
+import { revolutionaryMicroSaasServices2026,
+  revolutionaryITInfrastructureServices2026,
+  revolutionaryAIServices2026,
+  ALL_REVOLUTIONARY_SERVICES_2026
+ } from '../data/comprehensiveServices2026';
+const ComprehensiveServicesShowcase2026: React.FC = (): JSX.Element => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');
+  const categories = ['all', ...Array.from(new Set(ALL_REVOLUTIONARY_SERVICES_2026.map(s => s.category)))];
+  const innovationLevels = ['all', ...Array.from(new Set(ALL_REVOLUTIONARY_SERVICES_2026.map(s => s.innovationLevel)))];
+  const filteredServices = useMemo(() => {
+    let filtered = ALL_REVOLUTIONARY_SERVICES_2026;
+    if (searchTerm) {
+      const lowerQuery = searchTerm.toLowerCase();
+      filtered = filtered.filter(service => 
+        service.name.toLowerCase().includes(lowerQuery) ||
+        service.description.toLowerCase().includes(lowerQuery) ||
+        service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
+      )}
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(service => service.category === selectedCategory)}
+    if (selectedInnovationLevel !== 'all') {
+      filtered = filtered.filter(service => service.innovationLevel === selectedInnovationLevel)}
+    return filtered}, [searchTerm, selectedCategory, selectedInnovationLevel]);
+  const getCategoryIcon = (category: string)  => {
+    switch (category) {
+      case 'Quantum Computing': return <Cpu className="w-5 h-5" />;
+      case 'Neural Networks': return <Brain className="w-5 h-5" />;
+      case 'Blockchain Development': return <Shield className="w-5 h-5" />;
+      case 'Quantum Computing Infrastructure': return <Cpu className="w-5 h-5" />;
+      case 'Edge Computing': return <Network className="w-5 h-5" />;
+      case 'Autonomous Systems': return <Brain className="w-5 h-5" />;
+      case 'Quantum AI': return <Zap className="w-5 h-5" />;
+      default: return <Zap className="w-5 h-5" />}
+  };
+  const getInnovationLevelColor = (level: string)  => {
+    switch (level) {
+      case 'Revolutionary': return 'bg-gradient-to-r from-purple-600 to-pink-600';
+      case 'Breakthrough': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
+      case 'Advanced': return 'bg-gradient-to-r from-green-600 to-emerald-600';
+      default: return 'bg-gray-600'}
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>

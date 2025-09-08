@@ -1,10 +1,15 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { SEO } from '../components/SEO';
-import {
-  Building,
-  Heart,
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Building, 
+  Shield, 
+  Cloud, 
+  Brain, 
+  Zap, 
+  Globe,
+  Users,
+  Database,
+  Lock,
   TrendingUp,
   Factory,
   ShoppingCart,

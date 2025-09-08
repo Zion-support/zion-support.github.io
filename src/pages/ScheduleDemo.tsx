@@ -1,50 +1,7 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Calendar, 
-  Clock, 
-  Users, 
-  Video, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Brain,
-  Shield,
-  Cloud,
-  Building,
-  Zap,
-  Heart,
-  Lock,
-  Leaf,
-  Rocket,
-  Cpu,
-  TrendingUp,
-  MessageCircle,
-  FileText,
-  Settings,
-  Globe,
-  Database,
-  Network,
-  Award,
-  BookOpen,
-  Play,
-  Key,
-  Target,
-  Lightbulb,
-  Clock as ClockIcon,
-  BarChart3,
-  PieChart,
-  Activity,
-  Eye,
-  Search,
-  Filter,
-  Grid,
-  List
-} from 'lucide-react';
+import { motion  } from 'framer-motion.ts';
+import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket  } from 'lucide-react';
+import { SEO  } from '../components/SEO';
 
 const ScheduleDemo: React.FC = () => {
   const [selectedService, setSelectedService] = useState('');

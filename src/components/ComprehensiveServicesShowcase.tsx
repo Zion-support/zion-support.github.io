@@ -1,15 +1,17 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  Star, 
-  Zap, 
-  Brain, 
-  Code, 
+import React, { useState, useMemo } from 'react';
+import { motion  } from 'framer-motion.ts';
+import { Brain, 
+  Cpu, 
+  Cloud, 
+  Shield, 
+  Rocket, 
+  Zap,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  Target,
+  Award,
   Globe,
   TrendingUp,
   Users,

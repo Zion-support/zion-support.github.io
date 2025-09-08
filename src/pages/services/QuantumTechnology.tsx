@@ -1,57 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-import { Link } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
-import { 
-<<<<<<< HEAD
-  Building, 
-=======
-<<<<<<< HEAD
-  Microchip, 
-  Atom, 
-  Zap, 
-  Shield, 
-  Cpu, 
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-  Database, 
-  Network, 
-  Brain,
-  Zap,
-  ArrowRight,
-  CheckCircle,
-  Star,
-<<<<<<< HEAD
-  TrendingUp,
-  Shield,
-  Globe
-=======
-  Brain,
-  Bot,
-  Database as DatabaseIcon,
-  ShieldCheck,
-  Globe2,
-  BarChart
-=======
-  Atom, 
-  Cpu, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  Globe, 
-  Database,
-  Lock,
-  BarChart3,
-  Target,
-  Rocket,
-  Brain,
-  Network
->>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-} from 'lucide-react';
+import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity  } from 'lucide-react';
 
 <<<<<<< HEAD
 const quantumServices = [

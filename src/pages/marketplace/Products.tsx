@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { motion   } from 'framer-motion';
-import { ShoppingCart, Search, Filter, Star, Heart, ArrowRight, Zap, Shield, Cloud, Database, Cpu, Users   } from 'lucide-react';
+import { motion  } from 'framer-motion.ts';
+import { ShoppingCart, Search, Filter, Star, Heart, ArrowRight, Zap, Shield, Cloud, Database, Cpu, Users  } from 'lucide-react';
 
 export default function Products(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');

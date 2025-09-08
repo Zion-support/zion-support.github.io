@@ -1,7 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
+import { motion  } from 'framer-motion.ts';
+import { Shield, 
   Lock, 
   Eye, 
   Database, 

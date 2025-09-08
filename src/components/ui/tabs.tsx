@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { cn } from '@/lib/utils';
-=======
-import React, { createContext, useContext, useState } from 'react';
-import { cn } from '@/lib/utils';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 }
 

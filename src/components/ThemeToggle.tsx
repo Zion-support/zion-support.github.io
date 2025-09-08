@@ -1,7 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Sun, Moon, Monitor } from 'lucide-react';
-import { useTheme } from './ThemeProvider';
+import React, { useState, useEffect } from 'react';
+import { Sun, Moon, Monitor  } from 'lucide-react';
 
 
 

@@ -1,13 +1,42 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, Shield, Cloud, Zap, Rocket, Cpu, TrendingUp, 
-  Target, Users, CheckCircle, ArrowRight, Star, Globe,
-  Lock, Leaf, Heart, Database, Network, Eye, Search,
-  Filter, Grid, List, DollarSign, Calculator, Award,
-  Calendar, Clock, CheckCircle2, X
-} from 'lucide-react';
+import React, { useState, useMemo } from 'react';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { CheckCircle, 
+  Star, 
+  Zap, 
+  Shield, 
+  TrendingUp, 
+  Brain, 
+  Server, 
+  Globe, 
+  ArrowRight, 
+  Mail, 
+  Phone, 
+  MapPin, 
+  ExternalLink,
+  DollarSign,
+  CreditCard,
+  Wallet,
+  Coins,
+  PiggyBank,
+  Calculator,
+  BarChart3,
+  Target,
+  Award,
+  Users,
+  Clock,
+  Calendar,
+  Check,
+  X,
+  Crown,
+  Rocket,
+  Cpu,
+  Lock,
+  Heart,
+  Sparkles
+ } from 'lucide-react';
+import { INNOVATIVE_SERVICES_2025  } from '@/data/innovativeServices2025';
+import { SEO  } from '@/components/SEO';
 
 const ComprehensivePricingGuide2030: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');

@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import {
-  Mail,
-  Lock,
-  Eye,
-  EyeOff,
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Mail, 
+  Lock, 
+  Eye, 
+  EyeOff, 
   User,
   Building,
   ArrowRight,

@@ -1,4 +1,5 @@
-}
+import React from 'react';
+import { Filter, X  } from 'lucide-react';
 
 import React from 'react';
 import { Filter, X    } from 'lucide-react';

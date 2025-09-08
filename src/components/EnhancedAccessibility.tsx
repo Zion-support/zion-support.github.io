@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Eye, 
-  EyeOff, 
-  Volume2, 
+import React, { useEffect, useState } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Volume2, 
   VolumeX, 
   Settings, 
   X, 

@@ -1,6 +1,6 @@
 import React from 'react';
-import { motion  } from 'framer-motion';
-import { Link  } from 'react-router-dom';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
 import { SEO  } from '@/components/SEO';
 import { Users, 
   Target, 
@@ -56,6 +56,35 @@ function About() {
       image: '/team/kleber-santos.jpg'
     }
   ];
+
+  const milestones = [
+    {
+      year: '2018',
+      title: 'Comp Founded',
+      description: 'Zion Tech Group established with a vision to democratize AI technology.'
+    },
+    {
+      year: '2020',
+      title: 'First AI Product Launch',
+      description: 'Successfully launched our flagship AI compliance assistant.'
+    },
+    {
+      year: '2022',
+      title: 'Global Expansion',
+      description: 'Expanded operations to 25+ countries with 100+ enterprise clients.'
+    },
+    {
+      year: '2024',
+      title: 'Quantum Computing Initiative',
+      description: 'Launched quantum computing research and development program.'
+    },
+    {
+      year: '2025',
+      title: 'AI Ethics Leadership',
+      description: 'Recognized as industry leader in responsible AI development.'
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}

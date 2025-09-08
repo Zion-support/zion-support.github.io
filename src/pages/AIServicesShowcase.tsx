@@ -1,58 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  BarChart3, 
-  Workflow, 
-  Atom, 
-  Network, 
-  Cpu, 
-  Cloud, 
-  Lock, 
-  TrendingUp, 
-  Users, 
-  MessageCircle, 
-  FileText, 
-  Target, 
-  Rocket, 
-  Star, 
-  CheckCircle,
-  ArrowRight,
-  Play,
-  BookOpen,
-  Calendar,
-  Phone,
-  Mail,
-  Globe,
-  Lightbulb,
-  Code,
-  Database,
-  Monitor,
-  Smartphone,
-  Server,
-  Palette,
-  Eye,
-  Search,
-  Settings,
-  Palette as PaletteIcon,
-  PenTool
-} from 'lucide-react';
-
-export default function AIServicesShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [hoveredService, setHoveredService] = useState<string | null>(null);
-
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Brain, count: 25 },
-    { id: 'automation', name: 'AI Automation', icon: Workflow, count: 8 },
-    { id: 'analytics', name: 'Data Analytics', icon: BarChart3, count: 6 },
-    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 5 },
-    { id: 'quantum', name: 'Quantum AI', icon: Atom, count: 4 },
-    { id: 'content', name: 'Content Creation', icon: PenTool, count: 3 }
-  ];
+import React from 'react';
+import { SEO  } from '../components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
 
   const aiServices = [
     {

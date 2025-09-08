@@ -1,60 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-import { SEO } from '../../components/SEO';
-import { 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { 
-  CogIcon,
-  ChartBarIcon,
-  RocketLaunchIcon,
-  ShieldCheckIcon,
-  CloudIcon,
-  CpuChipIcon,
-  BoltIcon,
-  EyeIcon,
-  CheckCircleIcon,
-  ArrowRightIcon
-} from '@heroicons/react/24/outline';
-
-const AIWorkflowAutomation: React.FC = () => {
-  const features = [
-    {
-      icon: CpuChipIcon,
-      title: "Intelligent Process Mapping",
-      description: "AI automatically analyzes and maps your existing business processes, identifying optimization opportunities and bottlenecks.",
-      color: "from-purple-500 to-pink-600"
-    },
-    {
-      icon: CogIcon,
-      title: "Automated Workflow Generation",
-      description: "Generate optimized workflows automatically based on AI analysis of your business requirements and best practices.",
-      color: "from-blue-500 to-cyan-600"
-    },
-    {
-      icon: ChartBarIcon,
-      title: "Real-time Optimization",
-      description: "Continuously monitor and optimize workflows in real-time using machine learning algorithms and performance analytics.",
-      color: "from-green-500 to-emerald-600"
-    },
-    {
-      icon: CloudIcon,
-      title: "Cross-Platform Integration",
-      description: "Seamlessly integrate with existing systems including CRM, ERP, project management tools, and custom applications.",
-      color: "from-orange-500 to-red-600"
-=======
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a346
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e1e9
-import { SEO } from '../../components/SEO';
-import { 
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+import { SEO  } from '../../components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { Zap, 
+  Brain, 
   Workflow, 
   Zap, 
   Brain, 

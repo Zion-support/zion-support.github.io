@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
-=======
-import React, { createContext, useContext, useState, useEffect } from 'react';
->>>>>>> origin/cursor/check-and-fix-github-actions-e92c
-=======
->>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+import React, { createContext, useContext, useEffect, useState } from 'react';
 
 
   theme: Theme;

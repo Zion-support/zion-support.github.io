@@ -1,9 +1,10 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
-import { 
-  Rocket, 
-  TrendingUp, 
+import { motion  } from 'framer-motion.ts';
+import { Rocket, 
+  Cpu, 
+  Database, 
+  Cloud, 
+  Shield, 
   Users, 
   Target, 
   CheckCircle, 

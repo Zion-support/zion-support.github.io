@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-"use client"
+import React, { useState } from 'react';
+import { ChevronDown  } from 'lucide-react';
 
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-4d8c

@@ -1,10 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Building2, 
-  Building, 
-  Rocket, 
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Building, 
   Shield, 
   Heart, 
   TrendingUp, 

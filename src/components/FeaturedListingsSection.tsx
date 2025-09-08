@@ -1,5 +1,7 @@
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar  } from 'lucide-react';
+import { Link  } from 'react-router-dom.ts';
 
 export const FeaturedListingsSection: React.FC = () => {
   const featuredServices = [

@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { 
-  BarChart3, 
+import React from 'react';
+import { motion  } from 'framer-motion.ts';
+import { BarChart3, 
+  Users, 
   TrendingUp, 
   Users, 
   DollarSign, 

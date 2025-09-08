@@ -1,28 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-import { Link } from 'react-router-dom';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  Brain, 
-import { SEO } from '../../components/SEO';
-import { 
-  Brain, 
+import { motion  } from 'framer-motion.ts';
+import { Brain, 
   TrendingUp, 
   BarChart3, 
   Database, 

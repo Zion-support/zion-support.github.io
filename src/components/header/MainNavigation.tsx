@@ -1,24 +1,25 @@
-import React from 'react';
-import { NavLink } from "react-router-dom";
-import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp, Building2, FileText, HelpCircle, BarChart3, Globe, Cpu, Database, Cloud, Lock, Target, Rocket, Lightbulb } from 'lucide-react';
-
-export function MainNavigation({ className }) {
-    return (
-      <nav className={cn("hidden md:flex items-center space-x-6", className)}>
-        <NavLink to="/" className={({ isActive }) => cn("text-sm font-medium transition-colors hover:text-primary", isActive ? "text-zion-cyan" : "text-muted-foreground")}>
-          Home
-        </NavLink>
-        
-        {/* Services Dropdown */}
-        <div className="relative group">
-          <button 
-            onMouseEnter={() => setIsServicesOpen(true)} 
-            onMouseLeave={() => setIsServicesOpen(false)} 
-            className="absolute top-full left-0 mt-2 w-[900px] bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50"
-          >
-            <div className="p-6">
-              <div className="grid grid-cols-4 gap-6">
-                {/* AI & Automation Services */}
+import React, { useState } from 'react';
+import { Link  } from 'react-router-dom.ts';
+import { cn  } from '@/lib/utils';
+import { NavLink  } from 'react-router-dom.ts';
+import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp  } from 'lucide-react';
+export function MainNavigation(...args[]):  {
+    const [isServicesOpen, setIsServicesOpen] = useState(false);
+    const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+    return (<nav className={cn("hidden md:flex items-center space-x-6", className)}>
+      <NavLink to="/" className={({ isActive }) => cn("text-sm font-medium transition-colors hover:text-primary", isActive ? "text-zion-cyan" : "text-muted-foreground")}>
+        Home
+      </NavLink>
+      {/* Services Dropdown */}
+      <div className="relative group">
+        <button onMouseEnter={() => setIsServicesOpen(true)} onMouseLeave={() => setIsServicesOpen(false)} className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground">
+          <Zap className="w-4 h-4"/>
+          <span>Services</span>
+          <ChevronDown className="w-3 h-3"/>
+        </button>
+        {isServicesOpen && (<div onMouseEnter={() => setIsServicesOpen(true)} onMouseLeave={() => setIsServicesOpen(false)} className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">
+            <div className="p-4">
+              <div className="grid grid-cols-2 gap-4">
                 <div>
                   <h4 className="text-zion-cyan font-semibold mb-4 flex items-center">
                     <Brain className="w-4 h-4 mr-2"/>

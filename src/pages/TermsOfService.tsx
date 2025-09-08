@@ -1,10 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  FileText, 
-  CheckCircle, 
-  AlertTriangle, 
-  Info, 
+import { motion  } from 'framer-motion.ts';
+import { FileText, 
   Shield, 
   Users, 
   Globe, 

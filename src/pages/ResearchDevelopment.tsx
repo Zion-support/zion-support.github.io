@@ -1,9 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Microscope, 
-  Lightbulb, 
-  Rocket, 
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion.ts';
+import { Flask, 
   Brain, 
   Cloud, 
   Shield,

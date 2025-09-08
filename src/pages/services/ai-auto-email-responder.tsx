@@ -1,49 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { MessageCircle, Zap, Clock, CheckCircle, ArrowRight, Brain, Globe, Server, Target, PieChart, Mail, Smartphone } from 'lucide-react';
-
-export default function AIAutoEmailResponder() {
-  const features = [
-    {
-      icon: MessageCircle,
-      title: 'Intelligent Email Responses',
-      description: 'AI-powered email responses that understand context and provide relevant, helpful replies.'
-    },
-    {
-      icon: Zap,
-      title: 'Instant Response Time',
-      description: 'Automatically respond to emails within seconds, improving customer satisfaction and engagement.'
-    },
-    {
-      icon: Clock,
-      title: '24/7 Availability',
-      description: 'Round-the-clock email support without delays, ensuring customers always get timely responses.'
-    },
-    {
-      icon: Target,
-      title: 'Context-Aware Replies',
-      description: 'Smart responses that understand email content and provide personalized, relevant information.'
-    },
-    {
-      icon: PieChart,
-      title: 'Performance Analytics',
-      description: 'Track response times, customer satisfaction, and email handling efficiency with detailed metrics.'
-    },
-    {
-      icon: Mail,
-      title: 'CRM Integration',
-      description: 'Seamlessly integrate with your CRM system for automatic logging and customer tracking.'
-    }
-  ];
-
-  const benefits = [
-    'Reduce response time by 90%',
-    'Increase customer satisfaction',
-    '24/7 automated support',
-    'Reduce manual email workload',
-    'Improve response consistency',
-    'Seamless CRM integration'
-  ];
+import { Helmet  } from 'react-helmet-async.ts';
+import { Mail, MessageCircle, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Clock, Target, Activity, BarChart3, Database, Bot  } from 'lucide-react';
+import { Link  } from 'react-router-dom.ts';
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

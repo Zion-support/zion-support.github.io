@@ -1,49 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { DollarSign, TrendingDown, BarChart3, CheckCircle, ArrowRight, Brain, Zap, Globe, Server, Target, PieChart, Calculator } from 'lucide-react';
-
-export default function FinOpsAdvisor() {
-  const features = [
-    {
-      icon: DollarSign,
-      title: 'Cloud Cost Optimization',
-      description: 'AI-powered analysis identifies cost-saving opportunities across your cloud infrastructure.'
-    },
-    {
-      icon: TrendingDown,
-      title: 'Spend Reduction',
-      description: 'Automated recommendations reduce cloud spending by up to 40% without performance impact.'
-    },
-    {
-      icon: BarChart3,
-      title: 'Real-time Monitoring',
-      description: 'Continuous monitoring of cloud costs with instant alerts for budget overruns.'
-    },
-    {
-      icon: Calculator,
-      title: 'Predictive Analytics',
-      description: 'Forecast future cloud costs and optimize resource allocation proactively.'
-    },
-    {
-      icon: PieChart,
-      title: 'Cost Allocation',
-      description: 'Accurate cost attribution to teams, projects, and business units.'
-    },
-    {
-      icon: Target,
-      title: 'Budget Management',
-      description: 'Set and enforce budgets with automated controls and notifications.'
-    }
-  ];
-
-  const benefits = [
-    'Reduce cloud costs by 40%',
-    'Improve cost visibility by 90%',
-    'Automate 80% of cost optimization',
-    'Real-time budget monitoring',
-    'Predictive cost forecasting',
-    'Team-level cost accountability'
-  ];
+import { Helmet  } from 'react-helmet-async.ts';
+import { DollarSign, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart  } from 'lucide-react';
+import { Link  } from 'react-router-dom.ts';
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

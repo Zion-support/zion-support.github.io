@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { 
-  CheckCircle, 
-  AlertCircle, 
+import React from 'react';
+import { CheckCircle, 
+  AlertTriangle, 
   XCircle, 
   Clock, 
   Activity, 

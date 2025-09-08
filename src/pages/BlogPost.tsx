@@ -1,12 +1,10 @@
 <<<<<<< HEAD
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useParams, Link } from 'react-router-dom';
-import { SEO } from '../components/SEO';
-import { 
-  ArrowLeft, 
-  Calendar, 
+import React from 'react';
+import { useParams, Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Calendar, 
+  User, 
   Clock, 
   User, 
   Tag, 

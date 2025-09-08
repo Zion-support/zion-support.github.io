@@ -1,19 +1,8 @@
-import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { Zap, Target, Users, Globe, Shield, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
-=======
-import { Link } from 'react-router-dom';
-import { 
-  Rocket, 
-  Brain, 
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion.ts';
+import { Rocket, 
+  Zap, 
+  Shield, 
   Users, 
   BarChart3, 
   Shield, 

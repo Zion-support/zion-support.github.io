@@ -1,51 +1,8 @@
 import React, { useState } from 'react';
-import { 
-  Brain, 
-  Shield, 
-  Cpu, 
-  Cloud, 
-  Rocket, 
-  Target, 
-  Users, 
-  Code, 
-  Network, 
-  Database, 
-  Lock, 
-  BarChart3, 
-  Heart, 
-  DollarSign, 
-  ShoppingCart, 
-  Building,
-  Eye,
-  Zap,
-  Globe,
-  ArrowRight,
-  Search,
-  Filter,
-  Star,
-  CheckCircle,
-  Clock,
-  TrendingUp,
-  Atom,
-  Car,
-  Leaf,
-  Factory,
-  Building2,
-  GraduationCap,
-  Store,
-  Scale,
-  Truck,
-  Home,
-  Utensils,
-  BookOpen,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink
-} from 'lucide-react';
-import { ADVANCED_MICRO_SAAS_SERVICES_2025 } from '../data/advancedMicroSaasServices2025';
-import { SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 } from '../data/specializedITInfrastructureServices2025';
-import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
+import { SEO  } from '../components/SEO';
+import { ADVANCED_MICRO_SAAS_SERVICES_2025  } from '../data/advancedMicroSaasServices2025';
+import { SPECIALIZED_IT_SERVICES_2025  } from '../data/specializedITServices2025';
+import { ADVANCED_AI_SERVICES_2025  } from '../data/advancedAIServices2025';
 
 export default function AdvancedServicesShowcase2025() {
   const [searchQuery, setSearchQuery] = useState('');

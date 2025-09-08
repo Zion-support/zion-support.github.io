@@ -1,63 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import {
-  Brain,
-  BarChart3,
-  TrendingUp,
-  Target,
-  Users,
-  CheckCircle,
-  ArrowRight,
-  ChevronRight,
-  Database,
-  PieChart,
-  LineChart,
-  Activity,
-  Eye,
-  Zap,
-  Shield,
-  Globe,
-  Building,
-  Briefcase,
-  TestTube,
-  GraduationCap,
-  HelpCircle,
-  Lock,
-  Cpu,
-  Cloud,
-  Smartphone,
-  Monitor
-} from 'lucide-react';
-
-export function AIBusinessIntelligencePage() {
-  const biServices = [
-    {
-      title: 'Predictive Analytics',
-      description: 'Forecast future trends and outcomes',
-      icon: TrendingUp,
-      features: ['Time Series Analysis', 'Regression Models', 'Classification', 'Risk Assessment']
-    },
-    {
-      title: 'Data Visualization',
-      description: 'Transform data into actionable insights',
-      icon: PieChart,
-      features: ['Interactive Dashboards', 'Real-time Charts', 'Custom Reports', 'Mobile Views']
-    },
-    {
-      title: 'Performance Monitoring',
-      description: 'Track KPIs and business metrics',
-      icon: Activity,
-      features: ['Real-time Monitoring', 'Alert Systems', 'Performance Tracking', 'Goal Management']
-    }
-  ];
-
-  const industries = [
-    { name: 'Finance', icon: Building, description: 'Risk assessment and market analysis' },
-    { name: 'Healthcare', icon: Users, description: 'Patient outcomes and resource optimization' },
-    { name: 'Retail', icon: Briefcase, description: 'Customer behavior and inventory management' },
-    { name: 'Manufacturing', icon: Cpu, description: 'Predictive maintenance and quality control' }
-  ];
+import { Helmet  } from 'react-helmet-async.ts';
+import { Brain, BarChart3, TrendingUp, Database, Users, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Zap, Target, PieChart  } from 'lucide-react';
+import { Link  } from 'react-router-dom.ts';
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">

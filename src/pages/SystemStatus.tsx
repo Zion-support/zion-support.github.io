@@ -157,42 +157,99 @@ export default function SystemStatus() {
         canonical="https://ziontechgroup.com/system-status"
       />
 
-      <div className="min-h-screen bg-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                System <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Status</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Real-time monitoring of our services and infrastructure. 
-                We're committed to maintaining 99.9%+ uptime for all our services.
-              </p>
-              
-              {/* Overall Status */}
-              <div className="inline-flex items-center gap-3 px-6 py-3 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50">
-                <div className="flex items-center gap-2">
-                  {getStatusIcon(overallStatus)}
-                  <span className="text-white font-semibold">Overall Status:</span>
-                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(overallStatus)}`}>
-                    {overallStatus.charAt(0).toUpperCase() + overallStatus.slice(1)}
-                  </span>
-                </div>
-                <div className="h-6 w-px bg-slate-600"></div>
-                <div className="flex items-center gap-2">
-                  <Activity className="w-5 h-5 text-cyan-400" />
-                  <span className="text-white font-semibold">Uptime:</span>
-                  <span className="text-cyan-400 font-bold">{overallUptime.toFixed(1)}%</span>
-                </div>
+      {/* Overall Status */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="bg-slate-800/50 rounded-2xl p-8 backdrop-blur-sm border border-slate-700/50"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Overall Status */}
+            <div className="text-center">
+              <div className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-4 ${getStatusColor(overallStatus)}`}>
+                {React.createElement(getStatusIcon(overallStatus), { className: "w-4 h-4 mr-2" })}
+                {overallStatus.charAt(0).toUpperCase() + overallStatus.slice(1)}
               </div>
-            </motion.div>
+              <h3 className="text-2xl font-bold text-white mb-2">Overall Status</h3>
+              <p className="text-gray-400">All systems operational</p>
+            </div>
+
+            {/* Uptime */}
+            <div className="text-center">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">{overallUptime.toFixed(2)}%</div>
+              <h3 className="text-xl font-semibold text-white mb-2">Uptime</h3>
+              <p className="text-gray-400">30-day average</p>
+            </div>
+
+            {/* Last Updated */}
+            <div className="text-center">
+              <div className="text-sm text-gray-400 mb-2">Last Updated</div>
+              <div className="text-lg font-semibold text-white">
+                {lastUpdated.toLocaleTimeString()}
+              </div>
+              <p className="text-gray-400">Updates every 30s</p>
+            </div>
           </div>
-        </section>
+        </motion.div>
+      </div>
+
+      {/* Services Status */}
+      <div className="py-16 bg-zion-slate-dark">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-white mb-12">
+            Service Status
+          </h2>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+              {services.map((service, index)  => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="text-zion-cyan">{service.icon}</div>
+                    <div className="flex items-center gap-2">
+                      {getStatusIcon(service.status)}
+                      <span className="text-sm text-zion-slate-light">Operational</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white">{service.name}</h3>
+                    <p className="text-sm text-gray-400">{service.description}</p>
+                  </div>
+                  
+                  <div className={`px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(service.status)} mt-4 inline-block`}>
+                    {React.createElement(getStatusIcon(service.status), { className: "w-3 h-3 inline mr-1" })}
+                    {service.status.charAt(0).toUpperCase() + service.status.slice(1)}
+                  </div>
+
+                  <div className="space-y-3 mt-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-400 text-sm">Uptime</span>
+                      <span className="text-white font-medium">{service.uptime}%</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-400 text-sm">Response Time</span>
+                      <span className="text-white font-medium">{service.responseTime}ms</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-400 text-sm">Last Updated</span>
+                      <span className="text-white font-medium text-sm">
+                        {new Date(service.lastUpdated).toLocaleTimeString()}
+                      </span>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
 
         {/* Services Status */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">

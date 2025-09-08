@@ -1,12 +1,26 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, Shield, Cloud, Zap, Rocket, Cpu, TrendingUp, 
-  Target, Users, CheckCircle, ArrowRight, Star, Globe,
-  Lock, Leaf, Heart, Database, Network, Eye, Search,
-  Filter, Grid, List, Play, ExternalLink, Award, Calendar
-} from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { motion  } from 'framer-motion.ts';
+import { Brain, 
+  Shield, 
+  Cloud, 
+  Zap, 
+  Star, 
+  CheckCircle, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  ExternalLink,
+  TrendingUp,
+  Users,
+  Target,
+  Award,
+  Clock,
+  DollarSign,
+  Search
+ } from 'lucide-react';
+import { innovativeAIServices2030  } from '../data/innovativeAIServices2030';
+import { innovativeCybersecurityServices2030  } from '../data/innovativeCybersecurityServices2030';
+import { innovativeCloudDevOpsServices2030  } from '../data/innovativeCloudDevOpsServices2030';
 
 const InnovativeServicesShowcase2030: React.FC = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');

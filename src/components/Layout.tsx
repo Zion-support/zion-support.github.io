@@ -1,3 +1,6 @@
+import React from 'react';
+import { ReactNode  } from 'react';
+interface LayoutProps extends React.PropsWithChildren<{}> {
 
 
 const navigation: NavItem[] = [

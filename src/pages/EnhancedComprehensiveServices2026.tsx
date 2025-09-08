@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Brain,
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Brain,
   Cloud,
   Shield,
   Server,

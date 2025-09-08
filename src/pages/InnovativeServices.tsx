@@ -1,36 +1,9 @@
-import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, Calendar, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, BookOpen, Target, TrendingUp, PieChart, Activity, Zap as ZapIcon2, Rocket, Lightbulb, Sparkles, CpuIcon, Monitor, Smartphone, CpuIcon as CpuIcon2 } from 'lucide-react';
-
-
-
-
-
-
-
-
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5
-      }
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-import { SEO } from '../components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES } from '../data/innovativeMicroSaasServices';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  TrendingUp, 
-  Zap, 
+import React from 'react';
+import { motion  } from 'framer-motion.ts';
+import { Brain, 
+  Atom, 
+  Lock, 
+  Wifi, 
   Shield, 
   Brain, 
   Globe,

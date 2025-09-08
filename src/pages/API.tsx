@@ -1,7 +1,57 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
-import { motion } from 'framer-motion';
-import { Code, Database, Shield, Zap, Globe, Settings, BookOpen, Terminal } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Code, 
+  Search, 
+  Filter,
+  ArrowRight,
+  Download,
+  ExternalLink,
+  Brain,
+  Cloud,
+  Shield,
+  Sparkles,
+  Zap,
+  Globe,
+  Target,
+  TrendingUp,
+  CheckCircle,
+  Clock,
+  User,
+  Star,
+  Terminal,
+  Key,
+  Database,
+  Lock
+ } from 'lucide-react';
+
+const API: React.FC = () => {
+  const endpoints = [
+    {
+      method: 'GET',
+      path: '/api/v1/services',
+      description: 'Retrieve all available services',
+      auth: 'Required'
+    },
+    {
+      method: 'POST',
+      path: '/api/v1/quote',
+      description: 'Request a quote for services',
+      auth: 'Required'
+    },
+    {
+      method: 'GET',
+      path: '/api/v1/analytics',
+      description: 'Get analytics data',
+      auth: 'Required'
+    },
+    {
+      method: 'PUT',
+      path: '/api/v1/user/profile',
+      description: 'Update user profile',
+      auth: 'Required'
+    }
+  ];
 
 export default function API() {
   const features = [

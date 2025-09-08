@@ -1,8 +1,22 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Search,
-  HelpCircle,
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Search, 
+  HelpCircle, 
+  MessageCircle, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Clock, 
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  Zap,
+  Brain,
+  Cloud,
+  Shield,
+  Rocket,
   BookOpen,
   MessageCircle,
   Phone,

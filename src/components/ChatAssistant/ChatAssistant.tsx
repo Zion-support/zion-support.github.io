@@ -1,21 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Send, Bot, User, X, Minimize2, Maximize2, MessageCircle } from 'lucide-react';
-import { Button } from '../ui/button';
-import { Input } from '../ui/input';
-import { ChatMessage, Message } from './ChatMessage';
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-import React, { useState, useEffect, useRef, ReactNode } from 'react';
-import { ChatMessage } from './ChatMessage';
-import { ChatInput } from './ChatInput';
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
-import { Button } from "@/components/ui/Button";
-import { X } from "lucide-react";
-<<<<<<< HEAD
+import React, { useState, useRef } from 'react';
+import { X, Send  } from 'lucide-react';
+export interface Message {
 
 export interface Message {
   id: string;

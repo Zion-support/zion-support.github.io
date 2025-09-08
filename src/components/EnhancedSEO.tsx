@@ -1,7 +1,7 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { useLocation } from 'react-router-dom';
-import { seoOptimizer, SEOData } from '../utils/seoOptimizer';
+import { Helmet  } from 'react-helmet-async.ts';
+
+interface SEOProps extends React.PropsWithChildren<{}> {
 
 interface EnhancedSEOProps {
   title: string;

@@ -1,6 +1,7 @@
-<<<<<<< HEAD
-import { useState } from 'react';
-import { Search, Star, Users, Zap, Brain, Shield, Settings, Phone, Mail, MapPin } from 'lucide-react';
+import React from 'react';
+import { SEO  } from '@/components/SEO';
+import { Link  } from 'react-router-dom.ts';
+import { ArrowRight, CheckCircle2, Globe, Sparkles, Shield, Cpu, Cloud, Database, Workflow, Rocket, DollarSign, Phone, Mail, MapPin, ExternalLink  } from 'lucide-react';
 
 const ComprehensiveServices: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');

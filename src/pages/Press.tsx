@@ -1,9 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { 
-  Newspaper, 
-  Calendar, 
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '../components/SEO';
+import { Newspaper, 
   Download, 
   ExternalLink, 
   Users, 

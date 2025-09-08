@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link, useLocation } from 'react-router-dom';
-import { ThemeToggle } from './ThemeToggle';
+import React from 'react';
+import { Link  } from 'react-router-dom.ts';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

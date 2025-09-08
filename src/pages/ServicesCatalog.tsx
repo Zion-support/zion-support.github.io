@@ -1,43 +1,5 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  ArrowRight, 
-  CheckCircle,
-  Clock,
-  Users,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Globe,
-  Lock,
-  Heart,
-  Leaf,
-  Rocket,
-  Cpu,
-  Database,
-  Network,
-  Building,
-  TrendingUp,
-  Award,
-  BookOpen,
-  Play,
-  FileText,
-  Settings,
-  Key,
-  Leaf as LeafIcon,
-  Scale,
-  Building2,
-  Car,
-  Home,
-  Factory,
-  City,
-  CheckCircle as CheckCircleIcon
-} from 'lucide-react';
+import React from 'react';
+import { SEO  } from '@/components/SEO';
 
 const ServicesCatalog: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');

@@ -1,10 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  FileText, 
-  TrendingUp, 
-  Users, 
-  Building,
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion.ts';
+import Link from 'next/link.ts';
+import { CheckCircle,
+  TrendingUp,
+  Users,
+  DollarSign,
+  Clock,
+  Target,
   ArrowRight,
   Search,
   Star,

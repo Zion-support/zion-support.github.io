@@ -1,7 +1,7 @@
 import React from 'react';
-import SEOHead from "@/components/SEOHead";
-import Link from 'next/link';
-import { Check, BarChart3, TrendingUp, Database, Users, Shield, Zap, Globe, Target, PieChart, LineChart, Activity } from 'lucide-react';
+import { SEO  } from '../../components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { BarChart3, Database, Zap, Shield, Globe, Server, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Eye, Monitor, Target, Layers, PieChart, LineChart, BarChart, TrendingDown, ShoppingCart  } from 'lucide-react';
 
 
 

@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-import { cn } from '../../lib/utils';
+import React from 'react';
+interface ButtonProps extends React.PropsWithChildren<{}> {
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 =======

@@ -1,10 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Atom, 
+import React from 'react';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { SEO  } from '@/components/SEO';
+import { Atom, 
   Zap, 
   Brain, 
   Shield, 

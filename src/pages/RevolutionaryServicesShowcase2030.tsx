@@ -1,12 +1,51 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, Shield, Cloud, Zap, Rocket, Cpu, TrendingUp, 
-  Target, Users, CheckCircle, ArrowRight, Star, Globe,
-  Lock, Leaf, Heart, Database, Network, Eye, Search,
-  Filter, Grid, List, Play, ExternalLink, Award
-} from 'lucide-react';
+import { motion  } from 'framer-motion.ts';
+import { ArrowRight,
+  ChevronLeft,
+  ChevronRight,
+  Mail as MailIcon,
+  MapPin,
+  Phone,
+  Rocket,
+  Search,
+  Star,
+  Zap,
+  Shield,
+  Cloud,
+  Brain,
+  Globe,
+  TrendingUp,
+  Award,
+  Users,
+  Clock,
+  DollarSign,
+  Target,
+  CheckCircle,
+  ArrowUpRight,
+  BookOpen,
+  Lightbulb,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  Eye,
+  BarChart3,
+  Code,
+  Palette,
+  Smartphone,
+  Monitor,
+  Server,
+  Wifi,
+  Satellite,
+  Leaf,
+  Building,
+  FlaskConical,
+  SortAsc,
+  SortDesc,
+  X
+ } from 'lucide-react';
+import { SEO  } from '../components/SEO';
+import { REVOLUTIONARY_SERVICES_2030  } from '../data/revolutionaryServices2030';
 
 const RevolutionaryServicesShowcase2030: React.FC = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');

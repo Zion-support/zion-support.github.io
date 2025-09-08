@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
-import { AppHeader } from './AppHeader';
-import { Footer } from '@/components/Footer';
-=======
-
-export function AppLayout({ children }: { children: React.ReactNode }) {
+import { Header  } from '../components/Header';
+import { Footer  } from '../components/Footer';
+export function AppLayout(...args[]):  {
 	return (
 		<div className="min-h-screen flex flex-col bg-black text-white">
 			<header className="fixed top-0 left-0 right-0 z-50 bg-black/90 border-b border-gray-800">

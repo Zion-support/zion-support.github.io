@@ -1,17 +1,38 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, Shield, Cloud, Zap, Rocket, Cpu, TrendingUp, 
-  Target, Users, CheckCircle, ArrowRight, Star, Globe,
-  Lock, Leaf, Heart, Database, Network, Eye, Search,
-  Filter, Grid, List, DollarSign, Calculator, Award,
-  Calendar, Clock, CheckCircle2, X
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { ADVANCED_AI_SERVICES_2025 } from '../data/advancedAIServices2025';
-import { INNOVATIVE_IT_INFRASTRUCTURE_2025 } from '../data/innovativeITInfrastructure2025';
-import { INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025 } from '../data/innovativeBlockchainWeb3Services2025';
+import React, { useState, useMemo } from 'react';
+import { motion  } from 'framer-motion.ts';
+import { Search, 
+  Filter, 
+  Star, 
+  TrendingUp, 
+  Shield, 
+  Zap, 
+  Globe, 
+  Cpu,
+  Network,
+  Layers,
+  Brain,
+  Cloud,
+  Smartphone,
+  Monitor,
+  Server,
+  Lock,
+  Users,
+  BarChart3,
+  Target,
+  DollarSign,
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  ChevronDown,
+  ChevronUp
+ } from 'lucide-react';
+import { SEO  } from '../components/SEO';
+import { ADVANCED_AI_SERVICES_2025  } from '../data/advancedAIServices2025';
+import { INNOVATIVE_IT_INFRASTRUCTURE_2025  } from '../data/innovativeITInfrastructure2025';
+import { INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025  } from '../data/innovativeBlockchainWeb3Services2025';
 
 const ComprehensivePricingGuide2027: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');

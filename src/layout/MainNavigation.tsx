@@ -1,9 +1,22 @@
 
-import { Link, useLocation } from "react-router-dom";
-import { cn } from "@/lib/utils";
-import { useAuth } from "@/hooks/useAuth";
-import { MessageSquare, ChevronDown, HelpCircle, FileText, Users } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import React, { useState, useRef, useEffect } from 'react';
+import { Link, useLocation  } from 'react-router-dom.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { ChevronDown, 
+  Menu, 
+  X, 
+  Home, 
+  Settings, 
+  Users, 
+  Building, 
+  Globe,
+  Zap,
+  Brain,
+  Shield,
+  Cloud,
+  Code,
+  BarChart3
+ } from 'lucide-react';
 
 export function MainNavigation(): JSX.Element {
 	return (

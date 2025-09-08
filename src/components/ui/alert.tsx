@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
->>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-import { cn } from '@/lib/utils';
+
+interface AlertProps extends React.PropsWithChildren<{}> {
 
 interface AlertProps {
   children: React.ReactNode;

@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+import React, { useState } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Bot, Clock, Globe, TrendingDown, CheckCircle  } from 'lucide-react';
+import { GradientHeading  } from './GradientHeading';
 
 <<<<<<< HEAD
 =======

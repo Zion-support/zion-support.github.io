@@ -1,8 +1,36 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
-import { Button } from '../components/ui/button';
-import { Code, ExternalLink, Book, Terminal, Download, Github } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion.ts';
+import { Code, 
+  BookOpen, 
+  Zap, 
+  Shield, 
+  Users, 
+  MessageSquare, 
+  Github, 
+  ExternalLink, 
+  Terminal, 
+  Webhook, 
+  Key, 
+  Mail,
+  ArrowRight,
+  Check,
+  Star,
+  Download,
+  Play,
+  Settings,
+  Database,
+  Globe,
+  Lock,
+  Rocket,
+  Crown,
+  Sparkles,
+  ChevronRight,
+  Clock,
+  BarChart3,
+  Target,
+  Award,
+  Lightbulb
+ } from 'lucide-react';
 
 export default function DeveloperPortal() {
   const apiEndpoints = [

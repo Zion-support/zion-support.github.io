@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Check,
-  Star,
-  Zap,
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Check, 
+  Star, 
+  Zap, 
+  Brain, 
+  Cloud, 
+  Shield, 
+  ShoppingCart,
+  Users,
+  Building,
+  Rocket,
   Brain,
   Shield,
   Cloud,

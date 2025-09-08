@@ -1,43 +1,143 @@
-import React from 'react';
-import { useEffect } from 'react';
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
-import { toast } from "sonner";
-export default function Profile() {
-    const { user, isLoading, logout } = useAuth();
-    const navigate = useNavigate();
-    useEffect(() => {
-        if (!isLoading && !user) {
-            toast.error("Please log in to view your profile");
-            navigate("/login?redirect=/profile");
-        }
-    }, [user, isLoading, navigate]);
-    if (isLoading) {
-        return (<>
-        
-        <div className="min-h-screen bg-zion-blue flex items-center justify-center">
-          <div className="animate-pulse text-white">Loading profile...</div>
-        </div>
-        
-      </>);
-    }
-    if (!user) {
-        return (<>
-        
-        <div className="min-h-screen bg-zion-blue flex items-center justify-center">
-          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md">
-            <h1 className="text-xl font-bold text-white mb-4">Please log in</h1>
-            <p className="text-zion-slate mb-4">You need to be logged in to view your profile.</p>
-            <Button onClick={() => navigate("/login?redirect=/profile")} className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
-              Go to Login
-            </Button>
-          </div>
-        </div>
-        
-      </>);
-    }
-    return (<>
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion.ts';
+import { User, 
+  Mail, 
+  Phone, 
+  Building, 
+  Globe, 
+  MapPin, 
+  Camera, 
+  Save, 
+  Edit, 
+  X,
+  Shield,
+  Bell,
+  Palette,
+  Key,
+  Trash2,
+  Download,
+  Upload,
+  Eye,
+  EyeOff,
+  CheckCircle,
+  AlertCircle,
+  Settings,
+  UserCheck,
+  CreditCard,
+  Activity,
+  BarChart3,
+  Calendar,
+  Star,
+  Award,
+  Zap,
+  Brain,
+  Cloud,
+  Rocket
+ } from 'lucide-react';
+
+interface UserProfile {
+
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  comp: string;
+  position: string;
+  industry: string;
+  location: string;
+  website: string;
+  bio: string;
+  avatar: string}
+
+interface NotificationSettings {
+
+  emailNotifications: boolean;
+  pushNotifications: boolean;
+  marketingEmails: boolean;
+  securityAlerts: boolean;
+  projectUpdates: boolean;
+  weeklyReports: boolean}
+
+interface SecuritySettings {
+
+  twoFactorEnabled: boolean;
+  sessionTimeout: number;
+  passwordLastChanged: string;
+  lastLogin: string;
+loginHistory: Array<any>}
+
+const Profile: React.FC = (): JSX.Element => {
+  const [activeTab, setActiveTab] = useState<any>('profile');
+  const [isEditing, setIsEditing] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [success, setSuccess] = useState('');
+  const [error, setError] = useState('');
+
+  const [profile, setProfile] = useState<any>({
+    firstName: 'John',
+    lastName: 'Doe',
+    email: 'john.doe@ziontechgroup.com',
+    phone: '+1 (555) 123-4567',
+    comp: 'Zion Tech Group',
+    position: 'Senior Developer',
+    industry: 'Technology',
+    location: 'San Francisco, CA',
+    website: 'https://ziontechgroup.com',
+    bio: 'Passionate technology professional with expertise in AI, cloud computing, and digital transformation. Committed to delivering innovative solutions that drive business growth.',
+    avatar: '/api/placeholder/150/150'
+  });
+
+  const [notifications, setNotifications] = useState<any>({
+    emailNotifications: true,
+    pushNotifications: true,
+    marketingEmails: false,
+    securityAlerts: true,
+    projectUpdates: true,
+    weeklyReports: false
+  });
+
+  const [security, setSecurity] = useState<any>({
+    twoFactorEnabled: true,
+    sessionTimeout: 30,
+    passwordLastChanged: '2024-01-15',
+    lastLogin: '2024-01-20 14:30:00',
+    loginHistory[
+      { date: '2024-01-20 14:30:00', location: 'San Francisco, CA', device: 'Chrome on MacBook Pro', status: 'success' },
+      { date: '2024-01-19 09:15:00', location: 'San Francisco, CA', device: 'Safari on iPhone', status: 'success' },
+      { date: '2024-01-18 16:45:00', location: 'New York, NY', device: 'Chrome on Windows', status: 'success' },
+      { date: '2024-01-17 11:20:00', location: 'Unknown', device: 'Unknown Device', status: 'failed' }
+    ]
+  });
+
+  const [currentPassword, setCurrentPassword] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [showPasswords, setShowPasswords] = useState({
+    current: false,
+    new: false,
+    confirm: false
+  });
+
+  const industries = [
+    'Technology',
+    'Healthcare',
+    'Finance',
+    'Manufacturing',
+    'Retail',
+    'Education',
+    'Government',
+    'Non-profit',
+    'Other'
+  ];
+
+  const handleProfileUpdate = async () => {
+    setIsLoading(true);
+    setError('');
+    setSuccess('');
+
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000));
       
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto px-4 py-8">

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, createContext, useContext } from 'react';
-import { motion, AnimatePresence    } from 'framer-motion';
-import { X, CheckCircle, AlertCircle, Info, AlertTriangle, Bell    } from 'lucide-react';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { X, CheckCircle, AlertCircle, Info, AlertTriangle, Bell  } from 'lucide-react';
 
 export type NotificationType = 'success' | 'error' | 'warning' | 'info';
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import { motion    } from 'framer-motion';
-import { Link    } from 'react-router-dom';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
 import { TrendingUp, 
   Users, 
   DollarSign, 

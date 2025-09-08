@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/build-and-fix-errors-e276
-=======
->>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
 import React, { useState } from 'react';
-import { Mail, Send, CheckCircle } from 'lucide-react';
+import { Mail, Send, CheckCircle  } from 'lucide-react';
 
 export const FooterNewsletter: React.FC = () => {
   const [email, setEmail] = useState('');

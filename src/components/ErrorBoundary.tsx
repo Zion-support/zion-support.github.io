@@ -1,24 +1,8 @@
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { Link, useNavigate } from 'react-router-dom';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-=======
-import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
-=======
-import React, { useState, useEffect, ReactNode } from 'react';
-=======
->>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
-import { motion } from 'framer-motion';
-import { Link, useNavigate } from 'react-router-dom';
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+import { Button  } from './ui/button';
+import { AlertTriangle, RefreshCw, Home, Mail  } from 'lucide-react';
+
+interface Props extends React.PropsWithChildren<{}> {
 
 interface Props {
   children: ReactNode;

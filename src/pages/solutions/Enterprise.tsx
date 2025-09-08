@@ -1,34 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Building,
-  Users,
-  Shield,
-  Cloud,
-  Database,
-  Network,
-  Lock,
-  Globe,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Lightbulb,
-  Target,
-  Award,
-  Clock,
-  DollarSign,
-  Zap,
-  Brain,
-  Rocket,
-  Cpu,
-  Server,
-  BarChart3,
-  TrendingUp,
-  Settings,
-  Activity,
-  ShoppingCart
-} from 'lucide-react';
+import { SEO  } from '../../components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { Building, Users, Shield, Zap, Globe, TrendingUp, CheckCircle, ArrowRight  } from 'lucide-react';
 
 export default function Enterprise() {
   const enterpriseSolutions = [

@@ -1,55 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { 
-  Target, 
-  TrendingUp, 
-  Users, 
-  Mail, 
-  MessageSquare, 
-  BarChart3,
-  Zap,
-  Globe,
-  Smartphone,
-  CheckCircle,
-  ArrowRight,
-  Brain,
-  Palette
-} from 'lucide-react';
-
-const AIMarketingAutomation = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: "AI-Powered Targeting",
-      description: "Advanced algorithms that automatically identify and segment your most valuable customers."
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
-=======
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Brain, 
   Target, 
   TrendingUp, 
   Users, 

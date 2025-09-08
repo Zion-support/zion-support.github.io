@@ -353,10 +353,10 @@ const Blog: React.FC = () => {
               <h2 className="text-4xl font-bold text-white mb-4">Featured Articles</h2>
               <p className="text-xl text-gray-300">Don't miss these must-read insights</p>
             </motion.div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {featuredPosts.map((post, index) => (
-                <motion.div
+            
+            <div className="grid lg:grid-cols-3 gap-8">
+              {featuredPosts.map((post, index)  => (
+                <motion.article
                   key={post.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -386,28 +386,9 @@ const Blog: React.FC = () => {
                       </h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">{post.excerpt}</p>
                       
-                      <div className="flex items-center justify-between mb-4 text-sm text-gray-400">
-                        <div className="flex items-center gap-4">
-                          <div className="flex items-center gap-2">
-                            <Calendar className="w-4 h-4" />
-                            <span>{formatDate(post.publishDate)}</span>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <Clock className="w-4 h-4" />
-                            <span>{post.readTime}</span>
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-4">
-                          <div className="flex items-center gap-2">
-                            <Eye className="w-4 h-4" />
-                            <span>{formatNumber(post.views)}</span>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <Heart className="w-4 h-4" />
-                            <span>{formatNumber(post.likes)}</span>
-                          </div>
-                        </div>
-                      </div>
+                      <p className="text-slate-400 mb-4 line-clamp-3">
+                        {post.excerpt}
+                      </p>
                       
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
@@ -431,7 +412,7 @@ const Blog: React.FC = () => {
                     </div>
                   </div>
                 </motion.article>
-                ))}
+              ))}
             </div>
           </div>
         </section>

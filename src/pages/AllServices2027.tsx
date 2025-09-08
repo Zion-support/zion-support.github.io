@@ -1,3 +1,29 @@
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { SEO  } from '../components/SEOHead';
+import { innovativeServices2027  } from '../data/innovativeServices2027';
+import { Brain, 
+  Shield, 
+  Zap, 
+  Code, 
+  Signal, 
+  Users, 
+  Truck,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  CheckCircle,
+  TrendingUp,
+  Globe,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  Cloud,
+  Rocket
+ } from 'lucide-react';
 
 
   const categories = [

@@ -2,119 +2,12 @@ interface FeatureCTAsProps {;
   className?: string;
   style?: React && React.CSSProperties;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-import React from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
-import { Link } from "react-router-dom";
-<<<<<<< HEAD
-import { 
-  ArrowRight, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Database, 
-  Zap, 
-  Code, 
-  Settings, 
-  Link as LinkIcon,
-  Phone,
-  Mail,
-  Globe
-} from "lucide-react";
-
-const features = [
-  {
-    title: "AI & Machine Learning",
-    description: "Transform your business with intelligent automation and data-driven insights",
-    icon: <Brain className="w-8 h-8" />,
-    link: "/comprehensive-services#ai-ml",
-    color: "from-purple-500 to-indigo-600",
-    cta: "Explore AI Services"
-  },
-  {
-    title: "Cybersecurity",
-    description: "Protect your organization with comprehensive security solutions and monitoring",
-    icon: <Shield className="w-8 h-8" />,
-    link: "/comprehensive-services#cybersecurity",
-    color: "from-red-500 to-pink-600",
-    cta: "Secure Your Business"
-  },
-  {
-    title: "Cloud & Infrastructure",
-    description: "Modernize your infrastructure with cloud solutions and DevOps automation",
-    icon: <Cloud className="w-8 h-8" />,
-    link: "/comprehensive-services#cloud-infrastructure",
-    color: "from-blue-500 to-cyan-600",
-    cta: "Cloud Solutions"
-  },
-  {
-    title: "Data & Analytics",
-    description: "Unlock business insights with advanced analytics and data engineering",
-    icon: <Database className="w-8 h-8" />,
-    link: "/comprehensive-services#data-analytics",
-    color: "from-green-500 to-emerald-600",
-    cta: "Data Insights"
-  },
-  {
-    title: "Digital Transformation",
-    description: "Accelerate your digital journey with strategic transformation services",
-    icon: <Zap className="w-8 h-8" />,
-    link: "/comprehensive-services#digital-transformation",
-    color: "from-orange-500 to-red-600",
-    cta: "Transform Now"
-  },
-  {
-    title: "Web & Mobile",
-    description: "Build custom applications and digital experiences for your business",
-    icon: <Code className="w-8 h-8" />,
-    link: "/comprehensive-services#web-mobile",
-    color: "from-indigo-500 to-purple-600",
-    cta: "Build Apps"
-  },
-  {
-    title: "IT Support & Management",
-    description: "Ensure smooth IT operations with managed services and support",
-    icon: <Settings className="w-8 h-8" />,
-    link: "/comprehensive-services#it-support",
-    color: "from-gray-500 to-slate-600",
-    cta: "Get Support"
-  },
-  {
-    title: "Blockchain & Web3",
-    description: "Leverage decentralized technologies for innovation and transparency",
-    icon: <LinkIcon className="w-8 h-8" />,
-    link: "/comprehensive-services#blockchain-web3",
-    color: "from-yellow-500 to-amber-600",
-    cta: "Web3 Solutions"
-=======
-import { motion } from "framer-motion";
-=======
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-import React from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { 
-  ArrowRight, 
-  Users, 
-  Zap, 
-import React from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
-import { 
-  ArrowRight, 
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
+import { Badge  } from '@/components/ui/badge';
+import { Link  } from 'react-router-dom.ts';
+import { ArrowRight, 
   Users, 
   Zap, 
   Settings, 

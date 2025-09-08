@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { MobileSidebarToggle } from './MobileSidebarToggle';
-import {
-  Menu,
-  X,
-  Search,
-  User,
-  Bell,
+import { Link, useLocation  } from 'react-router-dom.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { MobileSidebarToggle  } from './MobileSidebarToggle';
+import { Menu, 
+  X, 
+  Search, 
+  User, 
+  Bell, 
   ChevronDown,
   Brain,
   Shield,

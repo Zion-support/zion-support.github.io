@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer-motion';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Badge } from './ui/badge';
-import { Button } from './ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
-import { Input } from './ui/input';
-import { Search, Star, TrendingUp, Zap, Shield, Cloud, Brain, Link } from 'lucide-react';
-import { ENHANCED_MICRO_SAAS_SERVICES, EnhancedMicroSaasService } from '../data/enhancedMicroSaasServices';
-import FuturisticNeonButton from './ui/FuturisticNeonButton';
-import FuturisticMatrixBackground from './ui/FuturisticMatrixBackground';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
+  Shield, 
+  Cloud, 
+  Database, 
+  Globe, 
+  Zap, 
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Users,
+  Clock,
+  CheckCircle,
+  Search
+ } from 'lucide-react';
 
 const EnhancedServicesShowcase: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');

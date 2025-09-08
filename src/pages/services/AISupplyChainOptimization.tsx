@@ -1,7 +1,32 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
-import { motion } from 'framer-motion';
-import { Truck, Globe, TrendingUp, CheckCircle, Clock, Sparkles, BarChart3, Target, Zap, Shield, Users, ArrowRight, Package, Route, Factory } from 'lucide-react';
+import { SEO  } from '../../components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { Truck, 
+  Brain, 
+  BarChart3, 
+  TrendingUp, 
+  CheckCircle, 
+  ArrowRight, 
+  Mail, 
+  Phone, 
+  Globe, 
+  ExternalLink,
+  Zap,
+  Target,
+  Cpu,
+  Package,
+  Route,
+  Warehouse,
+  Route,
+  Clock,
+  DollarSign,
+  Globe2,
+  MapPin,
+  Activity,
+  Gauge,
+  Shield,
+  RefreshCw
+ } from 'lucide-react';
 
 export default function AISupplyChainOptimization(...args: any[]): any {
   const features = [

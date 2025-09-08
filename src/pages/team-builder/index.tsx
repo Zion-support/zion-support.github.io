@@ -1,4 +1,4 @@
-// import { NextPage  } from 'next'; // Removed
+// import { NextPage  } from 'next.ts'; // Removed
 import React from 'react'; // Ensure React is imported if not already for FC type
 import { AppLayout  } from '@/layout/AppLayout'; // Assuming a general AppLayout exists
 import { Button  } from '@/components/ui/button';

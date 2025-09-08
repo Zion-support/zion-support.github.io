@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useLocation  } from 'react-router-dom';
+import { Link, useLocation  } from 'react-router-dom.ts';
 import { Logo  } from '@/components/header/Logo';
 import { PointsBadge  } from '@/components/loyalty/PointsBadge';
 import { UserMenu  } from '@/components/header/UserMenu';

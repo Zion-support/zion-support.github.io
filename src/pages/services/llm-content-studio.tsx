@@ -1,49 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { BookOpen, PenTool, Sparkles, CheckCircle, ArrowRight, Brain, Zap, Globe, Server, Target, PieChart, FileText } from 'lucide-react';
-
-export default function LLMContentStudio() {
-  const features = [
-    {
-      icon: BookOpen,
-      title: 'AI Content Generation',
-      description: 'Generate high-quality, engaging content using advanced language models and AI technology.'
-    },
-    {
-      icon: PenTool,
-      title: 'Creative Writing Assistant',
-      description: 'AI-powered writing tools that help create compelling copy, articles, and marketing materials.'
-    },
-    {
-      icon: Sparkles,
-      title: 'Content Optimization',
-      description: 'Optimize existing content for SEO, readability, and engagement with intelligent suggestions.'
-    },
-    {
-      icon: Target,
-      title: 'Brand Voice Consistency',
-      description: 'Maintain consistent brand voice and tone across all content with AI-powered style guides.'
-    },
-    {
-      icon: PieChart,
-      title: 'Performance Analytics',
-      description: 'Track content performance and engagement metrics with detailed analytics and insights.'
-    },
-    {
-      icon: FileText,
-      title: 'Multi-Format Support',
-      description: 'Create content for blogs, social media, emails, and more with versatile AI tools.'
-    }
-  ];
-
-  const benefits = [
-    'Increase content production by 300%',
-    'Improve content quality and engagement',
-    'Maintain consistent brand voice',
-    'Reduce content creation time',
-    'SEO-optimized content generation',
-    'Multi-platform content creation'
-  ];
+import { Helmet  } from 'react-helmet-async.ts';
+import { BookOpen, PenTool, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Sparkles  } from 'lucide-react';
+import { Link  } from 'react-router-dom.ts';
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

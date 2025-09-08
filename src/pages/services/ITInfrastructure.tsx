@@ -1,28 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-import { SEO } from '../../components/SEO';
-=======
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { Server, Network, Database, Cloud, Shield, Zap, Users, Globe } from 'lucide-react';
-=======
-import { Link } from 'react-router-dom';
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-import { 
-  Server, 
-  Database, 
-  Cloud, 
-  Network, 
-  Shield, 
-  Zap, 
-  Building, 
-  Globe, 
-  Cpu, 
-  HardDrive 
-} from 'lucide-react';
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
+import { SEO  } from '../../components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { Server, Network, Shield, Database, Cloud, Cpu, Users, CheckCircle, ArrowRight, Settings, Monitor, HardDrive, Wifi, Lock, TrendingUp, BarChart3, Zap  } from 'lucide-react';
 
 export default function ITInfrastructure(...args: any[]): any {
   const features = [

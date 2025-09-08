@@ -1,27 +1,7 @@
-// This is the type definition copied from Categories.tsx for consistency.
-// Ideally, this would be in a shared types file.
-interface CategoryType {
-  id: string,
-  name: string,
-  iconName?: string, // Example field if categories have icons
-  itemCount?: number, // Example field for number of items in a category
-  // Add a 'link' property if your API provides it, or construct it.
-  link?: string  {
-    id: "services"
-    name: t('categories.services')
-    description: t('categories.services_desc')
-    iconName: "Briefcase", // Corresponds to lucide icon name
-    link: "/services"
-    color: "from-purple-500 to-indigo-600", // Keep color for styling
-
-import { GradientHeading } from "./GradientHeading";
-import { Link } from "react-router-dom";
-<<<<<<< HEAD
-import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react";
-=======
-import { ArrowRight } from 'lucide-react';
-import { motion } from "framer-motion";
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+import React from 'react';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight  } from 'lucide-react';
 
 const categories = [
   {

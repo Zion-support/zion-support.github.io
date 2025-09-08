@@ -21,24 +21,16 @@ const FuturisticBackground = React.memo(() => {
   );
 
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
       {particles.map((particle) => (
-        <motion.div
+        <div
           key={particle.id}
-          className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30"
+          className="absolute w-1 h-1 bg-cyan-400/30 rounded-full animate-pulse"
           style={{
             left: particle.left,
             top: particle.top,
-          }}
-          animate={{
-            y: [-20, 20, -20],
-            opacity: [0.3, 0.6, 0.3],
-          }}
-          transition={{
-            duration: particle.duration,
-            delay: particle.delay,
-            repeat: Infinity,
-            ease: "easeInOut"
+            animationDelay: `${particle.delay}s`,
+            animationDuration: `${particle.duration}s`
           }}
         />
       ))}
@@ -308,9 +300,9 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="group"
                 whileHover={{ y: -8, scale: 1.02 }}
+                transition={{ duration: 0.8, delay: index * 0.1, type: "spring", stiffness: 300, damping: 20 }}
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className="w-8 h-8 text-white" />

@@ -1,11 +1,7 @@
-import SEOHead from "@/components/SEOHead";
-import { Atom, Cpu, Globe, Shield, Zap, Target, Users, BarChart3, Rocket, Brain } from 'lucide-react';
-=======
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { SEO } from "@/components/SEO";
-import { 
-  Atom, 
+import { motion  } from 'framer-motion.ts';
+import { Atom, 
+  Cpu, 
   Zap, 
   Shield, 
   Brain, 

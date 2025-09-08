@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link  } from 'react-router-dom';
-import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
 import { HelpCircle, 
   MessageCircle, 
   Phone, 

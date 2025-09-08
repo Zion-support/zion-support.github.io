@@ -1,56 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { 
-  Brain, 
-  Zap, 
-  Target, 
-  Users, 
-  Shield, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  TrendingUp, 
-  Award, 
-  Globe, 
-  Building, 
-  Settings, 
-  Cpu, 
-  Database, 
-  Network, 
-  Lock, 
-  Eye, 
-  Heart, 
-  Palette, 
-  BarChart3, 
-  MessageSquare, 
-  FileText, 
-  Mail, 
-  Calendar,
-  Clock,
-  DollarSign,
-  Zap as ZapIcon,
-  Brain as BrainIcon,
-  Cloud as CloudIcon,
-  Shield as ShieldIcon,
-  Rocket as RocketIcon,
-  Star as StarIcon,
-  Lightbulb,
-  BarChart,
-  PieChart,
-  LineChart,
-  Activity,
-  Gauge,
-  Target as TargetIcon,
-  UserCheck,
-  MessageCircle,
-  FileCheck,
-  AlertTriangle,
-  CheckCircle2,
-  XCircle,
-  Info,
-  ShoppingCart
-} from 'lucide-react';
+import React from 'react';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, LineChart, Bot, Database, Shield, DollarSign, ExternalLink, Image as ImageIcon, FileText, Workflow, Globe, Video  } from 'lucide-react';
 
 export default function AIServices() {
   const [activeTab, setActiveTab] = useState('overview');

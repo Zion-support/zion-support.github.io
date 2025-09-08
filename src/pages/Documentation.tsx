@@ -290,6 +290,30 @@ const Documentation: React.FC = () => {
           tags: ['monitoring', 'observability', 'logging']
         }
       ]
+    },
+    {
+      id: 'iot-edge',
+      name: 'IoT & Edge Computing',
+      icon: Zap,
+      description: 'IoT and edge computing documentation',
+      articles: [
+        { title: 'IoT Device Setup', readTime: '20 min', difficulty: 'Intermediate' },
+        { title: 'Edge Computing Deployment', readTime: '30 min', difficulty: 'Advanced' },
+        { title: 'Data Processing at Edge', readTime: '25 min', difficulty: 'Advanced' },
+        { title: 'IoT Security Best Practices', readTime: '15 min', difficulty: 'Intermediate' }
+      ]
+    },
+    {
+      id: 'blockchain',
+      name: 'Blockchain Solutions',
+      icon: Rocket,
+      description: 'Blockchain and distributed ledger technology',
+      articles: [
+        { title: 'Smart Contract Development', readTime: '40 min', difficulty: 'Advanced' },
+        { title: 'Blockchain Integration', readTime: '30 min', difficulty: 'Intermediate' },
+        { title: 'DeFi Protocol Setup', readTime: '35 min', difficulty: 'Advanced' },
+        { title: 'Blockchain Security', readTime: '25 min', difficulty: 'Intermediate' }
+      ]
     }
   ];
 
@@ -407,6 +431,27 @@ const Documentation: React.FC = () => {
       default: return 'bg-gray-500/20 text-gray-400 border-gray-500/30';
     }
   ];
+
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'api': return <Api className="w-4 h-4" />;
+      case 'guide': return <BookOpen className="w-4 h-4" />;
+      case 'tutorial': return <Code className="w-4 h-4" />;
+      case 'reference': return <FileText className="w-4 h-4" />;
+      default: return <FileText className="w-4 h-4" />;
+    }
+  };
+
+  const filteredCategories = selectedCategory === 'all' 
+    ? docCategories: docCategories.filter(category  => category.id === selectedCategory);
+
+  const searchResults = searchQuery 
+    ? docCategories.flatMap(category => 
+        category.articles.filter(article => 
+          article.title.toLowerCase().includes(searchQuery.toLowerCase())
+        ).map(article => ({ ...category, article }))
+      )
+    : [];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

@@ -1,15 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Heart, Stethoscope, Brain, Activity, Shield, 
-  Users, Database, BarChart3, CheckCircle, ArrowRight,
-  Play, Download, BookOpen, MessageCircle, Phone,
-  Zap, Eye, Clock, TrendingUp, Award, Hospital,
-  Pill, Microscope, FileText, ChartBar
-} from 'lucide-react';
-
-const HealthcareSolutions: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('overview');
+import React from 'react';
+import { SEO  } from '../../components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { Heart, Shield, Brain, Zap, Users, TrendingUp, CheckCircle, ArrowRight  } from 'lucide-react';
 
   const solutions = [
     {

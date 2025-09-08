@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Search, 
+import { Link  } from 'react-router-dom.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Search, 
+  HelpCircle, 
   MessageCircle, 
   Phone, 
   Mail, 

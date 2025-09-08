@@ -1,12 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-import { cn } from '@/lib/utils';
+import { motion  } from 'framer-motion.ts';
+import { cn  } from '../../utils/cn';
 
   size?: 'sm' | 'md' | 'lg' | 'xl;
    color?: string;

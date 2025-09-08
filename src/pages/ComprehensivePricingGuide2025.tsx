@@ -1,65 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  Shield, 
-  Zap, 
-  Brain, 
-  Cloud, 
-  Lock, 
-  TrendingUp,
-  Users,
-  Globe,
-  Cpu,
-  Database,
-  Rocket,
-  Leaf,
-  Building,
-  BarChart3,
-  Code,
-  Server,
-  Smartphone,
-  Network,
-  Clock,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  CheckCircle,
-  Award,
-  Target,
-  Lightbulb,
-  Sparkles,
-  Eye,
-  Heart,
-  DollarSign,
-  Calendar,
-  Settings,
-  Monitor,
-  Smartphone as MobileIcon,
-  Globe as WebIcon,
-  Shield as SecurityIcon,
-  Zap as PerformanceIcon,
-  Brain as AIIcon,
-  Cloud as CloudIcon,
-  Rocket as InnovationIcon,
-  ChevronDown,
-  ChevronUp,
-  Info,
-  AlertCircle,
-  Clock as TimeIcon,
-  Users as TeamIcon,
-  Globe as WorldIcon,
-  Shield as SecurityIcon2,
-  Zap as SpeedIcon,
-  Brain as IntelligenceIcon,
-  Cloud as CloudIcon2,
-  Rocket as LaunchIcon
-} from 'lucide-react';
-import { comprehensiveServices2025Enhanced, serviceCategories } from '../data/comprehensive-services-2025-enhanced';
+import React from 'react';
+import { SEO  } from '../components/SEO';
+import { servicesCatalog  } from '../data/servicesCatalog';
+import { MICRO_SAAS_SERVICES  } from '../data/microSaasServices';
 
 }}
 ""

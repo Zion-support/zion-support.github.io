@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import { useAdminQuotes   } from '@/hooks/useAdminQuotes';
-import { useAuth   } from '@/hooks/useAuth';
+import { useAdminQuotes  } from '@/hooks/useAdminQuotes';
+import { useAuth  } from '@/hooks/useAuth';
 import { Card,
   CardContent
   } from '@/components/ui/card';

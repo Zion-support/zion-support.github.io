@@ -1,15 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import {
-  Twitter,
-  Linkedin,
-  Facebook,
-  Instagram,
-  Github,
-  Mail,
-  Phone,
-  MapPin,
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { FooterNewsletter  } from '@/components/FooterNewsletter';
+import { Twitter, 
+  Linkedin, 
+  Facebook, 
+  Instagram, 
+  Github, 
+  Mail, 
+  Phone, 
+  MapPin, 
   ArrowUp,
   Globe,
   Shield,

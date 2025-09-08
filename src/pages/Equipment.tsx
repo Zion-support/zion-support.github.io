@@ -1,41 +1,4 @@
 import React from 'react';
-import { SEO } from '../components/SEO';
-import { motion } from 'framer-motion';
-import { Server, Cpu, HardDrive, Network, Shield, Zap, Globe, Settings } from 'lucide-react';
-
-export default function Equipment() {
-  const services = [
-    {
-      icon: Server,
-      title: 'Server Infrastructure',
-      description: 'High-performance servers and data center solutions'
-    },
-    {
-      icon: Cpu,
-      title: 'Computing Hardware',
-      description: 'Advanced processors and specialized computing equipment'
-    },
-    {
-      icon: HardDrive,
-      title: 'Storage Solutions',
-      description: 'Enterprise storage and backup systems'
-    },
-    {
-      icon: Network,
-      title: 'Network Equipment',
-      description: 'Routers, switches, and network infrastructure'
-    },
-    {
-      icon: Shield,
-      title: 'Security Hardware',
-      description: 'Firewalls, intrusion detection, and security appliances'
-    },
-    {
-      icon: Zap,
-      title: 'Power Systems',
-      description: 'UPS systems and power management solutions'
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

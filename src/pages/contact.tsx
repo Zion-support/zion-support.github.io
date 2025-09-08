@@ -1,22 +1,7 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock, 
-  Send, 
-  CheckCircle,
-  MessageSquare,
-  Globe,
-  Building,
-  Users,
-  ArrowRight,
-  Mail as MailIcon,
-  Phone as PhoneIcon,
-  MapPin as MapPinIcon
-} from 'lucide-react';
+import { SEO  } from '../components/SEO';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
 
 export default function Contact() {
   const [formData, setFormData] = useState({

@@ -1,24 +1,8 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  PenTool, 
-  FileText, 
-  Image, 
-  Video, 
-  Globe, 
-  Zap, 
-  Brain, 
-  Shield,
-  CheckCircle,
-  TrendingUp,
-  MessageSquare,
-  Search,
-  Target,
-  BarChart3,
-  Users,
-  Sparkles
-} from 'lucide-react';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { PenTool, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Edit3, Type, Image, Video, Music  } from 'lucide-react';
+import { SEO  } from '@/components/SEO';
 
 export default function AIContentGenerator(...args: any[]): any {
   const features = [

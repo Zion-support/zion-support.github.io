@@ -1,25 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-import React from 'react';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-=======
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/Card";
-import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
-import { 
-<<<<<<< HEAD
-  MICRO_SAAS_SERVICES, 
-  MICRO_SAAS_CATEGORIES,
-  CONTACT_INFO 
-} from "@/data/microSaasServices";
-import { 
-  Brain, 
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion.ts';
+import { Brain, 
   Cloud, 
   Shield, 
   BarChart3, 
