@@ -2,13 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
-  Link as LinkIcon,
+  Brain,
+  Cpu,
   Zap,
   Target,
   TrendingUp,
   Users,
   Building,
-  Cpu,
   Database,
   Network,
   Globe,
@@ -24,7 +24,6 @@ import {
   Lock,
   Cloud,
   Server,
-  Brain,
   CircuitBoard,
   Microscope,
   Flask,
@@ -66,6 +65,7 @@ import {
   Download,
   Upload,
   Share,
+  Link as LinkIcon,
   ExternalLink,
   Mail,
   Phone,
@@ -394,284 +394,111 @@ import {
   Seagull as SeagullIcon2,
   Pelican as PelicanIcon2,
   Swan as SwanIcon2,
-  Goose as GooseIcon2,
-  Coins,
-  Wallet,
-  CreditCard,
-  PiggyBank,
-  TrendingUp as TrendingUpIcon,
-  Shield as ShieldIcon,
-  Lock as LockIcon,
-  Eye as EyeIcon,
-  CheckCircle as CheckCircleIcon,
-  ArrowRight as ArrowRightIcon,
-  Star as StarIcon3,
-  Award as AwardIcon,
-  Lightbulb as LightbulbIcon,
-  Code as CodeIcon,
-  BarChart3 as BarChart3Icon,
-  Activity as ActivityIcon,
-  Eye as EyeIcon2,
-  Lock as LockIcon2,
-  Cloud as CloudIcon3,
-  Server as ServerIcon,
-  Brain as BrainIcon,
-  CircuitBoard as CircuitBoardIcon,
-  Microscope as MicroscopeIcon2,
-  Flask as FlaskIcon,
-  TestTube as TestTubeIcon,
-  Calculator as CalculatorIcon,
-  AlertTriangle as AlertTriangleIcon,
-  Security as SecurityIcon,
-  Key as KeyIcon,
-  Fingerprint as FingerprintIcon,
-  Monitor as MonitorIcon,
-  HardDrive as HardDriveIcon,
-  Wifi as WifiIcon,
-  Smartphone as SmartphoneIcon,
-  GitBranch as GitBranchIcon2,
-  GitCommit as GitCommitIcon2,
-  GitPullRequest as GitPullRequestIcon2,
-  GitMerge as GitMergeIcon2,
-  Package as PackageIcon2,
-  Settings as SettingsIcon2,
-  Terminal as TerminalIcon2,
-  Database as DatabaseIcon3,
-  Layers as LayersIcon4,
-  Box as BoxIcon2,
-  Container as ContainerIcon2,
-  FileText as FileTextIcon2,
-  PieChart as PieChartIcon2,
-  LineChart as LineChartIcon2,
-  BarChart as BarChartIcon2,
-  TrendingDown as TrendingDownIcon2,
-  RefreshCw as RefreshCwIcon2,
-  RotateCcw as RotateCcwIcon2,
-  Repeat as RepeatIcon2,
-  Shuffle as ShuffleIcon2,
-  Move as MoveIcon2,
-  Copy as CopyIcon2,
-  Edit as EditIcon2,
-  Trash as TrashIcon2,
-  Save as SaveIcon2,
-  Download as DownloadIcon2,
-  Upload as UploadIcon2,
-  Share as ShareIcon2,
-  Link as LinkIcon3,
-  ExternalLink as ExternalLinkIcon2,
-  Mail as MailIcon2,
-  Phone as PhoneIcon2,
-  MessageSquare as MessageSquareIcon2,
-  Video as VideoIcon2,
-  Camera as CameraIcon2,
-  Image as ImageIcon2,
-  File as FileIcon2,
-  Folder as FolderIcon2,
-  Archive as ArchiveIcon2,
-  BookOpen as BookOpenIcon2,
-  Calendar as CalendarIcon2,
-  Clock as ClockIcon2,
-  MapPin as MapPinIcon2,
-  Navigation as NavigationIcon2,
-  Compass as CompassIcon2,
-  Globe as GlobeIcon3,
-  Map as MapIcon2,
-  Layers as LayersIcon5,
-  Grid as GridIcon2,
-  List as ListIcon2,
-  Menu as MenuIcon2,
-  MoreHorizontal as MoreHorizontalIcon2,
-  MoreVertical as MoreVerticalIcon2,
-  Plus as PlusIcon2,
-  Minus as MinusIcon2,
-  X as XIcon2,
-  Search as SearchIcon3,
-  Filter as FilterIcon2,
-  SortAsc as SortAscIcon2,
-  SortDesc as SortDescIcon2,
-  ChevronUp as ChevronUpIcon2,
-  ChevronDown as ChevronDownIcon2,
-  ChevronLeft as ChevronLeftIcon2,
-  ChevronRight as ChevronRightIcon2,
-  ArrowUp as ArrowUpIcon2,
-  ArrowDown as ArrowDownIcon2,
-  ArrowLeft as ArrowLeftIcon2,
-  Info as InfoIcon2,
-  HelpCircle as HelpCircleIcon2,
-  AlertCircle as AlertCircleIcon2,
-  CheckCircle2 as CheckCircle2Icon2,
-  XCircle as XCircleIcon2,
-  MinusCircle as MinusCircleIcon2,
-  PlusCircle as PlusCircleIcon2,
-  Circle as CircleIcon2,
-  Square as SquareIcon2,
-  Triangle as TriangleIcon2,
-  Hexagon as HexagonIcon2,
-  Octagon as OctagonIcon2,
-  Star as StarIcon4,
-  Heart as HeartIcon3,
-  ThumbsUp as ThumbsUpIcon2,
-  ThumbsDown as ThumbsDownIcon2,
-  Smile as SmileIcon2,
-  Frown as FrownIcon2,
-  Meh as MehIcon2,
-  Laugh as LaughIcon2,
-  Cry as CryIcon2,
-  Wink as WinkIcon2,
-  Zap as ZapIcon3,
-  Flash as FlashIcon2,
-  Thunder as ThunderIcon2,
-  Rain as RainIcon2,
-  Snow as SnowIcon2,
-  Cloud as CloudIcon4,
-  Sun as SunIcon2,
-  Moon as MoonIcon2,
-  Sunrise as SunriseIcon2,
-  Sunset as SunsetIcon2,
-  Wind as WindIcon2,
-  Thermometer as ThermometerIcon2,
-  Droplets as DropletsIcon2,
-  Umbrella as UmbrellaIcon2,
-  Tree as TreeIcon2,
-  Leaf as LeafIcon2,
-  Flower as FlowerIcon2,
-  Seed as SeedIcon2,
-  Sprout as SproutIcon2,
-  Plant as PlantIcon2,
-  Bug as BugIcon3,
-  Butterfly as ButterflyIcon2,
-  Bird as BirdIcon2,
-  Fish as FishIcon2,
-  Cat as CatIcon2,
-  Dog as DogIcon2,
-  Horse as HorseIcon2,
-  Cow as CowIcon2,
-  Pig as PigIcon2,
-  Sheep as SheepIcon2,
-  Goat as GoatIcon2,
-  Chicken as ChickenIcon2,
-  Duck as DuckIcon3,
-  Turkey as TurkeyIcon3,
-  Eagle as EagleIcon3,
-  Hawk as HawkIcon3,
-  Owl as OwlIcon3,
-  Crow as CrowIcon3,
-  Sparrow as SparrowIcon3,
-  Robin as RobinIcon3,
-  Bluejay as BluejayIcon3,
-  Cardinal as CardinalIcon2,
-  Goldfinch as GoldfinchIcon3,
-  Hummingbird as HummingbirdIcon3,
-  Woodpecker as WoodpeckerIcon3,
-  Seagull as SeagullIcon3,
-  Pelican as PelicanIcon3,
-  Swan as SwanIcon3,
-  Goose as GooseIcon3,
-  AppWindow
+  Goose as GooseIcon2
 } from 'lucide-react';
 
-export function BlockchainPage() {
-  const blockchainServices = [
+export function ArtificialIntelligencePage() {
+  const aiServices = [
     {
-      category: 'Blockchain Development',
+      category: 'Machine Learning & AI Development',
       services: [
         {
-          name: 'Smart Contract Development',
-          description: 'Secure and audited smart contracts for various use cases',
-          icon: Code,
-          href: '/services/smart-contract-development',
-          features: ['Contract Design', 'Security Auditing', 'Testing & Deployment', 'Maintenance']
+          name: 'Custom AI Models',
+          description: 'Develop tailored machine learning models for your specific needs',
+          icon: Brain,
+          href: '/services/custom-ai-models',
+          features: ['Model Development', 'Training & Optimization', 'Deployment', 'Maintenance']
         },
         {
-          name: 'DApp Development',
-          description: 'Decentralized applications built on blockchain technology',
-          icon: AppWindow,
-          href: '/services/dapp-development',
-          features: ['Frontend Development', 'Backend Integration', 'User Experience', 'Deployment']
+          name: 'Natural Language Processing',
+          description: 'AI-powered text and language understanding solutions',
+          icon: MessageCircle,
+          href: '/services/natural-language-processing',
+          features: ['Text Analysis', 'Language Translation', 'Sentiment Analysis', 'Chatbots']
         },
         {
-          name: 'Blockchain Infrastructure',
-          description: 'Build and deploy custom blockchain networks',
-          icon: Network,
-          href: '/services/blockchain-infrastructure',
-          features: ['Network Design', 'Consensus Mechanisms', 'Node Management', 'Scalability']
+          name: 'Computer Vision',
+          description: 'AI systems for image and video analysis',
+          icon: Eye,
+          href: '/services/computer-vision',
+          features: ['Image Recognition', 'Object Detection', 'Video Analysis', 'Quality Control']
         }
       ]
     },
     {
-      category: 'DeFi & Financial Solutions',
+      category: 'AI Infrastructure & Platforms',
       services: [
         {
-          name: 'DeFi Protocol Development',
-          description: 'Decentralized finance protocols and applications',
-          icon: Coins,
-          href: '/services/defi-protocol-development',
-          features: ['Lending Platforms', 'DEX Development', 'Yield Farming', 'Risk Management']
+          name: 'AI Platform Development',
+          description: 'Build scalable AI platforms and infrastructure',
+          icon: Server,
+          href: '/services/ai-platform-development',
+          features: ['Scalable Architecture', 'Model Serving', 'Data Pipeline', 'Monitoring']
         },
         {
-          name: 'Token Development',
-          description: 'Custom token creation and management systems',
-          icon: Wallet,
-          href: '/services/token-development',
-          features: ['Token Standards', 'Minting & Burning', 'Distribution', 'Governance']
+          name: 'MLOps & Model Management',
+          description: 'Streamline machine learning operations and model lifecycle',
+          icon: Workflow,
+          href: '/services/mlops-model-management',
+          features: ['Model Versioning', 'Automated Training', 'Deployment Pipeline', 'Performance Monitoring']
         },
         {
-          name: 'Payment Solutions',
-          description: 'Blockchain-based payment and remittance systems',
-          icon: CreditCard,
-          href: '/services/blockchain-payment-solutions',
-          features: ['Cross-border Payments', 'Microtransactions', 'Settlement', 'Compliance']
+          name: 'AI Cloud Solutions',
+          description: 'Cloud-based AI services and infrastructure',
+          icon: Cloud,
+          href: '/services/ai-cloud-solutions',
+          features: ['Cloud AI Services', 'Scalable Computing', 'Cost Optimization', 'Security']
         }
       ]
     },
     {
-      category: 'Enterprise Blockchain',
+      category: 'AI Applications & Solutions',
       services: [
         {
-          name: 'Supply Chain Solutions',
-          description: 'Transparent and traceable supply chain management',
-          icon: Package,
-          href: '/services/blockchain-supply-chain',
-          features: ['Product Tracking', 'Authenticity Verification', 'Compliance', 'Analytics']
+          name: 'Predictive Analytics',
+          description: 'AI-powered forecasting and predictive modeling',
+          icon: TrendingUp,
+          href: '/services/predictive-analytics',
+          features: ['Data Analysis', 'Forecasting Models', 'Risk Assessment', 'Business Intelligence']
         },
         {
-          name: 'Identity Management',
-          description: 'Self-sovereign identity and verification systems',
-          icon: Shield,
-          href: '/services/blockchain-identity-management',
-          features: ['Digital Identity', 'Verification', 'Privacy', 'Compliance']
+          name: 'Process Automation',
+          description: 'Intelligent automation using AI and RPA',
+          icon: Bot,
+          href: '/services/process-automation',
+          features: ['Workflow Automation', 'Document Processing', 'Decision Support', 'Efficiency Optimization']
         },
         {
-          name: 'Asset Tokenization',
-          description: 'Convert real-world assets to digital tokens',
-          icon: Building,
-          href: '/services/asset-tokenization',
-          features: ['Asset Valuation', 'Token Creation', 'Trading Platform', 'Regulatory Compliance']
+          name: 'AI-Powered Analytics',
+          description: 'Advanced analytics and business intelligence with AI',
+          icon: BarChart3,
+          href: '/services/ai-powered-analytics',
+          features: ['Data Mining', 'Pattern Recognition', 'Insight Generation', 'Visualization']
         }
       ]
     },
     {
-      category: 'Blockchain Consulting',
+      category: 'AI Consulting & Strategy',
       services: [
         {
-          name: 'Strategy & Architecture',
-          description: 'Blockchain strategy and technical architecture planning',
+          name: 'AI Strategy & Roadmap',
+          description: 'Develop comprehensive AI adoption strategies',
           icon: Target,
-          href: '/services/blockchain-strategy-architecture',
-          features: ['Use Case Analysis', 'Technology Selection', 'Implementation Roadmap', 'ROI Analysis']
+          href: '/services/ai-strategy-roadmap',
+          features: ['Technology Assessment', 'Implementation Planning', 'ROI Analysis', 'Change Management']
         },
         {
-          name: 'Security & Auditing',
-          description: 'Comprehensive blockchain security assessment',
-          icon: Lock,
-          href: '/services/blockchain-security-auditing',
-          features: ['Smart Contract Auditing', 'Network Security', 'Penetration Testing', 'Compliance Review']
+          name: 'AI Ethics & Governance',
+          description: 'Ensure responsible and ethical AI implementation',
+          icon: Shield,
+          href: '/services/ai-ethics-governance',
+          features: ['Bias Detection', 'Fairness Assessment', 'Transparency', 'Compliance']
         },
         {
-          name: 'Training & Education',
-          description: 'Blockchain technology training for teams',
+          name: 'AI Training & Education',
+          description: 'Train your team on AI technologies and best practices',
           icon: Users,
-          href: '/services/blockchain-training-education',
+          href: '/services/ai-training-education',
           features: ['Technical Training', 'Best Practices', 'Hands-on Workshops', 'Ongoing Support']
         }
       ]
@@ -680,63 +507,63 @@ export function BlockchainPage() {
 
   const benefits = [
     {
-      icon: Shield,
-      title: 'Enhanced Security',
-      description: 'Immutable and tamper-proof data records'
+      icon: Zap,
+      title: 'Increased Efficiency',
+      description: 'Automate repetitive tasks and optimize processes'
     },
     {
-      icon: Eye,
-      title: 'Transparency',
-      description: 'Complete visibility into transactions and data'
+      icon: Target,
+      title: 'Better Decision Making',
+      description: 'Data-driven insights and predictive analytics'
     },
     {
       icon: TrendingUp,
-      title: 'Efficiency',
-      description: 'Streamlined processes and reduced intermediaries'
+      title: 'Competitive Advantage',
+      description: 'Stay ahead with cutting-edge AI technology'
     },
     {
-      icon: Globe,
-      title: 'Global Access',
-      description: 'Borderless and permissionless access'
+      icon: Brain,
+      title: 'Innovation',
+      description: 'Unlock new possibilities and business models'
     }
   ];
 
   const technologies = [
-    'Ethereum', 'Hyperledger Fabric', 'Polkadot', 'Solana',
-    'Smart Contracts', 'Web3.js', 'Solidity', 'Rust',
-    'IPFS', 'Zero-Knowledge Proofs', 'Layer 2 Solutions', 'Cross-Chain Bridges'
+    'Machine Learning', 'Deep Learning', 'Natural Language Processing', 'Computer Vision',
+    'Neural Networks', 'TensorFlow', 'PyTorch', 'Scikit-learn',
+    'Cloud AI Services', 'Edge AI', 'Federated Learning', 'AutoML'
   ];
 
   const industries = [
     {
-      industry: 'Finance & Banking',
-      applications: ['Cross-border Payments', 'Trade Finance', 'Asset Management', 'Regulatory Compliance']
-    },
-    {
-      industry: 'Supply Chain',
-      applications: ['Product Tracking', 'Authenticity Verification', 'Quality Assurance', 'Compliance Management']
-    },
-    {
       industry: 'Healthcare',
-      applications: ['Medical Records', 'Drug Traceability', 'Clinical Trials', 'Patient Data Management']
+      applications: ['Medical Imaging', 'Drug Discovery', 'Patient Care', 'Diagnostic Support']
     },
     {
-      industry: 'Real Estate',
-      applications: ['Property Tokenization', 'Title Management', 'Rental Agreements', 'Investment Platforms']
+      industry: 'Finance',
+      applications: ['Fraud Detection', 'Risk Assessment', 'Algorithmic Trading', 'Customer Service']
+    },
+    {
+      industry: 'Manufacturing',
+      applications: ['Predictive Maintenance', 'Quality Control', 'Supply Chain Optimization', 'Process Automation']
+    },
+    {
+      industry: 'Retail',
+      applications: ['Personalization', 'Inventory Management', 'Demand Forecasting', 'Customer Analytics']
     }
   ];
 
-  const blockchainFeatures = [
-    'Decentralization', 'Immutability', 'Transparency', 'Security',
-    'Smart Contracts', 'Consensus Mechanisms', 'Cryptographic Security', 'Distributed Ledger',
-    'Token Economics', 'Governance Models', 'Interoperability', 'Scalability'
+  const aiCapabilities = [
+    'Supervised Learning', 'Unsupervised Learning', 'Reinforcement Learning', 'Transfer Learning',
+    'Natural Language Generation', 'Speech Recognition', 'Image Generation', 'Anomaly Detection',
+    'Recommendation Systems', 'Time Series Analysis', 'Clustering', 'Classification'
   ];
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 via-emerald-900/20 to-teal-900/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-indigo-900/20 to-purple-900/20"></div>
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -744,30 +571,30 @@ export function BlockchainPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 rounded-2xl flex items-center justify-center">
-                <LinkIcon className="w-10 h-10 text-white" />
+              <div className="w-20 h-20 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 rounded-2xl flex items-center justify-center">
+                <Brain className="w-10 h-10 text-white" />
               </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent">
-              Blockchain Technology
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
+              Artificial Intelligence
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your business with revolutionary blockchain solutions. From DeFi to 
-              enterprise applications, we're building the decentralized future.
+              Transform your business with cutting-edge AI solutions. From machine learning 
+              to intelligent automation, we're building the future.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-3 rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-200 font-medium inline-flex items-center space-x-2"
+                className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-8 py-3 rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 font-medium inline-flex items-center space-x-2"
               >
-                <span>Explore Blockchain Solutions</span>
+                <span>Explore AI Solutions</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 to="/case-studies"
-                className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg hover:border-green-500 hover:text-green-400 transition-all duration-200 font-medium"
+                className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg hover:border-blue-500 hover:text-blue-400 transition-all duration-200 font-medium"
               >
-                View Blockchain Projects
+                View AI Projects
               </Link>
             </div>
           </motion.div>
@@ -785,11 +612,11 @@ export function BlockchainPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Why Blockchain?
+              Why Choose AI?
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Blockchain technology offers unprecedented levels of security, transparency, 
-              and efficiency for modern business operations.
+              Artificial Intelligence is revolutionizing industries by enabling automation, 
+              improving decision-making, and unlocking new business opportunities.
             </p>
           </motion.div>
 
@@ -801,9 +628,9 @@ export function BlockchainPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-6 rounded-xl bg-gray-800/50 border border-gray-700 hover:border-green-500/50 transition-all duration-300"
+                className="text-center p-6 rounded-xl bg-gray-800/50 border border-gray-700 hover:border-blue-500/50 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
@@ -814,7 +641,7 @@ export function BlockchainPage() {
         </div>
       </section>
 
-      {/* Blockchain Services Grid */}
+      {/* AI Services Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -825,16 +652,16 @@ export function BlockchainPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Blockchain Services
+              AI Services & Solutions
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our comprehensive blockchain portfolio covers development, DeFi solutions, 
-              enterprise applications, and strategic consulting.
+              Our comprehensive AI portfolio covers development, infrastructure, applications, 
+              and strategic consulting to accelerate your AI journey.
             </p>
           </motion.div>
 
           <div className="space-y-12">
-            {blockchainServices.map((category, categoryIndex) => (
+            {aiServices.map((category, categoryIndex) => (
               <motion.div
                 key={category.category}
                 initial={{ opacity: 0, y: 20 }}
@@ -842,8 +669,8 @@ export function BlockchainPage() {
                 transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-2xl font-bold mb-8 text-green-400 flex items-center space-x-3">
-                  <LinkIcon className="w-6 h-6" />
+                <h3 className="text-2xl font-bold mb-8 text-blue-400 flex items-center space-x-3">
+                  <Brain className="w-6 h-6" />
                   <span>{category.category}</span>
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -854,10 +681,10 @@ export function BlockchainPage() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.4, delay: serviceIndex * 0.1 }}
                       viewport={{ once: true }}
-                      className="bg-gray-800/50 border border-gray-700 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                      className="bg-gray-800/50 border border-gray-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
                     >
                       <div className="flex items-start space-x-4 mb-4">
-                        <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
                           <service.icon className="w-6 h-6 text-white" />
                         </div>
                         <div className="flex-1">
@@ -871,7 +698,7 @@ export function BlockchainPage() {
                         <ul className="space-y-1">
                           {service.features.map((feature, featureIndex) => (
                             <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-400">
-                              <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                              <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />
                               <span>{feature}</span>
                             </li>
                           ))}
@@ -880,7 +707,7 @@ export function BlockchainPage() {
 
                       <Link
                         to={service.href}
-                        className="inline-flex items-center space-x-2 text-green-400 hover:text-green-300 transition-colors text-sm font-medium"
+                        className="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
                       >
                         <span>Learn More</span>
                         <ArrowRight className="w-4 h-4" />
@@ -908,8 +735,8 @@ export function BlockchainPage() {
               Industry Applications
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Blockchain technology is revolutionizing industries across the board. Discover 
-              how our solutions can transform your sector.
+              AI is transforming industries across the board. Discover how our solutions 
+              can revolutionize your specific sector.
             </p>
           </motion.div>
 
@@ -921,13 +748,13 @@ export function BlockchainPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-800/50 border border-gray-700 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300"
+                className="bg-gray-800/50 border border-gray-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
               >
-                <h3 className="text-xl font-semibold mb-4 text-green-400">{industry.industry}</h3>
+                <h3 className="text-xl font-semibold mb-4 text-blue-400">{industry.industry}</h3>
                 <div className="grid grid-cols-2 gap-3">
                   {industry.applications.map((application, applicationIndex) => (
                     <div key={applicationIndex} className="flex items-center space-x-2 text-sm text-gray-300">
-                      <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                      <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
                       <span>{application}</span>
                     </div>
                   ))}
@@ -938,7 +765,7 @@ export function BlockchainPage() {
         </div>
       </section>
 
-      {/* Blockchain Features Section */}
+      {/* AI Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -949,28 +776,28 @@ export function BlockchainPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Blockchain Features
+              AI Capabilities
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our blockchain solutions leverage the core features that make this technology 
-              revolutionary for modern business.
+              Our AI expertise spans the full spectrum of machine learning and artificial 
+              intelligence technologies.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {blockchainFeatures.map((feature, index) => (
+            {aiCapabilities.map((capability, index) => (
               <motion.div
-                key={feature}
+                key={capability}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="bg-gray-800/50 border border-gray-700 rounded-lg p-4 text-center hover:border-green-500/50 transition-all duration-300"
+                className="bg-gray-800/50 border border-gray-700 rounded-lg p-4 text-center hover:border-blue-500/50 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Cpu className="w-6 h-6 text-white" />
                 </div>
-                <span className="text-sm font-medium text-gray-300">{feature}</span>
+                <span className="text-sm font-medium text-gray-300">{capability}</span>
               </motion.div>
             ))}
           </div>
@@ -988,11 +815,11 @@ export function BlockchainPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Blockchain Technologies
+              AI Technologies & Tools
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              We work with leading blockchain platforms and technologies to deliver 
-              robust, scalable, and secure solutions.
+              We leverage the latest AI technologies, frameworks, and tools to deliver 
+              cutting-edge solutions for your business.
             </p>
           </motion.div>
 
@@ -1004,9 +831,9 @@ export function BlockchainPage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="bg-gray-800/50 border border-gray-700 rounded-lg p-4 text-center hover:border-green-500/50 transition-all duration-300"
+                className="bg-gray-800/50 border border-gray-700 rounded-lg p-4 text-center hover:border-blue-500/50 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Package className="w-6 h-6 text-white" />
                 </div>
                 <span className="text-sm font-medium text-gray-300">{tech}</span>
@@ -1017,7 +844,7 @@ export function BlockchainPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900/20 to-emerald-900/20">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/20 to-indigo-900/20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1026,25 +853,25 @@ export function BlockchainPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Go Blockchain?
+              Ready to Embrace AI?
             </h2>
             <p className="text-xl text-gray-400 mb-8">
-              Join the blockchain revolution and discover how decentralized technology 
-              can transform your business operations and create new opportunities.
+              Join the AI revolution and discover how artificial intelligence can transform 
+              your business operations and drive innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-3 rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-200 font-medium inline-flex items-center space-x-2"
+                className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-8 py-3 rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 font-medium inline-flex items-center space-x-2"
               >
-                <span>Start Your Blockchain Journey</span>
+                <span>Start Your AI Journey</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 to="/case-studies"
-                className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg hover:border-green-500 hover:text-green-400 transition-all duration-200 font-medium"
+                className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg hover:border-blue-500 hover:text-blue-400 transition-all duration-200 font-medium"
               >
-                View Blockchain Projects
+                View AI Projects
               </Link>
             </div>
           </motion.div>
@@ -1054,4 +881,4 @@ export function BlockchainPage() {
   );
 }
 
-export default BlockchainPage;
+export default ArtificialIntelligencePage;
