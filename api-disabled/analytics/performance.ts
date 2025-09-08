@@ -1,8 +1,19 @@
 export {};
 
-module.exports = {};
+interface PerformanceData {
+  url: string;
+  timestamp: number;
+  metrics: {
+    fcp?: number;
+    lcp?: number;
+    fid?: number;
+    cls?: number;
+    ttfb?: number;
+    fmp?: number}}
 
-module.exports = {};
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' })}
 
 module.exports = {};
 module.exports = {};
@@ -14,8 +25,29 @@ module.exports = {};
 module.exports = {};
 module.exports = {};
 
+    // Validate the data
+    if (!data.url || !data.timestamp || !data.metrics) {
+      return res.status(400).json({ error: 'Invalid data format' })}
 
+    // Log performance metrics (in production, you might want to send to a database or analytics service)
+    console.log('Performance Metrics:' {
+      url: data.url,
+      timestamp: new Date(data.timestamp).toISOString(),
+      metrics: data.metrics
+    });
 
-module.exports = {};
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
+    // Here you could send the data to:
+    // - A database (MongoDB, PostgreSQL, etc.)
+    // - An analytics service (Mixpanel, Amplitude, etc.)
+    // - A monitoring service (DataDog, New Relic, etc.)
+    // - Google Analytics 4 Measurement Protocol
+
+    // For now, we'll just acknowledge receipt
+    res.status(200).json({ 
+      success: true, 
+      message: 'Performance metrics recorded',
+      timestamp: Date.now()
+    })} catch (error) {
+    console.error('Error processing performance data:', error);
+    res.status(500).json({ error: 'Internal server error' })}
+}

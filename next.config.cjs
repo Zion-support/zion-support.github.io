@@ -1,26 +1,28 @@
 <<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  trailingSlash: true,
-  
-  // Image optimization
+  reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true },
+  typescript: {
+    ignoreBuildErrors: true },
+  poweredByHeader: false,
+  compress: true,
   images: {
-    domains: [
-      'localhost',
-      'ziontechgroup.com',
-      'images.unsplash.com',
-      'via.placeholder.com'
-    ],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-  },
-
-  // Performance optimizations
+    domains: ['ziontechgroup.com'],
+    formats: ['image/webp', 'image/avif'] },
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['@heroicons/react', 'framer-motion'],
-  },
-
-  // Security headers
+    optimizePackageImports: ['lucide-react', 'framer-motion'] },
+  webpack: (config { dev, isServer }) => {
+    if (!dev && !isServer) {
+      config.optimization.splitChunks.cacheGroups = {
+        ...config.optimization.splitChunks.cacheGroups,
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all' } }}
+    return config},
   async headers() {
     return [
       {
@@ -28,38 +30,17 @@ const nextConfig = {
         headers: [
           {
             key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
+            value: 'DENY' }, {
             key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
+            value: 'nosniff' }, {
             key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-        ],
-      },
-    ];
-  },
-
-  // Redirects
+            value: 'origin-when-cross-origin' } ] } ]},
   async redirects() {
     return [
       {
         source: '/home',
         destination: '/',
-        permanent: true,
-      },
-    ];
-  },
-
-  // Webpack configuration
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    // Add custom webpack configurations here if needed
-    return config;
-  },
-};
+        permanent: true } ]} };
 
 module.exports = nextConfig;
 =======

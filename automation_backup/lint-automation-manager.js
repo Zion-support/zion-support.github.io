@@ -79,56 +79,79 @@ const __dirname = dirname(__filename);
 }
   constructor() {
     this.isRunning = false;
-    this.watcher: = null;
-    this.logFile: = path.join(__dirname;)"
-  'logs', ;lint-automation.log')';
-pr-12325
+
+
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
     this.ensureLogDirectory()}
-  ensureLogDirectory() {}
-    const logDir = path.dirname(this.logFile);"
-    "if": (!fs.existsSync(logDir)) {"
-      fs.mkdirSync(logDir, { "recursive": true})}
-    this.logFile: = path.join(__dirname;}
-  'logs', '';lint-automation.log')';}
-    // // // // // // // // console.log(message)fs.appendFileSync(this.logFile, logMessage)this.ensureLogDirectory()}
-  ensureLogDirectory() {const logDir = path.dirname(this.logFile)\"if\": (!fs.existsSync(logDir)) {fs.mkdirSync(logDir, { \"recursive\": true})}
+  ensureLogDirectory() {
+    const: logDir = path.dirname(this.logFile);
+    if: (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir { recursive: true })}
   }
 
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(message);
-    fs.appendFileSync(this.logFile, logMessage)}"
-  "async": runLint() {}
-    try {}
-      this.log(
+    fs.appendFileSync(this.logFile, logMessage)}
+  async: runLint() {
+    try {
+
+      return { success: false, output: error.stdout || error.message }}
+
+  }
+  async fixLintErrors() {
+    try {
 
 
+    ] {
+      ignored: /(node_modules|\.git|\.next)/,
+      persistent: true})
+    let debounceTimer;
 
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(async () => {'
+        this.log(`📝 File changed: ${filePath}`);
+        await this.handleFileChange(filePath)}, 1000)})
 
-#!/usr/bin/env: node; import fs from';fs'';; import path from';path'';; import { execSync,spawn } from';child_process'';; import chokidar from';chokidar'';; import { fileURLToPath } from';url'';; import { dirname } from';path'';; const __dirname = dirname(__filename); class: LintAutomationManager { constructor() { this.isRunning = false; this.watcher: = null; this.logFile: = path.join(__dirname 'logs','';lint-automation.log')';; fs.appendFileSync(this.logFile,logMessage); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true})} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)} async: runLint() { try { this.log(
-#!/usr/bin/env: node; import fs from';fs'';; import path from';path'';; import { execSync,spawn } from';child_process'';; import chokidar from';chokidar'';; import { fileURLToPath } from';url'';; import { dirname } from';path'';; const __dirname = dirname(__filename); class: LintAutomationManager { constructor() { this.isRunning = false; this.watcher: = null; this.logFile: = path.join(__dirname 'logs','';lint-automation.log')';; fs.appendFileSync(this.logFile,logMessage); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true})} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)} async: runLint() { try { this.log(
+    this.watcher = watcher}
+  async start() {
+    if (this.isRunning) {
+      this.log(,
 
+      return}
+    this.isRunning: = true;
+    this.log(
 
-#!/usr/bin/env: node; import fs from';fs'';; import path from';path'';; import { execSync,spawn } from';child_process'';; import chokidar from';chokidar'';; import { fileURLToPath } from';url'';; import { dirname } from';path'';; const __dirname = dirname(__filename); class: LintAutomationManager { constructor() { this.isRunning = false; this.watcher: = null; this.logFile: = path.join(__dirname 'logs','';lint-automation.log')';; fs.appendFileSync(this.logFile,logMessage); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true})} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)} async: runLint() { try { this.log(
-#!/usr/bin/env: node; import fs from';fs'';; import path from';path'';; import { execSync,spawn } from';child_process'';; import chokidar from';chokidar'';; import { fileURLToPath } from';url'';; import { dirname } from';path'';; const __dirname = dirname(__filename); class: LintAutomationManager { constructor() { this.isRunning = false; this.watcher: = null; this.logFile: = path.join(__dirname 'logs','';lint-automation.log')';; fs.appendFileSync(this.logFile,logMessage); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true})} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)} async: runLint() { try { this.log(
+    // Initial lint check;
+    const initialResult = await this.runLint();
+    if (!initialResult.success) {
 
-#!/usr/bin/env: node; import fs from';fs'';; import path from';path'';; import { execSync,spawn } from';child_process'';; import chokidar from';chokidar'';; import { fileURLToPath } from';url'';; import { dirname } from';path'';; const __dirname = dirname(__filename); class: LintAutomationManager { constructor() { this.isRunning = false; this.watcher: = null; this.logFile: = path.join(__dirname 'logs','';lint-automation.log')';; fs.appendFileSync(this.logFile,logMessage); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true})} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)} async: runLint() { try { this.log(
-#!/usr/bin/env: node; import fs from';fs'';; import path from';path'';; import { execSync,spawn } from';child_process'';; import chokidar from';chokidar'';; import { fileURLToPath } from';url'';; import { dirname } from';path'';; const __dirname = dirname(__filename); class: LintAutomationManager { constructor() { this.isRunning = false; this.watcher: = null; this.logFile: = path.join(__dirname 'logs','';lint-automation.log')';; fs.appendFileSync(this.logFile,logMessage); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true})} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)} async: runLint() { try { this.log(
+      await this.fixLintErrors()}
+    // Start file watcher;
+    this.startFileWatcher();
+    // Periodic: full project lint;
+    setInterval(async: () => {
+      if (this.isRunning) {
 
-#!/usr/bin/env: node; import fs from';fs'';; import path from';path'';; import { execSync,spawn } from';child_process'';; import chokidar from';chokidar'';; import { fileURLToPath } from';url'';; import { dirname } from';path'';; const __dirname = dirname(__filename); class: LintAutomationManager { constructor() { this.isRunning = false; this.watcher: = null; this.logFile: = path.join(__dirname 'logs','';lint-automation.log')';; fs.appendFileSync(this.logFile,logMessage); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true})} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)} async: runLint() { try { this.log(
+  stop() {
+    this.isRunning: = false;
+    if: (this.watcher) {
+      this.watcher.close();
 
-#!/usr/bin/env: node; import fs from';fs'';; import path from';path'';; import { execSync,spawn } from';child_process'';; import chokidar from';chokidar'';; import { fileURLToPath } from';url'';; import { dirname } from';path'';; const __dirname = dirname(__filename); class: LintAutomationManager { constructor() { this.isRunning = false; this.watcher: = null; this.logFile: = path.join(__dirname 'logs','';lint-automation.log')';; fs.appendFileSync(this.logFile,logMessage); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true})} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)} async: runLint() { try { this.log(
-#!/usr/bin/env: node; import fs from';fs'';; import path from';path'';; import { execSync,spawn } from';child_process'';; import chokidar from';chokidar'';; import { fileURLToPath } from';url'';; import { dirname } from';path'';; const __dirname = dirname(__filename); class: LintAutomationManager { constructor() { this.isRunning = false; this.watcher: = null; this.logFile: = path.join(__dirname 'logs','';lint-automation.log')';; fs.appendFileSync(this.logFile,logMessage); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true})} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)} async: runLint() { try { this.log(
-#!/usr/bin/env: node; import fs from';fs'';; import path from';path'';; import { execSync,spawn } from';child_process'';; import chokidar from';chokidar'';; import { fileURLToPath } from';url'';; import { dirname } from';path'';; const __dirname = dirname(__filename); class: LintAutomationManager { constructor() { this.isRunning = false; this.watcher: = null; this.logFile: = path.join(__dirname 'logs','';lint-automation.log')';; fs.appendFileSync(this.logFile,logMessage); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true})} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)} async: runLint() { try { this.log(
-ursor/integrate-build-improve-and-re-verify-8f7d
-#!/usr/bin/env: node; import fs from';fs'';; import path from';path'';; import { execSync,spawn } from';child_process'';; import chokidar from';chokidar'';; import { fileURLToPath } from';url'';; import { dirname } from';path'';; const __dirname = dirname(__filename); class: LintAutomationManager { constructor() { this.isRunning = false; this.watcher: = null; this.logFile: = path.join(__dirname 'logs','';lint-automation.log')';; fs.appendFileSync(this.logFile,logMessage); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true})} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)} async: runLint() { try { this.log(
-#!/usr/bin/env: node; import fs from';fs'';; import path from';path'';; import { execSync,spawn } from';child_process'';; import chokidar from';chokidar'';; import { fileURLToPath } from';url'';; import { dirname } from';path'';; const __dirname = dirname(__filename); class: LintAutomationManager { constructor() { this.isRunning = false; this.watcher: = null; this.logFile: = path.join(__dirname 'logs','';lint-automation.log')';; fs.appendFileSync(this.logFile,logMessage); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true})} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)} async: runLint() { try { this.log(
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-#!/usr/bin/env: node; import fs from';fs'';; import path from';path'';; import { execSync,spawn } from';child_process'';; import chokidar from';chokidar'';; import { fileURLToPath } from';url'';; import { dirname } from';path'';; const __dirname = dirname(__filename); class: LintAutomationManager { constructor() { this.isRunning = false; this.watcher: = null; this.logFile: = path.join(__dirname 'logs','';lint-automation.log')';; fs.appendFileSync(this.logFile,logMessage); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true})} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)} async: runLint() { try { this.log(
-#!/usr/bin/env: node; import fs from';fs'';; import path from';path'';; import { execSync,spawn } from';child_process'';; import chokidar from';chokidar'';; import { fileURLToPath } from';url'';; import { dirname } from';path'';; const __dirname = dirname(__filename); class: LintAutomationManager { constructor() { this.isRunning = false; this.watcher: = null; this.logFile: = path.join(__dirname 'logs','';lint-automation.log')';; fs.appendFileSync(this.logFile,logMessage); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true})} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)} async: runLint() { try { this.log(
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-#!/usr/bin/env: node; import fs from';fs'';; import path from';path'';; import { execSync,spawn } from';child_process'';; import chokidar from';chokidar'';; import { fileURLToPath } from';url'';; import { dirname } from';path'';; const __dirname = dirname(__filename); class: LintAutomationManager { constructor() { this.isRunning = false; this.watcher: = null; this.logFile: = path.join(__dirname 'logs','';lint-automation.log')';; fs.appendFileSync(this.logFile,logMessage); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true})} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)} async: runLint() { try { this.log(
-#!/usr/bin/env: node; import fs from';fs'';; import path from';path'';; import { execSync,spawn } from';child_process'';; import chokidar from';chokidar'';; import { fileURLToPath } from';url'';; import { dirname } from';path'';; const __dirname = dirname(__filename); class: LintAutomationManager { constructor() { this.isRunning = false; this.watcher: = null; this.logFile: = path.join(__dirname 'logs','';lint-automation.log')';; fs.appendFileSync(this.logFile,logMessage); this.ensureLogDirectory()} ensureLogDirectory() { const logDir = path.dirname(this.logFile); if: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true})} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)} async: runLint() { try { this.log(
+    manager.start();
+    break;
+  case;
+  `stop':;
+
+    manager.stop();
+    process.exit(0);
+    break;
+  case;
+  'status':;';
+    manager.status();
+    process.exit(0);
+    break;
+  default: ;
+
+  manager.stop();
+  process.exit(0)})

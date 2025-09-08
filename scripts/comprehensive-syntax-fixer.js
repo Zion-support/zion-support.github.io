@@ -9,34 +9,18 @@ const __dirname = path.dirname(__filename);
 
 class ComprehensiveSyntaxFixer {
   constructor() {
-    this.projectRoot = path.join(__dirname, '..);
-    this.fixedFiles = [];
-    this.errors = [];
-  }
-
-  log(message, details = null) {
-    console.log(`🔧 ${message}`);
-    if (details) {
-      console.log(`   ${details}`);
-    }
-  }
-
-  getAllFiles(dir, extensions = [.ts', '.tsx, .js', '.jsx]) {
-    const files = [];
-    const scanDirectory = (currentDir) => {
-      if (!fs.existsSync(currentDir)) return;
-      
-      const items = fs.readdirSync(currentDir);
-      for (const item of items) {
-        const fullPath = path.join(currentDir, item);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory() && !item.startsWith(.') && item !== 'node_modules) {
-          scanDirectory(fullPath);
-        } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-          files.push(fullPath);
-        }
-      }
+    this.projectRoot = process.cwd()
+    this.scriptsDir = path.join(this.projectRoot, 'scripts')
+    this.fixedCount = 0
+    this.errorCount = 0}
+  async fixAllScripts() {
+    console.log('🔧 Starting comprehensive syntax error fixing...')
+    const files = fs.readdirSync(this.scriptsDir;
+)
+    const jsFiles = files.filter(file => file.endsWith('.js') || file.endsWith('.cjs'))
+    for (const file of jsFiles) {
+      await this.fixScript(file;
+)
     }
     
     scanDirectory(dir);
@@ -117,55 +101,98 @@ class ComprehensiveSyntaxFixer {
     }
   }
 
-  async run() {
-    this.log(Starting comprehensive syntax fixing...');
-    
-    // Get all source files
-    const sourceFiles = this.getAllFiles(path.join(this.projectRoot, 'app));
-    const pageFiles = this.getAllFiles(path.join(this.projectRoot, pages'));
-    const componentFiles = this.getAllFiles(path.join(this.projectRoot, 'components));
-    const allFiles = [...sourceFiles, ...pageFiles, ...componentFiles];
-    
-    this.log(`Found ${allFiles.length} files to check`);
-    
-    // Fix each file
-    let fixedCount = 0;
-    for (const file of allFiles) {
-      if (this.fixFile(file)) {
-        fixedCount++;
-      }
-    }
-    
-    // Also fix specific problematic files
-    const specificFiles = [
-      middleware.ts',
-      'pages/_document.js,
-      pages/space-tech.tsx',
-      'app/services/ai-content-generator/page.tsx'
-    ];
-    
-    for (const file of specificFiles) {
-      const filePath = path.join(this.projectRoot, file);
-      if (fs.existsSync(filePath)) {
-        if (this.fixFile(filePath)) {
-          fixedCount++;
-        }
-      }
-    }
-    
-    this.log(`Fixed ${fixedCount} files`);
-    
-    if (this.errors.length > 0) {
-      this.log(`Encountered ${this.errors.length} errors:`);
-      this.errors.forEach(error => console.log(`   ❌ ${error}`));
-    }
-    
-    return {
-      success: this.errors.length === 0,
-      fixedFiles: this.fixedFiles,
-      errors: this.errors
-    }
-  }
+  fixAllSyntaxIssues(content) {
+    // Fix import statements
+    content = this.fixImportStatements(content;
+)
+    // Fix function calls and parentheses
+    content = this.fixFunctionCalls(content;
+)
+    // Fix object syntax
+    content = this.fixObjectSyntax(content;
+)
+    // Fix string concatenation
+    content = this.fixStringConcatenation(content;
+)
+    // Fix conditional statements
+    content = this.fixConditionalStatements(content;
+)
+    // Fix semicolon issues
+    content = this.fixSemicolonIssues(content;
+)
+    // Fix template literals
+    content = this.fixTemplateLiterals(content;
+)
+    // Fix array syntax
+    content = this.fixArraySyntax(content;
+)
+    return content}
+  fixImportStatements(content) {
+    // Fix broken import statements
+    content = content.replace(/import\s+(\w+)\s+from\s*;\s*['"`]([^'"`]+)['"`]/g, "import $1 from '$2'")
+    content = content.replace(/import\s+(\w+)\s+from\s*,\s*['"`]([^'"`]+)['"`]/g, "import $1 from '$2'")
+    content = content.replace(/import\s+(\w+)\s+from\s*;\s*\n\s*['"`]([^'"`]+)['"`]/g, "import $1 from '$2'")
+    content = content.replace(/import\s+(\w+)\s+from\s*,\s*\n\s*['"`]([^'"`]+)['"`]/g, "import $1 from '$2'")
+    // Fix incomplete import statements
+    content = content.replace(/import\s+(\w+)\s+from\s*$/gm, "import $1 from '$1'")
+    return content}
+  fixFunctionCalls(content) {
+    // Fix missing closing parentheses
+    content = content.replace(/fileURLToPath\(import\.meta\.url\s*;\s*$/gm, 'fileURLToPath(import.meta.url)')
+    content = content.replace(/fileURLToPath\(import\.meta\.url\s*,\s*$/gm, 'fileURLToPath(import.meta.url)')
+    // Fix other function call issues
+    content = content.replace(/(\w+)\s*\(\s*([^)]*)\s*;\s*$/gm, '$1($2)')
+    content = content.replace(/(\w+)\s*\(\s*([^)]*)\s*,\s*$/gm, '$1($2)')
+    return content}
+  fixObjectSyntax(content) {
+    // Fix object syntax issues
+    content = content.replace(/(\w+):\s*([^}]+)\s*;\s*}/g, '$1: $2\n}')
+    content = content.replace(/(\w+):\s*([^}]+)\s*;\s*\)/g, '$1: $2\n)'),
+    content = content.replace(/(\w+):\s*([^}]+)\s*;\s*]/g, '$1: $2\n]'),
+    // Fix object property syntax
+    content = content.replace(/(\w+):\s*([^}]+)\s*;\s*\n/gm, '$1: $2,\n')
+    return content}
+  fixStringConcatenation(content) {
+    // Fix broken string concatenation
+    content = content.replace(/['"`]\s*;\s*\n\s*['"`]/g, "'")
+    content = content.replace(/['"`]\s*,\s*\n\s*['"`]/g, "'")
+    content = content.replace(/['"`]\s*;\s*['"`]/g, "'")
+    content = content.replace(/['"`]\s*,\s*['"`]/g, "'")
+    // Fix string concatenation with variables
+    content = content.replace(/['"`]\s*;\s*\n\s*(\w+)/g, "' + $1")
+    content = content.replace(/['"`]\s*,\s*\n\s*(\w+)/g, "' + $1")
+    return content}
+  fixConditionalStatements(content) {
+    // Fix conditional syntax issues
+    content = content.replace(/\?\s*([^:]+)\s*;\s*$/gm, '? $1 :')
+    content = content.replace(/\?\s*([^:]+)\s*;\s*\n/gm, '? $1 :\n')
+    // Fix ternary operators
+    content = content.replace(/\?\s*([^:]+)\s*;\s*:\s*([^]+)\s*;/g, '? $1 : $2')
+    return content}
+  fixSemicolonIssues(content) {
+    // Fix misplaced semicolons
+    content = content.replace(/;\s*$/gm, '')
+    content = content.replace(/;\s*\n\s*['"`]/g, '\n  \'')
+    content = content.replace(/;\s*\n\s*}/g, '\n}')
+    content = content.replace(/;\s*\n\s*\)/g, '\n)')
+    // Fix missing semicolons where needed
+    content = content.replace(/(\w+)\s*}\s*$/gm, '$1;\n}')
+    content = content.replace(/(\w+)\s*\)\s*$/gm, '$1;\n)')
+    return content}
+  fixTemplateLiterals(content) {
+    // Fix template literal syntax
+    content = content.replace(/`\s*;\s*\n\s*`/g, '`')
+    content = content.replace(/`\s*,\s*\n\s*`/g, '`')
+    content = content.replace(/`\s*;\s*`/g, '`')
+    content = content.replace(/`\s*,\s*`/g, '`')
+    return content}
+  fixArraySyntax(content) {
+    // Fix array syntax issues
+    content = content.replace(/\[\s*;\s*\]/g, '[]')
+    content = content.replace(/\[\s*,\s*\]/g, '[]')
+    content = content.replace(/\[\s*;\s*\n\s*\]/g, '[]')
+    content = content.replace(/\[\s*,\s*\n\s*\]/g, '[]')
+    return content}
 }
 
 // Run if called directly

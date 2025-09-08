@@ -1,22 +1,13 @@
-import React from 'react';
-import Head from 'next/head';
+export default function handler(req, res) {
+  const healthCheck = {
+    uptime: process.uptime(),
+    message: 'OK',
+    timestamp: Date.now(),
+    environment: process.env.NODE_ENV,
+    version: process.env.npm_package_version || '1.0.0' };
 
-export default function Health() {
-  return (
-    <>
-      <Head>
-        <title>Health - Zion Tech Group</title>
-        <meta name="description" content="Health page" />
-      </Head>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">Health</h1>
-        <p className="text-lg mb-4">This page is under construction.</p>
-        <div className="mt-4">
-          <a href="/" className="text-blue-600 hover:underline">
-            ← Back to Home
-          </a>
-        </div>
-      </div>
-    </>
-  );
+  try {
+    res.status(200).json(healthCheck)} catch (error) {
+    healthCheck.message = error.message;
+    res.status(503).json(healthCheck)}
 }

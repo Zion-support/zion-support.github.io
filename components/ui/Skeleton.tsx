@@ -71,53 +71,19 @@ class ErrorBoundary extends React.Component {
 }
 export type SkeletonProps = {;
   className?: string;
-}
+  width?: string | number;
+  height?: string | number;
+  rounded?: boolean}
 
 
 export default function Skeleton(): any ({ className = '' }: SkeletonProps) {;
 
   return (
-    <div className={`relative overflow-hidden rounded-md bg-gray-200/60 dark:bg-white/10 ${className}`}>;
-      <div className="absolute inset-0 -translate-x-full animate-[shimmer_1 && shimmer_1.2s_infinite] bg-gradient-to-r from-transparent via-white/40 dark: via-white/10 to-transparent" />;
-      <style jsx global>{`;
-        @keyframes shimmer {;
-          100% { transform: translateX(100%) }
-        }
-
-
-export const Skeleton: React.FC<SkeletonProps> = ({ ",;
-  className = ",;
-  width,;
-  height,;
-  rounded = false}) => {;
-  const style: React && React.CSSProperties = {}
-
-  ";
-  if (width) style && style.width = typeof width === "number" ? "${width}px" : width,;
-if (height) style && style.height = typeof height === "number" ? "${height}px" : height,;
-
-export const Skeleton: React.FC<SkeletonProps> = ({ "
-  className = "
-  width
-  height
-  rounded = false}) => {
-  const style: React.CSSProperties = {}
-;
-  ";
-  if (width) style && style.width = typeof width === "number" ? "${width}px" : width,;
-if (height) style && style.height = typeof height === "number" ? "${height}px" : height,;
-
-  ";
-  if (width) style && style.width = typeof width === "number" ? "${width}px" : width,;
-if (height) style && style.height = typeof height === "number" ? "${height}px" : height,;
-
-return (";
-    <divclassName="{"animate-pulse" bg-gray-200 ${rounded ? "rounded-full" : "rounded"} ${className}"}"
-      style="{style}">;
-   />;
-  );
-}
-export const CardSkeleton: React.FC = () => (";
+    <div
+      className={`animate-pulse bg-gray-200 ${rounded ? 'rounded-full' : 'rounded'} ${className}`}
+      style={style}
+    />
+  )}
 
   <div className="bg-white rounded-lg shadow-md p-6">",;
 

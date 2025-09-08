@@ -1068,5 +1068,4 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
         </motion.div>
       )}
     </div>
-  );
-};
+  )}

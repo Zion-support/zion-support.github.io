@@ -1,65 +1,4 @@
-import React from 'react';
-import { Link   } from 'react-router-dom';
-import { Cloud, DollarSign, Gauge, CheckCircle, BarChart3, ArrowRight   } from 'lucide-react';
 
-export default function CloudFinOpsOptimizer(...args: any[]): any {
-  const capabilities = [
-    'Multi-cloud cost visibility (AWS, Azure, GCP)',
-    'Idle/underutilized resource detection and rightsizing',
-    'Reserved Instances/Savings Plans recommendations',
-    'Anomaly detection and budget alerts',
-  ];
-
-  const benefits = [
-    'Reduce cloud costs by 40-60%',
-    'Improve resource efficiency by 50%',
-    'Automate 80% of optimization tasks',
-    'Achieve 95% cost predictability',
-    'Enable real-time cost monitoring',
-    'Maximize cloud ROI and performance'
-  ];
-
-  const services = [
-    {
-      icon: Calculator,
-      title: 'Cost Analysis Engine',
-      description: 'Advanced algorithms for comprehensive cost analysis and optimization'
-    },
-    {
-      icon: Rocket,
-      title: 'Automated Actions',
-      description: 'Intelligent automation for rightsizing, scheduling, and optimization'
-    },
-    {
-      icon: BarChart3,
-      title: 'Real-time Dashboards',
-      description: 'Live monitoring and reporting of cloud costs and performance'
-    },
-    {
-      icon: Target,
-      title: 'Goal Setting & Tracking',
-      description: 'Set cost targets and track progress with automated alerts'
-    }
-  ];
-
-  const useCases = [
-    {
-      industry: 'Enterprise',
-      description: 'Optimize large-scale multi-cloud environments'
-    },
-    {
-      industry: 'Startups',
-      description: 'Scale efficiently while controlling costs'
-    },
-    {
-      industry: 'E-commerce',
-      description: 'Balance performance with cost optimization'
-    },
-    {
-      industry: 'SaaS Platforms',
-      description: 'Optimize costs for multi-tenant applications'
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -298,8 +237,13 @@ export default function CloudFinOpsOptimizer(...args: any[]): any {
         </div>
       </section>
     </div>
-  );
-};
+  )}
 
-export default CloudFinOpsOptimizer;
+
+
+
+
+
+
+
 

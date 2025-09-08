@@ -4,137 +4,17 @@ import Layout from '../../components/Layout';
 const MicroSaaSPage: React.FC = () => {
   const services = [
     {
-      title: 'Cloud Cost Guard (FinOps Assistant)',
-      description: 'Intelligent cloud cost management with anomaly detection, rightsizing recommendations, and budget guardrails across AWS, Azure, and GCP.',
-      features: ['Cost Anomaly Detection', 'Auto Rightsizing', 'Budget Alerts', 'Cost Forecasting'],
-      pricing: '$299–$1,499/month',
-      icon: '💰'
-    },
-    {
-      title: 'LLM Evaluation & Safety Suite',
-      description: 'Comprehensive evaluation platform for large language models with prompt testing, bias detection, and safety guardrails.',
-      features: ['Prompt Evaluation', 'Bias Detection', 'Jailbreak Testing', 'Safety Policies'],
-      pricing: '$799–$3,500/month',
-      icon: '🤖'
-    },
-    {
-      title: 'Customer Feedback & NPS Micro-App',
-      description: 'Embedded customer feedback system with automated surveys, sentiment analysis, and intelligent issue routing.',
-      features: ['Embedded Surveys', 'Sentiment Analysis', 'NPS Tracking', 'Issue Routing'],
-      pricing: '$149–$799/month',
-      icon: '📊'
-    },
-    {
-      title: 'API Rate Limiting & Analytics',
-      description: 'Intelligent API management with rate limiting, usage analytics, and performance monitoring for optimal API performance.',
-      features: ['Rate Limiting', 'Usage Analytics', 'Performance Monitoring', 'Cost Optimization'],
-      pricing: '$199–$999/month',
-      icon: '⚡'
-    },
-    {
-      title: 'Social Media Scheduler',
-      description: 'AI-powered social media management with content scheduling, analytics, and engagement optimization across platforms.',
-      features: ['Content Scheduling', 'Analytics Dashboard', 'Engagement Tracking', 'AI Content Suggestions'],
-      pricing: '$99–$499/month',
-      icon: '📱'
-    },
-    {
-      title: 'Email Marketing Automation',
-      description: 'Advanced email marketing platform with segmentation, automation workflows, and detailed analytics for better engagement.',
-      features: ['Email Automation', 'Segmentation', 'A/B Testing', 'Analytics'],
-      pricing: '$149–$699/month',
-      icon: '📧'
-    },
-    {
-      title: 'Event Management Dashboard',
-      description: 'Comprehensive event management platform with ticket sales, attendee management, scheduling, and real-time analytics.',
-      features: ['Ticket Management', 'Attendee Tracking', 'Event Scheduling', 'Real-time Analytics'],
-      pricing: '$199–$999/month',
-      icon: '🎪'
-    },
-    {
-      title: 'Customer Support & Helpdesk Platform',
-      description: 'Complete customer support solution with ticket management, knowledge base, live chat, and AI-powered chatbots.',
-      features: ['Ticket Management', 'Knowledge Base', 'Live Chat', 'AI Chatbots'],
-      pricing: '$99–$599/month',
-      icon: '🎧'
-    },
-    {
-      title: 'Project Management & Collaboration',
-      description: 'Streamlined project management tool with task tracking, team collaboration, time tracking, and resource management.',
-      features: ['Task Management', 'Team Collaboration', 'Time Tracking', 'Resource Planning'],
-      pricing: '$79–$399/month',
-      icon: '📋'
-    },
-    {
-      title: 'Invoice & Billing Management',
-      description: 'Automated invoicing and billing system with payment processing, expense tracking, and financial reporting.',
-      features: ['Automated Invoicing', 'Payment Processing', 'Expense Tracking', 'Financial Reports'],
-      pricing: '$49–$299/month',
-      icon: '💰'
-    },
-    {
-      title: 'Social Media Analytics & Management',
-      description: 'Comprehensive social media management platform with scheduling, analytics, engagement tracking, and competitor analysis.',
-      features: ['Content Scheduling', 'Analytics Dashboard', 'Engagement Tracking', 'Competitor Analysis'],
-      pricing: '$99–$499/month',
-      icon: '📱'
-    },
-    {
-      title: 'Lead Generation & CRM',
-      description: 'Intelligent lead generation and customer relationship management system with automated follow-ups and sales pipeline tracking.',
-      features: ['Lead Capture', 'Automated Follow-ups', 'Sales Pipeline', 'Contact Management'],
-      pricing: '$149–$799/month',
-      icon: '🎯'
-    },
-    {
-      title: 'Inventory & Stock Management',
-      description: 'Smart inventory management system with real-time tracking, automated reordering, and supply chain optimization.',
-      features: ['Real-time Tracking', 'Automated Reordering', 'Supply Chain Analytics', 'Cost Optimization'],
-      pricing: '$199–$999/month',
-      icon: '📦'
-    },
-    {
-      title: 'Employee Time & Attendance',
-      description: 'Comprehensive time tracking and attendance management system with payroll integration and productivity analytics.',
-      features: ['Time Tracking', 'Attendance Management', 'Payroll Integration', 'Productivity Analytics'],
-      pricing: '$59–$299/month',
-      icon: '⏰'
-    },
-    {
-      title: 'Website Performance Monitor',
-      description: 'Advanced website monitoring and performance optimization tool with uptime tracking, speed analysis, and SEO insights.',
-      features: ['Uptime Monitoring', 'Speed Analysis', 'SEO Insights', 'Performance Alerts'],
-      pricing: '$29–$199/month',
-      icon: '📊'
-    }
-  ];
-
-  const developmentProcess = [
-    {
-      step: '01',
-      title: 'Idea Validation',
-      description: 'Market research, competitor analysis, and user interviews to validate your SaaS concept and identify market opportunities.'
-    },
-    {
-      step: '02',
-      title: 'MVP Development',
-      description: 'Rapid development of a minimum viable product with core features to test market fit and gather user feedback.'
-    },
-    {
-      step: '03',
-      title: 'Payment Integration',
-      description: 'Seamless integration of payment systems, subscription management, and billing automation for recurring revenue.'
-    },
-    {
-      step: '04',
-      title: 'Analytics & Monitoring',
-      description: 'Comprehensive analytics dashboard, user behavior tracking, and performance monitoring for data-driven decisions.'
-    },
-    {
-      step: '05',
-      title: 'Scaling & Optimization',
-      description: 'Infrastructure scaling, performance optimization, and feature enhancements based on user feedback and growth metrics.'
+      icon: <Zap className="w-8 h-8" />, title: 'Lightning Fast Setup',
+      description: 'Get up and running in minutes, not months. Our micro SaaS solutions are designed for quick deployment.'
+    }, {
+      icon: <Users className="w-8 h-8" />, title: 'Scalable Solutions',
+      description: 'Start small and grow as your business expands. Our solutions scale with your needs.'
+    }, {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Enterprise Security', description: 'Bank-level security with SOC 2 compliance, ensuring your data is always protected.'
+    }, {
+      icon: <Star className="w-8 h-8" />,
+      title: 'Proven Results', description: 'Track record of successful implementations with measurable ROI for our clients.'
     }
   ];
 
@@ -266,8 +146,31 @@ const MicroSaaSPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
-};
+
+      {/* CTA Section */}
+      <section className="py-20 bg-blue-900 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+          <p className="text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
+            Let&apos;s discuss how our micro SaaS solutions can help streamline your operations ''
+            and drive growth for your business.
+          </p>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <Link href="/contact">
+              <span className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
+                Schedule Consultation
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </span>
+            </Link>
+            <Link href="tel:+13024640950">
+              <span className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer">
+                Call +1 302 464 0950
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+    </MainLayout>
+  )};
 
 export default MicroSaaSPage;

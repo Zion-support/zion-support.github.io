@@ -1,25 +1,28 @@
-var __rest = (this && this.__rest) || function (s, e) {
-    var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
-        }
-    return t;
-};
-import { jsx as _jsx } from "react/jsx-runtime";
 import React from 'react';
-import { cn } from '@/lib/utils';
-const Badge = React.forwardRef((_a, ref) => {
-    var { className, variant = 'default' } = _a, props = __rest(_a, ["className", "variant"]);
-    return (_jsx("div", Object.assign({ ref: ref, className: cn('inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2', {
-            'border-transparent bg-primary text-primary-foreground hover:bg-primary/80': variant === 'default',
-            'border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80': variant === 'secondary',
-            'border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80': variant === 'destructive',
-            'text-foreground': variant === 'outline',
-        }, className) }, props)));
-});
-Badge.displayName = 'Badge';
-export { Badge };
+
+interface BadgeProps {
+  children: React.ReactNode;
+  variant?: 'default' | 'secondary' | 'destructive' | 'outline';
+  className?: string}
+
+export const Badge: React.FC<BadgeProps> = ({ 
+  children, 
+  variant = 'default', 
+  className = '' 
+}) => {
+  const baseClasses = 'inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium';
+  
+  const variantClasses = {
+    default: 'bg-blue-100 text-blue-800',
+    secondary: 'bg-gray-100 text-gray-800',
+    destructive: 'bg-red-100 text-red-800',
+    outline: 'border border-gray-300 text-gray-700'
+  };
+
+  return (
+    <span className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
+      {children}
+    </span>
+  )};
+
+export default Badge;

@@ -2,21 +2,79 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
-import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react';
-
-export default function EmergingTechPage() {
-  const features = [
-    'Blockchain, tokenization, and smart contract audits',
-    'IoT and edge orchestration with zero-trust patterns',
-    '5G private networks and campus connectivity',
-    'Metaverse and spatial computing experimentation',
+export default function EmergingTech() {
+  const technologies = [
+    {
+      icon: Brain,
+      title: 'Artificial Intelligence',
+      description: 'Advanced AI solutions including machine learning, deep learning, and neural networks for intelligent automation.',
+      features: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+    }, {
+      icon: Lock,
+      title: 'Blockchain & Web3',
+      description: 'Decentralized applications, smart contracts, and blockchain solutions for secure, transparent operations.',
+      features: ['Smart Contracts', 'DeFi Solutions', 'NFT Platforms', 'Cryptocurrency Integration']
+    }, {
+      icon: Globe,
+      title: 'Internet of Things (IoT)',
+      description: 'Connected devices and IoT ecosystems for smart homes, cities, and industrial automation.',
+      features: ['Device Management', 'Data Analytics', 'Remote Monitoring', 'Automation Systems']
+    }, {
+      icon: Eye,
+      title: 'Augmented & Virtual Reality',
+      description: 'Immersive AR/VR experiences for training, entertainment, and business applications.',
+      features: ['AR Applications', 'VR Experiences', 'Mixed Reality', '3D Visualization']
+    }, {
+      icon: Zap,
+      title: 'Edge Computing',
+      description: 'Distributed computing solutions that bring processing power closer to data sources.',
+      features: ['Real-time Processing', 'Reduced Latency', 'Bandwidth Optimization', 'Offline Capabilities']
+    }, {
+      icon: Database,
+      title: 'Quantum Computing',
+      description: 'Next-generation computing solutions leveraging quantum mechanics for complex problem solving.',
+      features: ['Quantum Algorithms', 'Optimization Problems', 'Cryptography', 'Simulation']
+    }
   ];
 
-  const solutions = [
-    { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' },
-    { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' },
-    { name: '5G Private Networks', href: '/5g-private-network-solutions' },
-    { name: 'Metaverse AI Platform', href: '/metaverse-ai-development-platform' },
+  const benefits = [
+    {
+      icon: Rocket,
+      title: 'Competitive Advantage',
+      description: 'Stay ahead of the competition by adopting cutting-edge technologies before your competitors.'
+    }, {
+      icon: Zap,
+      title: 'Innovation Leadership',
+      description: 'Position your company as an innovation leader in your industry with emerging technology solutions.'
+    }, {
+      icon: Globe,
+      title: 'Future-Proof Solutions',
+      description: 'Build solutions that are designed to evolve and adapt to future technological advancements.'
+    }, {
+      icon: Shield,
+      title: 'Risk Mitigation',
+      description: 'Early adoption of emerging technologies helps identify and mitigate potential risks and challenges.'
+    }
+  ];
+
+  const applications = [
+    {
+      industry: 'Healthcare',
+      technologies: ['AI Diagnostics', 'IoT Monitoring', 'Blockchain Records', 'AR Surgery'],
+      description: 'Revolutionary healthcare solutions improving patient outcomes and operational efficiency.'
+    }, {
+      industry: 'Finance',
+      technologies: ['Blockchain Payments', 'AI Fraud Detection', 'Quantum Security', 'IoT Banking'],
+      description: 'Next-generation financial services with enhanced security and user experience.'
+    }, {
+      industry: 'Manufacturing',
+      technologies: ['IoT Sensors', 'AI Quality Control', 'AR Training', 'Edge Computing'],
+      description: 'Smart manufacturing solutions for increased productivity and quality control.'
+    }, {
+      industry: 'Retail',
+      technologies: ['AR Shopping', 'AI Personalization', 'IoT Inventory', 'Blockchain Supply Chain'],
+      description: 'Immersive retail experiences with intelligent automation and supply chain transparency.'
+    }
   ];
 
   return (
@@ -62,9 +120,10 @@ export default function EmergingTechPage() {
                 </a>
               ))}
             </div>
-          </section>
-        </div>
-      </div>
-    </Layout>
-  );
-}
+          </div>
+        </section>
+      </main>
+
+      <SimpleFooter />
+    </>
+  )}

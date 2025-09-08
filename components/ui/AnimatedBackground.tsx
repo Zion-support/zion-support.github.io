@@ -1,4 +1,11 @@
-export default function AnimatedBackground() {
+import React from 'react';
+import { ReactNode } from "react";
+
+interface AnimatedBackgroundProps {
+  children?: ReactNode;
+  className?: string}
+
+export default function AnimatedBackground({ children, className = '' }: AnimatedBackgroundProps) {
   return (
     <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
       {/* Gradient wash */}
@@ -17,5 +24,4 @@ export default function AnimatedBackground() {
       <div className="absolute top-1/3 -left-24 h-1 w-1/2 rounded-full bg-white/10 animate-particle-drift" />
       <div className="absolute top-2/3 -left-10 h-1 w-1/3 rounded-full bg-white/10 animate-particle-drift" />
     </div>
-  );
-}
+  )}

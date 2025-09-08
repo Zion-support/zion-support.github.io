@@ -1,2 +1,4 @@
-:src.pages.disabled/ComprehensivePricing2027.test.tsx
-describe ('ComprehensivePricing2027', () => {}; '; it ('renders without crashing', () => {}; render (<ComprehensivePricing2027 />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<ComprehensivePricing2027 />) ;
+
+
+
+

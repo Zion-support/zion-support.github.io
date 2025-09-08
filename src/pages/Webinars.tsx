@@ -1,182 +1,40 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
 
 
-import React, { useState } from 'react';
-import { motion   } from 'framer-motion';
-import { SEO   } from '../components/SEO';
-import { Video, 
-  Calendar, 
-  Clock, 
-  Users, 
-  Search,
-  Filter,
-  Play,
-  ExternalLink,
-  Download,
-  BookOpen,
-  Brain,
-  Shield,
-  Cloud,
-  Rocket,
-  Heart,
-  Globe,
-  Star,
-  TrendingUp,
-  Award,
-  Zap,
-  Clock3,
-  MapPin,
-  Mail,
-  Phone
-  } from 'lucide-react';
+export default function Webinars() {}
+  const upcomingWebinars = [
 
-export default function Webinars(...args: any[]): any {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [filterType, setFilterType] = useState('all');
+      description: "Learn how AI is revolutionizing business operations and discover practical implementation strategies.", date: "2025-01-15",
+      time: "2:00 PM EST", duration: "60 minutes",
+      speaker: "Dr. Sarah Chen", attendees: 1250,
 
-  const categories = [
-    { id: 'all', name: 'All Categories', icon: <Video className="w-5 h-5" />, count: 0 },
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 6 },
-    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 4 },
-    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 3 },
-    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 5 },
-    { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 2 },
-    { id: 'strategy', name: 'Digital Strategy', icon: <Target className="w-5 h-5" />, count: 4 }
-  ];
+      featured: true
 
-  const filterTypes = [
-    { id: 'all', name: 'All Webinars', count: 0 },
-    { id: 'upcoming', name: 'Upcoming', count: 0 },
-    { id: 'on-demand', name: 'On-Demand', count: 0 },
-    { id: 'live', name: 'Live Now', count: 0 }
-  ];
+      title: "Quantum Computing: The Future is Now", description: "Explore the latest developments in quantum computing and their real-world applications.",
+      date: "2025-01-20", time: "3:00 PM EST",
+      duration: "45 minutes", speaker: "Prof. Michael Rodriguez",
+      attendees: 890, featured: true
+    }, { id: 3, title: "Micro SaaS Success Stories",
+      description: "Hear from successful micro SaaS entrepreneurs and learn their strategies for growth.", date: "2025-01-25",
+      time: "1:00 PM EST", duration: "50 minutes",
+      speaker: "Alex Thompson", attendees: 567,
 
-  const webinars = [
-    {
-      title: "AI-Powered Cybersecurity: Next-Gen Threat Detection",
-      category: "Cybersecurity",
-      date: "January 20, 2025",
-      duration: "90 minutes",
-      speaker: "Dr. Sarah Chen",
-      description: "Learn about advanced AI algorithms for detecting and preventing sophisticated cyber threats in real-time."
-    },
-    {
-      title: "Cloud-Native Architecture: Best Practices for 2025",
-      category: "Cloud Computing",
-      date: "January 25, 2025",
-      duration: "75 minutes",
-      speaker: "Marcus Rodriguez",
-      description: "Discover the latest patterns and practices for building scalable, resilient cloud-native applications."
-    },
-    {
-      title: "Digital Transformation: From Strategy to Execution",
-      category: "Digital Strategy",
-      date: "February 1, 2025",
-      duration: "60 minutes",
-      speaker: "Lisa Thompson",
-      description: "Practical insights on implementing successful digital transformation initiatives across your organization."
-    },
-    {
-      title: "Quantum Computing: Business Applications & Opportunities",
-      category: "Emerging Tech",
-      date: "February 8, 2025",
-      duration: "120 minutes",
-      speaker: "Dr. James Wilson",
-      description: "Explore how quantum computing will revolutionize industries and create new business opportunities."
-    },
-    {
-      title: "DevOps Excellence: Automation & Continuous Delivery",
-      category: "DevOps",
-      date: "February 15, 2025",
-      duration: "90 minutes",
-      speaker: "David Kim",
-      description: "Master the art of DevOps automation and implement robust continuous delivery pipelines."
-    },
-    {
-      title: "Data Privacy & Compliance in the AI Era",
-      category: "Compliance",
-      date: "February 22, 2025",
-      duration: "75 minutes",
-      speaker: "Alex Thompson",
-      description: "Navigate the complex landscape of data privacy regulations while leveraging AI technologies."
+      featured: false
     }
   ];
 
   const pastWebinars = [
-    {
-      id: any5,
-      title: 'The Future of AI in Healthcare: Opportunities and Challenges',
-      category: 'healthcare-tech',
-      speaker: 'Dr. Emily Watson, VP of Healthcare Technology',
-      date: '2024-01-20',
-      time: '14:00 EST',
-      duration: '75 minutes',
-      attendees: 520,
-      maxAttendees: 500,
-      summary: 'Comprehensive overview of AI applications in healthcare, including ethical considerations and regulatory compliance.',
-      tags: ['Healthcare AI', 'Ethics', 'Regulatory Compliance', 'Medical Technology'],
-      registrationUrl: null,
-      watchUrl: '/webinars/ai-healthcare-future-2024/watch',
-      isLive: false,
-      recordingUrl: '/webinars/ai-healthcare-future-2024/recording',
-      slidesUrl: '/webinars/ai-healthcare-future-2024/slides'
-    },
-    {
-      id: 6,
-      title: 'Quantum Computing: Preparing Your Organization for the Future',
-      category: 'quantum-computing',
-      speaker: 'Dr. Sarah Chen, Chief AI Scientist',
-      date: '2024-01-15',
-      time: '15:00 EST',
-      duration: '90 minutes',
-      attendees: 480,
-      maxAttendees: 450,
-      summary: 'Understanding quantum computing fundamentals and preparing organizations for quantum advantage.',
-      tags: ['Quantum Computing', 'Future Technology', 'Innovation', 'Strategic Planning'],
-      registrationUrl: null,
-      watchUrl: '/webinars/quantum-computing-future-2024/watch',
-      isLive: false,
-      recordingUrl: '/webinars/quantum-computing-future-2024/recording',
-      slidesUrl: '/webinars/quantum-computing-future-2024/slides'
-    },
-    {
-      id: 7,
-      title: 'Sustainable Technology: Green IT Solutions for Enterprise',
-      category: 'sustainability',
-      speaker: 'Priya Patel, Head of Data Science',
-      date: '2024-01-10',
-      time: '13:30 EST',
-      duration: '60 minutes',
-      attendees: 320,
-      maxAttendees: 300,
-      summary: 'Implementing sustainable technology practices to reduce environmental impact and operational costs.',
-      tags: ['Sustainability', 'Green IT', 'Environmental Impact', 'Cost Reduction'],
-      registrationUrl: null,
-      watchUrl: '/webinars/sustainable-technology-enterprise-2024/watch',
-      isLive: false,
-      recordingUrl: '/webinars/sustainable-technology-enterprise-2024/recording',
-      slidesUrl: '/webinars/sustainable-technology-enterprise-2024/slides'
-    },
-    {
-      id: 8,
-      title: 'Edge Computing and IoT: Building the Connected Enterprise',
-      category: 'digital-transformation',
-      speaker: 'Alex Thompson, Director of Cloud Operations',
-      date: '2024-01-05',
-      time: '14:00 EST',
-      duration: '80 minutes',
-      attendees: 410,
-      maxAttendees: 400,
-      summary: 'Strategies for implementing edge computing and IoT solutions in enterprise environments.',
-      tags: ['Edge Computing', 'IoT', 'Enterprise', 'Digital Transformation'],
-      registrationUrl: null,
-      watchUrl: '/webinars/edge-computing-iot-enterprise-2024/watch',
-      isLive: false,
-      recordingUrl: '/webinars/edge-computing-iot-enterprise-2024/recording',
-      slidesUrl: '/webinars/edge-computing-iot-enterprise-2024/slides'
+
+      description: "Essential cybersecurity practices for modern applications and infrastructure.", date: "2025-01-10",
+      duration: "55 minutes", speaker: "Lisa Park",
+      views: 2340, rating: 4.8
+    }, { id: 5, title: "Digital Transformation Strategies",
+      description: "Comprehensive guide to successful digital transformation initiatives.", date: "2025-01-05",
+      duration: "65 minutes", speaker: "David Kumar",
+      views: 1890, rating: 4.7
+
     }
   ];
 
@@ -500,11 +358,14 @@ export default function Webinars(...args: any[]): any {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center py-20"
-            >
-              <div className="w-20 h-20 mx-auto mb-6 bg-slate-700/50 rounded-full flex items-center justify-center">
-                <Search className="w-10 h-10 text-slate-400" />
+
+              </h1>
+              <p className=&quot;text-xl text-gray-300 mb-8&quot;>
+                Join our expert-led webinars and learn from industry leaders about 
+                the latest trends in AI, quantum computing, and emerging technologies&quot;
+              </p>
+              <div className=&quot;flex items-center justify-center&quot;>&quot;"
+                <Video className=&quot;w-16 h-16 text-blue-400&quot; />&quot;
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">No webinars found</h3>
               <p className="text-slate-400">Try adjusting your filters or search terms</p>
@@ -548,30 +409,100 @@ export default function Webinars(...args: any[]): any {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto"
-          >
-            <h2 className="text-3xl font-bold mb-6 text-white">Interested in Speaking?</h2>
-            <p className="text-slate-300 mb-8">
-              Are you an industry expert interested in sharing your knowledge? 
-              We're always looking for speakers to join our webinar series.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="text-center">
-                <Mail className="w-8 h-8 mx-auto mb-3 text-cyan-400" />
-                <h3 className="font-semibold text-white mb-2">Email Us</h3>
-                <a 
-                  href={`mailto:${contactInfo.email}`}
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
-                >
-                  {contactInfo.email}
+        {/* Upcoming Webinars */}
+        <section className=&quot;py-16&quot;>&quot;"
+          <div className=&quot;container mx-auto px-4&quot;>&quot;"
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+
+              className="text-center mb-12"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">Upcoming Webinars</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Don&apos;t miss these exclusive sessions with industry experts'
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+              {upcomingWebinars.map((webinar, index) => (
+
+                <motion.div
+
+                  key={webinar.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+
+                    )}
+                  </div>;
+
+
+                  </div>
+
+                  <button className=&quot;w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hove,r:to-purple-700 transition-all duration-200&quot;>
+                    Register Now&quot;
+                  </button>
+                </motion.div>
+
+              ))}
+            </div>;
+          </div>;
+        </section>;
+
+        {/* Past Webinars */}
+
+              </p>
+            </motion.div>
+
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
+              {pastWebinars.map((webinar, index) => (&quot}
+                <motion.div
+
+                  key={webinar.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+
+                  </div>
+
+                  <div className=&quot;flex gap-2&quot;>&quot;"
+                    <button className=&quot;flex-1 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200&quot;>&quot;"
+                      <Play className=&quot;w-4 h-4 inline mr-2&quot; />
+                      Watch Now&quot;
+                    </button>
+                    <button className=&quot;px-4 py-2 border border-slate-600 text-gray-300 rounded-lg hove,r:bg-slate-700 transition-colors&quot;>&quot;"
+                      <Download className=&quot;w-4 h-4&quot; />&quot;
+                    </button>
+                  </div>
+                </motion.div>
+
+              ))}
+            </div>;
+          </div>;
+        </section>;
+
+        {/* CTA Section */}
+
+              </h2>
+              <p className=&quot;text-xl text-gray-300 mb-8&quot;>
+                Subscribe to our newsletter to get notified about upcoming webinars 
+                and exclusive technology insights.&quot;
+              </p>
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>&quot;"
+                <a
+                  href=&quot;/contact&quot;
+                  className=&quot;inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:scale-105&quot;
+                >&quot;
+                  <Video className=&quot;w-5 h-5 mr-2&quot; />
+                  Subscribe to Updates&quot;
+                </a>
+                <a
+                  href=&quot;/training&quot;
+                  className=&quot;inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hove,r:text-white transition-all duration-200&quot;
+                >&quot;
+                  <ArrowRight className=&quot;w-5 h-5 mr-2&quot; />
+                  View Training Programs&quot;
                 </a>
               </div>
               
@@ -663,30 +594,13 @@ export default function Webinars(...args: any[]): any {
               ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
+</>
 
-      {/* Newsletter Signup */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">Get Early Access</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Be the first to know about upcoming webinars, exclusive content, and special events.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
-            />
-            <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
-              Subscribe
-            </button>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
+  )}
 
-export default Webinars;
+
+
+
+

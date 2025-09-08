@@ -1,93 +1,70 @@
 import React from 'react';
-import Head from 'next/head';
-import Section from '../components/ui/Section';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
 
+
+
+
+export default function CaseStudies() {
   const caseStudies = [
-    {
-      title: 'E-commerce Platform Optimization',
-      company: 'TechRetail Inc.',
-      description: 'Implemented autonomous AI systems that increased conversion rates by 45% and reduced cart abandonment by 60%.',
+
+      image: '/api/placeholder/600/400'
+    }, {
+      title: 'AI-Powered Customer Service Revolution',
+      client: 'Leading E-commerce Platform', industry: 'E-commerce',
+      challenge: 'High customer service volume and response times', solution: 'AI chatbot implementation with natural language processing',
       results: [
-        '45% increase in conversion rates',
-        '60% reduction in cart abandonment',
-        '3x faster page load times',
-        '99.9% uptime maintained'
-      ],
-      category: 'E-commerce',
-      image: '/api/placeholder/400/300',
-      color: 'from-blue-500 to-blue-600'
-    },
-    {
-      title: 'Financial Services Automation',
-      company: 'GlobalBank',
-      description: 'Deployed intelligent automation systems that processed 10x more transactions while maintaining 100% accuracy.',
+
+      image: '/api/placeholder/600/400'
+    }, {
+      title: 'Cybersecurity Transformation',
+      client: 'Financial Services Firm', industry: 'Financial Services',
+      challenge: 'Advanced threat protection and compliance', solution: 'Comprehensive security framework with AI monitoring',
       results: [
-        '10x increase in transaction processing',
-        '100% accuracy maintained',
-        '24/7 autonomous operation',
-        '50% reduction in operational costs'
-      ],
-      category: 'Financial Services',
-      image: '/api/placeholder/400/300',
-      color: 'from-green-500 to-green-600'
-    },
-    {
-      title: 'Healthcare Data Management',
-      company: 'MedTech Solutions',
-      description: 'Built autonomous data processing systems that improved patient care efficiency by 35% and reduced errors by 90%.',
+
+      image: '/api/placeholder/600/400'
+    }, {
+      title: 'Data Analytics Platform Development',
+      client: 'Healthcare Provider Network', industry: 'Healthcare',
+      challenge: 'Patient data analysis and predictive insights', solution: 'Custom analytics platform with machine learning',
       results: [
-        '35% improvement in care efficiency',
-        '90% reduction in data errors',
-        'Real-time patient monitoring',
-        'HIPAA compliance automation'
-      ],
-      category: 'Healthcare',
-      image: '/api/placeholder/400/300',
-      color: 'from-purple-500 to-purple-600'
-    },
-    {
-      title: 'Manufacturing Process Optimization',
-      company: 'AutoManufacturing Co.',
-      description: 'Implemented AI-powered monitoring systems that increased production efficiency by 40% and reduced downtime by 75%.',
+
+      image: '/api/placeholder/600/400'
+    }, {
+      title: 'Micro SaaS Development',
+      client: 'Startup Technology Company', industry: 'Technology',
+      challenge: 'Rapid product development and market entry', solution: 'Custom micro SaaS platform with scalable architecture',
       results: [
-        '40% increase in production efficiency',
-        '75% reduction in downtime',
-        'Predictive maintenance automation',
-        'Real-time quality control'
-      ],
-      category: 'Manufacturing',
-      image: '/api/placeholder/400/300',
-      color: 'from-orange-500 to-orange-600'
-    },
-    {
-      title: 'Content Generation Platform',
-      company: 'Digital Media Corp.',
-      description: 'Created autonomous content generation systems that produce 1000+ articles daily with 95% accuracy and SEO optimization.',
+
+      image: '/api/placeholder/600/400'
+    }, {
+      title: 'Digital Transformation Initiative',
+      client: 'Traditional Retail Chain', industry: 'Retail',
+      challenge: 'Digital modernization and omnichannel experience', solution: 'End-to-end digital transformation with AI integration',
       results: [
-        '1000+ articles generated daily',
-        '95% content accuracy',
-        'Automatic SEO optimization',
-        '24/7 content production'
-      ],
-      category: 'Digital Media',
-      image: '/api/placeholder/400/300',
-      color: 'from-red-500 to-red-600'
-    },
+
+      image: '/api/placeholder/600/400'
+
+    }
+  ];
+
+  const industries = [
+
+  ];
+
+  const testimonials = [
     {
-      title: 'Cloud Infrastructure Scaling',
-      company: 'CloudScale Tech',
-      description: 'Built self-scaling cloud infrastructure that automatically handles traffic spikes and maintains 99.99% uptime.',
-      results: [
-        'Automatic traffic scaling',
-        '99.99% uptime maintained',
-        'Zero-downtime deployments',
-        'Cost optimization automation'
-      ],
-      category: 'Cloud Infrastructure',
-      image: '/api/placeholder/400/300',
-      color: 'from-indigo-500 to-indigo-600'
+      quote: "Zion Tech Group transformed our entire IT infrastructure. The results exceeded our expectations, and we&apos;ve seen significant improvements in efficiency and cost savings.",
+
+      author: "Sarah Johnson",
+      title: "CTO", company: "Manufacturing Corp",
+      rating: 5
+    }, {
+      quote: "Their AI solutions revolutionized our customer service operations. We now provide 24/7 support with higher satisfaction rates than ever before.",
+      author: "Michael Chen", title: "VP of Operations",
+      company: "E-commerce Platform", rating: 5
+    }, {
+      quote: "The cybersecurity implementation was flawless. We feel confident knowing our data is protected by the most advanced security measures available.", author: "Dr. Emily Rodriguez",
+      title: "Chief Information Officer", company: "Healthcare Network",
+      rating: 5
     }
   ];
 
@@ -103,82 +80,17 @@ import Button from '../components/ui/Button';
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
-      {/* Hero Section */}
-      <Section className="bg-gradient-to-br from-gray-50 to-blue-50" spacing="xl">
-        <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-black mb-8 gradient-text">
-            Success Stories
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Real-world results from our autonomous technology implementations across diverse industries
-          </p>
-        </div>
-      </Section>
 
-      {/* Case Studies Grid */}
-      <Section className="bg-white" spacing="xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Featured Case Studies
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover how our autonomous solutions have delivered measurable business impact
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {caseStudies.map((study, index) => (
-            <Card key={index} className="group hover:shadow-2xl transition-all duration-300">
-              <div className="mb-6">
-                <div className={`w-full h-48 bg-gradient-to-br ${study.color} rounded-lg mb-4 flex items-center justify-center`}>
-                  <div className="text-white text-center">
-                    <div className="text-2xl font-bold mb-2">{study.company}</div>
-                    <div className="text-sm opacity-90">{study.category}</div>
+          </div>
+        </section>
+
+
                   </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{industry.name}</h3>
+                  <p className="text-blue-600 font-semibold">{industry.count} Projects</p>
                 </div>
-                <div className="inline-block bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium mb-3">
-                  {study.category}
-                </div>
-              </div>
-              
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{study.title}</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">{study.description}</p>
-              
-              <div className="space-y-3 mb-6">
-                <h4 className="font-semibold text-gray-900">Key Results:</h4>
-                <ul className="space-y-2">
-                  {study.results.map((result, resultIndex) => (
-                    <li key={resultIndex} className="flex items-center text-sm text-gray-600">
-                      <span className={`w-2 h-2 bg-gradient-to-r ${study.color} rounded-full mr-3`}></span>
-                      {result}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              
-              <Button variant="outline" size="sm" className="w-full">
-                View Full Case Study
-              </Button>
-            </Card>
-          ))}
-        </div>
-      </Section>
-
-      {/* Statistics Section */}
-      <Section className="bg-gray-50" spacing="xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Impact by the Numbers
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Quantified results from our autonomous technology implementations
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">45%</div>
-            <div className="text-sm text-gray-600">Average Conversion Increase</div>
+              ))}
+            </div>
           </div>
           <div className="text-center">
             <div className="text-4xl md:text-5xl font-bold text-purple-600 mb-2">10x</div>
@@ -304,25 +216,73 @@ import Button from '../components/ui/Button';
   );
 };
 
-<<<<<<< HEAD
-export default CaseStudies;
-=======
-export default function CaseStudiesPage() {
-	return (
-  {/* Empty JSX fragment */}
-			{/* Hero Section */}
-			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="mx-auto max-w-2xl text-center">
-						<h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-							Case Studies
-						</h1>
-						<p className="mt-6 text-lg leading-8 text-gray-600">
-							Real results from real clients. See how we've transformed businesses across industries.
-						</p>
-					</div>
-				</div>
-			</section>
+
+            </div>
+            
+            <div className="space-y-16">
+              {caseStudies.map((study, index) => (
+                <div key={index} className={`flex flex-col lg: flex-row gap-8 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+                  <div className="lg:w-1/2">
+                    <div className="bg-gray-200 rounded-xl h-80 flex items-center justify-center">
+                      <study.icon className="w-24 h-24 text-gray-400" />
+                    </div>
+                  </div>
+                  <div className="lg:w-1/2 flex flex-col justify-center">
+                    <div className="flex items-center space-x-4 mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                        <study.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
+                          {study.industry}
+                        </span>
+                      </div>
+                    </div>
+                    <h3 className="text-3xl font-bold text-gray-900 mb-4">{study.title}</h3>
+                    <p className="text-lg text-gray-600 mb-6 font-semibold">{study.client}</p>
+                    
+                    <div className="mb-6">
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">Challenge:</h4>
+                      <p className="text-gray-600 mb-4">{study.challenge}</p>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">Solution:</h4>
+                      <p className="text-gray-600 mb-4">{study.solution}</p>
+                    </div>
+                    
+                    <div className="mb-6">
+                      <h4 className="text-lg font-semibold text-gray-900 mb-3">Results:</h4>
+                      <ul className="space-y-2">
+                        {study.results.map((result, resultIndex) => (
+                          <li key={resultIndex} className="flex items-center">
+                            <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                            <span className="text-gray-700">{result}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <div className="flex items-center space-x-6 text-sm text-gray-500 mb-6">
+                      <div className="flex items-center">
+                        <Clock className="w-4 h-4 mr-1" />
+                        {study.duration}
+                      </div>
+                      <div className="flex items-center">
+                        <Users className="w-4 h-4 mr-1" />
+                        {study.team}
+                      </div>
+                    </div>
+                    
+                    <Link href="/contact">
+                      <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-300">
+                        Start Similar Project
+                        <ArrowRight className="w-4 h-4 ml-2 inline" />
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
 			{/* Industry Filter */}
 			<section className="py-12 border-b border-gray-200">

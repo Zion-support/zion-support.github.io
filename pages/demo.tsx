@@ -1,20 +1,9 @@
-import React, { useState } from 'react'
-import dynamic from 'next/dynamic'
-import Head from 'next/head'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { 
-  Brain, 
-  Server, 
-  Zap, 
-  Shield, 
-  ArrowRight, 
-  Play, 
-  Clock,
-  Users,
-  Star,
-  CheckCircle
-} from 'lucide-react'
+import React { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import Navigation from '../src/components/Navigation';
+import Footer from '../src/components/Footer';
+import { Play, Calendar, Users, Zap, Brain, Cloud, Shield, ArrowRight, CheckCircle, Star } from 'lucide-react';
 
 const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
@@ -33,26 +22,25 @@ const DemoPage: React.FC = () => {
         'Machine Learning Models',
         'Natural Language Processing',
         'Computer Vision',
-        'Predictive Analytics'
-      ],
-      category: 'AI Services'
-    },
-    {
-      id: 'it-infrastructure',
-      title: 'IT Infrastructure Demo',
-      description: 'Explore our comprehensive IT infrastructure solutions',
+        'Predictive Analytics',
+        'Chatbot Integration',
+        'Document Processing'
+      ]
+    }, {
+      id: 'it-services',
+      title: 'IT Services Demo',
+      description: 'Explore our comprehensive IT infrastructure and support solutions',
       duration: '20 minutes',
       icon: <Server className="w-8 h-8"  />,
       features: [
         'Cloud Migration',
-        'Network Setup',
-        'System Integration',
-        '24/7 Support'
-      ],
-      category: 'IT Services'
-    },
-    {
-      id: 3,
+        'Network Security',
+        'System Monitoring',
+        'Backup Solutions',
+        'Performance Optimization'
+      ]
+    }, {
+      id: 'micro-saas',
       title: 'Micro SaaS Demo',
       description: 'Discover our innovative micro SaaS development capabilities',
       duration: '18 minutes',
@@ -81,7 +69,27 @@ const DemoPage: React.FC = () => {
     }
   ]
 
-  const selectedDemoData = demos.find(demo => demo.id === selectedDemo)
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      company: 'TechCorp Inc.',
+      role: 'CTO',
+      content: 'The AI demo was incredible. We could see exactly how it would integrate with our existing systems.',
+      rating: 5
+    }, {
+      name: 'Michael Chen',
+      company: 'StartupXYZ',
+      role: 'Founder',
+      content: 'The micro SaaS demo showed us the potential for our product. Highly recommended!',
+      rating: 5
+    }, {
+      name: 'Emily Rodriguez',
+      company: 'Enterprise Solutions',
+      role: 'IT Director',
+      content: 'The IT services demo covered everything we needed. Very comprehensive and professional.',
+      rating: 5
+    }
+  ];
 
   return (
     <>
@@ -297,7 +305,6 @@ const DemoPage: React.FC = () => {
         </main>
       </PageTransition>
     </>
-  )
-}
+  )};
 
 export default DemoPage

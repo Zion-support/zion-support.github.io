@@ -1,12 +1,20 @@
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-console.log('� Running Health Check...')
-  "status"
-      "status"
-      "status"
-    execSync('npm run build', { "stdio"})
-    execSync('npm run lint', { "stdio"})
-    execSync('npm run type-check', { "stdio"})
-console.log('� Overall "status")
+
+/**;
+ * Application Health Check Script;
+ * Checks various aspects of the application health;
+ */;
+
+
+;
+  async runCheck(name, checkFn) {;
+    try {;
+      const result = await checkFn();
+
+;
+// Run health checks if called directly;
+if (require.main === module) {;
+  const checker = new HealthChecker();
+  checker.runAllChecks().catch(console.error)}
+;
+module.exports = HealthChecker;

@@ -23,5 +23,4 @@ export function LoginContent(...args: []):  {
         </div>
       </div>
     </div>
-  );
-}
+  )}

@@ -1,62 +1,12 @@
-import React from 'react'; export default ContactForm; const ContactForm = () => { const [formData, setFormData] = useState ({ firstName: ", lastName: ", email: ", comp: ", phone: ", service: ", message: " }) ; const [isSubmitting, setIsSubmitting] = useState (false) ; const [submitStatus, setSubmitStatus] = useState ("idle") ; const handleInputChange = (e) => { const { name, value } = e.target; setFormData (prev => ({ ...prev, [name]: value }) ) }; const handleSubmit = async (e) => { e.preventDefault () ; setIsSubmitting (true) ; setSubmitStatus ("idle") ; try {"""";import React, { useState } from 'react';
-import { Button } from "./ui/Button.jsx";
-const ContactForm = () => {
-    const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''
-    });
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitStatus, setSubmitStatus] = useState('idle');
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({
-            ...prev,
-            [name]: value
-        }));
-    };
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setIsSubmitting(true);
-        setSubmitStatus('idle');
-        try {
-            // Simulate API call
-            await new Promise(resolve => setTimeout(resolve, 2000));
-            // Reset form on success
-            setFormData({
-                firstName: '',
-                lastName: '',
-                email: '',
-                company: '',
-                phone: '',
-                service: '',
-                message: ''
-            });
-            setSubmitStatus('success');
-            setTimeout(() => setSubmitStatus('idle'), 5000);
-        }
-        catch (error) {
-            setSubmitStatus('error');
-            setTimeout(() => setSubmitStatus('idle'), 5000);
-        }
-        finally {
-            setIsSubmitting(false);
-        }
-    };
-    const isFormValid = formData.firstName && formData.lastName && formData.email && formData.message;
-    return (<div className="max-w-2xl mx-auto">
-      {submitStatus === 'success' && (<div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
-          <div className="flex items-center">
-            <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-            </svg>
-            Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.
-          </div>
-        </div>)}
+import React { useState } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Mail, Phone, 
+  MapPin, Send, 
+  CheckCircle, AlertCircle,
+  User, Building,
+  MessageSquare
+} from 'lucide-react';
 
       {submitStatus === 'error' && (<div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
           <div className="flex items-center">
@@ -67,13 +17,94 @@ const ContactForm = () => {
           </div>
         </div>)}
 
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
-              First Name *
-            </label>
-            <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleInputChange} required className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Enter your first name"/>
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev, [name]: value
+    }))};
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    try {
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      setSubmitStatus('success');
+      setFormData({
+        firstName: '', lastName: '',
+        email: '', company: '',
+        phone: '', service: '',
+        message: '', budget: '',
+        timeline: ''
+      })} catch (error) {
+      setSubmitStatus('error')} finally {
+      setIsSubmitting(false)}
+  };
+
+  const services = [
+    'AI & Machine Learning', 'Cloud & DevOps',
+    'Enterprise Security', 'Digital Transformation',
+    'Micro SAAS Services', 'IT Onsite Services',
+    'Custom Development', 'Other'
+  ];
+
+  const budgets = [
+    'Under $10K', '$10K - $50K',
+    '$50K - $100K', '$100K - $500K',
+    'Over $500K'
+  ];
+
+  const timelines = [
+    'Immediate (1-2 weeks)', 'Quick (1-2 months)', 'Standard (3-6 months)', 'Long-term (6+ months)'
+  ];
+
+  if (submitStatus === 'success') {
+    return (
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        className="text-center py-12"
+      >
+        <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+          <CheckCircle className="w-10 h-10 text-white" />
+        </div>
+        <h3 className="text-2xl font-bold text-white mb-4">Thank You!</h3>
+        <p className="text-zion-slate-light mb-6">
+          Your message has been sent successfully. We&apos;ll get back to you within 24 hours.''
+        </p>
+        <button
+          onClick={() => setSubmitStatus('idle')}
+          className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover: bg-zion-cyan/90 transition-colors"
+        >
+          Send Another Message
+        </button>
+      </motion.div>
+    )}
+
+  return (
+    <div className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8">
+      <div className="text-center mb-8">
+        <h2 className="text-3xl font-bold text-white mb-4">Get In Touch</h2>
+        <p className="text-zion-slate-light">
+          Ready to transform your business? Let&apos;s discuss how we can help you achieve your goals.''
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 mb-8">
+        {/* Contact Information */}
+        <div className="space-y-6">
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center">
+              <Mail className="w-6 h-6 text-zion-cyan" />
+            </div>
+            <div>
+              <div className="text-white font-semibold">Email</div>
+              <div className="text-zion-slate-light">kleber@ziontechgroup.com</div>
+            </div>
           </div>
 
           <div>
@@ -137,29 +168,26 @@ const ContactForm = () => {
           </Button>
         </div>
 
-        <p className="text-xs text-gray-400 text-center">
-          By submitting this form, you agree to our{' '}
-          <a href="/privacy" className="text-blue-400 hover:text-blue-300 underline">
-            Privacy Policy
-          </a>{' '}
-          and{' '}
-          <a href="/terms" className="text-blue-400 hover:text-blue-300 underline">
-            Terms of Service
-          </a>
-          .
-        </p>
-      </form>
-    </div>);
-};
-export default ContactForm;
-}}}
-
-export { ContactForm };
-
-export { ContactForm };
-
-export { ContactForm };
-
-export { ContactForm };
-
-export { ContactForm };
+          <motion.button
+            type="submit"
+            disabled={isSubmitting}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="w-full px-6 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:from-zion-cyan/90 hover:to-zion-purple/90 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            {isSubmitting ? (
+              <>
+                <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                Sending Message...
+</>
+            ) : (
+              <>
+                <Send className="w-5 h-5" />
+                Send Message
+</>
+            )}
+          </motion.button>
+        </form>
+      </div>
+    </div>
+  )};

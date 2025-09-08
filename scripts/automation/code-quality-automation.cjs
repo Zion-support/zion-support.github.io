@@ -1,342 +1,340 @@
-#!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-const { promisify } = require('util');
-const writeFile = promisify(fs.writeFile);
-const readFile = promisify(fs.readFile);
 
-class CodeQualityAutomation {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'reports');
-    this.qualityScore = 0;
-    this.issuesFound = [];
-    this.improvementsMade = [];
-    this.startTime = Date.now();
-  }
+// Get automation interval from environment variable (default: 20 minutes)
+const AUTOMATION_INTERVAL =
+  parseInt(process.env.AUTOMATION_INTERVAL) || 1200000; // 20 minutes;
+async function runCodeQualityAutomation() {
+  try {
 
-  async init() {
-    console.log('🚀 Code Quality Automation Starting...');
-    console.log(`📁 Project Root: ${this.projectRoot}`);
-    
-    // Ensure reports directory exists
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
-  }
 
-  async analyzeCodeQuality() {
-    console.log('🔍 Analyzing code quality...');
-    
-    const qualityMetrics = {
-      linting: await this.runLintingAnalysis(),
-      typescript: await this.runTypeScriptAnalysis(),
-      complexity: await this.analyzeCodeComplexity(),
-      duplication: await this.analyzeCodeDuplication(),
-      coverage: await this.analyzeTestCoverage(),
-      dependencies: await this.analyzeDependencies()
-    };
-    
-    this.qualityScore = this.calculateQualityScore(qualityMetrics);
-    return qualityMetrics;
-  }
+    );
+;
+    let totalImprovements = 0;
+    let qualityScore = 0;
 
-  async runLintingAnalysis() {
-    try {
-      const result = execSync('npm run lint', { encoding: 'utf8' });
-      const lines = result.split('\n');
-      const errors = lines.filter(line => line.includes('error'));
-      const warnings = lines.filter(line => line.includes('warning'));
-      
-      return {
-        errors: errors.length,
-        warnings: warnings.length,
-        total: errors.length + warnings.length
-      };
-    } catch (error) {
-      const output = error.stdout?.toString() || '';
-      const lines = output.split('\n');
-      const errors = lines.filter(line => line.includes('error'));
-      const warnings = lines.filter(line => line.includes('warning'));
-      
-      return {
-        errors: errors.length,
-        warnings: warnings.length,
-        total: errors.length + warnings.length
-      };
-    }
-  }
+    const formattingImprovements = await improveCodeFormatting();
+    totalImprovements += formattingImprovements;
+;
+    // 2. Import organization;
+    console.log('📦 Organizing imports...');
+    const importImprovements = await organizeImports();
+    totalImprovements += importImprovements;
+;
 
-  async runTypeScriptAnalysis() {
-    try {
-      const result = execSync('npm run type-check', { encoding: 'utf8' });
-      const lines = result.split('\n');
-      const errors = lines.filter(line => line.includes('error'));
-      
-      return {
-        errors: errors.length,
-        total: errors.length
-      };
-    } catch (error) {
-      const output = error.stdout?.toString() || '';
-      const lines = output.split('\n');
-      const errors = lines.filter(line => line.includes('error'));
-      
-      return {
-        errors: errors.length,
-        total: errors.length
-      };
-    }
-  }
+    // 3. Code structure optimization;
+    console.log('🏗️ Optimizing code structure...');
+    const structureImprovements = await optimizeCodeStructure();
+    totalImprovements += structureImprovements;
 
-  async analyzeCodeComplexity() {
-    console.log('🔍 Analyzing code complexity...');
-    
-    let totalComplexity = 0;
-    let fileCount = 0;
-    
-    const analyzeFile = (filePath) => {
-      try {
-        const content = fs.readFileSync(filePath, 'utf8');
-        const lines = content.split('\n');
-        
-        // Simple complexity analysis
-        let complexity = 0;
-        lines.forEach(line => {
-          if (line.includes('if') || line.includes('else')) complexity += 1;
-          if (line.includes('for') || line.includes('while')) complexity += 2;
-          if (line.includes('switch')) complexity += 3;
-          if (line.includes('catch')) complexity += 2;
-        });
-        
-        totalComplexity += complexity;
-        fileCount += 1;
-      } catch (error) {
-        // Skip files that can't be read
+    // 4. Performance optimizations;
+    console.log('⚡ Optimizing performance...');
+    const performanceImprovements = await optimizePerformance();
+    totalImprovements += performanceImprovements;
+
+    // 5. Security improvements;
+    console.log('🔒 Improving security...');
+    const securityImprovements = await improveSecurity();
+    totalImprovements += securityImprovements;
+
+    // 6. Accessibility improvements;
+    console.log('♿ Improving accessibility...');
+    const accessibilityImprovements = await improveAccessibility();
+    totalImprovements += accessibilityImprovements;
+
+    // 7. Test coverage improvements;
+    console.log('🧪 Improving test coverage...');
+    const testImprovements = await improveTestCoverage();
+    totalImprovements += testImprovements}
+;
+async function improveCodeFormatting() {;
+  let improvements = 0});
+      improvements += 5}
+;
+    // Fix common formatting issues manually;
+    const filesToFormat = [''src/components'', ''src/pages'', ''src/utils'', ''src/services'', '];
+;
+    for (const dir of filesToFormat) {;
+      if (fs.existsSync(dir)) {;
+        const files = fs;
+          .readdirSync(dir);
+          .filter(;
+            f =>;
+              f.endsWith('.tsx') ||;
+              f.endsWith('.ts') ||;
+              f.endsWith('.js') ||;
+              f.endsWith('.jsx');
+
+          );
+;
+        for (const file of files) {;
+          const filePath = path.join(dir, 'file);
+          try {;
+            let content = fs.readFileSync(filePath', 'utf8');
+            let modified = false}
       }
-    };
-    
-    const walkDir = (dir) => {
-      const files = fs.readdirSync(dir);
-      files.forEach(file => {
-        const filePath = path.join(dir, file);
-        const stat = fs.statSync(filePath);
-        
-        if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-          walkDir(filePath);
-        } else if (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx')) {
-          analyzeFile(filePath);
-        }
-      });
-    };
-    
-    walkDir(path.join(this.projectRoot, 'src'));
-    
-    return {
-      averageComplexity: fileCount > 0 ? totalComplexity / fileCount : 0,
-      totalComplexity,
-      fileCount
-    };
-  }
+    }
+;
+    console.log(  ✅ Made ${improvements} formatting improvements)} catch (error) {  console.log(  ⚠️  Code formatting improvement failed: ${error.message  }`)}
+;
+  return improvements}
+;
+async function organizeImports() {;
+  let improvements = 0;
 
-  async analyzeCodeDuplication() {
-    console.log('🔍 Analyzing code duplication...');
-    
-    // Simple duplication detection
-    const allCode = [];
-    const walkDir = (dir) => {
-      const files = fs.readdirSync(dir);
-      files.forEach(file => {
-        const filePath = path.join(dir, file);
-        const stat = fs.statSync(filePath);
-        
-        if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-          walkDir(filePath);
-        } else if (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx')) {
-          try {
-            const content = fs.readFileSync(filePath, 'utf8');
-            allCode.push(content);
-          } catch (error) {
-            // Skip files that can't be read
-          }
-        }
-      });
-    };
-    
-    walkDir(path.join(this.projectRoot, 'src'));
-    
-    // Find similar code blocks
-    let duplicationScore = 0;
-    for (let i = 0; i < allCode.length; i++) {
-      for (let j = i + 1; j < allCode.length; j++) {
-        const similarity = this.calculateSimilarity(allCode[i], allCode[j]);
-        if (similarity > 0.8) {
-          duplicationScore += similarity;
+          );
+;
+        for (const file of files) {;
+          const filePath = path.join(dir, 'file);
+          try {;
+            let content = fs.readFileSync(filePath', 'utf8');
+            let modified = false;
+;
+            const lines = content.split('\n');
+            const importLines = [];
+            const otherLines = [];
+
+                importLines.push(line)} else {;
+                otherLines.push(line)}
+            });
+
+              // Relative imports last;
+              if (a.startsWith('.') && !b.startsWith('.')) return 1;
+              if (!a.startsWith('.') && b.startsWith('.')) return -1;
+;
+              return a.localeCompare(b)})}
+      }
+    }
+;
+    console.log(  ✅ Organized imports in ${improvements} files``)} catch (error) {  console.log(`  ⚠️  Import organization failed: ${error.message  }`)}
+;
+  return improvements}
+;
+async function optimizeCodeStructure() {;
+  let improvements = 0;
+
+          .filter(f => f.endsWith('.tsx') || f.endsWith('.ts'));
+;
+        for (const file of files) {;
+          const filePath = path.join(dir, 'file);
+          try {;
+            let content = fs.readFileSync(filePath', 'utf8');
+            let modified = false;
+
+                const varName = line.match(/(const|let|var)\s+(\w+)/)?.[2];
+                if (;
+                  varName &&;
+                  !content.includes(varName) &&;
+                  !line.includes('export');
+                ) {;
+                  return false}
+              }
+              return true});
+;
+            if (filteredLines.length !== lines.length) {;
+              content = filteredLines.join('\n');
+              modified = true}
+
         }
       }
     }
-    
-    return {
-      duplicationScore: Math.min(duplicationScore, 100),
-      filesAnalyzed: allCode.length
-    };
-  }
+console.log(`  ✅ Optimized structure in ${improvements} files`)} catch (error) {  console.log(`  ⚠️  Code structure optimization failed: ${error.message  }`)}
+;
+  return improvements}
+;
+async function optimizePerformance() {;
+  let improvements = 0;
 
-  calculateSimilarity(str1, str2) {
-    const words1 = str1.split(/\s+/);
-    const words2 = str2.split(/\s+/);
-    
-    const commonWords = words1.filter(word => words2.includes(word));
-    return commonWords.length / Math.max(words1.length, words2.length);
-  }
+          .filter(f => f.endsWith('.tsx') || f.endsWith('.ts'));
+;
+        for (const file of files) {;
+          const filePath = path.join(dir, 'file);
+          try {;
+            let content = fs.readFileSync(filePath', 'utf8');
+            let modified = false;
 
-  async analyzeTestCoverage() {
-    console.log('🔍 Analyzing test coverage...');
-    
-    try {
-      // Check if tests exist
-      const testDir = path.join(this.projectRoot, 'tests');
-      const testFiles = fs.existsSync(testDir) ? fs.readdirSync(testDir) : [];
-      
-      return {
-        testFiles: testFiles.length,
-        hasTests: testFiles.length > 0,
-        coverage: testFiles.length > 0 ? Math.min(testFiles.length * 10, 100) : 0
-      };
-    } catch (error) {
-      return {
-        testFiles: 0,
-        hasTests: false,
-        coverage: 0
-      };
-    }
-  }
+              );
+              content = content.replace(;
+                /function (\w+)\(/g,;
+                'const $1 = React.memo(({';
+              );
+              modified = true}
 
-  async analyzeDependencies() {
-    console.log('🔍 Analyzing dependencies...');
-    
-    try {
-      const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8'));
-      const dependencies = Object.keys(packageJson.dependencies || {});
-      const devDependencies = Object.keys(packageJson.devDependencies || {});
-      
-      // Check for outdated packages
-      let outdatedCount = 0;
-      try {
-        const outdatedResult = execSync('npm outdated --json', { encoding: 'utf8' });
-        const outdated = JSON.parse(outdatedResult);
-        outdatedCount = Object.keys(outdated).length;
-      } catch (error) {
-        // No outdated packages
+        }
       }
-      
-      return {
-        totalDependencies: dependencies.length + devDependencies.length,
-        outdatedPackages: outdatedCount,
-        dependencyHealth: Math.max(0, 100 - outdatedCount * 5)
-      };
-    } catch (error) {
-      return {
-        totalDependencies: 0,
-        outdatedPackages: 0,
-        dependencyHealth: 0
-      };
     }
-  }
+console.log(`  ✅ Applied ${improvements} performance optimizations`)} catch (error) {  console.log(`  ⚠️  Performance optimization failed: ${error.message  }`)}
+;
+  return improvements}
+;
+async function improveSecurity() {;
+  let improvements = 0;
 
-  calculateQualityScore(metrics) {
-    let score = 100;
-    
-    // Deduct points for issues
-    score -= metrics.linting.errors * 2;
-    score -= metrics.linting.warnings * 0.5;
-    score -= metrics.typescript.errors * 3;
-    score -= Math.min(metrics.complexity.averageComplexity * 5, 20);
-    score -= metrics.duplication.duplicationScore * 0.5;
-    score -= (100 - metrics.coverage.coverage) * 0.3;
-    score -= (100 - metrics.dependencies.dependencyHealth) * 0.2;
-    
-    return Math.max(0, Math.round(score));
-  }
+          .filter(f => f.endsWith('.js') || f.endsWith('.ts'));
+;
+        for (const file of files) {;
+          const filePath = path.join(dir, 'file);
+          try {;
+            let content = fs.readFileSync(filePath', 'utf8');
+            let modified = false;
 
-  async generateQualityReport(metrics) {
-    const endTime = Date.now();
-    const duration = endTime - this.startTime;
-    
-    const report = {
-      timestamp: new Date().toISOString(),
-      duration: `${duration}ms`,
-      qualityScore: this.qualityScore,
-      metrics,
-      summary: `Code quality score: ${this.qualityScore}/100`,
-      recommendations: this.generateRecommendations(metrics)
-    };
-    
-    const reportPath = path.join(this.reportsDir, 'code-quality-report.json');
-    await writeFile(reportPath, JSON.stringify(report, null, 2));
-    
-    console.log('\n📊 Code Quality Report:');
-    console.log(`⏱️  Duration: ${duration}ms`);
-    console.log(`🎯 Quality Score: ${this.qualityScore}/100`);
-    console.log(`📁 Report saved to: ${reportPath}`);
-    
-    return report;
-  }
+              );
+              modified = true}
+;
+            // Fix eval usage (if any);
+            if (content.includes('eval(')) {;
+              content = content.replace(;
+                /eval\(/g,// SECURITY: eval() removed - use safer alternatives';
+              );
+              modified = true}
 
-  generateRecommendations(metrics) {
-    const recommendations = [];
-    
-    if (metrics.linting.errors > 0) {
-      recommendations.push('Fix linting errors to improve code quality');
+        }
+      }
     }
-    
-    if (metrics.linting.warnings > 10) {
-      recommendations.push('Address linting warnings to improve code consistency');
-    }
-    
-    if (metrics.typescript.errors > 0) {
-      recommendations.push('Fix TypeScript errors to improve type safety');
-    }
-    
-    if (metrics.complexity.averageComplexity > 5) {
-      recommendations.push('Reduce code complexity by breaking down complex functions');
-    }
-    
-    if (metrics.duplication.duplicationScore > 20) {
-      recommendations.push('Reduce code duplication by extracting common functionality');
-    }
-    
-    if (metrics.coverage.coverage < 50) {
-      recommendations.push('Increase test coverage to improve code reliability');
-    }
-    
-    if (metrics.dependencies.outdatedPackages > 5) {
-      recommendations.push('Update outdated dependencies to improve security and performance');
-    }
-    
-    return recommendations;
-  }
+console.log(`  ✅ Applied ${improvements} security improvements`)} catch (error) {  console.log(`  ⚠️  Security improvement failed: ${error.message  }`)}
+;
+  return improvements}
+;
+async function improveAccessibility() {;
+  let improvements = 0;
 
-  async run() {
-    await this.init();
-    
-    try {
-      const metrics = await this.analyzeCodeQuality();
-      const report = await this.generateQualityReport(metrics);
-      return report;
-    } catch (error) {
-      console.error('❌ Error in Code Quality Automation:', error);
-      throw error;
+        const files = fs.readdirSync(dir).filter(f => f.endsWith('.tsx'));
+;
+        for (const file of files) {;
+          const filePath = path.join(dir, 'file);
+          try {;
+            let content = fs.readFileSync(filePath', 'utf8');
+            let modified = false}
+      }
     }
-  }
+console.log(`  ✅ Applied ${improvements} accessibility improvements`)} catch (error) {  console.log(`  ⚠️  Accessibility improvement failed: ${error.message  }`)}
+;
+  return improvements}
+;
+async function improveTestCoverage() {;
+  let improvements = 0;
+
+              const testContent = generateBasicTest(componentName);
+              fs.writeFileSync(testFilePath`, testContent, `utf8`);
+              improvements++;console.log(`    ✅ Created test file for ${componentName}`)}
+        }
+      }
+    }
+console.log(`  ✅ Created ${improvements} test files`)} catch (error) {  console.log(`  ⚠️  Test coverage improvement failed: ${error.message  }`)}
+;
+  return improvements}
+
+    render(<${componentName} />);
+    expect(screen.getByRole(`main`) || screen.getByText(/.*/)).toBeInTheDocument()});
+
+    render(<${componentName} />);
+    // Add specific test assertions based on component content})});}
+;
+async function improveDocumentation() {;
+  let improvements = 0;
+
+          );
+;
+        for (const file of files) {;
+          const filePath = path.join(dir, 'file);
+          try {;
+            let content = fs.readFileSync(filePath', 'utf8');
+            let modified = false;
+
+            // Add JSDoc comments to functions;
+            const functionPattern = /(function\s+\w+\s*\([^)]*\)\s*\{)/g;
+            if (functionPattern.test(content) && !content.includes('/**')) {;
+              content = content.replace(;
+                /(function\s+(\w+)\s*\([^)]*\)\s*\{)/g,/**\n * $2 function\n * @param {*} params - Function parameters\n * @returns {*} Function return value\n */\n$1';
+              );
+              modified = true}
+
+ * @description ${componentName} component for the application;
+ * @param {Object} props - Component props;
+ * @returns {JSX.Element} Rendered component;
+ */;
+              content = docComment + content;
+              modified = true}
+
+        }
+      }
+    }
+;
+    console.log(`  ✅ Added documentation to ${improvements} files`)} catch (error) {  console.log(`  ⚠️  Documentation improvement failed: ${error.message  }`)}
+;
+  return improvements}
+
+    const testFiles = countTestFiles('src');console.log(    🧪 Test files: ${testFiles}``);
+;
+    // Check for common issues;
+    const issues = await checkCommonIssues();console.log(`    ⚠️  Common issues found: ${issues}`);
+;
+    // Run linting;
+    try {;
+      execSync('npm run lint' { stdio: 'pipe' })}
+;
+    // Run type checking;
+    try {;
+      execSync('npm run type-check' { stdio: 'pipe' });
+
+      console.log('    ⚠️  Type checking has issues')}
+  } catch (error) {console.log(    ⚠️  Quality assessment failed: ${error.message})}
 }
+;
+function countLinesOfCode(dir) {;
+  let count = 0;
+;
+  try {;
+    const items = fs.readdirSync(dir);
+;
+    for (const item of items) {;
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+;
+      if (stat.isDirectory()) {;
+        count += countLinesOfCode(fullPath);
 
-// Run the automation if called directly
-if (require.main === module) {
-  const automation = new CodeQualityAutomation();
-  automation.run().catch(console.error);
-}
+  return count}
+;
+function countTestFiles(dir) {;
+  let count = 0;
+;
+  try {;
+    const items = fs.readdirSync(dir);
+;
+    for (const item of items) {;
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+;
+      if (stat.isDirectory()) {;
+        count += countTestFiles(fullPath)} else if (item.includes('.test.') || item.includes('.spec.')) {;
+        count++}
+    }
 
-module.exports = CodeQualityAutomation;
+  return count}
+;
+async function checkCommonIssues() {;
+  let issues = 0;
+
+  return issues}
+;
+function findFilesWithPattern(dir, pattern) {;
+  const files = [];
+;
+  try {;
+    const items = fs.readdirSync(dir);
+;
+    for (const item of items) {;
+      const fullPath = path.join(dir, 'item);
+      const stat = fs.statSync(fullPath);
+;
+      if (stat.isDirectory()) {;
+        files.push(...findFilesWithPattern(fullPath', pattern));
+
+  process.exit(0)});
+;
+process.on('SIGTERM', () => {;
+  console.log('🛑 Received SIGTERM, shutting down gracefully...');
+  process.exit(0)});
+
+  console.error('❌ Failed to start code quality automation:', error);
+  process.exit(1)});

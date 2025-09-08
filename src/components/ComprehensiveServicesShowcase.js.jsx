@@ -1,21 +1,9 @@
-import React, { useState } from 'react';
+
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Brain, 
-  Shield, 
-  Rocket, 
-  Globe, 
-  Zap, 
-  ArrowRight, 
-  Star, 
-  Users, 
-  TrendingUp,
-  CheckCircle,
-  DollarSign,
-  Clock,
-  Target,
-  Award
-} from 'lucide-react';
+import {}""
+  Brain, Shield, Rocket, Globe, Zap, ArrowRight, Star, Users, TrendingUp, CheckCircle, DollarSign, ''
+  Clock','
+
 import { Link } from 'react-router-dom';
 
 // Import the new service data
@@ -51,59 +39,54 @@ export function ComprehensiveServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('micro-saas');
   const [selectedService, setSelectedService] = useState(null);
 
-  const currentCategory = serviceCategories.find(cat => cat.id === selectedCategory);
-  const currentServices = currentCategory?.services || [];
+const serviceCategories = []
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
+]
+
+export function ComprehensiveServicesShowcase() {}""
+''
+''
+''''
+  const [selectedCategory, setSelectedCategory] = useState('micro-saas')
+  const [selectedService, setSelectedService] = useState(null)
+
+  const containerVariants = {}
+    hidden: { opacity: 0 }, visible: {}
+      opacity: 1, transition: {}
+        staggerChildren: 0.1, delayChildren: 0.2 }
     }
   };
 
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-      }
+  const itemVariants = {}
+  hidden: { y: 20, opacity: 0 }, visible: {}
+      y: 0, opacity: 1, transition: {}""
+''''
+        duration: 0.5','''
+        ease: 'easeOut''' }
     }
   };
 
-  const cardVariants = {
-    hidden: { scale: 0.95, opacity: 0 },
-    visible: {
-      scale: 1,
-      opacity: 1,
-      transition: {
-        duration: 0.4,
-        ease: "easeOut"
-      }
-    }
-  };
+  const cardVariants = {}
+  hidden: { scale: 0.95, opacity: 0 }, visible: {}
+      scale: 1, opacity: 1, transition: {}""
+''''
+        duration: 0.4, ''''
+        ease: 'easeOut''' }
 
-  return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header Section */}
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Revolutionary 2027 Services
-          </h2>
-          <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
-            Discover cutting-edge micro SAAS solutions, advanced IT infrastructure, and innovative AI services 
+  return (''''
+    <section className='py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>''''
+      <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>""
+        {/* Header Section */}''''
+        <motion .div ''''
+          className='text-center mb-16'
+          initial = {}, { opacity: 0, y: 30 }}
+          animate = {}, { opacity: 1, y: 0 }}""
+          transition={{ duration: 0.6 }}'''" >'''''"
+          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>""
+            Revolutionary 2027 Services''''
+          </h2>''''
+          <p className='text-xl text-zion-cyan-light max-w-3xl mx-auto'>
+            Discover cutting-edge micro SAAS solutions, advanced IT infrastructure, and innovative AI services
             designed to transform your business and drive exponential growth.
           </p>
           
@@ -133,58 +116,55 @@ export function ComprehensiveServicesShowcase() {
               </p>
             </div>
           </div>
-        </motion.div>
-
-        {/* Category Navigation */}
-        <motion.div 
-          className="flex flex-wrap justify-center gap-4 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          {serviceCategories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                selectedCategory === category.id
-                  ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
-                  : 'bg-zion-slate-dark text-zion-cyan-light hover:bg-zion-slate hover:text-zion-cyan border border-zion-cyan/30'
-              }`}
+        </motion.div>""
+        {/* Category Navigation */}''''
+        <motion .div ''''
+          className='flex flex-wrap justify-center gap-4 mb-12'
+          initial = {}, { opacity: 0, y: 20 }}
+          animate = {}, { opacity: 1, y: 0 }}
+          transition = {}, { duration: 0.6, delay: 0.2 }}" >"
+          {serviceCategories.map ( (category) => (<button key={category.id}
+              onClick={() =" > setSelectedCategory(category.id)}"
+              className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${}`
+`"`"
+`'`"`'"
+`'`'`"`"
+                selectedCategory === category.id`'`'`'`"`'"
+                  ? `bg-gradient-to-r ${category.color} text-white shadow-lg`''`'`'`"`"
+                  : 'bg-zion-slate-dark text-zion-cyan-light hover:bg-zion-slate hover:text-zion-cyan border border-zion-cyan/30'````, `
+}`}
             >
               {category.icon}
               <span>{category.name}</span>
-            </button>
-          ))}
-        </motion.div>
+            </button>) ) }
+        </motion.div>""
+        {/* Services Grid */}''''
+        <motion .div''''
 
-        {/* Services Grid */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          {currentServices.map((service) => (
-            <motion.div
-              key={service.id}
-              className="group cursor-pointer"
+          variants={containerVariants}''''
+          initial='hidden'''''
+          animate='visible'''" >"
+          {currentServices.map((service) => (""
+            <motion .div''''
+              key={service.id}''''
+              className='group cursor-pointer'
               variants={itemVariants}
-              onClick={() => setSelectedService(service)}
-            >
-              <motion.div
-                className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 h-full"
+              onClick={ () =" > setSelectedService (service) }"
+            >''''
+              <motion .div''''
+
                 variants={cardVariants}
-                whileHover={{ 
-                  y: -8,
-                  boxShadow: "0 20px 40px rgba(0, 0, 0, 0.3)"
-                }}
-              >
-                {/* Service Header */}
-                <div className="flex items-start justify-between mb-4">
-                  <div className="text-4xl">{service.icon}</div>
-                  {service.popular && (
-                    <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-medium">
+                whileHover = {}, {}""
+''''
+                  y: -8, ''''
+                  boxShadow: '0 20px 40px rgba(0, 0, 0',''''
+  0.3)', '
+}}"" >''''
+                {/* Service Header */}''''
+                <div className='flex items-start justify-between mb-4'>''''
+                  <div className='text-4xl'>{service.icon}</div>''''
+                  {service.popular && (''''
+                    <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-medium'>
                       Popular
                     </div>
                   )}
@@ -257,36 +237,31 @@ export function ComprehensiveServicesShowcase() {
                   </div>
                 </div>
               </motion.div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Call to Action */}
-        <motion.div 
-          className="text-center mt-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h3>
-            <p className="text-zion-cyan-light mb-6 max-w-2xl mx-auto">
-              Join thousands of businesses already transforming their operations with our revolutionary services. 
-              Get expert consultation and custom implementation tailored to your needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
-              >
-                Schedule Consultation
-              </Link>
-              <a
-                href="tel:+13024640950"
-                className="bg-zion-slate-dark text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover:bg-zion-slate hover:border-zion-cyan/50 transition-all duration-300"
-              >
+            </motion.div>) ) }
+        </motion.div>""
+        {/* Call to Action */}''''
+        <motion .div ''''
+          className='text-center mt-16'
+          initial = {}, { opacity: 0, y: 30 }}
+          animate = {}, { opacity: 1, y: 0 }}
+          transition = {}, { duration: 0.6, delay: 0.4""}}'''" >'''''"
+          <div className='bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30'>''''
+            <h3 className='text-2xl font-bold text-white mb-4'>""
+              Ready to Get Started?''''
+            </h3>''''
+            <p className='text-zion-cyan-light mb-6 max-w-2xl mx-auto'>
+              Join thousands of businesses already transforming their operations with our revolutionary services.""
+              Get expert consultation and custom implementation tailored to your needs.''''
+            </p>''''
+            <div className='flex flex-col sm: flex-row gap-4 justify-center'>''''
+              <Link''''
+                to='/contact'''''
+                className='bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105 '>
+                Schedule Consultation""
+              </Link>''''
+              <a''''
+                href='tel:+13024640950'''''
+                className='bg-zion-slate-dark text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover:bg-zion-slate hover:border-zion-cyan/50 transition-all duration-300 '>
                 Call Now: +1 302 464 0950
               </a>
             </div>
@@ -302,21 +277,20 @@ export function ComprehensiveServicesShowcase() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setSelectedService(null)}
-          >
-            <motion.div
-              className="bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="flex items-start justify-between mb-6">
-                <div className="text-6xl">{selectedService.icon}</div>
-                <button
-                  onClick={() => setSelectedService(null)}
-                  className="text-zion-cyan-light hover:text-white transition-colors"
-                >
+            onClick={ () =" > setSelectedService (null) }"
+          >''''
+            <motion .div''''
+              className='bg-zion-slate-dark rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
+              initial = {}, { scale: 0.9, opacity: 0 }}
+              animate = {}, { scale: 1, opacity: 1 }}
+              exit = {}, { scale: 0.9, opacity: 0 }}""
+              onClick={(e) =" > e.stopPropagation()}''''"
+            >''''
+              <div className='flex items-start justify-between mb-6'>''''
+                <div className='text-6xl'>{selectedService.icon}</div>""
+                <button ''''
+                  onClick={() =" > setSelectedService(null)}''''"
+                  className='text-zion-cyan-light hover: text-white transition-colors '>
                   ✕
                 </button>
               </div>
@@ -335,31 +309,36 @@ export function ComprehensiveServicesShowcase() {
                       </li>
                     ))}
                   </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-4">Service Details</h3>
-                  <div className="space-y-3">
-                    <div className="flex justify-between">
-                      <span className="text-zion-cyan-light">Price:</span>
-                      <span className="text-white font-medium">{selectedService.price}{selectedService.period}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-zion-cyan-light">Setup Time:</span>
-                      <span className="text-white font-medium">{selectedService.setupTime}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-zion-cyan-light">Trial:</span>
-                      <span className="text-white font-medium">{selectedService.trialDays} days</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-zion-cyan-light">Customers:</span>
-                      <span className="text-white font-medium">{selectedService.customers.toLocaleString()}+</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-zion-cyan-light">Rating:</span>
-                      <span className="text-white font-medium">{selectedService.rating}/5 ({selectedService.reviews} reviews)</span>
-                    </div>
+                </div>""
+''''
+                <div>''''
+                  <h3 className='text-xl font-semibold text-white mb-4'>Service Details</h3>''''
+                  <div className='space-y-3'>''''
+                    <div className='flex justify-between'>''''
+                      <span className='text-zion-cyan-light'>Price: </span>''''
+                      <span className='text-white font-medium'>{selectedService.price}, {selectedService.period}</span>''''
+                    </div>''''
+                    <div className='flex justify-between'>''''
+                      <span className='text-zion-cyan-light'>Setup Time:</span>''''
+                      <span className='text-white font-medium'>{selectedService.setupTime}</span>''''
+                    </div>''''
+                    <div className='flex justify-between'>''''
+                      <span className='text-zion-cyan-light'>Trial:</span>''''
+                      <span className='text-white font-medium'>{selectedService.trialDays} days</span>''''
+                    </div>''''
+                    <div className='flex justify-between'>''''
+                      <span className='text-zion-cyan-light'>Customers:</span>''''
+                      <span className='text-white font-medium'>{selectedService.customers.toLocaleString()}+</span>''''
+                    </div>''''
+                    <div className='flex justify-between'>''''
+                      <span className='text-zion-cyan-light'>Rating: </span>''''
+                      <span className='text-white font-medium'>{selectedService.rating}/5 ({selectedService.reviews} reviews)</span>
+                    </div>""
+                  </div>''''
+''''
+                  <div className='mt-6'>''''
+                    <h4 className='text-lg font-semibold text-white mb-2'>ROI</h4>''''
+                    <p className='text-zion-cyan-light text-sm'>{selectedService.roi}</p>
                   </div>
 
                   <div className="mt-6">
@@ -389,5 +368,7 @@ export function ComprehensiveServicesShowcase() {
           </motion.div>
         )}
       </AnimatePresence>
-    </section>
-  )}
+    </section>"`"
+  )}''`"`"
+''`'"`"`'
+

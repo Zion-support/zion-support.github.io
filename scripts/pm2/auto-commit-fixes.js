@@ -1,35 +1,121 @@
-#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+
+  constructor() {
+
+  'child_process');
 class AutoCommitFixes {;
   constructor() {;
+
     this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/auto-commit-fixes.log');
-    this.startTime = Date.now();
-    this.commitsMade = 0;
-    this.filesChanged = 0;
-  };
-  log(message) {;
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
+
+      const status = execSync('git status --porcelain;
+  ' {;
+        cwd: this.projectRoot,;
+
+        encoding: 'utf8;
+  '});
+
+        return { hasChanges: false, files: [] }
+      const files = status.split('\n;
+  ');
+        .filter(line => line.trim());
+        .map(line => {;
+          const parts = line.trim().split(/\s+/)})
+
+      return { hasChanges: true, files }
+
+      const staged = execSync('git diff --cached --name-only;
+  ' {;
+        cwd: this.projectRoot,;
+        encoding: 'utf8;
+  '});
+      return staged.split('\n;
+
+      const unstaged = execSync('git diff --name-only;
+  ' {;
+        cwd: this.projectRoot,;
+        encoding: 'utf8;
+  '});
+      return unstaged.split('\n;
+
+        stdio: 'pipe;
+  '});
+      this.log(`Staged ${files.length} files`)} catch (error) {;
+      this.log(`Error staging files: ${error.message}`);
+  async createCommit(message, files) {;
     try {;
-      fs.appendFileSync(this.logFile, logMessage);
-    } catch (error) {,;
-      console.error('Error writing to log: file:', error.message);
-<<<<<<< HEAD
-    },;
-=======
-    },;
+      const commitMessage = `🔧 ${message}\n\nFiles changed:\n${files.map(f => `- ${f}`).join('\n;
+  ')}`;
+      execSync(`git commit -m '${commitMessage}'` {;
+        cwd: this.projectRoot,;
 
-#!/usr / bin / env node;
-const fs = require ('fs');
-const path = require ('path');
-const { exec_sync } = require ('child_process');
+        stdio: 'pipe;
+  '});
+      this.commitsMade++;
+      this.log(`✅ Created commit: ${message}`);
+
+      this.log(`Error creating commit: ${error.message}`);
+
+      return false;
+  async analyzeChanges(files) {;
+    const changes = {;
+      added: [],;
+      modified: [],;
+      deleted: [],;
+      renamed: [],;
+      other: []}
+
+  ') {
+
+        changes.added.push(fileName)} else if (status === 'M;
+  ') {;
+        changes.modified.push(fileName)} else if (status === 'D;
+
+        changes.deleted.push(fileName)} else if (status === 'R;
+  ') {;
+        changes.renamed.push(fileName)} else {;
+        changes.other.push(fileName)});
+
+    return changes;
+
+      const logsDir = path.dirname(this.logFile);
+      if (!fs.existsSync(logsDir)) {
+
+        fs.mkdirSync(logsDir { recursive: true });
+      // Check git status;
+      this.log('📋 Checking git status...;
+  ');
+      const gitStatus = await this.checkGitStatus();
+
+        this.log('✨ No changes to commit;
+  ');
+        return;
+      this.log(`📁 Found ${gitStatus.files.length} changed files`);
+      // Analyze changes;
+      const changes = await this.analyzeChanges(gitStatus.files);`
+      this.log('🔍 Analyzing changes...;
+  ');
+
+      this.log('📦 Staging all changes...;
+  ');
+
+      await this.stageFiles(gitStatus.files.map(f => f.file));
+      // Generate commit message;
+      const commitMessage = await this.generateCommitMessage(changes);
+      this.log(`💬 Commit message: ${commitMessage}`);
+      // Create commit;
+
+  ');
+        this.filesChanged = gitStatus.files.length} else {;
+
+        this.log('❌ Failed to create commit;
+  `);
+      const duration = Date.now() - this.startTime;
+
+      this.log(`❌ Error running auto commit fixes: ${error.message}`);
+
+      process.exit(1);
+// Run the auto commit fixes;
+const autoCommit = new AutoCommitFixes();
 
 
-;
-class AutoCommitFixes { constructor () { this.project_root = process.cwd (); this.log_file = path.join (this.project_root, 'logs / pm2 / auto - commit - fixes.log'); this.start_time = Date.now (); this.commits_made = 0; this.files_changed = 0}
-; log (message) { const timestamp = new Date ().toISOString (); const log_message = `[${timestamp}] ${message}\n`;
-; try { fs.appendFileSync (this.log_file, log_message)} catch (error) { console.error ('Error writing to log file: ', error.message)}
-;
+

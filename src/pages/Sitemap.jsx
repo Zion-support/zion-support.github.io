@@ -1,113 +1,117 @@
+
+      ]
+    }
+  ];
+
+
 import { Link } from 'react-router-dom';
-const Sitemap = () => {
-    const sitemapSections = [
-        {
-            title: "Main Pages",
-            links: [
-                { name: "Home", path: "/", description: "Welcome to Zion Tech Group" },
-                { name: "About Us", path: "/about", description: "Our story and mission" },
-                { name: "Contact", path: "/contact", description: "Get in touch with us" },
-                { name: "Pricing", path: "/pricing", description: "Our service pricing" },
-                { name: "Careers", path: "/careers", description: "Join our team" },
-                { name: "Partners", path: "/partners", description: "Strategic partnerships" }
-            ]
-        },
-        {
-            title: "Services",
-            links: [
-                { name: "All Services", path: "/services", description: "Complete service overview" },
-                { name: "AI Services", path: "/ai-services", description: "Artificial Intelligence services" },
-                { name: "IT Services", path: "/it-services", description: "Information Technology solutions" },
-                { name: "Cybersecurity", path: "/cybersecurity", description: "Security and threat protection" },
-                { name: "Green IT", path: "/green-it", description: "Sustainable technology solutions" },
-                { name: "Micro SaaS Services", path: "/micro-saas-services", description: "Scalable software solutions" },
-                { name: "Enhanced Services", path: "/enhanced-services", description: "Advanced technology solutions" },
-                { name: "Innovative Services 2027", path: "/innovative-services-2027", description: "Cutting-edge solutions" },
-                { name: "Comprehensive Services", path: "/comprehensive-services", description: "Enterprise solutions" },
-                { name: "Emerging Tech Services", path: "/emerging-tech-services-2027", description: "Next-generation technology" }
-            ]
-        },
-        {
-            title: "Marketplace & Solutions",
-            links: [
-                { name: "Marketplace", path: "/marketplace", description: "Technology marketplace" },
-                { name: "AI Business Solutions", path: "/ai-business-solutions", description: "AI-powered business tools" },
-                { name: "Digital Marketing", path: "/digital-marketing-services", description: "Marketing technology solutions" },
-                { name: "Financial Solutions", path: "/financial-solutions", description: "Fintech and financial services" },
-                { name: "Manufacturing Solutions", path: "/manufacturing-solutions", description: "Industry 4.0 solutions" },
-                { name: "5G Enterprise Solutions", path: "/5g-enterprise-solutions", description: "Next-generation connectivity" }
-            ]
-        },
-        {
-            title: "Company & Resources",
-            links: [
-                { name: "Blog", path: "/blog", description: "Latest insights and news" },
-                { name: "FAQ", path: "/faq", description: "Frequently asked questions" },
-                { name: "Sitemap", path: "/sitemap", description: "Complete site navigation" },
-                { name: "Help Center", path: "/help", description: "Self-service support" },
-                { name: "System Status", path: "/status", description: "Service status and uptime" },
-                { name: "Security", path: "/security", description: "Security and compliance information" }
-            ]
-        },
-        {
-            title: "Legal & Compliance",
-            links: [
-                { name: "Privacy Policy", path: "/privacy", description: "Data protection and privacy" },
-                { name: "Terms of Service", path: "/terms", description: "Terms and conditions" },
-                { name: "Cookie Policy", path: "/cookies", description: "Cookie usage information" },
-                { name: "Accessibility", path: "/accessibility", description: "Accessibility information" }
-            ]
-        },
-        {
-            title: "User Account",
-            links: [
-                { name: "Login", path: "/login", description: "User authentication" },
-                { name: "Sign Up", path: "/signup", description: "Create new account" },
-                { name: "Dashboard", path: "/dashboard", description: "User dashboard" },
-                { name: "Forgot Password", path: "/forgot-password", description: "Password recovery" }
-            ]
-        }
-    ];
-    
-    return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24">
-            <div className="container mx-auto px-4 py-16">
-                {/* Header */}
-                <div className="text-center mb-16">
-                    <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                        Site
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                            {" "}Map
-                        </span>
-                    </h1>
-                    <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                        Complete navigation guide to all pages and services on Zion Tech Group
-                    </p>
+
+export default function Sitemap() {
+  const sitemapStructure = [
+
+        { name: 'Partners', path: '/partners', description: 'Partnership programs' }
+      ] }, {""
+      title: 'Services', icon: Briefcase,
+      pages: [""
+        { name: 'AI Services', path: '/services/ai', description: 'Artificial intelligence solutions' }, ""
+        { name: 'Cloud Solutions', path: '/services/cloud', description: 'Cloud infrastructure and migration' }","
+        { name: 'Cybersecurity', path: '/services/cybersecurity', description: 'Security and compliance' }, ""
+        { name: 'IT Infrastructure', path: '/services/infrastructure', description: 'Hardware and network solutions' }","
+        { name: 'Digital Transformation', path: '/services/transformation', description: 'Business transformation consulting' }, ""
+        { name: 'Consulting', path: '/services/consulting', description: 'Strategic technology consulting' }
+      ] }, {""
+      title: 'Solutions', icon: Target,
+      pages: [""
+        { name: 'Industry Solutions', path: '/solutions/industry', description: 'Sector-specific solutions' }, ""
+        { name: 'Manufacturing', path: '/solutions/manufacturing', description: 'Smart factory solutions' }","
+        { name: 'Financial Services', path: '/solutions/financial', description: 'FinTech and banking solutions' }, ""
+        { name: 'Healthcare', path: '/solutions/healthcare', description: 'Digital health solutions' }","
+        { name: 'Retail', path: '/solutions/retail', description: 'E-commerce and retail solutions' }, ""
+        { name: 'Education', path: '/solutions/education', description: 'EdTech solutions' }
+      ] }, {""
+      title: 'Resources', icon: FileText,
+      pages: [""
+        { name: 'Case Studies', path: '/case-studies', description: 'Success stories and examples' }, ""
+        { name: 'Research & Development', path: '/research-development', description: 'Innovation and research' }","
+        { name: 'Blog', path: '/blog', description: 'Latest insights and articles' }, ""
+        { name: 'White Papers', path: '/white-papers', description: 'Industry research papers' }","
+        { name: 'Webinars', path: '/webinars', description: 'Educational webinars' }, ""
+        { name: 'Documentation', path: '/docs', description: 'Technical documentation' }
+      ] }, {""
+      title: 'Events & News', icon: Video,
+      pages: [""
+        { name: 'Events', path: '/events', description: 'Upcoming and past events' }, ""
+        { name: 'News', path: '/news', description: 'Company news and updates' }","
+        { name: 'Press Releases', path: '/press', description: 'Official press releases' }, ""
+        { name: 'Media Kit', path: '/media-kit', description: 'Brand assets and resources' }
+      ] }, {""
+      title: 'Support & Help', icon: HelpCircle,
+      pages: [""
+        { name: 'Help Center', path: '/support', description: 'Self-service support' }, ""
+        { name: 'Training', path: '/training', description: 'Training and certification' }","
+        { name: 'FAQ', path: '/faq', description: 'Frequently asked questions' }, ""
+        { name: 'Contact Support', path: '/contact', description: 'Get help from our team' }","
+        { name: 'Status Page', path: '/status', description: 'System status and uptime' }
+      ] }, {""
+      title: 'Legal & Policies', icon: Users,
+      pages: [""
+        { name: 'Privacy Policy', path: '/privacy-policy', description: 'Data privacy information' }, ""
+        { name: 'Terms of Service', path: '/terms-of-service', description: 'Terms and conditions' }","
+        { name: 'Cookie Policy', path: '/cookie-policy', description: 'Cookie usage information' }, ""
+        { name: 'Accessibility', path: '/accessibility', description: 'Accessibility statement' }","
+        { name: 'Security', path: '/security', description: 'Security practices and policies' }
+      ] }, {""
+      title: 'Developer Resources', icon: Globe,
+      pages: [""
+        { name: 'API Documentation', path: '/api', description: 'Developer API reference' }, ""
+        { name: 'SDKs & Libraries', path: '/developers/sdks', description: 'Software development kits' }","
+        { name: 'Code Examples', path: '/developers/examples', description: 'Sample code and tutorials' }, ""
+        { name: 'Developer Blog', path: '/developers/blog', description: 'Technical articles' }","
+        { name: 'Community Forum', path: '/community', description: 'Developer community' }
+      ] }
+  ];
+
+  const externalLinks = [""
+    { name: 'LinkedIn', url: 'https://linkedin.com/company/ziontechgroup', description: 'Follow us on LinkedIn' }, ""
+    { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', description: 'Follow us on Twitter' }","
+    { name: 'GitHub', url: 'https://github.com/ziontechgroup', description: 'Open source projects' }, ""
+    { name: 'YouTube', url: 'https://youtube.com/@ziontechgroup', description: 'Video content and tutorials' }","
+    { name: 'Discord', url: 'https://discord.gg/ziontechgroup', description: 'Join our community' }
+
+  ];
+
+  return (""
+    <div className="min-h-screen bg-zion-blue-dark">
+
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
+              Site Map
+            </h1>""
+            <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed">
+              Navigate through all the pages and resources available on the Zion Tech Group website
+            </p>""
+
+            <p className="text-lg text-zion-slate-light">
+              Find everything you need to explore our services, solutions, and resources
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+                  <h2 className="text-2xl font-bold text-white">{section.title}</h2>
                 </div>
-                {/* Sitemap Sections */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {sitemapSections.map((section, sectionIndex) => (
-                        <div key={sectionIndex} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                            <h2 className="text-xl font-bold text-white mb-4 border-b border-zion-cyan/30 pb-2">
-                                {section.title}
-                            </h2>
-                            <ul className="space-y-3">
-                                {section.links.map((link, linkIndex) => (
-                                    <li key={linkIndex}>
-                                        <Link
-                                            to={link.path}
-                                            className="block text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 group"
-                                        >
-                                            <div className="font-medium text-white group-hover:text-zion-cyan transition-colors">
-                                                {link.name}
-                                            </div>
-                                            <div className="text-sm text-gray-400 group-hover:text-zion-cyan/70 transition-colors">
-                                                {link.description}
-                                            </div>
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
+                ""
+                <div className="space-y-4">
+                  {section.pages.map((page, pageIndex) => (""
+                    <div key={pageIndex} className="group">
+
+                          <div className="text-white font-medium group-hover:text-zion-cyan transition-colors">
+                            {page.name}
+                          </div>""
+
+                          <div className="text-zion-slate-light text-sm">
+                            {page.description}
+                          </div>
                         </div>
                     ))}
                 </div>
@@ -135,7 +139,47 @@ const Sitemap = () => {
                         </Link>
                     </div>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              Connect with us on social media and explore additional resources
+            </p>
+          </div>
+
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors">
+                  {link.name}
+                </h3>""
+
+                <p className="text-zion-slate-light text-sm">
+                  {link.description}
+                </p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+
+                Search Website
+              </Link>
             </div>
         </div>
-    );
-}
+      </section>
+    </div>
+
+
+
+
+
+
+
+
+
+
+

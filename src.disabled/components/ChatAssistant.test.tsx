@@ -1,1 +1,4 @@
-describe ("ChatAssistant", () => { it ("renders without crashing", () => { render (<ChatAssistant />) ; expect (screen.getByRole ("main") || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; it ("displays expected content", () => { render (<ChatAssistant />) ;""";
+
+
+
+

@@ -1,17 +1,4 @@
-import React from 'react';
 
-interface UltraFuturisticBackgroundProps {
-  children: React.ReactNode;
-  intensity?: 'low' | 'medium' | 'high';
-  colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic-matrix' | 'space-time';
-  particleCount?: number;
-  animationSpeed?: number;
-  enableHolographic?: boolean;
-  enableQuantumEffects?: boolean;
-  enableNeonEffects?: boolean;
-  enableSpaceTime?: boolean;
-  variant?: 'quantum' | 'neon' | 'cyber';
-  className?: string;
 }
 
 export default function UltraFuturisticBackground({ 

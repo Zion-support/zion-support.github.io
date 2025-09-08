@@ -2,7 +2,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Book, FileText, Video, Download, Search, ExternalLink } from 'lucide-react';
+
 
 const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
@@ -12,48 +12,142 @@ const DocsPage: React.FC = () => {
     {
       icon: Book,
       title: 'Getting Started',
-      description: 'Quick start guides and tutorials to help you begin using our services.',
-      items: [
-        { name: 'Quick Start Guide', link: '/docs/getting-started' },
-        { name: 'API Overview', link: '/docs/api-overview' },
-        { name: 'Authentication', link: '/docs/authentication' },
-        { name: 'First Steps', link: '/docs/first-steps' }
-      ]
-    },
-    {
-      icon: FileText,
-      title: 'API Documentation',
-      description: 'Comprehensive API reference and integration guides.',
-      items: [
-        { name: 'REST API Reference', link: '/docs/api-reference' },
-        { name: 'Webhook Integration', link: '/docs/webhooks' },
-        { name: 'SDK Documentation', link: '/docs/sdk' },
-        { name: 'Rate Limits', link: '/docs/rate-limits' }
-      ]
-    },
-    {
-      icon: Video,
-      title: 'Tutorials & Guides',
-      description: 'Step-by-step tutorials and best practices.',
-      items: [
-        { name: 'Video Tutorials', link: '/docs/video-tutorials' },
-        { name: 'Code Examples', link: '/docs/code-examples' },
-        { name: 'Best Practices', link: '/docs/best-practices' },
-        { name: 'Troubleshooting', link: '/docs/troubleshooting' }
-      ]
-    },
-    {
-      icon: Download,
-      title: 'Resources',
-      description: 'Downloadable resources and additional materials.',
-      items: [
-        { name: 'White Papers', link: '/docs/white-papers' },
-        { name: 'Case Studies', link: '/docs/case-studies' },
-        { name: 'Templates', link: '/docs/templates' },
-        { name: 'Changelog', link: '/docs/changelog' }
-      ]
-    }
-  ]
+      description: 'Quick start guides and setup instructions',
+      icon: BookOpen,
+      docs: [
+        {
+          title: 'Quick Start Guide',
+          description: 'Get up and running in minutes',
+          time: '5 min read' }, {
+          title: 'Installation Guide',
+          description: 'Step-by-step installation instructions',
+          time: '10 min read' }, {
+          title: 'Configuration',
+          description: 'Configure your environment',
+          time: '15 min read' }, {
+          title: 'First Project',
+          description: 'Create your first project',
+          time: '20 min read' } ] }, {
+      title: 'API Reference',
+      description: 'Complete API documentation and endpoints',
+      icon: Code,
+      docs: [
+        {
+          title: 'Authentication',
+          description: 'API authentication and security',
+          time: '8 min read' }, {
+          title: 'Endpoints',
+          description: 'All available API endpoints',
+          time: '25 min read' }, {
+          title: 'Rate Limits',
+          description: 'API rate limiting and quotas',
+          time: '5 min read' }, {
+          title: 'Error Codes',
+          description: 'Common error codes and solutions',
+          time: '10 min read' } ] }, {
+      title: 'AI Services',
+      description: 'AI and machine learning service documentation',
+      icon: Database,
+      docs: [
+        {
+          title: 'AI Models',
+          description: 'Available AI models and capabilities',
+          time: '15 min read' }, {
+          title: 'Training Data',
+          description: 'Data preparation and training',
+          time: '20 min read' }, {
+          title: 'Model Deployment',
+          description: 'Deploy and manage AI models',
+          time: '12 min read' }, {
+          title: 'Performance Tuning',
+          description: 'Optimize model performance',
+          time: '18 min read' } ] }, {
+      title: 'Cloud Services',
+      description: 'Cloud infrastructure and deployment guides',
+      icon: Cloud,
+      docs: [
+        {
+          title: 'Cloud Setup',
+          description: 'Configure cloud environments',
+          time: '15 min read' }, {
+          title: 'Deployment',
+          description: 'Deploy applications to cloud',
+          time: '20 min read' }, {
+          title: 'Scaling',
+          description: 'Scale your applications',
+          time: '12 min read' }, {
+          title: 'Monitoring',
+          description: 'Monitor cloud resources',
+          time: '10 min read' } ] }, {
+      title: 'Security',
+      description: 'Security best practices and guidelines',
+      icon: Shield,
+      docs: [
+        {
+          title: 'Security Overview',
+          description: 'Security architecture and principles',
+          time: '12 min read' }, {
+          title: 'Authentication',
+          description: 'User authentication and authorization',
+          time: '15 min read' }, {
+          title: 'Data Protection',
+          description: 'Protect sensitive data',
+          time: '18 min read' }, {
+          title: 'Compliance',
+          description: 'Meet compliance requirements',
+          time: '20 min read' } ] }, {
+      title: 'Support',
+      description: 'Help and support resources',
+      icon: Users,
+      docs: [
+        {
+          title: 'FAQ',
+          description: 'Frequently asked questions',
+          time: '10 min read' }, {
+          title: 'Troubleshooting',
+          description: 'Common issues and solutions',
+          time: '15 min read' }, {
+          title: 'Contact Support',
+          description: 'Get help from our team',
+          time: '5 min read' }, {
+          title: 'Community',
+          description: 'Join our developer community',
+          time: '8 min read' } ] } ];
+
+  const popularDocs = [
+  {
+      title: 'Quick Start Guide',
+      description: 'Get started with Zion Tech Group services in minutes',
+      category: 'Getting Started',
+      views: '12.5k',
+      rating: 4.9 }, {
+      title: 'API Authentication',
+      description: 'Learn how to authenticate with our APIs',
+      category: 'API Reference',
+      views: '8.2k',
+      rating: 4.8 }, {
+      title: 'AI Model Training',
+      description: 'Train custom AI models for your use case',
+      category: 'AI Services',
+      views: '6.7k',
+      rating: 4.9 }, {
+      title: 'Cloud Deployment',
+      description: 'Deploy your applications to the cloud',
+      category: 'Cloud Services',
+      views: '5.9k',
+      rating: 4.7 } ];
+
+  const resources = [
+  {
+      title: 'SDK Downloads',
+      description: 'Download our SDKs for popular programming languages',
+      icon: Download }, {
+      title: 'Code Examples',
+      description: 'Ready-to-use code examples and snippets',
+      icon: Code }, {
+      title: 'Video Tutorials',
+      description: 'Step-by-step video tutorials',
+      icon: ExternalLink ];
 
   const apiSections = [
     {
@@ -324,179 +418,74 @@ export default function DocsPage() {
             </div>
           </div>
         </section>
-      </div>
-    </Layout>
-  );
-}
 
-const popularDocs = [
-  { title: 'Quick Start Guide', description: 'Get started with our platform in minutes', category: 'Getting Started', views: '2.5k' },
-  { title: 'API Authentication', description: 'Learn how to authenticate with our API', category: 'API Reference', views: '1.8k' },
-  { title: 'Building a Web App', description: 'Complete tutorial for web application development', category: 'Tutorials', views: '3.2k' },
-  { title: 'Security Guidelines', description: 'Essential security practices for your applications', category: 'Best Practices', views: '1.5k' }
-];
-
-export default function DocsPage() {
-  return (
-    <Layout
-      title="Documentation - Zion Tech Group"
-      description="Comprehensive documentation for our services, APIs, and development tools. Get started quickly with our guides and tutorials."
-      keywords="documentation, API reference, tutorials, guides, getting started, development docs"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-          </div>
-
-ursor/website-audit-and-update-with-deployment-9cae
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              <div className="flex items-center justify-center mb-6">
-                <BookOpen className="w-16 h-16 text-blue-400 mr-4" />
-                <h1 className="text-5xl md:text-6xl font-bold">
-                  Documentation <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Center</span>
-                </h1>
-              </div>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Comprehensive documentation, guides, and tutorials to help you get the most out of our services
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="#getting-started"
-                  className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
-                >
-                  Get Started
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link
-                  href="#api-reference"
-                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-gray-900 rounded-lg font-semibold transition-colors"
-                >
-                  API Reference
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Search Section */}
+        {/* Resources */}
         <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Search Documentation
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+                Additional Resources
               </h2>
-              <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                Find exactly what you're looking for in our comprehensive documentation
+              <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+                Tools and resources to help you succeed
               </p>
-            </motion.div>
-
-            <motion.div
-              className="max-w-2xl mx-auto"
-            >
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search documentation..."
-                  className="w-full pl-12 pr-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
-                />
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-ursor/website-audit-and-update-with-deployment-9cae
-        {/* Popular Docs */}
-                  key={doc.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-
             </div>
-          </div>
-        </section>
 
-ursor/website-audit-and-update-with-deployment-9cae
-        {/* Categories Section */}
-                  key={category.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  <div className="space-y-4">
-                    {category.docs.map((doc, docIndex) => (
-                      <div key={docIndex} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                        <div>
-                          <h4 className="font-semibold text-gray-900">{doc.title}</h4>
-                          <p className="text-sm text-gray-600">{doc.description}</p>
-                        </div>
-                        <div className="flex items-center text-sm text-gray-500">
-                          <Clock className="w-4 h-4 mr-1" />
-                          {doc.time}
-                        </div>,
-                      </div>;
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {resources.map((resource, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-xl shadow-lg p-6 text-center"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <resource.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {resource.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">{resource.description}</p>
+                  <ul className="space-y-2 text-left">
+                    {resource.items.map((item, itemIndex) => (
+                      <li
+                        key={itemIndex}
+                        className="flex items-center text-sm text-gray-700"
+                      >
+                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                        {item}
+                      </li>
                     ))}
-                  <Link
-                    href="#"
-                    className="mt-6 w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
-                  >
-                    View All {category.title}
-                    <ArrowRight className="ml-2 w-4 h-4" />"
-                  </Link>;
-                </motion.div>;
+                  </ul>
+                </div>
               ))}
-
             </div>
           </div>
         </section>
 
-ursor/website-audit-and-update-with-deployment-9cae
         {/* CTA Section */}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Need Help Getting Started?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Our documentation team is here to help you succeed. Contact us if you can't find what you're looking for.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
-                >
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              Need Help?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Can&apos;t find what you&apos;re looking for? Our support team is
+              here to help.
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+              <Link href="/contact">
+                <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
                   Contact Support
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <Link
-                  href="/api-docs"
-                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-semibold transition-colors"
-                >
-                  API Reference
-                </Link>
-              </div>
-            </motion.div>
+                  <ArrowRight className="w-5 h-5 ml-2 inline" />
+                </button>
+              </Link>
+              <Link href="/help">
+                <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                  Help Center
+                </button>
+              </Link>
+            </div>
           </div>
         </section>
-      </div>
-    </MainLayout>
-    </Layout>
-    </SimpleLayout>
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
-  );
-};
-
-export default Page;
+      </main>
+    </>
+  )}

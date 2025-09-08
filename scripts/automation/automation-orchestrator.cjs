@@ -1,282 +1,216 @@
-#!/usr/bin/env node
 
-const fs = require('fs');
+
+const pm2 = require('pm2');
+const fs = require('fs').promises;
 const path = require('path');
-const { execSync } = require('child_process');
-const { promisify } = require('util');
-const writeFile = promisify(fs.writeFile);
-const readFile = promisify(fs.readFile);
+;
+class AutomationOrchestrator {;
+  constructor() {;
+    this.processes = new Map();
+    this.schedules = new Map();
+    this.dependencies = new Map();
+    this.healthChecks = new Map()}}
+;
+  async initialize() {;
+    return new Promise((resolve, reject) => {;
+      pm2.connect(err => {;
+        if (err) {;
+          console.error('❌ Failed to connect to PM2');
+          reject(err);
+          return}
+        console.log(`✅ Connected to PM2`);
+        this.setupProcessMonitoring();
+        this.initializeSchedules();
+        this.startHealthMonitoring();
+        resolve()})})}
+;
+  setupProcessMonitoring() {;
+    pm2.launchBus((err, bus) => {;
+      if (err) {;
+        console.error('❌ Failed to launch PM2 bus');
+        return}
+;
+      bus.on('process:event', data => {;
+        this.handleProcessEvent(data)});
+;
+      bus.on('log:err', data => {;
+        this.handleProcessError(data)});
 
-class AutomationOrchestrator {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'reports');
-    this.automations = new Map();
-    this.status = 'idle';
-    this.startTime = Date.now();
-    this.schedule = null;
+        this.handleProcessLog(data)})})}
+;
+  handleProcessEvent(data) {;
+    const { event, process } = data;
+
+        console.log(`🚀 Process ${process.name} started);
+        this.processes.set(process.name { ...process, status: `online` });
+        break;
+
+      case 'stop':console.log(⏸️  Process ${process.name} stopped``);
+        this.processes.set(process.name { ...process, status: 'stopped' });
+
+        break;
+      case `restart`:console.log(`🔄 Process ${process.name} restarted`);
+        this.processes.set(process.name { ...process, status: `online` });
+        break;
+      case `exit`:console.log(`❌ Process ${process.name} exited`);
+        this.processes.set(process.name { ...process, status: `errored` });
+        this.handleProcessFailure(process.name);
+        break}
+  }
+;
+  handleProcessError(data) {;
+    const { process, log } = data;console.error(`❌ Error in ${process.name}:`, log)}
+  }
+;
+  handleProcessLog(data) {;
+    const { process, log } = data}
+  }
+;
+  handleProcessFailure(processName) {;
+    const process = this.processes.get(processName);
+
+
+      );
+      this.attemptRecovery(processName)}
   }
 
-  async init() {
-    console.log('🚀 Automation Orchestrator Starting...');
-    console.log(`📁 Project Root: ${this.projectRoot}`);
-    
-    // Ensure reports directory exists
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+    return criticalProcesses.includes(processName)}
 
-    // Initialize automation modules
-    await this.initializeAutomations();
+        if (status === 'online') {console.log(✅ ${processName} recovered successfully``)} else {console.error(`❌ ${processName} recovery failed`)}
+      }, 10000)} catch (error) {  console.error(`❌ Failed to recover ${processName  }:`, error.message)}
   }
 
-  async initializeAutomations() {
-    console.log('🔧 Initializing automation modules...');
-    
-    try {
-      // Import automation modules
-      const EnhancedErrorFixer = require('./enhanced-error-fixer.cjs');
-      const CodeQualityAutomation = require('./code-quality-automation.cjs');
-      
-      this.automations.set('error-fixer', {
-        name: 'Enhanced Error Fixer',
-        module: EnhancedErrorFixer,
-        interval: 15 * 60 * 1000, // 15 minutes
-        lastRun: null,
-        status: 'ready'
-      });
-      
-      this.automations.set('code-quality', {
-        name: 'Code Quality Automation',
-        module: CodeQualityAutomation,
-        interval: 2 * 60 * 60 * 1000, // 2 hours
-        lastRun: null,
-        status: 'ready'
-      });
-      
-      console.log(`✅ Initialized ${this.automations.size} automation modules`);
-    } catch (error) {
-      console.error('❌ Error initializing automations:', error);
-    }
+    })}
+;
+  startHealthMonitoring() {;
+    setInterval(() => {;
+      this.performHealthCheck()}, this.config.healthCheckInterval)}
+;
+  async performHealthCheck() {;
+    try {;
+      const processes = await this.getProcessList();
+;
+      for (const process of processes) {;
+        const health = this.assessProcessHealth(process);
+        this.healthChecks.set(process.name, health);
+
+    // Check memory usage;
+    const memoryMB = process.monit.memory / (1024 * 1024);
+    if (memoryMB > 100) {;
+      health.status = 'unhealthy';
+      health.issues.push('High memory usage')}
+    health.metrics.memory = memoryMB;
+
+      health.status = 'unhealthy';
+      health.issues.push('High CPU usage')}
+    health.metrics.cpu = process.monit.cpu;
+
+      health.status = 'unhealthy';
+      health.issues.push('Excessive restarts')}
+    health.metrics.restarts = process.pm2_env.restart_time}
+    health.metrics.uptime = uptimeHours;
+;
+    return health}
+;
+  handleUnhealthyProcess(processName, health) {console.warn(`🚨 Process ${processName} is unhealthy:`, health.issues);
+
+
+      this.restartProcess(processName).catch(error => {console.error(❌ Failed to restart ${processName}:, error.message`)})}
   }
+;
+  async getProcessList() {;
+    return new Promise((resolve, reject) => {;
+      pm2.list((err, processes) => {;
+        if (err) {;
+          reject(err);
+          return}
+        resolve(processes)})})}
+;
+  async getProcessStatus(processName) {;
+    try {;
+      const processes = await this.getProcessList();
+      const process = processes.find(p => p.name === processName);
 
-  async runAutomation(name) {
-    const automation = this.automations.get(name);
-    if (!automation) {
-      throw new Error(`Automation '${name}' not found`);
-    }
-
-    console.log(`🚀 Running ${automation.name}...`);
-    automation.status = 'running';
-    automation.lastRun = Date.now();
-
-    try {
-      const instance = new automation.module();
-      const result = await instance.run();
-      
-      automation.status = 'completed';
-      automation.lastResult = result;
-      
-      console.log(`✅ ${automation.name} completed successfully`);
-      return result;
-    } catch (error) {
-      automation.status = 'failed';
-      automation.lastError = error.message;
-      
-      console.error(`❌ ${automation.name} failed:`, error.message);
-      throw error;
-    }
+        error.message;
+      );
+      return `unknown`}
   }
+;
+  async restartProcess(processName) {;
+    return new Promise((resolve, reject) => {;
+      pm2.restart(processName, err => {;
+        if (err) {;
+          reject(err);
+          return}
+        resolve()})})}
+;
+  async stopProcess(processName) {;
+    return new Promise((resolve, reject) => {;
+      pm2.stop(processName, err => {;
+        if (err) {;
+          reject(err);
+          return}
+        resolve()})})}
+;
+  async startProcess(processName) {;
+    return new Promise((resolve, reject) => {;
+      pm2.start(processName, err => {;
+        if (err) {;
+          reject(err);
+          return}
+        resolve()})})}
+;
+  getProcessInfo(processName) {;
+    return this.processes.get(processName) || null}
+;
+  getHealthStatus(processName) {;
+    return this.healthChecks.get(processName) || { status: 'unknown' }}
+;
+  getSchedule(processName) {;
+    return this.schedules.get(processName) || null}
+;
+  async generateReport() {;
+    const report = {;
+      timestamp: new Date().toISOString(),;
+      summary: {;
+        totalProcesses: this.processes.size,;
+        healthyProcesses: 0,;
+        unhealthyProcesses: 0,;
+        erroredProcesses: 0,},;
+      processes: [],;
+      recommendations: [],};
+;
+    for (const ['name', 'process'] of this.processes) {;
+      const health = this.healthChecks.get(name) || { status: 'unknown' };
+      const schedule = this.schedules.get(name) || {};
+;
+      if (health.status === 'healthy') {;
+        report.summary.healthyProcesses++;
 
-  async runAllAutomations() {
-    console.log('🚀 Running all automations...');
-    this.status = 'running';
-    
-    const results = {};
-    const errors = [];
-    
-    for (const [name, automation] of this.automations) {
-      try {
-        results[name] = await this.runAutomation(name);
-      } catch (error) {
-        errors.push({ name, error: error.message });
-      }
-    }
-    
-    this.status = 'completed';
-    
-    return { results, errors };
+      report.recommendations.push('Review and optimize unhealthy processes')}
+    if (report.summary.erroredProcesses > 0) {;
+      report.recommendations.push('Investigate and fix errored processes')}
+;
+    return report}
+;
+  async saveReport() {;
+    try {;
+      const report = await this.generateReport();
+
+      // Ensure reports directory exists;
+      await fs.mkdir(path.dirname(reportPath) { recursive: true });
+;
+      await fs.writeFile(reportPath, JSON.stringify(report, null, 2));console.log(`📊 Report saved to ${reportPath}`)}
+;
+  async run() {;
+    try {;
+      await this.initialize();
+
+      console.error('❌ Orchestrator error:', error.message)}
   }
+}
 
-  async startScheduledAutomations() {
-    console.log('⏰ Starting scheduled automations...');
-    
-    if (this.schedule) {
-      clearInterval(this.schedule);
-    }
-    
-    this.schedule = setInterval(async () => {
-      await this.runScheduledAutomations();
-    }, 60000); // Check every minute
-    
-    console.log('✅ Scheduled automations started');
-  }
-
-  async runScheduledAutomations() {
-    const now = Date.now();
-    
-    for (const [name, automation] of this.automations) {
-      if (automation.status === 'ready' && 
-          (!automation.lastRun || (now - automation.lastRun) >= automation.interval)) {
-        
-        console.log(`⏰ Running scheduled automation: ${automation.name}`);
-        try {
-          await this.runAutomation(name);
-        } catch (error) {
-          console.error(`❌ Scheduled automation failed: ${automation.name}`, error.message);
-        }
-      }
-    }
-  }
-
-  async stopScheduledAutomations() {
-    if (this.schedule) {
-      clearInterval(this.schedule);
-      this.schedule = null;
-      console.log('⏹️  Scheduled automations stopped');
-    }
-  }
-
-  async getStatus() {
-    const status = {
-      orchestrator: {
-        status: this.status,
-        uptime: Date.now() - this.startTime,
-        automations: this.automations.size
-      },
-      automations: {}
-    };
-    
-    for (const [name, automation] of this.automations) {
-      status.automations[name] = {
-        name: automation.name,
-        status: automation.status,
-        lastRun: automation.lastRun,
-        nextRun: automation.lastRun ? automation.lastRun + automation.interval : null,
-        interval: automation.interval
-      };
-    }
-    
-    return status;
-  }
-
-  async generateOrchestratorReport() {
-    const endTime = Date.now();
-    const duration = endTime - this.startTime;
-    
-    const report = {
-      timestamp: new Date().toISOString(),
-      duration: `${duration}ms`,
-      status: this.status,
-      automations: {},
-      summary: `Orchestrator ran for ${duration}ms with status: ${this.status}`
-    };
-    
-    for (const [name, automation] of this.automations) {
-      report.automations[name] = {
-        name: automation.name,
-        status: automation.status,
-        lastRun: automation.lastRun,
-        lastResult: automation.lastResult,
-        lastError: automation.lastError
-      };
-    }
-    
-    const reportPath = path.join(this.reportsDir, 'automation-orchestrator-report.json');
-    await writeFile(reportPath, JSON.stringify(report, null, 2));
-    
-    console.log('\n📊 Orchestrator Report:');
-    console.log(`⏱️  Duration: ${duration}ms`);
-    console.log(`📁 Report saved to: ${reportPath}`);
-    
-    return report;
-  }
-
-  async healthCheck() {
-    console.log('🏥 Running health check...');
-    
-    const health = {
-      timestamp: new Date().toISOString(),
-      status: 'healthy',
-      checks: {}
-    };
-    
-    // Check if all automations are ready
-    for (const [name, automation] of this.automations) {
-      health.checks[name] = {
-        status: automation.status === 'ready' ? 'healthy' : 'unhealthy',
-        message: automation.status === 'ready' ? 'Ready to run' : `Status: ${automation.status}`
-      };
-    }
-    
-    // Check if any automation is stuck
-    const stuckAutomations = Array.from(this.automations.values())
-      .filter(a => a.status === 'running' && (Date.now() - a.lastRun) > 300000); // 5 minutes
-    
-    if (stuckAutomations.length > 0) {
-      health.status = 'degraded';
-      health.checks.stuckAutomations = {
-        status: 'unhealthy',
-        message: `${stuckAutomations.length} automation(s) appear to be stuck`
-      };
-    }
-    
-    // Check disk space
-    try {
-      const stats = fs.statSync(this.reportsDir);
-      const freeSpace = require('child_process').execSync('df . | tail -1 | awk \'{print $4}\'').toString().trim();
-      health.checks.diskSpace = {
-        status: 'healthy',
-        message: `Free space: ${freeSpace} blocks`
-      };
-    } catch (error) {
-      health.checks.diskSpace = {
-        status: 'unhealthy',
-        message: 'Could not check disk space'
-      };
-    }
-    
-    return health;
-  }
-
-  async run() {
-    await this.init();
-    
-    try {
-      // Run initial automations
-      const results = await this.runAllAutomations();
-      
-      // Start scheduled automations
-      await this.startScheduledAutomations();
-      
-      // Generate report
-      const report = await this.generateOrchestratorReport();
-      
-      console.log('🎉 Automation Orchestrator started successfully!');
-      console.log('📊 Initial run results:', results);
-      
-      return { results, report };
-    } catch (error) {
-      console.error('❌ Error in Automation Orchestrator:', error);
-      throw error;
-    }
-  }
-  {/* Removed stray closing brace */}
-
-// Run the orchestrator if called directly
-if (require.main === module) {
   const orchestrator = new AutomationOrchestrator();
-  orchestrator.run().catch(console.error);
-  {/* Removed stray closing brace */}
-
+  orchestrator.run().catch(console.error)}
+;
 module.exports = AutomationOrchestrator;

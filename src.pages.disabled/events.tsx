@@ -1,2 +1,5 @@
-:src.pages.disabled/events.tsx
-import React from 'react'; import { SEO } from '../components/SEO'; const Events: React.FC = () => { return ( <> <SEO title="Events" description="Join Zion Tech Group at upcoming technology events and conferences." keywords="events, conferences, technology, networking" /> <div className="min-h-screen bg-zion-slate-dark flex items-center justify-center"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-4">Events</h1> <p className="text-gray-300">Coming soon...</p> </div> </div> </> ); }; export default Events;
+
+
+
+
+

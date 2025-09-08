@@ -36,29 +36,5 @@ interface ScrollToTopProps {
 
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-}
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-export default function ScrollToTop({ }: ScrollToTopProps) {
->>>>>>> origin/main
-  return (
-    <div>
-      <h1>ScrollToTop</h1>
-      <p>This component is currently under development.</p>
-    </div>
-<<<<<<< HEAD
-  );}
-=======
-=======
-  );
-
-}
-:src.disabled/components/ScrollToTop.jsx
-}
-}
->>>>>>> origin/main

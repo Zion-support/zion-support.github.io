@@ -3,80 +3,76 @@ import Head from 'next/head';
 
 interface SEOOptimizerProps {
   title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-}
+   description?: string;
+   keywords?: string;
+   ogImage?: string;
+   ogType?: string;
+   canonicalUrl?: string;
+   structuredData?: any;
+   noindex?: boolean;
+   nofollow?: boolean}
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title = "Zion Tech Group - Revolutionary AI, Quantum Computing & Autonomous Solutions",
-  description = "Pioneering the future of technology with innovative AI, quantum computing, and autonomous solutions that transform businesses worldwide. Enterprise-grade security, cloud infrastructure, and cutting-edge innovations.",
-  keywords = "AI, artificial intelligence, quantum computing, autonomous systems, cybersecurity, cloud infrastructure, enterprise IT, machine learning, automation, space technology, blockchain, emerging tech",
-  image = "/og-image.svg",
-  url = "https://ziontechgroup.com",
-  type = "website",
-  author = "Zion Tech Group",
-  publishedTime,
-  modifiedTime,
-  section = "Technology",
-  tags = ["AI", "Quantum Computing", "Cybersecurity", "Cloud", "Enterprise IT"]
-}) => {
-  const fullTitle = title.includes("Zion Tech Group") ? title : `${title} | Zion Tech Group`;
-  const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
-  const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
-
-  return (
     <Head>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content={author} />
-      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={fullUrl} />
-      
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={fullUrl} />
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={fullImage} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={fullImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-      
+      <title>{fullTitle}</title>'
+      <meta name='description' content={fullDescription} />
+      <meta name='keywords' content={keywords} />
+      <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=5' />
+      <meta name='robots' content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />`
+      <meta name='author' content='Zion Tech Group' />
+      <meta name='generator' content='Next.js' />
+      {/* Canonical URL */}, {/* Open Graph */}
+      <meta property='og:title' content={fullTitle} />
+      <meta property='og:description' content={fullDescription} />
+      <meta property='og:image' content={ogImage.startsWith('http') ? ogImage : `http,
+    s://ziontechgroup.com${ogImage}`} />`
+      <meta property='og:type' content={ogType} />
+      <meta property='og:url' content={currentUrl} />
+      <meta property='og:site_name' content='Zion Tech Group' />
+      <meta property='o,
+    g:locale' content='en_US' />
+      {/* Twitter Card */}
+      <meta name='twitter:card' content='summary_large_image' />
+      <meta name='twitte,
+    r:title' content={fullTitle} />
+      <meta name='twitter:description' content={fullDescription} />
+      <meta name='twitter:image' content={ogImage.startsWith('http') ? ogImage : `http,
+    s://ziontechgroup.com${ogImage}`} />`
+      <meta name='twitter:site' content='@ziontechgroup' />
+      <meta name='twitte,
+    r:creator' content='@ziontechgroup' />
       {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="theme-color" content="#000000" />
-      <meta name="msapplication-TileColor" content="#000000" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      
+      <meta name='theme-color' content='#1e40af' />
+      <meta name='msapplication-TileColor' content='#1e40af' />
+      <meta name='apple-mobile-web-app-capable' content='yes' />
+      <meta name='apple-mobile-web-app-status-bar-style' content='default' />
+      <meta name='apple-mobile-web-app-title' content='Zion Tech Group' />
       {/* Favicon */}
-      <link rel="icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-      
-      {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel='icon' href='/favicon.ico' />
+      <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
+      <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
+      <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
+      <link rel='manifest' href='/site.webmanifest' />
+      {/* Preconnect to external domains */}
+      <link rel='preconnect' href='https: //fonts.googleapis.com' />
+      <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
+      <link rel='preconnect' href='http,
+    s://www.google-analytics.com' />
+      <link rel='preconnect' href='http,
+    s://www.googletagmanager.com' />
+      {/* DNS Prefetch */}
+      <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+      <link rel='dns-prefetch' href='//www.google-analytics.com' />
+      {/* Structured Data */}
+      <script'
+        type='application/ld+json';
+        dangerouslySetInnerHTML={{;
+          __html: JSON.stringify(finalStructuredData, null, 2)}}
+      />;
+      {/* Performance Hints */}
+      <link rel='preload' href='/fonts/inter-var.woff2' as='font' type='font/woff2' crossOrigin='anonymous' />
+      <link rel='preload' href='/images/hero-bg.webp' as='image' />
     </Head>
-  );
-};
+  )};
 
-export default SEOOptimizer;
+

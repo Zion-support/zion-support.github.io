@@ -1,56 +1,88 @@
-import React from "react";
-const FAQ = () => {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      {" "}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {" "}
-        <div className="text-center mb-12">
-          {" "}
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            {" "}
-            Frequently Asked Questions{" "}
-          </h1>{" "}
-          <p className="text-xl text-gray-600">
-            {" "}
-            Find answers to common questions about our services.{" "}
-          </p>{" "}
-        </div>{" "}
-        <div className="max-w-3xl mx-auto space-y-6">
-          {" "}
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            {" "}
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              What services do you offer?
-            </h3>{" "}
-            <p className="text-gray-600">
-              We offer AI solutions,cybersecurity,cloud services,and digital
-              transformation solutions.
-            </p>{" "}
-          </div>{" "}
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            {" "}
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              How can I get started?
-            </h3>{" "}
-            <p className="text-gray-600">
-              Contact us through our contact form or request a quote to get
-              started with our services.
-            </p>{" "}
-          </div>{" "}
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            {" "}
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              Do you offer support?
-            </h3>{" "}
-            <p className="text-gray-600">
-              Yes,we provide comprehensive support for all our services and
-              solutions.
-            </p>{" "}
-          </div>{" "}
-        </div>{" "}
-      </div>{" "}
+
+
+const FAQ: React.FC = () => {}
+  const [openItems, setOpenItems] = React.useState<;<;<number[]>([]);
+  const toggleItem = (index: number) => {
+    setOpenItems(prev =>
+
+      prev.includes(index);
+        ? prev.filter(i => i !== index);
+        : [...prev, index];
+    )}, {
+      question: &apos;Do you have case studies or references?&apos;,
+      answer: &apos;Yes, we have numerous case studies showcasing successful implementations across various industries. We can provide references from satisfied clients and detailed case studies demonstrating ROI and business impact.&apos}
+
+
+  ]
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className=&apos;text-center mb-12&apos;>&apos;
+
+          <div className=&apos;flex items-center justify-center mb-4&apos;>&apos;
+            <HelpCircle className=&apos;h-8 w-8 text-blue-600 mr-3&apos; />&apos;
+            <h1 className=&apos;text-4xl font-bold text-gray-900&apos;>Frequently Asked Questions&apos;</h1>
+          </div>
+          <p className=&apos;text-xl text-gray-600 max-w-2xl mx-auto&apos;>
+            Find answers to common questions about our services, processes, and solutions.&apos;
+          </p>
+        </motion.div>
+        {/* FAQ Items */}
+        <div className=&apos;space-y-4&apos;>
+          {faqs.map((faq, index) => (&apos}
+            <motion.div
+
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+
+              <button;
+                onClick={() => toggleItem(index)}
+                className='w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors';
+              >;
+                <span className='text-lg font-semibold text-gray-900 pr-4'>;
+                  {faq.question}
+                </span>;
+                <ChevronDown;
+                  className={`h-5 w-5 text-gray-500 transition-transform ${;
+                    openItems.includes(index) ? 'rotate-180' : '}`}
+                />;
+              </button>;
+              {openItems.includes(index) && (;
+                <motion.div;
+
+                </span>
+
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: &apos;auto&apos;, opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+
+              )}
+            </motion.div>;
+          ))}
+
+            </h2>
+            <p className=&apos;text-gray-600 mb-6&apos;>
+              Our team is here to help. Get in touch with us for personalized assistance.&apos;
+            </p>
+            <div className=&apos;flex flex-col sm:flex-row gap-4 justify-center&apos;>&apos;'
+              <a
+
+
+              </a>
+            </div>
+          </div>
+        </motion.div>
+      </div>
     </div>
-  );
-};
-export default FAQ;
+
+  )}
+
+
+
+
+
+
+
+

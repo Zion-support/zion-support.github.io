@@ -1,5 +1,67 @@
 import React from 'react';
-import MainLayout from '../src/components/layout/MainLayout';
+import Head from 'next/head';
+import Link from 'next/link';
+import { HelpCircle, MessageCircle, Phone, Mail, Clock, Search, BookOpen, Users, ArrowRight, CheckCircle, Star, Globe } from 'lucide-react';
+
+export default function Support() {
+  const supportOptions = [
+
+    }
+  ];
+
+  const faqCategories = [
+
+        {
+          question: 'How do I create an account?',
+          answer: 'You can create an account by visiting our sign-up page and providing your email address and basic information. We\'ll send you a verification email to complete the process.'
+        }, {
+          question: 'What services do you offer?',
+          answer: 'We offer AI services, cloud solutions, cybersecurity, and micro SaaS development. Visit our services page for detailed information about each offering.'
+        }, {
+          question: 'How do I get my API key?', answer: 'Once you\'ve created an account, you can find your API key in the dashboard under the "API Keys" section. You can generate new keys or revoke existing ones as needed.'
+        }
+      ]
+    }, {
+      title: 'Billing & Pricing',
+      questions: [
+        {
+          question: 'What payment methods do you accept?', answer: 'We accept all major credit cards, PayPal, and bank transfers. Enterprise customers can also arrange for invoicing and payment terms.'
+        }, {
+          question: 'Can I change my plan anytime?', answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we\'ll prorate any billing differences.'
+        }, {
+          question: 'Do you offer refunds?', answer: 'We offer a 30-day money-back guarantee for all our services. If you\'re not satisfied, contact our support team for a full refund.'
+        }
+      ]
+    }, {
+      title: 'Technical Support',
+      questions: [
+        {
+          question: 'How do I integrate your API?', answer: 'We provide comprehensive documentation and SDKs for popular programming languages. Check our API documentation for detailed integration guides.'
+        }, {
+          question: 'What are your API rate limits?', answer: 'Rate limits vary by plan. Free plans have 1,000 requests per month, Professional plans have 100,000 requests per month, and Enterprise plans have unlimited requests.'
+        }, {
+          question: 'How do I report a bug?', answer: 'You can report bugs through our support portal, email support@ziontechgroup.com, or use the feedback form in your dashboard.'
+        }
+      ]
+    }
+  ];
+
+  const supportTiers = [
+
+    }
+  ];
+
+  const contactMethods = [
+
+      title: 'Technical Support',
+      email: 'support@ziontechgroup.com', phone: '+1 302 464 0951',
+      hours: '24/7 for Premium customers'
+    }, {
+      title: 'Sales & Partnerships',
+      email: 'sales@ziontechgroup.com', phone: '+1 302 464 0952',
+      hours: 'Monday - Friday, 9 AM - 6 PM EST'
+    }
+  ];
 
 const Page = () => {
   return (
@@ -550,8 +612,5 @@ export default Support
           </div>
         </section>
       </main>
-    </Layout>
-  )
-}
-export default SupportPage;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+</>
+  )}

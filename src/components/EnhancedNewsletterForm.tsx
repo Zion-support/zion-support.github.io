@@ -215,5 +215,4 @@ export function EnhancedNewsletterForm() {
         </p>
       </form>
     </div>
-  );
-}
+  )}

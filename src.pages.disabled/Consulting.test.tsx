@@ -1,2 +1,4 @@
-:src.pages.disabled/Consulting.test.tsx
-describe ('Consulting', () => {}; '; it ('renders without crashing', () => {}; render (<Consulting />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<Consulting />) ;
+
+
+
+

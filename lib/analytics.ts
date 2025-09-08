@@ -10,61 +10,31 @@
 }
 // Track events
 export const trackEvent = (
-  eventName: string
-  properties?: Record<string, string | number | boolean>
+  eventName: string,
+
 ) => {
-  if (typeof window !== 'undefined' && window.gtag) {;
-    window.gtag('event', eventName, properties);
-  }
-}
-export const trackPageView = (url: string) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', eventName, properties)};
-};
-export const trackPageView = (url: string) => {
   if (typeof window !== 'undefined' && window.gtag) {'
-    window.gtag('configGA_MEASUREMENT_ID', {'
-      page_path: url
-    });
-  }
-}
-;
-export const trackPageView = (url: string) =>: any {
-  // Check condition
-if ( {) {
-  $2
-}
-    window.gtag ('config', 'GA_MEASUREMENT_ID', {
+    window.gtag('event', eventName, properties)}
+};
 
-      page_path: url,
 
-      page_path: url,;
-      page_path: url,
-
-    });
-  }
-}
-      page_path: url,
-
-    });
-  }
+      page_path: url })}
 };
 
 export const measurePerformance = () => {
   if (typeof window !== 'undefined' && 'performance' in window) {
     const navigation = performance && performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     return {
-
-      loadTime: navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart,
-      domContentLoaded: navigation && navigation.domContentLoadedEventEnd - navigation && navigation.domContentLoadedEventStart,
-      firstPaint: performance && performance.getEntriesByName('first-paint')[0]?.startTime || 0,
-      firstContentfulPaint: performance && performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0,
-    };
-
-  }
-  return null;
-}
-};
+      loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+      domContentLoaded:
+        navigation.domContentLoadedEventEnd -
+        navigation.domContentLoadedEventStart,
+      firstPaint:'
+        performance.getEntriesByName('first-paint')[0]?.startTime || 0,
+      firstContentfulPaint:'
+        performance.getEntriesByName('first-contentful-paint')[0]?.startTime ||
+        0 }}
+  return null};
 
 // Track events
 export const trackEvent = (
@@ -111,25 +81,14 @@ if ( {) {
 ;
 interface WebVitalMetric {
   name: string;
-  value: number;
-  id: string;
-}
+  valu,
+    e: number;
+  i,
+    d: string}
 
-
-      value: Math.round(metric.value)
-      event_category: 'Web Vitals'
-      event_label: metric.id
-      non_interaction: true
-      value: Math.round(metric.value),
-      event_category: 'Web Vitals',
-      event_label: metric.id,
-      non_interaction: true,;
-    });
-  }
-}
-export const trackWebVitals = (metric: WebVitalMetric) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', metric.name, {
+export const trackWebVitals = (metric: WebVitalMetric) => {'
+  if (typeof window !== 'undefined' && window.gtag) {'
+    window.gtag('event', metric.name {
       value: Math.round(metric.value),
 export const trackWebVitals = (metric: WebVitalMetric) =>: any {
   // Check condition
@@ -142,31 +101,12 @@ if ( {) {
 
       event_category: 'Web Vitals',
       event_label: metric.id,
-      non_interaction: true,
-    });
-  }
+      non_interaction: true })}
+};
 
-}
-;
-// Track events;
+declare global {
+  interface Window {
 
-// Track events
-}
-;
-// Track events;
-export const event = ({
-  action
-  category
-  label
-  value
-}: {
-
-      value: Math.round(metric.value),
-      event_category: 'Web Vitals',
-      event_label: metric.id,
-      non_interaction: true,;
-
-    });
   }
 }
 // Track events

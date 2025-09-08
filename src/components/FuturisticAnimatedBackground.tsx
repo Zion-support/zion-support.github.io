@@ -1,11 +1,13 @@
 import React from 'react';
 
-  return (
-    <canvas
-      ref={canvasRef}
-      className="fixed inset-0 w-full h-full pointer-events-none z-0"
-      style={{ background: 'radial-gradient(1200px 600px at 10% -10%, rgba(56,189,248,0.05), transparent 60%), radial-gradient(900px 500px at 110% 10%, rgba(168,85,247,0.03), transparent 60%)' }}
-    />
-  );
-};
-export default FuturisticAnimatedBackground;
+export default function FuturisticAnimatedBackground() {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      <SEO title="FuturisticAnimatedBackground - Zion Tech Group" description="Professional FuturisticAnimatedBackground services by Zion Tech Group" />
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold text-white mb-8">FuturisticAnimatedBackground</h1>
+        <p className="text-gray-300 text-lg">
+          Professional FuturisticAnimatedBackground services to help your business grow.
+        </p>
+      </div>
+    </div>
+  )}

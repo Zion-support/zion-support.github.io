@@ -23,107 +23,132 @@ export function generateSearchSuggestions() {
   ];
   {/* Removed stray closing brace */}
 
-// Marketplace items data
-export const marketplaceItems = [
-  {
-    id: 1,
-    title: "AI-Powered Business Intelligence Platform",
-    description: "Advanced analytics and insights powered by machine learning algorithms",
-    category: "AI Services",
-    price: "$2,500/month",
-    rating: 4.8,
-    location: "Global",
-    availability: "Available",
-    tags: ["AI", "Analytics", "Business Intelligence", "Machine Learning"],
-    images: ["/images/ai-bi-platform.jpg"]
+
+  'Database Management',
+  
+
+  'Event Sourcing' ];
+
+
+    icon: '🤖',
+
+      'DevOps Automation',
+      'Container Orchestration',
+      'Infrastructure as Code',
+      'CI/CD Pipelines',
+      'Monitoring & Logging',
+      'Auto Scaling',
+      'Load Balancing'
+    ]
   },
-  {
-    id: 2,
-    title: "Quantum-Safe Cybersecurity Suite",
-    description: "Next-generation security solutions resistant to quantum computing attacks",
-    category: "Cybersecurity",
-    price: "$1,800/month",
-    rating: 4.9,
-    location: "Global",
-    availability: "Available",
-    tags: ["Cybersecurity", "Quantum Computing", "Security", "Encryption"],
-    images: ["/images/quantum-security.jpg"]
+
+      'Penetration Testing',
+      'Vulnerability Assessment',
+      'Incident Response',
+      'Security Monitoring',
+      'Compliance Management',
+      'Identity & Access Management',
+      'Data Protection'
+    ]
   },
-  {
-    id: 3,
-    title: "Blockchain Supply Chain Platform",
-    description: "Transparent and secure supply chain management using blockchain technology",
-    category: "Blockchain Solutions",
-    price: "$3,200/month",
-    rating: 4.7,
-    location: "Global",
-    availability: "Available",
-    tags: ["Blockchain", "Supply Chain", "Transparency", "Security"],
-    images: ["/images/blockchain-supply.jpg"]
-  },
-  {
-    id: 4,
-    title: "IoT Smart City Infrastructure",
-    description: "Comprehensive IoT solutions for modern smart city development",
-    category: "IoT Services",
-    price: "$4,500/month",
-    rating: 4.6,
-    location: "Global",
-    availability: "Available",
-    tags: ["IoT", "Smart City", "Infrastructure", "Automation"],
-    images: ["/images/iot-smart-city.jpg"]
-  },
-  {
-    id: 5,
-    title: "Cloud-Native Microservices Platform",
-    description: "Scalable microservices architecture for modern applications",
-    category: "Cloud Computing",
-    price: "$2,800/month",
-    rating: 4.8,
-    location: "Global",
-    availability: "Available",
-    tags: ["Cloud", "Microservices", "Scalability", "Architecture"],
-    images: ["/images/cloud-microservices.jpg"]
-  {/* Removed stray closing brace */}
+
+      'Workflow Optimization',
+      'Change Management',
+      'Digital Strategy',
+      'Legacy Modernization',
+      'Business Process Reengineering',
+      'Digital Adoption',
+      'Innovation Consulting'
+    ]
+  }
+]]
+  }
 ];
 
-// Marketplace filters configuration
-export const marketplaceFilters = {
-  productTypes: [
-    "AI Services",
-    "Cloud Computing", 
-    "Cybersecurity",
-    "Micro SAAS",
-    "IT Infrastructure",
-    "Quantum Computing",
-    "Blockchain Solutions",
-    "IoT Services",
-    "Data Analytics",
-    "Machine Learning",
-    "DevOps Services",
-    "Mobile Development",
-    "Web Development",
-    "Digital Transformation",
-    "Enterprise Solutions",
-    "Startup Services",
-    "Consulting",
-    "Training",
-    "Support",
-    "Maintenance"
-  ],
-  locations: [
-    "Global",
-    "North America",
-    "Europe",
-    "Asia Pacific",
-    "Latin America",
-    "Middle East",
-    "Africa"
-  ],
-  availability: [
-    "Available",
-    "Coming Soon",
-    "Limited Availability",
-    "Custom Development"
-  {/* Removed stray closing bracket */}
-};
+export const industrySolutions = [
+
+      'Payment Processing',
+      'Risk Analytics',
+      'Compliance Automation',
+      'Customer Onboarding',
+      'Fraud Detection'
+    ]
+  },
+
+      'Telemedicine Platforms',
+      'Medical Imaging',
+      'Patient Management',
+      'Clinical Decision Support',
+      'Healthcare Analytics'
+    ]
+  },
+
+      'Inventory Management',
+      'Customer Analytics',
+      'Omnichannel Integration',
+      'Personalization',
+      'Mobile Commerce'
+    ]
+  }
+];
+
+export const testimonials = [{id: 1,
+    name: 'Sarah Johnson',
+    title: 'CTO',
+    company: 'TechCorp Industries',
+    content: 'Zion Tech Group transformed our legacy systems into a modern, scalable cloud infrastructure. Their expertise in DevOps and automation has increased our deployment speed by 300%.',
+    rating: 5,
+    avatar: '/avatars/sarah.jpg'
+  }, {id: 2,
+    name: 'Michael Chen',
+    title: 'VP of Engineering',
+    company: 'InnovateBank',
+    content: 'The AI-powered fraud detection system from Zion Tech Group has reduced our false positives by 60% while maintaining 99.9% accuracy. Outstanding results!',
+    rating: 5,
+    avatar: '/avatars/michael.jpg'
+  }, {id: 3,
+    name: 'Emily Rodriguez',
+    title: 'Operations Director',
+    company: 'GreenManufacturing Co.' ]
+  }
+];
+
+
+    content: 'Zion Tech Group transformed our legacy systems into a modern, scalable cloud infrastructure. Their expertise in DevOps and automation has increased our deployment speed by 300%.',
+    rating: 5, ""
+    avatar: '/avatars/sarah.jpg',
+
+    content: 'The AI-powered fraud detection system from Zion Tech Group has reduced our false positives by 60% while maintaining 99.9% accuracy. Outstanding results!',
+    rating: 5, ""
+    avatar: '/avatars/michael.jpg',
+
+
+    content: 'Their digital transformation consulting helped us implement smart manufacturing solutions that increased our production efficiency by 40% and reduced waste by 25%.',
+    rating: 5, ""
+    avatar: '/avatars/emily.jpg' }
+];
+
+
+    title: 'AI-Powered Manufacturing Optimization',
+    industry: 'Manufacturing',
+    challenge: 'Inefficient production processes and high defect rates',
+    solution: 'Machine learning models for predictive maintenance and quality control',
+
+      '25% improvement in product quality',
+      '15% increase in overall efficiency'
+    ],
+    technologies: ['Python', 'TensorFlow', 'IoT Sensors', 'Real-time Analytics']
+  },
+
+    title: 'Healthcare Security Enhancement',
+    industry: 'Healthcare',
+    challenge: 'Increasing cyber threats and compliance requirements',
+    solution: 'Comprehensive security framework with 24/7 monitoring',
+
+      'Zero security breaches in 2 years',
+      '50% faster incident response time'
+    ],
+    technologies: ['SIEM', 'EDR', 'Vulnerability Scanning', 'Compliance Automation']
+  }
+];
+

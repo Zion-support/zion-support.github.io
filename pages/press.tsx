@@ -17,36 +17,63 @@ import {
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
-const pressReleases = [
-  {
-    title: "Zion Tech Group Launches Revolutionary AI-Powered Drug Discovery Platform",
-    date: "2025-01-15",
-    summary: "New platform reduces drug discovery time by 50% and lowers R&D costs by 40%",
-    category: "Product Launch",
-    link: "#"
-  },
-  {
-    title: "Company Expands Quantum Computing Infrastructure Services",
-    date: "2025-01-10",
-    summary: "Leading provider of quantum computing solutions announces new service offerings",
-    category: "Service Expansion",
-    link: "#"
-  },
-  {
-    title: "Zion Tech Group Partners with Major Healthcare Organizations",
-    date: "2025-01-05",
-    summary: "Strategic partnerships to advance AI-powered healthcare solutions",
-    category: "Partnership",
-    link: "#"
-  },
-  {
-    title: "Company Recognized as Top AI Services Provider",
-    date: "2024-12-20",
-    summary: "Industry recognition for excellence in AI and technology solutions",
-    category: "Award",
-    link: "#"
-  }
-];
+export default function Press() {
+  const pressReleases = [
+
+      readTime: '3 min read'
+    }, {
+      title: 'Zion Tech Group Secures $10M Series A Funding for Global Expansion',
+      date: '2023-11-20', summary: 'Funding round led by leading venture capital firms to accelerate product development and international market expansion.',
+      category: 'Funding', readTime: '4 min read'
+    }, {
+      title: 'Zion Tech Group Partners with Microsoft to Deliver Advanced Cloud Solutions', date: '2023-09-10',
+      summary: 'Strategic partnership enables customers to leverage Microsoft Azure with Zion\'s AI and automation capabilities.',
+      category: 'Partnership',
+      readTime: '2 min read'
+    }, {
+      title: 'Zion Tech Group Recognized as Top AI Company by TechCrunch',
+      date: '2023-08-05', summary: 'Company named in TechCrunch\'s "Top 50 AI Companies to Watch" list for innovative approach to business automation.',
+      category: 'Award', readTime: '2 min read'
+    }
+  ];
+
+  const mediaCoverage = [
+
+      url: '#'
+    }, {
+      outlet: 'Forbes',
+      title: 'The Future of AI in Enterprise: Insights from Zion Tech Group', date: '2023-12-15',
+      type: 'Interview', url: '#'
+    }, {
+      outlet: 'VentureBeat', title: 'Zion Tech Group Raises $10M to Scale AI Automation Platform',
+      date: '2023-11-20', type: 'News',
+      url: '#'
+    }, {
+      outlet: 'ZDNet',
+      title: 'Microsoft Partnership Brings AI to Enterprise Cloud', date: '2023-09-10',
+      type: 'News', url: '#'
+    }
+  ];
+
+  const awards = [
+
+    }, {
+      title: 'Best Cloud Innovation', organization: 'Cloud Computing Awards',
+      date: '2023-12-01', description: 'Awarded for breakthrough cloud automation platform'
+    }, {
+      title: 'Startup of the Year', organization: 'Delaware Business Times',
+      date: '2023-10-15', description: 'Honored for rapid growth and market disruption'
+    }
+  ];
+
+  const teamQuotes = [
+
+    }, {
+      name: 'Sarah Johnson', title: 'CTO',
+      quote: 'The intersection of AI and business automation represents the next frontier in enterprise technology. We\'re proud to be at the forefront of this transformation.',
+      image: '/api/placeholder/100/100'
+    }
+  ];
 
 const mediaKit = {
   logo: "/images/logo.png",
@@ -252,25 +279,6 @@ export default function PressPage() {
             </div>
           </div>
         </section>
-
-        {/* Contact CTA */}
-        <section className="py-20 bg-blue-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold mb-6">Need More Information?</h2>
-            <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              Contact our media team for additional resources, interviews, or press inquiries.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
-                Contact Media Team
-              </Link>
-              <Link href="/about" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
-                Learn More About Us
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-  );
-}
+      </main>
+</>
+  )}

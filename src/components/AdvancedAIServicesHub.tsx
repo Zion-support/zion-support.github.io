@@ -309,21 +309,4 @@ const AdvancedAIServicesHub: React.FC = () => {
         </motion.div>
       </div>
     </div>
-  );
-};
-=======
-        {/* Empty State */}
-        {sortedServices.length === 0 && (
-          <div className="text-center py-12">
-            <div className="text-slate-400 mb-4">
-              <Search className="w-16 h-16 mx-auto"  />
-            </div>
-            <h3 className="text-lg font-medium text-slate-900 mb-2">No services found</h3>
-            <p className="text-slate-600">Try adjusting your search or filter criteria.</p>
-          </div>
-        )}
-      </div>
-    </div>
-  )};
-
-export default AdvancedAIServicesHub;
+  )}

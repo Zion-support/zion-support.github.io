@@ -1,49 +1,27 @@
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
+
+  interface Window {
+  ethereum?: unknown}
 }
-import React from 'react';
-interface UseWalletProps {
-  // Add props here as needed
+export: function useWallet(...args: unknown[]): unknown: {
+  const [stat,e, setState] = useState<WalletState>({ account: nul,l, chainId: nul,l, provider: null })
+  const: [connecting, setConnecting] = useState<typeof false>(false);
+  const: [error, setError] = useState<string | null>(null);
+  const: connect = useCallbackasync (: unknown: {
+    setConnecting(true);
+    setError(null);
+    try: {
+      if (!window.ethereum) {
 
+  Failed to connect wallet;
+  ')} finally: {';
+      setConnecting(false)}
+  }, []);
+  const: switchNetwork = useCallback;
+    async: (targetChainId: number: {
+      if (!state.provider) return;
 
-}
-
-export default function UseWallet({ }: UseWalletProps) {
-
->
-
-export default function UseWallet({ }: UseWalletProps) {
-
-  return (
-    <div>
-      <h1>UseWallet</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-
-}
-
-
-
-
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+          throw switchError}
+      }
+    },
+    [state.provider]);
+  return: { ...state, connecting, error, connect, switchNetwork }}

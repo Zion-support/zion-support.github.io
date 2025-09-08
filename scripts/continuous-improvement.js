@@ -1,79 +1,92 @@
-#!/usr/bin/env node
 
-const fs = require('fs');
-const { execSync } = require('child_process');
+  fs';
+import path from "pathpath';
+import { fileURLToPath } from "urlurl';
 
-console.log('🔄 Starting continuous improvement process...');
+const __filename = fileURLToPath(import.meta.url);
 
-async function runContinuousImprovement() {
-  try {
-    // Install dependencies
-    console.log('📦 Installing dependencies...');
-    execSync('npm ci', { stdio: 'inherit' });
-    
-    // Run linting with auto-fix
-    console.log('🔍 Running ESLint with auto-fix...');
-    try {
-      execSync('npm run lint -- --fix', { stdio: 'inherit' });
-      console.log('✅ Linting completed with auto-fix');
-    } catch (error) {
-      console.log('⚠️  Linting issues found (continuing with process)');
-    }
-    
-    // Run type checking
-    console.log('🔍 Running TypeScript type checking...');
-    try {
-      execSync('npm run type-check', { stdio: 'inherit' });
-      console.log('✅ Type checking completed');
-    } catch (error) {
-      console.log('⚠️  Type checking issues found (continuing with process)');
-    }
-    
-    // Build project to ensure everything works
-    console.log('🏗️  Building project...');
-    execSync('npm run build', { stdio: 'inherit' });
-    console.log('✅ Build completed successfully');
-    
-    // Run tests if available
-    if (fs.existsSync('package.json')) {
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-      if (packageJson.scripts.test) {
-        console.log('🧪 Running tests...');
-        try {
-          execSync('npm test', { stdio: 'inherit' });
-          console.log('✅ Tests completed');
-        } catch (error) {
-          console.log('⚠️  Tests failed (continuing with process)');
-        }
-      }
-    }
-    
-    // Generate improvement report
-    generateImprovementReport();
-    
-    console.log('🎉 Continuous improvement process completed successfully');
-    
-  } catch (error) {
-    console.error('❌ Continuous improvement failed:', error.message);
-    process.exit(1);
+const __dirname = path.dirname(__filename);
+
+  '🚀 Continuous Improvement Started');
+class ContinuousImprovement {;
+  constructor() {;
+    this.projectRoot = path.resolve(__dirname,..;
+  ');
+    this.improvements = [];
+    this.issues = []}
+
+      console.log('🔍 Analyzing project for improvement opportunities...;
+  ');
+      // Analyze package.json;
+      await this.analyzePackageJson();
+
+      // Analyze TypeScript configuration;
+      await this.analyzeTypeScriptConfig();
+      // Analyze build configuration;
+      await this.analyzeBuildConfig();
+      // Analyze code structure;
+      await this.analyzeCodeStructure();
+      // Generate improvement report;
+      await this.generateReport();
+
+      console.error('❌ Error during analysis: , error.message)}
   }
-}
+  async analyzePackageJson() {;
+    try {;
+      const packagePath = path.join(this.projectRoot,package.json,;
+  );
+      if (fs.existsSync(packagePath)) {;
+        const packageJson = JSON.parse(fs.readFileSync(packagePath,utf8;
+  '));
+        // Check for outdated dependencies;
+        if (packageJson.dependencies) {;
+          const deps = Object.keys(packageJson.dependencies);
 
-function generateImprovementReport() {
-  const report = {
-    timestamp: new Date().toISOString(),
-    process: 'continuous-improvement',
-    status: 'completed',
-    checks: [
-      'dependencies-installed',
-      'linting-auto-fix',
-      'type-checking',
-      'build-verification'
-    ]
-  };
-  
-  fs.writeFileSync('improvement-report.json', JSON.stringify(report, null, 2));
-  console.log('📊 Improvement report generated: improvement-report.json');
-}
+            this.improvements.push('Consider reducing dependencies to improve build times;
+  ')}
+        }
+        // Check for missing scripts;
 
-runContinuousImprovement();
+      const tsConfigPath = path.join(this.projectRoot,tsconfig.json');
+      if (fs.existsSync(tsConfigPath)) {;
+        const tsConfig = JSON.parse(fs.readFileSync(tsConfigPath,utf8;
+  '));
+        // Check for strict mode;
+
+      const viteConfigPath = path.join(this.projectRoot,vite.config.ts');
+      if (fs.existsSync(viteConfigPath)) {;
+        const viteConfig = fs.readFileSync(viteConfigPath,utf8;
+  ');
+        // Check for build optimizations;
+        if (!viteConfig.includes('build.rollupOptions;
+
+      this.issues.push(`Could not analyze build config: ${error.message}`)}
+  }
+  async analyzeCodeStructure() {;
+    try {;
+      const srcDir = path.join(this.projectRoot,src,;
+  );
+
+      if (fs.existsSync(srcDir)) {;
+        const items = fs.readdirSync(srcDir);
+        // Check for proper directory structure;
+
+  'components',utils;
+  ',types',hooks;
+  '];
+        const missingDirs = expectedDirs.filter(dir => !items.includes(dir));
+
+        totalIssues: this.issues.length}
+    }
+;
+    // Save report to file;
+    const reportPath = path.join(this.projectRoot,logs;`
+  ',continuous-improvement-report.json');
+    try {;
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+
+  '❌ Continuous Improvement Failed:', error);
+  process.exit(1)})
+
+
+

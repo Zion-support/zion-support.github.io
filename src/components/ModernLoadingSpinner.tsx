@@ -1,1 +1,22 @@
-import React, { useState, useEffect } from 'react'; import { motion, AnimatePresence } from 'framer - motion'; ; interface ModernLoadingSpinnerProps {; size?: 'sm' | 'md' | 'lg' | 'xl'; variant?: 'default' | 'futuristic' | 'ai' | 'cyber' | 'quantum'; text?: string; showProgress?: boolean; progress?: number; duration?: number; onComplete?: () => void; }; const loadingVariants = {; hidden: { opacity: 0, scale: 0.8 },; visible: { opacity: 1, scale: 1 },; exit: { opacity: 0, scale: 0.8 }; }; ; const spinnerVariants = {; rotate: {; rotate: 360,; transition: {; duration: 1,; repeat: Infinity,; ease: "linear"; }; },; pulse: {; scale: [1, 1.1, 1],; opacity: [0.5, 1, 0.5],; transition: {; duration: 2,;" repeat: Infinity, ";" ease: "easeInOut"; }; },; float: {; y: [-10, 10, -10],; transition: {; duration: 3,;" repeat: Infinity, ";" ease: "easeInOut"; }; }; }; ; const iconVariants = {; rotate: {; rotate: 360,; transition: {; duration: 2,;" repeat: Infinity, ";" ease: "linear"; }; },; pulse: {; scale: [1, 1.2, 1],; transition: {; duration: 1.5,;" repeat: Infinity, ";" ease: "easeInOut"; }; }; }; ; export const ModernLoadingSpinner: React.FC < ModernLoadingSpinnerProps> = ({; size = 'md',; variant = 'default',; text = 'Loading...',; showProgress = false,; progress = 0,; duration = 3000,; onComplete; }) => {; const [currentProgress, setCurrentProgress] = useState (0) ; const [isComplete, setIsComplete] = useState (false) ; ; const sizeClasses = {; sm: 'w - 8 h - 8',; md: 'w - 12 h - 12',; lg: 'w - 16 h - 16',; xl: 'w - 24 h - 24'; }; ; const textSizes = {; sm: 'text - sm',; md: 'text - base',; lg: 'text - lg',; xl: 'text - xl'; }; ;''";
+
+
+
+
+   variant?: 'default' | 'futuristic' | 'ai' | 'cyber' | 'quantum';
+
+
+   text?: string;
+   showProgress?: boolean;
+   progress?: number;
+
+
+
+
+
+
+
+
+
+
+
+

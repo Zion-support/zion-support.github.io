@@ -1,80 +1,33 @@
-import React from "react";
-import Head from 'next/head'
-import Link from 'next/link'
-const whitePapers = []
-  {}
-    id: 1,'
-    title: "The Future of AI in Enterprise: A Comprehensive Guide",
-    description: "Explore how artificial intelligence is transforming enterprise operations and what businesses need to know to stay competitive.",
-    author: "Dr. Sarah Chen",
-    date: "2024-01-15",
-    category: "Artificial Intelligence",
-    readTime: "45 min read",
-    downloadCount: "2,341",
-    featured: true,
-    pdfUrl: "/whitepapers/ai-enterprise-guide.pdf"
-  },
-  {}
-    id: 2,
-    title: "Cloud Security Best Practices for Modern Businesses",
-    description: "A detailed analysis of cloud security challenges and proven strategies to protect your organization's data and infrastructure.",
-    author: "Michael Rodriguez",
-    date: "2024-01-10",
-    category: "Cybersecurity",
-    readTime: "30 min read",
-    downloadCount: "1,876",
-    featured: false,
-    pdfUrl: "/whitepapers/cloud-security-best-practices.pdf"
-  },
-  {}
-    id: 3,
-    title: "Quantum Computing: The Next Frontier in Technology",
-    description: "Understanding quantum computing's potential impact on various industries and how to prepare for the quantum revolution.",
-    author: "Dr. Alex Thompson",
-    date: "2024-01-05",
-    category: "Quantum Computing",
-    readTime: "60 min read",
-    downloadCount: "1,234",
-    featured: false,
-    pdfUrl: "/whitepapers/quantum-computing-frontier.pdf"
-  },
-  {}
-    id: 4,
-    title: "Digital Transformation Strategies for Healthcare",
-    description: "How healthcare organizations can leverage technology to improve patient outcomes and operational efficiency.",
-    author: "Jennifer Lee",
-    date: "2023-12-28",
-    category: "Healthcare Technology",
-    readTime: "40 min read",
-    downloadCount: "987",
-    featured: false,
-    pdfUrl: "/whitepapers/healthcare-digital-transformation.pdf"
-  },
-  {}
-    id: 5,
-    title: "The Economics of Micro SaaS: Building Profitable Solutions",
-    description: "A comprehensive guide to building, launching, and scaling micro SaaS applications for sustainable business growth.",
-    author: "David Kim",
-    date: "2023-12-20",
-    category: "SaaS",
-    readTime: "35 min read",
-    downloadCount: "1,567",
-    featured: false,
-    pdfUrl: "/whitepapers/micro-saas-economics.pdf"
-  },
-  {}
-    id: 6,
-    title: "Data Privacy in the Age of AI: Compliance and Best Practices",
-    description: "Navigating the complex landscape of data privacy regulations while implementing AI solutions effectively.",
-    author: "Emma Wilson",
-    date: "2023-12-15",
-    category: "Data Privacy",
-    readTime: "50 min read",
-    downloadCount: "1,123",
-    featured: false,
-    pdfUrl: "/whitepapers/data-privacy-ai-compliance.pdf"
-  }];
-];
+
+import React from
+  'react';
+import { motion } from
+  'framer-motion';
+import { SEO } from
+  '../components/SEO';
+import { Button } from
+  '../components/ui/Button';
+import { Card } from
+  '../components/ui/Card';
+import { Badge } from
+  '../components/ui/Badge';
+>>>>>>> origin/main
+import { 
+  FileText, Download,
+  Calendar, User,
+  Clock, ArrowRight,
+  Search, Filter,
+  Tag, Eye,
+  Share2, BookOpen,
+  TrendingUp, Brain,
+  Shield, Cloud,
+  Database, Network,
+  Zap, Globe,
+  Phone, Mail,
+  Award, Star,
+  CheckCircle
+} from
+  'lucide-react';
 
 const categories = []
   "All Papers",
@@ -86,46 +39,113 @@ const categories = []
   "Data Privacy"];
 ];
 
-export default function WhitePapersPage() {}
-  return (")
-    <div className="min-h-screen bg-gray-50">"
-</div>
-      <Head>
-</Head>
-        <title>White Papers - Zion Tech Group</title>"
-        <meta name="description" content="Download our comprehensive white papers on AI, cloud computing, cybersecurity, and technology trends." />"
-</meta>
-      </Head>"
-      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">"
-</section>"
-        <div className="container mx-auto px-4">"
-</div>"
-          <div className="max-w-4xl mx-auto text-center">"
-</div>"
-            <FileText className="w-16 h-16 mx-auto mb-6" />"
-</FileText>"
-            <h1 className="text-5xl font-bold mb-6">"
-</h1>
-            </h1>"
-            <p className="text-xl text-blue-100">"
-</p>
+  const categories = [
+    { name: "All Categories", count: 24, active: true }, { name: "AI Strategy", count: 6, active: false }, { name: "Security", count: 4, active: false }, { name: "Cloud Computing", count: 5, active: false }, { name: "Analytics", count: 3, active: false }, { name: "Customer Experience", count: 3, active: false }, { name: "Digital Transformation", count: 2, active: false }, { name: "Other", count: 1, active: false }
+  ];
+
+  const featuredPaper = whitePapers.find(paper => paper.featured);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="White Papers - Zion Tech Group" 
+        description="Access our comprehensive white papers and research reports on AI, technology trends, and business innovation. Expert insights and actionable strategies."
+      />
+      
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <Badge variant="secondary" className="mb-4">
+              <FileText className="w-4 h-4 mr-2" />
+              Research & Insights
+            </Badge>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              White Papers
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Access our comprehensive research and insights on the latest technology trends and business strategies.
             </p>
-          </div>
+          </motion.div>
         </div>
-      </section>"
-      <section className="py-16">"
-</section>"
-        <div className="container mx-auto px-4">"
-</div>"
-          <div className="max-w-6xl mx-auto">"
-</div>"
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured White Paper</h2>"
-              <motion.article;
-                key={paper.id};
-                className="bg-white rounded-lg shadow-lg overflow-hidden mb-8"
-                initial={{ opacity: 0, y: 20 }};
-                animate={{ opacity: 1, y: 0 }};
-                transition={{ duration: 0.6 }};
+      </section>
+
+      {/* Featured White Paper */}, {featuredPaper && (
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-3xl font-bold text-white mb-8">Featured White Paper</h2>
+              <Card className="overflow-hidden">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                  <div className="relative h-64 lg:h-full">
+                    <img 
+                      src={featuredPaper.image} 
+                      alt={featuredPaper.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <Badge className="bg-gradient-to-r from-purple-500 to-pink-500 text-white">
+                        <Star className="w-4 h-4 mr-1" />
+                        Featured
+                      </Badge>
+                    </div>
+                  </div>
+                  <div className="p-8">
+                    <div className="flex items-center mb-4">
+                      <Badge variant="outline" className="mr-3">{featuredPaper.category}</Badge>
+                      <span className="text-gray-400 text-sm">{featuredPaper.pages} pages</span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4">{featuredPaper.title}</h3>
+                    <p className="text-gray-300 mb-6">{featuredPaper.description}</p>
+                    
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-green-400">{featuredPaper.downloads.toLocaleString()}</div>
+                        <div className="text-sm text-gray-400">Downloads</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-blue-400">{featuredPaper.rating}/5</div>
+                        <div className="text-sm text-gray-400">Rating</div>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center text-gray-400 text-sm">
+                        <User className="w-4 h-4 mr-2" />
+                        {featuredPaper.author}
+                        <Calendar className="w-4 h-4 ml-4 mr-2" />
+                        {new Date(featuredPaper.date).toLocaleDateString()}
+                      </div>
+                      <Button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+                        <Download className="w-4 h-4 mr-2" />
+                        Download Now
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </motion.div>
+          </div>
+        </section>
+      )}, {/* White Papers Grid */}
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-8">
+            {/* Main Content */}
+            <div className="lg:w-2/3">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="mb-8"
               >
 </motion>"
                 <div className="md:flex">"
@@ -353,4 +373,7 @@ export default function WhitePapersPage() {}
           </div>
         </div>
       </section>
-    </div>"
+    </div>
+  )};
+
+export default WhitePapers;

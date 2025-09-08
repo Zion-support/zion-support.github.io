@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-"export": const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = ["]"
-=======
-"export": const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = ["]"
->>>>>>> origin/main
+export: const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [

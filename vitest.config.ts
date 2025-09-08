@@ -1,30 +1,7 @@
-import { defineConfig  } from 'vitest/config.ts';
-import path from 'node:path.ts';
-export default defineConfig({
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-      '@/pages': path.resolve(__dirname, './src/pages'),
-    },
-  },
-  test: {
-    environment: 'jsdom',
-    setupFiles: './tests/setup.ts',
-    globals: true,
-    coverage: {
-provider:,
-  v8',
-      reporter: [
-  'text,
+
 ,
-  json',
-  'html'],
-      exclude: [
-  'node_modules/,
-  'tests/',
-  '**/*.d.ts',
-  '**/*.config.*',
-  '**/coverage/**',],
-    },
-  },
-});
+  ./src/pages')}}',;
+  test: {
+
+    coverage: {
+ursor/automate-test-fix-improve-and-merge-code-48f3]}}})

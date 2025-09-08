@@ -1,5 +1,5 @@
-#!/usr/bin/env node
 
+const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
@@ -7,246 +7,250 @@ const { execSync, spawn } = require('child_process');
 class ESLintErrorFixer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'reports');
-    this.startTime = Date.now();
-    this.results = {
-      errorsFixed: 0,
-      warningsFixed: 0,
-      filesProcessed: 0,
-      success: false
-    };
-    
-    // Ensure reports directory exists
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+    this.logFile = path.join(;
+      this.projectRoot',automation/logs/eslint-error-fixer.log';
+    );
+
+    );
+;
+    this.ensureLogsDirectory();
+;
+    this.errors = [];
+    this.fixes = {;
+      applied: [],;
+      failed: [],;
+      skipped: [],}}
+;
+  ensureLogsDirectory() {;
+    const logsDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logsDir)) {;
+      fs.mkdirSync(logsDir { recursive: true })}
   }
 
-  log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ESLint Error Fixer: ${message}`);
-  }
+    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}\n`;
+;
+    fs.appendFileSync(this.logFile, logMessage);
 
-  async runLintCheck() {
-    this.log('Running ESLint check...');
-    
-    try {
-      const result = execSync('npm run lint', { 
-        encoding: 'utf8',
-        stdio: 'pipe'
+      fs.appendFileSync(this.errorLogFile, logMessage)}
+console.log(`[${type.toUpperCase()}] ${message}`)}
+
+        stdout += data.toString()});
+;
+      child.stderr.on('data', data => {;
+        stderr += data.toString()});
+;
+      child.on('close', code => {;
+        if (code === 0) {;
+          resolve({ stdout, stderr, code })} else {;
+          reject({ stdout, stderr, code })}
       });
-      
-      this.log('ESLint check passed - no errors found');
-      return { success: true, errors: [], warnings: [] };
-      
-    } catch (error) {
-      const output = error.stdout || error.stderr || '';
-      const errors = this.parseESLintOutput(output);
-      
-      this.log(`ESLint check failed with ${errors.length} issues`);
-      return { success: false, errors, warnings: [] };
-    }
-  }
+;
+      child.on('error', error => {;
+        reject({ error, stdout, stderr })})})}
+;
+  async detectESLintErrors() {;
+    this.log('Detecting ESLint errors...');
 
-  parseESLintOutput(output) {
-    const lines = output.split('\n');
+      return []} catch (error) {  this.log(`ESLint errors detected: ${error.stderr  }`, `error`);
+      return this.parseESLintErrors(error.stderr)}
+  }
+;
+  parseESLintErrors(stderr) {;
     const errors = [];
-    
-    for (const line of lines) {
-      if (line.includes('error') || line.includes('warning')) {
-        const match = line.match(/(\d+):(\d+)\s+(error|warning)\s+(.+)/);
-        if (match) {
-          errors.push({
-            line: parseInt(match[1]),
-            column: parseInt(match[2]),
-            type: match[3],
-            message: match[4],
-            fullLine: line
-          });
-        }
+
+        const match = line.match(/(.+\.(jsx?|tsx?)):(\d+):(\d+)/);
+        if (match) {;
+          const ruleMatch = line.match(/error\s+([^\s]+)/)})}
       }
     }
-    
-    return errors;
-  }
+;
+    return errors}
+;
+  async fixESLintErrors(errors) {this.log(`Fixing ${errors.length} ESLint errors...`);
 
-  async fixCommonErrors() {
-    this.log('Attempting to fix common ESLint errors...');
-    
-    try {
-      // Run ESLint with --fix flag
-      execSync('npm run fix:all', { 
-        encoding: 'utf8',
-        stdio: 'pipe'
-      });
-      
-      this.log('ESLint auto-fix completed');
-      return true;
-      
-    } catch (error) {
-      this.log(`ESLint auto-fix failed: ${error.message}`);
-      return false;
-    }
-  }
-
-  async fixSpecificErrors(errors) {
-    this.log(`Attempting to fix ${errors.length} specific errors...`);
-    
-    let fixedCount = 0;
-    
-    for (const error of errors) {
-      if (await this.fixSingleError(error)) {
-        fixedCount++;
-      }
+        await this.fixESLintError(error);
+        this.fixes.applied.push({;
+          error,;
+          timestamp: new Date().toISOString(),})} catch (fixError) {;
+        this.fixes.failed.push({;
+          error,;
+          fixError: fixError.message,;
+          timestamp: new Date().toISOString(),})}
     }
     
     this.log(`Fixed ${fixedCount} out of ${errors.length} errors`);
     return fixedCount;
   }
 
-  async fixSingleError(error) {
-    try {
-      const filePath = this.extractFilePath(error.fullLine);
-      if (!filePath || !fs.existsSync(filePath)) {
-        return false;
-      }
-      
-      const content = fs.readFileSync(filePath, 'utf8');
-      const lines = content.split('\n');
-      
-      if (error.line > lines.length) {
-        return false;
-      }
-      
-      const lineIndex = error.line - 1;
-      const originalLine = lines[lineIndex];
-      
-      // Apply common fixes based on error type
-      let fixedLine = this.applyCommonFixes(originalLine, error);
-      
-      if (fixedLine !== originalLine) {
-        lines[lineIndex] = fixedLine;
-        fs.writeFileSync(filePath, lines.join('\n'));
-        this.log(`Fixed error in ${filePath}:${error.line}`);
-        return true;
-      }
-      
-      return false;
-      
-    } catch (err) {
-      this.log(`Failed to fix error: ${err.message}`);
-      return false;
+      await this.fixUnusedVariableError(error, lines)} else if (;
+      error.rule === 'semi' ||;
+      error.message.includes('missing semicolon');
+    ) {;
+      await this.fixMissingSemicolonError(error, lines)} else if (error.rule === 'quotes' || error.message.includes('quotes')) {;
+      await this.fixQuotesError(error, lines)} else if (error.rule === 'indent' || error.message.includes('indent')) {;
+      await this.fixIndentError(error, lines)} else if (;
+      error.rule === 'no-console' ||;
+      error.message.includes('console');
+    ) {;
+      await this.fixConsoleError(error, lines);
+
+      await this.fixPreferConstError(error, lines)} else {;
+      await this.fixGenericESLintError(error, lines)}
+  }
+;
+  async fixUnusedVariableError(error, lines) {;
+    if (error.line > lines.length) return;
+;
+    const targetLine = lines[error.line - 1];
+
+    );
+;
+    if (varMatch) {;
+      const varName = varMatch[1];
+
+      );
+;
+      if (fixedLine !== targetLine) {;
+        lines[error.line - 1] = fixedLine;
+        fs.writeFileSync(error.file, lines.join('\n'))}
     }
   }
+;
+  async fixMissingSemicolonError(error, lines) {;
+    if (error.line > lines.length) return;
+;
+    const targetLine = lines[error.line - 1];
 
-  extractFilePath(line) {
-    const match = line.match(/^([^:]+):/);
-    return match ? match[1] : null;
+      lines[error.line - 1] = targetLine + ';';
+      fs.writeFileSync(error.file, lines.join('\n'))}
   }
+;
+  async fixQuotesError(error, lines) {;
+    if (error.line > lines.length) return;
+;
+    const targetLine = lines[error.line - 1];
 
-  applyCommonFixes(line, error) {
-    let fixedLine = line;
-    
-    // Fix unused variables
-    if (error.message.includes('no-unused-vars')) {
-      fixedLine = line.replace(/^(\s*)(const|let|var)\s+(\w+)/, '$1// $2 $3');
-    }
-    
-    // Fix console statements
-    if (error.message.includes('no-console')) {
-      fixedLine = line.replace(/console\.(log|warn|error|info)/, '// console.$1');
-    }
-    
-    // Fix missing semicolons
-    if (error.message.includes('missing semicolon')) {
-      if (!line.trim().endsWith(';') && !line.trim().endsWith('{') && !line.trim().endsWith('}')) {
-        fixedLine = line + ';';
-      }
-    }
-    
-    // Fix trailing spaces
-    if (error.message.includes('trailing spaces')) {
-      fixedLine = line.replace(/\s+$/, '');
-    }
-    
-    return fixedLine;
-  }
-
-  async generateReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      duration: Date.now() - this.startTime,
-      results: this.results,
-      summary: {
-        totalIssues: this.results.errorsFixed + this.results.warningsFixed,
-        successRate: this.results.success ? '100%' : '0%',
-        efficiency: `${this.results.filesProcessed} files processed in ${Math.round((Date.now() - this.startTime) / 1000)}s`
-      }
-    };
-    
-    const reportPath = path.join(this.reportsDir, 'eslint-error-fixer-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    this.log(`Report generated: ${reportPath}`);
-    return report;
-  }
-
-  async run() {
-    this.log('Starting ESLint Error Fixer...');
-    
-    try {
-      // Run initial lint check
-      const lintResult = await this.runLintCheck();
-      
-      if (lintResult.success) {
-        this.results.success = true;
-        this.log('No ESLint errors found - system is clean');
-      } else {
-        // Try to fix errors automatically
-        const autoFixSuccess = await this.fixCommonErrors();
-        
-        if (autoFixSuccess) {
-          // Check again after auto-fix
-          const lintResultAfter = await this.runLintCheck();
-          
-          if (lintResultAfter.success) {
-            this.results.success = true;
-            this.results.errorsFixed = lintResult.errors.length;
-            this.log('All ESLint errors were automatically fixed');
-          } else {
-            // Try to fix remaining errors manually
-            const remainingErrors = lintResultAfter.errors;
-            const manuallyFixed = await this.fixSpecificErrors(remainingErrors);
-            
-            this.results.errorsFixed = lintResult.errors.length - remainingErrors.length + manuallyFixed;
-            this.results.success = remainingErrors.length === 0;
-          }
-        }
-      }
-      
-      // Generate report
-      await this.generateReport();
-      
-      this.log(`ESLint Error Fixer completed. Success: ${this.results.success}`);
-      return this.results;
-      
-    } catch (error) {
-      this.log(`ESLint Error Fixer failed: ${error.message}`);
-      this.results.success = false;
-      return this.results;
+      const fixedLine = targetLine.replace(/'/g, '");
+      if (fixedLine !== targetLine) {;
+        lines[error.line - 1] = fixedLine;
+        fs.writeFileSync(error.file, lines.join('\n'))}
+    } else if (error.message.includes('double quotes')) {;
+      const fixedLine = targetLine.replace(/"/g, "'");
+      if (fixedLine !== targetLine) {;
+        lines[error.line - 1] = fixedLine;
+        fs.writeFileSync(error.file, lines.join('\n'))}
     }
   }
-  {/* Removed stray closing brace */}
+;
+  async fixIndentError(error, lines) {;
+    if (error.line > lines.length) return;
+;
+    const targetLine = lines[error.line - 1];
+    const expectedIndent = error.message.match(/Expected (\d+) spaces/);
+;
+    if (expectedIndent) {;
+      const expectedSpaces = parseInt(expectedIndent[1]);
+      const currentIndent = targetLine.match(/^(\s*)/)[1].length;
+;
+      if (currentIndent !== expectedSpaces) {;
+        const newIndent = ' '.repeat(expectedSpaces);
+        const fixedLine = newIndent + targetLine.trimLeft();
+        lines[error.line - 1] = fixedLine;
+        fs.writeFileSync(error.file, lines.join('\n'))}
+    }
+  }
+;
+  async fixConsoleError(error, lines) {;
+    if (error.line > lines.length) return;
+;
+    const targetLine = lines[error.line - 1];
 
-// Run the fixer if called directly
-if (require.main === module) {
-  const fixer = new ESLintErrorFixer();
-  fixer.run().then(results => {
-    process.exit(results.success ? 0 : 1);
-  }).catch(error => {
-    console.error('Fatal error:', error);
-    process.exit(1);
-  });
-  {/* Removed stray closing brace */}
+      const fixedLine = '// ' + targetLine;
+      lines[error.line - 1] = fixedLine;
+      fs.writeFileSync(error.file, lines.join('\n'))}
+  }
+;
+  async fixPreferConstError(error, lines) {;
+    if (error.line > lines.length) return;
+;
+    const targetLine = lines[error.line - 1];
 
+      const fixedLine = targetLine.replace(/let /g, 'const ');
+      if (fixedLine !== targetLine) {;
+        lines[error.line - 1] = fixedLine;
+        fs.writeFileSync(error.file, lines.join('\n'))}
+    }
+  }
+;
+  async fixGenericESLintError(error, lines) {;
+    if (error.line > lines.length) return;
+;
+    const targetLine = lines[error.line - 1];
+
+    // Fix missing spaces around operators;
+    fixedLine = fixedLine.replace(/([^=!<>])=([^=])/g, '$1 = $2');
+    fixedLine = fixedLine.replace(/([^=!<>])==([^=])/g, '$1 == $2');
+    fixedLine = fixedLine.replace(/([^=!<>])===([^=])/g, '$1 === $2');
+;
+    if (fixedLine !== targetLine) {;
+      lines[error.line - 1] = fixedLine;
+      fs.writeFileSync(error.file, lines.join('\n'))}
+  }
+;
+  async updateESLintConfig() {;
+    this.log('Updating ESLint configuration...');
+;
+    const eslintConfigPath = path.join(this.projectRoot, '.eslintrc.js');
+;
+    if (fs.existsSync(eslintConfigPath)) {;
+      let config = fs.readFileSync(eslintConfigPath, 'utf8')}};`;
+;
+      fs.writeFileSync(eslintConfigPath, updatedConfig);
+      this.log(`Updated ESLint configuration for error fixing`)}
+  }
+;
+  generateReport() {;
+    const report = {;
+      timestamp: new Date().toISOString(),;
+      summary: {;
+        totalErrors: this.errors.length,;
+        fixesApplied: this.fixes.applied.length,;
+        fixesFailed: this.fixes.failed.length,;
+        fixesSkipped: this.fixes.skipped.length,},;
+      errors: this.errors,;
+      fixes: this.fixes,;
+      recommendations: this.generateRecommendations(),};
+;
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+    this.log(`Report generated: ${this.reportFile}`);
+;
+    return report}
+;
+  generateRecommendations() {;
+    const recommendations = []})}
+;
+    if (this.fixes.failed.length > 0) {;
+      recommendations.push({;
+        priority: 'medium',;
+        message: 'Some ESLint errors could not be automatically fixed',;
+        action: 'Manually review failed fixes and apply corrections',})}
+;
+    return recommendations}
+;
+  async run() {;
+    this.log('Starting ESLint Error Fixer...')}
+;
+      const report = this.generateReport();
+
+      return report} catch (error) {  this.log(`ESLint Error Fixer failed: ${error.message  }`, `error`);
+      throw error}
+  }
+}
+
+      process.exit(0)});
+    .catch(error => {;
+      console.error('ESLint Error Fixer failed:', error);
+      process.exit(1)})}
+;
 module.exports = ESLintErrorFixer;

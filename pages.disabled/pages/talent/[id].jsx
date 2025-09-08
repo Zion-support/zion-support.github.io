@@ -1,39 +1,29 @@
-import React, { useState, useEffect } from,
-  react';'
-import { useParams } from
-  'react-router-dom';'
-import SEO from
-  '@/components/SEO';'
-import { ProfileLoadingState } from
-  '@/components/profile/ProfileLoadingState';'
-import { ProfileErrorState } from
-  '@/components/profile/ProfileErrorState';
-export { function };
+import: React { useState, useEffect } from,
+  react';';
+import: { useParams } from;
+  'react-router-dom';';
+import: SEO from;
+  '@/components/SEO';';
+import: { ProfileLoadingState } from;
+  '@/components/profile/ProfileLoadingState';';
+import: { ProfileErrorState } from;
+  '@/components/profile/ProfileErrorState';';
+export: { function }
 export default function TalentProfilePage() {}
     const { id } = useParams();
-    const [profile, setProfile] = useState(null);
-    const [loading, setLoading] = useState(true);
-const [error, setError] = useState(null);: pages.disabled/pages/talent/[id].jsx
-    useEffect(() => {
+
         const fetchProfile = async () => {
-            if (!id) {
-  'setError('Profile not found);setLoading(false);
+            if (!id) {'
+  'setError('Profile not found)                setLoading(false);
+
                 return;
 
             try {}
                 const res = await fetch(`/api/talent/${id}`);
-                if (!res.ok),
-  throw new Error(
-  'Failed to load profile');
-                const data = await res.json();
-setProfile(data.profile);: pages.disabled/pages/talent/[id].jsx
-            catch (err) {
-  'setError('Profile not found);finally {}
-                setLoading(false);
 
-        };
-        fetchProfile();
-    }, [id]);
+            finally {}
+                setLoading(false)}
+        fetchProfile()}, [id])
     if (loading)
         return <ProfileLoadingState />;
     if (error || !profile)'
@@ -48,16 +38,8 @@ setProfile(data.profile);: pages.disabled/pages/talent/[id].jsx
             {profile.full_name}
           </h1>
           {profile.bio && <p>{profile.bio}</p>}
-:pages.disabled/pages/talent/[id].jsx
-{profile.hourly_rate && <p>Hourly Rate: ${profile.hourly_rate}/hr</p>}"{profile.skills && (<div>""<h2 className="font-semibold">Skills</h2>""
-              <ul className="list-disc ml-5">
-                {profile.skills.map(skill => (<li key={skill}>{skill}</li>))}
-              </ul>
-:pages.disabled/pages/talent/[id].jsx
-            </div>)}"
-          {profile.social && (<div>""
-              <h2 className="font-semibold">Social Links</h2>""
-<ul className="list-disc ml-5">"{Object.entries(profile.social).map(([platform, url]) => (<li key={platform}>""<a href={url} className="text-zion-cyan" target="_blank" rel="noopener noreferrer">
+
+
                       {platform}
                     </a>
                   </li>))}
@@ -65,17 +47,11 @@ setProfile(data.profile);: pages.disabled/pages/talent/[id].jsx
             </div>)}
         </div>
       </main>
-:src/pages/talent/[id].jsx
-    </>);
-}}}}}
 
-export { TalentProfilePage };
+export { TalentProfilePage }
 
-export { TalentProfilePage };
 
-export { TalentProfilePage };
+export { TalentProfilePage }
+    </>)'`}}}}}`
+  ''`''``
 
-export { TalentProfilePage };
-    </>);'"`
-}}}}}
-  '"`'"`

@@ -5,87 +5,49 @@
  * Automatically fixes common syntax errors in the codebase;
  */
 
-const { execSync } = require('child_process')
-const fs = require('fs')
-const path = require('path')
-  }
+const fs = require('fs');
+const path = require('path');
+
+class SyntaxErrorFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.fixedFiles = [];
+    this.errors = []}
 
   log(message) {
-    console.log(`🔧 ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   fixFile(filePath) {
     try {
       let content = fs.readFileSync(filePath, 'utf8');
       let originalContent = content;
+      let fixed = false;
+
+      // Fix unterminated strings with &apos;
+      content = content.replace(/&apos;s\s*"'\s*$/gm, '&apos;s");
+      content = content.replace(/&apos;s\s*"'\s*>/gm, '&apos;s">');
+      content = content.replace(/&apos;s\s*"'\s*,/gm, '&apos;s"',);
       
-      // Fix common syntax errors
-      content = this.fixCommonErrors(content);
+      // Fix unterminated strings with escaped quotes
+      content = content.replace(/we\\'ll\s*"'\s*$/gm, 'we\\'ll");
+      content = content.replace(/we\\'ll\s*"'\s*,/gm, 'we\\'ll"',);
       
+      // Fix unterminated strings in general
+      content = content.replace(/"'\s*$/gm, '");
+      content = content.replace(/"'\s*>/gm, '">');
+      content = content.replace(/"'\s*,/gm, '"',);
+      content = content.replace(/"'\s*\)/gm, '")');
+
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content);
         this.fixedFiles.push(filePath);
-        this.log(`Fixed: ${filePath}`);
-        return true;
-      }
-      
-      return false;
-    } catch (error) {
-      this.errors.push(`${filePath}: ${error.message}`);
+        fixed = true;
+        this.log(`✅ Fixed syntax errors in ${filePath}`)}
 
-#!/usr/bin/env node
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-console.log('🔧 Syntax Error Fixer');
-console.log('');
-
-class SyntaxErrorFixer {
-  constructor() {
-    this.fixes = [];
-    this.errors = [];
-    this.startTime = Date.now();
-  }
-
-  log(message, type = 'info') {
-    const timestamp = new Date().toISOString();
-    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logEntry);
-  }
-
-  async fixTypeScriptErrors() {
-    this.log('🔍 Checking for TypeScript errors...');
-    
-    try {
-      const result = execSync('npx tsc --noEmit --skipLibCheck', {
-        encoding: 'utf8',
-        stdio: 'pipe',
-        cwd: process.cwd()
-      });
-      this.log('✅ No TypeScript errors found', 'success');
-      return true;
-    } catch (error) {
-      this.log('⚠️ TypeScript errors found, attempting fixes...', 'warning');
-      
-      // Try to fix common TypeScript issues
-      const output = error.stdout || error.stderr || '';
-      const lines = output.split('\n');
-      
-      for (const line of lines) {
-        if (line.includes('error TS')) {
-          this.log(`Found error: ${line}`, 'warning');
-          this.fixes.push({
-            type: 'typescript',
-            error: line,
-            timestamp: new Date().toISOString()
-          });
-        }
-      
-
-      return false;
-    }
+      return fixed} catch (error) {
+      this.errors.push({ file: filePath, error: error.message });
+      this.log(`❌ Error fixing ${filePath}: ${error.message}`);
+      return false}
   }
 
   fixCommonErrors(content) {
@@ -122,18 +84,11 @@ class SyntaxErrorFixer {
     return content;
   }
 
-  async fixDirectory(dirPath) {
-    const files = fs.readdirSync(dirPath);
-    
-    for (const file of files) {
-      const filePath = path.join(dirPath, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat.isDirectory()) {
-        await this.fixDirectory(filePath);
-      } else if (file.match(/\.(tsx?|jsx?)$/)) {
-        this.fixFile(filePath);
-      }
+    for (const file of filesToFix) {
+      const filePath = path.join(this.projectRoot, file);
+      if (fs.existsSync(filePath)) {
+        this.fixFile(filePath)} else {
+        this.log(`⚠️ File not found: ${filePath}`)}
     }
   }
 
@@ -148,48 +103,20 @@ class SyntaxErrorFixer {
     const reportPath = path.join(__dirname, '..', 'automation', 'logs', 'syntax-fix-report.json';);
     const logDir = path.dirname(reportPath;);
     
-    if () {
-      fs.mkdirSync(logDir, { "recursive": true })}
-    
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))) {
-    ) {
-      fs.mkdirSync(logDir, { "recursive": true })}
-    
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))}
-    this.log(`📄 Report saved "to": ${reportPath}`);
-    
-    return report}
+    if (this.errors.length > 0) {
+      this.log(`❌ ${this.errors.length} errors encountered:`);
+      this.errors.forEach(err => {
+        this.log(`   - ${err.file}: ${err.error}`)})}
 
-  async run() {
-    this.log('🚀 Starting syntax error fixing...');
-    
-    try {
-      await this.fixDirectory('components');
-      await this.fixDirectory('pages');
-      await this.fixDirectory('lib');
-      
-      if ( {
-        this.log('🎉 Syntax error fixing completed successfully!')} else {
-        this.log('⚠️ Syntax error fixing completed with some issues')}
-      
-      return report) {
-     {
-        this.log('🎉 Syntax error fixing completed successfully!')} else {
-        this.log('⚠️ Syntax error fixing completed with some issues')}
-      
-      return report}} catch (error) {
-      this.log(`💥 Syntax error fixing "failed": ${error.message}`, 'ERROR');
-      throw error}
-  }
+    return {
+      fixedFiles: this.fixedFiles,
+      errors: this.errors
+    }}
 }
 
 if (require.main === module) {
   const fixer = new SyntaxErrorFixer();
-  fixer.run().catch(error => {
-    console.error('Syntax fixing failed:', error);
-    process.exit(1);
-  });
-}
+  fixer.fixAllFiles()}
 
 module.exports = SyntaxErrorFixer;
 

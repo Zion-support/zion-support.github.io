@@ -96,6 +96,6 @@ const RequestQuote = () => {
         </div>{" "}
       </div>{" "}
     </div>
-  );
-};
+  )};
+
 export default RequestQuote;

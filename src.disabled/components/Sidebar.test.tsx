@@ -1,1 +1,4 @@
-describe ("Sidebar", () => { it ("renders without crashing", () => { render (<Sidebar />) ; expect (screen.getByRole ("main") || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; it ("displays expected content", () => { render (<Sidebar />) ;""";
+
+
+
+

@@ -1,14 +1,58 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
 
-export default function Help() {
-  const contact = {
-    phone: '+1-302-464-0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown, DE 19709',
-    site: 'https://ziontechgroup.com'
-  };
+import Link from 'next/link';
+import Navigation from '../src/components/Navigation';
+import Footer from '../src/components/Footer';
+import { 
+  Search, HelpCircle, 
+  MessageCircle, Phone, 
+  Mail, BookOpen, 
+  Video, FileText, 
+  ChevronDown, ChevronRight,
+  CheckCircle, ExternalLink
+} from 'lucide-react'}
+
+  ]}
+  ];
+;
+  return (;
+    <Layout;
+      title="Help & Support - Zion Tech Group";
+      description="Get help and support for Zion Tech Group services. Find answers to common questions, contact our support team, and access helpful resources.";
+    >;
+      {/* Hero Section */}
+
+
+          </p>
+        </div>
+      </section>
+
+
+              />
+
+      ]
+    }
+  ];
+
+
+    { title: 'Status Page', href: '/status', icon: CheckCircle }
+  ];
+
+  const contactMethods = [
+
+      href: 'tel:+13024640950'
+    }, {
+      icon: Mail,
+      title: 'Email Support', description: 'Send us a detailed message',
+      contact: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com'
+    }, {
+      icon: MessageCircle, title: 'Live Chat',
+      description: 'Chat with our support team', contact: 'Available 9 AM - 6 PM EST',
+      href: '/contact'
+    }
+  ];
+
+  const toggleCategory = (categoryTitle: string) => {
+    setExpandedCategory(expandedCategory === categoryTitle ? null : categoryTitle)};
 
   const helpCategories = [
     {
@@ -61,89 +105,159 @@ export default function Help() {
         <link rel="canonical" href="https://ziontechgroup.com/help" />
       </Head>
       
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '40px 20px' }}>
-        <div style={{ marginBottom: 40 }}>
-          <h1 style={{ 
-            fontSize: '2.5rem', 
-            fontWeight: 800, 
-            marginBottom: 16, 
-            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent'
-          }}>
-            Help Center
-          </h1>
-          <p style={{ fontSize: '1.1rem', opacity: 0.8, lineHeight: 1.6 }}>
-            Find answers to your questions and get the support you need.
-          </p>
-        </div>
-
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 24 }}>
-          {helpCategories.map((category, index) => (
-            <div key={index} style={{ 
-              background: '#f8fafc', 
-              padding: 24, 
-              borderRadius: 12, 
-              border: '1px solid #e2e8f0' 
-            }}>
-              <h2 style={{ fontSize: '1.25rem', fontWeight: 600, marginBottom: 16, display: 'flex', alignItems: 'center', gap: 8 }}>
-                <span style={{ fontSize: '1.5rem' }}>{category.icon}</span>
-                {category.title}
-              </h2>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-                {category.articles.map((article, articleIndex) => (
-                  <div key={articleIndex} style={{ 
-                    padding: 12, 
-                    background: 'white', 
-                    borderRadius: 8, 
-                    border: '1px solid #e2e8f0',
-                    cursor: 'pointer',
-                    transition: 'all 0.2s'
-                  }}>
-                    <h3 style={{ fontSize: '0.9rem', fontWeight: 600, marginBottom: 4, color: '#3b82f6' }}>
-                      {article.title}
-                    </h3>
-                    <p style={{ fontSize: '0.8rem', color: '#666', lineHeight: 1.4 }}>
-                      {article.description}
-                    </p>
-                  </div>
-                ))}
+      <Navigation />
+      
+      <main className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20 pt-32">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-5xl font-bold text-gray-900 mb-6">
+                Help & <span className="text-blue-600">Support</span>
+              </h1>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                Find answers to your questions, get technical support, and access helpful resources. 
+                We&apos;re here to help you succeed with our technology solutions.'
+              </p>
+              
+              {/* Search Bar */}
+              <div className="max-w-2xl mx-auto">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search for help articles, guides, or FAQs..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
 
-        <div style={{ 
-          marginTop: 48, 
-          padding: 32, 
-          background: '#f0f9ff', 
-          borderRadius: 12, 
-          border: '1px solid rgba(59, 130, 246, 0.2)',
-          textAlign: 'center'
-        }}>
-          <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 16 }}>Still Need Help?</h2>
-          <p style={{ opacity: 0.8, marginBottom: 20 }}>
-            Can't find what you're looking for? Our support team is here to help.
-          </p>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 16, alignItems: 'center' }}>
-            <Link href="/contact" style={{
-              background: '#3b82f6',
-              color: 'white',
-              padding: '12px 24px',
-              textDecoration: 'none',
-              borderRadius: 8,
-              fontSize: '1rem',
-              fontWeight: 600
-            }}>
-              Contact Support
-            </Link>
-            <div style={{ display: 'flex', gap: 24, fontSize: '0.9rem', color: '#666' }}>
-              <span>📞 {contact.phone}</span>
-              <span>✉️ {contact.email}</span>
+
             </div>
           </div>
+        </section>
+
+
+
+                <p className="text-sm text-gray-500">{channel.responseTime}</p>
+
+              </div>
+
+            ))}
+          </div>;
+        </div>;
+      </section>;
+
+
+                <p className="text-gray-600 text-sm">{resource.description}</p>
+
+              </Link>
+
+            ))}
+          </div>;
+        </div>;
+      </section>;
+
+
+                  </h3>
+                </Link>
+
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Methods */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Contact Support</h2>
+              <p className="text-lg text-gray-600">Get in touch with our support team</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {contactMethods.map((method, index) => (
+                <a
+                  key={index}
+                  href={method.href}
+                  className="bg-white rounded-lg p-8 text-center hover: shadow-lg transition-shadow border border-gray-200"
+                >
+                  <method.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{method.title}</h3>
+                  <p className="text-gray-600 mb-4">{method.description}</p>
+                  <p className="text-blue-600 font-medium">{method.contact}</p>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+              <p className="text-lg text-gray-600">Find answers to common questions</p>
+            </div>
+            
+            <div className="max-w-4xl mx-auto">
+
+                  </button>
+                  
+                  {expandedCategory === category.title && (
+                    <div className="mt-4 space-y-4">
+                      {category.questions.map((faq, faqIndex) => (
+                        <div key={faqIndex} className="bg-white border border-gray-200 rounded-lg p-6">
+                          <h4 className="font-semibold text-gray-900 mb-3">{faq.question}</h4>
+                          <p className="text-gray-600">{faq.answer}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+
+
+
+            </Link>
+
+
+
+            </Link>
+          </div>
         </div>
-      </div>
-    </>
+      </section>
+
+
+              Call Us
+
+            </a>
+          </div>
+        </div>
+      </section>
+    </Layout>
+
+              </Link>
+              <Link href="/docs" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                View Documentation
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+
+
   );
-}
+
+
+

@@ -66,51 +66,90 @@ const plans = []
   };
 ];
 
-const addOns = []
-  {}
-    name: "Additional AI Models",
-    price: "$500",
-    period: "/month per model",
-    description: "Add more AI models to your plan"
-  },
-  {}
-    name: "Priority Support",
-    price: "$200",
-    period: "/month",
-    description: "Get faster response times and dedicated support"
-  },
-  {}
-    name: "Custom Development",
-    price: "$150",
-    period: "/hour",
-    description: "Custom features and integrations"
-  },
-  {}
-    name: "Training Sessions",
-    price: "$1,000",
-    period: "/session",
-    description: "Team training and onboarding sessions"
-  }];
-];
+const Pricing: React.FC = () => {
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$299",
+      period: "/month",
+      description: "Perfect for small businesses getting started with AI",
+      features: [
+        "AI-powered analytics dashboard",
+        "Basic automation tools",
+        "Email support",
+        "Up to 5 team members",
+        "Standard integrations",
+        "Monthly reports"
+      ],
+      popular: false,
+      color: "from-blue-500 to-cyan-500",
+      buttonText: "Get Started",
+      buttonVariant: "outline" as const
+    }, {
+      name: "Professional",
+      price: "$799",
+      period: "/month",
+      description: "Ideal for growing businesses with advanced needs",
+      features: [
+        "Advanced AI analytics",
+        "Custom automation workflows",
+        "Priority support",
+        "Up to 25 team members",
+        "Advanced integrations",
+        "Real-time reporting",
+        "API access",
+        "Custom branding"
+      ],
+      popular: true,
+      color: "from-purple-500 to-pink-500",
+      buttonText: "Start Free Trial",
+      buttonVariant: "default" as const
+    }, {
+      name: "Enterprise",
+      price: "Custom",
+      period: "",
+      description: "Tailored solutions for large organizations",
+      features: [
+        "Unlimited AI capabilities",
+        "Custom AI model training",
+        "Dedicated support team",
+        "Unlimited team members",
+        "White-label solutions",
+        "Advanced security",
+        "Custom integrations",
+        "24/7 phone support",
+        "SLA guarantee"
+      ],
+      popular: false,
+      color: "from-orange-500 to-red-500",
+      buttonText: "Contact Sales",
+      buttonVariant: "outline" as const
+    }
+  ];
 
-const faqs = []
-  {}
-    question: "Can I change my plan anytime?",
-    answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the beginning of your next billing cycle."
-  },
-  {}
-    question: "Do you offer custom pricing?",
-    answer: "Yes, we offer custom pricing for enterprise clients with specific requirements. Contact our sales team to discuss your needs."
-  },
-  {}
-    question: "What payment methods do you accept?",
-    answer: "We accept all major credit cards, bank transfers, and can arrange custom payment terms for enterprise clients."
-  },
-  {}
-    question: "Is there a free trial available?",
-    answer: "Yes, we offer a 14-day free trial for all plans. No credit card required to get started."
-  }];
-];
+  const servicePricing = [
+    {
+      service: "AI Development",
+      startingPrice: "$5,000",
+      description: "Custom AI solutions and machine learning models",
+      features: ["Custom AI models", "Data analysis", "Integration support", "Training & documentation"]
+    }, {
+      service: "Cloud Migration",
+      startingPrice: "$3,000",
+      description: "Seamless migration to cloud infrastructure",
+      features: ["Infrastructure assessment", "Migration planning", "Data transfer", "Performance optimization"]
+    }, {
+      service: "Cybersecurity",
+      startingPrice: "$2,500",
+      description: "Comprehensive security solutions and monitoring",
+      features: ["Security audit", "Threat monitoring", "Incident response", "Compliance support"]
+    }, {
+      service: "Digital Transformation",
+      startingPrice: "$10,000",
+      description: "End-to-end digital transformation consulting",
+      features: ["Strategy development", "Process optimization", "Technology implementation", "Change management"]
+    }
+  ];
 
 export default function PricingPage() {}
   const [billingPeriod, setBillingPeriod] = useState<'monthly' | 'yearly'>('monthly');'
@@ -344,4 +383,7 @@ export default function PricingPage() {}
           </div>
         </div>
       </section>
-    </div>"
+    </div>
+  )};
+
+export default Pricing;

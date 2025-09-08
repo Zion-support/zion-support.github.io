@@ -1,51 +1,73 @@
 
+const AboutPage: NextPage = () => {
+  const stats = [
+    { number: '500+', label: 'Projects Completed', icon: <Award className="w-8 h-8" /> }, { number: '50+', label: 'Happy Clients', icon: <Users className="w-8 h-8" /> }, { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-8 h-8" /> }, { number: '24/7', label: 'Support Available', icon: <Globe className="w-8 h-8" /> } ];
 
-import React from "react";"
-import Layout from "../components/Layout";"
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import Head from 'next/head';'
-import Link from 'next/link';'
-import MainLayout from '../components/layout/MainLayout';'
-import { 
-  }
-  TrendingUp,
-  Building,
-  Rocket,
-  Lightbulb,
-  Handshake,
-  Brain, 
-  Users, 
-  Award, 
-  Target, 
-  Heart,
-  Globe, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  DollarSign, 
-  Clock, 
-  BarChart3,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';'
-const values = [;
-  {
+  const values = [
+    {
+      icon: <Lightbulb className="w-8 h-8" />,
+      title: 'Innovation',
+      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions that drive real business value.'
+    }, {
+      icon: <Heart className="w-8 h-8" />,
+      title: 'Customer Focus',
+      description: 'Our clients\' success is our success. We build lasting partnerships based on trust, transparency, and mutual growth.'
+    }, {
+      icon: <Zap className="w-8 h-8" />,
+      title: 'Excellence',
+      description: 'We maintain the highest standards of quality in everything we do, from code to customer service.'
+    }, {
+      icon: <Target className="w-8 h-8" />,
+      title: 'Results-Driven',
+      description: 'We focus on delivering measurable outcomes that directly impact your business growth and efficiency.'
     }
-    "icon": Lightbulb,
-    "title": 'Innovation','
-    "description": 'We constantly push the boundaries of technology to create cutting-edge solutions that drive real business value.''
-  },
-  {
+  ];
+
+  const team = [
+    {
+      name: 'Kleber Silva',
+      role: 'Founder & CEO',
+      bio: 'Technology visionary with over 15 years of experience in software development and business transformation.',
+      image: '/team/kleber.jpg'
+    }, {
+      name: 'Sarah Johnson',
+      role: 'CTO',
+      bio: 'Expert in cloud architecture and AI/ML solutions with a passion for scalable, innovative technology.',
+      image: '/team/sarah.jpg'
+    }, {
+      name: 'Michael Chen',
+      role: 'Head of Engineering',
+      bio: 'Full-stack development specialist focused on creating robust, user-centric applications.',
+      image: '/team/michael.jpg'
+    }, {
+      name: 'Emily Rodriguez',
+      role: 'Head of Design',
+      bio: 'UX/UI expert dedicated to creating intuitive, beautiful, and functional user experiences.',
+      image: '/team/emily.jpg'
     }
-    "icon": Shield,
-    "title": 'Security','
-    "description": 'Security is at the core of everything we do, ensuring your data and systems are protected with enterprise-grade security.''
-  },
-  {
+  ];
+
+  const timeline = [
+    {
+      year: '2020',
+      title: 'Company Founded',
+      description: 'Zion Tech Group was established with a vision to democratize technology solutions for businesses of all sizes.'
+    }, {
+      year: '2021',
+      title: 'First Major Client',
+      description: 'Successfully delivered our first enterprise AI solution, marking the beginning of our growth journey.'
+    }, {
+      year: '2022',
+      title: 'Micro SaaS Launch',
+      description: 'Introduced our first suite of micro SaaS solutions, helping small businesses scale efficiently.'
+    }, {
+      year: '2023',
+      title: 'Team Expansion',
+      description: 'Grew our team to 20+ experts and expanded our service offerings to include comprehensive IT services.'
+    }, {
+      year: '2024',
+      title: 'Global Reach',
+      description: 'Serving clients across multiple countries and industries, with a focus on AI and digital transformation.'
     }
     "icon": Users,
     "title": 'Collaboration','
@@ -201,36 +223,7 @@ initial={{ "opacity": 0, "y": 20 }}
         </div>
       </div>
     </MainLayout>
-  );
-      "name": 'Kleber','
-      "role": 'Founder & CEO','
-      "description": 'Visionary leader driving innovation in AI and quantum technologies','
-      "image": '/api/placeholder/150/150','
-      "color": 'from-cyan-500 to-blue-500''
-    };
-    {
-      }
-      "name": 'AI Team','
-      "role": 'AI Research & Development','
-      "description": 'Expert engineers and researchers pushing the boundaries of artificial intelligence','
-      "image": '/api/placeholder/150/150','
-      "color": 'from-purple-500 to-pink-500''
-    };
-    {
-      }
-      "name": 'Quantum Team','
-      "role": 'Quantum Computing','
-      "description": 'Specialists in quantum algorithms and quantum-resistant cryptography','
-      "image": '/api/placeholder/150/150','
-      "color": 'from-blue-500 to-cyan-500''
-    };
-    {
-      }
-      "name": 'Security Team','
-      "role": 'Cybersecurity','
-      "description": 'Experts in threat detection and zero-trust security architectures','
-      "image": '/api/placeholder/150/150','
-      "color": 'from-red-500 to-orange-500''
+  )};
 
   ];
 const milestones = [;

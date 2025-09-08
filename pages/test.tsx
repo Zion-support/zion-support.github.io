@@ -29,6 +29,5 @@ export default function TestPage() {
         <p><strong>Environment:</strong> {process.env.NODE_ENV}</p>
         <p><strong>Timestamp:</strong> {new Date().toISOString()}</p>
       </div>
-    </div>
-  );
-}
+    </>
+  )}

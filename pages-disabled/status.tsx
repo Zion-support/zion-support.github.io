@@ -1,69 +1,105 @@
 import React from "react";
 import Layout from '../components/Layout';
 
-const services = []
-  {}
-    name: 'Website',
-    status: 'operational',
-    uptime: '99.9%',
-    responseTime: '120ms',
-    lastIncident: '2024-01-10'
-  },
-  {}
-    name: 'API Services',
-    status: 'operational',
-    uptime: '99.8%',
-    responseTime: '85ms',
-    lastIncident: '2024-01-08'
-  },
-  {}
-    name: 'Database',
-    status: 'operational',
-    uptime: '99.95%',
-    responseTime: '45ms',
-    lastIncident: '2024-01-05'
-  },
-  {}
-    name: 'Cloud Infrastructure',
-    status: 'operational',
-    uptime: '99.9%',
-    responseTime: '200ms',
-    lastIncident: '2024-01-12'
-  },
-  {}
-    name: 'AI Services',
-    status: 'operational',
-    uptime: '99.7%',
-    responseTime: '300ms',
-    lastIncident: '2024-01-09'
-  },
-  {}
-    name: 'Support System',
-    status: 'operational',
-    uptime: '99.9%',
-    responseTime: '150ms',
-    lastIncident: '2024-01-07'
+const SystemStatus: NextPage = () => {
+  const services = [
+    {
+      name: 'Website',
+      status: 'operational',
+      uptime: '99.9%',
+      responseTime: '120ms',
+      lastIncident: 'No incidents in the past 30 days',
+      icon: Globe
+    }, {
+      name: 'API Services',
+      status: 'operational',
+      uptime: '99.8%',
+      responseTime: '85ms',
+      lastIncident: 'No incidents in the past 30 days',
+      icon: Server
+    }, {
+      name: 'Database',
+      status: 'operational',
+      uptime: '99.9%',
+      responseTime: '45ms',
+      lastIncident: 'No incidents in the past 30 days',
+      icon: Database
+    }, {
+      name: 'Cloud Infrastructure',
+      status: 'operational',
+      uptime: '99.9%',
+      responseTime: '200ms',
+      lastIncident: 'No incidents in the past 30 days',
+      icon: Cloud
+    }, {
+      name: 'CDN',
+      status: 'operational',
+      uptime: '99.9%',
+      responseTime: '50ms',
+      lastIncident: 'No incidents in the past 30 days',
+      icon: Activity
+    }, {
+      name: 'Email Services',
+      status: 'operational',
+      uptime: '99.7%',
+      responseTime: '300ms',
+      lastIncident: 'No incidents in the past 30 days',
+      icon: Server
+    }
+  ];
+
+  const recentIncidents = [
+    {
+      id: 1,
+      title: 'Scheduled Maintenance - API Services',
+      status: 'resolved',
+      date: '2024-11-15',
+      duration: '2 hours',
+      description: 'Scheduled maintenance window for API infrastructure updates. All services were restored successfully.'
+    }, {
+      id: 2,
+      title: 'Database Performance Issue',
+      status: 'resolved',
+      date: '2024-10-28',
+      duration: '45 minutes',
+      description: 'Temporary performance degradation in database queries. Issue was resolved by optimizing query performance.'
+    }, {
+      id: 3,
+      title: 'CDN Outage',
+      status: 'resolved',
+      date: '2024-10-10',
+      duration: '1 hour',
+      description: 'CDN provider experienced regional outage affecting content delivery. Service was restored after provider resolution.'
+    }
+  ];
+
+  const getStatusIcon = (status: string) => {
+    switch (status) {
+      case 'operational':
+        return <CheckCircle className="w-5 h-5 text-green-500" />;
+      case 'degraded':
+        return <AlertCircle className="w-5 h-5 text-yellow-500" />;
+      case 'outage':
+        return <XCircle className="w-5 h-5 text-red-500" />;
+      case 'maintenance':
+        return <Clock className="w-5 h-5 text-blue-500" />;
+      default:
+        return <AlertCircle className="w-5 h-5 text-gray-500" />}
   };
 ];
 
-const incidents = []
-  {}
-    id: 1,
-    title: 'Scheduled Maintenance - Database Optimization',
-    status: 'resolved',
-    severity: 'maintenance',
-    startTime: '2024-01-15 02:00 UTC',
-    endTime: '2024-01-15 04:00 UTC',
-    description: 'Routine database optimization and performance improvements.'
-  },
-  {}
-    id: 2,
-    title: 'API Rate Limiting Issue',
-    status: 'resolved',
-    severity: 'minor',
-    startTime: '2024-01-10 14:30 UTC',
-    endTime: '2024-01-10 15:45 UTC',
-    description: 'Temporary issue with API rate limiting causing some requests to be rejected.'
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'operational':
+        return 'bg-green-100 text-green-800';
+      case 'degraded':
+        return 'bg-yellow-100 text-yellow-800';
+      case 'outage':
+        return 'bg-red-100 text-red-800';
+      case 'maintenance':
+        return 'bg-blue-100 text-blue-800';
+      default:
+        return 'bg-gray-100 text-gray-800'}
   };
 ];
 
@@ -329,6 +365,7 @@ export default function StatusPage() {}
           </div>
         </section>
       </div>
-    </Layout>
-  );
-};
+    </MainLayout>
+  )};
+
+export default SystemStatus;

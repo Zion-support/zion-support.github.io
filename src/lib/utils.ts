@@ -1,6 +1,23 @@
-import { type ClassValue, clsx  } from 'clsx.ts';
-import { twMerge  } from 'tailwind-merge.ts';
 
-export function cn(...args: any[]): any {
-  return twMerge(clsx(inputs));
-}
+import { type ClassValue, clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))}
+
+export default function Page() {"
+import { twMerge  } from 'tailwind-merge';
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))}"
+}}
+
+
+
+
+
+
+
+
+
+

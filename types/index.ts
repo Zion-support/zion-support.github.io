@@ -1,65 +1,13 @@
-// Global type definitions
 
-export interface Service {
-  id: string;
-  name: string;
-  description: string;
-  category: string;
+
   features: string[];
-  pricing: string;
-  setupTime: string;
-  targetUsers: string;
-  icon?: string;
-  slug?: string;
-  benefits?: string[];
-  marketPrice?: string;
-  price?: string;
-}
+  technologies: string[];
+  deliveryTim,
+    e: string;
+  suppor,
+    t: string;
+  image?: string;
 
-export interface User {
-  id: string;
-  email: string;
-  name: string;
-  role: 'admin' | 'user' | 'talent' | 'client';
-  avatar?: string;
-  createdAt: string;
-  updatedAt: string;
-}
-
-export interface Project {
-  id: string;
-  name: string;
-  description: string;
-  status: 'active' | 'completed' | 'paused' | 'cancelled';
-  clientId: string;
-  talentId?: string;
-  startDate: string;
-  endDate?: string;
-  budget: number;
-  timeline: Milestone[];
-  documents: ProjectDocument[];
-  notes: ProjectNote[];
-}
-
-export interface Milestone {
-  id: string;
-  title: string;
-  description: string;
-  dueDate: string;
-  status: 'pending' | 'in-progress' | 'completed' | 'overdue';
-  deliverables: string[];
-}
-
-export interface ProjectDocument {
-  id: string;
-  name: string;
-  url: string;
-  type: string;
-  uploadedAt: string;
-  uploadedBy: string;
-}
-
-export interface ProjectNote {
   id: string;
   content: string;
   authorId: string;
@@ -88,60 +36,91 @@ export interface PaymentTerms {
 
 export interface FeedbackRecord {
   id: string;
-  createdAtIso: string;
-  user: string;
-  rating: number;
-  comment?: string;
-  kind: string;
-  context?: string;
-}
+   title: string;
+   client: string;
+   industry: string;
+   challenge: string;
+   solution: string;
+   results: string[];
+   technologies: string[];
+   duration: string;
 
-export interface ApiResponse<T = any> {
+  id: string;
+   title: string;
+   excerpt: string;
+   content: string;
+   author: string;
+   publishedAt: string;
+   updatedAt: string;
+   tags: string[];
+   category: string;
+   imag,
+    e: string;
+   featured?: boolean;
+
+  id: string;
+   name: string;
+   price: number;
+   currency: string;
+   period: 'month' | 'year' | 'one-time';';
+   features: string[];
+   limitations?: string[];
+   popular?: boolean;
+
   success: boolean;
   data?: T;
   error?: string;
-  message?: string;
-}
-
-export interface PaginatedResponse<T> extends ApiResponse<T[]> {
+  message?: strin,g}
+export: interface PaginationParams {
+  page: number;
+   limi,
+    t: number;
+   sort?: string;
+   order?: 'asc' | 'desc'}';
+export: interface PaginatedResponse<T> {
+  data: T[];
   pagination: {
     page: number;
     limit: number;
     total: number;
-    totalPages: number;
-  };
-}
+    pages: number}
+export: interface SEOProps {
+  title?: string;
+   description?: string;
+   keywords?: string;
+   ogImage?: string;
+   url?: string;
+   type?: string;
+   noindex?: boolean}
+export: interface PerformanceMetrics {
+  fcp?: number;
 
-export interface SearchParams {
-  query?: string;
-  category?: string;
-  priceMin?: number;
-  priceMax?: number;
-  features?: string[];
-  sortBy?: 'name' | 'price' | 'rating' | 'created';
-  sortOrder?: 'asc' | 'desc';
-  page?: number;
-  limit?: number;
-}
+export interface AccessibilitySettings {
+  highContrast: boolean;
 
-export interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-}
+  theme: 'light' | 'dark' | 'system';
+   language: string;
+   accessibility: AccessibilitySettings;
+   notifications: { email: boolean;
+   browse,
+    r: boolean;
+   marketin,
+    g: boolean}
 
-export interface ErrorContext {
-  component?: string;
-  action?: string;
-  userId?: string;
-  timestamp: number;
-  userAgent?: string;
-  url?: string;
 }
+export: interface NavigationItem {
+  name: string;
+   hre,
+    f: string;
+   submenu?: NavigationItem[];
 
-export interface ErrorReport {
+  name: string;
+   tagline: string;
+   description: string;
+   address: { street: string;
+   city: string;
+   state: string;
+
   message: string;
   stack?: string;
   context: ErrorContext;
@@ -228,171 +207,47 @@ export interface CustomEvent<T = any> extends Event {
 export interface FormField {
   name: string;
   label: string;
-  type: 'text' | 'email' | 'password' | 'number' | 'textarea' | 'select' | 'checkbox' | 'radio';
-  required?: boolean;
-  placeholder?: string;
-  options?: { value: string; label: string }[];
+  type: 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox' | 'radio';';
+  required: boolean;
+   placeholder?: string;
+
+
   validation?: {
     min?: number;
     max?: number;
     pattern?: string;
-    message?: string;
-  };
+    message?: string}
 }
 
-export interface FormData {
-  [key: string]: any;
-}
+;
+// Component: prop types;
+export: interface BaseComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  id?: string;
+  'data-testid'?: string}';
 
-export interface FormErrors {
-  [key: string]: string;
-}
 
-// Theme Types
-export interface Theme {
-  colors: {
-    primary: string;
-    secondary: string;
-    accent: string;
-    background: string;
-    surface: string;
-    text: string;
-    textSecondary: string;
-  };
-  spacing: {
-    xs: string;
-    sm: string;
-    md: string;
-    lg: string;
-    xl: string;
-  };
-  typography: {
-    fontFamily: string;
-    fontSize: {
-      xs: string;
-      sm: string;
-      md: string;
-      lg: string;
-      xl: string;
-    };
-  };
-}
+  disabled?: boolean;
+  loading?: boolean;
+  onClick?: () => void;
+  type?: 'button' | 'submit' | 'reset'}';
 
-// Animation Types
-export interface AnimationConfig {
-  duration: number;
-  delay?: number;
-  easing?: string;
-  direction?: 'normal' | 'reverse' | 'alternate' | 'alternate-reverse';
-  fillMode?: 'none' | 'forwards' | 'backwards' | 'both';
-}
 
-// Navigation Types
-export interface NavItem {
-  label: string;
-  href: string;
-  icon?: string;
-  children?: NavItem[];
-  external?: boolean;
-}
 
-export interface BreadcrumbItem {
-  label: string;
-  href?: string;
-}
-
-// SEO Types
-export interface SEOData {
-  title: string;
-  description: string;
-  keywords?: string[];
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product';
-  publishedTime?: string;
-  modifiedTime?: string;
-  author?: string;
-  section?: string;
-  tags?: string[];
-}
-
-// Analytics Types
-export interface AnalyticsEvent {
-  name: string;
-  category: string;
-  action: string;
-  label?: string;
-  value?: number;
-  customParameters?: Record<string, any>;
-}
-
-export interface PageView {
-  page: string;
-  title: string;
-  url: string;
-  referrer?: string;
-  timestamp: number;
-  userId?: string;
-  sessionId?: string;
-}
-
-// Notification Types
-export interface Notification {
-  id: string;
-  type: 'success' | 'error' | 'warning' | 'info';
-  title: string;
-  message: string;
-  duration?: number;
-  action?: {
-    label: string;
-    onClick: () => void;
-  };
-}
-
-// Loading States
-export interface LoadingState {
-  isLoading: boolean;
+  placeholder?: string;
+  value?: string;
+  onChange?: (value: string) => void;
   error?: string;
-  data?: any;
-}
+  disabled?: boolean;
 
-// API Error Types
-export interface ApiError {
-  code: string;
-  message: string;
-  details?: any;
-  timestamp: string;
-  requestId?: string;
-}
+  headers?: Record<string, string>}
+// Environment types;
+export interface Environment {'
+  NODE_ENV: 'development' | 'production' | 'test';
 
-// Cache Types
-export interface CacheConfig {
-  ttl: number; // Time to live in seconds
-  key: string;
-  tags?: string[];
-}
+  NEXT_PUBLIC_API_URL?: string;
+  NEXT_PUBLIC_APP_URL?: string;
+  NEXT_PUBLIC_GA_ID?: string;
+  NEXT_PUBLIC_SENTRY_DSN?: strin,g}
 
-export interface CacheEntry<T> {
-  data: T;
-  timestamp: number;
-  ttl: number;
-  tags?: string[];
-}
-
-// Feature Flags
-export interface FeatureFlags {
-  [key: string]: boolean;
-}
-
-// Configuration Types
-export interface AppConfig {
-  name: string;
-  version: string;
-  environment: string;
-  apiUrl: string;
-  features: FeatureFlags;
-  theme: Theme;
-  seo: SEOData;
-}
-
-export default {};

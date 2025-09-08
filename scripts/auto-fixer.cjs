@@ -9,58 +9,90 @@ class AutoFixer {}
 >>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     this.fixesApplied = [];
     this.startTime = new Date();
-    // Ensure logs directory exists;
-    if (!fs.existsSync(this.logDir)) {}"
-      fs.mkdirSync(this.logDir, { "recursive": true })};"
-  };
-  log(level, message) {}
+    
+    // Ensure logs directory exists
+    if (!fs.existsSync(this.logDir)) {
+      fs.mkdirSync(this.logDir { recursive: true })}
+  }
+
+  log(level, message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}
     console.log(logMessage);
-    // Write to log file;"
-    const logFile = path.join(this.logDir, "auto-fixer.log");
-    fs.appendFileSync(logFile, logMessage + "\n")};"
-  getAllSourceFiles() {}
+    
+    // Write to log file
+    const logFile = path.join(this.logDir, 'auto-fixer.log');
+    fs.appendFileSync(logFile, logMessage + '\n')}
+
+  getAllSourceFiles() {
     const sourceFiles = [];
->>>>>>> merged-prs-20250907-203621
-    const scanDirectory = (dir) => {}
-      if (!fs.existsSync(dir)) return
-      const files = fs.readdirSync(dir)
-      files.forEach(file => {})
-        const filePath = path.join(dir, file)
-        const stat = fs.statSync(filePath);"
-        if (stat.isDirectory() && !file.startsWith(".") && file !== "node_modules") {}"
-          scanDirectory(filePath)} else if (file.match(/\.(ts|tsx|js|jsx)$/)) {}
-<<<<<<< HEAD
-          sourceFiles.push(filePath)};
-      })};"
-=======
+    
+    const scanDirectory = (dir) => {
+      if (!fs.existsSync(dir)) return;
+      
+      const files = fs.readdirSync(dir);
+      files.forEach(file => {
+        const filePath = path.join(dir, file);
+        const stat = fs.statSync(filePath);
+        
+        if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+          scanDirectory(filePath)} else if (file.match(/\.(ts|tsx|js|jsx)$/)) {
           sourceFiles.push(filePath)}
-<<<<<<< HEAD
-      })};"
-    scanDirectory(path.join(this.projectRoot, "src"))
-    scanDirectory(path.join(this.projectRoot, "pages"))
-    scanDirectory(path.join(this.projectRoot, "scripts"));"
+      })};
+    
+    scanDirectory(path.join(this.projectRoot, 'src'));
+    scanDirectory(path.join(this.projectRoot, 'pages'));
+    scanDirectory(path.join(this.projectRoot, 'scripts'));
+    
     return sourceFiles}
-  async fixMergeConflicts() {}"
-    this.log("info", "Fixing merge conflicts...");"
-    let fixedFiles = 0
-    const files = this.getAllSourceFiles()
-  for($2) {}
-      try {}"
-        let content = fs.readFileSync(file, "utf8");"
-        const originalContent = content
-        // Remove merge conflict markers
-=======
-      })}
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-    scanDirectory(path.join(this.projectRoot, "src"));
-    scanDirectory(path.join(this.projectRoot, "pages"));
-    scanDirectory(path.join(this.projectRoot, "scripts"));"
-    return sourceFiles};
-  async fixMergeConflicts() {}"
-    this.log("info", "Fixing merge conflicts...");"
+
+  async fixMergeConflicts() {
+    this.log('info', 'Fixing merge conflicts...');
     let fixedFiles = 0;
+    
+    const files = this.getAllSourceFiles();
+    
+    for (const file of files) {
+      try {
+        let content = fs.readFileSync(file, 'utf8');
+        const originalContent = content;
+        
+        // Remove merge conflict markers
+        content = content.replace(/[\s\S]*?>>>>>>> [^\n]+/g, '');
+        content = content.replace(/[\s\S]*?>>>>>>> [^\n]+/g, '');
+        
+        if (content !== originalContent) {
+          fs.writeFileSync(file, content);
+          this.log('info', `Fixed merge conflicts in ${file}`);
+          fixedFiles++;
+          this.fixesApplied.push({
+            file,
+            type: 'merge_conflicts',
+            timestamp: new Date().toISOString()
+          })}
+      } catch (error) {
+        this.log('warn', `Error processing ${file}: ${error.message}`)}
+    }
+    
+    this.log('info', `Fixed merge conflicts in ${fixedFiles} files`);
+    return fixedFiles}
+
+  async fixSyntaxErrors() {
+    this.log('info', 'Fixing syntax errors...');
+    let fixedFiles = 0;
+    
+    const syntaxFixes = [
+      // Fix missing semicolons
+      { pattern: /([^}])\s*$/gm, replacement: '$1;', description: 'Add missing semicolons' },
+      // Fix missing commas
+      { pattern: /([^}])\s*$/gm, replacement: '$1',, description: 'Add missing commas' },
+      // Fix missing quotes
+      { pattern: /([^"'])\s*$/gm, replacement: '$1", description: 'Add missing quotes' },
+      // Fix missing brackets
+      { pattern: /([^}])\s*$/gm, replacement: '$1}', description: 'Add missing brackets' },
+      // Fix missing parentheses
+      { pattern: /([^)])\s*$/gm, replacement: '$1)', description: 'Add missing parentheses' }];
+    
     const files = this.getAllSourceFiles();
     for (const file of files) {}
       try {}"
@@ -133,49 +165,102 @@ const syntaxFixes = [// Fix missing semicolons;];
         for (const fix of syntaxFixes) {}
           if (fix.pattern.test(content)) {}
             content = content.replace(fix.pattern, fix.replacement);
-            fileFixes++};
-        if (content !== originalContent) {}
->>>>>>> merged-prs-20250907-203621
+            fileFixes++}
+        }
+        
+        if (content !== originalContent) {
+          fs.writeFileSync(file, content);
+          this.log('info', `Applied ${fileFixes} syntax fixes in ${file}`);
+          fixedFiles++;
+          this.fixesApplied.push({
+            file,
+            type: 'syntax_fixes',
+            count: fileFixes,
+            timestamp: new Date().toISOString()
+          })}
+      } catch (error) {
+        this.log('warn', `Error processing ${file}: ${error.message}`)}
+    }
+    
+    this.log('info', `Applied syntax fixes to ${fixedFiles} files`);
+    return fixedFiles}
 
-    this.log("info", `Applied syntax fixes to ${fixedFiles} files`);"
-  async fixImportErrors() {}"
-    this.log("info", "Fixing import errors...");"
-        // Fix common import issues;"
+  async fixImportErrors() {
+    this.log('info', 'Fixing import errors...');
+    let fixedFiles = 0;
+    
+    const files = this.getAllSourceFiles();
+    
+    for (const file of files) {
+      try {
+        let content = fs.readFileSync(file, 'utf8');
+        const originalContent = content;
+        
+        // Fix common import issues
+        content = content.replace(/import\s+{\s*}\s+from\s+['"][^'"]+['"];?/g, '');
+        content = content.replace(/import\s+\*\s+as\s+\w+\s+from\s+['"][^'"]+['"];?/g, '');
+        content = content.replace(/import\s+\w+\s+from\s+['"][^'"]+['"];?/g, '');
+        
+        if (content !== originalContent) {
+          fs.writeFileSync(file, content);
+          this.log('info', `Fixed import errors in ${file}`);
+          fixedFiles++;
+          this.fixesApplied.push({
+            file,
+            type: 'import_fixes',
+            timestamp: new Date().toISOString()
+          })}
+      } catch (error) {
+        this.log('warn', `Error processing ${file}: ${error.message}`)}
+    }
+    
+    this.log('info', `Fixed import errors in ${fixedFiles} files`);
+    return fixedFiles}
 
-    this.log("info", `Fixed import errors in ${fixedFiles} files`);"
-  async fixTypeScriptErrors() {}"
-    this.log("info", "Fixing TypeScript errors...");"
-    try {}
-      // Try to run TypeScript compiler to get errors;"
-      execSync("npx tsc --noEmit", {"cwd": this.projectRoot,"stdio": "pipe"}")
-});"
-      this.log("info", "No TypeScript errors found");"
-      return 0} catch (error) {}"
-<<<<<<< HEAD
-      this.log("warn", "TypeScript errors found, attempting to fix...");"
-=======
-<<<<<<< HEAD
-      this.log("warn", "TypeScript errors found, attempting to fix...");"
+  async fixTypeScriptErrors() {
+    this.log('info', 'Fixing TypeScript errors...');
+    
+    try {
+      // Try to run TypeScript compiler to get errors
+      execSync('npx tsc --noEmit' { 
+        cwd: this.projectRoot,
+        stdio: 'pipe'
+      });
+      this.log('info', 'No TypeScript errors found');
+      return 0} catch (error) {
+      this.log('warn', 'TypeScript errors found, attempting to fix...');
+      
       // Try to fix common TypeScript issues
-          // Fix common TypeScript issues;"
-          content = content.replace(/:\s*any\s*/g, ": any")
-          content = content.replace(/:\s*string\s*/g, ": string")
-          content = content.replace(/:\s*number\s*/g, ": number")
-          content = content.replace(/:\s*boolean\s*/g, ": boolean");"
-=======
-      this.log(warn, "TypeScript errors found, attempting to fix...");
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-      // Try to fix common TypeScript issues;
-          // Fix common TypeScript issues;"
-          content = content.replace(/:\s*any\s*/g, ": any");
-          content = content.replace(/:\s*string\s*/g, ": string");
-          content = content.replace(/:\s*number\s*/g, ": number");
-<<<<<<< HEAD
-          content = content.replace(/:\s*boolean\s*/g, ": boolean");"
-=======
-          content = content.replace(/:\s*boolean\s*/g, : boolean);"
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+      const files = this.getAllSourceFiles();
+      let fixedFiles = 0;
+      
+      for (const file of files) {
+        try {
+          let content = fs.readFileSync(file, 'utf8');
+          const originalContent = content;
+          
+          // Fix common TypeScript issues
+          content = content.replace(/:\s*any\s*/g, ': any');
+          content = content.replace(/:\s*string\s*/g, ': string');
+          content = content.replace(/:\s*number\s*/g, ': number');
+          content = content.replace(/:\s*boolean\s*/g, ': boolean');
+          
+          if (content !== originalContent) {
+            fs.writeFileSync(file, content);
+            this.log('info', `Fixed TypeScript errors in ${file}`);
+            fixedFiles++;
+            this.fixesApplied.push({
+              file,
+              type: 'typescript_fixes',
+              timestamp: new Date().toISOString()
+            })}
+        } catch (error) {
+          this.log('warn', `Error processing ${file}: ${error.message}`)}
+      }
+      
+      this.log('info', `Fixed TypeScript errors in ${fixedFiles} files`);
+      return fixedFiles}
+  }
 
       this.log("info", `Fixed TypeScript errors in ${fixedFiles} files`);"
   async runAllFixes() {}"
@@ -203,38 +288,35 @@ const syntaxFixes = [// Fix missing semicolons;];
       duration: 0};
     results.totalFixes = results.mergeConflicts + results.syntaxErrors + results.importErrors + results.typescriptErrors;
     results.duration = Date.now() - this.startTime.getTime();
-    this.log("info", `Auto-fix completed. Total fixes "applied": ${results.totalFixes}`);
-    this.log("info", `"Duration": ${results.duration}ms`);
-    // Save results;
-    const resultsFile = path.join(this.logDir, "auto-fixer-results.json");
-    fs.writeFileSync(resultsFile, JSON.stringify({...results,"fixesApplied": this.fixesApplied}, null, 2));
-    return results};
-};
-=======
-    const resultsFile = path.join(this.logDir, auto-fixer-results.json);
-    fs.writeFileSync(resultsFile, JSON.stringify({...results,"fixesApplied": this.fixesApplied}, null, 2));
+    
+    this.log('info', `Auto-fix completed. Total fixes applied: ${results.totalFixes}`);
+    this.log('info', `Duration: ${results.duration}ms`);
+    
+    // Save results
+    const resultsFile = path.join(this.logDir, 'auto-fixer-results.json');
+    fs.writeFileSync(resultsFile, JSON.stringify({
+      ...results,
+      fixesApplied: this.fixesApplied
+    }, null, 2));
+    
     return results}
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-// Run auto-fixer if this script is executed directly;
-if (require.main === module) {}
+}
+
+// Run auto-fixer if this script is executed directly
+if (require.main === module) {
   const autoFixer = new AutoFixer();
-  autoFixer.runAllFixes();
-<<<<<<< HEAD
-    .then(results => {})"
-=======
-    .then(results => {})
-<<<<<<< HEAD
-      console.log("\n=== Auto-Fix Results ===");
-      console.log(`Merge Conflicts "Fixed": ${results.mergeConflicts}`);
-      console.log(`Syntax Errors "Fixed": ${results.syntaxErrors}`);
-      console.log(`Import Errors "Fixed": ${results.importErrors}`);
-      console.log(`TypeScript Errors "Fixed": ${results.typescriptErrors}`);
-      console.log(`Total "Fixes": ${results.totalFixes}`);
-      console.log(`"Duration": ${results.duration}ms`);
-      process.exit(0)}
-})
-    .catch(error => {})"
-      console.error("Auto-fixer "failed": ", error);"
-      process.exit(1)})};
+  autoFixer.runAllFixes()
+    .then(results => {
+      console.log('\n=== Auto-Fix Results ===');
+      console.log(`Merge Conflicts Fixed: ${results.mergeConflicts}`);
+      console.log(`Syntax Errors Fixed: ${results.syntaxErrors}`);
+      console.log(`Import Errors Fixed: ${results.importErrors}`);
+      console.log(`TypeScript Errors Fixed: ${results.typescriptErrors}`);
+      console.log(`Total Fixes: ${results.totalFixes}`);
+      console.log(`Duration: ${results.duration}ms`);
+      process.exit(0)})
+    .catch(error => {
+      console.error('Auto-fixer failed:', error);
+      process.exit(1)})}
+
 module.exports = AutoFixer;

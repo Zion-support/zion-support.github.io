@@ -1,2 +1,4 @@
-:src.pages.disabled/ServicesComparisonMatrix2025.test.tsx
-describe ('ServicesComparisonMatrix2025', () => {}; '; it ('renders without crashing', () => {}; render (<ServicesComparisonMatrix2025 />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<ServicesComparisonMatrix2025 />) ;
+
+
+
+

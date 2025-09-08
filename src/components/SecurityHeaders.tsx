@@ -1,73 +1,36 @@
-import { Shield, Lock, CheckCircle, AlertTriangle } from 'lucide-react';
-export function SecurityHeaders({ className }) {
-    const securityFeatures = [
-        {
-            icon: Shield,
-            title: "SOC 2 Type II Certified",
-            description: "Enterprise-grade security compliance",
-            status: "verified",
-            color: "text-zion-cyan"
-        },
-        {
-            icon: Lock,
-            title: "End-to-End Encryption",
-            description: "256-bit AES encryption for all data",
-            status: "verified",
-            color: "text-zion-purple"
-        },
-        {
-            icon: CheckCircle,
-            title: "GDPR & CCPA Compliant",
-            description: "Full data protection compliance",
-            status: "verified",
-            color: "text-zion-cyan"
-        },
-        {
-            icon: Shield,
-            title: "Zero-Knowledge Architecture",
-            description: "We cannot access your encrypted data",
-            status: "verified",
-            color: "text-zion-purple"
-        }
-    ];
-    const complianceBadges = [
-        { name: "SOC 2", status: "Certified", year: "2024", icon: CheckCircle },
-        { name: "ISO 27001", status: "Certified", year: "2024", icon: CheckCircle },
-        { name: "GDPR", status: "Compliant", year: "2024", icon: CheckCircle },
-        { name: "CCPA", status: "Compliant", year: "2024", icon: CheckCircle },
-        { name: "HIPAA", status: "Ready", year: "2024", icon: AlertTriangle }
-    ];
-    return (<section className={`py-16 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark ${className || ''}`}>
-      <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Enterprise Security & Compliance
-          </h2>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Zion Tech Group maintains the highest standards of security and compliance 
-            to protect your business data and ensure regulatory adherence.
-          </p>
-        </div>
+import { useEffect } from 'react';
 
-        {/* Security Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {securityFeatures.map((feature, index) => (<div key={index} className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-zion-cyan/30 transition-all duration-300 hover:transform hover:scale-105">
-              <div className={`mx-auto w-16 h-16 bg-zion-cyan/10 rounded-full flex items-center justify-center mb-4`}>
-                <feature.icon className={`w-8 h-8 ${feature.color}`}/>
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">
-                {feature.title}
-              </h3>
-              <p className="text-zion-slate-light text-sm leading-relaxed">
-                {feature.description}
-              </p>
-              <div className="mt-3 flex items-center justify-center gap-2">
-                <CheckCircle className="w-4 h-4 text-zion-cyan"/>
-                <span className="text-xs text-zion-cyan font-medium">Verified</span>
-              </div>
-            </div>))}
-        </div>
+const SecurityHeaders = () => {
+  useEffect(() => {
+    // Add Content Security Policy
+    const meta = document.createElement('meta');
+    meta.httpEquiv = 'Content-Security-Policy';
+    meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none;
+    document.head.appendChild(meta);
+
+    // Add additional security headers via meta tags
+    const securityHeaders = [
+  { httpEquiv: 'X-Frame-Options', content: 'DENY' }, { httpEquiv: 'X-Content-Type-Options', content: 'nosniff' }, { httpEquiv: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' }, { httpEquiv: 'Permissions-Policy', content: 'camera=(), microphone=(), geolocation=(), payment=(), usb=()' }
+    ];
+
+    securityHeaders.forEach(header => {
+      const metaTag = document.createElement('meta');
+      metaTag.httpEquiv = header.httpEquiv;
+      metaTag.content = header.content;
+      document.head.appendChild(metaTag)});
+
+    return () => {
+      // Cleanup on unmount
+      const securityMetaTags = document.querySelectorAll('meta[http-equiv]');
+      securityMetaTags.forEach(tag => {
+        if (tag.getAttribute('http-equiv')?.startsWith('X-') || 
+            tag.getAttribute('http-equiv') === 'Content-Security-Policy' ||
+            tag.getAttribute('http-equiv') === 'Referrer-Policy' ||
+            tag.getAttribute('http-equiv') === 'Permissions-Policy') {
+          tag.remove()}
+      })}}, []);
+
+  return null};
 
         {/* Compliance Section */}
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 mb-16">

@@ -441,10 +441,6 @@ if ( {) {
             Create account
           </Link>
         </p>
-      </form>
-    </Form>
-  )            Create account;
-          </Link>;
-        </p>;
-      </form>;
-<<<<<<< HEAD
+      </div>
+    </div>
+  )}

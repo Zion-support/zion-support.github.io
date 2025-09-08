@@ -620,7 +620,5 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
           </div>
         </div>
       </div>
-    </React.Fragment>
-  )};
-
-export default ComprehensivePricingGuide2030;>
+    </div>
+  )}

@@ -1,44 +1,25 @@
 
+import { withErrorLogging } from;
+  './withErrorLogging.cjs;
+const PROD_DOMAIN =;
 
+    res.statusCode = 405;
+    res.setHeader('Allow;, 'POST;);';
+    res.end('Method Not Allowed;);';
+    return}
+  const { productId, userId } = req.body || {}
+  if (!productId || !userId) {;
+    res.statusCode = 400;
+
+    const testKey = process.env.STRIPE_TEST_SECRET_KEY || liveKey;
+    if(;
+      !isProdDomain() &&;
+
+      metadata: { userId, productId }});
     res.statusCode = 200;
-    res.json({
-      success: true
-      sessionId: session.id
-      url: session.url
-    });
-  } catch (err) {
-    console.error('Create checkout session error:', err);
+    res.json({ sessionId: session.id })} catch (err) {;
+    // Error logged by withErrorLogging wrapper;
     res.statusCode = 500;
-    res.json({ error: err.message });
-  }
-}
+    res.json({ error: err.message }})}
+export default withErrorLogging(handler);`
 
-export default withErrorLogging(handler);
->>>>>>> origin/main
-
-export default function handler(req, res) {
-  res.status(200).json({ message: "Checkout session created" })}
-export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
-  res.status(200).json({ message: 'Checkout session created' });
-}
-export default function handler(req, res) {
-  res.status(200).json({ "message": 'Checkout session created' });
-}
-
-export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
-export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
-export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-      url: session.url
->>>>>>> origin/main
-    })
-  } catch (err) {,
-    // console.error('Checkout session API error:, err),
-    res.statusCode = 500,
-    res.json({ error: err.message || 'Checkout session creation failed' })
-  }
-};
-export default withErrorLogging(handler),
-,
-origin/cursor/integrate-build-improve-and-re-verify-c7b5

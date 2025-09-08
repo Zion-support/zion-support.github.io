@@ -6,43 +6,9 @@ const path = require('path');
 
 
 
-
-main
-
-
-function fixTestFile(filePath) {
-  try {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> merged-prs-20250907-203621
-<<<<<<< HEAD
-<<<<<<< HEAD
-const path = require(path');
-
-
-=======
-const path = require('path');
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-main
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-// Function to fix malformed test files;
-function fixTestFile(filePath) {}
-  try {}
-<<<<<<< HEAD
-    let content = fs.readFileSync(filePath, 'utf8');
+testDirs.forEach(dir => {
+  if (fs.existsSync(dir)) {
+    const files = fs.readdirSync(dir { recursive: true });
     
     // Fix common syntax errors in test files
     content = content.replace(/render\(<[^>]+>\)""/g, 'render(<$1>);');
@@ -276,17 +242,32 @@ function walkDir(dir) {
         const itemPath = path.join(currentDir, item);
         const stat = fs.statSync(itemPath);
         
-        if (stat.isDirectory()) {
-          readDir(itemPath);
-        } else if (item.endsWith('.test.js') || item.endsWith('.test.ts') || item.endsWith('.test.tsx') || item.endsWith('.test.jsx')) {
-          files.push(itemPath);
+        if (fs.existsSync(filePath)) {
+          let content = fs.readFileSync(filePath, 'utf8');
+          let originalContent = content;
+          
+          // Fix common syntax errors from the comprehensive fixer
+          // 1. Fix malformed imports like "import React from 'react';';"
+          content = content.replace(/from\s+'([^']+)';';/g, "from '$1';");
+          content = content.replace(/import\s+'([^']+)';';/g, "import '$1';");
+          
+          // 2. Fix unterminated strings in imports
+          content = content.replace(/import\s+([^]+);';/g, 'import $1;');
+          
+          // 3. Fix double quotes in imports
+          content = content.replace(/import\s+([^"]*)"([^"]*)"([^"]*);";/g, 'import $1"$2"$3;');
+          
+          // 4. Fix malformed component imports
+          content = content.replace(/from\s+"([^"]+)";";/g, 'from "$1";');
+          
+          if (content !== originalContent) {
+            fs.writeFileSync(filePath, content, 'utf8');
+            fixedFiles.push(filePath);
+            console.log(`✅ Fixed ${filePath}`)}
         }
       }
-    };
-    
-    readDir(dir);
-    return files;
-  }
+    })}
+});
 
   async run() {
     try {
@@ -303,73 +284,9 @@ function walkDir(dir) {
 >>>>>>> pr/11282
     }
 
-<<<<<<< HEAD
-console.log('Fixing test files...');
-findAndFixTestFiles('./src');
-console.log('Done fixing test files.');
-=======
-<<<<<<< HEAD
-// Run if called directly
-if (require.main === module) {
-  const fixer = new TestFileFixer();
-  fixer.run().catch(console.error);
-}
-=======
-console.log(Fixing test files...');
-findAndFixTestFiles('./src);
-console.log(Done fixing test files.');
-=======
->>>>>>> merged-prs-20250907-203621
-
-<<<<<<< HEAD
-    // Add styling tests here;
-});`;
-`;`
-      fs.writeFileSync(filePath, fixedContent);
-      return true;
-    };
-    return false;
-  } catch (error) {}`;
-    console.error(`Error fixing file ${filePath}:`, error.message);
-// Function to remove unused fireEvent imports;
-function removeUnusedFireEvent(filePath) {}
-
-      // Remove fireEvent from import statement;
-      content = content.replace(/, fireEvent/g, );
-      content = content.replace(/fireEvent, /g, );
-      content = content.replace(/fireEvent/g, );
-      fs.writeFileSync(filePath, content);
-    console.error(`Error processing file ${filePath}:`, error.message);
-
-const files = fs.readdirSync(testDir);
-
-let fixedCount = 0;
-let fireEventCount = 0;
-
-files.forEach(file => {})
-  if (file.endsWith('.test.js')) {}
-    const filePath = path.join(testDir, file);
-    // Fix malformed files;
-    if (fixTestFile(filePath)) {}
-      fixedCount++;
-    // Remove unused fireEvent;
-    if (removeUnusedFireEvent(filePath)) {}
-      fireEventCount++;
-`;
-console.log(`Fixed ${fixedCount} malformed test files`);`;
-console.log(`Removed unused fireEvent from ${fireEventCount} files`);
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-      fixedCount += walkDir(filePath);
-    } else if (file.endsWith('.test.js') || file.endsWith('.test.tsx')) {
-      if (fixTestFile(filePath)) {
-        fixedCount++;
-      }
-    }
-  }
-  
-  return fixedCount;
-}
+if (fixedFiles.length > 0) {
+  console.log('Fixed files:');
+  fixedFiles.forEach(file => console.log(`  - ${file}`))}
 
 console.log('Starting to fix test files...');
 const fixedCount = walkDir(testDir);

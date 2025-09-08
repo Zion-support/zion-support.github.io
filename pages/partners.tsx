@@ -1,92 +1,57 @@
-import Head from 'next/head.ts'
-import { motion  } from 'framer-motion.ts'
-import { Handshake, 
-  Shield, 
-  Cloud, 
-  Brain, 
-  Users, 
-  Globe,
-  Award,
-  Zap,
-  Cpu,
-  Database,
-  Lock,
-  Rocket
- } from 'lucide-react.ts'
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 
-export default function Partners(...args: any[]): any {
-  const title = 'Partners — Zion Tech Group'
-  const description = 'Strategic partnerships with leading technology providers, cloud platforms, and cybersecurity experts to deliver comprehensive solutions.'
-  
-  const partnerCategories = [
-    {
-      icon: Cloud,
-      title: 'Cloud & Infrastructure',
-      description: 'Strategic partnerships with leading cloud providers and infrastructure companies.',
-      partners: [
-        { name: 'AWS', description: 'Amazon Web Services', logo: '☁️', tier: 'Platinum' },
-        { name: 'Microsoft Azure', description: 'Cloud computing platform', logo: '🔷', tier: 'Platinum' },
-        { name: 'Google Cloud', description: 'Cloud infrastructure services', logo: '🔵', tier: 'Gold' },
-        { name: 'DigitalOcean', description: 'Cloud infrastructure provider', logo: '🌊', tier: 'Silver' }
-      ]
-    },
-    {
-      icon: Brain,
-      title: 'AI & Machine Learning',
-      description: 'Partnerships with cutting-edge AI research and development organizations.',
-      partners: [
-        { name: 'OpenAI', description: 'Advanced AI research', logo: '🤖', tier: 'Gold' },
-        { name: 'Anthropic', description: 'AI safety and research', logo: '🧠', tier: 'Gold' },
-        { name: 'Hugging Face', description: 'Machine learning platform', logo: '🤗', tier: 'Silver' },
-        { name: 'Databricks', description: 'Data and AI platform', logo: '📊', tier: 'Silver' }
-      ]
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Collaborations with security experts and compliance organizations.',
-      partners: [
-        { name: 'CrowdStrike', description: 'Cybersecurity solutions', logo: '🦅', tier: 'Gold' },
-        { name: 'Palo Alto Networks', description: 'Network security', logo: '🌲', tier: 'Gold' },
-        { name: 'Rapid7', description: 'Security analytics', logo: '⚡', tier: 'Silver' },
-        { name: 'Qualys', description: 'Cloud security platform', logo: '🛡️', tier: 'Silver' }
-      ]
-    },
-    {
-      icon: Database,
-      title: 'Data & Analytics',
-      description: 'Partnerships with data management and analytics solution providers.',
-      partners: [
-        { name: 'Snowflake', description: 'Data cloud platform', logo: '❄️', tier: 'Gold' },
-        { name: 'Tableau', description: 'Data visualization', logo: '📈', tier: 'Silver' },
-        { name: 'MongoDB', description: 'Database platform', logo: '🍃', tier: 'Silver' },
-        { name: 'Elastic', description: 'Search and analytics', logo: '🔍', tier: 'Silver' }
-      ]
-    }
-  {/* Removed stray closing bracket */}
 
-  const benefits = [
-    {
-      icon: Zap,
-      title: 'Enhanced Capabilities',
-      description: 'Access to cutting-edge technologies and expertise through our partner network.'
-    },
-    {
-      icon: Shield,
-      title: 'Security & Compliance',
-      description: 'Enterprise-grade security solutions backed by industry-leading partners.'
-    },
-    {
-      icon: Rocket,
-      title: 'Faster Implementation',
-      description: 'Accelerated delivery through proven partner integrations and best practices.'
-    },
-    {
-      icon: Award,
-      title: 'Quality Assurance',
-      description: 'Solutions validated by our trusted partner ecosystem.'
+export default function Partners() {
+
+  const partnerTypes = [
+
+        'Integrate your technology with our platform and create powerful solutions together.',
+      features: ['
+        'API Integration',
+        'SDK Access',
+        'Technical Documentation',
+        'Developer Support' ] }, {'
+      title: 'Solution Partners',
+      description:'
+        'Resell our solutions and provide implementation services to your clients.',
+      features: ['
+        'Reseller Program',
+        'Implementation Services',
+        'Training & Certification',
+        'Marketing Support' ] }, {'
+      title: 'Channel Partners',
+      description:'
+        'Distribute our solutions through your sales channels and customer base.',
+      features: ['
+        'Channel Program',
+        'Sales Training',
+        'Lead Sharing',
+        'Co-marketing Opportunities' ] } }, {
+      title: 'Solution Partners',
+      description:
+        'Specialized service providers that complement our offerings and expand our capabilities.',
+      icon: Target,
+      benefits: [
+
+    }, {
+      title: 'Channel Partners',
+      description:
+        'Resellers and integrators who help us reach new markets and deliver solutions to clients worldwide.',
+      icon: Globe,
+      benefits: [
+
     }
-  {/* Removed stray closing bracket */}
+
+  ];
+
+  const currentPartners = [
+
+    }
+
+
+  ];
 
   const partnershipLevels = [
     {
@@ -112,30 +77,119 @@ export default function Partners(...args: any[]): any {
 const Page = () => {
   return (
     <>
+
+        keywords="partners, partnership, reseller, technology partners, channel partners, business partnership"
+      />
+
       <Head>
         <title>Partners - Zion Tech Group</title>
         <meta name="description" content="Join our partner network and grow your business with Zion Tech Group's innovative solutions." />
         <link rel="canonical" href="https://ziontechgroup.com/partners" />
       </Head>
-      <main style={{ padding: '20px', maxWidth: 1200, margin: '0 auto' }}>
-        <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '20px', textAlign: 'center' }}>Our Partners</h1>
-        <p style={{ fontSize: '1.1rem', lineHeight: 1.6, textAlign: 'center', color: '#ccc' }}>
-          Join our growing network of partners and unlock new opportunities for growth and innovation.
-        </p>
-        <div style={{ marginTop: '30px', textAlign: 'center' }}>
-          <Link href="/" style={{
-            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-            color: 'white',
-            padding: '12px 24px',
-            textDecoration: 'none',
-            borderRadius: 8,
-            fontSize: '1rem',
-            fontWeight: 600
-          }}>
-            Back to Home
-          </Link>
-        </div>
-      </main>
+
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        {/* Hero Section */}
+
+            </div>
+
+          </div>
+        </section>
+
+
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Partner With Us?
+            </h2>"
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We provide comprehensive support and resources to help our
+              partners succeed and grow their business.
+            </p>
+          </div>
+"
+          <div className="grid grid-cols-1 m,
+    d:grid-cols-2 l,
+    g:grid-cols-3 gap-8">
+            {partnerBenefits.map((benefit, index) => (
+              <Card
+                key={index}"
+                className="p-6 hover: shadow-xl transition-shadow duration-300"
+              >"
+                <div className="flex items-center mb-4">"
+                  <div className="p-3 bg-blue-100 rounded-lg mr-4">"
+                    <benefit.icon className="h-8 w-8 text-blue-600" />
+                  </div>"
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    {benefit.title}
+                  </h3>
+
+                      </li>
+                    ))}
+                  </ul>
+
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    {partner.name}
+                  </h3>
+                  <p className="text-blue-600 font-semibold mb-2">
+                    {partner.category}
+                  </p>
+                  <p className="text-gray-600 text-sm">{partner.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+              {partnershipBenefits.map((benefit, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <benefit.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-600">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              Ready to Partner With Us?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+
+
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link href="/contact">
+                <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                  Start Partnership Discussion
+                  <ArrowRight className="w-5 h-5 ml-2 inline" />
+                </button>
+              </Link>
+              <a
+                href="mailto:partners@ziontechgroup.com"
+                className="text-white hover:text-blue-200 transition-colors"
+              >
+                partners@ziontechgroup.com
+              </a>
+            </div>
+          </div>
+
     </>
-  {/* Removed stray closing parenthesis */}
-  {/* Removed stray closing brace */}
+

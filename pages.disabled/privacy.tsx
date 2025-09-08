@@ -7,25 +7,36 @@ import MainLayout from '../src/components/layout/MainLayout';
 
 export default function PrivacyPage() {
   return (
-    <MainLayout
-      title="Privacy Policy - Zion Tech Group"
-      description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information."
-      keywords="privacy policy, data protection, personal information, GDPR compliance"
-      canonical="https://ziontechgroup.com/privacy"
-    >
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Privacy Policy</h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Your privacy is important to us. Learn how we collect, use, and protect your information.
+    <>
+      <Head>
+        <title>Privacy Policy - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Privacy Policy for Zion Tech Group. Learn how we collect, use, and protect your personal information."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+
+      <main className="min-h-screen bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            Privacy Policy
+          </h1>
+
+          <div className="prose prose-lg max-w-none">
+            <p className="text-gray-600 mb-8">
+              <strong>Last updated:</strong> January 27, 2025
+            </p>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                1. Introduction
+              </h2>
+              <p className="text-gray-700 mb-4">
+                Zion Tech Group ("we", "our", or "us") is committed to
+                protecting your privacy. This Privacy Policy explains how we
+                collect, use, disclose, and safeguard your information when you
+                visit our website or use our services.
               </p>
             </motion.div>
           </div>
@@ -130,5 +141,4 @@ export default function PrivacyPage() {
         </section>
       </div>
     </>
-  );
-}
+  )}

@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "lib": ["dom", "dom.iterable", "es2022", "webworker"],
+    "target": "ES2020",
+    "lib": ["dom", "dom.iterable", "es6"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -62,7 +62,13 @@
       "@/components/*": ["./src/components/*"],
       "@/pages/*": ["./src/pages/*"],
       "@/utils/*": ["./src/utils/*"],
-      "@/types/*": ["./src/types/*"]
+      "@/types/*": ["./src/types/*"],
+<<<<<<< HEAD
+      "@/hooks/*": ["./src/hooks/*"],
+=======
+>>>>>>> cursor/resolve-conflicts-and-merge-to-main-1d25
+      "@/services/*": ["./src/services/*"],
+      "@/store/*": ["./src/store/*"]
     }
 =======
       "@/*": ["./*"],
@@ -88,17 +94,13 @@
     "types/**/*.ts"
   ],
   "exclude": [
+<<<<<<< HEAD
+    "node_modules"
+=======
     "node_modules",
     ".next",
     "out",
-    "dist",
-    "build",
-    "automation",
-    "scripts",
-    "fix_*.js",
-    "fix_*.cjs",
-    "*.fix.js",
-    "*.fix.cjs",
-    "supabase/functions/**"
+    "dist"
+>>>>>>> cursor/resolve-conflicts-and-merge-to-main-1d25
   ]
 }

@@ -4,109 +4,17 @@ import Layout from '../../components/Layout';
 const ITServicesPage: React.FC = () => {
   const services = [
     {
-      title: 'Cloud DevOps & SRE',
-      description: 'Comprehensive DevOps and Site Reliability Engineering services to ensure your applications run smoothly and scale efficiently.',
-      features: ['CI/CD Pipeline Setup', 'Infrastructure as Code', 'Monitoring & Alerting', 'Auto-scaling'],
-      pricing: '$120–$220/hour or $6k–$30k/project',
-      icon: '☁️'
-    },
-    {
-      title: 'Cybersecurity Hardening & SOC',
-      description: 'Protect your digital assets with comprehensive security solutions, including Zero Trust architecture and SOC services.',
-      features: ['Security Audits', 'Penetration Testing', 'Zero Trust Implementation', 'SOC Services'],
-      pricing: '$5k–$40k project, $2k–$8k/month managed',
-      icon: '🔒'
-    },
-    {
-      title: 'Cloud Migration & Modernization',
-      description: 'Seamlessly migrate your infrastructure to the cloud and modernize legacy systems for better performance and scalability.',
-      features: ['Cloud Migration', 'Legacy Modernization', 'Containerization', 'Serverless Architecture'],
-      pricing: '$10k–$150k project',
-      icon: '🚀'
-    },
-    {
-      title: 'Network Infrastructure',
-      description: 'Design, implement, and maintain robust network infrastructure solutions for optimal performance and security.',
-      features: ['Network Design', 'VPN Setup', 'Load Balancing', 'Network Monitoring'],
-      pricing: '$3k–$20k project',
-      icon: '🌐'
-    },
-    {
-      title: 'Database Management',
-      description: 'Optimize your database performance, implement backup strategies, and ensure data integrity and security.',
-      features: ['Database Optimization', 'Backup & Recovery', 'Data Migration', 'Performance Tuning'],
-      pricing: '$2k–$15k project',
-      icon: '🗄️'
-    },
-    {
-      title: 'IT Support & Maintenance',
-      description: 'Comprehensive IT support services to keep your systems running smoothly with proactive monitoring and maintenance.',
-      features: ['24/7 Support', 'Proactive Monitoring', 'System Maintenance', 'Troubleshooting'],
-      pricing: '$1k–$5k/month',
-      icon: '🛠️'
-    },
-    {
-      title: 'Cloud Architecture & Design',
-      description: 'Expert cloud architecture design and implementation for scalable, secure, and cost-effective cloud solutions.',
-      features: ['Cloud Strategy', 'Architecture Design', 'Cost Optimization', 'Security Implementation'],
-      pricing: '$8k–$50k project',
-      icon: '🏗️'
-    },
-    {
-      title: 'Disaster Recovery & Backup',
-      description: 'Comprehensive disaster recovery and backup solutions to protect your data and ensure business continuity.',
-      features: ['Backup Strategy', 'Disaster Recovery Planning', 'Data Replication', 'Recovery Testing'],
-      pricing: '$5k–$25k setup, $500–$2k/month',
-      icon: '💾'
-    },
-    {
-      title: 'API Development & Integration',
-      description: 'Custom API development and third-party integrations to connect your systems and streamline operations.',
-      features: ['RESTful APIs', 'GraphQL APIs', 'Third-party Integrations', 'API Documentation'],
-      pricing: '$3k–$20k project',
-      icon: '🔌'
-    },
-    {
-      title: 'Performance Optimization',
-      description: 'System and application performance optimization to improve speed, efficiency, and user experience.',
-      features: ['Performance Analysis', 'Code Optimization', 'Database Tuning', 'Caching Strategies'],
-      pricing: '$2k–$15k project',
-      icon: '⚡'
-    },
-    {
-      title: 'Compliance & Governance',
-      description: 'IT compliance and governance services to ensure your systems meet regulatory requirements and industry standards.',
-      features: ['Compliance Audits', 'Policy Development', 'Risk Assessment', 'Regulatory Reporting'],
-      pricing: '$5k–$30k project',
-      icon: '📋'
-    },
-    {
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile application development for iOS and Android with modern frameworks.',
-      features: ['Native Development', 'Cross-platform Apps', 'UI/UX Design', 'App Store Deployment'],
-      pricing: '$10k–$100k project',
-      icon: '📱'
-    },
-    {
-      title: 'Web Application Development',
-      description: 'Custom web application development with modern frameworks, responsive design, and scalable architecture.',
-      features: ['Custom Development', 'Responsive Design', 'Scalable Architecture', 'Performance Optimization'],
-      pricing: '$8k–$80k project',
-      icon: '🌐'
-    },
-    {
-      title: 'Data Analytics & Business Intelligence',
-      description: 'Data analytics and business intelligence solutions to transform raw data into actionable insights.',
-      features: ['Data Warehousing', 'ETL Processes', 'Dashboard Development', 'Predictive Analytics'],
-      pricing: '$5k–$40k project',
-      icon: '📊'
-    },
-    {
-      title: 'IoT Solutions & Integration',
-      description: 'Internet of Things solutions and device integration to connect and manage smart devices and sensors.',
-      features: ['IoT Architecture', 'Device Integration', 'Data Collection', 'Real-time Monitoring'],
-      pricing: '$10k–$60k project',
-      icon: '🌐'
+      icon: <Shield className="w-8 h-8" />, title: 'Enterprise Security',
+      description: 'Bank-level security protocols and compliance standards to protect your business data.'
+    }, {
+      icon: <Zap className="w-8 h-8" />,
+      title: 'Performance Optimization', description: 'Optimize your infrastructure for maximum performance and efficiency.'
+    }, {
+      icon: <Users className="w-8 h-8" />, title: 'Expert Team',
+      description: 'Experienced IT professionals with deep expertise in enterprise solutions.'
+    }, {
+      icon: <Globe className="w-8 h-8" />,
+      title: 'Global Support', description: '24/7 support and monitoring to ensure your systems run smoothly.'
     }
   ];
 
@@ -246,8 +154,7 @@ const ITServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
-};
+    </MainLayout>
+  )};
 
 export default ITServicesPage;

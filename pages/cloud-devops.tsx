@@ -12,29 +12,20 @@ export default function CloudDevOps() {
   const services = [
     {
       icon: Cloud,
-      title: 'Cloud Migration & Strategy',
-      description: 'Seamless migration to AWS, Azure, or GCP with zero downtime and optimized cost structures.',
-      features: ['Multi-cloud strategy', 'Cost optimization', 'Security compliance', 'Performance monitoring']
-    },
-    {
+      title: 'Cloud Migration',
+      description: 'Seamless migration to cloud platforms with zero downtime and optimized performance.',
+      features: ['AWS Migration', 'Azure Migration', 'GCP Migration', 'Hybrid Cloud Solutions']
+    }, {
       icon: Server,
       title: 'Infrastructure as Code',
-      description: 'Automated infrastructure provisioning and management using Terraform, Ansible, and CloudFormation.',
-      features: ['Terraform automation', 'Ansible playbooks', 'CloudFormation templates', 'GitOps workflows']
-    },
-    {
-      icon: Database,
-      title: 'Database Management',
-      description: 'High-performance database solutions with automated backups, scaling, and optimization.',
-      features: ['Database migration', 'Performance tuning', 'Automated backups', 'High availability']
-    },
-    {
-      icon: Shield,
-      title: 'DevSecOps & Security',
-      description: 'Integrated security practices throughout the development lifecycle with automated compliance.',
-      features: ['Security scanning', 'Compliance automation', 'Vulnerability management', 'Access controls']
-    },
-    {
+      description: 'Automated infrastructure provisioning and management using modern IaC tools.',
+      features: ['Terraform', 'CloudFormation', 'Ansible', 'Kubernetes']
+    }, {
+      icon: GitBranch,
+      title: 'CI/CD Pipelines',
+      description: 'Automated build, test, and deployment pipelines for faster and reliable releases.',
+      features: ['Jenkins', 'GitLab CI', 'GitHub Actions', 'Azure DevOps']
+    }, {
       icon: Zap,
       title: 'CI/CD Pipeline Automation',
       description: 'Streamlined deployment pipelines with automated testing, quality gates, and rollback capabilities.',
@@ -46,6 +37,14 @@ export default function CloudDevOps() {
       description: 'Comprehensive training programs to upskill your team in modern DevOps practices and tools.',
       features: ['Hands-on training', 'Best practices', 'Tool certification', 'Ongoing support']
     }
+  ];
+
+  const technologies = [
+    { name: 'AWS', description: 'Amazon Web Services' }, { name: 'Azure', description: 'Microsoft Azure' }, { name: 'GCP', description: 'Google Cloud Platform' }, { name: 'Docker', description: 'Containerization' }, { name: 'Kubernetes', description: 'Container Orchestration' }, { name: 'Terraform', description: 'Infrastructure as Code' }
+  ];
+
+  const stats = [
+    { number: '99.9%', label: 'Uptime', icon: Clock }, { number: '50%', label: 'Cost Reduction', icon: Zap }, { number: '10x', label: 'Faster Deployments', icon: GitBranch }, { number: '24/7', label: 'Monitoring', icon: Server }
   ];
 
   return (
@@ -148,8 +147,113 @@ export default function CloudDevOps() {
               </a>
             </div>
           </div>
-        </section>
-      </div>
-    </>
-  );
-}
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="w-8 h-8 text-blue-400" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-400">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Complete Cloud & DevOps Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              From cloud migration to DevOps automation, we provide end-to-end solutions for modern infrastructure.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-gray-800/50 border border-gray-700 rounded-xl p-8 hover:border-blue-500/50 transition-all duration-300">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center mr-4">
+                    <service.icon className="w-6 h-6 text-blue-400" />
+                  </div>
+                  <h3 className="text-2xl font-semibold">{service.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technologies Section */}
+      <section className="py-20 bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Technologies We Work With
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We use the latest cloud and DevOps technologies to deliver scalable and reliable solutions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            {technologies.map((tech, index) => (
+              <div key={index} className="bg-gray-900/50 border border-gray-700 rounded-lg p-6 text-center hover:border-blue-500/50 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
+                <p className="text-gray-400 text-sm">{tech.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-900/20 to-cyan-900/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Scale Your Infrastructure?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Transform your infrastructure with our cloud and DevOps expertise. Get started with a free consultation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
+            >
+              Get Started Today
+              <ArrowRight className="w-5 h-5 ml-2 inline" />
+            </Link>
+            <a
+              href="tel:+13024640950"
+              className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300 flex items-center justify-center"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Call Now
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  )}

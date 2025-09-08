@@ -79,26 +79,24 @@ export default function Enterprise() {
     return (<div className="min-h-screen bg-background">
       <SEO title="Enterprise Solutions - Zion Tech Group" description="Enterprise-grade AI and tech solutions for large organizations. Scale your tech operations with Zion Tech Group's comprehensive enterprise platform." keywords="enterprise solutions, enterprise AI, tech consulting, team management, Zion Tech Group" canonical="https://ziontechgroup.com/enterprise"/>
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Enterprise Solutions
-          </h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Scale your tech operations with Zion Tech Group's comprehensive enterprise platform. 
-            Access global talent, advanced tools, and dedicated support for your organization.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light">
-              Schedule Demo
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue-dark">
-              Contact Sales
-            </Button>
-          </div>
-        </div>
-      </section>
+const Enterprise: React.FC = () => {
+  return (
+    <div className="mx-auto max-w-7xl px-4 py-12">
+      <h1 className="text-3xl font-bold text-gray-900">Enterprise Solutions</h1>
+      <p className="mt-4 text-gray-700">
+        Explore our enterprise-grade AI, cloud, and cybersecurity solutions tailored for large organizations.
+      </p>
+      <ul className="mt-6 list-disc pl-6 space-y-2 text-gray-700">
+        <li>AI-powered analytics and automation</li>
+        <li>Cloud modernization and FinOps</li>
+        <li>Zero Trust cybersecurity and compliance</li>
+        <li>Scalable infrastructure and observability</li>
+      </ul>
+      <a href="/contact" className="mt-8 inline-block rounded-md bg-blue-600 px-5 py-2.5 text-white hover: bg-blue-700">
+        Talk to an expert
+      </a>
+    </div>
+  )};
 
       {/* Features Section */}
       <section className="py-20 bg-zion-blue-dark">

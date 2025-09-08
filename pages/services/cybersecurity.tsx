@@ -14,61 +14,70 @@ export default function CybersecurityPage() {
       title: "Advanced Threat Detection",
       description: "AI-powered threat detection and response with real-time monitoring",
       features: [
-        "24/7 threat monitoring",
-        "AI-powered analysis",
-        "Real-time alerts",
-        "Automated response"
-      ],
-      price: "$899/month",
-      icon: Eye
-    },
-    {
-      title: "Zero-Trust Architecture",
-      description: "Implement comprehensive zero-trust security across your organization",
+        'Vulnerability scanning',
+        'Penetration testing',
+        'Security audit',
+        'Risk assessment',
+        'Compliance review'
+      ]
+    }, {
+      title: 'Network Security',
+      description: 'Protect your network infrastructure from threats',
+      icon: Network,
       features: [
-        "Identity verification",
-        "Access control",
-        "Network segmentation",
-        "Continuous monitoring"
-      ],
-      price: "$1,199/month",
-      icon: Lock
-    },
-    {
-      title: "Incident Response",
-      description: "Rapid response and recovery from security incidents",
+        'Firewall configuration',
+        'Intrusion detection',
+        'Network monitoring',
+        'VPN setup',
+        'Traffic analysis'
+      ]
+    }, {
+      title: 'Data Protection',
+      description: 'Safeguard your sensitive data and information',
+      icon: Database,
       features: [
-        "24/7 incident response",
-        "Forensic analysis",
-        "Recovery planning",
-        "Post-incident review"
-      ],
-      price: "$699/month",
-      icon: Shield
+        'Data encryption',
+        'Backup solutions',
+        'Access controls',
+        'Data loss prevention',
+        'Privacy compliance'
+      ]
+    }, {
+      title: 'Incident Response',
+      description: 'Rapid response to security incidents and breaches',
+      icon: AlertTriangle,
+      features: [
+        '24/7 monitoring',
+        'Incident detection',
+        'Forensic analysis',
+        'Recovery planning',
+        'Post-incident review'
+      ]
     }
   ];
 
-  const benefits = [
+  const compliance = [
     {
-      icon: Shield,
-      title: "Comprehensive Protection",
-      description: "Multi-layered security that protects against all types of threats"
-    },
-    {
-      icon: Zap,
-      title: "Real-Time Response",
-      description: "Instant detection and automated response to security threats"
-    },
-    {
-      icon: Users,
-      title: "Expert Team",
-      description: "24/7 support from cybersecurity experts and AI systems"
-    },
-    {
-      icon: Target,
-      title: "Compliance Ready",
-      description: "Meet all industry standards and regulatory requirements"
+      name: 'SOC 2',
+      description: 'Service Organization Control 2 compliance for service providers',
+      icon: Shield
+    }, {
+      name: 'ISO 27001',
+      description: 'International standard for information security management',
+      icon: Lock
+    }, {
+      name: 'GDPR',
+      description: 'General Data Protection Regulation compliance',
+      icon: Globe
+    }, {
+      name: 'HIPAA',
+      description: 'Health Insurance Portability and Accountability Act',
+      icon: Users
     }
+  ];
+
+  const stats = [
+    { number: '99.9%', label: 'Security Uptime', description: 'Continuous protection' }, { number: '24/7', label: 'Monitoring', description: 'Round-the-clock surveillance' }, { number: '< 5min', label: 'Response Time', description: 'Rapid incident response' }, { number: '100%', label: 'Compliance', description: 'Regulatory adherence' }
   ];
 
   return (
@@ -104,18 +113,21 @@ export default function CybersecurityPage() {
               Protect your organization with cutting-edge cybersecurity solutions. 
               From advanced threat detection to zero-trust architecture, we keep you secure.
             </p>
-            <motion.a
-              href="mailto:kleber@ziontechgroup.com"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              <span>Secure Your Business</span>
-              <ArrowRight className="w-5 h-5" />
-            </motion.a>
-          </motion.div>
-        </div>
-      </section>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Get Security Assessment
+              </Link>
+              <Link href="/case-studies" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors">
+                View Case Studies
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )};
 
       {/* Services Section */}
       <section className="py-20 px-6">

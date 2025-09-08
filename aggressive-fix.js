@@ -226,9 +226,8 @@ function processDirectory(dirPath) {
       <h1>${componentName}</h1>
       <p>This is a valid React component.</p>
     </div>
-  );
-}`;
-}
+  )}
+`}
 
 function fixFile(filePath) {
   try {
@@ -236,36 +235,33 @@ function fixFile(filePath) {
     if (content.trim().length < 20) {
       const newContent = createValidReactComponent(filePath);
       fs.writeFileSync(filePath, newContent);
-      return true;
-    }
-    return false;
-  } catch (error) {
+      return true}
+    
+    return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 function processDirectory(dirPath) {
   let fixedCount = 0;
   try {
     const items = fs.readdirSync(dirPath);
-     else if (
-        item.endsWith(".tsx") ||
-        item.endsWith(".ts") ||
-        item.endsWith(".js") ||
-        item.endsWith(".jsx")
-      ) {
+    
+    for (const item of items) {
+      const fullPath = path.join(dirPath, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        fixedCount += processDirectory(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {
         if (fixFile(fullPath)) {
-          fixedCount++;
-        }
+          fixedCount++}
       }
     }
     return fixedCount;
   } catch (error) {
-    console && console.error(`Error processing directory ${dirPath}:`, error && error.message);
-    return 0;
-  }
-}
+    console.error(`Error processing directory ${dirPath}:`, error.message)}
+  
+  return fixedCount}
 
 
 console.log(`Fixed ${fixedCount} files`);

@@ -11,63 +11,100 @@ const { execSync } = require("child_process");
 
 #!/usr/bin/env node;
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-#!/usr/bin/env node;
->>>>>>> merged-prs-20250907-203621
-const fs = require("child_process")
-const path = require("child_process")
-const { execSync } = require("child_process")
-    this.reportsDir = path.join(this.projectRoot, "maintenance-reports")
-      fs.mkdirSync(this.reportsDir, { "recursive"})
-  log(message, level = "info")
-    this.log("🧹 Cleaning cache...")
-    const cacheDirs = [".next", "node_modules/.cache", ".npm", ".yarn"]
-          execSync(`rm -rf "${dirPath}"`, { "cwd"`})
-          this.log(` "Cleaned"`)
-          this.log(`⚠ Failed to clean ${dir}: ${error.message}`, "warning"`)
-    this.log("🧹 Cleaning old log files...")
-    const logDirs = ["logs", "automation-reports", "maintenance-reports"]
-            this.log(` Removed old "log"`)
-          this.log(`⚠ Failed to clean logs in ${dir}: ${error.message}`, "warning"`)
-    this.log(" Optimizing dependencies...")
-      execSync("npm prune", { "cwd": this.projectRoot, "stdio": "inherit"})
-      this.log(" Removed unused dependencies")
-      execSync("npm install --package-lock-only", { "cwd": this.projectRoot, "stdio": "inherit"})
-      this.log(" Updated package-lock.json")
-      return { "success"}
-      this.log(`⚠ Dependency optimization "failed": ${error.message}`, "warning"`)
-      return { "success": false, "error"}
-    this.log("� Checking disk space...")
-      const result = execSync("df -h .", { "cwd": this.projectRoot, "encoding": "utf8"})
-      this.log(`� Disk space "info"`)
-      return { "success": true, "output"}
-      this.log(`⚠ Failed to check disk "space": ${error.message}`, "warning"`)
-      return { "success": false, "error"}
-    this.log(" Generating maintenance report...")
-      "timestamp"
-      summary: {cacheCleaned: true,"logsCleaned": true,"dependenciesOptimized"}
-      "recommendations": ["Run maintenance script weekly","Monitor disk space usage","Keep dependencies updated"]
-        "Clean logs regularly"
-    this.log(`� Maintenance report saved "to"`)
-// console.log("\n" + "=")
-    console.log(" MAINTENANCE SCRIPT SUMMARY")
-// console.log("=")
-    console.log(" Cache cleaned")
-// console.log(" Logs cleaned")
-    console.log(" Dependencies optimized")
-// console.log(" Disk space checked")
-    console.log("=")
-    console.log("� Report saved to maintenance-reports/ directory")
-      this.log(" Starting Maintenance Script")
-      this.log("� Maintenance Script completed successfully")
-      return { "success"}
-      this.log(`� Maintenance "failed": ${error.message}`, "error"`)
-      return { "success": false, "error"}
+const fs = require('fs');';const path = require('path');';const { execSync } = require('child_process');
+;;class MaintenanceScript {;
+  constructor() {;
+    this.projectRoot = process.cwd();
+    this.reportsDir = path.join(this.projectRoot, 'maintenance-reports');
+;    this.ensureDirectories();,}
+;
+  ensureDirectories() {;
+    if (!fs.existsSync(this.reportsDir)) {;
+      fs.mkdirSync(this.reportsDir { "recursive": true });",}
+  }
+;
+  log(message) {;
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] ${message}`);`}
+;
+  async cleanCache() {;
+    this.log('🧹 Cleaning cache...');
+;;    const cacheDirs = ['.next', 'node_modules/.cache', '.npm', '.yarn'];
+;;    let cleaned = 0;
+    for (const dir of cacheDirs) {;
+      const dirPath = path.join(this.projectRoot, dir);
+      if (fs.existsSync(dirPath)) {;
+        try {;
+          execSync(`rm -rf "${dirPath}"` { "cwd": this.projectRoot });";          this.log(`✅ Cleaned ${dir}`);`;          cleaned++} catch (error) {;
+          this.log(`❌ Failed to clean ${dir}: ${error.message}`);`}
+      }
+    }
+;
+    return { cleaned }}
+;
+  async updateDependencies() {;
+    this.log('📦 Updating dependencies...');
+;;    try {;
+      // Check for updates;
+      execSync('npm outdated' {';        "cwd": this.projectRoot,;);        "stdio": 'pipe'',});';;
+      // Update dependencies;
+      execSync('npm update' {';        "cwd": this.projectRoot,;);        "stdio": 'inherit'',});';;
+      this.log('✅ Dependencies updated');';      return { "success": true };",} catch (error) {;
+      this.log(`❌ Dependency update "failed": ${error.message}`);`;      return { "success": false, "error": error.message };",}
+  }
+;
+  async optimizeImages() {;
+    this.log('🖼️ Optimizing images...');
+;;    const publicDir = path.join(this.projectRoot, 'public');
+;    if (!fs.existsSync(publicDir)) {;;      return { "error": 'Public directory not found' };'}';;
+    try {;
+      const images = this.findImages(publicDir);
+      let optimized = 0;
+;
+      for (const image of images) {;
+        try {;
+          // Use ImageMagick or similar tool to optimize images;
+          // This is a placeholder - you would need to install imagemagick;
+          this.log(`📸 Found "image": ${path.relative(publicDir, image)}`);`;          optimized++} catch (error) {;
+          this.log(`❌ Failed to optimize ${image}: ${error.message}`);`}
+      }
+;
+      return { optimized, "total": images.length };",} catch (error) {;
+      this.log(`❌ Image optimization "failed": ${error.message}`);`;      return { "error": error.message };",}
+  }
+;
+  findImages(dir) {;
+    let images = [];
+    const items = fs.readdirSync(dir);
+;
+    for (const item of items) {;
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+;
+      if (stat.isDirectory()) {;
+        images = images.concat(this.findImages(fullPath))} else if (/.(jpg|jpeg|png|gif|webp|svg)$/i.test(item)) {;
+        images.push(fullPath)}
+    }
+;
+    return images}
+;
+  async generateReport() {;
+    this.log('📊 Running maintenance tasks...');
+;;    const report = {;
+      "timestamp": new Date().toISOString(),;";      "cacheCleanup": await this.cleanCache(),;";      "dependencyUpdate": await this.updateDependencies(),;";      "imageOptimization": await this.optimizeImages(),;",};
+;
+    const reportPath = path.join(;);      this.reportsDir,;
+      `maintenance-report-${Date.now()}.json``;    );
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+;
+    this.log(`📊 Report "saved": ${reportPath}`);`;    return report}
+;
+  async run() {;
+    this.log('🚀 Starting Maintenance Script');
+;    const report = await this.generateReport();;    this.log('🎉 Maintenance completed');
+;    return report;,}
+}
+;
+// Run the maintenance script;
+const maintenance = new MaintenanceScript();
+maintenance.run().catch(console.error);

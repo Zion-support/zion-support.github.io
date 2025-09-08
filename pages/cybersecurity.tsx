@@ -9,23 +9,20 @@ const CybersecurityPage: React.FC = () => {
   const services = [
     {
       icon: Shield,
-      title: 'Security Assessment & Auditing',
-      description: 'Comprehensive security evaluations to identify vulnerabilities and compliance gaps.',
-      features: ['Penetration testing', 'Vulnerability scanning', 'Compliance audits', 'Risk assessments']
-    },
-    {
+      title: 'Security Assessment',
+      description: 'Comprehensive security audits and vulnerability assessments to identify and mitigate risks.',
+      features: ['Penetration Testing', 'Vulnerability Scanning', 'Security Audits', 'Risk Assessment']
+    }, {
       icon: Lock,
-      title: 'Identity & Access Management',
-      description: 'Robust IAM solutions to control user access and protect sensitive data.',
-      features: ['Multi-factor authentication', 'Single sign-on', 'Role-based access', 'Privileged access management']
-    },
-    {
+      title: 'Data Protection',
+      description: 'Advanced encryption and data protection solutions to safeguard your sensitive information.',
+      features: ['Data Encryption', 'Backup Solutions', 'Access Controls', 'Data Loss Prevention']
+    }, {
       icon: Eye,
-      title: 'Security Monitoring & SIEM',
-      description: '24/7 security monitoring with advanced threat detection and incident response.',
-      features: ['Real-time monitoring', 'Threat intelligence', 'Incident response', 'Forensic analysis']
-    },
-    {
+      title: 'Monitoring & Detection',
+      description: '24/7 security monitoring and threat detection to protect against cyber attacks.',
+      features: ['SIEM Solutions', 'Threat Detection', 'Incident Response', 'Security Analytics']
+    }, {
       icon: AlertTriangle,
       title: 'Threat Detection & Response',
       description: 'Advanced threat hunting and automated response to security incidents.',
@@ -43,6 +40,14 @@ const CybersecurityPage: React.FC = () => {
       description: 'End-to-end data protection with advanced encryption and backup solutions.',
       features: ['Data encryption', 'Backup solutions', 'Data loss prevention', 'Privacy compliance']
     }
+  ];
+
+  const complianceFrameworks = [
+    { name: 'SOC 2', description: 'Service Organization Control 2 compliance' }, { name: 'ISO 27001', description: 'Information security management systems' }, { name: 'GDPR', description: 'General Data Protection Regulation compliance' }, { name: 'HIPAA', description: 'Health Insurance Portability and Accountability Act' }, { name: 'PCI DSS', description: 'Payment Card Industry Data Security Standard' }, { name: 'NIST', description: 'National Institute of Standards and Technology framework' }
+  ];
+
+  const stats = [
+    { number: '99.9%', label: 'Security Uptime', icon: Shield }, { number: '24/7', label: 'Monitoring', icon: Clock }, { number: '50+', label: 'Security Experts', icon: Users }, { number: '15+', label: 'Years Experience', icon: Award }
   ];
 
   return (
@@ -252,4 +257,93 @@ const CybersecurityPage: React.FC = () => {
   )
 }
 
-export default CybersecurityPage
+      {/* Services Section */}
+      <section className="py-20 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Comprehensive Security Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our cybersecurity services cover every aspect of your security needs, from assessment to incident response.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-gray-800/50 border border-gray-700 rounded-xl p-8 hover:border-red-500/50 transition-all duration-300">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-lg flex items-center justify-center mr-4">
+                    <service.icon className="w-6 h-6 text-red-400" />
+                  </div>
+                  <h3 className="text-2xl font-semibold">{service.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Compliance Section */}
+      <section className="py-20 bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Compliance & Standards
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We help you meet industry standards and regulatory requirements with our compliance expertise.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            {complianceFrameworks.map((framework, index) => (
+              <div key={index} className="bg-gray-900/50 border border-gray-700 rounded-lg p-6 text-center hover:border-red-500/50 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-white mb-2">{framework.name}</h3>
+                <p className="text-gray-400 text-sm">{framework.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-red-900/20 to-orange-900/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Secure Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Don't wait for a security breach. Contact our cybersecurity experts today for a comprehensive security assessment.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25"
+            >
+              Get Started Today
+              <ArrowRight className="w-5 h-5 ml-2 inline" />
+            </Link>
+            <a
+              href="tel:+13024640950"
+              className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300 flex items-center justify-center"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Call Now
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  )}

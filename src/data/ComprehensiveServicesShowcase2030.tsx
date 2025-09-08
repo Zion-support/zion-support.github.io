@@ -557,7 +557,5 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {
           </div>
         </div>
       </div>
-    </React.Fragment>
-  )};
-
-export default ComprehensiveServicesShowcase2030;>
+    </div>
+  )}

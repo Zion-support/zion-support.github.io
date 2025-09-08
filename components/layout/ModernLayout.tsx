@@ -1,4 +1,6 @@
 
+
+
 interface ModernLayoutProps extends React.PropsWithChildren<{}> {
 
 type ModernLayoutProps = {
@@ -10,23 +12,12 @@ type ModernLayoutProps = {;
   children: ReactNode,;
   title?: string;
   description?: string;
-  keywords?: string;
-  canonical?: string;
 
-}
-;
 
-const ModernLayout = ({
-const ModernLayout = ({;
-  children;
-  title = "Zion Tech Group - Revolutionary AI Services & IT Solutions";
-  description = "Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting - edge technology.";
-  keywords = "AI services, IT solutions, micro SaaS, digital transformation, cloud computing, cybersecurity";
-  canonical;
+const ModernLayout: React.FC<ModernLayoutProps> = ({
 
-}: ModernLayoutProps) => {;
 
-}: ModernLayoutProps) =>: any {
+
   return (
     <>;
       <Head>;
@@ -34,50 +25,75 @@ const ModernLayout = ({;
         <meta name="description" content={description} />;
         <meta name="keywords" content={keywords} />;
 
-        <meta property="og: type" content="website" />;
-        <meta property="og:url" content={canonical || "https://ziontechgroup && ziontechgroup.com"} />;
-        <meta property="og:title" content={title} />;
-        <meta property="og:description" content={description} />;
-        <meta property="og:site_name" content="Zion Tech Group" />;
-        <meta name="twitter:card" content="summary_large_image" />;
-        <meta name="twitter:title" content={title} />;
-        <meta name="twitter:description" content={description} />;
-        <link rel="icon" href="/favicon && favicon.ico" />;
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon && icon.png" />;
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32 && 32x32.png" />;
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16 && 16x16.png" />;
-        <link rel="manifest" href="/site && site.webmanifest" />;
-      </Head>;
-      <div className="min-h-screen bg-white text-gray-900">;
-        {children}
-      </div>;
-    </>;
-  ),;
-};
 
 
-        <meta name="viewport" content="width = device - width, initial - scale = 1" />;
-        <meta name="author" content="Zion Tech Group" />;
-        <meta name="robots" content="index, follow" />;
-        {canonical ? <link rel="canonical" href={canonical} /> : null}
-        <meta property="og: type" content="website" />;
-        <meta property="og:url" content={canonical || "https://ziontechgroup.com"} />;
-        <meta property="og:title" content={title} />;
-        <meta property="og:description" content={description} />;
-        <meta property="og:site_name" content="Zion Tech Group" />;
-        <meta name="twitter:card" content="summary_large_image" />;
-        <meta name="twitter:title" content={title} />;
-        <meta name="twitter:description" content={description} />;
-        <link rel="icon" href="/favicon.ico" />;
-        <link rel="apple - touch - icon" sizes="180x180" href="/apple - touch - icon.png" />;
-        <link rel="icon" type="image / png" sizes="32x32" href="/favicon - 32x32.png" />;
-        <link rel="icon" type="image / png" sizes="16x16" href="/favicon - 16x16.png" />;
-        <link rel="manifest" href="/site.webmanifest" />;
-      </Head>;
-      <div className="min - h-screen bg - white text-gray-900">;
-        {children}
-      </div>;
-</>),
-}
-;
-export default ModernLayout;
+        {/* Twitter */}"
+        <meta property="twitter:card" content="summary_large_image" />"
+        <meta property="twitte,
+    r:url" content={canonical} />"
+        <meta property="twitter:title" content={title} />"
+        <meta property="twitter:description" content={description} />"
+        <meta property="twitter:image" content="http,
+    s://ziontechgroup.com/twitter-image.jpg" />
+
+
+
+        {/* Structured Data */}
+
+          type="application/ld+json"
+
+              "@context": "https://schema.org", "@type": "Organization",
+              "name": "Zion Tech Group", "url": "https://ziontechgroup.com",
+              "logo": "https://ziontechgroup.com/logo.png", "description": "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.",
+              "address": {
+
+                "@type": "PostalAddress", "streetAddress": "364 E Main St STE 1008",
+                "addressLocality": "Middletown", "addressRegion": "DE",
+                "postalCode": "19709", "addressCountry": "US"
+
+
+
+              
+
+
+
+
+
+
+},
+              "contactPoint": {";
+
+
+                "@type": "ContactPoint", "telephone": "+1-302-464-0950",
+                "contactType": "customer service", "email": "kleber@ziontechgroup.com"
+              },
+              "sameAs"[
+                "https: //linkedin.com/company/ziontechgroup", "https: //twitter.com/ziontechgroup",
+                "https: //github.com/ziontechgroup"
+
+
+
+
+              ]
+            })}}
+        />
+
+      </Helmet>
+
+
+
+          {children}
+        </main>
+        <ModernFooter />
+      </div>
+
+
+    </>
+
+
+  )};
+
+export default ModernLayout;"
+
+
+

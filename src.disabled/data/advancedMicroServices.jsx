@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-"export": const ADVANCED_MICRO_SERVICES = ["]"
-=======
-"export": const ADVANCED_MICRO_SERVICES = ["]"
->>>>>>> origin/main
+export: const ADVANCED_MICRO_SERVICES = [

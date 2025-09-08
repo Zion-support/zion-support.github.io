@@ -11,13 +11,13 @@ import {
   Phone,
   MapPin,
   Globe,
-  Github,
-  Linkedin,;
-  Twitter,;
+  Shield,
+  FileText,
+  HelpCircle } from 'lucide-react';
 
-  Brain,Mail,Phone,MapPin,Globe,} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter  } from 'lucide-react';
-import React from 'react';
-<<<<<<< HEAD
+export default function EnhancedFooter() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })};
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -226,51 +226,22 @@ import {
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-  const footerSections = [
-    {
-      title: 'Services',
-      links: [
-        { name: 'AI Business Intelligence', href: '/ai-business-intelligence' },
-        { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' },
-        { name: 'Edge Computing', href: '/edge-computing-orchestration' },
-        { name: 'Space Technology', href: '/space-technology' },
-        { name: 'View All Services', href: '/comprehensive-2025-services-showcase' }
-      ]
-    };
-    {
-      title: 'Company',
-      links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Work', href: '/portfolio' },
-        { name: 'Blog & Insights', href: '/blog' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Contact', href: '/contact' }
-      ]
-    };
-    {
-      title: 'Resources',
-      links: [
-        { name: 'Documentation', href: '/docs' },
-        { name: 'API Reference', href: '/api' },
-        { name: 'Support Center', href: '/support' },
-        { name: 'Privacy Policy', href: '/privacy' },
-        { name: 'Terms of Service', href: '/terms' }
-      ]
-    }
+  const footerLinks = {
+    services: [
+      { name: 'AI Services', href: '/services/ai-services' }, { name: 'IT Services', href: '/services/it-services' }, { name: 'Micro SaaS', href: '/services/micro-saas' }, { name: 'Web Development', href: '/services/web-development' }, { name: 'Cloud Services', href: '/services/cloud-services' }, { name: 'AI Development', href: '/services/ai-development' } ],
+    solutions: [
+      { name: 'AI Content Creation', href: '/solutions/ai-content-creation' }, { name: 'Customer Support', href: '/solutions/customer-support' }, { name: 'Email Automation', href: '/solutions/email-automation' }, { name: 'Event Management', href: '/solutions/event-management' }, { name: 'Project Management', href: '/solutions/project-management' }, { name: 'Workflow Automation', href: '/solutions/workflow-automation' } ],
+    company: [
+      { name: 'About Us', href: '/about' }, { name: 'Careers', href: '/careers' }, { name: 'Partners', href: '/partners' }, { name: 'Contact', href: '/contact' }, { name: 'Blog', href: '/blog' } ],
+    resources: [
+      { name: 'Help Center', href: '/help' }, { name: 'Pricing Guide', href: '/pricing-guide' }, { name: 'Search', href: '/search' }, { name: 'Sitemap', href: '/sitemap' } ],
+    legal: [
+      { name: 'Privacy Policy', href: '/privacy' }, { name: 'Terms of Service', href: '/terms' }, { name: 'Cookie Policy', href: '/cookies' } ] };
+
+  const socialLinks = [
+
   ];
-;
-  const social_links = [;
-    { name: 'GitHub', href: 'https://github.com / Zion - Holdings', icon: Github },
-    {
-      name: 'LinkedIn',
-      href: 'https://linkedin.com / company / ziontechgroup',
-      icon: Linkedin,
-    },
-    {
-      name: 'Twitter',
-      href: 'https://twitter.com / ziontechgroup',
-      icon: Twitter,
-    },
+
   return (
     <footer className='bg - slate - 950 border - t border - white / 10'>;
       <div className='max - w-7xl mx - auto px - 6 py - 16'>;
@@ -848,7 +819,4 @@ company updates.;
 
       </button>
     </footer>
-  )}"'
-
-export default EnhancedFooter;
-export default EnhancedFooter;
+  )}

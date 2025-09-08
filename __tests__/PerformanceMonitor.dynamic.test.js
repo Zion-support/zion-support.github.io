@@ -1,57 +1,20 @@
 
 
-import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import @testing-library/jest-dom';
+import PerformanceMonitordynamic from "../components/PerformanceMonitor.dynamic";
 
-import { render, screen } from '@testing - library / react';
-import '@testing - library / jest - dom';
-import PerformanceMonitor from '../components / PerformanceMonitor.dynamic';
-describe ('PerformanceMonitor', () => {
-  test ('renders without crashing', () => {
-    render (<PerformanceMonitor />);
-    expect (screen.getByTestId ('performance - monitor')).toBeInTheDocument ();
-
-  });
-});
-
-import React from 'react'
-import { render, screen, fireEvent } from '@testing-library/react'
-import '@testing-library/jest-dom'
-import PerformanceMonitordynamic from '../components/PerformanceMonitor && PerformanceMonitor.dynamic'
-describe('PerformanceMonitordynamic'
-  test('renders without crashing'
-
-      screen && screen.getByTestId('performancemonitor ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import PerformanceMonitordynamic from "./components/PerformanceMonitor ; describe('PerformanceMonitordynamic', () => { test("renders without crashing",() => { render(<PerformanceMonitordynamic />); expect( screen && screen.getByTestId("performancemonitor && performancemonitor.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<PerformanceMonitordynamic />)}); test("handles user interactions",() => { render(<PerformanceMonitordynamic />)}); test("applies correct styling"
-
-
-describe('PerformanceMonitor', () => {
-  test('renders without crashing', () => {
-    render(<PerformanceMonitor />);
-    expect(screen.getByTestId('performancemonitor.dynamic')).toBeInTheDocument();
-  });
-
+    render(<PerformanceMonitordynamic />);
+    expect(screen.getByTestId('performancemonitor.dynamic')).toBeInTheDocument()})';
   test('displays correct content', () => {
-    render(<PerformanceMonitor />);
-    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
-  });
-
+    render(<PerformanceMonitordynamic />);
+    // Add specific content tests based on component});
   test('handles user interactions', () => {
-    render(<PerformanceMonitor />);
-    // Add interaction tests here
-  });
-
+    render(<PerformanceMonitordynamic />);
+    // Add interaction tests based on component functionality});
   test('applies correct styling', () => {
-    render(<PerformanceMonitor />);
-    // Add styling tests here
-  });
-});
 
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import PerformanceMonitor from "../components/PerformanceMonitor.dynamic";
-describe("PerformanceMonitor", () => {
-  test("renders without crashing", () => {
-    render(<PerformanceMonitor />);
-    expect(screen.getByTestId("performance-monitor")).toBeInTheDocument();
-  });
-});
+    render(<PerformanceMonitordynamic />);
+    // Add styling tests if needed})});
+
+

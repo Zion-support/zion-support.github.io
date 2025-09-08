@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -20,40 +20,37 @@ export default function Login() {
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }));
-  };
-
-  const validateForm = () => {
-    const newErrors: Record<string, string> = {}
-
-    if (!formData.email.trim()) newErrors.email = 'Email is required'
-    else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid'
-    
-    if (!formData.password) newErrors.password = 'Password is required'
-
-    setErrors(newErrors)
-    return Object.keys(newErrors).length === 0
-  }
+      [name]: value
+    }))};
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
+    setIsLoading(true);
+    setError('');
     
-    if (!validateForm()) return
+    // Simulate login process
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    // Simulate successful login
+    window.location.href = '/dashboard'};
 
-    setIsSubmitting(true)
-    
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000))
-      
-      // Success - redirect or show success message
-      // console.log removed for production
-      
-    } catch (error) {
-      console.error('Login error:', error)
-    } finally {
-      setIsSubmitting(false)
+  const benefits = [
+    {
+      icon: User,
+      title: 'Personal Dashboard',
+      description: 'Access your personalized workspace'
+    }, {
+      icon: Shield,
+      title: 'Secure Access',
+      description: 'Enterprise-grade security'
+    }, {
+      icon: Zap,
+      title: 'Fast Performance',
+      description: 'Lightning-fast platform'
+    }, {
+      icon: Star,
+      title: 'Premium Features',
+      description: 'Access to exclusive tools'
     }
   }
 
@@ -214,5 +211,4 @@ export default function Login() {
         </section>
       </main>
     </>
-  {/* Removed stray closing parenthesis */}
-  {/* Removed stray closing brace */}
+  )}

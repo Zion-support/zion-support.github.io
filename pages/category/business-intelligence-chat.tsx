@@ -16,7 +16,6 @@ const BusinessIntelligenceChat: NextPage = () => {
         <Link href="/blog"><a>Back to Blog</a></Link>
       </main>
     </div>
-  );
-};
+  )};
 
 export default BusinessIntelligenceChat;

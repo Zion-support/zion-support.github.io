@@ -16,7 +16,6 @@ const QualityAssuranceTestingChat: NextPage = () => {
         <Link href="/services"><a>Back to Services</a></Link>
       </main>
     </div>
-  );
-};
+  )};
 
 export default QualityAssuranceTestingChat;

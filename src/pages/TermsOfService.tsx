@@ -1,160 +1,129 @@
-import React from 'react';
-import { motion   } from 'framer-motion';
-import { FileText, 
-  Shield, 
-  Users, 
-  Globe, 
-  Mail, 
-  Phone,
-  MapPin,
-  Calendar,
-  CheckCircle,
-  AlertTriangle,
-  Info,
-  Lock,
-  Eye,
-  Database
-  } from 'lucide-react';
 
-const TermsOfService: React.FC = (): JSX.Element => {
-  const lastUpdated = 'January 15, 2024';
-  const companyName = 'Zion Tech Group';
-  const website = 'https://ziontechgroup.com';
-  const email = 'legal@ziontechgroup.com';
-  const phone = '+1 (555) 123-4567';
-  const address = '123 Technology Drive, Innovation City, IC 12345, United States';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
 
-  return (
-  {/* Empty JSX fragment */}
-      <Helmet>
-        <title>Terms of Service - Zion Tech Group | Legal Terms & Conditions</title>
-        <meta name="description" content="Read Zion Tech Group's Terms of Service to understand the legal terms and conditions governing your use of our services." />
-        <meta name="keywords" content="terms of service, legal terms, conditions, Zion Tech Group, service agreement" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center"
-            >
-              <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <FileText className="w-10 h-10 text-white" />
-              </div>
-              
-              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent mb-6">
-                Terms of Service
               </h1>
               
               <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
                 Please read these terms carefully before using our services. By using our services, you agree to these terms.
               </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <div className="flex items-center gap-2 text-sm text-slate-500">
-                  <Calendar className="w-4 h-4" />
-                  <span>Last Updated: {lastUpdated}</span>
-                </div>
-                <button className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
-                  <Download className="w-4 h-4" />
-                  Download PDF
-                </button>
+              <div className=&quot;flex items-center justify-center&quot;>&quot;"
+                <Scale className=&quot;w-16 h-16 text-blue-400&quot; />&quot;
+
+              <p className="text-xl text-gray-300 mb-8">
+                Please read these terms carefully before using our services. 
+                By using our services, you agree to be bound by these terms.""
+              </p>""
+              <div className="flex items-center justify-center">""
+                <Scale className="w-16 h-16 text-blue-400" /"" >
+
+
+
               </div>
             </motion.div>
           </div>
         </section>
 
-        {/* Table of Contents */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
-                Table of Contents
-              </h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {sections.map((section, index) => (
-                  <motion.a
-                    key={section.id}
-                    href={`#${section.id}`}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
-                    className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors border border-slate-200 hover:border-slate-300"
-                  >
-                    <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
-                      <section.icon className="w-4 h-4 text-purple-600" />
-                    </div>
-                    <span className="font-medium text-slate-900">{section.title}</span>
-                    <ArrowRight className="w-4 h-4 text-slate-400 ml-auto" />
-                  </motion.a>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
+        {/* Content */}""
+        <section className="py-16">""
+          <div className="container mx-auto px-4 max-w-4xl">
 
-        {/* Key Provisions */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
-                Key Provisions
-              </h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {keyProvisions.map((provision, index) => (
-                  <motion.div
-                    key={provision.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
-                    className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-purple-200"
-                  >
-                    <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <provision.icon className="w-8 h-8 text-purple-600" />
-                    </div>
-                    <h3 className="text-lg font-semibold text-slate-900 mb-3 text-center">{provision.title}</h3>
-                    <p className="text-slate-600 text-center text-sm">{provision.description}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
 
-        {/* Terms Content */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-            >
-              {sections.map((section, index) => (
-                <div key={section.id} id={section.id} className="mb-16">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center">
-                      <section.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <h2 className="text-2xl font-bold text-slate-900">{section.title}</h2>
-                  </div>
-                  
-                  <div className="prose prose-slate max-w-none">
-                    <p className="text-lg text-slate-700 leading-relaxed">{section.content}</p>
-                  </div>
+              whileInView={{ opacity: 1, y: 0 }}
+
+              className="prose prose-lg prose-invert max-w-none"
+            >"
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50">"
+                <h2 className="text-2xl font-bold text-white mb-4">Acceptance of Terms</h2>"
+                <p className="text-gray-300 mb-4">"
+                  By accessing and using Zion Tech Group&apos;s services, you accept and agree to be bound '
+                  by the terms and provision of this agreement.'
+                </p>""
+                <p className="text-gray-300">
+                  If you do not agree to abide by the above, please do not use this service.
+
+                </p>
+              </div>"
+
+
+                <p className="text-gray-300">
+                  If you do not agree to abide by the above, please do not use this service.
+                </p>
+              </div>""
+
+""
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50 mt-8">""
+                <h2 className="text-2xl font-bold text-white mb-4">Use License</h2>""
+                <p className="text-gray-300 mb-4">
+
+                  Zion Tech Group&apos;s website for personal, non-commercial transitory viewing only.'
+                </p>'
+                <p className="text-gray-300">
+
+
+
+                <ul className="text-gray-300 space-y-2 mt-4">
+
+                  <li>• Modify or copy the materials</li>
+                  <li>• Use the materials for  commercial purpose</li>
+                  <li>• Attempt to reverse engineer  software</li>
+                  <li>• Remove  copyright or proprietary notations</li>
+
+                </ul>
+
+""
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50 mt-8">""
+                <h2 className="text-2xl font-bold text-white mb-4">Service Availability</h2>""
+                <p className="text-gray-300 mb-4">
+                  We strive to maintain high service availability, but we do not guarantee 
+
+                </p>""
+                <p className="text-gray-300">
+                  We reserve the right to modify, suspend, or discontinue  part of our 
+                  services at  time without notice.
+                </p>
+
+""
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50 mt-8">""
+                <h2 className="text-2xl font-bold text-white mb-4">User Responsibilities</h2>""
+                <p className="text-gray-300 mb-4">
+
+
+
+                <ul className="text-gray-300 space-y-2">
+
+                  <li>• Provide accurate and complete information</li>
+
+                  <li>• Maintain the security of your account credentials</li>
+                  <li>• Use our services in compliance with applicable laws</li>
+                  <li>• Not engage in  harmful or illegal activities</li>
+                </ul>
+
+""
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50 mt-8">""
+                <h2 className="text-2xl font-bold text-white mb-4">Limitation of Liability</h2>""
+                <p className="text-gray-300 mb-4">
+                  In no event shall Zion Tech Group or its suppliers be liable for  damages 
+
+                </p>""
+                <p className="text-gray-300">
+                  This limitation applies to all claims, whether based on contract, tort, 
+                  or  other legal theory.
+                </p>
+
+""
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50 mt-8">""
+                <h2 className="text-2xl font-bold text-white mb-4">Contact Information</h2>""
+                <p className="text-gray-300 mb-4">
+
+
+
+                <div className="text-gray-300">
+
+                  <p>Email: legal@ziontechgroup.com</p>
+
+
                 </div>
               ))}
             </motion.div>
@@ -232,8 +201,12 @@ const TermsOfService: React.FC = (): JSX.Element => {
           </div>
         </section>
       </div>
-    </
-  );
-};
+</>
 
-export default TermsOfService;>
+  )}
+
+
+
+
+
+

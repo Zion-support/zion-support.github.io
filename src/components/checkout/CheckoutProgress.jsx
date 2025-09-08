@@ -1,3 +1,4 @@
+
 import { Steps, Step } from '@/components/ui/steps';
 export default function CheckoutProgress({ currentStep, className }) {
     return (<Steps currentStep={currentStep} className={className}>
@@ -14,4 +15,15 @@ export { CheckoutProgress };
 
 export { CheckoutProgress };
 
-export { CheckoutProgress };
+export { CheckoutProgress }
+
+
+
+
+
+
+
+
+
+
+

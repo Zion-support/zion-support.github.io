@@ -55,62 +55,68 @@ function fixSyntaxErrors(filePath) {
     const seen = new Set();
     const newLines = [];
     
-    for (const line of lines) {
-      const trimmed = line.trim();
-      if (trimmed.startsWith('const ') || trimmed.startsWith('let ') || trimmed.startsWith('var ')) {
-        const key = trimmed.split(' ')[1]?.split('=')[0]?.split(':')[0];
-        if (key && seen.has(key)) {
-          continue; // Skip duplicate declarations
-        }
-        if (key) seen.add(key);
-      }
-      newLines.push(line);
-    }
+    // Fix extra quotes at end of lines
+    content = content.replace(/;'/g, ';');
+    content = content.replace(/',/g, '',);
+    content = content.replace(/}'/g, '}');
+    content = content.replace(/\)'/g, ')');
+    content = content.replace(/\]'/g, ']');
+    content = content.replace(/}'/g, '}');
+    content = content.replace(/\/>'/g, '/>');
+    content = content.replace(/'>'/g, '>');
+    content = content.replace(/'>'/g, '>');
     
-    const dedupedContent = newLines.join('\n');
-    if (dedupedContent !== content) {
-      content = dedupedContent;
-      modified = true;
-    }
-
-    if (modified) {
+    // Fix broken import statements
+    content = content.replace(/import\s+(\w+)\s+from\s*,\s*['"`]([^'"`]+)['"`]/g, "import $1 from '$2'");
+    
+    // Fix missing semicolons
+    content = content.replace(/(\w+\([^)]*\))\s*$/gm, "$1;");
+    
+    // Fix broken object properties
+    content = content.replace(/(\w+):\s*([^}]+)\s*(\w+):/g, "$1: $2,\n    $3:");
+    
+    // Fix broken function calls
+    content = content.replace(/(\w+\([^)]*\))\s*\)\s*}/g, "$1);");
+    
+    // Only write if content changed
+    if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors in: ${filePath}`);
-      return true;
-    }
+      console.log(`Fixed: ${filePath}`);
+      return true}
     
-    return false;
-  } catch (error) {
+    return false} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
+
+function findFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath)}
+    }
+  }
+  
+  traverse(dir);
+  return files}
 
 // Main execution
-const componentFiles = [
-  'components/AccessibilityEnhancer.tsx',
-  'components/Analytics.tsx',
-  'components/ErrorBoundary.tsx',
-  'components/Footer.tsx',
-  'components/Header.tsx',
-  'components/LoadingSpinner.tsx',
-  'components/Navigation.tsx',
-  'components/OptimizedImage.tsx',
-  'components/PerformanceMonitor.tsx',
-  'components/SEOHead.tsx',
-  'components/SearchBar.tsx',
-  'components/Sidebar.tsx'
-];
-
-console.log('Fixing remaining syntax errors...');
-
+const files = findFiles('.');
 let fixedCount = 0;
-for (const file of componentFiles) {
-  if (fs.existsSync(file)) {
-    if (fixSyntaxErrors(file)) {
-      fixedCount++;
-    }
-  }
-}
+
+console.log(`Found ${files.length} files to check...`);
+
+files.forEach(file => {
+  if (fixFile(file)) {
+    fixedCount++}
+});
 
 console.log(`Fixed ${fixedCount} files`);

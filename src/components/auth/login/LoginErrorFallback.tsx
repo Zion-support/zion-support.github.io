@@ -38,5 +38,4 @@ export default function LoginErrorFallback(...args: []):  {
         </button>
       </div>
     </div>
-  );
-}
+  )}

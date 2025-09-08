@@ -1,36 +1,25 @@
-import React, { useState, useCallback, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from 'lucide-react';
-import { useAnalytics } from '../hooks/useAnalytics';
-export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = '', enableAnalytics = true, showProgressBar = true }) => {
-    const { trackEvent, trackConversion } = useAnalytics({
-        enableTracking: enableAnalytics,
-        enableUserBehaviorTracking: true
-    });
-    const [formData, setFormData] = useState({});
-    const [validation, setValidation] = useState({});
-    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const { trackEvent, trackConversion } = useAnalytics({        enableTracking: enableAnalytics,
+        enableUserBehaviorTracking: true})
+    const [formData, setFormData] = useState({})
+    const [validation, setValidation] = useState({})
+    const;const;const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
-    const [showPassword, setShowPassword] = useState({});
-    const [progress, setProgress] = useState(0);
-    // Initialize form data and validation
-    useEffect(() => {
-        const initialData = {};
-        const initialValidation = {};
-        fields.forEach(field => {
-            initialData[field.name] = field.type === 'checkbox' ? false : '';
-            initialValidation[field.name] = {
-                isValid: !field.required,
-                message: '',
-                isTouched: false
-            };
-        });
+    const [showPassword, setShowPassword] = useState({})
+    const;const;const [progress, setProgress] = useState(0);
+
+    // Initialize form data and validation;
+    useEffect(() => {}
+        const initialValidation = {}
+        fields.forEach(field => {}
+
+
         setFormData(initialData);
-        setValidation(initialValidation);
-    }, [fields]);
-    // Update progress based on filled fields
-    useEffect(() => {
-        const filledFields = Object.values(formData).filter(value => typeof value === 'boolean' ? value : value.toString().trim() !== '').length;
+        setValidation(initialValidation)}, [fields]);
+    // Update progress based on filled fields;
+    useEffect(() => {}
+
+
         const totalFields = fields.length;
         setProgress((filledFields / totalFields) * 100);
     }, [formData, fields.length]);
@@ -39,14 +28,45 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         const field = fields.find(f => f.name === name);
         if (!field)
             return null;
-        // Required field validation
-        if (field.required) {
-            if (typeof value === 'boolean' && !value) {
-                return 'This field is required';
+        // Required field validation;
+        if (field.required) {}
+
+';
+                return &apos;This field is required&apos}
+        }';
+
+            if (field.type === 'email' && stringValue) {}
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(stringValue)) {}
+';'
+                    return 'Please enter a valid email address'}
+
+            if (field.type === 'tel' && stringValue) {}
+                const phonePattern = /^[\+]?[1-9][\d]{0, 15}$/;
+                if (!phonePattern.test(stringValue.replace(/[\s\-\(\)]/g,))) {}
+
+
+                    return 'Please enter a valid phone number'}
+
             }
-            if (typeof value === 'string' && value.trim() === '') {
-                return 'This field is required';
-            }
+
+                return `Minimum length is ${field.validation.minLength} characters`}
+            if(field.validation?.maxLength && stringValue.length > field.validation.maxLength) {}
+`;
+``;
+```;
+````;
+                return `Maximum length is ${field.validation.maxLength} characters`}
+            // Pattern validation;
+            if (field.validation?.pattern && !field.validation.pattern.test(stringValue)) {}
+
+                return 'Please enter a valid value'}
+
+            // Custom validation;
+            if(field.validation?.custom) {}&apos;&apos;
+                const customError = field.validation.custom(stringValue);
+                if(customError);
+                    return customError}
         }
         // Skip validation for empty non-required fields
         if (!field.required && (typeof value === 'string' && value.trim() === '')) {
@@ -94,491 +114,150 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         setFormData(prev => ({ ...prev, [name]: value }));
         // Validate field
         const error = validateField(name, value);
-        setValidation(prev => ({
-            ...prev,
-            [name]: {
-                isValid: !error,
-                message: error || '',
-                isTouched: true
-            }
+        setValidation(prev => ({}
+
+                isTouched: true}
         }));
-        // Track form interaction
-        if (enableAnalytics) {
-            trackEvent('form', 'field_changed', name, undefined, { fieldName: name, value: String(value) });
-        }
-    }, [validateField, enableAnalytics, trackEvent]);
-    // Handle field blur
-    const handleFieldBlur = useCallback((name) => {
-        const value = formData[name];
+        // Track form interaction;
+        if (enableAnalytics) {}
+'}, [validateField, enableAnalytics, trackEvent]);
+    // Handle field blur;&apos;&apos;
+    const handleFieldBlur = useCallback((name) => {}
+        const;const;const value = formData[name];
         const error = validateField(name, value);
-        setValidation(prev => ({
-            ...prev,
-            [name]: {
-                ...prev[name],
-                isValid: !error,
-                message: error || '',
-                isTouched: true
-            }
-        }));
-    }, [formData, validateField]);
-    // Check if form is valid
-    const isFormValid = useCallback(() => {
-        return Object.values(validation).every(v => v.isValid);
-    }, [validation]);
-    // Handle form submission
-    const handleSubmit = useCallback(async (e) => {
+        setValidation(prev => ({}
+
+            [name]: {}
+                ...prev[name],;
+                isValid: !error',;
+
+                isTouched: true}
+
+        }))}, [formData, validateField]);
+    // Check if form is valid;&apos;&apos;
+    const isFormValid = useCallback(() => {}
+        return Object.values(validation).every(v => v.isValid)}, [validation]);
+    // Handle form submission;
+    const handleSubmit = useCallback(async (e) => {}
         e.preventDefault();
-        if (!isFormValid()) {
-            // Track validation error
-            if (enableAnalytics) {
-                trackEvent('form', 'validation_error', 'form_submission_failed', undefined, {
-                    errors: Object.values(validation).filter(v => !v.isValid).length
-                });
-            }
-            return;
-        }
+        if(!isFormValid()) {}
+            // Track validation error;
+            if (enableAnalytics) {}
+
+                    errors: Object.values(validation).filter(v => !v.isValid).length})}
+            return}
         setIsSubmitting(true);
-        try {
-            // Track form submission start
-            if (enableAnalytics) {
-                trackEvent('form', 'submission_started', 'form_submitted');
-            }
+        try {}
+            // Track form submission start;
+            if (enableAnalytics) {}
+
             await onSubmit(formData);
-            // Track successful submission
-            if (enableAnalytics) {
-                trackEvent('form', 'submission_success', 'form_completed');
-                trackConversion('form_submission', 1, { formType: title });
-            }
+            // Track successful submission;
+            if (enableAnalytics) {}
+';
+
+                trackConversion('form_submission', 1 { formType: title })}
+
             setIsSubmitted(true);
             // Reset form after successful submission
             setTimeout(() => {
                 setIsSubmitted(false);
                 setFormData({});
                 setValidation({});
-                setProgress(0);
-            }, 5000);
-        }
-        catch (error) {
-            // Track submission error
-            if (enableAnalytics) {
-                trackEvent('form', 'submission_error', 'form_failed', undefined, {
-                    error: error instanceof Error ? error.message : 'Unknown error'
-                });
-            }
-            // // // console.error('Form submission failed:', error);
-        }
-        finally {
-            setIsSubmitting(false);
-        }
+                setProgress(0)}, 5000)}
+        catch(error) {}
+            // Track submission error;
+            if (enableAnalytics) {}
+
+
+        finally {}
+            setIsSubmitting(false)}
     }, [formData, validation, isFormValid, onSubmit, enableAnalytics, trackEvent, trackConversion, title]);
-    // Toggle password visibility
-    const togglePasswordVisibility = useCallback((fieldName) => {
-        setShowPassword(prev => ({ ...prev, [fieldName]: !prev[fieldName] }));
+    // Toggle password visibility;&apos;&apos;
+    const togglePasswordVisibility = useCallback((fieldName) => {}
+        setShowPassword(prev => ({ ...prev, [fieldName]: !prev[fieldName] }))}, []);
+    // Get field icon;
+    const getFieldIcon = useCallback((field) => {}
+        switch(field.type) {}
+
+
+            default: return <User className='w-4 h-4'/>}
+
     }, []);
-    // Get field icon
-    const getFieldIcon = useCallback((field) => {
-        switch (field.type) {
-            case 'email': return <Mail className="w-4 h-4"/>;
-            case 'tel': return <Phone className="w-4 h-4"/>;
-            case 'textarea': return <MessageSquare className="w-4 h-4"/>;
-            case 'select': return <Building className="w-4 h-4"/>;
-            default: return <User className="w-4 h-4"/>;
-        }
-    }, []);
-    // Render field
-    const renderField = useCallback((field) => {
-        const fieldValue = formData[field.name];
-        const fieldValidation = validation[field.name];
-        const isPasswordField = field.name.toLowerCase().includes('password');
-        return (<motion.div key={field.name} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-2">
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-          {field.label}
-          {field.required && <span className="text-red-500 ml-1">*</span>}
-        </label>
+    // Render field;&apos;
+    const renderField = useCallback((field) => {}
 
-export function AdvancedForm({
-  title = 'Contact Form',
-  fields = [],
-  onSubmit = () => {},
-  className = '',
-  enableValidation = true,
-  enableProgress = true,
-  enableAnalytics = false,
-  trackEvent = () => {},
-  trackConversion = () => {}
-}) {
-  const [formData, setFormData] = useState({});
-  const [validation, setValidation] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [progress, setProgress] = useState(0);
-  const [showPassword, setShowPassword] = useState({});
-
-  // Initialize form data and validation
-  useEffect(() => {
-    const initialData = {};
-    const initialValidation = {};
-    
-    fields.forEach(field => {
-      initialData[field.name] = field.defaultValue || '';
-      initialValidation[field.name] = {
-        isValid: true,
-        message: '',
-        isTouched: false
-      };
-    });
-    
-    setFormData(initialData);
-    setValidation(initialValidation);
-  }, [fields]);
-
-  // Update progress based on filled fields
-  useEffect(() => {
-    if (!enableProgress) return;
-    
-    const filledFields = Object.values(formData).filter(value => 
-      value && value.toString().trim() !== ''
-    ).length;
-    const progressPercentage = (filledFields / fields.length) * 100;
-    setProgress(Math.min(progressPercentage, 100));
-  }, [formData, fields.length, enableProgress]);
-
-  // Field validation
-  const validateField = useCallback((name, value) => {
-    if (!enableValidation) return '';
-    
-    const field = fields.find(f => f.name === name);
-    if (!field) return '';
-
-    const required = field.required !== false;
-    const minLength = field.minLength;
-    const maxLength = field.maxLength;
-    const pattern = field.pattern;
-
-    // Required validation
-    if (required && (!value || value.toString().trim() === '')) {
-      return field.requiredMessage || `${field.label} is required`;
-    }
-
-    // Length validation
-    if (value && minLength && value.toString().length < minLength) {
-      return field.minLengthMessage || `${field.label} must be at least ${minLength} characters`;
-    }
-
-    if (value && maxLength && value.toString().length > maxLength) {
-      return field.maxLengthMessage || `${field.label} must be no more than ${maxLength} characters`;
-    }
-
-    // Pattern validation
-    if (value && pattern && !new RegExp(pattern).test(value)) {
-      return field.patternMessage || `${field.label} format is invalid`;
-    }
-
-    // Email validation
-    if (field.type === 'email' && value) {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(value)) {
-        return field.emailMessage || 'Please enter a valid email address';
-      }
-    }
-
-    return '';
-  }, [fields, enableValidation]);
-
-  // Handle field change
-  const handleFieldChange = useCallback((name, value) => {
-    setFormData(prev => ({ ...prev, [name]: value }));
-    
-    // Validate field
-    const error = validateField(name, value);
-    setValidation(prev => ({
-      ...prev,
-      [name]: {
-        isValid: !error,
-        message: error || '',
-        isTouched: true
-      }
-    }));
-    
-    // Track form interaction
-    if (enableAnalytics) {
-      trackEvent('form', 'field_changed', name, null, { 
-        fieldName: name, 
-        value: String(value) 
-      });
-    }
-  }, [validateField, enableAnalytics, trackEvent]);
-
-  // Handle field blur
-  const handleFieldBlur = useCallback((name) => {
-    const value = formData[name];
-    const error = validateField(name, value);
-    setValidation(prev => ({
-      ...prev,
-      [name]: {
-        ...prev[name],
-        isValid: !error,
-        message: error || '',
-        isTouched: true
-      }
-    }));
-  }, [formData, validateField]);
-
-  // Check if form is valid
-  const isFormValid = useCallback(() => {
-    return Object.values(validation).every(v => v.isValid);
-  }, [validation]);
-
-  // Handle form submission
-  const handleSubmit = useCallback(async (e) => {
-    e.preventDefault();
-    
-    if (!isFormValid()) {
-      // Track validation error
-      if (enableAnalytics) {
-        trackEvent('form', 'validation_error', 'form_submission_failed', null, {
-          errors: Object.values(validation).filter(v => !v.isValid).length
-        });
-      }
-      return;
-    }
-    
-    setIsSubmitting(true);
-    
-    try {
-      // Track form submission start
-      if (enableAnalytics) {
-        trackEvent('form', 'submission_started', 'form_submitted');
-      }
-      
-      await onSubmit(formData);
-      
-      // Track successful submission
-      if (enableAnalytics) {
-        trackEvent('form', 'submission_success', 'form_completed');
-        trackConversion('form_submission', 1, { formType: title });
-      }
-      
-      setIsSubmitted(true);
-      
-      // Reset form after successful submission
-      setTimeout(() => {
-        setIsSubmitted(false);
-        setFormData({});
-        setValidation({});
-        setProgress(0);
-      }, 5000);
-      
-    } catch (error) {
-      // Track submission error
-      if (enableAnalytics) {
-        trackEvent('form', 'submission_error', 'form_failed', null, {
-          error: error instanceof Error ? error.message : 'Unknown error'
-        });
-      }
-      console.error('Form submission failed:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
-  }, [formData, validation, isFormValid, onSubmit, enableAnalytics, trackEvent, trackConversion, title]);
-
-  // Toggle password visibility
-  const togglePasswordVisibility = useCallback((fieldName) => {
-    setShowPassword(prev => ({ ...prev, [fieldName]: !prev[fieldName] }));
-  }, []);
-
-  // Get field icon
-  const getFieldIcon = useCallback((field) => {
-    switch (field.type) {
-      case 'email': return <Mail className="w-4 h-4" />;
-      case 'tel': return <Phone className="w-4 h-4" />;
-      case 'textarea': return <MessageSquare className="w-4 h-4" />;
-      case 'select': return <Building className="w-4 h-4" />;
-      default: return <User className="w-4 h-4" />;
-    }
-  }, []);
-
-  // Render field
-  const renderField = useCallback((field) => {
-    const fieldValidation = validation[field.name];
-    const isPasswordField = field.name.toLowerCase().includes('password');
-    
-    return (
-      <motion.div
-        key={field.name}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: fields.indexOf(field) * 0.1 }}
-        className="mb-6"
-      >
-        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-          {field.label}
-          {field.required !== false && <span className="text-red-500 ml-1">*</span>}
-        </label>
-        
-        <div className="relative">
-          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+        const isPasswordField = field.name.toLowerCase().includes('password')
+        return (<motion.div key={field.name} initial = {}, { opacity: 0, y: 20}} animate = {}, { opacity: 1,
+  y: 0 ''';'
+''''}} className='space-y-2'>''''
+        <label className='block text-sm font-medium text-gray-700 dark: text-gray-300'>'''{field.label}''''{field.required && <span className='text-red-500 ml-1'>*</span>}'
+        </label>''''
+''''
+        <div className='relative'>'''{/* Field Icon */}'''''
+          <div className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400'>
             {getFieldIcon(field)}
           </div>
-          
-          {field.type === 'textarea' ? (
-            <textarea
-              name={field.name}
-              value={formData[field.name] || ''}
-              onChange={(e) => handleFieldChange(field.name, e.target.value)}
-              onBlur={() => handleFieldBlur(field.name)}
-              placeholder={field.placeholder}
-              rows={field.rows || 4}
-              className={`w-full pl-10 pr-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                fieldValidation?.isTouched && !fieldValidation?.isValid
-                  ? 'border-red-500'
-                  : 'border-gray-300 dark:border-gray-600'
-              } bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100`}
-            />
-          ) : field.type === 'select' ? (
-            <select
-              name={field.name}
-              value={formData[field.name] || ''}
-              onChange={(e) => handleFieldChange(field.name, e.target.value)}
-              onBlur={() => handleFieldBlur(field.name)}
-              className={`w-full pl-10 pr-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                fieldValidation?.isTouched && !fieldValidation?.isValid
-                  ? 'border-red-500'
-                  : 'border-gray-300 dark:border-gray-600'
-              } bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100`}
-            >
-              <option value="">{field.placeholder || 'Select an option'}</option>
-              {field.options?.map(option => (
-                <option key={option.value} value={option.value}>
-                  {option.label}
-                </option>
-              ))}
-            </select>
-          ) : (
-            <input
-              type={isPasswordField && showPassword[field.name] ? 'text' : field.type || 'text'}
-              name={field.name}
-              value={formData[field.name] || ''}
-              onChange={(e) => handleFieldChange(field.name, e.target.value)}
-              onBlur={() => handleFieldBlur(field.name)}
-              placeholder={field.placeholder}
-              className={`w-full pl-10 pr-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                fieldValidation?.isTouched && !fieldValidation?.isValid
-                  ? 'border-red-500'
-                  : 'border-gray-300 dark:border-gray-600'
-              } bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100`}
-            />
-          )}
-          
-          {isPasswordField && (
-            <button
-              type="button"
-              onClick={() => togglePasswordVisibility(field.name)}
-              className="absolute inset-y-0 right-0 pr-3 flex items-center"
-            >
-              {showPassword[field.name] ? (
-                <EyeOff className="w-4 h-4 text-gray-400" />
-              ) : (
-                <Eye className="w-4 h-4 text-gray-400" />
-              )}
-            </button>
-          )}
-        </div>
-        
-        {fieldValidation?.isTouched && fieldValidation?.message && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            className="mt-1 flex items-center gap-1 text-sm text-red-600"
-          >
-            <AlertCircle className="w-4 h-4" />
-            {fieldValidation.message}
-          </motion.div>
-        )}
-        
-        {fieldValidation?.isTouched && fieldValidation?.isValid && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            className="mt-1 flex items-center gap-1 text-sm text-green-600"
-          >
-            <CheckCircle className="w-4 h-4" />
-            Valid
-          </motion.div>
-        )}
-      </motion.div>
-    );
-  }, [formData, validation, showPassword, fields, handleFieldChange, handleFieldBlur, togglePasswordVisibility, getFieldIcon]);
+          {/* Input Field */}'{field.type === 'textarea' ? (<textarea name={field.name} value={fieldValue} onChange = {}'
+  (e) => handleFieldChange(field.name, e.target.value)`;
+``} onBlur={() => handleFieldBlur(field.name)} placeholder={field.placeholder} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched';'
+                    ? fieldValidation.isValid'';
+                        ? 'border-green-500 focus: ring-green-200'''`
+                        : 'border-red-500 focus:ring-red-200''`'`
+                    : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`} rows={4}/>) : field.type === 'select' ? (<select name={field.name} value={fieldValue} onChange = {}
+  (e) => handleFieldChange(field.name, e.target.value)`;
+``} onBlur={() => handleFieldBlur(field.name)} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched';'
+                    ? fieldValidation.isValid'';
+                        ? 'border-green-500 focus: ring-green-200'''`;
+                        : 'border-red-500 focus:ring-red-200''`''`'
+                    : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`}>''''
+              <option value=''>Select an option</option>
+              {field.options?.map(option => (<option key={option.value} value={option.value}>
+                  {option.label}''''
+                </option>))}''''''
+            </select>) : field.type === 'checkbox' ? (<div className='flex items-center space-x-3'>''''
+              <input type='checkbox' name={field.name} checked={fieldValue} onChange = {}
+  (e) => handleFieldChange(field.name, e.target.checked)''''
+''''} className='w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500'/>''''
+              <span className='text-sm text-gray-600 dark:text-gray-400'>
+                {field.placeholder}
+              </span>''
+            </div>) : (<input type={isPasswordField && showPassword[field.name] ? 'text' : field.type} name={field.name} value={fieldValue} onChange = {}
+  (e) => handleFieldChange(field.name, e.target.value)`;
+``} onBlur={() => handleFieldBlur(field.name)} placeholder={field.placeholder} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched';'
+                    ? fieldValidation.isValid'';
+                        ? 'border-green-500 focus: ring-green-200'''`
+                        : 'border-red-500 focus:ring-red-200''`'`
+                    : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`}/>)}
+'''{/* Password Toggle */}''''{isPasswordField && (<button type='button' onClick={() => togglePasswordVisibility(field.name)} className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: text-gray-600 transition-colors'>''''{showPassword[field.name] ? <EyeOff className='w-4 h-4'/> : <Eye className='w-4 h-4'/>}'
+            </button>)}
+'''{/* Validation Icon */}''''{fieldValidation?.isTouched && (<div className='absolute right-3 top-1/2 transform -translate-y-1/2'>''''{fieldValidation.isValid ? (<CheckCircle className='w-5 h-5 text-green-500'/>) : (<AlertCircle className='w-5 h-5 text-red-500'/>)}'
 
-  if (isSubmitted) {
-    return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="text-center py-8"
-      >
-        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-        <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-          Thank you!
-        </h3>
-        <p className="text-gray-600 dark:text-gray-400">
-          Your form has been submitted successfully.
+            </div>)}
+        </div>;
+        {/* Validation Message */}, {fieldValidation?.isTouched && fieldValidation.message && (<motion.p initial = {}
+
+
+          </motion.p>)}
+      </motion.div>)}, [formData, validation, showPassword, getFieldIcon, handleFieldChange, handleFieldBlur, togglePasswordVisibility]);
+    if(isSubmitted) {}
+        return (<motion.div initial = {}
+
+
         </p>
-      </motion.div>
-    );
-  }
+      </motion.div>)}
+    return (<motion.div initial = {}, { opacity: 0, y: 20}} animate = {}, { opacity: 1,
+  y: 0 `;
 
-  return (
-    <div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-6 ${className}`}>
-      <div className="text-center mb-6">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-          {title}
-        </h2>
-        {enableProgress && (
-          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mb-4">
-            <motion.div
-              className="bg-blue-500 h-2 rounded-full"
-              initial={{ width: 0 }}
-              animate={{ width: `${progress}%` }}
-              transition={{ duration: 0.5 }}
-            />
-          </div>
-        )}
-        <p className="text-sm text-gray-600 dark:text-gray-400">
-          {enableProgress ? `${Math.round(progress)}% complete` : 'Please fill out the form below'}
-        </p>
-      </div>
+        {/* Form Status */}
+        <AnimatePresence>;
+          {Object.values(validation).some(v => !v.isValid && v.isTouched) && (<motion.div initial = {}
 
-      {/* Progress Bar */}
-      {showProgressBar && (<div className="px-6 pt-4">
-          <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mb-2">
-            <span>Form Progress</span>
-            <span>{Math.round(progress)}%</span>
-          </div>
-          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-            <motion.div className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300" initial={{ width: 0 }} animate={{ width: `${progress}%` }}/>
-          </div>
-        </div>)}
 
-      {/* Form */}
-      <form onSubmit={handleSubmit} className="p-6 space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {fields.map(field => renderField(field))}
-        </div>
 
-        {/* Submit Button */}
-        <motion.button type="submit" disabled={!isFormValid() || isSubmitting} className={`w-full py-3 px-6 rounded-lg font-medium text-white transition-all duration-200 flex items-center justify-center gap-2 ${!isFormValid() || isSubmitting
-            ? 'bg-gray-400 cursor-not-allowed'
-            : 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105'}`} whileHover={isFormValid() && !isSubmitting ? { scale: 1.02 } : {}} whileTap={isFormValid() && !isSubmitting ? { scale: 0.98 } : {}}>
-          {isSubmitting ? (<React.Fragment>
-              <Loader2 className="w-5 h-5 animate-spin"/>
-              Sending...
-            </React.Fragment>) : (<React.Fragment>
-              <Send className="w-5 h-5"/>
-              {submitText}
-            </React.Fragment>)}
-        </motion.button>
-      </form>
-    </div>
-  );
-}
+
+
+
+
+
+

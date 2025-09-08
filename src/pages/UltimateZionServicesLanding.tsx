@@ -1,11 +1,1 @@
-import UltimateZionServicesShowcase from '../components/UltimateZionServicesShowcase';
-
-const UltimateZionServicesLanding: React.FC = () => {
-  return (
-    <div>
-      <UltimateZionServicesShowcase />
-    </div>
-  );
-};
-
-export default UltimateZionServicesLanding;
+import React from 'react'; "export default UltimateZionServicesLanding;"const UltimateZionServicesLanding: React.FC = () : JSX.Element => {; return(; <div>; <UltimateZionServicesShowcase />; </div>;) }; ";"

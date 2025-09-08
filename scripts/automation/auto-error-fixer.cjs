@@ -1,225 +1,136 @@
 #!/usr/bin/env node;
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
-  const fs = require("fs")
-const path = require("path")
->>>>>>> merged-prs-20250907-203621
-const { execSync } = require("child_process")
-    this.logFile = path.join(this.projectRoot, "auto-error-fixer-report.json")
-  this.log(" Starting Auto Error Fixer...")
-  this.log("� Stopping Auto Error Fixer...")
-  this.log("� Stopping Auto Error Fixer...")
-  this.log(" Checking for errors...")
-  this.log(` Error during auto-"fix"`)
-  this.log(" Checking TypeScript errors...")
-      const result = execSync("npm run type-check 2>&1", { "encoding": "utf8"})
-      if (result.includes("error TS")
-  this.log("� TypeScript errors detected, attempting to fix...")
-  execSync("npx tsc --noEmit --skipLibCheck", { "stdio": "pipe"})
-  this.log(` Error during auto-"fix"`)
-  this.log(" Checking TypeScript errors...")
-      const result = execSync("npm run type-check 2>&1", { "encoding": "utf8"})
-      if (result.includes("error TS")
-  this.log("� TypeScript errors detected, attempting to fix...")
-  execSync("npx tsc --noEmit --skipLibCheck", { "stdio": "pipe"})
-      this.log("� TypeScript errors detected, attempting to fix...")
-  const files = this.findFiles(".ts,.tsx")
-  let content = fs.readFileSync(file, "utf8")
-          /} catch \("error")
-          "} catch ("error": any)"
-        content = content.replace(/\(([^)]+): \)/g, "($"1": any)"
-          "function $1(): any {"}
-        if (content !== fs.readFileSync(file, "utf8")
-          /} catch \("error")
-          "} catch ("error": any)"
-        content = content.replace(/\(([^)]+): \)/g, "($"1": any)"
-          "function $1(): any {"}
-        if (content !== fs.readFileSync(file, "utf8")
-          this.errorsFixed.push({ file, "type": "missing_types"})
-  const files = this.findFiles(".ts,.tsx")
-  let content = fs.readFileSync(file, "utf8")
-          content.includes("import React")
-          !content.includes("import React from")
-            "import React from "react;"
-        if (content.includes("JSX") && !content.includes("import React")
-  content = "import React from react;\n"
-          this.errorsFixed.push({ file, "type": "import_export"})
-  const files = this.findFiles(".tsx,.jsx")
-  let content = fs.readFileSync(file, "utf8")
-          "<React.Fragment>$1</React.Fragment>
-</React>"
-        content = content.replace(/<([^>]+)\/>/g, "<$1 />"
-        if (content !== fs.readFileSync(file, "utf8")
-  const files = this.findFiles(".tsx,.jsx")
-  let content = fs.readFileSync(file, "utf8")
-          "<React.Fragment>$1</React.Fragment>
-</React>"
-        content = content.replace(/<([^>]+)\/>/g, "<$1 />"
-        if (content !== fs.readFileSync(file, "utf8")
-          this.errorsFixed.push({ file, "type": "jsx_syntax"})
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-  this.log(" Checking ESLint errors...")
-  execSync("npm run lint -- --fix", { "stdio": "pipe"})
-        this.log(" ESLint auto-fix completed")
-<<<<<<< HEAD
-  this.log("⚠ ESLint auto-fix failed, checking for specific errors...")
-  this.log(` ESLint check "failed"`)
-const files = this.findFiles(".ts,.tsx,.js,.jsx");
-let content = fs.readFileSync(file, "utf8");
-        content = content.replace(/[\t]+$/gm, "")
-        content = content.replace(/([^])\n/g, "$1;\n"
-=======
-  this.log(⚠ ESLint auto-fix failed, checking for specific errors...)
-  this.log(` ESLint check "failed"`)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> merged-prs-20250907-203621
-    const files = this.findFiles(".ts,.tsx,.js,.jsx")
-  let content = fs.readFileSync(file, "utf8")
-        content = content.replace(/[\t]+$/gm, )
-        content = content.replace(/([^])\n/g, "$1;\n"
->>>>>>> origin/chore/fix-lint-and-merge
-        content = content.replace(/([^]*)/g, $1
-        if (content !== fs.readFileSync(file, "utf8")
-  this.log( Checking ESLint errors...)
-  execSync("npm run lint -- --fix", { stdio: "pipe"})
-        this.log( ESLint auto-fix completed)
-  this.log("⚠ ESLint auto-fix failed, checking for specific errors...")
-<<<<<<< HEAD
+    this.projectRoot = process.cwd();
+    this.fixesApplied = 0;
+    this.errorsFixed = [];
+    this.logFile = path.join(this.projectRoot, `auto-error-fixer-report.json`);
+    this.isRunning = false;
+    this.checkInterval = 5 * 60 * 1000; // Check every 5 minutes}
+;
+  log(message) {;
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] ${message}`)}
 
-=======
-  this.log(` ESLint check "failed"`)
-    const files = this.findFiles(".ts,.tsx,.js,.jsx")
-  let content = fs.readFileSync(file, "utf8")
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
-        content = content.replace(/[\t]+$/gm, ")
-        content = content.replace(/([^])\n/g, "$1;\n
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-        content = content.replace(/([^]*)/g, $1
-        if (content !== fs.readFileSync(file, "utf8")
-  this.log(" Checking ESLint errors...")
-  execSync("npm run lint -- --fix", { "stdio": "pipe"})
-        this.log(" ESLint auto-fix completed")
-  this.log("⚠ ESLint auto-fix failed, checking for specific errors...")
-  this.log(` ESLint check "failed"`)
-const files = this.findFiles(".ts,.tsx,.js,.jsx");
-let content = fs.readFileSync(file, "utf8");
-        content = content.replace(/[\t]+$/gm, ")
-        content = content.replace(/([^])\n/g, "$1;\n"
-        content = content.replace(/([^]*)"/g, $1
-        if (content !== fs.readFileSync(file, "utf8")
-          this.errorsFixed.push({ file, "type": "eslint"})
-  this.log(" Checking for syntax errors...")
-<<<<<<< HEAD
-const files = this.findFiles(".ts,.tsx,.js,.jsx");
-const content = fs.readFileSync(file, "utf8");
-=======
-<<<<<<< HEAD
-    const files = this.findFiles(".ts,.tsx,.js,.jsx")
-  const content = fs.readFileSync(file, "utf8")
-=======
-<<<<<<< HEAD
+        await this.checkAndFixErrors()}
+    }, this.checkInterval)}
 
-=======
-    const files = this.findFiles(".ts,.tsx,.js,.jsx")
-  const content = fs.readFileSync(file, "utf8")
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-        if (content.includes(")
-            "type": "merge_conflict"
-            "needsManualFix"
-        if (content.includes("<>") && !content.includes("</>")
-            "type": "malformed_jsx"
-            "needsManualFix"
-  this.log(" Checking for missing dependencies...")
-      if (!fs.existsSync(path.join(this.projectRoot, "node_modules")
-<<<<<<< HEAD
-  this.log(" Checking for syntax errors...")
-const files = this.findFiles(".ts,.tsx,.js,.jsx");
-const content = fs.readFileSync(file, "utf8");
-=======
-<<<<<<< HEAD
+    this.isRunning = false;
+    if (this.monitorInterval) {;
+      clearInterval(this.monitorInterval)}
+  }
 
-=======
-  this.log(" Checking for syntax errors...")
-    const files = this.findFiles(".ts,.tsx,.js,.jsx")
-  const content = fs.readFileSync(file, "utf8")
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-        if (content.includes(")
-            "type": "merge_conflict"
-            "needsManualFix"
-        if (content.includes("<>") && !content.includes("</>")
-            "type": "malformed_jsx"
-            "needsManualFix"
-  this.log(" Checking for missing dependencies...")
-      if (!fs.existsSync(path.join(this.projectRoot, "node_modules")
-  this.log("� Installing dependencies...")
-        execSync("npm install", { "stdio": "inherit"})
-        this.errorsFixed.push({ "type": "dependencies", "action": "installed"})
-<<<<<<< HEAD
-const outdated = execSync("npm outdated --json", { "encoding": "utf8"});
-        if (outdated && outdated !== "{}")
-  this.log("� Updating outdated packages...")
-          execSync("npm update", { "stdio": "inherit"})
-          this.errorsFixed.push({ "type": "dependencies", "action": "updated"})
-=======
-  const outdated = execSync("npm outdated --json", { "encoding": "utf8"})
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
-        if (outdated && outdated !== "{}")
-  this.log(� Updating outdated packages...)
-          execSync("npm update", { stdio: "inherit"})
-          this.errorsFixed.push({ type: "dependencies", action: "updated"})
-  this.log(` Dependency check failed`)
-  this.log(" Checking build errors...")
-  execSync(npm run build, { "stdio": pipe})
-        this.log(" Build successful")
-  this.log(⚠ Build failed, attempting to fix...)
-  execSync("rm -rf dist", { stdio: "pipe"})
-          execSync(rm -rf .vite, { "stdio": pipe})
-          this.log("🧹 Cleared build cache")
-  execSync(npm run build, { "stdio": pipe})
-          this.log(" Build successful after cache clear")
-          this.errorsFixed.push({ type: "build_cache", action: "cleared"})
-  this.log( Build still failing after cache clear)
-  this.log(` Build check "failed"`)
-<<<<<<< HEAD
-  const exts = extensions.split(",")
-  this.log(` Dependency check "failed"`)
-  this.log(" Checking build errors...")
-  execSync("npm run build", { "stdio": "pipe"})
-        this.log(" Build successful")
-  this.log("⚠ Build failed, attempting to fix...")
-  execSync("rm -rf dist", { "stdio": "pipe"})
-          execSync("rm -rf .vite", { "stdio": "pipe"})
-          this.log("🧹 Cleared build cache")
-  execSync("npm run build", { "stdio": "pipe"})
-          this.log(" Build successful after cache clear")
-          this.errorsFixed.push({ "type": "build_cache", "action": "cleared"})
-  this.log(" Build still failing after cache clear")
-  this.log(` Build check "failed"`)
-  const exts = extensions.split(",")
-          !item.startsWith(".")
-          item !== "node_modules"
-  "timestamp"
-      "fixesApplied"
-      "errorsFixed"
-      "status": "completed"
-  "isRunning"
-      "fixesApplied"
-      "lastCheck"
-      "logFile"
-  process.on("SIGINT")
-  process.on("SIGINT")
-  process.on(")
+      // Check build errors;
+      await this.fixBuildErrors();
+;
+      this.log(`✅ Error check completed. Fixed ${this.fixesApplied} issues.`);
+      this.saveReport();
+
+      // TypeScript check failed, which means there are errors;
+      this.log('📝 TypeScript errors detected, attempting to fix...');
+      await this.fixCommonTypeScriptErrors()}
+  }
+
+    // Fix JSX syntax errors;
+    await this.fixJSXErrors()}
+;
+  async fixMissingTypes() {;
+    const files = this.findFiles('.ts,.tsx');
+;
+    for (const file of files) {;
+      try {;
+        let content = fs.readFileSync(file, 'utf8');
+        let modified = false;
+
+          fs.writeFileSync(file, content);
+          this.log(`✅ Fixed missing types in ${file}`);
+          this.fixesApplied++;
+          this.errorsFixed.push({ file, type: `missing_types` });
+          modified = true}
+;
+        if (modified) {;
+          this.log(`📝 Fixed missing types in ${file}`)}
+
+          modified = true}
+;
+        if (modified) {;
+          fs.writeFileSync(file, content);
+          this.log(`✅ Fixed import/export issues in ${file}`);
+          this.fixesApplied++;
+          this.errorsFixed.push({ file, type: `import_export` })}
+
+          fs.writeFileSync(file, content);
+          this.log(`✅ Fixed JSX errors in ${file}`);
+          this.fixesApplied++;
+          this.errorsFixed.push({ file, type: `jsx_syntax` });
+          modified = true}
+;
+        if (modified) {;
+          this.log(`📝 Fixed JSX errors in ${file}`)}
+
+          fs.writeFileSync(file, content);
+          this.log(`✅ Fixed ESLint issues in ${file}`);
+          this.fixesApplied++;
+          this.errorsFixed.push({ file, type: `eslint` });
+          modified = true}
+;
+        if (modified) {;
+          this.log(`📝 Fixed ESLint issues in ${file}`)}
+
+        this.log('📦 Installing dependencies...');
+        execSync('npm install' { stdio: 'inherit' });
+        this.fixesApplied++;
+        this.errorsFixed.push({ type: 'dependencies', action: 'installed' })}
+
+        const outdated = execSync('npm outdated --json' { encoding: 'utf8' });
+        if (outdated && outdated !== '{}') {;
+          this.log('📦 Updating outdated packages...');
+          execSync('npm update' { stdio: 'inherit' });
+          this.fixesApplied++;
+          this.errorsFixed.push({ type: `dependencies`, action: `updated` })}
+
+    const files = [];
+;
+    const walkDir = dir => {;
+      const items = fs.readdirSync(dir);
+;
+      for (const item of items) {;
+        const fullPath = path.join(dir, item);
+        const stat = fs.statSync(fullPath);
+
+          walkDir(fullPath)} else if (stat.isFile()) {;
+          const ext = path.extname(item);
+          if (exts.some(e => e.trim() === ext)) {;
+            files.push(fullPath)}
+        }
+      }
+    };
+;
+    walkDir(this.projectRoot);
+    return files}
+;
+  saveReport() {;
+    const report = {;
+      timestamp: new Date().toISOString(),;
+      fixesApplied: this.fixesApplied,;
+      errorsFixed: this.errorsFixed,;
+      status: 'completed',};
+;
+    fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2))}
+;
+  getStatus() {;
+    return {;
+      isRunning: this.isRunning,;
+      fixesApplied: this.fixesApplied,;
+      lastCheck: new Date().toISOString(),;
+      logFile: this.logFile,}}
+}
+
+    autoFixer.stop();
+    process.exit(0)});
+;
+  process.on('SIGTERM', () => {;
+    autoFixer.stop();
+    process.exit(0)});
+
+  // Start the auto-fixer;
+  autoFixer.start()}

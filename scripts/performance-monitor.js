@@ -1,158 +1,186 @@
-#!/usr/bin/env node
 
-const fs = require('fs');
-const { execSync } = require('child_process');
-const path = require('path'); // Added missing import for path
-
-console.log('📊 Starting performance monitoring...');
-
-async function runPerformanceMonitoring() {
-  try {
-    // Install dependencies
-    console.log('📦 Installing dependencies...');
-    execSync('npm ci', { stdio: 'inherit' });
-    
-    // Build application
-    console.log('🏗️  Building application...');
-    execSync('npm run build', { stdio: 'inherit' });
-    console.log('✅ Build completed successfully');
-    
-    // Check if dist folder exists
-    if (!fs.existsSync('dist')) {
-      console.log('❌ Build failed - dist folder not found');
-      return;
+    this.projectRoot = path.resolve(__dirname, '..');
+    this.metrics = {
+      timestamp: new Date().toISOString(),;
+      system: {},;
+      application: {},;
+      build: {}
     }
-    
-    // Analyze build size
-    analyzeBuildSize();
-    
-    // Check for performance issues
-    checkPerformanceIssues();
-    
-    // Generate performance report
-    generatePerformanceReport();
-    
-    console.log('🎉 Performance monitoring completed successfully');
-    
-  } catch (error) {
-    console.error('❌ Performance monitoring failed:', error.message);
-    process.exit(1);
   }
-}
 
-function analyzeBuildSize() {
-  try {
-    const stats = fs.statSync('dist');
-    const sizeInMB = (stats.size / (1024 * 1024)).toFixed(2);
-    console.log(`📊 Build size: ${sizeInMB} MB`);
-    
-    // Check individual file sizes
-    const files = fs.readdirSync('dist');
-    let totalJsSize = 0;
-    let totalCssSize = 0;
-    
-    files.forEach(file => {
-      const filePath = path.join('dist', file);
-      const fileStat = fs.statSync(filePath);
-      if (fileStat.isFile()) {
-        const fileSize = fileStat.size;
-        if (file.endsWith('.js')) {
-          totalJsSize += fileSize;
-        } else if (file.endsWith('.css')) {
-          totalCssSize += fileSize;
-        }
+      console.log('🔍 Collecting performance metrics...');
+      // Collect system metrics;
+      await this.collectSystemMetrics();
+
+      // Collect application metrics;
+      await this.collectApplicationMetrics();
+      // Collect build metrics;
+      await this.collectBuildMetrics();
+      // Save metrics;
+      await this.saveMetrics();
+      // Display summary;
+      this.displaySummary();
+
+      // CPU usage;
+      const startUsage = process.cpuUsage();
+      await this.sleep(100); // Wait 100ms;
+      const endUsage = process.cpuUsage(startUsage);
+
+        const nodeModulesSize = this.getDirectorySize(nodeModulesPath);
+
+      // Count files
+
+      }} catch (error) {'
+      console.warn('⚠️  Could not collect application metrics:', error.message)}
+  }
+
+      console.log('🔨 Collecting build metrics...');
+
+      // Check if build artifacts exist
+
+      ];
+      this.metrics.build.artifacts = {};
+      buildFiles.forEach(file => {
+        const filePath = path.join(this.projectRoot, file);
+        this.metrics.build.artifacts[file] = fs.existsSync(filePath)});
+      // Check build configuration'
+      const viteConfigPath = path.join(this.projectRoot, 'vite.config.ts');
+      if (fs.existsSync(viteConfigPath)) {'
+        const viteConfig = fs.readFileSync(viteConfigPath, 'utf8');
+        this.metrics.build.config = {
+          hasVite: true,
+          hasBuildOptimizations: viteConfig.includes('build.rollupOptions'),
+          hasChunkSplitting: viteConfig.includes('build.rollupOptions.output.manualChunks')}}
+    } catch (error) {'
+      console.warn('⚠️  Could not collect build metrics:', error.message)}
+
+  }
+  getDirectorySize(dirPath) {;
+    let totalSize = 0;
+    try {;
+      const items = fs.readdirSync(dirPath);
+      for (const item of items) {;
+        const fullPath = path.join(dirPath, item);
+        const stat = fs.statSync(fullPath);
+
+  countFiles(dirPath, extensions) {
+
+    let count = 0;
+
+          count++}
       }
-    });
-    
-    console.log(`📁 JavaScript files: ${(totalJsSize / 1024).toFixed(2)} KB`);
-    console.log(`📁 CSS files: ${(totalCssSize / 1024).toFixed(2)} KB`);
-    
-    // Performance recommendations
-    if (totalJsSize > 500 * 1024) { // 500KB
-      console.log('⚠️  JavaScript bundle is large - consider code splitting');
-    }
-    if (totalCssSize > 100 * 1024) { // 100KB
-      console.log('⚠️  CSS bundle is large - consider purging unused styles');
-    }
-    
-  } catch (error) {
-    console.log('⚠️  Could not analyze build size');
-  }
-}
+    } catch (error) {;
+      // Skip directories we can;
 
-function checkPerformanceIssues() {
-  console.log('🔍 Checking for performance issues...');
-  
-  // Check for large dependencies
-  try {
-    const packageLock = JSON.parse(fs.readFileSync('package-lock.json', 'utf8'));
-    const dependencies = packageLock.dependencies || {};
-    
-    let largeDeps = [];
-    for (const [name, dep] of Object.entries(dependencies)) {
-      if (dep.resolved && dep.integrity) {
-        // This is a simplified check - in a real scenario you'd want more sophisticated analysis
-        if (name.includes('lodash') || name.includes('moment') || name.includes('jquery')) {
-          largeDeps.push(name);
-        }
+    try {
+      fs.writeFileSync(metricsPath, JSON.stringify(this.metrics, null, 2));
+      console.log(`📊 Metrics saved to: ${metricsPath}`)} catch (error) {`
+      console.warn('⚠️  Could not save metrics:', error.message)}
+  }
+  displaySummary() {'
+    console.log('\n📊 Performance Summary: ');
+    console.log('─');
+    console.log('─'.repeat(50));
+    // System metrics'
+    console.log('💻 Syste,
+    m:');
+    console.log(`   Memor,
+    y: ${this.metrics.system.memory?.heapUsed || 'N/A'}MB used / ${this.metrics.system.memory?.heapTotal || 'N/A'}MB total`);`
+    console.log(`   CPU: ${this.metrics.system.cpu?.user || 'N/A'}ms user / ${this.metrics.system.cpu?.system || 'N/A'}ms system`);`
+    console.log(`   Uptime: ${this.metrics.system.process?.uptime || 'N/A}s`);
+    // Application metrics`
+    console.log('\n📱 Application:');
+    if (this.metrics.application.buildSize) {'
+      console.log(`   Build siz,
+    e: ${this.metrics.application.buildSize}MB`)}
+    if (this.metrics.application.dependenciesSize) {`
+      console.log(`   Dependencies: ${this.metrics.application.dependenciesSize}MB`)}
+    if (this.metrics.application.sourceSize) {`
+      console.log(`   Source code: ${this.metrics.application.sourceSize}KB`)}
+    // Build metrics`
+    console.log('\n🔨 Build:');
+    const artifactCount = Object.values(this.metrics.build.artifacts || {}).filter(Boolean).length;
+    console.log(`   Artifacts: ${artifactCount}/${Object.keys(this.metrics.build.artifacts || {}).length} present`);`
+    console.log('─'.repeat(50))}
+  sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms))}
+
+}
+      // Check node_modules size;
+      const nodeModulesPath = path.join(this.projectRoot, 'node_modules');
+;      if (fs.existsSync(nodeModulesPath)) {;;        const nodeModulesSize = this.getDirectorySize(nodeModulesPath);
+        this.metrics.application.dependenciesSize = Math.round(nodeModulesSize / 1024 / 1024); // MB}
+      // Check source code size;
+      const srcPath = path.join(this.projectRoot, 'src');
+;      if (fs.existsSync(srcPath)) {;;        const srcSize = this.getDirectorySize(srcPath);
+        this.metrics.application.sourceSize = Math.round(srcSize / 1024); // KB}
+      // Count files;
+      this.metrics.application.fileCounts = {;
+        "source": this.countFiles(srcPath, ['.ts', '.tsx', '.js', '.jsx'])',;        "styles": this.countFiles(path.join(this.projectRoot, 'styles'), ['.css', '.scss', '.sass'])',;        "tests": this.countFiles(path.join(this.projectRoot, 'tests'), ['.test.js', '.test.ts', '.spec.js', '.spec.ts'])'};',} catch (error) {;
+      console.warn('⚠️  Could not collect application "metrics":', error.message);'}'}
+  async collectBuildMetrics() {;
+    try {;
+      console.log('🔨 Collecting build metrics...');
+;      // Check if build artifacts exist;;      const buildFiles = [
+        'dist/index.html'',;        'dist/css'',;        'dist/js'',;        'dist/assets''];';      this.metrics.build.artifacts = {};
+      buildFiles.forEach(file => {;);        const filePath = path.join(this.projectRoot, file);
+        this.metrics.build.artifacts[file] = fs.existsSync(filePath)});
+      // Check build configuration;
+      const viteConfigPath = path.join(this.projectRoot, 'vite.config.ts');
+;      if (fs.existsSync(viteConfigPath)) {;;        const viteConfig = fs.readFileSync(viteConfigPath, 'utf8');
+;        this.metrics.build.config = {;;          "hasVite": true,;";          "hasBuildOptimizations": viteConfig.includes('build.rollupOptions')',;          "hasChunkSplitting": viteConfig.includes('build.rollupOptions.output.manualChunks')'};',}
+    } catch (error) {;
+      console.warn('⚠️  Could not collect build "metrics":', error.message);'}'}
+  getDirectorySize(dirPath) {;
+    let totalSize = 0;
+    try {;
+      const items = fs.readdirSync(dirPath);
+      for (const item of items) {;
+        const fullPath = path.join(dirPath, item);
+        const stat = fs.statSync(fullPath);
+        if (stat.isDirectory()) {;
+          totalSize += this.getDirectorySize(fullPath)} else {;
+          totalSize += stat.size}
       }
-    }
-    
-    if (largeDeps.length > 0) {
-      console.log(`⚠️  Large dependencies detected: ${largeDeps.join(', ')}`);
-    }
-  } catch (error) {
-    console.log('⚠️  Could not analyze dependencies');
-  }
-  
-  // Check for common performance anti-patterns
-  const htmlFiles = findHtmlFiles('dist');
-  htmlFiles.forEach(file => {
-    const content = fs.readFileSync(file, 'utf8');
-    
-    if (content.includes('document.write')) {
-      console.log('⚠️  Found document.write - this can block rendering');
-    }
-    
-    if (content.includes('eval(')) {
-      console.log('⚠️  Found eval() - this can impact performance and security');
-    }
-  });
-}
+    } catch (error) {;
+      // Skip directories we can't read'}';    return totalSize}
+  countFiles(dirPath, extensions) {;
+    let count = 0;
+    try {;
+      const items = fs.readdirSync(dirPath);
+      for (const item of items) {;
+        const fullPath = path.join(dirPath, item);
+        const stat = fs.statSync(fullPath);
+        if (stat.isDirectory()) {;
+          count += this.countFiles(fullPath, extensions)} else if (extensions.some(ext => item.endsWith(ext))) {;
+          count++}
+      }
+    } catch (error) {;
+      // Skip directories we can't read'}';    return count}
+  async saveMetrics() {;
+    const metricsPath = path.join(this.projectRoot, 'logs', 'performance-metrics.json');
+;    try {;;      fs.writeFileSync(metricsPath, JSON.stringify(this.metrics, null, 2));
+      console.log(`📊 Metrics saved "to": ${metricsPath}`);`} catch (error) {;
+      console.warn('⚠️  Could not save "metrics":', error.message);'}'}
+  displaySummary() {;
+    console.log('\n📊 Performance "Summary":');';    console.log('─');';    console.log('─'.repeat(50));
+;    // System metrics;;    console.log('💻 "System":');';    console.log(`   "Memory": ${this.metrics.system.memory?.heapUsed || 'N/A'}MB used / ${this.metrics.system.memory?.heapTotal || 'N/A'}MB total`);';    console.log(`   "CPU": ${this.metrics.system.cpu?.user || 'N/A'}ms user / ${this.metrics.system.cpu?.system || 'N/A'}ms system`);';    console.log(`   "Uptime": ${this.metrics.system.process?.uptime  ||  'N/A}s`);';    // Application metrics`;    console.log('\n📱 "Application":');
+;    if (this.metrics.application.buildSize) {;;      console.log(`   Build "size": ${this.metrics.application.buildSize}MB`);`}
+    if (this.metrics.application.dependenciesSize) {;
+      console.log(`   "Dependencies": ${this.metrics.application.dependenciesSize}MB`);`}
+    if (this.metrics.application.sourceSize) {;
+      console.log(`   Source "code": ${this.metrics.application.sourceSize}KB`);`}
+    // Build metrics;
+    console.log('\n🔨 "Build":');';    const artifactCount = Object.values(this.metrics.build.artifacts || {}).filter(Boolean).length;
+    console.log(`   "Artifacts": ${artifactCount}/${Object.keys(this.metrics.build.artifacts || {}).length} present`);`;    console.log('─'.repeat(50));'}';  sleep(ms) {;
+    return new Promise(resolve => setTimeout(resolve, ms))}
 
-function findHtmlFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
-  
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory()) {
-      files.push(...findHtmlFiles(fullPath));
-    } else if (item.endsWith('.html')) {
-      files.push(fullPath);
-    }
-  }
-  
-  return files;
 }
+// Run the performance monitor;
+const monitor = new PerformanceMonitor();
 
-function generatePerformanceReport() {
-  const report = {
-    timestamp: new Date().toISOString(),
-    process: 'performance-monitoring',
-    status: 'completed',
-    checks: [
-      'build-verification',
-      'size-analysis',
-      'performance-issues-check',
-      'dependency-analysis'
-    ]
-  };
-  
-  fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2));
-  console.log('📊 Performance report generated: performance-report.json');
-}
+  console.error('❌ Performance Monitor Failed:', error);
+  process.exit(1)})
 
-runPerformanceMonitoring();
+
+

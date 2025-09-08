@@ -1,7 +1,7 @@
-import React from 'react'; const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = "quantum" }) => { const canvasRef = useRef(null); const animationRef = useRef(); useEffect(() => { const canvas = canvasRef.current; if (!canvas) return; const ctx = canvas.getContext("2d"); if (!ctx) return; canvas.width = window.innerWidth; canvas.height = window.innerHeight; const particles = []; const colors = { quantum["#00ffff", #ff00ff",#ffff00", #00ff00"],; neon["#ff0080", #8000ff",#00ffff", #ffff00"],; holographic["#ff6b6b", #4ecdc4",#45b7d1",; "#96ceb4"] }; const selectedColors = colors[theme];""";import React, { useEffect, useRef } from 'react';'
-const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) => {}
-    const canvasRef = useRef(null);
-    const animationRef = useRef();
+
+    const canvasRef = useRef(null)
+    const animationRef = useRef()
+
     useEffect(() => {}
         const canvas = canvasRef.current;
         if (!canvas)
@@ -15,24 +15,13 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
         const colors = {}
 '
 ''
-'''
-  quantum['#00ffff',#ff00ff',#ffff00',#00ff00'],;'''
-            neon['#ff0080',#8000ff',#00ffff',#ffff00'],;'''
-            holographic['#ff6b6b',#4ecdc4',#45b7d1',;'''
-  '#96ceb4']
-};
-        const selectedColors = colors[theme];
-        // Create particles;
-        for(let i = 0; i < 100; i++) {}
+''
+
+        const selectedColors = colors[theme]
+        // Create particles
+        for(let i = 0 i < 100 i++) {}
             particles.push({}
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                vx: (Math.random() - 0.5) * 2,
-                vy: (Math.random() - 0.5) * 2,
-                size: Math.random() * 3 + 1,
-                opacity: Math.random() * 0.5 + 0.3,
-                color: selectedColors[Math.floor(Math.random() * selectedColors.length)]
-            })}
+                x: Math.random() * canvas.width, y: Math.random() * canvas.height, vx: (Math.random() - 0.5) * 2, vy: (Math.random() - 0.5) * 2, size: Math.random() * 3 + 1, opacity: Math.random() * 0.5 + 0.3, color: selectedColors[Math.floor(Math.random() * selectedColors.length)] })}
         const animate = () => {}
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             // Update and draw particles;
@@ -123,22 +112,7 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
             canvas.height = window.innerHeight};'
         window.addEventListener('resize', handleResize);
         return () => {}
-            if(animationRef.current) {}
-                cancelAnimationFrame(animationRef.current)}'
-            window.removeEventListener('resize', handleResize)}}, [intensity, theme]);
-    return (<canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" style = {}
-  {}
-            opacity: intensity,'
-  filter: theme === 'quantum' ? 'blur(0.5px)' : 'none'
-}}/>)};
-export default UltraFuturisticBackground2034;
 
-export { UltraFuturisticBackground2034 };
 
-export { UltraFuturisticBackground2034 };
 
-export { UltraFuturisticBackground2034 };
 
-export { UltraFuturisticBackground2034 };
-
-export { UltraFuturisticBackground2034 };

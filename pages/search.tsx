@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React { useState, useEffect } from 'react';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 <<<<<<< HEAD
@@ -76,8 +78,8 @@ export default function SearchPage() {
 
   useEffect(() => {
     if (router.query.q) {
-      setSearchTerm(router.query.q as string);
-    }
+      setSearchQuery(router.query.q as string);
+      performSearch(router.query.q as string)}
   }, [router.query.q]);
 
 <<<<<<< HEAD
@@ -98,25 +100,59 @@ export default function SearchPage() {
 =======
   const performSearch = (query: string) => {
     setIsLoading(true);
-    
-    // Simulate search delay
-    setTimeout(() => {
-      const filteredResults = searchResults.filter(item =>
-        item.title.toLowerCase().includes(query.toLowerCase()) ||
-        item.description.toLowerCase().includes(query.toLowerCase()) ||
-        item.type.toLowerCase().includes(query.toLowerCase())
+    try {
+      // Simulate search functionality
+      // In a real implementation, this would call your search API
+      const mockResults = [
+  {
+          title: 'AI Services',
+          description:
+            'Cutting-edge artificial intelligence solutions for your business',
+          url: '/services/ai-services',
+          type: 'service' }, {
+          title: 'IT Services',
+          description:
+            'Comprehensive information technology services and support',
+          url: '/services/it-services',
+          type: 'service' }, {
+          title: 'Micro SaaS Solutions',
+          description:
+            'Scalable software as a service solutions for modern businesses',
+          url: '/services/micro-saas',
+          type: 'service' }, {
+          title: 'About Zion Tech Group',
+          description: 'Learn more about our company, mission, and team',
+          url: '/about',
+          type: 'page' }, {
+          title: 'Contact Us',
+          description:
+            'Get in touch with our team for consultation and support',
+          url: '/contact',
+          type: 'page' } ].filter(
+        result =>
+          result.title.toLowerCase().includes(query.toLowerCase()) ||
+          result.description.toLowerCase().includes(query.toLowerCase())
       );
-      setResults(filteredResults);
-      setIsLoading(false);
-    }, 500);
+
+      setSearchResults(mockResults)} catch (error) {
+      console.error('Search error: ', error)} finally {
+      setIsLoading(false)}
   };
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      router.push(`/search?q=${encodeURIComponent(searchQuery)}`);
-    }
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
+      router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`)}
+  };
+
+  const getIconForType = (type: string) => {
+    switch (type) {
+      case 'service':
+        return <Zap className="w-5 h-5 text-blue-600" />;
+      case 'page':
+        return <FileText className="w-5 h-5 text-green-600" />;
+      default:
+        return <Globe className="w-5 h-5 text-gray-600" />}
   };
 
   return (
@@ -243,45 +279,33 @@ export default function SearchPage() {
           </div>
         </section>
 
-        {/* Search Results */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-center mb-8"
-              >
-                <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                  {results.length} results found
-                </h2>
-                <p className="text-gray-600">
-                  {searchTerm ? `for "${searchTerm}"` : 'Browse all content'}
-                </p>
-              </motion.div>
-
-              <div className="space-y-6">
-                {results.map((result, index) => (
-                  <motion.div
-                    key={result.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 group"
-                  >
-                    <div className="flex items-start justify-between">
-                      <div className="flex-1">
-                        <div className="flex items-center mb-2">
-                          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mr-3">
-                            {result.type}
-                          </span>
-                          <span className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium">
-                            {result.category}
-                          </span>
-                        </div>
-                        
-                        <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+          {/* Search Results */}, {router.query.q && (
+            <div className="mb-6">
+              <p className="text-gray-600">
+                {isLoading
+                  ? 'Searching...'
+                  : `Found ${searchResults.length} results for "${router.query.q}"`}
+              </p>
+            </div>
+          )}, {isLoading ? (
+            <div className="text-center py-12">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+              <p className="mt-4 text-gray-600">Searching...</p>
+            </div>
+          ) : searchResults.length > 0 ? (
+            <div className="space-y-6">
+              {searchResults.map((result, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-lg p-6 shadow-sm hover: shadow-md transition-shadow"
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 mt-1">
+                      {getIconForType(result.type)}
+                    </div>
+                    <div className="flex-1">
+                      <Link href={result.url} className="group">
+                        <h3 className="text-xl font-semibold text-gray-900 group-hover: text-blue-600 transition-colors mb-2">
                           {result.title}
                         </h3>
                         
@@ -470,12 +494,5 @@ export default function SearchPage() {
           </div>
         </section>
       </div>
-    </Layout>
-  );
-}
-=======
-      </div>
-    </Layout>
-  );
-};
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
+    </>
+  )}

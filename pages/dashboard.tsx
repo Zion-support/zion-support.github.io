@@ -1,4 +1,4 @@
-import React from 'react';
+import React { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -10,32 +10,29 @@ const DashboardPage: React.FC = () => {
   
   const stats = [
     {
-      title: 'Uptime',
-      value: '99.97%',
-      change: '+0.02%',
-      status: 'excellent',
-      icon: '🟢'
-    },
-    {
-      title: 'Response Time',
-      value: '127ms',
-      change: '-12ms',
-      status: 'good',
-      icon: '🟡'
-    },
-    {
-      title: 'Active Users',
-      value: '2,847',
-      change: '+156',
-      status: 'excellent',
-      icon: '🟢'
-    },
-    {
-      title: 'Error Rate',
-      value: '0.03%',
-      change: '-0.01%',
-      status: 'excellent',
-      icon: '🟢'
+      title: 'Active Projects',
+      value: '12',
+      change: '+2 this month',
+      icon: BarChart3,
+      color: 'from-blue-500 to-cyan-500'
+    }, {
+      title: 'Team Members',
+      value: '8',
+      change: '+1 this week',
+      icon: Users,
+      color: 'from-green-500 to-emerald-500'
+    }, {
+      title: 'Completed Tasks',
+      value: '47',
+      change: '+12 this week',
+      icon: CheckCircle,
+      color: 'from-purple-500 to-pink-500'
+    }, {
+      title: 'Revenue',
+      value: '$125K',
+      change: '+15% this month',
+      icon: TrendingUp,
+      color: 'from-orange-500 to-red-500'
     }
   ];
 
@@ -46,17 +43,16 @@ const DashboardPage: React.FC = () => {
       client: 'E-commerce Retailer',
       status: 'In Progress',
       progress: 75,
-      deadline: '2024-02-15'
-    },
-    {
+      dueDate: '2024-02-15',
+      team: ['John Doe', 'Jane Smith', 'Mike Johnson']
+    }, {
       id: 2,
-      name: 'Micro SaaS Inventory System',
-      client: 'Manufacturing Co.',
-      status: 'Completed',
-      progress: 100,
-      deadline: '2024-01-30'
-    },
-    {
+      name: 'Cloud Migration',
+      status: 'Planning',
+      progress: 25,
+      dueDate: '2024-03-01',
+      team: ['Sarah Wilson', 'David Brown']
+    }, {
       id: 3,
       name: 'Cloud Migration Project',
       client: 'Financial Services',
@@ -76,59 +72,73 @@ const DashboardPage: React.FC = () => {
 
   const recentActivities = [
     {
-      type: 'Content Update',
-      description: 'Automated content refresh completed',
-      timestamp: '2 minutes ago',
-      status: 'success'
-    },
-    {
-      title: 'IT Infrastructure',
-      count: 12,
-      revenue: '$1.2M',
-      icon: <Cloud className="w-6 h-6"  />
-    },
-    {
-      type: 'Security Scan',
-      description: 'Vulnerability assessment completed - no issues found',
-      timestamp: '8 minutes ago',
-      status: 'success'
-    },
-    {
-      type: 'SEO Update',
-      description: 'Meta tags optimized for 12 pages',
-      timestamp: '12 minutes ago',
-      status: 'success'
+      id: 1,
+      title: 'New project assigned',
+      message: 'You have been assigned to the AI Chatbot project',
+      time: '2 hours ago',
+      type: 'info'
+    }, {
+      id: 2,
+      title: 'Meeting reminder',
+      message: 'Team standup meeting in 30 minutes',
+      time: '30 minutes ago',
+      type: 'warning'
+    }, {
+      id: 3,
+      title: 'Project completed',
+      message: 'Mobile App Development project has been completed',
+      time: '1 day ago',
+      type: 'success'
     }
   ];
 
   const quickActions = [
     {
+      title: 'Create Project',
+      description: 'Start a new project',
+      icon: Plus,
+      color: 'from-blue-500 to-cyan-500',
+      href: '/projects/new'
+    }, {
       title: 'View Reports',
-      description: 'Access detailed performance and analytics reports',
-      href: '/reports',
-      icon: '📊',
-      color: 'from-blue-500 to-cyan-500'
-    },
+      description: 'Check project analytics',
+      icon: BarChart3,
+      color: 'from-green-500 to-emerald-500',
+      href: '/reports'
+    }, {
+      title: 'Team Chat',
+      description: 'Communicate with team',
+      icon: MessageCircle,
+      color: 'from-purple-500 to-pink-500',
+      href: '/chat'
+    }, {
+      title: 'Download Resources',
+      description: 'Access project files',
+      icon: Download,
+      color: 'from-orange-500 to-red-500',
+      href: '/resources'
+    }
+  ];
+
+  const services = [
     {
-      title: 'Automation Health',
-      description: 'Monitor automation system status and health',
-      href: '/automation-health',
-      icon: '🤖',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: 'Services',
-      description: 'Explore our comprehensive service offerings',
-      href: '/services',
-      icon: '🚀',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'Contact Us',
-      description: 'Get in touch with our team',
-      href: '/contact',
-      icon: '📧',
-      color: 'from-orange-500 to-red-500'
+      title: 'AI Services',
+      description: 'Explore our AI solutions',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
+      href: '/services/ai-services'
+    }, {
+      title: 'Micro SAAS',
+      description: 'Business automation tools',
+      icon: Code,
+      color: 'from-blue-500 to-cyan-500',
+      href: '/services/micro-saas'
+    }, {
+      title: 'IT Services',
+      description: 'Infrastructure management',
+      icon: Cloud,
+      color: 'from-green-500 to-emerald-500',
+      href: '/services/it-services'
     }
   ];
 
@@ -271,8 +281,5 @@ const DashboardPage: React.FC = () => {
           </Link>
         </div>
       </div>
-    </div>
-  );
-};
-
-export default Dashboard;
+    </>
+  )}

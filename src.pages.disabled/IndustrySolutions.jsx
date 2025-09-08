@@ -1,2 +1,4 @@
-:src.pages.disabled/IndustrySolutions.jsx
-import React from 'react'; export default IndustrySolutions; import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory, Store, Home, GraduationCap, Stethoscope const IndustrySolutions = () => { const [searchTerm, setSearchTerm] = useState (") ; const [selectedIndustry, setSelectedIndustry] = useState ("all") ; const [selectedSolutionType, setSelectedSolutionType] = useState ("all") ;
+
+
+
+

@@ -1,2 +1,3 @@
-import React from
-  'react'; // Import Prisma for error types" const prisma = new PrismaClient(); // Define the extended product type // This could be moved to a shared types file if used elsewhere (e.g., src/types/products.ts) export type ProductWithReviewStats = Product & { averageRating: number | null; reviewCount: number; title: string; category?: string; // Assuming category might be added or is part of Product model images?: { url: string; alt?: string }[] | string[]; // Allow for string array or object array for images // price?: number | null; // Already in Product // currency?: string; // Already in Product // tags?: string[]; // Already in Product }; interface ErrorResponse { error: string; details?: string; } export default async function handler(
+
+
+

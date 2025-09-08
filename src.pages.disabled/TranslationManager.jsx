@@ -1,2 +1,4 @@
-:src.pages.disabled/TranslationManager.jsx
-import React from 'react'; export default function TranslationManager () { const { t, i18n } = useTranslation () ; const isMobile = useIsMobile () ; const { supportedLanguages } = useLanguage () ; const { translateContent, isTranslating } = useTranslationService () ; const [selectedNamespace, setSelectedNamespace] = useState ("translation") ; const [searchQuery, setSearchQuery] = useState (") ; const [translations, setTranslations] = useState ({ }) ; const [filteredKeys, setFilteredKeys] = useState ([]) ; const [editingKey, setEditingKey] = useState (null) ; const [editedTranslations, setEditedTranslations] = useState ({ }) ; const [isSaving, setIsSaving] = useState (false) ;
+
+
+
+

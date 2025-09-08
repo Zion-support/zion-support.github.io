@@ -3,88 +3,62 @@ import { motion } from 'framer-motion';
 import { CheckCircle, AlertTriangle, XCircle, Clock, Server, Database, Globe, Shield } from 'lucide-react';
 import Layout from '../components/Layout';
 
-const services = [
-  {
-    name: 'AI Services',
-    status: 'operational',
-    uptime: '99.9%',
-    lastIncident: '2024-01-07'
-  },
-  {
-    name: 'IT Services',
-    status: 'operational',
-    uptime: '99.8%',
-    lastIncident: '2024-01-05'
-  },
-  {
-    name: 'Micro SaaS',
-    status: 'operational',
-    uptime: '99.9%',
-    lastIncident: '2024-01-03'
-  },
-  {
-    name: 'Cloud Infrastructure',
-    status: 'operational',
-    uptime: '99.7%',
-    lastIncident: '2024-01-01'
-  }
-];
+const Status: NextPage = () => {
+  const services = [
+    {
+      name: 'Web Application', status: 'operational',
+      uptime: '99.9%', responseTime: '120ms',
+      lastIncident: 'No incidents in the past 30 days'
+    }, {
+      name: 'API Services',
+      status: 'operational', uptime: '99.8%',
+      responseTime: '85ms', lastIncident: 'No incidents in the past 30 days'
+    }, {
+      name: 'Database', status: 'operational',
+      uptime: '99.9%', responseTime: '45ms',
+      lastIncident: 'No incidents in the past 30 days'
+    }, {
+      name: 'Cloud Infrastructure',
+      status: 'operational', uptime: '99.7%',
+      responseTime: '200ms', lastIncident: 'No incidents in the past 30 days'
+    }, {
+      name: 'CDN', status: 'operational',
+      uptime: '99.9%', responseTime: '50ms',
+      lastIncident: 'No incidents in the past 30 days'
+    }, {
+      name: 'Monitoring',
+      status: 'operational', uptime: '100%',
+      responseTime: '30ms', lastIncident: 'No incidents in the past 30 days'
+    }
+  ];
 
-const incidents = [
-  {
-    id: 1,
-    title: 'Scheduled Maintenance - AI Services',
-    description: 'Planned maintenance window for AI service infrastructure updates.',
-    status: 'resolved',
-    startTime: '2024-01-07T02:00:00Z',
-    endTime: '2024-01-07T04:00:00Z',
-    impact: 'minor'
-  },
-  {
-    id: 2,
-    title: 'Database Performance Issue',
-    description: 'Temporary performance degradation in database queries.',
-    status: 'resolved',
-    startTime: '2024-01-05T14:30:00Z',
-    endTime: '2024-01-05T16:45:00Z',
-    impact: 'minor'
-  },
-  {
-    id: 3,
-    title: 'CDN Outage',
-    description: 'Content delivery network experiencing intermittent issues.',
-    status: 'resolved',
-    startTime: '2024-01-03T09:15:00Z',
-    endTime: '2024-01-03T11:30:00Z',
-    impact: 'major'
-  }
-];
+  const getStatusIcon = (status: string) => {
+    switch (status) {
+      case 'operational': return <CheckCircle className="w-5 h-5 text-green-500" />;
+      case 'degraded': return <AlertCircle className="w-5 h-5 text-yellow-500" />;
+      case 'outage': return <XCircle className="w-5 h-5 text-red-500" />;
+      default: return <Clock className="w-5 h-5 text-gray-500" />}
+  };
 
-const getStatusIcon = (status: string) => {
-  switch (status) {
-    case 'operational':
-      return <CheckCircle className="w-5 h-5 text-green-500" />;
-    case 'degraded':
-      return <AlertTriangle className="w-5 h-5 text-yellow-500" />;
-    case 'outage':
-      return <XCircle className="w-5 h-5 text-red-500" />;
-    default:
-      return <Clock className="w-5 h-5 text-gray-500" />;
-  }
-};
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'operational': return 'text-green-600 bg-green-100';
+      case 'degraded': return 'text-yellow-600 bg-yellow-100';
+      case 'outage': return 'text-red-600 bg-red-100';
+      default: return 'text-gray-600 bg-gray-100'}
+  };
 
-const getStatusColor = (status: string) => {
-  switch (status) {
-    case 'operational':
-      return 'text-green-600 bg-green-100';
-    case 'degraded':
-      return 'text-yellow-600 bg-yellow-100';
-    case 'outage':
-      return 'text-red-600 bg-red-100';
-    default:
-      return 'text-gray-600 bg-gray-100';
-  }
-};
+  const incidents = [
+    {
+      id: 1, title: 'Scheduled Maintenance - API Services',
+      status: 'resolved', date: '2025-01-20',
+      description: 'Scheduled maintenance window for API services completed successfully.', impact: 'minor'
+    }, {
+      id: 2, title: 'Database Performance Issue',
+      status: 'resolved', date: '2025-01-15',
+      description: 'Temporary performance degradation in database queries has been resolved.', impact: 'minor'
+    }
+  ];
 
 export default function StatusPage() {
   return (
@@ -247,6 +221,7 @@ export default function StatusPage() {
           </div>
         </section>
       </div>
-    </Layout>
-  );
-}
+    </MainLayout>
+  )};
+
+export default Status;

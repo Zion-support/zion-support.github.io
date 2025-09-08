@@ -1,167 +1,189 @@
-#!/usr/bin/env node
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+    );
+    this.isRunning = false;
+    this.checkInterval = 2 * 60 * 1000; // Check every 2 minutes}
+;
+  log(message) {;
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] ${message}`)}
 
-console.log('🔧 Starting merge conflict resolver automation...');
+        await this.checkAndResolveConflicts()}
+    }, this.checkInterval)}
 
-// Get automation interval from environment variable (default: 10 minutes)
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 600000; // 10 minutes
-
-async function runMergeConflictResolver() {
-  try {
-    console.log(`🔧 Running merge conflict resolver at ${new Date().toISOString()}`);
-    
-    const conflicts = {
-      resolved: 0,
-      found: 0,
-      files: []
-    };
-    
-    // Scan for merge conflicts
-    console.log('🔍 Scanning for merge conflicts...');
-    const conflictFiles = findMergeConflicts('./src');
-    conflicts.found = conflictFiles.length;
-    
-    if (conflictFiles.length > 0) {
-      console.log(`⚠️  Found ${conflictFiles.length} files with merge conflicts:`);
-      conflictFiles.forEach(file => {
-        console.log(`  - ${file}`);
-        conflicts.files.push(file);
-      });
-      
-      // Resolve merge conflicts
-      console.log('🔧 Resolving merge conflicts...');
-      conflicts.resolved = await resolveMergeConflicts(conflictFiles);
-      
-      console.log(`✅ Resolved ${conflicts.resolved} merge conflicts`);
-    } else {
-      console.log('✅ No merge conflicts found');
-    }
-    
-    // Generate merge conflict resolver report
-    console.log('📊 Generating merge conflict resolver report...');
-    const report = {
-      timestamp: new Date().toISOString(),
-      conflicts: conflicts,
-      summary: 'Merge conflict resolver completed',
-      status: 'completed'
-    };
-    
-    const reportPath = path.join(process.cwd(), 'merge-conflict-resolver-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(`✅ Merge conflict resolver report saved to ${reportPath}`);
-    
-    console.log('✅ Merge conflict resolver completed successfully');
-    
-  } catch (error) {
-    console.error('❌ Merge conflict resolver failed:', error.message);
+    this.isRunning = false;
+    if (this.monitorInterval) {;
+      clearInterval(this.monitorInterval)}
   }
-}
 
-function findMergeConflicts(dir) {
-  const conflictFiles = [];
-  
-  function scanDirectory(currentDir) {
-    try {
-      const items = fs.readdirSync(currentDir);
-      
-      for (const item of items) {
-        const fullPath = path.join(currentDir, item);
+      const conflicts = await this.findMergeConflicts();
+;
+      if (conflicts.length > 0) {this.log(`⚠️ Found ${conflicts.length} merge conflicts`);
+        this.conflictsFound = conflicts;
+;
+        for (const conflict of conflicts) {;
+          await this.resolveConflict(conflict)}
+this.log(`✅ Resolved ${this.conflictsResolved} conflicts`)}
+;
+      this.saveReport()} catch (error) {  this.log(`❌ Error during conflict resolution: ${error.message  }`)}
+  }
+;
+  async findMergeConflicts() {;
+    const conflicts = []})}
+      } catch (error) {  this.log(`⚠️ Could not read ${file  }: ${error.message}`)}
+    }
+;
+    return conflicts}
+;
+  extractConflictMarkers(content) {;
+    const markers = [];
+
+    let inConflict = false;
+    let conflictStart = 0;
+    let conflictEnd = 0;
+;
+    for (let i = 0; i < lines.length; i++) {;
+      const line = lines[i]})}
+    }
+;
+    return markers}
+;
+  async resolveConflict(conflict) {;
+    try {this.log(`🔧 Resolving conflict in ${conflict.file}`);
+
+        resolvedContent;
+      );
+;
+      if (resolvedContent !== content) {;
+        fs.writeFileSync(conflict.file, resolvedContent);this.log(`✅ Auto-resolved conflict in ${conflict.file}`);
+        this.conflictsResolved++}
+      } else {this.log(`⚠️ Could not auto-resolve conflict in ${conflict.file}`)}
+
+      )}
+  }
+;
+  async autoResolveConflict(filePath, content) {;
+    const ext = path.extname(filePath);
+
+        return this.resolveTypeScriptConflict(content);
+      case '.js':;
+      case '.jsx':;
+        return this.resolveJavaScriptConflict(content);
+      case '.json':;
+        return this.resolveJsonConflict(content);
+      case '.md':;
+        return this.resolveMarkdownConflict(content);
+      default:;
+        return this.resolveGenericConflict(content)}
+  }
+
+    // Fix any syntax issues;
+    resolved = this.fixTypeScriptSyntax(resolved);
+;
+    return resolved}
+
+    // Clean up any duplicate imports;
+    resolved = this.cleanupDuplicateImports(resolved);
+;
+    return resolved}
+
+        );
+;
+        return resolved}
+
+      .replace(/  }
+;
+  resolveMarkdownConflict(content) {;
+    // For markdown, prefer the longer version (more content);
+    const headMatch = content.match(/\n/);
+    const incomingMatch = content.match(/\n([\s\S]*?)\n;
+
+          /\n[\s\S]*?          headContent;
+        )}
+    }
+
+      .replace(/  }
+;
+  cleanupDuplicateImports(content) {;
+    const lines = content.split('\n');
+    const imports = new Set();
+    const cleanedLines = [];
+;
+    for (const line of lines) {;
+      if (line.trim().startsWith('import ')) {;
+        if (!imports.has(line.trim())) {;
+          imports.add(line.trim());
+          cleanedLines.push(line)}
+      } else {;
+        cleanedLines.push(line)}
+    }
+;
+    return cleanedLines.join('\n')}
+
+    );
+;
+    return fixed}
+
+        .filter(line => line.length > 0)} catch (error) {  this.log(`❌ Could not check git status: ${error.message  }`);
+      return []}
+  }
+;
+  async commitResolvedConflicts() {;
+    try {;
+      const status = await this.checkGitStatus();
+
+      );
+;
+      if (resolvedFiles.length > 0) {this.log(`📝 Committing ${resolvedFiles.length} resolved files...`);
+
+        return true}
+    } catch (error) {  this.log(`❌ Could not commit resolved conflicts: ${error.message  }`)}
+;
+    return false}
+
+    const files = [];
+;
+    const walkDir = dir => {;
+      const items = fs.readdirSync(dir);
+;
+      for (const item of items) {;
+        const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory()) {
-          scanDirectory(fullPath);
-        } else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.json') || item.endsWith('.md')) {
-          try {
-            const content = fs.readFileSync(fullPath, 'utf8');
-            
-            // Check for merge conflict markers
-            if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-              conflictFiles.push(path.relative(process.cwd(), fullPath));
-            }
-          } catch (error) {
-            // Skip files that can't be read
-          }
+
+          walkDir(fullPath)} else if (stat.isFile()) {;
+          const ext = path.extname(item);
+          if (exts.some(e => e.trim() === ext)) {;
+            files.push(fullPath)}
         }
       }
-    } catch (error) {
-      // Skip directories that can't be accessed
-    }
-  }
-  
-  scanDirectory(dir);
-  return conflictFiles;
+    };
+;
+    walkDir(this.projectRoot);
+    return files}
+;
+  saveReport() {;
+    const report = {;
+      timestamp: new Date().toISOString(),;
+      conflictsResolved: this.conflictsResolved,;
+      conflictsFound: this.conflictsFound,;
+      status: 'completed',};
+;
+    fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2))}
+;
+  getStatus() {;
+    return {;
+      isRunning: this.isRunning,;
+      conflictsResolved: this.conflictsResolved,;
+      conflictsFound: this.conflictsFound.length,;
+      lastCheck: new Date().toISOString(),;
+      logFile: this.logFile,}}
 }
 
-async function resolveMergeConflicts(conflictFiles) {
-  let resolvedCount = 0;
-  
-  for (const filePath of conflictFiles) {
-    try {
-      const fullPath = path.join(process.cwd(), filePath);
-      let content = fs.readFileSync(fullPath, 'utf8');
-      const originalContent = content;
-      
-      // Remove merge conflict markers and keep the HEAD version by default
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, (match) => {
-        // Extract the HEAD section
-        const headMatch = match.match(/<<<<<<< HEAD([\s\S]*?)=======/);
-        if (headMatch) {
-          return headMatch[1].trim();
-        }
-        return '';
-      });
-      
-      // Remove any remaining merge conflict markers
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
-      content = content.replace(/=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
-      
-      // Clean up any empty lines that might be left
-      content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-      
-      if (content !== originalContent) {
-        fs.writeFileSync(fullPath, content);
-        console.log(`✅ Resolved merge conflicts in ${filePath}`);
-        resolvedCount++;
-      }
-    } catch (error) {
-      console.log(`⚠️  Could not resolve merge conflicts in ${filePath}: ${error.message}`);
-    }
-  }
-  
-  return resolvedCount;
-}
+    conflictResolver.stop();
+    process.exit(0)});
+;
+  process.on('SIGTERM', () => {;
+    conflictResolver.stop();
+    process.exit(0)});
 
-// Main continuous loop
-async function runContinuous() {
-  console.log(`🚀 Starting merge conflict resolver with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
-  
-  // Run initial merge conflict resolver
-  await runMergeConflictResolver();
-  
-  // Set up continuous execution
-  setInterval(async () => {
-    await runMergeConflictResolver();
-  }, AUTOMATION_INTERVAL);
-  
-  console.log(`✅ Merge conflict resolver running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-}
-
-// Handle graceful shutdown
-process.on('SIGINT', () => {
-  console.log('🛑 Received SIGINT, shutting down gracefully...');
-  process.exit(0);
-});
-
-process.on('SIGTERM', () => {
-  console.log('🛑 Received SIGTERM, shutting down gracefully...');
-  process.exit(0);
-});
-
-// Start the merge conflict resolver
-runContinuous().catch(error => {
-  console.error('❌ Failed to start merge conflict resolver:', error);
-  process.exit(1);
-});
+  // Start the conflict resolver;
+  conflictResolver.start()}
