@@ -1,0 +1,12 @@
+[tools]
+python = "3.12"
+<<<<<<< HEAD
+
+[settings]
+python.compile = false
+=======
+node = "20"
+
+[settings]
+python.compile = true
+>>>>>>> origin/cursor/build-and-dependency-installation-failure-dca0

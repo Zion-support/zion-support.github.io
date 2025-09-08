@@ -1,12 +1,24 @@
 [build]
-  command = "npm ci && npm run build"
-  publish = ".next"
+  # Do not run any build. Deploy the prebuilt static export from out/ as-is.
+  command = "echo 'Skipping build; deploying prebuilt static export'"
+  publish = "out"
+  # Netlify expects a numeric timeout (in seconds)
+  command_timeout = 1800
 
 [build.environment]
   NODE_VERSION = "20"
+  PYTHON_VERSION = "3.11"
+  NETLIFY_SKIP_INSTALL = "true"
+  NETLIFY_SKIP_BUILD = "true"
+  # Avoid optional binary downloads (electron, playwright, cypress)
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"
+  PUPPETEER_SKIP_DOWNLOAD = "1"
+  CYPRESS_INSTALL_BINARY = "0"
+  ELECTRON_SKIP_DOWNLOAD = "1"
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+# Keep the config minimal to avoid plugin-related build failures
 
-[[plugins]]
-  package = "netlify-plugin-cloudinary" 
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

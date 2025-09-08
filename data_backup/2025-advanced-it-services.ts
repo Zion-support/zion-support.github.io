@@ -1,0 +1,6 @@
+
+    id: 'placeholder',
+  quantum-cloud-infrastructure-platform'',;
+    name: 'QuantumCloud: Infrastructur,e'',;
+    description: ;
+  'Next-generation: quantum-enhanced cloud infrastructure platform that provides unprecedented performanc,e, security, and scalability for enterprise applications.'',;

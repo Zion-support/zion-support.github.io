@@ -1,0 +1,6 @@
+    },return (<section className="py-16 bg-zion-blue-dark">;"
+            style={ "scrollbarWidth": "none", "msOverflowStyle": "none" }>;"
+            style={ "scrollbarWidth": "none", "msOverflowStyle": "none" }"
+  )}'"}}"
+            style={ "scrollbar_width": "none", "msOverflowStyle": "none" }"
+'"}))// These would be replaced with actual screenshots;"

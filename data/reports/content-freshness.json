@@ -1,0 +1,507 @@
+{
+  "generatedAt": "2025-09-08T11:14:05.252Z",
+  "staleThresholdDays": 30,
+  "mostStale": [
+    {
+      "file": "pages/academy/insights/index.tsx",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "pages/academy/insights/latest.tsx",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "pages/admin/changelog.tsx",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "pages/admin/content-freshness.tsx",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/.gitkeep",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2024-ai-emerging-tech-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2024-innovative-it-services.ts.conflicted",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2024-real-market-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2024-real-micro-saas-services.ts.conflicted",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-advanced-ai-automation-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-advanced-ai-services-expansion-v2.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-advanced-ai-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-advanced-cloud-devops-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-advanced-cybersecurity-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-advanced-emerging-tech-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-advanced-emerging-tech-services.ts.backup",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-advanced-fintech-solutions.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-advanced-healthcare-biotech-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-advanced-healthcare-biotech-services.ts.backup",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-advanced-innovative-services-expansion.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-advanced-it-infrastructure-expansion-v2.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-advanced-it-infrastructure-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-advanced-it-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-advanced-logistics-supply-chain-solutions.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-advanced-micro-saas-expansion-v2.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-blockchain-web3-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-comprehensive-pricing-analysis.js",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-comprehensive-real-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-comprehensive-services-expansion.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-cutting-edge-ai-services.ts.conflicted",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-cutting-edge-enterprise-solutions.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-cutting-edge-innovative-services.js",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-cutting-edge-it-infrastructure.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-cutting-edge-it-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-cutting-edge-micro-saas.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-cybersecurity-quantum-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-emerging-tech-breakthroughs.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-emerging-tech-innovations.ts.conflicted",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-emerging-tech-services-enhanced.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-emerging-tech-services-v2.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-emerging-tech-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-enterprise-it-solutions.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-innovative-agriculture-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-innovative-ai-automation-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-innovative-ai-it-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-innovative-ai-services-enhanced.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-innovative-ai-services-expansion.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-innovative-ai-services-v2.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-innovative-ar-vr-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-innovative-business-solutions-expansion.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-innovative-business-solutions.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-innovative-edge-computing-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-innovative-energy-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-innovative-it-infrastructure-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-innovative-it-infrastructure-services.ts.backup",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-innovative-it-services-enhanced.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-innovative-micro-saas-expansion-v3.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-innovative-micro-saas-expansion.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-innovative-micro-saas-expansion.ts.backup",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-innovative-micro-saas-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-innovative-micro-saas-solutions.ts.conflicted",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-innovative-new-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-innovative-real-micro-saas-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-space-metaverse-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2025-specialized-industry-solutions.js",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2026-advanced-ai-automation-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2026-ai-autonomous-services.ts.conflicted",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2026-emerging-tech-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2026-innovative-micro-saas-expansion.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2026-metaverse-digital-reality-services.ts.conflicted",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2026-quantum-space-tech-services.ts.conflicted",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2026-specialized-industry-solutions.ts.conflicted",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2026-specialized-it-solutions.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2027-cutting-edge-innovations.ts.conflicted",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2027-emerging-tech-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2027-practical-micro-saas.ts.conflicted",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2028-cutting-edge-micro-saas.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2028-emerging-tech-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2028-futuristic-innovations.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2028-practical-business-solutions.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2029-ai-autonomous-ecosystem.ts.conflicted",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2029-cutting-edge-innovations-v2.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2029-cutting-edge-innovations.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2029-emerging-tech-breakthroughs-v2.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2029-emerging-tech-breakthroughs-v2.ts.backup",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2029-emerging-tech-breakthroughs.ts.conflicted",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2029-emerging-tech-services-v2.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2029-emerging-tech-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2029-enterprise-it-breakthroughs.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2029-enterprise-it-services-v2.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2029-enterprise-it-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2029-futuristic-ai-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2029-innovative-micro-saas-v2.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2029-innovative-micro-saas.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2029-practical-business-solutions-v2.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2029-practical-business-solutions.ts.conflicted",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2029-research-development-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2029-space-colonization-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2030-ai-autonomous-ecosystem.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    },
+    {
+      "file": "data/2030-futuristic-ai-services.ts",
+      "changedAt": 1757329917000,
+      "ageDays": 0.0014743634259259258
+    }
+  ],
+  "stale": []
+}

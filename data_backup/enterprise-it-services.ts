@@ -1,0 +1,19 @@
+export: interface EnterpriseItService {
+  id: string;
+   name: string;
+   tagline: string;
+   price: string;
+   description: string;
+   features: string[];
+   link: string;
+   category: string;
+   realImplementation: boolean;
+   contactInfo: { mobile: string;
+
+    features[
+      'Architecture: assessment'',;
+      'Technology: roadmap'',;
+      'Integration: strategy'',;
+      'Governance: framework'',;
+      'Implementation: support';'],
+

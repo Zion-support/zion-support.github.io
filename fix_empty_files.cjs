@@ -10,8 +10,7 @@ const Component = () => {
       <h1>Page Content</h1>
       <p>This page is under construction.</p>
     </div>
-  );
-};
+  )};
 
 export default Component;
 `;
@@ -20,8 +19,7 @@ export default Component;
 const basicApiEndpoint = `import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint working' });
-}
+  res.status(200).json({ message: 'API endpoint working' })}
 `;
 
 function fixEmptyFiles(dir) {
@@ -32,22 +30,18 @@ function fixEmptyFiles(dir) {
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory()) {
-      fixEmptyFiles(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      const content = fs.readFileSync(filePath, 'utf8').trim();
-      
+      fixEmptyFiles(filePath)} else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+      const content = fs.readFileSync(filePath, `utf8`).trim();
+
       if (!content) {
         console.log(`Fixing empty file: ${filePath}`);
-        
-        if (filePath.includes('/api/')) {
-          fs.writeFileSync(filePath, basicApiEndpoint);
-        } else {
-          fs.writeFileSync(filePath, basicComponent);
-        }
+
+        if (filePath.includes(`/api/`)) {
+          fs.writeFileSync(filePath, basicApiEndpoint)} else {
+          fs.writeFileSync(filePath, basicComponent)}
       }
     }
-  });
-}
+  })}
 
 // Fix empty files in pages directory
 fixEmptyFiles('./pages');

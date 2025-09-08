@@ -1,0 +1,30 @@
+<<<<<<<< HEAD:src.pages.disabled/RevolutionaryServicesShowcase2025.tsx.backup
+<<<<<<< HEAD
+
+   id: string;
+   name: string;
+   category: string;
+   pricing: string;
+   description: string;
+   price: number;
+   pricingModel: string;
+   features: string[];
+   benefits: string[];
+   targetAudience: string[];
+   tags: string[];
+   contactInfo: {
+   phone: string;
+   email: string;
+
+
+=======
+
+
+
+
+
+
+
+>>>>>>> main
+========
+>>>>>>>> origin/cursor/build-and-dependency-installation-failure-6ae3:src/pages/RevolutionaryServicesShowcase2025.tsx

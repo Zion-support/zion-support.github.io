@@ -1,0 +1,74 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve",
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+<<<<<<< HEAD
+    "allowSyntheticDefaultImports": true
+  },
+  "include": [
+    "src"
+=======
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "strictNullChecks": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false,
+    "allowJs": true,
+    "incremental": true
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "src",
+    "vite-env.d.ts"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-be2d
+  ],
+  "exclude": [
+    "node_modules",
+    ".next",
+    "out",
+    "dist",
+    "build",
+    "automation",
+    "scripts",
+    "fix_*.js",
+    "fix_*.cjs",
+    "*.fix.js",
+<<<<<<< HEAD
+    "*.fix.cjs",
+    "vite.config.ts",
+    "tailwind.config.ts",
+    "**/*.backup.*",
+    "**/*.disabled/**",
+    "pages_disabled/**",
+    "pages.disabled/**",
+    "src_disabled/**",
+    "temp_components.disabled/**",
+    "tests.disabled/**"
+=======
+    "*.fix.cjs"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-be2d
+  ]
+}

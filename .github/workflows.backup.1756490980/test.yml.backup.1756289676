@@ -1,0 +1,51 @@
+name: Test
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+permissions:
+  contents: read
+jobs:
+  test:
+    name: Test Suite
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build project
+        run: npm run build
+      - name: Verify build output
+        run: |
+          if [ ! -d dist ]; then
+            echo "Build failed: dist folder not found"
+            exit 1
+          fi
+          echo "Build completed successfully"
+      - name: Verify asset paths
+        run: |
+          npx http-server dist -p 5000 -s >/dev/null 2>&1 &
+          SERVER_PID=$!
+          sleep 3
+          kill $SERVER_PID || true
+      - name: Run type check
+        run: npm run type-check
+      - name: Run linting
+        run: npm run lint
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: out
+          retention-days: 30
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true

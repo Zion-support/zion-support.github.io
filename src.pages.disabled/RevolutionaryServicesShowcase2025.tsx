@@ -1,0 +1,17 @@
+
+   id: string;
+   name: string;
+   category: string;
+   pricing: string;
+   description: string;
+   price: number;
+   pricingModel: string;
+   features: string[];
+   benefits: string[];
+   targetAudience: string[];
+   tags: string[];
+   contactInfo: {
+   phone: string;
+   email: string;
+
+

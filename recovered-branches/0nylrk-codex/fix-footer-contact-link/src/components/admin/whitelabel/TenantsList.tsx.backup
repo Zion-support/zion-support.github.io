@@ -1,0 +1,165 @@
+
+<<<<<<< HEAD
+import React, { useState, useEffect } from "react";
+import { supabase } from "@/integrations/supabase/client";
+=======
+
+>>>>>>> main
+
+import {;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+  TableRow,;
+} from "@/components/ui/table";
+import { Button } from "@/components/ui/button";import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuTrigger,;} from "@/components/ui/table";
+import { Button } from "@/components/ui/button";
+import {}
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,;
+DropdownMenuTrigger,;
+  DropdownMenuTrigger,
+
+
+
+<<<<<<< HEAD
+=======
+  TableRow
+} from "@/components/ui/table";"
+import { Button } from "@/components/ui/button";"
+  }
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+DropdownMenuTrigger,;
+  DropdownMenuTrigger,
+  DropdownMenuTrigger,import { Badge } from "@/components/ui/badge";
+import { toast } from "@/hooks/use-toast";
+import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";    loadTenants();
+  }, []);
+
+<<<<<<< HEAD
+  const loadTenants = async () => {;
+    try {;
+
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+      setIsLoading(true);
+      const { data, error } = await supabase;"
+        .from("whitelabel_tenants");"
+        .select("*");"
+        .order("created_at", { ascending: false });
+
+      if (error) throw error;
+      setTenants(data as WhitelabelTenant[]);
+      });
+    } finally {;
+      setIsLoading(false);
+    }
+
+  };
+import {
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+  Edit,
+  MoreHorizontal,
+  ExternalLink,
+  Power,
+  PowerOff,
+  Users,
+  const verifyDns = async (tenant: WhitelabelTenant) => {;
+    try {;
+      // In a real implementation, this would verify DNS records;'
+      // For now, we'll just mark it as verified;
+      const { error } = await supabase;    }
+
+  },
+
+  return (
+=======
+import {;
+  Edit,;
+  MoreHorizontal,;
+  ExternalLink,;
+  Power,;
+  PowerOff,;
+  Users,;
+  RefreshCcw,;
+} from "@/components/icons";
+import { format } from "date-fns";
+export function TenantsList() {;
+  const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {;
+
+  const loadTenants = async () => {;
+    try {;
+
+    } catch (error: any) {;
+      console && console.error("Error loading tenants:", error);
+      toast({;
+        variant: "destructive",;
+        title: "Failed to load tenants",;
+        description: error && error.message,;
+
+
+  const toggleTenantStatus = async (tenant: WhitelabelTenant) => {
+    try {
+      const { error } = await supabase
+        .from("whitelabel_tenants")
+        .update({ is_active: !tenant.is_active })
+
+        .eq("id", tenant.id);
+
+
+
+
+
+
+
+
+
+
+      const { error } = await supabase;
+}
+"variant": "destructive",;"
+        "title": "Failed to verify DNS","
+        "description": error.message
+      });
+
+
+
+
+
+
+
+                        </div>;
+
+                          </Button>;
+                        </DropdownMenuTrigger>;
+                        <DropdownMenuContent align="end">;
+                          <DropdownMenuItem>;
+
+
+
+
+                    <TableCell>{format(new Date(tenant.created_at), 'MMM d, yyyy')}
+                    <TableCell className="text-right">"
+
+
+                      <DropdownMenu>
+
+                        <DropdownMenuTrigger asChild>
+
+
+>>>>>>> main
