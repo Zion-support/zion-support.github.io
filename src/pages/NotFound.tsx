@@ -1,28 +1,30 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/Button';
 
-const NotFound: React.FC = () => {
+const NotFoundPage: React.FC = () => {
   return (
-    <div className="text-center">
-      <div className="max-w-md mx-auto">
-        <h1 className="text-9xl font-bold bg-gradient-to-r from-red-500 to-red-700 bg-clip-text text-transparent mb-4">
-          404
-        </h1>
-        <h2 className="text-3xl font-bold mb-4 text-white">
-          Page Not Found
-        </h2>
-        <p className="text-lg text-blue-200 mb-8">
-          Sorry, the page you are looking for doesn't exist or has been moved.
-        </p>
-        <Link 
-          to="/"
-          className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
-        >
-          Go Back Home
-        </Link>
+    <>
+      <Helmet>
+        <title>Page Not Found - Zion</title>
+        <meta name="description" content="The page you're looking for doesn't exist." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue to-zion-purple flex items-center justify-center">
+        <div className="text-center text-white">
+          <h1 className="text-6xl font-bold mb-4">404</h1>
+          <h2 className="text-2xl font-semibold mb-4">Page Not Found</h2>
+          <p className="text-zion-slate-light mb-8 max-w-md mx-auto">
+            The page you're looking for doesn't exist or has been moved.
+          </p>
+          <Button asChild size="lg" className="bg-zion-cyan hover:bg-zion-cyan/80">
+            <Link to="/">Go Home</Link>
+          </Button>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
-export default NotFound;
+export default NotFoundPage;

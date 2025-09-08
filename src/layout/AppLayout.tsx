@@ -14,7 +14,6 @@ export const AppLayout: React.FC<AppLayoutProps> = ({ children, config }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   const isActive = (path: string) => location.pathname === path;
-  
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 to-purple-900 text-white">
       <header className="bg-black/20 backdrop-blur-sm border-b border-white/10">

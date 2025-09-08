@@ -12,6 +12,7 @@ import { ViewModeProvider } from './context/ViewModeContext';
 import { AppLayout } from './layout/AppLayout';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSpinner } from './components/LoadingSpinner';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
 import { AppConfig } from './types/app';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -43,8 +44,8 @@ const queryClient = new QueryClient({
 const appConfig: AppConfig = {
   name: 'Zion Tech Group',
   version: '1.0.0',
-  environment: (process.env.NODE_ENV as any) || 'development',
-  apiUrl: process.env.REACT_APP_API_URL || '/api',
+  environment: (import.meta.env.MODE as any) || 'development',
+  apiUrl: import.meta.env.VITE_API_URL || '/api',
   features: {
     analytics: true,
     notifications: true,
@@ -85,6 +86,7 @@ const App: React.FC = () => {
                             </Routes>
                           </AppLayout>
                         </Suspense>
+                        <PerformanceMonitor />
                         {/* <ReactQueryDevtools initialIsOpen={false} /> */}
                       </ViewModeProvider>
                     </AnalyticsProvider>
