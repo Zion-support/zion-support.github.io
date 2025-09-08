@@ -1104,7 +1104,7 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Threat detection & response</li>
                   <li>• Zero-trust architecture</li>
                 </ul>
-                <Link href="/security" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <Link href="/docs/security" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   View Security Guide →
                 </a>
               </div>
@@ -1118,7 +1118,7 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Security testing</li>
                   <li>• Continuous validation</li>
                 </ul>
-                <Link href="/testing" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                <Link href="/docs/testing" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
                   View Testing Guide →
                 </a>
               </div>
@@ -1132,7 +1132,7 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Analytics dashboard</li>
                   <li>• Predictive maintenance</li>
                 </ul>
-                <Link href="/performance" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <Link href="/docs/performance" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   View Performance Guide →
                 </a>
               </div>
@@ -1200,7 +1200,7 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Health monitoring</li>
                   <li>• Self-healing infrastructure</li>
                 </ul>
-                <Link href="/ULTIMATE_REDUNDANCY_IMPLEMENTATION_SUMMARY.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <Link href="/docs/ultimate-redundancy" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
@@ -1214,7 +1214,7 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Error prevention</li>
                   <li>• Predictive analytics</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_COMPREHENSIVE_REDUNDANCY.md" target="_blank" rel="noopener noreferrer" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                <Link href="/docs/comprehensive-redundancy" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
@@ -1228,7 +1228,7 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Performance monitoring</li>
                   <li>• Cluster management</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_PM2_REDUNDANCY_COMPLETE.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <Link href="/docs/pm2-redundancy" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
@@ -2122,22 +2122,24 @@ export default function HomePage({ pageLinks }: HomePageProps) {
             </div>
           </section>
         </main>
-
-        {/* Footer */}
-        <footer className="border-t border-white/10 mt-20">
-          <div className="container mx-auto px-6 py-8">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <div className="text-white/60 mb-4 md:mb-0">
-                © 2025 Zion Tech Group. All rights reserved.
-              </div>
-              <div className="flex space-x-6">
-                <a href="/about" className="text-white/60 hover:text-cyan-400 transition-colors">About</a>
-                <a href="/automation" className="text-white/60 hover:text-cyan-400 transition-colors">Automation</a>
-                <a href="/contact" className="text-white/60 hover:text-cyan-400 transition-colors">Contact</a>
-              </div>
-            </div>
+        {/* Documentation Highlights */}
+        <section className="mx-auto max-w-7xl px-6 pb-16">
+          <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">📚 Explore Documentation</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Link href="/docs/readme" className="group bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">
+              <h3 className="text-xl font-bold text-cyan-300 mb-2">Project Overview</h3>
+              <p className="text-white/75 text-sm">Quick start and high-level overview.</p>
+            </Link>
+            <Link href="/docs/architecture" className="group bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300">
+              <h3 className="text-xl font-bold text-fuchsia-300 mb-2">Architecture</h3>
+              <p className="text-white/75 text-sm">System design and components.</p>
+            </Link>
+            <Link href="/docs/deployment" className="group bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:border-green-400/30 transition-all duration-300">
+              <h3 className="text-xl font-bold text-green-300 mb-2">Deployment</h3>
+              <p className="text-white/75 text-sm">How to deploy reliably.</p>
+            </Link>
           </div>
-        </footer>
+        </section>
       </div>
       {/* Quick Links Footer */}
       <footer className="border-t border-white/10 bg-black/20">
