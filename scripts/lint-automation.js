@@ -1,16 +1,20 @@
 #!/usr/bin/env node
 
-const { spawn } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 class LintAutomation {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.logsDir = path.join(this.projectRoot, 'logs');
-    this.isRunning = false;
-    this.checkInterval = 5 * 60 * 1000; // 5 minutes
-    this.lastCheck = null;
+    this.projectRoot = path.resolve(__dirname, '..');
+    this.logFile = path.join(this.projectRoot, 'logs', 'lint-automation.log');
+    this.lintReportFile = path.join(this.projectRoot, 'logs', 'lint-report.json');
+    this.fixedIssues = [];
+    this.remainingIssues = [];
   }
 
   log(message, level = 'INFO') {
@@ -18,161 +22,359 @@ class LintAutomation {
     const logMessage = `[${timestamp}] [${level}] ${message}`;
     console.log(logMessage);
     
-    // Write to log file
-    const logFile = path.join(this.logsDir, 'lint-automation.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
-  }
-
-  async runLintCheck() {
-    if (this.isRunning) {
-      this.log('Lint check already in progress, skipping...', 'WARN');
-      return;
-    }
-
-    this.isRunning = true;
-    this.log('Starting lint check...');
-
-    try {
-      const result = await this.runCommand('npm', { args: ['run', 'lint'] });
-      this.log('Lint check completed successfully - no errors found');
-      this.lastCheck = new Date();
-    } catch (error) {
-      this.log(`Lint check failed with errors: ${error.stderr || error.message}`, 'WARN');
-      
-      // Try to auto-fix issues
-      await this.autoFixLintIssues();
-    } finally {
-      this.isRunning = false;
-    }
-  }
-
-  async autoFixLintIssues() {
-    this.log('Attempting to auto-fix lint issues...');
-    
-    try {
-      const result = await this.runCommand('npm', { args: ['run', 'lint', '--', '--fix'] });
-      this.log('Auto-fix completed successfully');
-      
-      // Run lint check again to verify fixes
-      await this.verifyFixes();
-    } catch (error) {
-      this.log(`Auto-fix failed: ${error.stderr || error.message}`, 'ERROR');
-    }
-  }
-
-  async verifyFixes() {
-    this.log('Verifying fixes...');
-    
-    try {
-      const result = await this.runCommand('npm', { args: ['run', 'lint'] });
-      this.log('Verification successful - all issues resolved');
-    } catch (error) {
-      this.log(`Verification failed - some issues remain: ${error.stderr || error.message}`, 'WARN');
-      
-      // Generate detailed report of remaining issues
-      await this.generateLintReport();
-    }
-  }
-
-  async generateLintReport() {
-    this.log('Generating lint report...');
-    
-    try {
-      const result = await this.runCommand('npm', { args: ['run', 'lint', '--', '--format', 'json'] });
-      
-      const report = {
-        timestamp: new Date().toISOString(),
-        lintOutput: result.stdout,
-        summary: 'Lint issues detected and auto-fix attempted'
-      };
-      
-      const reportFile = path.join(this.logsDir, 'lint-report.json');
-      fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-      
-      this.log(`Lint report generated: ${reportFile}`);
-    } catch (error) {
-      this.log(`Failed to generate lint report: ${error.message}`, 'ERROR');
-    }
+    // Append to log file
+    fs.appendFileSync(this.logFile, logMessage + '\n');
   }
 
   async runCommand(command, options = {}) {
-    return new Promise((resolve, reject) => {
-      const child = spawn(command, options.args || [], {
-        shell: true,
-        stdio: 'pipe',
+    try {
+      const result = execSync(command, {
         cwd: this.projectRoot,
+        encoding: 'utf8',
+        stdio: options.silent ? 'pipe' : 'inherit',
         ...options
       });
-
-      let stdout = '';
-      let stderr = '';
-
-      child.stdout.on('data', (data) => {
-        stdout += data.toString();
-      });
-
-      child.stderr.on('data', (data) => {
-        stderr += data.toString();
-      });
-
-      child.on('close', (code) => {
-        if (code === 0) {
-          resolve({ stdout, stderr, code });
-        } else {
-          reject({ stdout, stderr, code });
-        }
-      });
-
-      child.on('error', (error) => {
-        reject({ error, stdout, stderr });
-      });
-    });
+      return { success: true, output: result };
+    } catch (error) {
+      return { success: false, error: error.message, output: error.stdout || '' };
+    }
   }
 
-  async startMonitoring() {
-    this.log('Starting lint automation monitoring...');
+  async runLinting() {
+    this.log('🔍 Running linting checks...');
     
-    // Create logs directory if it doesn't exist
-    if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursive: true });
+    // Run ESLint
+    const eslintResult = await this.runCommand('npm run lint', { silent: true });
+    
+    if (eslintResult.success) {
+      this.log('✅ No linting issues found');
+      return { success: true, issues: [] };
     }
     
-    // Initial check
-    await this.runLintCheck();
+    // Parse linting output
+    const issues = this.parseLintOutput(eslintResult.output);
+    this.log(`Found ${issues.length} linting issues`);
     
-    // Set up periodic checks
-    setInterval(async () => {
-      await this.runLintCheck();
-    }, this.checkInterval);
+    return { success: false, issues };
+  }
+
+  parseLintOutput(output) {
+    const issues = [];
+    const lines = output.split('\n');
     
-    this.log(`Lint automation monitoring started. Checking every ${this.checkInterval / 1000 / 60} minutes.`);
+    for (const line of lines) {
+      if (line.includes('error') || line.includes('warning')) {
+        const match = line.match(/([^:]+):(\d+):(\d+):\s*(error|warning)\s*(.+)/);
+        if (match) {
+          issues.push({
+            file: match[1],
+            line: parseInt(match[2]),
+            column: parseInt(match[3]),
+            severity: match[4],
+            message: match[5],
+            category: this.categorizeIssue(match[5])
+          });
+        }
+      }
+    }
     
-    // Keep the process alive
-    process.on('SIGINT', () => {
-      this.log('Received SIGINT, shutting down gracefully...');
-      process.exit(0);
+    return issues;
+  }
+
+  categorizeIssue(message) {
+    if (message.includes('React') && message.includes('never used')) {
+      return 'unused-imports';
+    } else if (message.includes('console statement')) {
+      return 'console-statements';
+    } else if (message.includes('defined but never used')) {
+      return 'unused-variables';
+    } else if (message.includes('JSX closing tag')) {
+      return 'jsx-syntax';
+    } else if (message.includes('Parsing error')) {
+      return 'syntax-errors';
+    } else if (message.includes('no-undef')) {
+      return 'undefined-references';
+    } else {
+      return 'other';
+    }
+  }
+
+  async fixLintIssues(issues) {
+    this.log('🔧 Starting automatic linting fixes...');
+    
+    let fixedCount = 0;
+    
+    for (const issue of issues) {
+      try {
+        if (await this.fixLintIssue(issue)) {
+          fixedCount++;
+          this.fixedIssues.push({
+            ...issue,
+            fixMethod: 'automatic',
+            timestamp: new Date().toISOString()
+          });
+        } else {
+          this.remainingIssues.push({
+            ...issue,
+            timestamp: new Date().toISOString()
+          });
+        }
+      } catch (error) {
+        this.log(`Failed to fix issue in ${issue.file}: ${error.message}`, 'ERROR');
+        this.remainingIssues.push({
+          ...issue,
+          error: error.message,
+          timestamp: new Date().toISOString()
+        });
+      }
+    }
+    
+    return fixedCount;
+  }
+
+  async fixLintIssue(issue) {
+    const filePath = path.join(this.projectRoot, issue.file);
+    
+    if (!fs.existsSync(filePath)) {
+      return false;
+    }
+    
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    switch (issue.category) {
+      case 'unused-imports':
+        modified = this.fixUnusedImports(content, issue);
+        break;
+        
+      case 'console-statements':
+        modified = this.fixConsoleStatements(content, issue);
+        break;
+        
+      case 'unused-variables':
+        modified = this.fixUnusedVariables(content, issue);
+        break;
+        
+      case 'jsx-syntax':
+        modified = this.fixJSXSyntax(content, issue);
+        break;
+        
+      case 'syntax-errors':
+        modified = this.fixSyntaxErrors(content, issue);
+        break;
+        
+      case 'undefined-references':
+        modified = this.fixUndefinedReferences(content, issue);
+        break;
+    }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      return true;
+    }
+    
+    return false;
+  }
+
+  fixUnusedImports(content, issue) {
+    const lines = content.split('\n');
+    const lineIndex = issue.line - 1;
+    
+    if (lineIndex >= 0 && lineIndex < lines.length) {
+      const line = lines[lineIndex];
+      
+      // Remove unused React import
+      if (line.includes('import React') && !line.includes('React.')) {
+        lines.splice(lineIndex, 1);
+        return true;
+      }
+      
+      // Remove other unused imports
+      if (line.includes('import') && line.includes('from')) {
+        // Check if the import is actually used in the file
+        const importMatch = line.match(/import\s*{([^}]+)}\s*from/);
+        if (importMatch) {
+          const imports = importMatch[1].split(',').map(imp => imp.trim());
+          let allUnused = true;
+          
+          for (const imp of imports) {
+            const cleanImp = imp.replace(/\s+as\s+\w+/, ''); // Remove "as" aliases
+            if (content.includes(cleanImp) && !line.includes(cleanImp)) {
+              allUnused = false;
+              break;
+            }
+          }
+          
+          if (allUnused) {
+            lines.splice(lineIndex, 1);
+            return true;
+          }
+        }
+      }
+    }
+    
+    return false;
+  }
+
+  fixConsoleStatements(content, issue) {
+    // Remove console statements
+    const originalContent = content;
+    content = content.replace(/console\.(log|error|warn|info|debug)\([^)]*\);?\s*/g, '');
+    
+    return content !== originalContent;
+  }
+
+  fixUnusedVariables(content, issue) {
+    const lines = content.split('\n');
+    const lineIndex = issue.line - 1;
+    
+    if (lineIndex >= 0 && lineIndex < lines.length) {
+      const line = lines[lineIndex];
+      
+      // Remove simple variable declarations
+      if (line.includes('const ') || line.includes('let ') || line.includes('var ')) {
+        // Check if it's a simple assignment
+        if (line.includes('=') && !line.includes('function') && !line.includes('=>')) {
+          lines.splice(lineIndex, 1);
+          return true;
+        }
+      }
+    }
+    
+    return false;
+  }
+
+  fixJSXSyntax(content, issue) {
+    // This is a simplified approach - in practice, you'd need more sophisticated JSX parsing
+    this.log(`JSX syntax issue detected in ${issue.file} at line ${issue.line} - requires manual review`, 'WARN');
+    return false;
+  }
+
+  fixSyntaxErrors(content, issue) {
+    // This is a simplified approach - in practice, you'd need more sophisticated parsing
+    this.log(`Syntax error detected in ${issue.file} at line ${issue.line} - requires manual review`, 'WARN');
+    return false;
+  }
+
+  fixUndefinedReferences(content, issue) {
+    const lines = content.split('\n');
+    const lineIndex = issue.line - 1;
+    
+    if (lineIndex >= 0 && lineIndex < lines.length) {
+      const line = lines[lineIndex];
+      
+      // Check if it's a missing import
+      if (line.includes('import') && line.includes('from')) {
+        // Fix malformed import statements
+        const fixedLine = line.replace(/import:\s*{([^}]+)},\s*from,\s*'([^']+)':\s*,/g, 
+          "import { $1 } from '$2';");
+        if (fixedLine !== line) {
+          lines[lineIndex] = fixedLine;
+          return true;
+        }
+      }
+    }
+    
+    return false;
+  }
+
+  async runAutoFix() {
+    this.log('🔄 Running ESLint auto-fix...');
+    
+    const autoFixResult = await this.runCommand('npm run fix:all', { silent: true });
+    
+    if (autoFixResult.success) {
+      this.log('✅ Auto-fix completed successfully');
+      return true;
+    } else {
+      this.log('⚠️ Auto-fix completed with some issues', 'WARN');
+      return false;
+    }
+  }
+
+  async generateReport() {
+    const report = {
+      timestamp: new Date().toISOString(),
+      summary: {
+        totalIssues: this.fixedIssues.length + this.remainingIssues.length,
+        fixedIssues: this.fixedIssues.length,
+        remainingIssues: this.remainingIssues.length,
+        successRate: this.fixedIssues.length / (this.fixedIssues.length + this.remainingIssues.length) * 100
+      },
+      fixedIssues: this.fixedIssues,
+      remainingIssues: this.remainingIssues,
+      categories: this.analyzeCategories()
+    };
+    
+    // Save report
+    fs.writeFileSync(this.lintReportFile, JSON.stringify(report, null, 2));
+    
+    this.log(`📊 Lint report generated: ${this.fixedIssues.length} issues fixed, ${this.remainingIssues.length} remaining`);
+    return report;
+  }
+
+  analyzeCategories() {
+    const categories = {};
+    
+    [...this.fixedIssues, ...this.remainingIssues].forEach(issue => {
+      if (!categories[issue.category]) {
+        categories[issue.category] = { total: 0, fixed: 0, remaining: 0 };
+      }
+      categories[issue.category].total++;
+      
+      if (this.fixedIssues.some(fixed => fixed.file === issue.file && fixed.line === issue.line)) {
+        categories[issue.category].fixed++;
+      } else {
+        categories[issue.category].remaining++;
+      }
     });
     
-    process.on('SIGTERM', () => {
-      this.log('Received SIGTERM, shutting down gracefully...');
-      process.exit(0);
-    });
+    return categories;
   }
 
   async run() {
+    this.log('🚀 Starting Lint Automation');
+    
     try {
-      await this.startMonitoring();
+      // Run initial linting
+      const lintResult = await this.runLinting();
+      
+      if (lintResult.success) {
+        this.log('✅ No linting issues found');
+        return;
+      }
+      
+      // Fix issues automatically
+      const fixedCount = await this.fixLintIssues(lintResult.issues);
+      this.log(`Fixed ${fixedCount} issues automatically`);
+      
+      // Run auto-fix for remaining issues
+      await this.runAutoFix();
+      
+      // Generate final report
+      const report = await this.generateReport();
+      
+      this.log(`✅ Lint automation completed! Fixed ${fixedCount} out of ${lintResult.issues.length} issues`);
+      
+      // If there are still issues, log them for manual review
+      if (this.remainingIssues.length > 0) {
+        this.log(`⚠️ ${this.remainingIssues.length} issues require manual review:`, 'WARN');
+        this.remainingIssues.forEach(issue => {
+          this.log(`  - ${issue.file}:${issue.line} - ${issue.message}`, 'WARN');
+        });
+      }
+      
     } catch (error) {
-      this.log(`Lint automation failed: ${error.message}`, 'ERROR');
-      process.exit(1);
+      this.log(`❌ Error in lint automation: ${error.message}`, 'ERROR');
+      throw error;
     }
   }
 }
 
-// Run the lint automation if this script is executed directly
-if (require.main === module) {
+// Run the lint automation
+if (import.meta.url === `file://${process.argv[1]}`) {
   const automation = new LintAutomation();
-  automation.run();
+  automation.run().catch(console.error);
 }
 
-module.exports = LintAutomation;
+export default LintAutomation;

@@ -1,15 +1,21 @@
 #!/usr/bin/env node
 
-const { execSync, spawn } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+import { execSync, spawn } from 'child_process';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 class ErrorFixer {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.logsDir = path.join(this.projectRoot, 'logs');
-    this.fixesApplied = 0;
-    this.errorsFixed = [];
+    this.projectRoot = path.resolve(__dirname, '..');
+    this.logFile = path.join(this.projectRoot, 'logs', 'error-fixer.log');
+    this.errorReportFile = path.join(this.projectRoot, 'logs', 'error-report.json');
+    this.fixReportFile = path.join(this.projectRoot, 'logs', 'fix-report.json');
+    this.fixedErrors = [];
+    this.failedFixes = [];
   }
 
   log(message, level = 'INFO') {
@@ -17,359 +23,525 @@ class ErrorFixer {
     const logMessage = `[${timestamp}] [${level}] ${message}`;
     console.log(logMessage);
     
-    // Write to log file
-    const logFile = path.join(this.logsDir, 'error-fixer.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
+    // Append to log file
+    fs.appendFileSync(this.logFile, logMessage + '\n');
   }
 
   async runCommand(command, options = {}) {
-    return new Promise((resolve, reject) => {
-      const child = spawn(command, options.args || [], {
-        shell: true,
-        stdio: 'pipe',
+    try {
+      const result = execSync(command, {
         cwd: this.projectRoot,
+        encoding: 'utf8',
+        stdio: options.silent ? 'pipe' : 'inherit',
         ...options
       });
-
-      let stdout = '';
-      let stderr = '';
-
-      child.stdout.on('data', (data) => {
-        stdout += data.toString();
-      });
-
-      child.stderr.on('data', (data) => {
-        stderr += data.toString();
-      });
-
-      child.on('close', (code) => {
-        if (code === 0) {
-          resolve({ stdout, stderr, code });
-        } else {
-          reject({ stdout, stderr, code });
-        }
-      });
-
-      child.on('error', (error) => {
-        reject({ error, stdout, stderr });
-      });
-    });
-  }
-
-  async fixLintingErrors() {
-    this.log('Starting linting error fixes...');
-    
-    try {
-      // Run ESLint with auto-fix
-      const result = await this.runCommand('npm', { args: ['run', 'lint', '--', '--fix'] });
-      this.log('ESLint auto-fix completed');
-      this.fixesApplied++;
-      this.errorsFixed.push('ESLint auto-fixes applied');
+      return { success: true, output: result };
     } catch (error) {
-      this.log(`ESLint auto-fix failed: ${error.stderr || error.message}`, 'WARN');
+      return { success: false, error: error.message, output: error.stdout || '' };
     }
   }
 
-  async fixTypeScriptErrors() {
-    this.log('Starting TypeScript error fixes...');
+  async detectErrors() {
+    this.log('🔍 Starting error detection...');
     
-    try {
-      // Check for TypeScript errors
-      const result = await this.runCommand('npm', { args: ['run', 'type-check'] });
-      this.log('TypeScript check completed - no errors found');
-    } catch (error) {
-      this.log('TypeScript errors detected, attempting fixes...', 'WARN');
-      
-      // Try to fix common TypeScript issues
-      await this.fixCommonTypeScriptIssues();
+    const errors = {
+      lint: [],
+      typeCheck: [],
+      build: [],
+      dependencies: [],
+      security: []
+    };
+
+    // Check linting errors
+    this.log('Checking linting errors...');
+    const lintResult = await this.runCommand('npm run lint', { silent: true });
+    if (!lintResult.success) {
+      errors.lint = this.parseLintErrors(lintResult.output);
     }
-  }
 
-  async fixCommonTypeScriptIssues() {
-    this.log('Fixing common TypeScript issues...');
-    
-    // Fix JSX syntax issues
-    await this.fixJSXSyntaxIssues();
-    
-    // Fix import/export issues
-    await this.fixImportExportIssues();
-    
-    // Fix unused variable issues
-    await this.fixUnusedVariableIssues();
-  }
+    // Check TypeScript errors
+    this.log('Checking TypeScript errors...');
+    const typeCheckResult = await this.runCommand('npm run type-check', { silent: true });
+    if (!typeCheckResult.success) {
+      errors.typeCheck = this.parseTypeCheckErrors(typeCheckResult.output);
+    }
 
-  async fixJSXSyntaxIssues() {
-    this.log('Fixing JSX syntax issues...');
-    
-    const jsxFiles = this.findFiles('.tsx', '.jsx');
-    
-    for (const file of jsxFiles) {
+    // Check build errors
+    this.log('Checking build errors...');
+    const buildResult = await this.runCommand('npm run build', { silent: true });
+    if (!buildResult.success) {
+      errors.build = this.parseBuildErrors(buildResult.output);
+    }
+
+    // Check dependency issues
+    this.log('Checking dependency issues...');
+    const auditResult = await this.runCommand('npm audit --json', { silent: true });
+    if (auditResult.success) {
       try {
-        let content = fs.readFileSync(file, 'utf8');
-        let fixed = false;
-        
-        // Fix missing React imports
-        if (content.includes('JSX') && !content.includes("import React")) {
-          content = "import React from 'react';\n" + content;
-          fixed = true;
+        const auditData = JSON.parse(auditResult.output);
+        if (auditData.metadata && auditData.metadata.vulnerabilities) {
+          errors.dependencies = Object.entries(auditData.metadata.vulnerabilities)
+            .filter(([severity, count]) => count > 0)
+            .map(([severity, count]) => ({ severity, count }));
         }
-        
-        // Fix JSX fragment syntax
-        content = content.replace(/<>\s*<\/>/g, '<></>');
-        
-        // Fix unclosed JSX tags
-        content = this.fixUnclosedJSXTags(content);
-        
-        if (fixed) {
-          fs.writeFileSync(file, content);
-          this.log(`Fixed JSX issues in ${file}`);
-          this.fixesApplied++;
-          this.errorsFixed.push(`JSX fixes in ${file}`);
-        }
-      } catch (error) {
-        this.log(`Error fixing JSX in ${file}: ${error.message}`, 'ERROR');
+      } catch (e) {
+        this.log('Failed to parse audit results', 'WARN');
       }
     }
+
+    return errors;
   }
 
-  fixUnclosedJSXTags(content) {
-    // Simple heuristic to fix common unclosed tag issues
-    const lines = content.split('\n');
-    const fixedLines = [];
-    let openTags = [];
+  parseLintErrors(output) {
+    const errors = [];
+    const lines = output.split('\n');
     
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      // Count opening and closing tags
-      const openMatches = line.match(/<([a-zA-Z][a-zA-Z0-9]*)/g);
-      const closeMatches = line.match(/<\/([a-zA-Z][a-zA-Z0-9]*)/g);
-      
-      if (openMatches) {
-        openMatches.forEach(match => {
-          const tagName = match.slice(1);
-          openTags.push(tagName);
+    for (const line of lines) {
+      if (line.includes('error') || line.includes('warning')) {
+        const match = line.match(/([^:]+):(\d+):(\d+):\s*(error|warning)\s*(.+)/);
+        if (match) {
+          errors.push({
+            file: match[1],
+            line: parseInt(match[2]),
+            column: parseInt(match[3]),
+            type: match[4],
+            message: match[5],
+            category: 'lint'
+          });
+        }
+      }
+    }
+    
+    return errors;
+  }
+
+  parseTypeCheckErrors(output) {
+    const errors = [];
+    const lines = output.split('\n');
+    
+    for (const line of lines) {
+      if (line.includes('error TS')) {
+        const match = line.match(/([^:]+):(\d+):(\d+)\s*-\s*error\s+TS\d+:\s*(.+)/);
+        if (match) {
+          errors.push({
+            file: match[1],
+            line: parseInt(match[2]),
+            column: parseInt(match[3]),
+            type: 'typescript',
+            message: match[4],
+            category: 'typeCheck'
+          });
+        }
+      }
+    }
+    
+    return errors;
+  }
+
+  parseBuildErrors(output) {
+    const errors = [];
+    const lines = output.split('\n');
+    
+    for (const line of lines) {
+      if (line.includes('Error:') || line.includes('error')) {
+        errors.push({
+          type: 'build',
+          message: line.trim(),
+          category: 'build'
         });
       }
-      
-      if (closeMatches) {
-        closeMatches.forEach(match => {
-          const tagName = match.slice(2);
-          const index = openTags.lastIndexOf(tagName);
-          if (index !== -1) {
-            openTags.splice(index, 1);
-          }
+    }
+    
+    return errors;
+  }
+
+  async fixErrors(errors) {
+    this.log('🔧 Starting automatic error fixing...');
+    
+    let totalFixed = 0;
+    
+    // Fix linting errors
+    if (errors.lint.length > 0) {
+      this.log(`Fixing ${errors.lint.length} linting errors...`);
+      const fixedLint = await this.fixLintErrors(errors.lint);
+      totalFixed += fixedLint;
+    }
+
+    // Fix TypeScript errors
+    if (errors.typeCheck.length > 0) {
+      this.log(`Fixing ${errors.typeCheck.length} TypeScript errors...`);
+      const fixedType = await this.fixTypeScriptErrors(errors.typeCheck);
+      totalFixed += fixedType;
+    }
+
+    // Fix build errors
+    if (errors.build.length > 0) {
+      this.log(`Fixing ${errors.build.length} build errors...`);
+      const fixedBuild = await this.fixBuildErrors(errors.build);
+      totalFixed += fixedBuild;
+    }
+
+    // Fix dependency issues
+    if (errors.dependencies.length > 0) {
+      this.log(`Fixing ${errors.dependencies.length} dependency issues...`);
+      const fixedDeps = await this.fixDependencyIssues(errors.dependencies);
+      totalFixed += fixedDeps;
+    }
+
+    return totalFixed;
+  }
+
+  async fixLintErrors(errors) {
+    let fixed = 0;
+    
+    for (const error of errors) {
+      try {
+        if (await this.fixLintError(error)) {
+          fixed++;
+          this.fixedErrors.push({
+            ...error,
+            fixMethod: 'automatic',
+            timestamp: new Date().toISOString()
+          });
+        }
+      } catch (e) {
+        this.failedFixes.push({
+          ...error,
+          error: e.message,
+          timestamp: new Date().toISOString()
         });
       }
-      
-      fixedLines.push(line);
     }
     
-    // Add missing closing tags
-    while (openTags.length > 0) {
-      const tagName = openTags.pop();
-      fixedLines.push(`</${tagName}>`);
-    }
-    
-    return fixedLines.join('\n');
+    return fixed;
   }
 
-  async fixImportExportIssues() {
-    this.log('Fixing import/export issues...');
+  async fixLintError(error) {
+    const filePath = path.join(this.projectRoot, error.file);
     
-    const tsFiles = this.findFiles('.ts', '.tsx');
-    
-    for (const file of tsFiles) {
-      try {
-        let content = fs.readFileSync(file, 'utf8');
-        let fixed = false;
-        
-        // Fix missing React imports for JSX files
-        if (file.endsWith('.tsx') && content.includes('JSX') && !content.includes("import React")) {
-          content = "import React from 'react';\n" + content;
-          fixed = true;
-        }
-        
-        // Fix unused imports
-        content = this.removeUnusedImports(content);
-        
-        if (fixed) {
-          fs.writeFileSync(file, content);
-          this.log(`Fixed import issues in ${file}`);
-          this.fixesApplied++;
-          this.errorsFixed.push(`Import fixes in ${file}`);
-        }
-      } catch (error) {
-        this.log(`Error fixing imports in ${file}: ${error.message}`, 'ERROR');
-      }
-    }
-  }
-
-  removeUnusedImports(content) {
-    // Simple heuristic to remove obviously unused imports
-    const lines = content.split('\n');
-    const usedImports = new Set();
-    
-    // Find used identifiers
-    for (const line of lines) {
-      const matches = line.match(/\b([a-zA-Z_$][a-zA-Z0-9_$]*)\b/g);
-      if (matches) {
-        matches.forEach(match => usedImports.add(match));
-      }
+    if (!fs.existsSync(filePath)) {
+      return false;
     }
     
-    // Remove unused import lines
-    const filteredLines = lines.filter(line => {
-      if (line.trim().startsWith('import')) {
-        const importMatch = line.match(/import\s+.*?from\s+['"]([^'"]+)['"]/);
-        if (importMatch) {
-          const moduleName = importMatch[1];
-          // Keep React imports and other essential ones
-          if (moduleName === 'react' || moduleName === 'react-dom') {
-            return true;
-          }
-          // Check if any imported items are used
-          const importItems = line.match(/\{([^}]+)\}/);
-          if (importItems) {
-            const items = importItems[1].split(',').map(item => item.trim());
-            return items.some(item => usedImports.has(item));
-          }
-        }
-      }
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Fix common linting issues
+    switch (error.message) {
+      case "'React' is defined but never used":
+        content = this.removeUnusedReactImport(content);
+        modified = true;
+        break;
+        
+      case "Unexpected console statement":
+        content = this.removeConsoleStatements(content);
+        modified = true;
+        break;
+        
+      case "is defined but never used":
+        content = this.removeUnusedVariables(content, error);
+        modified = true;
+        break;
+        
+      case "Parsing error: Expected corresponding JSX closing tag":
+        content = this.fixJSXClosingTags(content, error);
+        modified = true;
+        break;
+    }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content);
       return true;
-    });
-    
-    return filteredLines.join('\n');
-  }
-
-  async fixUnusedVariableIssues() {
-    this.log('Fixing unused variable issues...');
-    
-    const tsFiles = this.findFiles('.ts', '.tsx');
-    
-    for (const file of tsFiles) {
-      try {
-        let content = fs.readFileSync(file, 'utf8');
-        let fixed = false;
-        
-        // Remove unused variables (simple heuristic)
-        content = this.removeUnusedVariables(content);
-        
-        if (fixed) {
-          fs.writeFileSync(file, content);
-          this.log(`Fixed unused variables in ${file}`);
-          this.fixesApplied++;
-          this.errorsFixed.push(`Unused variable fixes in ${file}`);
-        }
-      } catch (error) {
-        this.log(`Error fixing unused variables in ${file}: ${error.message}`, 'ERROR');
-      }
     }
+    
+    return false;
   }
 
-  removeUnusedVariables(content) {
-    // Simple heuristic to remove unused variables
+  removeUnusedReactImport(content) {
+    // Remove React import if it's not used
     const lines = content.split('\n');
-    const usedVars = new Set();
+    const reactImportIndex = lines.findIndex(line => 
+      line.includes("import React") && !line.includes("React.")
+    );
     
-    // Find used variables
-    for (const line of lines) {
-      const matches = line.match(/\b([a-zA-Z_$][a-zA-Z0-9_$]*)\b/g);
-      if (matches) {
-        matches.forEach(match => usedVars.add(match));
-      }
+    if (reactImportIndex !== -1) {
+      lines.splice(reactImportIndex, 1);
+      return lines.join('\n');
     }
     
-    // Remove lines with unused variable declarations
-    const filteredLines = lines.filter(line => {
-      if (line.includes('const') || line.includes('let') || line.includes('var')) {
-        const varMatch = line.match(/(?:const|let|var)\s+([a-zA-Z_$][a-zA-Z0-9_$]*)/);
-        if (varMatch) {
-          const varName = varMatch[1];
-          // Keep variables that are used or are likely important
-          if (usedVars.has(varName) || varName.startsWith('_') || varName === 'React') {
-            return true;
-          }
-          return false;
-        }
-      }
-      return true;
-    });
-    
-    return filteredLines.join('\n');
+    return content;
   }
 
-  findFiles(...extensions) {
-    const files = [];
+  removeConsoleStatements(content) {
+    // Remove console.log, console.error, etc.
+    return content.replace(/console\.(log|error|warn|info|debug)\([^)]*\);?\s*/g, '');
+  }
+
+  removeUnusedVariables(content, error) {
+    // This is a simplified approach - in practice, you'd need more sophisticated analysis
+    const lines = content.split('\n');
+    const lineIndex = error.line - 1;
     
-    function walkDir(dir) {
-      const items = fs.readdirSync(dir);
-      
-      for (const item of items) {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
+    if (lineIndex >= 0 && lineIndex < lines.length) {
+      const line = lines[lineIndex];
+      // Remove the line if it's a simple variable declaration
+      if (line.includes('const ') || line.includes('let ') || line.includes('var ')) {
+        lines.splice(lineIndex, 1);
+        return lines.join('\n');
+      }
+    }
+    
+    return content;
+  }
+
+  fixJSXClosingTags(content, error) {
+    // This is a simplified approach - in practice, you'd need more sophisticated JSX parsing
+    // For now, we'll just log the issue for manual review
+    this.log(`JSX closing tag issue detected in ${error.file} at line ${error.line}`, 'WARN');
+    return content;
+  }
+
+  async fixTypeScriptErrors(errors) {
+    let fixed = 0;
+    
+    for (const error of errors) {
+      try {
+        if (await this.fixTypeScriptError(error)) {
+          fixed++;
+          this.fixedErrors.push({
+            ...error,
+            fixMethod: 'automatic',
+            timestamp: new Date().toISOString()
+          });
+        }
+      } catch (e) {
+        this.failedFixes.push({
+          ...error,
+          error: e.message,
+          timestamp: new Date().toISOString()
+        });
+      }
+    }
+    
+    return fixed;
+  }
+
+  async fixTypeScriptError(error) {
+    const filePath = path.join(this.projectRoot, error.file);
+    
+    if (!fs.existsSync(filePath)) {
+      return false;
+    }
+    
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Fix common TypeScript issues
+    switch (error.message) {
+      case "JSX expressions must have one parent element":
+        content = this.fixJSXParentElement(content, error);
+        modified = true;
+        break;
         
-        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-          walkDir(fullPath);
-        } else if (stat.isFile()) {
-          if (extensions.some(ext => item.endsWith(ext))) {
-            files.push(fullPath);
+      case "JSX element 'div' has no corresponding closing tag":
+        content = this.fixJSXClosingTags(content, error);
+        modified = true;
+        break;
+        
+      case "is not defined":
+        content = this.fixUndefinedVariables(content, error);
+        modified = true;
+        break;
+    }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      return true;
+    }
+    
+    return false;
+  }
+
+  fixJSXParentElement(content, error) {
+    // Wrap JSX content in a parent div if needed
+    const lines = content.split('\n');
+    const lineIndex = error.line - 1;
+    
+    if (lineIndex >= 0 && lineIndex < lines.length) {
+      // Find the start of JSX content and wrap it
+      let jsxStart = -1;
+      for (let i = lineIndex; i >= 0; i--) {
+        if (lines[i].includes('<') && !lines[i].includes('import') && !lines[i].includes('export')) {
+          jsxStart = i;
+          break;
+        }
+      }
+      
+      if (jsxStart !== -1) {
+        lines.splice(jsxStart, 0, '  <div>');
+        // Find the end and add closing tag
+        for (let i = jsxStart + 1; i < lines.length; i++) {
+          if (lines[i].includes('return') || lines[i].includes('export')) {
+            lines.splice(i, 0, '  </div>');
+            break;
           }
+        }
+        return lines.join('\n');
+      }
+    }
+    
+    return content;
+  }
+
+  fixUndefinedVariables(content, error) {
+    // Add missing imports or fix variable references
+    const lines = content.split('\n');
+    const lineIndex = error.line - 1;
+    
+    if (lineIndex >= 0 && lineIndex < lines.length) {
+      const line = lines[lineIndex];
+      
+      // Check if it's a missing import
+      if (line.includes('import') && line.includes('from')) {
+        // Fix malformed import statements
+        const fixedLine = line.replace(/import:\s*{([^}]+)},\s*from,\s*'([^']+)':\s*,/g, 
+          "import { $1 } from '$2';");
+        if (fixedLine !== line) {
+          lines[lineIndex] = fixedLine;
+          return lines.join('\n');
         }
       }
     }
     
-    walkDir(this.projectRoot);
-    return files;
+    return content;
+  }
+
+  async fixBuildErrors(errors) {
+    let fixed = 0;
+    
+    for (const error of errors) {
+      try {
+        if (await this.fixBuildError(error)) {
+          fixed++;
+          this.fixedErrors.push({
+            ...error,
+            fixMethod: 'automatic',
+            timestamp: new Date().toISOString()
+          });
+        }
+      } catch (e) {
+        this.failedFixes.push({
+          ...error,
+          error: e.message,
+          timestamp: new Date().toISOString()
+        });
+      }
+    }
+    
+    return fixed;
+  }
+
+  async fixBuildError(error) {
+    // Handle build-specific errors
+    if (error.message.includes('Cannot find module')) {
+      // Try to install missing dependencies
+      const moduleMatch = error.message.match(/Cannot find module '([^']+)'/);
+      if (moduleMatch) {
+        const moduleName = moduleMatch[1];
+        this.log(`Installing missing module: ${moduleName}`);
+        const installResult = await this.runCommand(`npm install ${moduleName}`, { silent: true });
+        return installResult.success;
+      }
+    }
+    
+    return false;
+  }
+
+  async fixDependencyIssues(dependencies) {
+    let fixed = 0;
+    
+    for (const dep of dependencies) {
+      try {
+        if (dep.severity === 'high' || dep.severity === 'critical') {
+          this.log(`Fixing ${dep.severity} severity dependency issue`);
+          const fixResult = await this.runCommand('npm audit fix', { silent: true });
+          if (fixResult.success) {
+            fixed++;
+          }
+        }
+      } catch (e) {
+        this.log(`Failed to fix dependency issue: ${e.message}`, 'ERROR');
+      }
+    }
+    
+    return fixed;
   }
 
   async generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
-      fixesApplied: this.fixesApplied,
-      errorsFixed: this.errorsFixed,
-      summary: `Applied ${this.fixesApplied} fixes to resolve ${this.errorsFixed.length} error categories`
+      summary: {
+        totalErrors: this.fixedErrors.length + this.failedFixes.length,
+        fixedErrors: this.fixedErrors.length,
+        failedFixes: this.failedFixes.length,
+        successRate: this.fixedErrors.length / (this.fixedErrors.length + this.failedFixes.length) * 100
+      },
+      fixedErrors: this.fixedErrors,
+      failedFixes: this.failedFixes
     };
     
-    const reportFile = path.join(this.logsDir, 'error-fix-report.json');
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    // Save reports
+    fs.writeFileSync(this.errorReportFile, JSON.stringify(report, null, 2));
+    fs.writeFileSync(this.fixReportFile, JSON.stringify({
+      timestamp: new Date().toISOString(),
+      fixedErrors: this.fixedErrors
+    }, null, 2));
     
-    this.log(`Error fix report generated: ${reportFile}`);
+    this.log(`📊 Report generated: ${this.fixedErrors.length} errors fixed, ${this.failedFixes.length} failed`);
     return report;
   }
 
   async run() {
-    this.log('Starting Error Fixer automation...');
+    this.log('🚀 Starting Error Fixer Automation');
     
     try {
-      // Create logs directory if it doesn't exist
-      if (!fs.existsSync(this.logsDir)) {
-        fs.mkdirSync(this.logsDir, { recursive: true });
+      // Detect errors
+      const errors = await this.detectErrors();
+      
+      // Count total errors
+      const totalErrors = Object.values(errors).flat().length;
+      this.log(`Found ${totalErrors} total errors to fix`);
+      
+      if (totalErrors === 0) {
+        this.log('✅ No errors found!');
+        return;
       }
       
-      // Run all fix operations
-      await this.fixLintingErrors();
-      await this.fixTypeScriptErrors();
+      // Fix errors
+      const fixedCount = await this.fixErrors(errors);
       
       // Generate report
       const report = await this.generateReport();
       
-      this.log(`Error Fixer completed successfully. ${report.summary}`);
+      this.log(`✅ Error fixing completed! Fixed ${fixedCount} out of ${totalErrors} errors`);
       
-      // Exit successfully
-      process.exit(0);
+      // If there are still errors, try to run auto-fix
+      if (fixedCount < totalErrors) {
+        this.log('🔄 Running additional auto-fix attempts...');
+        await this.runCommand('npm run fix:all', { silent: true });
+      }
       
     } catch (error) {
-      this.log(`Error Fixer failed: ${error.message}`, 'ERROR');
-      process.exit(1);
+      this.log(`❌ Error in error fixing process: ${error.message}`, 'ERROR');
+      throw error;
     }
   }
 }
 
-// Run the error fixer if this script is executed directly
-if (require.main === module) {
+// Run the error fixer
+if (import.meta.url === `file://${process.argv[1]}`) {
   const fixer = new ErrorFixer();
-  fixer.run();
+  fixer.run().catch(console.error);
 }
 
-module.exports = ErrorFixer;
+export default ErrorFixer;

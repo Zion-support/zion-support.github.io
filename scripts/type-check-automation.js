@@ -1,18 +1,20 @@
 #!/usr/bin/env node
 
-const { spawn } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 class TypeCheckAutomation {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.logsDir = path.join(this.projectRoot, 'logs');
-    this.isRunning = false;
-    this.checkInterval = 10 * 60 * 1000; // 10 minutes
-    this.lastCheck = null;
-    this.errorCount = 0;
-    this.lastErrorReport = null;
+    this.projectRoot = path.resolve(__dirname, '..');
+    this.logFile = path.join(this.projectRoot, 'logs', 'type-check-automation.log');
+    this.typeCheckReportFile = path.join(this.projectRoot, 'logs', 'type-check-report.json');
+    this.fixedErrors = [];
+    this.remainingErrors = [];
   }
 
   log(message, level = 'INFO') {
@@ -20,411 +22,364 @@ class TypeCheckAutomation {
     const logMessage = `[${timestamp}] [${level}] ${message}`;
     console.log(logMessage);
     
-    // Write to log file
-    const logFile = path.join(this.logsDir, 'type-check-automation.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
-  }
-
-  async runTypeCheck() {
-    if (this.isRunning) {
-      this.log('Type check already in progress, skipping...', 'WARN');
-      return;
-    }
-
-    this.isRunning = true;
-    this.log('Starting TypeScript type check...');
-
-    try {
-      const result = await this.runCommand('npm', { args: ['run', 'type-check'] });
-      this.log('TypeScript check completed successfully - no errors found');
-      this.lastCheck = new Date();
-      this.errorCount = 0;
-      
-      // Clear error report if no errors
-      if (this.lastErrorReport) {
-        this.lastErrorReport = null;
-      }
-    } catch (error) {
-      this.errorCount++;
-      this.log(`TypeScript check failed with ${this.errorCount} error(s): ${error.stderr || error.message}`, 'WARN');
-      
-      // Store error details for analysis
-      this.lastErrorReport = {
-        timestamp: new Date().toISOString(),
-        errorCount: this.errorCount,
-        errorOutput: error.stderr || error.message
-      };
-      
-      // Try to auto-fix common TypeScript issues
-      await this.autoFixTypeScriptIssues();
-    } finally {
-      this.isRunning = false;
-    }
-  }
-
-  async autoFixTypeScriptIssues() {
-    this.log('Attempting to auto-fix TypeScript issues...');
-    
-    try {
-      // Fix common JSX syntax issues
-      await this.fixJSXSyntaxIssues();
-      
-      // Fix import/export issues
-      await this.fixImportExportIssues();
-      
-      // Fix type annotation issues
-      await this.fixTypeAnnotationIssues();
-      
-      // Run type check again to verify fixes
-      await this.verifyFixes();
-    } catch (error) {
-      this.log(`Auto-fix failed: ${error.message}`, 'ERROR');
-    }
-  }
-
-  async fixJSXSyntaxIssues() {
-    this.log('Fixing JSX syntax issues...');
-    
-    const jsxFiles = this.findFiles('.tsx', '.jsx');
-    let fixedCount = 0;
-    
-    for (const file of jsxFiles) {
-      try {
-        let content = fs.readFileSync(file, 'utf8');
-        let fixed = false;
-        
-        // Fix missing React imports for JSX files
-        if (file.endsWith('.tsx') && content.includes('JSX') && !content.includes("import React")) {
-          content = "import React from 'react';\n" + content;
-          fixed = true;
-        }
-        
-        // Fix JSX fragment syntax
-        content = content.replace(/<>\s*<\/>/g, '<></>');
-        
-        // Fix unclosed JSX tags
-        content = this.fixUnclosedJSXTags(content);
-        
-        if (fixed) {
-          fs.writeFileSync(file, content);
-          fixedCount++;
-          this.log(`Fixed JSX issues in ${file}`);
-        }
-      } catch (error) {
-        this.log(`Error fixing JSX in ${file}: ${error.message}`, 'ERROR');
-      }
-    }
-    
-    if (fixedCount > 0) {
-      this.log(`Fixed JSX issues in ${fixedCount} files`);
-    }
-  }
-
-  fixUnclosedJSXTags(content) {
-    // Simple heuristic to fix common unclosed tag issues
-    const lines = content.split('\n');
-    const fixedLines = [];
-    let openTags = [];
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      // Count opening and closing tags
-      const openMatches = line.match(/<([a-zA-Z][a-zA-Z0-9]*)/g);
-      const closeMatches = line.match(/<\/([a-zA-Z][a-zA-Z0-9]*)/g);
-      
-      if (openMatches) {
-        openMatches.forEach(match => {
-          const tagName = match.slice(1);
-          openTags.push(tagName);
-        });
-      }
-      
-      if (closeMatches) {
-        closeMatches.forEach(match => {
-          const tagName = match.slice(2);
-          const index = openTags.lastIndexOf(tagName);
-          if (index !== -1) {
-            openTags.splice(index, 1);
-          }
-        });
-      }
-      
-      fixedLines.push(line);
-    }
-    
-    // Add missing closing tags
-    while (openTags.length > 0) {
-      const tagName = openTags.pop();
-      fixedLines.push(`</${tagName}>`);
-    }
-    
-    return fixedLines.join('\n');
-  }
-
-  async fixImportExportIssues() {
-    this.log('Fixing import/export issues...');
-    
-    const tsFiles = this.findFiles('.ts', '.tsx');
-    let fixedCount = 0;
-    
-    for (const file of tsFiles) {
-      try {
-        let content = fs.readFileSync(file, 'utf8');
-        let fixed = false;
-        
-        // Fix missing React imports for JSX files
-        if (file.endsWith('.tsx') && content.includes('JSX') && !content.includes("import React")) {
-          content = "import React from 'react';\n" + content;
-          fixed = true;
-        }
-        
-        // Fix unused imports
-        content = this.removeUnusedImports(content);
-        
-        if (fixed) {
-          fs.writeFileSync(file, content);
-          fixedCount++;
-          this.log(`Fixed import issues in ${file}`);
-        }
-      } catch (error) {
-        this.log(`Error fixing imports in ${file}: ${error.message}`, 'ERROR');
-      }
-    }
-    
-    if (fixedCount > 0) {
-      this.log(`Fixed import issues in ${fixedCount} files`);
-    }
-  }
-
-  removeUnusedImports(content) {
-    // Simple heuristic to remove obviously unused imports
-    const lines = content.split('\n');
-    const usedImports = new Set();
-    
-    // Find used identifiers
-    for (const line of lines) {
-      const matches = line.match(/\b([a-zA-Z_$][a-zA-Z0-9_$]*)\b/g);
-      if (matches) {
-        matches.forEach(match => usedImports.add(match));
-      }
-    }
-    
-    // Remove unused import lines
-    const filteredLines = lines.filter(line => {
-      if (line.trim().startsWith('import')) {
-        const importMatch = line.match(/import\s+.*?from\s+['"]([^'"]+)['"]/);
-        if (importMatch) {
-          const moduleName = importMatch[1];
-          // Keep React imports and other essential ones
-          if (moduleName === 'react' || moduleName === 'react-dom') {
-            return true;
-          }
-          // Check if any imported items are used
-          const importItems = line.match(/\{([^}]+)\}/);
-          if (importItems) {
-            const items = importItems[1].split(',').map(item => item.trim());
-            return items.some(item => usedImports.has(item));
-          }
-        }
-      }
-      return true;
-    });
-    
-    return filteredLines.join('\n');
-  }
-
-  async fixTypeAnnotationIssues() {
-    this.log('Fixing type annotation issues...');
-    
-    const tsFiles = this.findFiles('.ts', '.tsx');
-    let fixedCount = 0;
-    
-    for (const file of tsFiles) {
-      try {
-        let content = fs.readFileSync(file, 'utf8');
-        let fixed = false;
-        
-        // Fix common type annotation issues
-        content = this.fixCommonTypeIssues(content);
-        
-        if (fixed) {
-          fs.writeFileSync(file, content);
-          fixedCount++;
-          this.log(`Fixed type issues in ${file}`);
-        }
-      } catch (error) {
-        this.log(`Error fixing types in ${file}: ${error.message}`, 'ERROR');
-      }
-    }
-    
-    if (fixedCount > 0) {
-      this.log(`Fixed type issues in ${fixedCount} files`);
-    }
-  }
-
-  fixCommonTypeIssues(content) {
-    // Fix common TypeScript type issues
-    let fixed = false;
-    
-    // Fix missing return type annotations
-    content = content.replace(
-      /function\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(/g,
-      'function $1(): any('
-    );
-    
-    // Fix missing parameter types
-    content = content.replace(
-      /\(\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:/g,
-      '($1: any:'
-    );
-    
-    // Fix missing variable types
-    content = content.replace(
-      /(?:const|let|var)\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*([^;]+);/g,
-      (match, varName, value) => {
-        if (value.includes('useState') || value.includes('useEffect')) {
-          return match; // Keep React hooks as is
-        }
-        return `const ${varName}: any = ${value};`;
-      }
-    );
-    
-    return content;
-  }
-
-  async verifyFixes() {
-    this.log('Verifying TypeScript fixes...');
-    
-    try {
-      const result = await this.runCommand('npm', { args: ['run', 'type-check'] });
-      this.log('Verification successful - all TypeScript issues resolved');
-    } catch (error) {
-      this.log(`Verification failed - some TypeScript issues remain: ${error.stderr || error.message}`, 'WARN');
-      
-      // Generate detailed report of remaining issues
-      await this.generateTypeCheckReport();
-    }
-  }
-
-  async generateTypeCheckReport() {
-    this.log('Generating TypeScript check report...');
-    
-    const report = {
-      timestamp: new Date().toISOString(),
-      errorCount: this.errorCount,
-      lastErrorReport: this.lastErrorReport,
-      summary: `TypeScript check failed with ${this.errorCount} error(s)`
-    };
-    
-    const reportFile = path.join(this.logsDir, 'typescript-check-report.json');
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    
-    this.log(`TypeScript check report generated: ${reportFile}`);
+    // Append to log file
+    fs.appendFileSync(this.logFile, logMessage + '\n');
   }
 
   async runCommand(command, options = {}) {
-    return new Promise((resolve, reject) => {
-      const child = spawn(command, options.args || [], {
-        shell: true,
-        stdio: 'pipe',
+    try {
+      const result = execSync(command, {
         cwd: this.projectRoot,
+        encoding: 'utf8',
+        stdio: options.silent ? 'pipe' : 'inherit',
         ...options
       });
-
-      let stdout = '';
-      let stderr = '';
-
-      child.stdout.on('data', (data) => {
-        stdout += data.toString();
-      });
-
-      child.stderr.on('data', (data) => {
-        stderr += data.toString();
-      });
-
-      child.on('close', (code) => {
-        if (code === 0) {
-          resolve({ stdout, stderr, code });
-        } else {
-          reject({ stdout, stderr, code });
-        }
-      });
-
-      child.on('error', (error) => {
-        reject({ error, stdout, stderr });
-      });
-    });
+      return { success: true, output: result };
+    } catch (error) {
+      return { success: false, error: error.message, output: error.stdout || '' };
+    }
   }
 
-  findFiles(...extensions) {
-    const files = [];
+  async runTypeCheck() {
+    this.log('🔍 Running TypeScript type checking...');
     
-    function walkDir(dir) {
-      const items = fs.readdirSync(dir);
-      
-      for (const item of items) {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-          walkDir(fullPath);
-        } else if (stat.isFile()) {
-          if (extensions.some(ext => item.endsWith(ext))) {
-            files.push(fullPath);
-          }
+    const typeCheckResult = await this.runCommand('npm run type-check', { silent: true });
+    
+    if (typeCheckResult.success) {
+      this.log('✅ No TypeScript errors found');
+      return { success: true, errors: [] };
+    }
+    
+    // Parse TypeScript output
+    const errors = this.parseTypeCheckOutput(typeCheckResult.output);
+    this.log(`Found ${errors.length} TypeScript errors`);
+    
+    return { success: false, errors };
+  }
+
+  parseTypeCheckOutput(output) {
+    const errors = [];
+    const lines = output.split('\n');
+    
+    for (const line of lines) {
+      if (line.includes('error TS')) {
+        const match = line.match(/([^:]+):(\d+):(\d+)\s*-\s*error\s+TS\d+:\s*(.+)/);
+        if (match) {
+          errors.push({
+            file: match[1],
+            line: parseInt(match[2]),
+            column: parseInt(match[3]),
+            message: match[4],
+            category: this.categorizeError(match[4]),
+            tsCode: this.extractTSCode(line)
+          });
         }
       }
     }
     
-    walkDir(this.projectRoot);
-    return files;
+    return errors;
   }
 
-  async startMonitoring() {
-    this.log('Starting TypeScript check automation monitoring...');
+  extractTSCode(line) {
+    const match = line.match(/error\s+(TS\d+):/);
+    return match ? match[1] : null;
+  }
+
+  categorizeError(message) {
+    if (message.includes('JSX expressions must have one parent element')) {
+      return 'jsx-parent-element';
+    } else if (message.includes('JSX element') && message.includes('has no corresponding closing tag')) {
+      return 'jsx-closing-tags';
+    } else if (message.includes('is not defined')) {
+      return 'undefined-references';
+    } else if (message.includes('Cannot find module')) {
+      return 'module-not-found';
+    } else if (message.includes('Type') && message.includes('is not assignable')) {
+      return 'type-mismatch';
+    } else if (message.includes('Property') && message.includes('does not exist')) {
+      return 'property-access';
+    } else if (message.includes('Expected') && message.includes('got')) {
+      return 'syntax-error';
+    } else {
+      return 'other';
+    }
+  }
+
+  async fixTypeErrors(errors) {
+    this.log('🔧 Starting automatic TypeScript error fixing...');
     
-    // Create logs directory if it doesn't exist
-    if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursive: true });
+    let fixedCount = 0;
+    
+    for (const error of errors) {
+      try {
+        if (await this.fixTypeError(error)) {
+          fixedCount++;
+          this.fixedErrors.push({
+            ...error,
+            fixMethod: 'automatic',
+            timestamp: new Date().toISOString()
+          });
+        } else {
+          this.remainingErrors.push({
+            ...error,
+            timestamp: new Date().toISOString()
+          });
+        }
+      } catch (error) {
+        this.log(`Failed to fix TypeScript error: ${error.message}`, 'ERROR');
+        this.remainingErrors.push({
+          ...error,
+          error: error.message,
+          timestamp: new Date().toISOString()
+        });
+      }
     }
     
-    // Initial check
-    await this.runTypeCheck();
+    return fixedCount;
+  }
+
+  async fixTypeError(error) {
+    const filePath = path.join(this.projectRoot, error.file);
     
-    // Set up periodic checks
-    setInterval(async () => {
-      await this.runTypeCheck();
-    }, this.checkInterval);
+    if (!fs.existsSync(filePath)) {
+      return false;
+    }
     
-    this.log(`TypeScript check automation monitoring started. Checking every ${this.checkInterval / 1000 / 60} minutes.`);
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
     
-    // Keep the process alive
-    process.on('SIGINT', () => {
-      this.log('Received SIGINT, shutting down gracefully...');
-      process.exit(0);
+    switch (error.category) {
+      case 'jsx-parent-element':
+        modified = this.fixJSXParentElement(content, error);
+        break;
+        
+      case 'jsx-closing-tags':
+        modified = this.fixJSXClosingTags(content, error);
+        break;
+        
+      case 'undefined-references':
+        modified = this.fixUndefinedReferences(content, error);
+        break;
+        
+      case 'module-not-found':
+        modified = this.fixModuleNotFound(content, error);
+        break;
+        
+      case 'type-mismatch':
+        modified = this.fixTypeMismatch(content, error);
+        break;
+        
+      case 'property-access':
+        modified = this.fixPropertyAccess(content, error);
+        break;
+        
+      case 'syntax-error':
+        modified = this.fixSyntaxError(content, error);
+        break;
+    }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      return true;
+    }
+    
+    return false;
+  }
+
+  fixJSXParentElement(content, error) {
+    const lines = content.split('\n');
+    const lineIndex = error.line - 1;
+    
+    if (lineIndex >= 0 && lineIndex < lines.length) {
+      // Find the start of JSX content and wrap it
+      let jsxStart = -1;
+      for (let i = lineIndex; i >= 0; i--) {
+        if (lines[i].includes('<') && !lines[i].includes('import') && !lines[i].includes('export')) {
+          jsxStart = i;
+          break;
+        }
+      }
+      
+      if (jsxStart !== -1) {
+        lines.splice(jsxStart, 0, '  <div>');
+        // Find the end and add closing tag
+        for (let i = jsxStart + 1; i < lines.length; i++) {
+          if (lines[i].includes('return') || lines[i].includes('export')) {
+            lines.splice(i, 0, '  </div>');
+            break;
+          }
+        }
+        return true;
+      }
+    }
+    
+    return false;
+  }
+
+  fixJSXClosingTags(content, error) {
+    // This is a simplified approach - in practice, you'd need more sophisticated JSX parsing
+    this.log(`JSX closing tag issue detected in ${error.file} at line ${error.line} - requires manual review`, 'WARN');
+    return false;
+  }
+
+  fixUndefinedReferences(content, error) {
+    const lines = content.split('\n');
+    const lineIndex = error.line - 1;
+    
+    if (lineIndex >= 0 && lineIndex < lines.length) {
+      const line = lines[lineIndex];
+      
+      // Check if it's a missing import
+      if (line.includes('import') && line.includes('from')) {
+        // Fix malformed import statements
+        const fixedLine = line.replace(/import:\s*{([^}]+)},\s*from,\s*'([^']+)':\s*,/g, 
+          "import { $1 } from '$2';");
+        if (fixedLine !== line) {
+          lines[lineIndex] = fixedLine;
+          return true;
+        }
+      }
+      
+      // Check if it's a missing variable declaration
+      if (line.includes('const') || line.includes('let') || line.includes('var')) {
+        // Fix malformed variable declarations
+        const fixedLine = line.replace(/const:\s*([^=]+)=/g, 'const $1 =');
+        if (fixedLine !== line) {
+          lines[lineIndex] = fixedLine;
+          return true;
+        }
+      }
+    }
+    
+    return false;
+  }
+
+  fixModuleNotFound(content, error) {
+    // This would typically require installing the missing module
+    // For now, we'll just log it for manual review
+    this.log(`Module not found issue in ${error.file} - requires manual dependency installation`, 'WARN');
+    return false;
+  }
+
+  fixTypeMismatch(content, error) {
+    // This is a simplified approach - in practice, you'd need more sophisticated type analysis
+    this.log(`Type mismatch issue in ${error.file} at line ${error.line} - requires manual review`, 'WARN');
+    return false;
+  }
+
+  fixPropertyAccess(content, error) {
+    // This is a simplified approach - in practice, you'd need more sophisticated type analysis
+    this.log(`Property access issue in ${error.file} at line ${error.line} - requires manual review`, 'WARN');
+    return false;
+  }
+
+  fixSyntaxError(content, error) {
+    // This is a simplified approach - in practice, you'd need more sophisticated parsing
+    this.log(`Syntax error in ${error.file} at line ${error.line} - requires manual review`, 'WARN');
+    return false;
+  }
+
+  async runBuildCheck() {
+    this.log('🔍 Running build check...');
+    
+    const buildResult = await this.runCommand('npm run build', { silent: true });
+    
+    if (buildResult.success) {
+      this.log('✅ Build completed successfully');
+      return true;
+    } else {
+      this.log('⚠️ Build failed - some TypeScript errors may remain', 'WARN');
+      return false;
+    }
+  }
+
+  async generateReport() {
+    const report = {
+      timestamp: new Date().toISOString(),
+      summary: {
+        totalErrors: this.fixedErrors.length + this.remainingErrors.length,
+        fixedErrors: this.fixedErrors.length,
+        remainingErrors: this.remainingErrors.length,
+        successRate: this.fixedErrors.length / (this.fixedErrors.length + this.remainingErrors.length) * 100
+      },
+      fixedErrors: this.fixedErrors,
+      remainingErrors: this.remainingErrors,
+      categories: this.analyzeCategories()
+    };
+    
+    // Save report
+    fs.writeFileSync(this.typeCheckReportFile, JSON.stringify(report, null, 2));
+    
+    this.log(`📊 Type check report generated: ${this.fixedErrors.length} errors fixed, ${this.remainingErrors.length} remaining`);
+    return report;
+  }
+
+  analyzeCategories() {
+    const categories = {};
+    
+    [...this.fixedErrors, ...this.remainingErrors].forEach(error => {
+      if (!categories[error.category]) {
+        categories[error.category] = { total: 0, fixed: 0, remaining: 0 };
+      }
+      categories[error.category].total++;
+      
+      if (this.fixedErrors.some(fixed => fixed.file === error.file && fixed.line === error.line)) {
+        categories[error.category].fixed++;
+      } else {
+        categories[error.category].remaining++;
+      }
     });
     
-    process.on('SIGTERM', () => {
-      this.log('Received SIGTERM, shutting down gracefully...');
-      process.exit(0);
-    });
+    return categories;
   }
 
   async run() {
+    this.log('🚀 Starting TypeScript Type Check Automation');
+    
     try {
-      await this.startMonitoring();
+      // Run initial type checking
+      const typeCheckResult = await this.runTypeCheck();
+      
+      if (typeCheckResult.success) {
+        this.log('✅ No TypeScript errors found');
+        return;
+      }
+      
+      // Fix errors automatically
+      const fixedCount = await this.fixTypeErrors(typeCheckResult.errors);
+      this.log(`Fixed ${fixedCount} TypeScript errors automatically`);
+      
+      // Run build check to verify fixes
+      const buildSuccess = await this.runBuildCheck();
+      
+      // Generate final report
+      const report = await this.generateReport();
+      
+      this.log(`✅ Type check automation completed! Fixed ${fixedCount} out of ${typeCheckResult.errors.length} errors`);
+      
+      // If there are still errors, log them for manual review
+      if (this.remainingErrors.length > 0) {
+        this.log(`⚠️ ${this.remainingErrors.length} TypeScript errors require manual review:`, 'WARN');
+        this.remainingErrors.forEach(error => {
+          this.log(`  - ${error.file}:${error.line} - ${error.message}`, 'WARN');
+        });
+      }
+      
+      if (!buildSuccess) {
+        this.log('⚠️ Build check failed - some TypeScript errors may still exist', 'WARN');
+      }
+      
     } catch (error) {
-      this.log(`TypeScript check automation failed: ${error.message}`, 'ERROR');
-      process.exit(1);
+      this.log(`❌ Error in type check automation: ${error.message}`, 'ERROR');
+      throw error;
     }
   }
 }
 
-// Run the TypeScript check automation if this script is executed directly
-if (require.main === module) {
+// Run the type check automation
+if (import.meta.url === `file://${process.argv[1]}`) {
   const automation = new TypeCheckAutomation();
-  automation.run();
+  automation.run().catch(console.error);
 }
 
-module.exports = TypeCheckAutomation;
+export default TypeCheckAutomation;
