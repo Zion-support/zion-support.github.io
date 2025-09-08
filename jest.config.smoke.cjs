@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-module.exports = {
-=======
 const nextJest = require('next/jest');
 
 const createJestConfig = nextJest({
@@ -9,13 +6,15 @@ const createJestConfig = nextJest({
 
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
->>>>>>> origin/combined-pr-merge
   testEnvironment: 'jsdom',
-  testMatch: ['**/App.smoke.test.tsx'],
+  // Run only curated smoke tests to avoid corrupted/empty suites
+  testMatch: [
+    '**/App.smoke.test.{js,jsx,ts,tsx}',
+    '**/AppMinimal.test.{js,jsx,ts,tsx}'
+  ],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   collectCoverageFrom: [
     'app/**/*.{js,jsx,ts,tsx}',
     'pages/**/*.{js,jsx,ts,tsx}',
@@ -23,34 +22,6 @@ const customJestConfig = {
     '!**/node_modules/**',
   ],
   testPathIgnorePatterns: [
-<<<<<<< HEAD
-    '/\\.next/',
-    '/node_modules/',
-    '/src\\.broken/',
-    '/src_backup/',
-    '/src-disabled/',
-    '/src\\.disabled/',
-    '/backup/',
-    '/backup-[^/]+/',
-    '/recovered-branches/',
-    '/corrupted_backup/',
-    '/broken_files_backup/',
-    '/pages_backup_.*?/',
-    '/pages_backup_conflict.*/',
-    '/pages_disabled/',
-    '/pages\\.disabled/',
-    '/__tests__/',
-  ],
-  transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
-  },
-  transformIgnorePatterns: [
-    '/node_modules/',
-    '^.+\\.module\\.(css|sass|scss)$',
-  ],
-  passWithNoTests: true,
-};
-=======
     '<rootDir>/node_modules/',
     '<rootDir>/dist/',
     '<rootDir>/build/',
@@ -78,4 +49,3 @@ const customJestConfig = {
 };
 
 module.exports = createJestConfig(customJestConfig);
->>>>>>> origin/combined-pr-merge
