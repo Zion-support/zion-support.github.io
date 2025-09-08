@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { Suspense } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -56,12 +53,11 @@ const appConfig: AppConfig = {
 const AppLoadingFallback: React.FC = () => (
   <div className="min-h-screen bg-gradient-to-br from-zion-blue to-zion-purple flex items-center justify-center">
     <div className="text-center">
-      <LoadingSpinner size="large" color="white" />
+      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto"></div>
       <p className="mt-4 text-zion-slate-light">Loading Zion App...</p>
     </div>
   </div>
 );
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-031e
 
 // Main App component
 const App: React.FC = () => {
