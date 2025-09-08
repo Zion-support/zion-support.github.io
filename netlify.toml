@@ -1,19 +1,8 @@
 [build]
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> main
-  command = "npm ci && npm install react@18.3.1 react-dom@18.3.1 && npm run build"
+  # Install Python dependencies first, then Node.js dependencies and build
+  command = "pip install -r requirements.txt && npm ci && npm run build"
   publish = "dist"
-=======
-  # Stable Next.js build using existing scripts; ensure deps installed deterministically
-  command = "npm ci && npm run build"
-  # Publish the Next.js build directory so the Netlify Next plugin runs correctly
-  publish = ".next"
-  # Increase build timeout for large site generation
   command_timeout = "30m"
->>>>>>> main
 
 [[plugins]]
   package = "netlify-plugin-compress"
