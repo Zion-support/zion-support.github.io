@@ -866,7 +866,7 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Threat detection & response</li>
                   <li>• Zero-trust architecture</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <Link href="/docs/SECURITY.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   View Security Guide →
                 </a>
               </div>
@@ -880,7 +880,7 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Security testing</li>
                   <li>• Continuous validation</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/TESTING.md" target="_blank" rel="noopener noreferrer" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                <Link href="/docs/TESTING.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
                   View Testing Guide →
                 </a>
               </div>
@@ -894,7 +894,7 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Analytics dashboard</li>
                   <li>• Predictive maintenance</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/PERFORMANCE.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <Link href="/docs/PERFORMANCE.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   View Performance Guide →
                 </a>
               </div>
@@ -1003,8 +1003,8 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Content optimization</li>
                   <li>• Quality assurance</li>
                 </ul>
-                <Link href="/ai-content-factory-report.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  View Report →
+                <Link href="/docs/README_ULTIMATE_REDUNDANCY.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  Learn More →
                 </Link>
               </div>
 
@@ -1079,7 +1079,7 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Bottleneck identification</li>
                   <li>• Continuous improvement</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_COMPREHENSIVE_REDUNDANCY.md" target="_blank" rel="noopener noreferrer" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                <Link href="/docs/COMPREHENSIVE_REDUNDANCY_README.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
@@ -1155,7 +1155,7 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Health monitoring</li>
                   <li>• Cluster management</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_COMPLETE_PM2_REDUNDANCY.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <Link href="/docs/README_PM2_REDUNDANCY_COMPLETE.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
@@ -1377,8 +1377,8 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Competitive intelligence</li>
                   <li>• Future predictions</li>
                 </ul>
-                <Link href="/ai-trends-radar-report.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  View Research →
+                <Link href="/docs/ARCHITECTURE.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  View Architecture Guide →
                 </Link>
               </div>
 
@@ -1392,8 +1392,8 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• SEO enhancement</li>
                   <li>• Performance analytics</li>
                 </ul>
-                <Link href="/ai-content-factory-report.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  View Factory →
+                <Link href="/docs/DEPLOYMENT.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                  View Deployment Guide →
                 </Link>
               </div>
 
@@ -1407,8 +1407,8 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Campaign management</li>
                   <li>• ROI tracking</li>
                 </ul>
-                <Link href="/marketing-daily-report.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  View Marketing →
+                <Link href="/docs/API.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  View API Documentation →
                 </Link>
               </div>
             </div>
@@ -1421,43 +1421,43 @@ export default function HomePage({ latestUpdates }: HomeProps) {
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">🤖 AI Research & Trends</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Autonomous trend analysis</li>
-                  <li>• Market intelligence gathering</li>
-                  <li>• Innovation scouting</li>
-                  <li>• Predictive insights</li>
+                  <li>• Autonomous content creation</li>
+                  <li>• SEO optimization</li>
+                  <li>• Dynamic page generation</li>
+                  <li>• Content quality assurance</li>
+                  <li>• Multi-language support</li>
+                </ul>
+                <Link href="/docs/content-generation-report.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  Learn More →
+                </Link>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">🔄 Git & CI/CD Automation</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Automated git sync</li>
+                  <li>• Conflict resolution</li>
+                  <li>• Branch management</li>
+                  <li>• PR automation</li>
+                  <li>• Code quality checks</li>
+                </ul>
+                <Link href="/docs/GITHUB_ACTIONS_IMPROVEMENTS.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                  Learn More →
+                </Link>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">📊 Monitoring & Analytics</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Real-time dashboards</li>
+                  <li>• Performance metrics</li>
+                  <li>• Health monitoring</li>
+                  <li>• Predictive analytics</li>
                   <li>• Automated reporting</li>
                 </ul>
-                <a href="/SECURITY.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  View Security Guide →
-                </a>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">📊 Performance Monitoring</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Real-time health checks</li>
-                  <li>• Automated performance reports</li>
-                  <li>• Lighthouse optimization</li>
-                  <li>• Continuous monitoring</li>
-                  <li>• Proactive alerts</li>
-                </ul>
-                <a href="/TESTING.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  View Testing Guide →
-                </a>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">🔧 Self-Healing Systems</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Automated error recovery</li>
-                  <li>• Build failure prevention</li>
-                  <li>• Dependency management</li>
-                  <li>• Continuous improvement</li>
-                  <li>• Intelligent orchestration</li>
-                </ul>
-                <a href="/PERFORMANCE.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  View Performance Guide →
-                </a>
+                <Link href="/docs/performance-weekly-report.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  Learn More →
+                </Link>
               </div>
             </div>
           </section>
@@ -1693,7 +1693,7 @@ export default function HomePage({ latestUpdates }: HomeProps) {
               <div>
                 <h3 className="text-lg font-semibold text-green-400 mb-4">Documentation</h3>
                 <ul className="space-y-2 text-sm text-white/70">
-                  <li><Link href="/about" className="hover:text-green-300 transition-colors">Project Overview</Link></li>
+                  <li><Link href="/docs/README.md" className="hover:text-green-300 transition-colors">Project Overview</Link></li>
                   <li><Link href="/docs/ARCHITECTURE.md" className="hover:text-green-300 transition-colors">Architecture</Link></li>
                   <li><Link href="/docs/API.md" className="hover:text-green-300 transition-colors">API Docs</Link></li>
                   <li><Link href="/docs/CONTRIBUTING.md" className="hover:text-green-300 transition-colors">Contributing</Link></li>
@@ -1703,7 +1703,7 @@ export default function HomePage({ latestUpdates }: HomeProps) {
               <div>
                 <h3 className="text-lg font-semibold text-yellow-400 mb-4">Automation</h3>
                 <ul className="space-y-2 text-sm text-white/70">
-                  <li><Link href="/docs/README_COMPREHENSIVE_REDUNDANCY.md" className="hover:text-yellow-300 transition-colors">Redundancy Systems</Link></li>
+                  <li><Link href="/docs/COMPREHENSIVE_REDUNDANCY_README.md" className="hover:text-yellow-300 transition-colors">Redundancy Systems</Link></li>
                   <li><Link href="/docs/README_ULTIMATE_REDUNDANCY.md" className="hover:text-yellow-300 transition-colors">Ultimate Redundancy</Link></li>
                   <li><Link href="/docs/README_PM2_REDUNDANCY_COMPLETE.md" className="hover:text-yellow-300 transition-colors">PM2 Orchestration</Link></li>
                   <li><Link href="/docs/AUTOMATION_COMPLETION_REPORT.md" className="hover:text-yellow-300 transition-colors">Automation Status</Link></li>
