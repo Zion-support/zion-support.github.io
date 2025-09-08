@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Bot, Atom, Workflow, Server } from 'lucide-react';
-import { ThemeToggle } from '../components/ThemeToggle';
-import { EnhancedSearch } from '../components/EnhancedSearch';
-import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, HelpCircle } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, HelpCircle, Terminal } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 
 interface AppHeaderProps {
@@ -50,9 +45,8 @@ interface AppHeaderProps {
 
   const mainNavigation = [
     { name: 'Home', href: '/', current: true },
-    { name: 'Services', href: '/services', current: false, hasDropdown: true },
-    { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },
-    { name: 'Resources', href: '/resources', current: false, hasDropdown: true },
+    { name: 'Services', href: '/services', current: false },
+    { name: 'Solutions', href: '/solutions', current: false },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
     { name: 'Pricing', href: '/pricing', current: false },
@@ -246,6 +240,14 @@ interface AppHeaderProps {
     { name: 'Documentation', href: '/docs', icon: BookOpen },
   ];
 
+  const resources = [
+    { name: 'Documentation', href: '/docs', icon: BookOpen },
+    { name: 'API Reference', href: '/api', icon: Code },
+    { name: 'Developer Portal', href: '/developers', icon: Terminal },
+    { name: 'Help Center', href: '/help', icon: HelpCircle },
+    { name: 'Support', href: '/support', icon: MessageCircle },
+  ];
+
   return (
     <>
       <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
@@ -350,6 +352,41 @@ interface AppHeaderProps {
                     </div>
                   </div>
                 )}
+              </div>
+
+              {/* Resources Dropdown */}
+              <div className="relative">
+                <button
+                  onMouseEnter={() => setServicesDropdownOpen(false)}
+                  className="flex items-center text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-all duration-200 relative group"
+                >
+                  Resources
+                  <ChevronDown className="w-4 h-4 ml-1 transition-transform duration-200" />
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                </button>
+                
+                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 border border-cyan-400/20 rounded-xl shadow-2xl backdrop-blur-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  <div className="p-4">
+                    <div className="space-y-2">
+                      {resources.map((resource) => (
+                        <Link
+                          key={resource.name}
+                          to={resource.href}
+                          className="flex items-center p-3 rounded-lg hover:bg-slate-700/50 transition-all duration-200 group"
+                        >
+                          <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center group-hover:from-cyan-400/40 group-hover:to-blue-500/40 transition-all duration-200">
+                            <resource.icon className="w-4 h-4 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+                          </div>
+                          <div className="ml-3">
+                            <div className="text-white font-medium group-hover:text-cyan-400 transition-colors">
+                              {resource.name}
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
             </nav>
 
@@ -491,6 +528,28 @@ interface AppHeaderProps {
                 </Link>
               </div>
 
+              {/* Mobile resources */}
+              <div className="mt-6 pt-6 border-t border-slate-700/50">
+                <h3 className="text-slate-400 text-sm font-medium mb-4">Resources</h3>
+                <div className="grid grid-cols-1 gap-3">
+                  {resources.map((resource) => (
+                    <Link
+                      key={resource.name}
+                      to={resource.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="flex items-center p-3 rounded-lg hover:bg-slate-700/50 transition-all duration-200"
+                    >
+                      <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center">
+                        <resource.icon className="w-4 h-4 text-cyan-400" />
+                      </div>
+                      <div className="ml-3">
+                        <div className="text-white font-medium text-sm">{resource.name}</div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
               {/* Mobile quick links */}
               <div className="mt-6 pt-6 border-t border-slate-700/50">
                 <h3 className="text-slate-400 text-sm font-medium mb-4">Quick Links</h3>
@@ -520,9 +579,9 @@ interface AppHeaderProps {
                 </Link>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </header>
+      </header>
+    </>
   );
 }

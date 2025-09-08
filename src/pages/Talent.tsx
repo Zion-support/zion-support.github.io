@@ -1,202 +1,194 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Users, 
-  Search, 
-  Filter, 
-  Star, 
-  Award, 
-  MapPin, 
-  Clock, 
-  CheckCircle, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Rocket, 
-  Heart, 
-  Globe, 
-  Zap, 
-  Code, 
-  Database, 
-  Network, 
-  Lock, 
-  Eye,
-  Phone,
-  Mail,
-  ExternalLink,
-  ArrowRight
-} from 'lucide-react';
+import React from 'react';
 import { SEO } from '../components/SEO';
+import { motion } from 'framer-motion';
+import { Users, Search, Briefcase, Star, Award, TrendingUp, Globe, Zap } from 'lucide-react';
 
 export default function Talent() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedLocation, setSelectedLocation] = useState('all');
-
-  const talentCategories = [
+  const features = [
     {
-      id: 'ai-ml',
-      name: 'AI & Machine Learning',
-      icon: Brain,
-      color: 'from-purple-600 to-pink-600',
-      count: 45,
-      description: 'AI engineers, data scientists, and ML specialists'
+      icon: Search,
+      title: 'AI-Powered Talent Discovery',
+      description: 'Advanced algorithms to find the perfect match for your organization'
     },
     {
-      id: 'cybersecurity',
-      name: 'Cybersecurity',
-      icon: Shield,
-      color: 'from-red-600 to-orange-600',
-      count: 32,
-      description: 'Security analysts, penetration testers, and compliance experts'
+      icon: Briefcase,
+      title: 'Specialized Tech Recruitment',
+      description: 'Expert recruiters focused on AI, Quantum Computing, and emerging technologies'
     },
     {
-      id: 'cloud-devops',
-      name: 'Cloud & DevOps',
-      icon: Cloud,
-      color: 'from-blue-600 to-cyan-600',
-      count: 38,
-      description: 'Cloud architects, DevOps engineers, and infrastructure specialists'
+      icon: Star,
+      title: 'Top-Tier Candidates',
+      description: 'Access to the best talent in the technology industry'
     },
     {
-      id: 'software-development',
-      name: 'Software Development',
-      icon: Code,
-      color: 'from-green-600 to-emerald-600',
-      count: 67,
-      description: 'Full-stack developers, mobile developers, and system architects'
+      icon: Award,
+      title: 'Quality Assurance',
+      description: 'Rigorous screening and verification processes'
     },
     {
-      id: 'data-analytics',
-      name: 'Data & Analytics',
-      icon: Database,
-      color: 'from-indigo-600 to-purple-600',
-      count: 28,
-      description: 'Data engineers, analysts, and business intelligence specialists'
+      icon: TrendingUp,
+      title: 'Career Growth Support',
+      description: 'Continuous development and advancement opportunities'
     },
     {
-      id: 'digital-transformation',
-      name: 'Digital Transformation',
-      icon: Rocket,
-      color: 'from-orange-600 to-red-600',
-      count: 23,
-      description: 'Transformation consultants and change management experts'
+      icon: Globe,
+      title: 'Global Talent Pool',
+      description: 'Worldwide network of qualified professionals'
     }
   ];
 
-  const featuredTalent = [
+  const services = [
     {
-      id: 1,
-      name: 'Dr. Sarah Chen',
-      title: 'Senior AI Research Scientist',
-      category: 'ai-ml',
-      experience: '8+ years',
-      location: 'San Francisco, CA',
-      skills: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision'],
-      rating: 4.9,
-      projects: 47,
-      hourlyRate: '$150-200',
-      availability: 'Available',
-      avatar: '/avatars/sarah-chen.jpg',
-      description: 'PhD in Computer Science with expertise in large language models and AI ethics.'
+      title: 'Executive Search',
+      description: 'C-level and senior leadership recruitment',
+      price: 'Custom'
     },
     {
-      id: 2,
-      name: 'Marcus Rodriguez',
-      title: 'Cybersecurity Architect',
-      category: 'cybersecurity',
-      experience: '12+ years',
-      location: 'New York, NY',
-      skills: ['Zero Trust', 'SOC 2', 'Incident Response', 'Threat Hunting'],
-      rating: 4.8,
-      projects: 63,
-      hourlyRate: '$180-250',
-      availability: 'Available',
-      avatar: '/avatars/marcus-rodriguez.jpg',
-      description: 'Former CISO with deep expertise in enterprise security architecture.'
+      title: 'Technical Recruitment',
+      description: 'AI, ML, Quantum Computing, and IT professionals',
+      price: '15-25%'
     },
     {
-      id: 3,
-      name: 'Alex Thompson',
-      title: 'Cloud Infrastructure Engineer',
-      category: 'cloud-devops',
-      experience: '6+ years',
-      location: 'Austin, TX',
-      skills: ['AWS', 'Kubernetes', 'Terraform', 'CI/CD'],
-      rating: 4.7,
-      projects: 34,
-      hourlyRate: '$120-180',
-      availability: 'Available',
-      avatar: '/avatars/alex-thompson.jpg',
-      description: 'Expert in multi-cloud architecture and infrastructure automation.'
+      title: 'Contract Staffing',
+      description: 'Flexible staffing solutions for project-based work',
+      price: 'Hourly rates'
     },
     {
-      id: 4,
-      name: 'Dr. Emily Watson',
-      title: 'Healthcare Technology Consultant',
-      category: 'digital-transformation',
-      experience: '10+ years',
-      location: 'Boston, MA',
-      skills: ['HIPAA', 'Healthcare IT', 'Digital Health', 'Compliance'],
-      rating: 4.9,
-      projects: 29,
-      hourlyRate: '$160-220',
-      availability: 'Available',
-      avatar: '/avatars/emily-watson.jpg',
-      description: 'Former healthcare executive specializing in digital transformation.'
+      title: 'Talent Assessment',
+      description: 'AI-powered skills evaluation and personality testing',
+      price: 'Per assessment'
     }
-  ];
-
-  const locations = [
-    { id: 'all', name: 'All Locations', count: 0 },
-    { id: 'remote', name: 'Remote', count: 89 },
-    { id: 'san-francisco', name: 'San Francisco', count: 23 },
-    { id: 'new-york', name: 'New York', count: 18 },
-    { id: 'austin', name: 'Austin', count: 15 },
-    { id: 'boston', name: 'Boston', count: 12 },
-    { id: 'seattle', name: 'Seattle', count: 11 },
-    { id: 'delaware', name: 'Delaware', count: 8 }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="Talent - Zion Tech Group"
-        description="Discover top-tier technology talent for your projects. AI experts, cybersecurity specialists, cloud engineers, and more."
+        title="Talent Solutions - Zion Tech Group"
+        description="Discover top-tier technology talent with our AI-powered recruitment solutions. Specialized in AI, Quantum Computing, and emerging technologies."
       />
       
-      {/* Header */}
-      <div className="bg-slate-800/50 border-b border-slate-700">
-        <div className="container mx-auto px-4 py-16">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
+        <div className="relative z-10 max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
+            transition={{ duration: 0.8 }}
           >
-            <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Users className="w-10 h-10 text-white" />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Discover Top Tech Talent
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Discover
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Top Talent</span>
             </h1>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
-              Connect with world-class technology professionals specializing in AI, cybersecurity, 
-              cloud computing, and digital transformation.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Connect with exceptional technology professionals through our AI-powered talent solutions. 
+              Specialized in AI, Quantum Computing, and emerging technologies.
             </p>
-            
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search for talent, skills, or expertise..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                />
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105">
+                Find Talent
+              </button>
+              <button className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200">
+                Post a Job
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Why Choose Our Talent Solutions?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Leverage cutting-edge AI technology and industry expertise to find the perfect candidates for your organization.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-200"
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-cyan-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 px-4 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Our Talent Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive recruitment solutions tailored to your organization's needs.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-200"
+              >
+                <h3 className="text-lg font-semibold text-white mb-2">{service.title}</h3>
+                <p className="text-gray-300 text-sm mb-4">{service.description}</p>
+                <div className="text-cyan-400 font-semibold">{service.price}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Find Your Next Star?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let our AI-powered talent solutions connect you with exceptional professionals who can drive your organization forward.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105">
+                Get Started Today
+              </button>
+              <button className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200">
+                Schedule a Consultation
+              </button>
             </div>
           </motion.div>
         </div>

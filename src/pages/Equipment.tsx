@@ -1,226 +1,123 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Server, 
-  Laptop, 
-  Monitor, 
-  Network, 
-  Shield, 
-  Cloud, 
-  Search, 
-  Filter, 
-  Star, 
-  CheckCircle, 
-  Clock, 
-  MapPin, 
-  DollarSign, 
-  Zap, 
-  Brain, 
-  Database, 
-  Lock, 
-  Eye,
-  Phone,
-  Mail,
-  ExternalLink,
-  ArrowRight,
-  Wifi,
-  HardDrive,
-  Cpu,
-  Memory
-} from 'lucide-react';
+import React from 'react';
 import { SEO } from '../components/SEO';
+import { motion } from 'framer-motion';
+import { Server, Cpu, HardDrive, Network, Shield, Zap, Globe, Settings } from 'lucide-react';
 
 export default function Equipment() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedAvailability, setSelectedAvailability] = useState('all');
-
-  const equipmentCategories = [
+  const services = [
     {
-      id: 'servers',
-      name: 'Servers & Infrastructure',
       icon: Server,
-      color: 'from-blue-600 to-cyan-600',
-      count: 156,
-      description: 'Enterprise servers, storage systems, and networking equipment'
+      title: 'Server Infrastructure',
+      description: 'High-performance servers and data center solutions'
     },
     {
-      id: 'workstations',
-      name: 'Workstations & Desktops',
-      icon: Laptop,
-      color: 'from-green-600 to-emerald-600',
-      count: 89,
-      description: 'High-performance workstations for development and design'
+      icon: Cpu,
+      title: 'Computing Hardware',
+      description: 'Advanced processors and specialized computing equipment'
     },
     {
-      id: 'networking',
-      name: 'Networking Equipment',
-      icon: Network,
-      color: 'from-purple-600 to-pink-600',
-      count: 234,
-      description: 'Switches, routers, firewalls, and wireless equipment'
-    },
-    {
-      id: 'security',
-      name: 'Security & Surveillance',
-      icon: Shield,
-      color: 'from-red-600 to-orange-600',
-      count: 67,
-      description: 'Security cameras, access control, and monitoring systems'
-    },
-    {
-      id: 'storage',
-      name: 'Storage Solutions',
       icon: HardDrive,
-      color: 'from-indigo-600 to-purple-600',
-      count: 123,
-      description: 'NAS, SAN, and enterprise storage arrays'
+      title: 'Storage Solutions',
+      description: 'Enterprise storage and backup systems'
     },
     {
-      id: 'peripherals',
-      name: 'Peripherals & Accessories',
-      icon: Monitor,
-      color: 'from-yellow-600 to-orange-600',
-      count: 445,
-      description: 'Monitors, keyboards, mice, and other accessories'
+      icon: Network,
+      title: 'Network Equipment',
+      description: 'Routers, switches, and network infrastructure'
+    },
+    {
+      icon: Shield,
+      title: 'Security Hardware',
+      description: 'Firewalls, intrusion detection, and security appliances'
+    },
+    {
+      icon: Zap,
+      title: 'Power Systems',
+      description: 'UPS systems and power management solutions'
     }
-  ];
-
-  const featuredEquipment = [
-    {
-      id: 1,
-      name: 'Dell PowerEdge R750 Server',
-      category: 'servers',
-      type: 'Rack Server',
-      specs: {
-        cpu: 'Intel Xeon Gold 6338',
-        ram: '128GB DDR4',
-        storage: '2TB NVMe SSD',
-        network: '10GbE'
-      },
-      condition: 'Excellent',
-      availability: 'In Stock',
-      location: 'Delaware',
-      price: '$4,299',
-      originalPrice: '$5,199',
-      rating: 4.8,
-      reviews: 23,
-      image: '/equipment/dell-poweredge-r750.jpg',
-      description: 'High-performance rack server ideal for virtualization and enterprise applications.'
-    },
-    {
-      id: 2,
-      name: 'Cisco Catalyst 9300 Switch',
-      category: 'networking',
-      type: 'Network Switch',
-      specs: {
-        ports: '48-Port PoE+',
-        speed: '10/100/1000 Mbps',
-        power: 'PoE+ 370W',
-        stack: 'StackWise-480'
-      },
-      condition: 'Like New',
-      availability: 'In Stock',
-      location: 'Delaware',
-      price: '$2,899',
-      originalPrice: '$3,599',
-      rating: 4.9,
-      reviews: 18,
-      image: '/equipment/cisco-catalyst-9300.jpg',
-      description: 'Enterprise-grade PoE switch with advanced security and management features.'
-    },
-    {
-      id: 3,
-      name: 'HP Z8 G4 Workstation',
-      category: 'workstations',
-      type: 'Desktop Workstation',
-      specs: {
-        cpu: 'Intel Xeon W-3275',
-        ram: '64GB DDR4',
-        storage: '1TB NVMe SSD',
-        gpu: 'NVIDIA RTX A5000'
-      },
-      condition: 'Excellent',
-      availability: 'In Stock',
-      location: 'Delaware',
-      price: '$3,599',
-      originalPrice: '$4,299',
-      rating: 4.7,
-      reviews: 31,
-      image: '/equipment/hp-z8-g4.jpg',
-      description: 'Professional workstation for CAD, 3D rendering, and video editing.'
-    },
-    {
-      id: 4,
-      name: 'Synology DS1821+ NAS',
-      category: 'storage',
-      type: 'Network Storage',
-      specs: {
-        bays: '8-Bay',
-        cpu: 'AMD Ryzen V1500B',
-        ram: '4GB DDR4',
-        network: '2.5GbE'
-      },
-      condition: 'Like New',
-      availability: 'In Stock',
-      location: 'Delaware',
-      price: '$899',
-      originalPrice: '$1,099',
-      rating: 4.8,
-      reviews: 42,
-      image: '/equipment/synology-ds1821.jpg',
-      description: 'High-capacity NAS for business file sharing and backup solutions.'
-    }
-  ];
-
-  const availabilityOptions = [
-    { id: 'all', name: 'All Availability', count: 0 },
-    { id: 'in-stock', name: 'In Stock', count: 1123 },
-    { id: 'available-soon', name: 'Available Soon', count: 89 },
-    { id: 'custom-order', name: 'Custom Order', count: 156 },
-    { id: 'rental', name: 'Rental Available', count: 234 }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="Equipment - Zion Tech Group"
-        description="Browse and request enterprise-grade IT equipment. Servers, workstations, networking gear, and more."
+        title="Equipment Services - Zion Tech Group"
+        description="Enterprise-grade technology equipment and infrastructure solutions. Servers, networking, storage, and security hardware."
       />
       
-      {/* Header */}
-      <div className="bg-slate-800/50 border-b border-slate-700">
-        <div className="container mx-auto px-4 py-16">
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
+        <div className="relative z-10 max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
+            transition={{ duration: 0.8 }}
           >
-            <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Server className="w-10 h-10 text-white" />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Enterprise IT Equipment
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Technology
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Equipment</span>
             </h1>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
-              High-quality, certified IT equipment for your business needs. 
-              From servers to workstations, we have the technology you require.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Enterprise-grade technology infrastructure and equipment solutions for modern businesses.
             </p>
-            
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search for equipment, brands, or specifications..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                />
-              </div>
-            </div>
+            <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105">
+              Get Equipment Quote
+            </button>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Equipment & Infrastructure Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive technology equipment solutions to power your digital transformation.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-200"
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <service.icon className="w-6 h-6 text-cyan-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+                <p className="text-gray-300">{service.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 bg-slate-800/30">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Upgrade Your Infrastructure?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get expert consultation and equipment recommendations for your business needs.
+            </p>
+            <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105">
+              Contact Equipment Team
+            </button>
           </motion.div>
         </div>
       </div>
