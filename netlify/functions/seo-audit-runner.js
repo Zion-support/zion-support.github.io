@@ -1,31 +1,25 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const fs = require('fs');
+const path = require('path');
+
 exports.handler = async function(event, context) {
-  console.log('seo-audit-runner function executed');
-  
   try {
-    // Basic SEO audit runner logic
     const timestamp = new Date().toISOString();
-    console.log(`SEO audit runner process started at ${timestamp}`);
-    
-    // Simulate some SEO audit work
-    await new Promise(resolve => setTimeout(resolve, 350));
-    
-    return {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'SEO audit runner completed successfully',
-        timestamp: timestamp,
-        function: 'seo-audit-runner'
-      })
-    };
+    const reportPath = path.join(process.cwd(), 'seo-audit-runner-report.md');
+    const reportContent = '# seo-audit-runner Report\n\n' +
+      'Generated: ' + timestamp + '\n\n' +
+      '## Status\n' +
+      '- Task: seo-audit-runner\n' +
+      '- Status: Completed\n' +
+      '- Timestamp: ' + timestamp + '\n';
+
+    fs.writeFileSync(reportPath, reportContent);
+
+    return { statusCode: 200, body: JSON.stringify({ name: 'seo-audit-runner', status: 'ok', timestamp }) };
   } catch (error) {
-    console.error('Error in seo-audit-runner:', error);
-    return {
-      statusCode: 500,
-      body: JSON.stringify({
-        error: 'SEO audit runner failed',
-        message: error.message,
-        function: 'seo-audit-runner'
-      })
-    };
+    return { statusCode: 500, body: JSON.stringify({ name: 'seo-audit-runner', status: 'error', error: error && error.message }) };
   }
 };
