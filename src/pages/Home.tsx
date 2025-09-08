@@ -2,6 +2,67 @@
 import React, { Suspense, useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { SEOOptimizer, defaultSEO } from '../components/SEOOptimizer.tsx';
+import { PerformanceOptimizer } from '../components/PerformanceOptimizer';
+import {
+  Users,
+  TrendingUp,
+  Award,
+  Globe,
+  Brain,
+  Cloud,
+  Shield,
+  Zap,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Play,
+  ChevronLeft,
+  ChevronRight,
+  Rocket,
+  Target,
+  Handshake,
+  Lightbulb,
+  Cpu,
+  Database,
+  Network,
+  Smartphone,
+  Lock,
+  BarChart3,
+  Code,
+  Server,
+  Chip,
+  Wifi,
+  ShieldCheck,
+  Globe2,
+  Bot,
+  Workflow,
+  Eye,
+  Sparkles,
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  DollarSign,
+  Atom,
+  Leaf,
+  Gamepad2,
+  Coins,
+  Satellite,
+  Activity,
+  FileText,
+  MessageCircle,
+  Search,
+  BarChart,
+  Users2,
+  Settings,
+  Palette,
+  ArrowUpRight,
+  CheckCircle2,
+  Clock3,
+  Target2,
+  Building2
+} from 'lucide-react';
 
 export default function Home() {
   const featuredServices = [
@@ -328,12 +389,262 @@ export default function Home() {
         </div>
       </motion.section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
+          {/* Trust Indicators */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.1 }}
+            className="mt-12 flex flex-wrap justify-center items-center gap-6 text-zinc-400"
+          >
+            <div className="flex items-center gap-2">
+              <ShieldCheck className="w-5 h-5 text-zion-cyan" />
+              <span className="text-sm">ISO 27001 Certified</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Users className="w-5 h-5 text-zion-cyan" />
+              <span className="text-sm">500+ Clients Worldwide</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Award className="w-5 h-5 text-zion-cyan" />
+              <span className="text-sm">Industry Leader 2025</span>
+            </div>
+          </motion.div>
+
+          {/* Contact Information */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.3 }}
+            className="mt-8 p-6 bg-slate-800/30 border border-slate-700/50 rounded-2xl backdrop-blur-sm"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div className="flex flex-col items-center">
+                <Phone className="w-6 h-6 text-zion-cyan mb-2" />
+                <span className="text-sm text-zinc-400 mb-1">Call Us</span>
+                <a href="tel:+13024640950" className="text-white font-semibold hover:text-zion-cyan transition-colors">
+                  +1 (302) 464-0950
+                </a>
+              </div>
+              <div className="flex flex-col items-center">
+                <Mail className="w-6 h-6 text-zion-cyan mb-2" />
+                <span className="text-sm text-zinc-400 mb-1">Email Us</span>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-white font-semibold hover:text-zion-cyan transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex flex-col items-center">
+                <MapPin className="w-6 h-6 text-zion-cyan mb-2" />
+                <span className="text-sm text-zinc-400 mb-1">Visit Us</span>
+                <span className="text-white font-semibold">
+                  Middletown, DE 19709
+                </span>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1.5 }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+      >
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="w-6 h-10 border-2 border-zion-cyan rounded-full flex justify-center"
+        >
+          <motion.div
+            animate={{ y: [0, 12, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="w-1 h-3 bg-zion-cyan rounded-full mt-2"
+          />
+        </motion.div>
+      </motion.div>
+    </section>
+  );
+};
+
+// Enhanced Services Section
+const ServicesSection = () => {
+  const services = [
+    {
+      title: "AI Autonomous Business Operations",
+      description: "Transform your business with AI that autonomously manages, optimizes, and scales your entire business ecosystem.",
+      icon: Brain,
+      color: "from-zion-purple to-zion-purple-dark",
+      link: "/services/ai-autonomous-business-operations-platform"
+    },
+    {
+      title: "Quantum Edge Computing",
+      description: "Revolutionize your infrastructure with the world's first quantum-enhanced edge computing platform.",
+      icon: Atom,
+      color: "from-zion-cyan to-zion-purple",
+      link: "/services/quantum-edge-computing-solutions"
+    },
+    {
+      title: "AI Customer Experience Analytics",
+      description: "Transform customer relationships with AI-powered analytics that understand and optimize every interaction.",
+      icon: BarChart3,
+      color: "from-zion-purple to-zion-cyan",
+      link: "/services/ai-customer-experience-analytics-platform"
+    },
+    {
+      title: "AI Customer Churn Predictor",
+      description: "Stop losing customers before they leave with AI that predicts churn with 95% accuracy and automatically triggers retention campaigns.",
+      icon: TrendingDown,
+      color: "from-blue-500 to-cyan-500",
+      link: "/services/ai-powered-customer-churn-predictor"
+    },
+    {
+      title: "AI Project Management",
+      description: "Transform your project management with AI-powered insights, automated workflows, and intelligent resource allocation.",
+      icon: Workflow,
+      color: "from-zion-cyan to-zion-purple",
+      link: "/services/ai-project-management-platform"
+    },
+    {
+      title: "AI-Powered SEO Platform",
+      description: "Revolutionize your search engine optimization with AI that understands search intent, predicts trends, and automatically optimizes content.",
+      icon: Search,
+      color: "from-green-500 to-blue-500",
+      link: "/services/ai-powered-seo"
+    },
+    {
+      title: "AI Legal Document Automation",
+      description: "Transform your legal practice with AI that generates, reviews, and optimizes legal documents in seconds.",
+      icon: FileText,
+      color: "from-purple-500 to-indigo-500",
+      link: "/services/ai-legal-document-automation-platform"
+    },
+    {
+      title: "AI Enterprise Workflow Automation",
+      description: "Streamline business processes with intelligent workflow automation that learns and optimizes over time.",
+      icon: Workflow,
+      color: "from-zion-purple to-zion-cyan",
+      link: "/services/ai-enterprise-workflow-automation"
+    },
+    {
+      title: "AI Quantum Computing Solutions",
+      description: "Harness quantum computing power with AI-enhanced algorithms for exponential performance improvements.",
+      icon: Atom,
+      color: "from-zion-cyan to-zion-purple",
+      link: "/services/ai-quantum-computing-solutions"
+    },
+    {
+      title: "AI Cybersecurity Threat Intelligence",
+      description: "Protect your organization with AI-powered threat detection and automated response systems.",
+      icon: Shield,
+      color: "from-zion-purple to-zion-cyan",
+      link: "/services/ai-cybersecurity-threat-intelligence"
+    },
+    {
+      title: "AI Autonomous Logistics",
+      description: "Revolutionize logistics with AI that autonomously optimizes routes, manages fleets, and reduces costs by 40%.",
+      icon: Truck,
+      color: "from-blue-500 to-cyan-500",
+      link: "/services/ai-autonomous-logistics-platform"
+    },
+    {
+      title: "AI Autonomous Manufacturing",
+      description: "Transform manufacturing with AI that autonomously optimizes production, quality control, and reduces defects by 80%.",
+      icon: Factory,
+      color: "from-purple-500 to-pink-500",
+      link: "/services/ai-autonomous-manufacturing-platform"
+    },
+    {
+      title: "AI Autonomous Research",
+      description: "Accelerate research by 10x with AI that autonomously conducts research, analyzes data, and generates insights.",
+      icon: Search,
+      color: "from-green-500 to-emerald-500",
+      link: "/services/ai-autonomous-research-assistant"
+    },
+    {
+      icon: Chip,
+      title: "Edge Computing",
+      description: "Ultra-low latency IoT and edge solutions",
+      href: "/services/edge-computing-platform",
+      color: "from-green-500 to-emerald-500",
+      features: ["IoT Platforms", "Real-time Analytics", "5G Integration"]
+    },
+    {
+      icon: TrendingUp,
+      title: "Micro SaaS",
+      description: "Innovative software-as-a-service solutions for modern businesses",
+      href: "/micro-saas",
+      color: "from-indigo-500 to-purple-500",
+      features: ["AI Sales Copilot", "Compliance Assistant", "FinOps Optimizer", "BI Dashboard", "Support Automation", "Project Management", "Marketing Automation"]
+    },
+    {
+      icon: Database,
+      title: "AI Enterprise Solutions",
+      description: "Comprehensive AI-powered enterprise resource planning and management",
+      href: "/services/ai-enterprise-resource-planning",
+      color: "from-emerald-500 to-teal-500",
+      features: ["Resource Planning", "Process Automation", "Business Intelligence", "Supply Chain Optimization"]
+    },
+    {
+      icon: Users,
+      title: "Customer Success AI",
+      description: "AI-driven customer success and relationship management platforms",
+      href: "/services/ai-customer-success-platform",
+      color: "from-pink-500 to-rose-500",
+      features: ["Customer Insights", "Success Automation", "Churn Prevention", "Growth Analytics"]
+    },
+    {
+      icon: Truck,
+      title: "Supply Chain AI",
+      description: "Intelligent supply chain optimization and logistics management",
+      href: "/services/ai-supply-chain-intelligence",
+      color: "from-orange-500 to-amber-500",
+      features: ["Demand Forecasting", "Route Optimization", "Inventory Management", "Risk Management"]
+    },
+    {
+      icon: Zap,
+      title: "Quantum AI",
+      description: "Next-generation quantum computing and AI integration",
+      href: "/services/ai-quantum-neural-network-platform",
+      color: "from-cyan-500 to-blue-500",
+      features: ["Quantum Neural Networks", "AI Algorithms", "Quantum Simulation"]
+    }
+  ];
+
+  return (
+    <section className="py-20 bg-zion-blue-dark/50 relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+            Cutting-Edge Services for the
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
+              Digital Age
+            </span>
+          </h2>
+          <p className="text-lg text-zinc-300 max-w-3xl mx-auto leading-relaxed">
+            Discover our comprehensive suite of AI-powered solutions designed to drive innovation, 
+            efficiency, and growth across your organization.
+          </p>
+        </motion.div>
+
+        {/* 2032 Innovation Highlight */}
+        <div className="mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-gradient-to-r from-purple-900/30 via-blue-900/30 to-cyan-900/30 rounded-3xl p-8 border border-purple-500/30"
+          >
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-medium mb-4">
+                <Rocket className="w-4 h-4" />
+                New for 2032
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">AI Business Automation</h3>
               <p className="text-gray-600 dark:text-gray-300">

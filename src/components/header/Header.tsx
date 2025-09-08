@@ -70,27 +70,38 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
   };
   
   return (
-    <header 
-      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-gradient-to-r from-zion-blue-dark/95 via-zion-purple-dark/95 to-zion-slate-dark/95 backdrop-blur-md shadow-lg shadow-zion-purple/10"
-      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-gradient-to-r from-zion-blue-dark/95 via-zion-slate-dark/95 to-zion-blue-dark/95 backdrop-blur-xl shadow-2xl shadow-zion-purple/10"
-      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md neon-pulse"
-      style={headerStyle}
-    >
-      {/* Animated background pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30" />
-      
-      {/* Glowing border effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zion-purple/10 to-transparent opacity-50" />
-      
-      <div className="container flex h-16 items-center px-4 sm:px-6 relative z-10">
-        <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
-
-        {/* Desktop Navigation */}
-
-        {/* Search Bar */}
-        <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
-        <div className="ml-6 flex-1 hidden md:block">
-          <MainNavigation />
+    <>
+      {/* Top Bar */}
+      <div className="bg-zion-slate-darker border-b border-zion-purple/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex h-12 items-center justify-between text-sm">
+            <div className="flex items-center space-x-6">
+              <div className="text-zion-slate-light">
+                📧 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-zion-cyan transition-colors">kleber@ziontechgroup.com</a>
+              </div>
+              <div className="text-zion-slate-light hidden sm:block">
+                📞 <a href="tel:+13024640950" className="hover:text-zion-cyan transition-colors">+1 (302) 464-0950</a>
+              </div>
+              <div className="text-zion-slate-light hidden md:block">
+                📍 <span>Middletown, DE 19709</span>
+              </div>
+            </div>
+            <div className="flex items-center space-x-4">
+              <Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                Support
+              </Link>
+              <Link to="/careers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                Careers
+              </Link>
+              <div className="flex items-center space-x-2">
+                <span className="text-zion-slate-light text-xs">Follow us:</span>
+                <a href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer" 
+                   className="text-zion-slate-light hover:text-zion-cyan transition-colors">LinkedIn</a>
+                <a href="https://twitter.com/ziontechgroup" target="_blank" rel="noopener noreferrer" 
+                   className="text-zion-slate-light hover:text-zion-cyan transition-colors">Twitter</a>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Desktop Search */}
