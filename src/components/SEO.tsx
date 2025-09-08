@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
@@ -59,9 +59,7 @@ interface SEOProps {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
 }
 
-<<<<<<< HEAD
-export const SEO: React.FC<SEOProps> = ({
-<<<<<<< HEAD
+export function SEO({
   title,
   description,
   keywords = [],
@@ -157,78 +155,10 @@ export function SEO({
   tags = []
 }: SEOProps) => {
   const siteName = 'Zion Tech Group';
-  const siteUrl = 'https://ziontechgroup.com';
-  const fullTitle = title?.includes(siteName) ? title : `${title} | ${siteName}`;
-  const fullUrl = canonical || ogUrl || `${siteUrl}${window.location.pathname}`;
-  const fullOgImage = ogImage?.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
-  
-  // Handle keywords - convert string to array if needed
-  const keywordsArray = Array.isArray(keywords) ? keywords : keywords.split(',').map(k => k.trim());
-  
-  // Structured data for organization
-  const organizationSchema = {
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-60a2
-=======
-  title: string;
-  description: string;
-  url: string;
-  image?: string;
-  type?: 'website' | 'article' | 'product';
-  publishedTime?: string;
-  modifiedTime?: string;
-  author?: string;
-  section?: string;
-  tags?: string[];
-}
+  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+  const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : 'https://ziontechgroup.com');
 
-<<<<<<< HEAD
-export const SEO: React.FC<SEOProps> = ({
-  title,
-  description,
-  url,
-  image = '/images/zion-tech-group-og.jpg',
-  type = 'website',
-  publishedTime,
-  modifiedTime,
-  author = 'Zion Tech Group',
-  section,
-  tags = []
-}) => {
-  const siteName = 'Zion Tech Group';
-  const fullTitle = `${title} | ${siteName}`;
-  const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
-  const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
-
-  // Structured data for organization
-  const organizationSchema = {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
-=======
-  title: string;
-  description: string;
-  url: string;
-  keywords?: string;
-  ogImage?: string;
-  twitterCard?: string;
-  canonicalUrl?: string;
-  structuredData?: object;
-}
-
-export function SEO({ 
-  title, 
-  description, 
-  url, 
-  keywords, 
-  ogImage, 
-  twitterCard = "summary_large_image",
-  canonicalUrl,
-  structuredData 
-}: SEOProps) {
-  const defaultOgImage = ogImage || "https://ziontechgroup.com/og-image.jpg";
-  const canonical = canonicalUrl || url;
-  
-  // Default structured data for Zion Tech Group
+  // Default structured data for organization
   const defaultStructuredData = {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6b26
 =======
@@ -481,156 +411,41 @@ export function SEO({
     }
   };
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "description": "AI-powered innovation and enterprise IT solutions",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Zion Tech Group"
-    },
-<<<<<<< HEAD
-=======
-    "description": "Your comprehensive marketplace for all things technology and AI",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://ziontechgroup.com/search?q={search_term_string}"
-      },
-<<<<<<< HEAD
-=======
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://ziontechgroup.com/search?q={search_term_string}",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
-      "query-input": "required name=search_term_string"
-    }
-  };
+  // Merge with custom structured data
+  const finalStructuredData = structuredData || defaultStructuredData;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  // Structured data for breadcrumbs
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://ziontechgroup.com"
-      }
-    ]
-  };
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-60a2
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
   return (
     <Helmet>
-      {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
 <<<<<<< HEAD
 <<<<<<< HEAD
       <meta name="description" content={description} />
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <meta name="keywords" content={finalKeywords} />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
-=======
-      <meta name="description" content={fullDescription} />
-      <meta name="keywords" content={keywords.join(', ')} />
-      <meta name="author" content={author} />
+      {keywords && <meta name="keywords" content={keywords} />}
       
-      {/* Robots Meta */}
-      {noindex && <meta name="robots" content="noindex" />}
-      {nofollow && <meta name="robots" content="nofollow" />}
-      {!noindex && !nofollow && <meta name="robots" content="index, follow" />}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
-=======
-      <meta name="keywords" content={keywordsArray.join(', ')} />
-      <meta name="author" content={author} />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-60a2
-=======
-      <meta name="description" content={description} />
-      <meta name="author" content={author} />
-      <meta name="robots" content="index, follow" />
-      <meta name="language" content="English" />
-      <meta name="revisit-after" content="7 days" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
+      {/* Open Graph */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta property="og:type" content={type} />
+      <meta property="og:site_name" content={siteName} />
+      <meta property="og:url" content={fullCanonical} />
+      
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
       
       {/* Canonical URL */}
-      <link rel="canonical" href={fullUrl} />
-      
-<<<<<<< HEAD
-      {/* Robots Meta */}
-      {noindex && <meta name="robots" content="noindex" />}
-      {nofollow && <meta name="robots" content="nofollow" />}
-      {!noindex && !nofollow && <meta name="robots" content="index, follow" />}
-      
-=======
-      <meta name="keywords" content={keywords} />
       <link rel="canonical" href={fullCanonical} />
       
-      {/* Language and Locale */}
-      <meta httpEquiv="content-language" content="en" />
-      <meta name="language" content="English" />
-      <meta name="geo.region" content="US-DE" />
-      <meta name="geo.placename" content="Middletown, Delaware" />
-      <meta name="geo.position" content="39.4496;-75.7163" />
-      <meta name="ICBM" content="39.4496, -75.7163" />
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />
-<<<<<<< HEAD
-      <meta property="og:description" content={fullDescription} />
-      <meta property="og:type" content={ogType} />
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <meta property="og:url" content={canonical || window.location.href} />
-      <meta property="og:image" content={ogImage} />
-=======
-      <meta property="og:url" content={fullCanonical} />
-      <meta property="og:image" content={ogImage || defaultOgImage} />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content={siteName} />
-=======
-      <meta property="og:url" content={canonical || 'https://ziontechgroup.com'} />
-      <meta property="og:site_name" content={siteName} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-=======
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={fullUrl} />
-      <meta property="og:image" content={image} />
-      <meta property="og:site_name" content="Zion Tech Group" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-60a2
-      <meta property="og:locale" content="en_US" />
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
+      {/* Additional meta tags */}
+      <meta name="robots" content={noindex || nofollow ? `${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}` : 'index, follow'} />
+      <meta name="author" content={author || siteName} />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
-=======
-      {article && (
+      {/* Article specific meta tags */}
+      {type === 'article' && (
         <>
           {publishedTime && <meta property="article:published_time" content={publishedTime} />}
           {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
@@ -641,178 +456,6 @@ export function SEO({
           ))}
         </>
       )}
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
-      {/* Twitter Card Meta Tags */}
-<<<<<<< HEAD
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-      
-      {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#00e5ff" />
-      <meta name="msapplication-TileColor" content="#00e5ff" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta name="apple-mobile-web-app-title" content={siteName} />
-=======
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-=======
-    publisher: {
-      '@type': 'Organization',
-      name: siteName,
-      logo: {
-        '@type': 'ImageObject',
-        url: `${siteUrl}/logo.png`
-      }
-    },
-    datePublished: publishedTime,
-    dateModified: modifiedTime,
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': fullUrl
-    },
-    ...(section && { articleSection: section }),
-    ...(tags.length > 0 && { keywords: tags.join(', ') })
-  } : null;
-
-  return (
-    <Helmet>
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={fullOgImage} />
-      <meta property="og:url" content={fullUrl} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:site_name" content={siteName} />
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content={twitterCard} />
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      
-<<<<<<< HEAD
-      {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#0891b2" />
-      <meta name="msapplication-TileColor" content="#0891b2" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      
-      {/* Article-specific meta tags */}
-=======
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={fullUrl} />
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={fullImage} />
-      <meta property="og:site_name" content={siteName} />
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter */}
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={fullUrl} />
-      <meta property="twitter:title" content={fullTitle} />
-      <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={fullImage} />
-      <meta property="twitter:site" content="@ziontechgroup" />
-      <meta property="twitter:creator" content="@ziontechgroup" />
-      
-      {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#000000" />
-      <meta name="msapplication-TileColor" content="#000000" />
-      
-      {/* Keywords */}
-      {tags.length > 0 && (
-        <meta name="keywords" content={tags.join(', ')} />
-      )}
-      
-      {/* Article specific meta tags */}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
-      {type === 'article' && publishedTime && (
-        <meta property="article:published_time" content={publishedTime} />
-      )}
-      {type === 'article' && modifiedTime && (
-        <meta property="article:modified_time" content={modifiedTime} />
-      )}
-      {type === 'article' && author && (
-        <meta property="article:author" content={author} />
-      )}
-      {type === 'article' && section && (
-        <meta property="article:section" content={section} />
-      )}
-      {type === 'article' && tags.length > 0 && (
-        tags.map((tag, index) => (
-          <meta key={index} property="article:tag" content={tag} />
-        ))
-      )}
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-60a2
-      
-      {/* Favicon and App Icons */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-=======
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={fullDescription} />
-      <meta name="twitter:image" content={ogImage} />
-      
-      {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#1e40af" />
-      <meta name="msapplication-TileColor" content="#1e40af" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
-      
-      {/* Favicon and App Icons */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-      
-      {/* Preconnect to External Domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <link rel="preconnect" href="https://api.ziontechgroup.com" />
-      
-      {/* DNS Prefetch for performance */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//api.ziontechgroup.com" />
-=======
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      
-      {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
-=======
-      <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-      
-      {/* DNS prefetch for performance */}
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-60a2
       
       {/* Structured Data */}
       {structuredData && (
@@ -826,193 +469,6 @@ export function SEO({
 <<<<<<< HEAD
         {JSON.stringify(defaultStructuredData)}
       </script>
-      
-      {/* Additional SEO Meta Tags */}
-      <meta name="application-name" content={siteName} />
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="format-detection" content="telephone=no" />
-<<<<<<< HEAD
-      <meta name="msapplication-config" content="/browserconfig.xml" />
-      
-      {/* Security Headers */}
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-=======
-      
-      {/* Security Headers */}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      <meta httpEquiv="X-Frame-Options" content="DENY" />
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-      
-<<<<<<< HEAD
-      {/* Performance and Accessibility */}
-      <meta name="color-scheme" content="dark light" />
-      <meta name="supported-color-schemes" content="dark light" />
-=======
-      {/* Performance Hints */}
-      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
-=======
-=======
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
-=======
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage || defaultOgImage} />
-
-      {/* Additional Meta Tags */}
-      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-      <meta name="author" content={author} />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-      <meta name="theme-color" content="#172d67" />
-      <meta name="msapplication-TileColor" content="#172d67" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      
-      {/* Performance and Security */}
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="referrer" content="strict-origin-when-cross-origin" />
-      
-      {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      
-      {/* Favicon and App Icons */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
-=======
-      {/* Canonical */}
-      <link rel="canonical" href={fullUrl} />
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
-        {JSON.stringify(organizationSchema)}
-      </script>
-      
-      <script type="application/ld+json">
-        {JSON.stringify(websiteSchema)}
-      </script>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <script type="application/ld+json">
-        {JSON.stringify(breadcrumbSchema)}
-      </script>
-      
-      {/* Additional SEO optimizations */}
-      <meta name="application-name" content="Zion Tech Group" />
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      
-      {/* Security headers */}
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https:; connect-src 'self' https:;" />
-      
-      {/* Performance optimizations */}
-      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      <link rel="modulepreload" href="/js/react-vendor.js" />
-      <link rel="modulepreload" href="/js/ui-vendor.js" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-60a2
-=======
-=======
-      "https://www.linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup"
-    ],
-    "foundingDate": "2020",
-    "numberOfEmployees": "50-100",
-    "serviceType": [
-      "AI Services",
-      "Micro SAAS Solutions", 
-      "IT Infrastructure",
-      "Cybersecurity",
-      "Digital Transformation"
-    ]
-  };
-
-  const finalStructuredData = structuredData || defaultStructuredData;
-
-  return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content="index, follow" />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={canonical} />
-      
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content="website" />
-      <meta property="og:image" content={defaultOgImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={defaultOgImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-      
-      {/* Additional Meta Tags for Better SEO */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#06b6d4" />
-      <meta name="msapplication-TileColor" content="#06b6d4" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      
-      {/* Performance and Security Meta Tags */}
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="format-detection" content="telephone=no" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6b26
-      
-      {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-<<<<<<< HEAD
-      <link rel="preconnect" href="https://api.ziontechgroup.com" />
-      
-      {/* Favicon */}
-=======
-      
-      {/* Favicon and App Icons */}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6b26
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
-=======
-      
-      {articleSchema && (
-        <script type="application/ld+json">
-          {JSON.stringify(articleSchema)}
-        </script>
-      )}
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
     </Helmet>
   );
 }

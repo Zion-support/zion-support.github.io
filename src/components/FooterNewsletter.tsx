@@ -10,21 +10,17 @@
 =======
 >>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
 import React, { useState } from 'react';
-import { Mail, ArrowRight, CheckCircle } from 'lucide-react';
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
->>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
+import { Mail, Send, CheckCircle } from 'lucide-react';
 
-<<<<<<< HEAD
 export const FooterNewsletter: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [message, setMessage] = useState('');
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!email.trim()) return;
+    
     setIsSubmitting(true);
     setMessage('');
 
@@ -99,9 +95,44 @@ import { Mail } from 'lucide-react';
         <p className="text-zion-cyan text-sm font-medium">
           Thank you for subscribing! 🎉
         </p>
-        <p className="text-zion-slate-light text-xs mt-1">
-          You'll receive our latest updates soon.
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+        
+        {isSubmitted ? (
+          <div className="flex items-center justify-center gap-2 text-green-400">
+            <CheckCircle className="w-5 h-5" />
+            <span>Successfully subscribed!</span>
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your email address"
+              className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
+              required
+            />
+            <button
+              type="submit"
+              disabled={isSubmitting || !email.trim()}
+              className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-blue-500 text-white font-medium rounded-lg hover:from-zion-cyan/90 hover:to-blue-500/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+            >
+              {isSubmitting ? (
+                <>
+                  <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                  Subscribing...
+                </>
+              ) : (
+                <>
+                  <Send className="w-4 h-4" />
+                  Subscribe
+                </>
+              )}
+            </button>
+          </form>
+        )}
+        
+        <p className="text-xs text-gray-400 mt-4">
+          We respect your privacy. Unsubscribe at any time.
         </p>
       </div>
     );
@@ -192,20 +223,3 @@ import { Mail } from 'lucide-react';
     </div>
   );
 };
-=======
-          className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
-          required
-        />
-      </div>
-      <Button
-        type="submit"
-        disabled={isLoading || !email.trim()}
-        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        {isLoading ? 'Subscribing...' : 'Subscribe'}
-      </Button>
-    </form>
-  );
-}
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
