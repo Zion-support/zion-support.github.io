@@ -5,12 +5,12 @@ const TalentSlugPage: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Talent — Zion Tech Solutions</title>
-        <meta name="description" content="Talent page" />
+        <title>Talent Profile - Zion Tech Solutions</title>
+        <meta name="description" content="Talent profile page" />
       </Head>
       
       <main>
-        <h1>Talent</h1>
+        <h1>Talent Profile</h1>
         <p>This page is under construction.</p>
       </main>
     </div>
