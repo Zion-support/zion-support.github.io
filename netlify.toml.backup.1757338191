@@ -1,7 +1,13 @@
 [build]
+<<<<<<< HEAD
   # Skip building on Netlify and deploy prebuilt dist/ directory
   command = "echo Skipping build; deploying prebuilt dist"
   publish = "dist"
+=======
+  # Skip build and serve prebuilt static output from the repository
+  command = "echo 'Netlify: Skipping build; serving prebuilt out/ directory'"
+  publish = "out"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-1240
   command_timeout = "30m"
 
 [build.environment]
@@ -9,12 +15,7 @@
   # Skip dependency install since we are not building on Netlify
   NETLIFY_SKIP_INSTALL = "true"
 
-<<<<<<< HEAD
-
-
-=======
 ## Plugins removed to avoid extra dependency installation during Netlify build
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9139
 
 [[redirects]]
   from = "/*"
