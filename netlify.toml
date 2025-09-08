@@ -1,22 +1,35 @@
 [build]
+<<<<<<< HEAD
   # Skipping build: deploying prebuilt dist
   command = "echo 'Skipping build: deploying prebuilt dist'"
   publish = "dist"
   functions = "netlify/functions"
+=======
+  # Do not run any build. Deploy the prebuilt static export from dist/ as-is.
+  command = "echo 'Skipping build; deploying prebuilt static export from dist'"
+  publish = "dist"
+>>>>>>> 3b4330e27053 (Checkpoint before follow-up message)
   command_timeout = "30m"
   # Only run when files outside dist/ change
   ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ':(exclude)dist'"
 
 [build.environment]
   NODE_VERSION = "20"
+<<<<<<< HEAD
   PYTHON_VERSION = "3.11"
   # Do not install dependencies during deploy; avoids Yarn on Netlify
+=======
+>>>>>>> 3b4330e27053 (Checkpoint before follow-up message)
   NETLIFY_SKIP_INSTALL = "true"
   NETLIFY_USE_YARN = "false"
   NPM_FLAGS = "--omit=optional"
 
 
+<<<<<<< HEAD
 
+=======
+# Keep the config minimal to avoid plugin-related build failures
+>>>>>>> 3b4330e27053 (Checkpoint before follow-up message)
 [[redirects]]
   from = "/*"
   to = "/index.html"
