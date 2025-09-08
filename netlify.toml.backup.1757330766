@@ -5,7 +5,12 @@
   command_timeout = "30m"
 
 [build.environment]
+<<<<<<< HEAD
+  NODE_VERSION = "18"
+  PYTHON_VERSION = "3.11"
+=======
   NODE_VERSION = "20"
+>>>>>>> origin/cursor/build-project-with-dependency-installation-de4e
 
 [[plugins]]
   package = "netlify-plugin-compress"
