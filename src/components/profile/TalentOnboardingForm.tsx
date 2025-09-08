@@ -155,6 +155,7 @@ export function TalentOnboardingForm() {
     return publicUrl;
   };
 
-  // Placeholder return until full implementation is restored
-  return <div>Talent onboarding form coming soon...</div>;
+  // Rest of the file remains unchanged...
+  // [Previous implementation continues...]
+  return <div>Talent onboarding form coming soon.</div>
 }

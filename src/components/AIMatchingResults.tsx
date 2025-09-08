@@ -34,12 +34,17 @@ interface AIMatchingResultsProps {
   project_description?: string,
   service_type?: string;
 }
-export /**
- * AIMatchingResults - Function description
- */
-function AIMatchingResults() {
-  const [active_tab, setActiveTab] = useState ('all');
-  // Group matches by category;
+
+export function AIMatchingResults({
+  matches,
+  onSelectMatch,
+  isLoading = false,
+  projectDescription = "",
+  serviceType: _serviceType = ""
+}: AIMatchingResultsProps) {
+  const [activeTab, setActiveTab] = useState("all");
+  
+  // Group matches by category
   const categories = {
     all: matches,
     talent: matches.filter (match =>;
