@@ -194,8 +194,8 @@ export function Footer() {
       links: [
         { name: 'AI Solutions', href: '/ai-services' },
         { name: 'IT Services', href: '/it-services' },
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops-automation' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity-solutions' },
+        { name: 'Cloud & DevOps', href: '/cloud-solutions' },
+        { name: 'Cybersecurity', href: '/services/ai-cybersecurity-suite' },
         { name: 'Micro SAAS', href: '/micro-saas' },
         { name: 'Digital Transformation', href: '/digital-transformation' }
       ]
@@ -204,11 +204,11 @@ export function Footer() {
       title: 'Solutions',
       links: [
         { name: 'Enterprise Solutions', href: '/enterprise' },
-        { name: 'Healthcare Tech', href: '/solutions/healthcare' },
-        { name: 'Financial Solutions', href: '/solutions/financial' },
-        { name: 'Manufacturing', href: '/solutions/manufacturing' },
-        { name: 'Government', href: '/solutions/government' },
-        { name: 'Retail Solutions', href: '/solutions/retail' }
+        { name: 'Industry Solutions', href: '/industry-solutions' },
+        { name: 'Emerging Tech', href: '/emerging-tech' },
+        { name: 'Space Tech', href: '/space-tech' },
+        { name: 'Cloud Solutions', href: '/cloud-solutions' },
+        { name: 'AI Services', href: '/ai-services' }
       ]
     },
     {
@@ -292,7 +292,7 @@ export function Footer() {
   const contactInfo = [
     {
       icon: Phone,
-      text: '+1 (302) 464-0950',
+      text: '+1 302 464 0950',
       href: 'tel:+13024640950'
     },
     {
@@ -302,8 +302,8 @@ export function Footer() {
     },
     {
       icon: MapPin,
-      text: '364 E Main St STE 1008, Middletown DE 19709',
-      href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'
+      text: 'Middletown, DE',
+      href: '#'
     },
     {
       icon: Clock,

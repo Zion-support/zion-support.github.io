@@ -39,16 +39,10 @@ import {
   Cloud,
   Cpu,
   Zap,
-  Target,
   Building,
-  Atom,
-  Eye,
   Users,
-  FileText,
   Briefcase,
-  Network,
-  Newspaper,
-  Activity
+  Rocket
 } from 'lucide-react';
 
 interface HeaderProps {
@@ -66,27 +60,23 @@ export function Header({ onMenuClick }: HeaderProps) {
     {
       name: 'Services',
       href: '/services',
-      dropdown: true,
-      icon: Zap,
-      items: [
-        { name: 'AI & Machine Learning', href: '/ai-services' },
-        { name: 'Quantum Computing', href: '/services/quantum-computing-solutions' },
-        { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity' },
-        { name: 'AI Healthcare', href: '/services/ai-healthcare-analytics-platform' },
-        { name: 'AI Financial Trading', href: '/services/ai-financial-trading-platform' },
-        { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization' },
-        { name: 'AI Marketing & SEO', href: '/services/ai-marketing-automation-platform' },
-        { name: 'AI Project Management', href: '/services/ai-project-management-platform' },
-        { name: 'AI DevOps & Infrastructure', href: '/services/ai-devops-automation-platform' },
-        { name: 'AI IoT & Edge Computing', href: '/services/ai-iot-edge-computing-platform' },
-        { name: 'Space Technology', href: '/services/space-tech' },
-        { name: 'Micro SAAS Solutions', href: '/micro-saas' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
-        { name: 'Data & Analytics', href: '/services/ai-business-intelligence' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure-management' },
-        { name: 'Emerging Technologies', href: '/services/quantum-computing-solutions' }
+      dropdown: [
+        { name: 'AI Solutions', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI platforms' },
+        { name: 'IT Services', href: '/it-services', icon: Cpu, description: 'Digital transformation' },
+        { name: 'Cloud & DevOps', href: '/cloud-solutions', icon: Cloud, description: 'Scalable infrastructure' },
+        { name: 'Cybersecurity', href: '/services/ai-cybersecurity-suite', icon: Shield, description: 'Advanced security' },
+        { name: 'Micro SAAS', href: '/micro-saas', icon: Zap, description: 'Custom software solutions' },
+        { name: 'Digital Transformation', href: '/digital-transformation', icon: Rocket, description: 'Business transformation' }
+      ]
+    },
+    {
+      name: 'Solutions',
+      href: '/solutions',
+      dropdown: [
+        { name: 'Enterprise', href: '/enterprise', icon: Building, description: 'Enterprise solutions' },
+        { name: 'Industry Solutions', href: '/industry-solutions', icon: Briefcase, description: 'Industry-specific solutions' },
+        { name: 'Emerging Tech', href: '/emerging-tech', icon: Rocket, description: 'Next-gen technology' },
+        { name: 'Space Tech', href: '/space-tech', icon: Rocket, description: 'Space technology solutions' }
       ]
     },
     {
