@@ -56,7 +56,7 @@ setIsSubmitting(false);
 :pages.disabled_auto/contact.tsx;
       description='Get in touch with Zion Tech Group for technology solutions, consultations, and support. We;
   're here to help transform your business.';
-      description='Get in touch with Zion Tech Group for technology solutions, consultations, and support. We&apos;re here to help transform your business.''>{/* Hero Section */}
+      description='Get in touch with Zion Tech Group for technology solutions, consultations, and support. We're here to help transform your business.''>{/* Hero Section */}
       <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20>
         <div className='container mx-auto px-4>
           <div className='max-w-4xl mx-auto text-center>

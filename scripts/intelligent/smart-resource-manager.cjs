@@ -1,9 +1,13 @@
+
+
+=======
 #!/usr/bin/env node;
 /**
  * Smart Resource Manager;
  * Intelligent resource optimization and management;
  */
 
+=======
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -55,4 +59,6 @@ const os = require('os')
       execSync('find . -name "*.json" -mtime +30 -exec gzip {} \\;', { "stdio"})
         "action"
       console.error(' Error compressing "files")
+    console.error(' Smart Resource Manager "failed")
+=======
     console.error(' Smart Resource Manager "failed")

@@ -1,99 +1,97 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { HelmetProvider } from 'react-helmet-async';
-import './App.css';
-
-// Components
-import ErrorBoundary from './components/ErrorBoundary';
-import { AppLayout } from './layout/AppLayout';
-import LazyLoad from './components/LazyLoad';
+import { ThemeProvider } from './components/ThemeProvider';
+import { ErrorBoundary, setupGlobalErrorHandling } from './components/ErrorHandling';
+import ScrollToTop from './components/ScrollToTop';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
-import Analytics from './components/Analytics';
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
+import { SEO, HomePageSEO } from './components/SEO';
+import { AccessibilityWrapper } from './components/AccessibilityEnhancements';
+import { PerformanceOptimizations } from './components/PerformanceOptimizations';
 
-// Pages
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import NotFound from './pages/NotFound';
+// Pages - Lazy loaded for better performance
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Pricing = lazy(() => import('./pages/Pricing'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
-// Context Providers
-import { LanguageProvider } from './context/LanguageContext';
-import { WhitelabelProvider } from './context/WhitelabelContext';
-import { AuthProvider } from './context/auth/AuthProvider';
-import { NotificationProvider } from './context/notifications/NotificationProvider';
-import { AnalyticsProvider } from './context/AnalyticsContext';
-import { ViewModeProvider } from './context/ViewModeContext';
+// Service Pages - Lazy loaded for better performance
+const AIServices = lazy(() => import('./pages/AIServices'));
+const ITServices = lazy(() => import('./pages/ITServices'));
+const MicroSaaS = lazy(() => import('./pages/MicroSaaS'));
+const Cybersecurity = lazy(() => import('./pages/Cybersecurity'));
+const CloudMigration = lazy(() => import('./pages/CloudMigration'));
+const MobileDevelopment = lazy(() => import('./pages/MobileDevelopment'));
 
-// Create QueryClient instance
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      staleTime: 5 * 60 * 1000, // 5 minutes
-      cacheTime: 10 * 60 * 1000, // 10 minutes
-    },
-  },
-});
+// Additional Pages - Lazy loaded for better performance
+const FAQ = lazy(() => import('./pages/FAQ'));
+const Privacy = lazy(() => import('./pages/Privacy'));
+const Terms = lazy(() => import('./pages/Terms'));
+const Support = lazy(() => import('./pages/Support'));
 
-// App configuration
-const appConfig = {
-  name: 'Zion Tech Group',
-  version: '1.0.0',
-  theme: 'light',
-};
+function App() {
+  // Setup global error handling
+  useEffect(() => {
+    setupGlobalErrorHandling();
+  }, []);
 
-// Loading fallback component
-const AppLoadingFallback = () => (
-  <div className="flex items-center justify-center min-h-screen">
-    <LoadingSpinner size="large" />
-  </div>
-);
-
-// Main App component
-const App: React.FC = () => {
   return (
     <ErrorBoundary>
       <HelmetProvider>
-        <QueryClientProvider client={queryClient}>
-          <Router>
-            <LanguageProvider>
-              <WhitelabelProvider>
-                <AuthProvider>
-                  <NotificationProvider>
-                    <AnalyticsProvider>
-                      <ViewModeProvider>
-                        <Suspense fallback={<AppLoadingFallback />}>
-                          <AppLayout config={appConfig}>
-                            <LazyLoad>
-                              <Routes>
-                                <Route path="/" element={<Home />} />
-                                <Route path="/about" element={<About />} />
-                                <Route path="/contact" element={<Contact />} />
-                                <Route path="*" element={<NotFound />} />
-                              </Routes>
-                            </LazyLoad>
-                          </AppLayout>
-                        </Suspense>
-                        <PerformanceMonitor />
-                        <Analytics 
-                          trackingId={import.meta.env.VITE_GA_TRACKING_ID}
-                          enablePerformanceTracking={true}
-                          enableErrorTracking={true}
-                          enablePageViewTracking={true}
-                        />
-                        {/* <ReactQueryDevtools initialIsOpen={false} /> */}
-                      </ViewModeProvider>
-                    </AnalyticsProvider>
-                  </NotificationProvider>
-                </AuthProvider>
-              </WhitelabelProvider>
-            </LanguageProvider>
-          </Router>
-        </QueryClientProvider>
+        <ThemeProvider>
+          <AccessibilityEnhancer>
+            <AccessibilityWrapper>
+              <Router>
+                <ScrollToTop />
+                <PerformanceMonitor />
+                <PerformanceOptimizer enableMonitoring={process.env.NODE_ENV === 'development'} />
+                
+                {/* SEO Meta Tags */}
+                <HomePageSEO />
+                
+                <div className="min-h-screen bg-background text-foreground" id="main-content">
+                  <PerformanceOptimizations>
+                    <Suspense fallback={<LoadingSpinner />}>
+                      <Routes>
+                        {/* Main Routes */}
+                        <Route path="/" element={<Home />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/services" element={<Services />} />
+                        <Route path="/contact" element={<Contact />} />
+                        <Route path="/pricing" element={<Pricing />} />
+                        
+                        {/* Service Routes */}
+                        <Route path="/services/ai-services" element={<AIServices />} />
+                        <Route path="/services/it-services" element={<ITServices />} />
+                        <Route path="/services/micro-saas" element={<MicroSaaS />} />
+                        <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+                        <Route path="/services/cloud-solutions" element={<CloudMigration />} />
+                        <Route path="/services/mobile-development" element={<MobileDevelopment />} />
+                        
+                        {/* Additional Routes */}
+                        <Route path="/faq" element={<FAQ />} />
+                        <Route path="/privacy" element={<Privacy />} />
+                        <Route path="/terms" element={<Terms />} />
+                        <Route path="/support" element={<Support />} />
+                        
+                        {/* 404 Route */}
+                        <Route path="*" element={<NotFound />} />
+                      </Routes>
+                    </Suspense>
+                  </PerformanceOptimizations>
+                </div>
+              </Router>
+            </AccessibilityWrapper>
+          </AccessibilityEnhancer>
+        </ThemeProvider>
       </HelmetProvider>
     </ErrorBoundary>
   );
-};
+}
 
 export default App;

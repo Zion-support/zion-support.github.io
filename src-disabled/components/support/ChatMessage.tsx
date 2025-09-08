@@ -55,10 +55,10 @@ import { format } from "date-fns";
 // before we perform our link replacements below.
 function escapeHtml(unsafe: string): string {
   return unsafe
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
+    .replace(/&/g, '&')
+    .replace(/</g, '<')
+    .replace(/>/g, '>')
+    .replace(/"/g, '"')
     .replace(/'/g, '&#039;')
 function formatMessageWithLinks(message: string): string {
   // First, escape any HTML so that user input cannot break out of the intended

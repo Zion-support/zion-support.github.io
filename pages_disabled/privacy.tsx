@@ -217,7 +217,7 @@ export default function PrivacyPage() {
             <div className="bg-gray-800/30 backdrop-blur-xl rounded-xl p-6 border border-gray-700/50">
               <h3 className="text-2xl font-bold text-white mb-4 flex items-center">
                 <Shield className="w-6 h-6 text-green-400 mr-3" />
-                Children&apos;s Privacy
+                Children's Privacy
               </h3>
               <p className="text-gray-300 leading-relaxed">
                 Our services are not intended for children under 13 years of age. We do not knowingly collect personal information from 
@@ -239,7 +239,7 @@ export default function PrivacyPage() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Questions About Privacy?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              We&apos;re here to help. Contact our privacy team for any questions or concerns about your data.
+              We're here to help. Contact our privacy team for any questions or concerns about your data.
             </p>
             <div className="bg-gray-800/30 backdrop-blur-xl rounded-2xl p-8 border border-gray-700/50">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
