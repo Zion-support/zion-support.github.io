@@ -10,42 +10,47 @@ import { EnhancedAccessibilityEnhancer  } from './components/EnhancedAccessibili
 import { MobileExperienceEnhancer  } from './components/MobileExperienceEnhancer';
 import { ErrorBoundary  } from './components/ErrorBoundary';
 
-// Lazy load pages - only import existing ones
-const Home = React.lazy(() => import('./pages/Home'));
-const About = React.lazy(() => import('./pages/About'));
-const Contact = React.lazy(() => import('./pages/Contact'));
-const Blog = React.lazy(() => import('./pages/Blog'));
-const BlogPost = React.lazy(() => import('./pages/BlogPost'));
-const Press = React.lazy(() => import('./pages/Press'));
-const Docs = React.lazy(() => import('./pages/Docs'));
-const Training = React.lazy(() => import('./pages/Training'));
-const Webinars = React.lazy(() => import('./pages/Webinars'));
-const Status = React.lazy(() => import('./pages/Status'));
-const Sitemap = React.lazy(() => import('./pages/Sitemap'));
-const Accessibility = React.lazy(() => import('./pages/Accessibility'));
-const Security = React.lazy(() => import('./pages/Security'));
-const Compliance = React.lazy(() => import('./pages/Compliance'));
-const Services = React.lazy(() => import('./pages/Services'));
-const Solutions = React.lazy(() => import('./pages/Solutions'));
-const Resources = React.lazy(() => import('./pages/Resources'));
-const Pricing = React.lazy(() => import('./pages/Pricing'));
-const Team = React.lazy(() => import('./pages/Team'));
-const Partners = React.lazy(() => import('./pages/Partners'));
-const News = React.lazy(() => import('./pages/News'));
-const Press = React.lazy(() => import('./pages/Press'));
-const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
-const Dashboard = React.lazy(() => import('./pages/Dashboard'));
-const Login = React.lazy(() => import('./pages/Login'));
-const FAQ = React.lazy(() => import('./pages/FAQ'));
-const Privacy = React.lazy(() => import('./pages/Privacy'));
-const Terms = React.lazy(() => import('./pages/Terms'));
-const Cookies = React.lazy(() => import('./pages/Cookies'));
-const SearchPage = React.lazy(() => import('./pages/SearchPage'));
-const Partners = React.lazy(() => import('./pages/Partners'));
-const Documentation = React.lazy(() => import('./pages/Documentation'));
-const Community = React.lazy(() => import('./pages/Community'));
-const Support = React.lazy(() => import('./pages/Support'));
-const Developers = React.lazy(() => import('./pages/Developers'));
+const baseRoutes = [
+  { path: '/', element: <Home /> },
+  { path: '/match', element: <AIMatcherPage /> },
+  { path: '/login', element: <Login /> },
+  { path: '/register', element: <Signup /> },
+  { path: '/signup', element: <SimpleSignup /> },
+  { path: '/talent', element: <TalentDirectory /> },
+  { path: '/talents', element: <TalentsPage /> },
+  { path: '/more-talents', element: <MoreTalentsPage /> },
+  { path: '/additional-talents', element: <AdditionalTalentsPage /> },
+  { path: '/services', element: <ServicesPage /> },
+  { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
+  { path: '/it-onsite-services/:country', element: <ITOnsiteServicesPage /> },
+  { path: '/categories', element: <Categories /> },
+  { path: '/equipment', element: <EquipmentPage /> },
+  { path: '/equipment/:id', element: <EquipmentDetail /> },
+  { path: '/new-products', element: <NewProductsPage /> },
+  { path: '/analytics', element: <Analytics /> },
+  { path: '/mobile-launch', element: <MobileLaunchPage /> },
+  { path: '/open-app', element: <OpenAppRedirect /> },
+  {
+    path: '/community',
+    element: (
+      <CommunityProvider>
+        <CommunityPage />
+      </CommunityProvider>
+    ),
+  },
+  { path: '/contact', element: <ContactPage /> },
+  { path: '/partners', element: <PartnersPage /> },
+  { path: '/sitemap', element: <Sitemap /> },
+  { path: '/help', element: <Help /> },
+  { path: '/zion-hire-ai', element: <ZionHireAI /> },
+  { path: '/hire-ai', element: <ZionHireAI /> },
+  { path: '/request-quote', element: <RequestQuotePage /> },
+  { path: '/blog', element: <Blog /> },
+  { path: '/blog/:slug', element: <BlogPost /> },
+  { path: '/wishlist', element: <WishlistPage /> },
+  { path: '/cart', element: <CartPage /> },
+  { path: '/checkout', element: <Checkout /> },
+];
 
 // New pages
 const Solutions = React.lazy(() => import('./pages/solutions'));
