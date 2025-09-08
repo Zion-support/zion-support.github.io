@@ -1,6 +1,10 @@
 [build]
   # Install Python dependencies first, then Node.js dependencies and build
+<<<<<<< HEAD
+  command = "(mise settings set python.compile false || true) && pip install -r requirements.txt && npm ci && npm run build"
+=======
   command = "mise settings set python.compile false && pip install -r requirements.txt && npm ci && npm run build"
+>>>>>>> origin/cursor/build-project-with-dependency-installation-2d49
   publish = "dist"
   command_timeout = "30m"
 
