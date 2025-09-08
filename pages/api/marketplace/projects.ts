@@ -1,49 +1,23 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-function bad(res: NextApiResponse, message: string, code = 400) {
-  return res.status(code).json({
-    ok: false,
-    error: message
-  });
-}
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
+  }
 
-function canAccess(user: any, project: any) {
-  return true; // Simplified access check
-}
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    if (req.method === 'POST') {
-      const note = {
-        id: 'temp-note-id',
-        authorId: 'user-id',
-        authorRole: 'user',
-        content: 'Project note',
-        createdAtIso: new Date().toISOString()
-      };
-      
-      return res.json({
-        ok: true,
-        project: { notes: [note] }
-      });
-    }
-    
-    if (req.method === 'PUT') {
-      const doc = {
-        id: 'temp-doc-id',
-        name: 'document.pdf',
-        url: 'https://example.com/document.pdf',
-        uploadedAtIso: new Date().toISOString()
-      };
-      
-      return res.json({
-        ok: true,
-        project: { documents: [doc] }
-      });
-    }
-    
-    return bad(res, "Unknown action");
-  } catch (error) {
-    return bad(res, "Internal server error", 500);
+    // Mock response
+    const data = {
+      success: true,
+      message: 'API endpoint working',
+      timestamp: new Date().toISOString()
+    };
+
+    res.status(200).json(data);
+  } catch (error: any) {
+    res.status(500).json({
+      error: error?.message || 'Internal server error'
+    });
   }
 }

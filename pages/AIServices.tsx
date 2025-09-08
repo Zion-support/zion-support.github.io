@@ -18,14 +18,7 @@ import {
   Bot, 
   FileText,
   Cog,
-  Shield,
-  Zap,
-  Users,
-  TrendingUp,
-  Database,
-  Network,
-  Target,
-  Rocket
+  Shield
 } from 'lucide-react';
 =======
 import { Brain, CheckCircle, ArrowRight, Star } from 'lucide-react';
@@ -152,7 +145,7 @@ export default function AIServices() {
                   whileTap={{ scale: 0.95 }}
                   className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
                 >
-                  Schedule Demo
+                  View Portfolio
                 </motion.button>
               </div>
             </motion.div>
@@ -196,6 +189,22 @@ export default function AIServices() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We deliver AI solutions that drive real business value
               </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
+                >
+                  Start AI Project
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
+                >
+                  Schedule Demo
+                </motion.button>
+              </div>
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

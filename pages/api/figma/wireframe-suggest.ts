@@ -12,19 +12,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
     return;
   }
-  
+
   const { screenName, role } = req.body || {};
-  
+
   if (!screenName) {
     res.status(400).json({
       error: 'screenName is required'
     });
     return;
   }
-  
+
   try {
-    const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
-    
+    const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.
+- Screen: ${screenName}
+- Primary role: ${role || 'Talent'}
+- Return a compact outline with bullets and short labels.`;
+
     const completion = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [
@@ -40,13 +43,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       temperature: 0.4,
       max_tokens: 400
     });
-    
+
     const suggestion = completion.choices?.[0]?.message?.content || 'No suggestion generated.';
+
     res.status(200).json({
       suggestion
     });
   } catch (e: unknown) {
-    const message = process.env.OPENAI_API_KEY ? (e?.message || 'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.';
+    const message = process.env.OPENAI_API_KEY 
+      ? (e?.message || 'Failed to generate') 
+      : 'Set OPENAI_API_KEY to enable suggestions.';
+    
     res.status(500).json({
       error: message
     });

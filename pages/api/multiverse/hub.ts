@@ -1,16 +1,28 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const state = { config: {}, lastSyncedAt: new Date().toISOString() };
-  
-  if (req.method === 'GET') {
-    return res.status(200).json({
-      status: 'ok',
-      instanceId: 'hub-instance',
-      config: state.config,
-      lastSyncedAt: state.lastSyncedAt
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', ['GET']);
+    return res.status(405).end('Method Not Allowed');
+  }
+
+  try {
+    // Mock multiverse hub data
+    const hub = {
+      id: 'multiverse-hub-1',
+      name: 'Zion Multiverse Hub',
+      status: 'active',
+      connectedRealms: ['earth', 'mars', 'venus'],
+      lastSync: new Date().toISOString()
+    };
+
+    res.status(200).json({
+      success: true,
+      hub
+    });
+  } catch (error: any) {
+    res.status(500).json({
+      error: error?.message || 'Failed to retrieve multiverse hub data'
     });
   }
-  
-  res.status(405).json({ error: 'Method not allowed' });
 }

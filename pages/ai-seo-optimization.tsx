@@ -1,16 +1,22 @@
 import React from 'react';
-import Layout from '../components/Layout';
 import Head from 'next/head';
+import Layout from '../components/Layout';
 
 export default function AISEOOptimization() {
   return (
     <Layout>
       <Head>
         <title>AI SEO Optimization - Zion Tech Group</title>
+        <meta name="description" content="AI-powered SEO optimization solutions for better search engine rankings." />
       </Head>
-      <div>
-        <h1>AI SEO Optimization</h1>
-        <p>Advanced SEO optimization powered by artificial intelligence</p>
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-20">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">AI SEO Optimization</h1>
+          <p className="text-xl text-gray-600 mb-8">
+            AI-powered SEO optimization solutions for better search engine rankings.
+          </p>
+        </div>
       </div>
     </Layout>
   );

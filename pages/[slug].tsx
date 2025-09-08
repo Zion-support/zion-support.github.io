@@ -102,9 +102,9 @@ function getAllServices(): Service[] {
 		.concat(real2026Additions as unknown as Service[])
 		.concat(added2026Q2Services as unknown as Service[])
 		.concat(real2026Q3Additions as unknown as Service[])
-		.concat(real2026Q4Additions as unknown as Service[])
-		.concat(real2026Q4NewServices as unknown as Service[])
-		.concat(real2027Q1Additions as unknown as Service[])
+		.concat(real2026Q4Additions as unknown as Service[]);
+		.concat(real2026Q4NewServices as unknown as Service[]);
+		.concat(real2027Q1Additions as unknown as Service[]);
 		.concat(newSaasItAiServices2025 as unknown as Service[]);
 function toSlug(value: string): string {
 	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');

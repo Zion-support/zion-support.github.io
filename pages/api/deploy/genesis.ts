@@ -2,11 +2,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    return res.status(405).json({
-      error: 'Method not allowed'
-    });
+    return res.status(405).json({ error: 'Method not allowed' });
   }
-  
+
   try {
     const body = req.body || {};
     const {
@@ -19,17 +17,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       modules = {},
       bonusModules = {}
     } = body;
-    
+
     if (!instanceName || !deploymentRegion) {
       return res.status(400).json({
         error: 'Missing required fields: instanceName, deploymentRegion'
       });
     }
-    
+
     // Simulated provisioning operations – replace with real infra hooks later
     const now = new Date().toISOString();
     const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`;
-    
+
     const outputActions = {
       zionGPT: {
         initialized: true,
@@ -52,15 +50,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       },
       publicPages: []
     };
-    
+
     res.status(200).json({
       success: true,
       provisionId,
-      outputActions
+      outputActions,
+      message: 'Genesis deployment initiated successfully'
     });
-  } catch (error) {
+  } catch (error: any) {
     res.status(500).json({
-      error: 'Internal server error'
+      error: error?.message || 'Genesis deployment failed'
     });
   }
 }
