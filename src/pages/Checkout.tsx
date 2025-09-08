@@ -7,7 +7,16 @@ import { safeStorage } from '@/utils/safeStorage';
 import { Button } from '@/components/ui/button';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { getStripe } from '@/utils/getStripe';
-import { apiClient } from '@/utils/apiClient';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+} from '@/components/ui/dialog';
+import { Input } from '@/components/ui/input';
+import { useAuth } from '@/hooks/useAuth';
 
 
 export default function Checkout() {
@@ -51,15 +60,12 @@ export default function Checkout() {
     }
   }, [location.search]);
 
-  const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
-  main
-
-  const onSubmit = async (data: CheckoutForm) => {
+  const createSession = async (body: any) => {
     try {
-      const response = await apiClient('/api/checkout_sessions', {
+      const response = await fetch('/api/create-checkout-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ productId: product.id }),
+        body: JSON.stringify(body),
       });
       const { sessionId } = await response.json();
       const stripe = await getStripe();
@@ -68,6 +74,25 @@ export default function Checkout() {
       }
     } catch (err) {
       console.error('Checkout error', err);
+    }
+    await createSession({ priceId: product.id });
+  };
+
+  const handleGuestSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const product = items[0];
+    await createSession({
+      priceId: product.id,
+      email: guestEmail,
+      shipping: guestAddress,
+    });
+  };
+
+  const handleCheckout = async () => {
+    const product = items[0];
+    if (!user) {
+      setShowGuest(true);
+      return;
     }
     await createSession({ priceId: product.id });
   };
