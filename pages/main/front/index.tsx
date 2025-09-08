@@ -51,54 +51,40 @@ export default function FrontLanding() {
         </nav>
       </header>
       {/* Hero */}
-      <main className='relative z-10'>
-        <section className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24'>
-          <div className='text-center'>            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className='mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md'
-            >
-              <span className='h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]' />              Autonomous agents running continuous improvements
-            </motion.div>
-            <motion.h1
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.05 }}
-              className='mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl'><span className='gradient-text'>
-                Autonomous Cloud Automations
-              </span>            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1 }}
-              className='mx-auto mt-5 max-w-3xl text-lg text-white/80'
-            >
-              Self-improving, cloud-native agents that invent, generate, and run
-              new automation factories—fixing, optimizing, and syncing changes
-              to the repository continuously.            </motion.p>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className='mt-8 flex flex-wrap justify-center gap-3'
-            >
-              <Link href='/automation'>
-                <a className='rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-shadow'>
-                  Explore Automations
-                </a>
-              </Link>
-              <a
-                href='https://github.com/Zion-Holdings/zion.app/actions/workflows/autonomous-meta.yml'
-                target='_blank'
-                rel='noopener'
-                className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10'
-              >
-                Live Meta Factory
-              </a>
-            </motion.div>
-            {/* Quick stats */}
-            <div className='mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4'>
+      <div className="relative z-10">
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
+        >
+          <div className="text-center">
+            <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md">
+              <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
+              Front systems hub — tailored view of our autonomous capabilities
+            </div>
+                        <h1 className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl">
+              <span className="gradient-text animate-shimmer bg-[length:200%_100%]">Futuristic Front Experience</span>
+            </h1>
+            <div className="mx-auto mt-3 flex max-w-2xl items-center justify-center gap-2 text-xs text-white/60">
+              <a href="#feature-map" className="hover:text-white">Feature Map</a>
+              <span aria-hidden>•</span>
+              <a href="#capabilities" className="hover:text-white">Capabilities</a>
+              <span aria-hidden>•</span>
+              <a href="#benefits" className="hover:text-white">Benefits</a>
+              <span aria-hidden>•</span>
+              <a href="#reports" className="hover:text-white">Integrations</a>
+            </div>
+            <p className="mx-auto mt-5 max-w-3xl text-lg text-white/80">
+              Explore the features, capabilities, and benefits that power Zion's autonomous cloud automations — optimized for your front‑of‑house experience.
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <Link href="/automation"><a className="rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-shadow">Explore Automations</a></Link>
+              <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">View Cloud Automations</a></Link>
+            </div>
+
+            {/* Live metrics strip */}
+            <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
               {[
                 ['24/7', 'Autonomous'],
                 ['Main', 'Direct Sync'],
@@ -276,7 +262,7 @@ export default function FrontLanding() {
               <a href="https://github.com/Zion-Holdings/zion.app/blob/main/docs/CHANGELOG_AI.md" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
   <div className="text-base font-semibold">AI Changelog</div>
   <div className="mt-1 text-sm text-white/75">Summarized updates</div>
-    <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div></a>
+  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div></a>
           </div>
         </section>
         {/* AUTO-GENERATED: FRONT_ADS_END */}
@@ -750,7 +736,6 @@ export default function FrontLanding() {
 
         {/* AUTO: catalog injection for automated advertising */}
         {/* AUTO:FRONT_INDEX_DIRECTORY_START */}
-
 <section id="auto-catalog" className="mx-auto max-w-7xl px-6 pb-16">
   <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Autonomous Catalog</h2>
   <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Auto‑discovered features, capabilities, and resources. Kept fresh by in‑repo Node tools.</p>
@@ -772,7 +757,7 @@ export default function FrontLanding() {
 
   </div>
 </section>
- {/* AUTO:FRONT_INDEX_DIRECTORY_END */}
+{/* AUTO:FRONT_INDEX_DIRECTORY_END */}
 
         {/* Platform Modules */}
         <motion.section
@@ -1400,8 +1385,8 @@ export default function FrontLanding() {
             <a href="https://github.com/Zion-Holdings/zion.app/actions" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl tilt-on-hover holo neon-ring"><div className="text-base font-semibold">Live Pipelines</div><div className="mt-1 text-sm text-white/75">CI logs & artifacts</div></a>
             <a href="https://github.com/Zion-Holdings/zion.app/tree/main/docs" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl tilt-on-hover holo neon-ring"><div className="text-base font-semibold">Docs & Guides</div><div className="mt-1 text-sm text-white/75">Technical notes</div></a>
           </div>
-                </section>
-         {/* AUTO-GENERATED: FRONT_ADS_END */}
+        </section>
+        /* AUTO-GENERATED: FRONT_ADS_END */
 
         {/* Feature Highlights (new) */}
         <motion.section
