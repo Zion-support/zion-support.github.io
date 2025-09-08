@@ -1,559 +1,305 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/Card';
-import { Button } from '../components/ui/Button';
+import Section from '../components/ui/Section';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
 
   const caseStudies = [
     {
-      id: 'fintech-ai-fraud-detection',
-      title: 'FinTech Revolution: AI-Powered Fraud Detection System',
-      company: 'SecureBank Corp',
-      industry: 'Financial Services',
-      service: 'AI & Machine Learning',
-      challenge: 'High fraud rates and false positives in transaction monitoring',
-      solution: 'Implemented advanced AI fraud detection system with real-time analysis',
-      results: {
-        fraudReduction: '89%',
-        falsePositives: '76%',
-        processingSpeed: '95%',
-        costSavings: '$2.4M',
-        timeframe: '6 months'
-      },
-      description: 'SecureBank Corp was experiencing significant losses due to fraudulent transactions and customer dissatisfaction from false positive alerts. Our AI-powered fraud detection system revolutionized their security infrastructure.',
-      technologies: ['Machine Learning', 'Real-time Analytics', 'Behavioral Analysis', 'Pattern Recognition'],
-      metrics: [
-        { label: 'Fraud Detection Rate', value: '99.2%', improvement: '+89%' },
-        { label: 'False Positives', value: '2.1%', improvement: '-76%' },
-        { label: 'Processing Speed', value: '<100ms', improvement: '+95%' },
-        { label: 'Annual Savings', value: '$2.4M', improvement: 'New' }
+      title: 'E-commerce Platform Optimization',
+      company: 'TechRetail Inc.',
+      description: 'Implemented autonomous AI systems that increased conversion rates by 45% and reduced cart abandonment by 60%.',
+      results: [
+        '45% increase in conversion rates',
+        '60% reduction in cart abandonment',
+        '3x faster page load times',
+        '99.9% uptime maintained'
       ],
-      testimonial: {
-        quote: "Zion Tech Group's AI solution has transformed our fraud detection capabilities. We've seen an 89% reduction in fraud while dramatically improving customer experience.",
-        author: 'Sarah Mitchell',
-        role: 'Chief Risk Officer',
-        avatar: 'SM'
-      },
-      image: '🛡️',
-      featured: true,
-      duration: '6 months',
-      teamSize: '8 experts'
+      category: 'E-commerce',
+      image: '/api/placeholder/400/300',
+      color: 'from-blue-500 to-blue-600'
     },
     {
-      id: 'healthcare-ai-diagnostics',
-      title: 'Healthcare Innovation: AI-Powered Medical Diagnostics Platform',
-      company: 'MediCore Health System',
-      industry: 'Healthcare',
-      service: 'AI & Machine Learning',
-      challenge: 'Slow diagnostic processes and inconsistent accuracy across different specialists',
-      solution: 'Developed AI diagnostic platform with computer vision and predictive analytics',
-      results: {
-        diagnosticAccuracy: '94%',
-        processingTime: '78%',
-        patientThroughput: '65%',
-        costReduction: '$1.8M',
-        timeframe: '8 months'
-      },
-      description: 'MediCore Health System needed to improve diagnostic accuracy and speed while reducing costs. Our AI-powered medical diagnostics platform delivered exceptional results.',
-      technologies: ['Computer Vision', 'Deep Learning', 'Medical Imaging', 'Predictive Analytics'],
-      metrics: [
-        { label: 'Diagnostic Accuracy', value: '96.7%', improvement: '+94%' },
-        { label: 'Processing Time', value: '15 min', improvement: '-78%' },
-        { label: 'Patient Throughput', value: '+65%', improvement: '+65%' },
-        { label: 'Cost Reduction', value: '$1.8M', improvement: 'Annual' }
+      title: 'Financial Services Automation',
+      company: 'GlobalBank',
+      description: 'Deployed intelligent automation systems that processed 10x more transactions while maintaining 100% accuracy.',
+      results: [
+        '10x increase in transaction processing',
+        '100% accuracy maintained',
+        '24/7 autonomous operation',
+        '50% reduction in operational costs'
       ],
-      testimonial: {
-        quote: "The AI diagnostics platform has revolutionized our patient care. We're seeing faster, more accurate diagnoses that are saving lives.",
-        author: 'Dr. Michael Chen',
-        role: 'Chief Medical Officer',
-        avatar: 'MC'
-      },
-      image: '🏥',
-      featured: true,
-      duration: '8 months',
-      teamSize: '12 experts'
+      category: 'Financial Services',
+      image: '/api/placeholder/400/300',
+      color: 'from-green-500 to-green-600'
     },
     {
-      id: 'ecommerce-cloud-migration',
-      title: 'E-commerce Transformation: Cloud Migration & Optimization',
-      company: 'RetailMax Global',
-      industry: 'E-commerce',
-      service: 'Cloud & Infrastructure',
-      challenge: 'Legacy infrastructure causing downtime and limiting scalability',
-      solution: 'Complete cloud migration with auto-scaling and performance optimization',
-      results: {
-        uptime: '99.9%',
-        loadTimes: '68%',
-        scalability: '10x',
-        costOptimization: '45%',
-        timeframe: '4 months'
-      },
-      description: 'RetailMax Global was struggling with frequent downtime and slow performance during peak shopping seasons. Our cloud migration strategy delivered remarkable improvements.',
-      technologies: ['AWS', 'Kubernetes', 'Auto-scaling', 'Load Balancing', 'CDN'],
-      metrics: [
-        { label: 'Uptime', value: '99.97%', improvement: '+99.9%' },
-        { label: 'Page Load Time', value: '1.2s', improvement: '-68%' },
-        { label: 'Scalability', value: '10x', improvement: '1000%' },
-        { label: 'Infrastructure Costs', value: '-45%', improvement: '-45%' }
+      title: 'Healthcare Data Management',
+      company: 'MedTech Solutions',
+      description: 'Built autonomous data processing systems that improved patient care efficiency by 35% and reduced errors by 90%.',
+      results: [
+        '35% improvement in care efficiency',
+        '90% reduction in data errors',
+        'Real-time patient monitoring',
+        'HIPAA compliance automation'
       ],
-      testimonial: {
-        quote: "Our Black Friday traffic increased 300% with zero downtime. The cloud migration has been transformational for our business.",
-        author: 'Jennifer Walsh',
-        role: 'CTO',
-        avatar: 'JW'
-      },
-      image: '☁️',
-      featured: false,
-      duration: '4 months',
-      teamSize: '6 experts'
+      category: 'Healthcare',
+      image: '/api/placeholder/400/300',
+      color: 'from-purple-500 to-purple-600'
     },
     {
-      id: 'manufacturing-iot-automation',
-      title: 'Smart Manufacturing: IoT-Powered Production Optimization',
-      company: 'TechManufacture Inc',
-      industry: 'Manufacturing',
-      service: 'IoT & Automation',
-      challenge: 'Inefficient production processes and lack of real-time visibility',
-      solution: 'Implemented IoT sensors and automation systems for smart manufacturing',
-      results: {
-        efficiency: '42%',
-        downtime: '67%',
-        qualityImprovement: '35%',
-        energySavings: '28%',
-        timeframe: '10 months'
-      },
-      description: 'TechManufacture Inc needed to modernize their production facilities to compete in the digital age. Our IoT and automation solution transformed their operations.',
-      technologies: ['IoT Sensors', 'Edge Computing', 'Predictive Maintenance', 'Real-time Analytics'],
-      metrics: [
-        { label: 'Production Efficiency', value: '+42%', improvement: '+42%' },
-        { label: 'Unplanned Downtime', value: '-67%', improvement: '-67%' },
-        { label: 'Quality Score', value: '98.5%', improvement: '+35%' },
-        { label: 'Energy Consumption', value: '-28%', improvement: '-28%' }
+      title: 'Manufacturing Process Optimization',
+      company: 'AutoManufacturing Co.',
+      description: 'Implemented AI-powered monitoring systems that increased production efficiency by 40% and reduced downtime by 75%.',
+      results: [
+        '40% increase in production efficiency',
+        '75% reduction in downtime',
+        'Predictive maintenance automation',
+        'Real-time quality control'
       ],
-      testimonial: {
-        quote: "The smart manufacturing solution has given us unprecedented visibility and control over our production processes.",
-        author: 'David Rodriguez',
-        role: 'Operations Director',
-        avatar: 'DR'
-      },
-      image: '🏭',
-      featured: false,
-      duration: '10 months',
-      teamSize: '10 experts'
+      category: 'Manufacturing',
+      image: '/api/placeholder/400/300',
+      color: 'from-orange-500 to-orange-600'
     },
     {
-      id: 'startup-devops-platform',
-      title: 'Startup Success: Autonomous DevOps Platform Implementation',
-      company: 'InnovateTech Startup',
-      industry: 'Technology',
-      service: 'DevOps & Infrastructure',
-      challenge: 'Manual deployment processes causing delays and errors',
-      solution: 'Implemented autonomous DevOps platform with CI/CD and self-healing infrastructure',
-      results: {
-        deploymentSpeed: '85%',
-        errorReduction: '92%',
-        teamProductivity: '60%',
-        timeToMarket: '70%',
-        timeframe: '3 months'
-      },
-      description: 'InnovateTech Startup was struggling with slow, error-prone deployments that were hampering their growth. Our autonomous DevOps platform accelerated their success.',
-      technologies: ['CI/CD Pipeline', 'Docker', 'Kubernetes', 'Monitoring', 'Infrastructure as Code'],
-      metrics: [
-        { label: 'Deployment Speed', value: '< 5 min', improvement: '+85%' },
-        { label: 'Deployment Errors', value: '-92%', improvement: '-92%' },
-        { label: 'Team Productivity', value: '+60%', improvement: '+60%' },
-        { label: 'Time to Market', value: '-70%', improvement: '-70%' }
+      title: 'Content Generation Platform',
+      company: 'Digital Media Corp.',
+      description: 'Created autonomous content generation systems that produce 1000+ articles daily with 95% accuracy and SEO optimization.',
+      results: [
+        '1000+ articles generated daily',
+        '95% content accuracy',
+        'Automatic SEO optimization',
+        '24/7 content production'
       ],
-      testimonial: {
-        quote: "The DevOps platform has been a game-changer. We can now deploy features multiple times per day with complete confidence.",
-        author: 'Alex Thompson',
-        role: 'Founder & CEO',
-        avatar: 'AT'
-      },
-      image: '🚀',
-      featured: false,
-      duration: '3 months',
-      teamSize: '5 experts'
+      category: 'Digital Media',
+      image: '/api/placeholder/400/300',
+      color: 'from-red-500 to-red-600'
+    },
+    {
+      title: 'Cloud Infrastructure Scaling',
+      company: 'CloudScale Tech',
+      description: 'Built self-scaling cloud infrastructure that automatically handles traffic spikes and maintains 99.99% uptime.',
+      results: [
+        'Automatic traffic scaling',
+        '99.99% uptime maintained',
+        'Zero-downtime deployments',
+        'Cost optimization automation'
+      ],
+      category: 'Cloud Infrastructure',
+      image: '/api/placeholder/400/300',
+      color: 'from-indigo-500 to-indigo-600'
     }
   ];
 
-  const industries = ['All', 'Financial Services', 'Healthcare', 'E-commerce', 'Manufacturing', 'Technology'];
-  const services = ['All', 'AI & Machine Learning', 'Cloud & Infrastructure', 'DevOps & Infrastructure', 'IoT & Automation', 'Cybersecurity'];
+  const categories = ['All', 'E-commerce', 'Financial Services', 'Healthcare', 'Manufacturing', 'Digital Media', 'Cloud Infrastructure'];
 
-  const filteredCaseStudies = caseStudies.filter(study => {
-    const matchesIndustry = selectedIndustry === 'All' || study.industry === selectedIndustry;
-    const matchesService = selectedService === 'All' || study.service === selectedService;
-    return matchesIndustry && matchesService;
-  });
-
-  const featuredCaseStudies = caseStudies.filter(study => study.featured);
-
-<<<<<<< HEAD
-=======
-
-const CaseStudies: NextPage = () => {
-  const [selectedIndustry, setSelectedIndustry] = useState('All');
-  const [selectedService, setSelectedService] = useState('All');
-
-  const caseStudies = [
-    {
-      id: 'fintech-ai-fraud-detection',
-      title: 'FinTech Revolution: AI-Powered Fraud Detection System',
-      company: 'SecureBank Corp',
-      industry: 'Financial Services',
-      service: 'AI & Machine Learning',
-      challenge: 'High fraud rates and false positives in transaction monitoring',
-      solution: 'Implemented advanced AI fraud detection system with real-time analysis',
-      results: {
-        fraudReduction: '89%',
-        falsePositives: '76%',
-        processingSpeed: '95%',
-        costSavings: '$2.4M',
-        timeframe: '6 months'
-      },
-      description: 'SecureBank Corp was experiencing significant losses due to fraudulent transactions and customer dissatisfaction from false positive alerts. Our AI-powered fraud detection system revolutionized their security infrastructure.',
-      technologies: ['Machine Learning', 'Real-time Analytics', 'Behavioral Analysis', 'Pattern Recognition'],
-      metrics: [
-        { label: 'Fraud Detection Rate', value: '99.2%', improvement: '+89%' },
-        { label: 'False Positives', value: '2.1%', improvement: '-76%' },
-        { label: 'Processing Speed', value: '<100ms', improvement: '+95%' },
-        { label: 'Annual Savings', value: '$2.4M', improvement: 'New' }
-      ],
-      testimonial: {
-        quote: "Zion Tech Group's AI solution has transformed our fraud detection capabilities. We've seen an 89% reduction in fraud while dramatically improving customer experience.",
-        author: 'Sarah Mitchell',
-        role: 'Chief Risk Officer',
-        avatar: 'SM'
-      },
-      image: '🛡️',
-      featured: true,
-      duration: '6 months',
-      teamSize: '8 experts'
-    },
-    {
-      id: 'healthcare-ai-diagnostics',
-      title: 'Healthcare Innovation: AI-Powered Medical Diagnostics Platform',
-      company: 'MediCore Health System',
-      industry: 'Healthcare',
-      service: 'AI & Machine Learning',
-      challenge: 'Slow diagnostic processes and inconsistent accuracy across different specialists',
-      solution: 'Developed AI diagnostic platform with computer vision and predictive analytics',
-      results: {
-        diagnosticAccuracy: '94%',
-        processingTime: '78%',
-        patientThroughput: '65%',
-        costReduction: '$1.8M',
-        timeframe: '8 months'
-      },
-      description: 'MediCore Health System needed to improve diagnostic accuracy and speed while reducing costs. Our AI-powered medical diagnostics platform delivered exceptional results.',
-      technologies: ['Computer Vision', 'Deep Learning', 'Medical Imaging', 'Predictive Analytics'],
-      metrics: [
-        { label: 'Diagnostic Accuracy', value: '96.7%', improvement: '+94%' },
-        { label: 'Processing Time', value: '15 min', improvement: '-78%' },
-        { label: 'Patient Throughput', value: '+65%', improvement: '+65%' },
-        { label: 'Cost Reduction', value: '$1.8M', improvement: 'Annual' }
-      ],
-      testimonial: {
-        quote: "The AI diagnostics platform has revolutionized our patient care. We're seeing faster, more accurate diagnoses that are saving lives.",
-        author: 'Dr. Michael Chen',
-        role: 'Chief Medical Officer',
-        avatar: 'MC'
-      },
-      image: '🏥',
-      featured: true,
-      duration: '8 months',
-      teamSize: '12 experts'
-    },
-    {
-      id: 'ecommerce-cloud-migration',
-      title: 'E-commerce Transformation: Cloud Migration & Optimization',
-      company: 'RetailMax Global',
-      industry: 'E-commerce',
-      service: 'Cloud & Infrastructure',
-      challenge: 'Legacy infrastructure causing downtime and limiting scalability',
-      solution: 'Complete cloud migration with auto-scaling and performance optimization',
-      results: {
-        uptime: '99.9%',
-        loadTimes: '68%',
-        scalability: '10x',
-        costOptimization: '45%',
-        timeframe: '4 months'
-      },
-      description: 'RetailMax Global was struggling with frequent downtime and slow performance during peak shopping seasons. Our cloud migration strategy delivered remarkable improvements.',
-      technologies: ['AWS', 'Kubernetes', 'Auto-scaling', 'Load Balancing', 'CDN'],
-      metrics: [
-        { label: 'Uptime', value: '99.97%', improvement: '+99.9%' },
-        { label: 'Page Load Time', value: '1.2s', improvement: '-68%' },
-        { label: 'Scalability', value: '10x', improvement: '1000%' },
-        { label: 'Infrastructure Costs', value: '-45%', improvement: '-45%' }
-      ],
-      testimonial: {
-        quote: "Our Black Friday traffic increased 300% with zero downtime. The cloud migration has been transformational for our business.",
-        author: 'Jennifer Walsh',
-        role: 'CTO',
-        avatar: 'JW'
-      },
-      image: '☁️',
-      featured: false,
-      duration: '4 months',
-      teamSize: '6 experts'
-    },
-    {
-      id: 'manufacturing-iot-automation',
-      title: 'Smart Manufacturing: IoT-Powered Production Optimization',
-      company: 'TechManufacture Inc',
-      industry: 'Manufacturing',
-      service: 'IoT & Automation',
-      challenge: 'Inefficient production processes and lack of real-time visibility',
-      solution: 'Implemented IoT sensors and automation systems for smart manufacturing',
-      results: {
-        efficiency: '42%',
-        downtime: '67%',
-        qualityImprovement: '35%',
-        energySavings: '28%',
-        timeframe: '10 months'
-      },
-      description: 'TechManufacture Inc needed to modernize their production facilities to compete in the digital age. Our IoT and automation solution transformed their operations.',
-      technologies: ['IoT Sensors', 'Edge Computing', 'Predictive Maintenance', 'Real-time Analytics'],
-      metrics: [
-        { label: 'Production Efficiency', value: '+42%', improvement: '+42%' },
-        { label: 'Unplanned Downtime', value: '-67%', improvement: '-67%' },
-        { label: 'Quality Score', value: '98.5%', improvement: '+35%' },
-        { label: 'Energy Consumption', value: '-28%', improvement: '-28%' }
-      ],
-      testimonial: {
-        quote: "The smart manufacturing solution has given us unprecedented visibility and control over our production processes.",
-        author: 'David Rodriguez',
-        role: 'Operations Director',
-        avatar: 'DR'
-      },
-      image: '🏭',
-      featured: false,
-      duration: '10 months',
-      teamSize: '10 experts'
-    },
-    {
-      id: 'startup-devops-platform',
-      title: 'Startup Success: Autonomous DevOps Platform Implementation',
-      company: 'InnovateTech Startup',
-      industry: 'Technology',
-      service: 'DevOps & Infrastructure',
-      challenge: 'Manual deployment processes causing delays and errors',
-      solution: 'Implemented autonomous DevOps platform with CI/CD and self-healing infrastructure',
-      results: {
-        deploymentSpeed: '85%',
-        errorReduction: '92%',
-        teamProductivity: '60%',
-        timeToMarket: '70%',
-        timeframe: '3 months'
-      },
-      description: 'InnovateTech Startup was struggling with slow, error-prone deployments that were hampering their growth. Our autonomous DevOps platform accelerated their success.',
-      technologies: ['CI/CD Pipeline', 'Docker', 'Kubernetes', 'Monitoring', 'Infrastructure as Code'],
-      metrics: [
-        { label: 'Deployment Speed', value: '< 5 min', improvement: '+85%' },
-        { label: 'Deployment Errors', value: '-92%', improvement: '-92%' },
-        { label: 'Team Productivity', value: '+60%', improvement: '+60%' },
-        { label: 'Time to Market', value: '-70%', improvement: '-70%' }
-      ],
-      testimonial: {
-        quote: "The DevOps platform has been a game-changer. We can now deploy features multiple times per day with complete confidence.",
-        author: 'Alex Thompson',
-        role: 'Founder & CEO',
-        avatar: 'AT'
-      },
-      image: '🚀',
-      featured: false,
-      duration: '3 months',
-      teamSize: '5 experts'
-    }
-  ];
-
-  const industries = ['All', 'Financial Services', 'Healthcare', 'E-commerce', 'Manufacturing', 'Technology'];
-  const services = ['All', 'AI & Machine Learning', 'Cloud & Infrastructure', 'DevOps & Infrastructure', 'IoT & Automation', 'Cybersecurity'];
-
-  const filteredCaseStudies = caseStudies.filter(study => {
-    const matchesIndustry = selectedIndustry === 'All' || study.industry === selectedIndustry;
-    const matchesService = selectedService === 'All' || study.service === selectedService;
-    return matchesIndustry && matchesService;
-  });
-
-  const featuredCaseStudies = caseStudies.filter(study => study.featured);
-
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <Head>
-        <title>Case Studies | Zion Tech Group</title>
-        <meta name="description" content="Explore real-world success stories of how our autonomous technology solutions have transformed businesses across industries." />
-        <meta property="og:title" content="Case Studies" />
-        <meta property="og:description" content="Real-world success stories of our autonomous technology solutions." />
+        <title>Case Studies | Zion Tech Group - Success Stories</title>
+        <meta name="description" content="Explore real-world success stories and case studies showcasing how our autonomous technology solutions have transformed businesses across industries." />
+        <meta property="og:title" content="Case Studies - Zion Tech Group" />
+        <meta property="og:description" content="Success stories and case studies from our autonomous technology implementations." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
       {/* Hero Section */}
-      <section className="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+      <Section className="bg-gradient-to-br from-gray-50 to-blue-50" spacing="xl">
+        <div className="text-center max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-6xl font-black mb-8 gradient-text">
             Success Stories
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover how our autonomous technology solutions have transformed businesses across industries
+          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Real-world results from our autonomous technology implementations across diverse industries
           </p>
         </div>
-      </section>
+      </Section>
 
-      {/* Featured Case Study */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Featured Case Study
-            </h2>
-            <p className="text-xl text-gray-600">
-              Our most impactful transformation story
-            </p>
-          </div>
-
-          {caseStudies.filter(cs => cs.featured).map(caseStudy => (
-            <Card key={caseStudy.id} className="hover-lift">
-              <CardHeader>
-                <div className="flex items-center justify-between mb-4">
-                  <div>
-                    <CardTitle className="text-2xl text-blue-600">{caseStudy.title}</CardTitle>
-                    <p className="text-gray-600 mt-2">{caseStudy.company} • {caseStudy.industry}</p>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-sm text-gray-500">Duration</div>
-                    <div className="font-semibold text-gray-900">{caseStudy.duration}</div>
+      {/* Case Studies Grid */}
+      <Section className="bg-white" spacing="xl">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Featured Case Studies
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover how our autonomous solutions have delivered measurable business impact
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {caseStudies.map((study, index) => (
+            <Card key={index} className="group hover:shadow-2xl transition-all duration-300">
+              <div className="mb-6">
+                <div className={`w-full h-48 bg-gradient-to-br ${study.color} rounded-lg mb-4 flex items-center justify-center`}>
+                  <div className="text-white text-center">
+                    <div className="text-2xl font-bold mb-2">{study.company}</div>
+                    <div className="text-sm opacity-90">{study.category}</div>
                   </div>
                 </div>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">The Challenge</h3>
-                    <p className="text-gray-600 mb-6">{caseStudy.challenge}</p>
-                    
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Our Solution</h3>
-                    <p className="text-gray-600 mb-6">{caseStudy.solution}</p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Results</h3>
-                    <ul className="space-y-2 mb-6">
-                      {caseStudy.results.map((result, index) => (
-                        <li key={index} className="flex items-start">
-                          <span className="text-green-500 mr-2">✓</span>
-                          <span className="text-gray-600">{result}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Technologies Used</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {caseStudy.technologies.map((tech, index) => (
-                        <span key={index} className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+                <div className="inline-block bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium mb-3">
+                  {study.category}
                 </div>
-              </CardContent>
+              </div>
+              
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{study.title}</h3>
+              <p className="text-gray-600 mb-6 leading-relaxed">{study.description}</p>
+              
+              <div className="space-y-3 mb-6">
+                <h4 className="font-semibold text-gray-900">Key Results:</h4>
+                <ul className="space-y-2">
+                  {study.results.map((result, resultIndex) => (
+                    <li key={resultIndex} className="flex items-center text-sm text-gray-600">
+                      <span className={`w-2 h-2 bg-gradient-to-r ${study.color} rounded-full mr-3`}></span>
+                      {result}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <Button variant="outline" size="sm" className="w-full">
+                View Full Case Study
+              </Button>
             </Card>
           ))}
         </div>
-      </section>
+      </Section>
 
-      {/* All Case Studies */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              All Case Studies
-            </h2>
-            <p className="text-xl text-gray-600">
-              Explore our complete portfolio of successful transformations
-            </p>
+      {/* Statistics Section */}
+      <Section className="bg-gray-50" spacing="xl">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Impact by the Numbers
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Quantified results from our autonomous technology implementations
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="text-center">
+            <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">45%</div>
+            <div className="text-sm text-gray-600">Average Conversion Increase</div>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {caseStudies.filter(cs => !cs.featured).map(caseStudy => (
-              <Card key={caseStudy.id} className="hover-lift">
-                <CardHeader>
-                  <CardTitle className="text-xl text-gray-900">{caseStudy.title}</CardTitle>
-                  <p className="text-gray-600">{caseStudy.company} • {caseStudy.industry}</p>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Challenge</h4>
-                      <p className="text-gray-600 text-sm">{caseStudy.challenge}</p>
-                    </div>
-                    
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Solution</h4>
-                      <p className="text-gray-600 text-sm">{caseStudy.solution}</p>
-                    </div>
-                    
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Key Results</h4>
-                      <ul className="space-y-1">
-                        {caseStudy.results.slice(0, 2).map((result, index) => (
-                          <li key={index} className="flex items-start text-sm">
-                            <span className="text-green-500 mr-2">✓</span>
-                            <span className="text-gray-600">{result}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    <div className="pt-4">
-                      <Button variant="outline" className="w-full">
-                        View Full Case Study
-                      </Button>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="text-center">
+            <div className="text-4xl md:text-5xl font-bold text-purple-600 mb-2">10x</div>
+            <div className="text-sm text-gray-600">Processing Speed Improvement</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl md:text-5xl font-bold text-green-600 mb-2">99.99%</div>
+            <div className="text-sm text-gray-600">Uptime Achieved</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl md:text-5xl font-bold text-orange-600 mb-2">75%</div>
+            <div className="text-sm text-gray-600">Cost Reduction</div>
           </div>
         </div>
-      </section>
+      </Section>
+
+      {/* Industries We Serve */}
+      <Section className="bg-white" spacing="xl">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Industries We Transform
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Our autonomous technology solutions work across diverse sectors
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <Card className="text-center group hover:shadow-2xl transition-all duration-300">
+            <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold mb-4 text-gray-900">E-commerce</h3>
+            <p className="text-gray-600">
+              Optimize conversion rates, reduce cart abandonment, and automate customer experience
+            </p>
+          </Card>
+          
+          <Card className="text-center group hover:shadow-2xl transition-all duration-300">
+            <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold mb-4 text-gray-900">Financial Services</h3>
+            <p className="text-gray-600">
+              Automate transaction processing, ensure compliance, and optimize risk management
+            </p>
+          </Card>
+          
+          <Card className="text-center group hover:shadow-2xl transition-all duration-300">
+            <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold mb-4 text-gray-900">Healthcare</h3>
+            <p className="text-gray-600">
+              Streamline patient care, automate data processing, and ensure compliance
+            </p>
+          </Card>
+          
+          <Card className="text-center group hover:shadow-2xl transition-all duration-300">
+            <div className="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold mb-4 text-gray-900">Manufacturing</h3>
+            <p className="text-gray-600">
+              Optimize production processes, reduce downtime, and automate quality control
+            </p>
+          </Card>
+          
+          <Card className="text-center group hover:shadow-2xl transition-all duration-300">
+            <div className="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold mb-4 text-gray-900">Digital Media</h3>
+            <p className="text-gray-600">
+              Automate content generation, optimize SEO, and scale content production
+            </p>
+          </Card>
+          
+          <Card className="text-center group hover:shadow-2xl transition-all duration-300">
+            <div className="w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <svg className="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold mb-4 text-gray-900">Cloud Infrastructure</h3>
+            <p className="text-gray-600">
+              Auto-scaling systems, zero-downtime deployments, and intelligent optimization
+            </p>
+          </Card>
+        </div>
+      </Section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Create Your Success Story?
+      <Section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white" spacing="lg">
+        <div className="text-center max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Ready to Write Your Success Story?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let&apos;s discuss how our autonomous technology can transform your business
+            Let's discuss how our autonomous technology can transform your business
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              asChild
-              size="lg"
-              variant="secondary"
-              className="transform hover:scale-105 transition-transform duration-200"
-            >
-              <Link href="/contact">
-                Get Started Today
-              </Link>
+            <Button variant="secondary" size="lg" href="/contact">
+              Start Your Project
             </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-blue-600 transform hover:scale-105 transition-all duration-200"
-            >
-              <Link href="/services">
-                Explore Our Services
-              </Link>
+            <Button variant="outline" size="lg" href="/services" className="border-white text-white hover:bg-white hover:text-blue-600">
+              Explore Our Services
             </Button>
           </div>
         </div>
-      </section>
+      </Section>
     </>
   );
 };
