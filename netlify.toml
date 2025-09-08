@@ -1,12 +1,6 @@
 [build]
-<<<<<<< HEAD
-  # Publish prebuilt dist without running a build
+  # Deploy prebuilt assets from dist without running a build on Netlify
   command = "echo Skipping build; deploying prebuilt dist"
-=======
-  # Install Python dependencies first (if present), then Node.js dependencies and build
-  # Use system Python to avoid shims. Fall back gracefully if requirements file is absent.
-  command = "if [ -f requirements.build.txt ]; then /usr/bin/python3 -m pip install -r requirements.build.txt; fi && npm install --no-audit --no-fund && npm run build"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-47cc
   publish = "dist"
   command_timeout = "30m"
 
