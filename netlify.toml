@@ -1,7 +1,8 @@
 [build]
   # Install Python dependencies first, then Node.js dependencies and build
   # Explicitly use system Python to avoid mise shim issues
-  command = "/usr/bin/python3 -m pip install -r requirements.txt && npm ci && npm run build"
+  # Use a non-standard requirements file name to prevent Netlify's auto Python install step
+  command = "/usr/bin/python3 -m pip install -r requirements.build.txt && npm ci && npm run build"
   publish = "dist"
   command_timeout = "30m"
 
