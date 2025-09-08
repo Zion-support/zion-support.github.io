@@ -92,10 +92,85 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       links: [
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
-        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
-        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
-        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
-        { name: 'Request Custom Quote', href: '/request-quote' }
+        { name: 'FinOps Advisor', href: '/services/finops-advisor' },
+        { name: 'Edge Computing Platform', href: '/services/edge-computing-platform' },
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' }
+      ]
+    },
+    {
+      title: 'IoT & Digital Solutions',
+      icon: Rocket,
+      color: 'from-green-600 to-emerald-600',
+      links: [
+        { name: 'IoT Edge Computing', href: '/services/iot-edge' },
+        { name: 'Digital Twin', href: '/services/digital-twin' },
+        { name: 'Blockchain Enterprise Solutions', href: '/services/blockchain-enterprise-solutions' },
+        { name: 'Healthcare Technology', href: '/services/healthcare-tech' },
+        { name: 'Sustainability Solutions', href: '/services/sustainability' },
+        { name: 'Green IT', href: '/services/green-it' },
+        { name: 'Quantum Computing', href: '/services/quantum-computing' },
+        { name: 'Space Technology', href: '/services/space-tech' }
+      ]
+    },
+    {
+      title: 'Innovative Micro SaaS',
+      icon: Zap,
+      color: 'from-emerald-600 to-teal-600',
+      links: [
+        { name: 'AI Project Management', href: '/services/ai-project-management' },
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
+        { name: 'Vendor Risk Management', href: '/services/vendor-risk-management' },
+        { name: 'AI SEO Optimizer', href: '/services/ai-seo-optimizer' },
+        { name: 'SaaS Churn Predictor', href: '/services/saas-churn-predictor' },
+        { name: 'AI Incident Postmortems', href: '/services/ai-incident-postmortems' },
+        { name: 'API Monitoring SaaS', href: '/services/api-monitoring' },
+        { name: 'GDPR Cookie Compliance', href: '/services/gdpr-cookie-compliance' }
+      ]
+    },
+    {
+      title: 'Revolutionary 2030 Services',
+      icon: Crown,
+      color: 'from-yellow-600 to-orange-600',
+      links: [
+        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030' },
+        { name: 'AI Autonomous Business Operations', href: '/revolutionary-services-2030' },
+        { name: 'Quantum AI Hybrid Computing', href: '/revolutionary-services-2030' },
+        { name: 'AI Metaverse Development', href: '/revolutionary-services-2030' },
+        { name: 'AI Space Technology', href: '/revolutionary-services-2030' },
+        { name: 'Next-Gen Cybersecurity', href: '/revolutionary-services-2030' },
+        { name: 'Quantum Internet Infrastructure', href: '/revolutionary-services-2030' },
+        { name: 'AI Autonomous Vehicles', href: '/revolutionary-services-2030' },
+        { name: 'Brain-Computer Interface', href: '/revolutionary-services-2030' },
+        { name: 'AI Climate Change Solutions', href: '/revolutionary-services-2030' },
+        { name: 'AI Drug Discovery Platform', href: '/revolutionary-services-2030' },
+        { name: 'AI Financial Services Platform', href: '/revolutionary-services-2030' },
+        { name: 'AI Manufacturing Platform', href: '/revolutionary-services-2030' },
+        { name: 'AI Retail Platform', href: '/revolutionary-services-2030' },
+        { name: 'AI Transportation Platform', href: '/revolutionary-services-2030' },
+        { name: 'AI Energy Management Platform', href: '/revolutionary-services-2030' }
+      ]
+    },
+    {
+      title: 'Company & Support',
+      icon: Users,
+      color: 'from-indigo-600 to-purple-600',
+      links: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Contact', href: '/contact' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'FAQ', href: '/faq' },
+        { name: 'Help Center', href: '/help' },
+        { name: 'Support', href: '/support' },
+        { name: 'Training', href: '/training' },
+        { name: 'Documentation', href: '/docs' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Privacy Policy', href: '/privacy' },
+        { name: 'Terms of Service', href: '/terms' },
+        { name: 'Cookie Policy', href: '/cookies' },
+        { name: 'Accessibility', href: '/accessibility' },
+        { name: 'Security', href: '/security' },
+        { name: 'Compliance', href: '/compliance' }
       ]
     }
   ];
