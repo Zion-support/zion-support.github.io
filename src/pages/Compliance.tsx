@@ -1,613 +1,504 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { 
-  Shield, 
-  Lock, 
-  CheckCircle, 
-  AlertTriangle,
-  BadgeCheck,
-  Clock,
-  TrendingUp,
-  BarChart3,
-  FileText,
-  Users,
-  Settings,
-  HelpCircle,
-  Globe,
-  Heart,
-  Award,
-  Zap,
-  Brain,
-  Cloud,
-  Database,
-  Code,
-  Target,
-  Star,
-  Rocket,
-  Lightbulb,
-  Car,
-  GraduationCap,
-  Factory,
-  ShoppingCart,
-  Camera,
-  Gamepad2,
-  Microscope,
-  Building2,
-  Scale,
-  Gavel,
-  BookOpen,
-  Clipboard,
-  Eye,
-  Key,
-  Server,
-  Network
-} from 'lucide-react';
+import { Shield, CheckCircle, FileText, Users, Globe, Brain, Zap, Heart, Award, Lock, Eye, AlertTriangle } from 'lucide-react';
 
 export default function Compliance() {
   const complianceFrameworks = [
     {
-      name: 'ISO 27001',
-      category: 'Information Security',
+      title: 'ISO 27001',
+      description: 'Information Security Management System',
+      icon: Shield,
+      features: [
+        'Risk assessment and management',
+        'Security policies and procedures',
+        'Asset management and classification',
+        'Access control and identity management',
+        'Incident management and response'
+      ],
+      color: 'from-blue-500 to-cyan-500',
       status: 'Certified',
-      description: 'International standard for information security management systems',
-      scope: 'Global',
-      lastAudit: '2024-01-15',
-      nextAudit: '2025-01-15',
-      icon: BadgeCheck,
-      level: 'Level 3'
+      year: '2024'
     },
     {
-      name: 'SOC 2 Type II',
-      category: 'Security & Privacy',
-      status: 'Certified',
-      description: 'Service Organization Control 2 compliance for security and privacy',
-      scope: 'North America',
-      lastAudit: '2024-06-30',
-      nextAudit: '2025-06-30',
-      icon: BadgeCheck,
-      level: 'Type II'
-    },
-    {
-      name: 'GDPR',
-      category: 'Data Protection',
-      status: 'Compliant',
-      description: 'General Data Protection Regulation compliance for EU data handling',
-      scope: 'European Union',
-      lastAudit: '2024-03-01',
-      nextAudit: 'Ongoing',
+      title: 'SOC 2 Type II',
+      description: 'Service Organization Control 2',
       icon: CheckCircle,
-      level: 'Full Compliance'
+      features: [
+        'Security controls assessment',
+        'Availability monitoring',
+        'Processing integrity verification',
+        'Confidentiality protection',
+        'Privacy controls implementation'
+      ],
+      color: 'from-green-500 to-emerald-500',
+      status: 'Compliant',
+      year: '2024'
     },
     {
-      name: 'HIPAA',
-      category: 'Healthcare',
+      title: 'GDPR',
+      description: 'General Data Protection Regulation',
+      icon: Lock,
+      features: [
+        'Data protection by design',
+        'Privacy impact assessments',
+        'Data subject rights management',
+        'Breach notification procedures',
+        'Data processing agreements'
+      ],
+      color: 'from-purple-500 to-pink-500',
       status: 'Compliant',
-      description: 'Health Insurance Portability and Accountability Act compliance',
-      scope: 'United States',
-      lastAudit: '2024-02-15',
-      nextAudit: 'Ongoing',
-      icon: CheckCircle,
-      level: 'Full Compliance'
+      year: '2024'
     },
     {
-      name: 'PCI DSS',
-      category: 'Payment Security',
+      title: 'HIPAA',
+      description: 'Health Insurance Portability and Accountability Act',
+      icon: Eye,
+      features: [
+        'Protected health information safeguards',
+        'Administrative safeguards',
+        'Physical safeguards',
+        'Technical safeguards',
+        'Breach notification requirements'
+      ],
+      color: 'from-orange-500 to-red-500',
       status: 'Compliant',
-      description: 'Payment Card Industry Data Security Standard compliance',
-      scope: 'Global',
-      lastAudit: '2024-04-01',
-      nextAudit: '2025-04-01',
-      icon: CheckCircle,
-      level: 'Level 1'
-    },
-    {
-      name: 'SOX',
-      category: 'Financial Reporting',
-      status: 'Compliant',
-      description: 'Sarbanes-Oxley Act compliance for financial reporting',
-      scope: 'United States',
-      lastAudit: '2024-01-31',
-      nextAudit: '2025-01-31',
-      icon: CheckCircle,
-      level: 'Full Compliance'
+      year: '2024'
     }
   ];
 
   const industryCompliance = [
     {
       industry: 'Healthcare',
-      frameworks: ['HIPAA', 'HITECH', 'FDA', 'ISO 13485'],
-      status: 'Compliant',
-      description: 'Full compliance with healthcare industry regulations and standards',
-      icon: Heart
+      standards: ['HIPAA', 'HITECH', 'FDA 21 CFR Part 11'],
+      icon: Shield,
+      color: 'from-red-500 to-pink-500'
     },
     {
       industry: 'Financial Services',
-      frameworks: ['PCI DSS', 'SOX', 'GLBA', 'Basel III'],
-      status: 'Compliant',
-      description: 'Comprehensive compliance with financial industry regulations',
-      icon: Building2
+      standards: ['PCI DSS', 'SOX', 'GLBA', 'FFIEC'],
+      icon: CheckCircle,
+      color: 'from-blue-500 to-cyan-500'
     },
     {
       industry: 'Government',
-      frameworks: ['FedRAMP', 'FISMA', 'CJIS', 'ITAR'],
-      status: 'In Progress',
-      description: 'Working towards government security and compliance certifications',
-      icon: Shield
+      standards: ['FISMA', 'FedRAMP', 'CMMC', 'NIST'],
+      icon: Award,
+      color: 'from-green-500 to-emerald-500'
     },
     {
-      industry: 'Education',
-      frameworks: ['FERPA', 'COPPA', 'CIPA', 'ISO 27001'],
-      status: 'Compliant',
-      description: 'Full compliance with educational institution requirements',
-      icon: GraduationCap
+      industry: 'Manufacturing',
+      standards: ['ISO 9001', 'ISO 14001', 'IATF 16949'],
+      icon: Zap,
+      color: 'from-purple-500 to-indigo-500'
     }
   ];
 
   const complianceProcesses = [
     {
-      process: 'Risk Assessment',
-      description: 'Regular risk assessments to identify and mitigate compliance risks',
+      name: 'Risk Assessment',
+      description: 'Comprehensive risk identification and evaluation',
+      icon: Brain,
       frequency: 'Quarterly',
-      lastCompleted: '2024-01-15',
-      nextDue: '2024-04-15',
-      icon: Eye
+      status: 'Active'
     },
     {
-      process: 'Policy Review',
-      description: 'Comprehensive review and updates of compliance policies',
-      frequency: 'Semi-annually',
-      lastCompleted: '2024-01-30',
-      nextDue: '2024-07-30',
-      icon: FileText
+      name: 'Policy Management',
+      description: 'Development and maintenance of compliance policies',
+      icon: FileText,
+      frequency: 'Ongoing',
+      status: 'Active'
     },
     {
-      process: 'Training & Awareness',
+      name: 'Training & Awareness',
       description: 'Regular compliance training for all employees',
-      frequency: 'Annually',
-      lastCompleted: '2024-01-15',
-      nextDue: '2025-01-15',
-      icon: Users
+      icon: Users,
+      frequency: 'Monthly',
+      status: 'Active'
     },
     {
-      process: 'Audit & Monitoring',
-      description: 'Continuous monitoring and regular compliance audits',
+      name: 'Monitoring & Auditing',
+      description: 'Continuous compliance monitoring and regular audits',
+      icon: Eye,
       frequency: 'Continuous',
-      lastCompleted: 'Ongoing',
-      nextDue: 'Ongoing',
-      icon: Clipboard
+      status: 'Active'
     }
   ];
 
-  const complianceMetrics = [
-    {
-      metric: 'Overall Compliance',
-      value: '98.5%',
-      description: 'Overall compliance score across all frameworks',
-      trend: 'Improving',
-      icon: TrendingUp
-    },
-    {
-      metric: 'Audit Success Rate',
-      value: '100%',
-      description: 'Successful completion of compliance audits',
-      trend: 'Stable',
-      icon: CheckCircle
-    },
-    {
-      metric: 'Policy Coverage',
-      value: '95%',
-      description: 'Coverage of required compliance policies',
-      trend: 'Improving',
-      icon: FileText
-    },
-    {
-      metric: 'Training Completion',
-      value: '100%',
-      description: 'Employee compliance training completion rate',
-      trend: 'Stable',
-      icon: Users
-    }
-  ];
-
-  const upcomingCompliance = [
-    {
-      framework: 'FedRAMP Authorization',
-      targetDate: '2024-Q4',
-      status: 'In Progress',
-      description: 'Federal Risk and Authorization Management Program authorization',
-      priority: 'High'
-    },
-    {
-      framework: 'ISO 27001:2022',
-      targetDate: '2024-Q3',
-      status: 'In Progress',
-      description: 'Upgrade to latest ISO 27001 standard',
-      priority: 'Medium'
-    },
-    {
-      framework: 'SOC 2 Type II Renewal',
-      targetDate: '2025-Q2',
-      status: 'Planned',
-      description: 'Annual SOC 2 Type II compliance renewal',
-      priority: 'Medium'
-    },
-    {
-      framework: 'GDPR Enhanced Compliance',
-      targetDate: '2024-Q4',
-      status: 'Planned',
-      description: 'Enhanced GDPR compliance measures',
-      priority: 'Low'
-    }
-  ];
-
-  const complianceResources = [
-    {
-      name: 'Compliance Handbook',
-      description: 'Comprehensive guide to our compliance framework',
-      type: 'Documentation',
-      lastUpdated: '2024-01-15',
-      icon: BookOpen
-    },
-    {
-      name: 'Policy Templates',
-      description: 'Standardized policy templates for common requirements',
-      type: 'Templates',
-      lastUpdated: '2024-02-01',
-      icon: FileText
-    },
-    {
-      name: 'Training Materials',
-      description: 'Compliance training materials and resources',
-      type: 'Training',
-      lastUpdated: '2024-01-30',
-      icon: Users
-    },
-    {
-      name: 'Audit Checklists',
-      description: 'Comprehensive audit checklists for each framework',
-      type: 'Tools',
-      lastUpdated: '2024-01-20',
-      icon: Clipboard
-    }
-  ];
-
-export default function Compliance() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Compliance - Zion Tech Group"
-        description="Learn about Zion Tech Group's comprehensive compliance framework, certifications, and regulatory adherence across multiple industries."
+        description="Zion Tech Group's comprehensive compliance framework covering ISO 27001, SOC 2, GDPR, HIPAA, and industry-specific regulations."
       />
       
-      <div className="container mx-auto px-4 py-16">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <div className="w-24 h-24 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-3xl flex items-center justify-center mx-auto mb-8">
-            <Scale className="w-12 h-12 text-white" />
-          </div>
-          <h1 className="text-5xl font-bold text-white mb-6">Compliance & Governance</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            We maintain the highest standards of compliance across multiple regulatory frameworks 
-            and industry standards to ensure your business meets all legal and regulatory requirements.
-          </p>
-        </motion.div>
-
-        {/* Compliance Overview */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8 mb-16 border border-cyan-500/30"
-        >
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Comprehensive Compliance Framework</h2>
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto">
-              Our compliance program is built on a foundation of industry best practices, 
-              continuous monitoring, and regular audits. We ensure adherence to international 
-              standards and regulatory requirements across multiple jurisdictions and industries.
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
+                <Shield className="w-10 h-10 text-white" />
+              </div>
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Regulatory
+              <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                Compliance
+              </span>
+            </h1>
+            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
+              We maintain comprehensive compliance with international standards and regulations, 
+              ensuring your data and systems meet the highest security and privacy requirements.
             </p>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
+      </section>
 
-        {/* Compliance Frameworks */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mb-16"
-        >
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Compliance Frameworks</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Compliance Overview */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto text-center"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Comprehensive Compliance Framework
+            </h2>
+            <p className="text-xl text-slate-300 mb-8">
+              Our compliance program covers international standards and industry-specific regulations, 
+              providing a solid foundation for secure and compliant operations.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                {
+                  icon: Shield,
+                  title: 'International Standards',
+                  description: 'ISO 27001 and SOC 2 compliance'
+                },
+                {
+                  icon: Lock,
+                  title: 'Data Protection',
+                  description: 'GDPR and privacy regulation compliance'
+                },
+                {
+                  icon: Award,
+                  title: 'Industry Specific',
+                  description: 'Healthcare, financial, and government compliance'
+                }
+              ].map((item, index) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <item.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
+                  <p className="text-slate-300">{item.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Compliance Frameworks */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Compliance Frameworks
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Our compliance frameworks ensure we meet and exceed international standards 
+              for information security and data protection.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {complianceFrameworks.map((framework, index) => (
               <motion.div
-                key={framework.name}
+                key={framework.title}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                className="bg-slate-800/50 rounded-xl p-6 border border-slate-600/30"
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50"
               >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                    <framework.icon className="w-6 h-6 text-white" />
+                <div className="flex items-center gap-4 mb-6">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${framework.color} rounded-xl flex items-center justify-center`}>
+                    <framework.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white">{framework.name}</h3>
-                    <p className="text-cyan-400 text-sm">{framework.category}</p>
-                  </div>
-                </div>
-                <p className="text-gray-400 text-sm mb-4">{framework.description}</p>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-gray-500">Status:</span>
-                    <span className={`${
-                      framework.status === 'Certified' || framework.status === 'Compliant'
-                        ? 'text-green-400'
-                        : 'text-yellow-400'
-                    }`}>
-                      {framework.status}
-                    </span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-500">Level:</span>
-                    <span className="text-white">{framework.level}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-500">Scope:</span>
-                    <span className="text-white">{framework.scope}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-500">Next Audit:</span>
-                    <span className="text-white">{framework.nextAudit}</span>
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between mb-2">
+                      <h3 className="text-2xl font-bold text-white">{framework.title}</h3>
+                      <span className="inline-block px-3 py-1 bg-green-500/20 text-green-400 text-sm rounded-full border border-green-500/30">
+                        {framework.status}
+                      </span>
+                    </div>
+                    <p className="text-slate-300">{framework.description}</p>
+                    <p className="text-sm text-slate-400 mt-1">Year: {framework.year}</p>
                   </div>
                 </div>
+                
+                <ul className="space-y-3">
+                  {framework.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <span className="text-slate-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </div>
+      </section>
 
-        {/* Industry Compliance */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="mb-16"
-        >
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Industry Compliance</h2>
-          <div className="grid md:grid-cols-2 gap-6">
+      {/* Industry Compliance */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Industry-Specific Compliance
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              We understand the unique compliance requirements of different industries 
+              and provide tailored solutions to meet these standards.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {industryCompliance.map((industry, index) => (
               <motion.div
                 key={industry.industry}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
-                className="bg-slate-800/50 rounded-xl p-6 border border-slate-600/30"
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 text-center"
               >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
-                    <industry.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white">{industry.industry}</h3>
-                    <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${
-                      industry.status === 'Compliant' 
-                        ? 'bg-green-500/20 text-green-400 border border-green-500/30'
-                        : 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'
-                    }`}>
-                      {industry.status}
-                    </span>
-                  </div>
+                <div className={`w-16 h-16 bg-gradient-to-br ${industry.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                  <industry.icon className="w-8 h-8 text-white" />
                 </div>
-                <p className="text-gray-400 mb-4">{industry.description}</p>
+                <h3 className="text-lg font-semibold text-white mb-3">{industry.industry}</h3>
                 <div className="space-y-2">
-                  <h4 className="text-sm font-medium text-cyan-400">Frameworks:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {industry.frameworks.map((framework, frameworkIndex) => (
-                      <span
-                        key={frameworkIndex}
-                        className="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm border border-cyan-500/30"
-                      >
-                        {framework}
-                      </span>
-                    ))}
-                  </div>
+                  {industry.standards.map((standard, idx) => (
+                    <div key={idx} className="text-sm text-slate-300 bg-slate-700/30 rounded px-2 py-1">
+                      {standard}
+                    </div>
+                  ))}
                 </div>
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </div>
+      </section>
 
-        {/* Compliance Processes */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="mb-16"
-        >
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Compliance Processes</h2>
-          <div className="grid md:grid-cols-2 gap-6">
+      {/* Compliance Processes */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Compliance Management Processes
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Our systematic approach to compliance ensures continuous adherence 
+              to standards and regulations.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {complianceProcesses.map((process, index) => (
               <motion.div
-                key={process.process}
+                key={process.name}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.0 + index * 0.1 }}
-                className="bg-slate-800/50 rounded-xl p-6 border border-slate-600/30"
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 text-center"
               >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center">
-                    <process.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white">{process.process}</h3>
-                    <p className="text-green-400 text-sm">{process.frequency}</p>
-                  </div>
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <process.icon className="w-8 h-8 text-white" />
                 </div>
-                <p className="text-gray-400 mb-4">{process.description}</p>
-                <div className="grid grid-cols-2 gap-4 text-sm">
-                  <div>
-                    <span className="text-gray-500">Last Completed:</span>
-                    <p className="text-white">{process.lastCompleted}</p>
-                  </div>
-                  <div>
-                    <span className="text-gray-500">Next Due:</span>
-                    <p className="text-white">{process.nextDue}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Compliance Metrics */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
-          className="mb-16"
-        >
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Compliance Metrics</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {complianceMetrics.map((metric, index) => (
-              <motion.div
-                key={metric.metric}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
-                className="bg-slate-800/50 rounded-xl p-6 border border-slate-600/30 text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <metric.icon className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
-                <h3 className="text-lg font-semibold text-white mb-2">{metric.metric}</h3>
-                <p className="text-gray-400 text-sm mb-3">{metric.description}</p>
-                <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${
-                  metric.trend === 'Improving' 
-                    ? 'bg-green-500/20 text-green-400 border border-green-500/30'
-                    : 'bg-blue-500/20 text-blue-400 border border-blue-500/30'
-                }`}>
-                  {metric.trend}
-                </span>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Upcoming Compliance */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-          className="mb-16"
-        >
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Upcoming Compliance Initiatives</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {upcomingCompliance.map((initiative, index) => (
-              <motion.div
-                key={initiative.framework}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.4 + index * 0.1 }}
-                className="bg-slate-800/50 rounded-xl p-6 border border-slate-600/30"
-              >
-                <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-xl font-semibold text-white">{initiative.framework}</h3>
-                  <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${
-                    initiative.priority === 'High' 
-                      ? 'bg-red-500/20 text-red-400 border border-red-500/30'
-                      : initiative.priority === 'Medium'
-                      ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'
-                      : 'bg-green-500/20 text-green-400 border border-green-500/30'
-                  }`}>
-                    {initiative.priority}
+                <h3 className="text-lg font-semibold text-white mb-2">{process.name}</h3>
+                <p className="text-slate-300 text-sm mb-3">{process.description}</p>
+                <div className="space-y-2">
+                  <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-sm rounded-full border border-blue-500/30">
+                    {process.frequency}
+                  </span>
+                  <span className="inline-block px-3 py-1 bg-green-500/20 text-green-400 text-sm rounded-full border border-green-500/30">
+                    {process.status}
                   </span>
                 </div>
-                <p className="text-gray-400 mb-4">{initiative.description}</p>
-                <div className="grid grid-cols-2 gap-4 text-sm">
-                  <div>
-                    <span className="text-gray-500">Target Date:</span>
-                    <p className="text-white">{initiative.targetDate}</p>
-                  </div>
-                  <div>
-                    <span className="text-gray-500">Status:</span>
-                    <p className="text-white">{initiative.status}</p>
-                  </div>
-                </div>
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </div>
+      </section>
 
-        {/* Compliance Resources */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.4 }}
-          className="mb-16"
-        >
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Compliance Resources</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {complianceResources.map((resource, index) => (
-              <motion.div
-                key={resource.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.6 + index * 0.1 }}
-                className="bg-slate-800/50 rounded-xl p-6 border border-slate-600/30 text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <resource.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{resource.name}</h3>
-                <p className="text-gray-400 text-sm mb-3">{resource.description}</p>
-                <span className="inline-block px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-xs font-medium border border-orange-500/30 mb-3">
-                  {resource.type}
-                </span>
-                <p className="text-gray-500 text-xs">Updated: {resource.lastUpdated}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Contact Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.6 }}
-          className="text-center"
-        >
-          <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8 border border-cyan-500/30">
-            <h2 className="text-3xl font-bold text-white mb-4">Compliance Questions?</h2>
-            <p className="text-lg text-gray-300 mb-6">
-              Our compliance team is available to answer your questions and provide 
-              detailed information about our compliance status and processes.
+      {/* Compliance Benefits */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Benefits of Our Compliance Program
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Our comprehensive compliance approach delivers tangible benefits 
+              for your business and stakeholders.
             </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {[
+              {
+                icon: Shield,
+                title: 'Risk Mitigation',
+                description: 'Reduced security and compliance risks through systematic controls and monitoring'
+              },
+              {
+                icon: Users,
+                title: 'Stakeholder Trust',
+                description: 'Enhanced confidence from customers, partners, and regulators'
+              },
+              {
+                icon: Globe,
+                title: 'Global Operations',
+                description: 'Ability to operate in multiple jurisdictions with confidence'
+              },
+              {
+                icon: Award,
+                title: 'Competitive Advantage',
+                description: 'Demonstrated commitment to security and compliance excellence'
+              }
+            ].map((benefit, index) => (
+              <motion.div
+                key={benefit.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center">
+                    <benefit.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">{benefit.title}</h3>
+                </div>
+                <p className="text-slate-300">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Compliance Commitment */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto text-center"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Our Compliance Commitment
+            </h2>
+            <p className="text-xl text-slate-300 mb-8">
+              We are committed to maintaining the highest standards of compliance 
+              and continuously improving our processes to meet evolving requirements.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
+                <div className="flex items-center gap-3 mb-4">
+                  <AlertTriangle className="w-6 h-6 text-yellow-400" />
+                  <h3 className="text-xl font-semibold text-white">Continuous Improvement</h3>
+                </div>
+                <p className="text-slate-300">
+                  Regular assessment and enhancement of our compliance program 
+                  to address new regulations and emerging threats.
+                </p>
+              </div>
+              
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
+                <div className="flex items-center gap-3 mb-4">
+                  <Heart className="w-6 h-6 text-red-400" />
+                  <h3 className="text-xl font-semibold text-white">Client Partnership</h3>
+                </div>
+                <p className="text-slate-300">
+                  Working closely with clients to ensure their specific compliance 
+                  requirements are met and exceeded.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ensure Your Compliance
+            </h2>
+            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
+              Partner with Zion Tech Group to achieve and maintain compliance 
+              with international standards and industry regulations.
+            </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300"
               >
-                Contact Compliance Team
+                Get Compliance Assessment
               </a>
               <a
-                href="/support"
-                className="bg-slate-700/50 text-white px-8 py-3 rounded-lg font-medium hover:bg-slate-600/50 transition-all duration-300 border border-slate-600/50"
+                href="/security"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-slate-700/50 text-white font-semibold rounded-lg border border-slate-600 hover:border-cyan-400/50 transition-all duration-300"
               >
-                Compliance Support
+                Learn About Security
               </a>
             </div>
-          </div>
-        </motion.div>
-      </div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 }

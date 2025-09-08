@@ -1,102 +1,102 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { Shield, AlertTriangle, Users, Zap, Database, Globe, BarChart3, CheckCircle, Network, Cpu, Clock, Target } from 'lucide-react';
+import { Shield, Lock, Users, Zap, Database, Globe, BarChart3, CheckCircle, Network, Cpu, Eye, Key } from 'lucide-react';
 
-export default function IncidentResponsePlatform() {
+export default function ZeroTrustArchitecture() {
   const features = [
     {
-      icon: AlertTriangle,
-      title: 'Real-time Detection',
-      description: 'Advanced threat detection with immediate alerts and automated response capabilities.',
-      benefits: ['Instant alerts', 'Automated response', 'Threat intelligence', 'Behavioral analysis']
-    },
-    {
       icon: Shield,
-      title: 'Incident Management',
-      description: 'Comprehensive incident tracking, investigation, and resolution workflows.',
-      benefits: ['Case management', 'Investigation tools', 'Resolution tracking', 'Documentation']
+      title: 'Identity Verification',
+      description: 'Multi-factor authentication and continuous identity validation for all users and devices.',
+      benefits: ['MFA enforcement', 'Biometric auth', 'Device trust', 'Session management']
     },
     {
-      icon: Users,
-      title: 'Team Collaboration',
-      description: 'Coordinated response efforts with role-based access and communication tools.',
-      benefits: ['Role management', 'Communication tools', 'Task assignment', 'Progress tracking']
+      icon: Lock,
+      title: 'Micro-segmentation',
+      description: 'Granular network segmentation isolating workloads and limiting lateral movement.',
+      benefits: ['Network isolation', 'Traffic control', 'Policy enforcement', 'Threat containment']
     },
     {
-      icon: Clock,
-      title: 'Response Automation',
-      description: 'Automated response actions to contain threats and minimize damage.',
-      benefits: ['Playbook automation', 'Containment actions', 'Recovery procedures', 'Compliance reporting']
+      icon: Eye,
+      title: 'Continuous Monitoring',
+      description: 'Real-time visibility into all network traffic, user behavior, and system activities.',
+      benefits: ['Traffic analysis', 'Behavioral analytics', 'Threat detection', 'Incident response']
+    },
+    {
+      icon: Key,
+      title: 'Least Privilege Access',
+      description: 'Minimal access permissions based on specific roles and just-in-time authorization.',
+      benefits: ['Role-based access', 'Time-limited permissions', 'Privilege escalation', 'Access reviews']
     }
   ];
 
   const useCases = [
     {
-      title: 'Security Operations',
-      description: 'Centralized security operations center with comprehensive incident management.',
-      icon: Shield,
-      benefits: ['SOC integration', 'Threat hunting', 'Incident correlation', 'Performance metrics']
+      title: 'Enterprise Networks',
+      description: 'Secure corporate networks with zero trust principles and advanced threat protection.',
+      icon: Network,
+      benefits: ['Network security', 'User authentication', 'Device management', 'Compliance']
     },
     {
-      title: 'Compliance Management',
-      description: 'Meet regulatory requirements with detailed incident documentation and reporting.',
-      icon: Database,
-      benefits: ['Audit trails', 'Compliance reports', 'Regulatory alignment', 'Documentation']
+      title: 'Cloud Infrastructure',
+      description: 'Secure cloud environments with identity-based access and continuous monitoring.',
+      icon: Database, // Changed from Cloud to Database as Cloud is not imported
+      benefits: ['Cloud security', 'API protection', 'Data encryption', 'Compliance']
     },
     {
-      title: 'Threat Intelligence',
-      description: 'Integrate threat intelligence feeds for proactive threat detection and response.',
-      icon: Target,
-      benefits: ['Intel integration', 'IOC management', 'Threat feeds', 'Context enrichment']
+      title: 'Remote Workforce',
+      description: 'Secure remote access solutions for distributed teams and mobile workers.',
+      icon: Users,
+      benefits: ['VPN alternatives', 'Device trust', 'Secure access', 'User experience']
     },
     {
-      title: 'Forensic Analysis',
-      description: 'Comprehensive digital forensics capabilities for incident investigation.',
+      title: 'Critical Infrastructure',
+      description: 'Protect industrial systems and critical infrastructure with zero trust security.',
       icon: Cpu,
-      benefits: ['Evidence collection', 'Analysis tools', 'Chain of custody', 'Expert testimony']
+      benefits: ['OT security', 'Network isolation', 'Threat prevention', 'Compliance']
     }
   ];
 
   const technologies = [
+    'Identity Providers (IdP)',
+    'Network Access Control (NAC)',
+    'Software-Defined Perimeter (SDP)',
+    'Zero Trust Network Access (ZTNA)',
+    'Privileged Access Management (PAM)',
     'Security Information and Event Management (SIEM)',
     'Endpoint Detection and Response (EDR)',
-    'Threat Intelligence Platforms (TIP)',
-    'Security Orchestration, Automation and Response (SOAR)',
-    'Network Traffic Analysis (NTA)',
-    'User and Entity Behavior Analytics (UEBA)',
-    'Digital Forensics Tools',
-    'Incident Management Systems'
+    'Cloud Access Security Broker (CASB)'
   ];
 
   const benefits = [
     {
       icon: Zap,
-      title: 'Faster Response',
-      description: 'Reduce incident response time with automated detection and response capabilities.'
+      title: 'Enhanced Security',
+      description: 'Eliminate trust assumptions and continuously verify all access attempts.'
     },
     {
       icon: Shield,
-      title: 'Better Protection',
-      description: 'Improve security posture with comprehensive threat detection and containment.'
+      title: 'Threat Prevention',
+      description: 'Prevent lateral movement and contain threats before they spread.'
     },
     {
-      icon: BarChart3,
+      icon: BarChart3, // Changed from TrendingUp to BarChart3
       title: 'Compliance Ready',
-      description: 'Meet regulatory requirements with detailed incident documentation and reporting.'
+      description: 'Meet regulatory requirements with comprehensive security controls.'
     },
     {
       icon: Globe,
-      title: 'Global Coverage',
-      description: 'Protect assets across all locations with centralized incident management.'
+      title: 'Global Protection',
+      description: 'Secure access from anywhere while maintaining security standards.'
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="Incident Response Platform Services - Zion Tech Group"
-        description="Comprehensive incident response platform with real-time detection, automated response, and team collaboration. Protect your organization with advanced security incident management."
+        title="Zero Trust Architecture Services - Zion Tech Group"
+        description="Implement comprehensive zero trust security architecture. Continuous verification, micro-segmentation, and least privilege access for modern enterprise security."
       />
       
       {/* Hero Section */}
@@ -109,26 +109,25 @@ export default function IncidentResponsePlatform() {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-orange-600 via-red-500 to-pink-600 rounded-2xl flex items-center justify-center">
-                <AlertTriangle className="w-10 h-10 text-white" />
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-600 via-cyan-500 to-green-600 rounded-2xl flex items-center justify-center">
+                <Shield className="w-10 h-10 text-white" />
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Incident Response
-              <span className="block bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 bg-clip-text text-transparent">
-                Platform
+              Zero Trust
+              <span className="block bg-gradient-to-r from-blue-400 via-cyan-500 to-green-500 bg-clip-text text-transparent">
+                Architecture
               </span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive incident response platform with real-time detection, 
-              automated response, and team collaboration. Protect your organization 
-              with advanced security incident management.
+              Implement comprehensive zero trust security architecture. Continuous verification, 
+              micro-segmentation, and least privilege access for modern enterprise security.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105">
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105">
                 Get Started
               </button>
-              <button className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-white transition-all duration-300">
+              <button className="px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300">
                 Learn More
               </button>
             </div>
@@ -137,10 +136,10 @@ export default function IncidentResponsePlatform() {
         
         {/* Background Elements */}
         <div className="absolute top-20 left-10 opacity-20">
-          <Target className="w-16 h-16 text-orange-400 animate-pulse" />
+          <Lock className="w-16 h-16 text-blue-400 animate-pulse" />
         </div>
         <div className="absolute bottom-20 right-10 opacity-20">
-          <Network className="w-16 h-16 text-red-500 animate-bounce" />
+          <Key className="w-16 h-16 text-cyan-500 animate-bounce" />
         </div>
       </section>
 
@@ -154,11 +153,11 @@ export default function IncidentResponsePlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Platform Features
+              Zero Trust Principles
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our comprehensive incident response platform delivers the tools, 
-              automation, and collaboration needed to handle security incidents effectively.
+              Our comprehensive zero trust architecture implements all core principles 
+              to deliver robust, adaptive security for modern enterprises.
             </p>
           </motion.div>
 
@@ -169,9 +168,9 @@ export default function IncidentResponsePlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-orange-400/50 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
@@ -179,7 +178,7 @@ export default function IncidentResponsePlatform() {
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-slate-400">
-                      <CheckCircle className="w-4 h-4 text-orange-400 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
                   ))}
@@ -200,11 +199,11 @@ export default function IncidentResponsePlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Our Platform?
+              Why Choose Zero Trust?
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our incident response platform offers unique advantages that can transform 
-              your security operations and improve incident handling.
+              Zero trust architecture offers unique advantages that can transform 
+              your security posture and protect against modern threats.
             </p>
           </motion.div>
 
@@ -218,7 +217,7 @@ export default function IncidentResponsePlatform() {
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50"
               >
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mr-4">
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-2xl font-semibold text-white">{benefit.title}</h3>
@@ -240,11 +239,11 @@ export default function IncidentResponsePlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Platform Applications
+              Implementation Scenarios
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Discover how our incident response platform can be implemented across 
-              different security operations and use cases.
+              Discover how zero trust architecture can be implemented across 
+              different environments and use cases.
             </p>
           </motion.div>
 
@@ -258,7 +257,7 @@ export default function IncidentResponsePlatform() {
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50"
               >
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-pink-500 rounded-xl flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-green-500 rounded-xl flex items-center justify-center mr-4">
                     <useCase.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-2xl font-semibold text-white">{useCase.title}</h3>
@@ -267,7 +266,7 @@ export default function IncidentResponsePlatform() {
                 <div className="grid grid-cols-2 gap-3">
                   {useCase.benefits.map((benefit, idx) => (
                     <div key={idx} className="flex items-center text-sm text-slate-400">
-                      <CheckCircle className="w-4 h-4 text-red-400 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </div>
                   ))}
@@ -292,20 +291,20 @@ export default function IncidentResponsePlatform() {
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               We leverage cutting-edge security technologies and frameworks to 
-              deliver robust, scalable, and effective incident response solutions.
+              deliver robust, scalable, and effective zero trust solutions.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {technologies.map((tech, index) => (
               <motion.div
                 key={tech}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 text-center hover:border-orange-400/50 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 text-center hover:border-blue-400/50 transition-all duration-300"
               >
-                <div className="text-orange-400 mb-3">
+                <div className="text-blue-400 mb-3">
                   <Zap className="w-8 h-8 mx-auto" />
                 </div>
                 <h3 className="text-white font-medium text-sm">{tech}</h3>
@@ -316,7 +315,7 @@ export default function IncidentResponsePlatform() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-900/20 to-red-900/20">
+      <section className="py-20 bg-gradient-to-r from-blue-900/20 to-cyan-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -324,17 +323,17 @@ export default function IncidentResponsePlatform() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Improve Incident Response?
+              Ready to Implement Zero Trust?
             </h2>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Transform your security operations with comprehensive incident response 
-              capabilities from Zion Tech Group.
+              Transform your security posture with comprehensive zero trust architecture 
+              from Zion Tech Group.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105">
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105">
                 Start Your Project
               </button>
-              <button className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-white transition-all duration-300">
+              <button className="px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300">
                 Schedule Consultation
               </button>
             </div>

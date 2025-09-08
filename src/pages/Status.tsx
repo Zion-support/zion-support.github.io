@@ -1,185 +1,132 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
-import { 
-  CheckCircle, AlertCircle, XCircle, Clock, 
-  Activity, Server, Database, Globe, Shield,
-  Wifi, Cloud, Zap, TrendingUp, RefreshCw,
-  ExternalLink, Info, AlertTriangle, MinusCircle, MessageCircle
-} from 'lucide-react';
+import { CheckCircle, AlertTriangle, XCircle, Clock, Server, Database, Cloud, Globe, Activity, BarChart3 } from 'lucide-react';
 
 export default function Status() {
-  const [lastUpdated, setLastUpdated] = useState(new Date());
-  const [isRefreshing, setIsRefreshing] = useState(false);
-
-  // Mock data - in a real app, this would come from an API
   const systemStatus = {
     overall: 'operational',
+    lastUpdated: '2025-01-15T14:30:00Z',
     uptime: '99.98%',
-    lastIncident: '2024-01-15',
     responseTime: '45ms'
   };
 
   const services = [
     {
-      name: 'Website & Frontend',
+      name: 'AI Business Intelligence',
       status: 'operational',
       uptime: '99.99%',
       responseTime: '120ms',
-      lastCheck: '2 minutes ago',
-      description: 'Main website and user interface'
+      lastIncident: null,
+      icon: Database
     },
     {
-      name: 'API Services',
+      name: 'AI Sales Copilot',
       status: 'operational',
       uptime: '99.97%',
-      responseTime: '45ms',
-      lastCheck: '1 minute ago',
-      description: 'Backend API and data services'
+      responseTime: '85ms',
+      lastIncident: null,
+      icon: Cloud
     },
     {
-      name: 'Database Systems',
-      status: 'operational',
-      uptime: '99.99%',
-      responseTime: '12ms',
-      lastCheck: '30 seconds ago',
-      description: 'Primary and backup databases'
-    },
-    {
-      name: 'Authentication',
+      name: 'AI Compliance Assistant',
       status: 'operational',
       uptime: '99.98%',
-      responseTime: '85ms',
-      lastCheck: '1 minute ago',
-      description: 'User authentication and authorization'
+      responseTime: '95ms',
+      lastIncident: null,
+      icon: Server
     },
     {
-      name: 'File Storage',
-      status: 'operational',
-      uptime: '99.96%',
-      responseTime: '200ms',
-      lastCheck: '2 minutes ago',
-      description: 'Document and media storage'
-    },
-    {
-      name: 'Email Services',
+      name: 'IoT Edge Platform',
       status: 'operational',
       uptime: '99.95%',
       responseTime: '150ms',
-      lastCheck: '3 minutes ago',
-      description: 'Transactional and marketing emails'
+      lastIncident: null,
+      icon: Globe
     },
     {
-      name: 'Monitoring Systems',
-      status: 'operational',
-      uptime: '99.99%',
-      responseTime: '25ms',
-      lastCheck: '15 seconds ago',
-      description: 'System monitoring and alerting'
-    },
-    {
-      name: 'CDN & Edge',
-      status: 'operational',
-      uptime: '99.97%',
-      responseTime: '35ms',
-      lastCheck: '1 minute ago',
-      description: 'Content delivery network'
-    }
-  ];
-
-  const regions = [
-    {
-      name: 'North America (US East)',
-      status: 'operational',
-      uptime: '99.99%',
-      responseTime: '45ms',
-      servers: 12
-    },
-    {
-      name: 'North America (US West)',
-      status: 'operational',
-      uptime: '99.98%',
-      responseTime: '52ms',
-      servers: 8
-    },
-    {
-      name: 'Europe (Frankfurt)',
-      status: 'operational',
-      uptime: '99.97%',
-      responseTime: '78ms',
-      servers: 6
-    },
-    {
-      name: 'Asia Pacific (Singapore)',
+      name: 'Blockchain Solutions',
       status: 'operational',
       uptime: '99.96%',
-      responseTime: '95ms',
-      servers: 4
+      responseTime: '200ms',
+      lastIncident: null,
+      icon: Database
+    },
+    {
+      name: 'Healthcare Tech Platform',
+      status: 'operational',
+      uptime: '99.97%',
+      responseTime: '110ms',
+      lastIncident: null,
+      icon: Server
     }
   ];
 
   const recentIncidents = [
     {
-      id: 1,
-      title: 'Scheduled Maintenance - Database Optimization',
+      id: 'INC-2025-001',
+      title: 'Scheduled Maintenance - AI Services',
+      description: 'Planned maintenance window for AI infrastructure upgrades',
       status: 'resolved',
       severity: 'low',
-      startTime: '2024-01-15 02:00 UTC',
-      endTime: '2024-01-15 04:00 UTC',
-      duration: '2 hours',
-      description: 'Routine database maintenance and optimization completed successfully.',
-      updates: [
-        {
-          time: '2024-01-15 02:00 UTC',
-          message: 'Maintenance started - Database optimization in progress'
-        },
-        {
-          time: '2024-01-15 03:30 UTC',
-          message: 'Optimization 75% complete - Performance improvements detected'
-        },
-        {
-          time: '2024-01-15 04:00 UTC',
-          message: 'Maintenance completed successfully - All systems operational'
-        }
-      ]
+      startTime: '2025-01-10T02:00:00Z',
+      endTime: '2025-01-10T04:00:00Z',
+      affectedServices: ['AI Business Intelligence', 'AI Sales Copilot']
     },
     {
-      id: 2,
-      title: 'API Response Time Degradation',
+      id: 'INC-2025-002',
+      title: 'Database Performance Degradation',
+      description: 'Temporary performance issues affecting response times',
       status: 'resolved',
       severity: 'medium',
-      startTime: '2024-01-10 14:30 UTC',
-      endTime: '2024-01-10 16:45 UTC',
-      duration: '2 hours 15 minutes',
-      description: 'Increased API response times due to high traffic load. Additional resources deployed.',
-      updates: [
-        {
-          time: '2024-01-10 14:30 UTC',
-          message: 'Investigating increased API response times'
-        },
-        {
-          time: '2024-01-10 15:00 UTC',
-          message: 'Identified high traffic load - Scaling resources'
-        },
-        {
-          time: '2024-01-10 16:45 UTC',
-          message: 'Issue resolved - Performance restored to normal levels'
-        }
-      ]
+      startTime: '2025-01-08T14:30:00Z',
+      endTime: '2025-01-08T16:45:00Z',
+      affectedServices: ['All Services']
     }
   ];
 
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'operational':
-        return 'text-green-400 bg-green-400/10 border-green-400/20';
+        return 'text-green-400';
       case 'degraded':
-        return 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20';
+        return 'text-yellow-400';
       case 'outage':
-        return 'text-red-400 bg-red-400/10 border-red-400/20';
+        return 'text-red-400';
       case 'maintenance':
-        return 'text-blue-400 bg-blue-400/10 border-blue-400/20';
+        return 'text-blue-400';
       default:
-        return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
+        return 'text-slate-400';
+    }
+  };
+
+  const getStatusIcon = (status: string) => {
+    switch (status) {
+      case 'operational':
+        return CheckCircle;
+      case 'degraded':
+        return AlertTriangle;
+      case 'outage':
+        return XCircle;
+      case 'maintenance':
+        return Clock;
+      default:
+        return Clock;
+    }
+  };
+
+  const getSeverityColor = (severity: string) => {
+    switch (severity) {
+      case 'low':
+        return 'bg-blue-500/20 text-blue-400 border-blue-500/30';
+      case 'medium':
+        return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30';
+      case 'high':
+        return 'bg-orange-500/20 text-orange-400 border-orange-500/30';
+      case 'critical':
+        return 'bg-red-500/20 text-red-400 border-red-500/30';
+      default:
+        return 'bg-slate-500/20 text-slate-400 border-slate-500/30';
     }
   };
 
@@ -237,88 +184,250 @@ export default function Status() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="System Status - Zion Tech Group"
+        description="Real-time status of Zion Tech Group services and systems. Monitor uptime, performance, and incident reports."
+      />
+      
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="relative overflow-hidden py-20">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              System <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Status</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Real-time status of Zion Tech Group services and infrastructure
-            </p>
-            <div className="flex items-center justify-center space-x-4 text-gray-400">
-              <Activity className="w-5 h-5" />
-              <span>Live Monitoring</span>
-              <span>•</span>
-              <Clock className="w-5 h-5" />
-              <span>24/7 Uptime</span>
-              <span>•</span>
-              <Shield className="w-5 h-5" />
-              <span>Enterprise Security</span>
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
+                <Activity className="w-10 h-10 text-white" />
+              </div>
             </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              System
+              <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                Status
+              </span>
+            </h1>
+            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
+              Real-time monitoring of our services and systems. Stay informed about 
+              uptime, performance, and any ongoing issues.
+            </p>
           </motion.div>
         </div>
       </section>
 
       {/* Overall Status */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8">
-            <div className="flex flex-col lg:flex-row items-center justify-between mb-8">
-              <div>
-                <h2 className="text-2xl font-bold text-white mb-2">Overall System Status</h2>
-                <p className="text-gray-400">All systems are operating normally</p>
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl font-bold text-white mb-4">
+                  Overall System Status
+                </h2>
+                <div className="flex items-center justify-center gap-3 mb-6">
+                  <CheckCircle className="w-8 h-8 text-green-400" />
+                  <span className="text-2xl font-bold text-green-400">All Systems Operational</span>
+                </div>
+                <p className="text-slate-300">
+                  Last updated: {new Date(systemStatus.lastUpdated).toLocaleString()}
+                </p>
               </div>
-              <div className="flex items-center space-x-4 mt-4 lg:mt-0">
-                <button
-                  onClick={refreshStatus}
-                  disabled={isRefreshing}
-                  className="flex items-center space-x-2 px-4 py-2 bg-white/10 text-gray-300 rounded-lg hover:bg-white/20 transition-colors disabled:opacity-50"
-                >
-                  <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`} />
-                  <span>Refresh</span>
-                </button>
-                <div className="text-sm text-gray-400">
-                  Last updated: {lastUpdated.toLocaleTimeString()}
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="text-center p-6 bg-slate-700/30 rounded-xl">
+                  <div className="text-3xl font-bold text-green-400 mb-2">{systemStatus.uptime}</div>
+                  <div className="text-slate-300">Uptime (30 days)</div>
+                </div>
+                <div className="text-center p-6 bg-slate-700/30 rounded-xl">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{systemStatus.responseTime}</div>
+                  <div className="text-slate-300">Average Response Time</div>
+                </div>
+                <div className="text-center p-6 bg-slate-700/30 rounded-xl">
+                  <div className="text-3xl font-bold text-blue-400 mb-2">0</div>
+                  <div className="text-slate-300">Active Incidents</div>
                 </div>
               </div>
             </div>
+          </motion.div>
+        </div>
+      </section>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <CheckCircle className="w-8 h-8 text-white" />
+      {/* Service Status */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Service Status
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Current status of all Zion Tech Group services and platforms.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, index) => {
+              const StatusIcon = getStatusIcon(service.status);
+              return (
+                <motion.div
+                  key={service.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-3">
+                      <service.icon className="w-6 h-6 text-cyan-400" />
+                      <h3 className="font-semibold text-white">{service.name}</h3>
+                    </div>
+                    <StatusIcon className={`w-6 h-6 ${getStatusColor(service.status)}`} />
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-slate-400">Status:</span>
+                      <span className={`font-medium ${getStatusColor(service.status)}`}>
+                        {service.status.charAt(0).toUpperCase() + service.status.slice(1)}
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-slate-400">Uptime:</span>
+                      <span className="text-white font-medium">{service.uptime}</span>
+                    </div>
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-slate-400">Response Time:</span>
+                      <span className="text-white font-medium">{service.responseTime}</span>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Recent Incidents */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Recent Incidents
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Information about recent service disruptions and maintenance activities.
+            </p>
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto space-y-6">
+            {recentIncidents.map((incident, index) => (
+              <motion.div
+                key={incident.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{incident.title}</h3>
+                    <p className="text-slate-300 mb-3">{incident.description}</p>
+                  </div>
+                  <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getSeverityColor(incident.severity)}`}>
+                    {incident.severity.charAt(0).toUpperCase() + incident.severity.slice(1)}
+                  </span>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-1">Status</h3>
-                <p className="text-green-400 font-medium">Operational</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <TrendingUp className="w-8 h-8 text-white" />
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-sm">
+                      <Clock className="w-4 h-4 text-slate-400" />
+                      <span className="text-slate-400">Started:</span>
+                      <span className="text-white">{new Date(incident.startTime).toLocaleString()}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm">
+                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <span className="text-slate-400">Resolved:</span>
+                      <span className="text-white">{new Date(incident.endTime).toLocaleString()}</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-slate-400 mb-2">Affected Services:</div>
+                    <div className="flex flex-wrap gap-2">
+                      {incident.affectedServices.map((service, idx) => (
+                        <span key={idx} className="px-2 py-1 bg-slate-700 text-slate-300 text-xs rounded">
+                          {service}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-1">Uptime</h3>
-                <p className="text-blue-400 font-medium">{systemStatus.uptime}</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Activity className="w-8 h-8 text-white" />
+                
+                <div className="flex items-center gap-2">
+                  <span className="text-green-400 text-sm font-medium">✓ Resolved</span>
+                  <span className="text-slate-400">•</span>
+                  <span className="text-slate-400 text-sm">Incident ID: {incident.id}</span>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-1">Response Time</h3>
-                <p className="text-purple-400 font-medium">{systemStatus.responseTime}</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Clock className="w-8 h-8 text-white" />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Performance Metrics */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Performance Metrics
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Real-time performance data and system health indicators.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { label: 'CPU Usage', value: '23%', color: 'text-green-400', icon: BarChart3 },
+              { label: 'Memory Usage', value: '67%', color: 'text-yellow-400', icon: BarChart3 },
+              { label: 'Network Latency', value: '12ms', color: 'text-green-400', icon: Activity },
+              { label: 'Active Connections', value: '2.4k', color: 'text-blue-400', icon: Server }
+            ].map((metric, index) => (
+              <motion.div
+                key={metric.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 text-center"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <metric.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-1">Last Incident</h3>
-                <p className="text-yellow-400 font-medium">{systemStatus.lastIncident}</p>
-              </div>
-            </div>
+                <div className={`text-3xl font-bold mb-2 ${metric.color}`}>{metric.value}</div>
+                <div className="text-slate-300">{metric.label}</div>
+              </motion.div>
+            ))}
           </div>
         </div>
         
@@ -445,266 +554,40 @@ export default function Status() {
         </div>
       </section>
 
-      {/* Recent Incidents */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
+        <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="mb-12"
+            transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl font-bold text-white mb-4 text-center">Recent Incidents</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto text-center">
-              Historical record of system incidents and maintenance events
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Stay Informed
+            </h2>
+            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
+              Subscribe to status updates and get notified about any service disruptions 
+              or maintenance activities.
             </p>
+            
+            <div className="max-w-md mx-auto">
+              <div className="flex gap-3">
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  className="flex-1 px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 transition-colors"
+                />
+                <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300">
+                  Subscribe
+                </button>
+              </div>
+              <p className="text-slate-400 text-sm mt-3">
+                Get real-time updates about system status and incidents.
+              </p>
+            </div>
           </motion.div>
-
-          <div className="space-y-6">
-            {recentIncidents.map((incident, index) => (
-              <motion.div
-                key={incident.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-6 hover:border-blue-500/50 transition-all duration-300"
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex-1">
-                    <div className="flex items-center space-x-3 mb-2">
-                      <h3 className="text-lg font-semibold text-white">{incident.title}</h3>
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium border ${getSeverityColor(incident.severity)}`}>
-                        {incident.severity}
-                      </span>
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium border ${getStatusColor(incident.status)}`}>
-                        {incident.status}
-                      </span>
-                    </div>
-                    <p className="text-gray-300 mb-3">{incident.description}</p>
-                    <div className="flex items-center space-x-6 text-sm text-gray-400">
-                      <span>Started: {incident.startTime}</span>
-                      <span>Duration: {incident.duration}</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="border-t border-white/10 pt-4">
-                  <h4 className="text-sm font-medium text-gray-400 mb-3">Incident Updates:</h4>
-                  <div className="space-y-2">
-                    {incident.updates.map((update, updateIndex) => (
-                      <div key={updateIndex} className="flex items-start space-x-3 text-sm">
-                        <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                        <div>
-                          <span className="text-gray-400">{update.time}</span>
-                          <p className="text-white">{update.message}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
-
-      {/* Additional Resources */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">Additional Resources</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Stay informed about our system status and get support when you need it
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-6 text-center hover:border-blue-500/50 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Info className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Status Page RSS</h3>
-              <p className="text-gray-300 text-sm mb-4">Subscribe to our RSS feed for automatic updates</p>
-              <a
-                href="/status/rss"
-                className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
-              >
-                <span>Subscribe</span>
-                <ExternalLink className="w-4 h-4 ml-1" />
-              </a>
-            </div>
-
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-6 text-center hover:border-blue-500/50 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <MessageCircle className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Support Chat</h3>
-              <p className="text-gray-300 text-sm mb-4">Get real-time help from our support team</p>
-              <a
-                href="/support"
-                className="inline-flex items-center text-green-400 hover:text-green-300 transition-colors"
-              >
-                <span>Start Chat</span>
-                <ExternalLink className="w-4 h-4 ml-1" />
-              </a>
-            </div>
-
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-6 text-center hover:border-blue-500/50 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <AlertTriangle className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Report Issues</h3>
-              <p className="text-gray-300 text-sm mb-4">Report problems or request assistance</p>
-              <a
-                href="/contact"
-                className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors"
-              >
-                <span>Report Issue</span>
-                <ExternalLink className="w-4 h-4 ml-1" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Need Help or Have Questions?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Our support team is available 24/7 to help you with any issues or questions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/support"
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-              >
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Get Support
-              </a>
-              <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-3 border border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
-              >
-                <Info className="w-5 h-5 mr-2" />
-                Contact Us
-              </a>
-            </div>
-            
-            <div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700/50">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Activity className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-2">&lt;100ms</h3>
-              <p className="text-gray-300">Average Response Time</p>
-            </div>
-            
-            <div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700/50">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Server className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-2">24/7</h3>
-              <p className="text-gray-300">Monitoring</p>
-            </div>
-            
-            <div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700/50">
-              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-2">100%</h3>
-              <p className="text-gray-300">Security Status</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Incident History */}
-      <div className="py-20 bg-slate-800/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Recent Incidents
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We maintain transparency about any service disruptions
-            </p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-slate-700/30 rounded-xl p-8 border border-slate-600/50 text-center">
-              <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-white mb-2">No Recent Incidents</h3>
-              <p className="text-gray-300 mb-6">
-                All systems have been operating normally. We're committed to maintaining this level of service.
-              </p>
-              <div className="text-sm text-gray-400">
-                Last incident: 30 days ago (resolved within 15 minutes)
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Status Page Info */}
-      <div className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            About This Status Page
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            This page provides real-time information about the status of our services. 
-            We update it automatically every minute and immediately when issues are detected.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-            <div className="p-6 bg-slate-800/50 rounded-xl border border-slate-700/50">
-              <h3 className="text-lg font-semibold text-white mb-2">Real-time Updates</h3>
-              <p className="text-gray-300 text-sm">
-                Status updates are provided in real-time with automatic refresh every minute.
-              </p>
-            </div>
-            
-            <div className="p-6 bg-slate-800/50 rounded-xl border border-slate-700/50">
-              <h3 className="text-lg font-semibold text-white mb-2">Transparent Communication</h3>
-              <p className="text-gray-300 text-sm">
-                We believe in transparency and will always communicate any issues promptly.
-              </p>
-            </div>
-            
-            <div className="p-6 bg-slate-800/50 rounded-xl border border-slate-700/50">
-              <h3 className="text-lg font-semibold text-white mb-2">24/7 Monitoring</h3>
-              <p className="text-gray-300 text-sm">
-                Our systems are monitored around the clock to ensure quick issue detection.
-              </p>
-            </div>
-          </div>
-          
-          <div className="mt-12 p-6 bg-slate-800/50 rounded-xl border border-slate-700/50">
-            <p className="text-gray-300 mb-4">
-              <strong>Last Updated:</strong> {lastUpdated.toLocaleString()}
-            </p>
-            <p className="text-sm text-gray-400">
-              This status page is automatically updated. For urgent issues, please contact our support team.
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

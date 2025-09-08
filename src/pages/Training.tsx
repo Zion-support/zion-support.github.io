@@ -1,556 +1,376 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  GraduationCap, 
-  Users, 
-  TrendingUp, 
-  Shield, 
-  Cloud, 
-  Brain, 
-  Zap, 
-  Target,
-  CheckCircle,
-  ArrowRight,
-  BarChart3,
-  Workflow,
-  Database,
-  Globe,
-  Lock,
-  Rocket,
-  Star,
-  Award,
-  Headphones,
-  Phone,
-  Mail,
-  MapPin,
-  BookOpen,
-  Video,
-  Monitor,
-  Settings,
-  Lightbulb,
-  Cog,
-  Wrench,
-  Laptop,
-  Smartphone,
-  Tablet,
-  Wifi,
-  MessageCircle,
-  Calendar,
-  Clock,
-  CheckSquare,
-  DollarSign,
-  PieChart,
-  LineChart,
-  BarChart,
-  Target as TargetIcon,
-  Eye,
-  FileText,
-  Image,
-  Camera,
-  Navigation,
-  Compass,
-  Globe as GlobeIcon,
-  Lock as LockIcon,
-  Shield as ShieldIcon,
-  CheckCircle as CheckCircleIcon,
-  XCircle,
-  AlertTriangle,
-  Info,
-  HelpCircle,
-  Settings as SettingsIcon,
-  Cog as CogIcon,
-  Wrench as WrenchIcon,
-  Tool,
-  Hammer,
-  Paintbrush,
-  Ruler,
-  Calculator,
-  Percent,
-  Plus,
-  Minus,
-  Divide,
-  Equal,
-  Play,
-  Pause,
-  SkipBack,
-  SkipForward,
-  Volume2,
-  Mic,
-  Headphones as HeadphonesIcon,
-  Speaker,
-  Monitor as MonitorIcon,
-  Smartphone as SmartphoneIcon,
-  Tablet as TabletIcon,
-  Laptop as LaptopIcon,
-  Wifi as WifiIcon,
-  MessageCircle as MessageCircleIcon,
-  PhoneCall,
-  Mail as MailIcon,
-  MapPin as MapPinIcon,
-  Navigation as NavigationIcon,
-  Compass as CompassIcon,
-  Globe as GlobeIcon2,
-  Lock as LockIcon2,
-  Shield as ShieldIcon2,
-  CheckCircle as CheckCircleIcon2,
-  XCircle as XCircleIcon,
-  AlertTriangle as AlertTriangleIcon,
-  Info as InfoIcon,
-  HelpCircle as HelpCircleIcon,
-  Settings as SettingsIcon2,
-  Cog as CogIcon2,
-  Wrench as WrenchIcon2,
-  Tool as ToolIcon,
-  Hammer as HammerIcon,
-  Paintbrush as PaintbrushIcon,
-  Ruler as RulerIcon,
-  Calculator as CalculatorIcon,
-  Percent as PercentIcon,
-  Plus as PlusIcon,
-  Minus as MinusIcon,
-  Divide as DivideIcon,
-  Equal as EqualIcon
-} from 'lucide-react';
+import { SEO } from '../components/SEO';
+import { motion } from 'framer-motion';
+import { GraduationCap, Users, Video, BookOpen, Shield, Clock, Star, ArrowRight, Play, Download } from 'lucide-react';
 
 export default function Training() {
-  const trainingPrograms = [
+  const trainingCategories = [
     {
-      category: "AI & Machine Learning",
-      programs: [
-        {
-          title: "AI Fundamentals",
-          duration: "8 weeks",
-          level: "Beginner",
-          description: "Learn the basics of artificial intelligence and machine learning",
-          topics: ["Machine Learning Basics", "Neural Networks", "Data Preprocessing", "Model Training"]
-        },
-        {
-          title: "Advanced AI Development",
-          duration: "12 weeks",
-          level: "Advanced",
-          description: "Master advanced AI techniques and implementation",
-          topics: ["Deep Learning", "Natural Language Processing", "Computer Vision", "AI Ethics"]
-        }
+      title: 'AI & Machine Learning',
+      description: 'Master artificial intelligence and machine learning fundamentals',
+      icon: GraduationCap,
+      color: 'from-purple-500 to-pink-500',
+      courses: [
+        { title: 'AI Fundamentals', duration: '8 hours', level: 'Beginner', rating: 4.8 },
+        { title: 'Machine Learning Basics', duration: '12 hours', level: 'Intermediate', rating: 4.7 },
+        { title: 'Deep Learning Applications', duration: '16 hours', level: 'Advanced', rating: 4.9 }
       ]
     },
     {
-      category: "Cybersecurity",
-      programs: [
-        {
-          title: "Cybersecurity Fundamentals",
-          duration: "6 weeks",
-          level: "Beginner",
-          description: "Essential cybersecurity concepts and best practices",
-          topics: ["Security Principles", "Threat Detection", "Incident Response", "Security Tools"]
-        },
-        {
-          title: "Advanced Security Operations",
-          duration: "10 weeks",
-          level: "Intermediate",
-          description: "Advanced security operations and threat hunting",
-          topics: ["Penetration Testing", "Security Architecture", "Compliance", "Risk Management"]
-        }
+      title: 'Cybersecurity',
+      description: 'Learn essential cybersecurity concepts and practices',
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
+      courses: [
+        { title: 'Cybersecurity Essentials', duration: '6 hours', level: 'Beginner', rating: 4.6 },
+        { title: 'Zero Trust Architecture', duration: '10 hours', level: 'Intermediate', rating: 4.8 },
+        { title: 'Incident Response', duration: '14 hours', level: 'Advanced', rating: 4.7 }
       ]
     },
     {
-      category: "Cloud & DevOps",
-      programs: [
-        {
-          title: "Cloud Computing Basics",
-          duration: "6 weeks",
-          level: "Beginner",
-          description: "Introduction to cloud computing and services",
-          topics: ["Cloud Models", "AWS/Azure Basics", "Containerization", "Microservices"]
-        },
-        {
-          title: "DevOps Engineering",
-          duration: "10 weeks",
-          level: "Intermediate",
-          description: "Master DevOps practices and tools",
-          topics: ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring", "Automation"]
-        }
-      ]
-    },
-    {
-      category: "Data & Analytics",
-      programs: [
-        {
-          title: "Data Science Fundamentals",
-          duration: "8 weeks",
-          level: "Beginner",
-          description: "Learn data science and analytics fundamentals",
-          topics: ["Data Analysis", "Statistical Methods", "Data Visualization", "SQL Basics"]
-        },
-        {
-          title: "Advanced Analytics",
-          duration: "12 weeks",
-          level: "Advanced",
-          description: "Advanced analytics and business intelligence",
-          topics: ["Predictive Analytics", "Big Data", "Data Engineering", "MLOps"]
-        }
-      ]
-    }
-  ];
-
-  const deliveryMethods = [
-    {
-      icon: Video,
-      title: "Online Learning",
-      description: "Flexible online courses with interactive content and real-time support",
-      features: ["24/7 access", "Interactive modules", "Progress tracking", "Expert support"]
-    },
-    {
-      icon: Users,
-      title: "Instructor-Led Training",
-      description: "Live training sessions with industry experts and hands-on practice",
-      features: ["Live sessions", "Hands-on labs", "Q&A sessions", "Networking opportunities"]
-    },
-    {
-      icon: Laptop,
-      title: "Hybrid Learning",
-      description: "Combination of online and in-person training for optimal learning experience",
-      features: ["Flexible scheduling", "Mixed delivery", "Practical application", "Continuous support"]
-    },
-    {
+      title: 'Cloud & DevOps',
+      description: 'Master cloud computing and DevOps practices',
       icon: BookOpen,
-      title: "Self-Paced Learning",
-      description: "Learn at your own pace with comprehensive study materials",
-      features: ["Self-directed", "Rich resources", "Practice exercises", "Assessment tools"]
+      color: 'from-blue-500 to-cyan-500',
+      courses: [
+        { title: 'Cloud Fundamentals', duration: '8 hours', level: 'Beginner', rating: 4.5 },
+        { title: 'DevOps Practices', duration: '12 hours', level: 'Intermediate', rating: 4.6 },
+        { title: 'Container Orchestration', duration: '16 hours', level: 'Advanced', rating: 4.8 }
+      ]
+    },
+    {
+      title: 'IoT & Edge Computing',
+      description: 'Explore Internet of Things and edge computing technologies',
+      icon: Video,
+      color: 'from-green-500 to-emerald-500',
+      courses: [
+        { title: 'IoT Fundamentals', duration: '6 hours', level: 'Beginner', rating: 4.4 },
+        { title: 'Edge Computing', duration: '10 hours', level: 'Intermediate', rating: 4.6 },
+        { title: 'IoT Security', duration: '12 hours', level: 'Advanced', rating: 4.7 }
+      ]
     }
   ];
 
-  const certifications = [
+  const featuredCourses = [
     {
-      name: "AI & ML Professional",
-      description: "Comprehensive certification in artificial intelligence and machine learning",
-      duration: "6 months",
-      level: "Professional",
-      benefits: ["Industry recognition", "Career advancement", "Skill validation", "Networking"]
+      title: 'Complete AI Business Intelligence Course',
+      description: 'Learn how to implement AI-powered business intelligence solutions from scratch.',
+      instructor: 'Dr. Sarah Chen',
+      duration: '20 hours',
+      level: 'Intermediate',
+      rating: 4.9,
+      students: '2.3k',
+      price: '$299',
+      featured: true
     },
     {
-      name: "Cybersecurity Specialist",
-      description: "Advanced cybersecurity certification with practical hands-on experience",
-      duration: "4 months",
-      level: "Specialist",
-      benefits: ["Security expertise", "Compliance knowledge", "Threat mitigation", "Risk assessment"]
+      title: 'Zero Trust Security Implementation',
+      description: 'Comprehensive guide to implementing zero trust architecture in enterprise environments.',
+      instructor: 'Michael Rodriguez',
+      duration: '16 hours',
+      level: 'Advanced',
+      rating: 4.8,
+      students: '1.8k',
+      price: '$399',
+      featured: true
     },
     {
-      name: "Cloud Architect",
-      description: "Expert-level cloud architecture and design certification",
-      duration: "8 months",
-      level: "Expert",
-      benefits: ["Architecture skills", "Multi-cloud expertise", "Cost optimization", "Security design"]
-    },
-    {
-      name: "Data Scientist",
-      description: "Comprehensive data science and analytics certification",
-      duration: "7 months",
-      level: "Professional",
-      benefits: ["Analytics skills", "ML expertise", "Business insights", "Data storytelling"]
+      title: 'IoT Edge Computing Masterclass',
+      description: 'Master IoT edge computing with hands-on projects and real-world applications.',
+      instructor: 'Emily Watson',
+      duration: '18 hours',
+      level: 'Intermediate',
+      rating: 4.7,
+      students: '1.5k',
+      price: '$349',
+      featured: true
     }
   ];
 
-  const testimonials = [
+  const learningPaths = [
     {
-      name: "Sarah Johnson",
-      role: "Data Scientist",
-      company: "Tech Corp",
-      testimonial: "The AI training program completely transformed my career. The hands-on projects and expert guidance were invaluable.",
-      rating: 5
+      title: 'AI Developer Path',
+      description: 'Complete path to become an AI developer',
+      duration: '6 months',
+      courses: 12,
+      level: 'Beginner to Advanced',
+      icon: GraduationCap
     },
     {
-      name: "Michael Chen",
-      role: "Security Engineer",
-      company: "SecureNet",
-      testimonial: "The cybersecurity certification provided practical skills that I use daily. Highly recommend for security professionals.",
-      rating: 5
+      title: 'Cybersecurity Expert Path',
+      description: 'Comprehensive cybersecurity certification path',
+      duration: '8 months',
+      courses: 15,
+      level: 'Beginner to Advanced',
+      icon: Shield
     },
     {
-      name: "Emily Rodriguez",
-      role: "Cloud Engineer",
-      company: "CloudTech",
-      testimonial: "Excellent cloud training with real-world scenarios. The instructors are industry experts who know their stuff.",
-      rating: 5
+      title: 'Cloud Architect Path',
+      description: 'Full-stack cloud architecture training',
+      duration: '7 months',
+      courses: 14,
+      level: 'Intermediate to Advanced',
+      icon: BookOpen
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Helmet>
-        <title>Training Programs - Zion Tech Group</title>
-        <meta name="description" content="Transform your career with Zion Tech Group's comprehensive training programs in AI, cybersecurity, cloud computing, and data science." />
-        <meta name="keywords" content="training programs, AI training, cybersecurity training, cloud training, data science training, Zion Tech Group" />
-        <link rel="canonical" href="https://ziontechgroup.com/training" />
-      </Helmet>
-
+      <SEO 
+        title="Training & Learning - Zion Tech Group"
+        description="Comprehensive training programs, courses, and learning paths for AI, cybersecurity, cloud computing, and emerging technologies."
+      />
+      
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-blue/20 border border-zion-blue/30 text-zion-blue text-sm font-medium mb-6">
-              <GraduationCap className="w-4 h-4 mr-2" />
-              Training Programs
+      <section className="relative overflow-hidden py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
+                <GraduationCap className="w-10 h-10 text-white" />
+              </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Transform Your Career with
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-blue to-zion-cyan"> Expert Training</span>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Training &
+              <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                Learning
+              </span>
             </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Zion Tech Group offers comprehensive training programs designed to equip you with the skills needed for the future of technology.
+            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
+              Master cutting-edge technologies with our comprehensive training programs. 
+              From AI fundamentals to advanced cybersecurity, we've got you covered.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-blue to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-cyan hover:to-zion-blue transition-all duration-300 transform hover:scale-105"
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Featured Courses */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Featured Courses
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Our most popular and highly-rated courses to accelerate your learning.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {featuredCourses.map((course, index) => (
+              <motion.div
+                key={course.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300"
               >
-                Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                to="/pricing"
-                className="inline-flex items-center px-8 py-4 border border-zion-blue text-zion-blue font-semibold rounded-lg hover:bg-zion-blue hover:text-white transition-all duration-300"
-              >
-                View Pricing
-              </Link>
-            </div>
+                <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 h-48 flex items-center justify-center">
+                  <Play className="w-16 h-16 text-cyan-400" />
+                </div>
+                
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full border border-cyan-500/30">
+                      {course.level}
+                    </span>
+                    <span className="text-2xl font-bold text-white">{course.price}</span>
+                  </div>
+                  
+                  <h3 className="text-xl font-semibold text-white mb-3">{course.title}</h3>
+                  <p className="text-slate-300 mb-4">{course.description}</p>
+                  
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-slate-400">Instructor:</span>
+                      <span className="text-white">{course.instructor}</span>
+                    </div>
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-slate-400">Duration:</span>
+                      <span className="text-white">{course.duration}</span>
+                    </div>
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-slate-400">Students:</span>
+                      <span className="text-white">{course.students}</span>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className={`w-4 h-4 ${i < Math.floor(course.rating) ? 'text-yellow-400 fill-current' : 'text-slate-600'}`} />
+                      ))}
+                      <span className="text-slate-400 text-sm ml-2">{course.rating}</span>
+                    </div>
+                  </div>
+                  
+                  <button className="w-full py-3 px-6 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300">
+                    Enroll Now
+                  </button>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Training Programs Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Training Programs
+      {/* Training Categories */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Browse by Category
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              From AI and machine learning to cybersecurity and cloud computing, we offer programs for every skill level.
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Explore our comprehensive training programs organized by technology area.
             </p>
-          </div>
-          
-          <div className="space-y-12">
-            {trainingPrograms.map((category, index) => (
-              <div key={index} className="bg-slate-800/50 border border-slate-700 rounded-xl p-8">
-                <div className="flex items-center mb-8">
-                  <div className="p-3 bg-zion-blue/20 rounded-lg mr-4">
-                    <Target className="w-8 h-8 text-zion-blue" />
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {trainingCategories.map((category, index) => (
+              <motion.div
+                key={category.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300"
+              >
+                <div className="flex items-center mb-6">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mr-4`}>
+                    <category.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-3xl font-bold text-white">{category.category}</h3>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-2">{category.title}</h3>
+                    <p className="text-slate-300">{category.description}</p>
+                  </div>
                 </div>
                 
-                <div className="grid md:grid-cols-2 gap-6">
-                  {category.programs.map((program, idx) => (
-                    <div key={idx} className="bg-slate-700/50 border border-slate-600 rounded-lg p-6">
-                      <div className="flex items-center justify-between mb-4">
-                        <h4 className="text-xl font-semibold text-white">{program.title}</h4>
-                        <div className="flex items-center space-x-2">
-                          <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
-                            {program.level}
-                          </span>
-                          <span className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full">
-                            {program.duration}
-                          </span>
+                <div className="space-y-4">
+                  {category.courses.map((course, idx) => (
+                    <div key={idx} className="p-4 bg-slate-700/30 rounded-lg hover:bg-slate-700/50 transition-colors">
+                      <div className="flex items-center justify-between mb-2">
+                        <h4 className="font-semibold text-white">{course.title}</h4>
+                        <div className="flex items-center gap-2">
+                          <span className="text-slate-400 text-sm">{course.duration}</span>
+                          <span className="text-slate-400 text-sm">•</span>
+                          <span className="text-slate-400 text-sm">{course.level}</span>
                         </div>
                       </div>
-                      <p className="text-zion-slate-light mb-4">{program.description}</p>
-                      <div>
-                        <h5 className="text-white font-semibold mb-2">Key Topics:</h5>
-                        <ul className="space-y-1">
-                          {program.topics.map((topic, topicIdx) => (
-                            <li key={topicIdx} className="text-sm text-zion-slate-light flex items-center">
-                              <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
-                              {topic}
-                            </li>
-                          ))}
-                        </ul>
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-1">
+                          <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                          <span className="text-slate-300 text-sm">{course.rating}</span>
+                        </div>
+                        <button className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center">
+                          View Course
+                          <ArrowRight className="w-4 h-4 ml-1" />
+                        </button>
                       </div>
                     </div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Delivery Methods Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Flexible Learning Options
+      {/* Learning Paths */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Learning Paths
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Choose the learning method that best fits your schedule and learning style.
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Structured learning journeys designed to take you from beginner to expert.
             </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {deliveryMethods.map((method, index) => (
-              <div key={index} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 text-center">
-                <div className="p-3 bg-zion-blue/20 rounded-lg mx-auto mb-4 w-16 h-16 flex items-center justify-center">
-                  <method.icon className="w-8 h-8 text-zion-blue" />
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {learningPaths.map((path, index) => (
+              <motion.div
+                key={path.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center hover:border-cyan-400/50 transition-all duration-300"
+              >
+                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <path.icon className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{method.title}</h3>
-                <p className="text-zion-slate-light mb-4">{method.description}</p>
-                <ul className="space-y-1 text-left">
-                  {method.features.map((feature, idx) => (
-                    <li key={idx} className="text-sm text-zion-slate-light flex items-center">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Certifications Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry-Recognized Certifications
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Earn certifications that validate your skills and advance your career.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {certifications.map((cert, index) => (
-              <div key={index} className="bg-slate-800/50 border border-slate-700 rounded-xl p-8">
-                <div className="flex items-center justify-between mb-6">
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{cert.name}</h3>
-                    <p className="text-zion-slate-light">{cert.description}</p>
+                
+                <h3 className="text-2xl font-bold text-white mb-4">{path.title}</h3>
+                <p className="text-slate-300 mb-6">{path.description}</p>
+                
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-slate-400">Duration:</span>
+                    <span className="text-white">{path.duration}</span>
                   </div>
-                  <div className="text-right">
-                    <span className="px-3 py-1 bg-zion-purple/20 text-zion-purple text-sm rounded-full">
-                      {cert.level}
-                    </span>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-slate-400">Courses:</span>
+                    <span className="text-white">{path.courses}</span>
+                  </div>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-slate-400">Level:</span>
+                    <span className="text-white">{path.level}</span>
                   </div>
                 </div>
                 
-                <div className="flex items-center mb-6">
-                  <Clock className="w-5 h-5 text-zion-cyan mr-2" />
-                  <span className="text-zion-slate-light">{cert.duration}</span>
-                </div>
-                
-                <div>
-                  <h4 className="text-white font-semibold mb-3">Benefits:</h4>
-                  <ul className="space-y-2">
-                    {cert.benefits.map((benefit, idx) => (
-                      <li key={idx} className="text-zion-slate-light flex items-center">
-                        <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              What Our Students Say
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Hear from professionals who have transformed their careers with our training programs.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
-                <div className="flex items-center mb-4">
-                  <div className="p-2 bg-zion-blue/20 rounded-lg mr-3">
-                    <Star className="w-6 h-6 text-zion-blue" />
-                  </div>
-                  <div>
-                    <div className="text-white font-semibold">{testimonial.name}</div>
-                    <div className="text-zion-cyan text-sm">{testimonial.role}</div>
-                    <div className="text-zion-slate-light text-sm">{testimonial.company}</div>
-                  </div>
-                </div>
-                <p className="text-zion-slate-light mb-4 italic">"{testimonial.testimonial}"</p>
-                <div className="flex items-center">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-              </div>
+                <button className="w-full py-3 px-6 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300">
+                  Start Path
+                </button>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-zion-blue/20 to-zion-cyan/20 border border-zion-blue/30 rounded-2xl p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Career?
+      <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Start Learning?
             </h2>
-            <p className="text-xl text-zion-slate-light mb-8">
-              Let's discuss how Zion Tech Group's training programs can help you achieve your career goals.
+            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
+              Join thousands of professionals who have already transformed their careers 
+              with our comprehensive training programs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-blue to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-cyan hover:to-zion-blue transition-all duration-300 transform hover:scale-105"
-              >
-                Schedule Consultation
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <a
-                href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border border-zion-blue text-zion-blue font-semibold rounded-lg hover:bg-zion-blue hover:text-white transition-all duration-300"
-              >
-                <Phone className="mr-2 w-5 h-5" />
-                Call Now
-              </a>
+            <div className="flex flex-wrap justify-center gap-4">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+                Browse All Courses
+              </button>
+              <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                Contact Training Team
+              </button>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Info */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="flex flex-col items-center">
-              <div className="p-3 bg-zion-cyan/20 rounded-lg mb-4">
-                <Phone className="w-8 h-8 text-zion-cyan" />
-              </div>
-              <h3 className="text-white font-semibold mb-2">Phone</h3>
-              <p className="text-zion-slate-light">+1 (302) 464-0950</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="p-3 bg-zion-blue/20 rounded-lg mb-4">
-                <Mail className="w-8 h-8 text-zion-blue" />
-              </div>
-              <h3 className="text-white font-semibold mb-2">Email</h3>
-              <p className="text-zion-slate-light">kleber@ziontechgroup.com</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="p-3 bg-zion-purple/20 rounded-lg mb-4">
-                <MapPin className="w-8 h-8 text-zion-purple" />
-              </div>
-              <h3 className="text-white font-semibold mb-2">Address</h3>
-              <p className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown, DE 19709</p>
-            </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>
