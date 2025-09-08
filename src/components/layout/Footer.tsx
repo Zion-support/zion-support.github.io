@@ -83,7 +83,11 @@ import {
       title: "Innovation Hub",
       icon: Rocket,
       links: [
-        { name: "Quantum Computing", href: "/services/quantum-computing-solutions" },
+        { name: "Infrastructure Management", href: "/services/it-infrastructure-management" },
+        { name: "Cloud & DevOps", href: "/services/cloud-devops" },
+        { name: "Cybersecurity", href: "/services/cybersecurity" },
+        { name: "Digital Transformation", href: "/services/digital-transformation" },
+        { name: "Quantum Computing", href: "/services/ai-quantum-computing-solutions" },
         { name: "Edge Computing", href: "/services/edge-computing-solutions" },
         { name: "Blockchain & Web3", href: "/services/blockchain-enterprise-solutions" },
         { name: "IoT Solutions", href: "/services/iot-edge" },
@@ -181,15 +185,13 @@ import {
                   kleber@ziontechgroup.com
                 </a>
               </div>
-              <div className="flex items-center space-x-3 text-zinc-400 hover:text-cyan-400 transition-colors">
-                <Phone className="w-4 h-4 text-cyan-500" />
-                <a href="tel:+13024640950" className="hover:underline">
-                  +1 302 464 0950
-                </a>
+              <div className="flex items-center space-x-3 text-zinc-400">
+                <Phone className="w-4 h-4" />
+                <span>+1 (302) 464-0950</span>
               </div>
-              <div className="flex items-start space-x-3 text-zinc-400">
-                <MapPin className="w-4 h-4 text-cyan-500 mt-0.5" />
-                <span className="text-sm">364 E Main St STE 1008<br />Middletown, DE 19709</span>
+              <div className="flex items-center space-x-3 text-zinc-400">
+                <MapPin className="w-4 h-4" />
+                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
               </div>
             </div>
 
@@ -238,97 +240,54 @@ import {
           ))}
         </div>
 
-
-        {/* Quick Actions Bar */}
-        <div className="bg-gradient-to-r from-zinc-800/50 to-zinc-700/50 rounded-xl p-6 mb-8 border border-zinc-700/50">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {quickLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                className="flex items-center space-x-3 p-3 bg-zinc-800/30 rounded-lg hover:bg-zinc-700/50 transition-all duration-300 group"
-              >
-                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover:from-cyan-500/30 group-hover:to-purple-500/30 transition-all">
-                  <link.icon className="w-4 h-4 text-cyan-400" />
-                </div>
-                <div>
-                  <div className="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors">
-                    {link.name}
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-
         {/* Bottom Footer */}
         <div className="border-t border-zinc-800 pt-8">
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center space-y-6 lg:space-y-0">
-            {/* Copyright & Legal */}
-            <div className="flex flex-col space-y-2">
-              <div className="text-zinc-400 text-sm">
-                © {currentYear} Zion Tech Group. All rights reserved.
-              </div>
-              <div className="flex flex-wrap gap-4 text-xs text-zinc-500">
-                <Link to="/privacy" className="hover:text-cyan-400 transition-colors">
-                  Privacy Policy
-                </Link>
-                <span>•</span>
-                <Link to="/terms" className="hover:text-cyan-400 transition-colors">
-                  Terms of Service
-                </Link>
-                <span>•</span>
-                <Link to="/cookies" className="hover:text-cyan-400 transition-colors">
-                  Cookie Policy
-                </Link>
-                <span>•</span>
-                <Link to="/accessibility" className="hover:text-cyan-400 transition-colors">
-                  Accessibility
-                </Link>
-                <span>•</span>
-                <Link to="/sitemap" className="hover:text-cyan-400 transition-colors">
-                  Sitemap
-                </Link>
-              </div>
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="text-zinc-400 text-sm mb-4 md:mb-0">
+              © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-
-            {/* Center Content - Business Hours */}
-            <div className="text-center">
-              <div className="text-xs text-zinc-500 mb-2">BUSINESS HOURS</div>
-              <div className="text-sm text-zinc-400">
-                Mon - Fri: 9:00 AM - 6:00 PM EST<br />
-                24/7 Emergency Support Available
-              </div>
+            
+            {/* Social Links */}
+            <div className="flex space-x-4">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-400 hover:text-zion-cyan transition-colors"
+                  aria-label={social.name}
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
+              ))}
             </div>
+          </div>
 
-            {/* Social Links & Actions */}
-            <div className="flex flex-col items-end space-y-4">
-              {/* Social Links */}
-              <div className="flex items-center space-x-3">
-                <span className="text-xs text-zinc-500 mr-2">FOLLOW US</span>
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.name}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-9 h-9 bg-zinc-800 rounded-lg flex items-center justify-center text-zinc-400 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 transform hover:scale-110"
-                    aria-label={social.name}
-                  >
-                    <social.icon className="w-4 h-4" />
-                  </a>
-                ))}
-              </div>
-
-              {/* Status & Trust Indicators */}
-              <div className="flex items-center space-x-3 text-xs text-zinc-500">
-                <div className="flex items-center space-x-1">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span>All Systems Operational</span>
-                </div>
-                <span>•</span>
-                <span>99.9% Uptime</span>
-              </div>
+          {/* Legal Links */}
+          <div className="mt-6 pt-6 border-t border-zinc-800">
+            <div className="flex flex-wrap justify-center space-x-6 text-sm">
+              <Link to="/privacy" className="text-zinc-400 hover:text-white transition-colors">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="text-zinc-400 hover:text-white transition-colors">
+                Terms of Service
+              </Link>
+              <Link to="/cookies" className="text-zinc-400 hover:text-white transition-colors">
+                Cookie Policy
+              </Link>
+              <Link to="/accessibility" className="text-zinc-400 hover:text-white transition-colors">
+                Accessibility
+              </Link>
+              <Link to="/security" className="text-zinc-400 hover:text-white transition-colors">
+                Security
+              </Link>
+              <Link to="/compliance" className="text-zinc-400 hover:text-white transition-colors">
+                Compliance
+              </Link>
+              <Link to="/sitemap" className="text-zinc-400 hover:text-white transition-colors">
+                Sitemap
+              </Link>
             </div>
           </div>
         </div>
