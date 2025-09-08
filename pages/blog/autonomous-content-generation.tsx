@@ -124,20 +124,20 @@ export default function AutonomousContentGeneration() {
                   The line between human-created and AI-generated content is becoming increasingly blurred, with AI systems now capable of producing work that rivals human creativity in many domains.
                 </p>
               </section>
-
-              <div className="bg-gradient-to-r from-fuchsia-400/20 to-cyan-400/20 rounded-2xl p-8 border border-fuchsia-400/30">
-                <h3 className="text-2xl font-bold mb-4 text-white">Ready to Transform Your Content Strategy?</h3>
-                <p className="text-white/80 mb-6">
-                  Discover how autonomous AI systems can revolutionize your content creation process and drive unprecedented engagement with your audience.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <a href="/services" className="px-6 py-3 bg-gradient-to-r from-fuchsia-400 to-cyan-400 text-white font-bold rounded-lg hover:from-fuchsia-500 hover:to-cyan-500 transition-all duration-200">
-                    Learn More
-                  </a>
-                  <a href="/contact" className="px-6 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200">
-                    Schedule a Demo
-                  </a>
-                </div>
+            </article>
+            
+            <div className="mt-16 pt-8 border-t border-white/20">
+              <h3 className="text-xl font-semibold mb-4 text-white">Share this article</h3>
+              <div className="flex gap-4">
+                <Link href="/contact" className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white transition-colors">
+                  Twitter
+                </Link>
+                <Link href="/contact" className="px-4 py-2 bg-blue-800 hover:bg-blue-900 rounded-lg text-white transition-colors">
+                  LinkedIn
+                </Link>
+                <Link href="/contact" className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg text-white transition-colors">
+                  Email
+                </Link>
               </div>
             </div>
           </article>

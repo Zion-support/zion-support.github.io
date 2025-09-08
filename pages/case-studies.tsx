@@ -2,6 +2,63 @@ import React from 'react';
 import Head from 'next/head';
 
 export default function CaseStudiesPage() {
+  const caseStudies = [
+    {
+      id: 'ai-automation-success',
+      title: 'AI-Powered Automation Success Story',
+      company: 'TechCorp Solutions',
+      industry: 'Technology',
+      challenge: 'Manual processes were consuming 40+ hours per week and causing delays in customer service.',
+      solution: 'Implemented intelligent automation workflows using AI and machine learning algorithms.',
+      results: [
+        'Reduced manual processing time by 85%',
+        'Improved customer response time from 24 hours to 2 hours',
+        'Increased team productivity by 60%',
+        'ROI of 300% within 6 months'
+      ],
+      technologies: ['AI/ML', 'RPA', 'Workflow Automation', 'API Integration'],
+      duration: '4 months',
+      teamSize: '8 developers + 2 business analysts',
+      featured: true
+    },
+    {
+      id: 'digital-transformation',
+      title: 'Complete Digital Transformation Journey',
+      company: 'Global Manufacturing Inc.',
+      industry: 'Manufacturing',
+      challenge: 'Legacy systems were preventing growth and causing operational inefficiencies across 12 locations.',
+      solution: 'End-to-end digital transformation including cloud migration, process automation, and data analytics.',
+      results: [
+        'Unified operations across all locations',
+        'Reduced operational costs by 35%',
+        'Improved supply chain visibility by 90%',
+        'Enhanced decision-making with real-time analytics'
+      ],
+      technologies: ['Cloud Computing', 'IoT', 'Data Analytics', 'Process Automation'],
+      duration: '18 months',
+      teamSize: '15 developers + 5 architects + 10 business users',
+      featured: false
+    },
+    {
+      id: 'startup-scaling',
+      title: 'Startup Scaling from 0 to 100K Users',
+      company: 'InnovateStart',
+      industry: 'SaaS',
+      challenge: 'Rapid user growth was overwhelming manual processes and causing system crashes.',
+      solution: 'Built scalable infrastructure and automated user onboarding, support, and analytics systems.',
+      results: [
+        'Successfully handled 100K+ concurrent users',
+        'Automated 95% of user onboarding',
+        'Reduced support tickets by 70%',
+        'Achieved 99.9% uptime'
+      ],
+      technologies: ['Microservices', 'Auto-scaling', 'CI/CD', 'Monitoring'],
+      duration: '6 months',
+      teamSize: '6 developers + 2 DevOps engineers',
+      featured: false
+    }
+  ];
+
   return (
     <>
       <Head>

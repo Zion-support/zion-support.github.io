@@ -2,6 +2,46 @@ import React from 'react';
 import Head from 'next/head';
 
 export default function BlogPage() {
+  const blogPosts = [
+    {
+      id: 'ai-automation-trends-2025',
+      title: 'AI Automation Trends 2025: The Future of Autonomous Systems',
+      excerpt: 'Explore the cutting-edge trends shaping the future of AI automation and autonomous technology systems.',
+      date: 'January 17, 2025',
+      readTime: '8 min read',
+      category: 'AI & Automation',
+      featured: true
+    },
+    {
+      id: 'digital-transformation-2025',
+      title: 'Digital Transformation Trends & Strategies for 2025',
+      excerpt: 'Discover the key digital transformation trends and strategies that will shape business success in 2025 and beyond.',
+      date: 'January 17, 2025',
+      readTime: '8 min read',
+      category: 'Digital Transformation',
+      featured: false
+    },
+    {
+      id: 'cloud-automation-best-practices',
+      title: 'Cloud Automation Best Practices: A Complete Guide',
+      excerpt: 'Master cloud automation with our comprehensive guide covering best practices, tools, and strategies for scalable, reliable cloud infrastructure.',
+      date: 'January 17, 2025',
+      readTime: '10 min read',
+      category: 'Cloud & Infrastructure',
+      featured: false
+    },
+    {
+      id: 'autonomous-content-generation',
+      title: 'Revolutionizing Content Creation with Autonomous AI Systems',
+      excerpt: 'How Zion Tech Group is transforming content generation through intelligent automation and machine learning.',
+      date: 'January 15, 2025',
+      readTime: '6 min read',
+      category: 'Content & AI'
+    }
+  ];
+
+  const categories = ['All', 'AI & Automation', 'Digital Transformation', 'Cloud & Infrastructure', 'Content & AI'];
+
   return (
     <>
       <Head>
