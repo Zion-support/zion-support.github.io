@@ -6,8 +6,9 @@
 
 [build.environment]
   NODE_VERSION = "20"
-  PYTHON_VERSION = "3.12.6"
   MISE_PYTHON_COMPILE = "false"
+  # Force mise to use system Python even during Netlify's dependency stage
+  MISE_TOOL_VERSIONS__python = "system"
 
 [[plugins]]
   package = "netlify-plugin-compress"
