@@ -183,6 +183,20 @@ module.exports = {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '86400000' // 24 hours (daily)
       }
+    },
+
+    // Comprehensive automation - runs every 4 hours (replaces GitHub Actions)
+    {
+      name: 'comprehensive-automation',
+      script: './scripts/automation/comprehensive-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '14400000' // 4 hours
+      }
     }
   ],
 
