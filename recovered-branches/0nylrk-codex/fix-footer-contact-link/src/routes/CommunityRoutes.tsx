@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-=======
-
-const CommunityRoutes = () => {import { Fragment } from "react,
-import { Fragment } from react",
-import { Route, Routes } from "react-router-dom,
-import { ProtectedRoute } from ../components/ProtectedRoute",
-import CommunityPage from "../pages/CommunityPage,
-import ForumCategoryPage from ../pages/ForumCategoryPage",
-import ForumPostPage from "../pages/ForumPostPage,
-import CreatePostPage from ../pages/CreatePostPage",
-import EditPostPage from "../pages/EditPostPage;
-import CommunityProfilePage from ../pages/CommunityProfilePage";
-const CommunityRoutes = () => {
-const CommunityRoutes = () => {  return (
 import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "../components/ProtectedRoute";
@@ -22,12 +7,7 @@ import ForumPostPage from "../pages/ForumPostPage";
 import CreatePostPage from "../pages/CreatePostPage";
 import EditPostPage from "../pages/EditPostPage";
 import CommunityProfilePage from "../pages/CommunityProfilePage";
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-<<<<<<< HEAD
-
-
+const CommunityRoutes = () => {
 =======
 import { Fragment } from "react",
 
@@ -90,19 +70,6 @@ const CommunityRoutes = () => {
       />
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
-const CommunityRoutes = () => {}
-const CommunityRoutes = () => {}
-const CommunityRoutes = () => {;
-
-  return (
-
-<<<<<<< HEAD
-
-
-=======
-  return (
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
       {/* Protected routes */}
       <Route
         path="/community/create

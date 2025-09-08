@@ -1,8 +1,23 @@
-React from
-  'react';
-import { cn } from
-  '../../src/lib/utils';''
-  'const Card = React.forwardRef<;'HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(({ className, ...props }, ref) => (
+import React from "react";
+import { cn } from "../../lib/utils";
+
+
+interface HTMLDivElement extends HTMLElement {
+  tagName: "DIV";
+}
+
+interface HTMLParagraphElement extends HTMLElement {
+  tagName: "P";
+}
+
+interface HTMLHeadingElement extends HTMLElement {
+  tagName: "H1" | "H2" | "H3" | "H4" | "H5" | "H6";
+}
+
+const Card = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
   <div
     ref={ref}
     className={cn(
@@ -51,6 +66,22 @@ CardDescription.displayName =
   'const CardFooter = React.forwardRef<;'HTMLDivElement, React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
   <div
+=======
+  />));
+CardDescription.display_name = "CardDescription";
+;
+const CardContent = React.forward_ref<;
+  HTMLDivElement,
+  React.HTMLAttributes < HTMLDivElement>;
+>(({ class_name, ...props }, ref) => (
+  <div ref={ref} className={cn ("p - 6 pt - 0", class_name)} {...props} />));
+CardContent.display_name = "CardContent";
+;
+const CardFooter = React.forward_ref<;
+  HTMLDivElement,
+  React.HTMLAttributes < HTMLDivElement>;
+>(({ class_name, ...props }, ref) => (
+  <div;
     ref={ref}
 className={cn('flex items-center p-6 pt-0'
   ', className)}'    {...props}

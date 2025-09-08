@@ -32,21 +32,27 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentResul
     [/dispute|issue|complaint|chargeback/i, []],
     [/profile|setup|verification|kyc|tax/i, []]],
 
-  let heuristicHit = $2;
-  for (const [re] of heuristics) {
-    if (re.test(q)) {
-      heuristicHit = $2;
-      for (const [kw, ids] of keywordToArticle.entries()) {
-        if (q.includes(kw)) ids.forEach((id) => matched.add(id))
-      }
-    }
-  }
+export function getArticlesByCategory(
+  articles: HelpArticle[],
+  category: string,
+): HelpArticle[] {
+  return articles.filter((article) => article.category === category);
+}
 
   // Keyword fallback
   for (const [kw, ids] of keywordToArticle.entries()) {
     if (q.includes(kw)) ids.forEach((id) => matched.add(id))
   }
 
-  const matchedIds = Array.from($2);
-  return { intentMatched: heuristicHit || matchedIds.length > 0, matchedArticleIds: matchedIds.slice(0, 3) }
+export function searchArticles(
+  articles: HelpArticle[],
+  query: string,
+): HelpArticle[] {
+  const queryLower = query.toLowerCase();
+  return articles.filter(
+    (article) =>
+      article.title.toLowerCase().includes(queryLower) ||
+      article.content.toLowerCase().includes(queryLower) ||
+      article.tags.some((tag) => tag.toLowerCase().includes(queryLower)),
+  );
 }

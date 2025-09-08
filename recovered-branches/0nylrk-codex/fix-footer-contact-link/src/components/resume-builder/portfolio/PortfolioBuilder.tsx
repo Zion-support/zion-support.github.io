@@ -1,21 +1,3 @@
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import {useState, useEffect} from 'react';
-import {Card, CardContent} from '@/components/ui/card';
-import {Button} from '@/components/ui/button';
-import {FilePlus, Loader2} from 'lucide-react';
-import {ProjectCard} from './ProjectCard';
-import {ProjectForm} from './ProjectForm';
-import {PortfolioProject} from '@/types/resume';
-import {usePortfolio} from '@/hooks/usePortfolio';
-
-<<<<<<< HEAD
-
-=======
-
 import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -25,9 +7,7 @@ import { ProjectForm } from "./ProjectForm";
 import { PortfolioProject } from "@/types/resume";
 
 import { usePortfolio } from "@/hooks/usePortfolio";
-export function PortfolioBuilder() {};
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
+export function PortfolioBuilder() {
   const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
 
   const [showAddProject, setShowAddProject] = useState(false);
@@ -53,43 +33,11 @@ export function PortfolioBuilder() {};
     if (success) {
       fetchProjects();
     }
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-import { useState, useEffect } from 'react',;
-import { Card, CardContent } from '@/components/ui/card',;
-import { Button } from '@/components/ui/button',;
-import { FilePlus, Loader2 } from 'lucide-react',;
-import { ProjectCard } from './ProjectCard',;
-import { ProjectForm } from './ProjectForm',;
-import { PortfolioProject } from '@/types/resume',;
-import { usePortfolio } from '@/hooks/usePortfolio',;
-export function PortfolioBuilder() {;
-  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio(),;
-  const [showAddProject, setShowAddProject] = useState(false),;
-  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(null),;
-  useEffect(() => {;
-    fetchProjects();
-  }, [fetchProjects]),;
-  const handleAddSuccess = () => {;
-    setShowAddProject(false),;
-    fetchProjects();
-  },;
-  const handleEditSuccess = () => {;
-    setEditingProject(null),;
-    fetchProjects();
-  },;
-  const handleDeleteProject = async (projectId: string) => {;
-    const success = await deleteProject(projectId),;
-    if (success) {;
-      fetchProjects();
-    }
-  },
-
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
-
+  };
 
   if (isLoading) {
 
@@ -105,11 +53,6 @@ export function PortfolioBuilder() {;
     );
   }
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
@@ -129,38 +72,21 @@ export function PortfolioBuilder() {;
         </Button>
       </div>
 
-
       {/* Edit or Add Form */}
       {(showAddProject |editingProject) && (
         <Card>
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
-
-<<<<<<< HEAD
-=======
               {editingProject ? "Edit Project" : "Add New Project"}
             </h2>
 
-
             <ProjectForm
               project={editingProject || undefined}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
 
               onCancel={() => {;
                 setShowAddProject(false);
                 setEditingProject(null);
-
-
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
               }}
             />
           </CardContent>
@@ -169,14 +95,6 @@ export function PortfolioBuilder() {;
 
 <<<<<<< HEAD
 
-=======
-      {/* Projects List */}
-      {projects.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
-            <ProjectCard
-              key={project.id}
->>>>>>> origin/cursor/delete-old-data-records-6bba
       {/* Projects List */}
       {projects && projects.length > 0 ? (;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
@@ -191,36 +109,6 @@ export function PortfolioBuilder() {;
               onDelete={handleDeleteProject}
             />;
           ))}
-
-=======
-              project={project}
-              onEdit={() => setEditingProject(project)}
-              {editingProject ? 'Edit Project' :'Add New Project'}
-            </h2>;
-            ;
-            <ProjectForm ;
-              project={editingProject || undefined}
-              onSuccess={editingProject ? handleEditSuccess :handleAddSuccess}
-              onCancel={() => {;
-                setShowAddProject(false),;
-                setEditingProject(null),;
-              }}
-            />;
-          </CardContent>;
-        </Card>;      )}
-      ;
-      {/* Projects List */}
-      {projects.length > 0 ? (;
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-          {projects.map((project) => (;
-            <ProjectCard;
-              key={project.id}              project={project}
-              onEdit={_() => setEditingProject(project)}
-              onDelete={handleDeleteProject}
-            />
-          ))}
-        </div>;
-      ) :(;
         </div>
       ) : (
         !showAddProject && (
@@ -237,45 +125,11 @@ export function PortfolioBuilder() {;
                   Add your best work to showcase your skills and experience to
                   potential employers.
                 </p>
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
                 <Button
                   onClick={() => setShowAddProject(true)}
                   className="mt-2"
                 >
                   Add Your First Project
-</ProjectForm>
-          </CardContent>;
-        </Card>;"
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;"
-</div>
-            <ProjectCard;
-              key={project && project.id}
-              project={project}
-              onEdit={() => setEditingProject(project)}
-</ProjectCard>
-        </div>"
-          <Card className="text-center py-12">"
-</Card>
-            <CardContent>
-</CardContent>"
-              <div className="flex flex-col items-center gap-4">"
-</div>"
-                <div className="bg-muted/50 p-6 rounded-full">"
-</div>"
-                  <FilePlus className="h-12 w-12 text-muted-foreground" />"
-</FilePlus>
-                </div>"
-                <h3 className="text-xl font-medium">"
-</h3>
-                </h3>"
-                <p className="text-muted-foreground max-w-md mx-auto">"
-</p>
-                </p>
-                <Button;
-                  onClick={() => setShowAddProject(true)}
-</Button>
-
                 </Button>
               </div>
             </CardContent>
@@ -283,7 +137,7 @@ export function PortfolioBuilder() {;
         )
       )}
     </div>
-  )
+  );
 }
 <<<<<<< HEAD
 

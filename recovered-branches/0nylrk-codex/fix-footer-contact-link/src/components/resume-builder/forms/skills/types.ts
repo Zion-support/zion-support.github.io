@@ -1,15 +1,26 @@
-<<<<<<< HEAD
-
+import { Skill } from "@/types/resume";
 export interface SkillsFormProps {
+  resumeId: string;
+  skills: Skill[];
+  onComplete: () => void;
+  onBack: () => void;
+}
+
+  resumeId: string;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  skills: Skill[];
+
+  on_complete: () => void;
+  on_back: () => void;
 
 =======
-export interface SkillsFormProps {
-import {Skill} from '@/types/resume';
-export interface SkillsFormProps {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Skill  } from '@/types / resume';
 
-export interface SkillsFormProps {};
+export interface SkillsFormProps {
   resume_id: string;
 '
 >>>>>>> origin/cursor/delete-old-data-records-6bba
@@ -26,15 +37,17 @@ export interface SkillsFormProps {;
 export interface SkillItemProps {
   skill: Skill;
   category: string;
+  onDelete: (id: string, category: string) => Promise<void>;
+}
 
   on_delete: (id: string, category: string) => Promise < void>;
 
 }
 export interface SkillCategoryProps {
+  category: string;
+  skills: Skill[];
+  onDelete: (id: string, category: string) => Promise<void>;
 }
-
-
-export interface SkillItemProps {;
 
 
 export interface SkillItemProps {
@@ -79,60 +92,14 @@ export interface SkillCategoryProps {;
 export interface AddSkillFormProps {;
   resumeId: string;
   onAddSkill: (skill: Skill) => Promise<boolean>;
-
-  defaultCategory?: string
-import { Skill } from '@/types/resume',;
-export interface SkillsFormProps {;
-  resumeId: string,;
-  skills: Skill[],;
-  onComplete: () => void,;
-  onBack: () => void;
-
-
-=======
-export interface SkillItemProps {};
-
-
-  onAddSkill: (skill: Skill) => Promise<boolean>;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-}
-;
-export interface SkillItemProps {;
-  skill: Skill,;
-  category: string,;
-  onDelete: (id: string, category: string) => Promise<void>;
-}
-;
-export interface SkillCategoryProps {;
-  category: string,;
-  skills: Skill[],;
-  onDelete: (id: string, category: string) => Promise<void>;
-}
-;
-export interface AddSkillFormProps {;
-  resumeId: string,;
-  onAddSkill: (skill: Skill) => Promise<boolean>;
   defaultCategory?: string;
-
-
-<<<<<<< HEAD
-
-
 }
+
 export interface BulkAddSkillsProps {
   resumeId: string;
 
   onSuccess: () => Promise<void>;
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 }
-
-  onAddSkill: (skill: Skill) => Promise<boolean>;
-
-  defaultCategory?: string;
-
 export interface AddSkillFormProps {
 
   resume_id: string;

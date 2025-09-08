@@ -402,8 +402,27 @@ export default function HomePage() {
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-We deliver exceptional results through innovation, expertise, and dedication
+                We deliver exceptional results through innovation, expertise, and dedication
               </p>
+            </motion.div>
+
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-4 gradient-text">Our Services</h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Comprehensive technology solutions tailored to your business requirements
+
+              </p>
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {whyChooseUs.map((item, index) => (
@@ -418,8 +437,194 @@ We deliver exceptional results through innovation, expertise, and dedication
                     <item.icon className="w-8 h-8 text-blue-600" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2 text-gray-900">{item.title}</h3>
-<p className="text-gray-600">{item.description}</p>
+                  <p className="text-gray-600">{item.description}</p>
                 </motion.div>
+              ))}
+>>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+            </div>
+          </div>
+        </section>
+
+<<<<<<< HEAD
+        {/* Why Choose Us */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Why Choose Zion Tech Group?
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We deliver exceptional results through innovation, expertise, and dedication
+              </p>
+                We deliver exceptional results through innovation, expertise, and dedication
+              </p>
+                We deliver exceptional results through innovation, expertise, and dedication              </p>
+ursor/fix-lint-push-and-merge-to-main-ae4e
+
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+            </motion.div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {whyChooseUs.map((item, index) => (
+                <motion.div
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+                  key={index}
+                  className="text-center"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
+
+                  <p className="text-gray-600">{item.description}</p>
+=======
+=======
+
+
+
+        {/* Features Section */}
+        <section className="py-20 px-4 bg-slate-900/50">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                Why Choose <span className="text-cyan-400">Zion Tech</span>?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We combine technical expertise with business acumen to deliver exceptional results.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <motion.div
+                className="text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Zap className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-semibold mb-4 text-white">Lightning Fast</h3>
+                <p className="text-gray-300">
+                  Rapid deployment and implementation with minimal downtime to keep your business running smoothly.
+                </p>
+              </motion.div>
+
+              <motion.div
+                className="text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Shield className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-semibold mb-4 text-white">Secure & Reliable</h3>
+                <p className="text-gray-300">
+                  Enterprise-grade security measures and 99.9% uptime guarantee to protect your critical data.
+                </p>
+              </motion.div>
+
+              <motion.div
+                className="text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Brain className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-semibold mb-4 text-white">AI-Powered</h3>
+                <p className="text-gray-300">
+                  Leverage the latest AI technologies to automate processes and gain valuable insights from your data.
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+        {/* Testimonials Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                What Our <span className="text-cyan-400">Clients Say</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Don't just take our word for it. Here's what our satisfied clients have to say.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="p-6">
+                    <div className="flex mb-4">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                      ))}
+                    </div>
+                    <p className="text-gray-300 mb-6 italic">
+                      "{testimonial.content}"
+                    </p>
+                    <div>
+                      <div className="font-semibold text-white">{testimonial.name}</div>
+                      <div className="text-cyan-400 text-sm">{testimonial.role}</div>
+                    </div>
+                  </Card>
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+=======
+<p className="text-gray-600">{item.description}</p>
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+                </motion.div>
+
+=======
+
+                  <p className="text-gray-600">{item.description}</p>                </motion.div>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               ))}
             </div>
           </div>
@@ -446,12 +651,12 @@ We deliver exceptional results through innovation, expertise, and dedication
                   Get Started
                 </Link>
                 <Link
-                  href="/pricing"
-                  className="px-8 py-4 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors text-lg"
+                  href="tel:+13024640950"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now
-</Link>
+                </Link>
               </div>
               <div className={`grid md:grid-cols-3 gap-6 text-center transition-all duration-1000 delay-800 ${
                 animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
@@ -543,5 +748,20 @@ We deliver exceptional results through innovation, expertise, and dedication
     </>
   );
 }
-</main>
+      </main>
     </>
+=======
+
+          </div>
+        </section>
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+          </div>
+        </section>
+
+
+      </div>
+
+    </MainLayout>
+  );
+}

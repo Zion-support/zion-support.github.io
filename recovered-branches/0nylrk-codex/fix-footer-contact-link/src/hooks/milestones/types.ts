@@ -1,11 +1,12 @@
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import {supabase} from '@/integrations / supabase / client';
-export type MilestoneStatus = 'pending' | 'in_progress' | 'submitted' | 'completed' | 'rejected' | 'paid' | 'approved';
-;
+import { supabase } from "@/integrations/supabase/client";
+export type MilestoneStatus =
+  | "pending"
+  | "in_progress"
+  | "submitted"
+  | "completed"
+  | "rejected"
+  | "paid"
+  | "approved";
 
 export interface Milestone {
 <<<<<<< HEAD
@@ -26,11 +27,9 @@ export interface Milestone {;
   amount: number;
   status: MilestoneStatus;
   created_at: string;
-
-}
-<<<<<<< HEAD
-
-export interface MilestoneActivity {
+  updated_at: string;
+  created_by: string;
+  deliverables?: any[];
 }
 
 
@@ -56,17 +55,6 @@ export interface MilestoneActivity {;
 
 <<<<<<< HEAD
   created_by_profile?: {
-
-
-  }
-}
-
-=======
-
-  }
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
     display_name: string;
     avatar_url?: string;
   };

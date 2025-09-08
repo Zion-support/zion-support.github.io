@@ -1,47 +1,13 @@
-
-<<<<<<< HEAD
-
-  // Redirect if user is already logged in and has completed profile
-  if (isAuthenticated && user?.profileComplete) {
-    return <Navigate to="/" />
-  }
-  // Redirect to onboarding if user is authenticated but hasn't completed profile
-  if (isAuthenticated && !user?.profileComplete) {
-    return <Navigate to="/onboarding" />
-
-=======
-import {Navigate} from "react-router-dom";
-import {useAuth} from "@/hooks/useAuth";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {LoginContent} from "@/components/auth/login";
-export default function Login() {;
-  const { isAuthenticated, user } = useAuth();
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-<<<<<<< HEAD
-=======
+import { Navigate } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth";
+import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 import { LoginContent } from "@/components/auth/login";
 export default function Login() {};
   const { isAuthenticated, user } = useAuth();
 
-import { Footer } from "@/components/Footer",
-import { LoginContent } from "@/components/auth/login",
-export default function Login() {
-  const { isAuthenticated, user } = useAuth(),
-
-import { LoginContent } from "@/components/auth/login";
-export default function Login() {
-import { Navigate } from \"react-router-dom\",;
-import { useAuth } from \"@/hooks/useAuth\",;
-import { Header } from \"@/components/Header\",import { Footer } from \"@/components/Footer\";
-import { LoginContent } from \"@/components/auth/login\";
-export default function Login() {}
-  const { isAuthenticated, user } = useAuth();
-
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Redirect if user is already logged in and has completed profile
   if (isAuthenticated && user?.profileComplete) {
     return <Navigate to="/" />;
@@ -49,28 +15,7 @@ export default function Login() {}
 
   // Redirect to onboarding if user is authenticated but hasn't completed profile
   if (isAuthenticated && !user?.profileComplete) {
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { Navigate } from "react-router-dom",;
-import { useAuth } from "@/hooks/useAuth",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { LoginContent } from "@/components/auth/login",;
-<<<<<<< HEAD
-
-
-export default function Login() {;
-  const { isAuthenticated, user } = useAuth();
-
-
-=======
-export default function Login() {;
-  const { isAuthenticated, user } = useAuth();
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  // Redirect if user is already logged in and has completed profile;
-  if (isAuthenticated && user?.profileComplete) {;
-    return <Navigate to="/" />;
-
+    return <Navigate to="/onboarding" />;
   }
 <<<<<<< HEAD
 

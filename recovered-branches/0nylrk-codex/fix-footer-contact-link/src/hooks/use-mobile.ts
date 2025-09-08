@@ -4,31 +4,23 @@
 import {useState, useEffect} from 'react';
 
   const [isMobile, setIsMobile] = useState(
+    typeof window !== "undefined" ? window.innerWidth < 768 : false,
+  );
+  useEffect(() => {
 
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
 
-=======
-import {useState, useEffect} from 'react';
->>>>>>> origin/cursor/delete-old-data-records-6bba
-export /**
- * useIsMobile - Function description
- */
-function useIsMobile() {
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
+    return undefined;
+  }, []);
+
+  return isMobile;
 }
-const [is_mobile, setIsMobile] = useState (;
-    typeof window !== 'undefined' ? window.inner_width < 768 : false);'
-;
-  useEffect (() => {
-    }
-    const handle_resize = () =>: any {
-      }
-      setIsMobile (window.inner_width < 768);
-    }
-;
-    // Check condition,
-if ( {) {
-  $2}
-<<<<<<< HEAD
-
       window.addEventListener ('resize', handle_resize);
 
       return () => window.removeEventListener ('resize', handle_resize);

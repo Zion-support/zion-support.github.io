@@ -1,44 +1,9 @@
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-export type ForumCategory =;
-  | 'getting - hired';
-  | 'project - help';
-  | 'ai - tools';
-  | 'feedback';
-  | 'announcements';
-<<<<<<< HEAD
-
-
-=======
-  id: ForumCategory;
-  name: string;
-  description: string;
-  adminOnly: boolean
-  icon: string
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-export interface ForumCategoryInfo {
-  id: ForumCategory;
-  name: string;
-  description: string;
-
-  id: ForumCategory;
-  name: string;
-  description: string;
-  adminOnly: boolean
-  icon: string
-}
-
-<<<<<<< HEAD
-
 export type ForumCategory =
-export type ForumCategory = 
-export type ForumCategory = 
+  | "getting-hired"
+  | "project-help"
+  | "ai-tools"
+  | "feedback"
+  | "announcements";
 
   id: ForumCategory;
   name: string;
@@ -137,19 +102,12 @@ export interface ForumPost {;
   updated_at: string;
   upvotes: number;
   downvotes: number;
-
-<<<<<<< HEAD
-
-
-
-  reply_count: number;
-  is_answered?: boolean;
-  is_pinned?: boolean;
-  is_locked?: boolean,
-  is_featured?: boolean;
-
+  replyCount: number;
+  isAnswered?: boolean;
+  isPinned?: boolean;
+  isLocked?: boolean;
+  isFeatured?: boolean;
 }
-export interface ForumReply {
 
 }
 =======
@@ -189,14 +147,8 @@ export interface ForumReply {;
   created_at: string;
   updated_at: string;
   upvotes: number;
-
-
-
-  downvotes: number,
-  is_answer?: boolean;
-
-}
-export interface Badge {
+  downvotes: number;
+  isAnswer?: boolean;
 }
 
 
@@ -205,13 +157,9 @@ export interface Badge {;
   id: string;
   name: string;
   description: string;
-
-=======
-export interface Badge {;
-
+  icon: string;
   color: string;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+}
 
   icon: string,
 
@@ -253,41 +201,36 @@ export interface UserBadge {;
   awardedAt: string;
 }
 
-  badgeId: string;
-  awardedAt: string;
 
 export interface CommunityUser {;
 
 <<<<<<< HEAD
-
-
-
-=======
-
-  // TODO: Implement
-}
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  id: string;
-  name: string;
-
-  description: string;
-
-}
-
-  id: string;
-  name: string;
-
-  avatar?: string;
-  role: string;,
-  reputation: number;
-
-
 <<<<<<< HEAD
-
-
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+export interface CommunityUser {
+
+export interface CommunityUser {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+export interface Badge {
+  id: string;
+  name: string;
+  description: string;
+}
+export interface CommunityUser {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  id: string;
+  name: string;
+  avatar?: string;
+  role: string;
+  reputation: number;
+<<<<<<< HEAD
+<<<<<<< HEAD
   post_count: number;
   reply_count: number;
   badges: Badge[];
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  isVerified: boolean;
+  isModerator: boolean;
+}

@@ -1,28 +1,13 @@
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import {ReactNode} from 'react';
-
-// Extend FeatureCardProps to include key for mapping
-declare module '@/components/FeatureCard' {
-
-
-<<<<<<< HEAD
-=======
-import {ReactNode} from 'react';
-
+import { ReactNode } from "react";
 // Extend FeatureCardProps to include key for mapping
 declare module "@/components/FeatureCard" {
-
   export interface FeatureCardProps {
-
-    title: string,
-  description: string;
+    title: string;
+    description: string;
     icon: ReactNode;
-
-
+    className?: string;
+    key?: number | string;
+  }
 }
     title: string;,
   description: string;
@@ -53,13 +38,13 @@ declare module '@/components/FeatureCard' {
     image?: string;
     tags?: string[];
     author?: string;
-
 <<<<<<< HEAD
-=======
-
-    review_count?: number;
-    key?: string | number,
-
+<<<<<<< HEAD
+    author_image?: string;
+    ai_score?: number;
+    rating?: number;
+    reviewCount?: number;
+    key?: string | number;
     variant?: string;
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 

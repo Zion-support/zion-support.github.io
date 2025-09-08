@@ -1,59 +1,5 @@
-import React from 'react';
-import { Link   } from 'react-router-dom';
-import { Mail, MessageSquare, Calendar, PenTool, BarChart3, Users, DollarSign, ExternalLink, Shield, FileSearch, Bug, Globe, CreditCard, ShoppingCart, Bell, Languages   } from 'lucide-react';
-
-const MicroSaaS: React.FC = (): JSX.Element => {
-  const products = [
-    {
-      icon: Bot,
-      title: 'AI Lead Scoring Micro‑SaaS',
-      desc: 'Automated, explainable B2B lead scoring with CRM integration and model feedback loops.',
-      price: '$199–$799/month',
-      href: '/services/ai-lead-scoring'
-    },
-    {
-      icon: Zap,
-      title: 'Website AI Chatbot',
-      desc: 'RAG‑powered website assistant trained on your docs with handoff to human and analytics.',
-      price: '$99–$499/month',
-      href: '/services/website-ai-chatbot'
-    },
-    {
-      icon: Database,
-      title: 'RAG Site Search',
-      desc: 'Cited semantic search across your knowledge base with filters, relevancy, and dashboards.',
-      price: '$149–$699/month',
-      href: '/services/rag-search'
-    },
-    {
-      icon: BarChart3,
-      title: 'E‑commerce Personalization',
-      desc: 'On‑site recommendations, bundles, and pricing nudges tuned to conversion KPIs.',
-      price: '$249–$1,499/month',
-      href: '/services/ecommerce-personalization'
-    },
-    {
-      icon: Globe,
-      title: 'Multilingual CX Orchestrator',
-      desc: '50+ languages, brand‑safe translations, and locale QA across chat, email, and voice.',
-      price: '$199–$899/month',
-      href: '/ai-services'
-    },
-    {
-      icon: Shield,
-      title: 'AI Governance & Observability',
-      desc: 'Prompt, output, and PII policies with alerts, dashboards, and red‑teaming workflows.',
-      price: '$299–$1,499/month',
-      href: '/services/ai-data-governance'
-    }
-  ];
-
-  const ctas = [
-    { label: 'View Live Site', href: 'https://ziontechgroup.com', external: true },
-    { label: 'Request a Quote', href: '/request-quote' },
-    { label: 'Contact Us', href: '/contact' }
-  ];
-
+import React from "react";
+const MicroSaaS = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <section className="relative overflow-hidden">
@@ -119,13 +65,5 @@ const MicroSaaS: React.FC = (): JSX.Element => {
       </section>
     </div>
   );
-}
-
-function FeatureCard({ title, desc, to }: { title: string; desc: string; to: string }) {
-  return (
-    <Link to={to} className="block p-5 rounded-xl border border-slate-800 hover:border-cyan-500 bg-slate-900/40 transition-colors">
-      <div className="text-lg font-semibold mb-1">{title}</div>
-      <div className="text-slate-400 text-sm">{desc}</div>
-    </Link>
-  );
-}
+};
+export default MicroSaaS;

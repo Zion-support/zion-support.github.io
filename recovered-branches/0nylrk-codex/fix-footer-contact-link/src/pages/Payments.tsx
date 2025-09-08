@@ -1,27 +1,9 @@
-<<<<<<< HEAD
-
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {TransactionHistory} from "@/components/transactions/TransactionHistory";
 import {GradientHeading} from "@/components/GradientHeading";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-
-
-
-=======
-import React from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { TransactionHistory } from "@/components/transactions/TransactionHistory",
-
-
-import { GradientHeading } from "@/components/GradientHeading";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { GradientHeading } from "@/components/GradientHeading",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
 export default function Payments() {
   return (
     <>
@@ -114,6 +96,13 @@ export default function Payments() {
       </div>
       <Footer />
     </>
+  );
+}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
 // Import UI components for Payment Settings tab;
 
                         <label

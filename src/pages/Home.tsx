@@ -1,15 +1,17 @@
+import React from "react";
+import { Link } from "react-router-dom";
 
 import React, { Suspense, useState, useEffect } from 'react';
 import { motion   } from 'framer-motion';
 import { Link   } from 'react-router-dom';
 
-import { SEO } from '@/components/SEO';
-import { HeroSection } from '@/components/HeroSection';
-import { LoadingSpinner } from '@/components/ui/LoadingSpinner';
-
-import { SEO   } from '@/components/SEO';
-import { HeroSection   } from '@/components/HeroSection';
-import { LoadingSpinner   } from '@/components/ui/LoadingSpinner';
+// FeatureCard component
+const FeatureCard = ({ title, description }: { title: string; description: string }) => (
+  <div className="text-center">
+    <h3 className="text-lg font-semibold mb-2">{title}</h3>
+    <p className="text-gray-600">{description}</p>
+  </div>
+);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">
@@ -403,4 +405,6 @@ export default function Home(...args: any[]): any {
       </section>
     </div>
   );
-}
+};
+
+export default Home;

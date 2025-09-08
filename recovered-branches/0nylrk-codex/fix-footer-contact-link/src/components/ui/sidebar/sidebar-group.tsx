@@ -1,16 +1,11 @@
 <<<<<<< HEAD
 
 import React, { forwardRef } from "react";
-
-=======
-import React, { forwardRef } from "react";
-
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SafeRef } from "@/types/ref-types";
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
+  title?: string;
   icon?: React && React.ReactNode;
 
   defaultExpanded?: boolean;

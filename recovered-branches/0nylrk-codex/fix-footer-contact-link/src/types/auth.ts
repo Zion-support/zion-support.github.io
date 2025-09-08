@@ -1,10 +1,15 @@
-
-<<<<<<< HEAD
-
-
-
-
-=======
+export interface UserDetails {
+  id?: string;
+  name?: string;
+  email?: string;
+  userType?: string;
+  displayName?: string;
+  avatarUrl?: string;
+  headline?: string;
+  profileComplete?: boolean;
+  role?: string;
+  permissions?: string[];
+  companyId?: string;
   bio?: string;
   createdAt?: string;
   updatedAt?: string;
@@ -26,6 +31,13 @@
   avatar_url?: string;
   headline?: string;
   role?: string;
+  permissions?: string[];
+  companyId?: string;
+}
+
+  permissions?: string[],
+  company_id?: string;
+=======
   permissions?: string[],
   companyId?: string;
   bio?: string;

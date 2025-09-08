@@ -1,6 +1,14 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
+const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
+
+=======
+
+
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 
 
@@ -58,4 +66,3 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     res.status (500).json ({ error: e?.message ?? 'Failed to load leaderboard' });
   }
 };
-

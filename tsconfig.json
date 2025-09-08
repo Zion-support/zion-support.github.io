@@ -2,11 +2,15 @@
   "compilerOptions": {
     "target": "es5",
     "lib": [
-      "ES2024",
-      "DOM",
-      "DOM.Iterable",
-      "WebWorker",
-      "WebWorker.Iterable"
+      "dom",
+      "dom.iterable",
+      "es6",
+      "es2017",
+      "es2018",
+      "es2019",
+      "es2020",
+      "es2021",
+      "es2022"
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -56,30 +60,20 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./*"
-      ],
-      "@/components/*": [
-        "./components/*"
-      ],
-      "@/pages/*": [
-        "./pages/*"
-      ],
-      "@/utils/*": [
-        "./utils/*"
-      ],
-      "@/types/*": [
-        "./types/*"
-      ],
-      "@/data/*": [
-        "./data/*"
-      ],
-      "@/styles/*": [
-        "./styles/*"
-      ]
-    }
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/pages/*": ["./src/pages/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/types/*": ["./src/types/*"],
+      "@/styles/*": ["./src/styles/*"],
+      "@/assets/*": ["./src/assets/*"]
+    },
+    "allowSyntheticDefaultImports": true
   },
   "include": [
+    "next-env.d.ts",
+    "types/global.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",

@@ -1,11 +1,13 @@
-
-<<<<<<< HEAD
-
+import { Education } from "@/types/resume";
+export interface EducationFormProps {
+  resumeId: string;
+  educationEntries: Education[];
+  onComplete: () => void;
+  onBack: () => void;
+}
 =======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import {Education} from '@/types/resume';
-export interface EducationFormProps {;
-
+=======
+import { Education } from "@/types/resume";
 export interface EducationFormProps {
 
 <<<<<<< HEAD
@@ -35,7 +37,8 @@ export interface EducationFormProps {};
 export interface EducationItemProps {;
 
   education: Education;
-
+  onEdit: (education: Education) => void;
+  onDelete: (id: string) => void;
 }
 
 

@@ -1,54 +1,9 @@
-import React from 'react';
-
-<<<<<<< HEAD
-
-
-import { Button  } from '@/components/ui/button';
-import { useNavigate  } from 'react-router-dom';
-import { CheckCircle2 } from 'lucide-react';
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
+import { CheckCircle2 } from "lucide-react";
 export default function PaymentSuccess() {
-
-=======
-import { Button  } from '@/components/ui/button';
-import { useNavigate  } from 'react-router-dom';
-import { CheckCircle2 } from 'lucide-react';
-export default function PaymentSuccess() {
-
-import {Button} from '@/components/ui/button';
-import {useNavigate} from 'react-router-dom';
-import {CheckCircle2} from 'lucide-react';
-export default function PaymentSuccess() {;
   const navigate = useNavigate();
-export default function PaymentSuccess() {;
-  }
-import React from 'react','
-import { Button } from '@/components/ui/button','
-import { useNavigate } from 'react-router-dom','
-import { CheckCircle2 } from 'lucide-react','
-export default function PaymentSuccess() {
-
-import {Button} from '@/components/ui/button';
-import {useNavigate} from 'react-router-dom';
-import {CheckCircle2} from 'lucide-react';
-export default function PaymentSuccess() {;
-  const navigate = useNavigate();
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-import {Button} from '@/components/ui/button';
-import {useNavigate} from 'react-router-dom';
-import {CheckCircle2} from 'lucide-react';
-export default function PaymentSuccess() {;
-  const navigate = useNavigate();
-
-import React from 'react',
-import { Button } from '@/components/ui/button',
-import { useNavigate } from 'react-router-dom',
-import { CheckCircle2 } from 'lucide-react',
-export default function PaymentSuccess() {
-<<<<<<< HEAD
-
-  const navigate = useNavigate(),
-
 
   return (
 
@@ -85,15 +40,7 @@ export default function PaymentSuccess() {
             Go to Dashboard;
           </Button>
 
-
-<<<<<<< HEAD
-=======
-          <Button 
-
           <Button
-          <Button 
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
             variant="outline"
             onClick={() => navigate("/")}
 
@@ -110,95 +57,9 @@ export default function PaymentSuccess() {
         </div>
       </div>
     </div>
-
-  )
-<<<<<<< HEAD
-
-
-=======
-
-import React from 'react';'
-import { Button } from '@/components/ui/button';'
-import { useNavigate } from 'react-router-dom',;'
-import { CheckCircle2 } from 'lucide-react',;'
-    <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">;"
-      <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">;"
-        <div className="inline-flex h-12 w-12 rounded-full bg-green-100 mb-4 items-center justify-center">;"
-          <CheckCircle2 className="h-6 w-6 text-green-600" />;"
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import {Button} from '@/components/ui/button';
-import {useNavigate} from 'react-router-dom';
-import {CheckCircle2} from 'lucide-react';
-
-import {Button} from '@/components/ui/button';
-import {useNavigate} from 'react-router-dom';
-import {CheckCircle2} from 'lucide-react';
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import React from 'react',;
-import { Button } from '@/components/ui/button',;
-import { useNavigate } from 'react-router-dom',;
-import { CheckCircle2 } from 'lucide-react',;
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">;
-      <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">;
-        <div className="inline-flex h-12 w-12 rounded-full bg-green-100 mb-4 items-center justify-center">;
-          <CheckCircle2 className="h-6 w-6 text-green-600" />;
-<<<<<<< HEAD
-
-        </div>;
-
-=======
-        </div>;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-        <h1 className="text-2xl font-bold text-white mb-2">Payment Successful!</h1>;
-
-        <p className="text-zion-slate-light mb-6">;
-          Your payment has been processed successfully. You now have access to all the premium features.;
-        </p>;
-
-        <div className="flex flex-col space-y-3">;
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-            onClick={() => navigate('/dashboard')}
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white";
-          >;
-            Go to Dashboard;
-          </Button>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-;
-
-
-          >;
-            Return to Home;
-          </Button>;
-        </div>;
-      </div>;
-
-
-<<<<<<< HEAD
-
-
-
-
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 }

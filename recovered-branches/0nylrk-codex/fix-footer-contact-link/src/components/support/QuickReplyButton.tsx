@@ -1,83 +1,23 @@
-
-<<<<<<< HEAD
-=======
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-interface QuickReplyButtonProps {
-  text: string,
-  onClick: () => void
-}
-export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
-  return (
-    <Button
-      variant = $2;
-        "transition-colors duration-200"
-        "transition-colors duration-200",
-interface QuickReplyButtonProps {
-  text: string;
-  onClick: () => void
-}
-
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-
 interface QuickReplyButtonProps {
   text: string;
   onClick: () => void;
 }
 
 export function QuickReplyButton(): any ({ text, onClick }: QuickReplyButtonProps) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {  return (
     <Button
 
-import React from "react";
-import { Button } from "@/components/ui/button";
-
-import { cn } from "@/lib/utils";
-interface QuickReplyButtonProps {}
-  text: string;
-  onClick: () => void;
-}
-
-  return (
-    <Button;
-"
-      variant="outline""
+      variant="outline"
       size="sm"
       className={cn(
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
-        "transition-colors duration-200"
-        "border-zion-purple/30 hover:bg-zion-purple hover:text-white",
-        "transition-colors duration-200"
-import React from "react",;
-import { Button } from "@/components/ui/button",;
-import { cn } from "@/lib/utils",;
-interface QuickReplyButtonProps {;
-  text: string,;
-  onClick: () => void;
-}
-;
-export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {;
-  return (;
-    <Button;
-      variant="outline";
-      size="sm";
-      className={cn(;
-        "border-zion-purple/30 hover:bg-zion-purple hover:text-white";
-        "transition-colors duration-200";
-
-
-<<<<<<< HEAD
-
-
-=======
+        "border-zion-purple/30 hover: bg-zion-purple hover:text-white",
         "transition-colors duration-200",
->>>>>>> origin/cursor/delete-old-data-records-6bba
       )}
       onClick={onClick}>;
       {text}
@@ -123,7 +63,13 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {}
       {text}
     </Button>);
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    </Button>
+  );
+}
+;
 
 "
       variant="outline""

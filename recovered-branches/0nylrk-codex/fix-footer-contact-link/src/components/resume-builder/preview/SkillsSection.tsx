@@ -1,3 +1,7 @@
+import { Skill } from "@/types/resume";
+interface SkillsSectionProps {
+  skills: Skill[];
+}
 
 
 interface SkillsSectionProps {
@@ -5,65 +9,6 @@ interface SkillsSectionProps {
 }
 export function SkillsSection({ skills }: SkillsSectionProps) {
   // Group skills by category
-
-<<<<<<< HEAD
-
-
-        acc[category] = [];
-      }
-      acc[category].push (skill);
-      return acc;
-
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { Skill } from '@/types/resume',;
-interface SkillsSectionProps {;
-  skills: Skill[];
-}
-;
-export function SkillsSection({ skills }: SkillsSectionProps) {;
-  // Group skills by category;
-<<<<<<< HEAD
-
-  const skillsByCategory = skills.reduce((acc, skill) => {;
-    const category = skill.category || 'Other',;
-
-=======
-  }
-    }
-    const category = skill.category || 'Other',;'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    if (!acc[category]) {;
-      acc[category] = [];
-    }
-    acc[category].push(skill),
-
-
-<<<<<<< HEAD
-=======
-      if (!acc[category]) {
-        acc[category] = [];
-      }
-      acc[category].push(skill);
-      return acc;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-    return acc
-  }, {} as Record<string Skill[]>),
-
-  if (skills.length === 0) return null,
-<<<<<<< HEAD
-
-  
-
-
-  return (
-
-=======
-
-
   const skillsByCategory = skills.reduce(
     (acc, skill) => {"
       const category = skill.category || "Other";
@@ -78,26 +23,22 @@ export function SkillsSection({ skills }: SkillsSectionProps) {;
   );
 
 
-    return (
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
+  return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Skills</h2>
       <div className="space-y-2">
         {Object.entries(skillsByCategory).map(([category, skills]) => (
           <div key={category}>
             <h3 className="text-sm font-medium">{category}</h3>
-
-
-<<<<<<< HEAD
-=======
+            <p className="text-sm">
               {skills.map((skill) => skill.name).join(", ")}
->>>>>>> origin/cursor/delete-old-data-records-6bba
             </p>
           </div>
         ))}
       </div>
     </div>
+  );
+}
 
 
   );

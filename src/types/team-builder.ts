@@ -4,16 +4,11 @@ export interface ProjectBrief {
 
   id?: string; // Optional: could be added if we save briefs to the DB
   projectName: string;
-  goals: string; // Or scope
-  timeline: string; // Could be a string like "3 months" or a date range
-  budget: string; // Could be a string like "$10,000 - $20,000" or a number
-  techStack?: string[]; // Or areas like "Frontend", "AI", "DevOps"
-  userId?: string; // To associate with the user who created it
-  createdAt?: string;
-  lockTimeline?: boolean;
-  lockBudget?: boolean;
-  talentFilters?: TalentFilters; // New
-
+  goals: string;
+  timeline: string;
+  budget: string;
+  techStack?: string[];
+  talentFilters?: { verifiedOnly?: boolean; regions?: string[] };
 }
 
 export interface TalentFilters {

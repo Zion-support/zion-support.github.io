@@ -1,7 +1,2 @@
-
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+export { EducationForm } from "./EducationForm";
+export * from "./types";

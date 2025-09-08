@@ -18,16 +18,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ flags: filtered });
   }
 
-  if (req.method === 'POST') {
-    const init = req.body || {};
-    try {
-      const flag = await createFlag(init);
-      return res.status(201).json({ flag });
-    } catch (e: any) {
-      return res.status(400).json({ error: e.message || 'Invalid payload' });
-    }
-  }
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
 
-  res.setHeader('Allow', 'GET,POST');
-  return res.status(405).end('Method Not Allowed');
-}
+  res.setHeader('AllowGET,POST'),
+  return res.status(405).end('Method Not Allowed')
+};

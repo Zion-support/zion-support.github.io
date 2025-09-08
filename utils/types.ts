@@ -35,10 +35,12 @@ export type Message = $2;
   readBy?: { participantId: string, readAtIso: string}[]
 },
 
-export type Conversation = $2;
-  jobId?: string,
-  participants: Participant[],
-  createdAtIso: string,
-  updatedAtIso: string,
-  messages: Message[]
-},
+  id: string;
+  jobId: string;
+  talentSlug: string;
+  status: "applied" | "skipped" | "pending";
+  createdAtIso: string;
+}
+export type UserRole = 'admin' | 'user' | 'guest';
+
+export type UserRole = "admin" | "user" | "guest";

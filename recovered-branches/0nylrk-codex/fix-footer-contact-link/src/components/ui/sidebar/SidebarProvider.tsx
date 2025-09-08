@@ -1,12 +1,10 @@
-
-<<<<<<< HEAD
-
-
+import React, { createContext, useContext, useState } from "react";
 interface SidebarContextType {
   is_open: boolean;
   toggle: () => void;
   open: () => void;
-  close: () => void
+  close: () => void;
+}
 
 
 
@@ -16,9 +14,8 @@ const SidebarContext = create_context < SidebarContextType>({
   open: () => {},
   close: () => {},
 });
-;
-export const use_sidebar = (): SidebarContextType => useContext (SidebarContext);
-;
+
+export const useSidebar = (): SidebarContextType => useContext(SidebarContext);
 
 
 
@@ -39,16 +36,7 @@ export function SidebarProvider({
   children,
   defaultOpen = true,
 }: SidebarProviderProps) {
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-export function SidebarProvider({ 
-  children, 
-  defaultOpen = true 
-}: SidebarProviderProps) {;
-
-<<<<<<< HEAD
-
+  const [isOpen, setIsOpen] = useState(defaultOpen);
 
 =======
 >>>>>>> origin/cursor/delete-old-data-records-6bba
@@ -62,86 +50,13 @@ export function SidebarProvider({
 <<<<<<< HEAD
 
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>
-
-=======
-
-
-      <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>`
-
       <div
         className={`grid ${isOpen ? "grid-cols-[auto_1fr]" : "grid-cols-[auto_1fr]"} min-h-screen w-full`}
       >
-      <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>
-
-import React, { createContext, useContext, useState } from "react",;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-interface SidebarContextType {;
-  }
-  "isOpen": boolean,;
-  "toggle": () => void,;
-  "open": () => void,;
-  "close": () => void;
-}
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-const SidebarContext = createContext<SidebarContextType>({;
-  }
-  "isOpen": true,;
-  "toggle": () => {},;
-  "open": () => {},;
-  "close": () => {}),;
-
-<<<<<<< HEAD
-
-
-
-  return (;
-    <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>;
-
-
-
-
-
-
-
-=======
-  const [isOpen, setIsOpen] = useState(defaultOpen);
-  const toggle = () => setIsOpen(!isOpen);
-  const open = () => setIsOpen(true);
-  const close = () => setIsOpen(false);
-
-
-  return (;
-    <SidebarContext.Provider value={ isOpen, toggle, open, close }>;
-      <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>;        {children}`
-      </div>
-    </SidebarContext.Provider>
-  );
-  )
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
         {children}
       </div>
     </SidebarContext.Provider>
   );
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    <SidebarContext && SidebarContext.Provider value={{ isOpen, toggle, open, close }}>;
-      <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>;
-        {children}
-      </div>;
-    </SidebarContext && SidebarContext.Provider>;
-  );
-
 }
 <<<<<<< HEAD
 

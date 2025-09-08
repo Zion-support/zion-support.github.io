@@ -1,7 +1,3 @@
-
-
-<<<<<<< HEAD
-=======
 import {
   FormField
   FormItem
@@ -28,18 +24,9 @@ import { BasicInfoFormData } from "./schema";
 import { Input } from "@/components/ui/input";
 import { Control } from "react-hook-form";
 import { BasicInfoFormData } from "./schema";
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
 interface PersonalInfoFieldsProps {
   control: Control<BasicInfoFormData>;
 }
-
-
-import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Control} from "react-hook-form";
-import {BasicInfoFormData} from "./schema";
 
 
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",

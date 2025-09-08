@@ -1,74 +1,22 @@
-<<<<<<< HEAD
-
-
-
-=======
-
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {useState} from "react";
-export function NewsletterForm() {;
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-import { Button } from "@/components/ui/button",
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input";
-import { useState } from "react";
-
-
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input";
-import { useState } from "react";
-import { Input } from "@/components/ui/input",
-import { useState } from "react",
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input";
-import { useState } from "react";
-import { Input } from "@/components/ui/input",
-import { useState } from "react",
 export function NewsletterForm() {
-  const [email, setEmail] = useState(""),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [isSubmitted, setIsSubmitted] = useState(false),
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
+  const handleSubmit = (e: React && React.FormEvent) => {;
+    e && e.preventDefault();
+    setIsSubmitting(true);
 <<<<<<< HEAD
 
-
-  const handleSubmit = (e: React.FormEvent) => {
-
-
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    e.preventDefault(),
-    setIsSubmitting(true),
-    
     // Simulate API call
     setTimeout(() => {
-
-
-<<<<<<< HEAD
-
-
+      setIsSubmitting(false);
+      (setIsSubmitted(true), setEmail(""));
+    }, 1000);
+  };
 
   return (
     <div className="w-full max-w-md mx-auto">
@@ -84,11 +32,6 @@ export function NewsletterForm() {
           onSubmit={handleSubmit}
           className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2"
         >
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
           <Input
             type="email"
             placeholder="Enter your email"

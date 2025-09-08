@@ -1,95 +1,8 @@
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { Certification  } from '@/types/resume';
-import { Card, CardContent  } from '@/components/ui/card';
-import { Button  } from '@/components/ui/button';
-import { Edit, Trash2  } from 'lucide-react';
-import { format } from 'date-fns';
-
-<<<<<<< HEAD
-
-import {Certification} from '@/types/resume';
-import {Card, CardContent} from '@/components/ui/card';
-import {Button} from '@/components/ui/button';
-import {Edit, Trash2} from 'lucide-react';
-import {format} from 'date-fns';
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-interface CertificationsListProps {
-
-  certifications: Certification[];
-  onEdit: (cert: Certification) => void;
-  onDelete: (id: string) => void
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { Certification } from '@/types/resume',;
-import { Card, CardContent } from '@/components/ui/card',;
-import { Button } from '@/components/ui/button',;
-import { Edit, Trash2 } from 'lucide-react',;
-import { format } from 'date-fns',;
-interface CertificationsListProps {;
-  certifications: Certification[],;
-  onEdit: (cert: Certification) => void;
-  onDelete: (id: string) => void;
-
-
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-}
-export function CertificationsList({
-  certifications
-  onEdit
-  onDelete
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-}: CertificationsListProps) {
-  if (certifications.length === 0) {
-
-    return null;
-  }
-
 import { Certification } from "@/types/resume";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Edit, Trash2 } from "lucide-react";
 import { format } from "date-fns";
-
-import { Certification } from "@/types/resume";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Edit, Trash2 } from "lucide-react";
-import { format } from "date-fns";
-
-interface CertificationsListProps {
-  certifications: Certification[];
-  onEdit: (cert: Certification) => void;
-  onDelete: (id: string) => void
-import { Certification } from '@/types/resume',;
-import { Card, CardContent } from '@/components/ui/card',;
-import { Button } from '@/components/ui/button',;
-import { Edit, Trash2 } from 'lucide-react',;
-import { format } from 'date-fns',;
-interface CertificationsListProps {;
-  certifications: Certification[],;
-  onEdit: (cert: Certification) => void;
-  onDelete: (id: string) => void;                  )}
-
 interface CertificationsListProps {
   certifications: Certification[];
   onEdit: (cert: Certification) => void;
@@ -162,8 +75,10 @@ export function CertificationsList({
               </div>;
             </div>;
 
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
+            {cert.credential_url && (
+              <p className="text-xs mt-2">
+                <a
+                  href={cert.credential_url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"
@@ -176,9 +91,7 @@ export function CertificationsList({
         </Card>
       ))}
     </div>
-<<<<<<< HEAD
-
-  )
+  );
 }
 ;
 

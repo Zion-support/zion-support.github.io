@@ -1,21 +1,10 @@
+import {
+  FormField,
+=======
 <<<<<<< HEAD
 
 
   FormField,
-
-
-=======
-
-import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
 FormField,
   FormItem,
   FormLabel,
@@ -23,40 +12,9 @@ FormField,
 <<<<<<< HEAD
 
   FormMessage,
-
-} from '@/components / ui / form';
-import { Input  } from '@/components / ui / input';
-import { UseFormReturn  } from './react - hook - form';
-import { FormValues  } from './useHireRequestForm';
-
-
-interface PersonalInfoFieldsProps {
-  form: UseFormReturn < FormValues>;
-}
-
-=======
-  FormMessage} from "@/components/ui/form";"
-import { UseFormReturn } from "react-hook-form";"
-interface PersonalInfoFieldsProps {
-  }
-  "form": UseFormReturn<FormValues>;
-
-import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {UseFormReturn} from "react-hook-form";
-import {FormValues} from "./useHireRequestForm";
-
-
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { UseFormReturn } from "react-hook-form",
-import { FormValues } from "./useHireRequestForm",
-interface PersonalInfoFieldsProps {
-  form: UseFormReturn<FormValues>
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
-import { Input } from "@/components/ui/input",;
-import { UseFormReturn } from "react-hook-form",;
-
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { UseFormReturn } from "react-hook-form";
 import { FormValues } from "./useHireRequestForm";
 interface PersonalInfoFieldsProps {}
   form: UseFormReturn<FormValues>;

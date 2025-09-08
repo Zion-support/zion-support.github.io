@@ -3,37 +3,11 @@
 =======
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from "react";
-
-import {Button} from "@/components/ui/button";
-import {Menu, X} from "lucide-react";
-import {useSidebar} from "./sidebar-context";
-import {cn} from "@/lib/utils";
-
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Menu, X } from "lucide-react",
-import { useSidebar } from "./sidebar-context",
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useSidebar } from "./sidebar-context";
 import { cn } from "@/lib/utils";
-
-
-<<<<<<< HEAD
-
-=======
-  return (
-    <Button"
-      variant="ghost""
-      size="icon"
-
-import React from "react",;
-
+interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
   className?: string;
 interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
   className?: string

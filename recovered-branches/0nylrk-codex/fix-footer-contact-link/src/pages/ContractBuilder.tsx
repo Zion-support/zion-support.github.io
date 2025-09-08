@@ -1,41 +1,9 @@
-import React from 'react';
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { SEO  } from '@/components/SEO';
-import { AppHeader  } from '@/layout/AppHeader';
-import { Footer  } from '@/components/Footer';
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
-import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent';
-
-<<<<<<< HEAD
-
-import {SEO} from '@/components/SEO';
-import {AppHeader} from '@/layout/AppHeader';
-import {Footer} from '@/components/Footer';
-import {ProtectedRoute} from '@/components/ProtectedRoute';
-import {ContractBuilderContent} from '@/components/contracts/page/ContractBuilderContent';
-
-
-
-import React from 'react',
-import { SEO } from '@/components/SEO',
-import { AppHeader } from '@/layout/AppHeader',
-import { Footer } from '@/components/Footer',
-import { ProtectedRoute } from '@/components/ProtectedRoute',
-
 import React from "react";
 import { SEO } from "@/components/SEO";
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { ContractBuilderContent } from "@/components/contracts/page/ContractBuilderContent";
-
-
-
 function ContractBuilderPage() {
 
 =======
@@ -56,14 +24,13 @@ function ContractBuilderPage() {
         <Footer />
       </>
     </ProtectedRoute>
-
-<<<<<<< HEAD
-  )
+  );
+}
 =======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 

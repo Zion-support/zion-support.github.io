@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-
-=======
-
+// Export components from their respective files
 export * from "./Sidebar.tsx";
 
 // Export components from their respective files;

@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-
-import React from './react';
-import { use_theme } from '@/hooks / use_theme';
-
-
-=======
-import React from './react';
-import { use_theme } from '@/hooks / use_theme';
-
-
+import React from "react";
+import { useTheme } from "@/hooks/useTheme";
 interface MobileThemeProviderProps {
 
   children: React.ReactNode;
@@ -17,33 +8,11 @@ interface MobileThemeProviderProps {
 export function MobileThemeProvider() { return null; }
   const { theme } = useTheme();
 
-import React from "react";
-import { useTheme } from "@/hooks/useTheme";
-
-
-  const { theme } = useTheme();
   return (
-    <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>
-import React from "react",
-import { useTheme } from "@/hooks/useTheme",
-
-  return (
-    <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import React from './react';
-import { use_theme } from '@/hooks / use_theme';
-
-import React from './react';
-import { use_theme } from '@/hooks / use_theme';
-
-interface MobileThemeProviderProps {
-  children: React.ReactNode;
-}
-
-<<<<<<< HEAD
-import {useTheme} from "@/hooks/useTheme";
-interface MobileThemeProviderProps {;
-  children: React && React.ReactNode;
+    <div className={`mobile-app ${theme === "dark" ? "dark" : "light"}`}>
+      {children}
+    </div>
+  );
 }
 export function MobileThemeProvider(): any ({ children }: MobileThemeProviderProps) {;
   const { theme } = useTheme();

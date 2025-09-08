@@ -39,80 +39,46 @@ pr-12325
     twitter?: string;
     instagram?: string;
     youtube?: string;
-
-
-<<<<<<< HEAD
-
-=======
     linkedin?: string;
-    [key: string]: string | undefined
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
+    [key: string]: string | undefined;
+  };
   niche: string;
   audience_size: string;
   payout_method: string;
   bio: string;
   status: "pending" | "approved" | "rejected";
   created_at: string;
-
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-}
-
-export interface PartnerReferralLink {;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-  id: string;
-  commission_rate: number;
-
-}
-
-export interface PartnerSettings {;
-
-  id: string;
-  id: string;,
-
-  commission_rate: number;
-  fraud_threshold: number;,
-  is_payouts_enabled: boolean;
-
-export interface PartnerReferralLink {
-
-export interface PartnerReferralLink {;
-
-}
-
-export interface PartnerReferralLink {;
-
-export interface PartnerSettings {
-
-export interface PartnerSettings {};
-export interface PartnerSettings {;
-export interface PartnerSettings {};
-  id: string;
-  commission_rate: number;
-}
-export interface PartnerReferralLink {};
-export interface PartnerReferralLink {;
-
-export interface PartnerReferralLink {;
-
-updated_at: string
-export interface PartnerReferralLink {;
-
   updated_at: string;
   commission_rate?: number;
 }
-export interface PartnerSettings {
-  // TODO: Implement
+
+
+export interface PartnerSettings {;
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  id: string;
+  commission_rate: number;
+  fraud_threshold: number;
+  is_payouts_enabled: boolean;
 }
+
+
+export interface PartnerReferralLink {;
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  updated_at: string
+
+  commission_rate?: number
+}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export interface PartnerSettings {
+
 export interface PartnerSettings {;
 export interface PartnerSettings {
   // TODO: Implement
@@ -136,12 +102,8 @@ export interface PartnerReferralLink {
   campaign?: string;
   source?: string;
   clicks: number;
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  conversions: number;
+  created_at: string;
 }
 
 }
@@ -163,11 +125,6 @@ export interface PartnerPayout {;
   amount: number;"
   status: "pending" | "processing" | "completed" | "failed";
   method: string;
-
-
-<<<<<<< HEAD
-
-
-=======
+  created_at: string;
+  completed_at?: string;
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba

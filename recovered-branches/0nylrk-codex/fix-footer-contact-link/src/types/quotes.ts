@@ -1,9 +1,3 @@
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 export type ServiceType = "service" | "talent" | "equipment" | "";
 export type ServiceCategory = string;"
 export type TimelineType = "fixed" | "flexible";"
@@ -54,40 +48,7 @@ export interface ContactInfo {;
   phone: string,
   company: string;
 }
-
-export interface Budget {;
-
-  name: string;
-  email: string;
-  phone: string
-  company: string
-}
-
-<<<<<<< HEAD
-export interface QuoteFormData {
-  service_type: ServiceType;
-  service_category: ServiceCategory;
-  specific_item: ListingItem | null;
-  project_name: string;
-  project_description: string;
-  start_date?: Date;
-  end_date?: Date;
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
 export interface Budget {
-
-export interface Budget {;
-
-<<<<<<< HEAD
-
-
-=======
-export interface Budget {
-
-export interface Budget {;
->>>>>>> origin/cursor/delete-old-data-records-6bba
   amount: number;
   maxAmount?: number;
   type: BudgetType;
@@ -152,22 +113,6 @@ export interface QuoteRequest {
   is_archived: boolean;
   viewed_at?: string;
   replied_at?: string;
-<<<<<<< HEAD
-
-
-
-
-=======
-  created_at: string
-
-  updated_at: string
+  created_at: string;
+  updated_at: string;
 }
-export type ServiceType = "service" | "talent" | "equipment" | "",
-export type ServiceCategory = string,
-export type TimelineType = "fixed" | "flexible",
-export type BudgetType = "fixed" | "hourly" | "range",
-
-
-  updated_at: string
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

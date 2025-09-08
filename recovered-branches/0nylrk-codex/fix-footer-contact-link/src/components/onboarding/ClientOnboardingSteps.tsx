@@ -1,8 +1,10 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+import React from "react";
+import {useOnboardingStatus} from "@/hooks/useOnboardingStatus";
+import {PlusCircle, SendIcon, InboxIcon} from "lucide-react";
 import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
+
+export function ClientOnboardingSteps() {;
+  const onboardingStatus = useOnboardingStatus();
 
   const steps: OnboardingStep[] = [
     {
@@ -20,8 +22,16 @@ import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
       action: "Find Talent",
     },
     {
-  
-<<<<<<< HEAD
+      id: "response",
+      label: "Receive your first application",
+      completed: onboardingStatus.responseReceived,
+      link: "/client-dashboard",
+      action: "Check Dashboard",
+    },
+  ];
+
+  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
+}
 
 =======
 >>>>>>> origin/cursor/delete-old-data-records-6bba

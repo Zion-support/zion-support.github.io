@@ -7,7 +7,6 @@ export interface ResumeBasicInfo {
   id?: string;
   title: string;
   headline?: string;
-
   summary?: string;
 
 }
@@ -87,19 +86,74 @@ pr-12325
   end_date?: Date | string;
   is_current: boolean;
   description?: string;
+  institution_logo_url?: string;
+  location?: string;
+}
+
+<<<<<<< HEAD
+  institution_logo_url?: string,
+  location?: string;
 
 }
 
 
   id?: string;
 
+<<<<<<< HEAD
+  category?: string,
+  years_experience?: number;
+
+}
+export interface Certification {
+=======
+export interface Certification {
+  category?: string
+
+  years_experience?: number
+}
+export interface Certification {
+
+export interface Certification {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  id?: string;
+  name: string;
+  proficiency?: number;
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  id?: string;
+  name: string;
+  issuing_organization: string;
+  issue_date?: Date | string;
+  expiration_date?: Date | string;
+  credential_id?: string;
+  credential_url?: string;
+}
+
+<<<<<<< HEAD
+  credential_id?: string,
+  credential_url?: string;
+
+}
+export interface PortfolioProject {
+=======
+export interface PortfolioProject {
+  credential_id?: string
+
+  credential_url?: string
+}
+export interface PortfolioProject {
+
+export interface PortfolioProject {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id?: string;
   title: string;
   description?: string;
   technologies?: string[];
   image_url?: string;
   github_url?: string;
-
   demo_url?: string;
   pdf_url?: string;
 }
@@ -113,7 +167,10 @@ pr-12325
   education: Education[];
   skills: Skill[];
   certifications: Certification[];
-
+  portfolio_projects?: PortfolioProject[];
+  is_active: boolean;
+}
+=======
   portfolio_projects?: PortfolioProject[]
 
   is_active: boolean

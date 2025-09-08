@@ -1,19 +1,7 @@
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 interface ProfileErrorStateProps {
 
   error: string | null;
@@ -25,10 +13,7 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">
       <div className="text-red-400 mb-4 text-xl">
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+        {error || "Something went wrong"}
       </div>
       <Button asChild>
         <Link"
@@ -40,8 +25,6 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
         </Link>
       </Button>
     </div>
-
-<<<<<<< HEAD
   );
 }
   )

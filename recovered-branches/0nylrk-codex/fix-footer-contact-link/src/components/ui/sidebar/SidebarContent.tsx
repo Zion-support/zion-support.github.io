@@ -1,20 +1,6 @@
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-import React from "react",
-import { cn } from "@/lib/utils",
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import {cn} from "@/lib/utils";
-interface SidebarContentProps extends React && React.HTMLAttributes<HTMLDivElement> {;
-
+import React from "react";
+import { cn } from "@/lib/utils";
+interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
   children?: React && React.ReactNode;
 }
@@ -37,23 +23,6 @@ export function SidebarContent({
     </div>
   );
 }
-
-  )
-
-<<<<<<< HEAD
-
-
-  )
-
-
-=======
-  )
-import React from "react",;
-import { cn } from "@/lib/utils",;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {;
-  className?: string;
-
 ;
 export function SidebarContent({ className, children, ...props }: SidebarContentProps) {;
   return (;

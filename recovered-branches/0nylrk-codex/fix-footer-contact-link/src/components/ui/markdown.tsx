@@ -1,58 +1,16 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import { cn } from "@/lib/utils";
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 interface MarkdownProps {
-
-import React from "react",
-import ReactMarkdown from "react-markdown";
-import { cn } from "@/lib/utils";
-import ReactMarkdown from "react-markdown",
-import { cn } from "@/lib/utils",interface MarkdownProps {
-
   content: string;
   className?: string;
 }
-<<<<<<< HEAD
-
-export function Markdown({ content, className }: MarkdownProps) {}
-  return ("
-
+export function Markdown({ content, className }: MarkdownProps) {
+  return (
     <div className={cn("prose dark:prose-invert max-w-none", className)}>
       <ReactMarkdown>{content}</ReactMarkdown>
-
     </div>
-
-=======
-export function Markdown({ content, className }: MarkdownProps) {}
-  return ("
-    <div className={cn("prose dark:prose-invert max-w-none", className)}>
-      <ReactMarkdown>{content}</ReactMarkdown>
-
-
   );
-}
-  )
-
-
-  )
-import React from "react",;
-import ReactMarkdown from "react-markdown",;
-import { cn } from "@/lib/utils",;
-
-interface MarkdownProps {;
-  content: string,;
-
 }
 
 export function Markdown(): any ({ content, className }: MarkdownProps) {;

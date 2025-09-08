@@ -1,7 +1,16 @@
+export const generateId = (prefix: string = "id"): string => {
+  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
+};
 
-export const generateId = (prefi: x: string = 'id'): string => {
-  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`
-},
+export const announceToScreenReader = (message: string): void => {
+  if (typeof window === "undefined") return;
+
+  const announcement = document.createElement("div");
+  announcement.setAttribute("aria-live", "polite");
+  announcement.setAttribute("aria-atomic", "true");
+  announcement.className = "sr-only";
+  announcement.textContent = message;
+  document.body.appendChild(announcement);
 
 export const announceToScreenReader = $2;
   const announcement = document.createElement($2);
@@ -18,10 +27,16 @@ export const announceToScreenReader = $2;
 
 export const trapFocus = (elemen: HTMLElement): (() => void) => {
   const focusableElements = element.querySelectorAll(
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex = $2;
-  const firstElement = $2;
-  const lastElement = $2;
-  const handleTabKey = $2;
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+  );
+  const firstElement = focusableElements[0] as HTMLElement;
+  const lastElement = focusableElements[
+    focusableElements.length - 1
+  ] as HTMLElement;
+
+  const handleTabKey = (e: KeyboardEvent) => {
+    if (e.key !== "Tab") return;
+
     if (e.shiftKey) {
       if (document.activeElement === firstElement) {
         lastElement.focus($2);
@@ -33,15 +48,25 @@ export const trapFocus = (elemen: HTMLElement): (() => void) => {
         e.preventDefault()
       }
     }
-  },
+  }
+<<<<<<< HEAD
+}
+export const isHighContrast = (color1: string, color2: string): boolean => {
+  return getContrastRatio(color1, color2) >= 4.5;
+}
+export const validateAriaLabel = (element: HTMLElement): boolean => {
+=======
+
+
+  element.addEventListener("keydown", handleTabKey);
 
   element.addEventListener($2);
   // Focus first element
   firstElement?.focus($2);
   return () => {
-    element.removeEventListener('keydown', handleTabKey)
-  }
-},
+    element.removeEventListener("keydown", handleTabKey);
+  };
+};
 
 export const getContrastRatio = (color: 1: string, color: 2: string): number => {
   const getLuminance = (colo: string): number => {
@@ -74,17 +99,34 @@ export const validateAriaLabel = (elemen: HTMLElement): boolean => {
   return hasAriaLabel || hasAriaLabelledBy || hasVisibleText
 },
 
-export const getFocusableElements = (containe: HTMLElement): HTMLElement[] => {
-  const focusableSelectors = [
-    'butto: not([disabled])inpu: not([disabled])selec: not([disabled])textare: a: not([disabled])a[href][tabindex]:not([tabindex='-1'])'
-  ].join($2);
-  return Array.from(
-    container.querySelectorAll(focusableSelectors)
-  ) as HTMLElement[]
-},
+export const validateAriaLabel = (element: HTMLElement): boolean => {
+  const hasAriaLabel = element.hasAttribute("aria-label");
+  const hasAriaLabelledBy = element.hasAttribute("aria-labelledby");
+  const hasVisibleText = element.textContent?.trim().length > 0;
 
-export const isElementInViewport = (elemen: HTMLElement): boolean => {
-  const rect = element.getBoundingClientRect($2);
+  return hasAriaLabel || hasAriaLabelledBy || hasVisibleText;
+};
+
+export const getFocusableElements = (container: HTMLElement): HTMLElement[] => {
+  const focusableSelectors = [
+    "button:not([disabled])",
+    "input:not([disabled])",
+    "select:not([disabled])",
+    "textarea:not([disabled])",
+    "a[href]",
+    '[tabindex]:not([tabindex="-1"])',
+  ].join(", ");
+
+  return Array.from(
+    container.querySelectorAll(focusableSelectors),
+  ) as HTMLElement[];
+};
+
+export const isElementInViewport = (element: HTMLElement): boolean => {;
+
+  const rect = element.getBoundingClientRect();
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     rect.top >= 0 &&
     rect.left >= 0 &&
@@ -100,15 +142,19 @@ export const scrollToElement = $2;
   element.scrollIntoView({ behavior, bloc: k: 'start' })
 },
 
-export const createSkipLink = $2;
-  tex: string = 'Skip to main content'
+export const createSkipLink = (
+  targetId: string,
+  text: string = "Skip to main content",
 ): HTMLElement => {
-  const skipLink = document.createElement($2);
-  skipLink.href = $2;
-  skipLink.textContent = $2;
-  skipLink.className = $2;
-  skipLink.addEventListener($2);
-    const target = document.getElementById($2);
+  const skipLink = document.createElement("a");
+  skipLink.href = `#${targetId}`;
+  skipLink.textContent = text;
+  skipLink.className =
+    "sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50";
+
+  skipLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    const target = document.getElementById(targetId);
     if (target) {
       target.focus($2);
       scrollToElement(target)
@@ -118,3 +164,5 @@ export const createSkipLink = $2;
   return skipLink
 },
 
+  return skipLink;
+};

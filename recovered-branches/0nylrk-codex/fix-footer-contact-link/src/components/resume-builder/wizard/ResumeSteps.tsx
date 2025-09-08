@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-interface ResumeStepsProps {
-  steps: StepProps[];
-  activeTab: string;
-  onChange: (value: string) => void
-<<<<<<< HEAD
-
-
-}: ResumeStepsProps) => {
-=======
-import {Tabs, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {StepProps} from "./types";
-}
-
-export const ResumeSteps = ({
-  steps
-  activeTab
-  onChange
-
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { StepProps } from "./types";
 interface ResumeStepsProps {
@@ -31,16 +7,16 @@ interface ResumeStepsProps {
 }
 
 export const ResumeSteps = ({
-
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { StepProps } from "./types",
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-}
-export const ResumeSteps = ({
-
-import {Tabs, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {StepProps} from "./types";
+  steps,
+  activeTab,
+  onChange,
+}: ResumeStepsProps) => {
+  return (
+    <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8">
+      {steps.map((step) => (
+        <TabsTrigger key={step.id} value={step.id}>
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",;
@@ -67,19 +43,25 @@ export const ResumeSteps = ({ steps, activeTab, onChange }: ResumeStepsProps) =>
           {step && step.label}
         </TabsTrigger>;
       ))}
-
-<<<<<<< HEAD
-    </TabsList>;
-
-=======
     </TabsList>
->>>>>>> origin/cursor/delete-old-data-records-6bba
   );
-
 };
 
+=======
+=======
+    </TabsList>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> main
+  );
+};
 
-<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+};
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   steps,
 
 =======

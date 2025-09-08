@@ -1,7 +1,10 @@
-<<<<<<< HEAD
-
-export type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
-;
+export type NotificationType =
+  | "message"
+  | "quote_request"
+  | "booking_confirmation"
+  | "hire_request"
+  | "onboarding"
+  | "system";
 
 export interface CreateNotificationParams {
   user_id: string;
@@ -117,41 +120,14 @@ export interface OnboardingNotificationParams {
 export interface SystemNotificationParams {
 <<<<<<< HEAD
 
-  user_id: string;
-=======
 
-  // TODO: Implement
-
-export interface OnboardingNotificationParams {;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-<<<<<<< HEAD
-
-
-
-
-=======
 export interface SystemNotificationParams {;
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
-
-<<<<<<< HEAD
-=======
-  message: string;
-  type: NotificationType;
-}
-export interface SystemNotificationParams {
-  user_id: string;
+  userId: string;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   title: string;
   message: string;
-}
-
-
   actionUrl?: string | null;
   actionText?: string | null;
   sendEmail?: boolean;
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba

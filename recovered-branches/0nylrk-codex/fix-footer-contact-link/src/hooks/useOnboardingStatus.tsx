@@ -1,27 +1,6 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import {useState, useEffect} from "react";
-import {useAuth} from "./useAuth";
-import {supabase} from "@/integrations/supabase/client";
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { useState, useEffect } from "react",
+import { useState, useEffect } from "react";
 import { useAuth } from "./useAuth";
 import { supabase } from "@/integrations/supabase/client";
-import { useAuth } from "./useAuth",
-
-
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 interface OnboardingStatus {
 
   profileCompleted: boolean;
@@ -42,28 +21,14 @@ export function useOnboardingStatus() {}
 
 
   const [status, setStatus] = useState<OnboardingStatus>({
-
-
-    profileCompleted: false
-    skillsAdded: false
-    availabilitySet: false
-    matchReceived: false
-    jobPosted: false
-    inviteSent: false
-
-    responseReceived: false
-
-
-=======
-export function useOnboardingStatus() {;
-  const { user } = useAuth();
-export function useOnboardingStatus() {
-  const { user } = useAuth(),
-  const [status, setStatus] = useState<OnboardingStatus>({
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  }),
+    profileCompleted: false,
+    skillsAdded: false,
+    availabilitySet: false,
+    matchReceived: false,
+    jobPosted: false,
+    inviteSent: false,
+    responseReceived: false,
+  });
 
     profileCompleted: false,
     skillsAdded: false,
@@ -101,72 +66,15 @@ export function useOnboardingStatus() {
       try {
         // Get user onboarding progress from database
         const { data, error } = await supabase
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-          .single(),
+          .from("user_onboarding")
+          .select("*")
+          .eq("user_id", user.id)
+          .single();
 
         if (error) {
           console.error("Error fetching onboarding status:", error);
-          return
-
-        if (error) {
-          console.error("Error fetching onboarding status:", error),
-          return
-
-<<<<<<< HEAD
-
-
-=======
-          .single();
-          .single(),
-          
-        if (error) {
-          console.error("Error fetching onboarding status:", error),
-          return
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { useState, useEffect } from "react",;
-import { useAuth } from "./useAuth",;
-import { supabase } from "@/integrations/supabase/client",;
-interface OnboardingStatus {;
-  profileCompleted: boolean,;
-  skillsAdded: boolean,;
-  availabilitySet: boolean,;
-  matchReceived: boolean,;
-  jobPosted: boolean,;
-  inviteSent: boolean,;
-  responseReceived: boolean;
-}
-;
-export function useOnboardingStatus() {;
-  const { user } = useAuth(),;
-  const [status, setStatus] = useState<OnboardingStatus>({;
-    profileCompleted: false,;
-    skillsAdded: false,;
-    availabilitySet: false,;
-    matchReceived: false,;
-    jobPosted: false,;
-    inviteSent: false,;
-    responseReceived: false;
-  }),;
-  useEffect(() => {;
-    const fetchOnboardingStatus = async () => {;
-      if (!user) return,;
-      try {;
-        // Get user onboarding progress from database;
-        const { data, error } = await supabase;
-          .from('user_onboarding');
-          .select('*');
-          .eq('user_id', user.id);
-          .single(),;
-        if (error) {;
-          console.error("Error fetching onboarding status:", error),;
           return;
-<<<<<<< HEAD
-
-
-          .eq("user_id", user.id)
-          .single();
+        }
 
         if (error) {"
           console.error("Error fetching onboarding status:", error);
@@ -178,57 +86,15 @@ export function useOnboardingStatus() {;
         }
         if (data) {
           setStatus({
-            profileCompleted: data.profile_completed |false
-            skillsAdded: data.skills_added |false
-            availabilitySet: data.availability_set |false
-            matchReceived: data.match_received |false
-            jobPosted: data.job_posted |false
-            inviteSent: data.talent_invited |false
-            responseReceived: data.quote_received |false
-          })
-
-<<<<<<< HEAD
-=======
-import { useState, useEffect } from "react",;
-import { useAuth } from "./useAuth",;
-import { supabase } from "@/integrations/supabase/client",;
-;
-interface OnboardingStatus {;
-  profileCompleted:boolean,;
-  skillsAdded:boolean,;
-  availabilitySet:boolean,;
-  matchReceived:boolean,;
-  jobPosted:boolean,;
-  inviteSent:boolean,;
-  responseReceived:boolean;
-}
-;
-export function useOnboardingStatus() {;
-  const { user } = useAuth(),;
-  const [status, setStatus] = useState<OnboardingStatus>({;
-    profileCompleted:false,;
-    skillsAdded:false,;
-    availabilitySet:false,;
-    matchReceived:false,;
-    jobPosted:false,;
-    inviteSent:false,;
-    responseReceived:false;
-  }),;
-  ;
-  useEffect(() => {;
-    const fetchOnboardingStatus = async () => {;
-      if (!user) return,;
-      ;
+            profileCompleted: data.profile_completed || false,
+            skillsAdded: data.skills_added || false,
+            availabilitySet: data.availability_set || false,
+            matchReceived: data.match_received || false,
+            jobPosted: data.job_posted || false,
+            inviteSent: data.talent_invited || false,
+            responseReceived: data.quote_received || false,
+          });
         }
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-      try {;
-        // Get user onboarding progress from database;
-        const { data, error } = await supabase;
-          .from('user_onboarding');
-          .select('*');
-
-<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/delete-old-data-records-6bba

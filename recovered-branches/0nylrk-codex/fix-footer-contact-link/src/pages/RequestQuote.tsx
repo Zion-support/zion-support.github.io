@@ -1,21 +1,6 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {QuoteRequestForm} from "@/components/QuoteRequestForm";
-
-import { Header } from "@/components/Header",
+import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { QuoteRequestForm } from "@/components/QuoteRequestForm";
-import { Footer } from "@/components/Footer",
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 export default function RequestQuote() {
 
   return (
@@ -29,51 +14,8 @@ export default function RequestQuote() {
         <QuoteRequestForm />
       </div>
       <Footer />
-
-  )
-
-
-<<<<<<< HEAD
-=======
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {QuoteRequestForm} from "@/components/QuoteRequestForm";
-
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { QuoteRequestForm } from "@/components/QuoteRequestForm";
-
-export default function RequestQuote() {;
-
-  )
-
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {QuoteRequestForm} from "@/components/QuoteRequestForm";
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { QuoteRequestForm } from "@/components/QuoteRequestForm";
-
-export default function RequestQuote() {;
-  return (
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    <>;
-      <Header />;
-      <div className="min-h-screen bg-zion-blue">;
-        <QuoteRequestForm />;
-      </div>;
-      <Footer />;
-<<<<<<< HEAD
-
-    </>;
-
+    </>
+  );
 =======
 
     </>;  );

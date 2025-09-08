@@ -1,9 +1,6 @@
-
-<<<<<<< HEAD
-=======
-import { useState, useEffect  } from './react';
-import { Skill  } from '@/types / resume';
-import { SkillCategory  } from './SkillCategory';
+import { useState, useEffect } from "react";
+import { Skill } from "@/types/resume";
+import { SkillCategory } from "./SkillCategory";
 interface SkillsListProps {
   skills: Skill[];
   onDeleteSkill: (id: string, category: string) => Promise < void>;
@@ -16,123 +13,31 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) =>: any {
 
 <<<<<<< HEAD
   >({});
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-import { useState, useEffect  } from 'react';
-import { Skill  } from '@/types/resume';
-import { SkillCategory } from './SkillCategory';
-
-
-import { useState, useEffect  } from 'react';
-import { Skill  } from '@/types/resume';
-import { SkillCategory } from './SkillCategory';
-import {useState, useEffect} from 'react';
-import {Skill} from '@/types/resume';
-import {SkillCategory} from './SkillCategory';
-
 <<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-interface SkillsListProps {
-
-  skills: Skill[];
-  onDeleteSkill: (id: string, category: string) => Promise < void>;
-
-}
-export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) =>: any {
-  const [skillsByCategory, setSkillsByCategory] = useState<;
-    Record < string, Skill[]>;
-  >({});interface SkillsListProps {
-
-  skills: Skill[];
-
-  onDeleteSkill: (id: string, category: string) => Promise<void>;
-}
-
-export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
 <<<<<<< HEAD
-
-
-  const [skillsByCategory, setSkillsByCategory] = useState<
-    Record<string, Skill[]>;
-  >({});
-
-export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
-  const [skillsByCategory, setSkillsByCategory] = useState<
-
-=======
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    Record<string, Skill[]>
-  >({});
 
   useEffect(() => {
     // Group skills by category
     const grouped = skills.reduce(
       (acc, skill) => {
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+        const category = skill.category || "Other";
+        if (!acc[category]) {
           acc[category] = [];
         }
         acc[category].push (skill);
         return acc;
 <<<<<<< HEAD
 
+    setSkillsByCategory(grouped);
+  }, [skills]);
 
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-    return null
-
-
-<<<<<<< HEAD
+  if (Object.keys(skillsByCategory).length === 0) {
     return null;
-  }
-    return null
-
-=======
-    return null
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { useState, useEffect } from 'react',;
-import { Skill } from '@/types/resume',;
-import { SkillCategory } from './SkillCategory',;
-interface SkillsListProps {;
-  skills: Skill[],;
-  onDeleteSkill: (id: string, category: string) => Promise<void>;
-}
-;
-export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
-  const [skillsByCategory, setSkillsByCategory] = useState<Record<string Skill[]>>({}),;
-  useEffect(() => {;
-    // Group skills by category;
-    const grouped = skills.reduce((acc, skill) => {;
-      const category = skill.category || 'Other',;
-      if (!acc[category]) {;
-        acc[category] = [];
-      }
-    return null;
-
-
-<<<<<<< HEAD
-
-
-=======
   }
 
   return (
     <div className="space-y-6">
       <h3 className="text-md font-medium">Your Skills</h3>
-
 
       <div className="space-y-4">
         {Object.entries(skillsByCategory).map(([category, categorySkills]) => (
@@ -143,8 +48,21 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
             onDelete={onDeleteSkill}
           />
         ))}
-
-
+      </div>
+    </div>
+  );
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+};
       },
       {} as Record < string, Skill[]>,
     );

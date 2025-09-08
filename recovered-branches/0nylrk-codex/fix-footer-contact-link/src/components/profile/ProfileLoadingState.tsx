@@ -1,8 +1,4 @@
-
-
-import React from 'react',
-
-<<<<<<< HEAD
+import React from "react";
 export function ProfileLoadingState() {
 
 =======

@@ -1,11 +1,5 @@
-
-
-<<<<<<< HEAD
-=======
-interface MilestoneActivitiesProps {;
 import React from "react";
-interface MilestoneActivitiesProps {}
->>>>>>> origin/cursor/delete-old-data-records-6bba
+interface MilestoneActivitiesProps {
   projectId: string;
 }
 export /**;
@@ -33,7 +27,12 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
 
 <<<<<<< HEAD
 
+export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
+  return <div>Activity will be shown here</div>;
+}
+export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
+  return <div>Activity will be shown here</div>;
 
-=======
+}
 ;
 >>>>>>> origin/cursor/delete-old-data-records-6bba

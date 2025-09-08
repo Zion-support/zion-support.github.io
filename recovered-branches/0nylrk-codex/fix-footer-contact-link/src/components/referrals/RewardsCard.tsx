@@ -48,48 +48,8 @@ if ( {) {}
             Rewards earned from successful referrals;
 <<<<<<< HEAD
 
-          </CardDescription>;
-        </CardHeader>;
-        <CardContent>;
-          <div className="flex items - center justify - center p - 4">;
-            <div className="h - 8 w - 8 animate - spin rounded - full border - 4 border - primary border - t-transparent" />;
-          </div>;
-        </CardContent>;
-      </Card>);
-  }
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-    );
-
-}
-
-export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
-  if (isLoading) {
+  if (rewards.length === 0) {
     return (
-
-      <Card>
-</Card>
-        <CardHeader>
-</CardHeader>'
-          <CardTitle className="flex items-center gap-2">"
-</CardTitle>"
-            <BadgeDollarSign className="h-5 w-5" />"
-</BadgeDollarSign>
-          </CardTitle>
-          <CardDescription>
-</CardDescription>
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-</CardContent>"
-          <div className="flex items-center justify-center p-4">"
-</div>"
-            <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />"
-</div>
-          </div>
-        </CardContent>
-      </Card>
       <Card>
 </Card>
         <CardHeader>
@@ -114,9 +74,9 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
           </div>
         </CardContent>
       </Card>
-
-<<<<<<< HEAD
-
+    );
+  }
+  return (
     <Card>
 </Card>
       <CardHeader>
@@ -153,68 +113,8 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
 </div>
             <div;
               key={reward.id}
-<<<<<<< HEAD
-=======
-
-
-              }`}
-            >
-</div>
-              <div>
-</div>"
-                <div className="flex items-center gap-2">"
-</div>"
-                    <BadgeDollarSign className="h-4 w-4 text-green-600" />"
-</BadgeDollarSign>"
-                    <Badge className="h-4 w-4 text-blue-600" />"
-</Badge>"
-                  <p className="font-medium">"
-</p>
-                  </p>
-                </div>"
-                <p className="text-xs text-muted-foreground mt-1">"
-</p>
-                </p>"
-                  <p className="text-xs text-muted-foreground">"
-</p>
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { ReferralReward } from "@/types/referrals",;
-import { formatDate } from "@/utils/referralUtils",;
-import { BadgeDollarSign, Badge } from "lucide-react",;
-
-}
-export function RewardsCard(): any ({ rewards, isLoading }: RewardsCardProps) {;
-  if (isLoading) {;
-    return (
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { ReferralReward } from "@/types/referrals",;
-import { formatDate } from "@/utils/referralUtils",;
-import { BadgeDollarSign, Badge } from "lucide-react",;
-
-}
-<<<<<<< HEAD
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { ReferralReward } from "@/types/referrals",;
-import { formatDate } from "@/utils/referralUtils",;
-import { BadgeDollarSign, Badge } from "lucide-react",;
-interface RewardsCardProps {;
-  rewards: ReferralReward[];
-  isLoading: boolean;
-}
-;
-export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
-  if (isLoading) {;
-    return (;
-=======
-;
-export function RewardsCard({ rewards, isLoading } RewardsCardProps) {;
-  if (isLoading) {;
-    return (;
-}`}
+              className={`flex justify-between items-start ${
+                index !== rewards.length - 1 ? "border-b pb-3" : ""
               }`}
             >
               <div>
@@ -242,8 +142,18 @@ export function RewardsCard({ rewards, isLoading } RewardsCardProps) {;
         </div>
       </CardContent>
     </Card>
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  );
+}
 
+export function RewardsCard(): any ({ rewards, isLoading }: RewardsCardProps) {;
+  if (isLoading) {;
+    return (
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+interface RewardsCardProps {;
+  rewards: ReferralReward[];
+  isLoading: boolean;
 }
 ;
 

@@ -6,9 +6,23 @@ import React from "react";
 import React from "react";
 
 // This file fixes the ref type issues in sidebar components
+
 // Export a placeholder to ensure the file is recognized as a module
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
+// Define a type that makes the ref forwards compatible
+export type ForwardRefComponent<T, P = {}> = React.ForwardRefExoticComponent<
+  React.PropsWithoutRef<P> & React.RefAttributes<T>
+>;
+
+// Helper type for component refs
+export type ElementRef<T extends React.ElementType> =
+  React.ComponentPropsWithRef<T>["ref"];
+
+// Helper type for wrapping refs that fixes the mismatch errors
+export type PolymorphicRef<T extends React.ElementType> = React.Ref<
+  React.ElementRef<T>
+>;
 
 // Helper for dealing with refs in complex situations
 export type PolymorphicComponentProp<T extends React.ElementType, Props = $2;
@@ -98,8 +112,11 @@ export type SidebarContext = {
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
   setOpenMobile: (open: boolean) => void;
-
-<<<<<<< HEAD
+  isMobile: boolean;
+  toggleSidebar: () => void;
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 import React from 'react',;
 ;

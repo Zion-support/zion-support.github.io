@@ -34,14 +34,6 @@ export function MobileOnboarding() {
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
   const navigate = useNavigate();
 
-
-export function MobileOnboarding() {
-}
-const [currentStep, setCurrentStep] = useState<OnboardingStep>("language"),;"
-const navigate = useNavigate(),;
-export function MobileOnboarding() {;
-  }
-
   const goToNextStep = () => {
     }
     if (currentStep === "language") {"
@@ -57,41 +49,9 @@ export function MobileOnboarding() {;
   };
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
-  },
-  
   const handleRoleSelect = () => {
-<<<<<<< HEAD
-
-    setCurrentStep("signup")
-  },
-=======
-  },
-  
-  const handleRoleSelect = () => {
-    }
-    setCurrentStep("signup")"
-};
-import React, { useState } from "react";"
-import { useNavigate } from "react-router-dom";"
-import { Button } from "@/components/ui/button",;"
-import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSelector",;"
-import { RolePicker } from "../components/onboarding/RolePicker",;"
-import { SignUpForm } from "../components/onboarding/SignUpForm",;"
-type OnboardingStep = "language" | "role" | "signup",;"
-export function MobileOnboarding() {;
-  }
-  const goToNextStep = () => {;
-    }
-    if (currentStep === "language") {;"
-      }
-      setCurrentStep("role");"
-    } else if (currentStep === "role") {;"
-      }
-      setCurrentStep("signup");"
-    } else {;
-      }
-      navigate("/mobile");"
->>>>>>> origin/cursor/delete-old-data-records-6bba
+    setCurrentStep("signup");
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -205,9 +165,8 @@ export function MobileOnboarding() {;
           </div>;
 
         )}
-
-<<<<<<< HEAD
-
+      </div>
+    </div>
   );
 }
 

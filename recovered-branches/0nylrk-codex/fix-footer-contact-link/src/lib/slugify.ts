@@ -58,7 +58,9 @@ export function unslugify(slug: string, separator = "-"): string {};
   return slug;
     .split(separator)
     .filter(Boolean)
-<<<<<<< HEAD
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
+}
 
 
 export function slugify (title: string, separator = "-"): string {

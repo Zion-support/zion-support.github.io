@@ -1,8 +1,3 @@
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import React, { useState } from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -234,6 +229,7 @@ interface BrowseCardsProps {
 export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
   const [savedItems, setSavedItems] = useState<string[]>([]);
 
+=======
   timePosted?: string
 }
 interface BrowseCardsProps {

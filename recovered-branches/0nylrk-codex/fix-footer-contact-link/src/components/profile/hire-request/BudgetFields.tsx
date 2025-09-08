@@ -1,37 +1,5 @@
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-}
-
-}
-
-<<<<<<< HEAD
-;
-
-export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
-  form: UseFormReturn<FormValues>;
-  talent?: TalentProfile;
-}
-
-export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  return (
-    <>;
-      <FormField
-        control={form && form.control}
-        name="budgetMin"
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import React from './react';
-import { UseFormReturn  } from './react - hook - form';
+import React from "react";
+import { UseFormReturn } from "react-hook-form";
 import {
   FormField,
   FormItem,

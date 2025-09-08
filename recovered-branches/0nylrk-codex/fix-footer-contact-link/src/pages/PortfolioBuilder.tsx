@@ -1,51 +1,17 @@
-
-<<<<<<< HEAD
-
-=======
-import { useState  } from 'react';
-import { AppHeader  } from '@/layout/AppHeader';
-import { Footer  } from '@/components/Footer';
-import { SEO  } from '@/components/SEO';
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
-import { ResumeWizard  } from '@/components/resume-builder/ResumeWizard';
-import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder';
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-import {useState} from 'react';
-import {AppHeader} from '@/layout/AppHeader';
-import {Footer} from '@/components/Footer';
-import {SEO} from '@/components/SEO';
-import {ProtectedRoute} from '@/components/ProtectedRoute';
-import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
-import {ResumeWizard} from '@/components/resume-builder/ResumeWizard';
-import {PortfolioBuilder, as, PortfolioSection} from '@/components/resume-builder/portfolio/PortfolioBuilder';
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { useState } from 'react',
-import { AppHeader } from '@/layout/AppHeader',
-import { Footer } from '@/components/Footer',
-import { SEO } from '@/components/SEO',
-import { ProtectedRoute } from '@/components/ProtectedRoute',
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
-import { ResumeWizard } from '@/components/resume-builder/ResumeWizard',
-import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder',
-
 import { useState } from "react";
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
-<<<<<<< HEAD
-
-
+import { ResumeWizard } from "@/components/resume-builder/ResumeWizard";
+import {
+  PortfolioBuilder,
+  as,
+  PortfolioSection,
+} from "@/components/resume-builder/portfolio/PortfolioBuilder";
+function PortfolioBuilderContent() {
+  const [activeTab, setActiveTab] = useState("resume");
 
   return (
 
@@ -129,9 +95,41 @@ function PortfolioBuilderContent() {;
   );
 }
 
-function PortfolioBuilderContent() {;
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
->>>>>>> origin/cursor/delete-old-data-records-6bba
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+;
+
+export default function PortfolioBuilder() {;
+  return (
+    <ProtectedRoute>;
+      <PortfolioBuilderContent />;
+    </ProtectedRoute>;
+  );
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+;
+
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import {useState} from 'react';
+import {AppHeader} from '@/layout / AppHeader';
+import {Footer} from '@/components / Footer';
+import {SEO} from '@/components / SEO';
+import {ProtectedRoute} from '@/components / ProtectedRoute';
+import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components / ui / tabs';
+import {ResumeWizard} from '@/components / resume - builder / ResumeWizard';
 import {PortfolioBuilder, as, PortfolioSection} from '@/components / resume - builder / portfolio / PortfolioBuilder';
 /**
  * PortfolioBuilderContent - Function description;

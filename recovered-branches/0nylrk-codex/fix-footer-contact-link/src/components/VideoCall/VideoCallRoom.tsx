@@ -1,65 +1,13 @@
-<<<<<<< HEAD
-=======
-
-import React from 'react';'
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";"
-import {Button} from "@/components/ui/button";"
-import React from 'react','
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";"
-import { Button } from "@/components/ui/button";"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card","
-import { Button } from "@/components/ui/button","
-interface VideoCallRoomProps {;
-  }
-room?: string;
-  token?: string;
-  serverUrl?: string;
-  onDisconnect?: () => void;
-  className?: string;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-<<<<<<< HEAD
-=======
-
+import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 interface VideoCallRoomProps {
-  // TODO: Implement
-}
-pr-12325
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
   room?: string;
   token?: string;
   serverUrl?: string;
   onDisconnect?: () => void;
   className?: string;
-
-
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-interface VideoCallRoomProps {
-  room?: string,
-  token?: string,
-  serverUrl?: string,
-<<<<<<< HEAD
-
-  onDisconnect?: () => void,
-  className?: string
-
-=======
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {
   return (
@@ -131,9 +79,8 @@ export function VideoCallRoom({
   onDisconnect,
   className,)
 }: VideoCallRoomProps) {
-  return ("
-    <Card className={className || "w-full max-w-3xl mx-auto"}>"
-</Card>
+  return (
+    <Card className={className || "w-full max-w-3xl mx-auto"}>
       <CardHeader>
 </CardHeader>
         <CardTitle>Video Call</CardTitle>
@@ -148,9 +95,23 @@ export function VideoCallRoom({
           <Button onClick={onDisconnect}>Close</Button>
         </div>
       </CardContent>
-    </Card>"
-    <Card className={className || "w-full max-w-3xl mx-auto"}>;"
-</Card>
+    </Card>
+  );
+}
+;
+export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {;
+  return (;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+export function VideoCallRoom(): any ({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {;
+  return (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    <Card className={className || "w-full max-w-3xl mx-auto"}>;
       <CardHeader>;
 </CardHeader>
         <CardTitle>Video Call</CardTitle>;

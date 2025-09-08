@@ -1,71 +1,8 @@
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import {Education} from '@/types/resume';
-import {EducationItem} from './EducationItem';
-
-import { Education  } from '@/types/resume';
-import { EducationItem } from './EducationItem';
-import {Education} from '@/types/resume';
-import {EducationItem} from './EducationItem';
-
-
-<<<<<<< HEAD
-
-=======
-import { Education  } from '@/types/resume';
-import { EducationItem } from './EducationItem';
-import { Education  } from '@/types/resume';
-import { EducationItem } from './EducationItem';
-import {Education} from '@/types/resume';
-import {EducationItem} from './EducationItem';
->>>>>>> origin/cursor/delete-old-data-records-6bba
+import { Education } from "@/types/resume";
+import { EducationItem } from "./EducationItem";
 interface EducationListProps {
   educationEntries: Education[];
   onEdit: (education: Education) => void;
-  onDelete: (id: string) => void
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { Education } from '@/types/resume',;
-import { EducationItem } from './EducationItem',;
-interface EducationListProps {;
-  educationEntries: Education[],;
-  onEdit: (education: Education) => void;
-  onDelete: (id: string) => void;
-
-
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-}
-export function EducationList({
-  educationEntries
-  onEdit
-  onDelete
-}: EducationListProps) {
-  if (!educationEntries |educationEntries.length === 0) {
-<<<<<<< HEAD
-
-
-=======
-
-
-import { Education } from "@/types/resume";
-
-import { EducationItem } from "./EducationItem";
-interface EducationListProps {}
-  educationEntries: Education[];
-  onEdit: (education: Education) => void;
-
   onDelete: (id: string) => void;
 }
 
@@ -73,85 +10,28 @@ export function EducationList({}
   educationEntries,
   onEdit,
   onDelete,
-
-    return null;
-  }
-
-
-  return ("
-    <div className="space-y-4">"
-      <h3 className="text-md font-medium">Added Education</h3>
-      {educationEntries.map((edu) => (
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  education_entries: Education[];
-  on_edit: (education: Education) => void;
-  on_delete: (id: string) => void;
-}
-export /**
- * EducationList - Function description
- */
-function EducationList() {
-  // Check condition
-if ( {) {
-  $2
-}
-    return null;
-  }
-  return (
-    <div className="space - y-4">;
-      <h3 className="text - md font - medium">Added Education</h3>;
-      {education_entries.map ((edu) => (
-        <EducationItem;
-          key={edu.id}
-          education={edu}
-<<<<<<< HEAD
-
-
-import { Education } from "@/types/resume";
-import { EducationItem } from "./EducationItem";
-interface EducationListProps {
-  educationEntries: Education[];
-  onEdit: (education: Education) => void;
-  onDelete: (id: string) => void;
-}
-
-export function EducationList({
-  educationEntries,
-  onEdit,
-  onDelete,
 }: EducationListProps) {
   if (!educationEntries || educationEntries.length === 0) {
-
     return null;
   }
 
 
-  return (
 
+
+
+  return (
     <div className="space-y-4">
       <h3 className="text-md font-medium">Added Education</h3>
       {educationEntries.map((edu) => (
         <EducationItem
-=======
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
           key={edu.id}
           education={edu}
           onEdit={onEdit}
           onDelete={onDelete}
         />
-
       ))}
     </div>
   );
-}
-<<<<<<< HEAD
-
-
-  )
-
 }
 ;
 

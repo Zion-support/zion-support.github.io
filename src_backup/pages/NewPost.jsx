@@ -14,22 +14,8 @@ export default function NewPost() {
     <div>
       <h1>NewPost</h1>
       <p>Component placeholder - needs implementation</p>
-<<<<<<< HEAD
-
-
-=======
-  )
-
-}
-
-  )
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  )
-
-main
+    </div>
+  );
 }
 
 <<<<<<< HEAD

@@ -1,15 +1,7 @@
-
-<<<<<<< HEAD
-=======
-import { Loader2 } from "lucide-react",
-
-import {Loader2} from "lucide-react";
-
+import { Loader2 } from "lucide-react";
 interface ResultsHeaderProps {
   isLoading: boolean;
-  resultCount: number
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
+  resultCount: number;
 }
 export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {}
   return ("
@@ -25,81 +17,13 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {}
         </div>
       ) : (
         <span>
-
-<<<<<<< HEAD
-=======
           {resultCount === 0
             ? "No talents found. Try adjusting your filters."
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-<<<<<<< HEAD
-=======
-
-import {Loader2} from "lucide-react";
->>>>>>> origin/cursor/delete-old-data-records-6bba
-interface ResultsHeaderProps {;
-  isLoading: boolean,;
-
-  resultCount: number;
-}
-
-export function ResultsHeader(): any ({ isLoading, resultCount }: ResultsHeaderProps) {;
-  return (
-
-<<<<<<< HEAD
-=======
-    <div className="flex items-center mb-6 text-zion-slate-light">;
-      {isLoading ? (;
-        <div className="flex items-center">;
-          <Loader2 className="h-4 w-4 animate-spin mr-2" />;
-          <span>Loading talents...</span>;
-        </div>;
-      ) : (;
-        <span>;
-          {resultCount === 0 ? (;
-            "No talents found. Try adjusting your filters.";
-          ) : (;
-            `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`;
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-          {resultCount === 0 ? (
-            "No talents found. Try adjusting your filters."
-          ) : (
-            `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`
-
-          )}
-
-<<<<<<< HEAD
+            : `Found ${resultCount} talent${resultCount !== 1 ? "s" : ""}`}
+        </span>
       )}
-
-}
-
-export function ResultsHeader(): any ({ isLoading, resultCount }: ResultsHeaderProps) {;
-  return (
-
-    <div className="flex items-center mb-6 text-zion-slate-light">;
-      {isLoading ? (;
-        <div className="flex items-center">;
-          <Loader2 className="h-4 w-4 animate-spin mr-2" />;
-          <span>Loading talents...</span>;
-        </div>;
-      ) : (;
-        <span>;
-          {resultCount === 0 ? (;
-            "No talents found. Try adjusting your filters.";
-          ) : (;
-            `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`;
-
-
-
-          {resultCount === 0 ? (
-            "No talents found. Try adjusting your filters."
-          ) : (
-            `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`
-
-          )}
+<<<<<<< HEAD
+<<<<<<< HEAD
 
         </span>;
       )}

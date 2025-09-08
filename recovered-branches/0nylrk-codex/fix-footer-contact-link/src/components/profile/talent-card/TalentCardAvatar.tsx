@@ -1,51 +1,28 @@
-<<<<<<< HEAD
+import React from "react";
+import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 
+interface TalentCardAvatarProps {;
 
-
-=======
-
-
-
-  return ("
-    <Avatar className="w-14 h-14 border-2 border-zion-blue-light">"
-
-
-interface TalentCardAvatarProps {
-  profilePicture?: string,
-  fullName: string
-
+  profilePicture?: string;
+  fullName: string;
 }
 
-export function TalentCardAvatar({}
+export function TalentCardAvatar({
   profilePicture,
   fullName,
-
-      .split(' ')
-      .map(part => part[0])
-      .join('')
-
+}: TalentCardAvatarProps) {
+  // Get initials for avatar fallback
+  const getInitials = (name: string) => {
+    return name
       .split(" ")
-      .map((part) => part[0])"
+      .map((part) => part[0])
       .join("")
       .toUpperCase();
 
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  // Get initials for avatar fallback;
-  const getInitials = (name: string) => {;
-    return name;
-      .split(' ');
-      .map(part => part[0]);
-      .join('');
-      .toUpperCase();
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-      />;
-      <AvatarFallback className="bg-zion-purple/20 text-zion-purple">;
+  return (
+    <Avatar className="w-14 h-14 border-2 border-zion-blue-light">
+      <AvatarImage src={profilePicture || undefined} alt={fullName} />
+      <AvatarFallback className="bg-zion-purple/20 text-zion-purple">
         {getInitials(fullName)}
       </AvatarFallback>;
     </Avatar>;

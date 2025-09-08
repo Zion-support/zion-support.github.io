@@ -1,10 +1,4 @@
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-export type ReviewStatus = 'pending' | 'approved' | 'rejected';
-;
+export type ReviewStatus = "pending" | "approved" | "rejected";
 
 export interface Review {
 <<<<<<< HEAD
@@ -33,14 +27,8 @@ export interface Review {;
   updated_at: string;
   is_visible: boolean;
   report_count: number;
-  reviewer_profile?: {}
+  reviewer_profile?: {
     display_name: string;
-
-
-<<<<<<< HEAD
-
-=======
-    display_name: string,
     avatar_url?: string;
     avatar_url?: string
 };
@@ -61,17 +49,7 @@ export interface ReviewReport {;
   review_id: string;
   reporter_id: string;
   reason: string;
-<<<<<<< HEAD
-
-  status: 'pending' | 'resolved' | 'dismissed';
-
-
-=======
-
-
   status: "pending" | "resolved" | "dismissed";
   created_at: string;
   resolved_at?: string;
-
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba

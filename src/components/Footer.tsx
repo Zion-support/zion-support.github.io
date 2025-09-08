@@ -350,19 +350,46 @@ export function Footer() {
             <p className="text-gray-300 mb-6 leading-relaxed">
               Empowering businesses with cutting-edge technology solutions. From AI and quantum computing to cybersecurity and digital transformation.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Instagram className="h-5 w-5" />
-              </a>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/services" className="text-gray-400 hover:text-white">
+                  Our Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/pricing" className="text-gray-400 hover:text-white">
+                  Pricing
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/about" className="text-gray-400 hover:text-white">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-gray-400 hover:text-white">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <div className="space-y-2 text-gray-300">
+              <p>Email: info@ziontechgroup.com</p>
+              <p>Phone: +1 (555) 123-4567</p>
+              <p>Address: 123 Tech Street, Innovation City</p>
             </div>
           </div>
 
@@ -414,24 +441,10 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-700 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © 2024 Zion Tech Group. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy-policy" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms-of-service" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Terms of Service
-              </Link>
-              <Link href="/cookie-policy" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Cookie Policy
-              </Link>
-            </div>
-          </div>
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p className="text-gray-400">
+            © 2024 Zion Tech. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

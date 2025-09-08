@@ -1,7 +1,3 @@
-
-
-<<<<<<< HEAD
-=======
 import {
   FormField
   FormItem
@@ -28,18 +24,9 @@ import { BasicInfoFormData } from "./schema";
 import { Input } from "@/components/ui/input";
 import { Control } from "react-hook-form";
 import { BasicInfoFormData } from "./schema";
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
 interface ContactFieldsProps {
   control: Control<BasicInfoFormData>;
 }
-
-
-import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Control} from "react-hook-form";
-import {BasicInfoFormData} from "./schema";
 
 
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
@@ -146,7 +133,104 @@ export function ContactFields(): any ({ control }: ContactFieldsProps) {;
 
             <FormMessage />;
           </FormItem>;
-        )});
+        )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+          </FormItem>)}
+      />;
+      <FormField;
+        control={control}
+        name="website";
+        render={({ field }) => (
+          <FormItem>;
+            <FormLabel > Website</FormLabel>;
+            <FormControl>;
+              <Input placeholder="https://yourwebsite.com" {...field} />;
+            </FormControl>;
+            <FormMessage />;
+          </FormItem>)}
+      />;
+      <FormField;
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+        control={control}
+        name="linkedin";
+        render={({ field }) => (
+          <FormItem>;
+            <FormLabel > LinkedIn</FormLabel>;
+            <FormControl>;
+              <Input;
+                placeholder="https://linkedin.com / in / username";
+                {...field}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      />;
+
+      <FormField
+        control={control}
+        name="linkedin"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>LinkedIn</FormLabel>
+            <FormControl>
+              <Input
+                placeholder="https://linkedin.com/in/username"
+                {...field}
+              />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />;
+
+
+      <FormField
+        control={control}
+        name="github"
+=======
+      />;
+      <FormField
+        control={control}
+        name="linkedin"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>LinkedIn</FormLabel>
+            <FormControl>
+              <Input
+                placeholder="https://linkedin.com/in/username"
+                {...field}
+              />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />;
+;
+      <FormField;
+        control={control}
+        name="github";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>GitHub</FormLabel>;
+            <FormControl>;
+<<<<<<< HEAD
+              <Input placeholder="https://github && github.com/username" {...field} />;
+=======
+              <Input placeholder="https://github.com/username" {...field} />;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+            </FormControl>;
+            <FormMessage />;
+          </FormItem>;
+        )}
+      />
+    </div>
+  );
 }
 ;
 

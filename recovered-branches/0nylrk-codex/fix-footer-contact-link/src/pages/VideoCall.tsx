@@ -1,29 +1,3 @@
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { useState, useEffect  } from 'react';
-import { useParams, useNavigate  } from 'react-router-dom';
-import { Header  } from '@/components/Header';
-import { Footer  } from '@/components/Footer';
-import { SEO  } from '@/components/SEO';
-import { VideoCallRoom  } from '@/components/video/VideoCallRoom';
-import { Button  } from '@/components/ui/button';
-import { toast } from 'sonner';
-
-
-import {useState, useEffect} from 'react';
-import {useParams, useNavigate} from 'react-router-dom';
-import {Header} from '@/components/Header';
-import {Footer} from '@/components/Footer';
-import {SEO} from '@/components/SEO';
-import {VideoCallRoom} from '@/components/video/VideoCallRoom';
-import {Button} from '@/components/ui/button';
-import {toast} from 'sonner';
-<<<<<<< HEAD
-
-
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Header } from "@/components/Header";
@@ -32,51 +6,15 @@ import { SEO } from "@/components/SEO";
 import { VideoCallRoom } from "@/components/video/VideoCallRoom";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
-
 export default function VideoCall() {
-
-export default /**
- * VideoCall - Function description
- */
-function VideoCall() {
-  // use_params is typed as `any` in this environment due to missing type;
-  // definitions, so avoid passing a type argument to prevent TS2347.;
-  const { room_id } = use_params ();
-  const navigate = use_navigate ();
-  const [is_joining, setIsJoining] = useState (false);
-  const [has_joined, setHasJoined] = useState (false);
-  const [participants, set_participants] = useState < Array<{
-    id: string,
-    name: string,
-
-
-
-    avatar?: string;
-    is_muted?: boolean;
-    isVideoEnabled?: boolean;
-    isScreenSharing?: boolean;
-    is_host?: boolean;
-  }>>([;
-    {
-
-=======
-  // useParams is typed as `any` in this environment due to missing type`  // definitions, so avoid passing a type argument to prevent TS2347.
-}
-import {useState, useEffect} from 'react';'
-import {use_params, use_navigate} from 'react-router-dom';'
-import {Header} from '@/components / Header';'
-import {Footer} from '@/components / Footer';'
-import {SEO} from '@/components / SEO';'
-import {VideoCallRoom} from '@/components / video / VideoCallRoom';'
-import {Button} from '@/components / ui / button';'
-import {toast} from 'sonner';    avatar?: string;'
-
+  // useParams is typed as `any` in this environment due to missing type
+  // definitions, so avoid passing a type argument to prevent TS2347.
   const { roomId } = useParams();
   const navigate = useNavigate();
   const [isJoining, setIsJoining] = useState(false);
   const [hasJoined, setHasJoined] = useState(false);
   const [participants, setParticipants] = useState<
-
+    Array<{
       id: string;
       name: string;
       avatar?: string;
@@ -85,7 +23,9 @@ import {toast} from 'sonner';    avatar?: string;'
       isScreenSharing?: boolean;
       isHost?: boolean;
     }>
-
+  >([
+    {
+      id: "user-1",
       name: "You",
       isVideoEnabled: true,
       isMuted: false,
@@ -145,23 +85,6 @@ import {toast} from 'sonner';    avatar?: string;'
       }
       setHasJoined(true);
       setIsJoining(false);
-    setHasJoined(false);
-    toast && toast.info('Call ended', {,'
-  }
-  'description': 'You have left the meeting';'
-    });
-  const handleJoinCall = () => {;
-    }
-    setIsJoining(true);
-    // Simulate connection delay;
-    setTimeout(() => {;
-      }
-      setHasJoined(true);
-      setIsJoining(false);
-      toast.success('Call joined', {'
-        }
-        'description': `You have joined meeting room ${roomId}`,`
-      });
       toast.success("Call joined", {
         description: `You have joined meeting room ${roomId}`,
       });
@@ -182,47 +105,49 @@ import {toast} from 'sonner';    avatar?: string;'
     // Navigate back after a short delay;
     setTimeout(() => {;
 
+=======
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  },
+
+  const handleLeaveCall = () => {
+    setHasJoined(false),
+    toast.info("Call ended", {
       description: "You have left the meeting",
     });
 
     // Navigate back after a short delay
     setTimeout(() => {
-
       navigate(-1);
     }, 1500);
 
-
-  const simulateUserJoining = () => {;
-    // This is just for demo purposes - in a real app, this would be handled by the video call service;
-    const mockUsers = [;
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },;
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },;
-      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
-
-
-      setParticipants(prev => [...prev, randomUser]);
-      toast(`${randomUser && randomUser.name} joined the call`);
-    }
-  }
-
-
   const simulateUserJoining = () => {
     // This is just for demo purposes - in a real app, this would be handled by the video call service
     const mockUsers = [
-  },
-  
-  const simulateUserJoining = () => {
-    // This is just for demo purposes - in a real app, this would be handled by the video call service
-    const mockUsers = [
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false},
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true},
-      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true}
-    ],
-    
-    const randomUser = $2;
-    if (!participants.find(p => p.id === randomUser.id)) {
-      setParticipants($2);
-      toast(`${randomUser.name} joined the call`)
+      { id: "user-2", name: "Alex Chen", isVideoEnabled: true, isMuted: false },
+      {
+        id: "user-3",
+        name: "Taylor Kim",
+        isVideoEnabled: false,
+        isMuted: true,
+      },
+      {
+        id: "user-4",
+        name: "Jordan Smith",
+        isVideoEnabled: true,
+        isMuted: false,
+        isScreenSharing: true,
+      },
+    ];
+
+    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
+
+    if (!participants.find((p) => p.id === randomUser.id)) {
+      setParticipants((prev) => [...prev, randomUser]);
+      toast(`${randomUser.name} joined the call`);
     }
   },
 
@@ -238,14 +163,13 @@ import {toast} from 'sonner';    avatar?: string;'
             <Button
               onClick={handleJoinCall}
               disabled={isJoining}
-              size='lg'
-              className='bg-zion-purple hover:bg-zion-purple-light'
-            >
-              {isJoining ? 'Connecting...' : 'Join Call'}
+              size="lg"
+              className="bg-zion-purple hover:bg-zion-purple-light">;
+              {isJoining ? "Connecting..." : "Join Call"}
             </Button>
           </div>
         ) : (
-          <div className='space-y-4'>
+          <div className="space-y-4">
             <VideoCallRoom
     }, 1500)
 };
@@ -280,18 +204,6 @@ import {toast} from 'sonner';    avatar?: string;'
         ) : ("
           <div className="space-y-4">
 
-
-
-            <VideoCallRoom 
-              roomId={roomId || ''} 
-
-              roomId={roomId || ""}
-
-              participants={participants}
-              onLeave={handleLeaveCall}
-            />
-
-
             {/* This button is just for demo/testing purposes */}
             <div className='flex justify-center mt-4'>'
               <Button,
@@ -299,14 +211,18 @@ variant='outline';'
                 onClick={simulateUserJoining}
                 className='text-sm''
               >
-      </main>;
-      <Footer />;
-    </>;
-
-});
-
+                Simulate user joining (demo only)
+              </Button>
+            </div>
+          </div>
+        )}
+      </main>
+      <Footer />
+    </>
+  );
 }
 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       id: 'user - 1',
 
       name: 'You',

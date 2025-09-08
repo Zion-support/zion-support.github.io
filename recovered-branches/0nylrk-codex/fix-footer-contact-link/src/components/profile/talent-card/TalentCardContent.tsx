@@ -1,51 +1,10 @@
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import React, { useState } from './react';
-import { MapPin  } from './lucide-react';
-import { TalentCardSkills  } from './TalentCardSkills';
-
-<<<<<<< HEAD
-
-
-
-=======
-
-
-
-import React, { useState } from "react",
-import { MapPin } from "lucide-react";
-import { TalentCardSkills } from "./TalentCardSkills";
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
 import React, { useState } from "react";
 import { MapPin } from "lucide-react";
 import { TalentCardSkills } from "./TalentCardSkills";
-
-
-<<<<<<< HEAD
-=======
-  summary: string | undefined;
-  bio: string;
-  timezone: string | undefined;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 interface TalentCardContentProps {
   summary: string | undefined;
   bio: string;
   timezone: string | undefined;
-
-
-<<<<<<< HEAD
-=======
   skills: string[] | undefined;
 }
 
@@ -56,7 +15,7 @@ export function TalentCardContent({
 
   timezone,
   skills,
-}: TalentCardContentProps) {};
+}: TalentCardContentProps) {
   const [isHovering, setIsHovering] = useState(false);
 
 skills: string[] | undefined
@@ -104,6 +63,17 @@ import { TalentCardSkills } from "./TalentCardSkills",;
 
 <<<<<<< HEAD
       )}
+<<<<<<< HEAD
+
+      {/* Short bio or summary - longer on hover for desktop */}
+      <div
+        className="overflow-hidden transition-all duration-300"
+        style={{ maxHeight: isHovering ? "8rem" : "3rem" }}
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
+      >
+        <p className="text-zion-slate mb-4">{summary || bio}</p>
+      </div>
 
 =======
 >>>>>>> origin/cursor/delete-old-data-records-6bba

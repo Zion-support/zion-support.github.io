@@ -1,20 +1,15 @@
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import React from 'react',;
-import { Button } from '@/components/ui/button',;
-interface NotificationHeaderProps {;
-  unreadCount: number,;
-<<<<<<< HEAD
-
+import React from "react";
+import { Button } from "@/components/ui/button";
+interface NotificationHeaderProps {
+  unreadCount: number;
   onMarkAllAsRead: () => Promise<void>;
+}
 
-
-
-  onMarkAllAsRead
-
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
+  unreadCount,
+  onMarkAllAsRead,
 }) => {
   return (
     <div className="flex justify-between items-center p-4 border-b border-zion-blue-light">
@@ -23,17 +18,14 @@ interface NotificationHeaderProps {;
         <Button
           variant="ghost"
           size="sm"
-
-=======
-
-
-}
-
-export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
-
-  unreadCount
-  onMarkAllAsRead
-
+          onClick={onMarkAllAsRead}
+          className="text-xs text-zion-cyan hover:text-white hover:bg-zion-blue-dark">;
+          Mark all as read;
+        </Button>;
+      )}
+    </div>
+  );
+};
 import React from './react';
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 import { Button  } from '@/components / ui / button';

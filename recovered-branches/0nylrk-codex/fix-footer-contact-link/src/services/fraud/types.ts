@@ -1,10 +1,17 @@
+// Types used across fraud detection modules
+import { FraudSeverity } from "@/types/fraud";
+export interface AnalysisResult {
+  isSuspicious: boolean;
+  reasons: string[];
+}
+export interface MessageAnalysisResult extends AnalysisResult {
+  severity: FraudSeverity;
+}
+
 
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-// Types used across fraud detection modules;
-import {FraudSeverity} from '@/types / fraud';
 
 // Types used across fraud detection modules
 
@@ -54,6 +61,8 @@ export interface MessageAnalysisResult extends AnalysisResult {
 
 export interface EmailAnalysisResult extends AnalysisResult {}
 export interface FlagResult {
+  success: boolean;
+  error?: string;
 }
 
 ;

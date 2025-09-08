@@ -1,57 +1,21 @@
-
-<<<<<<< HEAD
-
-import { useState } from "react",
-import { useAuth } from "@/hooks/useAuth",
-
-=======
-import { useState } from "react",
-import { useAuth } from "@/hooks/useAuth",
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-import { 
-  BookOpen,
-  Code, 
-  Key, 
-  List, 
-  LucideIcon, 
-  Terminal, 
-  Webhook 
-} from "lucide-react",
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
-import { WebhooksManager } from "@/components/developers/WebhooksManager",
-import { ApiDocumentation } from "@/components/developers/ApiDocumentation",
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  BookOpen,
-  Code, 
-  Key, 
-  List, 
-  LucideIcon, 
-  Terminal, 
-  Webhook 
-} from "lucide-react",
-
+import { useState } from "react";
+import { useAuth } from "@/hooks/useAuth";
 import {
-  // TODO: Implement
-}
   BookOpen,
   Code,
   Key,
   List,
   LucideIcon,
   Terminal,
+  Webhook,
+} from "lucide-react";
 
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { ApiKeysManager } from "@/components/developers/ApiKeysManager";
+import { WebhooksManager } from "@/components/developers/WebhooksManager";
+import { ApiDocumentation } from "@/components/developers/ApiDocumentation";
+import { ApiLogs } from "@/components/developers/ApiLogs";
+interface TabDefinition {
   id: string;
 
   label: string;
@@ -145,60 +109,7 @@ export function DeveloperPortal() {
           Access the Zion API, manage your API keys, and set up webhooks.
         </p>
       </div>
-<<<<<<< HEAD
 
-
-      {/* Tabs */}
-"
-      <div className="border-b border-zinc-800 mb-8">"
-
-=======
-
-  const { user } = useAuth(),
-              return (
-
-
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState<string>("documentation");
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { useState } from './react';
-import { use_auth } from '@/hooks / use_auth';
-import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook } from './lucide-react';
-;
-import { ProtectedRoute } from '@/components / ProtectedRoute';
-import { ApiKeysManager } from '@/components / developers / ApiKeysManager';
-import { WebhooksManager } from '@/components / developers / WebhooksManager';
-import { ApiDocumentation } from '@/components / developers / ApiDocumentation';
-import { ApiLogs } from '@/components / developers / ApiLogs';
-interface TabDefinition {
-  id: string,
-  label: string,
-  icon: LucideIcon;
-}
-export /**
- * DeveloperPortal - Function description
- */
-function DeveloperPortal() {
-  const { user } = use_auth ();
-  const [active_tab, setActiveTab] = useState < string>("documentation");
-;
-  // Define the tabs;
-  const tabs: TabDefinition[] = [;
-    { id: "documentation", label: "Documentation", icon: BookOpen },
-    { id: "api - keys", label: "API Keys", icon: Key },
-    { id: "webhooks", label: "Webhooks", icon: Webhook },
-    { id: "logs", label: "Logs", icon: List }],
-  return (
-    <div className="w - full max - w-7xl mx - auto p - 4 md:p - 8">;
-      <div className="mb - 8">;
-        <h1 className="text - 3xl font - bold text - white flex items - center">;
-          <Terminal className="mr - 3" size={32} />;
-          Developer Portal;
-        </h1>;
-        <p className="text - zinc - 400 mt - 2">;
-          Access the Zion API, manage your API keys, and set up webhooks.;
-        </p>;
-      </div>;
       {/* Tabs */}
       <div className="border-b border-zinc-800 mb-8">
 <<<<<<< HEAD
@@ -404,9 +315,7 @@ export function DeveloperPortal() {;
 
                 {tab.label}
               </button>
-
             );
->>>>>>> origin/cursor/delete-old-data-records-6bba
           })}
         </div>
       </div>
@@ -423,10 +332,8 @@ export function DeveloperPortal() {;
         {activeTab === "api-keys" && <ApiKeysManager />}
         {activeTab === "webhooks" && <WebhooksManager />}
         {activeTab === "logs" && <ApiLogs />}
-
-      </div>;
-    </div>;
-
+      </div>
+    </div>
   );
 }
 

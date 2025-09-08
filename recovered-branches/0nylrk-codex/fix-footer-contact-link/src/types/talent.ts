@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-
-
-
-    title: string,
-    description: string;
-  }[];
-
-=======
-
-id: string;
+export interface TalentProfile {
+  id: string;
   user_id: string;
   full_name: string;
   // TODO: Implement
@@ -24,7 +15,6 @@ pr-12325
   bio?: string;
   summary?: string;
   location?: string;
-
   skills?: string[];
   hourly_rate?: number;
   years_experience?: number;
@@ -34,57 +24,42 @@ pr-12325
   rating_count?: number;
   is_verified?: boolean;
   key_projects?: {
-
+    title: string;
+    description: string;
+  }[];
+}
+export interface TalentProfileFilters {
   search?: string;
   skills?: string[];
-
-  id: string;
-  clientId: string;
-  talentId: string;
-  projectTitle: string;
-  projectDescription: string;
-  budget: {
-    min: number;
-
-<<<<<<< HEAD
-
-    max: number,
-    currency: string;
-
-=======
-
-    max: number
-
-    currency: string
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  }
-  timeline: {
-    startDate: string;
-
-    endDate?: string
-    estimatedDuration?: string
-  }
-  status: 'pending' | 'accepted' | 'rejected' | 'completed'
-
-
-<<<<<<< HEAD
-
-export interface TalentProfile {;
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
   availabilities?: string[];
   regions?: string[];
   priceRange?: [number, number];
   experienceRange?: [number, number];
 }
 
-<<<<<<< HEAD
-;
-
-
-
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+}
+export interface HireRequest {
+  id: string;
+  client_id: string;
+  talent_id: string;
+  project_title: string;
+  project_description: string;
+  budget: {
+    min: number;
+    max: number;
+    currency: string;
+  };
+  timeline: {
+    startDate: string;
+    endDate?: string;
+    estimatedDuration?: string;
+  };
+  status: "pending" | "accepted" | "rejected" | "completed";
+  createdAt: string;
+}
+
+
 export interface TalentProfile {;
 >>>>>>> origin/cursor/delete-old-data-records-6bba

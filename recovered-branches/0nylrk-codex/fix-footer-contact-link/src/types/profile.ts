@@ -1,23 +1,6 @@
-
-<<<<<<< HEAD
-
-
-  level: number, // 1 - 5;
-
 export interface ProfileSkill {
-
-=======
-name: string,
-  level: number, // 1 - 5;
-
-export interface ProfileSkill {
-  name: string,
-  level: number, // 1-5
-  endorsements?: number
->>>>>>> origin/cursor/delete-old-data-records-6bba
   name: string;
   level: number; // 1-5
-
   endorsements?: number;
 }
 
@@ -47,10 +30,6 @@ export interface ProfileSkill {
   tags?: string[];
   url?: string;
   date: string;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 
   url?: string,
@@ -93,8 +72,6 @@ export interface ProfileExperience {
   role: string;
   company: string,
   description: string;
-
-
   startDate: string;
   endDate?: string;
   current?: boolean;
@@ -104,32 +81,32 @@ export interface ProfileExperience {
   end_date?: string,
   current?: boolean;
 }
-
-  status: 'available' | 'limited' | 'unavailable';
-  next_available?: string;
-  message?: string,
-  available_hours?: { day: string, hours: string }[];
-
+export interface Availability {
+  status: "available" | "limited" | "unavailable";
+  nextAvailable?: string;
+  message?: string;
+  availableHours?: { day: string; hours: string }[];
 }
-
-  id: string;
-  name: string;
-  title: string;
-  avatar_url: string;
 
 
   coverImageUrl?: string;
   bio: string;
   location?: string;
   rating?: number;
-
-
+  reviewCount?: number;
+  aiScore?: number;
+  profileType: "service" | "talent";
   skills: ProfileSkill[];
   projects: ProfileProject[];
   experience: ProfileExperience[];
   availability: Availability;
-
-
+  hourlyRate?: number;
+  contactEmail?: string;
+}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  hourlyRate?: number
 
 
 

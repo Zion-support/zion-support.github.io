@@ -1,28 +1,13 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AppStoreButtons } from "./AppStoreButtons";
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 export const MobileAppHero: React.FC = () => {
   // These would come from environment variables or a config
   const appStoreUrl = "#"; // Replace with actual App Store URL when available
   const googlePlayUrl = "#"; // Replace with actual Google Play URL when available
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <section className="relative bg-gradient-to-r from-zion-blue-dark to-zion-purple py-16 md:py-24">
       <div className="container mx-auto px-4 lg:px-8">
@@ -40,10 +25,6 @@ export const MobileAppHero: React.FC = () => {
               Find top AI talent or global IT jobs on the go. The power of;
               Zion's AI matching, now available on your mobile device.
             </p>
-<<<<<<< HEAD
-=======
-"
->>>>>>> origin/cursor/delete-old-data-records-6bba
 
             <div className="mb-8">
               <AppStoreButtons;
@@ -52,11 +33,6 @@ export const MobileAppHero: React.FC = () => {
               />
             </div>
 
-<<<<<<< HEAD
-
-=======
-"
->>>>>>> origin/cursor/delete-old-data-records-6bba
             <Link to="/open-app">
               <Button"
                 variant="outline""
@@ -72,9 +48,6 @@ export const MobileAppHero: React.FC = () => {
 
 <<<<<<< HEAD
 
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
           <div className="flex-1 flex justify-center">
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
@@ -184,13 +157,16 @@ export const MobileAppHero: React.FC = () => {;
 
 
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+          <div className="flex-1 flex justify-center">;
+            <div className="relative w-64 h-auto">;
+              <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>;
+              <Phone className="w-full h-auto text-white" />;
+              {/* This would be replaced with an actual phone mockup image in production */}
             </div>
           </div>
         </div>
       </div>
     </section>
-
+  );
 };
-
-'"
->>>>>>> origin/cursor/delete-old-data-records-6bba

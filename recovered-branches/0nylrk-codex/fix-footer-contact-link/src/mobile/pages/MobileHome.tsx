@@ -11,21 +11,12 @@ import { TalentDashboard } from "../components/dashboard/TalentDashboard";
 import { useAuth } from "@/hooks/useAuth";
 export function MobileHome() {
   const { user } = useAuth();
-
   const isClient = user?.userType === "employer" || user?.userType === "buyer";
 
-import React from "react",
-
-import { MobileHeader } from "../components/common/MobileHeader",
-import { BottomNavigation } from "../components/common/BottomNavigation",
-import { ClientDashboard } from "../components/dashboard/ClientDashboard",
-
-import { TalentDashboard } from "../components/dashboard/TalentDashboard";
-
-import { useAuth } from "@/hooks/useAuth";
-export function MobileHome() {};
-<<<<<<< HEAD
 =======
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
@@ -58,28 +49,14 @@ import { useAuth } from "@/hooks/useAuth",
         showNotifications
         showSettings
 
-<<<<<<< HEAD
-      />
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
       <main className="py-4">
-import React from "react",;
-import { MobileHeader } from "../components/common/MobileHeader",;
-import { BottomNavigation } from "../components/common/BottomNavigation",;
-import { ClientDashboard } from "../components/dashboard/ClientDashboard",;
-import { TalentDashboard } from "../components/dashboard/TalentDashboard",;
-import { useAuth } from "@/hooks/useAuth",;
-export function MobileHome() {;
-  const { user } = useAuth();
-  const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
-  return (;
+        {isClient ? <ClientDashboard /> : <TalentDashboard />}
+      </main>
 
-
-<<<<<<< HEAD
-
-
-=======
+      <BottomNavigation />
+    </div>
+  );
+}
 import React from './react';
 import { MobileHeader } from '../components / common / MobileHeader';
 import { BottomNavigation } from '../components / common / BottomNavigation';

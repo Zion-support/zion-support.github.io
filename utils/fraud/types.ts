@@ -1,25 +1,34 @@
-export type MonitoredSource = $2;
-export type GptClassificationLabel = $2;
-export interface FraudEvent {
-  id: string,
-  userId: string | null,
-  source: MonitoredSource,
-  content: string | null,
-  metadata: Record<string, unknown> | null,
-  ipAddress: string | null,
-  createdAt: string, // ISO string
-}
+// Fraud detection types
+export type AdminActionType =
+  | "ban_user"
+  | "suspend_user"
+  | "flag_content"
+  | "remove_content"
+  | "investigate"
+  | "dismiss"
+  | "escalate";
 
-export interface HeuristicEvaluation {
-  flagged: boolean,
-  reasons: string[],
-  severity: 'low' | 'medium' | 'high'
-}
+export interface AdminAction {
+=======
 
-export interface GptClassification {
-  label: GptClassificationLabel,
-  reason: string,
-  confidence: number, // 0..1
+
+export interface AdminAction {;
+export interface AdminAction {
+
+
+
+export interface AdminAction {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  id: string;
+  case_id: string;
+  type: AdminActionType;
+  adminId: string;
+  reason: string;
+  details: Record<string, any>;
+  createdAt: string;
+  executedAt?: string;
+  status: "pending" | "executed" | "failed";
 }
 
 export type FraudReviewStatus = $2;
@@ -29,37 +38,56 @@ export interface StoredFraudRecord extends FraudEvent {
   autoHidden: boolean,
   status: FraudReviewStatus}
 
-export type AdminActionType = $2;
-export interface AdminActionRecord {
-  id: string,
-  fraudId: string,
-  action: AdminActionType,
-  adminId: string | null,
-  reason: string | null,
-  createdAt: string, // ISO
+export interface FraudDetectionResult {;
+<<<<<<< HEAD
+  isFraud: boolean;
+  confidence: number;
+  reasons: string[];
+=======
+
+  isFraud: boolean;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  confidence: number;
+  reasons: string[];
+  suggestedActions: AdminActionType[];
+  metadata: Record<string, any>;
 }
 
-export interface PrivacySettings {
-  userId: string,
-  monitoringContentAnalysisOptOut: boolean,
-  updatedAt: string, // ISO
-}
 
-export interface ListFilters {
-  source?: MonitoredSource,
-  userId?: string,
-  label?: GptClassificationLabel,
-  status?: FraudReviewStatus
-}
+export interface FraudDetectionConfig {;
 
-export interface MonthlyReport {
-  month: string, // YYYY-MM
-  totals: {
-    all: number,
-    safe: number,
-    suspicious: number,
-    dangerous: number},
-  bySource: Record<MonitoredSource, number>,
-  falsePositives: number, // count of IGNORED actions
-  topReasons: Array<{ reason: string, count: number}>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  enabled: boolean;
+  rules: {
+    suspiciousActivity: {
+      enabled: boolean;
+
+<<<<<<< HEAD
+
+=======
+      threshold: number,
+    }
+    fake_profile: {
+      enabled: boolean;
+      threshold: number;
+    };
+    fakeProfile: {
+      enabled: boolean;
+      threshold: number;
+    };
+    paymentFraud: {
+      enabled: boolean;
+      threshold: number;
+    };
+    spam: {
+      enabled: boolean;
+      threshold: number;
+    };
+  };
+  autoActions: {
+    enabled: boolean;
+    actions: AdminActionType[];
+    confidenceThreshold: number;
+  };
 }

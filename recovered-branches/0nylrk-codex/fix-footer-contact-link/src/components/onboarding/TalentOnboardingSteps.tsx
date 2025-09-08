@@ -1,8 +1,3 @@
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {useOnboardingStatus} from "@/hooks/useOnboardingStatus";
@@ -20,34 +15,6 @@ import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
 import React from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
-import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from "lucide-react";
-import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
-export function TalentOnboardingSteps() {
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  const { user } = useAuth();
-
-  const onboardingStatus = useOnboardingStatus();
-import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from "lucide-react",
-import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",
-
-<<<<<<< HEAD
-
-
-  const onboardingStatus = useOnboardingStatus();
-import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from "lucide-react",
-import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",
-
-
-=======
-export function TalentOnboardingSteps() {
-  const { user } = useAuth(),
-  const onboardingStatus = useOnboardingStatus(),
-  
-import React from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from "lucide-react";
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
 export function TalentOnboardingSteps() {
@@ -115,54 +82,11 @@ id: "match"
       label: "Receive your first job match",
       completed: onboardingStatus.matchReceived,
       link: "/talent-dashboard",
-      action: "View Matches"}],
-  
-  return <OnboardingTracker steps={steps} />
-}
-  const steps: OnboardingStep[] = [;
-    {;
-      id: "profile",;
-      label: "Complete your profile",;
-      completed: onboardingStatus && onboardingStatus.profileCompleted,;
-      completed: onboardingStatus.profileCompleted,;
-      link: "/profile",;
-      action: "Update"},;
-    {;
-      id: "skills",;
-      label: "Add your top skills",;
-      completed: onboardingStatus && onboardingStatus.skillsAdded,;
-      completed: onboardingStatus.skillsAdded,;
-      link: "/profile/skills",;
-      action: "Add Skills"},;
-    {;
-      id: "availability",;
-      label: "Set your availability",;
-      completed: onboardingStatus && onboardingStatus.availabilitySet,;
-      completed: onboardingStatus.availabilitySet,;
-      link: "/profile/availability",;
-      action: "Set"},;
-    {;
-      id: "match",;
-      label: "Receive your first job match",;
-      completed: onboardingStatus.matchReceived,;
-      link: "/talent-dashboard";
-      action: "View Matches"}];
-      completed: onboardingStatus && onboardingStatus.matchReceived,;
-      link: "/talent-dashboard",;
-      action: "View Matches"}],;
-  return <OnboardingTracker steps={steps} />;
-
-      id: "match",
-      label: "Receive your first job match",
-      completed: onboardingStatus.matchReceived,
-      link: "/talent-dashboard",
-      action: "View Matches"}],
-  
-  return <OnboardingTracker steps={steps} />
+      action: "View Matches",
+    },
+  ];
 
   return <OnboardingTracker steps={steps} />;
-
-
 }
 import React from './react';
 import { use_auth  } from '@/hooks / use_auth';

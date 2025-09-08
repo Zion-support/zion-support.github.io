@@ -1,11 +1,7 @@
-
-
+import React from "react";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+import { CodeBlock } from "@/components/developers/CodeBlock";
 export function ApiGettingStarted() {
-  const authExample = `curl -X GET \\
-  https: //api.zionai.com/v1/jobs \\
-  -H "Authorization: Bearer YOUR_API_KEY"`,;
-
-const quickStartJs = `import axios from 'axios';export function ApiGettingStarted() {
 
   const authExample = `curl -X GET \\
   https: //api.zionai.com/v1/jobs \\
@@ -85,25 +81,12 @@ console.log(response.data),`;
         </p>
         <h2>Authentication</h2>
         <p>
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-          All API requests must include your API key in the Authorization header. 
-          You can generate API keys in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</Link>.
-
+          All API requests must include your API key in the Authorization
+          header. You can generate API keys in the{" "}
           <a href="/developers/portal" className="text-zion-cyan">
             Developer Portal;
           </a>
           .
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
         </p>
 "
         <CodeBlock code={authExample} language="bash" showLineNumbers={false} />
@@ -177,12 +160,7 @@ console.log(response.data),`;
         </div>
       </div>
     </ApiDocsLayout>
-
-<<<<<<< HEAD
-
-
-=======
-
+  );
 }
 
 ;

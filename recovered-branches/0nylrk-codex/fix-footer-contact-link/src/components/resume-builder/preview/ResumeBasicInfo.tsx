@@ -1,10 +1,4 @@
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import { ResumeBasicInfo  } from '@/types / resume';
-
+import { ResumeBasicInfo } from "@/types/resume";
 interface ResumeBasicInfoSectionProps {
   basic_info: ResumeBasicInfo;
 

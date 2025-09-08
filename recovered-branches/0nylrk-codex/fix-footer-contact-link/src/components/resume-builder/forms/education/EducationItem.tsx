@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-
 import { format } from "date-fns";
 import { Edit, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -8,51 +5,23 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Education } from "@/types/resume";
 import { EducationItemProps } from "./types";
 export function EducationItem({
-
-
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-
-import {format} from 'date-fns';
-import {Edit, Trash2} from 'lucide-react';
-import {Button} from '@/components/ui/button';
-import {Card, CardContent} from '@/components/ui/card';
-import {Education} from '@/types/resume';
-import {EducationItemProps} from './types';
-
-
-
-import { format } from 'date-fns',
-import { Edit, Trash2 } from 'lucide-react',
-import { Button } from '@/components/ui/button',
-import { Card, CardContent } from '@/components/ui/card',
-import { Education } from '@/types/resume',
-import { EducationItemProps } from './types',
-
-<<<<<<< HEAD
-=======
-
-
-export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
+  education,
+  onEdit,
+  onDelete,
+}: EducationItemProps) {
   return (
-
-import { format } from 'date-fns',;
-import { Edit, Trash2 } from 'lucide-react',;
-import { Button } from '@/components/ui/button',;
-import { Card, CardContent } from '@/components/ui/card',;
-import { Education } from '@/types/resume',;
-import { EducationItemProps } from './types',;
-;
-export function EducationItem({ education, onEdit, onDelete } EducationItemProps) {;
-  return (;
-    <Card className="bg-muted/40">;
-      <CardContent className="pt-6">;
-        <div className="flex justify-between">;
-          <div>;
-            <h4 className="font-medium">{education.degree}</h4>;
-            <p className="text-sm text-muted-foreground">{education.institution}</p>;
-            {education.field_of_study && (;
-              <p className="text-sm text-muted-foreground">{education.field_of_study}</p>;
+    <Card className="bg-muted/40">
+      <CardContent className="pt-6">
+        <div className="flex justify-between">
+          <div>
+            <h4 className="font-medium">{education.degree}</h4>
+            <p className="text-sm text-muted-foreground">
+              {education.institution}
+            </p>
+            {education.field_of_study && (
+              <p className="text-sm text-muted-foreground">
+                {education.field_of_study}
+              </p>
             )}
             <p className="text-xs text-muted-foreground mt-1">;
               {typeof education.start_date === 'string' ;
@@ -84,9 +53,11 @@ export function EducationItem({ education, onEdit, onDelete } EducationItemProps
             </Button>;
           </div>;
         </div>;
-
-      </CardContent>;
-    </Card>;
+        {education && education.description && (;
+          <p className="text-sm mt-3 line-clamp-2">{education && education.description}</p>;
+        )}
+      </CardContent>
+    </Card>
   );
 }
               </p>)}

@@ -1,60 +1,23 @@
 import React from "react";
-
-
-<<<<<<< HEAD
-
-import React from "react",
-import { 
-
-=======
+import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogDescription} from "@/components/ui/dialog";"
-import { Button } from "@/components/ui/button";"
-import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react";"
-import { Card, CardContent } from "@/components/ui/card";"
-import { Separator } from "@/components/ui/separator";"
-import { QuoteStatusBadge } from "./QuoteStatusBadge";"
-import type { QuoteRequest } from "@/types/quotes";"
-import React from "react","
-  }
-import React from "react",
-import { 
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  Dialog,
-
-  DialogContent, 
-  DialogHeader, 
-  DialogTitle, 
-  DialogDescription 
-} from "@/components/ui/dialog",
-
-import { Button } from "@/components/ui/button",
-import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react",
-import { Card, CardContent } from "@/components/ui/card",
-import { Separator } from "@/components/ui/separator",
-import { QuoteStatusBadge } from "./QuoteStatusBadge",
-import type { QuoteRequest } from "@/types/quotes",
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+  DialogDescription,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { QuoteStatusBadge } from "./QuoteStatusBadge";
+import type { QuoteRequest } from "@/types/quotes";
+import { format } from "date-fns";
 interface QuoteDetailsProps {
-
   quote: QuoteRequest | null;
   isOpen: boolean;
-
-<<<<<<< HEAD
-  onClose: () => void
-import {format} from "date-fns";
-
-
-  };
-
+  onClose: () => void;
+}
 
 import {format} from "date-fns";
 
@@ -527,7 +490,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
 <<<<<<< HEAD
 
 =======
->>>>>>> origin/cursor/delete-old-data-records-6bba
       return date_string;
     }
   }

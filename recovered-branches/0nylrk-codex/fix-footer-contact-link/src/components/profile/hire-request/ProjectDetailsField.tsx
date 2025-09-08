@@ -1,6 +1,5 @@
-
-<<<<<<< HEAD
-=======
+import React from "react";
+import { UseFormReturn } from "react-hook-form";
 import {
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 
@@ -18,52 +17,6 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import { FormValues } from "./useHireRequestForm";
 interface ProjectDetailsFieldProps {
-  form: UseFormReturn<FormValues>
-}
-
-
-interface ProjectDetailsFieldProps {
-  form: UseFormReturn < FormValues>;
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import {UseFormReturn} from "react-hook-form";
-import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
-import {Textarea} from "@/components/ui/textarea";
-import {FormValues} from "./useHireRequestForm";
-
-interface ProjectDetailsFieldProps {
-  form: UseFormReturn<FormValues>
-
-
-<<<<<<< HEAD
-=======
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-
-} from "@/components/ui/form";
-import { Textarea } from "@/components/ui/textarea";
-
-import { FormValues } from "./useHireRequestForm";
-interface ProjectDetailsFieldProps {}
-  form: UseFormReturn<FormValues>;
-
-  form: UseFormReturn<FormValues>
->>>>>>> origin/cursor/delete-old-data-records-6bba
-import React from "react",
-import { UseFormReturn } from "react-hook-form",
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Textarea } from "@/components/ui/textarea",
-import { FormValues } from "./useHireRequestForm",
-interface ProjectDetailsFieldProps {
-<<<<<<< HEAD
-
-  form: UseFormReturn<FormValues>
-import React from "react",;
-import { UseFormReturn } from "react-hook-form",;
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
-
 =======
   }
   "form": UseFormReturn<FormValues>
