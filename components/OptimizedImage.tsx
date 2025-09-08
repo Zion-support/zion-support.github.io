@@ -9,28 +9,51 @@ interface OptimizedImageProps {
   className?: string;
   priority?: boolean;
   quality?: number;
+  fill?: boolean;
+  sizes?: string;
+  placeholder?: 'blur' | 'empty';
+  blurDataURL?: string;
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
-  width = 800,
-  height = 600,
+  width,
+  height,
   className = '',
   priority = false,
   quality = 75,
+  fill = false,
+  sizes,
+  placeholder = 'empty',
+  blurDataURL,
 }) => {
+  const imageProps = {
+    src,
+    alt,
+    className,
+    priority,
+    quality,
+    placeholder,
+    ...(blurDataURL && { blurDataURL }),
+    ...(sizes && { sizes }),
+  };
+
+  if (fill) {
+    return (
+      <Image
+        {...imageProps}
+        fill
+        style={{ objectFit: 'cover' }}
+      />
+    );
+  }
+
   return (
     <Image
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      className={className}
-      priority={priority}
-      quality={quality}
-      placeholder="blur"
-      blurDataURL="data:image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+      {...imageProps}
+      width={width || 400}
+      height={height || 300}
     />
   );
 };
