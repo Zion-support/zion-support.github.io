@@ -94,22 +94,141 @@ import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 <<<<<<< HEAD
 =======
 import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+import { 
+  Menu, 
+  X, 
+  Search, 
+  User, 
+  Bell, 
+  ChevronDown,
+  Brain,
+  Shield,
+  Cloud,
+  Zap,
+  Globe,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  Code,
+  Rocket,
+  Users,
+  BarChart3,
+  FileImage,
+  TrendingUp,
+  MessageCircle,
+  Video,
+  FileText,
+  Heart,
+  PanelLeft,
+  ShoppingBag
+} from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const isMobile = useIsMobile();
-  
-  // Try to access the messaging context, but provide a fallback value if it's not available
-  let unreadCount = 0;
-  try {
-    const { unreadCount: count } = useMessaging();
-    unreadCount = count;
-  } catch (error) {
-    console.warn('Messaging context not available');
-  }
-<<<<<<< HEAD
-  
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const { user, logout } = useAuth();
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setMobileMenuOpen(false);
+    setActiveDropdown(null);
+  }, [location.pathname]);
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
+    }
+  };
+
+  const toggleDropdown = (dropdown: string) => {
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  };
+
+  const navigationItems = [
+    {
+      name: 'Services',
+      href: '/services',
+      icon: Zap,
+      dropdown: [
+        { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
+        { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket },
+        { name: 'Blockchain', href: '/services/blockchain', icon: Lock },
+        { name: 'Digital Twin', href: '/services/digital-twin', icon: Globe },
+        { name: 'Sustainability', href: '/services/sustainability', icon: Heart }
+      ]
+    },
+    {
+      name: 'Micro SAAS',
+      href: '/micro-saas',
+      icon: Code,
+      dropdown: [
+        { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence' },
+        { name: 'Customer Experience', href: '/micro-saas/customer-experience' },
+        { name: 'Quantum Computing', href: '/micro-saas/quantum-computing' },
+        { name: 'Supply Chain', href: '/micro-saas/supply-chain' },
+        { name: 'Cybersecurity', href: '/micro-saas/cybersecurity' },
+        { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge' },
+        { name: 'Content Creation', href: '/micro-saas/content-creation' },
+        { name: 'HR Platform', href: '/micro-saas/hr-platform' }
+      ]
+    },
+    {
+      name: 'IT Services',
+      href: '/it-services',
+      icon: Network,
+      dropdown: [
+        { name: 'Infrastructure', href: '/it-services/infrastructure' },
+        { name: 'Digital Transformation', href: '/it-services/digital-transformation' },
+        { name: 'Consulting', href: '/it-services/consulting' },
+        { name: 'Onsite Support', href: '/it-services/onsite-support' },
+        { name: 'Green IT', href: '/it-services/green-it' },
+        { name: '5G Solutions', href: '/it-services/5g-solutions' }
+      ]
+    },
+    {
+      name: 'Marketplace',
+      href: '/marketplace',
+      icon: ShoppingBag,
+      dropdown: [
+        { name: 'Products', href: '/marketplace/products' },
+        { name: 'Talent', href: '/marketplace/talent' },
+        { name: 'Equipment', href: '/marketplace/equipment' },
+        { name: 'Services', href: '/marketplace/services' }
+      ]
+    },
+    {
+      name: 'Company',
+      href: '/about',
+      icon: Users,
+      dropdown: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Team', href: '/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Contact', href: '/contact' }
+      ]
+    }
+  ];
+
   return (
     <>
       <header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md">
@@ -249,22 +368,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MainNavigation } from './MainNavigation';
 
-export function AppHeader(): JSX.Element {
-	return (
-		<header className="bg-white shadow-sm border-b border-gray-200">
-			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="flex justify-between items-center h-16">
-					<div className="flex items-center">
-						<Link to="/" className="flex-shrink-0">
-							<h1 className="text-2xl font-bold text-zion-purple">Zion Tech Group</h1>
-						</Link>
-					</div>
-					<MainNavigation />
-				</div>
-			</div>
-		</header>
-	);
-}
+
 
 export function AppHeader({ isAdmin = false, unreadCount = 0 }: AppHeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
