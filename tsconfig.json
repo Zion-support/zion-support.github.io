@@ -39,17 +39,8 @@
     "noUncheckedIndexedAccess": false,
     "allowJs": true,
     "incremental": true,
-<<<<<<< HEAD
     "noEmitOnError": false,
-    "skipLibCheck": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
-=======
-    "noEmitOnError": false
->>>>>>> main
+    "skipLibCheck": true
   },
   "include": [
     "src/**/*",
