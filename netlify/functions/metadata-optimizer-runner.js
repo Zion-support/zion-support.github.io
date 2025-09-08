@@ -1,26 +1,39 @@
-exports.handler = async function(event, context) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('metadata-optimizer-runner function triggered');
     
-    // Basic metadata-optimizer-runner logic
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the metadata optimizer automation
+    const result = execSync('node automation/metadata-optimizer.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('metadata-optimizer-runner completed successfully:', result);
+    
+    return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'metadata-optimizer-runner executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'metadata-optimizer-runner'
+        success: true,
+        message: 'Metadata optimizer runner completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in metadata-optimizer-runner:', error);
+    console.error('metadata-optimizer-runner error:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'metadata-optimizer-runner'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

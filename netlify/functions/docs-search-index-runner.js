@@ -1,26 +1,39 @@
-exports.handler = async function(event, context) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('docs-search-index-runner function triggered');
     
-    // Basic docs-search-index-runner logic
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the docs search index automation
+    const result = execSync('node automation/docs-pages-indexer.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('docs-search-index-runner completed successfully:', result);
+    
+    return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'docs-search-index-runner executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'docs-search-index-runner'
+        success: true,
+        message: 'Docs search index runner completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in docs-search-index-runner:', error);
+    console.error('docs-search-index-runner error:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'docs-search-index-runner'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

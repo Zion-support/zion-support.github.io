@@ -1,26 +1,39 @@
-exports.handler = async function(event, context) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('ai-trends-radar-runner function triggered');
     
-    // Basic ai-trends-radar-runner logic
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the AI trends radar automation
+    const result = execSync('node automation/quantum-ai-innovation.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('ai-trends-radar-runner completed successfully:', result);
+    
+    return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'ai-trends-radar-runner executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'ai-trends-radar-runner'
+        success: true,
+        message: 'AI trends radar runner completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in ai-trends-radar-runner:', error);
+    console.error('ai-trends-radar-runner error:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'ai-trends-radar-runner'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

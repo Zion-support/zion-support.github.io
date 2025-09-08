@@ -1,26 +1,39 @@
-exports.handler = async function(event, context) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('pagespeed-insights-runner function triggered');
     
-    // Basic pagespeed-insights-runner logic
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the PageSpeed Insights automation
+    const result = execSync('node automation/advanced-performance-monitor.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('pagespeed-insights-runner completed successfully:', result);
+    
+    return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'pagespeed-insights-runner executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'pagespeed-insights-runner'
+        success: true,
+        message: 'PageSpeed Insights runner completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in pagespeed-insights-runner:', error);
+    console.error('pagespeed-insights-runner error:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'pagespeed-insights-runner'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

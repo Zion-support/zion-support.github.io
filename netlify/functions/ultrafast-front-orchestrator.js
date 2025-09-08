@@ -1,26 +1,39 @@
-exports.handler = async function(event, context) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('ultrafast-front-orchestrator function triggered');
     
-    // Basic ultrafast-front-orchestrator logic
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the ultrafast front orchestrator automation
+    const result = execSync('node automation/ultra-fast-service-generator.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('ultrafast-front-orchestrator completed successfully:', result);
+    
+    return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'ultrafast-front-orchestrator executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'ultrafast-front-orchestrator'
+        success: true,
+        message: 'Ultrafast front orchestrator completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in ultrafast-front-orchestrator:', error);
+    console.error('ultrafast-front-orchestrator error:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'ultrafast-front-orchestrator'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

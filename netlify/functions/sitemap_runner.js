@@ -1,27 +1,39 @@
-exports.handler = async function(event, context) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
-    console.log('🤖 sitemap_runner function triggered');
+    console.log('sitemap_runner function triggered');
     
-    // Basic implementation - replace with actual logic
-    const timestamp = new Date().toISOString();
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the sitemap automation
+    const result = execSync('node automation/sitemap-and-search.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('sitemap_runner completed successfully:', result);
     
     return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'sitemap_runner function executed successfully',
-        timestamp: timestamp,
-        function: 'sitemap_runner'
+        success: true,
+        message: 'Sitemap runner completed successfully',
+        result: result
       })
     };
   } catch (error) {
-    console.error('❌ sitemap_runner function failed:', error);
+    console.error('sitemap_runner error:', error);
     
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'sitemap_runner function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

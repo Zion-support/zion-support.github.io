@@ -1,26 +1,39 @@
-exports.handler = async function(event, context) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('home-visionary-expander function triggered');
     
-    // Basic home-visionary-expander logic
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the home visionary expander automation
+    const result = execSync('node automation/home-visionary-expander.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('home-visionary-expander completed successfully:', result);
+    
+    return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'home-visionary-expander executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'home-visionary-expander'
+        success: true,
+        message: 'Home visionary expander completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in home-visionary-expander:', error);
+    console.error('home-visionary-expander error:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'home-visionary-expander'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

@@ -1,27 +1,39 @@
-exports.handler = async function(event, context) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
-    console.log('🤖 cloud_orchestrator function triggered');
+    console.log('cloud_orchestrator function triggered');
     
-    // Basic implementation - replace with actual logic
-    const timestamp = new Date().toISOString();
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the cloud orchestrator automation
+    const result = execSync('node automation/cloud-orchestrator-plus.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 60000
+    });
+    
+    console.log('cloud_orchestrator completed successfully:', result);
     
     return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'cloud_orchestrator function executed successfully',
-        timestamp: timestamp,
-        function: 'cloud_orchestrator'
+        success: true,
+        message: 'Cloud orchestrator completed successfully',
+        result: result
       })
     };
   } catch (error) {
-    console.error('❌ cloud_orchestrator function failed:', error);
+    console.error('cloud_orchestrator error:', error);
     
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'cloud_orchestrator function failed',
-        message: error.message,
-        timestamp: new Date().toISOString()
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

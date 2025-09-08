@@ -1,26 +1,39 @@
-exports.handler = async function(event, context) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('front-ads-promoter function triggered');
     
-    // Basic front-ads-promoter logic
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the front ads promoter automation
+    const result = execSync('node automation/front-index-ads.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('front-ads-promoter completed successfully:', result);
+    
+    return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'front-ads-promoter executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'front-ads-promoter'
+        success: true,
+        message: 'Front ads promoter completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in front-ads-promoter:', error);
+    console.error('front-ads-promoter error:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'front-ads-promoter'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

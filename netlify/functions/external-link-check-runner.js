@@ -1,26 +1,39 @@
-exports.handler = async function(event, context) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('external-link-check-runner function triggered');
     
-    // Basic external-link-check-runner logic
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the external link check automation
+    const result = execSync('node automation/external-link-check.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('external-link-check-runner completed successfully:', result);
+    
+    return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'external-link-check-runner executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'external-link-check-runner'
+        success: true,
+        message: 'External link check runner completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in external-link-check-runner:', error);
+    console.error('external-link-check-runner error:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'external-link-check-runner'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

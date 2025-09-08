@@ -1,26 +1,39 @@
-exports.handler = async function(event, context) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('ai-changelog-runner function triggered');
     
-    // Basic AI changelog generation logic
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the AI changelog automation
+    const result = execSync('node automation/ai-changelog-generator.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('ai-changelog-runner completed successfully:', result);
+    
+    return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'ai-changelog-runner executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'ai-changelog-runner'
+        success: true,
+        message: 'AI changelog runner completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in ai-changelog-runner:', error);
+    console.error('ai-changelog-runner error:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'ai-changelog-runner'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

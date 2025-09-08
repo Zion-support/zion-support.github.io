@@ -1,26 +1,39 @@
-exports.handler = async function(event, context) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('robots-auditor function triggered');
     
-    // Basic robots-auditor logic
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the robots auditor automation
+    const result = execSync('node automation/seo-audit.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('robots-auditor completed successfully:', result);
+    
+    return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'robots-auditor executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'robots-auditor'
+        success: true,
+        message: 'Robots auditor completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in robots-auditor:', error);
+    console.error('robots-auditor error:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'robots-auditor'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

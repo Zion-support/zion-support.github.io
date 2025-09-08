@@ -1,26 +1,39 @@
-exports.handler = async function(event, context) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('front-maximizer function triggered');
     
-    // Basic front-maximizer logic
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the front maximizer automation
+    const result = execSync('node automation/frontend-automation-orchestrator.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('front-maximizer completed successfully:', result);
+    
+    return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'front-maximizer executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'front-maximizer'
+        success: true,
+        message: 'Front maximizer completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in front-maximizer:', error);
+    console.error('front-maximizer error:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'front-maximizer'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

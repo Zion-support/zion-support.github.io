@@ -1,26 +1,39 @@
-exports.handler = async function(event, context) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('readme-advertiser function triggered');
     
-    // Basic readme-advertiser logic
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the readme advertiser automation
+    const result = execSync('node automation/readme-auto-advertiser.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('readme-advertiser completed successfully:', result);
+    
+    return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'readme-advertiser executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'readme-advertiser'
+        success: true,
+        message: 'Readme advertiser completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in readme-advertiser:', error);
+    console.error('readme-advertiser error:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'readme-advertiser'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

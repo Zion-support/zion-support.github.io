@@ -1,26 +1,39 @@
-exports.handler = async function(event, context) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('todo-scanner-runner function triggered');
     
-    // Basic todo-scanner-runner logic
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the todo scanner automation
+    const result = execSync('node automation/todo-scanner.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('todo-scanner-runner completed successfully:', result);
+    
+    return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'todo-scanner-runner executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'todo-scanner-runner'
+        success: true,
+        message: 'Todo scanner runner completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in todo-scanner-runner:', error);
+    console.error('todo-scanner-runner error:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'todo-scanner-runner'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

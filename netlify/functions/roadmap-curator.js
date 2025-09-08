@@ -1,26 +1,39 @@
-exports.handler = async function(event, context) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('roadmap-curator function triggered');
     
-    // Basic roadmap-curator logic
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the roadmap curator automation
+    const result = execSync('node automation/quantum-ai-innovation.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('roadmap-curator completed successfully:', result);
+    
+    return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'roadmap-curator executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'roadmap-curator'
+        success: true,
+        message: 'Roadmap curator completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in roadmap-curator:', error);
+    console.error('roadmap-curator error:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'roadmap-curator'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }

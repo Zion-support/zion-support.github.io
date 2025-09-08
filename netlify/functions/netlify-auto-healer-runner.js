@@ -1,26 +1,39 @@
-exports.handler = async function(event, context) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
     console.log('netlify-auto-healer-runner function triggered');
     
-    // Basic netlify-auto-healer-runner logic
-    const result = {
+    // Get the root directory
+    const rootDir = path.resolve(__dirname, '../..');
+    
+    // Run the netlify auto healer automation
+    const result = execSync('node automation/netlify-auto-healer.cjs', {
+      cwd: rootDir,
+      encoding: 'utf8',
+      timeout: 30000
+    });
+    
+    console.log('netlify-auto-healer-runner completed successfully:', result);
+    
+    return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'netlify-auto-healer-runner executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'netlify-auto-healer-runner'
+        success: true,
+        message: 'Netlify auto healer runner completed successfully',
+        result: result
       })
     };
-    
-    return result;
   } catch (error) {
-    console.error('Error in netlify-auto-healer-runner:', error);
+    console.error('netlify-auto-healer-runner error:', error);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'netlify-auto-healer-runner'
+        success: false,
+        error: error.message,
+        stack: error.stack
       })
     };
   }
