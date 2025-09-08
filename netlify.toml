@@ -188,6 +188,26 @@
   schedule = "53 */6 * * *"
 
 [[scheduled.functions]]
+  name = "og-coverage-auditor"
+  schedule = "23 */6 * * *"
+
+[[scheduled.functions]]
+  name = "performance-budget-runner"
+  schedule = "37 */6 * * *"
+
+[[scheduled.functions]]
+  name = "roadmap-builder-runner"
+  schedule = "0 */12 * * *"
+
+[[scheduled.functions]]
+  name = "redirect-healer"
+  schedule = "*/15 * * * *"
+
+[[scheduled.functions]]
+  name = "sitemap-prioritizer"
+  schedule = "17 */6 * * *"
+
+[[scheduled.functions]]
   name = "redirect-manager"
   schedule = "*/30 * * * *"
 

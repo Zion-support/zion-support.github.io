@@ -142,54 +142,47 @@ const Index: NextPage = () => {
             <p className="text-white/70">Regenerates the AI changelog for transparent progress.</p>
             <a className="text-cyan-300 underline" href="/.netlify/functions/ai-changelog-runner" target="_blank" rel="noopener">Trigger / View</a>
           </li>
-
+ 
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
             <h2 className="text-xl font-bold">Dependency Licenses Audit</h2>
             <p className="text-white/70">Audits dependency licenses and writes public reports.</p>
             <a className="text-cyan-300 underline" href="/.netlify/functions/dependency-licenses-audit" target="_blank" rel="noopener">Trigger / View</a>
           </li>
-
+ 
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
             <h2 className="text-xl font-bold">Tech Debt Dashboard</h2>
             <p className="text-white/70">Scans TODO/FIXME/HACK across the repo; publishes a dashboard.</p>
             <a className="text-cyan-300 underline" href="/.netlify/functions/tech-debt-dashboard" target="_blank" rel="noopener">Trigger / View</a>
           </li>
-
+ 
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Autonomous Roadmap</h2>
-            <p className="text-white/70">Continuously generated roadmap from repository TODOs.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/roadmap-runner" target="_blank" rel="noopener">Trigger / View</a>
-            <span className="block text-white/60 text-sm mt-1">
-              <a className="underline" href="/reports/roadmap" target="_blank" rel="noopener">Open Report</a>
-            </span>
+            <h2 className="text-xl font-bold">Cloud Autonomous Orchestrator</h2>
+            <p className="text-white/70">Runs cloud orchestrations; fixes, builds, and syncs.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/cloud-autonomous-orchestrator-runner" target="_blank" rel="noopener">Trigger / View</a>
           </li>
+ 
+          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
+            <h2 className="text-xl font-bold">Branch Cleanup Runner</h2>
+            <p className="text-white/70">Deletes merged or stale ephemeral branches via GitHub API.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/branch-cleanup-runner" target="_blank" rel="noopener">Trigger / View</a>
+          </li>
++         <li className="rounded-lg bg-white/5 border border-white/10 p-5">
++           <h2 className="text-xl font-bold">OG Coverage Auditor</h2>
++           <p className="text-white/70">Audits pages for Open Graph tag coverage and publishes a report.</p>
++           <a className="text-cyan-300 underline" href="/.netlify/functions/og-coverage-auditor" target="_blank" rel="noopener">Trigger / View</a>
++         </li>
++         <li className="rounded-lg bg-white/5 border border-white/10 p-5">
++           <h2 className="text-xl font-bold">Performance Budget Reporter</h2>
++           <p className="text-white/70">Scans public assets and CSS to report on size budgets.</p>
++           <a className="text-cyan-300 underline" href="/.netlify/functions/performance-budget-runner" target="_blank" rel="noopener">Trigger / View</a>
++         </li>
++         <li className="rounded-lg bg-white/5 border border-white/10 p-5">
++           <h2 className="text-xl font-bold">Roadmap Auto‑Builder</h2>
++           <p className="text-white/70">Synthesizes a roadmap from TODO signals into docs/reports.</p>
++           <a className="text-cyan-300 underline" href="/.netlify/functions/roadmap-builder-runner" target="_blank" rel="noopener">Trigger / View</a>
++         </li>
         </ul>
-        <div className="mt-12">
-          <h2 className="text-2xl font-bold mb-3">New Intelligent Automations</h2>
-          <ul className="space-y-4">
-            <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-              <h3 className="text-lg font-bold">Autonomous Invention Orchestrator</h3>
-              <p className="text-white/70">Discovers opportunities, futurizes the front, commits, and pushes to main.</p>
-              <a className="text-cyan-300 underline" href="/.netlify/functions/autonomous-invention-orchestrator" target="_blank" rel="noopener">Trigger / View</a>
-            </li>
-            <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-              <h3 className="text-lg font-bold">LLM Content Curator</h3>
-              <p className="text-white/70">Curates copy and promos across key pages with safe, reviewable edits.</p>
-              <a className="text-cyan-300 underline" href="/.netlify/functions/llm-content-curator-runner" target="_blank" rel="noopener">Trigger / View</a>
-            </li>
-            <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-              <h3 className="text-lg font-bold">Front Index Advertiser</h3>
-              <p className="text-white/70">Auto-generates and injects fresh front index promos and deep links.</p>
-              <a className="text-cyan-300 underline" href="/.netlify/functions/front-index-advertiser" target="_blank" rel="noopener">Trigger / View</a>
-            </li>
-            <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-              <h3 className="text-lg font-bold">Auto Media Release</h3>
-              <p className="text-white/70">Publishes condensed product updates to the newsroom and social.</p>
-              <a className="text-cyan-300 underline" href="/.netlify/functions/auto-media-release-runner" target="_blank" rel="noopener">Trigger / View</a>
-            </li>
-          </ul>
-        </div>
-      </main>
+</main>
     </div>
   );
 };
