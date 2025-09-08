@@ -9,6 +9,8 @@
   PYTHON_VERSION = "3.11"
   # Skip Netlify auto installers; rely on build command
   NETLIFY_SKIP_INSTALL = "true"
+  # Explicitly disable the Next.js Netlify plugin/runtime for this Vite SPA
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
   # Disable mise shims entirely during Netlify builds
   MISE_DISABLE = "1"
   MISE_SHIMS = "0"
@@ -18,6 +20,10 @@
   ELECTRON_SKIP_DOWNLOAD = "1"
 
 ## Plugins removed to avoid extra dependency installation during Netlify build
+## Ensure Netlify UI does not inject Next.js runtime for this site
+# [[plugins]]
+#   package = "@netlify/plugin-nextjs"
+#   enabled = false
 
 [[redirects]]
   from = "/*"
