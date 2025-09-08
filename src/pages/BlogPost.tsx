@@ -1,207 +1,321 @@
 <<<<<<< HEAD
 
 import React from 'react';
-import { useParams, Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
-import { Calendar, 
-  User, 
-  Clock, 
-  User, 
-  Tag, 
-  Share2, 
-  Bookmark, 
-  Heart, 
-  MessageCircle, 
-  ExternalLink,
-  TrendingUp,
-  Star,
-  Eye,
-  ThumbsUp,
-  BookOpen,
-  Zap,
-  Brain,
-  Cloud,
-  Shield,
-  Rocket,
-  Globe,
-  Building,
-  Users,
-  Target,
-  Award
-} from 'lucide-react';
+import { useParams, Link } from 'react-router-dom';
+import { SEO } from '../components/SEO';
+import { motion } from 'framer-motion';
+import { Calendar, User, ArrowLeft, Share2, Bookmark, Clock, Tag, MessageCircle, Heart, ArrowRight } from 'lucide-react';
+
+// Mock blog post data - in a real app, this would come from an API
+const blogPost = {
+  id: 1,
+  title: 'The Future of AI in Enterprise: 2025 Trends and Predictions',
+  content: `
+    <p class="mb-6 text-lg text-slate-300 leading-relaxed">
+      Artificial Intelligence has evolved from a buzzword to a fundamental business enabler. As we approach 2025, 
+      enterprises are witnessing unprecedented transformation through AI integration. This comprehensive analysis 
+      explores the key trends that will shape the enterprise AI landscape in the coming year.
+    </p>
+
+    <h2 class="text-2xl font-bold text-white mb-4 mt-8">1. AI-Powered Decision Intelligence</h2>
+    <p class="mb-6 text-slate-300 leading-relaxed">
+      Decision intelligence platforms are becoming the backbone of modern enterprises. These systems combine 
+      traditional business intelligence with AI-driven insights, enabling organizations to make faster, 
+      more accurate decisions. Companies implementing decision intelligence are seeing 40% improvement 
+      in operational efficiency and 25% reduction in decision-making time.
+    </p>
+
+    <h2 class="text-2xl font-bold text-white mb-4 mt-8">2. Autonomous Business Processes</h2>
+    <p class="mb-6 text-slate-300 leading-relaxed">
+      The era of fully autonomous business processes is upon us. From automated customer service to 
+      intelligent supply chain management, AI systems are taking over routine tasks, allowing human 
+      workers to focus on strategic initiatives. This shift is expected to create new job categories 
+      focused on AI oversight and optimization.
+    </p>
+
+    <h2 class="text-2xl font-bold text-white mb-4 mt-8">3. AI Ethics and Governance</h2>
+    <p class="mb-6 text-slate-300 leading-relaxed">
+      As AI becomes more pervasive, ethical considerations are taking center stage. Enterprises are 
+      implementing comprehensive AI governance frameworks to ensure responsible AI deployment. This 
+      includes bias detection, transparency requirements, and human oversight mechanisms.
+    </p>
+
+    <h2 class="text-2xl font-bold text-white mb-4 mt-8">4. Edge AI and Distributed Intelligence</h2>
+    <p class="mb-6 text-slate-300 leading-relaxed">
+      Edge computing combined with AI is enabling real-time decision making at the data source. 
+      This approach reduces latency, improves privacy, and enables AI applications in environments 
+      where cloud connectivity is limited or unreliable.
+    </p>
+
+    <h2 class="text-2xl font-bold text-white mb-4 mt-8">5. AI-Augmented Creativity</h2>
+    <p class="mb-6 text-slate-300 leading-relaxed">
+      AI is not replacing human creativity but augmenting it. Creative professionals are using 
+      AI tools to generate ideas, optimize workflows, and explore new possibilities. This 
+      collaboration is leading to innovative solutions that neither humans nor AI could create alone.
+    </p>
+
+    <h2 class="text-2xl font-bold text-white mb-4 mt-8">Looking Ahead</h2>
+    <p class="mb-6 text-slate-300 leading-relaxed">
+      The enterprise AI landscape of 2025 will be characterized by increased automation, 
+      enhanced decision-making capabilities, and a focus on responsible AI deployment. 
+      Organizations that embrace these trends while maintaining human oversight will be 
+      best positioned for success in the AI-driven future.
+    </p>
+  `,
+  author: {
+    name: 'Dr. Sarah Chen',
+    title: 'AI Research Director',
+    avatar: '/api/placeholder/100/100',
+    bio: 'Leading expert in enterprise AI with over 15 years of experience in machine learning and business intelligence.'
+  },
+  date: '2025-01-15',
+  readTime: '8 min read',
+  category: 'AI & Analytics',
+  tags: ['AI', 'Enterprise', 'Trends', '2025', 'Machine Learning', 'Digital Transformation'],
+  relatedPosts: [
+    {
+      id: 2,
+      title: 'Digital Twin Technology: Revolutionizing Industrial Operations',
+      excerpt: 'Learn how digital twin technology is transforming manufacturing, healthcare, and urban planning.',
+      date: '2025-01-10',
+      category: 'Digital Twin'
+    },
+    {
+      id: 3,
+      title: 'Quantum Computing: Breaking Down the Hype vs. Reality',
+      excerpt: 'Separate fact from fiction in the quantum computing landscape and understand its real-world applications.',
+      date: '2025-01-05',
+      category: 'Quantum Computing'
+    }
+  ]
+};
 
 export default function BlogPost() {
-  const { id } = useParams();
-  const [isLiked, setIsLiked] = useState(false);
-  const [isBookmarked, setIsBookmarked] = useState(false);
-
-  // Mock blog post data - in a real app, this would come from an API
-  const blogPost = {
-    id: id || '1',
-    title: 'The Future of AI in Enterprise: How Zion Tech Group is Leading the Revolution',
-    excerpt: 'Discover how artificial intelligence is transforming enterprise operations and how Zion Tech Group is at the forefront of this technological revolution.',
-    content: `
-      <p class="mb-6 text-lg leading-relaxed">
-        Artificial Intelligence has evolved from a futuristic concept to a practical business tool that's reshaping how enterprises operate, compete, and grow. At Zion Tech Group, we've been at the forefront of this transformation, helping organizations harness the power of AI to drive innovation and achieve unprecedented results.
-      </p>
-      
-      <h2 class="text-2xl font-bold text-white mb-4 mt-8">The AI Revolution in Enterprise</h2>
-      <p class="mb-6 text-lg leading-relaxed">
-        The enterprise AI landscape has witnessed remarkable growth over the past decade. What started as simple automation tools has evolved into sophisticated systems capable of understanding context, making predictions, and learning from experience. This evolution has created new opportunities for businesses to optimize operations, enhance customer experiences, and unlock new revenue streams.
-      </p>
-      
-      <p class="mb-6 text-lg leading-relaxed">
-        Our research shows that organizations implementing AI solutions see an average 30% improvement in operational efficiency and a 25% increase in customer satisfaction. These aren't just numbers—they represent real business value that can make the difference between thriving and merely surviving in today's competitive landscape.
-      </p>
-      
-      <h2 class="text-2xl font-bold text-white mb-4 mt-8">Zion Tech Group's AI Solutions</h2>
-      <p class="mb-6 text-lg leading-relaxed">
-        We've developed a comprehensive suite of AI solutions designed specifically for enterprise needs. Our AI Business Intelligence platform combines machine learning algorithms with advanced data analytics to provide actionable insights that drive strategic decision-making.
-      </p>
-      
-      <p class="mb-6 text-lg leading-relaxed">
-        The AI Workflow Orchestrator automates complex business processes, reducing manual work by up to 70% while improving accuracy and consistency. This allows employees to focus on high-value tasks that require human creativity and judgment.
-      </p>
-      
-      <h2 class="text-2xl font-bold text-white mb-4 mt-8">Real-World Impact</h2>
-      <p class="mb-6 text-lg leading-relaxed">
-        One of our clients, a Fortune 500 manufacturing company, implemented our AI-powered predictive maintenance system and reduced equipment downtime by 45%. Another client, a healthcare provider, used our AI diagnostic tools to improve patient outcomes while reducing diagnostic time by 60%.
-      </p>
-      
-      <p class="mb-6 text-lg leading-relaxed">
-        These success stories demonstrate that AI isn't just about cutting-edge technology—it's about solving real business problems and creating measurable value for organizations and their stakeholders.
-      </p>
-      
-      <h2 class="text-2xl font-bold text-white mb-4 mt-8">Looking Ahead</h2>
-      <p class="mb-6 text-lg leading-relaxed">
-        As we look to the future, we see AI becoming even more integrated into enterprise operations. The next generation of AI solutions will focus on explainability, ethical considerations, and seamless human-AI collaboration. At Zion Tech Group, we're already working on these next-generation capabilities.
-      </p>
-      
-      <p class="mb-6 text-lg leading-relaxed">
-        The future belongs to organizations that can effectively leverage AI to augment human capabilities, not replace them. Our mission is to help every enterprise achieve this balance and unlock their full potential in the AI era.
-      </p>
-    `,
-    author: {
-      name: 'Dr. Sarah Chen',
-      role: 'Chief AI Officer',
-      avatar: '/api/placeholder/60/60',
-      bio: 'Leading AI research and development at Zion Tech Group with 15+ years of experience in machine learning and enterprise AI solutions.'
-    },
-    publishDate: '2024-12-15',
-    readTime: '8 min read',
-    category: 'Artificial Intelligence',
-    tags: ['AI', 'Enterprise', 'Innovation', 'Machine Learning', 'Digital Transformation'],
-    views: 15420,
-    likes: 892,
-    comments: 156,
-    featured: true,
-    relatedPosts: [
-      {
-        id: '2',
-        title: 'Building Secure AI Systems: Best Practices for Enterprise',
-        excerpt: 'Learn the essential security considerations when implementing AI solutions in enterprise environments.',
-        category: 'Cybersecurity',
-        readTime: '6 min read',
-        publishDate: '2024-12-10'
-      },
-      {
-        id: '3',
-        title: 'The Rise of Edge Computing: Bringing AI Closer to Data',
-        excerpt: 'Explore how edge computing is revolutionizing AI deployment and enabling real-time decision making.',
-        category: 'Edge Computing',
-        readTime: '7 min read',
-        publishDate: '2024-12-08'
-      },
-      {
-        id: '4',
-        title: 'Quantum AI: The Next Frontier in Computing',
-        excerpt: 'Discover how quantum computing is set to transform artificial intelligence and solve previously impossible problems.',
-        category: 'Quantum Computing',
-        readTime: '9 min read',
-        publishDate: '2024-12-05'
-      }
-    ]
-  };
-
-  const handleLike = () => {
-    setIsLiked(!isLiked);
-  };
-
-  const handleBookmark = () => {
-    setIsBookmarked(!isBookmarked);
-  };
-
-  const handleShare = () => {
-    if (navigator.share) {
-      navigator.share({
-        title: blogPost.title,
-        text: blogPost.excerpt,
-        url: window.location.href
-      });
-    } else {
-      navigator.clipboard.writeText(window.location.href);
-      // Show toast notification
-    }
-  };
+  const { slug } = useParams();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title={`${blogPost.title} - Zion Tech Group Blog`}
-        description={blogPost.excerpt}
+        title={`${blogPost.title} - Zion Tech Group`}
+        description="Discover how artificial intelligence is reshaping enterprise operations and what to expect in the coming year."
       />
       
-      {/* Navigation */}
-      <div className="container mx-auto px-4 py-6">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-        >
+      {/* Back Navigation */}
+      <section className="pt-8 px-4">
+        <div className="container mx-auto max-w-4xl">
           <Link 
             to="/blog"
-            className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+            className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Blog
+            <ArrowLeft className="h-5 w-5" />
+            <span>Back to Blog</span>
           </Link>
-        </motion.div>
-      </div>
+        </div>
+      </section>
 
-      {/* Hero Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
+      {/* Article Header */}
+      <section className="py-12 px-4">
+        <div className="container mx-auto max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto"
           >
-            {/* Category Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full text-white text-sm font-semibold mb-6">
-              <Zap className="w-4 h-4 mr-2" />
-              {blogPost.category}
-            </div>
-
-            {/* Title */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              {blogPost.title}
-            </h1>
-
-            {/* Excerpt */}
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              {blogPost.excerpt}
-            </p>
-
-            {/* Meta Information */}
-            <div className="flex flex-wrap items-center gap-6 text-gray-400 mb-8">
-              <div className="flex items-center">
-                <Calendar className="w-4 h-4 mr-2" />
-                {new Date(blogPost.publishDate).toLocaleDateString('en-US', { 
+            {/* Category and Date */}
+            <div className="flex items-center space-x-4 mb-6">
+              <span className="px-4 py-2 bg-cyan-400/20 text-cyan-400 text-sm font-medium rounded-full border border-cyan-400/30">
+                {blogPost.category}
+              </span>
+              <div className="flex items-center space-x-2 text-slate-400 text-sm">
+                <Calendar className="h-4 w-4" />
+                <span>{new Date(blogPost.date).toLocaleDateString('en-US', { 
                   year: 'numeric', 
                   month: 'long', 
                   day: 'numeric' 
-                })}
+                })}</span>
+              </div>
+              <div className="flex items-center space-x-2 text-slate-400 text-sm">
+                <Clock className="h-4 w-4" />
+                <span>{blogPost.readTime}</span>
+              </div>
+            </div>
+
+            {/* Title */}
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+              {blogPost.title}
+            </h1>
+
+            {/* Author Info */}
+            <div className="flex items-center space-x-4 mb-8">
+              <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center">
+                <User className="w-8 h-8 text-white" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-white">{blogPost.author.name}</h3>
+                <p className="text-slate-400">{blogPost.author.title}</p>
+              </div>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex items-center space-x-4 mb-8">
+              <button className="flex items-center space-x-2 px-4 py-2 bg-slate-800/70 text-slate-300 rounded-lg hover:bg-slate-700 transition-colors duration-300">
+                <Heart className="h-4 w-4" />
+                <span>Like</span>
+              </button>
+              <button className="flex items-center space-x-2 px-4 py-2 bg-slate-800/70 text-slate-300 rounded-lg hover:bg-slate-700 transition-colors duration-300">
+                <Bookmark className="h-4 w-4" />
+                <span>Save</span>
+              </button>
+              <button className="flex items-center space-x-2 px-4 py-2 bg-slate-800/70 text-slate-300 rounded-lg hover:bg-slate-700 transition-colors duration-300">
+                <Share2 className="h-4 w-4" />
+                <span>Share</span>
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Article Content */}
+      <section className="px-4 pb-16">
+        <div className="container mx-auto max-w-4xl">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            {/* Main Content */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="lg:col-span-3"
+            >
+              <article className="prose prose-invert prose-lg max-w-none">
+                <div 
+                  className="text-slate-300 leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: blogPost.content }}
+                />
+              </article>
+
+              {/* Tags */}
+              <div className="mt-12 pt-8 border-t border-slate-700">
+                <h3 className="text-lg font-semibold text-white mb-4">Tags</h3>
+                <div className="flex flex-wrap gap-2">
+                  {blogPost.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-3 py-1 bg-slate-800/70 text-slate-300 text-sm rounded-full border border-slate-600 hover:border-cyan-400/50 transition-colors duration-300"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Comments Section */}
+              <div className="mt-12 pt-8 border-t border-slate-700">
+                <h3 className="text-lg font-semibold text-white mb-6">Comments</h3>
+                <div className="space-y-6">
+                  <div className="bg-slate-800/50 rounded-lg p-6 border border-slate-700/50">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center">
+                        <User className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center space-x-2 mb-2">
+                          <h4 className="font-semibold text-white">John Smith</h4>
+                          <span className="text-sm text-slate-400">2 days ago</span>
+                        </div>
+                        <p className="text-slate-300">
+                          Excellent insights on AI trends! The section on autonomous business processes 
+                          really resonated with our current digital transformation efforts.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-slate-800/50 rounded-lg p-6 border border-slate-700/50">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-10 h-10 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center">
+                        <User className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center space-x-2 mb-2">
+                          <h4 className="font-semibold text-white">Maria Garcia</h4>
+                          <span className="text-sm text-slate-400">1 week ago</span>
+                        </div>
+                        <p className="text-slate-300">
+                          Great article! I'm particularly interested in the AI ethics and governance 
+                          section. How do you recommend implementing these frameworks in smaller organizations?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Comment Form */}
+                <div className="mt-8">
+                  <h4 className="text-lg font-semibold text-white mb-4">Leave a Comment</h4>
+                  <form className="space-y-4">
+                    <div>
+                      <textarea
+                        rows={4}
+                        placeholder="Share your thoughts..."
+                        className="w-full px-4 py-3 rounded-lg bg-slate-800/70 border border-slate-600 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white placeholder-slate-400 resize-none"
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 shadow-lg shadow-cyan-400/25"
+                    >
+                      Post Comment
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Sidebar */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="lg:col-span-1"
+            >
+              {/* Author Card */}
+              <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 mb-8">
+                <h3 className="text-lg font-semibold text-white mb-4">About the Author</h3>
+                <div className="text-center mb-4">
+                  <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <User className="w-10 h-10 text-white" />
+                  </div>
+                  <h4 className="font-semibold text-white">{blogPost.author.name}</h4>
+                  <p className="text-slate-400 text-sm">{blogPost.author.title}</p>
+                </div>
+                <p className="text-slate-300 text-sm text-center">
+                  {blogPost.author.bio}
+                </p>
+              </div>
+
+              {/* Related Posts */}
+              <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
+                <h3 className="text-lg font-semibold text-white mb-4">Related Posts</h3>
+                <div className="space-y-4">
+                  {blogPost.relatedPosts.map((post) => (
+                    <Link
+                      key={post.id}
+                      to={`/blog/${post.id}`}
+                      className="block p-4 rounded-lg hover:bg-slate-700/50 transition-colors duration-300 border border-slate-700/50 hover:border-cyan-400/50"
+                    >
+                      <h4 className="font-medium text-white mb-2 line-clamp-2 hover:text-cyan-400 transition-colors duration-300">
+                        {post.title}
+                      </h4>
+                      <p className="text-slate-400 text-sm mb-2 line-clamp-2">
+                        {post.excerpt}
+                      </p>
+                      <div className="flex items-center justify-between text-xs text-slate-500">
+                        <span>{post.category}</span>
+                        <span>{new Date(post.date).toLocaleDateString()}</span>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
               </div>
               <div className="flex items-center">
                 <Clock className="w-4 h-4 mr-2" />
@@ -249,163 +363,29 @@ export default function BlogPost() {
         </div>
       </section>
 
-      {/* Content Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
-              {/* Main Content */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="lg:col-span-3"
-              >
-                <div 
-                  className="prose prose-lg prose-invert max-w-none"
-                  dangerouslySetInnerHTML={{ __html: blogPost.content }}
-                />
-              </motion.div>
-
-              {/* Sidebar */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="lg:col-span-1"
-              >
-                {/* Author Info */}
-                <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50 mb-8">
-                  <h3 className="text-lg font-bold text-white mb-4">About the Author</h3>
-                  <div className="flex items-center mb-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mr-4">
-                      <User className="w-8 h-8 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="text-white font-semibold">{blogPost.author.name}</h4>
-                      <p className="text-gray-400 text-sm">{blogPost.author.role}</p>
-                    </div>
-                  </div>
-                  <p className="text-gray-300 text-sm">{blogPost.author.bio}</p>
-                </div>
-
-                {/* Stats */}
-                <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50 mb-8">
-                  <h3 className="text-lg font-bold text-white mb-4">Article Stats</h3>
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-400">Views</span>
-                      <span className="text-white font-semibold">{blogPost.views.toLocaleString()}</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-400">Likes</span>
-                      <span className="text-white font-semibold">{blogPost.likes}</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-400">Comments</span>
-                      <span className="text-white font-semibold">{blogPost.comments}</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Tags */}
-                <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50">
-                  <h3 className="text-lg font-bold text-white mb-4">Tags</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {blogPost.tags.map((tag, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1 bg-slate-700 text-cyan-400 text-sm rounded-full hover:bg-slate-600 transition-colors cursor-pointer"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-
-      {/* Related Posts */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
+      {/* Newsletter Signup */}
+      <section className="px-4 pb-20">
+        <div className="container mx-auto max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="bg-gradient-to-r from-slate-800/80 to-slate-700/80 rounded-2xl p-8 md:p-12 border border-slate-600/50 text-center"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Related Articles
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Stay Updated with Zion Tech
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Continue exploring our latest insights and discoveries in technology and innovation.
+            <p className="text-xl text-slate-300 mb-8">
+              Get the latest insights delivered to your inbox. No spam, just valuable content.
             </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {blogPost.relatedPosts.map((post, index) => (
-              <motion.div
-                key={post.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 group"
-              >
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs rounded-full">
-                    {post.category}
-                  </span>
-                  <span className="text-gray-400 text-sm">{post.readTime}</span>
-                </div>
-                
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                  {post.title}
-                </h3>
-                
-                <p className="text-gray-300 mb-4 line-clamp-3">
-                  {post.excerpt}
-                </p>
-                
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-400 text-sm">
-                    {new Date(post.publishDate).toLocaleDateString('en-US', { 
-                      month: 'short', 
-                      day: 'numeric' 
-                    })}
-                  </span>
-                  <Link 
-                    to={`/blog/${post.id}`}
-                    className="text-cyan-400 hover:text-cyan-300 transition-colors group-hover:translate-x-1 transform duration-300"
-                  >
-                    Read More →
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Stay Updated with Our Latest Insights
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
-              Subscribe to our newsletter and never miss the latest trends, insights, and innovations in technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-6 py-4 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors"
+                className="flex-1 px-6 py-4 rounded-xl bg-slate-700/70 border border-slate-600 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white placeholder-slate-400"
               />
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 shadow-lg shadow-cyan-400/25">
                 Subscribe
               </button>
             </div>

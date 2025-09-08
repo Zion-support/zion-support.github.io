@@ -1,541 +1,672 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
 import { 
+  GraduationCap, 
   BookOpen, 
   Video, 
   Users, 
-  Award, 
   Clock, 
-  CheckCircle, 
-  ArrowRight,
-  Zap,
   Star,
-  Rocket,
-  Cpu,
-  Database,
-  Network,
-  Smartphone,
-  Monitor,
-  Server,
-  Cloud,
-  Eye,
-  Brain,
-  Shield,
-  Lock,
-  Globe,
-  Settings,
-  Key,
-  Globe2,
-  ShieldCheck,
-  Leaf,
-  Scale,
-  Building2,
-  Car,
-  Home,
-  Factory,
-  Building,
-  CheckCircle2,
-  ArrowUpRight,
-  MailIcon,
-  Phone,
-  MapPin,
-  BarChart3,
-  PieChart,
-  Activity,
-  Target,
-  Crosshair,
-  Radar,
-  Satellite,
-  Telescope,
-  Microscope,
-  Binoculars,
-  Camera,
-  Video2,
-  Film,
-  Tv,
-  Radio,
-  Speaker,
-  Headphones,
-  Mic,
-  Phone2,
-  Smartphone2,
-  Tablet,
-  Laptop,
-  Watch,
-  Clock2,
+  CheckCircle,
+  ArrowRight,
+  ExternalLink,
+  Download,
+  Play,
+  Pause,
+  SkipBack,
+  SkipForward,
+  Volume2,
+  VolumeX,
+  Maximize,
+  Minimize,
+  RotateCcw,
+  RotateCw,
+  ZoomIn,
+  ZoomOut,
+  Move,
+  Crop,
+  Scissors,
+  Type,
+  Bold,
+  Italic,
+  Underline,
+  Strikethrough,
+  AlignLeft,
+  AlignCenter,
+  AlignRight,
+  AlignJustify,
+  List,
+  ListOrdered,
+  Quote,
+  Code2,
+  Link2,
+  Image,
+  File,
+  Folder,
+  FolderOpen,
+  FolderPlus,
+  FolderMinus,
+  FilePlus,
+  FileMinus,
+  FileEdit,
+  FileX,
+  FileCheck,
+  FileSearch,
+  FileText2,
+  FileCode,
+  FileImage,
+  FileVideo,
+  FileAudio,
+  FileArchive,
+  FilePdf,
+  FileWord,
+  FileExcel,
+  FilePowerpoint,
   Calendar,
-  Calendar2,
-  User,
-  Users2,
-  UserCheck,
-  UserX,
-  UserPlus,
-  UserMinus,
-  UserCog,
-  UserEdit,
-  UserSearch,
-  UserVoice,
-  UserCheck2,
-  UserX2,
-  UserPlus2,
-  UserMinus2,
-  UserCog2,
-  UserEdit2,
-  UserSearch2,
-  UserVoice2
+  MapPin,
+  Globe,
+  Mail,
+  Phone,
+  Building,
+  Heart,
+  Sparkles,
+  Infinity,
+  Layers,
+  GitBranch,
+  Workflow,
+  Command,
+  Terminal,
+  Wifi,
+  Bluetooth,
+  Satellite,
+  Radio,
+  Signal,
+  DollarSign,
+  Factory,
+  ShoppingCart,
+  Truck,
+  Robot,
+  Lightbulb,
+  Code,
+  Palette,
+  MessageSquare,
+  BarChart3,
+  Settings,
+  HelpCircle,
+  Brain,
+  Cloud,
+  Shield,
+  Server,
+  Database,
+  Zap,
+  Target,
+  TrendingUp,
+  Monitor,
+  Smartphone,
+  Laptop,
+  Eye,
+  Fingerprint,
+  Key,
+  Rocket,
+  Award,
+  Trophy,
+  Medal,
+  Certificate,
+  Badge,
+  Ribbon,
+  Crown,
+  Gem,
+  Diamond,
+  Ruby,
+  Emerald,
+  Sapphire,
+  Amethyst,
+  Topaz,
+  Opal,
+  Pearl,
+  Jade,
+  Onyx,
+  Quartz,
+  Marble,
+  Granite,
+  Limestone,
+  Sandstone,
+  Shale,
+  Clay,
+  Silt,
+  Loam,
+  Peat,
+  Chalk,
+  Gypsum,
+  Halite,
+  Calcite,
+  Dolomite,
+  Feldspar,
+  Mica,
+  Hornblende,
+  Pyroxene,
+  Olivine,
+  Garnet,
+  Staurolite,
+  Kyanite,
+  Sillimanite,
+  Andalusite,
+  Chiastolite,
+  Cordierite,
+  Tourmaline,
+  Beryl,
+  Spinel,
+  Corundum,
+  Zircon,
+  Rutile,
+  Brookite,
+  Anatase,
+  Perovskite,
+  Ilmenite,
+  Magnetite,
+  Hematite,
+  Goethite,
+  Limonite,
+  Siderite,
+  Pyrite,
+  Marcasite,
+  Chalcopyrite,
+  Bornite,
+  Covellite,
+  Chalcocite,
+  Galena,
+  Sphalerite,
+  Cinnabar,
+  Realgar,
+  Orpiment,
+  Stibnite,
+  Bismuthinite,
+  Molybdenite,
+  Wolframite,
+  Scheelite,
+  Cassiterite,
+  Columbite,
+  Tantalite,
+  Uraninite,
+  Pitchblende,
+  Carnotite,
+  Autunite,
+  Torbernite,
+  Zeunerite,
+  Rocket
 } from 'lucide-react';
 
+const trainingCategories = [
+  {
+    title: 'AI & Machine Learning',
+    description: 'Master artificial intelligence and machine learning technologies',
+    icon: Brain,
+    color: 'from-purple-400 to-pink-500',
+    courses: [
+      { title: 'AI Fundamentals', duration: '8 hours', level: 'Beginner', price: '$299' },
+      { title: 'Machine Learning with Python', duration: '16 hours', level: 'Intermediate', price: '$499' },
+      { title: 'Deep Learning & Neural Networks', duration: '24 hours', level: 'Advanced', price: '$799' },
+      { title: 'AI Ethics & Responsible AI', duration: '6 hours', level: 'Intermediate', price: '$199' }
+    ]
+  },
+  {
+    title: 'Cloud & DevOps',
+    description: 'Learn cloud infrastructure and DevOps best practices',
+    icon: Cloud,
+    color: 'from-blue-400 to-cyan-500',
+    courses: [
+      { title: 'Cloud Architecture Fundamentals', duration: '12 hours', level: 'Beginner', price: '$399' },
+      { title: 'DevOps Pipeline Implementation', duration: '20 hours', level: 'Intermediate', price: '$599' },
+      { title: 'Kubernetes & Container Orchestration', duration: '18 hours', level: 'Advanced', price: '$699' },
+      { title: 'Infrastructure as Code', duration: '14 hours', level: 'Intermediate', price: '$449' }
+    ]
+  },
+  {
+    title: 'Cybersecurity',
+    description: 'Develop expertise in cybersecurity and threat protection',
+    icon: Shield,
+    color: 'from-red-400 to-pink-500',
+    courses: [
+      { title: 'Cybersecurity Fundamentals', duration: '10 hours', level: 'Beginner', price: '$349' },
+      { title: 'Threat Detection & Response', duration: '16 hours', level: 'Intermediate', price: '$549' },
+      { title: 'Security Compliance & Auditing', duration: '12 hours', level: 'Intermediate', price: '$399' },
+      { title: 'Advanced Penetration Testing', duration: '20 hours', level: 'Advanced', price: '$749' }
+    ]
+  },
+  {
+    title: 'Data & Analytics',
+    description: 'Master data science and business intelligence',
+    icon: BarChart3,
+    color: 'from-green-400 to-emerald-500',
+    courses: [
+      { title: 'Data Analytics Fundamentals', duration: '8 hours', level: 'Beginner', price: '$249' },
+      { title: 'Business Intelligence Tools', duration: '14 hours', level: 'Intermediate', price: '$449' },
+      { title: 'Big Data Processing', duration: '18 hours', level: 'Advanced', price: '$649' },
+      { title: 'Data Visualization & Storytelling', duration: '10 hours', level: 'Intermediate', price: '$299' }
+    ]
+  }
+];
+
+const featuredCourses = [
+  {
+    title: 'Complete AI Developer Bootcamp',
+    description: 'Comprehensive training program covering all aspects of AI development',
+    instructor: 'Dr. Sarah Chen',
+    duration: '40 hours',
+    level: 'Intermediate',
+    price: '$1,299',
+    rating: 4.9,
+    students: 1247,
+    badge: 'Bestseller',
+    icon: Brain,
+    color: 'from-purple-400 to-pink-500'
+  },
+  {
+    title: 'Cloud Migration Masterclass',
+    description: 'Learn to migrate legacy systems to modern cloud infrastructure',
+    instructor: 'Mike Rodriguez',
+    duration: '32 hours',
+    level: 'Advanced',
+    price: '$999',
+    rating: 4.8,
+    students: 892,
+    badge: 'Popular',
+    icon: Cloud,
+    color: 'from-blue-400 to-cyan-500'
+  },
+  {
+    title: 'Cybersecurity Professional Certification',
+    description: 'Prepare for industry-recognized cybersecurity certifications',
+    instructor: 'Lisa Thompson',
+    duration: '48 hours',
+    level: 'Advanced',
+    price: '$1,499',
+    rating: 4.9,
+    students: 756,
+    badge: 'Certified',
+    icon: Shield,
+    color: 'from-red-400 to-pink-500'
+  }
+];
+
+const learningPaths = [
+  {
+    title: 'AI Engineer Path',
+    description: 'Complete path to become a certified AI engineer',
+    duration: '6 months',
+    courses: 8,
+    certification: 'AI Engineer Certification',
+    icon: Brain,
+    color: 'from-purple-400 to-pink-500',
+    skills: ['Machine Learning', 'Deep Learning', 'AI Ethics', 'Model Deployment']
+  },
+  {
+    title: 'DevOps Engineer Path',
+    description: 'Master DevOps practices and cloud infrastructure',
+    duration: '4 months',
+    courses: 6,
+    certification: 'DevOps Engineer Certification',
+    icon: Cloud,
+    color: 'from-blue-400 to-cyan-500',
+    skills: ['Cloud Architecture', 'CI/CD', 'Containerization', 'Infrastructure as Code']
+  },
+  {
+    title: 'Cybersecurity Specialist Path',
+    description: 'Develop expertise in cybersecurity and threat protection',
+    duration: '5 months',
+    courses: 7,
+    certification: 'Cybersecurity Specialist Certification',
+    icon: Shield,
+    color: 'from-red-400 to-pink-500',
+    skills: ['Threat Detection', 'Incident Response', 'Compliance', 'Penetration Testing']
+  }
+];
+
+const trainingStats = [
+  {
+    metric: '10,000+',
+    label: 'Students Trained',
+    description: 'Professionals who have completed our training programs'
+  },
+  {
+    metric: '50+',
+    label: 'Expert Instructors',
+    description: 'Industry professionals with real-world experience'
+  },
+  {
+    metric: '200+',
+    label: 'Course Hours',
+    description: 'Comprehensive training content across all topics'
+  },
+  {
+    metric: '95%',
+    label: 'Success Rate',
+    description: 'Students who successfully complete their training'
+  }
+];
+
 export default function Training() {
-  const trainingPrograms = [
-    {
-      icon: BookOpen,
-      title: 'AI Fundamentals',
-      description: 'Master the basics of artificial intelligence and machine learning',
-      duration: '8 weeks',
-      level: 'Beginner',
-      certification: true,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: Brain,
-      title: 'Advanced AI Development',
-      description: 'Build sophisticated AI models and applications',
-      duration: '12 weeks',
-      level: 'Advanced',
-      certification: true,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity Training',
-      description: 'Learn to protect systems and data from cyber threats',
-      duration: '10 weeks',
-      level: 'Intermediate',
-      certification: true,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud & DevOps',
-      description: 'Master cloud infrastructure and deployment automation',
-      duration: '10 weeks',
-      level: 'Intermediate',
-      certification: true,
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      icon: Database,
-      title: 'Data Analytics',
-      description: 'Transform data into actionable business insights',
-      duration: '8 weeks',
-      level: 'Intermediate',
-      certification: true,
-      color: 'from-red-500 to-pink-500'
-    },
-    {
-      icon: Network,
-      title: 'IoT & Edge Computing',
-      description: 'Build connected devices and edge computing solutions',
-      duration: '12 weeks',
-      level: 'Advanced',
-      certification: true,
-      color: 'from-teal-500 to-blue-500'
-    }
-  ];
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const learningFormats = [
-    {
-      title: 'Online Courses',
-      description: 'Self-paced learning with interactive content and assessments',
-      icon: Video,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Live Workshops',
-      description: 'Real-time interactive sessions with expert instructors',
-      icon: Users,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: 'Hands-on Labs',
-      description: 'Practical exercises in real-world environments',
-      icon: Cpu,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'Certification Programs',
-      description: 'Industry-recognized credentials to advance your career',
-      icon: Award,
-      color: 'from-yellow-500 to-orange-500'
-    }
-  ];
-
-  const benefits = [
-    'Accelerate your career with in-demand skills',
-    'Learn from industry experts and practitioners',
-    'Get hands-on experience with real projects',
-    'Earn industry-recognized certifications',
-    'Join a community of tech professionals',
-    'Access to cutting-edge tools and technologies',
-    'Flexible learning schedules and formats',
-    'Lifetime access to course materials'
-  ];
-
-  const upcomingEvents = [
-    {
-      title: 'AI Fundamentals Workshop',
-      date: 'March 15-17, 2025',
-      time: '9:00 AM - 5:00 PM EST',
-      instructor: 'Dr. Sarah Chen',
-      seats: '25 available',
-      price: '$1,299'
-    },
-    {
-      title: 'Cybersecurity Bootcamp',
-      date: 'April 5-9, 2025',
-      time: '9:00 AM - 5:00 PM EST',
-      instructor: 'Mike Rodriguez',
-      seats: '20 available',
-      price: '$2,499'
-    },
-    {
-      title: 'Cloud Architecture Masterclass',
-      date: 'May 10-12, 2025',
-      time: '9:00 AM - 5:00 PM EST',
-      instructor: 'Lisa Thompson',
-      seats: '30 available',
-      price: '$1,799'
-    }
-  ];
+  const filteredCategories = selectedCategory === 'all' 
+    ? trainingCategories 
+    : trainingCategories.filter(cat => cat.title.toLowerCase().includes(selectedCategory.toLowerCase()));
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Training & Certification - Zion Tech Group"
+        description="Professional training programs and certifications in AI, cloud computing, cybersecurity, and data analytics. Advance your career with expert-led courses."
+      />
+      
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-green-900/20"></div>
-        <div className="container-responsive relative z-10 py-20">
+      <section className="relative py-20 px-4">
+        <div className="container mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            className="text-center"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium mb-6">
-              <BookOpen className="w-4 h-4" />
-              Training & Certification
+            <div className="w-20 h-20 bg-gradient-to-r from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <GraduationCap className="w-10 h-10 text-white" />
             </div>
-            
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Master the Future of
-              <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-green-400 bg-clip-text text-transparent">
-                {' '}Technology
-              </span>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-amber-400 via-orange-500 to-red-600 bg-clip-text text-transparent">
+              Training & Certification
             </h1>
-            
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-              Transform your career with our comprehensive training programs in AI, 
-              cybersecurity, cloud computing, and more. Learn from industry experts 
-              and earn valuable certifications.
+            <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-4xl mx-auto">
+              Advance your career with expert-led training programs in cutting-edge technologies. 
+              Get certified and stay ahead in the rapidly evolving tech landscape.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
+                className="px-8 py-4 bg-gradient-to-r from-amber-400 to-orange-500 text-white font-semibold rounded-xl hover:from-amber-500 hover:to-orange-600 transition-all duration-300 shadow-lg shadow-amber-400/25"
               >
-                Enroll Now
-                <ArrowRight className="w-5 h-5" />
+                Start Learning
               </Link>
               <Link
-                to="/demo"
-                className="inline-flex items-center gap-2 px-8 py-4 border border-purple-500/30 text-purple-300 hover:bg-purple-500/10 font-semibold rounded-xl transition-all duration-300"
+                to="/training/catalog"
+                className="px-8 py-4 border-2 border-amber-400 text-amber-400 font-semibold rounded-xl hover:bg-amber-400 hover:text-slate-900 transition-colors duration-300"
               >
-                Free Demo
-                <Video className="w-5 h-5" />
+                View Catalog
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Training Programs Section */}
-      <section className="py-20">
-        <div className="container-responsive">
+      {/* Training Stats */}
+      <section className="px-4 mb-20">
+        <div className="container mx-auto max-w-6xl">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-center mb-12"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Comprehensive Training Programs
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Training by the Numbers
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Choose from our wide range of training programs designed to meet 
-              your skill level and career goals.
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Join thousands of professionals who have advanced their careers with our training programs
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {trainingPrograms.map((program, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {trainingStats.map((stat, index) => (
               <motion.div
-                key={program.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group p-6 rounded-2xl bg-slate-800/50 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:bg-slate-800/70"
+                key={stat.metric}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center"
               >
-                <div className={`p-3 rounded-xl bg-gradient-to-br ${program.color} w-fit mb-4`}>
-                  <program.icon className="w-6 h-6 text-white" />
+                <div className="text-3xl md:text-4xl font-bold text-amber-400 mb-2">
+                  {stat.metric}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-400 transition-colors">
-                  {program.title}
-                </h3>
-                <p className="text-gray-400 leading-relaxed mb-4">
-                  {program.description}
-                </p>
-                <div className="space-y-2 text-sm">
-                  <div className="flex items-center gap-2 text-gray-300">
-                    <Clock className="w-4 h-4" />
-                    <span>{program.duration}</span>
+                <div className="text-white font-semibold mb-2">{stat.label}</div>
+                <p className="text-slate-400 text-sm">{stat.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Courses */}
+      <section className="px-4 mb-20">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Featured Courses
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Our most popular and highly-rated training programs
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {featuredCourses.map((course, index) => (
+              <motion.div
+                key={course.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-amber-400/50 transition-all duration-300 group"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <div className={`w-12 h-12 bg-gradient-to-br ${course.color} rounded-lg flex items-center justify-center`}>
+                    <course.icon className="w-6 h-6 text-white" />
                   </div>
-                  <div className="flex items-center gap-2 text-gray-300">
-                    <Users className="w-4 h-4" />
-                    <span>{program.level}</span>
+                  <span className="px-2 py-1 bg-amber-400/10 text-amber-400 text-xs rounded-full">
+                    {course.badge}
+                  </span>
+                </div>
+                
+                <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-amber-400 transition-colors duration-300">
+                  {course.title}
+                </h4>
+                <p className="text-slate-300 text-sm mb-4">{course.description}</p>
+                
+                <div className="space-y-2 mb-4">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-slate-400">Instructor:</span>
+                    <span className="text-white">{course.instructor}</span>
                   </div>
-                  {program.certification && (
-                    <div className="flex items-center gap-2 text-purple-400">
-                      <Award className="w-4 h-4" />
-                      <span>Certification Included</span>
-                    </div>
-                  )}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Learning Formats Section */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Multiple Learning Formats
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Choose the learning format that works best for your schedule and 
-              preferred learning style.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {learningFormats.map((format, index) => (
-              <motion.div
-                key={format.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group p-8 rounded-2xl bg-slate-800/50 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:bg-slate-800/70"
-              >
-                <div className={`p-4 rounded-xl bg-gradient-to-br ${format.color} w-fit mb-6`}>
-                  <format.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-purple-400 transition-colors">
-                  {format.title}
-                </h3>
-                <p className="text-gray-400 leading-relaxed text-lg">
-                  {format.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Why Choose Our Training?
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Experience the advantages of learning from industry leaders with 
-              proven methodologies and cutting-edge content.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={benefit}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center p-6 rounded-xl bg-slate-800/50 border border-slate-700/50"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8 text-white" />
-                </div>
-                <p className="text-gray-300 leading-relaxed">{benefit}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Upcoming Events Section */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Upcoming Training Events
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Reserve your spot in our upcoming workshops and bootcamps. 
-              Limited seats available for each session.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {upcomingEvents.map((event, index) => (
-              <motion.div
-                key={event.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="p-6 rounded-2xl bg-slate-800/50 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:bg-slate-800/70"
-              >
-                <div className="mb-4">
-                  <h3 className="text-xl font-semibold text-white mb-2">{event.title}</h3>
-                  <div className="space-y-2 text-sm text-gray-400">
-                    <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4" />
-                      <span>{event.date}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Clock className="w-4 h-4" />
-                      <span>{event.time}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <User className="w-4 h-4" />
-                      <span>{event.instructor}</span>
-                    </div>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-slate-400">Duration:</span>
+                    <span className="text-white">{course.duration}</span>
+                  </div>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-slate-400">Level:</span>
+                    <span className="text-white">{course.level}</span>
                   </div>
                 </div>
                 
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm text-green-400 font-medium">{event.seats}</span>
-                  <span className="text-lg font-bold text-purple-400">{event.price}</span>
+                  <div className="flex items-center space-x-1">
+                    <Star className="w-4 h-4 text-amber-400 fill-current" />
+                    <span className="text-white text-sm">{course.rating}</span>
+                    <span className="text-slate-400 text-sm">({course.students})</span>
+                  </div>
+                  <div className="text-amber-400 font-semibold">{course.price}</div>
                 </div>
                 
-                <Link
-                  to="/contact"
-                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium rounded-xl transition-all duration-300 transform hover:scale-105"
-                >
-                  Reserve Seat
-                </Link>
+                <button className="w-full px-4 py-2 bg-gradient-to-r from-amber-400 to-orange-500 text-white font-medium rounded-lg hover:from-amber-500 hover:to-orange-600 transition-all duration-300">
+                  Enroll Now
+                </button>
               </motion.div>
             ))}
           </div>
         </div>
-      </motion.div>
+      </section>
+
+      {/* Training Categories */}
+      <section className="px-4 mb-20">
+        <div className="container mx-auto max-w-7xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.0 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Training Categories
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Explore our comprehensive training programs organized by technology domain
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {filteredCategories.map((category, index) => (
+              <motion.div
+                key={category.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
+                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-amber-400/50 transition-all duration-300 group"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <category.icon className="w-8 h-8 text-white" />
+                </div>
+                
+                <h4 className="text-xl font-semibold text-white mb-3">{category.title}</h4>
+                <p className="text-slate-300 mb-4">{category.description}</p>
+                
+                <div className="space-y-3 mb-4">
+                  {category.courses.map((course, courseIndex) => (
+                    <div key={courseIndex} className="flex items-center justify-between p-3 bg-slate-700/30 rounded-lg">
+                      <div>
+                        <h5 className="text-white font-medium text-sm">{course.title}</h5>
+                        <div className="flex items-center space-x-4 mt-1">
+                          <span className="text-slate-400 text-xs">{course.duration}</span>
+                          <span className="text-slate-400 text-xs">{course.level}</span>
+                        </div>
+                      </div>
+                      <div className="text-amber-400 font-semibold text-sm">{course.price}</div>
+                    </div>
+                  ))}
+                </div>
+                
+                <button className="w-full px-4 py-2 border border-amber-400 text-amber-400 font-medium rounded-lg hover:bg-amber-400 hover:text-slate-900 transition-all duration-300">
+                  View All Courses
+                </button>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Learning Paths */}
+      <section className="px-4 mb-20">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.4 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Learning Paths
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Structured learning journeys designed to take you from beginner to expert
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {learningPaths.map((path, index) => (
+              <motion.div
+                key={path.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.6 + index * 0.1 }}
+                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-amber-400/50 transition-all duration-300"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-br ${path.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                  <path.icon className="w-8 h-8 text-white" />
+                </div>
+                
+                <h4 className="text-lg font-semibold text-white mb-3 text-center">{path.title}</h4>
+                <p className="text-slate-300 text-sm mb-4 text-center">{path.description}</p>
+                
+                <div className="space-y-2 mb-4">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-slate-400">Duration:</span>
+                    <span className="text-white">{path.duration}</span>
+                  </div>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-slate-400">Courses:</span>
+                    <span className="text-white">{path.courses}</span>
+                  </div>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-slate-400">Certification:</span>
+                    <span className="text-white text-xs">{path.certification}</span>
+                  </div>
+                </div>
+                
+                <div className="mb-4">
+                  <h5 className="text-amber-400 font-medium mb-2">Skills You'll Learn:</h5>
+                  <div className="flex flex-wrap gap-2">
+                    {path.skills.map((skill, skillIndex) => (
+                      <span key={skillIndex} className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                
+                <button className="w-full px-4 py-2 bg-gradient-to-r from-amber-400 to-orange-500 text-white font-medium rounded-lg hover:from-amber-500 hover:to-orange-600 transition-all duration-300">
+                  Start Path
+                </button>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="container-responsive">
+      <section className="px-4 mb-20">
+        <div className="container mx-auto max-w-4xl">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.8 }}
+            className="bg-gradient-to-r from-slate-800/80 to-slate-700/80 rounded-2xl p-8 md:p-12 border border-slate-600/50 text-center"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Advance Your Career?
             </h2>
-            <p className="text-xl text-gray-400 mb-8 leading-relaxed">
-              Join thousands of professionals who have transformed their careers 
-              with our industry-leading training programs.
+            <p className="text-xl text-slate-300 mb-8">
+              Join thousands of professionals who have transformed their careers with our expert-led training programs.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
+                className="px-8 py-4 bg-gradient-to-r from-amber-400 to-orange-500 text-white font-semibold rounded-xl hover:from-amber-500 hover:to-orange-600 transition-all duration-300 shadow-lg shadow-amber-400/25"
               >
-                Get Started Today
-                <ArrowRight className="w-5 h-5" />
+                Get Started
               </Link>
               <Link
-                to="/demo"
-                className="inline-flex items-center gap-2 px-8 py-4 border border-purple-500/30 text-purple-300 hover:bg-purple-500/10 font-semibold rounded-xl transition-all duration-300"
+                to="/training/catalog"
+                className="px-8 py-4 border-2 border-amber-400 text-amber-400 font-semibold rounded-xl hover:bg-amber-400 hover:text-slate-900 transition-colors duration-300"
               >
-                Schedule Consultation
-                <Users className="w-5 h-5" />
+                Browse Courses
               </Link>
             </div>
           </motion.div>
         </div>
-      </motion.div>
-
-      {/* Call to Action */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.9 }}
-        className="px-4 sm:px-6 lg:px-8 pb-16"
-      >
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">Ready to Advance Your Career?</h2>
-            <p className="text-gray-300 mb-6">
-              Join thousands of professionals who have transformed their careers with our training programs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
-              >
-                Get Started
-                <ExternalLink className="w-4 h-4 ml-2" />
-              </a>
-              <a
-                href="/support"
-                className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300"
-              >
-                Contact Training Team
-                <Users className="w-4 h-4 ml-2" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </motion.div>
+      </section>
     </div>
   );
 }

@@ -1,602 +1,528 @@
 import React, { useState, useEffect } from 'react';
-import { useSearchParams, Link  } from 'react-router-dom.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Search, 
+import { Link, useSearchParams } from 'react-router-dom';
+import { SEO } from '../components/SEO';
+import { motion } from 'framer-motion';
+import { 
+  Search, 
   Filter, 
-  Grid, 
-  List, 
-  Star, 
-  MapPin, 
+  X, 
+  ArrowRight, 
   Clock, 
-  DollarSign,
-  Users,
-  Code,
-  Shield,
-  Cloud,
-  Brain,
-  Rocket,
-  Zap,
-  Heart,
-  Building,
-  Cpu,
-  Lock,
-  Globe,
-  TrendingUp,
-  Award,
-  CheckCircle,
-  X,
-  Clock,
-  TrendingUp,
-  Star,
-  Eye,
-  ArrowRight,
+  TrendingUp, 
+  Star, 
   FileText,
   Users,
   Shield,
-  Zap,
-  Globe,
-  Brain,
   Cloud,
-  Lock,
-  Building,
-  Calendar,
-  Tag,
+  Database,
+  Brain,
+  Server,
+  Rocket,
+  Zap,
+  Target,
+  Globe,
+  Lightbulb,
+  Code,
+  Palette,
+  MessageSquare,
+  BarChart3,
+  Monitor,
+  Smartphone,
+  Laptop,
+  CheckCircle,
+  ExternalLink,
   BookOpen,
-  MessageCircle,
-  Phone,
-  Mail
+  HelpCircle,
+  Settings,
+  Building,
+  Heart,
+  Sparkles,
+  Infinity,
+  Layers,
+  GitBranch,
+  Workflow,
+  Command,
+  Terminal,
+  Wifi,
+  Bluetooth,
+  Satellite,
+  Radio,
+  Signal,
+  DollarSign,
+  Factory,
+  ShoppingCart,
+  Truck,
+  Robot
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+
+// Mock search results data
+const searchResults = [
+  {
+    id: 1,
+    title: 'AI Services Overview',
+    description: 'Comprehensive artificial intelligence services including machine learning, automation, and custom AI solutions.',
+    category: 'Services',
+    type: 'Service Page',
+    url: '/ai-services',
+    icon: Brain,
+    color: 'from-purple-400 to-pink-500',
+    tags: ['AI', 'Machine Learning', 'Automation', 'Analytics'],
+    relevance: 95
+  },
+  {
+    id: 2,
+    title: 'IT Infrastructure Management',
+    description: 'Enterprise-grade IT infrastructure services including server management, network administration, and cloud solutions.',
+    category: 'Services',
+    type: 'Service Page',
+    url: '/it-services',
+    icon: Server,
+    color: 'from-blue-400 to-cyan-500',
+    tags: ['IT', 'Infrastructure', 'Cloud', 'Networking'],
+    relevance: 92
+  },
+  {
+    id: 3,
+    title: 'MicroSaaS Development',
+    description: 'Build scalable SaaS platforms with our expert development team. From concept to launch, we deliver enterprise-grade solutions.',
+    category: 'Services',
+    type: 'Service Page',
+    url: '/micro-saas',
+    icon: Rocket,
+    color: 'from-emerald-400 to-teal-500',
+    tags: ['SaaS', 'Development', 'Platform', 'Custom Software'],
+    relevance: 90
+  },
+  {
+    id: 4,
+    title: 'Cloud & DevOps Solutions',
+    description: 'Comprehensive cloud migration, infrastructure automation, and DevOps practices for modern businesses.',
+    category: 'Services',
+    type: 'Service Page',
+    url: '/services/cloud-devops',
+    icon: Cloud,
+    color: 'from-indigo-400 to-purple-500',
+    tags: ['Cloud', 'DevOps', 'Automation', 'Infrastructure'],
+    relevance: 88
+  },
+  {
+    id: 5,
+    title: 'Cybersecurity Services',
+    description: 'Advanced security solutions including threat detection, compliance audits, and incident response.',
+    category: 'Services',
+    type: 'Service Page',
+    url: '/services/ai-cybersecurity-suite',
+    icon: Shield,
+    color: 'from-red-400 to-pink-500',
+    tags: ['Security', 'Cybersecurity', 'Compliance', 'Threat Detection'],
+    relevance: 85
+  },
+  {
+    id: 6,
+    title: 'Data Analytics & BI',
+    description: 'Transform raw data into actionable insights with our advanced analytics and business intelligence solutions.',
+    category: 'Services',
+    type: 'Service Page',
+    url: '/services/data-analytics',
+    icon: BarChart3,
+    color: 'from-green-400 to-emerald-500',
+    tags: ['Analytics', 'Business Intelligence', 'Data', 'Reporting'],
+    relevance: 83
+  },
+  {
+    id: 7,
+    title: 'Digital Transformation',
+    description: 'Strategic guidance and implementation for digital transformation initiatives across industries.',
+    category: 'Services',
+    type: 'Service Page',
+    url: '/services/digital-transformation',
+    icon: Zap,
+    color: 'from-yellow-400 to-orange-500',
+    tags: ['Digital Transformation', 'Strategy', 'Innovation', 'Technology'],
+    relevance: 80
+  },
+  {
+    id: 8,
+    title: 'About Zion Tech Group',
+    description: 'Learn about our mission, values, and the team behind Zion Tech Group\'s innovative technology solutions.',
+    category: 'Company',
+    type: 'Page',
+    url: '/about',
+    icon: Building,
+    color: 'from-slate-400 to-gray-500',
+    tags: ['About', 'Company', 'Team', 'Mission'],
+    relevance: 75
+  },
+  {
+    id: 9,
+    title: 'Contact Us',
+    description: 'Get in touch with our team for consultations, quotes, and support. We\'re here to help with your technology needs.',
+    category: 'Contact',
+    type: 'Page',
+    url: '/contact',
+    icon: MessageSquare,
+    color: 'from-blue-400 to-indigo-500',
+    tags: ['Contact', 'Support', 'Consultation', 'Quote'],
+    relevance: 70
+  },
+  {
+    id: 10,
+    title: 'Blog - Latest Insights',
+    description: 'Stay updated with the latest technology trends, industry insights, and company news from Zion Tech Group.',
+    category: 'Resources',
+    type: 'Page',
+    url: '/blog',
+    icon: FileText,
+    color: 'from-purple-400 to-pink-500',
+    tags: ['Blog', 'Insights', 'News', 'Technology Trends'],
+    relevance: 65
+  }
+];
+
+const categories = [
+  { name: 'All', value: 'all', icon: Search, color: 'from-slate-400 to-gray-500' },
+  { name: 'Services', value: 'services', icon: Settings, color: 'from-blue-400 to-cyan-500' },
+  { name: 'Company', value: 'company', icon: Building, color: 'from-purple-400 to-pink-500' },
+  { name: 'Resources', value: 'resources', icon: BookOpen, color: 'from-green-400 to-emerald-500' },
+  { name: 'Support', value: 'support', icon: HelpCircle, color: 'from-orange-400 to-red-500' }
+];
+
+const popularSearches = [
+  'AI services',
+  'Cloud migration',
+  'Cybersecurity',
+  'Data analytics',
+  'IT consulting',
+  'Digital transformation',
+  'SaaS development',
+  'DevOps services'
+];
 
 export default function SearchPage() {
-  const [searchQuery, setSearchQuery] = React.useState('');
-  const [activeFilters, setActiveFilters] = React.useState<string[]>([]);
-  const [selectedCategory, setSelectedCategory] = React.useState('all');
-  const [sortBy, setSortBy] = React.useState('relevance');
-  const [isSearching, setIsSearching] = React.useState(false);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [query, setQuery] = useState(searchParams.get('q') || '');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [isSearching, setIsSearching] = useState(false);
+  const [results, setResults] = useState(searchResults);
 
-  const searchCategories = [
-    { id: 'all', name: 'All Results', count: 156 },
-    { id: 'services', name: 'Services', count: 42 },
-    { id: 'solutions', name: 'Solutions', count: 28 },
-    { id: 'blog', name: 'Blog Posts', count: 35 },
-    { id: 'case-studies', name: 'Case Studies', count: 18 },
-    { id: 'documentation', name: 'Documentation', count: 33 }
-  ];
-
-  const filterOptions = [
-    { id: 'ai', label: 'AI & Machine Learning', icon: Brain },
-    { id: 'cloud', label: 'Cloud Computing', icon: Cloud },
-    { id: 'security', label: 'Cybersecurity', icon: Shield },
-    { id: 'transformation', label: 'Digital Transformation', icon: Zap },
-    { id: 'consulting', label: 'Consulting', icon: Users },
-    { id: 'iot', label: 'IoT & Edge', icon: Globe }
-  ];
-
-  const sortOptions = [
-    { value: 'relevance', label: 'Most Relevant' },
-    { value: 'date', label: 'Newest First' },
-    { value: 'popularity', label: 'Most Popular' },
-    { value: 'rating', label: 'Highest Rated' }
-  ];
-
-  // Mock search results - in a real app, this would come from an API
-  const searchResults = [
-    {
-      id: 1,
-      type: 'service',
-      title: 'AI Business Intelligence Solutions',
-      excerpt: 'Transform your business data into actionable insights with our advanced AI-powered business intelligence platform. Get real-time analytics, predictive modeling, and automated reporting.',
-      category: 'AI & Machine Learning',
-      tags: ['AI', 'Business Intelligence', 'Analytics', 'Machine Learning'],
-      url: '/services/ai-business-intelligence',
-      rating: 4.8,
-      views: 1247,
-      date: '2024-01-15',
-      icon: Brain
-    },
-    {
-      id: 2,
-      type: 'blog',
-      title: 'The Future of Cloud Computing in 2024',
-      excerpt: 'Discover the latest trends in cloud computing, from edge computing to serverless architectures. Learn how businesses are leveraging cloud technology for competitive advantage.',
-      category: 'Cloud Computing',
-      tags: ['Cloud', 'Technology Trends', 'Digital Transformation'],
-      url: '/blog/cloud-computing-2024',
-      rating: 4.6,
-      views: 892,
-      date: '2024-01-10',
-      icon: Cloud
-    },
-    {
-      id: 3,
-      type: 'case-study',
-      title: 'Healthcare Provider Digital Transformation Success',
-      excerpt: 'How a major healthcare provider achieved 40% operational efficiency improvement through our digital transformation services, including AI-powered patient care systems.',
-      category: 'Digital Transformation',
-      tags: ['Healthcare', 'Digital Transformation', 'AI', 'Case Study'],
-      url: '/case-studies/healthcare-transformation',
-      rating: 4.9,
-      views: 1567,
-      date: '2024-01-08',
-      icon: Zap
-    },
-    {
-      id: 4,
-      type: 'service',
-      title: 'Zero Trust Network Architecture',
-      excerpt: 'Implement comprehensive cybersecurity with our Zero Trust Network Architecture services. Protect your organization from modern cyber threats with advanced security protocols.',
-      category: 'Cybersecurity',
-      tags: ['Security', 'Zero Trust', 'Network Security', 'Cybersecurity'],
-      url: '/services/zero-trust-network',
-      rating: 4.7,
-      views: 1034,
-      date: '2024-01-12',
-      icon: Shield
-    },
-    {
-      id: 5,
-      type: 'documentation',
-      title: 'API Integration Guide',
-      excerpt: 'Complete guide to integrating with Zion Tech Group APIs. Includes authentication, endpoints, rate limiting, and best practices for developers.',
-      category: 'Documentation',
-      tags: ['API', 'Integration', 'Developer Guide', 'Technical'],
-      url: '/docs/api-integration',
-      rating: 4.5,
-      views: 756,
-      date: '2024-01-05',
-      icon: FileText
-    },
-    {
-      id: 6,
-      type: 'blog',
-      title: 'Cybersecurity Best Practices for Small Businesses',
-      excerpt: 'Essential cybersecurity practices that small businesses should implement to protect against cyber threats. Practical tips and actionable strategies.',
-      category: 'Cybersecurity',
-      tags: ['Security', 'Small Business', 'Best Practices', 'Cybersecurity'],
-      url: '/blog/cybersecurity-small-business',
-      rating: 4.4,
-      views: 623,
-      date: '2024-01-03',
-      icon: Shield
+  // Filter results based on search query and category
+  useEffect(() => {
+    if (!query.trim()) {
+      setResults(searchResults);
+      return;
     }
-  ];
 
-  const recentSearches = [
-    'AI chatbot implementation',
-    'cloud migration strategy',
-    'cybersecurity audit',
-    'digital transformation roadmap',
-    'machine learning models'
-  ];
+    setIsSearching(true);
+    
+    // Simulate search delay
+    const timer = setTimeout(() => {
+      const filtered = searchResults.filter(result => {
+        const matchesQuery = result.title.toLowerCase().includes(query.toLowerCase()) ||
+                           result.description.toLowerCase().includes(query.toLowerCase()) ||
+                           result.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()));
+        
+        const matchesCategory = selectedCategory === 'all' || 
+                               result.category.toLowerCase() === selectedCategory.toLowerCase();
+        
+        return matchesQuery && matchesCategory;
+      });
 
-  const popularSearches = [
-    'AI solutions',
-    'cloud computing',
-    'cybersecurity services',
-    'digital transformation',
-    'IoT solutions',
-    'blockchain technology'
-  ];
+      // Sort by relevance
+      const sorted = filtered.sort((a, b) => b.relevance - a.relevance);
+      setResults(sorted);
+      setIsSearching(false);
+    }, 500);
 
-  const handleSearch = (query: string) => {
+    return () => clearTimeout(timer);
+  }, [query, selectedCategory]);
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
     if (query.trim()) {
-      setSearchQuery(query);
-      setIsSearching(true);
-      // In a real app, this would trigger an API call
-      setTimeout(() => setIsSearching(false), 1000);
+      setSearchParams({ q: query.trim() });
     }
   };
 
-  const addFilter = (filterId: string) => {
-    if (!activeFilters.includes(filterId)) {
-      setActiveFilters([...activeFilters, filterId]);
-    }
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category);
   };
 
-  const removeFilter = (filterId: string) => {
-    setActiveFilters(activeFilters.filter(f => f !== filterId));
+  const handlePopularSearch = (searchTerm: string) => {
+    setQuery(searchTerm);
+    setSearchParams({ q: searchTerm });
   };
 
-  const clearAllFilters = () => {
-    setActiveFilters([]);
+  const clearSearch = () => {
+    setQuery('');
     setSelectedCategory('all');
-    setSortBy('relevance');
-  };
-
-  const getResultIcon = (type: string) => {
-    switch (type) {
-      case 'service':
-        return Zap;
-      case 'blog':
-        return BookOpen;
-      case 'case-study':
-        return Building;
-      case 'documentation':
-        return FileText;
-      default:
-        return FileText;
-    }
-  };
-
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'short', 
-      day: 'numeric' 
-    });
+    setSearchParams({});
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="Search - Zion Tech Group"
-        description="Search through Zion Tech Group's comprehensive collection of services, solutions, blog posts, case studies, and documentation."
+        title={`Search Results${query ? ` for "${query}"` : ''} - Zion Tech Group`}
+        description="Search through Zion Tech Group's services, resources, and company information."
       />
       
       {/* Search Header */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20"></div>
-        <div className="relative container mx-auto px-4 py-20">
+      <section className="relative py-20 px-4">
+        <div className="container mx-auto max-w-4xl">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Search
-              <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Everything
-              </span>
+            <div className="w-20 h-20 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <Search className="w-10 h-10 text-white" />
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+              Search Zion Tech Group
             </h1>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
-              Find services, solutions, documentation, and insights across our entire platform
+            <p className="text-xl text-slate-300 mb-8">
+              Find the information, services, and resources you need
             </p>
             
-            {/* Main Search Bar */}
-            <div className="max-w-4xl mx-auto">
+            {/* Search Form */}
+            <form onSubmit={handleSearch} className="max-w-2xl mx-auto">
               <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-slate-400" />
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
                 <input
                   type="text"
-                  placeholder="Search for services, solutions, articles, or anything else..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  onKeyPress={(e) => e.key === 'Enter' && handleSearch(searchQuery)}
-                  className="w-full pl-14 pr-4 py-5 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300 text-lg"
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  placeholder="Search for services, resources, or information..."
+                  className="w-full pl-12 pr-20 py-4 bg-slate-800/50 border border-slate-700/50 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
                 />
                 <button
-                  onClick={() => handleSearch(searchQuery)}
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+                  type="submit"
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300"
                 >
                   Search
                 </button>
               </div>
-            </div>
-          </motion.div>
-        </div>
-      </div>
+            </form>
 
-      <div className="container mx-auto px-4 pb-20">
-        {/* Search Filters and Results */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          {/* Left Sidebar - Filters */}
-          <div className="lg:col-span-1">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-6"
-            >
-              {/* Categories */}
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700">
-                <h3 className="text-lg font-semibold text-white mb-4">Categories</h3>
-                <div className="space-y-2">
-                  {searchCategories.map((category) => (
-                    <button
-                      key={category.id}
-                      onClick={() => setSelectedCategory(category.id)}
-                      className={`w-full text-left px-3 py-2 rounded-lg transition-colors ${
-                        selectedCategory === category.id
-                          ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
-                          : 'text-slate-300 hover:bg-slate-700/50'
-                      }`}
-                    >
-                      <div className="flex items-center justify-between">
-                        <span>{category.name}</span>
-                        <span className="text-sm text-slate-400">{category.count}</span>
-                      </div>
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Filters */}
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700">
-                <h3 className="text-lg font-semibold text-white mb-4">Filters</h3>
-                <div className="space-y-3">
-                  {filterOptions.map((filter) => (
-                    <button
-                      key={filter.id}
-                      onClick={() => addFilter(filter.id)}
-                      className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-700/50 transition-colors"
-                    >
-                      <filter.icon className="w-4 h-4" />
-                      <span className="text-sm">{filter.label}</span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Sort Options */}
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700">
-                <h3 className="text-lg font-semibold text-white mb-4">Sort By</h3>
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                >
-                  {sortOptions.map((option) => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              {/* Recent Searches */}
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700">
-                <h3 className="text-lg font-semibold text-white mb-4">Recent Searches</h3>
-                <div className="space-y-2">
-                  {recentSearches.map((search, index) => (
-                    <button
-                      key={index}
-                      onClick={() => handleSearch(search)}
-                      className="w-full text-left px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-700/50 transition-colors flex items-center gap-2"
-                    >
-                      <Clock className="w-4 h-4 text-slate-400" />
-                      <span className="text-sm truncate">{search}</span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Popular Searches */}
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700">
-                <h3 className="text-lg font-semibold text-white mb-4">Popular Searches</h3>
-                <div className="flex flex-wrap gap-2">
+            {/* Popular Searches */}
+            {!query && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="mt-8"
+              >
+                <p className="text-slate-400 mb-4">Popular searches:</p>
+                <div className="flex flex-wrap justify-center gap-2">
                   {popularSearches.map((search, index) => (
                     <button
                       key={index}
-                      onClick={() => handleSearch(search)}
-                      className="px-3 py-1 bg-slate-700 text-slate-300 rounded-full text-sm hover:bg-slate-600 transition-colors"
+                      onClick={() => handlePopularSearch(search)}
+                      className="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg hover:bg-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 text-sm"
                     >
                       {search}
                     </button>
                   ))}
                 </div>
+              </motion.div>
+            )}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Search Results */}
+      {query && (
+        <section className="px-4 mb-20">
+          <div className="container mx-auto max-w-6xl">
+            {/* Results Header */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8"
+            >
+              <div>
+                <h2 className="text-2xl font-bold text-white mb-2">
+                  Search Results for "{query}"
+                </h2>
+                <p className="text-slate-400">
+                  {isSearching ? 'Searching...' : `${results.length} result${results.length !== 1 ? 's' : ''} found`}
+                </p>
               </div>
+              
+              <button
+                onClick={clearSearch}
+                className="flex items-center space-x-2 text-slate-400 hover:text-white transition-colors duration-300 mt-4 sm:mt-0"
+              >
+                <X className="w-4 h-4" />
+                <span>Clear Search</span>
+              </button>
             </motion.div>
           </div>
 
-          {/* Right Side - Results */}
-          <div className="lg:col-span-3">
-            {/* Active Filters */}
-            {activeFilters.length > 0 && (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="mb-6 p-4 bg-slate-800/30 backdrop-blur-sm rounded-xl border border-slate-700"
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-sm font-medium text-slate-300">Active Filters:</h3>
-                  <button
-                    onClick={clearAllFilters}
-                    className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors"
-                  >
-                    Clear All
-                  </button>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {activeFilters.map((filterId) => {
-                    const filter = filterOptions.find(f => f.id === filterId);
-                    return filter ? (
-                      <span
-                        key={filterId}
-                        className="inline-flex items-center gap-2 px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm border border-cyan-500/30"
-                      >
-                        <filter.icon className="w-3 h-3" />
-                        {filter.label}
-                        <button
-                          onClick={() => removeFilter(filterId)}
-                          className="ml-1 hover:text-cyan-300 transition-colors"
-                        >
-                          <X className="w-3 h-3" />
-                        </button>
-                      </span>
-                    ) : null;
-                  })}
-                </div>
-              </motion.div>
-            )}
-
-            {/* Search Results */}
+            {/* Category Filters */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="space-y-6"
+              className="flex flex-wrap gap-3 mb-8"
             >
-              {isSearching ? (
-                <div className="text-center py-12">
-                  <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-                  <p className="text-slate-400">Searching...</p>
-                </div>
-              ) : searchQuery ? (
-                <>
-                  <div className="flex items-center justify-between mb-6">
-                    <h2 className="text-2xl font-bold text-white">
-                      Search Results for "{searchQuery}"
-                    </h2>
-                    <p className="text-slate-400">{searchResults.length} results found</p>
-                  </div>
+              {categories.map((category) => (
+                <button
+                  key={category.value}
+                  onClick={() => handleCategoryChange(category.value)}
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg border transition-all duration-300 ${
+                    selectedCategory === category.value
+                      ? 'bg-gradient-to-r from-cyan-400 to-blue-500 text-white border-transparent shadow-lg shadow-cyan-400/25'
+                      : 'bg-slate-800/50 text-slate-300 border-slate-600/50 hover:border-cyan-400/50 hover:text-white'
+                  }`}
+                >
+                  <category.icon className="w-4 h-4" />
+                  <span>{category.name}</span>
+                </button>
+              ))}
+            </motion.div>
 
-                  {searchResults.map((result, index) => (
-                    <motion.div
-                      key={result.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.1 * index }}
-                      className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
-                    >
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                          <result.icon className="w-6 h-6 text-cyan-400" />
+            {/* Results List */}
+            {isSearching ? (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="text-center py-12"
+              >
+                <div className="w-16 h-16 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                <p className="text-slate-400">Searching...</p>
+              </motion.div>
+            ) : results.length > 0 ? (
+              <div className="space-y-6">
+                {results.map((result, index) => (
+                  <motion.div
+                    key={result.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
+                    className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300"
+                  >
+                    <div className="flex items-start space-x-4">
+                      <div className={`w-12 h-12 bg-gradient-to-br ${result.color} rounded-lg flex items-center justify-center flex-shrink-0`}>
+                        <result.icon className="w-6 h-6 text-white" />
+                      </div>
+                      
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-start justify-between mb-2">
+                          <h3 className="text-xl font-semibold text-white hover:text-cyan-400 transition-colors duration-300">
+                            <Link to={result.url}>{result.title}</Link>
+                          </h3>
+                          <div className="flex items-center space-x-2">
+                            <span className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded">
+                              {result.type}
+                            </span>
+                            <span className="px-2 py-1 bg-cyan-400/10 text-cyan-400 text-xs rounded">
+                              {result.relevance}% match
+                            </span>
+                          </div>
                         </div>
                         
-                        <div className="flex-1">
-                          <div className="flex items-start justify-between mb-2">
-                            <div>
-                              <div className="flex items-center gap-2 mb-1">
-                                <span className="px-2 py-1 bg-slate-700 text-slate-300 text-xs rounded-full">
-                                  {result.type.replace('-', ' ').toUpperCase()}
-                                </span>
-                                <span className="text-slate-400 text-sm">{result.category}</span>
-                              </div>
-                              <h3 className="text-xl font-semibold text-white mb-2">
-                                <Link
-                                  to={result.url}
-                                  className="hover:text-cyan-400 transition-colors"
-                                >
-                                  {result.title}
-                                </Link>
-                              </h3>
-                            </div>
-                            
-                            <div className="flex items-center gap-2 text-slate-400 text-sm">
-                              <div className="flex items-center gap-1">
-                                <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                                {result.rating}
-                              </div>
-                              <div className="flex items-center gap-1">
-                                <Eye className="w-4 h-4" />
-                                {result.views}
-                              </div>
-                            </div>
+                        <p className="text-slate-300 mb-3">{result.description}</p>
+                        
+                        <div className="flex items-center justify-between">
+                          <div className="flex flex-wrap gap-2">
+                            {result.tags.map((tag, tagIndex) => (
+                              <span key={tagIndex} className="px-2 py-1 bg-slate-700/30 text-slate-400 text-xs rounded">
+                                {tag}
+                              </span>
+                            ))}
                           </div>
                           
-                          <p className="text-slate-300 mb-3 leading-relaxed">{result.excerpt}</p>
-                          
-                          <div className="flex items-center justify-between">
-                            <div className="flex flex-wrap gap-2">
-                              {result.tags.map((tag, tagIndex) => (
-                                <span
-                                  key={tagIndex}
-                                  className="px-2 py-1 bg-slate-700 text-slate-300 text-xs rounded-full"
-                                >
-                                  {tag}
-                                </span>
-                              ))}
-                            </div>
-                            
-                            <div className="flex items-center gap-4 text-sm text-slate-400">
-                              <span>{formatDate(result.date)}</span>
-                              <Link
-                                to={result.url}
-                                className="flex items-center gap-1 text-cyan-400 hover:text-cyan-300 transition-colors"
-                              >
-                                Read More
-                                <ArrowRight className="w-4 h-4" />
-                              </Link>
-                            </div>
-                          </div>
+                          <Link
+                            to={result.url}
+                            className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+                          >
+                            <span className="text-sm font-medium">View</span>
+                            <ArrowRight className="w-4 h-4" />
+                          </Link>
                         </div>
                       </div>
-                    </motion.div>
-                  ))}
-                </>
-              ) : (
-                <div className="text-center py-12">
-                  <Search className="w-16 h-16 text-slate-500 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-2">Start Your Search</h3>
-                  <p className="text-slate-400 mb-6">
-                    Enter a search term above to find services, solutions, and resources
-                  </p>
-                  
-                  {/* Quick Search Suggestions */}
-                  <div className="max-w-2xl mx-auto">
-                    <h4 className="text-lg font-medium text-white mb-4">Popular Topics</h4>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                      {popularSearches.map((search, index) => (
-                        <button
-                          key={index}
-                          onClick={() => handleSearch(search)}
-                          className="p-3 bg-slate-800/50 border border-slate-700 rounded-xl text-slate-300 hover:bg-slate-700/50 hover:border-slate-600 transition-all duration-300 text-sm"
-                        >
-                          {search}
-                        </button>
-                      ))}
                     </div>
-                  </div>
+                  </motion.div>
+                ))}
+              </div>
+            ) : (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="text-center py-12"
+              >
+                <div className="w-20 h-20 bg-slate-700/50 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Search className="w-10 h-10 text-slate-400" />
                 </div>
-              )}
-            </motion.div>
+                <h3 className="text-xl font-semibold text-white mb-2">No results found</h3>
+                <p className="text-slate-400 mb-6">
+                  Try adjusting your search terms or browse our categories below
+                </p>
+                
+                <div className="flex flex-wrap justify-center gap-3">
+                  {categories.slice(1).map((category) => (
+                    <button
+                      key={category.value}
+                      onClick={() => handleCategoryChange(category.value)}
+                      className="px-4 py-2 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg hover:bg-slate-700/50 hover:border-cyan-400/50 transition-all duration-300"
+                    >
+                      Browse {category.name}
+                    </button>
+                  ))}
+                </div>
+              </motion.div>
+            )}
           </div>
-        </div>
+        </section>
+      )}
 
-        {/* Help Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mt-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-12 border border-cyan-500/30"
-        >
-          <div className="text-center mb-8">
-            <h2 className="text-4xl font-bold text-white mb-6">Need Help Finding Something?</h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our team is here to help you find exactly what you're looking for
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <MessageCircle className="w-8 h-8 text-cyan-400" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Live Chat</h3>
-              <p className="text-slate-400 text-sm mb-4">Get instant help from our support team</p>
-              <button className="px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition-colors text-sm">
-                Start Chat
-              </button>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-8 h-8 text-cyan-400" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
-              <p className="text-slate-400 text-sm mb-4">Speak directly with our experts</p>
-              <button className="px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition-colors text-sm">
-                Call Now
-              </button>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-8 h-8 text-cyan-400" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Email Support</h3>
-              <p className="text-slate-400 text-sm mb-4">Send us a detailed message</p>
-              <button className="px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition-colors text-sm">
-                Send Email
-              </button>
+      {/* Browse Categories */}
+      {!query && (
+        <section className="px-4 mb-20">
+          <div className="container mx-auto max-w-6xl">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Browse by Category
+              </h2>
+              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+                Explore our services, resources, and company information
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {categories.slice(1).map((category, index) => (
+                <motion.div
+                  key={category.value}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                  className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 group cursor-pointer"
+                  onClick={() => handleCategoryChange(category.value)}
+                >
+                  <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <category.icon className="w-8 h-8 text-white" />
+                  </div>
+                  
+                  <h3 className="text-xl font-semibold text-white mb-3">{category.name}</h3>
+                  
+                  <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
+                    <span className="text-sm font-medium">Browse {category.name}</span>
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
-        </motion.div>
-      </div>
+        </section>
+      )}
     </div>
   );
 }

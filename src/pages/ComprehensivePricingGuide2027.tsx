@@ -1,559 +1,513 @@
-import React, { useState, useMemo } from 'react';
-import { motion  } from 'framer-motion.ts';
-import { Search, 
-  Filter, 
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { SEO } from '../components/SEO';
+import { motion } from 'framer-motion';
+import { 
+  DollarSign, 
+  CheckCircle, 
   Star, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  Globe, 
-  Cpu,
-  Network,
-  Layers,
-  Brain,
-  Cloud,
-  Smartphone,
-  Monitor,
-  Server,
-  Lock,
+  TrendingUp,
+  Shield,
+  Zap,
   Users,
-  BarChart3,
-  Target,
-  DollarSign,
+  Building,
+  Rocket,
+  Award,
   Clock,
-  CheckCircle,
+  Target,
+  BarChart3,
+  PieChart,
+  Calculator,
+  FileText,
+  Download,
   ArrowRight,
+  ChevronRight,
+  ChevronDown,
+  Info,
+  AlertCircle,
+  HelpCircle,
   Phone,
   Mail,
-  MapPin,
-  ChevronDown,
-  ChevronUp
- } from 'lucide-react';
-import { SEO  } from '../components/SEO';
-import { ADVANCED_AI_SERVICES_2025  } from '../data/advancedAIServices2025';
-import { INNOVATIVE_IT_INFRASTRUCTURE_2025  } from '../data/innovativeITInfrastructure2025';
-import { INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025  } from '../data/innovativeBlockchainWeb3Services2025';
+  MessageSquare,
+  Cloud,
+  Package,
+  Calendar,
+  Settings
+} from 'lucide-react';
 
-const ComprehensivePricingGuide2027: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
+const pricingTiers = [
+  {
+    name: 'Starter',
+    price: '$2,500',
+    period: '/month',
+    description: 'Perfect for small businesses starting their digital transformation',
+    icon: Star,
+    color: 'from-blue-400 to-cyan-500',
+    features: [
+      'Basic AI Analytics Dashboard',
+      'Cloud Infrastructure Setup',
+      '24/7 Basic Support',
+      'Monthly Performance Reports',
+      'Security Monitoring',
+      'Backup & Recovery'
+    ],
+    limitations: [
+      'Up to 5 users',
+      'Basic integrations only',
+      'Standard response time'
+    ],
+    cta: 'Get Started',
+    popular: false
+  },
+  {
+    name: 'Professional',
+    price: '$7,500',
+    period: '/month',
+    description: 'Ideal for growing companies with advanced technology needs',
+    icon: Award,
+    color: 'from-purple-400 to-pink-500',
+    features: [
+      'Advanced AI & ML Solutions',
+      'Custom Dashboard Development',
+      'Priority Support (4hr response)',
+      'Weekly Performance Reviews',
+      'Advanced Security Suite',
+      'Custom Integrations',
+      'Training & Workshops',
+      'Quarterly Strategy Sessions'
+    ],
+    limitations: [
+      'Up to 25 users',
+      'Advanced integrations',
+      'Priority support'
+    ],
+    cta: 'Start Free Trial',
+    popular: true
+  },
+  {
+    name: 'Enterprise',
+    price: 'Custom',
+    period: '',
+    description: 'Tailored solutions for large enterprises with complex requirements',
+    icon: Building,
+    color: 'from-orange-400 to-red-500',
+    features: [
+      'Full AI Suite Implementation',
+      'Custom Solution Development',
+      'Dedicated Support Team',
+      'Real-time Monitoring',
+      'Advanced Security & Compliance',
+      'Unlimited Integrations',
+      'Custom Training Programs',
+      'Strategic Consulting',
+      'On-site Support Available'
+    ],
+    limitations: [
+      'Unlimited users',
+      'Full customization',
+      'Dedicated support'
+    ],
+    cta: 'Contact Sales',
+    popular: false
+  }
+];
 
-  const categories = ['All', 'AI & Machine Learning', 'Cybersecurity', 'Cloud & Infrastructure', 'Digital Transformation', 'Healthcare Tech', 'Sustainability', 'Micro SaaS'];
+const serviceCategories = [
+  {
+    name: 'AI & Analytics Services',
+    icon: TrendingUp,
+    color: 'from-blue-400 to-cyan-500',
+    services: [
+      { name: 'AI Business Intelligence', price: '$3,500/month', description: 'Advanced analytics and insights' },
+      { name: 'Machine Learning Models', price: '$5,000/month', description: 'Custom ML model development' },
+      { name: 'Predictive Analytics', price: '$4,200/month', description: 'Future trend forecasting' },
+      { name: 'Data Visualization', price: '$2,800/month', description: 'Interactive dashboards and reports' }
+    ]
+  },
+  {
+    name: 'Cloud & DevOps',
+    icon: Cloud,
+    color: 'from-green-400 to-emerald-500',
+    services: [
+      { name: 'Cloud Migration', price: '$15,000', description: 'One-time migration service' },
+      { name: 'DevOps Automation', price: '$4,500/month', description: 'CI/CD pipeline optimization' },
+      { name: 'Infrastructure Management', price: '$3,200/month', description: '24/7 infrastructure monitoring' },
+      { name: 'Security & Compliance', price: '$5,800/month', description: 'Comprehensive security suite' }
+    ]
+  },
+  {
+    name: 'Digital Solutions',
+    icon: Zap,
+    color: 'from-purple-400 to-pink-500',
+    services: [
+      { name: 'Digital Transformation', price: '$25,000', description: 'Strategic transformation consulting' },
+      { name: 'MicroSaaS Development', price: '$12,000/month', description: 'Custom SaaS solution development' },
+      { name: 'IoT Implementation', price: '$8,500/month', description: 'IoT infrastructure and management' },
+      { name: 'Blockchain Solutions', price: '$18,000', description: 'Blockchain implementation and consulting' }
+    ]
+  }
+];
 
-  const priceRanges = [
-    { value: 'All', label: 'All Prices' },
-    { value: 'budget', label: 'Under $1,000/month' },
-    { value: 'mid', label: '$1,000 - $5,000/month' },
-    { value: 'premium', label: '$5,000 - $15,000/month' },
-    { value: 'enterprise', label: '$15,000+/month' }
-  ];
+const pricingFactors = [
+  {
+    factor: 'Project Complexity',
+    description: 'More complex projects require additional resources and time',
+    impact: 'High',
+    examples: ['Custom integrations', 'Legacy system migration', 'Advanced AI models']
+  },
+  {
+    factor: 'Team Size',
+    description: 'Larger teams need more comprehensive solutions and support',
+    impact: 'Medium',
+    examples: ['User management', 'Training programs', 'Support scaling']
+  },
+  {
+    factor: 'Data Volume',
+    description: 'Higher data volumes require more robust infrastructure',
+    impact: 'Medium',
+    examples: ['Storage costs', 'Processing power', 'Backup solutions']
+  },
+  {
+    factor: 'Compliance Requirements',
+    description: 'Industry-specific compliance adds complexity and cost',
+    impact: 'High',
+    examples: ['HIPAA', 'SOC 2', 'GDPR', 'Industry standards']
+  }
+];
 
-  const pricingPlans = [
-    {
-      id: 'ai-enterprise-orchestrator',
-      name: 'AI Enterprise Orchestrator',
-      category: 'AI & Machine Learning',
-      description: 'Multi-agent AI coordination platform for enterprise workflow automation',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-600',
-      plans: [
-        {
-          name: 'Starter',
-          price: '$8,000',
-          period: 'month',
-          features: ['Up to 5 AI agents', 'Basic workflow automation', 'Email support', 'Standard integrations'],
-          limitations: ['Max 100 workflows', 'Basic reporting', 'Community forum']
-        },
-        {
-          name: 'Professional',
-          price: '$15,000',
-          period: 'month',
-          features: ['Up to 25 AI agents', 'Advanced workflow automation', 'Priority support', 'Custom integrations', 'Advanced analytics'],
-          limitations: ['Max 500 workflows', 'Advanced reporting', 'Phone support']
-        },
-        {
-          name: 'Enterprise',
-          price: '$25,000',
-          period: 'month',
-          features: ['Unlimited AI agents', 'Full workflow automation', '24/7 dedicated support', 'Custom development', 'White-label options'],
-          limitations: ['None', 'Full customization', 'Dedicated account manager']
-        }
-      ],
-      roi: '300-500%',
-      implementation: '8-12 weeks',
-      support: '24/7'
-    },
-    {
-      id: 'ai-cybersecurity-suite',
-      name: 'AI Cybersecurity Suite',
-      category: 'Cybersecurity',
-      description: 'Next-generation AI-powered threat detection and response',
-      icon: Shield,
-      color: 'from-red-500 to-orange-600',
-      plans: [
-        {
-          name: 'Basic',
-          price: '$5,000',
-          period: 'month',
-          features: ['Basic threat detection', 'Email alerts', 'Standard support', 'Basic reporting'],
-          limitations: ['Max 100 endpoints', 'Basic threat intelligence', 'Community support']
-        },
-        {
-          name: 'Advanced',
-          price: '$12,000',
-          period: 'month',
-          features: ['Advanced threat detection', 'Automated response', 'Priority support', 'Advanced reporting', 'Custom rules'],
-          limitations: ['Max 500 endpoints', 'Advanced threat intelligence', 'Phone support']
-        },
-        {
-          name: 'Enterprise',
-          price: '$20,000',
-          period: 'month',
-          features: ['Full threat detection', 'AI-powered response', '24/7 dedicated support', 'Custom development', 'Compliance reporting'],
-          limitations: ['None', 'Full customization', 'Dedicated security team']
-        }
-      ],
-      roi: '400-600%',
-      implementation: '6-10 weeks',
-      support: '24/7'
-    },
-    {
-      id: 'cloud-devops-revolution',
-      name: 'Cloud DevOps Revolution',
-      category: 'Cloud & Infrastructure',
-      description: 'Next-generation cloud infrastructure and DevOps automation',
-      icon: Cloud,
-      color: 'from-cyan-500 to-blue-600',
-      plans: [
-        {
-          name: 'Starter',
-          price: '$3,000',
-          period: 'month',
-          features: ['Basic CI/CD pipeline', 'Cloud monitoring', 'Email support', 'Standard templates'],
-          limitations: ['Max 3 environments', 'Basic automation', 'Community support']
-        },
-        {
-          name: 'Professional',
-          price: '$10,000',
-          period: 'month',
-          features: ['Advanced CI/CD pipeline', 'Multi-cloud support', 'Priority support', 'Custom automation', 'Advanced monitoring'],
-          limitations: ['Max 10 environments', 'Advanced automation', 'Phone support']
-        },
-        {
-          name: 'Enterprise',
-          price: '$18,000',
-          period: 'month',
-          features: ['Full CI/CD pipeline', 'Multi-cloud orchestration', '24/7 dedicated support', 'Custom development', 'Full automation'],
-          limitations: ['None', 'Full customization', 'Dedicated DevOps team']
-        }
-      ],
-      roi: '200-350%',
-      implementation: '6-10 weeks',
-      support: '24/7'
-    },
-    {
-      id: 'digital-transformation-2027',
-      name: 'Digital Transformation 2027',
-      category: 'Digital Transformation',
-      description: 'Comprehensive digital transformation strategy and implementation',
-      icon: Rocket,
-      color: 'from-orange-500 to-red-600',
-      plans: [
-        {
-          name: 'Strategy',
-          price: '$25,000',
-          period: 'month',
-          features: ['Digital strategy development', 'Technology roadmap', 'Change management plan', 'ROI analysis'],
-          limitations: ['Strategy only', 'Basic implementation', 'Standard support']
-        },
-        {
-          name: 'Implementation',
-          price: '$50,000',
-          period: 'month',
-          features: ['Full strategy + implementation', 'Technology deployment', 'Change management', 'Training programs', 'Priority support'],
-          limitations: ['Standard implementation', 'Advanced support', 'Phone support']
-        },
-        {
-          name: 'Transformation',
-          price: '$100,000',
-          period: 'month',
-          features: ['Complete transformation', 'Custom development', '24/7 dedicated support', 'Ongoing optimization', 'Full customization'],
-          limitations: ['None', 'Full customization', 'Dedicated transformation team']
-        }
-      ],
-      roi: '600-1000%',
-      implementation: '16-24 weeks',
-      support: '24/7'
-    },
-    {
-      id: 'healthcare-tech-platform',
-      name: 'Healthcare Tech Platform',
-      category: 'Healthcare Tech',
-      description: 'AI-powered healthcare technology platform for modern medical facilities',
-      icon: Heart,
-      color: 'from-pink-500 to-red-600',
-      plans: [
-        {
-          name: 'Clinic',
-          price: '$8,000',
-          period: 'month',
-          features: ['Patient management', 'Basic AI diagnostics', 'Email support', 'Standard compliance'],
-          limitations: ['Max 50 patients/day', 'Basic AI features', 'Community support']
-        },
-        {
-          name: 'Hospital',
-          price: '$20,000',
-          period: 'month',
-          features: ['Full patient management', 'Advanced AI diagnostics', 'Priority support', 'Full compliance', 'Custom integrations'],
-          limitations: ['Max 500 patients/day', 'Advanced AI features', 'Phone support']
-        },
-        {
-          name: 'Enterprise',
-          price: '$35,000',
-          period: 'month',
-          features: ['Complete healthcare platform', 'AI-powered diagnostics', '24/7 dedicated support', 'Custom development', 'Full customization'],
-          limitations: ['None', 'Full customization', 'Dedicated healthcare team']
-        }
-      ],
-      roi: '350-500%',
-      implementation: '12-16 weeks',
-      support: '24/7'
-    },
-    {
-      id: 'micro-saas-suite',
-      name: 'Micro SaaS Suite',
-      category: 'Micro SaaS',
-      description: 'Collection of focused, AI-powered micro SaaS solutions',
-      icon: Zap,
-      color: 'from-indigo-500 to-purple-600',
-      plans: [
-        {
-          name: 'Individual',
-          price: '$500',
-          period: 'month',
-          features: ['3 micro SaaS tools', 'Basic AI features', 'Email support', 'Standard templates'],
-          limitations: ['Max 3 tools', 'Basic AI features', 'Community support']
-        },
-        {
-          name: 'Business',
-          price: '$1,500',
-          period: 'month',
-          features: ['10 micro SaaS tools', 'Advanced AI features', 'Priority support', 'Custom integrations', 'Advanced analytics'],
-          limitations: ['Max 10 tools', 'Advanced AI features', 'Phone support']
-        },
-        {
-          name: 'Enterprise',
-          price: '$3,000',
-          period: 'month',
-          features: ['All micro SaaS tools', 'Full AI features', '24/7 dedicated support', 'Custom development', 'White-label options'],
-          limitations: ['None', 'Full customization', 'Dedicated account manager']
-        }
-      ],
-      roi: '150-300%',
-      implementation: '2-4 weeks',
-      support: '24/7'
-    }
-  };
+const costOptimization = [
+  {
+    title: 'Start Small, Scale Smart',
+    description: 'Begin with essential services and add advanced features as needed',
+    icon: TrendingUp,
+    savings: '20-30%'
+  },
+  {
+    title: 'Bundle Services',
+    description: 'Combine multiple services for discounted package pricing',
+    icon: Package,
+    savings: '15-25%'
+  },
+  {
+    title: 'Annual Commitments',
+    description: 'Lock in rates with annual contracts and prepayment options',
+    icon: Calendar,
+    savings: '10-20%'
+  },
+  {
+    title: 'Custom Solutions',
+    description: 'Work with our team to design cost-effective custom solutions',
+    icon: Settings,
+    savings: '25-40%'
+  }
+];
 
-  const filteredPlans = pricingPlans.filter(plan => {
-    const matchesCategory = selectedCategory === 'All' || plan.category === selectedCategory;
-    const matchesSearch = plan.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         plan.description.toLowerCase().includes(searchQuery.toLowerCase());
-    
-    let matchesPrice = true;
-    if (selectedPriceRange !== 'All') {
-      const maxPrice = plan.plans[plan.plans.length - 1].price.replace('$', '').replace(',', '');
-      const priceNum = parseInt(maxPrice);
-      
-      switch (selectedPriceRange) {
-        case 'budget':
-          matchesPrice = priceNum < 1000;
-          break;
-        case 'mid':
-          matchesPrice = priceNum >= 1000 && priceNum < 5000;
-          break;
-        case 'premium':
-          matchesPrice = priceNum >= 5000 && priceNum < 15000;
-          break;
-        case 'enterprise':
-          matchesPrice = priceNum >= 15000;
-          break;
-      }
-    }
-    
-    return matchesCategory && matchesSearch && matchesPrice;
-  });
-
-  const pricingBenefits = [
-    {
-      icon: Star,
-      title: 'Proven ROI',
-      description: 'All our services deliver measurable returns on investment'
-    },
-    {
-      icon: Clock,
-      title: 'Fast Implementation',
-      description: 'Quick deployment with minimal business disruption'
-    },
-    {
-      icon: Users,
-      title: '24/7 Support',
-      description: 'Round-the-clock expert support and maintenance'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security and compliance standards'
-    }
-  ];
-
+export default function ComprehensivePricingGuide2027() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
-      <Helmet>
-        <title>Comprehensive Pricing Guide 2027 - Zion Tech Group</title>
-        <meta name="description" content="Explore Zion Tech Group's comprehensive pricing guide for 2027. Transparent pricing for AI, cybersecurity, cloud, and digital transformation services." />
-        <meta name="keywords" content="pricing guide 2027, technology pricing, AI services pricing, Zion Tech Group pricing" />
-      </Helmet>
-
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Comprehensive Pricing Guide 2027 - Zion Tech Group"
+        description="Complete pricing information for Zion Tech Group's AI, cloud, and digital transformation services. Transparent pricing with flexible plans for businesses of all sizes."
+      />
+      
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full mb-6">
-              <Calculator className="w-10 h-10 text-white" />
+      <section className="relative py-20 px-4">
+        <div className="container mx-auto max-w-7xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <div className="w-20 h-20 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <DollarSign className="w-10 h-10 text-white" />
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Comprehensive Pricing Guide
-              <span className="block bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-                2027
-              </span>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 bg-clip-text text-transparent">
+              Pricing Guide 2027
             </h1>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Transparent pricing for all our technology services. Choose the plan that fits your business 
-              needs and budget, with flexible options for every organization size.
+            <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-4xl mx-auto">
+              Transparent, competitive pricing for cutting-edge technology solutions. 
+              Choose the plan that fits your business needs and budget.
             </p>
-          </div>
-          
-          {/* Quick Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                <DollarSign className="w-6 h-6 text-white" />
-              </div>
-              <div className="text-2xl font-bold text-white mb-1">Transparent</div>
-              <div className="text-slate-300 text-sm">Pricing</div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/request-quote"
+                className="px-8 py-4 bg-gradient-to-r from-green-400 to-emerald-500 text-white font-semibold rounded-xl hover:from-green-500 hover:to-emerald-600 transition-all duration-300 shadow-lg shadow-green-400/25"
+              >
+                Get Custom Quote
+              </Link>
+              <Link
+                to="/contact"
+                className="px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-xl hover:bg-green-400 hover:text-slate-900 transition-colors duration-300"
+              >
+                Speak with Sales
+              </Link>
             </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                <Star className="w-6 h-6 text-white" />
-              </div>
-              <div className="text-2xl font-bold text-white mb-1">400%+</div>
-              <div className="text-slate-300 text-sm">Average ROI</div>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                <Clock className="w-6 h-6 text-white" />
-              </div>
-            <div className="text-2xl font-bold text-white mb-1">Flexible</div>
-              <div className="text-slate-300 text-sm">Plans</div>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                <Users className="w-6 h-6 text-white" />
-              </div>
-              <div className="text-2xl font-bold text-white mb-1">24/7</div>
-              <div className="text-slate-300 text-sm">Support</div>
-            </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Pricing Benefits */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Why Choose Our Pricing?
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {pricingBenefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-slate-700 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-white" />
+      {/* Pricing Tiers */}
+      <section className="px-4 mb-20">
+        <div className="container mx-auto max-w-7xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Choose Your Plan
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Flexible pricing options designed to scale with your business
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {pricingTiers.map((tier, index) => (
+              <motion.div
+                key={tier.name}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                className={`relative bg-slate-800/50 rounded-2xl p-8 border-2 transition-all duration-300 hover:scale-105 ${
+                  tier.popular 
+                    ? 'border-green-400 shadow-lg shadow-green-400/25' 
+                    : 'border-slate-700/50 hover:border-green-400/50'
+                }`}
+              >
+                {tier.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+
+                <div className={`w-16 h-16 bg-gradient-to-br ${tier.color} rounded-xl flex items-center justify-center mb-6`}>
+                  <tier.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                <p className="text-slate-300 leading-relaxed">{benefit.description}</p>
-              </div>
+                
+                <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                <div className="mb-4">
+                  <span className="text-4xl font-bold text-green-400">{tier.price}</span>
+                  <span className="text-slate-400">{tier.period}</span>
+                </div>
+                <p className="text-slate-300 mb-6">{tier.description}</p>
+                
+                <div className="space-y-3 mb-8">
+                  <h4 className="text-white font-semibold mb-3">What's Included:</h4>
+                  {tier.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center text-sm text-slate-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                      {feature}
+                    </div>
+                  ))}
+                </div>
+
+                {tier.limitations.length > 0 && (
+                  <div className="space-y-3 mb-8">
+                    <h4 className="text-white font-semibold mb-3">Limitations:</h4>
+                    {tier.limitations.map((limitation, limitationIndex) => (
+                      <div key={limitationIndex} className="flex items-center text-sm text-slate-400">
+                        <AlertCircle className="w-4 h-4 text-orange-400 mr-3 flex-shrink-0" />
+                        {limitation}
+                      </div>
+                    ))}
+                  </div>
+                )}
+                
+                <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+                  tier.popular
+                    ? 'bg-gradient-to-r from-green-400 to-emerald-500 text-white hover:from-green-500 hover:to-emerald-600'
+                    : 'border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-slate-900'
+                }`}>
+                  {tier.cta}
+                </button>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Search and Filters */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-6">
-            {/* Search */}
-            <div className="flex-1 relative">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-slate-400" />
-              <input
-                type="text"
-                placeholder="Search pricing plans..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 rounded-xl bg-slate-800/70 border border-green-400/20 focus:border-green-400 focus:ring-2 focus:ring-green-400/20 outline-none text-white"
-              />
-            </div>
+      {/* Service Categories */}
+      <section className="px-4 mb-20">
+        <div className="container mx-auto max-w-7xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Service-Specific Pricing
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Detailed pricing for individual services and solutions
+            </p>
+          </motion.div>
 
-            {/* Category Filter */}
-            <div className="flex gap-4">
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 rounded-xl bg-slate-800/70 border border-green-400/20 focus:border-green-400 focus:ring-2 focus:ring-green-400/20 outline-none text-white"
+          <div className="space-y-8">
+            {serviceCategories.map((category, index) => (
+              <motion.div
+                key={category.name}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.0 + index * 0.1 }}
+                className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50"
               >
-                {categories.map(category => (
-                  <option key={category} value={category}>{category}</option>
-                ))}
-              </select>
-
-              {/* Price Range Filter */}
-              <select
-                value={selectedPriceRange}
-                onChange={(e) => setSelectedPriceRange(e.target.value)}
-                className="px-4 py-3 rounded-xl bg-slate-800/70 border border-green-400/20 focus:border-green-400 focus:ring-2 focus:ring-green-400/20 outline-none text-white"
-              >
-                {priceRanges.map(range => (
-                  <option key={range.value} value={range.value}>{range.label}</option>
-                ))}
-              </select>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Plans */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="space-y-12">
-            {filteredPlans.map((plan) => (
-              <div key={plan.id} className="bg-white/5 backdrop-blur-sm border border-slate-700 rounded-2xl p-8">
-                {/* Plan Header */}
-                <div className="flex items-start justify-between mb-8">
-                  <div className="flex items-center space-x-4">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${plan.color} rounded-lg flex items-center justify-center`}>
-                      <plan.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div>
-                      <h2 className="text-3xl font-bold text-white mb-2">{plan.name}</h2>
-                      <p className="text-slate-300 text-lg">{plan.description}</p>
-                      <div className="flex items-center space-x-4 mt-3 text-sm">
-                        <span className="text-green-400">ROI: {plan.roi}</span>
-                        <span className="text-blue-400">Implementation: {plan.implementation}</span>
-                        <span className="text-purple-400">Support: {plan.support}</span>
-                      </div>
-                    </div>
+                <div className="flex items-center mb-6">
+                  <div className={`w-12 h-12 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mr-4`}>
+                    <category.icon className="w-6 h-6 text-white" />
                   </div>
+                  <h3 className="text-2xl font-bold text-white">{category.name}</h3>
                 </div>
-
-                {/* Pricing Tiers */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  {plan.plans.map((tier, index) => (
-                    <div key={index} className={`bg-white/5 backdrop-blur-sm border rounded-xl p-6 ${
-                      index === 1 ? 'border-green-500/50 bg-green-500/5' : 'border-slate-700'
-                    }`}>
-                      {index === 1 && (
-                        <div className="inline-block px-3 py-1 bg-green-500 text-white text-xs rounded-full mb-4">
-                          Most Popular
-                        </div>
-                      )}
-                      
-                      <h3 className="text-xl font-bold text-white mb-2">{tier.name}</h3>
-                      <div className="mb-4">
-                        <span className="text-3xl font-bold text-white">{tier.price}</span>
-                        <span className="text-slate-400">/{tier.period}</span>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {category.services.map((service, serviceIndex) => (
+                    <div key={serviceIndex} className="bg-slate-700/30 rounded-xl p-6 border border-slate-600/50">
+                      <div className="flex justify-between items-start mb-3">
+                        <h4 className="text-lg font-semibold text-white">{service.name}</h4>
+                        <span className="text-green-400 font-bold">{service.price}</span>
                       </div>
-                      
-                      <div className="mb-6">
-                        <h4 className="text-white font-semibold mb-3">Features:</h4>
-                        <ul className="space-y-2">
-                          {tier.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center space-x-2">
-                              <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                              <span className="text-slate-300 text-sm">{feature}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      
-                      {tier.limitations.length > 0 && (
-                        <div className="mb-6">
-                          <h4 className="text-slate-400 font-semibold mb-3">Limitations:</h4>
-                          <ul className="space-y-2">
-                            {tier.limitations.map((limitation, limitationIndex) => (
-                              <li key={limitationIndex} className="flex items-center space-x-2">
-                                <X className="w-4 h-4 text-slate-500 flex-shrink-0" />
-                                <span className="text-slate-500 text-sm">{limitation}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                      
-                      <Link
-                        to="/schedule-demo"
-                        className={`w-full py-3 px-4 rounded-lg font-semibold text-center transition-all duration-200 ${
-                          index === 1
-                            ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700'
-                            : 'bg-slate-700 text-white hover:bg-slate-600'
-                        }`}
-                      >
-                        Get Started
-                      </Link>
+                      <p className="text-slate-300 text-sm">{service.description}</p>
                     </div>
                   ))}
                 </div>
               </div>
             ))}
           </div>
-          
-          {filteredPlans.length === 0 && (
-            <div className="text-center py-16">
-              <div className="text-6xl mb-4">🔍</div>
-              <h3 className="text-xl font-semibold mb-2 text-white">No pricing plans found</h3>
-              <p className="text-slate-400">Try adjusting your search criteria or filters</p>
-            </div>
-          )}
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-green-500/10 to-emerald-600/10 border border-green-500/20 rounded-2xl p-8">
-            <h2 className="text-3xl font-bold text-white mb-4">
+      {/* Pricing Factors */}
+      <section className="px-4 mb-20">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.4 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              What Affects Pricing?
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Understanding the factors that influence project costs
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {pricingFactors.map((factor, index) => (
+              <motion.div
+                key={factor.factor}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.6 + index * 0.1 }}
+                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50"
+              >
+                <div className="flex justify-between items-start mb-4">
+                  <h4 className="text-xl font-semibold text-white">{factor.factor}</h4>
+                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                    factor.impact === 'High' ? 'bg-red-500/20 text-red-400' :
+                    factor.impact === 'Medium' ? 'bg-yellow-500/20 text-yellow-400' :
+                    'bg-green-500/20 text-green-400'
+                  }`}>
+                    {factor.impact} Impact
+                  </span>
+                </div>
+                <p className="text-slate-300 mb-4">{factor.description}</p>
+                <div className="space-y-2">
+                  {factor.examples.map((example, exampleIndex) => (
+                    <div key={exampleIndex} className="flex items-center text-sm text-slate-400">
+                      <ChevronRight className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {example}
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Cost Optimization */}
+      <section className="px-4 mb-20">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Cost Optimization Strategies
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Smart ways to maximize value while minimizing costs
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {costOptimization.map((strategy, index) => (
+              <motion.div
+                key={strategy.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 2.0 + index * 0.1 }}
+                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <strategy.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-xl font-semibold text-white mb-2">{strategy.title}</h4>
+                    <p className="text-slate-300 mb-3">{strategy.description}</p>
+                    <div className="inline-block bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-semibold">
+                      Save {strategy.savings}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="px-4 mb-20">
+        <div className="container mx-auto max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 2.2 }}
+            className="bg-gradient-to-r from-slate-800/80 to-slate-700/80 rounded-2xl p-8 md:p-12 border border-slate-600/50 text-center"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
-            <p className="text-slate-300 mb-6">
-              Contact our sales team for custom pricing, volume discounts, and enterprise solutions. 
-              We'll help you find the perfect plan for your business needs.
+            <p className="text-xl text-slate-300 mb-8">
+              Get a personalized quote tailored to your specific needs and budget.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/schedule-demo"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-200"
+                to="/request-quote"
+                className="px-8 py-4 bg-gradient-to-r from-green-400 to-emerald-500 text-white font-semibold rounded-xl hover:from-green-500 hover:to-emerald-600 transition-all duration-300 shadow-lg shadow-green-400/25"
               >
-                Schedule Demo
+                Get Custom Quote
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center px-6 py-3 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition-all duration-200"
+                className="px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-xl hover:bg-green-400 hover:text-slate-900 transition-colors duration-300"
               >
-                Contact Sales
+                Speak with Sales
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>

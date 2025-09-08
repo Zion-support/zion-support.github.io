@@ -1,68 +1,182 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
 import { 
   Users, 
   MessageSquare, 
   Calendar, 
   MapPin, 
-  Clock, 
-  ArrowRight,
-  CheckCircle,
-  Star,
+  Globe, 
   Heart,
-  Share2,
-  Bookmark,
-  Tag,
-  Filter,
-  TrendingUp,
-  Globe,
-  Settings,
-  Code,
-  BarChart3,
-  PieChart,
-  Activity,
+  Star,
+  Award,
+  Rocket,
+  Zap,
   Target,
-  Crosshair,
-  Radar,
+  TrendingUp,
+  Shield,
+  Cloud,
+  Database,
+  Brain,
+  Server,
+  CheckCircle,
+  ArrowRight,
+  ExternalLink,
+  BookOpen,
+  HelpCircle,
+  Settings,
+  Building,
+  Sparkles,
+  Infinity,
+  Layers,
+  GitBranch,
+  Workflow,
+  Command,
+  Terminal,
+  Wifi,
+  Bluetooth,
   Satellite,
-  Telescope,
-  Microscope,
-  Binoculars,
-  Camera,
-  Video2,
-  Film,
-  Tv,
   Radio,
-  Speaker,
-  Headphones,
-  Mic,
-  Phone2,
-  Smartphone2,
-  Tablet,
+  Signal,
+  DollarSign,
+  Factory,
+  ShoppingCart,
+  Truck,
+  Robot,
+  Lightbulb,
+  Code,
+  Palette,
+  FileText,
+  BarChart3,
+  Monitor,
+  Smartphone,
   Laptop,
-  Watch,
-  Clock2,
-  Calendar2,
-  User2,
-  Users2,
-  UserCheck,
-  UserX,
-  UserPlus,
-  UserMinus,
-  UserCog,
-  UserEdit,
-  UserSearch,
-  UserVoice,
-  UserCheck2,
-  UserX2,
-  UserPlus2,
-  UserMinus2,
-  UserCog2,
-  UserEdit2,
-  UserSearch2,
-  UserVoice2
+  Eye,
+  Fingerprint,
+  Key,
+  Clock,
+  Phone,
+  Mail
 } from 'lucide-react';
+
+const communityFeatures = [
+  {
+    title: 'Developer Forums',
+    description: 'Connect with fellow developers, share knowledge, and get help with technical challenges',
+    icon: MessageSquare,
+    color: 'from-blue-400 to-cyan-500',
+    features: ['Technical discussions', 'Code reviews', 'Best practices', 'Problem solving']
+  },
+  {
+    title: 'Learning Resources',
+    description: 'Access tutorials, documentation, and learning materials to enhance your skills',
+    icon: BookOpen,
+    color: 'from-purple-400 to-pink-500',
+    features: ['Video tutorials', 'Interactive courses', 'Documentation', 'Code examples']
+  },
+  {
+    title: 'Events & Meetups',
+    description: 'Join virtual and in-person events to network and learn from industry experts',
+    icon: Calendar,
+    color: 'from-green-400 to-emerald-500',
+    features: ['Webinars', 'Workshops', 'Conferences', 'Networking events']
+  },
+  {
+    title: 'Project Showcase',
+    description: 'Share your projects and get feedback from the community',
+    icon: Rocket,
+    color: 'from-orange-400 to-red-500',
+    features: ['Project demos', 'Code sharing', 'Feedback loops', 'Collaboration opportunities']
+  }
+];
+
+const upcomingEvents = [
+  {
+    title: 'AI & Machine Learning Workshop',
+    date: 'March 15, 2024',
+    time: '2:00 PM - 5:00 PM EST',
+    type: 'Virtual Workshop',
+    description: 'Learn the fundamentals of AI and ML with hands-on exercises',
+    attendees: 45,
+    icon: Brain,
+    color: 'from-purple-400 to-pink-500'
+  },
+  {
+    title: 'Cloud Architecture Best Practices',
+    date: 'March 22, 2024',
+    time: '1:00 PM - 4:00 PM EST',
+    type: 'Webinar',
+    description: 'Explore cloud-native architecture patterns and implementation strategies',
+    attendees: 78,
+    icon: Cloud,
+    color: 'from-blue-400 to-cyan-500'
+  },
+  {
+    title: 'Cybersecurity Roundtable',
+    date: 'March 29, 2024',
+    time: '3:00 PM - 6:00 PM EST',
+    type: 'Panel Discussion',
+    description: 'Industry experts discuss emerging security threats and solutions',
+    attendees: 32,
+    icon: Shield,
+    color: 'from-red-400 to-pink-500'
+  }
+];
+
+const communityStats = [
+  {
+    metric: '5,000+',
+    label: 'Members',
+    description: 'Active community members from around the world'
+  },
+  {
+    metric: '200+',
+    label: 'Events',
+    description: 'Workshops, webinars, and meetups hosted annually'
+  },
+  {
+    metric: '50+',
+    label: 'Countries',
+    description: 'Global reach across multiple time zones'
+  },
+  {
+    metric: '24/7',
+    label: 'Support',
+    description: 'Round-the-clock community support and engagement'
+  }
+];
+
+const discussionTopics = [
+  {
+    category: 'AI & Machine Learning',
+    topics: ['Model training', 'Data preprocessing', 'Deployment strategies', 'Ethics in AI'],
+    icon: Brain,
+    color: 'from-purple-400 to-pink-500',
+    postCount: 156
+  },
+  {
+    category: 'Cloud & DevOps',
+    topics: ['Container orchestration', 'CI/CD pipelines', 'Infrastructure as code', 'Cost optimization'],
+    icon: Cloud,
+    color: 'from-blue-400 to-cyan-500',
+    postCount: 234
+  },
+  {
+    category: 'Cybersecurity',
+    topics: ['Threat detection', 'Compliance frameworks', 'Incident response', 'Security automation'],
+    icon: Shield,
+    color: 'from-red-400 to-pink-500',
+    postCount: 89
+  },
+  {
+    category: 'Data & Analytics',
+    topics: ['Data visualization', 'ETL processes', 'Real-time analytics', 'Business intelligence'],
+    icon: BarChart3,
+    color: 'from-green-400 to-emerald-500',
+    postCount: 178
+  }
+];
 
 export default function Community() {
   const upcomingEvents = [
@@ -179,262 +293,124 @@ export default function Community() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Community - Zion Tech Group"
+        description="Join our vibrant community of technology professionals. Connect, learn, and grow with fellow developers and industry experts."
+      />
+      
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-900/20 via-blue-900/20 to-purple-900/20"></div>
-        <div className="container-responsive relative z-10 py-20">
+      <section className="relative py-20 px-4">
+        <div className="container mx-auto max-w-7xl">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
+            transition={{ duration: 0.6 }}
+            className="text-center"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full text-green-300 text-sm font-medium mb-6">
-              <Users className="w-4 h-4" />
-              Community
+            <div className="w-20 h-20 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <Users className="w-10 h-10 text-white" />
             </div>
-            
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Join Our Global
-              <span className="bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-                {' '}Tech Community
-              </span>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 bg-clip-text text-transparent">
+              Join Our Community
             </h1>
-            
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-              Connect with fellow developers, engineers, and tech enthusiasts. 
-              Share knowledge, collaborate on projects, and grow your network.
+            <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-4xl mx-auto">
+              Connect with thousands of technology professionals, share knowledge, and grow your skills in our vibrant community.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
+                className="px-8 py-4 bg-gradient-to-r from-green-400 to-emerald-500 text-white font-semibold rounded-xl hover:from-green-500 hover:to-emerald-600 transition-all duration-300 shadow-lg shadow-green-400/25"
               >
                 Join Community
-                <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 to="/events"
-                className="inline-flex items-center gap-2 px-8 py-4 border border-green-500/30 text-green-300 hover:bg-green-500/10 font-semibold rounded-xl transition-all duration-300"
+                className="px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-xl hover:bg-green-400 hover:text-slate-900 transition-colors duration-300"
               >
                 View Events
-                <Calendar className="w-5 h-5" />
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Community Stats Section */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {/* Community Stats */}
+      <section className="px-4 mb-20">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Community by the Numbers
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Our growing community spans the globe with diverse expertise and shared passion for technology
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {communityStats.map((stat, index) => (
               <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center p-6 rounded-2xl bg-slate-800/50 border border-slate-700/50"
-              >
-                <div className={`p-4 rounded-xl bg-gradient-to-br ${stat.color} w-fit mx-auto mb-4`}>
-                  <stat.icon className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-400">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Upcoming Events Section */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Upcoming Community Events
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Join us for exciting meetups, workshops, and conferences around the world.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {upcomingEvents.map((event, index) => (
-              <motion.div
-                key={event.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group p-6 rounded-2xl bg-slate-800/50 border border-slate-700/50 hover:border-green-500/50 transition-all duration-300 hover:bg-slate-800/70"
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div className={`p-3 rounded-xl bg-gradient-to-br ${event.color} w-fit`}>
-                    <Calendar className="w-6 h-6 text-white" />
-                  </div>
-                  <span className="inline-block px-3 py-1 bg-green-500/20 text-green-400 text-xs font-medium rounded-full">
-                    {event.type}
-                  </span>
-                </div>
-                
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-green-400 transition-colors">
-                  {event.title}
-                </h3>
-                
-                <div className="space-y-2 text-sm text-gray-400 mb-4">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
-                    <span>{event.date}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4" />
-                    <span>{event.time}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <MapPin className="w-4 h-4" />
-                    <span>{event.location}</span>
-                  </div>
-                </div>
-                
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-300">{event.attendees} attending</span>
-                  <button className="px-4 py-2 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white text-sm font-medium rounded-lg transition-all duration-300">
-                    RSVP
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Discussion Topics Section */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Hot Discussions
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Join the conversation on trending topics and get help from the community.
-            </p>
-          </motion.div>
-
-          <div className="space-y-6">
-            {discussionTopics.map((topic, index) => (
-              <motion.div
-                key={topic.title}
+                key={stat.metric}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group p-6 rounded-2xl bg-slate-800/50 border border-slate-700/50 hover:border-green-500/50 transition-all duration-300 hover:bg-slate-800/70"
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center"
               >
-                <div className="flex items-start justify-between">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-medium rounded-full">
-                        {topic.category}
-                      </span>
-                      {topic.isHot && (
-                        <span className="inline-flex items-center gap-1 px-2 py-1 bg-red-500/20 text-red-400 text-xs rounded-full">
-                          <TrendingUp className="w-3 h-3" />
-                          Hot
-                        </span>
-                      )}
-                    </div>
-                    
-                    <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-green-400 transition-colors">
-                      {topic.title}
-                    </h3>
-                    
-                    <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">
-                      <span>By {topic.author}</span>
-                      <span>{topic.replies} replies</span>
-                      <span>{topic.views} views</span>
-                      <span>{topic.lastActivity}</span>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center gap-2">
-                    <button className="p-2 text-gray-400 hover:text-green-400 transition-colors">
-                      <Bookmark className="w-4 h-4" />
-                    </button>
-                    <button className="p-2 text-gray-400 hover:text-green-400 transition-colors">
-                      <Share2 className="w-4 h-4" />
-                    </button>
-                  </div>
+                <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">
+                  {stat.metric}
                 </div>
+                <div className="text-white font-semibold mb-2">{stat.label}</div>
+                <p className="text-slate-400 text-sm">{stat.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Member Spotlight Section */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="container-responsive">
+      {/* Community Features */}
+      <section className="px-4 mb-20">
+        <div className="container mx-auto max-w-6xl">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="text-center mb-12"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Community Leaders
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              What You'll Find Here
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Meet some of our most active and helpful community members.
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Discover the tools and resources that make our community thrive
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {memberSpotlight.map((member, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {communityFeatures.map((feature, index) => (
               <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center p-6 rounded-2xl bg-slate-800/50 border border-slate-700/50 hover:border-green-500/50 transition-all duration-300"
+                key={feature.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 group"
               >
-                <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">
-                  {member.avatar}
+                <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 
-                <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
-                <p className="text-gray-400 mb-1">{member.role}</p>
-                <p className="text-gray-500 text-sm mb-4">{member.company}</p>
+                <h4 className="text-xl font-semibold text-white mb-3">{feature.title}</h4>
+                <p className="text-slate-300 mb-4">{feature.description}</p>
                 
-                <div className="mb-4">
-                  <span className="text-sm text-gray-400">{member.contributions} contributions</span>
-                </div>
-                
-                <div className="flex flex-wrap justify-center gap-2">
-                  {member.expertise.map((skill, skillIndex) => (
-                    <span
-                      key={skillIndex}
-                      className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full"
-                    >
-                      {skill}
-                    </span>
+                <div className="space-y-2">
+                  {feature.features.map((feat, featIndex) => (
+                    <div key={featIndex} className="flex items-center space-x-2">
+                      <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                      <span className="text-slate-300 text-sm">{feat}</span>
+                    </div>
                   ))}
                 </div>
               </motion.div>
@@ -443,38 +419,152 @@ export default function Community() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container-responsive">
+      {/* Upcoming Events */}
+      <section className="px-4 mb-20">
+        <div className="container mx-auto max-w-6xl">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.0 }}
+            className="text-center mb-12"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Join the Community?
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Upcoming Events
             </h2>
-            <p className="text-xl text-gray-400 mb-8 leading-relaxed">
-              Connect with thousands of tech professionals, share your knowledge, 
-              and grow your network in our vibrant community.
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Join our upcoming workshops, webinars, and networking events
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {upcomingEvents.map((event, index) => (
+              <motion.div
+                key={event.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
+                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-green-400/50 transition-all duration-300"
+              >
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className={`w-12 h-12 bg-gradient-to-br ${event.color} rounded-lg flex items-center justify-center`}>
+                    <event.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <span className="px-2 py-1 bg-green-400/10 text-green-400 text-xs rounded-full">
+                      {event.type}
+                    </span>
+                  </div>
+                </div>
+                
+                <h4 className="text-lg font-semibold text-white mb-2">{event.title}</h4>
+                <p className="text-slate-300 text-sm mb-4">{event.description}</p>
+                
+                <div className="space-y-2 mb-4">
+                  <div className="flex items-center space-x-2 text-slate-400 text-sm">
+                    <Calendar className="w-4 h-4" />
+                    <span>{event.date}</span>
+                  </div>
+                  <div className="flex items-center space-x-2 text-slate-400 text-sm">
+                    <Clock className="w-4 h-4" />
+                    <span>{event.time}</span>
+                  </div>
+                  <div className="flex items-center space-x-2 text-slate-400 text-sm">
+                    <Users className="w-4 h-4" />
+                    <span>{event.attendees} attending</span>
+                  </div>
+                </div>
+                
+                <button className="w-full px-4 py-2 bg-gradient-to-r from-green-400 to-emerald-500 text-white font-medium rounded-lg hover:from-green-500 hover:to-emerald-600 transition-all duration-300">
+                  Register Now
+                </button>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Discussion Topics */}
+      <section className="px-4 mb-20">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.4 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Popular Discussion Topics
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Engage in meaningful conversations about the latest technology trends
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {discussionTopics.map((topic, index) => (
+              <motion.div
+                key={topic.category}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.6 + index * 0.1 }}
+                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center space-x-3">
+                    <div className={`w-12 h-12 bg-gradient-to-br ${topic.color} rounded-lg flex items-center justify-center`}>
+                      <topic.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h4 className="text-lg font-semibold text-white">{topic.category}</h4>
+                  </div>
+                  <span className="text-slate-400 text-sm">{topic.postCount} posts</span>
+                </div>
+                
+                <div className="space-y-2 mb-4">
+                  {topic.topics.map((subtopic, subtopicIndex) => (
+                    <div key={subtopicIndex} className="flex items-center space-x-2">
+                      <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
+                      <span className="text-slate-300 text-sm">{subtopic}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <button className="w-full px-4 py-2 border border-green-400 text-green-400 font-medium rounded-lg hover:bg-green-400 hover:text-slate-900 transition-all duration-300">
+                  Join Discussion
+                </button>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="px-4 mb-20">
+        <div className="container mx-auto max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.8 }}
+            className="bg-gradient-to-r from-slate-800/80 to-slate-700/80 rounded-2xl p-8 md:p-12 border border-slate-600/50 text-center"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Join Our Community?
+            </h2>
+            <p className="text-xl text-slate-300 mb-8">
+              Connect with thousands of technology professionals and start your journey today.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
+                className="px-8 py-4 bg-gradient-to-r from-green-400 to-emerald-500 text-white font-semibold rounded-xl hover:from-green-500 hover:to-emerald-600 transition-all duration-300 shadow-lg shadow-green-400/25"
               >
-                Get Started Today
-                <ArrowRight className="w-5 h-5" />
+                Join Community
               </Link>
               <Link
                 to="/events"
-                className="inline-flex items-center gap-2 px-8 py-4 border border-green-500/30 text-green-300 hover:bg-green-500/10 font-semibold rounded-xl transition-all duration-300"
+                className="px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-xl hover:bg-green-400 hover:text-slate-900 transition-colors duration-300"
               >
                 Browse Events
-                <Calendar className="w-5 h-5" />
               </Link>
             </div>
           </motion.div>
