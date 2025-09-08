@@ -14,8 +14,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       text: code.replace(/[^0-9]/g, ''),
       scale: 3,
       height: 10,
-      includetext: false
-    });
+      includetext: false});
     res.setHeader('Content-Type', 'image/png');
     res.status(200).send(png);
   } catch (e: any) {

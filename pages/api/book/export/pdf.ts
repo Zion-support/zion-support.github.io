@@ -22,8 +22,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const browser = await puppeteer.launch({
     headless: true,
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
-  });
+    args: ['--no-sandbox', '--disable-setuid-sandbox']});
 
   try {
     const page = await browser.newPage();
@@ -35,7 +34,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.setHeader('Content-Disposition', 'attachment; filename="zion-os-book.pdf"');
     res.status(200).send(pdfBuffer);
   } catch (e: any) {
-    try { await browser.close(); } catch {}
+    try { await browser.close() } catch {}
     res.status(500).json({ error: e?.message || 'Failed to render PDF' });
   }
 }

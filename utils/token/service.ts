@@ -2,94 +2,53 @@ export interface TokenTransaction {
   id: string;
   userId: string;
   amount: number;
-  type: 'credit' | 'debit';
   reason: string;
-  timestamp: string;
-  balance: number;
+  timestamp: number;
 }
 
 export interface TokenConfig {
-  creditRate: number;
-  debitRate: number;
-  maxBalance: number;
-  minBalance: number;
+  maxSupply: number;
+  currentSupply: number;
+  inflationRate: number;
 }
 
-const transactions: TokenTransaction[] = [];
-let config: TokenConfig = {
-  creditRate: 1.0,
-  debitRate: 1.0,
-  maxBalance: 10000,
-  minBalance: 0
+const mockTransactions: TokenTransaction[] = [];
+let mockConfig: TokenConfig = {
+  maxSupply: 1000000,
+  currentSupply: 0,
+  inflationRate: 0.02
 };
 
 export function getConfig(): TokenConfig {
-  return { ...config };
+  return { ...mockConfig };
 }
 
 export function getAllTransactions(): TokenTransaction[] {
-  return [...transactions];
+  return [...mockTransactions];
 }
 
 export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
-  if (amount <= 0) {
-    throw new Error('Amount must be positive');
-  }
-
-  const userTransactions = transactions.filter(t => t.userId === userId);
-  const currentBalance = userTransactions.length > 0 ? userTransactions[userTransactions.length - 1].balance : 0;
-  const newBalance = currentBalance + amount;
-
-  if (newBalance > config.maxBalance) {
-    throw new Error('Balance would exceed maximum allowed');
-  }
-
-  const transaction: TokenTransaction = {
-    id: Date.now().toString(),
+  const tx: TokenTransaction = {
+    id: Math.random().toString(36).substr(2, 9),
     userId,
     amount,
-    type: 'credit',
     reason,
-    timestamp: new Date().toISOString(),
-    balance: newBalance
+    timestamp: Date.now()
   };
-
-  transactions.push(transaction);
-  return transaction;
+  mockTransactions.push(tx);
+  mockConfig.currentSupply += amount;
+  return tx;
 }
 
-export function deductTokens(userId: string, amount: number, reason: string): TokenTransaction {
-  if (amount <= 0) {
-    throw new Error('Amount must be positive');
-  }
-
-  const userTransactions = transactions.filter(t => t.userId === userId);
-  const currentBalance = userTransactions.length > 0 ? userTransactions[userTransactions.length - 1].balance : 0;
-  const newBalance = currentBalance - amount;
-
-  if (newBalance < config.minBalance) {
-    throw new Error('Insufficient balance');
-  }
-
-  const transaction: TokenTransaction = {
-    id: Date.now().toString(),
+export function revokeTokens(userId: string, amount: number, reason: string): TokenTransaction {
+  const tx: TokenTransaction = {
+    id: Math.random().toString(36).substr(2, 9),
     userId,
-    amount,
-    type: 'debit',
+    amount: -amount,
     reason,
-    timestamp: new Date().toISOString(),
-    balance: newBalance
+    timestamp: Date.now()
   };
-
-  transactions.push(transaction);
-  return transaction;
-}
-
-export function getBalance(userId: string): number {
-  const userTransactions = transactions.filter(t => t.userId === userId);
-  return userTransactions.length > 0 ? userTransactions[userTransactions.length - 1].balance : 0;
-}
-
-export function updateConfig(newConfig: Partial<TokenConfig>): void {
-  config = { ...config, ...newConfig };
+  mockTransactions.push(tx);
+  mockConfig.currentSupply = Math.max(0, mockConfig.currentSupply - amount);
+  return tx;
 }

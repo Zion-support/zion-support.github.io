@@ -1,19 +1,19 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth';
-import { createFlag, getAllFlags } from '../../../../../utils/moderationDb';
+import { createFlag, readAllFlags } from '../../../../../utils/moderationDb';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = parseUserFromRequest(req);
-  try { ensureAdmin(user); } catch (e: any) { return res.status(e.statusCode || 403).json({ error: 'Forbidden' }); }
+  try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode || 403).json({ error: 'Forbidden' }); }
 
   if (req.method === 'GET') {
     const { status, reason, userEmail, contentType } = req.query as Record<string, string | undefined>;
-    const flags = await getAllFlags();
+    const flags = await readAllFlags();
     const filtered = flags.filter(f =>
       (!status || f.status === status) &&
       (!reason || f.reason.toLowerCase().includes(reason.toLowerCase())) &&
-      (!userEmail || f.reporterId.toLowerCase().includes(userEmail.toLowerCase())) &&
-      (!contentType || f.targetType === contentType)
+      (!userEmail || f.userEmail.toLowerCase().includes(userEmail.toLowerCase())) &&
+      (!contentType || f.contentType === contentType)
     );
     return res.status(200).json({ flags: filtered });
   }
@@ -29,5 +29,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   res.setHeader('Allow', 'GET,POST');
-  return res.status(405).end('Method Not Allowed')
+  return res.status(405).end('Method Not Allowed');
 }

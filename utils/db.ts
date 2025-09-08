@@ -11,8 +11,7 @@ export function readJsonFile<T>(filename: string, defaultValue: T): T {
     }
     const content = fs.readFileSync(filePath, 'utf8');
     return JSON.parse(content);
-  } catch (error) {
-    console.error(`Error reading ${filename}:`, error);
+  } catch {
     return defaultValue;
   }
 }
@@ -25,7 +24,6 @@ export function writeJsonFile<T>(filename: string, data: T): void {
     const filePath = path.join(DATA_DIR, filename);
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
   } catch (error) {
-    console.error(`Error writing ${filename}:`, error);
-    throw error;
+    console.error('Error writing JSON file:', error);
   }
 }

@@ -6,7 +6,7 @@ const REPO = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
-    return res.status(405).json({ error: 'Method not allowed' })
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
@@ -27,7 +27,7 @@ Stack:\n\n${stack || 'n/a'}
 Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
 `;
 
-    const issue = await octokit.issues.create({ owner, repo, title, body, labels: ['autoheal', 'bug'] });
+    const issue = await octokit.issues.create({ owner, repo, title, body, labels: ['autohealbug'] });
 
     // trigger workflow dispatch
     try {
@@ -36,8 +36,7 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
         repo,
         workflow_id: 'autoheal.yml',
         ref: 'dev',
-        inputs: { issue_number: String(issue.data.number) }
-      } as any);
+        inputs: { issue_number: String(issue.data.number) }} as any);
     } catch (e) {
       // ignore if missing;
     }

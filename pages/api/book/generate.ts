@@ -13,8 +13,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Fallback: return structured placeholders
     const drafted = chapters.map((c) => ({
       title: c.title,
-      content: `Draft notes for ${c.title} about ${meta?.title || 'the book'}...\n\n- Key idea 1\n- Key idea 2\n- Key idea 3`
-    }));
+      content: `Draft notes for ${c.title} about ${meta?.title || 'the book'}...\n\n- Key idea 1\n- Key idea 2\n- Key idea 3`}));
     res.status(200).json({ chapters: drafted });
     return;
   }
@@ -29,10 +28,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: system },
-        { role: 'user', content: prompt }
-      ],
-      temperature: 0.7
-    });
+        { role: 'user', content: prompt }],
+      temperature: 0.7});
     const text = completion.choices?.[0]?.message?.content || '';
     drafted.push({ title: ch.title, content: text });
   }

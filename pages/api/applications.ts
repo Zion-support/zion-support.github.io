@@ -19,7 +19,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method === 'POST') {
     const { jobId, talentSlug, action } = req.body || {};
-    if (!jobId || !talentSlug || !['apply', 'skip'].includes(action)) {
+    if (!jobId || !talentSlug || !['applyskip'].includes(action)) {
       res.status(400).json({ error: 'Invalid request' });
       return;
     }
@@ -40,8 +40,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       jobId: String(jobId),
       talentSlug: String(talentSlug),
       status: action === 'apply' ? 'applied' : 'skipped',
-      createdAtIso: now
-    };
+      createdAtIso: now};
     apps.push(app);
     writeJsonFile<Application[]>(FILE, apps);
     res.status(201).json({ application: app });
@@ -49,5 +48,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   res.setHeader('Allow', 'GET, POST');
-  res.status(405).end('Method Not Allowed')
+  res.status(405).end('Method Not Allowed');
 }

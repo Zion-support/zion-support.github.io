@@ -17,7 +17,7 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
       .order('created_at', { ascending: false });
 
     if (error) return res.status(500).json({ error: error.message });
-    return res.status(200).json({ partners: data })
+    return res.status(200).json({ partners: data });
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
   }
