@@ -54,28 +54,6 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    "dist",
-    ".next",
-    "build",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "src.disabled/**/*",
-    "src_disabled_*/**/*",
-    "**/tests/**",
-    "__tests__/**",
-    "temp_*/**",
-    "temp-*/**",
-    "temp*/**",
-    "temp_conflicts/**",
-    "temp_exclude/**",
-    "zion-*/**",
-    "zion_os/**",
-    "zion/**",
-    "apps/**",
-    "utils/**",
-    "types/**"
+
   ]
 }

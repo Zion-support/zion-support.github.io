@@ -7,3 +7,5 @@ export function ITSupportPage() {
     </div>
   )
 }
+  );
+};

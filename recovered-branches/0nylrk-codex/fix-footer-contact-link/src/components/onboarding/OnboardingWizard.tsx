@@ -148,3 +148,5 @@ interface OnboardingWizardProps {;'
         <Button
           className="w-full bg-zion-purple hover:bg-zion-purple-light"
         {steps[currentStep].skipText && (;
+  );
+};

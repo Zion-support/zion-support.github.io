@@ -7,3 +7,5 @@ export function ActiveFiltersBar() {
     </div>
   )
 }
+  );
+};

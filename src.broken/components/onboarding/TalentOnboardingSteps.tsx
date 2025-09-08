@@ -7,3 +7,5 @@ export function TalentOnboardingSteps() {
     </div>
   )
 }
+  );
+};

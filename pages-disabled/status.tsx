@@ -369,3 +369,5 @@ export default function StatusPage() {}
   )};
 
 export default SystemStatus;
+  );
+};

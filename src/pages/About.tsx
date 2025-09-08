@@ -1,9 +1,4 @@
-import React, { memo } from 'react';
 
-// Info card component for better performance
-const InfoCard = memo<{ title: string; children: React.ReactNode }>(({ title, children }) => (
-  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-    <h3 className="text-xl font-semibold mb-3 text-white">{title}</h3>
     {children}
   </div>
 ));
@@ -157,6 +152,7 @@ const About: React.FC = memo(() => {
                 </li>
               </ul>
             </div>
+
           </div>
         </div>
       </div>

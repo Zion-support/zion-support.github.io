@@ -56,3 +56,5 @@ import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
         />;
       </CardContent>;
     </Card>;
+  );
+};

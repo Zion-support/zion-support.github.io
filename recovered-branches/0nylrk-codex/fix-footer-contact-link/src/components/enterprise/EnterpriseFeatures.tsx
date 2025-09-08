@@ -187,3 +187,5 @@ icon: Settings
 }
 ;
 ;
+  );
+};

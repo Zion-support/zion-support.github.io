@@ -32,3 +32,5 @@ import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner",;
 import { DownloadSection } from "@/components/mobile-app/DownloadSection",;
 const MobileAppPage: React.FC = () => {;
   return (;export default MobileAppPage;
+  );
+};

@@ -15,5 +15,4 @@
    marketPrice: string;
    contactInfo: {
    phone: string;
-
-
+}

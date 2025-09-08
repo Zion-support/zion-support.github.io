@@ -7,3 +7,5 @@ export function QuoteWizard() {
     </div>
   )
 }
+  );
+};

@@ -18,4 +18,4 @@ export: interface ComprehensivePricingGuide2028 {
    roi: string;
    innovationLevel: string;
    contactInfo: { phone: string;
-
+}

@@ -28,9 +28,5 @@ return (;
   return (<div>;
       <Head>;
         <title>CloudArchitectureChat - Zion Tech Solutions</title>;
-
-
-
-
-
-
+  );
+};

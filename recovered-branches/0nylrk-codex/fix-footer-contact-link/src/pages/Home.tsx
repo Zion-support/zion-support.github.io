@@ -23,7 +23,5 @@ import { FeatureHighlights } from "@/components/home/FeatureHighlights",export d
         canonical="https: //app.ziontechgroup.com/"
 
       />
-
-
-
-
+  );
+};

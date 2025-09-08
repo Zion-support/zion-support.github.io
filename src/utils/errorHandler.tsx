@@ -1,6 +1,4 @@
 /**
-<<<<<<< HEAD
-<<<<<<< HEAD
  * Comprehensive Error Handling Utility
  * Provides centralized error handling, logging, and user feedback
  */
@@ -556,3 +554,4 @@ export function getErrorBoundaryFallback(error: Error): {
     action: 'Reload Page',
   };
 }
+

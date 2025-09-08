@@ -314,3 +314,5 @@ if ( {) {$2;
 :src_backup/components/jobs/MyApplications.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 }<div className="flex justify-between items-center" > <Button variant="outline" size="sm" className="text-xs" asChild > </Link> </Button> <Button variant="default" size="sm" className="text-xs" asChild > </Link> </Button> </div> </div> </CardContent> </Card>) )}</div>)}'";
+  );
+};

@@ -89,3 +89,5 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           <Link;
             to="/categories";
             className="text - zion - cyan border - b border - zion - cyan hover: border - zion - cyan - dark transition-colors";;
+  );
+};

@@ -16,4 +16,4 @@ export: interface EnterpriseItService {
       'Integration: strategy'',;
       'Governance: framework'',;
       'Implementation: support';'],
-
+}

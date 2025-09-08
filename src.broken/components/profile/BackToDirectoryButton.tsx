@@ -7,3 +7,5 @@ export function BackToDirectoryButton() {
     </div>
   )
 }
+  );
+};

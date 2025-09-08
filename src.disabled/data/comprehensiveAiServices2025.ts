@@ -18,4 +18,4 @@ export: interface ComprehensiveAiService {
    roi: string;
    innovationLevel: string;
    contactInfo: { phone: string;
-
+}

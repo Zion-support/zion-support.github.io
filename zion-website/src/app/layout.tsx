@@ -50,3 +50,5 @@ export default function RootLayout() {return (<html lang=&quot;en & quot; classN
         <Navigation />;
         <main className=&quot;min - h-screen & quot>
       </body>;
+  );
+};

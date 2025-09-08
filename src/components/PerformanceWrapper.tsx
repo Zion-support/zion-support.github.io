@@ -9,27 +9,6 @@ interface PerformanceWrapperProps {
   className?: string;
 }
 
-// Simple lazy loading hook
-const useLazyComponent = (importFn: () => Promise<{ default: ComponentType<unknown> }>) => {
-  const [Component, setComponent] = useState<ComponentType<unknown> | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [isError, setIsError] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    importFn()
-      .then((module) => {
-        setComponent(() => module.default);
-        setIsLoading(false);
-      })
-      .catch(() => {
-        setIsError(true);
-        setIsLoading(false);
-      });
-  }, [importFn]);
-
-  return { ref, Component, isLoading, isError };
-};
 
 /**
  * Performance wrapper component that provides basic performance optimizations
@@ -37,15 +16,24 @@ const useLazyComponent = (importFn: () => Promise<{ default: ComponentType<unkno
 const PerformanceWrapper: React.FC<PerformanceWrapperProps> = ({
   children,
   fallback = <div>Loading...</div>,
-  className,
+
 }) => {
+  const MemoizedComponent = memo ? memo(children as React.ComponentType<any>) : children;
+
+  if (enableLazyLoading && lazyImport) {
+    const LazyComponent = React.lazy(lazyImport);
+    return (
+      <Suspense fallback={fallback}>
+        <LazyComponent />
+      </Suspense>
+    );
+  }
+
   return (
     <div className={className}>
-      <Suspense fallback={fallback}>
-        {children}
-      </Suspense>
+      {memoize ? MemoizedComponent : children}
     </div>
   );
 };
 
-export default memo(PerformanceWrapper);
+

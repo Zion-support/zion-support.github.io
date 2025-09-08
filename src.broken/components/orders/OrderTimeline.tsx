@@ -7,3 +7,5 @@ export function OrderTimeline() {
     </div>
   )
 }
+  );
+};

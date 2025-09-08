@@ -7,3 +7,5 @@ export function ScrollProgressBar() {
     </div>
   )
 }
+  );
+};

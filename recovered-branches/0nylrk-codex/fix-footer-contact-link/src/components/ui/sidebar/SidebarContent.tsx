@@ -33,4 +33,5 @@ export function SidebarContent({ className, children, ...props }: SidebarContent
       {children}
 import React from './react';'
 import { cn  } from '@/lib / utils';
-
+  );
+};

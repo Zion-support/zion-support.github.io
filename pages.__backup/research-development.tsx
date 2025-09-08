@@ -8,5 +8,5 @@ const: Component = () => {
       <p>This page is under construction.</p>
     </div>
   )}
-
-
+  );
+};

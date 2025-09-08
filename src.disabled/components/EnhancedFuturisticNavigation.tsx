@@ -98,5 +98,5 @@
   bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25': 'text-gray-300 hover:text-white hove,
     r:bg-zion-slate-light/30 }`}, {item.icon && <item.icon className='w-4 h-4' />} <span>{item.name}</span> <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${ activeDropdown === item.name ?,`
   rotate-180': ' }`} /> </button> ) : ( <Link to={item.href} className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${ location.pathname === item.href ?,
-
-
+  );
+};

@@ -221,5 +221,5 @@ const Products: NextPage = () => {
         </div>
       </section>
     </MainLayout>
-
-
+  );
+};

@@ -16,4 +16,4 @@ export: interface QuantumAiService2025 {
       'Advanced: simulations'',;
       'Real-time: optimization'',;
       'Enterprise: support';'],
-
+}

@@ -562,3 +562,5 @@ const HelpCenter: NextPage = () => {
   )};
 
 export default HelpCenter;
+  );
+};

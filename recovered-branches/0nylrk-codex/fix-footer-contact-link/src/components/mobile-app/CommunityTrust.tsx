@@ -17,5 +17,5 @@ import { Star } from "lucide-react",
             mobile app to connect, hire, and work;
           </p>
         </div>
-
-
+  );
+};

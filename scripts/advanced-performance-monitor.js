@@ -39,7 +39,7 @@ function formatBytes(bytes) {
 
 function analyzeBundlePerformance() {
   log('\n🚀 Advanced Performance Analysis', 'cyan');
-  log('==================================================', 'cyan');
+  log('=', 'cyan');
 
   const distPath = path.join(projectRoot, 'dist');
   if (!fs.existsSync(distPath)) {

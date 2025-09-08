@@ -7,3 +7,5 @@ export function Navigation() {
     </div>
   )
 }
+  );
+};

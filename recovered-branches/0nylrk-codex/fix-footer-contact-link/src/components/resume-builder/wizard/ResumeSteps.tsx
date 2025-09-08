@@ -35,5 +35,3 @@ export const ResumeSteps = ({
 "
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",;"
 import { StepProps } from "./types",;
-
-
