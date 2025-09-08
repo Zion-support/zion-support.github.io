@@ -260,21 +260,17 @@
   schedule = "*/30 * * * *" # every 30 minutes
 
 [[scheduled.functions]]
-  name = "ultrafast-repo-healer"
-  schedule = "*/2 * * * *" # every 2 minutes
+  name = "branch-cleanup-runner"
+  schedule = "0 3 * * *" # daily at 03:00 UTC
 
 [[scheduled.functions]]
-  name = "knowledge-graph-orchestrator"
-  schedule = "0 * * * *" # hourly
+  name = "orphan-page-audit-runner"
+  schedule = "17 */6 * * *"
 
 [[scheduled.functions]]
-  name = "newsroom-orchestrator"
-  schedule = "*/30 * * * *" # every 30 minutes
+  name = "meta-og-enhancer-runner"
+  schedule = "0 */12 * * *"
 
 [[scheduled.functions]]
-  name = "image-optimizer-scheduler"
-  schedule = "0 */6 * * *" # every 6 hours
-
-[[scheduled.functions]]
-  name = "repo-radar-scheduler"
-  schedule = "10 */4 * * *" # every 4 hours
+  name = "rss-feed-generator"
+  schedule = "0 * * * *"

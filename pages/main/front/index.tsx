@@ -133,6 +133,9 @@ export default function FrontLanding() {
                 ['Roadmap', '/reports/roadmap'],
                 ['Redirect Healer', '/.netlify/functions/redirect-healer'],
                 ['Sitemap Prioritizer', '/.netlify/functions/sitemap-prioritizer'],
+                ['Orphan Report', '/reports/orphans'],
+                ['OG Enhancer', '/.netlify/functions/meta-og-enhancer-runner'],
+                ['RSS Feed', '/feed.xml'],
                 ['Newsroom', '/newsroom'],
                 ['Site Health', '/site-health'],
               ].map(([label, href]) => (
