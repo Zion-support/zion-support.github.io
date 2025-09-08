@@ -194,7 +194,7 @@
 
 [[scheduled.functions]]
   name = "a11y-audit-runner"
-  schedule = "*/20 * * * *"
+  schedule = "*/20 * * * *"}  
 
 [[scheduled.functions]]
   name = "todo-summary-runner"
@@ -226,9 +226,17 @@ schedule = "0 */6 * * *" # every 6 hours
   schedule = "*/10 * * * *"
 
 [[scheduled.functions]]
-  name = "internal-link-graph-runner"
-  schedule = "*/30 * * * *"
+  name = "deps-auto-upgrade-runner"
+  schedule = "7 */12 * * *"
 
 [[scheduled.functions]]
-  name = "roadmap-auto-generator"
-  schedule = "*/20 * * * *"
+  name = "metadata-schema-runner"
+  schedule = "*/30 * * * *" # every 30 minutes
+
+[[scheduled.functions]]
+  name = "perf-budget-runner"
+  schedule = "*/30 * * * *" # every 30 minutes
+
+[[scheduled.functions]]
+  name = "i18n-audit-runner"
+  schedule = "0 */6 * * *" # every 6 hours
