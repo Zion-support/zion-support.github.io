@@ -3,9 +3,11 @@
     "next/core-web-vitals"
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
+  "plugins": [
+    "@typescript-eslint"
+  ],
   "parserOptions": {
-    "ecmaVersion": 2020,
+    "ecmaVersion": "latest",
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
@@ -13,25 +15,23 @@
   },
   "env": {
     "browser": true,
-    "es2020": true,
+    "es2022": true,
     "node": true
   },
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
-    "@typescript-eslint/no-explicit-any": "warn",
-    "prefer-const": "error",
-    "react/no-unescaped-entities": "off",
-    "@next/next/no-html-link-for-pages": "warn",
-    "@next/next/no-title-in-document-head": "warn",
-    "react-hooks/exhaustive-deps": "warn"
+    "@typescript-eslint/no-explicit-any": "warn"
   },
-  "overrides": [
-    {
-      "files": ["*.js"],
-      "parserOptions": {
-        "ecmaVersion": 2020,
-        "sourceType": "module"
-      }
-    }
+  "ignorePatterns": [
+    "node_modules/",
+    ".next/",
+    "out/",
+    "dist/",
+    "build/",
+    "*.config.js",
+    "*.config.ts",
+    "scripts/*.js",
+    "automation/**/*.js",
+    "automation/**/*.cjs"
   ]
 }

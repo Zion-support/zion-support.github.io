@@ -1,3 +1,5 @@
+import Head from 'next/head';
+import Link from 'next/link';
 
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
@@ -203,27 +205,18 @@ export default function About() {
 
                 </p>
               </div>
-              <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
-
-                <h3 className="text-2xl font-bold mb-4">Why Choose Us?</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-center">
-
-                    <Award className="w-5 h-5 mr-3" />
-                    Award-winning development team
-                  </li>"
-                  <li className="flex items-center">"
-                    <Globe className="w-5 h-5 mr-3" />
-                    Global reach with local expertise
-                  </li>"
-                  <li className="flex items-center">"
-                    <Heart className="w-5 h-5 mr-3" />
-                    Passionate about client success
-                  </li>"
-                  <li className="flex items-center">"
-                    <Lightbulb className="w-5 h-5 mr-3" />
-                    Innovative problem-solving approach
-                  </li>
+              
+              <div>
+                <h3 className="text-2xl font-bold text-fuchsia-400 mb-4">Human-Centric Design</h3>
+                <p className="text-white/80 mb-4">
+                  While our systems are autonomous, they&apos;re designed to enhance human 
+                  capabilities, not replace them, ensuring technology serves people.
+                </p>
+                <ul className="text-white/70 space-y-2">
+                  <li>• User experience focus</li>
+                  <li>• Accessibility and usability</li>
+                  <li>• Human oversight integration</li>
+                  <li>• Ethical AI principles</li>
                 </ul>
 
 
@@ -286,26 +279,27 @@ export default function About() {
           </div>
         </section>
 
-
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-
-
-              Let's discuss how our technology solutions can drive your business forward.
-            </p>'
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-              <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+        {/* Call to Action */}
+        <section className="text-center">
+          <div className="bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 border border-cyan-500/30 rounded-lg p-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
+            <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
+              Discover how our autonomous technology solutions can revolutionize your 
+              operations, improve efficiency, and drive innovation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact" 
+                className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              >
                 Get Started
-              </Link>"
-              <Link href="/services" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hove,
-    r:bg-white hove,
-    r:text-blue-600 transition-colors">
-                View Services
               </Link>
-
-
+              <a 
+                href="/services" 
+                className="bg-transparent border border-white/30 hover:bg-white/10 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              >
+                Learn More
+              </a>
             </div>
           </div>
         </section>
