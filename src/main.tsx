@@ -71,29 +71,69 @@ const queryClient = new QueryClient({
   },
 });
 
-initGA();
-// Render the app with proper provider structure
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <HelmetProvider>
-      <QueryClientProvider client={queryClient}>
-        <WhitelabelProvider>
-          <Router>
-            <AuthProvider>
-              <NotificationProvider>
-                <AnalyticsProvider>
-                  <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                    <ErrorBoundary>
-                      <App />
+const rootElement = document.getElementById('root');
+
+function renderApp() {
+  const app = (
+    <React.StrictMode>
+      <HelmetProvider>
+        <QueryClientProvider client={queryClient}>
+          <WhitelabelProvider>
+            <Router>
+              <AuthProvider>
+                <NotificationProvider>
+                  <AnalyticsProvider>
+                    <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                      <ViewModeProvider>
+                        <AppLayout>
+                          <App />
+                        </AppLayout>
+                      </ViewModeProvider>
                       <LanguageDetectionPopup />
-                    </ErrorBoundary>
-                  </LanguageProvider>
-                </AnalyticsProvider>
-              </NotificationProvider>
-            </AuthProvider>
-          </Router>
-        </WhitelabelProvider>
-      </QueryClientProvider>
-    </HelmetProvider>
-  </React.StrictMode>,
-);
+                    </LanguageProvider>
+                  </AnalyticsProvider>
+                </NotificationProvider>
+              </AuthProvider>
+            </Router>
+          </WhitelabelProvider>
+        </QueryClientProvider>
+      </HelmetProvider>
+    </React.StrictMode>
+  );
+
+  if (rootElement?.hasChildNodes()) {
+    hydrateRoot(rootElement, app);
+  } else if (rootElement) {
+    createRoot(rootElement).render(app);
+  }
+}
+
+function displayFatalError(message: string) {
+  if (rootElement) {
+    rootElement.innerHTML = `
+      <div style="padding:20px;text-align:center;font-family:sans-serif;">
+        <h1>Application Error</h1>
+        <p>${message}</p>
+      </div>`;
+  }
+}
+
+try {
+  renderApp();
+} catch (error) {
+  console.error('Global error caught in main.tsx:', error);
+  displayFatalError((error as Error).message);
+}
+
+window.addEventListener('error', (e) => {
+  console.error('Unhandled error:', e.error || e.message);
+  displayFatalError(e.message);
+});
+
+window.addEventListener('unhandledrejection', (e) => {
+  const message = (e.reason && e.reason.message) || 'Unhandled promise rejection';
+  console.error('Unhandled rejection:', e.reason);
+  displayFatalError(message);
+});
+
+registerServiceWorker();
