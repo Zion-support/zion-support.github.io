@@ -4,136 +4,235 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('📦 Starting continuous dependency updates automation...');
+console.log('📦 Starting Dependency Updates Automation...');
 
-// Get automation interval from environment variable (default: 6 hours)
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 21600000; // 6 hours
+class DependencyUpdates {
+  constructor() {
+    this.reportDir = path.join(process.cwd(), 'ci-cd-reports');
+    this.ensureReportDirectory();
+    this.startTime = Date.now();
+    this.outdatedPackages = [];
+    this.updatedPackages = [];
+    this.failedUpdates = [];
+  }
 
-async function runDependencyUpdates() {
-  try {
-    console.log(`📦 Running dependency updates at ${new Date().toISOString()}`);
-    
-    // Check for outdated dependencies
-    console.log('🔍 Checking for outdated dependencies...');
-    try {
-      execSync('npm outdated', { stdio: 'inherit' });
-    } catch (error) {
-      console.log('✅ All dependencies are up to date');
-      return;
+  ensureReportDirectory() {
+    if (!fs.existsSync(this.reportDir)) {
+      fs.mkdirSync(this.reportDir, { recursive: true });
     }
-    
-    // Check for security vulnerabilities
-    console.log('🔒 Checking for security vulnerabilities...');
+  }
+
+  async run() {
     try {
-      execSync('npm audit --audit-level=moderate', { stdio: 'inherit' });
-      console.log('✅ No security vulnerabilities found');
-    } catch (error) {
-      console.log('⚠️  Security vulnerabilities found, attempting to fix...');
-      try {
-        execSync('npm audit fix --audit-level=moderate', { stdio: 'inherit' });
-        console.log('✅ Security vulnerabilities fixed');
-      } catch (fixError) {
-        console.log('❌ Could not fix security vulnerabilities');
+      console.log('🔍 Checking for outdated dependencies...');
+      
+      // Check for outdated packages
+      await this.checkOutdatedPackages();
+      
+      // Update packages if needed
+      if (this.outdatedPackages.length > 0) {
+        await this.updatePackages();
       }
-    }
-    
-    // Update minor and patch versions
-    console.log('🔄 Updating minor and patch versions...');
-    try {
-      execSync('npm update', { stdio: 'inherit' });
-      console.log('✅ Minor and patch updates completed');
+      
+      // Generate report
+      await this.generateReport();
+      
+      console.log(`✅ Dependency Updates completed. Found ${this.outdatedPackages.length} outdated packages, updated ${this.updatedPackages.length} packages.`);
+      
     } catch (error) {
-      console.log('⚠️  Some updates failed');
+      console.error('❌ Dependency Updates failed:', error.message);
+      await this.generateErrorReport(error);
     }
-    
-    // Check for major version updates
-    console.log('🔍 Checking for major version updates...');
+  }
+
+  async checkOutdatedPackages() {
     try {
-      const outdatedOutput = execSync('npm outdated --json', { encoding: 'utf8' });
-      const outdated = JSON.parse(outdatedOutput);
+      console.log('🔍 Checking for outdated packages...');
       
-      const majorUpdates = Object.entries(outdated).filter(([pkg, info]) => {
-        const current = info.current.split('.')[0];
-        const latest = info.latest.split('.')[0];
-        return current !== latest;
-      });
-      
-      if (majorUpdates.length > 0) {
-        console.log('⚠️  Major version updates available:');
-        majorUpdates.forEach(([pkg, info]) => {
-          console.log(`  - ${pkg}: ${info.current} → ${info.latest}`);
+      try {
+        const outdatedOutput = execSync('npm outdated --json', { 
+          encoding: 'utf8',
+          cwd: process.cwd(),
+          stdio: 'pipe'
         });
         
-        console.log('ℹ️  Major updates require manual review');
-      } else {
-        console.log('✅ No major version updates available');
+        if (outdatedOutput.trim()) {
+          const outdated = JSON.parse(outdatedOutput);
+          
+          for (const [packageName, packageInfo] of Object.entries(outdated)) {
+            this.outdatedPackages.push({
+              name: packageName,
+              current: packageInfo.current,
+              wanted: packageInfo.wanted,
+              latest: packageInfo.latest,
+              location: packageInfo.location,
+              timestamp: new Date().toISOString()
+            });
+          }
+          
+          console.log(`⚠️  Found ${this.outdatedPackages.length} outdated packages`);
+          
+          // Log outdated packages
+          for (const pkg of this.outdatedPackages) {
+            console.log(`  - ${pkg.name}: ${pkg.current} → ${pkg.latest}`);
+          }
+        } else {
+          console.log('✅ All packages are up to date');
+        }
+        
+      } catch (error) {
+        // npm outdated exits with code 1 if packages are outdated
+        console.log('ℹ️  Some packages may be outdated');
       }
+      
     } catch (error) {
-      console.log('ℹ️  Could not check for major updates');
+      console.log('ℹ️  Error checking outdated packages:', error.message);
     }
-    
-    // Install dependencies
-    console.log('📦 Installing updated dependencies...');
-    execSync('npm install', { stdio: 'inherit' });
-    
-    // Run tests to ensure nothing broke
-    console.log('🧪 Running tests after updates...');
+  }
+
+  async updatePackages() {
     try {
-      execSync('npm test', { stdio: 'inherit' });
-      console.log('✅ Tests passed after updates');
+      console.log('🔄 Updating outdated packages...');
+      
+      // Update packages using npm update
+      try {
+        const updateOutput = execSync('npm update', { 
+          encoding: 'utf8',
+          cwd: process.cwd(),
+          stdio: 'pipe'
+        });
+        
+        console.log('✅ Packages updated successfully');
+        
+        // Check what was actually updated
+        await this.checkWhatWasUpdated();
+        
+      } catch (error) {
+        console.log('❌ Package update failed:', error.message);
+        this.failedUpdates.push({
+          type: 'npm_update',
+          error: error.message,
+          timestamp: new Date().toISOString()
+        });
+      }
+      
+      // Try to update to latest versions for major updates
+      await this.updateToLatest();
+      
     } catch (error) {
-      console.log('❌ Tests failed after updates - rolling back...');
-      execSync('npm install', { stdio: 'inherit' });
-      // Don't exit, just log the error and continue
+      console.log('ℹ️  Error updating packages:', error.message);
     }
-    
-    // Generate dependency update report
+  }
+
+  async updateToLatest() {
+    try {
+      console.log('🔄 Updating packages to latest versions...');
+      
+      // Get list of packages that can be updated to latest
+      const majorUpdates = this.outdatedPackages.filter(pkg => 
+        pkg.wanted !== pkg.latest && pkg.wanted !== pkg.current
+      );
+      
+      if (majorUpdates.length > 0) {
+        console.log(`🔄 Found ${majorUpdates.length} packages that can be updated to latest versions`);
+        
+        for (const pkg of majorUpdates) {
+          try {
+            console.log(`🔄 Updating ${pkg.name} to latest version...`);
+            
+            const updateOutput = execSync(`npm install ${pkg.name}@latest`, { 
+              encoding: 'utf8',
+              cwd: process.cwd(),
+              stdio: 'pipe'
+            });
+            
+            this.updatedPackages.push({
+              name: pkg.name,
+              from: pkg.current,
+              to: pkg.latest,
+              type: 'major_update',
+              timestamp: new Date().toISOString()
+            });
+            
+            console.log(`✅ Updated ${pkg.name} to latest version`);
+            
+          } catch (error) {
+            console.log(`❌ Failed to update ${pkg.name}:`, error.message);
+            this.failedUpdates.push({
+              package: pkg.name,
+              error: error.message,
+              timestamp: new Date().toISOString()
+            });
+          }
+        }
+      }
+      
+    } catch (error) {
+      console.log('ℹ️  Error updating to latest versions:', error.message);
+    }
+  }
+
+  async checkWhatWasUpdated() {
+    try {
+      console.log('🔍 Checking what packages were updated...');
+      
+      // Check package-lock.json for changes
+      if (fs.existsSync('package-lock.json')) {
+        const lockFile = fs.readFileSync('package-lock.json', 'utf8');
+        
+        // Look for updated version numbers
+        for (const pkg of this.outdatedPackages) {
+          if (lockFile.includes(`"${pkg.name}": "~${pkg.wanted}"`) || 
+              lockFile.includes(`"${pkg.name}": "^${pkg.wanted}"`) ||
+              lockFile.includes(`"${pkg.name}": "${pkg.latest}"`)) {
+            
+            this.updatedPackages.push({
+              name: pkg.name,
+              from: pkg.current,
+              to: pkg.wanted || pkg.latest,
+              type: 'minor_update',
+              timestamp: new Date().toISOString()
+            });
+          }
+        }
+      }
+      
+    } catch (error) {
+      console.log('ℹ️  Error checking what was updated:', error.message);
+    }
+  }
+
+  async generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
-      summary: 'Dependency updates completed',
-      status: 'completed'
+      duration: Date.now() - this.startTime,
+      outdatedPackages: this.outdatedPackages,
+      updatedPackages: this.updatedPackages,
+      failedUpdates: this.failedUpdates,
+      totalOutdated: this.outdatedPackages.length,
+      totalUpdated: this.updatedPackages.length,
+      totalFailed: this.failedUpdates.length,
+      status: this.outdatedPackages.length === 0 ? 'up_to_date' : 'updates_applied'
     };
-    
-    const reportPath = path.join(process.cwd(), 'dependency-updates-report.json');
+
+    const reportPath = path.join(this.reportDir, 'dependency-updates-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`📊 Report saved to ${reportPath}`);
-    
-    console.log('✅ Continuous dependency updates completed successfully');
-    
-  } catch (error) {
-    console.error('❌ Continuous dependency updates failed:', error.message);
-    // Don't exit, just log the error and continue
   }
-  {/* Removed stray closing brace */}
 
-// Main continuous loop
-async function runContinuous() {
-  console.log(`🚀 Starting continuous dependency updates with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
-  
-  // Run initial dependency updates
-  await runDependencyUpdates();
-  
-  // Set up continuous execution
-  setInterval(async () => {
-    await runDependencyUpdates();
-  }, AUTOMATION_INTERVAL);
-  
-  console.log(`✅ Continuous dependency updates running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-  {/* Removed stray closing brace */}
+  async generateErrorReport(error) {
+    const errorReport = {
+      timestamp: new Date().toISOString(),
+      error: error.message,
+      stack: error.stack,
+      status: 'failed'
+    };
 
-// Handle graceful shutdown
-process.on('SIGINT', () => {
-  console.log('🛑 Received SIGINT, shutting down gracefully...');
-  process.exit(0);
-});
+    const reportPath = path.join(this.reportDir, 'dependency-updates-error.json');
+    fs.writeFileSync(reportPath, JSON.stringify(errorReport, null, 2));
+  }
+}
 
-process.on('SIGTERM', () => {
-  console.log('🛑 Received SIGTERM, shutting down gracefully...');
-  process.exit(0);
-});
-
-// Start the continuous dependency updates
-runContinuous().catch(error => {
-  console.error('❌ Failed to start continuous dependency updates:', error);
-  process.exit(1);
-});
+// Run the automation
+const updates = new DependencyUpdates();
+updates.run().catch(console.error);

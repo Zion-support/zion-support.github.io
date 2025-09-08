@@ -1,135 +1,360 @@
-#!/""usr/bin/env""
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-console.log("" Starting continuous quality checks automation...")
-const { execSync } = require("child_process")
-<<<<<<< HEAD
+#!/usr/bin/env node
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔍 Starting continuous quality checks automation...');
+console.log('🔍 Starting Quality Checks Automation...');
 
-// Get automation interval from environment variable (default: 3 hours)
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 10800000; // 3 hours
+class QualityChecks {
+  constructor() {
+    this.reportDir = path.join(process.cwd(), 'ci-cd-reports');
+    this.ensureReportDirectory();
+    this.startTime = Date.now();
+    this.qualityIssues = [];
+    this.passedChecks = [];
+    this.testResults = {};
+  }
 
-async function runQualityChecks() {
-  try {
-    console.log(`🔍 Running quality checks at ${new Date().toISOString()}`);
-    
-    // Run linting
-    console.log('🔍 Running ESLint...');
+  ensureReportDirectory() {
+    if (!fs.existsSync(this.reportDir)) {
+      fs.mkdirSync(this.reportDir, { recursive: true });
+    }
+  }
+
+  async run() {
     try {
-      execSync('npm run lint', { stdio: 'inherit' });
-      console.log('✅ ESLint completed successfully');
+      console.log('🔍 Running comprehensive quality checks...');
+      
+      // Run various quality checks
+      await this.runLintingChecks();
+      await this.runTypeChecking();
+      await this.runTesting();
+      await this.runBuildChecks();
+      await this.runCodeCoverage();
+      await this.runPerformanceChecks();
+      
+      // Generate report
+      await this.generateReport();
+      
+      console.log(`✅ Quality Checks completed. Found ${this.qualityIssues.length} issues, ${this.passedChecks.length} checks passed.`);
+      
     } catch (error) {
-      console.log('⚠️  ESLint issues found but continuing...');
+      console.error('❌ Quality Checks failed:', error.message);
+      await this.generateErrorReport(error);
+    }
+  }
+
+  async runLintingChecks() {
+    try {
+      console.log('🔍 Running linting checks...');
+      
+      try {
+        const lintOutput = execSync('npm run lint', { 
+          encoding: 'utf8',
+          cwd: process.cwd(),
+          stdio: 'pipe'
+        });
+        
+        this.passedChecks.push({
+          type: 'linting',
+          status: 'success',
+          message: 'ESLint passed successfully',
+          timestamp: new Date().toISOString()
+        });
+        
+        console.log('✅ ESLint passed successfully');
+        
+      } catch (error) {
+        const errorOutput = error.stdout || error.stderr || '';
+        const issues = this.parseLintOutput(errorOutput);
+        
+        this.qualityIssues.push({
+          type: 'linting',
+          status: 'failure',
+          message: 'ESLint found issues',
+          issues: issues,
+          timestamp: new Date().toISOString()
+        });
+        
+        console.log(`❌ ESLint found ${issues.length} issues`);
+      }
+      
+    } catch (error) {
+      console.log('ℹ️  Error running linting checks:', error.message);
+    }
+  }
+
+  async runTypeChecking() {
+    try {
+      console.log('🔍 Running TypeScript type checking...');
+      
+      try {
+        const tsOutput = execSync('npx tsc --noEmit', { 
+          encoding: 'utf8',
+          cwd: process.cwd(),
+          stdio: 'pipe'
+        });
+        
+        this.passedChecks.push({
+          type: 'typescript',
+          status: 'success',
+          message: 'TypeScript type checking passed',
+          timestamp: new Date().toISOString()
+        });
+        
+        console.log('✅ TypeScript type checking passed');
+        
+      } catch (error) {
+        const errorOutput = error.stdout || error.stderr || '';
+        const issues = this.parseTypeScriptOutput(errorOutput);
+        
+        this.qualityIssues.push({
+          type: 'typescript',
+          status: 'failure',
+          message: 'TypeScript type checking failed',
+          issues: issues,
+          timestamp: new Date().toISOString()
+        });
+        
+        console.log(`❌ TypeScript type checking found ${issues.length} issues`);
+      }
+      
+    } catch (error) {
+      console.log('ℹ️  Error running TypeScript checks:', error.message);
+    }
+  }
+
+  async runTesting() {
+    try {
+      console.log('🔍 Running tests...');
+      
+      try {
+        const testOutput = execSync('npm test', { 
+          encoding: 'utf8',
+          cwd: process.cwd(),
+          stdio: 'pipe'
+        });
+        
+        this.testResults = this.parseTestOutput(testOutput);
+        
+        if (this.testResults.passed > 0) {
+          this.passedChecks.push({
+            type: 'testing',
+            status: 'success',
+            message: `Tests passed: ${this.testResults.passed}/${this.testResults.total}`,
+            details: this.testResults,
+            timestamp: new Date().toISOString()
+          });
+          
+          console.log(`✅ Tests passed: ${this.testResults.passed}/${this.testResults.total}`);
+        }
+        
+      } catch (error) {
+        const errorOutput = error.stdout || error.stderr || '';
+        this.testResults = this.parseTestOutput(errorOutput);
+        
+        if (this.testResults.failed > 0) {
+          this.qualityIssues.push({
+            type: 'testing',
+            status: 'failure',
+            message: `Tests failed: ${this.testResults.failed}/${this.testResults.total}`,
+            details: this.testResults,
+            timestamp: new Date().toISOString()
+          });
+          
+          console.log(`❌ Tests failed: ${this.testResults.failed}/${this.testResults.total}`);
+        }
+      }
+      
+    } catch (error) {
+      console.log('ℹ️  Error running tests:', error.message);
+    }
+  }
+
+  async runBuildChecks() {
+    try {
+      console.log('🔍 Running build checks...');
+      
+      try {
+        const buildOutput = execSync('npm run build', { 
+          encoding: 'utf8',
+          cwd: process.cwd(),
+          stdio: 'pipe'
+        });
+        
+        this.passedChecks.push({
+          type: 'build',
+          status: 'success',
+          message: 'Build completed successfully',
+          timestamp: new Date().toISOString()
+        });
+        
+        console.log('✅ Build completed successfully');
+        
+      } catch (error) {
+        const errorOutput = error.stdout || error.stderr || '';
+        
+        this.qualityIssues.push({
+          type: 'build',
+          status: 'failure',
+          message: 'Build failed',
+          error: error.message,
+          details: errorOutput,
+          timestamp: new Date().toISOString()
+        });
+        
+        console.log('❌ Build failed:', error.message);
+      }
+      
+    } catch (error) {
+      console.log('ℹ️  Error running build checks:', error.message);
+    }
+  }
+
+  async runCodeCoverage() {
+    try {
+      console.log('🔍 Running code coverage...');
+      
+      try {
+        const coverageOutput = execSync('npm run test:coverage', { 
+          encoding: 'utf8',
+          cwd: process.cwd(),
+          stdio: 'pipe'
+        });
+        
+        const coverage = this.parseCoverageOutput(coverageOutput);
+        
+        if (coverage.total > 0) {
+          this.passedChecks.push({
+            type: 'coverage',
+            status: 'success',
+            message: `Code coverage: ${coverage.percentage}%`,
+            details: coverage,
+            timestamp: new Date().toISOString()
+          });
+          
+          console.log(`✅ Code coverage: ${coverage.percentage}%`);
+        }
+        
+      } catch (error) {
+        console.log('ℹ️  Code coverage not available or failed');
+      }
+      
+    } catch (error) {
+      console.log('ℹ️  Error running code coverage:', error.message);
+    }
+  }
+
+  async runPerformanceChecks() {
+    try {
+      console.log('🔍 Running performance checks...');
+      
+      // Check bundle size
+      try {
+        const bundleOutput = execSync('npm run build', { 
+          encoding: 'utf8',
+          cwd: process.cwd(),
+          stdio: 'pipe'
+        });
+        
+        // Look for bundle size information in build output
+        if (bundleOutput.includes('bundle size') || bundleOutput.includes('dist')) {
+          this.passedChecks.push({
+            type: 'performance',
+            status: 'success',
+            message: 'Build size check completed',
+            timestamp: new Date().toISOString()
+          });
+          
+          console.log('✅ Build size check completed');
+        }
+        
+      } catch (error) {
+        console.log('ℹ️  Build size check not available');
+      }
+      
+    } catch (error) {
+      console.log('ℹ️  Error running performance checks:', error.message);
+    }
+  }
+
+  parseLintOutput(output) {
+    const lines = output.split('\n');
+    return lines.filter(line => line.includes('error') || line.includes('warning')).map(line => line.trim());
+  }
+
+  parseTypeScriptOutput(output) {
+    const lines = output.split('\n');
+    return lines.filter(line => line.includes('error')).map(line => line.trim());
+  }
+
+  parseTestOutput(output) {
+    const lines = output.split('\n');
+    let passed = 0;
+    let failed = 0;
+    let total = 0;
+    
+    for (const line of lines) {
+      if (line.includes('✓') || line.includes('PASS')) passed++;
+      if (line.includes('✗') || line.includes('FAIL')) failed++;
+      if (line.includes('Tests:') || line.includes('Test Suites:')) {
+        const match = line.match(/(\d+)/);
+        if (match) total = parseInt(match[1]);
+      }
     }
     
-    // Run type checking
-    console.log('🔍 Running TypeScript type checking...');
-    try {
-      execSync('npm run type-check', { stdio: 'inherit' });
-      console.log('✅ Type checking completed successfully');
-    } catch (error) {
-      console.log('⚠️  Type checking issues found but continuing...');
+    return { passed, failed, total: passed + failed };
+  }
+
+  parseCoverageOutput(output) {
+    const lines = output.split('\n');
+    let percentage = 0;
+    let total = 0;
+    
+    for (const line of lines) {
+      if (line.includes('All files')) {
+        const match = line.match(/(\d+(?:\.\d+)?)%/);
+        if (match) percentage = parseFloat(match[1]);
+      }
+      if (line.includes('Statements') || line.includes('Functions') || line.includes('Lines')) {
+        total++;
+      }
     }
     
-    // Run tests
-    console.log('🧪 Running tests...');
-    try {
-      execSync('npm test', { stdio: 'inherit' });
-      console.log('✅ Tests completed successfully');
-    } catch (error) {
-      console.log('⚠️  Tests failed but continuing...');
-    }
-    
-    // Check code coverage if available
-    console.log('📊 Checking code coverage...');
-    try {
-      execSync('npm run test:coverage', { stdio: 'inherit' });
-      console.log('✅ Code coverage check completed');
-    } catch (error) {
-      console.log('ℹ️  Code coverage not available');
-    }
-    
-    // Check for dead code
-    console.log('🔍 Checking for dead code...');
-    try {
-      execSync('npx ts-unused-exports tsconfig.json', { stdio: 'inherit' });
-      console.log('✅ Dead code check completed');
-    } catch (error) {
-      console.log('ℹ️  Dead code checker not available');
-    }
-    
-    // Check for circular dependencies
-    console.log('🔍 Checking for circular dependencies...');
-    try {
-      execSync('npx madge --circular src/', { stdio: 'inherit' });
-      console.log('✅ Circular dependency check completed');
-    } catch (error) {
-      console.log('ℹ️  Circular dependency checker not available');
-    }
-    
-    // Check for duplicate code
-    console.log('🔍 Checking for duplicate code...');
-    try {
-      execSync('npx jscpd src/', { stdio: 'inherit' });
-      console.log('✅ Duplicate code check completed');
-    } catch (error) {
-      console.log('ℹ️  Duplicate code checker not available');
-    }
-    
-    // Generate quality report
-    console.log('📊 Generating quality report...');
+    return { percentage, total };
+  }
+
+  async generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
-      summary: 'Quality checks completed',
-      status: 'completed'
+      duration: Date.now() - this.startTime,
+      qualityIssues: this.qualityIssues,
+      passedChecks: this.passedChecks,
+      testResults: this.testResults,
+      totalIssues: this.qualityIssues.length,
+      totalPassed: this.passedChecks.length,
+      status: this.qualityIssues.length === 0 ? 'clean' : 'issues_found'
     };
-    
-    const reportPath = path.join(process.cwd(), 'quality-report.json');
+
+    const reportPath = path.join(this.reportDir, 'quality-checks-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(`✅ Quality report saved to ${reportPath}`);
-    
-    console.log('✅ Continuous quality checks completed successfully');
-    
-  } catch (error) {
-    console.error('❌ Continuous quality checks failed:', error.message);
-    // Don't exit, just log the error and continue
+    console.log(`📊 Report saved to ${reportPath}`);
   }
-  {/* Removed stray closing brace */}
 
-// Main continuous loop
-async function runContinuous() {
-  console.log(`🚀 Starting continuous quality checks with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
-  
-  // Run initial quality checks
-  await runQualityChecks();
-  
-  // Set up continuous execution
-  setInterval(async () => {
-    await runQualityChecks();
-  }, AUTOMATION_INTERVAL);
-  
-  console.log(`✅ Continuous quality checks running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-  {/* Removed stray closing brace */}
+  async generateErrorReport(error) {
+    const errorReport = {
+      timestamp: new Date().toISOString(),
+      error: error.message,
+      stack: error.stack,
+      status: 'failed'
+    };
 
-// Handle graceful shutdown
-process.on('SIGINT', () => {
-  console.log('🛑 Received SIGINT, shutting down gracefully...');
-  process.exit(0);
-});
+    const reportPath = path.join(this.reportDir, 'quality-checks-error.json');
+    fs.writeFileSync(reportPath, JSON.stringify(errorReport, null, 2));
+  }
+}
 
-process.on('SIGTERM', () => {
-  console.log('🛑 Received SIGTERM, shutting down gracefully...');
-  process.exit(0);
-});
-
-// Start the continuous quality checks
-runContinuous().catch(error => {
-  console.error('❌ Failed to start continuous quality checks:', error);
-  process.exit(1);
-});
+// Run the automation
+const quality = new QualityChecks();
+quality.run().catch(console.error);

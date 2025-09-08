@@ -85,22 +85,15 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       title: 'AI & Analytics Services',
       featured: true,
       links: [
-        { name: 'All Services', href: '/services', featured: true },
-        { name: 'Innovative Services 2025', href: '/services/innovative-2025', featured: true },
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', featured: true },
-        { name: 'AI Healthcare Diagnostics', href: '/services/ai-healthcare-analytics', featured: true },
-        { name: 'AI Legal Tech Platform', href: '/services/ai-legal-document-analysis', featured: true },
-        { name: 'AI Research & Discovery', href: '/services/ai-autonomous-research-assistant', featured: true },
-        { name: 'AI Green Technology', href: '/services/green-it', featured: true },
-        { name: 'AI Metaverse Platform', href: '/services/ai-content-creation', featured: true },
-        { name: 'AI Space Technology', href: '/services/space-tech', featured: true },
-        { name: 'AI FinTech Platform', href: '/services/ai-financial-trading', featured: true },
-        { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization', featured: true },
-        { name: 'AI Quality Assurance', href: '/services/ai-predictive-maintenance', featured: true },
-        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', featured: true },
-        { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', featured: true },
-        { name: 'AI HR & Recruitment', href: '/services/ai-hr-platform', featured: true },
-        { name: 'AI Content Creation', href: '/services/ai-content-creation', featured: true }
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
+        { name: 'AI Data Governance', href: '/services/data-analytics' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics-platform' },
+        { name: 'AI Project Management Platform', href: '/services/ai-project-management-platform' },
+        { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection' },
+        { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform' },
+        { name: 'AI Content Marketing Automation', href: '/services/ai-content-marketing-automation' }
       ]
     },
     {
@@ -139,16 +132,14 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       title: 'Business Solutions',
       featured: true,
       links: [
-        { name: 'Micro SaaS Products', href: '/services/micro-saas', featured: true },
-        { name: 'Enterprise Solutions', href: '/solutions', featured: true },
-        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', featured: true },
-        { name: 'AI Project Management', href: '/services/ai-project-management', featured: true },
-        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', featured: true },
-        { name: 'AI HR & Recruitment', href: '/services/ai-hr-platform', featured: true },
-        { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization', featured: true },
-        { name: 'AI Quality Assurance', href: '/services/ai-predictive-maintenance', featured: true },
-        { name: 'AI Sales Intelligence', href: '/services/ai-financial-trading', featured: true },
-        { name: 'AI Innovation Management', href: '/services/ai-autonomous-research-assistant', featured: true }
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'News & Press', href: '/news' },
+        { name: 'Events', href: '/events' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'Marketplace', href: '/marketplace' }
       ]
     },
     {

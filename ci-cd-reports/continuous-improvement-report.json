@@ -1,0 +1,38 @@
+{
+  "timestamp": "2025-08-29T15:31:31.034Z",
+  "duration": 61284,
+  "improvements": [
+    {
+      "type": "build",
+      "status": "success",
+      "message": "Build completed successfully",
+      "timestamp": "2025-08-29T15:31:06.514Z"
+    }
+  ],
+  "issues": [
+    {
+      "type": "linting",
+      "status": "failure",
+      "message": "Code linting failed",
+      "error": "Command failed: npm run lint\nsh: 1: eslint: not found\n",
+      "timestamp": "2025-08-29T15:30:30.085Z"
+    },
+    {
+      "type": "typescript",
+      "status": "failure",
+      "message": "TypeScript check failed",
+      "error": "Command failed: npx tsc --noEmit",
+      "timestamp": "2025-08-29T15:30:36.573Z"
+    },
+    {
+      "type": "security",
+      "status": "warning",
+      "message": "Security vulnerabilities found",
+      "error": "Command failed: npm audit --audit-level=moderate",
+      "timestamp": "2025-08-29T15:31:26.871Z"
+    }
+  ],
+  "totalImprovements": 1,
+  "totalIssues": 3,
+  "status": "issues_found"
+}

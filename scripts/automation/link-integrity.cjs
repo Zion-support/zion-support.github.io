@@ -1,363 +1,422 @@
-#!/""usr/bin/env""
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+#!/usr/bin/env node
 
-#!/"usr/bin/env"
-import { execSync  } from "child_process
-import fs from fs"
-import path from "path
-import { fileURLToPath } from url"
-console.log("� Starting continuous link integrity automation...)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> merged-prs-20250907-203621
-#!/""usr/bin/env""
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-import { execSync  } from "child_process"
-import fs from "fs"
-import path from "path"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+console.log('🔗 Starting Link Integrity Automation...');
 
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-import { fileURLToPath } from "url"
-console.log(""� Starting continuous link integrity automation...")
-import { execSync  } from "child_process"
-import fs from "fs"
-import path from "path"
-import { fileURLToPath  } from "url"
-console.log(""� Starting continuous link integrity automation...")
-// Get automation interval from environment variable ("default")
-    console.log(`"� Building project for link checking..."`)
-    execSync("npm run build", { "stdio": "inherit"})
-// console.log(" Build completed successfully"")
-    console.log("" Running comprehensive link check...")
-  console.log("� Starting continuous link integrity automation...")
-// Get automation interval from environment variable ("default")
-    console.log(`"� Building project for link checking..."`)
-    execSync("npm run build", { "stdio": "inherit"})
-// console.log(" Build completed successfully"")
-    console.log("" Running comprehensive link check...")
-  execSync("npx linkinator dist/ --reporter json --output link-report.json", { "stdio": "inherit"})
-      console.log(" Linkinator completed successfully")
-      if (fs.existsSync("link-report.json")
-  analyzeLinkReport(JSON.parse(fs.readFileSync("link-report.json", "utf8")
-  console.log("⚠  Linkinator failed but continuing...")
-      if (fs.existsSync("link-report.json")
-  analyzeLinkReport(JSON.parse(fs.readFileSync("link-report.json", "utf8")
-// console.log("⚠  Linkinator failed but continuing...")
-    console.log(" Checking for broken internal links...")
-<<<<<<< HEAD
-const distPath = path.join(process.cwd(), "dist";
-=======
-    const distPath = path.join(process.cwd(), "dist"
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-// console.log("⚠  Broken internal links "found": ")
-  console.log(" No broken internal links found")
-// console.log(" Checking for orphaned files..."")
-  console.log(""⚠  Orphaned files "found": ")
-// console.log("")
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-  console.log(` No orphaned files found``)
-// console.log(" Checking for missing assets..."")
-      console.log("⚠  Orphaned files "found": ")
-// console.log(" No orphaned files found")
-    console.log(" Checking for missing assets..."")
-// console.log(""⚠  Missing assets "found": ")
-  console.log("")
-// console.log(` No missing assets found``)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-// Get automation interval from environment variable (default: 2 hours)
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours
-
-async function runLinkIntegrity() {
-  try {
-    console.log(`🔗 Running link integrity check at ${new Date().toISOString()}`);
-    
-    // Build the project first
-    console.log('🏗️ Building project for link checking...');
-    execSync('npm run build', { stdio: 'inherit' });
-    console.log('✅ Build completed successfully');
-    
-    // Run linkinator for comprehensive link checking
-    console.log('🔍 Running comprehensive link check...');
-    try {
-      execSync('npx linkinator dist/ --reporter json --output link-report.json', { stdio: 'inherit' });
-      console.log('✅ Linkinator completed successfully');
-      
-      // Parse and analyze link report
-      if (fs.existsSync('link-report.json')) {
-        analyzeLinkReport(JSON.parse(fs.readFileSync('link-report.json', 'utf8')));
-      }
-    } catch (error) {
-      console.log('⚠️  Linkinator failed but continuing...');
-    }
-    
-    // Check for broken internal links
-    console.log('🔍 Checking for broken internal links...');
-    const distPath = path.join(process.cwd(), 'dist');
-    const internalLinks = findInternalLinks(distPath);
-    const brokenInternalLinks = [];
-    
-    for (const link of internalLinks) {
-      if (!fs.existsSync(path.join(distPath, link))) {
-        brokenInternalLinks.push(link);
-      }
-    }
-    
-    if (brokenInternalLinks.length > 0) {
-      console.log('⚠️  Broken internal links found:');
-      brokenInternalLinks.forEach(link => {
-        console.log(`  - ${link}`);
-      });
-    } else {
-      console.log('✅ No broken internal links found');
-    }
-    
-    // Check for orphaned files
-    console.log('🔍 Checking for orphaned files...');
-    const orphanedFiles = findOrphanedFiles(distPath);
-    
-    if (orphanedFiles.length > 0) {
-      console.log('⚠️  Orphaned files found:');
-      orphanedFiles.forEach(file => {
-        console.log(`  - ${file}`);
-      });
-    } else {
-      console.log('✅ No orphaned files found');
-    }
-    
-    // Check for missing assets
-    console.log('🔍 Checking for missing assets...');
-    const missingAssets = findMissingAssets(distPath);
-    
-    if (missingAssets.length > 0) {
-      console.log('⚠️  Missing assets found:');
-      missingAssets.forEach(asset => {
-        console.log(`  - ${asset}`);
-      });
-    } else {
-      console.log('✅ No missing assets found');
-    }
-    
-    // Generate link integrity report
-    console.log('📊 Generating link integrity report...');
-    const report = {
-      timestamp: new Date().toISOString(),
-      brokenInternalLinks: brokenInternalLinks.length,
-      orphanedFiles: orphanedFiles.length,
-      missingAssets: missingAssets.length,
-      summary: 'Link integrity check completed'
-    };
-    
-    const reportPath = path.join(process.cwd(), 'link-integrity-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(`✅ Link integrity report saved to ${reportPath}`);
-    
-    console.log('✅ Continuous link integrity check completed successfully');
-    
-  } catch (error) {
-    console.error('❌ Continuous link integrity check failed:', error.message);
-    // Don't exit, just log the error and continue
+class LinkIntegrity {
+  constructor() {
+    this.reportDir = path.join(process.cwd(), 'ci-cd-reports');
+    this.ensureReportDirectory();
+    this.startTime = Date.now();
+    this.validLinks = [];
+    this.brokenLinks = [];
+    this.redirectedLinks = [];
+    this.timeoutLinks = [];
+    this.totalLinks = 0;
   }
-  {/* Removed stray closing brace */}
 
-function findInternalLinks(distPath) {
-  const internalLinks = [];
-  
-  function scanDirectory(currentDir) {
+  ensureReportDirectory() {
+    if (!fs.existsSync(this.reportDir)) {
+      fs.mkdirSync(this.reportDir, { recursive: true });
+    }
+  }
+
+  async run() {
     try {
-      const items = fs.readdirSync(currentDir);
+      console.log('🔍 Running comprehensive link integrity check...');
       
-      for (const item of items) {
-        const fullPath = path.join(currentDir, item);
-        const stat = fs.statSync(fullPath);
+      // Run various link checks
+      await this.checkHtmlLinks();
+      await this.checkMarkdownLinks();
+      await this.checkSitemapLinks();
+      await this.checkRobotsTxt();
+      await this.checkExternalLinks();
+      await this.generateLinkReport();
+      
+      // Generate final report
+      await this.generateReport();
+      
+      console.log(`✅ Link Integrity completed. Checked ${this.totalLinks} links, found ${this.brokenLinks.length} broken links.`);
+      
+    } catch (error) {
+      console.error('❌ Link Integrity failed:', error.message);
+      await this.generateErrorReport(error);
+    }
+  }
+
+  async checkHtmlLinks() {
+    try {
+      console.log('🔍 Checking HTML files for links...');
+      
+      // Find all HTML and component files
+      const htmlFiles = execSync('find . -name "*.html" -o -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | head -30', { 
+        encoding: 'utf8',
+        cwd: process.cwd()
+      }).split('\n').filter(line => line.trim());
+      
+      for (const file of htmlFiles) {
+        if (file && fs.existsSync(file)) {
+          await this.extractAndCheckLinks(file, 'html');
+        }
+      }
+      
+    } catch (error) {
+      console.log('ℹ️  Error checking HTML files:', error.message);
+    }
+  }
+
+  async checkMarkdownLinks() {
+    try {
+      console.log('🔍 Checking markdown files for links...');
+      
+      const mdFiles = execSync('find . -name "*.md" | head -20', { 
+        encoding: 'utf8',
+        cwd: process.cwd()
+      }).split('\n').filter(line => line.trim());
+      
+      for (const file of mdFiles) {
+        if (file && fs.existsSync(file)) {
+          await this.extractAndCheckLinks(file, 'markdown');
+        }
+      }
+      
+    } catch (error) {
+      console.log('ℹ️  Error checking markdown files:', error.message);
+    }
+  }
+
+  async checkSitemapLinks() {
+    try {
+      console.log('🔍 Checking sitemap links...');
+      
+      if (fs.existsSync('sitemap.xml')) {
+        const sitemapContent = fs.readFileSync('sitemap.xml', 'utf8');
+        const urlMatches = sitemapContent.match(/<loc>(.*?)<\/loc>/g);
         
-        if (stat.isDirectory()) {
-          scanDirectory(fullPath);
-        } else if (item.endsWith('.html')) {
-          const content = fs.readFileSync(fullPath, 'utf8');
-          
-          // Find internal links (href attributes)
-          const hrefMatches = content.match(/href=["']([^"']+)["']/g);
-          if (hrefMatches) {
-            hrefMatches.forEach(match => {
-              const href = match.match(/href=["']([^"']+)["']/)[1];
-              if (href.startsWith('/') || href.startsWith('./') || href.startsWith('../')) {
-                internalLinks.push(href);
-              }
-            });
+        if (urlMatches) {
+          for (const match of urlMatches) {
+            const url = match.replace(/<loc>|<\/loc>/g, '');
+            await this.checkSingleLink(url, 'sitemap');
           }
         }
       }
+      
     } catch (error) {
-      // Skip directories that can't be accessed
+      console.log('ℹ️  Error checking sitemap:', error.message);
     }
   }
-  
-  scanDirectory(distPath);
-  return [...new Set(internalLinks)]; // Remove duplicates
-  {/* Removed stray closing brace */}
 
-function findOrphanedFiles(distPath) {
-  const referencedFiles = new Set();
-  const allFiles = [];
-  
-  function scanDirectory(currentDir) {
+  async checkRobotsTxt() {
     try {
-      const items = fs.readdirSync(currentDir);
+      console.log('🔍 Checking robots.txt links...');
       
-      for (const item of items) {
-        const fullPath = path.join(currentDir, item);
-        const stat = fs.statSync(fullPath);
+      if (fs.existsSync('robots.txt')) {
+        const robotsContent = fs.readFileSync('robots.txt', 'utf8');
+        const lines = robotsContent.split('\n');
         
-        if (stat.isDirectory()) {
-          scanDirectory(fullPath);
-        } else if (stat.isFile()) {
-          const relativePath = path.relative(distPath, fullPath);
-          allFiles.push(relativePath);
+        for (const line of lines) {
+          if (line.startsWith('Sitemap:')) {
+            const url = line.replace('Sitemap:', '').trim();
+            await this.checkSingleLink(url, 'robots');
+          }
+        }
+      }
+      
+    } catch (error) {
+      console.log('ℹ️  Error checking robots.txt:', error.message);
+    }
+  }
+
+  async checkExternalLinks() {
+    try {
+      console.log('🔍 Checking external links...');
+      
+      // Find external links in the codebase
+      const externalLinks = await this.findExternalLinks();
+      
+      for (const link of externalLinks) {
+        await this.checkSingleLink(link, 'external');
+      }
+      
+    } catch (error) {
+      console.log('ℹ️  Error checking external links:', error.message);
+    }
+  }
+
+  async findExternalLinks() {
+    const externalLinks = new Set();
+    
+    try {
+      // Search for external URLs in various file types
+      const fileTypes = ['*.html', '*.tsx', '*.ts', '*.jsx', '*.js', '*.md', '*.json'];
+      
+      for (const fileType of fileTypes) {
+        try {
+          const files = execSync(`find . -name "${fileType}" | head -20`, { 
+            encoding: 'utf8',
+            cwd: process.cwd()
+          }).split('\n').filter(line => line.trim());
           
-          // If it's an HTML file, check for references
-          if (item.endsWith('.html')) {
-            const content = fs.readFileSync(fullPath, 'utf8');
-            
-            // Find references to other files
-            const fileMatches = content.match(/src=["']([^"']+)["']|href=["']([^"']+)["']/g);
-            if (fileMatches) {
-              fileMatches.forEach(match => {
-                const fileRef = match.match(/src=["']([^"']+)["']|href=["']([^"']+)["']/)[1] || match.match(/src=["']([^"']+)["']|href=["']([^"']+)["']/)[2];
-                if (fileRef && !fileRef.startsWith('http')) {
-                  referencedFiles.add(fileRef);
+          for (const file of files) {
+            if (file && fs.existsSync(file)) {
+              const content = fs.readFileSync(file, 'utf8');
+              const urlRegex = /(https?:\/\/[^\s"<>]+)/g;
+              const urls = content.match(urlRegex) || [];
+              
+              for (const url of urls) {
+                if (this.isExternalUrl(url)) {
+                  externalLinks.add(url);
                 }
-              });
+              }
             }
           }
+        } catch (error) {
+          // Continue with next file type
         }
       }
     } catch (error) {
-      // Skip directories that can't be accessed
+      console.log('ℹ️  Error finding external links:', error.message);
     }
-  }
-  
-  scanDirectory(distPath);
-  
-  // Find files that are not referenced
-  return allFiles.filter(file => {
-    return !referencedFiles.has(file) && 
-           !file.endsWith('.html') && 
-           !file.endsWith('.css') && 
-           !file.endsWith('.js');
-  });
-  {/* Removed stray closing brace */}
-
-function findMissingAssets(distPath) {
-  const referencedAssets = new Set();
-  const missingAssets = [];
-  
-  function scanDirectory(currentDir) {
-    try {
-      const items = fs.readdirSync(currentDir);
-      
-      for (const item of items) {
-        const fullPath = path.join(currentDir, item);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory()) {
-          scanDirectory(fullPath);
-        } else if (item.endsWith('.html')) {
-          const content = fs.readFileSync(fullPath, 'utf8');
-          
-          // Find asset references
-          const assetMatches = content.match(/src=["']([^"']+)["']|href=["']([^"']+)["']/g);
-          if (assetMatches) {
-            assetMatches.forEach(match => {
-              const assetRef = match.match(/src=["']([^"']+)["']|href=["']([^"']+)["']/)[1] || match.match(/src=["']([^"']+)["']|href=["']([^"']+)["']/)[2];
-              if (assetRef && !assetRef.startsWith('http')) {
-                referencedAssets.add(assetRef);
-              }
-            });
-          }
-        }
-      }
-    } catch (error) {
-      // Skip directories that can't be accessed
-    }
-  }
-  
-  scanDirectory(distPath);
-  
-  // Check if referenced assets exist
-  referencedAssets.forEach(asset => {
-    const assetPath = path.join(distPath, asset);
-    if (!fs.existsSync(assetPath)) {
-      missingAssets.push(asset);
-    }
-  });
-  
-  return missingAssets;
-  {/* Removed stray closing brace */}
-
-function analyzeLinkReport(linkReport) {
-  if (linkReport.results) {
-    const brokenLinks = linkReport.results.filter(result => result.status !== 200);
     
-    if (brokenLinks.length > 0) {
-      console.log(`⚠️  Found ${brokenLinks.length} broken external links:`);
-      brokenLinks.forEach(link => {
-        console.log(`  - ${link.url} (Status: ${link.status})`);
-      });
-    } else {
-      console.log('✅ All external links are working');
+    return Array.from(externalLinks);
+  }
+
+  async extractAndCheckLinks(filePath, sourceType) {
+    try {
+      const content = fs.readFileSync(filePath, 'utf8');
+      
+      // Extract URLs using regex
+      const urlRegex = /(https?:\/\/[^\s"<>]+)/g;
+      const urls = content.match(urlRegex) || [];
+      
+      for (const url of urls) {
+        await this.checkSingleLink(url, sourceType, filePath);
+      }
+      
+    } catch (error) {
+      console.log(`ℹ️  Error processing file ${filePath}:`, error.message);
     }
   }
-  {/* Removed stray closing brace */}
 
-// Main continuous loop
-async function runContinuous() {
-  console.log(`🚀 Starting continuous link integrity checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
-  
-  // Run initial link integrity check
-  await runLinkIntegrity();
-  
-  // Set up continuous execution
-  setInterval(async () => {
-    await runLinkIntegrity();
-  }, AUTOMATION_INTERVAL);
-  
-  console.log(`✅ Continuous link integrity checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-  {/* Removed stray closing brace */}
+  async checkSingleLink(url, sourceType, filePath = null) {
+    try {
+      this.totalLinks++;
+      
+      // Skip certain URLs that might cause issues
+      if (this.shouldSkipUrl(url)) {
+        return;
+      }
+      
+      // Use curl to check if link is accessible
+      const result = await this.checkUrlWithCurl(url);
+      
+      if (result.status === 'valid') {
+        this.validLinks.push({
+          url,
+          sourceType,
+          filePath,
+          statusCode: result.statusCode,
+          responseTime: result.responseTime,
+          timestamp: new Date().toISOString()
+        });
+      } else if (result.status === 'redirect') {
+        this.redirectedLinks.push({
+          url,
+          sourceType,
+          filePath,
+          redirectUrl: result.redirectUrl,
+          statusCode: result.statusCode,
+          timestamp: new Date().toISOString()
+        });
+        
+        console.log(`🔄 Redirect: ${url} → ${result.redirectUrl}`);
+      } else if (result.status === 'broken') {
+        this.brokenLinks.push({
+          url,
+          sourceType,
+          filePath,
+          statusCode: result.statusCode,
+          error: result.error,
+          timestamp: new Date().toISOString()
+        });
+        
+        console.log(`❌ Broken link: ${url} (Status: ${result.statusCode})`);
+      } else if (result.status === 'timeout') {
+        this.timeoutLinks.push({
+          url,
+          sourceType,
+          filePath,
+          error: 'Request timeout',
+          timestamp: new Date().toISOString()
+        });
+        
+        console.log(`⏰ Timeout: ${url}`);
+      }
+      
+    } catch (error) {
+      this.brokenLinks.push({
+        url,
+        sourceType,
+        filePath,
+        error: error.message,
+        timestamp: new Date().toISOString()
+      });
+      
+      console.log(`❌ Error checking link: ${url} - ${error.message}`);
+    }
+  }
 
-// Handle graceful shutdown
-process.on('SIGINT', () => {
-  console.log('🛑 Received SIGINT, shutting down gracefully...');
-  process.exit(0);
-});
+  async checkUrlWithCurl(url) {
+    try {
+      const startTime = Date.now();
+      
+      // Use curl with timeout and follow redirects
+      const result = execSync(`curl -s -o /dev/null -w "%{http_code}|%{time_total}|%{redirect_url}" -m 10 -L "${url}"`, { 
+        encoding: 'utf8',
+        timeout: 15000
+      });
+      
+      const responseTime = Date.now() - startTime;
+      const [statusCode, timeTotal, redirectUrl] = result.trim().split('|');
+      const httpStatus = parseInt(statusCode);
+      
+      if (httpStatus >= 200 && httpStatus < 400) {
+        if (redirectUrl && redirectUrl !== '') {
+          return {
+            status: 'redirect',
+            statusCode: httpStatus,
+            redirectUrl: redirectUrl,
+            responseTime: responseTime
+          };
+        } else {
+          return {
+            status: 'valid',
+            statusCode: httpStatus,
+            responseTime: responseTime
+          };
+        }
+      } else {
+        return {
+          status: 'broken',
+          statusCode: httpStatus,
+          responseTime: responseTime
+        };
+      }
+      
+    } catch (error) {
+      if (error.message.includes('timeout') || error.message.includes('timed out')) {
+        return {
+          status: 'timeout',
+          error: 'Request timeout'
+        };
+      } else {
+        return {
+          status: 'broken',
+          error: error.message
+        };
+      }
+    }
+  }
 
-process.on('SIGTERM', () => {
-  console.log('🛑 Received SIGTERM, shutting down gracefully...');
-  process.exit(0);
-});
+  shouldSkipUrl(url) {
+    const skipPatterns = [
+      'localhost',
+      '127.0.0.1',
+      '0.0.0.0',
+      '::1',
+      'file://',
+      'mailto:',
+      'tel:',
+      'javascript:',
+      'data:'
+    ];
+    
+    return skipPatterns.some(pattern => url.includes(pattern));
+  }
 
-// Start the continuous link integrity checker
-runContinuous().catch(error => {
-  console.error('❌ Failed to start continuous link integrity checker:', error);
-  process.exit(1);
-});
+  isExternalUrl(url) {
+    try {
+      const urlObj = new URL(url);
+      const hostname = urlObj.hostname;
+      
+      // Check if it's not a localhost or internal domain
+      return !hostname.includes('localhost') && 
+             !hostname.includes('127.0.0.1') && 
+             !hostname.includes('0.0.0.0') &&
+             !hostname.includes('::1');
+    } catch (error) {
+      return false;
+    }
+  }
+
+  async generateLinkReport() {
+    try {
+      console.log('📊 Generating link report...');
+      
+      const linkReport = {
+        timestamp: new Date().toISOString(),
+        summary: {
+          totalLinks: this.totalLinks,
+          validLinks: this.validLinks.length,
+          brokenLinks: this.brokenLinks.length,
+          redirectedLinks: this.redirectedLinks.length,
+          timeoutLinks: this.timeoutLinks.length
+        },
+        validLinks: this.validLinks,
+        brokenLinks: this.brokenLinks,
+        redirectedLinks: this.redirectedLinks,
+        timeoutLinks: this.timeoutLinks
+      };
+      
+      const reportPath = path.join(this.reportDir, 'link-integrity-report.json');
+      fs.writeFileSync(reportPath, JSON.stringify(linkReport, null, 2));
+      
+      console.log('✅ Link report generated');
+      
+    } catch (error) {
+      console.log('ℹ️  Error generating link report:', error.message);
+    }
+  }
+
+  async generateReport() {
+    const report = {
+      timestamp: new Date().toISOString(),
+      duration: Date.now() - this.startTime,
+      summary: {
+        totalLinks: this.totalLinks,
+        validLinks: this.validLinks.length,
+        brokenLinks: this.brokenLinks.length,
+        redirectedLinks: this.redirectedLinks.length,
+        timeoutLinks: this.timeoutLinks.length
+      },
+      validLinks: this.validLinks,
+      brokenLinks: this.brokenLinks,
+      redirectedLinks: this.redirectedLinks,
+      timeoutLinks: this.timeoutLinks,
+      status: this.brokenLinks.length === 0 ? 'clean' : 'broken_links_found'
+    };
+
+    const reportPath = path.join(this.reportDir, 'link-integrity-final-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    console.log(`📊 Final report saved to ${reportPath}`);
+  }
+
+  async generateErrorReport(error) {
+    const errorReport = {
+      timestamp: new Date().toISOString(),
+      error: error.message,
+      stack: error.stack,
+      status: 'failed'
+    };
+
+    const reportPath = path.join(this.reportDir, 'link-integrity-error.json');
+    fs.writeFileSync(reportPath, JSON.stringify(errorReport, null, 2));
+  }
+}
+
+// Run the automation
+const integrity = new LinkIntegrity();
+integrity.run().catch(console.error);

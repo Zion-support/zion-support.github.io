@@ -1,140 +1,278 @@
-#!/""usr/bin/env""
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
-console.log("" Starting continuous improvement automation...")
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
-console.log("" Starting continuous improvement automation...")
-// Get automation interval from environment variable ("default")
-  console.log(` Running continuous improvement at ${new Date().toISOString()}
-// console.log(`"� Checking for pending improvements..."`)
-console.log(" Starting continuous improvement automation...")
-// Get automation interval from environment variable ("default")
-// console.log(""� Checking for pending improvements...")
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+#!/usr/bin/env node
 
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+console.log('🚀 Starting Continuous Improvement Automation...');
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> merged-prs-20250907-203621
-#!/""usr/bin/env""
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-console.log("" Starting continuous improvement automation...")
-const { execSync } = require("child_process")
-<<<<<<< HEAD
+class ContinuousImprovement {
+  constructor() {
+    this.reportDir = path.join(process.cwd(), 'ci-cd-reports');
+    this.ensureReportDirectory();
+    this.startTime = Date.now();
+    this.improvements = [];
+    this.issues = [];
+  }
 
-async function runContinuousImprovement() {
-  try {
-    console.log(`🚀 Running continuous improvement at ${new Date().toISOString()}`);
-    
-    // Check for any pending improvements
-    console.log('📋 Checking for pending improvements...');
-    
-    // Run quality checks
-    console.log('🔍 Running quality checks...');
-    try {
-      execSync('npm run lint', { stdio: 'inherit' });
-      console.log('✅ Linting completed');
-    } catch (error) {
-      console.log('⚠️  Linting issues found but continuing...');
+  ensureReportDirectory() {
+    if (!fs.existsSync(this.reportDir)) {
+      fs.mkdirSync(this.reportDir, { recursive: true });
     }
-    
-    // Run tests
-    console.log('🧪 Running tests...');
+  }
+
+  async run() {
     try {
-      execSync('npm test', { stdio: 'inherit' });
-      console.log('✅ Tests completed');
+      console.log('🔍 Running continuous improvement checks...');
+      
+      // Run various improvement tasks
+      await this.runCodeQualityChecks();
+      await this.runPerformanceChecks();
+      await this.runSecurityChecks();
+      await this.runDependencyChecks();
+      
+      // Generate report
+      await this.generateReport();
+      
+      console.log(`✅ Continuous Improvement completed. Applied ${this.improvements.length} improvements, found ${this.issues.length} issues.`);
+      
     } catch (error) {
-      console.log('⚠️  Tests failed but continuing...');
+      console.error('❌ Continuous Improvement failed:', error.message);
+      await this.generateErrorReport(error);
     }
-    
-    // Check for outdated dependencies
-    console.log('📦 Checking for outdated dependencies...');
+  }
+
+  async runCodeQualityChecks() {
     try {
-      execSync('npm outdated', { stdio: 'inherit' });
+      console.log('🔍 Running code quality checks...');
+      
+      // Run ESLint
+      try {
+        const lintOutput = execSync('npm run lint', { 
+          encoding: 'utf8',
+          cwd: process.cwd(),
+          stdio: 'pipe'
+        });
+        
+        this.improvements.push({
+          type: 'linting',
+          status: 'success',
+          message: 'Code linting passed',
+          timestamp: new Date().toISOString()
+        });
+        
+        console.log('✅ Code linting passed');
+        
+      } catch (error) {
+        this.issues.push({
+          type: 'linting',
+          status: 'failure',
+          message: 'Code linting failed',
+          error: error.message,
+          timestamp: new Date().toISOString()
+        });
+        
+        console.log('❌ Code linting failed:', error.message);
+      }
+      
+      // Run TypeScript check
+      try {
+        const tsOutput = execSync('npx tsc --noEmit', { 
+          encoding: 'utf8',
+          cwd: process.cwd(),
+          stdio: 'pipe'
+        });
+        
+        this.improvements.push({
+          type: 'typescript',
+          status: 'success',
+          message: 'TypeScript check passed',
+          timestamp: new Date().toISOString()
+        });
+        
+        console.log('✅ TypeScript check passed');
+        
+      } catch (error) {
+        this.issues.push({
+          type: 'typescript',
+          status: 'failure',
+          message: 'TypeScript check failed',
+          error: error.message,
+          timestamp: new Date().toISOString()
+        });
+        
+        console.log('❌ TypeScript check failed:', error.message);
+      }
+      
     } catch (error) {
-      console.log('✅ All dependencies are up to date');
+      console.log('ℹ️  Error running code quality checks:', error.message);
     }
-    
-    // Generate performance report
-    console.log('📊 Generating performance report...');
+  }
+
+  async runPerformanceChecks() {
     try {
-      execSync('npm run build', { stdio: 'inherit' });
-      console.log('✅ Build completed');
+      console.log('🔍 Running performance checks...');
+      
+      // Check bundle size
+      try {
+        const buildOutput = execSync('npm run build', { 
+          encoding: 'utf8',
+          cwd: process.cwd(),
+          stdio: 'pipe'
+        });
+        
+        this.improvements.push({
+          type: 'build',
+          status: 'success',
+          message: 'Build completed successfully',
+          timestamp: new Date().toISOString()
+        });
+        
+        console.log('✅ Build completed successfully');
+        
+      } catch (error) {
+        this.issues.push({
+          type: 'build',
+          status: 'failure',
+          message: 'Build failed',
+          error: error.message,
+          timestamp: new Date().toISOString()
+        });
+        
+        console.log('❌ Build failed:', error.message);
+      }
+      
     } catch (error) {
-      console.log('⚠️  Build failed but continuing...');
+      console.log('ℹ️  Error running performance checks:', error.message);
     }
-    
-    // Check bundle size
-    console.log('📦 Analyzing bundle size...');
+  }
+
+  async runSecurityChecks() {
     try {
-      execSync('node scripts/analyze-bundle.js', { stdio: 'inherit' });
-      console.log('✅ Bundle analysis completed');
+      console.log('🔍 Running security checks...');
+      
+      // Run npm audit
+      try {
+        const auditOutput = execSync('npm audit --audit-level=moderate', { 
+          encoding: 'utf8',
+          cwd: process.cwd(),
+          stdio: 'pipe'
+        });
+        
+        if (auditOutput.includes('found 0 vulnerabilities')) {
+          this.improvements.push({
+            type: 'security',
+            status: 'success',
+            message: 'No security vulnerabilities found',
+            timestamp: new Date().toISOString()
+          });
+          
+          console.log('✅ No security vulnerabilities found');
+        } else {
+          this.issues.push({
+            type: 'security',
+            status: 'warning',
+            message: 'Security vulnerabilities found',
+            details: auditOutput,
+            timestamp: new Date().toISOString()
+          });
+          
+          console.log('⚠️  Security vulnerabilities found');
+        }
+        
+      } catch (error) {
+        // npm audit exits with code 1 if vulnerabilities are found
+        this.issues.push({
+          type: 'security',
+          status: 'warning',
+          message: 'Security vulnerabilities found',
+          error: error.message,
+          timestamp: new Date().toISOString()
+        });
+        
+        console.log('⚠️  Security vulnerabilities found');
+      }
+      
     } catch (error) {
-      console.log('⚠️  Bundle analysis failed but continuing...');
+      console.log('ℹ️  Error running security checks:', error.message);
     }
-    
-    // Generate report
+  }
+
+  async runDependencyChecks() {
+    try {
+      console.log('🔍 Running dependency checks...');
+      
+      // Check for outdated packages
+      try {
+        const outdatedOutput = execSync('npm outdated --json', { 
+          encoding: 'utf8',
+          cwd: process.cwd(),
+          stdio: 'pipe'
+        });
+        
+        if (outdatedOutput.trim()) {
+          const outdated = JSON.parse(outdatedOutput);
+          const outdatedCount = Object.keys(outdated).length;
+          
+          this.issues.push({
+            type: 'dependencies',
+            status: 'info',
+            message: `${outdatedCount} outdated packages found`,
+            details: outdated,
+            timestamp: new Date().toISOString()
+          });
+          
+          console.log(`ℹ️  Found ${outdatedCount} outdated packages`);
+        } else {
+          this.improvements.push({
+            type: 'dependencies',
+            status: 'success',
+            message: 'All packages are up to date',
+            timestamp: new Date().toISOString()
+          });
+          
+          console.log('✅ All packages are up to date');
+        }
+        
+      } catch (error) {
+        // npm outdated exits with code 1 if packages are outdated
+        console.log('ℹ️  Some packages may be outdated');
+      }
+      
+    } catch (error) {
+      console.log('ℹ️  Error running dependency checks:', error.message);
+    }
+  }
+
+  async generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
-      summary: 'Continuous improvement completed',
-      status: 'completed'
+      duration: Date.now() - this.startTime,
+      improvements: this.improvements,
+      issues: this.issues,
+      totalImprovements: this.improvements.length,
+      totalIssues: this.issues.length,
+      status: this.issues.length === 0 ? 'clean' : 'issues_found'
     };
-    
-    const reportPath = path.join(process.cwd(), 'continuous-improvement-report.json');
+
+    const reportPath = path.join(this.reportDir, 'continuous-improvement-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`📊 Report saved to ${reportPath}`);
-    
-    console.log('✅ Continuous improvement completed successfully');
-    
-  } catch (error) {
-    console.error('❌ Continuous improvement failed:', error.message);
-    // Don't exit, just log the error and continue
   }
-  {/* Removed stray closing brace */}
 
-// Main continuous loop
-async function runContinuous() {
-  console.log(`🚀 Starting continuous improvement with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
-  
-  // Run initial improvement
-  await runContinuousImprovement();
-  
-  // Set up continuous execution
-  setInterval(async () => {
-    await runContinuousImprovement();
-  }, AUTOMATION_INTERVAL);
-  
-  console.log(`✅ Continuous improvement running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-  {/* Removed stray closing brace */}
+  async generateErrorReport(error) {
+    const errorReport = {
+      timestamp: new Date().toISOString(),
+      error: error.message,
+      stack: error.stack,
+      status: 'failed'
+    };
 
-// Handle graceful shutdown
-process.on('SIGINT', () => {
-  console.log('🛑 Received SIGINT, shutting down gracefully...');
-  process.exit(0);
-});
+    const reportPath = path.join(this.reportDir, 'continuous-improvement-error.json');
+    fs.writeFileSync(reportPath, JSON.stringify(errorReport, null, 2));
+  }
+}
 
-process.on('SIGTERM', () => {
-  console.log('🛑 Received SIGTERM, shutting down gracefully...');
-  process.exit(0);
-});
-
-// Start the continuous improvement
-runContinuous().catch(error => {
-  console.error('❌ Failed to start continuous improvement:', error);
-  process.exit(1);
-});
+// Run the automation
+const improvement = new ContinuousImprovement();
+improvement.run().catch(console.error);

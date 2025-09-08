@@ -1,248 +1,375 @@
-#!/""usr/bin/env""
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-console.log(" Starting continuous performance monitoring automation...")
-// Get automation interval from environment variable ("default")
-    console.log(""� Building project for performance analysis...")
-    execSync("npm run build", { "stdio": "inherit"})
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-"
-    // Build the project first"
-    console.log("� Building project for performance analysis...")
-    execSync("npm run build", { "stdio": "inherit"})
-    console.log("� Analyzing bundle size...")
-  execSync("node scripts/analyze-bundle.js", { "stdio": "inherit"})
-// console.log(" Bundle analysis completed")
-  console.log("⚠  Bundle analysis failed but continuing...")
-// console.log("⚠  Bundle analysis failed but continuing...")
-console.log(" Running Lighthouse performance tests...")
-  if (fs.existsSync("lighthouserc.json")
-  execSync("npx lighthouse --config=lighthouserc.json")
-  "stdio": "inherit"
-// console.log(" Lighthouse tests completed")
-  console.log("ℹ  No Lighthouse configuration found")
-// console.log("⚠  Lighthouse tests failed but continuing...")
-    console.log("� Checking build output for large files...")
-<<<<<<< HEAD
-const distPath = path.join(process.cwd(), "dist";
-// console.log("⚠  Large files found in build "output": ")
-  console.log(  - ${file.path}: ${(file.size / 1024 / 1024).toFixed(2)} MB"
-=======
-<<<<<<< HEAD
+#!/usr/bin/env node
 
-=======
-    const distPath = path.join(process.cwd(), "dist"
-// console.log("⚠  Large files found in build "output": ")
->>>>>>> origin/chore/fix-lint-and-merge
-  console.log(  - ${file.path}: ${(file.size / 1024 / 1024).toFixed(2)} MB"
-// console.log(" No excessively large files found)
-    console.log( Checking for unused dependencies...")
-  execSync("npx depcheck, { stdio": "inherit})
-// console.log(ℹ  Dependency check not available")
-    console.log(" Generating performance report...)
-  timestamp"
-      "buildSize
-      largeFiles"
-      "summary: Performance monitoring completed"
-    const reportPath = path.join(process.cwd(), "performance-report.json
-    console.log( Continuous performance monitoring completed successfully")
-  console.error( Continuous performance monitoring "failed: )
-    // Don"
-<<<<<<< HEAD
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
-=======
-// console.log("⚠  Lighthouse tests failed but continuing...")
-    console.log("� Checking build output for large files...")
-    const distPath = path.join(process.cwd(), "dist"
-// console.log("⚠  Large files found in build "output": ")
-  console.log(  - ${file.path}: ${(file.size / 1024 / 1024).toFixed(2)} MB"
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-// console.log(" No excessively large files found")
-    console.log(" Checking for unused dependencies...")
-  execSync("npx depcheck", { "stdio": "inherit"})
-// console.log("ℹ  Dependency check not available")
-    console.log(" Generating performance report...")
-  "timestamp"
-      "buildSize"
-      "largeFiles"
-      "summary": "Performance monitoring completed"
-    const reportPath = path.join(process.cwd(), "performance-report.json"
-<<<<<<< HEAD
-    console.log(" Continuous performance monitoring completed successfully")
-  console.error( Continuous performance monitoring "failed": ")
-    // Don"
-// console.log("⚠  Lighthouse tests failed but continuing...")
-    console.log("� Checking build output for large files...")
-const distPath = path.join(process.cwd(), "dist";
-=======
-<<<<<<< HEAD
+console.log('📊 Starting Performance Monitor Automation...');
 
-// Get automation interval from environment variable (default: 2 hours)
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours
+class PerformanceMonitor {
+  constructor() {
+    this.reportDir = path.join(process.cwd(), 'ci-cd-reports');
+    this.ensureReportDirectory();
+    this.startTime = Date.now();
+    this.metrics = {
+      buildTime: 0,
+      bundleSize: 0,
+      testTime: 0,
+      memoryUsage: 0,
+      cpuUsage: 0
+    };
+    this.performanceIssues = [];
+    this.passedChecks = [];
+  }
 
-async function runPerformanceMonitor() {
-  try {
-    console.log(`📊 Running performance monitoring at ${new Date().toISOString()}`);
-    
-    // Build the project first
-    console.log('🏗️ Building project for performance analysis...');
-    execSync('npm run build', { stdio: 'inherit' });
-    
-    // Check bundle size
-    console.log('📦 Analyzing bundle size...');
-    try {
-      execSync('node scripts/analyze-bundle.js', { stdio: 'inherit' });
-      console.log('✅ Bundle analysis completed');
-    } catch (error) {
-      console.log('⚠️  Bundle analysis failed but continuing...');
+  ensureReportDirectory() {
+    if (!fs.existsSync(this.reportDir)) {
+      fs.mkdirSync(this.reportDir, { recursive: true });
     }
-    
-    // Run Lighthouse performance tests if available
-    console.log('🔍 Running Lighthouse performance tests...');
+  }
+
+  async run() {
     try {
-      if (fs.existsSync('lighthouserc.json')) {
-        execSync('npx lighthouse --config=lighthouserc.json', { stdio: 'inherit' });
-        console.log('✅ Lighthouse tests completed');
-      } else {
-        console.log('ℹ️  No Lighthouse configuration found');
-      }
+      console.log('🔍 Running performance monitoring...');
+      
+      // Run various performance checks
+      await this.measureBuildPerformance();
+      await this.measureBundleSize();
+      await this.measureTestPerformance();
+      await this.measureSystemResources();
+      await this.analyzePerformance();
+      
+      // Generate report
+      await this.generateReport();
+      
+      console.log(`✅ Performance Monitor completed. Found ${this.performanceIssues.length} performance issues.`);
+      
     } catch (error) {
-      console.log('⚠️  Lighthouse tests failed but continuing...');
+      console.error('❌ Performance Monitor failed:', error.message);
+      await this.generateErrorReport(error);
     }
-    
-    // Check for large files in build output
-    console.log('📁 Checking build output for large files...');
-    const distPath = path.join(process.cwd(), 'dist');
-    if (fs.existsSync(distPath)) {
-      const largeFiles = findLargeFiles(distPath);
-      if (largeFiles.length > 0) {
-        console.log('⚠️  Large files found in build output:');
-        largeFiles.forEach(file => {
-          console.log(`  - ${file.path}: ${(file.size / 1024 / 1024).toFixed(2)} MB`);
+  }
+
+  async measureBuildPerformance() {
+    try {
+      console.log('🔍 Measuring build performance...');
+      
+      const buildStart = Date.now();
+      
+      try {
+        const buildOutput = execSync('npm run build', { 
+          encoding: 'utf8',
+          cwd: process.cwd(),
+          stdio: 'pipe'
         });
-      } else {
-        console.log('✅ No excessively large files found');
+        
+        const buildEnd = Date.now();
+        this.metrics.buildTime = buildEnd - buildStart;
+        
+        this.passedChecks.push({
+          type: 'build_performance',
+          status: 'success',
+          message: `Build completed in ${this.metrics.buildTime}ms`,
+          metric: this.metrics.buildTime,
+          timestamp: new Date().toISOString()
+        });
+        
+        console.log(`✅ Build completed in ${this.metrics.buildTime}ms`);
+        
+        // Check if build time is acceptable
+        if (this.metrics.buildTime > 60000) { // 1 minute
+          this.performanceIssues.push({
+            type: 'slow_build',
+            severity: 'warning',
+            message: `Build time is slow: ${this.metrics.buildTime}ms`,
+            metric: this.metrics.buildTime,
+            threshold: 60000,
+            timestamp: new Date().toISOString()
+          });
+          
+          console.log(`⚠️  Build time is slow: ${this.metrics.buildTime}ms`);
+        }
+        
+      } catch (error) {
+        this.performanceIssues.push({
+          type: 'build_failure',
+          severity: 'error',
+          message: 'Build failed during performance measurement',
+          error: error.message,
+          timestamp: new Date().toISOString()
+        });
+        
+        console.log('❌ Build failed during performance measurement');
       }
-    }
-    
-    // Check for unused dependencies
-    console.log('🔍 Checking for unused dependencies...');
-    try {
-      execSync('npx depcheck', { stdio: 'inherit' });
+      
     } catch (error) {
-      console.log('ℹ️  Dependency check not available');
+      console.log('ℹ️  Error measuring build performance:', error.message);
+    }
+  }
+
+  async measureBundleSize() {
+    try {
+      console.log('🔍 Measuring bundle size...');
+      
+      // Check if dist directory exists after build
+      if (fs.existsSync('dist')) {
+        const distStats = fs.statSync('dist');
+        const distSize = this.getDirectorySize('dist');
+        
+        this.metrics.bundleSize = distSize;
+        
+        this.passedChecks.push({
+          type: 'bundle_size',
+          status: 'success',
+          message: `Bundle size: ${this.formatBytes(distSize)}`,
+          metric: distSize,
+          timestamp: new Date().toISOString()
+        });
+        
+        console.log(`✅ Bundle size: ${this.formatBytes(distSize)}`);
+        
+        // Check if bundle size is acceptable
+        if (distSize > 10 * 1024 * 1024) { // 10MB
+          this.performanceIssues.push({
+            type: 'large_bundle',
+            severity: 'warning',
+            message: `Bundle size is large: ${this.formatBytes(distSize)}`,
+            metric: distSize,
+            threshold: 10 * 1024 * 1024,
+            timestamp: new Date().toISOString()
+          });
+          
+          console.log(`⚠️  Bundle size is large: ${this.formatBytes(distSize)}`);
+        }
+      } else {
+        console.log('ℹ️  Dist directory not found, skipping bundle size measurement');
+      }
+      
+    } catch (error) {
+      console.log('ℹ️  Error measuring bundle size:', error.message);
+    }
+  }
+
+  async measureTestPerformance() {
+    try {
+      console.log('🔍 Measuring test performance...');
+      
+      const testStart = Date.now();
+      
+      try {
+        const testOutput = execSync('npm test', { 
+          encoding: 'utf8',
+          cwd: process.cwd(),
+          stdio: 'pipe'
+        });
+        
+        const testEnd = Date.now();
+        this.metrics.testTime = testEnd - testStart;
+        
+        this.passedChecks.push({
+          type: 'test_performance',
+          status: 'success',
+          message: `Tests completed in ${this.metrics.testTime}ms`,
+          metric: this.metrics.testTime,
+          timestamp: new Date().toISOString()
+        });
+        
+        console.log(`✅ Tests completed in ${this.metrics.testTime}ms`);
+        
+        // Check if test time is acceptable
+        if (this.metrics.testTime > 30000) { // 30 seconds
+          this.performanceIssues.push({
+            type: 'slow_tests',
+            severity: 'warning',
+            message: `Test time is slow: ${this.metrics.testTime}ms`,
+            metric: this.metrics.testTime,
+            threshold: 30000,
+            timestamp: new Date().toISOString()
+          });
+          
+          console.log(`⚠️  Test time is slow: ${this.metrics.testTime}ms`);
+        }
+        
+      } catch (error) {
+        // Tests may fail but we still want to measure time
+        const testEnd = Date.now();
+        this.metrics.testTime = testEnd - testStart;
+        
+        console.log(`⚠️  Tests failed but completed in ${this.metrics.testTime}ms`);
+      }
+      
+    } catch (error) {
+      console.log('ℹ️  Error measuring test performance:', error.message);
+    }
+  }
+
+  async measureSystemResources() {
+    try {
+      console.log('🔍 Measuring system resources...');
+      
+      // Get memory usage
+      const memUsage = process.memoryUsage();
+      this.metrics.memoryUsage = memUsage.heapUsed;
+      
+      this.passedChecks.push({
+        type: 'memory_usage',
+        status: 'success',
+        message: `Memory usage: ${this.formatBytes(memUsage.heapUsed)}`,
+        metric: memUsage.heapUsed,
+        timestamp: new Date().toISOString()
+      });
+      
+      console.log(`✅ Memory usage: ${this.formatBytes(memUsage.heapUsed)}`);
+      
+      // Check if memory usage is acceptable
+      if (memUsage.heapUsed > 100 * 1024 * 1024) { // 100MB
+        this.performanceIssues.push({
+          type: 'high_memory',
+          severity: 'warning',
+          message: `High memory usage: ${this.formatBytes(memUsage.heapUsed)}`,
+          metric: memUsage.heapUsed,
+          threshold: 100 * 1024 * 1024,
+          timestamp: new Date().toISOString()
+        });
+        
+        console.log(`⚠️  High memory usage: ${this.formatBytes(memUsage.heapUsed)}`);
+      }
+      
+      // Get CPU usage (approximate)
+      const startUsage = process.cpuUsage();
+      await new Promise(resolve => setTimeout(resolve, 100));
+      const endUsage = process.cpuUsage(startUsage);
+      
+      this.metrics.cpuUsage = (endUsage.user + endUsage.system) / 1000; // Convert to milliseconds
+      
+      this.passedChecks.push({
+        type: 'cpu_usage',
+        status: 'success',
+        message: `CPU usage: ${this.metrics.cpuUsage.toFixed(2)}ms`,
+        metric: this.metrics.cpuUsage,
+        timestamp: new Date().toISOString()
+      });
+      
+      console.log(`✅ CPU usage: ${this.metrics.cpuUsage.toFixed(2)}ms`);
+      
+    } catch (error) {
+      console.log('ℹ️  Error measuring system resources:', error.message);
+    }
+  }
+
+  async analyzePerformance() {
+    try {
+      console.log('🔍 Analyzing performance metrics...');
+      
+      // Calculate performance score
+      let score = 100;
+      const issues = [];
+      
+      if (this.metrics.buildTime > 60000) {
+        score -= 20;
+        issues.push('Slow build time');
+      }
+      
+      if (this.metrics.bundleSize > 10 * 1024 * 1024) {
+        score -= 20;
+        issues.push('Large bundle size');
+      }
+      
+      if (this.metrics.testTime > 30000) {
+        score -= 15;
+        issues.push('Slow test execution');
+      }
+      
+      if (this.metrics.memoryUsage > 100 * 1024 * 1024) {
+        score -= 15;
+        issues.push('High memory usage');
+      }
+      
+      score = Math.max(0, score);
+      
+      this.passedChecks.push({
+        type: 'performance_score',
+        status: score >= 80 ? 'good' : score >= 60 ? 'fair' : 'poor',
+        message: `Performance score: ${score}/100`,
+        metric: score,
+        issues: issues,
+        timestamp: new Date().toISOString()
+      });
+      
+      console.log(`📊 Performance score: ${score}/100`);
+      
+      if (issues.length > 0) {
+        console.log(`⚠️  Performance issues: ${issues.join(', ')}`);
+      }
+      
+    } catch (error) {
+      console.log('ℹ️  Error analyzing performance:', error.message);
+    }
+  }
+
+  getDirectorySize(dirPath) {
+    let totalSize = 0;
+    
+    try {
+      const items = fs.readdirSync(dirPath);
+      
+      for (const item of items) {
+        const itemPath = path.join(dirPath, item);
+        const stats = fs.statSync(itemPath);
+        
+        if (stats.isDirectory()) {
+          totalSize += this.getDirectorySize(itemPath);
+        } else {
+          totalSize += stats.size;
+        }
+      }
+    } catch (error) {
+      console.log(`ℹ️  Error calculating directory size for ${dirPath}:`, error.message);
     }
     
-    // Generate performance report
-    console.log('📊 Generating performance report...');
+    return totalSize;
+  }
+
+  formatBytes(bytes) {
+    if (bytes === 0) return '0 Bytes';
+    
+    const k = 1024;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  }
+
+  async generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
-      buildSize: getDirectorySize(distPath),
-      largeFiles: findLargeFiles(distPath),
-      summary: 'Performance monitoring completed'
+      duration: Date.now() - this.startTime,
+      metrics: this.metrics,
+      performanceIssues: this.performanceIssues,
+      passedChecks: this.passedChecks,
+      totalIssues: this.performanceIssues.length,
+      totalPassed: this.passedChecks.length,
+      status: this.performanceIssues.length === 0 ? 'good' : 'issues_found'
     };
-    
-    const reportPath = path.join(process.cwd(), 'performance-report.json');
+
+    const reportPath = path.join(this.reportDir, 'performance-monitor-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(`✅ Performance report saved to ${reportPath}`);
-    
-    console.log('✅ Continuous performance monitoring completed successfully');
-    
-  } catch (error) {
-    console.error('❌ Continuous performance monitoring failed:', error.message);
-    // Don't exit, just log the error and continue
+    console.log(`📊 Report saved to ${reportPath}`);
   }
-  {/* Removed stray closing brace */}
 
-function findLargeFiles(dir, maxSize = 1024 * 1024) { // 1MB default
-  const largeFiles = [];
-  
-  function scanDirectory(currentDir) {
-    try {
-      const items = fs.readdirSync(currentDir);
-      
-      for (const item of items) {
-        const fullPath = path.join(currentDir, item);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory()) {
-          scanDirectory(fullPath);
-        } else if (stat.isFile() && stat.size > maxSize) {
-          largeFiles.push({
-            path: path.relative(process.cwd(), fullPath),
-            size: stat.size
-          });
-        }
-      }
-    } catch (error) {
-      // Skip directories that can't be accessed
-    }
+  async generateErrorReport(error) {
+    const errorReport = {
+      timestamp: new Date().toISOString(),
+      error: error.message,
+      stack: error.stack,
+      status: 'failed'
+    };
+
+    const reportPath = path.join(this.reportDir, 'performance-monitor-error.json');
+    fs.writeFileSync(reportPath, JSON.stringify(errorReport, null, 2));
   }
-  
-  scanDirectory(dir);
-  return largeFiles.sort((a, b) => b.size - a.size);
-  {/* Removed stray closing brace */}
+}
 
-function getDirectorySize(dir) {
-  let totalSize = 0;
-  
-  function calculateSize(currentDir) {
-    try {
-      const items = fs.readdirSync(currentDir);
-      
-      for (const item of items) {
-        const fullPath = path.join(currentDir, item);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory()) {
-          calculateSize(fullPath);
-        } else if (stat.isFile()) {
-          totalSize += stat.size;
-        }
-      }
-    } catch (error) {
-      // Skip directories that can't be accessed
-    }
-  }
-  
-  calculateSize(dir);
-  return totalSize;
-  {/* Removed stray closing brace */}
-
-// Main continuous loop
-async function runContinuous() {
-  console.log(`🚀 Starting continuous performance monitoring with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
-  
-  // Run initial performance monitoring
-  await runPerformanceMonitor();
-  
-  // Set up continuous execution
-  setInterval(async () => {
-    await runPerformanceMonitor();
-  }, AUTOMATION_INTERVAL);
-  
-  console.log(`✅ Continuous performance monitoring running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-  {/* Removed stray closing brace */}
-
-// Handle graceful shutdown
-process.on('SIGINT', () => {
-  console.log('🛑 Received SIGINT, shutting down gracefully...');
-  process.exit(0);
-});
-
-process.on('SIGTERM', () => {
-  console.log('🛑 Received SIGTERM, shutting down gracefully...');
-  process.exit(0);
-});
-
-// Start the continuous performance monitor
-runContinuous().catch(error => {
-  console.error('❌ Failed to start continuous performance monitoring:', error);
-  process.exit(1);
-});
+// Run the automation
+const monitor = new PerformanceMonitor();
+monitor.run().catch(console.error);
