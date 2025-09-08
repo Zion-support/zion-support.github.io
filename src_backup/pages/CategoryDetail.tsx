@@ -1,12 +1,15 @@
 
+import { useRouter } from "next/router";
+import Link from "next/link";
+import { Header } from "@/components/header/Header";
+import { Footer } from "@/components/Footer";
 import { GradientHeading } from "@/components/GradientHeading";
 import { ProductListingCard } from "@/components/ProductListingCard";
 import { useState, useEffect, useRef, Suspense } from "react";
 import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from 'lucide-react'
 import { MARKETPLACE_LISTINGS } from "@/data/listingData";
 import { ProductListing } from "@/types/listings";
-import { useRouter } from 'next/router';
-import Link from 'next/link';
+// useNavigate will be replaced by useRouter
 import { toast } from "@/hooks/use-toast";
 import { NextSeo } from '@/components/NextSeo';
 import { Header } from "@/components/Header";
@@ -70,14 +73,21 @@ interface CategoryDetailProps {
 
 export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps = {}) {
   const router = useRouter();
-  // Get slug from Next.js router query params
-  const params = router.query as { slug?: string };
-  const slug = slugProp ?? params.slug;
+  // Use router.query for slug in Next.js. Ensure the page is named [slug].tsx or similar.
+  // If slugProp is provided, it takes precedence.
+  const slug = slugProp ?? (router.query.slug as string | undefined);
+  // navigate will be replaced by router.push or router.replace
 
   // Redirect to categories list if slug is missing
-  if (!slug) {
-    router.push('/categories');
-    return null
+  // This check should ideally happen earlier or be handled by Next.js routing if possible
+  useEffect(() => {
+    if (!slug && router.isReady) { // Ensure router.query is populated
+      router.push('/categories');
+    }
+  }, [slug, router]);
+
+  if (!slug && !slugProp) { // If no slug and not yet redirected, render nothing or a loader
+    return null; // Or a loading spinner, or handle redirection more gracefully
   }
   const [isLoading, setIsLoading] = useState(true);
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
@@ -165,8 +175,69 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
           icon: <Bot className="w-6 h-6 />},
 
                   currency: '$',
-                  currency: $,
-                  tags: [`${slug}`, 'aitool'];
+                  tags: [`${slug}`, 'ai', 'tool'],
+                  author: {
+                    name: `Provider ${index + 1}`,
+                    id: `author-${index + 1}`,
+                    avatarUrl: undefined,
+                  },
+                  images: [`/placeholder.svg`],
+                  createdAt: new Date().toISOString(),
+                  rating: Math.floor(Math.random() * 5) + 1,
+                  reviewCount: Math.floor(Math.random() * 100),
+                }));
+
+        setListings(listingsToShow);
+      } catch (err) {
+        console.error('Category load error:', err);
+        toast({ title: 'Error', description: 'Failed to load category' });
+      } finally {
+        setIsLoading(false);
+      }
+    }
+
+    load();
+  }, [slug]);
+
+  useEffect(() => {
+    if (slug !== 'innovation') return;
+
+    const interval = setInterval(() => {
+      innovationCounterRef.current += 1;
+      setListings((prev) => [
+        generateInnovationListing(innovationCounterRef.current),
+        ...prev,
+      ]);
+    }, 120000); // every 2 minutes
+
+    return () => clearInterval(interval);
+  }, [slug]);
+
+  // Handle requesting a quote
+  const handleRequestQuote = (listingId: string) => {
+    const listing = listings.find(item => item.id === listingId);
+    
+    if (listing) {
+      toast({
+        title: "Quote Requested",
+        description: `Your quote request for ${listing.title} has been sent.`
+      });
+      
+      // Navigate to the quote request page with the listing information
+      const navigationState = {
+        serviceType: listing.category,
+        specificItem: {
+            id: listing.id,
+            title: listing.title,
+            category: listing.category,
+            image: listing.images?.[0] // Removed comma
+          }
+      }; // navigationState correctly defined
+      router.push({
+        pathname: "/request-quote",
+        query: { state: JSON.stringify(navigationState) },
+      });
+    }
   };
 
   const seoTitle = category.title
