@@ -225,6 +225,14 @@
   name = "auto-scheduler"
   schedule = "*/15 * * * *" # every 15 minutes
 
+[[scheduled.functions]]
+  name = "orphan-page-detector"
+  schedule = "*/30 * * * *" # every 30 minutes
+
+[[scheduled.functions]]
+  name = "content-staleness-runner"
+  schedule = "13 */12 * * *" # every 12 hours
+
 # From main (keep)
 [[scheduled.functions]]
   name = "autonomous-innovation-generator"
