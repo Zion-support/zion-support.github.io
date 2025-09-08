@@ -1,10 +1,15 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import HomePage from '../pages/HomePage';
+import NotFound from '../pages/NotFound';
+import { AppConfig } from '../types/app';
 
 interface AppLayoutProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
+  config?: AppConfig;
 }
 
-export const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
+export const AppLayout: React.FC<AppLayoutProps> = ({ children, config }) => {
   return (
     <div className="min-h-screen bg-zion-blue text-white">
       <header className="bg-zion-blue-dark border-b border-zion-blue-light">
@@ -13,6 +18,10 @@ export const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
         </div>
       </header>
       <main className="container mx-auto px-4 py-8">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
         {children}
       </main>
       <footer className="bg-zion-blue-dark border-t border-zion-blue-light mt-auto">
