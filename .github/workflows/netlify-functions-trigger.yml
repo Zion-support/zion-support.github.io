@@ -24,9 +24,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run netlify functions trigger
-        run: |
-          echo "Triggering Netlify functions..."
-          echo "This would handle Netlify function execution and monitoring"
+        run: 
       - name: Upload results
         uses: actions/upload-artifact@v4
         if: always()

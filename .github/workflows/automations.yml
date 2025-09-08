@@ -20,5 +20,5 @@ jobs:
 
       - name: Install dependencies
         run: |
-          echo "Workflow completed successfully"
+          echo "✅ Workflow completed successfully"
           
