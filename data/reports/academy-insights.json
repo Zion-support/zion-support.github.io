@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-09-08T06:43:23.099Z",
+  "generatedAt": "2025-09-08T07:07:08.016Z",
   "featuredCourses": [
     {
       "slug": "ai-engineering-foundations",
@@ -40,16 +40,16 @@
       "url": "https://www.nature.com/articles/s41586-025-09430-z"
     },
     {
-      "title": "Forty-Four Esolangs: The Art of Esoteric Code",
-      "url": "https://spectrum.ieee.org/esoteric-programming-languages-daniel-temkin"
-    },
-    {
       "title": "Creative Technology: The Sound Blaster",
       "url": "https://www.abortretry.fail/p/the-story-of-creative-technology"
     },
     {
-      "title": "Default musl allocator considered harmful to performance",
-      "url": "https://nickb.dev/blog/default-musl-allocator-considered-harmful-to-performance/"
+      "title": "Forty-Four Esolangs: The Art of Esoteric Code",
+      "url": "https://spectrum.ieee.org/esoteric-programming-languages-daniel-temkin"
+    },
+    {
+      "title": "How many dimensions is this?",
+      "url": "https://lcamtuf.substack.com/p/how-many-dimensions-is-this"
     }
   ],
   "recommendations": [
