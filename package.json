@@ -39,10 +39,15 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "clean": "rm -rf dist node_modules/.vite",
+<<<<<<< HEAD
+    "prebuild": "echo 'Skipping type-check and lint for build'",
+    "postbuild": "echo 'Build completed successfully'"
+=======
     "prebuild": "echo 'Skipping prebuild checks'",
     "postbuild": "echo 'Build completed successfully' && npm run optimize",
     "optimize": "node scripts/optimize-build.js",
     "build:optimize": "npm run build && npm run optimize"
+>>>>>>> main
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",

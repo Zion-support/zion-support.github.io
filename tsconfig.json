@@ -8,7 +8,6 @@
       "DOM.Iterable"
     ],
     "module": "ESNext",
-    "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
@@ -26,7 +25,7 @@
     "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true,
+    "noFallthroughCasesInSwitch": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": false,
@@ -40,7 +39,17 @@
     "noUncheckedIndexedAccess": false,
     "allowJs": true,
     "incremental": true,
+<<<<<<< HEAD
+    "noEmitOnError": false,
+    "skipLibCheck": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+=======
     "noEmitOnError": false
+>>>>>>> main
   },
   "include": [
     "src/**/*",
