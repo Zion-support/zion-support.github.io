@@ -24,7 +24,7 @@
     "build": "NODE_ENV=production vite build --mode production",
     "build:analyze": "NODE_ENV=production vite build --mode analyze",
     "build:preview": "npm run build && npm run preview",
-    "lint": "eslint src/main.tsx src/App.tsx",
+    "lint": "eslint src/ --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint . --fix",
     "type-check": "tsc --noEmit",
     "preview": "NODE_ENV=production vite preview",
