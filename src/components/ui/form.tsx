@@ -1,9 +1,9 @@
-import React from 'react.ts';
+import React from 'react';
 
 interface FormProps extends React.PropsWithChildren<{}> {
 
-  children: anyReact.ReactNode;
-  onSubmit?: (e: React.FormEvent)  => void;
+  children: React.ReactNode;
+  onSubmit?: (e: React.FormEvent)    => void;
 
 }
 
@@ -42,14 +42,16 @@ export function FormLabel(...args: []):  {
   return <label className={`block text-sm font-medium ${className}`}>{children}</label>;
 }
 
-interface FormFieldProps {
-  control: unknown;
+interface FormFieldProps extends React.PropsWithChildren<{}> {
+
+  control: any;
   name: string;
-  render: (props: unknown) => React.ReactNode;
+  render: (props: any)    => React.ReactNode;
+
 }
 
-export function FormField(...args: []):  {
-  return render({ field: { name, value: '', onChange: ()  => {} } });
+export function FormField(...args: any[]): any {
+  return render({ field: any{ name, value: '', onChange: ()    => {} } });
 }
 
 interface FormMessageProps extends React.PropsWithChildren<{}> {

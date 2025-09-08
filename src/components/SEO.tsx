@@ -1,5 +1,8 @@
-// Removed unused: import React, { useEffect, useMemo } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useEffect, useMemo } from 'react';
+import { Helmet    } from 'react-helmet-async';
+import { useLocation    } from 'react-router-dom';
+
+interface SEOProps extends React.PropsWithChildren<{}> {
 
 interface SEOProps {
   title?: string;
@@ -14,16 +17,29 @@ interface SEOProps {
   author?: string;
 }
 
-export function SEO({
-  title = "Zion Tech Group - Leading AI & Technology Solutions",
-  description = "Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Leading the future of technology.",
-  keywords = "AI solutions, quantum computing, micro SAAS, technology consulting, digital transformation, machine learning, artificial intelligence, business intelligence, cloud computing, cybersecurity, IT services, software development, digital twin, blockchain, IoT, edge computing",
-  ogImage = "/og-image.jpg",
-  canonicalUrl = "https://ziontechgroup.com",
-  structuredData,
-  twitterCard = "summary_large_image",
-  ogType = "website",
-  author = "Zion Tech Group",
+interface PageMetadata {
+
+
+
+  title: string;
+  description: string;
+  keywords: string[];
+  image: string;
+  type: string;
+  section: string;
+
+
+
+}
+
+export const SEO: React.FC<SEOProps> = ({
+  title,
+  description,
+  keywords = [],
+  image,
+  url,
+  type = 'website',
+  author,
   publishedTime,
   modifiedTime,
   section = "Technology",
@@ -150,72 +166,104 @@ export function SEO({
   }, [keywords]);
 
   // Generate meta tags
-  const metaTags = useMemo(() => [
-    // Basic meta tags
-    { name: "description", content: description },
-    { name: "keywords", content: metaKeywords },
-    { name: "author", content: author },
-    { name: "robots", content: robotsContent },
-    { name: "viewport", content: viewport },
-    { name: "charset", content: charset },
-    { name: "language", content: language },
-    
-    // Open Graph tags
-    { property: "og:title", content: title },
-    { property: "og:description", content: description },
-    { property: "og:image", content: ogImage },
-    { property: "og:url", content: canonicalUrl },
-    { property: "og:type", content: ogType },
-    { property: "og:site_name", content: "Zion Tech Group" },
-    { property: "og:locale", content: "en_US" },
-    
-    // Twitter Card tags
-    { name: "twitter:card", content: twitterCard },
-    { name: "twitter:title", content: title },
-    { name: "twitter:description", content: description },
-    { name: "twitter:image", content: ogImage },
-    { name: "twitter:site", content: "@ziontechgroup" },
-    { name: "twitter:creator", content: "@ziontechgroup" },
-    
-    // Additional Open Graph tags for articles
-    ...(publishedTime ? [{ property: "og:published_time", content: publishedTime }] : []),
-    ...(modifiedTime ? [{ property: "og:modified_time", content: modifiedTime }] : []),
-    ...(section ? [{ property: "og:section", content: section }] : []),
-    ...(tags ? [{ property: "og:tag", content: tags.join(', ') }] : []),
-    
-    // Mobile and PWA meta tags
-    { name: "theme-color", content: themeColor },
-    { name: "msapplication-TileColor", content: msApplicationTileColor },
-    { name: "apple-mobile-web-app-title", content: appleMobileWebAppTitle },
-    { name: "apple-mobile-web-app-capable", content: appleMobileWebAppCapable ? "yes" : "no" },
-    { name: "apple-mobile-web-app-status-bar-style", content: appleMobileWebAppStatusBarStyle },
-    
-    // Security and performance meta tags
-    { name: "referrer", content: "strict-origin-when-cross-origin" },
-    { name: "format-detection", content: "telephone=no" },
-    { name: "mobile-web-app-capable", content: "yes" },
-    
-    // Business and contact information
-    { name: "geo.region", content: "US-DE" },
-    { name: "geo.placename", content: "Middletown, Delaware" },
-    { name: "geo.position", content: "39.4496;-75.7163" },
-    { name: "ICBM", content: "39.4496, -75.7163" },
-    
-    // Verification tags
-    { name: "google-site-verification", content: "your-google-verification-code" },
-    { name: "msvalidate.01", content: "your-bing-verification-code" },
-    { name: "yandex-verification", content: "your-yandex-verification-code" }
-  ], [
-    title, description, metaKeywords, author, robotsContent, viewport, charset, language,
-    ogImage, canonicalUrl, ogType, publishedTime, modifiedTime, section, tags,
-    themeColor, msApplicationTileColor, appleMobileWebAppTitle, appleMobileWebAppCapable,
-    appleMobileWebAppStatusBarStyle, twitterCard
-  ]);
+  const generateMetaTags = () => {
+    const metaTags = [
+      // Basic meta tags
+      { name: 'description', content: finalMetadata.description },
+      { name: 'keywords', content: finalMetadata.keywords.join(', ') },
+      { name: 'author', content: author || 'Zion Tech Group' },
+      { name: 'robots', content: noindex ? 'noindex, nofollow' : 'index, follow' },
+      { name: 'language', content: 'English' },
+      { name: 'revisit-after', content: '7 days' },
+      { name: 'distribution', content: 'global' },
+      { name: 'rating', content: 'general' },
+
+      // Open Graph meta tags
+      { property: 'og:title', content: finalMetadata.title },
+      { property: 'og:description', content: finalMetadata.description },
+      { property: 'og:image', content: finalMetadata.image },
+      { property: 'og:url', content: currentUrl },
+      { property: 'og:type', content: finalMetadata.type },
+      { property: 'og:site_name', content: 'Zion Tech Group' },
+      { property: 'og:locale', content: ogLocale },
+      { property: 'og:image:width', content: '1200' },
+      { property: 'og:image:height', content: '630' },
+      { property: 'og:image:alt', content: finalMetadata.title },
+
+      // Twitter Card meta tags
+      { name: 'twitter:card', content: twitterCard },
+      { name: 'twitter:site', content: twitterSite },
+      { name: 'twitter:creator', content: twitterCreator },
+      { name: 'twitter:title', content: finalMetadata.title },
+      { name: 'twitter:description', content: finalMetadata.description },
+      { name: 'twitter:image', content: finalMetadata.image },
+      { name: 'twitter:image:alt', content: finalMetadata.title },
+
+      // Additional meta tags
+      { name: 'theme-color', content: '#007bff' },
+      { name: 'msapplication-TileColor', content: '#007bff' },
+      { name: 'apple-mobile-web-app-capable', content: 'yes' },
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
+      { name: 'apple-mobile-web-app-title', content: 'Zion Tech Group' },
+      { name: 'application-name', content: 'Zion Tech Group' },
+      { name: 'msapplication-config', content: '/browserconfig.xml' },
+    ];
+
+    // Add article-specific meta tags
+    if (type === 'article' && publishedTime) {
+      metaTags.push(
+        { property: any'article:published_time', content: publishedTime },
+        { property: 'article:modified_time', content: modifiedTime || publishedTime },
+        { property: 'article:author', content: author || 'Zion Tech Group' },
+        { property: 'article:section', content: finalMetadata.section }
+      );
+
+      // Add article tags
+      tags.forEach(tag    => {
+        metaTags.push({ property: 'article:tag', content: tag });
+      });
+    }
+
+    return metaTags;
+  };
 
   // Generate link tags
-  const linkTags = useMemo(() => [
-    // Canonical URL
-    { rel: "canonical", href: canonicalUrl },
+  const generateLinkTags = () => {
+    const linkTags = [
+      // Canonical URL
+      { rel: any'canonical', href: canonical || currentUrl },
+      
+      // Alternate languages (if you have multiple language versions)
+      { rel: 'alternate', hreflang: 'en', href: currentUrl },
+      { rel: 'alternate', hreflang: 'x-default', href: currentUrl },
+      
+      // Preconnect to external domains
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' },
+      { rel: 'preconnect', href: 'https://www.google-analytics.com' },
+      
+      // DNS prefetch
+      { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
+      { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
+      
+      // Favicon and app icons
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+      { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+      { rel: 'manifest', href: '/site.webmanifest' },
+      
+      // RSS feed
+      { rel: 'alternate', type: 'application/rss+xml', title: 'RSS Feed', href: '/rss.xml' },
+    ];
+
+    return linkTags;
+  };
+
+  // Update page title and meta tags when route changes
+  useEffect(()    => {
+    // Update document title
+    document.title = finalMetadata.title;
     
     // Favicon and app icons
     { rel: "icon", type: "image/x-icon", href: favicon },
@@ -270,24 +318,58 @@ export function SEO({
       criticalCSS.as = 'style';
       document.head.appendChild(criticalCSS);
 
-      // Preload hero image
-      const heroImage = document.createElement('link');
-      heroImage.rel = 'preload';
-      heroImage.href = '/images/hero-bg.jpg';
-      heroImage.as = 'image';
-      document.head.appendChild(heroImage);
-
-      // DNS prefetch for external domains
-      const dnsPrefetch = document.createElement('link');
-      dnsPrefetch.rel = 'dns-prefetch';
-      dnsPrefetch.href = 'https://www.google-analytics.com';
-      document.head.appendChild(dnsPrefetch);
+    // Update Open Graph tags
+    const updateOGTag = (property: string, content: string)    => {
+      let ogTag = document.querySelector(`meta[property="${property}"]`);
+      if (!ogTag) {
+        ogTag = document.createElement('meta');
+        ogTag.setAttribute('property', property);
+        document.head.appendChild(ogTag);
+      }
+      ogTag.setAttribute('content', content);
     };
 
-    // Add resource hints after component mounts
-    const timer = setTimeout(addResourceHints, 100);
-    return () => clearTimeout(timer);
-  }, []);
+    updateOGTag('og:title', finalMetadata.title);
+    updateOGTag('og:description', finalMetadata.description);
+    updateOGTag('og:image', finalMetadata.image);
+    updateOGTag('og:url', currentUrl);
+    updateOGTag('og:type', finalMetadata.type);
+
+    // Update Twitter tags
+    const updateTwitterTag = (name: string, content: string)    => {
+      let twitterTag = document.querySelector(`meta[name="${name}"]`);
+      if (!twitterTag) {
+        twitterTag = document.createElement('meta');
+        twitterTag.setAttribute('name', name);
+        document.head.appendChild(twitterTag);
+      }
+      twitterTag.setAttribute('content', content);
+    };
+
+    updateTwitterTag('twitter:title', finalMetadata.title);
+    updateTwitterTag('twitter:description', finalMetadata.description);
+    updateTwitterTag('twitter:image', finalMetadata.image);
+
+    // Add structured data
+    const existingStructuredData = document.querySelector('script[type="application/ld+json"]');
+    if (existingStructuredData) {
+      existingStructuredData.remove();
+    }
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(structuredData || generateStructuredData());
+    document.head.appendChild(script);
+
+    // Track page view for analytics
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: finalMetadata.title,
+        page_location: currentUrl,
+      });
+    }
+
+  }, [finalMetadata, currentUrl, canonical, structuredData, type, publishedTime, modifiedTime, author, tags]);
 
   return (
     <Helmet>

@@ -1,17 +1,23 @@
 type SupabaseUser = {
 
+
+
   id: string;
   email?: string;
 user_metadata?: {
     full_name?: string;
     avatar_url?: string;
   
+
+
 };
   created_at?: string;
   updated_at?: string;
 }
 
 type Profile = {
+
+
 
   id: string;
   display_name?: string;
@@ -21,20 +27,28 @@ type Profile = {
   created_at?: string;
   updated_at?: string;
 
-type MappedUser = {
+
+
+}
 
 export interface MappedUser {
 
-export interface Profile {
+
+
   id: string;
   email: string;
-  name?: string;
-  avatar_url?: string;
-  created_at?: string;
-  updated_at?: string;
+  displayName?: string;
+  avatar?: string;
+  role?: string;
+  isEmailVerified?: boolean;
+  createdAt?: string;
+  updatedAt?: string;
+
+
+
 }
 
-export const mapProfileToUser = (profile: Profile): User => {
+export const mapProfileToUser = (supabaseUser: anySupabaseUser, profile: Profile): MappedUser    => {
   return {
     id: profile.id,
     email: profile.email,

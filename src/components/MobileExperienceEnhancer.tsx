@@ -1,24 +1,28 @@
-// Removed unused: import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Smartphone, Monitor, RotateCw, Touch, Hand, Wifi, Battery, Settings, X, CheckCircle, Zap, Shield, Target, RotateCcw, Save, Loader2, Smartphone as PhoneIcon, Wifi as WifiIcon, Battery as BatteryIcon, ArrowLeft, RotateCw as Rotate, MousePointer, Clock } from 'lucide-react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
+import { useLocation    } from 'react-router-dom';
+
+interface MobileSettings {
 
 
-interface MobileOptimization {
-  id: string;
-  name: string;
-  description: string;
-  enabled: boolean;
-  category: 'performance' | 'touch' | 'visual' | 'layout';
-  impact: 'high' | 'medium' | 'low';
+
+  touchOptimized: anyboolean;
+  gestureSupport: boolean;
+  mobileNavigation: boolean;
+  responsiveImages: boolean;
+  mobilePerformance: boolean;
+  offlineSupport: boolean;
+
+
+
 }
 
-interface TouchGesture {
-  id: string;
-  name: string;
-  description: string;
-  gesture: string;
-  action: string;
-  enabled: boolean;
+interface MobileExperienceEnhancerProps extends React.PropsWithChildren<{}> {
+
+  enabled?: boolean;
+  showControls?: boolean;
+  autoDetect?: boolean;
+  onSettingsChange?: (settings: MobileSettings)    => void;
+
 }
 
 interface SmartphoneInfo {
@@ -197,23 +201,72 @@ export function MobileExperienceEnhancer({
       }
     };
     
-    detectSmartphone();
-    window.addEventListener('resize', detectSmartphone);
-    window.addEventListener('orientationchange', detectSmartphone);
-    
-    return () => {
-      window.removeEventListener('resize', detectSmartphone);
-      window.removeEventListener('orientationchange', detectSmartphone);
+    // Check for mobile network
+    const isSlowConnection = navigator.connection && 
+      (navigator.connection.effectiveType === 'slow-2g' || 
+       navigator.connection.effectiveType === '2g' ||
+       navigator.connection.effectiveType === '3g');
+
+    setSettings(prev => ({
+      ...prev,
+      touchOptimized: anyhasTouchSupport,
+      mobilePerformance: isSlowConnection || false,
+    }));
+  }, [autoDetect, enabled]);
+
+  // Touch optimization
+  useEffect(()    => {
+    if (!enabled || !settings.touchOptimized || !isMobile) return;
+
+    // Add touch-action CSS for better touch handling
+    const style = document.createElement('style');
+    style.textContent = `
+      .touch-optimized {
+        touch-action: anymanipulation;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      
+      .touch-optimized * {
+        touch-action: manipulation;
+      }
+      
+      .touch-optimized button,
+      .touch-optimized a {
+        min-height: 44px;
+        min-width: 44px;
+      }
+      
+      .touch-optimized input,
+      .touch-optimized select,
+      .touch-optimized textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+      }
+    `;
+    document.head.appendChild(style);
+
+    // Apply touch optimization classes
+    document.body.classList.add('touch-optimized');
+
+    return ()    => {
+      document.body.classList.remove('touch-optimized');
+      if (style.parentNode) {
+        style.parentNode.removeChild(style);
+      }
     };
   }, []);
 
   // Touch gesture handling
   useEffect(() => {
-    if (!settings.touchGestures) return;
-    
-    const handleTouchStart = (e: TouchEvent) => {
-      if (e.touches.length === 1) {
-        const touch = e.touches[0];
+    if (!enabled || !settings.gestureSupport || !isMobile) return;
+
+    const handleTouchStart = (event: anyTouchEvent)    => {
+      if (event.touches.length === 1) {
+        const touch = event.touches[0];
         touchStartRef.current = {
           x: touch?.clientX,
           y: touch?.clientY,
@@ -221,30 +274,35 @@ export function MobileExperienceEnhancer({
         };
       }
     };
-    
-    const handleTouchEnd = (e: TouchEvent) => {
-      if (!touchStartRef.current || e.touches.length !== 0) return;
-      
-      const touch = e.changedTouches[0];
-      const start = touchStartRef.current;
-      const deltaX = touch?.clientX - start?.x;
-      const deltaY = touch?.clientY - start?.y;
-      const deltaTime = Date.now() - start.time;
-      
-      // Detect gesture type
-      let gestureType: TouchGesture['type'] = 'tap';
-      let direction: TouchGesture['direction'] | undefined;
-      
-      if (deltaTime < 300 && Math.abs(deltaX) < 10 && Math.abs(deltaY) < 10) {
-        gestureType = 'tap';
-      } else if (deltaTime > 500) {
-        gestureType = 'longPress';
-      } else if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
-        gestureType = 'swipe';
-        direction = deltaX > 0 ? 'right' : 'left';
-      } else if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > 50) {
-        gestureType = 'swipe';
-        direction = deltaY > 0 ? 'down' : 'up';
+
+    const handleTouchEnd = (event: anyTouchEvent)    => {
+      if (!touchStartRef.current || event.changedTouches.length !== 1) return;
+
+      const touch = event.changedTouches[0];
+      const deltaX = touch.clientX - touchStartRef.current.x;
+      const deltaY = touch.clientY - touchStartRef.current.y;
+      const deltaTime = Date.now() - touchStartRef.current.time;
+      const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+      const velocity = distance / deltaTime;
+
+      // Detect gestures
+      if (distance > 50 && velocity > 0.3) {
+        let gesture = '';
+        
+        if (Math.abs(deltaX) > Math.abs(deltaY)) {
+          gesture = deltaX > 0 ? 'swipe-right' : 'swipe-left';
+        } else {
+          gesture = deltaY > 0 ? 'swipe-down' : 'swipe-up';
+        }
+
+        // Handle gestures
+        handleGesture(gesture, { deltaX, deltaY, velocity });
+        
+        // Track gesture history
+        gestureHistoryRef.current.push(gesture);
+        if (gestureHistoryRef.current.length > 10) {
+          gestureHistoryRef.current.shift();
+        }
       }
       
       const gesture: TouchGesture = {
@@ -260,18 +318,13 @@ export function MobileExperienceEnhancer({
       
       touchStartRef.current = null;
     };
-    
-    const handleGesture = (gesture: TouchGesture) => {
-      // Handle different gesture types
-      switch (gesture.type) {
-        case 'swipe':
-          if (gesture.direction === 'left') {
-            // Navigate forward
-            // console.log('Swipe left - navigate forward');
-          } else if (gesture.direction === 'right') {
-            // Navigate back
-            // console.log('Swipe right - navigate back');
-          }
+
+    const handleGesture = (gesture: string, data: { deltaX: number; deltaY: number; velocity: number })    => {
+      // Handle common gestures
+      switch (gesture) {
+        case 'swipe-left':
+          // Navigate forward or show next item
+          handleSwipeLeft(data);
           break;
         case 'longPress':
           // Show context menu
@@ -282,8 +335,97 @@ export function MobileExperienceEnhancer({
           // console.log('Tap detected');
           break;
       }
-    }
-  }, [touchGestures]);
+    };
+
+    const handleSwipeLeft = (data: any{ deltaX: number; deltaY: number; velocity: number })    => {
+      // Example: Navigate to next page or item
+      const nextButton = document.querySelector('[data-next], .next-button, .carousel-next');
+      if (nextButton) {
+        (nextButton as HTMLElement).click();
+      }
+    };
+
+    const handleSwipeRight = (data: any{ deltaX: number; deltaY: number; velocity: number })    => {
+      // Example: Navigate to previous page or item
+      const prevButton = document.querySelector('[data-prev], .prev-button, .carousel-prev');
+      if (prevButton) {
+        (prevButton as HTMLElement).click();
+      } else if (window.history.length > 1) {
+        window.history.back();
+      }
+    };
+
+    const handleSwipeUp = (data: any{ deltaX: number; deltaY: number; velocity: number })    => {
+      // Example: Scroll up or show more content
+      window.scrollBy({ top: -100, behavior: 'smooth' });
+    };
+
+    const handleSwipeDown = (data: any{ deltaX: number; deltaY: number; velocity: number })    => {
+      // Example: anyRefresh or show less content
+      if (data.velocity > 1.0) {
+        window.location.reload();
+      }
+    };
+
+    document.addEventListener('touchstart', handleTouchStart, { passive: true });
+    document.addEventListener('touchend', handleTouchEnd, { passive: true });
+
+    return ()    => {
+      document.removeEventListener('touchstart', handleTouchStart);
+      document.removeEventListener('touchend', handleTouchEnd);
+    };
+  }, [enabled, settings.gestureSupport, isMobile]);
+
+  // Mobile navigation optimization
+  useEffect(() => {
+    if (!enabled || !settings.mobileNavigation || !isMobile) return;
+
+    // Add mobile navigation styles
+    const style = document.createElement('style');
+    style.textContent = `
+      .mobile-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        padding: 10px 0;
+      }
+      
+      .mobile-nav .nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: #666;
+        font-size: 12px;
+        padding: 8px;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+      }
+      
+      .mobile-nav .nav-item:hover,
+      .mobile-nav .nav-item.active {
+        color: #007bff;
+        background: rgba(0, 123, 255, 0.1);
+      }
+      
+      .mobile-nav .nav-icon {
+        width: 24px;
+        height: 24px;
+        margin-bottom: 4px;
+      }
+      
+      @media (max-width: 768px) {
+        body {
+          padding-bottom: 80px;
+        }
+      }
+    `;
+    document.head.appendChild(style);
 
     // Create mobile navigation if it doesn't exist
     if (!document.querySelector('.mobile-nav')) {
@@ -312,7 +454,7 @@ export function MobileExperienceEnhancer({
       { href: '/contact', label: 'Contact', icon: '📞' },
     ];
 
-    navItems.forEach(item  => {
+    navItems.forEach(item    => {
       const link = document.createElement('a');
       link.href = item.href;
       link.className = `nav-item ${location.pathname === item.href ? 'active' : ''}`;
@@ -350,7 +492,8 @@ export function MobileExperienceEnhancer({
     const observer = new MutationObserver(optimizeImages);
     observer.observe(document.body, { childList: true, subtree: true });
 
-    return ()  => observer.disconnect()}, [enabled, settings.responsiveImages, isMobile]);
+    return ()    => observer.disconnect();
+  }, [enabled, settings.responsiveImages, isMobile]);
 
   // Mobile performance optimization
   useEffect(() => {
@@ -385,7 +528,7 @@ export function MobileExperienceEnhancer({
 
     window.addEventListener('scroll', handleScroll, { passive: true });
 
-    return ()  => {
+    return ()    => {
       document.body.classList.remove('mobile-performance');
       if (style.parentNode) {
         style.parentNode.removeChild(style)}
@@ -400,13 +543,61 @@ export function MobileExperienceEnhancer({
         try {
           const registration = await navigator.serviceWorker.register('/sw.js');
           serviceWorkerRef.current = registration;
-          // // // // // console.log('Service Worker registered successfully')} catch (error) {
-          // // // // // console.warn('Service Worker registration failed:', error)}
+          // // // console.log('Service Worker registered successfully');
+        } catch (error) {
+          // // // console.warn('Service Worker registration failed:', error);
+        }
       }
-      
-      // Apply mobile navigation
-      if (settings.mobileNavigation) {
-        document.body.classList.add('mobile-navigation');
+    };
+
+    registerServiceWorker();
+
+    // Handle offline/online events
+    const handleOnline = () => {
+      document.body.classList.remove('offline');
+      // Show online notification
+      showNotification('You are back online', 'success');
+    };
+
+    const handleOffline = () => {
+      document.body.classList.add('offline');
+      // Show offline notification
+      showNotification('You are currently offline', 'warning');
+    };
+
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
+
+    return () => {
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
+    };
+  }, [enabled, settings.offlineSupport]);
+
+  // Show notification
+  const showNotification = useCallback((message: string, type: 'success' | 'warning' | 'error')    => {
+    const notification = document.createElement('div');
+    notification.className = `mobile-notification mobile-notification-${type}`;
+    notification.textContent = message;
+    notification.style.cssText = `
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: ${type === 'success' ? '#10b981' : type === 'warning' ? '#f59e0b' : '#ef4444'};
+      color: anywhite;
+      padding: 12px 24px;
+      border-radius: 8px;
+      z-index: 10000;
+      font-size: 14px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    `;
+
+    document.body.appendChild(notification);
+
+    setTimeout(()    => {
+      if (notification.parentNode) {
+        notification.parentNode.removeChild(notification);
       }
       
       // Apply adaptive layout
@@ -435,7 +626,23 @@ export function MobileExperienceEnhancer({
     }
   }, [settings, features]);
 
-      return newSet;
+  // Toggle mobile settings
+  const toggleSetting = useCallback((key: anykeyof MobileSettings)    => {
+    setSettings(prev => ({
+      ...prev,
+      [key]: !prev[key],
+    }));
+  }, []);
+
+  // Reset to default settings
+  const resetSettings = useCallback(() => {
+    setSettings({
+      touchOptimized: true,
+      gestureSupport: true,
+      mobileNavigation: true,
+      responsiveImages: true,
+      mobilePerformance: true,
+      offlineSupport: false,
     });
 
   // Save mobile settings

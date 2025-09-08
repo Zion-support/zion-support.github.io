@@ -1,136 +1,146 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Brain, Zap, Globe, Cpu, Network, Search, Filter, CheckCircle, MessageCircle, Phone, Globe as GlobeIcon, Atom, Eye, EyeOff, Award, Target, Sparkles, Zap as ZapIcon, Brain as BrainIcon, Dna, Space, Layers, Monitor, Smartphone, Globe2, Leaf } from 'lucide-react';
-import { SEO } from "@/components/SEO";
-import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence   } from 'framer-motion';
+import { Link   } from 'react-router-dom';
+import { Brain, 
+  Cloud, 
+  Shield, 
+  Server, 
+  Zap, 
+  Globe, 
+  Cpu, 
+  Database,
+  Network,
+  Lock,
+  Code,
+  Rocket,
+  Users,
+  Search,
+  Filter,
+  Star,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Play,
+  BookOpen,
+  MessageCircle,
+  Phone,
+  Mail,
+  MapPin,
+  Globe as GlobeIcon,
+  Atom,
+  Blockchain,
+  Heart,
+  Scale,
+  Factory,
+  Satellite,
+  ShoppingCart,
+  Building,
+  Truck,
+  Eye,
+  EyeOff,
+  ExternalLink,
+  Award,
+  Target,
+  Lightbulb,
+  Sparkles,
+  Zap as ZapIcon,
+  Brain as BrainIcon,
+  Dna,
+  Space,
+  Layers,
+  Monitor,
+  Smartphone,
+  Globe2,
+  Leaf
+  } from 'lucide-react';
+import { SEO   } from '@/components/SEO';
+import { ULTIMATE_INNOVATIVE_SERVICES_2026   } from '@/data/ultimateInnovativeServices2026';
 
-const UltimateInnovativeServices2026 = () => {
-  const featuredServices = [
-    {
-      title: "AI Edge Computing Platform",
-      description: "Real-time AI processing at the edge with 5G integration and global deployment",
-      icon: Cpu,
-      category: "Edge Computing",
-      price: "From $2,500/month",
-      features: ["Edge AI Processing", "5G Integration", "Global Edge Network", "Hybrid Cloud", "ML Model Optimization"],
-      benefits: ["Ultra-low latency", "Real-time processing", "Global scalability", "Cost optimization"],
-      useCases: ["IoT Smart Cities", "Autonomous Vehicles", "Industrial IoT", "Healthcare Monitoring"],
-      link: "/services/ai-edge-computing-platform",
-      color: "from-cyan-500 to-blue-600",
-      popular: true
-    },
-    {
-      title: "AI Quantum Financial Trading Platform",
-      description: "Revolutionary quantum computing-powered trading with AI algorithms",
-      icon: TrendingUp,
-      category: "Financial Technology",
-      price: "From $5,000/month",
-      features: ["Quantum AI Algorithms", "Quantum Entanglement", "Predictive Analytics", "High-Frequency Trading", "Portfolio Optimization"],
-      benefits: ["94.7% arbitrage success", "23.7% average returns", "Ultra-fast execution", "Risk management"],
-      useCases: ["Hedge Funds", "Investment Banks", "Trading Firms", "Institutional Investors"],
-      link: "/services/ai-quantum-financial-trading-platform",
-      color: "from-green-500 to-emerald-600",
-      popular: true
-    },
-    {
-      title: "AI Healthcare Diagnostics Platform",
-      description: "Advanced medical imaging and diagnostic AI for improved patient outcomes",
-      icon: Heart,
-      category: "Healthcare Technology",
-      price: "From $3,500/month",
-      features: ["AI-Powered Diagnosis", "Medical Imaging AI", "Predictive Analytics", "HIPAA Compliant", "Real-time Processing"],
-      benefits: ["96.8% radiology accuracy", "80% faster diagnosis", "25% cost reduction", "30% better outcomes"],
-      useCases: ["Hospitals", "Medical Clinics", "Diagnostic Centers", "Healthcare Networks"],
-      link: "/services/ai-healthcare-diagnostics-platform",
-      color: "from-red-500 to-pink-600",
-      popular: true
-    },
-    {
-      title: "AI Quantum Neural Network Platform",
-      description: "Next-generation quantum neural networks for complex problem solving",
-      icon: Brain,
-      category: "Quantum AI",
-      price: "From $8,000/month",
-      features: ["Quantum Neural Networks", "Hybrid Quantum-Classical", "Advanced Optimization", "Real-time Learning", "Scalable Architecture"],
-      benefits: ["1000x faster training", "Unlimited scalability", "Quantum advantage", "Future-proof technology"],
-      useCases: ["Research Institutions", "Tech Companies", "Government Agencies", "Universities"],
-      link: "/services/ai-quantum-neural-network-platform",
-      color: "from-purple-500 to-indigo-600",
-      popular: false
-    },
-    {
-      title: "AI Autonomous Business Operations Platform",
-      description: "Fully autonomous business process automation and optimization",
-      icon: Rocket,
-      category: "Business Automation",
-      price: "From $6,500/month",
-      features: ["Autonomous Operations", "Process Optimization", "Intelligent Decision Making", "Predictive Maintenance", "Resource Management"],
-      benefits: ["90% efficiency increase", "24/7 operation", "Cost reduction", "Scalable growth"],
-      useCases: ["Manufacturing", "Logistics", "Retail", "Service Industries"],
-      link: "/services/ai-autonomous-business-operations-platform",
-      color: "from-orange-500 to-red-600",
-      popular: false
-    },
-    {
-      title: "AI Customer Experience Analytics Platform",
-      description: "Comprehensive customer behavior analysis and predictive insights",
-      icon: Users,
-      category: "Customer Analytics",
-      price: "From $4,500/month",
-      features: ["Behavioral Analytics", "Predictive Insights", "Real-time Monitoring", "Personalization Engine", "Sentiment Analysis"],
-      benefits: ["40% customer retention", "35% conversion increase", "Real-time insights", "Personalized experiences"],
-      useCases: ["E-commerce", "SaaS Companies", "Retail Chains", "Service Providers"],
-      link: "/services/ai-customer-experience-analytics-platform",
-      color: "from-blue-500 to-cyan-600",
-      popular: false
+export default function UltimateInnovativeServices2026(...args: any[]): any {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+  const [sortBy, setSortBy] = useState('featured');
+  const [expandedService, setExpandedService] = useState<any>(null);
+
+  const categories = [
+    { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue' },
+    { id: 'quantum-ai', name: 'Quantum AI', icon: Atom, color: 'from-zion-purple to-zion-cyan' },
+    { id: 'neuromorphic-ai', name: 'Neuromorphic AI', icon: BrainIcon, color: 'from-zion-pink to-zion-purple' },
+    { id: 'synthetic-biology', name: 'Synthetic Biology', icon: Dna, color: 'from-zion-green to-zion-blue' },
+    { id: 'space-technology', name: 'Space Technology', icon: Space, color: 'from-zion-blue to-zion-purple' },
+    { id: 'advanced-materials', name: 'Advanced Materials', icon: Layers, color: 'from-zion-orange to-zion-red' },
+    { id: 'brain-computer-interface', name: 'Brain-Computer Interface', icon: Monitor, color: 'from-zion-purple to-zion-pink' },
+    { id: 'digital-twin', name: 'Digital Twin', icon: Globe2, color: 'from-zion-cyan to-zion-green' },
+    { id: 'extended-reality', name: 'Extended Reality', icon: Smartphone, color: 'from-zion-orange to-zion-purple' },
+    { id: 'edge-ai', name: 'Edge AI', icon: Cpu, color: 'from-zion-green to-zion-cyan' },
+    { id: 'federated-learning', name: 'Federated Learning', icon: Network, color: 'from-zion-purple to-zion-blue' },
+    { id: 'sustainable-technology', name: 'Sustainable Technology', icon: Leaf, color: 'from-zion-green to-zion-blue' }
+  ];
+
+  const priceRanges = [
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'under-10k', name: 'Under $10K', range: 'Under $10,000' },
+    { id: '10k-20k', name: '$10K - $20K', range: '$10,000 - $20,000' },
+    { id: 'over-20k', name: 'Over $20K', range: 'Over $20,000' }
+  ];
+
+  const sortOptions = [
+    { id: 'featured', name: 'Featured' },
+    { id: 'price-low', name: 'Price: Low to High' },
+    { id: 'price-high', name: 'Price: High to Low' },
+    { id: 'innovation', name: 'Innovation Level' },
+    { id: 'roi', name: 'ROI Potential' }
+  ];
+
+  const getCategoryIcon = (category: string)   => {
+    const cat = categories.find(c => c.id === category);
+    return cat ? cat.icon : Zap;
+  };
+
+  const getCategoryColor = (category: string)   => {
+    const cat = categories.find(c => c.id === category);
+    return cat ? cat.color : 'from-zion-cyan to-zion-blue';
+  };
+
+  const filteredServices = ULTIMATE_INNOVATIVE_SERVICES_2026.filter(service => {
+    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    
+    const matchesCategory = selectedCategory === 'all' || service.category.toLowerCase().includes(selectedCategory);
+    
+    const matchesPrice = selectedPriceRange === 'all' || 
+                        (selectedPriceRange === 'under-10k' && service.price < 10000) ||
+                        (selectedPriceRange === '10k-20k' && service.price >= 10000 && service.price <= 20000) ||
+                        (selectedPriceRange === 'over-20k' && service.price > 20000);
+    
+    return matchesSearch && matchesCategory && matchesPrice;
+  });
+
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'price-low':
+        return a.price - b.price;
+      case 'price-high':
+        return b.price - a.price;
+      case 'innovation':
+        const innovationOrder = { 'Revolutionary': 3, 'Cutting-edge': 2, 'Advanced': 1 };
+        return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) - 
+               (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0);
+      case 'roi':
+        const aROI = parseInt(a.roi.split('-')[0]);
+        const bROI = parseInt(b.roi.split('-')[0]);
+        return bROI - aROI;
+      default:
+        return 0;
     }
   ];
 
-  const industrySolutions = [
-    {
-      title: "Manufacturing AI",
-      description: "Smart manufacturing with predictive maintenance and quality control",
-      icon: Factory,
-      price: "From $12,000/month"
-    },
-    {
-      title: "Financial Services AI",
-      description: "AI-powered financial analysis and risk management",
-      icon: BarChart3,
-      price: "From $15,000/month"
-    },
-    {
-      title: "Healthcare AI",
-      description: "Comprehensive healthcare AI solutions and diagnostics",
-      icon: Heart,
-      price: "From $20,000/month"
-    },
-    {
-      title: "Retail AI",
-      description: "Intelligent retail solutions and customer analytics",
-      icon: ShoppingCart,
-      price: "From $8,000/month"
-    },
-    {
-      title: "Transportation AI",
-      description: "Smart transportation and logistics optimization",
-      icon: Car,
-      price: "From $18,000/month"
-    },
-    {
-      title: "Education AI",
-      description: "Personalized learning and educational technology",
-      icon: BookOpen,
-      price: "From $6,000/month"
-    }
-  ];
-
-  const contactInfo = {
-    phone: "+1 302 464 0950",
-    email: "kleber@ziontechgroup.com",
-    address: "364 E Main St STE 1008, Middletown DE 19709",
-    website: "https://ziontechgroup.com"
+  const toggleServiceExpansion = (serviceId: string)   => {
+    setExpandedService(expandedService === serviceId ? null : serviceId);
   };
 
   return (
@@ -187,8 +197,72 @@ const UltimateInnovativeServices2026 = () => {
                 </a>
               </div>
 
-              {/* Contact Information */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {/* Category Filter */}
+            <div>
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              >
+                {categories.map(category   => (
+                  <option key={category.id} value={category.id} className="bg-zion-slate-800 text-white">
+                    {category.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Price Filter */}
+            <div>
+              <select
+                value={selectedPriceRange}
+                onChange={(e) => setSelectedPriceRange(e.target.value)}
+                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              >
+                {priceRanges.map(range   => (
+                  <option key={range.id} value={range.id} className="bg-zion-slate-800 text-white">
+                    {range.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          {/* Sort Options */}
+          <div className="mt-6 flex flex-wrap items-center gap-4">
+            <span className="text-zion-slate-300">Sort by: any</span>
+            {sortOptions.map(option   => (
+              <button
+                key={option.id}
+                onClick={() => setSortBy(option.id)}
+                className={`px-4 py-2 rounded-lg transition-all duration-200 ${
+                  sortBy === option.id
+                    ? 'bg-zion-cyan text-white'
+                    : 'bg-white/10 text-zion-slate-300 hover:bg-white/20'
+                }`}
+              >
+                {option.name}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              {filteredServices.length} Revolutionary Services Found
+            </h2>
+            <p className="text-zion-slate-300 text-lg">
+              Discover the future of technology with our cutting-edge micro SAAS solutions
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <AnimatePresence>
+              {sortedServices.map((service, index)   => (
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}

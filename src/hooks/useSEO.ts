@@ -1,6 +1,6 @@
-import { useEffect, useCallback, useMemo } from 'react';
+import { useEffect, useCallback, useMemo  } from 'react.ts';
 
-type SEOData = {
+interface SEOData {
 
   title: string;
   description: string;
@@ -11,14 +11,16 @@ type SEOData = {
   twitterCard?: string;
   noindex?: boolean;
   structuredData?: object;
+
 }
 
-type UseSEOOptions = {
+interface UseSEOOptions {
 
   enableAutoTitle?: boolean;
   enableStructuredData?: boolean;
   enablePerformanceTracking?: boolean;
   enableAnalytics?: boolean;
+
 }
 
 export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
@@ -44,14 +46,14 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
   }, [seoData.canonical]);
 
   // Update document title
-  const updateTitle = useCallback((title: string) => {
+  const updateTitle = useCallback((title: string)  => {
     if (typeof document !== 'undefined') {
       document.title = title;
     }
   }, []);
 
   // Update meta tags
-  const updateMetaTags = useCallback((data: SEOData) => {
+  const updateMetaTags = useCallback((data: anySEOData)  => {
     if (typeof document === 'undefined') return;
 
     // Update or create meta description
@@ -96,11 +98,11 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
   }, [canonicalUrl]);
 
   // Update Open Graph tags
-  const updateOpenGraphTags = useCallback((data: SEOData) => {
+  const updateOpenGraphTags = useCallback((data: anySEOData)  => {
     if (typeof document === 'undefined') return;
 
-    const ogTags: any[] = [
-      { property: 'og:title', content: fullTitle },
+    const ogTags = [
+      { property: any'og:title', content: fullTitle },
       { property: 'og:description', content: data.description },
       { property: 'og:type', content: data.ogType || 'website' },
       { property: 'og:url', content: canonicalUrl },
@@ -109,7 +111,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
       { property: 'og:locale', content: 'en_US' }
     ];
 
-    ogTags.forEach(({ property, content }) => {
+    ogTags.forEach(({ property, content })  => {
       let ogTag = document.querySelector(`meta[property="${property}"]`);
       if (!ogTag) {
         ogTag = document.createElement('meta');
@@ -121,18 +123,18 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
   }, [fullTitle, canonicalUrl]);
 
   // Update Twitter Card tags
-  const updateTwitterCardTags = useCallback((data: SEOData) => {
+  const updateTwitterCardTags = useCallback((data: anySEOData)  => {
     if (typeof document === 'undefined') return;
 
-    const twitterTags: any[] = [
-      { name: 'twitter:card', content: data.twitterCard || 'summary_large_image' },
+    const twitterTags = [
+      { name: any'twitter:card', content: data.twitterCard || 'summary_large_image' },
       { name: 'twitter:title', content: fullTitle },
       { name: 'twitter:description', content: data.description },
       { name: 'twitter:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },
       { name: 'twitter:site', content: '@ziontechgroup' }
     ];
 
-    twitterTags.forEach(({ name, content }) => {
+    twitterTags.forEach(({ name, content })  => {
       let twitterTag = document.querySelector(`meta[name="${name}"]`);
       if (!twitterTag) {
         twitterTag = document.createElement('meta');
@@ -144,7 +146,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
   }, [fullTitle]);
 
   // Add structured data
-  const addStructuredData = useCallback((data: object) => {
+  const addStructuredData = useCallback((data: anyobject)  => {
     if (!enableStructuredData || typeof document === 'undefined') return;
 
     // Remove existing structured data
@@ -192,7 +194,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
   }), []);
 
   // Track page view
-  const trackPageView = useCallback((pageData: SEOData) => {
+  const trackPageView = useCallback((pageData: anySEOData)  => {
     if (!enableAnalytics || typeof window === 'undefined') return;
 
     // Google Analytics
@@ -234,15 +236,15 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
     // Core Web Vitals
     if ('web-vital' in window) {
       // This would require the web-vitals library
-      // console.log('Web Vitals available');
+      // // // console.log('Web Vitals available');
     }
 
     // Navigation Timing API
     if ('performance' in window) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
-        const metrics: any = {
-          dns: navigation.domainLookupEnd - navigation.domainLookupStart,
+        const metrics = {
+          dns: anynavigation.domainLookupEnd - navigation.domainLookupStart,
           tcp: navigation.connectEnd - navigation.connectStart,
           ttfb: navigation.responseStart - navigation.requestStart,
           domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
@@ -251,9 +253,9 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
 
         // Track to analytics
         if (window.gtag) {
-          Object.entries(metrics).forEach(([key, value]) => {
+          Object.entries(metrics).forEach(([key, value])  => {
             window.gtag('event', 'performance_metric', {
-              event_category: 'performance',
+              event_category: any'performance',
               event_label: key,
               value: Math.round(value)
             });
@@ -264,7 +266,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
   }, []);
 
   // Initialize SEO
-  useEffect(() => {
+  useEffect(()  => {
     // Update document title
     if (enableAutoTitle) {
       updateTitle(fullTitle);
@@ -329,8 +331,10 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
 
 // Type declarations
 declare global {
-  type Window = {
+  interface Window {
 
-    gtag?: (...args[])  => void;
-    dataLayer?[]}
-  {/* Removed stray closing brace */}
+    gtag?: (...args: any[])  => void;
+    dataLayer?: any[];
+  
+}
+}

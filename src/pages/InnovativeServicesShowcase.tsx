@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
-import { INNOVATIVE_SERVICES_2025 } from '../data/innovativeServices2025';
-const InnovativeServicesShowcase: React.FC = () => {
+import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices   } from '../data/innovativeServices2025';
+
+const InnovativeServicesShowcase: React.FC = (): JSX.Element => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -184,15 +185,13 @@ const InnovativeServicesShowcase: React.FC = () => {
               
               <select
                 value={selectedCategory}
-                onChange={(e) => {
-                  setSelectedCategory(e.target.value);
-                  setSelectedSubcategory('all');
-                }}
-                className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-zion-blue"
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
               >
-                <option value="all">All Categories</option>
-                {INNOVATIVE_SERVICE_CATEGORIES_2025.map((category) => (
-                  <option key={category} value={category}>{category}</option>
+                {categories.map(category   => (
+                  <option key={category} value={category}>
+                    {category === 'all' ? 'All Categories' : category}
+                  </option>
                 ))}
               </select>
               
@@ -210,21 +209,46 @@ const InnovativeServicesShowcase: React.FC = () => {
               <select
                 value={priceRange}
                 onChange={(e) => setPriceRange(e.target.value)}
-                className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-zion-blue"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
               >
-                <option value="all">All Prices</option>
-                <option value="low">Under $10K</option>
-                <option value="medium">$10K - $25K</option>
-                <option value="high">$25K+</option>
+                {priceRanges.map(range   => (
+                  <option key={range.value} value={range.value}>{range.label}</option>
+                ))}
+              </select>
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Sort By</label>
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
+              >
+                {sortOptions.map(option   => (
+                  <option key={option.value} value={option.value}>{option.label}</option>
+                ))}
               </select>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {sortedServices.length === 0 ? (
+        {/* Results Count */}
+        <div className="mb-6">
+          <p className="text-gray-600">
+            Showing {filteredServices.length} of {INNOVATIVE_SERVICES_2025.length} services
+          </p>
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map((service)   => (
+            <ServiceCard key={service.id} service={service} />
+          ))}
+        </div>
+
+        {/* No Results */}
+        {filteredServices.length === 0 && (
           <div className="text-center py-12">
             <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
             <h3 className="text-lg font-medium text-gray-900 mb-2">No services found</h3>

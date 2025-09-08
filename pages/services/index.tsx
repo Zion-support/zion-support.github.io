@@ -1,50 +1,7 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { ZION_SERVICES } from '../../src/data/services';
+import Head from 'next/head.ts';
+import Link from 'next/link.ts';
 
-function toSlug(value: string) {
-  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-}
-
-const categories = [
-  'Micro SaaS',
-  'IT Services',
-  'AI Services'
-];
-
-export default function ServicesIndexPage() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const filteredServices = ZION_SERVICES.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.name?.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-
-  const byCategory: Record<string, typeof ZION_SERVICES> = {};
-  for (const c of categories) byCategory[c] = [];
-  
-  for (const service of ZION_SERVICES) {
-    const category = service.category;
-    if (category && byCategory[category]) {
-      byCategory[category].push(service);
-    }
-  }
-
-  const anchorMap: Record<string, string> = {
-    'Micro SaaS': 'micro-saas',
-    'IT Services': 'it-services',
-    'AI Services': 'ai-services',
-  };
-
-  const [shownCounts, setShownCounts] = useState<Record<string, number>>(() => 
-    Object.fromEntries(categories.map(c => [c, 12]))
-  );
-
+export default function ServicesIndex(...args: any[]): any {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -89,79 +46,58 @@ export default function ServicesIndexPage() {
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section id="services" className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Service Categories
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Choose from our comprehensive range of technology services
-            </p>
-          </motion.div>
-          
-          <div className="grid lg:grid-cols-2 gap-8">
-            {serviceCategories.map((category, index) => (
-              <motion.div
-                key={category.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border border-slate-700 p-8"
-              >
-                <div className="flex items-center mb-6">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center mr-4`}>
-                    <category.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white">{category.name}</h3>
-                    <p className="text-slate-400">{category.description}</p>
-                  </div>
-                </div>
-                
-                <div className="space-y-4">
-                  {category.services.map((service, serviceIndex) => (
-                    <div key={serviceIndex} className="bg-slate-700/50 rounded-lg p-4">
-                      <div className="flex items-start justify-between mb-3">
-                        <div className="flex items-center">
-                          <service.icon className="w-5 h-5 text-cyan-400 mr-2" />
-                          <h4 className="font-semibold text-white">{service.name}</h4>
-                        </div>
-                        <span className="text-cyan-400 font-semibold">{service.price}</span>
-                      </div>
-                      
-                      <p className="text-slate-300 text-sm mb-3">{service.description}</p>
-                      
-                      <div className="grid grid-cols-2 gap-2">
-                        {service.features.map((feature, featureIndex) => (
-                          <div key={featureIndex} className="flex items-center text-xs text-slate-400">
-                            <CheckCircle className="w-3 h-3 text-green-400 mr-1" />
-                            {feature}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                
-                <div className="mt-6 text-center">
-                  <Link
-                    href={`/services/${category.id}`}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
-                  >
-                    <span className="font-medium">View Details</span>
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                </div>
-              </motion.div>
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float" />
+        <div className="absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow" />
+        <div className="absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast" />
+        <div className="absolute inset-0 opacity-[0.08] [background:radial-gradient(circle_at_center,rgba(255,255,255,0.35)_0,rgba(255,255,255,0)_60%),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.12)_1px,transparent_1px)] bg-[size:100%_100%,3rem_3rem,3rem_3rem] animate-grid" />
+        <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]"><div className="twinkle-field absolute inset-0" /></div>
+        <div className="absolute inset-0 beams opacity-[0.06]" />
+      </div>
+
+      <header className="relative z-10">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
+          <div className="text-2xl font-bold tracking-wide">
+            <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon">Zion</span>
+          </div>
+          <div className="hidden gap-6 md:flex text-white/80">
+            <Link href="/"><a>Home</a></Link>
+            <Link href="/automation"><a>Automations</a></Link>
+            <Link href="/products"><a>Products</a></Link>
+            <Link href="/contact"><a>Contact</a></Link>
+          </div>
+        </nav>
+      </header>
+
+      <main className="relative z-10">
+        <section className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-20 text-center">
+          <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md">
+            <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
+            Autonomous delivery with safety guardrails
+          </div>
+          <h1 className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl"><span className="gradient-text">Services</span></h1>
+          <p className="mx-auto mt-5 max-w-3xl text-lg text-white/80">Choose from specialized agents and blueprints to ship value faster.</p>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-6 pb-16">
+          <div className="grid grid-cols-1 gap-5 sm: anygrid-cols-2 lg:grid-cols-3">
+            {[
+              { href: '/services/ai-seo-auditor', title: 'AI SEO Auditor', desc: 'Automate on-site SEO audits and fixes.' },
+              { href: '/services/customer-support-chatbot', title: 'Customer Support Chatbot', desc: 'Deflect tickets with high-quality automated replies.' },
+              { href: '/services/landing-page-generator', title: 'Landing Page Generator', desc: 'Spin up optimized pages with one prompt.' },
+              { href: '/services/price-intelligence-service', title: 'Price Intelligence', desc: 'Continuously monitor and adapt pricing.' },
+              { href: '/services/developer-productivity-copilot', title: 'Developer Productivity Copilot', desc: 'AI PR reviews, test gen, CI insights.' },
+              { href: '/services/ai-sales-assistant', title: 'AI Sales Assistant', desc: 'Qualify leads and personalize outreach.' },
+              { href: '/services/security-posture-guardian', title: 'Security Posture Guardian', desc: 'Misconfig and secret scanning with fixes.' },
+              { href: '/services/ai-data-pipeline-optimizer', title: 'AI Data Pipeline Optimizer', desc: 'Optimize ETL/ELT and RAG pipelines.' },
+            ].map((s)  => (
+              <Link key={s.href} href={s.href}>
+                <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
+                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                  <h3 className="text-lg font-semibold">{s.title}</h3>
+                  <p className="mt-1 text-sm text-white/75">{s.desc}</p>
+                </a>
+              </Link>
             ))}
           </div>
         </div>

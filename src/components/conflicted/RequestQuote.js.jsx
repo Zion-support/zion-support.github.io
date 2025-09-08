@@ -434,11 +434,15 @@ export default function RequestQuote() {}
                       placeholder="Enter your comp name"""
                     />
                   </div>
-                  {/* Project Type */}"""
-                  <div>""""
-                    <label className="block text-white font-medium mb-4">
-                      Project Type *"""
-                    </label>""""
+
+                  <div>
+                    <label className="block text-white font-medium mb-2">Company</label>
+                    <input type="text" name="comp" value={formData.company} onChange={handleInputChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors" placeholder="Enter your company name"/>
+                  </div>
+
+                  {/* Project Type */}
+                  <div>
+                    <label className="block text-white font-medium mb-4">Project Type *</label>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {projectTypes.map(type => (
                         <label;

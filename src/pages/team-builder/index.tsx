@@ -1,21 +1,21 @@
-// import { NextPage } from 'next'; // Removed
+// import { NextPage  } from 'next'; // Removed
 import React from 'react'; // Ensure React is imported if not already for FC type
-import { AppLayout } from '@/layout/AppLayout'; // Assuming a general AppLayout exists
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { Switch } from '@/components/ui/switch'; // Added for new fields
-import { useForm, Controller, type SubmitHandler } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
+import { AppLayout  } from '@/layout/AppLayout'; // Assuming a general AppLayout exists
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { Textarea  } from '@/components/ui/textarea';
+import { Label  } from '@/components/ui/label';
+import { Switch  } from '@/components/ui/switch'; // Added for new fields
+import { useForm, Controller, type SubmitHandler  } from 'react-hook-form';
+import { zodResolver  } from '@hookform/resolvers/zod';
 import * as z from 'zod';
-import { Steps, Step } from '@/components/ui/steps'; // Assuming this is how steps are imported
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { useState } from 'react';
-import { ProjectBrief, TeamRecommendation } from '@/types'; // Import from barrel file
-import { toast } from 'sonner'; // Or use-toast if that's the project's standard
-
-import { TeamRecommendationDisplay } from '@/components/team-builder/TeamRecommendationDisplay'; // New import
+import { Steps, Step  } from '@/components/ui/steps'; // Assuming this is how steps are imported
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from '@/components/ui/card';
+import { useState  } from 'react';
+import { ProjectBrief, TeamRecommendation  } from '@/types'; // Import from barrel file
+import { toast  } from 'sonner'; // Or use-toast if that's the project's standard
+import { Loader2  } from 'lucide-react';
+import { TeamRecommendationDisplay  } from '@/components/team-builder/TeamRecommendationDisplay'; // New import
 
 // Define Zod schema for form validation
 const projectBriefSchema = z.object({
@@ -82,11 +82,11 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
     setTeamRecommendation(null);
 
     const projectBriefData: ProjectBrief = {
-      userId: 'current-user-id',
+      userId: any'current-user-id',
       createdAt: new Date().toISOString(),
       ...data,
       techStack: data.techStack?.split(',').map(s  => s.trim()).filter(s => s) || [],
-      talentFilters: { // Ensure talentFilters is structured correctly
+      talentFilters: any{ // Ensure talentFilters is structured correctly
         verifiedOnly: data.talentFilters?.verifiedOnly,
         regions: data.talentFilters?.regions?.split(',').map(r  => r.trim()).filter(r => r) || [],
       }
@@ -110,7 +110,7 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
       toast.success('Team recommendation generated successfully!');
       // setCurrentStep((prev) => prev + 1); // No longer using steps for display, display immediately
     } catch (error: any) {
-      console.error('Error submitting project brief:', error);
+      // // // console.error('Error submitting project brief:', error);
       toast.error(error.message || 'An error occurred while generating the team.');
     } finally {
       setIsLoading(false);
@@ -151,7 +151,7 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
       toast.success(`Invitation sent to talent for ${roleTitle}! (Invite ID: ${inviteResult.id})`);
       // Optionally, update UI to reflect invite status on the talent card
     } catch (error: any) {
-      console.error('Error sending invite:', error);
+      // // // console.error('Error sending invite:', error);
       toast.error(`Failed to send invite: ${error.message}`);
     }
   };

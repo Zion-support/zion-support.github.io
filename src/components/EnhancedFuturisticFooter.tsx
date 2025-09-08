@@ -1,6 +1,64 @@
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Youtube, Github, ArrowRight, Star, Shield, Zap, Brain, Rocket, Heart, Cloud, Users, BookOpen, MessageCircle, HelpCircle, DollarSign, Atom, TrendingUp, Code, Building, Network, ShoppingCart, FileText, Factory, MailIcon, Calendar, FileText as FileTextIcon, Users as UsersIcon, Code as CodeIcon, HelpCircle as HelpCircleIcon, DollarSign as DollarSignIcon, Users as UsersIcon2, Calendar as CalendarIcon, Shield as ShieldIcon, BookOpen as BookOpenIcon, Factory as FactoryIcon, ShoppingCart as ShoppingCartIcon, Heart as HeartIcon, TrendingUp as TrendingUpIcon, Building as BuildingIcon, Rocket as RocketIcon, Atom as AtomIcon, Cloud as CloudIcon, Shield as ShieldIcon2, ShoppingCart as ShoppingCartIcon2, Users as UsersIcon3, BookOpen as BookOpenIcon2, FileText as FileTextIcon2, Users as UsersIcon4, Code as CodeIcon2, HelpCircle as HelpCircleIcon2, DollarSign as DollarSignIcon2, Users as UsersIcon5, Calendar as CalendarIcon2, Shield as ShieldIcon3, BookOpen as BookOpenIcon3, Factory as FactoryIcon2, ShoppingCart as ShoppingCartIcon3, Heart as HeartIcon2, TrendingUp as TrendingUpIcon2, Building as BuildingIcon2, Rocket as RocketIcon2, Atom as AtomIcon2, Cloud as CloudIcon2, Shield as ShieldIcon4, ShoppingCart as ShoppingCartIcon4, Users as UsersIcon6, BookOpen as BookOpenIcon4, FileText as FileTextIcon3, Users as UsersIcon7, Code as CodeIcon3, HelpCircle as HelpCircleIcon3, DollarSign as DollarSignIcon3, Users as UsersIcon8, Calendar as CalendarIcon3, Shield as ShieldIcon5, BookOpen as BookOpenIcon5 } from 'lucide-react';
+import React from 'react';
+import { Link    } from 'react-router-dom';
+import { motion    } from 'framer-motion';
+import { Phone, 
+  Mail, 
+  MapPin, 
+  Globe, 
+  Linkedin, 
+  Twitter, 
+  Facebook, 
+  Instagram,
+  Youtube,
+  Github,
+  ArrowRight,
+  Star,
+  Shield,
+  Zap,
+  Brain,
+  Rocket,
+  Heart,
+  Crown,
+  Sparkles,
+  Flame,
+  Thunder,
+  Lightning,
+  Sun,
+  Moon,
+  Planet,
+  Galaxy,
+  Universe,
+  Infinity,
+  Alpha,
+  Beta,
+  Gamma,
+  Delta,
+  Epsilon,
+  Zeta,
+  Eta,
+  Theta,
+  Iota,
+  Kappa,
+  Lambda,
+  Mu,
+  Nu,
+  Xi,
+  Omicron,
+  Pi,
+  Rho,
+  Sigma,
+  Tau,
+  Upsilon,
+  Phi,
+  Chi,
+  Psi,
+  Omega,
+  Clock,
+  Award,
+  Users,
+  TrendingUp,
+  CheckCircle
+   } from 'lucide-react';
 
 export const EnhancedFuturisticFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -153,89 +211,57 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'Partner Program', href: '/partners', icon: Users, featured: false }
   ];
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  const supportLinks = [
+    { name: 'Help Center', href: '/help', description: 'Find answers to questions' },
+    { name: 'Support Portal', href: '/support', description: 'Technical assistance' },
+    { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
+    { name: 'Documentation', href: '/docs', description: 'Technical guides' },
+    { name: 'Training', href: '/training', description: 'Learning resources' },
+    { name: 'Webinars', href: '/webinars', description: 'Educational sessions' }
+  ];
+
+  const legalLinks = [
+    { name: 'Privacy Policy', href: '/privacy', description: 'Data protection' },
+    { name: 'Terms of Service', href: '/terms', description: 'Service terms' },
+    { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },
+    { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },
+    { name: 'Security', href: '/security', description: 'Security practices' },
+    { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' }
+  ];
+
+  // Create missing pages for broken links
+  const createMissingPage = (name: string, href: string)    => {
+    // For now, we'll create placeholder pages for missing routes
+    // These will be created as separate components
+    return (
+      <Link
+        key={name}
+        to={href}
+        className="block text-sm text-slate-300 hover:text-cyan-400 transition-colors"
+      >
+        {name}
+      </Link>
+    );
   };
 
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700/50">
       {/* Main Footer Content */}
-      <div className="container-responsive py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-12">
-          {/* Company Info & Contact */}
-          <div className="lg:col-span-1 xl:col-span-1">
-            <div className="mb-8">
-              <Link to="/" className="inline-flex items-center space-x-3 group">
-                <div className="relative">
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Zap className="w-7 h-7 text-white" />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
-                    Zion Tech Group
-                  </h3>
-                  <p className="text-sm text-gray-400">Revolutionary AI Solutions</p>
-                </div>
-              </Link>
-            </div>
-
-            <p className="text-gray-300 mb-8 leading-relaxed">
-              Leading the future of technology with cutting-edge AI, quantum computing, and innovative solutions that transform businesses and drive innovation across industries.
-            </p>
-
-            {/* Contact Information */}
-            <div className="space-y-4 mb-8">
-              <a
-                href={`tel:${contactInfo.phone}`}
-                className="flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors group"
-              >
-                <div className="p-2 bg-slate-700/50 rounded-lg group-hover:bg-cyan-500/20 transition-colors">
-                  <Phone className="w-4 h-4" />
-                </div>
-                <span>{contactInfo.phone}</span>
-              </a>
-              
-              <a
-                href={`mailto:${contactInfo.email}`}
-                className="flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors group"
-              >
-                <div className="p-2 bg-slate-700/50 rounded-lg group-hover:bg-cyan-500/20 transition-colors">
-                  <Mail className="w-4 h-4" />
-                </div>
-                <span>{contactInfo.email}</span>
-              </a>
-              
-              <div className="flex items-start gap-3 text-gray-300">
-                <div className="p-2 bg-slate-700/50 rounded-lg mt-0.5">
-                  <MapPin className="w-4 h-4" />
-                </div>
-                <span className="text-sm leading-relaxed">{contactInfo.address}</span>
-              </div>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex items-center space-x-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`p-2 bg-slate-700/50 rounded-lg text-gray-400 transition-all duration-300 hover:bg-slate-600/50 ${social.color}`}
-                  aria-label={social.name}
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Footer Sections */}
-          <div className="lg:col-span-1 xl:col-span-2">
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-              {footerSections.map((section, index) => (
+      <div className="container mx-auto px-4 py-16">
+        {/* Top Section - Services & Quick Access */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          {/* Services Overview */}
+          <div>
+            <motion.h3 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-2xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
+            >
+              Our Services
+            </motion.h3>
+            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-6">
+              {footerSections.slice(0, 2).map((section, index)    => (
                 <motion.div
                   key={section.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -269,32 +295,70 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                         </Link>
                       </li>
                     ))}
-                  </ul>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Quick Access */}
+          <div>
+            <motion.h3 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-2xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"
+            >
+              Quick Access
+            </motion.h3>
+            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-4">
+              {quickLinks.map((link, index)    => (
+                <motion.div
+                  key={link.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 + index * 0.05 }}
+                >
+                  <Link
+                    to={link.href}
+                    className="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-800/50 transition-colors group"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-cyan-400/20 transition-colors">
+                      <Star className="w-4 h-4 text-cyan-400" />
+                    </div>
+                    <div>
+                      <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
+                        {link.name}
+                      </div>
+                      <div className="text-xs text-slate-400">
+                        Quick access
+                      </div>
+                    </div>
+                  </Link>
                 </motion.div>
               ))}
             </div>
           </div>
         </div>
 
-        {/* Quick Actions Section */}
-        <div className="mt-16 pt-12 border-t border-slate-700/50">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              Transform your business with our cutting-edge AI solutions. Get in touch today to learn how we can help you achieve your goals.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {quickActions.map((action) => (
-              <Link
-                key={action.name}
-                to={action.href}
-                className={`p-4 rounded-xl border transition-all duration-300 transform hover:scale-105 text-center group ${
-                  action.featured
-                    ? 'border-cyan-400/50 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 hover:from-cyan-500/30 hover:to-blue-500/30'
-                    : 'border-slate-700/50 bg-slate-800/30 hover:border-slate-600/50 hover:bg-slate-700/30'
-                }`}
+        {/* Middle Section - Detailed Services */}
+        <div className="mb-16">
+          <motion.h3 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-2xl font-bold mb-8 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent"
+          >
+            Complete Service Portfolio
+          </motion.h3>
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {footerSections.map((section, index)    => (
+              <motion.div
+                key={section.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
+                className="space-y-4"
               >
                 <div className={`p-2 rounded-lg mx-auto mb-3 w-fit ${
                   action.featured

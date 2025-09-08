@@ -1,32 +1,77 @@
-// Removed unused: import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
-import { Search, BookOpen, Video, FileText, MessageCircle, Mail, Phone, Users, Shield, Cloud, Brain, ArrowRight, Play, Star } from 'lucide-react';
+import React, { useState } from 'react';
+import { Link   } from 'react-router-dom';
+import { motion, AnimatePresence   } from 'framer-motion';
+import { Search, 
+  HelpCircle, 
+  MessageCircle, 
+  Phone, 
+  Mail, 
+  BookOpen, 
+  Video, 
+  FileText, 
+  ChevronDown, 
+  ChevronRight,
+  Star,
+  Users,
+  Code,
+  Shield,
+  Cloud,
+  Brain,
+  Rocket,
+  Zap,
+  Heart,
+  Building,
+  Cpu,
+  Lock,
+  Globe,
+  Award,
+  CheckCircle,
+  X,
+  ArrowRight,
+  ExternalLink,
+  Lightbulb,
+  AlertCircle,
+  Info,
+  Clock,
+  MapPin
+  } from 'lucide-react';
 
 interface FAQItem {
+
 
   id: string;
   question: string;
   answer: string;
   category: string;
-  tags: string[]}
+  tags: string[];
+
+
+}
 
 interface HelpCategory {
+
 
   id: string;
   title: string;
   description: string;
   icon;color: string;
   articleCount: number;
-  path: string}
+  path: string;
+
+
+}
 
 interface SupportOption {
+
 
   title: string;
   description: string;
   icon;color: string;
   action: string;
-  path: string}
+  path: string;
+
+
+}
 
 const helpCategories: HelpCategory[] = [
   {
@@ -179,126 +224,53 @@ const faqData: FAQItem[] = [
   {/* Removed stray closing brace */}
 ];
 
-export default function HelpCenter(...args[]):  {
+export default function HelpCenter(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [expandedFAQ, setExpandedFAQ] = useState<any>(null);
+  const [filteredFAQs, setFilteredFAQs] = useState<any>(faqData);
 
-export const HelpCenter: React.FC = () => {
-  const helpCategories = [
-    {
-      title: "Getting Started",
-      description: "Learn the basics and get up and running quickly",
-      icon: "🚀",
-      articles: ["Quick Start Guide", "Account Setup", "First Steps"]
-    },
-    {
-      title: "Account & Billing",
-      description: "Manage your account, billing, and subscription",
-      icon: "💳",
-      articles: ["Update Billing Info", "Change Plan", "Cancel Subscription"]
-    },
-    {
-      title: "Technical Support",
-      description: "Get help with technical issues and troubleshooting",
-      icon: "🔧",
-      articles: ["Common Issues", "Error Messages", "Performance Tips"]
-    },
-    {
-      id: 'security',
-      name: 'Security & Compliance',
-      icon: Shield,
-      description: 'Security features and compliance documentation',
-      color: 'from-red-500 to-orange-500',
-      articles: [
-        { title: 'Security Best Practices', type: 'guide', readTime: '20 min' },
-        { title: 'Compliance Requirements', type: 'guide', readTime: '25 min' },
-        { title: 'Access Control Setup', type: 'tutorial', readTime: '15 min' },
-        { title: 'Audit Trail Management', type: 'guide', readTime: '18 min' }
-      ]
-    },
-    {
-      id: 'integrations',
-      name: 'Integrations',
-// Fixed missing name:       icon: Network,
-      description: 'Third-party integrations and API documentation',
-      color: 'from-indigo-500 to-purple-500',
-      articles: [
-        { title: 'API Reference Guide', type: 'reference', readTime: '40 min' },
-        { title: 'Webhook Setup', type: 'tutorial', readTime: '20 min' },
-        { title: 'Third-party Integrations', type: 'guide', readTime: '25 min' },
-        { title: 'Custom Connectors', type: 'guide', readTime: '30 min' }
-      ]
-    },
-    {
-      id: 'troubleshooting',
-      name: 'Troubleshooting',
-// Fixed missing name:       icon: HelpCircle,
-      description: 'Common issues and solutions',
-      color: 'from-yellow-500 to-orange-500',
-      articles: [
-        { title: 'Common Error Codes', type: 'reference', readTime: '15 min' },
-        { title: 'Performance Issues', type: 'guide', readTime: '20 min' },
-        { title: 'Connection Problems', type: 'guide', readTime: '18 min' },
-        { title: 'Data Sync Issues', type: 'guide', readTime: '22 min' }
-      ]
+  const handleSearch = (query: string)   => {
+    setSearchQuery(query);
+    if (query.trim() === '') {
+      setFilteredFAQs(faqData);
+      return;
     }
   ];
 
-  const popularArticles = [
-    {
-      title: "How to set up your first project",
-      description: "Step-by-step guide to creating your first project in Zion Tech Group",
-      readTime: "5 min read"
-    },
-    {
-      title: "Understanding AI service pricing",
-      description: "Learn about our pricing structure and how to optimize costs",
-      readTime: "8 min read"
-    },
-    {
-      title: "Security best practices",
-      description: "Essential security measures to protect your data and applications",
-      readTime: "10 min read"
-    },
-    {
-      title: "Troubleshooting common errors",
-      description: "Solutions to the most frequently encountered issues",
-      readTime: "6 min read"
+    const filtered = faqData.filter(faq => 
+      faq.question.toLowerCase().includes(query.toLowerCase()) ||
+      faq.answer.toLowerCase().includes(query.toLowerCase()) ||
+      faq.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()))
+    );
+    setFilteredFAQs(filtered);
+  };
+
+  const toggleFAQ = (id: string)   => {
+    setExpandedFAQ(expandedFAQ === id ? null : id);
+  };
+
+  const getCategoryIcon = (category: string)   => {
+    switch (category) {
+      case 'getting-started': return BookOpen;
+      case 'services': return Code;
+      case 'marketplace': return Building;
+      case 'billing': return Award;
+      case 'account': return Users;
+      case 'troubleshooting': return AlertCircle;
+      default: return HelpCircle;
     }
   ];
 
-  const supportOptions = [
-    {
-      icon: MessageCircle,
-      title: 'Live Chat',
-      description: 'Get instant help from our support team',
-      availability: '24/7',
-      responseTime: 'Immediate',
-      action: 'Start Chat'
-    },
-    {
-      icon: Mail,
-      title: 'Email Support',
-      description: 'Send us a detailed message',
-      availability: '24/7',
-      responseTime: 'Within 4 hours',
-      action: 'Send Email'
-    },
-    {
-      icon: Phone,
-      title: 'Phone Support',
-      description: 'Speak directly with our experts',
-      availability: 'Mon-Fri 9AM-6PM EST',
-      responseTime: 'Immediate',
-      action: 'Call Now'
-    },
-    {
-      icon: Users,
-      title: 'Community Forum',
-      description: 'Connect with other users',
-      availability: '24/7',
-      responseTime: 'Varies',
-      action: 'Visit Forum'
+  const getCategoryColor = (category: string)   => {
+    switch (category) {
+      case 'getting-started': return 'text-blue-500';
+      case 'services': return 'text-purple-500';
+      case 'marketplace': return 'text-green-500';
+      case 'billing': return 'text-yellow-500';
+      case 'account': return 'text-indigo-500';
+      case 'troubleshooting': return 'text-red-500';
+      default: return 'text-zion-cyan';
     }
   ];
 
@@ -352,49 +324,211 @@ export const HelpCenter: React.FC = () => {
             </motion.div>
           </div>
 
-          {/* Search Bar */}
-          <div className="max-w-2xl mx-auto mb-16">
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Search for help articles..."
-                className="w-full px-6 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg text-white placeholder:text-gray-400 focus:outline-none focus:border-cyan-400 transition-colors text-lg"
-              />
-              <button className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-md transition-colors">
-                Search
-              </button>
-            </div>
+        {/* Help Categories */}
+        <motion.div 
+          className="mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <h2 className="text-2xl font-bold text-white mb-8 text-center">Browse Help Topics</h2>
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+            {helpCategories.map((category, index)   => (
+              <motion.div
+                key={category.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+              >
+                <Link
+                  to={category.path}
+                  className="block bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/40 transition-all duration-300 group"
+                >
+                  <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <category.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-white font-semibold text-lg mb-2 text-center">{category.title}</h3>
+                  <p className="text-zion-slate-light text-sm mb-4 text-center">{category.description}</p>
+                  <div className="flex items-center justify-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors">
+                    <span className="text-sm font-medium">{category.articleCount} articles</span>
+                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
           </div>
+        </motion.div>
 
-          {/* Help Categories */}
-          <div className="mb-20">
-            <h2 className="text-3xl font-bold text-center mb-12 text-white">
-              Browse by Category
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {helpCategories.map((category, index) => (
-                <div key={index} onClick={() => console.log(`Navigate to ${category.title}`)}>
-                  <Card className="bg-white/10 backdrop-blur-md border-white/20 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer hover:transform hover:scale-105">
-                    <CardHeader className="text-center">
-                      <div className="text-4xl mb-4">{category.icon}</div>
-                      <CardTitle className="text-xl text-white">{category.title}</CardTitle>
-                      <CardDescription className="text-gray-300">
-                        {category.description}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <ul className="space-y-2">
-                        {category.articles.map((article, articleIndex) => (
-                          <li key={articleIndex} className="text-gray-300 hover:text-cyan-400 transition-colors cursor-pointer">
-                            {article}
-                          </li>
-                        ))}
-                      </ul>
-                    </CardContent>
-                  </Card>
-                </div>
+        {/* Support Options */}
+        <motion.div 
+          className="mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <h2 className="text-2xl font-bold text-white mb-8 text-center">Get Support</h2>
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {supportOptions.map((option, index)   => (
+              <motion.div
+                key={option.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
+              >
+                <Link
+                  to={option.path}
+                  className="block bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/40 transition-all duration-300 text-center group"
+                >
+                  <div className={`w-16 h-16 bg-gradient-to-br ${option.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <option.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-white font-semibold text-lg mb-2">{option.title}</h3>
+                  <p className="text-zion-slate-light text-sm mb-4">{option.description}</p>
+                  <div className="inline-flex items-center bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-lg text-sm font-medium group-hover:from-zion-cyan-dark group-hover:to-zion-purple-dark transition-all duration-300">
+                    {option.action}
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* FAQ Section */}
+        <motion.div 
+          className="mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
+            
+            {/* Category Filter */}
+            <div className="flex flex-wrap justify-center gap-3 mb-8">
+              <button
+                onClick={() => setSelectedCategory('all')}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                  selectedCategory === 'all'
+                    ? 'bg-zion-cyan text-white'
+                    : 'bg-white/10 text-zion-slate-light hover: anybg-white/20'
+                }`}
+              >
+                All Categories
+              </button>
+              {helpCategories.map(category   => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                    selectedCategory === category.id
+                      ? 'bg-zion-cyan text-white'
+                      : 'bg-white/10 text-zion-slate-light hover:bg-white/20'
+                  }`}
+                >
+                  {category.title}
+                </button>
               ))}
             </div>
+
+            {/* FAQ Items */}
+            <div className="space-y-4">
+              {filteredFAQs
+                .filter(faq => selectedCategory === 'all' || faq.category === selectedCategory)
+                .map((faq, index) => (
+                  <motion.div
+                    key={faq.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: 0.7 + index * 0.1 }}
+                    className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl overflow-hidden"
+                  >
+                    <button
+                      onClick={() => toggleFAQ(faq.id)}
+                      className="w-full p-6 text-left flex items-center justify-between hover:bg-white/10 transition-colors duration-200"
+                    >
+                      <div className="flex items-start gap-4">
+                        <div className={`w-8 h-8 rounded-lg bg-gradient-to-br from-zion-cyan to-zion-purple flex items-center justify-center flex-shrink-0 mt-1`}>
+                          {getCategoryIcon(faq.category)({ className: "h-4 w-4 text-white" })}
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-white font-medium text-lg mb-2">{faq.question}</h3>
+                          <div className="flex flex-wrap gap-2">
+                            {faq.tags.map(tag => (
+                              <span
+                                key={tag}
+                                className={`px-2 py-1 rounded-full text-xs font-medium ${getCategoryColor(faq.category)} bg-white/10`}
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                      <div className="ml-4">
+                        {expandedFAQ === faq.id ? (
+                          <ChevronDown className="h-5 w-5 text-zion-cyan" />
+                        ) : (
+                          <ChevronRight className="h-5 w-5 text-zion-slate-light" />
+                        )}
+                      </div>
+                    </button>
+
+                    <AnimatePresence>
+                      {expandedFAQ === faq.id && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="px-6 pb-6">
+                            <div className="border-t border-zion-cyan/20 pt-4">
+                              <p className="text-zion-slate-light leading-relaxed">{faq.answer}</p>
+                              <div className="mt-4 flex items-center gap-4 text-sm text-zion-slate-light">
+                                <span className={`flex items-center gap-1 ${getCategoryColor(faq.category)}`}>
+                                  {getCategoryIcon(faq.category)({ className: "h-4 w-4" })}
+                                  {helpCategories.find(c   => c.id === faq.category)?.title}
+                                </span>
+                                <span className="flex items-center gap-1">
+                                  <Lightbulb className="h-4 w-4" />
+                                  Helpful
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                ))}
+            </div>
+
+            {filteredFAQs.length === 0 && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="text-center py-12"
+              >
+                <div className="w-24 h-24 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Search className="w-12 h-12 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">No results found</h3>
+                <p className="text-zion-slate-light mb-4">
+                  Try adjusting your search terms or browse our help categories above.
+                </p>
+                <button
+                  onClick={() => {
+                    setSearchQuery('');
+                    setSelectedCategory('all');
+                    setFilteredFAQs(faqData);
+                  }}
+                  className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300"
+                >
+                  Clear Search
+                </button>
+              </motion.div>
+            )}
           </div>
 
           {/* Popular Articles */}

@@ -1,31 +1,52 @@
 
-import { useState } from "react";
-// Removed unused: import { Header } from "@/components/Header";
-// Removed unused: import { Footer } from 'node_modules/react-day-picker/src/components/Footer';
-import { useTalentQuotes } from "@/hooks/useTalentQuotes";
-import { useAuth } from "@/hooks/useAuth";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { QuoteDetails } from "@/components/quotes/QuoteDetails";
-import { RequestsHeader, QuoteRequestsList } from "@/components/quotes";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-export default function RequestsPanel() {
-    const { user } = useAuth();
-    const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker';
-    const [selectedQuote, setSelectedQuote] = useState(null);
-    const [showDetails, setShowDetails] = useState(false);
-    const { quotes, unreadCount, isLoading, statusFilter, setStatusFilter, archiveFilter, setArchiveFilter, markAsViewed, markAsResponded, toggleArchive } = useTalentQuotes();
-    const handleViewDetails = (quote) => {
-        setSelectedQuote(quote);
-        setShowDetails(true);
-        // If status is new, mark as viewed
-        if (quote.status === 'new') {
-            markAsViewed(quote.id);
-        }
-    };
-    // Filter quotes by archive status
-    const activeQuotes = quotes.filter(q => !q.is_archived);
-    const archivedQuotes = quotes.filter(q => q.is_archived);
-    return (<ProtectedRoute>
+import { useState   } from 'react';
+import { Header   } from '@/components/Header';
+import { Footer   } from '@/components/Footer';
+import { useTalentQuotes   } from '@/hooks/useTalentQuotes';
+import { useAuth   } from '@/hooks/useAuth';
+import { Tabs, TabsContent, TabsList, TabsTrigger   } from '@/components/ui/tabs';
+import { QuoteDetails   } from '@/components/quotes/QuoteDetails';
+import { RequestsHeader, 
+  QuoteRequestsList 
+  } from '@/components/quotes';
+import type { QuoteRequest } from "@/types/quotes";
+import { ProtectedRoute   } from '@/components/ProtectedRoute';
+
+export default function RequestsPanel(...args: any[]): any {
+  const { user } = useAuth();
+  
+  const [selectedQuote, setSelectedQuote] = useState<any>(null);
+  const [showDetails, setShowDetails] = useState(false);
+
+  const {
+    quotes,
+    unreadCount,
+    isLoading,
+    statusFilter,
+    setStatusFilter,
+    archiveFilter,
+    setArchiveFilter,
+    markAsViewed,
+    markAsResponded,
+    toggleArchive
+  } = useTalentQuotes();
+
+  const handleViewDetails = (quote: anyQuoteRequest)   => {
+    setSelectedQuote(quote);
+    setShowDetails(true);
+    
+    // If status is new, mark as viewed
+    if (quote.status === 'new') {
+      markAsViewed(quote.id);
+    }
+  };
+
+  // Filter quotes by archive status
+  const activeQuotes = quotes.filter((q: anyQuoteRequest)   => !q.is_archived);
+  const archivedQuotes = quotes.filter((q: anyQuoteRequest)   => q.is_archived);
+
+  return (
+    <ProtectedRoute>
       <div>
         
         <div className="min-h-screen bg-zion-blue px-4 py-8">

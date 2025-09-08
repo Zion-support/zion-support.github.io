@@ -1,12 +1,22 @@
-import React, { useState, useRef } from 'react.ts';
-
+import React, { useState, useRef } from 'react';
+import { X, Send    } from 'lucide-react';
 export interface Message {
+
+
+
   id: string;
   role: 'user' | 'assistant';
   message: string;
   timestamp: Date;
   read?: boolean;
+
+
+
 }
+export interface ChatAssistantProps extends React.PropsWithChildren<{}> {
+
+  isOpen?: boolean;
+  onClose?: ()    => void;
 
 export interface ChatAssistantProps {
   isOpen: boolean;
@@ -27,7 +37,7 @@ export function ChatAssistant(...args: []):  {
   const [messages, setMessages] = useState<any>([]);
   const [inputMessage, setInputMessage] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const handleSendMessage = async (message: anystring)  => {
+  const handleSendMessage = async (message: string)    => {
     if (!message.trim()) return;
     const userMessage: Message = {
       id: anyDate.now().toString(),
@@ -35,7 +45,7 @@ export function ChatAssistant(...args: []):  {
       message: message.trim(),
       timestamp: new Date(),
     };
-    setMessages(prev  => [...prev, userMessage]);
+    setMessages(prev    => [...prev, userMessage]);
     setInputMessage('');
     // Simulate AI response
     setTimeout(() => {
@@ -45,28 +55,12 @@ export function ChatAssistant(...args: []):  {
         message: 'Thank you for your message! Our team will get back to you soon.',
         timestamp: new Date(),
       };
-      setCurrentMessages((prev: Message[]) => [...prev, newMessage]);
-      setPendingApiCallParams({ message: messageContent, conversationId });
-    } else { // Guest user
-      setGuestMessage(messageContent);
-      setShowGuestModal(true);
-    }
+      setMessages(prev    => [...prev, aiMessage]);
+    }, 1000);
   };
-
-  const handleModalSendConfirm = () => {
-    if (!guestMessage) return;
-
-    const newMessage: Message = {
-      id: Date.now().toString(),
-      role: 'user',
-      message: guestMessage,
-      timestamp: new Date()
-    };
-    setCurrentMessages((prev: Message[]) => [...prev, newMessage]); // This will now use the guest-aware setCurrentMessages
-    setPendingApiCallParams({ message: guestMessage, conversationId });
-    
-    setShowGuestModal(false);
-    setGuestMessage(null);
+  const handleSubmit = (e: React.FormEvent)    => {
+    e.preventDefault();
+    handleSendMessage(inputMessage);
   };
 
   const handleModalCancel = () => {

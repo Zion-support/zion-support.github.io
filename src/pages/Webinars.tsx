@@ -3,10 +3,36 @@ import { Link } from 'react-router-dom';
 
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Video, Calendar, Clock, Users, Play, Search, ExternalLink, Brain, Cloud, Shield, Database, Zap, Target } from 'lucide-react';
+import { motion   } from 'framer-motion';
+import { SEO   } from '../components/SEO';
+import { Video, 
+  Calendar, 
+  Clock, 
+  Users, 
+  Search,
+  Filter,
+  Play,
+  ExternalLink,
+  Download,
+  BookOpen,
+  Brain,
+  Shield,
+  Cloud,
+  Rocket,
+  Heart,
+  Globe,
+  Star,
+  TrendingUp,
+  Award,
+  Zap,
+  Clock3,
+  MapPin,
+  Mail,
+  Phone
+  } from 'lucide-react';
 
-export default function Webinars() {
+export default function Webinars(...args: any[]): any {
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [filterType, setFilterType] = useState('all');
@@ -79,22 +105,92 @@ export default function Webinars() {
     }
   ];
 
-  // Update counts
-  React.useEffect(() => {
-    categories.forEach(cat => {
-      cat.count = webinars.filter(w => w.category === cat.id).length;
-    });
+  const pastWebinars = [
+    {
+      id: any5,
+      title: 'The Future of AI in Healthcare: Opportunities and Challenges',
+      category: 'healthcare-tech',
+      speaker: 'Dr. Emily Watson, VP of Healthcare Technology',
+      date: '2024-01-20',
+      time: '14:00 EST',
+      duration: '75 minutes',
+      attendees: 520,
+      maxAttendees: 500,
+      summary: 'Comprehensive overview of AI applications in healthcare, including ethical considerations and regulatory compliance.',
+      tags: ['Healthcare AI', 'Ethics', 'Regulatory Compliance', 'Medical Technology'],
+      registrationUrl: null,
+      watchUrl: '/webinars/ai-healthcare-future-2024/watch',
+      isLive: false,
+      recordingUrl: '/webinars/ai-healthcare-future-2024/recording',
+      slidesUrl: '/webinars/ai-healthcare-future-2024/slides'
+    },
+    {
+      id: 6,
+      title: 'Quantum Computing: Preparing Your Organization for the Future',
+      category: 'quantum-computing',
+      speaker: 'Dr. Sarah Chen, Chief AI Scientist',
+      date: '2024-01-15',
+      time: '15:00 EST',
+      duration: '90 minutes',
+      attendees: 480,
+      maxAttendees: 450,
+      summary: 'Understanding quantum computing fundamentals and preparing organizations for quantum advantage.',
+      tags: ['Quantum Computing', 'Future Technology', 'Innovation', 'Strategic Planning'],
+      registrationUrl: null,
+      watchUrl: '/webinars/quantum-computing-future-2024/watch',
+      isLive: false,
+      recordingUrl: '/webinars/quantum-computing-future-2024/recording',
+      slidesUrl: '/webinars/quantum-computing-future-2024/slides'
+    },
+    {
+      id: 7,
+      title: 'Sustainable Technology: Green IT Solutions for Enterprise',
+      category: 'sustainability',
+      speaker: 'Priya Patel, Head of Data Science',
+      date: '2024-01-10',
+      time: '13:30 EST',
+      duration: '60 minutes',
+      attendees: 320,
+      maxAttendees: 300,
+      summary: 'Implementing sustainable technology practices to reduce environmental impact and operational costs.',
+      tags: ['Sustainability', 'Green IT', 'Environmental Impact', 'Cost Reduction'],
+      registrationUrl: null,
+      watchUrl: '/webinars/sustainable-technology-enterprise-2024/watch',
+      isLive: false,
+      recordingUrl: '/webinars/sustainable-technology-enterprise-2024/recording',
+      slidesUrl: '/webinars/sustainable-technology-enterprise-2024/slides'
+    },
+    {
+      id: 8,
+      title: 'Edge Computing and IoT: Building the Connected Enterprise',
+      category: 'digital-transformation',
+      speaker: 'Alex Thompson, Director of Cloud Operations',
+      date: '2024-01-05',
+      time: '14:00 EST',
+      duration: '80 minutes',
+      attendees: 410,
+      maxAttendees: 400,
+      summary: 'Strategies for implementing edge computing and IoT solutions in enterprise environments.',
+      tags: ['Edge Computing', 'IoT', 'Enterprise', 'Digital Transformation'],
+      registrationUrl: null,
+      watchUrl: '/webinars/edge-computing-iot-enterprise-2024/watch',
+      isLive: false,
+      recordingUrl: '/webinars/edge-computing-iot-enterprise-2024/recording',
+      slidesUrl: '/webinars/edge-computing-iot-enterprise-2024/slides'
+    }
+  ];
 
-    filterTypes.forEach(type => {
-      if (type.id === 'all') {
-        type.count = webinars.length;
-      } else {
-        type.count = webinars.filter(w => w.type === type.id).length;
-      }
-    });
+  // Calculate category counts
+  React.useEffect(()   => {
+    const allWebinars = [...upcomingWebinars, ...pastWebinars];
+    const categoryCounts = categories.map(cat => ({
+      ...cat,
+      count: cat.id === 'all' ? allWebinars.length: anyallWebinars.filter(wp   => wp.category === cat.id).length
+    }));
   }, []);
 
-  const filteredWebinars = webinars.filter(webinar => {
+  const filteredWebinars = (showPast ? pastWebinars: anyupcomingWebinars).filter(webinar   => {
+    const matchesCategory = selectedCategory === 'all' || webinar.category === selectedCategory;
     const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          webinar.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -134,18 +230,114 @@ export default function Webinars() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Tech
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-              {" "}Webinars
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Join industry experts for in-depth discussions on technology trends, 
-            best practices, and innovative solutions
-          </p>
+      <section className="pt-32 pb-20 px-4">
+        <div className="container mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl mb-8"
+          >
+            <Video className="w-10 h-10 text-white" />
+          </motion.div>
+          
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
+          >
+            Educational Webinars
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-xl text-slate-300 max-w-3xl mx-auto mb-12"
+          >
+            Join our expert-led webinars to stay ahead of the curve in AI, cybersecurity, 
+            cloud computing, and emerging technologies. Learn from industry leaders.
+          </motion.p>
+          
+          {/* Stats */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="grid grid-cols-2 md: anygrid-cols-4 gap-6 max-w-4xl mx-auto"
+          >
+            {stats.map((stat, index)   => (
+              <div key={stat.label} className="text-center">
+                <div className="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
+                  <stat.icon className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                <div className="text-xs text-slate-400">{stat.label}</div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Filters and Search */}
+      <section className="py-12 px-4 bg-slate-800/30">
+        <div className="container mx-auto">
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+            {/* Search */}
+            <div className="relative w-full lg:w-96">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
+              <input
+                type="text"
+                placeholder="Search webinars..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 rounded-lg bg-slate-800 border border-slate-600 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white placeholder-slate-400"
+              />
+            </div>
+
+            {/* Filters */}
+            <div className="flex flex-wrap gap-4 items-center">
+              {/* Category Filter */}
+              <div className="relative">
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="appearance-none px-4 py-3 pr-10 rounded-lg bg-slate-800 border border-slate-600 focus: anyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white text-sm"
+                >
+                  {categories.map((category)   => (
+                    <option key={category.id} value={category.id}>
+                      {category.name}
+                    </option>
+                  ))}
+                </select>
+                <Filter className="absolute right-3 top-1/2 -translate-y-1/2 h-4 h-4 text-slate-400 pointer-events-none" />
+              </div>
+
+              {/* Toggle Past/Upcoming */}
+              <div className="flex bg-slate-800 rounded-lg p-1 border border-slate-600">
+                <button
+                  onClick={() => setShowPast(false)}
+                  className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
+                    !showPast
+                      ? 'bg-cyan-400 text-slate-900'
+                      : 'text-slate-300 hover:text-white'
+                  }`}
+                >
+                  Upcoming
+                </button>
+                <button
+                  onClick={() => setShowPast(true)}
+                  className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
+                    showPast
+                      ? 'bg-cyan-400 text-slate-900'
+                      : 'text-slate-300 hover:text-white'
+                  }`}
+                >
+                  Past
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -190,8 +382,8 @@ export default function Webinars() {
               </div>))}
           </div>
           
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {filteredWebinars.map((webinar, index)  => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {filteredWebinars.map((webinar, index)   => (
               <motion.article
                 key={webinar.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -333,8 +525,8 @@ export default function Webinars() {
             Webinar Categories
           </motion.h2>
           
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {categories.slice(1).map((category, index)  => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {categories.slice(1).map((category, index)   => (
               <motion.div
                 key={category.id}
                 initial={{ opacity: 0, y: 20 }}

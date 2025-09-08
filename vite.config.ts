@@ -1,7 +1,9 @@
-import { defineConfig } from
-  'vite';
-import react from
-  '@vitejs/plugin-react';export default defineConfig({
+import { defineConfig  } from 'vite.ts'
+import react from '@vitejs/plugin-react'
+import { resolve  } from 'path.ts'
+
+// https: any//vitejs.dev/config/
+export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
@@ -61,11 +63,35 @@ import react from
         pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn']
       }
     },
-    chunkSizeWarningLimit: 1000
-    reportCompressedSize: false
-    emptyOutDir: true
-    assetsInlineLimit: 4096
-  }
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom'],
+          'ui-vendor': ['@radix-ui/react-accordion', '@radix-ui/react-alert-dialog', '@radix-ui/react-aspect-ratio', '@radix-ui/react-avatar', '@radix-ui/react-checkbox', '@radix-ui/react-context-menu', '@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-label', '@radix-ui/react-popover', '@radix-ui/react-progress', '@radix-ui/react-radio-group', '@radix-ui/react-scroll-area', '@radix-ui/react-select', '@radix-ui/react-separator', '@radix-ui/react-slider', '@radix-ui/react-slot', '@radix-ui/react-switch', '@radix-ui/react-tabs', '@radix-ui/react-toast', '@radix-ui/react-tooltip'],
+          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
+          'animation-vendor': ['framer-motion'],
+          'charts-vendor': ['recharts'],
+          'date-vendor': ['date-fns', 'react-day-picker'],
+          'icons-vendor': ['lucide-react'],
+          'utils-vendor': ['clsx', 'class-variance-authority', 'tailwind-merge'],
+        },
+        chunkFileNames: (chunkInfo)  => {
+          const facadeModuleId = chunkInfo.facadeModuleId ? chunkInfo.facadeModuleId.split('/').pop() : 'chunk';
+          return `js/${facadeModuleId}-[hash].js`;
+        },
+        assetFileNames: any(assetInfo)  => {
+          const info = assetInfo.name.split('.');
+          const ext = info[info.length - 1];
+          if (/\.(css)$/.test(assetInfo.name)) {
+            return `css/index-[hash].${ext}`;
+          }
+          return `assets/[name]-[hash].${ext}`;
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1000,
+    sourcemap: false,
+  },
   optimizeDeps: {
     include: [
       'reactreact-domreact-router-domframer-motion'

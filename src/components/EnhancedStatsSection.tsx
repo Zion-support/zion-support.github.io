@@ -1,9 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { Users, TrendingUp, Star, Zap, Shield, Award, Rocket } from 'lucide-react';
+import { motion, useAnimation    } from 'framer-motion';
+import { useInView    } from 'react-intersection-observer';
+import { Users, 
+  Globe, 
+  TrendingUp, 
+  Star, 
+  Zap, 
+  Shield,
+  Award,
+  Rocket
+   } from 'lucide-react';
 
 interface Stat {
+
+
+
   id: string;
   icon: React.ComponentType<any>;
   value: string;
@@ -11,6 +22,9 @@ interface Stat {
   description: string;
   color: string;
   gradient: string;
+
+
+
 }
 
 const stats: Stat[] = [
@@ -78,7 +92,7 @@ export default function EnhancedStatsSection(...args: []):  {
     triggerOnce: true
   });
 
-  useEffect(() => {
+  useEffect(()    => {
     if (inView) {
       controls.start('visible');
     }
@@ -151,8 +165,8 @@ export default function EnhancedStatsSection(...args: []):  {
         </motion.div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {stats.map((stat, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          {stats.map((stat, index)    => (
             <motion.div
               key={stat.id}
               initial={{ opacity: 0, y: 30 }}

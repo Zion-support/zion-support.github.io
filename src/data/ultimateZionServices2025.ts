@@ -3,13 +3,16 @@
 
 export type ServiceContact = {
 
+export interface ServiceContact {
+
   phone: string;
   email: string;
   website: string;
   address: string;
+
 }
 
-export type MicroSaasService = {
+export interface MicroSaasService {
 
   id: number;
   name: string;
@@ -34,11 +37,12 @@ export type MicroSaasService = {
   innovationLevel: string;
   marketSize: string;
   growthRate: string;
-  useCase: string;
-  technicalStack: string[];
+  useCases: string[];
+  technologies: string[];
+
 }
 
-export type ITService = {
+export interface ITService {
 
   id: number;
   name: string;
@@ -60,11 +64,12 @@ export type ITService = {
   innovationLevel: string;
   marketSize: string;
   compliance: string[];
-  technicalStack: string[];
-  caseStudies: string[];
+  useCases: string[];
+  technologies: string[];
+
 }
 
-export type AIService = {
+export interface AIService {
 
   id: number;
   name: string;
@@ -88,8 +93,8 @@ export type AIService = {
   innovationLevel: string;
   marketSize: string;
   ethicalAI: string[];
-  technicalStack: string[];
-  performanceMetrics: string[];
+  technologies: string[];
+
 }
 
 // Zion Tech Group Contact Information

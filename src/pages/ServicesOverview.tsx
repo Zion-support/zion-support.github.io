@@ -1,70 +1,196 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Search, Filter, Brain, Shield, Cloud, Zap, Globe, Star, CheckCircle, ArrowRight, Phone, Award, Clock, Target, Lock, ShoppingCart, Server, Sparkles, DollarSign, Users, Eye, Grid, List, ChevronRight, ChevronDown, Info, Globe, Zap, Target, Award, Clock, Users, Shield, Lock, Key, Eye, Info as InfoIcon } from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { servicesCatalog } from '../data/servicesCatalog';
+import { motion   } from 'framer-motion';
+import { Link   } from 'react-router-dom';
+import { Brain, 
+  Server, 
+  Zap, 
+  Shield, 
+  Users, 
+  Truck, 
+  Workflow, 
+  MessageSquare, 
+  BarChart3, 
+  Cloud, 
+  Database, 
+  Globe,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  TrendingUp,
+  Target,
+  Cpu,
+  Lock,
+  Monitor,
+  Activity,
+  Mail,
+  Phone,
+  ExternalLink
+  } from 'lucide-react';
+import { SEO   } from '../components/SEO';
 
-// Enhanced category definitions with better organization
-const serviceCategories = [
-  {
-    id: 'all',
-    name: 'All Services',
-    icon: Grid,
-    color: 'from-blue-600 to-cyan-600',
-    description: 'Complete portfolio of all services',
-    count: 0
-  },
-  {
-    id: 'Micro SaaS',
-    name: 'Micro SaaS Solutions',
-    icon: ShoppingCart,
-    color: 'from-purple-600 to-pink-600',
-    description: 'Scalable software-as-a-service solutions',
-    count: 0
-  },
-  {
-    id: 'IT Services',
-    name: 'IT Services',
-    icon: Server,
-    color: 'from-green-600 to-emerald-600',
-    description: 'Enterprise IT infrastructure and consulting',
-    count: 0
-  },
-  {
-    id: 'AI Solutions',
-    name: 'AI Solutions',
-    icon: Brain,
-    color: 'from-indigo-600 to-purple-600',
-    description: 'Advanced AI and machine learning solutions',
-    count: 0
-  },
-  {
-    id: 'Cybersecurity',
-    name: 'Cybersecurity',
-    icon: Shield,
-    color: 'from-red-600 to-pink-600',
-    description: 'Security and compliance solutions',
-    count: 0
-  },
-  {
-    id: 'Cloud & DevOps',
-    name: 'Cloud & DevOps',
-    icon: Cloud,
-    color: 'from-blue-600 to-cyan-600',
-    description: 'Cloud infrastructure and development operations',
-    count: 0
-  },
-  {
-    id: 'Emerging Tech',
-    name: 'Emerging Technologies',
-    icon: Sparkles,
-    color: 'from-yellow-600 to-orange-600',
-    description: 'Cutting-edge technologies and innovations',
-    count: 0
-  }
-];
+export default function ServicesOverview(...args: any[]): any {
+  const serviceCategories = [
+    {
+      name: 'AI Services',
+      description: 'Cutting-edge artificial intelligence solutions that transform business operations',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
+      services: [
+        {
+          title: 'AI Workflow Automation',
+          description: 'Intelligent process automation with AI-powered optimization',
+          price: 'From $3,500',
+          features: ['Process mapping', 'AI implementation', 'Ongoing optimization'],
+          link: '/services/ai-workflow-automation',
+          popular: true
+        },
+        {
+          title: 'AI Customer Experience Platform',
+          description: 'AI-powered personalization and customer journey optimization',
+          price: 'From $4,500',
+          features: ['CX assessment', 'Platform implementation', 'Performance optimization'],
+          link: '/services/ai-customer-experience-platform',
+          popular: false
+        },
+        {
+          title: 'AI Supply Chain Optimization',
+          description: 'Intelligent supply chain management and logistics optimization',
+          price: 'From $5,500',
+          features: ['Supply chain assessment', 'AI platform implementation', 'Continuous optimization'],
+          link: '/services/ai-supply-chain-optimization',
+          popular: false
+        },
+        {
+          title: 'AI Cybersecurity Suite',
+          description: 'Advanced AI-powered threat detection and security automation',
+          price: 'From $2,500/month',
+          features: ['Threat intelligence', 'SOC services', 'Compliance monitoring'],
+          link: '/services/ai-cybersecurity-suite',
+          popular: true
+        },
+        {
+          title: 'AI Business Intelligence',
+          description: 'Next-generation BI with AI-powered insights and analytics',
+          price: 'From $2,999/month',
+          features: ['AI data analysis', 'Predictive analytics', 'Custom dashboards'],
+          link: '/services/ai-business-intelligence',
+          popular: false
+        },
+        {
+          title: 'AI Sales Copilot',
+          description: 'AI-powered sales automation and lead optimization',
+          price: 'From $1,999/month',
+          features: ['Lead scoring', 'Sales automation', 'Performance analytics'],
+          link: '/services/ai-sales-copilot',
+          popular: false
+        }
+      ]
+    },
+    {
+      name: 'IT Services',
+      description: 'Comprehensive IT infrastructure and digital transformation solutions',
+      icon: Server,
+      color: 'from-blue-500 to-cyan-500',
+      services: [
+        {
+          title: 'Cloud DevOps',
+          description: 'Cloud migration and DevOps transformation services',
+          price: 'From $5,000',
+          features: ['Cloud migration', 'DevOps implementation', '24/7 managed services'],
+          link: '/services/cloud-devops',
+          popular: true
+        },
+        {
+          title: 'IT Infrastructure',
+          description: 'Modern infrastructure design and implementation',
+          price: 'From $8,000',
+          features: ['Infrastructure design', 'Implementation', 'Ongoing support'],
+          link: '/services/it-infrastructure',
+          popular: false
+        },
+        {
+          title: 'Digital Transformation',
+          description: 'End-to-end digital transformation consulting and implementation',
+          price: 'From $15,000',
+          features: ['Strategy development', 'Technology selection', 'Change management'],
+          link: '/services/digital-transformation',
+          popular: false
+        },
+        {
+          title: 'IT Consulting',
+          description: 'Strategic IT consulting and technology advisory services',
+          price: 'From $3,500',
+          features: ['Technology assessment', 'Strategic planning', 'Vendor selection'],
+          link: '/services/it-consulting',
+          popular: false
+        },
+        {
+          title: 'Zero Trust Network Architecture',
+          description: 'Advanced security architecture implementation',
+          price: 'From $12,000',
+          features: ['Security assessment', 'Architecture design', 'Implementation'],
+          link: '/services/zero-trust-network-architecture',
+          popular: false
+        },
+        {
+          title: 'Green IT Solutions',
+          description: 'Sustainable technology solutions and energy optimization',
+          price: 'From $6,000',
+          features: ['Energy audit', 'Green technology', 'Sustainability reporting'],
+          link: '/services/green-it',
+          popular: false
+        }
+      ]
+    },
+    {
+      name: 'Micro SaaS Solutions',
+      description: 'Specialized software-as-a-service solutions for specific business needs',
+      icon: Zap,
+      color: 'from-green-500 to-emerald-500',
+      services: [
+        {
+          title: 'Cloud FinOps Optimizer',
+          description: 'Cloud cost optimization and financial operations management',
+          price: 'From $1,999/month',
+          features: ['Cost analysis', 'Optimization', 'Financial reporting'],
+          link: '/services/cloud-finops-optimizer',
+          popular: true
+        },
+        {
+          title: 'AI Compliance Assistant',
+          description: 'Automated compliance monitoring and reporting',
+          price: 'From $1,500/month',
+          features: ['Compliance monitoring', 'Automated reporting', 'Risk assessment'],
+          link: '/services/ai-compliance-assistant',
+          popular: false
+        },
+        {
+          title: 'LLM Content Studio',
+          description: 'AI-powered content creation and management platform',
+          price: 'From $999/month',
+          features: ['Content generation', 'AI editing', 'Multi-platform publishing'],
+          link: '/services/llm-content-studio',
+          popular: false
+        },
+        {
+          title: 'Customer Feedback Surveys',
+          description: 'Intelligent customer feedback collection and analysis',
+          price: 'From $799/month',
+          features: ['Survey creation', 'AI analysis', 'Insight generation'],
+          link: '/services/mobile-feedback-surveys',
+          popular: false
+        },
+        {
+          title: 'FinOps Advisor',
+          description: 'Financial operations optimization and cost management',
+          price: 'From $2,500/month',
+          features: ['Cost optimization', 'Financial planning', 'Performance analytics'],
+          link: '/services/finops-advisor',
+          popular: false
+        }
+      ]
+    }
+  ];
 
 // Enhanced service features display
 const ServiceCard = ({ service, viewMode }: { service: unknown; viewMode: 'grid' | 'list' }) => {
@@ -122,11 +248,25 @@ const ServiceCard = ({ service, viewMode }: { service: unknown; viewMode: 'grid'
                   <CheckCircle className="w-3 h-3 text-green-500 flex-shrink-0" />
                   <span className="text-sm text-gray-600">{feature}</span>
                 </div>
-              ))}
-              {service.features.length > 3 && (
-                <button
-                  onClick={() => setExpanded(!expanded)}
-                  className="text-sm text-blue-600 hover:text-blue-800 font-medium flex items-center"
+              </div>
+              <h2 className="text-4xl font-bold text-white mb-4">
+                {category.name}
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                {category.description}
+              </p>
+            </motion.div>
+
+            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {category.services.map((service, serviceIndex)   => (
+                <motion.div
+                  key={serviceIndex}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
+                  className={`bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border ${
+                    service.popular ? 'border-blue-500 shadow-lg shadow-blue-500/20' : 'border-slate-600'
+                  } relative`}
                 >
                   {expanded ? 'Show less' : `+${service.features.length - 3} more features`}
                   {expanded ? <ChevronDown className="w-4 h-4 ml-1" /> : <ChevronRight className="w-4 h-4 ml-1" />}
@@ -154,35 +294,28 @@ const ServiceCard = ({ service, viewMode }: { service: unknown; viewMode: 'grid'
     );
   }
 
-  // List view
-  return (
-    <motion.div
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5 }}
-      className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100"
-    >
-      <div className="flex flex-col lg:flex-row lg:items-center gap-6">
-        {/* Service Info */}
-        <div className="flex-1">
-          <div className="flex items-center space-x-3 mb-3">
-            <div className={`w-10 h-10 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-xl flex items-center justify-center`}>
-              {React.createElement(getCategoryIcon(service.category), { className: 'w-5 h-5 text-white' })}
-            </div>
-            <span className="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
-              {service.category}
-            </span>
-          </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
-          <p className="text-gray-600 mb-4">{service.description}</p>
-
-          {/* Features */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-            {service.features.slice(0, 4).map((feature: string, idx: number) => (
-              <div key={idx} className="flex items-center space-x-2">
-                <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                <span className="text-sm text-gray-600">{feature}</span>
-              </div>
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {emergingTechnologies.map((tech, index)   => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-2xl border border-slate-600 text-center hover:border-blue-500 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <tech.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{tech.title}</h3>
+                <p className="text-gray-300 mb-4">{tech.description}</p>
+                <div className="text-2xl font-bold text-green-400 mb-4">{tech.price}</div>
+                <Link 
+                  to={tech.link}
+                  className="bg-gradient-to-r from-green-500 to-emerald-500 text-white py-2 px-4 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300 text-sm"
+                >
+                  Explore
+                </Link>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -492,45 +625,38 @@ export default function ServicesOverview() {
             </p>
           </motion.div>
 
-          <motion.div className="space-y-12" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            {serviceCategories.map((category, index) => (<motion.div key={category.name} variants={itemVariants} className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
-                <div className={`bg-gradient-to-r ${category.color} p-8 text-white`}>
-                  <div className="flex items-center mb-4">
-                    <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mr-6">
-                      <category.icon className="w-8 h-8"/>
-                    </div>
-                  )}
-
-                  <div className="flex items-start justify-between mb-4">
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center`}>
-                      <service.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <span className="text-sm text-slate-400 bg-slate-700 px-2 py-1 rounded-md">
-                      {service.category}
-                    </span>
-                  </div>
-
-                <div className="p-8">
-                  <div className="grid md:grid-cols-3 gap-6">
-                    {category.services.map((service, serviceIndex) => (<div key={serviceIndex} className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-blue-300 transition-colors">
-                        <h4 className="text-xl font-semibold text-gray-900 mb-3">{service.name}</h4>
-                        <p className="text-gray-600 mb-4">{service.description}</p>
-                        <div className="flex items-center justify-between">
-                          <span className="text-lg font-semibold text-blue-600">{service.price}</span>
-                          <Link to={service.href} className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
-                            Learn More
-                            <ArrowRight className="w-4 h-4 ml-1"/>
-                          </Link>
-                        </div>
-                      </div>))}
-                  </div>
-                  
-                  <div className="mt-8 text-center">
-                    <Link to={category.services[0].href} className={`inline-flex items-center px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r ${category.color} hover:opacity-90 transition-opacity`}>
-                      Explore All {category.name} Services
-                      <ArrowRight className="w-5 h-5 ml-2"/>
-                    </Link>
-                  </div>
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                icon: Star,
+                title: 'Expert Team',
+                description: 'Certified professionals with years of industry experience'
+              },
+              {
+                icon: Target,
+                title: 'Proven Results',
+                description: 'Track record of successful implementations and measurable ROI'
+              },
+              {
+                icon: TrendingUp,
+                title: 'Innovation Focus',
+                description: 'Cutting-edge solutions that keep you ahead of the competition'
+              },
+              {
+                icon: Shield,
+                title: 'Quality Assurance',
+                description: 'Rigorous testing and quality control for reliable solutions'
+              }
+            ].map((feature, index)   => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-2xl border border-slate-600 text-center"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
               </motion.div>))}
           </motion.div>

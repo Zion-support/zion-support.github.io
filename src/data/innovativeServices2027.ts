@@ -1,10 +1,24 @@
-export type InnovativeService2027 = {
+export interface InnovativeService2027 {
 
-// 2027 Innovative Services - Zion Tech Group
-// Real micro SAAS services, IT services, and AI services with market prices
+  id: string;
+  name: string;
+  category: string;
+  description: string;
+  features: string[];
+  price: string;
+  aiScore: number;
+  technology: string[];
+  useCases: string[];
+  benefits: string[];
+  implementation: string;
+  support: string;
+  rating: number;
+  reviews: number;
+  launchDate: string;
+  status: 'active' | 'beta' | 'coming-soon';
 
-export const INNOVATIVE_SERVICES_2027: ProductListing[] = [
-  // ===== AI & MACHINE LEARNING SERVICES =====
+}
+export const innovativeServices2027: InnovativeService2027[] = [
   {
     id: "quantum-ai-platform",
     title: "Quantum AI Neural Network Platform",
@@ -155,44 +169,24 @@ export const SERVICE_CATEGORIES_2027 = [
     color: "from-zion-orange to-zion-green"
   }
 ];
-
-// Pricing tiers for different business sizes
-export const PRICING_TIERS_2027 = [
-  {
-    name: "Starter",
-    price: "$2,999",
-    description: "Perfect for small businesses and startups",
-    features: [
-      "Basic AI integration",
-      "Standard support",
-      "Core functionality",
-      "Up to 5 users"
-    ],
-    services: INNOVATIVE_SERVICES_2027.filter(s => s.price <= 5000)
-  },
-  {
-    name: "Professional",
-    price: "$19,999",
-    description: "Ideal for growing businesses and enterprises",
-    features: [
-      "Advanced AI capabilities",
-      "Priority support",
-      "Custom integrations",
-      "Up to 50 users"
-    ],
-    services: INNOVATIVE_SERVICES_2027.filter(s => s.price > 5000 && s.price <= 25000)
-  },
-  {
-    name: "Enterprise",
-    price: "$49,999",
-    description: "For large organizations and corporations",
-    features: [
-      "Full AI platform access",
-      "24/7 dedicated support",
-      "Custom development",
-      "Unlimited users"
-    ],
-    services: INNOVATIVE_SERVICES_2027.filter(s => s.price > 25000)
+export const serviceCategories2027 = [
+  'All',
+  'AI & Consciousness',
+  'Quantum AI',
+  'Autonomous AI',
+  'Quantum Computing',
+  'Quantum Finance',
+  'Space Technology',
+  'Quantum Space',
+  'Biotechnology',
+  'Quantum Medicine',
+  'Quantum Security',
+  'Nanotechnology',
+  'Neural Technology'
+];
+export const getServicesByCategory = (category: string): InnovativeService2027[]  => {
+  if (category === 'All') {
+    return innovativeServices2027;
   }
 ];
 

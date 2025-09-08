@@ -1,7 +1,7 @@
 // Specialized Healthcare AI Services 2025 - Zion Tech Group
 // Advanced AI-powered healthcare technology solutions
 
-export type HealthcareAIService = {
+export interface HealthcareAIService {
 
   id: number;
   name: string;
@@ -23,12 +23,13 @@ export type HealthcareAIService = {
   clinicalValidation: string[];
   useCases: string[];
   technologies: string[];
-  contactInfo: {
+contactInfo: {
     phone: string;
     email: string;
     website: string;
     address: string;
-  };
+  
+};
 }
 
 // Zion Tech Group Contact Information

@@ -1,23 +1,7 @@
 import React, { useState } from 'react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { TrustedBySection } from '@/components/TrustedBySection';
-import { QuoteFormSection } from '@/components/QuoteFormSection';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { 
-  Shield, 
+import { Link  } from 'react-router-dom';
+import { motion  } from 'framer-motion';
+import { Shield, 
   Lock, 
   Eye, 
   AlertTriangle, 
@@ -69,36 +53,11 @@ const CYBERSECURITY_SERVICES = ENHANCED_SERVICES.filter(service =>
   Network,
   Bot,
   Sparkles,
-  Users,
-  Database,
-  Server,
-  Key
-} from 'lucide-react';
-import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
-import { TrustedBySection } from '@/components/TrustedBySection';
+  Clock
+ } from 'lucide-react';
+import { SEO  } from '@/components/SEO';
 
-const CYBERSECURITY_SERVICES = COMPREHENSIVE_SERVICES.filter(service => 
-  service.category === 'Cybersecurity'
-);
-
-const SECURITY_SERVICE_CATEGORIES = [
-  {
-    id: 'threat-detection',
-    name: 'Threat Detection & Response',
-    description: 'AI-powered security monitoring and incident response',
-    icon: Eye,
-    services: CYBERSECURITY_SERVICES.filter(s => s.title.includes('Threat Detection'))
-  },
-  {
-    id: 'zero-trust',
-    name: 'Zero Trust Security',
-    description: 'Identity verification and access management',
-    icon: Lock,
-    services: CYBERSECURITY_SERVICES.filter(s => s.title.includes('Zero Trust'))
-  }
-];
-
-export default function CybersecurityServicesPage() {
+const CybersecurityServicesPage: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const getCategoryIcon = (category: string) => {
@@ -114,7 +73,18 @@ export default function CybersecurityServicesPage() {
       case 'project-based': return 'Project-based';
       default: return model;
     }
-  };
+  ];
+
+  const categories = [
+    { id: 'all', name: 'All Services', icon: Shield },
+    { id: 'threat-detection', name: 'Threat Detection', icon: Eye },
+    { id: 'zero-trust', name: 'Zero Trust', icon: Lock },
+    { id: 'compliance', name: 'Compliance', icon: Shield },
+    { id: 'incident-response', name: 'Incident Response', icon: AlertTriangle }
+  ];
+
+  const filteredServices = selectedCategory === 'all' 
+    ? securityServices: anysecurityServices.filter(service  => service.category === selectedCategory);
 
   return (
   {/* Empty JSX fragment */}
@@ -412,412 +382,20 @@ export default function CybersecurityServicesPage() {
           </div>
         </section>
 
-        {/* Contact CTA */}
-        <section className="py-16 bg-zion-blue">
-          <div className="container mx-auto px-4 md:px-6 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Secure Your Business?
-            </h2>
-            <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Get in touch with our cybersecurity experts to discuss your security needs and discover 
-              how we can protect your business from evolving cyber threats.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white">
-                <Phone className="mr-2 h-4 w-4" />
-                Call: +1 302 464 0950
-              </Button>
-              <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/10">
-                <Mail className="mr-2 h-4 w-4" />
-                Email: kleber@ziontechgroup.com
-              </Button>
-            </div>
-            <div className="mt-8 text-zion-slate-light">
-              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-              <p>Website: <a href="https://ziontechgroup.com" className="text-zion-cyan hover:underline">https://ziontechgroup.com</a></p>
-            </div>
-          </div>
-        </section>
-
-        <TrustedBySection />
-      </main>
-      
-      <Footer />
-    </>
-  );
-}
-
-// Security Service Card Component
-function SecurityServiceCard({ service }: { service: any }) {
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { 
-  Search, 
-  Star, 
-  Clock, 
-  Users, 
-  Shield, 
-  Zap, 
-  Globe,
-  Mail,
-  Phone,
-  MapPin,
-  ExternalLink,
-  BookOpen,
-  CheckCircle,
-  TrendingUp,
-  DollarSign,
-  Lightbulb,
-  Lock,
-  Eye,
-  AlertTriangle,
-  Server,
-  Network,
-  Key,
-  ShieldCheck
-} from 'lucide-react';
-import { EXPANDED_SERVICES, type ExpandedService } from '@/data/expandedServices';
-import { TrustedBySection } from '@/components/TrustedBySection';
-
-export default function CybersecurityServicesPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedSubcategory, setSelectedSubcategory] = useState<string>('all');
-  const [priceRange, setPriceRange] = useState<string>('all');
-
-  // Filter only security services
-  const securityServices = EXPANDED_SERVICES.filter(service => 
-    service.category === 'Security Services'
-  );
-
-  const filteredServices = securityServices.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
-    const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
-    
-    let matchesPrice = true;
-    if (priceRange === 'low') matchesPrice = service.price < 500;
-    else if (priceRange === 'medium') matchesPrice = service.price >= 500 && service.price < 1000;
-    else if (priceRange === 'high') matchesPrice = service.price >= 1000;
-    
-    return matchesSearch && matchesSubcategory && matchesPrice;
-  });
-
-  const getPricingModelIcon = (model: string) => {
-    switch (model) {
-      case 'monthly': return <Clock className="w-4 h-4" />;
-      case 'hourly': return <Zap className="w-4 h-4" />;
-      case 'project-based': return <Zap className="w-4 h-4" />;
-      default: return <DollarSign className="w-4 h-4" />;
-    }
-  };
-
-  const getPricingModelText = (model: string) => {
-  const getPricingModelLabel = (model: string) => {
-    switch (model) {
-      case 'one-time': return 'One-time';
-      case 'monthly': return 'Monthly';
-      case 'hourly': return 'Hourly';
-      case 'project-based': return 'Project-based';
-      default: return model;
-    }
-  };
-
-  return (
-    <Card className="hover:shadow-lg transition-shadow border-red-500/20">
-      <div className="relative">
-        <img
-          src={service.images[0]}
-          alt={service.title}
-          className="w-full h-48 object-cover rounded-t-lg"
-        />
-        {service.featured && (
-          <Badge className="absolute top-3 left-3 bg-red-600">
-            Featured
-          </Badge>
-        )}
-        <Badge className="absolute top-3 right-3 bg-green-600">
-          AI Score: {service.aiScore}
-        </Badge>
-      </div>
-      
-      <CardHeader>
-        <div className="flex items-start justify-between mb-2">
-          <div className="text-2xl">🔒</div>
-          <div className="text-right">
-            <div className="text-2xl font-bold text-red-600">
-              {service.currency}{service.price.toLocaleString()}
-            </div>
-            <div className="text-sm text-muted-foreground">
-              {getPricingModelLabel(service.pricingModel)}
-            </div>
-          </div>
-        </div>
-        
-        <CardTitle className="text-lg leading-tight">{service.title}</CardTitle>
-        <CardDescription className="line-clamp-3">
-          {service.description}
-        </CardDescription>
-      </CardHeader>
-      
-      <CardContent className="space-y-4">
-        {/* Rating and Reviews */}
-        <div className="flex items-center gap-2">
-          <div className="flex items-center gap-1">
-            <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-            <span className="font-medium">{service.rating}</span>
-          </div>
-          <span className="text-muted-foreground">
-            ({service.reviewCount} reviews)
-          </span>
-        </div>
-        
-        {/* Market Price */}
-        <div className="flex items-center gap-2 text-sm">
-          <TrendingUp className="h-4 w-4 text-green-600" />
-          <span className="text-muted-foreground">Market Price:</span>
-          <span className="font-medium">{service.marketPrice}</span>
-        </div>
-        
-        {/* Delivery Time */}
-        <div className="flex items-center gap-2 text-sm">
-          <Clock className="h-4 w-4 text-blue-600" />
-          <span className="text-muted-foreground">Delivery:</span>
-          <span className="font-medium">{service.deliveryTime}</span>
-        </div>
-        
-        {/* Key Features */}
-        <div className="space-y-2">
-          <h4 className="font-medium text-sm">Key Features:</h4>
-          <ul className="space-y-1">
-            {service.features.slice(0, 3).map((feature: string, index: number) => (
-              <li key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
-                <CheckCircle className="h-3 w-3 text-green-600" />
-                {feature}
-              </li>
-            ))}
-          </ul>
-        </div>
-        
-        {/* Contact Information */}
-        <div className="pt-4 border-t">
-          <div className="space-y-2 text-sm">
-            <div className="flex items-center gap-2">
-              <Phone className="h-3 w-3 text-muted-foreground" />
-              <span>{service.contactInfo.phone}</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Mail className="h-3 w-3 text-muted-foreground" />
-              <span>{service.contactInfo.email}</span>
-            </div>
-          </div>
-        </div>
-        
-        {/* Action Buttons */}
-        <div className="flex gap-2 pt-4">
-          <Button className="flex-1 bg-red-600 hover:bg-red-700">
-            Get Security Quote
-          </Button>
-          <Button variant="outline" className="flex-1">
-            Learn More
-          </Button>
-        </div>
-  AlertTriangle, 
-  BarChart3, 
-  Star, 
-  Clock, 
-  ArrowRight, 
-  CheckCircle,
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  Users,
-  Circle,
-  Zap,
-  Server,
-  Network,
-  Code,
-  FileText,
-  ShieldCheck,
-  Key,
-  Database,
-  Monitor
-} from "lucide-react";
-import { CYBERSECURITY_SERVICES } from "@/data/expandedServices";
-
-const CybersecurityServicesPage = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-red-50">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white">
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="mb-6">
-              <Shield className="h-20 w-20 mx-auto text-red-200" />
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Cybersecurity Solutions
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-red-100">
-              Protect your business with enterprise-grade cybersecurity services and threat intelligence
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/request-quote">
-                <Button size="lg" className="bg-white hover:bg-gray-100 text-red-600 font-semibold">
-                  Get Security Assessment
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                  Contact Security Team
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Contact Information Banner */}
-      <div className="bg-white border-b border-gray-200">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-6 text-sm text-gray-600">
-              <div className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-red-600" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-red-600" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-red-600" />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
-              </div>
-            </div>
-            <div className="flex items-center gap-2">
-              <Globe className="h-4 w-4 text-red-600" />
-              <a 
-                href="https://ziontechgroup.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-red-600 hover:underline font-medium"
-              >
-                ziontechgroup.com
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Security Threats Overview */}
-      <div className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Modern Security Threats
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Stay protected against evolving cyber threats with our comprehensive security solutions
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <AlertTriangle className="h-8 w-8 text-red-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Ransomware Attacks</h3>
-              <p className="text-gray-600">Protect against data encryption and extortion attempts with advanced threat detection</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Users className="h-8 w-8 text-orange-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Social Engineering</h3>
-              <p className="text-gray-600">Defend against phishing, pretexting, and other human-based attack vectors</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-yellow-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Server className="h-8 w-8 text-yellow-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Supply Chain Attacks</h3>
-              <p className="text-gray-600">Secure your software and hardware supply chain against compromise</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Database className="h-8 w-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Data Breaches</h3>
-              <p className="text-gray-600">Prevent unauthorized access and protect sensitive information</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Cybersecurity Services Grid */}
-      <div className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Cybersecurity Services
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive security solutions to protect your business from all angles
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {CYBERSECURITY_SERVICES.map((service) => (
-              <Card key={service.id} className="hover:shadow-xl transition-all duration-300 border-2 hover:border-red-500/20">
-                <div className="relative">
-                  <img 
-                    src={service.images[0]} 
-                    alt={service.title}
-                    className="w-full h-64 object-cover rounded-t-lg"
-                  />
-                  {service.featured && (
-                    <Badge className="absolute top-4 right-4 bg-red-600 text-white">
-                      Featured
-                    </Badge>
-                  )}
-                </div>
-                <CardHeader>
-                  <div className="flex items-start justify-between mb-2">
-                    <Badge className="bg-red-100 text-red-800 border-red-200">
-                      {service.category}
-                    </Badge>
-                    <div className="flex items-center gap-1 text-sm text-gray-600">
-                      <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                      <span>{service.rating}</span>
-                      <span className="text-gray-400">({service.reviewCount})</span>
-                    </div>
-                  </div>
-                  <CardTitle className="text-xl leading-tight">{service.title}</CardTitle>
-                  <CardDescription className="text-base leading-relaxed">
-                    {service.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-3xl font-bold text-red-600">
-                      {service.currency}{service.price?.toLocaleString()}
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-gray-600">
-                      <Clock className="h-4 w-4" />
-                      <span>{service.availability}</span>
-                    </div>
+        {/* Services Grid */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-2 gap-8">
+              {filteredServices.map((service, index)  => (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-zinc-800/50 to-zinc-900/50 rounded-2xl p-8 border border-zinc-700/50 hover:border-red-400/50 transition-all duration-300"
+                >
+                  <div className="w-16 h-16 bg-red-500/20 rounded-xl flex items-center justify-center mb-6">
+                    <service.icon className="w-8 h-8 text-red-400" />
                   </div>
                   
                   <div className="flex flex-wrap gap-2 mb-4">

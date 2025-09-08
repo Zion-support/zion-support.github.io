@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
+import { Brain, 
   Zap, 
   Shield, 
   TrendingUp, 
@@ -22,7 +22,7 @@ import {
   Clock,
   Star,
   Heart
-} from 'lucide-react';
+ } from 'lucide-react';
 const aiServices = [
   {
     id: 'ai-consciousness-simulator',
@@ -269,11 +269,9 @@ const aiServices = [
     rating: 4.7,
     reviews: 89,
     customers: 156
-  {/* Removed stray closing brace */}
-];
-
-const AIServicesPage = () => {
-// Removed unused:   const aiServices = [
+  }
+import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Server, Eye, FileText, CheckCircle, Users, Lock, Search  } from 'lucide-react';
+const AIServices = [
     {
         title: "AI Strategy Consulting",
         description: "Strategic guidance for implementing AI solutions in your business",
@@ -386,6 +384,46 @@ const AIServicesPage = () => {
         link: "/request-quote?service=ai-content"
   {/* Removed stray closing brace */}
 ];
+const categories = [
+const AIServicesPage: React.FC = (): JSX.Element => {
+  const aiServices = [
+    {
+      id: 1,
+      title: 'Machine Learning Development',
+      description: 'Custom ML models tailored to your business needs',
+      icon: Brain,
+      features: ['Predictive Analytics', 'Pattern Recognition', 'Automated Decision Making'],
+      useCases: ['Customer Segmentation', 'Risk Assessment', 'Demand Forecasting'],
+      pricing: 'Starting at $15,000'
+    },
+    {
+      id: 2,
+      title: 'Natural Language Processing',
+      description: 'Advanced text and speech processing solutions',
+      icon: MessageSquare,
+      features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation'],
+      useCases: ['Chatbots', 'Document Processing', 'Content Moderation'],
+      pricing: 'Starting at $12,000'
+    },
+    {
+      id: 3,
+      title: 'Computer Vision',
+      description: 'Image and video analysis for automation',
+      icon: Eye,
+      features: ['Object Detection', 'Image Classification', 'Facial Recognition'],
+      useCases: ['Quality Control', 'Security Systems', 'Medical Imaging'],
+      pricing: 'Starting at $18,000'
+    },
+    {
+      id: 4,
+      title: 'Predictive Analytics',
+      description: 'Data-driven insights for strategic decision making',
+      icon: BarChart3,
+      features: ['Trend Analysis', 'Risk Modeling', 'Performance Optimization'],
+      useCases: ['Financial Planning', 'Inventory Management', 'Maintenance Scheduling'],
+      pricing: 'Starting at $10,000'
+    }
+  ];
 
   return (
   {/* Empty JSX fragment */}

@@ -1,7 +1,175 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
-import { Brain, Zap, TrendingUp, Shield, Users, BarChart3, Clock, DollarSign, CheckCircle, ArrowRight, Play, Target, Rocket, Globe, Cpu, Phone, Mail, MapPin, Star, Bot, Cog, Key, Video, Mail as MailIcon, Users as UsersIcon, Briefcase, Heart, Globe as GlobeIcon, Video as VideoIcon, ArrowRight as ArrowRightIcon, Link as LinkIcon, Star as StarIcon, Heart as HeartIcon, Angry, Angry as AngryIcon,  } from 'lucide-react';
+import React from 'react';
+import { motion   } from 'framer-motion';
+import { Link   } from 'react-router-dom';
+import { SEO   } from '@/components/SEO';
+import { Brain, 
+  Zap, 
+  TrendingUp, 
+  Shield, 
+  Users, 
+  BarChart3, 
+  Clock, 
+  DollarSign,
+  CheckCircle,
+  ArrowRight,
+  Play,
+  Pause,
+  Settings,
+  Monitor,
+  AlertTriangle,
+  Lightbulb,
+  Target,
+  Rocket,
+  Globe,
+  Lock,
+  Database,
+  Network,
+  Cpu,
+  Smartphone,
+  Cloud,
+  Server,
+  Phone,
+  Mail,
+  MapPin,
+  Star,
+  Award,
+  Calendar,
+  FileText,
+  PieChart,
+  LineChart,
+  Activity,
+  Command,
+  Bot,
+  Cog,
+  RefreshCw,
+  Eye,
+  Key,
+  Search,
+  Filter,
+  Download,
+  Upload,
+  Share2,
+  MessageSquare,
+  Video,
+  PhoneCall,
+  Mail as MailIcon,
+  MessageCircle,
+  Bell,
+  UserCheck,
+  UserX,
+  UserPlus,
+  Users as UsersIcon,
+  Building,
+  Home,
+  Briefcase,
+  GraduationCap,
+  Heart,
+  Globe as GlobeIcon,
+  Wifi,
+  Bluetooth,
+  WifiOff,
+  Signal,
+  Battery,
+  Power,
+  PowerOff,
+  Volume2,
+  VolumeX,
+  Mic,
+  MicOff,
+  Camera,
+  CameraOff,
+  Video as VideoIcon,
+  VideoOff,
+  Image,
+  File,
+  Folder,
+  FolderOpen,
+  Trash2,
+  Edit,
+  Save,
+  Plus,
+  Minus,
+  X,
+  ChevronDown,
+  ChevronUp,
+  ChevronLeft,
+  ChevronRight,
+  ArrowUp,
+  ArrowDown,
+  ArrowLeft,
+  ArrowRight as ArrowRightIcon,
+  RotateCcw,
+  RotateCw,
+  ZoomIn,
+  ZoomOut,
+  Maximize,
+  Minimize,
+  Move,
+  Copy,
+  Scissors,
+  Type,
+  Bold,
+  Italic,
+  Underline,
+  Strikethrough,
+  AlignLeft,
+  AlignCenter,
+  AlignRight,
+  AlignJustify,
+  List,
+  ListOrdered,
+  Quote,
+  Code as CodeIcon,
+  Link as LinkIcon,
+  ExternalLink,
+  Paperclip,
+  Send,
+  Archive,
+  Inbox,
+  Outbox,
+  Trash,
+  Star as StarIcon,
+  Heart as HeartIcon,
+  ThumbsUp,
+  ThumbsDown,
+  Smile,
+  Frown,
+  Meh,
+  Laugh,
+  Angry,
+  Surprise,
+  Wink,
+  Tongue,
+  Kiss,
+  Wink2,
+  Grimace,
+  Sunglasses,
+  Confused,
+  Confounded,
+  Kissing,
+  KissingHeart,
+  KissingSmile,
+  KissingClosedEyes,
+  StuckOutTongue,
+  StuckOutTongueWinkingEye,
+  StuckOutTongueClosedEyes,
+  Disappointed,
+  Worried,
+  Angry as AngryIcon,
+  Rage,
+  Cry,
+  Sob,
+  Joy,
+  Astonished,
+  Scream,
+  Neckbeard,
+  Smirk,
+  NoMouth,
+  NeutralFace,
+  Expressionless,
+  Husk,
+  RollingEyes,
+            } from 'lucide-react';
 
 const AIAutonomousBusinessOperations = () => {
   const features = [
@@ -220,7 +388,7 @@ const AIAutonomousBusinessOperations = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 icon: Clock,
@@ -252,7 +420,7 @@ const AIAutonomousBusinessOperations = () => {
                 title: "Data-Driven Decisions",
                 description: "Make informed decisions based on real-time data and AI insights"
               }
-            ].map((benefit, index) => (
+            ].map((benefit, index)   => (
               <motion.div
                 key={benefit.title}
                 className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
@@ -350,8 +518,8 @@ const AIAutonomousBusinessOperations = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase, index)   => (
               <motion.div
                 key={useCase.industry}
                 className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
@@ -398,8 +566,8 @@ const AIAutonomousBusinessOperations = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {pricingTiers.map((tier, index)   => (
               <motion.div
                 key={tier.name}
                 className={`bg-slate-800/50 rounded-xl p-8 border ${

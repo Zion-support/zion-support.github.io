@@ -1,14 +1,19 @@
-// Removed unused: import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Check, Star, Brain, Zap, Rocket, Target, ChevronDown, ChevronUp, Search, Filter, Grid, List, DollarSign } from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '@/data/innovativeMicroSaasServices2027';
-import { EMERGING_TECH_SERVICES_2027 } from '@/data/emergingTechServices2027';
+import React, { useState } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
+import { Check, Star, Brain, Cpu, Database, Network, Shield, Zap, 
+  Rocket, Atom, Globe, Cloud, Lock, Eye, Target, TrendingUp,
+  ChevronDown, ChevronUp, Search, Filter, Grid, List, DollarSign
+ } from 'lucide-react';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2027  } from '@/data/innovativeMicroSaasServices2027';
+import { EMERGING_TECH_SERVICES_2027  } from '@/data/emergingTechServices2027';
 
-export default function ComprehensivePricing2027() {
+export default function ComprehensivePricing2027(...args: any[]): any {
+  const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('All');
-  const [showAnnual, setShowAnnual] = useState(false);
+  const [sortBy, setSortBy] = useState<any>('price');
+  const [viewMode, setViewMode] = useState<any>('grid');
+  const [expandedService, setExpandedService] = useState<any>(null);
 
   // Combine all services
   const allServices = [...ADVANCED_MICRO_SAAS_SERVICES_2027, ...SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2027];
@@ -55,6 +60,38 @@ export default function ComprehensivePricing2027() {
         duration: 0.5
       }
     }
+  };
+
+  const cardVariants = {
+    hidden: { scale: 0.8, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.3,
+        ease: "easeOut"
+      }
+    },
+    hover: {
+      scale: 1.02,
+      y: -5,
+      transition: {
+        duration: 0.2,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const getPriceColor = (price: anynumber)  => {
+    if (price < 1000) return 'text-green-400';
+    if (price < 2500) return 'text-yellow-400';
+    return 'text-red-400';
+  };
+
+  const getPriceTier = (price: anynumber)  => {
+    if (price < 1000) return 'Starter';
+    if (price < 2500) return 'Professional';
+    return 'Enterprise';
   };
 
   return (
@@ -109,15 +146,14 @@ export default function ComprehensivePricing2027() {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="bg-black/30 backdrop-blur-sm rounded-2xl p-6 max-w-3xl mx-auto"
+            transition={{ duration: any0.8, delay: 0.6 }}
           >
             {[
               { label: 'Total Services', value: allServices.length, icon: Rocket, color: 'from-cyan-500 to-blue-600' },
-              { label: 'Starting Price', value: `$${Math.min(...allServices.map(s => s.price))}`, icon: DollarSign, color: 'from-green-500 to-emerald-600' },
-              { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s) => acc + s?.aiScore, 0) / allServices.length)}%`, icon: Brain, color: 'from-purple-500 to-pink-600' },
-              { label: 'Rating Avg', value: `${(allServices.reduce((acc, s) => acc + s?.rating, 0) / allServices.length).toFixed(1)}`, icon: Star, color: 'from-yellow-500 to-orange-600' }
-            ].map((stat, index) => (
+              { label: 'Starting Price', value: `$${Math.min(...allServices.map(s  => s.price))}`, icon: anyDollarSign, color: 'from-green-500 to-emerald-600' },
+              { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s)  => acc + s.aiScore, 0) / allServices.length)}%`, icon: anyBrain, color: 'from-purple-500 to-pink-600' },
+              { label: 'Rating Avg', value: `${(allServices.reduce((acc, s)  => acc + s.rating, 0) / allServices.length).toFixed(1)}`, icon: anyStar, color: 'from-yellow-500 to-orange-600' }
+            ].map((stat, index)  => (
               <div key={index} className="text-center group">
                 <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${stat.color} rounded-full mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <stat.icon className="w-8 h-8 text-white" />
@@ -149,12 +185,10 @@ export default function ComprehensivePricing2027() {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
                 >
-                  {categories.map(category => (
-                    <option key={category} value={category} className="bg-zion-slate-dark text-white">
-                      {category}
-                    </option>
+                  {categories.map(category  => (
+                    <option key={category} value={category}>{category}</option>
                   ))}
                 </select>
               </div>
@@ -182,25 +216,47 @@ export default function ComprehensivePricing2027() {
       {/* Services Grid */}
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            {filteredServices.map((service) => (
-              <motion.div
-                key={service.id}
-                variants={itemVariants}
-                className="bg-black/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
+          <AnimatePresence mode="wait">
+            {filteredServices.length > 0 ? (
+              <motion.div 
+                className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
+                key={viewMode}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: any0.3 }}
               >
-                {/* Service Header */}
-                <div className="text-center mb-6">
-                  <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
-                  <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm">
-                    {service.category}
-                  </span>
-                </div>
+                {filteredServices.map((service, index)  => (
+                  <motion.div
+                    key={service.id}
+                    variants={viewMode === 'grid' ? itemVariants : {}}
+                    className={viewMode === 'grid' ? '' : 'bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20'}
+                  >
+                    {viewMode === 'grid' ? (
+                      <motion.div
+                        className="bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20 h-full group cursor-pointer"
+                        variants={cardVariants}
+                        whileHover="hover"
+                        onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}
+                      >
+                        {/* Service Header */}
+                        <div className="flex items-start justify-between mb-4">
+                          <div className="flex-1">
+                            <h3 className="text-xl font-bold text-white group-hover:text-zion-cyan transition-colors line-clamp-2">
+                              {service.title}
+                            </h3>
+                            <p className="text-sm text-zion-slate-light mt-1">{service.category}</p>
+                          </div>
+                          <div className="text-right">
+                            <div className={`text-2xl font-bold ${getPriceColor(service.price)}`}>
+                              ${service.price}
+                            </div>
+                            <div className="text-xs text-zion-slate-light">per {service.pricingModel}</div>
+                            <div className="text-xs text-zion-cyan font-medium mt-1">
+                              {getPriceTier(service.price)}
+                            </div>
+                          </div>
+                        </div>
 
                 {/* Pricing */}
                 <div className="text-center mb-6">

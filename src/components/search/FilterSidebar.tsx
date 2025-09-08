@@ -1,22 +1,31 @@
-import { Filter, X } from 'lucide-react';
+import React from 'react';
+import { Filter, X    } from 'lucide-react';
 
 <<<<<<< HEAD
 
 =======
 interface FilterOption {
 
-  value: anystring;
+
+
+  value: string;
   label: string;
   count?: number;
+
+
 
 }
 
 interface FilterGroup {
 
+
+
   title: string;
   key: string;
   options: FilterOption[];
   type: 'checkbox' | 'radio' | 'range';
+
+
 
 }
 
@@ -24,10 +33,10 @@ interface FilterSidebarProps extends React.PropsWithChildren<{}> {
 
   filters: FilterGroup[];
   selectedFilters: Record<string, any>;
-  onFilterChange: (key: string, value: string, checked: boolean)  => void;
-  onClearFilters: ()  => void;
+  onFilterChange: (key: string, value: string, checked: boolean)    => void;
+  onClearFilters: any()  => void;
   isOpen: anyboolean;
-  onClose: ()  => void;
+  onClose: ()    => void;
 
 }
 
@@ -73,7 +82,7 @@ export function FilterSidebar(...args: []):  {
           </div>
           
           {/* Filter groups */}
-          {filters.map((group)  => (
+          {filters.map((group)    => (
             <div key={group.key} className="space-y-3">
               <h4 className="font-medium text-white">{group.title}</h4>
               

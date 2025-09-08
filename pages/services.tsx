@@ -1,96 +1,13 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { ArrowRight, Cloud, Zap, Users, Globe, Search, Filter, Star, TrendingUp, Clock, Users2 } from 'lucide-react';
+import React, { useState } from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, Search, Filter, Star, TrendingUp, Clock, Users2, Target, Rocket, Cpu, Database2, ShieldCheck, Globe2, Zap2, Brain2, Cloud2, Lock2  } from 'lucide-react.ts'
 
+import { additionalEnhancedServices  } from '../data/additional-real-services'
 
-<<<<<<< HEAD
-const Page = () => {
-  return (
-    <MainLayout 
-      title="Page - Zion Tech Group"
-      description="Zion Tech Group page"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 py-20">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-=======
-const services = [
-  {
-    title: 'Micro SaaS Solutions',
-    description: 'Build and scale your software-as-a-service business with our comprehensive micro SaaS platform.',
-    icon: Code,
-    features: ['Rapid Development', 'Scalable Architecture', 'Multi-tenant Support', 'API Integration'],
-    pricing: 'Starting at $2,999/month'
-  },
-  {
-    title: 'IT Infrastructure',
-    description: 'Complete IT infrastructure solutions including cloud migration, security, and maintenance.',
-    icon: Server,
-    features: ['Cloud Migration', 'Security Hardening', '24/7 Monitoring', 'Disaster Recovery'],
-    pricing: 'Starting at $1,999/month'
-  },
-  {
-    title: 'AI & Machine Learning',
-    description: 'Leverage artificial intelligence to automate processes and gain valuable insights from your data.',
-    icon: Brain,
-    features: ['Custom AI Models', 'Data Analytics', 'Process Automation', 'Predictive Insights'],
-    pricing: 'Starting at $3,999/month'
-  },
-  {
-    title: 'Cybersecurity',
-    description: 'Protect your business with comprehensive cybersecurity solutions and compliance support.',
-    icon: Shield,
-    features: ['Threat Detection', 'Compliance Auditing', 'Security Training', 'Incident Response'],
-    pricing: 'Starting at $2,499/month'
-  },
-  {
-    title: 'Cloud Services',
-    description: 'Optimize your cloud infrastructure with our expert cloud management and optimization services.',
-    icon: Cloud,
-    features: ['Cloud Strategy', 'Cost Optimization', 'Performance Tuning', 'Migration Support'],
-    pricing: 'Starting at $1,499/month'
-  },
-  {
-    title: 'Data Analytics',
-    description: 'Transform your data into actionable insights with our advanced analytics and reporting solutions.',
-    icon: Database,
-    features: ['Data Visualization', 'Real-time Dashboards', 'Custom Reports', 'Predictive Analytics'],
-    pricing: 'Starting at $1,799/month'
-  }
-];
-
-const benefits = [
-  {
-    icon: CheckCircle,
-    title: 'Proven Expertise',
-    description: 'Over 500 successful projects completed across various industries'
-  },
-  {
-    icon: Users,
-    title: 'Dedicated Support',
-    description: '24/7 support from our team of experienced professionals'
-  },
-  {
-    icon: Globe,
-    title: 'Global Reach',
-    description: 'Serving clients worldwide with local expertise and support'
-  },
-  {
-    icon: Star,
-    title: 'Quality Assurance',
-    description: '99% client satisfaction rate with rigorous quality standards'
-  }
-];
-
-export default function Services() {
-  return (
-    <>
-      <Head>
-        <title>Our Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive technology services including micro SaaS, IT infrastructure, AI solutions, and cybersecurity." />
-      </Head>
+export default function Services(...args: any[]): any {
+	const [searchTerm, setSearchTerm] = useState('')
+	const [selectedCategory, setSelectedCategory] = useState('all')
+	const [sortBy, setSortBy] = useState('popularity')
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -390,9 +307,9 @@ export default function Services() {
 							<select
 								value={selectedCategory}
 								onChange={(e) => setSelectedCategory(e.target.value)}
-								className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+								className="px-3 py-2 border border-gray-300 rounded-lg focus: anyring-2 focus:ring-blue-500 focus:border-transparent"
 							>
-								{categories.map((category) => (
+								{categories.map(category  => (
 									<option key={category} value={category}>
 										{category === 'all' ? 'All Categories' : category.charAt(0).toUpperCase() + category.slice(1)}
 									</option>
@@ -426,18 +343,13 @@ export default function Services() {
 					</div>
 
 					{/* Services Grid */}
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-						{currentServices.map((service) => (
-							<div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-								<div className="p-6">
-									{/* Service Header */}
-									<div className="flex items-start justify-between mb-4">
-										<div className="text-3xl">{service.icon}</div>
-										{service.popular && (
-											<span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs px-2 py-1 rounded-full">
-												POPULAR
-											</span>
-										)}
+					<div className="grid gap-8 md: anygrid-cols-2 lg:grid-cols-3">
+						{filteredServices.map((service)  => (
+							<div key={service.id} className="group relative rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+								{/* Popular Badge */}
+								{service.popular && (
+									<div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+										POPULAR
 									</div>
 
 									{/* Service Info */}

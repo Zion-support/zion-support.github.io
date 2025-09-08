@@ -1,10 +1,16 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Brain, Cloud, Cpu, Rocket, Users, BarChart3, CheckCircle, ArrowRight, Star, Workflow, Atom, Globe, Award, TrendingUp } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import React from 'react';
+import { SEO  } from '@/components/SEO';
+import { Link  } from 'react-router-dom';
+import { ArrowRight, CheckCircle2, Globe, Sparkles, Shield, Cpu, Cloud, Database, Workflow, Rocket, DollarSign, Phone, Mail, MapPin, ExternalLink  } from 'lucide-react';
 
-const ComprehensiveServices: React.FC = () => {
-  const serviceCategories = [
+const ComprehensiveServices: React.FC = (): JSX.Element => {
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+  };
+
+  const microSaaS = [
     {
       title: "AI & Machine Learning",
       description: "Cutting-edge artificial intelligence solutions",
@@ -85,28 +91,37 @@ const ComprehensiveServices: React.FC = () => {
         keywords="technology services, AI solutions, quantum computing, cloud services, IoT solutions, Zion Tech Group"
       />
 
-      {/* Hero Section */}
-      <div className="bg-gradient-to-br from-zion-blue to-zion-blue-dark py-20 px-4">
-        <div className="container mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Comprehensive Micro SAAS Solutions
-          </h1>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Discover our extensive portfolio of innovative micro SAAS, IT, and AI services designed to transform your business operations and drive growth
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/contact">
-              <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light">
-                <Phone className="w-5 h-5 mr-2"/>
-                Get Started Today
-              </Button>
-            </Link>
-            <Link to="/services-pricing">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                <DollarSign className="w-5 h-5 mr-2"/>
-                View Pricing
-              </Button>
-            </Link>
+  const linkItem = (href: string, label = 'Learn more') => (
+    <a href={href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-zion-cyan hover:underline">
+      <span>{label}</span>
+      <ExternalLink className="ml-2 h-4 w-4" />
+    </a>
+  );
+
+  const Section: React.FC<{ icon: React.ReactNode; title: string; description: string; items: { title: string; desc: string; price: string; cta: string; features: string[]; }[]; gradient: string; }>
+    = ({ icon, title, description, items, gradient }) => (
+    <section className="py-14">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className={`rounded-2xl p-8 border border-white/10 bg-gradient-to-br ${gradient} text-white`}> 
+          <div className="flex items-center mb-6">
+            <div className="mr-3">{icon}</div>
+            <h2 className="text-2xl md:text-3xl font-bold">{title}</h2>
+          </div>
+          <p className="text-white/80 mb-6">{description}</p>
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+            {items.map((svc)  => (
+              <div key={svc.title} className="bg-black/30 rounded-xl p-6 border border-white/10">
+                <h3 className="text-xl font-semibold mb-2">{svc.title}</h3>
+                <p className="text-white/80 mb-4">{svc.desc}</p>
+                <div className="text-zion-cyan font-semibold mb-4 flex items-center"><DollarSign className="h-4 w-4 mr-1" />{svc.price}</div>
+                <ul className="space-y-2 mb-4">
+                  {svc.features.map((f) => (
+                    <li key={f} className="flex items-start"><CheckCircle2 className="h-4 w-4 text-emerald-400 mr-2 mt-1" /><span className="text-white/90">{f}</span></li>
+                  ))}
+                </ul>
+                {linkItem(svc.cta)}
+              </div>
+            ))}
           </div>
         </div>
       </div>

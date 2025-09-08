@@ -1,9 +1,36 @@
 import React, { useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Filter, ArrowRight, TrendingUp, Brain, Cloud, Shield, Zap, Users, Server, Network, Lock, FileText, Code, BookOpen, Calendar, Atom, TrendingUp as TrendingUpIcon, Tag, Bookmark, Share2, Eye, Calendar as CalendarIcon, Tag as TagIcon } from 'lucide-react';
+import { useSearchParams, Link   } from 'react-router-dom';
+import { motion, AnimatePresence   } from 'framer-motion';
+import { Search, 
+  Filter, 
+  Grid, 
+  List, 
+  Star, 
+  MapPin, 
+  Clock, 
+  DollarSign,
+  Users,
+  Code,
+  Shield,
+  Cloud,
+  Brain,
+  Rocket,
+  Zap,
+  Heart,
+  Building,
+  Cpu,
+  Lock,
+  Globe,
+  TrendingUp,
+  Award,
+  CheckCircle,
+  X,
+  SlidersHorizontal
+  } from 'lucide-react';
 
 interface SearchResult {
+
+
   id: string;
   type: 'service' | 'talent' | 'equipment' | 'comp';
   title: string;
@@ -16,6 +43,8 @@ interface SearchResult {
   lastUpdated: string;
   icon: unknown;
   featured?: boolean;
+
+
 }
 
 const mockSearchResults: SearchResult[] = [
@@ -115,183 +144,36 @@ const filters = {
   rating['4.5+', '4.0+', '3.5+']
 };
 
-export default function SearchPage(...args[]):  {
+export default function SearchPage(...args: any[]): any {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
-  const [isSearching, setIsSearching] = useState(false);
-  const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
-  const [selectedFilters, setSelectedFilters] = useState<Set<string>>(new Set());
-  const [sortBy, setSortBy] = useState<'relevance' | 'date' | 'popularity'>('relevance');
+  const [query, setQuery] = useState(searchParams.get('q') || '');
+  const [results, setResults] = useState<any>([]);
+  const [filteredResults, setFilteredResults] = useState<any>([]);
+  const [loading, setLoading] = useState(false);
+  const [viewMode, setViewMode] = useState<any>('grid');
   const [showFilters, setShowFilters] = useState(false);
+  const [activeFilters, setActiveFilters] = useState({
+    type: any[] as string[],
+    category: [] as string[],
+    location: [] as string[],
+    priceRange: [] as string[],
+    rating: [] as string[]
+  });
 
-  // Mock search results - in a real app, this would come from an API
-  const mockSearchResults: SearchResult[] = [
-    // AI Services
-    {
-      id: 'ai-bi',
-      title: 'AI Business Intelligence',
-      description: 'Advanced AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated reporting for data-driven decision making.',
-      url: '/services/ai-business-intelligence',
-      type: 'service',
-      category: 'AI Services',
-      tags: ['AI', 'Business Intelligence', 'Analytics', 'Machine Learning', 'Predictive'],
-      relevance: 0.95,
-      lastUpdated: '2024-12-01',
-      icon: Brain,
-      featured: true
-    },
-    {
-      id: 'ai-compliance',
-      title: 'AI Compliance Assistant',
-      description: 'Automated regulatory compliance solution that helps businesses stay compliant with industry standards and regulations through intelligent monitoring and reporting.',
-      url: '/services/ai-compliance-assistant',
-      type: 'service',
-      category: 'AI Services',
-      tags: ['AI', 'Compliance', 'Regulatory', 'Automation', 'Risk Management'],
-      relevance: 0.92,
-      lastUpdated: '2024-11-28',
-      icon: Shield
-    },
-    {
-      id: 'ai-sales',
-      title: 'AI Sales Copilot',
-      description: 'Intelligent sales optimization platform that enhances sales performance through AI-driven insights, lead scoring, and automated follow-up sequences.',
-      url: '/services/ai-sales-copilot',
-      type: 'service',
-      category: 'AI Services',
-      tags: ['AI', 'Sales', 'CRM', 'Automation', 'Lead Generation'],
-      relevance: 0.89,
-      lastUpdated: '2024-11-25',
-      icon: Users
-    },
-
-    // Cloud Services
-    {
-      id: 'cloud-devops',
-      title: 'Cloud DevOps Platform',
-      description: 'Comprehensive cloud DevOps solution that automates infrastructure deployment, scaling, and management across multiple cloud providers.',
-      url: '/services/cloud-devops',
-      type: 'service',
-      category: 'Cloud & Infrastructure',
-      tags: ['Cloud', 'DevOps', 'Automation', 'Infrastructure', 'AWS', 'Azure'],
-      relevance: 0.87,
-      lastUpdated: '2024-11-20',
-      icon: Cloud
-    },
-    {
-      id: 'it-infrastructure',
-      title: 'IT Infrastructure Management',
-      description: 'Enterprise-grade IT infrastructure solutions including server management, network optimization, and disaster recovery planning.',
-      url: '/services/it-infrastructure',
-      type: 'service',
-      category: 'Cloud & Infrastructure',
-      tags: ['Infrastructure', 'IT', 'Enterprise', 'Networking', 'Security'],
-      relevance: 0.84,
-      lastUpdated: '2024-11-18',
-      icon: Server
-    },
-
-    // Security Services
-    {
-      id: 'ai-cybersecurity',
-      title: 'AI Cybersecurity Platform',
-      description: 'Next-generation cybersecurity solution powered by artificial intelligence for advanced threat detection, prevention, and response.',
-      url: '/services/ai-cybersecurity-platform',
-      type: 'service',
-      category: 'Security & Compliance',
-      tags: ['Cybersecurity', 'AI', 'Threat Detection', 'Security', 'Compliance'],
-      relevance: 0.91,
-      lastUpdated: '2024-11-22',
-      icon: Shield,
-      featured: true
-    },
-    {
-      id: 'zero-trust',
-      title: 'Zero Trust Network Access',
-      description: 'Modern security architecture that implements zero-trust principles for enhanced network security and access control.',
-      url: '/services/zero-trust-network-access',
-      type: 'service',
-      category: 'Security & Compliance',
-      tags: ['Zero Trust', 'Security', 'Network', 'Access Control', 'Compliance'],
-      relevance: 0.86,
-      lastUpdated: '2024-11-15',
-      icon: Lock
-    },
-
-    // Quantum Computing
-    {
-      id: 'quantum-computing',
-      title: 'Quantum Computing Solutions',
-      description: 'Cutting-edge quantum computing services for optimization problems, cryptography, and scientific simulations.',
-      url: '/services/quantum-computing',
-      type: 'service',
-      category: 'Quantum Computing',
-      tags: ['Quantum Computing', 'Optimization', 'Cryptography', 'AI', 'Research'],
-      relevance: 0.88,
-      lastUpdated: '2024-11-10',
-      icon: Atom
-    },
-
-    // Blog Posts
-    {
-      id: 'ai-trends-2024',
-      title: 'AI Trends to Watch in 2024',
-      description: 'Explore the latest artificial intelligence trends that will shape the technology landscape in 2024 and beyond.',
-      url: '/blog/ai-trends-2024',
-      type: 'blog',
-      category: 'AI & Technology',
-      tags: ['AI', 'Trends', 'Technology', '2024', 'Innovation'],
-      relevance: 0.82,
-      lastUpdated: '2024-12-01',
-      icon: BookOpen
-    },
-    {
-      id: 'cloud-migration-guide',
-      title: 'Complete Guide to Cloud Migration',
-      description: 'A comprehensive guide to migrating your infrastructure to the cloud, including best practices and common pitfalls.',
-      url: '/blog/cloud-migration-guide',
-      type: 'blog',
-      category: 'Cloud & Infrastructure',
-      tags: ['Cloud Migration', 'Guide', 'Best Practices', 'Infrastructure'],
-      relevance: 0.79,
-      lastUpdated: '2024-11-28',
-      icon: Cloud
-    },
-
-    // Case Studies
-    {
-      id: 'healthcare-ai-case-study',
-      title: 'AI Transformation in Healthcare',
-      description: 'How a leading healthcare provider leveraged AI to improve patient outcomes and operational efficiency.',
-      url: '/case-studies/healthcare-ai-transformation',
-      type: 'case-study',
-      category: 'Healthcare',
-      tags: ['AI', 'Healthcare', 'Case Study', 'Transformation', 'Patient Care'],
-      relevance: 0.85,
-      lastUpdated: '2024-11-20',
-      icon: FileText
-    }
-  ];
-
-  const filterOptions = [
-    { id: 'ai-services', name: 'AI Services', icon: Brain, count: 0 },
-    { id: 'cloud-infrastructure', name: 'Cloud & Infrastructure', icon: Cloud, count: 0 },
-    { id: 'security', name: 'Security & Compliance', icon: Shield, count: 0 },
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 0 },
-    { id: 'iot', name: 'IoT & Edge Computing', icon: Network, count: 0 },
-    { id: 'blog', name: 'Blog Posts', icon: BookOpen, count: 0 },
-    { id: 'case-studies', name: 'Case Studies', icon: FileText, count: 0 },
-    { id: 'documentation', name: 'Documentation', icon: Code, count: 0 }
-  ];
-
-  useEffect(() => {
-    if (searchQuery) {
-      performSearch();
+  useEffect(()   => {
+    if (query) {
+      performSearch(query);
     }
   }, [searchQuery, selectedFilters, sortBy]);
 
-  const performSearch = async () => {
-    setIsSearching(true);
+  useEffect(() => {
+    applyFilters();
+  }, [activeFilters, results]);
+
+  const performSearch = async (searchQuery: string)   => {
+    setLoading(true);
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1000));
     
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 800));
@@ -324,7 +206,7 @@ export default function SearchPage(...args[]):  {
     setIsSearching(false);
   };
 
-  const toggleFilter = (filterType: keyof typeof activeFilters, value: string) => {
+  const toggleFilter = (filterType: anykeyof typeof activeFilters, value: string)   => {
     setActiveFilters(prev => ({
       ...prev,
       [filterType]: prev[filterType].includes(value)
@@ -343,28 +225,14 @@ export default function SearchPage(...args[]):  {
     });
   };
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = (e: React.FormEvent)   => {
     e.preventDefault();
     if (searchQuery.trim()) {
       setSearchParams({ q: searchQuery.trim() });
     }
   };
 
-  const toggleFilter = (filterId: string) => {
-    const newFilters = new Set(selectedFilters);
-    if (newFilters.has(filterId)) {
-      newFilters.delete(filterId);
-    } else {
-      newFilters.add(filterId);
-    }
-    setSelectedFilters(newFilters);
-  };
-
-  const clearFilters = () => {
-    setSelectedFilters(new Set());
-  };
-
-  const getResultIcon = (type: string) => {
+  const getTypeIcon = (type: string)   => {
     switch (type) {
       case 'service': return Zap;
       case 'page': return FileText;
@@ -375,13 +243,15 @@ export default function SearchPage(...args[]):  {
     }
   };
 
-  const getResultColor = (type: string) => {
-    switch (type) {
-      case 'service': return 'from-blue-500 to-indigo-500';
-      case 'blog': return 'from-green-500 to-emerald-500';
-      case 'case-study': return 'from-purple-500 to-pink-500';
-      case 'documentation': return 'from-orange-500 to-red-500';
-      default: return 'from-gray-500 to-slate-500';
+  const getCategoryIcon = (category: string)   => {
+    switch (category) {
+      case 'AI & Analytics': return Brain;
+      case 'Cybersecurity': return Shield;
+      case 'Cloud & DevOps': return Cloud;
+      case 'IoT & Edge': return Zap;
+      case 'Quantum Computing': return Rocket;
+      case 'Blockchain': return Lock;
+      default: return Code;
     }
   };
 
@@ -495,13 +365,253 @@ export default function SearchPage(...args[]):  {
           {/* Search Results */}
           <div className="lg:col-span-3">
             {/* Results Header */}
-            <div className="flex items-center justify-between mb-6">
-              <div>
-                <h2 className="text-xl font-semibold text-gray-900">
-                  {searchQuery ? `Search Results for "${searchQuery}"` : 'Recent Content'}
-                </h2>
-                <p className="text-gray-600">
-                  {isSearching ? 'Searching...' : `${searchResults.length} results found`}
+            <motion.div 
+              className="flex items-center justify-between mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <div className="flex items-center gap-4">
+                <h3 className="text-xl font-semibold text-white">
+                  {loading ? 'Searching...' : `${filteredResults.length} results found`}
+                </h3>
+                {Object.values(activeFilters).some(filters => filters.length > 0) && (
+                  <div className="flex gap-2">
+                    {Object.entries(activeFilters).map(([key, values]) =>
+                      values.map(value => (
+                        <span
+                          key={`${key}-${value}`}
+                          className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full flex items-center gap-2"
+                        >
+                          {value}
+                          <button
+                            onClick={() => toggleFilter(key as keyof typeof activeFilters, value)}
+                            className="hover:text-zion-cyan-light"
+                          >
+                            <X className="w-3 h-3" />
+                          </button>
+                        </span>
+                      ))
+                    )}
+                  </div>
+                )}
+              </div>
+
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setViewMode('grid')}
+                  className={`p-2 rounded-lg transition-colors ${
+                    viewMode === 'grid' 
+                      ? 'bg-zion-cyan/20 text-zion-cyan' 
+                      : 'text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10'
+                  }`}
+                >
+                  <Grid className="w-5 h-5" />
+                </button>
+                <button
+                  onClick={() => setViewMode('list')}
+                  className={`p-2 rounded-lg transition-colors ${
+                    viewMode === 'list' 
+                      ? 'bg-zion-cyan/20 text-zion-cyan' 
+                      : 'text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10'
+                  }`}
+                >
+                  <List className="w-5 h-5" />
+                </button>
+              </div>
+            </motion.div>
+
+            {/* Loading State */}
+            {loading && (
+              <motion.div 
+                className="text-center py-12"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+              >
+                <div className="w-16 h-16 border-4 border-zion-cyan/20 border-t-zion-cyan rounded-full animate-spin mx-auto mb-4"></div>
+                <p className="text-zion-slate-light">Searching...</p>
+              </motion.div>
+            )}
+
+            {/* Results Grid/List */}
+            {!loading && (
+              <AnimatePresence mode="wait">
+                {viewMode === 'grid' ? (
+                  <motion.div
+                    key="grid"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="grid md: anygrid-cols-2 xl:grid-cols-3 gap-6"
+                  >
+                    {filteredResults.map((result, index)   => (
+                      <motion.div
+                        key={result.id}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.4, delay: index * 0.1 }}
+                      >
+                        <Link
+                          to={result.path}
+                          className="block bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/40 transition-all duration-300 group"
+                        >
+                          <div className="flex items-start justify-between mb-4">
+                            <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">
+                              {result.type === 'service' ? 
+                                getCategoryIcon(result.category)({ className: "h-6 w-6 text-white" }) : 
+                                getTypeIcon(result.type)({ className: "h-6 w-6 text-white" })
+                              }
+                            </div>
+                            {result.featured && (
+                              <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
+                                Featured
+                              </span>
+                            )}
+                          </div>
+
+                          <h3 className="text-white font-semibold text-lg mb-2 group-hover:text-zion-cyan transition-colors">
+                            {result.title}
+                          </h3>
+                          <p className="text-zion-slate-light text-sm mb-4 line-clamp-3">
+                            {result.description}
+                          </p>
+
+                          <div className="flex items-center justify-between mb-4">
+                            <span className="text-zion-cyan text-sm font-medium">{result.category}</span>
+                            {result.rating && (
+                              <div className="flex items-center gap-1">
+                                <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                                <span className="text-white text-sm">{result.rating}</span>
+                                <span className="text-zion-slate-light text-sm">({result.reviewCount})</span>
+                              </div>
+                            )}
+                          </div>
+
+                          <div className="flex items-center justify-between">
+                            {result.price && (
+                              <span className="text-white font-semibold">{result.price}</span>
+                            )}
+                            {result.location && (
+                              <div className="flex items-center gap-1 text-zion-slate-light text-sm">
+                                <MapPin className="w-4 h-4" />
+                                {result.location}
+                              </div>
+                            )}
+                          </div>
+
+                          <div className="flex flex-wrap gap-2 mt-4">
+                            {result.tags.slice(0, 3).map(tag => (
+                              <span
+                                key={tag}
+                                className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full"
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+                        </Link>
+                      </motion.div>
+                    ))}
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="list"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="space-y-4"
+                  >
+                    {filteredResults.map((result, index) => (
+                      <motion.div
+                        key={result.id}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.4, delay: index * 0.1 }}
+                      >
+                        <Link
+                          to={result.path}
+                          className="block bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/40 transition-all duration-300 group"
+                        >
+                          <div className="flex items-start gap-6">
+                            <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center flex-shrink-0">
+                              {result.type === 'service' ? 
+                                getCategoryIcon(result.category)({ className: "h-8 w-8 text-white" }) : 
+                                getTypeIcon(result.type)({ className: "h-8 w-8 text-white" })
+                              }
+                            </div>
+
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-start justify-between mb-2">
+                                <h3 className="text-white font-semibold text-xl group-hover:text-zion-cyan transition-colors">
+                                  {result.title}
+                                </h3>
+                                {result.featured && (
+                                  <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full ml-4">
+                                    Featured
+                                  </span>
+                                )}
+                              </div>
+
+                              <p className="text-zion-slate-light mb-4">
+                                {result.description}
+                              </p>
+
+                              <div className="flex items-center gap-6 mb-4">
+                                <span className="text-zion-cyan font-medium">{result.category}</span>
+                                {result.rating && (
+                                  <div className="flex items-center gap-1">
+                                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                                    <span className="text-white">{result.rating}</span>
+                                    <span className="text-zion-slate-light">({result.reviewCount})</span>
+                                  </div>
+                                )}
+                                {result.price && (
+                                  <div className="flex items-center gap-1 text-white">
+                                    <DollarSign className="w-4 h-4" />
+                                    {result.price}
+                                  </div>
+                                )}
+                                {result.location && (
+                                  <div className="flex items-center gap-1 text-zion-slate-light">
+                                    <MapPin className="w-4 h-4" />
+                                    {result.location}
+                                  </div>
+                                )}
+                              </div>
+
+                              <div className="flex flex-wrap gap-2">
+                                {result.tags.map(tag => (
+                                  <span
+                                    key={tag}
+                                    className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan text-sm rounded-full"
+                                  >
+                                    {tag}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                        </Link>
+                      </motion.div>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            )}
+
+            {/* No Results */}
+            {!loading && filteredResults.length === 0 && (
+              <motion.div 
+                className="text-center py-12"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+              >
+                <div className="w-24 h-24 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Search className="w-12 h-12 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">No results found</h3>
+                <p className="text-zion-slate-light mb-4">
+                  Try adjusting your search terms or filters to find what you're looking for.
                 </p>
               </div>
               

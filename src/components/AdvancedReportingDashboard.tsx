@@ -1,8 +1,55 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-
+import { motion, AnimatePresence    } from 'framer-motion';
+import { BarChart3, 
+  PieChart, 
+  TrendingUp, 
+  Download, 
+  Share2, 
+  Filter, 
+  Calendar,
+  Users,
+  DollarSign,
+  Target,
+  Activity,
+  Eye,
+  Settings,
+  RefreshCw,
+  FileText,
+  Image,
+  Printer,
+  Mail,
+  Clock,
+  CheckCircle,
+  AlertCircle,
+  XCircle,
+  Star,
+  Award,
+  TrendingDown,
+  ArrowUp,
+  ArrowDown,
+  Minus,
+  Search,
+  ChevronDown,
+  ChevronUp,
+  Zap,
+  Brain,
+  Cloud,
+  Shield,
+  Globe,
+  Database,
+  Server,
+  Lock,
+  Unlock,
+  Wifi,
+  Smartphone,
+  Monitor,
+  Tablet
+   } from 'lucide-react';
 
 interface ReportData {
+
+
+
   id: string;
   title: string;
   type: 'financial' | 'operational' | 'performance' | 'security' | 'customer' | 'technical';
@@ -17,16 +64,24 @@ interface ReportData {
   views: number;
   downloads: number;
   rating: number;
+
+
+
 }
 
 interface ReportMetrics {
+
+
+
   totalReports: number;
   activeReports: number;
   totalViews: number;
   totalDownloads: number;
   averageRating: number;
-  topCategories: Array<{ name: string; count: number; percentage: number }>;
-  recentActivity: Array<{ action: string; timestamp: string; user: string }>;
+  topCategories: Array<any>;
+  recentActivity: Array<any>;
+
+
 }
 
 interface AdvancedReportingDashboardProps {
@@ -174,7 +229,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   }, []);
 
   // Filter and sort reports
-  useEffect(() => {
+  useEffect(()    => {
     let filtered = reports;
 
     if (selectedType !== 'all') {
@@ -241,11 +296,11 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   // Calculate report metrics
   const reportMetrics = {
     totalReports: anyreports.length,
-    activeReports: reports.filter(r  => r.status === 'active').length,
-    totalViews: anyreports.reduce((sum, r)  => sum + r.views, 0),
-    totalDownloads: anyreports.reduce((sum, r)  => sum + r.downloads, 0),
-    averageRating: anyreports.reduce((sum, r)  => sum + r.rating, 0) / reports.length || 0,
-    topCategories: (()  => {
+    activeReports: reports.filter(r    => r.status === 'active').length,
+    totalViews: anyreports.reduce((sum, r)    => sum + r.views, 0),
+    totalDownloads: anyreports.reduce((sum, r)    => sum + r.downloads, 0),
+    averageRating: anyreports.reduce((sum, r)    => sum + r.rating, 0) / reports.length || 0,
+    topCategories: any(()    => {
       const catCounts = reports.reduce((acc, r) => {
         acc[r.category] = (acc[r.category] || 0) + 1;
         return acc;
@@ -257,7 +312,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           count,
           percentage: (count / reports.length) * 100
         }))
-        .sort((a, b) => b.count - a.count)
+        .sort((a, b)    => b.count - a.count)
         .slice(0, 5);
     })(),
     recentActivity: [
@@ -269,7 +324,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   };
 
   // Get type icon and color
-  const getTypeDisplay = (type: string) => {
+  const getTypeDisplay = (type: string)    => {
     const types = {
       financial: { icon: <DollarSign className="w-4 h-4" />, color: 'text-green-400 bg-green-400/20' },
       operational: { icon: <Activity className="w-4 h-4" />, color: 'text-blue-400 bg-blue-400/20' },
@@ -282,7 +337,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   };
 
   // Get priority color
-  const getPriorityColor = (priority: string) => {
+  const getPriorityColor = (priority: string)    => {
     switch (priority) {
       case 'low': return 'text-green-400 bg-green-400/20';
       case 'medium': return 'text-yellow-400 bg-yellow-400/20';
@@ -293,7 +348,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   };
 
   // Get status color
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (status: string)    => {
     switch (status) {
       case 'active': return 'text-green-400 bg-green-400/20';
       case 'archived': return 'text-zinc-400 bg-zinc-400/20';
@@ -303,7 +358,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   };
 
   // Handle report actions
-  const handleReportAction = (reportId: string, action: 'view' | 'download' | 'share' | 'print') => {
+  const handleReportAction = (reportId: string, action: 'view' | 'download' | 'share' | 'print')    => {
     const report = reports.find(r => r.id === reportId);
     if (report) {
       switch (action) {
@@ -313,23 +368,23 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           break;
         case 'download':
           // Simulate download
-          // console.log(`Downloading ${report.title}`);
+          // // // console.log(`Downloading ${report.title}`);
           break;
         case 'share':
           // Simulate share
-          // console.log(`Sharing ${report.title}`);
+          // // // console.log(`Sharing ${report.title}`);
           break;
         case 'print':
           // Simulate print
-          // console.log(`Printing ${report.title}`);
+          // // // console.log(`Printing ${report.title}`);
           break;
       }
     }
   };
 
   // Export report data
-  const exportReport = (report: ReportData, format: 'pdf' | 'excel' | 'csv') => {
-    // console.log(`Exporting ${report.title} as ${format}`);
+  const exportReport = (report: anyReportData, format: 'pdf' | 'excel' | 'csv')    => {
+    // // // console.log(`Exporting ${report.title} as ${format}`);
     // In a real implementation, this would generate and download the file
   };
 
@@ -658,8 +713,8 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
             {/* Key Metrics Preview */}
             <div className="mb-4">
               <h4 className="text-sm font-medium text-zinc-300 mb-3">Key Metrics</h4>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                {report.data.keyMetrics?.slice(0, 4).map((metric: string, idx: number) => (
+              <div className="grid grid-cols-2 md: anygrid-cols-4 gap-3">
+                {report.data.keyMetrics?.slice(0, 4).map((metric, idx)    => (
                   <div key={idx} className="p-2 bg-zinc-800/30 rounded-lg text-center">
                     <div className="text-xs text-zinc-400">{metric}</div>
                   </div>
@@ -773,8 +828,8 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
                 
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-3">Key Metrics</h3>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {selectedReport.data.keyMetrics?.map((metric: string, idx: number) => (
+                  <div className="grid grid-cols-2 md: anygrid-cols-4 gap-4">
+                    {selectedReport.data.keyMetrics?.map((metric, idx)    => (
                       <div key={idx} className="p-4 bg-zinc-800/30 rounded-lg text-center">
                         <div className="text-lg font-semibold text-white">{metric}</div>
                       </div>

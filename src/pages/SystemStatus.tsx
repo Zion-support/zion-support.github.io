@@ -1,7 +1,7 @@
-import React from 'react';
-import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Cloud, Shield, Brain, Zap, Globe, BarChart3, RefreshCw, ExternalLink } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Cloud, Shield, Brain, Zap, Globe, BarChart3, RefreshCw, ExternalLink   } from 'lucide-react';
 
-export default function SystemStatus() {
+export default function SystemStatus(...args: any[]): any {
   const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
 
@@ -11,7 +11,178 @@ export default function SystemStatus() {
     ? 'outage'
     : 'degraded';
 
-  const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0) / services.length;
+  const services = [
+    {
+      name: 'Core Platform',
+      status: 'operational',
+      uptime: '99.99%',
+      responseTime: '45ms',
+      lastIncident: null,
+      icon: <Server className="w-6 h-6" />
+    },
+    {
+      name: 'AI Services',
+      status: 'operational',
+      uptime: '99.97%',
+      responseTime: '120ms',
+      lastIncident: null,
+      icon: <Brain className="w-6 h-6" />
+    },
+    {
+      name: 'Database Services',
+      status: 'operational',
+      uptime: '99.99%',
+      responseTime: '25ms',
+      lastIncident: null,
+      icon: <Database className="w-6 h-6" />
+    },
+    {
+      name: 'Cloud Infrastructure',
+      status: 'operational',
+      uptime: '99.98%',
+      responseTime: '65ms',
+      lastIncident: null,
+      icon: <Cloud className="w-6 h-6" />
+    },
+    {
+      name: 'Security Services',
+      status: 'operational',
+      uptime: '100%',
+      responseTime: '30ms',
+      lastIncident: null,
+      icon: <Shield className="w-6 h-6" />
+    },
+    {
+      name: 'API Gateway',
+      status: 'operational',
+      uptime: '99.96%',
+      responseTime: '55ms',
+      lastIncident: null,
+      icon: <Zap className="w-6 h-6" />
+    },
+    {
+      name: 'CDN & Edge',
+      status: 'operational',
+      uptime: '99.99%',
+      responseTime: '15ms',
+      lastIncident: null,
+      icon: <Globe className="w-6 h-6" />
+    },
+    {
+      name: 'Analytics Platform',
+      status: 'operational',
+      uptime: '99.95%',
+      responseTime: '85ms',
+      lastIncident: null,
+      icon: <BarChart3 className="w-6 h-6" />
+    }
+  ];
+
+  const incidents = [
+    {
+      id: 1,
+      title: 'Scheduled Maintenance - AI Services',
+      description: 'Planned maintenance to upgrade AI model infrastructure',
+      status: 'resolved',
+      severity: 'maintenance',
+      startTime: '2025-01-15T02:00:00Z',
+      endTime: '2025-01-15T04:00:00Z',
+      affectedServices: ['AI Services'],
+      updates: [
+        {
+          time: '2025-01-15T02:00:00Z',
+          message: 'Maintenance started as scheduled'
+        },
+        {
+          time: '2025-01-15T03:30:00Z',
+          message: 'Infrastructure upgrade completed successfully'
+        },
+        {
+          time: '2025-01-15T04:00:00Z',
+          message: 'All services restored and operational'
+        }
+      ]
+    },
+    {
+      id: 2,
+      title: 'API Response Time Degradation',
+      description: 'Increased API response times affecting some endpoints',
+      status: 'resolved',
+      severity: 'minor',
+      startTime: '2025-01-10T14:20:00Z',
+      endTime: '2025-01-10T16:45:00Z',
+      affectedServices: ['API Gateway', 'Core Platform'],
+      updates: [
+        {
+          time: '2025-01-10T14:20:00Z',
+          message: 'Investigating increased API response times'
+        },
+        {
+          time: '2025-01-10T15:30:00Z',
+          message: 'Identified database connection pool issue'
+        },
+        {
+          time: '2025-01-10T16:45:00Z',
+          message: 'Issue resolved, response times normalized'
+        }
+      ]
+    }
+  ];
+
+  const getStatusColor = (status: string)   => {
+    switch (status) {
+      case 'operational':
+        return 'text-green-500';
+      case 'degraded':
+        return 'text-yellow-500';
+      case 'outage':
+        return 'text-red-500';
+      case 'maintenance':
+        return 'text-blue-500';
+      default:
+        return 'text-gray-500';
+    }
+  };
+
+  const getStatusIcon = (status: string)   => {
+    switch (status) {
+      case 'operational':
+        return <CheckCircle className="w-5 h-5 text-green-500" />;
+      case 'degraded':
+        return <AlertTriangle className="w-5 h-5 text-yellow-500" />;
+      case 'outage':
+        return <XCircle className="w-5 h-5 text-red-500" />;
+      case 'maintenance':
+        return <Clock className="w-5 h-5 text-blue-500" />;
+      default:
+        return <Clock className="w-5 h-5 text-gray-500" />;
+    }
+  };
+
+  const getSeverityColor = (severity: string)   => {
+    switch (severity) {
+      case 'critical':
+        return 'bg-red-500';
+      case 'major':
+        return 'bg-orange-500';
+      case 'minor':
+        return 'bg-yellow-500';
+      case 'maintenance':
+        return 'bg-blue-500';
+      default:
+        return 'bg-gray-500';
+    }
+  };
+
+  const formatDate = (dateString: string)   => {
+    return new Date(dateString).toLocaleString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+  };
 
   const refreshStatus = async () => {
     setIsRefreshing(true);
@@ -113,9 +284,9 @@ export default function SystemStatus() {
             Service Status
           </h2>
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-              {services.map((service, index) => (
-                <motion.div
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+              {services.map((service, index)   => (
+                <div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}

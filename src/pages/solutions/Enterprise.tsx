@@ -1,70 +1,10 @@
-import { motion } from 'framer-motion';
-import { 
-  Building, 
-  Target, 
-  CheckCircle, 
-  ArrowRight,
-  Play,
-  Settings,
-  Activity,
-  BarChart3,
-  TrendingUp,
-  Shield,
-  Database,
-  Smartphone,
-  Code,
-  FileText,
-  AlertCircle,
-  CheckSquare,
-  Calculator,
-  PieChart,
-  LineChart,
-  Target2,
-  Wallet,
-  PiggyBank,
-  CreditCard,
-  Receipt,
-  Cloud,
-  Zap2,
-  Gauge,
-  BarChart4,
-  TrendingUp2,
-  Lightbulb,
-  Briefcase,
-  Strategy,
-  Brain,
-  Compass,
-  RefreshCw,
-  TrendingUp3,
-  Layers,
-  Workflow,
-  Scale,
-  Award,
-  Lock,
-  Wifi,
-  Bluetooth,
-  Radio,
-  Sensor,
-  Chip,
-  Circuit,
-  Orbit,
-  Planet,
-  Star,
-  Telescope,
-  Antenna,
-  Signal,
-  Navigation,
-  Earth,
-  Moon,
-  Sun,
-  Binary,
-  Network,
-  Users,
-  Monitor
-} from 'lucide-react';
+import React from 'react';
+import { SEO  } from '../../components/SEO';
+import { motion  } from 'framer-motion';
+import { Building, Users, Shield, Zap, Globe, TrendingUp, CheckCircle, ArrowRight  } from 'lucide-react';
 
-const Enterprise = () => {
-  const features = [
+export default function EnterpriseSolutions(...args: any[]): any {
+  const solutions = [
     {
       icon: Building,
       title: 'Scalable Architecture',
@@ -204,8 +144,8 @@ const Enterprise = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {solutions.map((solution, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -330,7 +270,41 @@ const Enterprise = () => {
         })}
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Industries Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Industries We Serve
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our enterprise solutions are tailored to meet the unique challenges 
+              and requirements of various industries.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
+            {industries.map((industry, index)  => (
+              <motion.div
+                key={industry}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 text-center border border-slate-700 hover:border-slate-600 transition-all duration-300"
+              >
+                <h3 className="text-lg font-semibold text-white">{industry}</h3>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10">

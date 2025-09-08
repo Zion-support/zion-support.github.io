@@ -1,7 +1,7 @@
-import React, { useState } from 'react.ts';
-import { SEO  } from '../components/SEO';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React, { useState } from 'react';
+import { SEO   } from '../components/SEO';
+import { motion   } from 'framer-motion';
+import { Link   } from 'react-router-dom';
 
 const Contact: React.FC = (): JSX.Element => {
   const [activeTab, setActiveTab] = useState('general');
@@ -16,16 +16,16 @@ const Contact: React.FC = (): JSX.Element => {
     timeline: ''
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)   => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     })};
 
-  const handleSubmit = (e: React.FormEvent)  => {
+  const handleSubmit = (e: React.FormEvent)   => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
-    // // // // // console.log('Form submitted:', formData);
+    // // // console.log('Form submitted:', formData);
     alert('Thank you for your message! We will get back to you within 24 hours.');
     setFormData({
       name: '',
@@ -181,8 +181,8 @@ const Contact: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-              {contactMethods.map((method, index)  => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+              {contactMethods.map((method, index)   => (
                 <motion.div
                   key={method.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -293,7 +293,7 @@ const Contact: React.FC = () => {
                       <input
                         type="text"
                         name="comp"
-                        value={formData.comp}
+                        value={formData.company}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         placeholder="Your comp name"

@@ -1,8 +1,24 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Flask, Brain, Atom, Shield, TrendingUp, Lightbulb, Code, Database, Microscope, Rocket, BookOpen, Users, ArrowRight } from 'lucide-react';
+import { motion   } from 'framer-motion';
+import { Flask, 
+  Brain, 
+  Atom, 
+  Globe, 
+  Zap, 
+  Shield,
+  TrendingUp,
+  Lightbulb,
+  Code,
+  Database,
+  Microscope,
+  Rocket,
+  BookOpen,
+  Users,
+  Award,
+  ArrowRight
+  } from 'lucide-react';
 
-const ResearchDevelopment: React.FC = () => {
+const ResearchDevelopment: React.FC = (): JSX.Element => {
   const [selectedArea, setSelectedArea] = useState('all');
 
   const researchAreas = [
@@ -222,10 +238,39 @@ const ResearchDevelopment: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            {researchAreas.map((area, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
-                <h3 className="text-xl font-semibold text-white mb-3">{area.title}</h3>
-                <p className="text-gray-300 mb-4">{area.description}</p>
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {filteredProjects.map((project, index)   => (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-zion-slate/30 rounded-lg p-8 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
+              >
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-3">{project.title}</h3>
+                  <p className="text-zion-slate-light leading-relaxed mb-4">{project.description}</p>
+                  
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <span className="text-zion-cyan font-semibold">Status:</span>
+                      <span className="ml-2 text-white">{project.status}</span>
+                    </div>
+                    <div>
+                      <span className="text-zion-cyan font-semibold">Timeline:</span>
+                      <span className="ml-2 text-white">{project.timeline}</span>
+                    </div>
+                    <div>
+                      <span className="text-zion-cyan font-semibold">Team:</span>
+                      <span className="ml-2 text-white">{project.team}</span>
+                    </div>
+                    <div>
+                      <span className="text-zion-cyan font-semibold">Funding:</span>
+                      <span className="ml-2 text-white">{project.funding}</span>
+                    </div>
+                  </div>
+                </div>
                 
                 <div>
                   <h4 className="font-semibold text-blue-400 mb-2">Research Focus</h4>
@@ -239,16 +284,164 @@ const ResearchDevelopment: React.FC = () => {
               </div>))}
           </div>
           
-          <div className="text-center">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold mb-4">Collaborate With Us</h3>
-              <p className="text-gray-300 mb-6">
-                Interested in research collaboration or want to learn more about our R&D initiatives? 
-                Let's explore opportunities to work together.
-              </p>
-              <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
-                Get in Touch
-              </Link>
+          <div className="space-y-6">
+            {publications.map((pub, index) => (
+              <motion.div
+                key={pub.doi}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-zion-slate/30 rounded-lg p-6 border border-zion-cyan/20"
+              >
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-white mb-2">{pub.title}</h3>
+                    <p className="text-zion-slate-light mb-2">{pub.authors}</p>
+                    <div className="flex items-center gap-4 text-sm text-zion-slate-light">
+                      <span>{pub.journal}</span>
+                      <span>{pub.year}</span>
+                      <span className="flex items-center gap-1">
+                        <BookOpen className="w-4 h-4 text-zion-cyan" />
+                        {pub.citations} citations
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <div className="lg:text-right">
+                    <a
+                      href={`https://doi.org/${pub.doi}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan/80 transition-colors"
+                    >
+                      View Paper
+                      <ArrowRight className="w-4 h-4" />
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Research Partnerships */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">Research Partnerships</h2>
+            <p className="text-lg text-zion-slate-light">Collaborating with leading institutions worldwide</p>
+          </motion.div>
+          
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {partnerships.map((partner, index)   => (
+              <motion.div
+                key={partner.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-zion-slate/30 rounded-lg p-8 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-16 h-16 bg-zion-cyan/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Users className="w-8 h-8 text-zion-cyan" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-white mb-2">{partner.name}</h3>
+                    <div className="space-y-2 text-zion-slate-light">
+                      <p><span className="text-zion-cyan font-semibold">Type:</span> {partner.type}</p>
+                      <p><span className="text-zion-cyan font-semibold">Focus:</span> {partner.focus}</p>
+                      <p><span className="text-zion-cyan font-semibold">Duration:</span> {partner.duration}</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Innovation Lab */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">Innovation Lab</h2>
+            <p className="text-lg text-zion-slate-light">Where ideas become reality</p>
+          </motion.div>
+          
+          <div className="grid md: anygrid-cols-3 gap-8">
+            {[
+              {
+                icon: Flask,
+                title: 'Experimental Research',
+                description: 'State-of-the-art laboratories for cutting-edge experiments'
+              },
+              {
+                icon: Code,
+                title: 'Software Development',
+                description: 'Advanced development environments for software innovation'
+              },
+              {
+                icon: Database,
+                title: 'Data Analytics',
+                description: 'High-performance computing for big data research'
+              }
+            ].map((lab, index)   => (
+              <motion.div
+                key={lab.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="w-20 h-20 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <lab.icon className="w-10 h-10 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{lab.title}</h3>
+                <p className="text-zion-slate-light">{lab.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Join Our Research Team
+            </h2>
+            <p className="text-lg text-zion-slate-light mb-8">
+              Are you passionate about pushing the boundaries of technology? We're always looking for talented researchers and innovators.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-zion-cyan text-zion-slate-dark px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan/80 transition-all duration-300">
+                View Research Positions
+              </button>
+              <button className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate-dark transition-all duration-300">
+                Submit Research Proposal
+              </button>
             </div>
           </div>
         </div>

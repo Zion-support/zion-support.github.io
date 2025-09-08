@@ -1,8 +1,49 @@
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { Shield, Lock, Eye, Search, FileText, Users, CheckCircle, Zap, Globe, Cpu, ShieldCheck, FileCheck, Clock, TrendingUp, DollarSign, Building } from 'lucide-react';
+import React from 'react';
+import { motion   } from 'framer-motion';
+import { SEO   } from '@/components/SEO';
+import { Shield, 
+  Database, 
+  Lock, 
+  Eye, 
+  Search, 
+  FileText, 
+  Users, 
+  CheckCircle,
+  AlertTriangle,
+  BarChart3,
+  Zap,
+  Globe,
+  Cpu,
+  Key,
+  Fingerprint,
+  ShieldCheck,
+  FileCheck,
+  UserCheck,
+  Clock,
+  TrendingUp,
+  DollarSign,
+  Building,
+  Server,
+  Cloud,
+  Network,
+  Monitor,
+  Settings,
+  RefreshCw,
+  Download,
+  Upload,
+  Trash2,
+  Archive,
+  Copy,
+  Move,
+  Link,
+  Unlink,
+  EyeOff,
+  EyeOn,
+  LockOpen,
+  LockClosed
+  } from 'lucide-react';
 
-const AIDataGovernance: React.FC = () => {
+const AIDataGovernance: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Shield,
@@ -253,8 +294,8 @@ const AIDataGovernance: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -287,8 +328,8 @@ const AIDataGovernance: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -320,8 +361,8 @@ const AIDataGovernance: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {complianceFrameworks.map((framework, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {complianceFrameworks.map((framework, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -354,8 +395,8 @@ const AIDataGovernance: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -393,8 +434,8 @@ const AIDataGovernance: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

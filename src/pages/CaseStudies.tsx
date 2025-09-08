@@ -1,10 +1,30 @@
-// Removed unused: import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { FileText, Building, Users, TrendingUp, ArrowRight, Search, Share2, Bookmark, Zap, Brain, Cloud, Shield, Atom, Network, Heart, DollarSign, Clock, Factory } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
+import { SEO  } from '../components/SEO';
+import { TrendingUp, 
+  Users, 
+  DollarSign, 
+  Clock, 
+  Target, 
+  CheckCircle,
+  ArrowRight,
+  Filter,
+  Search,
+  Building,
+  Brain,
+  Shield,
+  Cloud,
+  Rocket,
+  Heart,
+  Globe,
+  Star,
+  Award,
+  Zap,
+  BarChart3,
+  ShoppingCart
+ } from 'lucide-react';
 
-
-const CaseStudies: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+export default function CaseStudies(...args: any[]): any {
   const [selectedIndustry, setSelectedIndustry] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -171,33 +191,43 @@ const CaseStudies: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                Case
-              </span>
-              <br />
-              <span className="text-white">Studies</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover how our innovative solutions have transformed businesses across industries, 
-              delivering measurable results and competitive advantages.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-              >
-                View All Studies
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
-              >
-                Contact Us
-              </motion.button>
-            </div>
+            <BarChart3 className="w-10 h-10 text-white" />
+          </motion.div>
+          
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
+          >
+            Success Stories
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-xl text-slate-300 max-w-3xl mx-auto mb-12"
+          >
+            Discover how we've helped organizations across industries achieve remarkable 
+            results through innovative AI and technology solutions.
+          </motion.p>
+          
+          {/* Stats */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="grid grid-cols-2 md: anygrid-cols-4 gap-6 max-w-4xl mx-auto"
+          >
+            {stats.map((stat, index)  => (
+              <div key={stat.label} className="text-center">
+                <div className="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
+                  <stat.icon className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                <div className="text-xs text-slate-400">{stat.label}</div>
+              </div>
+            ))}
           </motion.div>
         </div>
       </section>
@@ -222,22 +252,38 @@ const CaseStudies: React.FC = () => {
         </div>
       </div>
 
-      {/* Search and Filters */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-12">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-              <div className="md:col-span-2">
-                <div className="relative">
-                  <input
-                    type="text"
-                    placeholder="Search case studies..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                  />
-                  <Search className="absolute right-3 top-3 w-5 h-5 text-white/60" />
-                </div>
+            {/* Filters */}
+            <div className="flex flex-wrap gap-4">
+              {/* Industry Filter */}
+              <div className="relative">
+                <select
+                  value={selectedIndustry}
+                  onChange={(e) => setSelectedIndustry(e.target.value)}
+                  className="appearance-none px-4 py-3 pr-10 rounded-lg bg-slate-800 border border-slate-600 focus: anyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white text-sm"
+                >
+                  {industries.map((industry)  => (
+                    <option key={industry.id} value={industry.id}>
+                      {industry.name}
+                    </option>
+                  ))}
+                </select>
+                <Filter className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400 pointer-events-none" />
+              </div>
+
+              {/* Service Filter */}
+              <div className="relative">
+                <select
+                  value={selectedService}
+                  onChange={(e) => setSelectedService(e.target.value)}
+                  className="appearance-none px-4 py-3 pr-10 rounded-lg bg-slate-800 border border-slate-600 focus: anyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white text-sm"
+                >
+                  {services.map((service)  => (
+                    <option key={service.id} value={service.id}>
+                      {service.name}
+                    </option>
+                  ))}
+                </select>
+                <Filter className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400 pointer-events-none" />
               </div>
               <select
                 value={selectedCategory}
@@ -266,62 +312,11 @@ const CaseStudies: React.FC = () => {
         </div>
       </section>
 
-        {/* Featured Case Studies */}
-        {filteredCaseStudies.filter(cs => cs.featured).length > 0 && (
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Featured Success Stories</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {filteredCaseStudies.filter(cs => cs.featured).map((cs, index) => (
-                <motion.article
-                  key={cs.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow"
-                >
-                  <div className="p-6">
-                    <div className="flex items-center space-x-2 mb-3">
-                      <span className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full font-medium">
-                        Featured
-                      </span>
-                      <span className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">
-                        {industries.find(i => i.id === cs.industry)?.name}
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{cs.title}</h3>
-                    <p className="text-gray-600 mb-3 font-medium">{cs.comp}</p>
-                    <p className="text-gray-600 mb-4">{cs.challenge}</p>
-                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                      <span className="flex items-center">
-                        <Clock className="h-4 w-4 mr-1" />
-                        {cs.duration}
-                      </span>
-                      <span className="flex items-center">
-                        <Users className="h-4 w-4 mr-1" />
-                        {cs.teamSize}
-                      </span>
-                    </div>
-                    <a
-                      href={`/case-studies/${cs.id}`}
-                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-                    >
-                      Read Full Case Study
-                      <ArrowRight className="ml-1 h-4 w-4" />
-                    </a>
-                  </div>
-                </motion.article>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* All Case Studies */}
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            {filteredCaseStudies.length} Case Studies Found
-          </h2>
-          <div className="space-y-6">
-            {filteredCaseStudies.filter(cs => !cs.featured).map((cs, index) => (
+      {/* Case Studies Grid */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {filteredCaseStudies.map((study, index)  => (
               <motion.article
                 key={cs.id}
                 initial={{ opacity: 0, y: 20 }}

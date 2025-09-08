@@ -1,6 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Brain, Zap, Globe, ArrowRight, CheckCircle, Server, Cloud, Code, Rocket, Phone, Mail, DollarSign, Target, Image, Calculator, Plus, Key, TrendingUp } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
+import { Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
+  Server, Cloud, Database, Network, Lock, Code, Rocket, Building,
+  Search, Phone, Mail, Cpu, Monitor, Smartphone, Wifi, Bluetooth,
+  Satellite, Atom, Leaf, Space, Handshake, Calendar, DollarSign,
+  BarChart3, Target, Award, Clock, Heart, Truck, Sparkles, Crown,
+  Lightbulb, Globe2, FileText, Image, Video, Palette, ShoppingCart,
+  MessageSquare, Eye, Ear, Hand, Foot, Bone, Tooth, Pill, Bandage,
+  Thermometer, Scale, Calculator, ChartBar, PieChart, LineChart,
+  Activity, TrendingDown, Minus, Plus, Equal, Divide, Percent,
+  Euro, Pound, Yen, CreditCard, Wallet, Banknote, Coins, PiggyBank,
+  Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode, Barcode,
+  Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX, TrendingUp
+ } from 'lucide-react';
 
 const pricingData2028 = {
   aiServices[
@@ -128,7 +140,7 @@ const pricingData2028 = {
   {/* Removed stray closing bracket */}
 };
 
-export default function ComprehensivePricingGuide2028() {
+const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPlan, setSelectedPlan] = useState('professional');
 
@@ -255,12 +267,29 @@ export default function ComprehensivePricingGuide2028() {
     }
   ];
 
-  const filteredServices = allServices.filter(service => {
-    return selectedCategory === 'all' || service.category === selectedCategory;
+  const getAllServices = () => {
+    return [
+      ...pricingData2028.aiServices.map(service => ({ ...service, type: any'AI Services' })),
+      ...pricingData2028.microSAAS.map(service  => ({ ...service, type: any'Micro SAAS' })),
+      ...pricingData2028.itServices.map(service  => ({ ...service, type: 'IT Services' }))
+    ];
+  };
+
+  const filteredServices = getAllServices().filter(service => {
+    const matchesCategory = selectedCategory === 'all' || 
+      service.type.toLowerCase().includes(selectedCategory.replace('-', ' '));
+    
+    const price = parseInt(service.price.replace(/[^0-9]/g, ''));
+    let matchesPrice = true;
+    if (priceRange === 'low') matchesPrice = price < 500;
+    else if (priceRange === 'medium') matchesPrice = price >= 500 && price <= 10000;
+    else if (priceRange === 'high') matchesPrice = price > 10000;
+    
+    return matchesCategory && matchesPrice;
   });
 
-  const getCategoryIcon = (categoryId: string) => {
-    return categories.find(cat => cat.id === categoryId)?.icon || Sparkles;
+  const calculateROI = (roi: string)  => {
+    return parseInt(roi.replace('%', ''));
   };
 
   return (
@@ -353,8 +382,57 @@ export default function ComprehensivePricingGuide2028() {
             </p>
           </motion.div>
 
-          <div className="space-y-16">
-            {filteredServices.map((service, index) => (
+      {/* Filters */}
+      <section className="py-12 bg-zion-slate-dark/30">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+            {/* Category Filter */}
+            <div className="flex flex-wrap gap-3">
+              {categories.map((category) => (
+                <motion.button
+                  key={category.id}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 ${
+                    selectedCategory === category.id
+                      ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg'
+                      : 'bg-zion-slate/50 text-zion-slate-light hover:bg-zion-slate/70'
+                  }`}
+                >
+                  <category.icon className="w-4 h-4" />
+                  {category.name}
+                </motion.button>
+              ))}
+            </div>
+
+            {/* Price Range Filter */}
+            <div className="flex flex-wrap gap-3">
+              {priceRanges.map((range) => (
+                <motion.button
+                  key={range.id}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setPriceRange(range.id)}
+                  className={`px-4 py-2 rounded-lg transition-all duration-300 ${
+                    priceRange === range.id
+                      ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg'
+                      : 'bg-zion-slate/50 text-zion-slate-light hover:bg-zion-slate/70'
+                  }`}
+                >
+                  {range.name}
+                </motion.button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {sortedServices.map((service, index)  => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}

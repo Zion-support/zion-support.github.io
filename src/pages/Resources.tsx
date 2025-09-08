@@ -1,9 +1,52 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { BookOpen, Target, FileText, Users, Code, HelpCircle, DollarSign, ArrowRight, Star, Cloud, Play, Phone, Mail, MapPin, ExternalLink, Award, GitBranch, GitCommit } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion   } from 'framer-motion';
+import { BookOpen, 
+  FileText, 
+  Video, 
+  HelpCircle, 
+  Search,
+  Filter,
+  ArrowRight,
+  Download,
+  ExternalLink,
+  Calendar,
+  Clock,
+  Users,
+  Star,
+  TrendingUp,
+  Award,
+  Rocket,
+  Brain,
+  Shield,
+  Code,
+  Zap,
+  Lightbulb,
+  Target,
+  Building,
+  BarChart3,
+  Globe,
+  Mail,
+  Phone,
+  MessageCircle,
+  CheckCircle,
+  Play,
+  Pause,
+  Stop
+  } from 'lucide-react';
 
-export default function Resources() {
-  const resourceCategories = [
+const Resources: React.FC = (): JSX.Element => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const categories = [
+    { id: 'all', name: 'All Resources', count: 45, icon: BookOpen },
+    { id: 'case-studies', name: 'Case Studies', count: 12, icon: BarChart3 },
+    { id: 'white-papers', name: 'White Papers', count: 8, icon: FileText },
+    { id: 'webinars', name: 'Webinars', count: 15, icon: Video },
+    { id: 'support', name: 'Support', count: 10, icon: HelpCircle }
+  ];
+
+  const resources = [
     {
       id: 'blog',
       title: 'Blog & Insights',
@@ -104,38 +147,38 @@ export default function Resources() {
     }
   ];
 
-  const additionalResources = [
-    {
-      id: 'api-docs',
-      title: 'API Reference',
-      icon: GitBranch,
-      description: 'Comprehensive API documentation',
-      color: 'from-purple-500 to-indigo-500',
-      href: '/api-docs'
-    },
-    {
-      id: 'developers',
-      title: 'Developer Portal',
-      icon: GitCommit,
-      description: 'Developer tools and resources',
-      color: 'from-blue-500 to-cyan-500',
-      href: '/developers'
-    },
-    {
-      id: 'training',
-      title: 'Training & Certification',
-      icon: Award,
-      description: 'Professional development programs',
-      color: 'from-green-500 to-emerald-500',
-      href: '/training'
-    },
-    {
-      id: 'community',
-      title: 'Community Forum',
-      icon: Users,
-      description: 'Connect with peers and experts',
-      color: 'from-orange-500 to-red-500',
-      href: '/community'
+  const filteredResources = resources.filter(resource => {
+    const matchesCategory = selectedCategory === 'all' || resource.category === selectedCategory;
+    const matchesSearch = resource.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         resource.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         resource.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    return matchesCategory && matchesSearch;
+  });
+
+  const featuredResources = resources.filter(resource => resource.featured);
+  const regularResources = filteredResources.filter(resource => !resource.featured);
+
+  const formatDate = (dateString: string)   => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    });
+  };
+
+  const getResourceIcon = (type: string)   => {
+    switch (type) {
+      case 'White Paper':
+      case 'Research Paper':
+        return FileText;
+      case 'Case Study':
+        return BarChart3;
+      case 'Webinar Recording':
+      case 'Workshop Recording':
+        return Video;
+      default:
+        return FileText;
     }
   ];
 
@@ -164,26 +207,181 @@ export default function Resources() {
               of the latest technology trends and best practices.
             </p>
           </div>
-          
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <p className="text-gray-600 text-center">
-              Resources section coming soon. We're building a comprehensive library of valuable content.
-            </p>
+        </div>
+      </section>
+
+      {/* Featured Resources */}
+      {featuredResources.length > 0 && (
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold text-white mb-4">Featured Resources</h2>
+              <p className="text-zion-slate-light">Our most popular and valuable resources</p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+              {featuredResources.map((resource, index)   => {
+                const ResourceIcon = getResourceIcon(resource.type);
+                return (
+                  <motion.article
+                    key={resource.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="group"
+                  >
+                    <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
+                      {/* Resource Image Placeholder */}
+                      <div className="h-48 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center relative">
+                        <ResourceIcon className="w-16 h-16 text-zion-cyan" />
+                        <div className="absolute top-4 right-4">
+                          <span className="px-3 py-1 bg-zion-cyan text-white text-xs rounded-full font-semibold">
+                            Featured
+                          </span>
+                        </div>
+                      </div>
+                      
+                      <div className="p-6">
+                        <div className="flex items-center space-x-4 text-sm text-zion-slate-light mb-4">
+                          <span className="flex items-center">
+                            <Calendar className="w-4 h-4 mr-2" />
+                            {formatDate(resource.date)}
+                          </span>
+                          <span className="flex items-center">
+                            <Clock className="w-4 h-4 mr-2" />
+                            {resource.readTime || resource.duration}
+                          </span>
+                          <span className="flex items-center">
+                            <Download className="w-4 h-4 mr-2" />
+                            {resource.downloads?.toLocaleString() || resource.views?.toLocaleString()}
+                          </span>
+                        </div>
+
+                        <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
+                          {resource.title}
+                        </h3>
+                        
+                        <p className="text-zion-slate-light mb-4 leading-relaxed">
+                          {resource.description}
+                        </p>
+
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {resource.tags.map((tag, idx) => (
+                            <span
+                              key={idx}
+                              className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/20"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+
+                        <div className="flex items-center justify-between">
+                          <div className="text-sm">
+                            <p className="text-zion-cyan font-semibold">{resource.author}</p>
+                            <p className="text-zion-slate-light">{resource.type}</p>
+                          </div>
+                          <a
+                            href={resource.downloadUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 group"
+                          >
+                            Download
+                            <Download className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform duration-300" />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.article>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Regular Resources Grid */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">All Resources</h2>
+            <p className="text-zion-slate-light">Browse our complete library of knowledge resources</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {resourceCategories.filter(cat => cat.featured).map((category, index) => (
-              <motion.div
-                key={category.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative"
-              >
-                <div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-${category.color.split('-')[1]}-500/20 hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105`}>
-                  <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <category.icon className="w-8 h-8 text-white" />
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {regularResources.map((resource, index)   => {
+              const ResourceIcon = getResourceIcon(resource.type);
+              return (
+                <motion.article
+                  key={resource.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="group"
+                >
+                  <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 h-full">
+                    {/* Resource Image Placeholder */}
+                    <div className="h-40 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center">
+                      <ResourceIcon className="w-12 h-12 text-zion-cyan" />
+                    </div>
+                    
+                    <div className="p-6 flex-1">
+                      <div className="flex items-center space-x-4 text-sm text-zion-slate-light mb-3">
+                        <span className="flex items-center">
+                          <Calendar className="w-4 h-4 mr-2" />
+                          {formatDate(resource.date)}
+                        </span>
+                        <span className="flex items-center">
+                          <Clock className="w-4 h-4 mr-2" />
+                          {resource.readTime || resource.duration}
+                        </span>
+                      </div>
+
+                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300 line-clamp-2">
+                        {resource.title}
+                      </h3>
+                      
+                      <p className="text-zion-slate-light mb-4 leading-relaxed line-clamp-3">
+                        {resource.description}
+                      </p>
+
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {resource.tags.slice(0, 2).map((tag, idx) => (
+                          <span
+                            key={idx}
+                            className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/20"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      <div className="flex items-center justify-between mt-auto">
+                        <div className="text-sm">
+                          <p className="text-zion-cyan font-semibold">{resource.author}</p>
+                        </div>
+                        <a
+                          href={resource.downloadUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center text-zion-cyan hover:text-zion-cyan/80 transition-colors duration-300 group"
+                        >
+                          Download
+                          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                        </a>
+                      </div>
+                    </div>
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
                     {category.title}

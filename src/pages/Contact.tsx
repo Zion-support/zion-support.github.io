@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { SEO } from '../components/SEO';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { SEO   } from '../components/SEO';
+import { motion   } from 'framer-motion';
+import { Link   } from 'react-router-dom';
 
-function Contact(): JSX.Element {
+const Contact: React.FC = (): JSX.Element => {
   const [activeTab, setActiveTab] = useState('general');
   const [formData, setFormData] = useState({
     name: '',
@@ -14,17 +14,17 @@ function Contact(): JSX.Element {
     message: ''
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)   => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent)   => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
-    // // // // // console.log('Form submitted:', formData);
+    // // // console.log('Form submitted:', formData);
     alert('Thank you for your message! We will get back to you within 24 hours.');
     setFormData({
       name: '',
@@ -155,8 +155,8 @@ function Contact(): JSX.Element {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-              {contactMethods.map((method, index)  => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+              {contactMethods.map((method, index)   => (
                 <motion.div
                   key={method.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -260,6 +260,90 @@ function Contact(): JSX.Element {
                       />
                     </div>
                   </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-white font-medium mb-2">Company</label>
+                      <input
+                        type="text"
+                        name="comp"
+                        value={formData.company}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="Your company name"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-white font-medium mb-2">Phone</label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="+1 (555) 123-4567"
+                      />
+                    </div>
+                  </div>
+
+                  {(activeTab === 'consultation' || activeTab === 'support') && (
+                    <div>
+                      <label className="block text-white font-medium mb-2">Service of Interest</label>
+                      <select
+                        name="service"
+                        value={formData.service}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      >
+                        <option value="">Select a service</option>
+                        {serviceCategories.map(category => (
+                          <optgroup key={category.name} label={category.name}>
+                            {category.services.map(service => (
+                              <option key={service} value={service}>{service}</option>
+                            ))}
+                          </optgroup>
+                        ))}
+                      </select>
+                    </div>
+                  )}
+
+                  {activeTab === 'consultation' && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-white font-medium mb-2">Budget Range</label>
+                        <select
+                          name="budget"
+                          value={formData.budget}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        >
+                          <option value="">Select budget range</option>
+                          <option value="under-10k">Under $10,000</option>
+                          <option value="10k-50k">$10,000 - $50,000</option>
+                          <option value="50k-100k">$50,000 - $100,000</option>
+                          <option value="100k-500k">$100,000 - $500,000</option>
+                          <option value="over-500k">Over $500,000</option>
+                        </select>
+                      </div>
+                      <div>
+                        <label className="block text-white font-medium mb-2">Timeline</label>
+                        <select
+                          name="timeline"
+                          value={formData.timeline}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        >
+                          <option value="">Select timeline</option>
+                          <option value="immediate">Immediate</option>
+                          <option value="1-3-months">1-3 months</option>
+                          <option value="3-6-months">3-6 months</option>
+                          <option value="6-12-months">6-12 months</option>
+                          <option value="over-12-months">Over 12 months</option>
+                        </select>
+                      </div>
+                    </div>
+                  )}
+
                   <div>
                     <h3 className="text-white font-semibold">Email</h3>
                     <p className="text-zion-slate-light">kleber@ziontechgroup.com</p>

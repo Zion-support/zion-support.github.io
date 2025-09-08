@@ -1,199 +1,63 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Head from 'next/head';
-import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Rocket,
-  Target,
-  Handshake,
-  Lightbulb,
-  Cpu,
-  Database,
-  Network,
-  Smartphone,
-  Lock,
-  BarChart3,
-  Code,
-  Server,
-  Wifi,
-  ShieldCheck,
-  Globe2,
-  Bot,
-  Workflow,
-  Eye,
-  Sparkles,
-  Phone,
-  Mail,
-  MapPin,
-  Clock,
-  DollarSign,
-  Atom,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  Activity,
-  FileText,
-  MessageCircle,
-  Search,
-  BarChart,
-  Users2,
-  Settings,
-  Palette,
-  TrendingUp,
-  Award,
-  Globe,
-  Zap as ZapIcon,
-  Monitor,
-  Smartphone as Mobile,
-  Laptop,
-  Server as ServerIcon,
-  Database as DatabaseIcon,
-  Network as NetworkIcon,
-  Shield as ShieldIcon,
-  Brain as BrainIcon,
-  Cloud as CloudIcon,
-  BarChart as BarChartIcon,
-  Code as CodeIcon,
-  Palette as PaletteIcon,
-  Smartphone as SmartphoneIcon,
-  Globe as GlobeIcon,
-  Zap as ZapIcon2,
-  Lock as LockIcon,
-  Eye as EyeIcon,
-  TrendingUp as TrendingUpIcon,
-  Users as UsersIcon,
-  Settings as SettingsIcon,
-  FileText as FileTextIcon,
-  MessageCircle as MessageCircleIcon,
-  Search as SearchIcon,
-  BarChart as BarChartIcon2,
-  Users2 as Users2Icon,
-  Settings as SettingsIcon2,
-  Palette as PaletteIcon2,
-  TrendingUp as TrendingUpIcon2,
-  Award as AwardIcon,
-  Globe as GlobeIcon2,
-  Zap as ZapIcon3
-} from 'lucide-react';
+import Head from 'next/head.ts';
+import Link from 'next/link.ts';
 
-const products = [
-  {
-    id: 1,
-    name: 'AI Email Responder',
-    description: 'Intelligent email automation powered by advanced AI',
-    category: 'AI Services',
-    icon: Brain,
-    price: '$99/month',
-    features: [
-      'Natural language processing',
-      'Context-aware responses',
-      'Multi-language support',
-      'Custom training models'
-    ],
-    rating: 4.8,
-    users: 1200,
-    color: 'from-blue-500 to-cyan-500'
-  },
-  {
-    id: 2,
-    name: 'Cloud Infrastructure',
-    description: 'Scalable cloud solutions for modern businesses',
-    category: 'Cloud Services',
-    icon: Cloud,
-    price: '$199/month',
-    features: [
-      'Auto-scaling infrastructure',
-      'Global CDN',
-      '99.9% uptime guarantee',
-      '24/7 monitoring'
-    ],
-    rating: 4.7,
-    users: 850,
-    color: 'from-green-500 to-teal-500'
-  },
-  {
-    id: 3,
-    name: 'Security Suite',
-    description: 'Comprehensive security solutions for enterprise',
-    category: 'Security',
-    icon: Shield,
-    price: '$299/month',
-    features: [
-      'Advanced threat detection',
-      'Real-time monitoring',
-      'Compliance management',
-      'Incident response'
-    ],
-    rating: 4.9,
-    users: 650,
-    color: 'from-red-500 to-orange-500'
-  },
-  {
-    id: 4,
-    name: 'Micro SaaS Platform',
-    description: 'Complete SaaS solution for small businesses',
-    category: 'SaaS',
-    icon: Zap,
-    price: '$149/month',
-    features: [
-      'Multi-tenant architecture',
-      'User management',
-      'Payment processing',
-      'Analytics dashboard'
-    ],
-    rating: 4.6,
-    users: 950,
-    color: 'from-purple-500 to-pink-500'
-  }
-];
-
-const categories = [
-  'All',
-  'AI Services',
-  'Cloud Services',
-  'Security',
-  'SaaS'
-];
-
-export default function ProductsIndex() {
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
-
-  const filteredProducts = selectedCategory === 'All' 
-    ? products 
-    : products.filter(product => product.category === selectedCategory);
-
+export default function ProductsIndex(...args: any[]): any {
   return (
-    <Layout
-      title="Products - Zion Tech Group"
-      description="Discover our comprehensive suite of technology products and services designed for modern businesses."
-      keywords="products, AI services, cloud computing, security, SaaS, technology solutions"
-    >
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Our Products
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Comprehensive technology solutions designed to accelerate your business growth
-              </p>
-            </motion.div>
+    <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
+      <Head>
+        <title>Products — Zion</title>
+        <meta name="description" content="A showcase of ready-to-run automation suites." />
+      </Head>
+
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float" />
+        <div className="absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow" />
+        <div className="absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast" />
+        <div className="absolute inset-0 opacity-[0.08] [background:radial-gradient(circle_at_center,rgba(255,255,255,0.35)_0,rgba(255,255,255,0)_60%),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.12)_1px,transparent_1px)] bg-[size:100%_100%,3rem_3rem,3rem_3rem] animate-grid" />
+        <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]"><div className="twinkle-field absolute inset-0" /></div>
+        <div className="absolute inset-0 beams opacity-[0.06]" />
+      </div>
+
+      <header className="relative z-10">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
+          <div className="text-2xl font-bold tracking-wide">
+            <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon">Zion</span>
+          </div>
+          <div className="hidden gap-6 md:flex text-white/80">
+            <Link href="/"><a>Home</a></Link>
+            <Link href="/automation"><a>Automations</a></Link>
+            <Link href="/services"><a>Services</a></Link>
+            <Link href="/contact"><a>Contact</a></Link>
+          </div>
+        </nav>
+      </header>
+
+      <main className="relative z-10">
+        <section className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-20 text-center">
+          <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md">
+            <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
+            Automation suites — ready to deploy
+          </div>
+          <h1 className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl"><span className="gradient-text">Products</span></h1>
+          <p className="mx-auto mt-5 max-w-3xl text-lg text-white/80">Pre-configured agents and bundles designed for outcomes.</p>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-6 pb-16">
+          <div className="grid grid-cols-1 gap-5 sm: anygrid-cols-2 lg:grid-cols-3">
+            {[
+              { title: 'SEO Guard', desc: 'Continuous audits + on-page fixes' },
+              { title: 'Perf Shield', desc: 'CWV budgets + asset optimization' },
+              { title: 'Link Sentinel', desc: 'Prevents broken links in prod' },
+              { title: 'Content Curator', desc: 'Keeps the homepage fresh' },
+              { title: 'Design Refiner', desc: 'Iterates layouts with guardrails' },
+              { title: 'Security Scanner', desc: 'Finds and patches risky deps' },
+            ].map((p)  => (
+              <div key={p.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
+                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                <h3 className="text-lg font-semibold">{p.title}</h3>
+                <p className="mt-1 text-sm text-white/75">{p.desc}</p>
+              </div>
+            ))}
           </div>
         </section>
 

@@ -1,13 +1,35 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Brain, Cloud, Shield, Users, Globe, Code, Rocket, TrendingUp, Star, ArrowRight, Play, CheckCircle } from 'lucide-react';
+import { motion, AnimatePresence    } from 'framer-motion';
+import { Link    } from 'react-router-dom';
+import { Brain, 
+  Cloud, 
+  Shield, 
+  Zap, 
+  Users, 
+  Globe, 
+  Code, 
+  Database,
+  Rocket,
+  TrendingUp,
+  Star,
+  ArrowRight,
+  Play,
+  Target,
+  Award,
+  CheckCircle
+   } from 'lucide-react';
 
 interface Service {
+
+
+
   id: string;
   title: string;
   description: string;
-  icon: React.ComponentType<{ className?: string }>;
+icon: React.ComponentType<{ className?: string;
+
+
+}>;
   category: string;
   features: string[];
   pricing: string;
@@ -163,11 +185,10 @@ export const EnhancedServiceShowcase: React.FC = () => {
   }, []);
 
   const filteredServices = selectedCategory === 'All Services' 
-    ? services 
-    : services.filter(service => service.category === selectedCategory);
+    ? services: anyservices.filter(service    => service.category === selectedCategory);
 
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
+  const renderStars = (rating: anynumber)    => {
+    return Array.from({ length: any5 }, (_, i)    => (
       <Star
         key={i}
         className={`w-4 h-4 ${

@@ -1,22 +1,52 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Search, Filter, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Cpu, Database, Leaf, Phone, Mail, MapPin } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from '../data/innovativeMicroSaasServices2026';
-
-export default function InnovativeServicesShowcase2026() {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState('rating');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(12);
-
-  const filteredServices = INNOVATIVE_SERVICES_2026.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+import React, { useState, useEffect } from 'react';
+import { motion   } from 'framer-motion';
+import { Brain, 
+  Shield, 
+  Zap, 
+  Cloud, 
+  Lock, 
+  Globe, 
+  Cpu, 
+  Database,
+  Network,
+  Smartphone,
+  BarChart3,
+  TrendingUp,
+  Users,
+  Building2,
+  Leaf,
+  Car,
+  Heart,
+  Scale,
+  Eye,
+  Search,
+  Filter,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink
+  } from 'lucide-react';
+import { INNOVATIVE_SERVICES   } from '../data/servicesData';
+export default function InnovativeServicesShowcase2026(...args: any[]): any {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [sortBy, setSortBy] = useState('innovation');
+  const categories = [
+    { id: 'all', name: 'All Services', icon: Globe, color: 'from-blue-500 to-cyan-500' },
+    { id: 'AI & Analytics', name: 'AI & Analytics', icon: Brain, color: 'from-purple-500 to-pink-500' },
+    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500' },
+    { id: 'DevOps & Infrastructure', name: 'DevOps & Infrastructure', icon: Cpu, color: 'from-green-500 to-emerald-500' },
+    { id: 'AI & Healthcare', name: 'AI & Healthcare', icon: Heart, color: 'from-rose-500 to-pink-500' },
+    { id: 'AI & Edge Computing', name: 'AI & Edge Computing', icon: Zap, color: 'from-amber-500 to-yellow-500' }
+  ];
+  const filteredServices = INNOVATIVE_SERVICES.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
 
@@ -126,13 +156,12 @@ export default function InnovativeServicesShowcase2026() {
               {/* Category Filter */}
               <div className="flex-shrink-0">
                 <select
-                  value={activeCategory}
-                  onChange={(e) => setActiveCategory(e.target.value)}
-                  className="px-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
-                  <option value="all">All Categories</option>
-                  {SERVICE_CATEGORIES_2026.map(category => (
-                    <option key={category} value={category}>{category}</option>
+                  {categories.map(category   => (
+                    <option key={category.id} value={category.id}>{category.name}</option>
                   ))}
                 </select>
               </div>
@@ -180,13 +209,8 @@ export default function InnovativeServicesShowcase2026() {
       {/* Services Grid */}
       <section className="px-4 sm:px-6 lg:px-8 mb-16">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
-          >
-            {paginatedServices.map((service) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {sortedServices.map((service, index)   => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}

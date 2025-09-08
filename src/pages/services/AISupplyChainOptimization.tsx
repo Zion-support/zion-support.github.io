@@ -1,8 +1,33 @@
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
-import { Truck, TrendingUp, Zap, Globe, Lock, Star, Download, Share2, Play, CheckCircle, Clock, Brain, Target, PieChart, Activity, Shield, DollarSign, Package, Route, Warehouse, Factory, Store } from 'lucide-react';
+import React from 'react';
+import { SEO   } from '../../components/SEO';
+import { motion   } from 'framer-motion';
+import { Truck, 
+  Brain, 
+  BarChart3, 
+  TrendingUp, 
+  CheckCircle, 
+  ArrowRight, 
+  Mail, 
+  Phone, 
+  Globe, 
+  ExternalLink,
+  Zap,
+  Target,
+  Cpu,
+  Package,
+  Warehouse,
+  Route,
+  Clock,
+  DollarSign,
+  Globe2,
+  MapPin,
+  Activity,
+  Gauge,
+  Shield,
+  RefreshCw
+  } from 'lucide-react';
 
-export default function AISupplyChainOptimization() {
+export default function AISupplyChainOptimization(...args: any[]): any {
   const features = [
     'AI-powered demand forecasting and inventory optimization',
     'Real-time supply chain monitoring and analytics',
@@ -117,43 +142,256 @@ export default function AISupplyChainOptimization() {
                 <h3 className="text-xl font-semibold text-zion-slate-dark mb-3">{useCase}</h3>
                 <p className="text-zion-slate-dark/70">Optimize your supply chain operations with AI-powered insights and intelligent automation.</p>
               </div>
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              AI Supply Chain Optimization
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Revolutionize your supply chain with AI-powered optimization, demand forecasting, and intelligent logistics that drive efficiency and cost savings
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="https://ziontechgroup.com/contact" 
+                className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                Optimize Supply Chain
+                <ArrowRight className="w-5 h-5" />
+              </a>
+              <a 
+                href="tel:+13024640950" 
+                className="border border-blue-500 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                <Phone className="w-5 h-5" />
+                Supply Chain Consultation
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Advanced Supply Chain Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI platform delivers intelligent optimization across every aspect of your supply chain
+            </p>
+          </motion.div>
+
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)   => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-blue-500 transition-all duration-300"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6`}>
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 max-w-6xl mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Ready to Optimize Your Supply Chain?</h2>
-          <p className="text-zion-slate-dark/70 text-lg">Get started with AI-powered supply chain optimization today</p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl p-8 text-white text-center">
-            <h3 className="text-2xl font-bold mb-4">Start Free Trial</h3>
-            <p className="mb-6">Experience the power of AI-driven supply chain optimization with our 14-day free trial</p>
-            <button className="bg-white text-zion-cyan px-6 py-3 rounded-lg font-semibold hover:bg-zion-slate-light transition-colors">
-              Start Free Trial
-            </button>
-          </div>
-          
-          <div className="bg-zion-slate-dark rounded-xl p-8 text-white text-center">
-            <h3 className="text-2xl font-bold mb-4">Schedule Demo</h3>
-            <p className="mb-6">See our platform in action with a personalized demo from our experts</p>
-            <button className="bg-zion-cyan text-white px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan/80 transition-colors">
-              Schedule Demo
-            </button>
+      {/* Services & Pricing Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Supply Chain Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              From initial assessment to ongoing optimization, we provide end-to-end supply chain transformation
+            </p>
+          </motion.div>
+
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {services.map((service, index)   => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
+              >
+                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                <div className="text-3xl font-bold text-blue-400 mb-6">{service.price}</div>
+                <ul className="space-y-3">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center gap-3 text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-zion-slate-dark text-white">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-8">Contact Our Team</h2>
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div className="flex items-center justify-center space-x-3">
-              <Phone className="h-6 w-6 text-zion-cyan" />
-              <span>+1 302 464 0950</span>
+      {/* Use Cases Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Industry Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See how AI-powered supply chain optimization transforms different industries
+            </p>
+          </motion.div>
+
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)   => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
+              >
+                <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
+                <p className="text-gray-300 mb-6">{useCase.description}</p>
+                <div className="space-y-3">
+                  {useCase.benefits.map((benefit, benefitIndex) => (
+                    <div key={benefitIndex} className="flex items-center gap-3 text-green-400">
+                      <TrendingUp className="w-5 h-5 flex-shrink-0" />
+                      {benefit}
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Why Choose AI-Powered Optimization?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the advantages of intelligent supply chain management
+            </p>
+          </motion.div>
+
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {benefits.map((benefit, index)   => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
+                  <benefit.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technologies Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Advanced Technologies
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Built on cutting-edge AI and optimization technologies for maximum efficiency
+            </p>
+          </motion.div>
+
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {technologies.map((tech, index)   => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-2xl border border-slate-600 text-center"
+              >
+                <h3 className="text-xl font-semibold text-white mb-3">{tech.name}</h3>
+                <p className="text-gray-300">{tech.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl p-12 text-center"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Optimize Your Supply Chain?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Join hundreds of businesses that have transformed their supply chain operations with AI-powered optimization and intelligence
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="https://ziontechgroup.com/contact" 
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                Start Optimization
+                <ArrowRight className="w-5 h-5" />
+              </a>
+              <a 
+                href="tel:+13024640950" 
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                <Phone className="w-5 h-5" />
+                Call +1 302 464 0950
+              </a>
             </div>
             <div className="flex items-center justify-center space-x-3">
               <Mail className="h-6 w-6 text-zion-cyan" />

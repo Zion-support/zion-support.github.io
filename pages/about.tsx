@@ -1,8 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { Users, Target, Eye, Award, TrendingUp, Globe, Zap, Shield  } from 'lucide-react.ts'
 
 
-export default function About(...args[]):  {
+export default function About(...args: any[]): any {
 	return (
   {/* Empty JSX fragment */}
 			{/* Hero Section */}

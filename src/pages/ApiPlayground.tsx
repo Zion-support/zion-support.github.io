@@ -1,7 +1,7 @@
-// Removed unused: import React, { useState } from 'react';
-import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info } from 'lucide-react';
+import React, { useState } from 'react';
+import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info  } from 'lucide-react';
 
-export default function ApiPlayground() {
+export default function ApiPlayground(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [activeMethod, setActiveMethod] = useState('all');
@@ -213,7 +213,7 @@ export default function ApiPlayground() {
   ];
 
   // Update counts
-  categories.forEach(cat => {
+  categories.forEach(cat  => {
     cat.count = apis.filter(api => api.category === cat.id).length;
   });
 
@@ -231,15 +231,15 @@ export default function ApiPlayground() {
     return matchesSearch && matchesCategory && matchesMethod;
   });
 
-  const getCategoryIcon = (categoryId: string) => {
+  const getCategoryIcon = (categoryId: string)  => {
     return categories.find(c => c.id === categoryId)?.icon || <Code className="w-5 h-5" />;
   };
 
-  const getMethodColor = (method: string) => {
+  const getMethodColor = (method: string)  => {
     return methods.find(m => m.id === method)?.color || 'text-zion-slate-light';
   };
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (status: string)  => {
     switch (status) {
       case 'stable': return 'text-green-400';
       case 'beta': return 'text-yellow-400';
@@ -248,7 +248,7 @@ export default function ApiPlayground() {
     }
   };
 
-  const handleApiSelect = (api: unknown) => {
+  const handleApiSelect = (api: any)  => {
     setSelectedApi(api);
     setRequestBody(JSON.stringify(api.requestExample, null, 2));
     setResponseData('');
@@ -267,7 +267,7 @@ export default function ApiPlayground() {
     }, 1500);
   };
 
-  const copyToClipboard = (text: string) => {
+  const copyToClipboard = (text: string)  => {
     navigator.clipboard.writeText(text);
   };
 

@@ -1,4 +1,4 @@
-export type SpecializedITService = {
+export interface SpecializedITService {
 
   id: string;
   title: string;
@@ -16,14 +16,23 @@ export type SpecializedITService = {
   estimatedDelivery: string;
   supportLevel: string;
   marketPrice: string;
-  contactInfo: {
+  roi: string;
+  innovationLevel: string;
+contactInfo: {
     phone: string;
     email: string;
     website: string;
+  
+};
+  technicalSpecs?: {
+    technology: string[];
+    integrations: string[];
+    apiEndpoints: number;
+    uptime: string;
+    security: string[];
   };
-  websiteUrl: string;
-  technologyStack: string[];
-  roiMetrics: string[];
+  competitors?: string[];
+  marketSize?: string;
 }
 
 export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService2025[] = [

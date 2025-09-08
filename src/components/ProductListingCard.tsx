@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ProductListing } from "@/types/listings";
-import { DollarSign } from "lucide-react";
-import { RatingStars } from "@/components/RatingStars";
-import { FavoriteButton } from "@/components/FavoriteButton";
-// Removed unused: import { useDispatch } from 'react-redux';
+import { useNavigate, Link    } from 'react-router-dom';
+import { Badge    } from '@/components/ui/badge';
+import { Button    } from '@/components/ui/button';
+import { ProductListing    } from '@/types/listings';
+import { DollarSign    } from 'lucide-react';
+import { RatingStars    } from '@/components/RatingStars';
+import { FavoriteButton    } from '@/components/FavoriteButton';
+import { useDispatch    } from 'react-redux';
 import type { AppDispatch } from '@/store';
-// Removed unused: import { addItem } from '@/store/cartSlice';
-// Regular img tag will be used instead of next/image
+import { addItem    } from '@/store/cartSlice';
+import Image from 'next/image'; // Import next/image
 
 interface ProductListingCardProps {
   listing: ProductListing;
   view?: 'grid' | 'list';
-  onRequestQuote?: (id: string) => void;
+  onRequestQuote?: (id: string)    => void;
   /**
    * Base path for linking to the detail page. Defaults to
    * `/marketplace/listing` to preserve existing behaviour.
@@ -48,7 +49,7 @@ export function ProductListingCard(...args: []):  {
     navigate(`${detailBasePath}/${listing.id}`);
   };
   
-  const handleRequestQuote = (e: React.MouseEvent) => {
+  const handleRequestQuote = (e: React.MouseEvent)    => {
     e.preventDefault();
     e.stopPropagation();
     

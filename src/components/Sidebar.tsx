@@ -1,7 +1,77 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Home, Zap, Brain, Shield, Cloud, Cpu, Rocket, Users, ShoppingCart, BookOpen, HelpCircle, DollarSign, Target, TrendingUp, Globe, ChevronDown, ChevronRight, Briefcase, Phone, Building, FileText, BarChart3, Database, Code } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence    } from 'framer-motion';
+import { Link, useLocation    } from 'react-router-dom';
+import { X, 
+  Home, 
+  Briefcase, 
+  Users, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Globe, 
+  Linkedin, 
+  Twitter, 
+  Facebook, 
+  Instagram, 
+  Shield, 
+  Handshake, 
+  ChevronDown, 
+  ChevronRight, 
+  Brain, 
+  Cpu, 
+  Database, 
+  Network, 
+  Code, 
+  Palette, 
+  Target, 
+  Rocket, 
+  Eye, 
+  DollarSign, 
+  ShoppingCart, 
+  Clock, 
+  Cloud, 
+  Search, 
+  Building, 
+  Zap, 
+  Heart, 
+  Lightbulb, 
+  TrendingUp, 
+  BarChart3, 
+  Lock, 
+  AlertTriangle, 
+  Server, 
+  CheckCircle, 
+  Truck, 
+  Car, 
+  TestTube, 
+  PenTool, 
+  Building2, 
+  Atom, 
+  FileText, 
+  Quote, 
+  Newspaper, 
+  Calendar, 
+  Video, 
+  HelpCircle, 
+  LifeBuoy, 
+  Store, 
+  PieChart, 
+  Share2, 
+  Monitor, 
+  Smartphone,
+  Github, 
+  Youtube,
+  GraduationCap,
+  Activity,
+  DollarSign as DollarSignIcon
+   } from 'lucide-react';
+import { cn    } from '@/lib/utils';
+
+interface SidebarProps extends React.PropsWithChildren<{}> {
+
+  isOpen: anyboolean;
+  onClose: ()    => void;
+  className?: string;
 
 interface SidebarItem {
   title: string;
@@ -19,7 +89,20 @@ export const Sidebar: React.FC = () => {
   const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
   const location = useLocation();
 
-  const navigation: SidebarItem[] = [
+  // Close sidebar when location changes
+  React.useEffect(() => {
+    onClose();
+  }, [location.pathname, onClose]);
+
+  const toggleSection = (sectionTitle: string)    => {
+    setExpandedSections(prev => 
+      prev.includes(sectionTitle) 
+        ? prev.filter(title => title !== sectionTitle)
+        : [...prev, sectionTitle]
+    );
+  };
+
+  const navigationItems = [
     {
       title: 'Main Navigation',
       icon: Home,

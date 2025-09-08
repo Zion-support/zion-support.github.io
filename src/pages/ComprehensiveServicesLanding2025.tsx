@@ -1,34 +1,183 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { TrendingUp, Shield, Brain, Globe, ArrowRight, CheckCircle, Clock, Users, Target, Sparkles, BarChart3, MessageSquare, Mail, Database, Network, Leaf, Wallet, Box, Phone, Mail as MailIcon, Globe as GlobeIcon } from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { INNOVATIVE_SERVICES_2025 } from '../data/innovativeServices2025';
+import React, { useState, useMemo } from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
+import { Search, Filter, Star, TrendingUp, Zap, Brain, Shield, Cloud, Rocket, Heart, Globe, Cpu, Lock, Users, DollarSign, Clock, Target, Award, CheckCircle, ArrowRight, Phone, Mail, MapPin, ExternalLink, ChevronRight, Sparkles, Flame, Lightning, Sun, Moon, Planet, Galaxy, Universe, Infinity, Alpha, Beta, Gamma, Delta, Epsilon, Zeta, Eta, Theta, Iota, Kappa, Lambda, Mu, Nu, Xi, Omicron, Pi, Rho, Sigma, Tau, Upsilon, Phi, Chi, Psi, Omega  } from 'lucide-react';
+import { SEO  } from '@/components/SEO';
 
-const ComprehensiveServicesLanding2025: React.FC = () => {
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'AI & Automation':
-        return <Brain className="w-8 h-8" />;
-      case 'AI & Security':
-        return <Shield className="w-8 h-8" />;
-      case 'AI & Marketing':
-        return <BarChart3 className="w-8 h-8" />;
-      case 'AI & Sales':
-        return <TrendingUp className="w-8 h-8" />;
-      case 'AI & Customer Experience':
-        return <MessageSquare className="w-8 h-8" />;
-      case 'AI & Analytics':
-        return <Database className="w-8 h-8" />;
-      case 'Quantum Computing':
-        return <Box className="w-8 h-8" />;
-      case 'IoT & Edge Computing':
-        return <Network className="w-8 h-8" />;
-      case 'Blockchain & Web3':
-        return <Wallet className="w-8 h-8" />;
-      case 'Sustainability & Technology':
-        return <Leaf className="w-8 h-8" />;
-      default:
-        return <Sparkles className="w-8 h-8" />;
+const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
+  const serviceCategories = [
+    {
+      id: 'ai-services',
+      title: 'AI & Machine Learning',
+      description: 'Cutting-edge artificial intelligence solutions for business transformation',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
+      services: [
+        'AI Business Intelligence Platform',
+        'AI Sales Copilot',
+        'AI Compliance Assistant',
+        'AI Auto Email Responder',
+        'AI Compliance Copilot',
+        'LLM Content Studio'
+      ],
+      href: '/ai-services',
+      featured: true
+    },
+    {
+      id: 'quantum-services',
+      title: 'Quantum Computing',
+      description: 'Next-generation quantum solutions for complex problem solving',
+      icon: Zap,
+      color: 'from-cyan-500 to-blue-500',
+      services: [
+        'Quantum AI Hybrid Platform',
+        'Quantum Financial Trading',
+        'Quantum Internet Security',
+        'Quantum Neural Networks',
+        'Quantum Edge Computing',
+        'Quantum Cloud Infrastructure'
+      ],
+      href: '/revolutionary-services-2030',
+      featured: true
+    },
+    {
+      id: 'cybersecurity',
+      title: 'Cybersecurity',
+      description: 'Advanced security solutions for the digital age',
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
+      services: [
+        'AI-Powered Cybersecurity Platform',
+        'Zero Trust Architecture',
+        'Threat Intelligence',
+        'Incident Response',
+        'Compliance Automation',
+        'Security Analytics'
+      ],
+      href: '/services',
+      featured: true
+    },
+    {
+      id: 'cloud-devops',
+      title: 'Cloud & DevOps',
+      description: 'Scalable cloud infrastructure and automation solutions',
+      icon: Cloud,
+      color: 'from-blue-500 to-indigo-500',
+      services: [
+        'Cloud Infrastructure Management',
+        'DevOps Automation',
+        'Container Orchestration',
+        'Serverless Architecture',
+        'Cloud Migration',
+        'Performance Optimization'
+      ],
+      href: '/services/cloud-devops',
+      featured: false
+    },
+    {
+      id: 'it-infrastructure',
+      title: 'IT Infrastructure',
+      description: 'Enterprise-grade infrastructure and support services',
+      icon: Cpu,
+      color: 'from-green-500 to-emerald-500',
+      services: [
+        'Network Infrastructure',
+        'Data Center Management',
+        'Onsite IT Support',
+        'Green IT Solutions',
+        '5G Network Solutions',
+        'IoT Edge Computing'
+      ],
+      href: '/services/it-infrastructure',
+      featured: false
+    },
+    {
+      id: 'micro-saas',
+      title: 'Micro SaaS Solutions',
+      description: 'Productized software solutions for specific business needs',
+      icon: Rocket,
+      color: 'from-yellow-500 to-orange-500',
+      services: [
+        'Customer Feedback Surveys',
+        'FinOps Advisor',
+        'Business Intelligence Tools',
+        'Process Automation',
+        'Analytics Dashboards',
+        'Integration Platforms'
+      ],
+      href: '/micro-saas',
+      featured: true
+    },
+    {
+      id: 'healthcare-tech',
+      title: 'Healthcare Technology',
+      description: 'AI-powered healthcare solutions and diagnostics',
+      icon: Heart,
+      color: 'from-pink-500 to-rose-500',
+      services: [
+        'AI Healthcare Diagnostics',
+        'Medical Imaging Analysis',
+        'Patient Care Optimization',
+        'Telemedicine Platforms',
+        'Clinical Decision Support',
+        'Healthcare Analytics'
+      ],
+      href: '/revolutionary-services-2030',
+      featured: false
+    },
+    {
+      id: 'smart-cities',
+      title: 'Smart Cities & IoT',
+      description: 'Sustainable urban infrastructure and IoT solutions',
+      icon: Globe,
+      color: 'from-teal-500 to-cyan-500',
+      services: [
+        'Sustainable Smart City Platform',
+        'IoT Infrastructure Management',
+        'Energy Grid Optimization',
+        'Traffic Management',
+        'Environmental Monitoring',
+        'Public Safety Systems'
+      ],
+      href: '/revolutionary-services-2030',
+      featured: false
+    },
+    {
+      id: 'education-tech',
+      title: 'Education Technology',
+      description: 'AI-powered learning and educational platforms',
+      icon: Users,
+      color: 'from-indigo-500 to-purple-500',
+      services: [
+        'AI Education Platform',
+        'Personalized Learning',
+        'Intelligent Tutoring',
+        'Student Analytics',
+        'Content Management',
+        'Assessment Tools'
+      ],
+      href: '/revolutionary-services-2030',
+      featured: false
+    },
+    {
+      id: 'manufacturing',
+      title: 'Manufacturing & Industry 4.0',
+      description: 'Smart manufacturing and industrial automation',
+      icon: Cpu,
+      color: 'from-slate-500 to-gray-500',
+      services: [
+        'AI Manufacturing Platform',
+        'Predictive Maintenance',
+        'Quality Control Automation',
+        'Supply Chain Optimization',
+        'Industrial IoT',
+        'Smart Factory Solutions'
+      ],
+      href: '/revolutionary-services-2030',
+      featured: false
     }
   };
 
@@ -139,15 +288,31 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {industries.map((industry) => (<button key={industry.id} onClick={() => setSelectedIndustry(industry.id)} className={`p-6 rounded-xl border transition-all duration-300 text-left ${selectedIndustry === industry.id
-                ? 'bg-blue-500/20 border-blue-400 scale-105'
-                : 'bg-white/10 border-white/20 hover:border-blue-400 hover:scale-105'}`}>
-                <div className="text-4xl mb-3">{industry.icon}</div>
-                <h3 className="text-lg font-semibold mb-2">{industry.name}</h3>
-                <p className="text-sm text-gray-400">{industry.description}</p>
-              </button>))}
-          </div>
+          <div className="grid gap-8 grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3">
+            {featuredCategories.map((category, index)  => (
+              <motion.div
+                key={category.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group relative bg-slate-900/60 backdrop-blur border border-cyan-400/15 hover:border-cyan-400/40 transition-all duration-300 rounded-2xl p-6 hover:shadow-2xl hover:shadow-cyan-400/10 overflow-hidden"
+              >
+                {/* Background Gradient */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
+                
+                {/* Content */}
+                <div className="relative z-10">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <category.icon className="w-8 h-8 text-white" />
+                  </div>
+                  
+                  <h3 className="text-xl font-semibold mb-3 group-hover:text-cyan-300 transition-colors">
+                    {category.title}
+                  </h3>
+                  
+                  <p className="text-slate-300 text-sm mb-4 line-clamp-2">
+                    {category.description}
+                  </p>
 
           {/* Services Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
@@ -168,9 +333,29 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Service Content */}
-                <div className="p-6">
-                  <p className="text-gray-300 text-sm mb-4">{service.description}</p>
+      {/* All Categories */}
+      <section className="py-16 bg-slate-900/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Complete Service Portfolio</h2>
+            <p className="text-slate-300 max-w-2xl mx-auto">
+              Browse our comprehensive range of technology services across all categories
+            </p>
+          </div>
+
+          <div className="grid gap-6 grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3">
+            {filteredCategories.map((category, index)  => (
+              <motion.div
+                key={category.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                className="group bg-slate-800/40 backdrop-blur border border-slate-700/30 hover:border-cyan-400/30 transition-all duration-300 rounded-xl p-5 hover:shadow-lg hover:shadow-cyan-400/5"
+              >
+                <div className="flex items-start gap-4">
+                  <div className={`w-12 h-12 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center flex-shrink-0`}>
+                    <category.icon className="w-6 h-6 text-white" />
+                  </div>
                   
                   {/* Key Benefits */}
                   <div className="mb-4">

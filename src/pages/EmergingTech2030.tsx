@@ -1,10 +1,37 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Brain, Rocket, Zap, Shield, Cpu, ArrowRight, Star, Phone, Mail, MapPin, Award, Users, Target, BarChart3, Lightbulb, Heart, Zap as Lightning } from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { emergingTechServices2030 } from '../data/emergingTechServices2030';
+import React from 'react';
+import { motion   } from 'framer-motion';
+import { Link   } from 'react-router-dom';
+import { Brain, 
+  Rocket, 
+  Zap, 
+  Shield, 
+  Cloud, 
+  Cpu, 
+  ArrowRight, 
+  Star, 
+  TrendingUp, 
+  CheckCircle,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Award,
+  Users,
+  Target,
+  BarChart3,
+  Lightbulb,
+  Code,
+  Database,
+  Network,
+  Lock,
+  Eye,
+  Heart,
+  Zap as Lightning
+  } from 'lucide-react';
+import { SEO   } from '../components/SEO';
+import { emergingTechServices2030   } from '../data/emergingTechServices2030';
 
-export default function EmergingTech2030() {
+export default function EmergingTech2030(...args: any[]): any {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -123,8 +150,8 @@ export default function EmergingTech2030() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {emergingTechServices2030.map((service, index) => {
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {emergingTechServices2030.map((service, index)   => {
                 const IconComponent = serviceIcons[service.category as keyof typeof serviceIcons] || Cpu;
                 
                 return (
@@ -205,7 +232,7 @@ export default function EmergingTech2030() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Award,
@@ -243,7 +270,7 @@ export default function EmergingTech2030() {
                   description: 'Bank-grade security with SOC 2 compliance and enterprise-level data protection.',
                   color: 'from-red-500 to-pink-600'
                 }
-              ].map((feature, index) => (
+              ].map((feature, index)   => (
                 <motion.div
                   key={index}
                   variants={itemVariants}

@@ -1,19 +1,102 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Search, Filter, Star, TrendingUp, Zap, Shield, Brain, Atom, Phone, Mail, MapPin, CheckCircle, Target, BarChart3, Network, ArrowRight } from 'lucide-react';
-import { revolutionary2025AdvancedMicroSaasServices } from '../data/revolutionary-2025-advanced-micro-saas-v2';
-import { revolutionary2025SpecializedITAIServices } from '../data/revolutionary-2025-specialized-it-ai-services';
+import { motion   } from 'framer-motion';
+import { Search, 
+  Filter, 
+  Star, 
+  TrendingUp, 
+  Zap, 
+  Shield, 
+  Brain, 
+  Globe,
+  Atom,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  CheckCircle,
+  Clock,
+  Users,
+  Target,
+  BarChart3,
+  Rocket,
+  Cpu,
+  Network,
+  Database,
+  Lock,
+  Leaf,
+  Scale,
+  Stethoscope,
+  Car,
+  Building2,
+  DollarSign,
+  Award,
+  Lightbulb,
+  ArrowRight,
+  ChevronRight,
+  ChevronLeft,
+  Play,
+  Eye,
+  X,
+  Flask,
+  Calculator,
+  TrendingDown,
+  Minus,
+  Plus,
+  Equal,
+  Divide,
+  Percent,
+  Euro,
+  Pound,
+  Yen,
+  Bitcoin,
+  Ethereum,
+  CreditCard,
+  Wallet,
+  Banknote,
+  Coins,
+  PiggyBank,
+  Safe,
+  Vault,
+  LockKeyhole,
+  Key,
+  Fingerprint,
+  QrCode,
+  Barcode,
+  Scan,
+  Camera,
+  VideoOff,
+  Mic,
+  MicOff,
+  Volume2,
+  VolumeX,
+  Pause,
+  Stop,
+  SkipBack,
+  SkipForward,
+  Rewind,
+  FastForward,
+  Shuffle,
+  Repeat,
+  Repeat1,
+  Shuffle2,
+  SkipBack2,
+  SkipForward2,
+  PlayCircle,
+  PauseCircle
+  } from 'lucide-react';
+import { revolutionary2025AdvancedMicroSaasServices   } from '../data/revolutionary-2025-advanced-micro-saas-v2';
+import { revolutionary2025SpecializedITAIServices   } from '../data/revolutionary-2025-specialized-it-ai-services';
 // Combine all services
 const ALL_SERVICES = [...revolutionary2025AdvancedMicroSaasServices, ...revolutionary2025SpecializedITAIServices];
-const Revolutionary2025ServicesShowcase: React.FC = () => {
-  const [services, setServices] = useStateg<div[]>(ALL_SERVICES);
+const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
+  const [services, setServices] = useState<any>(ALL_SERVICES);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [selectedROI, setSelectedROI] = useState('all');
   const [sortBy, setSortBy] = useState('title');
-  const [viewMode, setViewMode] = useState<'grid' | 'list' | 'comparison'>('grid');
-  const [selectedServices, setSelectedServices] = useState<string[]>([]);
+  const [viewMode, setViewMode] = useState<any>('grid');
+  const [selectedServices, setSelectedServices] = useState<any>([]);
   // Filter services based on search and filters
   useEffect(() => {
     let filtered = ALL_SERVICES;
@@ -63,7 +146,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
     setServices(filtered);
   }, [searchTerm, selectedCategory, selectedPriceRange, selectedROI, sortBy]);
   const categories = Array.from(new Set(ALL_SERVICES.map(service => service.category)));
-// Removed unused:   const handleServiceSelect = (serviceId: string) => {
+  const handleServiceSelect = (serviceId: string)   => {
     setSelectedServices(prev => 
       prev.includes(serviceId) 
         ? prev.filter(id => id !== serviceId)
@@ -479,8 +562,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             </p>
           </div>
           {viewMode === 'grid' && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index)   => (
                 <motion.div
                   key={service.id}
                   className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 group hover:bg-slate-800/70"

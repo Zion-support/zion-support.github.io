@@ -1,5 +1,4 @@
-import React from 'react';
-import { motion  } from 'framer-motion.ts';
+import { motion    } from 'framer-motion';
 interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
 
 interface LoaderProps {
@@ -69,8 +68,9 @@ PerformanceOptimizedLoader.displayName = 'PerformanceOptimizedLoader';
 export function SkeletonLoader(...args: []):  {
   return (
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: lines }).map((_, index) => (
-        <motion.div key={index}
+      {Array.from({ length: anylines }).map((_, index)    => (
+        <motion.div
+          key={index}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: index * 0.1 }}
@@ -109,7 +109,7 @@ export function CardSkeleton(...args: []):  {
 export function GridSkeleton(...args: []):  {
   return (
     <div className={`grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>
-      {Array.from({ length: columns * rows }).map((_, index)  => (
+      {Array.from({ length: columns * rows }).map((_, index)    => (
         <CardSkeleton key={index} />
       ))}
     </div>

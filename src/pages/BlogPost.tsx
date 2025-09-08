@@ -1,15 +1,22 @@
 
-import { SEO } from '@/components/SEO'
+import React from 'react';
+import { useParams, Link  } from 'react-router-dom';
+import { motion  } from 'framer-motion';
+import { Calendar, 
+  User, 
+  Clock, 
+  ArrowLeft,
+  Tag,
+  Share2,
+  BookOpen,
+  MessageCircle,
+  Heart,
+  Eye,
+  ArrowRight
+ } from 'lucide-react';
 
-// Importing the sample blog posts - in a real app, you would fetch this from an API
-import { BLOG_POSTS } from "@/data/blog-posts";
-
-export default function BlogPost() {
-  const { slug } = useParams() as { slug: string };
-  const navigate = useNavigate();
-  const [post, setPost] = useState<BlogPostType | null>(null);
-  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
-  const [showShareMenu, setShowShareMenu] = useState(false);
+function BlogPost(...args: any[]): any {
+  const { id } = useParams();
   
   useEffect(() => {
     // Find the current post by slug
@@ -63,7 +70,16 @@ export default function BlogPost() {
       }
   {/* Removed stray closing bracket */}
   };
-  
+
+  const formatDate = (dateString: string)  => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    });
+  };
+
   return (
     <>
       <SEO
@@ -138,12 +154,93 @@ export default function BlogPost() {
                   <Clock className="h-4 w-4 mr-1" />
                   <span className="text-sm">{post.readTime}</span>
                 </div>
-                <div className="relative">
-                  <Button 
-                    variant="ghost" 
-                    size="sm"
-                    className="text-zion-slate-light hover:text-white hover:bg-zion-blue-dark"
-                    onClick={() => setShowShareMenu(!showShareMenu)}
+              </motion.div>
+
+              {/* Sidebar */}
+              <motion.div 
+                className="lg:col-span-1"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+              >
+                {/* Author Info */}
+                <div className="bg-zion-blue-light/10 border border-zion-purple/20 rounded-lg p-6 mb-8">
+                  <h3 className="text-lg font-semibold text-white mb-4">About the Author</h3>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-zion-purple/80 rounded-full flex items-center justify-center text-white font-bold">
+                      {blogPost.authorAvatar}
+                    </div>
+                    <div>
+                      <p className="text-white font-medium">{blogPost.author}</p>
+                      <p className="text-zion-slate-light text-sm">CEO & Founder</p>
+                    </div>
+                  </div>
+                  <p className="text-zion-slate-light text-sm">
+                    Technology visionary with 15+ years of experience in AI, cybersecurity, and digital transformation.
+                  </p>
+                </div>
+
+                {/* Reading Time */}
+                <div className="bg-zion-blue-light/10 border border-zion-purple/20 rounded-lg p-6 mb-8">
+                  <div className="flex items-center gap-3">
+                    <BookOpen className="h-6 w-6 text-zion-cyan" />
+                    <div>
+                      <p className="text-white font-medium">Reading Time</p>
+                      <p className="text-zion-slate-light text-sm">{blogPost.readTime}</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Posts */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-white mb-6">Related Articles</h2>
+            <p className="text-xl text-zion-cyan/80 max-w-3xl mx-auto">
+              Continue exploring insights and trends in technology and business.
+            </p>
+          </motion.div>
+          
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {blogPost.relatedPosts.map((post, index)  => (
+              <motion.article
+                key={post.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-zion-slate/30 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
+              >
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full font-medium">
+                    {post.category}
+                  </span>
+                  <span className="text-zion-cyan/60 text-xs">•</span>
+                  <span className="text-zion-cyan/60 text-xs">{post.readTime}</span>
+                </div>
+                
+                <h3 className="text-lg font-bold text-white mb-3 line-clamp-2">
+                  {post.title}
+                </h3>
+                
+                <p className="text-zion-cyan/80 text-sm mb-4 line-clamp-2">
+                  {post.excerpt}
+                </p>
+                
+                <div className="flex items-center justify-between">
+                  <span className="text-zion-cyan/60 text-xs">{formatDate(post.publishDate)}</span>
+                  <Link
+                    to={`/blog/${post.slug}`}
+                    className="bg-zion-cyan hover:bg-zion-cyan/80 text-zion-slate-dark px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 flex items-center gap-2"
                   >
                     <Share2 className="h-4 w-4 mr-1" />
                     <span className="text-sm">Share</span>

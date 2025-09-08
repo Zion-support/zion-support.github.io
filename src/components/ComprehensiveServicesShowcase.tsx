@@ -1,10 +1,38 @@
 import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { Brain, Cpu, Shield, Rocket, Zap, ArrowRight, CheckCircle, Star, Users, Target, Globe, Settings, Database, Network, Eye, TrendingUp, Clock, Phone, Mail, Search } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { EXPANDED_INNOVATIVE_SERVICES_2025 } from '../data/expandedInnovativeServices2025';
-import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
+import { motion    } from 'framer-motion';
+import { Brain, 
+  Cpu, 
+  Cloud, 
+  Shield, 
+  Rocket, 
+  Zap,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  Target,
+  Award,
+  Globe,
+  Settings,
+  Database,
+  Network,
+  Lock,
+  Eye,
+  TrendingUp,
+  Clock,
+  DollarSign,
+  Phone,
+  Mail,
+  ExternalLink,
+  Search
+   } from 'lucide-react';
+import { Link    } from 'react-router-dom';
+import { EXPANDED_INNOVATIVE_SERVICES_2025    } from '../data/expandedInnovativeServices2025';
+import { EMERGING_TECH_SERVICES_2025    } from '../data/emergingTechServices2025';
 interface Service {
+
+
+
   id: string;
   title: string;
   description: string;
@@ -23,11 +51,14 @@ interface Service {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+contactInfo: {
     phone: string;
     email: string;
     website: string;
-  };
+  
+
+
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
@@ -66,7 +97,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
       return matchesCategory && matchesInnovationLevel && matchesSearch;
     });
   }, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string)    => {
     switch (category) {
       case 'AI & Analytics':
       case 'AI & Customer Experience':
@@ -107,7 +138,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
         return <Star className="h-6 w-6" />;
     }
   };
-  const getInnovationLevelColor = (level: string) => {
+  const getInnovationLevelColor = (level: string)    => {
     switch (level) {
       case 'Cutting-edge':
         return 'bg-gradient-to-r from-purple-600 to-pink-600';
@@ -205,7 +236,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               >
-                {categories.map(category => (
+                {categories.map(category    => (
                   <option key={category} value={category}>
                     {category === 'all' ? 'All Categories' : category}
                   </option>
@@ -220,7 +251,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                 onChange={(e) => setSelectedInnovationLevel(e.target.value)}
                 className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               >
-                {innovationLevels.map(level => (
+                {innovationLevels.map(level    => (
                   <option key={level} value={level}>
                     {level === 'all' ? 'All Levels' : level}
                   </option>
@@ -233,8 +264,8 @@ const ComprehensiveServicesShowcase: React.FC = () => {
       {/* Services Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 xl:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)    => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}

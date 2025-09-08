@@ -1,4 +1,4 @@
-export type ComprehensivePricingGuide = {
+export interface ComprehensivePricingGuide {
 
   id: string;
   title: string;
@@ -19,8 +19,8 @@ contactInfo: {
     phone: string;
     email: string;
     address: string;
-    website: string;
-    address: string};
+  
+};
   competitors: string[];
   marketSize: string;
   growthRate: string;

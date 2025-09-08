@@ -1,21 +1,24 @@
 // Innovative AI Services 2030 - Zion Tech Group
 // Cutting-edge AI solutions for modern businesses
 
-export type AIService = {
+export interface AIService {
+
 
   id: string;
   title: string;
   description: string;
   category: string;
   subcategory: string;
-  pricing: {
+pricing: {
     monthly: number;
     yearly: number;
     custom: string;
     currency: string;
     pricingModel: string;
     marketPrice: string;
-  };
+  
+
+};
   features: string[];
   benefits: string[];
   useCases: string[];

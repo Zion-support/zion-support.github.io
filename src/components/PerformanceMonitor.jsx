@@ -79,8 +79,10 @@ export const PerformanceMonitor = () => {
           if (fcpEntry) {
             setMetrics(prev => ({ ...prev, fcp: Math.round(fcpEntry.startTime) }))}
         });
-        fcpObserver.observe({ entryTypes['paint'] })} catch (e) {
-        // // console.warn('FCP observer failed:', e)}
+        fcpObserver.observe({ entryTypes: ['paint'] });
+      } catch (e) {
+        // // // console.warn('FCP observer failed:', e);
+      }
 
       // Largest Contentful Paint
       try {
@@ -90,8 +92,10 @@ export const PerformanceMonitor = () => {
           if (lastEntry) {
             setMetrics(prev => ({ ...prev, lcp: Math.round(lastEntry.startTime) }))}
         });
-        lcpObserver.observe({ entryTypes['largest-contentful-paint'] })} catch (e) {
-        // // console.warn('LCP observer failed:', e)}
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      } catch (e) {
+        // // // console.warn('LCP observer failed:', e);
+      }
 
       // First Input Delay
       try {
@@ -100,10 +104,14 @@ export const PerformanceMonitor = () => {
           entries.forEach((entry) => {
             if (entry.processingStart && entry.processingStart > 0) {
               const fid = entry.processingStart - entry.startTime;
-              setMetrics(prev => ({ ...prev, fid: Math.round(fid) }))}
-          })});
-        fidObserver.observe({ entryTypes['first-input'] })} catch (e) {
-        // // console.warn('FID observer failed:', e)}
+              setMetrics(prev => ({ ...prev, fid: Math.round(fid) }));
+            }
+          });
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
+      } catch (e) {
+        // // // console.warn('FID observer failed:', e);
+      }
 
       // Cumulative Layout Shift
       try {
@@ -113,9 +121,12 @@ export const PerformanceMonitor = () => {
             if (!entry.hadRecentInput) {
               clsValue += entry.value}
           });
-          setMetrics(prev => ({ ...prev, cls: Math.round(clsValue * 1000) / 1000 }))});
-        clsObserver.observe({ entryTypes['layout-shift'] })} catch (e) {
-        // // console.warn('CLS observer failed:', e)}
+          setMetrics(prev => ({ ...prev, cls: Math.round(clsValue * 1000) / 1000 }));
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+      } catch (e) {
+        // // // console.warn('CLS observer failed:', e);
+      }
     }
 
     // Time to First Byte (from navigation timing)

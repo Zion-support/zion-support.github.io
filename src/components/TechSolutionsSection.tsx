@@ -1,4 +1,19 @@
-import { motion } from 'framer-motion';
+import React from 'react';
+import { motion    } from 'framer-motion';
+import { Link    } from 'react-router-dom';
+import { Brain, 
+  Shield, 
+  Cloud, 
+  Zap, 
+  Globe, 
+  Rocket, 
+  Cpu, 
+  Database,
+  Lock,
+  Network,
+  Code,
+  Server
+   } from 'lucide-react';
 
 const techSolutions = [
   {
@@ -64,40 +79,24 @@ export function TechSolutionsSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {techSolutions.map((solution, index) => (
-            <motion.div
-              key={solution.title}
-              className="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
-              <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                <span className="text-3xl">{solution.icon}</span>
-              </div>
-              
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">
-                {solution.title}
-              </h3>
-              
-              <p className="text-gray-400 text-sm mb-6 leading-relaxed">
-                {solution.description}
-              </p>
-              
-              <ul className="space-y-2">
-                {solution.benefits.map((benefit, benefitIndex) => (
-                  <li key={benefitIndex} className="flex items-center gap-2 text-sm">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                    <span className="text-gray-300">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-              
-              <div className="mt-6 pt-4 border-t border-slate-700">
-                <div className="text-blue-400 text-sm font-semibold group-hover:text-blue-300 transition-colors duration-200">
-                  Learn More →
+        <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {solutions.map((solution, index)    => {
+            const IconComponent = solution.icon;
+            return (
+              <motion.div
+                key={solution.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group relative bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-gray-200"
+              >
+                <div className="flex items-center mb-6">
+                  <div className={`p-3 rounded-xl bg-gradient-to-r ${solution.color} mr-4`}>
+                    <IconComponent className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">
+                    {solution.title}
+                  </h3>
                 </div>
               </div>
             </motion.div>

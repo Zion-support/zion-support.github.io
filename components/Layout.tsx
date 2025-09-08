@@ -1,40 +1,14 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-=======
-import React from 'react';
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
-import Head from 'next/head';
-import Header from './Header';
-import { Sidebar } from './Sidebar';
-import Footer from './Footer';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react.ts';
+import EnhancedNavigation2025 from './layout/EnhancedNavigation2025';
+import EnhancedFooter from './layout/EnhancedFooter';
 
-interface LayoutProps {
+interface LayoutProps extends React.PropsWithChildren<{}> {
+
   children: React.ReactNode;
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  noIndex?: boolean;
+
 }
 
-const Layout: React.FC<LayoutProps> = ({
-  children,
-  title = "Zion Tech Group",
-  description = "Leading technology solutions provider",
-  keywords = "technology, AI, IT, micro SaaS, solutions",
-  canonical = "https://ziontechgroup.com",
-  ogTitle,
-  ogDescription,
-  ogImage = '/og-image.jpg',
-  noIndex = false
-}: LayoutProps) => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-
+export default function Layout(...args: any[]): any {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Head>

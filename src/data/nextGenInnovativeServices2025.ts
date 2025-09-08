@@ -1,4 +1,4 @@
-export type NextGenInnovativeService = {
+export interface NextGenInnovativeService {
 
   id: string;
   title: string;
@@ -18,11 +18,12 @@ export type NextGenInnovativeService = {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+contactInfo: {
     phone: string;
     email: string;
     website: string;
-  };
+  
+};
   technicalSpecs: {
     technology: string[];
     integrations: string[];

@@ -1,8 +1,39 @@
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { Brain, TrendingUp, CheckCircle, Building } from 'lucide-react';
+import React from 'react';
+import { motion   } from 'framer-motion';
+import { SEO   } from '@/components/SEO';
+import { Brain, 
+  Users, 
+  TrendingUp, 
+  Target, 
+  BarChart3, 
+  Calendar,
+  Zap,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Globe,
+  Smartphone,
+  Monitor,
+  BookOpen,
+  MessageSquare,
+  Share2,
+  Analytics,
+  Palette,
+  Clock,
+  DollarSign,
+  Shield,
+  Headphones,
+  Rocket,
+  UserCheck,
+  FileText,
+  Briefcase,
+  GraduationCap,
+  Award,
+  Heart,
+  Building
+  } from 'lucide-react';
 
-export default function AIHRPlatform() {
+export default function AIHRPlatform(...args: any[]): any {
   const features = [
     "AI-powered candidate screening and matching",
     "Intelligent resume parsing and analysis",
@@ -156,8 +187,8 @@ export default function AIHRPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -192,8 +223,8 @@ export default function AIHRPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -228,8 +259,8 @@ export default function AIHRPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -263,8 +294,8 @@ export default function AIHRPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {pricing.map((plan, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

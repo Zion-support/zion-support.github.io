@@ -1,14 +1,67 @@
-export type ComprehensivePricingItem2027 = {
+export interface ComprehensivePricingItem2027 {
 
-export interface PricingTier {
-  name: string;
-  price: number;
-  billingCycle: string;
-  features: string[];
-  limitations: string[];
-  recommendedFor: string[];
-  savings?: string;
-  popular?: boolean;
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  subcategory: string;
+pricing: {
+starter: {
+      price: string;
+      billing: string;
+      features: string[];
+      limitations: string[];
+    
+};
+    professional: {
+      price: string;
+      billing: string;
+      features: string[];
+      limitations: string[];
+    };
+    enterprise: {
+      price: string;
+      billing: string;
+      features: string[];
+      limitations: string[];
+    };
+    custom: {
+      description: string;
+      features: string[];
+      contact: string;
+    };
+  };
+  marketInfo: {
+    marketSize: string;
+    growthRate: string;
+    averageMarketPrice: string;
+    competitors: string[];
+    roi: string;
+    setupTime: string;
+  };
+  features: {
+    core: string[];
+    advanced: string[];
+    enterprise: string[];
+  };
+  benefits: string[];
+  targetAudience: string[];
+  useCases: string[];
+  integrations: string[];
+  compliance: string[];
+  support: {
+    email: boolean;
+    phone: boolean;
+    chat: boolean;
+    dedicated: boolean;
+    sla: string;
+  };
+  contactInfo: {
+    phone: string;
+    email: string;
+    website: string;
+    address: string;
+  };
 }
 
 export interface ServicePricing {
@@ -610,5 +663,22 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ServicePricing[] = [
     }
   {/* Removed stray closing brace */}
 ];
-
-export default COMPREHENSIVE_PRICING_GUIDE_2027;
+export const getComprehensivePricingGuide2027 = () => comprehensivePricingGuide2027;
+export const getComprehensivePricingGuide2027ByCategory = (category: string)  => 
+  comprehensivePricingGuide2027.filter(item => item.category === category);
+export const getComprehensivePricingGuide2027ById = (id: string)  => 
+  comprehensivePricingGuide2027.find(item => item.id === id);
+export const pricingCategories2027 = [
+  'Metaverse Solutions',
+  'Web3 Solutions',
+  'Sustainable Tech',
+  'NeuroTech Solutions',
+  'Fusion Energy Solutions'
+];
+export const pricingSubcategories2027 = {
+  'Metaverse Solutions': ['E-commerce', 'Gaming', 'Social', 'Education'],
+  'Web3 Solutions': ['DeFi', 'NFTs', 'Blockchain', 'Cryptocurrency'],
+  'Sustainable Tech': ['Cloud Computing', 'Energy Management', 'Waste Management', 'Carbon Tracking'],
+  'NeuroTech Solutions': ['Medical Technology', 'Research', 'Accessibility', 'Gaming'],
+  'Fusion Energy Solutions': ['Energy Research', 'Plasma Physics', 'Reactor Design', 'Simulation']
+};

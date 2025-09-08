@@ -956,7 +956,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
 
   const handleServiceClick = useCallback((service: InnovativeMicroSaasService) => {setSelectedService(service)};
     // You can add navigation logic here
-    // console.log('Service clicked:', service);
+    // // // console.log('Service clicked:', service);
   }, []);
 
   const clearFilters = useCallback(() => {setSearchTerm('')};

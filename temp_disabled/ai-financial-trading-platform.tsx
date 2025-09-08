@@ -1,9 +1,29 @@
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { Shield, Eye, Zap, Lock, Activity, CheckCircle, Clock, Target, BarChart3, Network, Brain, Users } from 'lucide-react';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { SEO  } from '@/components/SEO';
+import { Shield, 
+  Eye, 
+  AlertTriangle, 
+  Zap, 
+  Lock, 
+  Activity, 
+  CheckCircle, 
+  ArrowRight,
+  Clock,
+  Target,
+  BarChart3,
+  Globe,
+  Server,
+  Network,
+  Smartphone,
+  Cloud,
+  Database,
+  Cpu,
+  Brain,
+  Users
+ } from 'lucide-react';
 
-
-export default function AIFinancialTradingPlatform() {
+export default function AICybersecurityThreatDetection(...args: any[]): any {
   const features = [
     {
       icon: Brain,
@@ -224,8 +244,8 @@ export default function AIFinancialTradingPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -263,8 +283,8 @@ export default function AIFinancialTradingPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -302,8 +322,8 @@ export default function AIFinancialTradingPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {tradingMarkets.map((market, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {threatTypes.map((threat, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -337,12 +357,48 @@ export default function AIFinancialTradingPlatform() {
               Choose Your Trading Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Flexible pricing options designed for traders of all levels
+              Meet industry standards and regulatory requirements with our certified security platform
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-6 gap-6">
+            {complianceFrameworks.map((framework, index)  => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700 text-center hover:border-red-500 transition-all duration-300"
+              >
+                <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3" />
+                <p className="text-white font-medium text-sm">{framework}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Choose Your Security Level
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Flexible pricing options designed to protect organizations of all sizes
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

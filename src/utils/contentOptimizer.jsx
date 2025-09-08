@@ -295,6 +295,7 @@ export class ContentOptimizer {
       `,
             blog: `
         <h1>Blog Post Title</h1>
+          </h1>
         <p>Engaging introduction that hooks the reader and explains the value.</p>
         
         <h2>Key Points Overview</h2>
@@ -313,6 +314,7 @@ export class ContentOptimizer {
         <p>Actionable advice and recommendations.</p>
         
         <h2>Conclusion</h2>
+          </h2>
         <p>Summary and call-to-action for further engagement.</p>
       `
         };

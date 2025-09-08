@@ -1,6 +1,27 @@
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { Brain, Zap, Shield, TrendingUp, CheckCircle, ArrowRight, Star, Network, Atom, CpuIcon } from 'lucide-react';
+import React from 'react';
+import { Link  } from 'react-router-dom';
+import { Atom, 
+  Brain, 
+  Zap, 
+  Target, 
+  BarChart3, 
+  Cpu, 
+  CheckCircle,
+  Star,
+  Clock,
+  DollarSign,
+  ArrowRight,
+  Server,
+  Network,
+  Database,
+  Cloud,
+  Lock,
+  Globe,
+  TrendingUp,
+  Users,
+  Shield
+ } from 'lucide-react';
+import { SEO  } from '@/components/SEO';
 
 export default function QuantumAIPlatform() {
   const features = [
@@ -243,17 +264,15 @@ export default function QuantumAIPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {quantumAdvantages.map((advantage, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300 text-center"
-              >
-                <div className="p-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg mx-auto mb-4 w-fit">
-                  <advantage.icon className="w-8 h-8 text-white" />
+      {/* Features */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Revolutionary Quantum Features</h2>
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-12">
+            {features.map((feature, index)  => (
+              <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-8 hover:border-purple-500/50 transition-all">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
+                  <feature.icon className="w-8 h-8 text-white"/>
                 </div>
                 
                 <div className="text-4xl font-bold text-blue-400 mb-2">{advantage.metric}</div>
@@ -315,38 +334,69 @@ export default function QuantumAIPlatform() {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Quantum Computing Pricing
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Access the future of computing with our flexible quantum platform pricing. 
-              Scale from research to enterprise deployment.
-            </p>
-          </motion.div>
+      {/* Use Cases */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Transformative Use Cases</h2>
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase, index)  => (
+              <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+                  <useCase.icon className="w-6 h-6 text-white"/>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{useCase.name}</h3>
+                <p className="text-gray-300 text-sm mb-4">{useCase.description}</p>
+                <ul className="space-y-2">
+                  {useCase.examples.map((example, idx) => (
+                    <li key={idx} className="text-gray-400 text-sm flex items-center">
+                      <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
+                      {example}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular 
-                    ? 'border-blue-500 ring-2 ring-blue-500/20' 
-                    : 'border-slate-700'
-                }`}
-              >
-                {plan.popular && (
+      {/* Quantum Advantages */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Quantum Computing Advantages</h2>
+          <div className="bg-slate-800/50 border border-white/10 rounded-xl p-8">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+              {quantumAdvantages.map((advantage, index)  => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Atom className="w-8 h-8 text-white"/>
+                  </div>
+                  <p className="text-white font-semibold">{advantage}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-8 text-center">
+              <p className="text-gray-300">
+                Quantum computing leverages the principles of quantum mechanics to provide computational advantages 
+                that are impossible with classical computers, opening new possibilities in science, technology, and business.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Quantum Access Pricing</h2>
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {pricingTiers.map((tier, index)  => (
+              <div key={index} className={`bg-slate-800/50 border rounded-xl p-8 relative ${
+                tier.popular 
+                  ? 'border-purple-500/50 bg-slate-800/70' 
+                  : 'border-white/10'
+              }`}>
+                {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
@@ -389,40 +439,16 @@ export default function QuantumAIPlatform() {
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our Quantum AI Platform is revolutionizing industries by solving previously 
-              intractable problems with unprecedented speed and accuracy.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300"
-              >
-                <h3 className="text-xl font-semibold text-white mb-4">{useCase.industry}</h3>
-                <ul className="space-y-2">
-                  {useCase.applications.map((application, appIndex) => (
-                    <li key={appIndex} className="text-gray-300 text-sm flex items-center">
-                      <ArrowRight className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                      {application}
-                    </li>
+      {/* Testimonials */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">What Quantum Researchers Say</h2>
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {testimonials.map((testimonial, index)  => (
+              <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6">
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"/>
                   ))}
                 </div>
                 <p className="text-gray-300 mb-4">"{testimonial.content}"</p>

@@ -1,14 +1,35 @@
-// Removed unused: import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Brain, Cloud, Code, Zap, Star, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion    } from 'framer-motion';
+import { Link    } from 'react-router-dom';
+import { Brain, 
+  Cloud, 
+  Shield, 
+  Globe, 
+  Code, 
+  BarChart3, 
+  Users, 
+  ShoppingCart,
+  MessageSquare,
+  FileText,
+  Settings,
+  Zap,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin
+   } from 'lucide-react';
 
 // Import the new services
-import { ultimateInnovativeServices2025 } from '../../data/2025-ultimate-innovative-services-expansion';
-import { enterpriseITInfrastructureServices2025 } from '../../data/2025-enterprise-it-infrastructure-services';
-import { innovativeMicroSaasSolutions2025 } from '../../data/2025-innovative-micro-saas-solutions';
+import { ultimateInnovativeServices2025    } from '../../data/2025-ultimate-innovative-services-expansion';
+import { enterpriseITInfrastructureServices2025    } from '../../data/2025-enterprise-it-infrastructure-services';
+import { innovativeMicroSaasSolutions2025    } from '../../data/2025-innovative-micro-saas-solutions';
 
 interface Service {
+
+
+
   id: string;
   name: string;
   tagline: string;
@@ -34,12 +55,15 @@ interface Service {
   competitors: string[];
   marketSize: string;
   growthRate: string;
-  contactInfo: {
+contactInfo: {
     mobile: string;
     email: string;
     address: string;
     website: string;
-  };
+  
+
+
+};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -65,8 +89,8 @@ const categories = [
     name: 'AI & Autonomous Systems',
     description: 'Revolutionary AI solutions that transform business operations',
     icon: <Brain className="w-8 h-8" />,
-    color: 'from-purple-600 to-pink-700',
-    services: ultimateInnovativeServices2025.filter(s  => s.category.includes('AI'))
+    color: any'from-purple-600 to-pink-700',
+    services: ultimateInnovativeServices2025.filter(s    => s.category.includes('AI'))
   },
   {
     id: 'it-infrastructure',
@@ -111,8 +135,7 @@ export function UltimateServicesShowcase(...args: []):  {
   ];
 
   const filteredServices = selectedCategory === 'all' 
-    ? allServices 
-    : categories.find(cat => cat.id === selectedCategory)?.services || [];
+    ? allServices: anycategories.find(cat    => cat.id === selectedCategory)?.services || [];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -193,7 +216,7 @@ export function UltimateServicesShowcase(...args: []):  {
           >
             All Services ({allServices.length})
           </button>
-          {categories.map((category) => (
+          {categories.map((category)    => (
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}

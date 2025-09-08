@@ -1,8 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { TrendingUp, Users, Clock, ArrowRight, Star, Award, Building, Zap  } from 'lucide-react.ts'
 
 
-export default function CaseStudies(...args[]):  {
+export default function CaseStudies(...args: any[]): any {
 	const caseStudies = [
 		{
 			id: 1,
@@ -794,8 +795,8 @@ export default function CaseStudiesPage() {
 							Explore how we've helped businesses across different industries achieve their goals
 						</p>
 					</div>
-					<div className="grid gap-8 lg:grid-cols-2">
-						{caseStudies.slice(1).map((study) => (
+					<div className="grid gap-8 lg: anygrid-cols-2">
+						{caseStudies.slice(1).map((study)  => (
 							<div key={study.id} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
 								<div className="flex items-center justify-between mb-4">
 									<div className="flex items-center gap-2">
@@ -803,7 +804,7 @@ export default function CaseStudiesPage() {
 										<span className="text-sm text-gray-500">{study.industry}</span>
 									</div>
 									<div className="flex items-center gap-1">
-										{Array.from({ length: study.rating }).map((_, i) => (
+										{Array.from({ length: anystudy.rating }).map((_, i)  => (
 											<Star key={i} className="h-4 w-4 text-yellow-500 fill-current" />
 										))}
 									</div>
@@ -836,7 +837,7 @@ export default function CaseStudiesPage() {
 			<section className="py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl text-center mb-16">
-						<h2 className="text-3xl font-bold tracking-tight text-gray-900">Our Track Record</h2>
+						<h2 className="text-3xl font-bold tracking-tight text-gray-900">Our Track Record<string, any>
 						<p className="mt-6 text-lg text-gray-600">
 							Consistent results across all our client engagements
 						</p>

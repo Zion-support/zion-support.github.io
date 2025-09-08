@@ -1,8 +1,22 @@
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
-import { Brain, BarChart3, TrendingUp, Users, Target, Zap, Shield, Cloud, CheckCircle, Star, Award, Globe } from 'lucide-react';
+import React from 'react';
+import { motion   } from 'framer-motion';
+import { Brain, 
+  TrendingUp, 
+  BarChart3, 
+  Target, 
+  Zap, 
+  Shield, 
+  Users, 
+  Globe,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Clock,
+  DollarSign,
+  Lightbulb
+  } from 'lucide-react';
 
-export default function AIBusinessIntelligence() {
+const AIBusinessIntelligence: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Brain,
@@ -106,20 +120,35 @@ export default function AIBusinessIntelligence() {
       </div>
 
       {/* Features Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-6">Key Features</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our AI Business Intelligence platform combines cutting-edge technology with intuitive design 
-            to deliver powerful insights that drive business growth.
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {features.map((feature, index) => (<motion.div key={feature.title} variants={itemVariants} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 hover:border-blue-500/50 transition-all duration-300">
-              <div className="flex items-start mb-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                  <feature.icon className="w-6 h-6 text-white"/>
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Powerful Features
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              Our AI Business Intelligence platform combines cutting-edge technology with intuitive design
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)   => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
@@ -150,23 +179,57 @@ export default function AIBusinessIntelligence() {
               and opportunities in your industry.
             </p>
           </motion.div>
+          
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)   => (
+              <motion.div
+                key={benefit}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="flex items-start space-x-3"
+              >
+                <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
+                <p className="text-zion-slate-light text-lg">{benefit}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {solutions.map((category, index) => (<motion.div key={category.category} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.1 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mr-4">
-                    <category.icon className="w-6 h-6 text-white"/>
-                  </div>
-                  <h3 className="text-xl font-semibold text-white">{category.category}</h3>
-                </div>
-                
-                <ul className="space-y-3">
-                  {category.solutions.map((solution, idx) => (<li key={idx} className="flex items-center text-sm text-gray-400">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                      {solution}
-                    </li>))}
-                </ul>
-              </motion.div>))}
+      {/* Use Cases Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Industry Applications
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              Our AI Business Intelligence solutions are designed for diverse industries and use cases
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)   => (
+              <motion.div
+                key={useCase.industry}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
+              >
+                <h3 className="text-xl font-semibold text-zion-cyan mb-3">{useCase.industry}</h3>
+                <p className="text-zion-slate-light">{useCase.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>

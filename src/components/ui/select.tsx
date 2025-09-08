@@ -1,8 +1,11 @@
-interface SelectProps {
+import React from 'react';
+
+interface SelectProps extends React.PropsWithChildren<{}> {
+
   children: React.ReactNode;
   className?: string;
   value?: string;
-  onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+  onChange?: (e: React.ChangeEvent<HTMLSelectElement>)    => void;
   disabled?: boolean;
 }
 

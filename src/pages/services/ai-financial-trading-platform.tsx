@@ -1,8 +1,29 @@
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { TrendingUp, Brain, DollarSign, BarChart3, Shield, Zap, CheckCircle, Clock, Target, Globe, Eye } from 'lucide-react';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { SEO  } from '@/components/SEO';
+import { TrendingUp, 
+  Brain, 
+  DollarSign, 
+  BarChart3, 
+  Shield, 
+  Zap, 
+  CheckCircle, 
+  ArrowRight,
+  Clock,
+  Target,
+  Activity,
+  Globe,
+  Smartphone,
+  Cloud,
+  Database,
+  Cpu,
+  Users,
+  Lock,
+  Eye,
+  PieChart
+ } from 'lucide-react';
 
-export default function AIFinancialTradingPlatform() {
+export default function AIFinancialTradingPlatform(...args: any[]): any {
   const features = [
     {
       icon: Brain,
@@ -187,8 +208,8 @@ export default function AIFinancialTradingPlatform() {
       {/* Performance Metrics */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {performanceMetrics.map((item, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
+            {performanceMetrics.map((item, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -223,8 +244,8 @@ export default function AIFinancialTradingPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -262,8 +283,8 @@ export default function AIFinancialTradingPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -301,8 +322,8 @@ export default function AIFinancialTradingPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {tradingMarkets.map((market, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {tradingMarkets.map((market, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -340,8 +361,8 @@ export default function AIFinancialTradingPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

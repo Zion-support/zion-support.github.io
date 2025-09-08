@@ -1,4 +1,4 @@
-export type AdvancedInnovativeService2026 = {
+export interface AdvancedInnovativeService2026 {
 
   id: string;
   title: string;
@@ -18,11 +18,12 @@ export type AdvancedInnovativeService2026 = {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+contactInfo: {
     phone: string;
     email: string;
     website: string;
-  };
+  
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];

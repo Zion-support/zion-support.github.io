@@ -1,5 +1,7 @@
 export type AdvancedAIService = {
 
+
+
   id: string;
   title: string;
   description: string;
@@ -21,7 +23,11 @@ export type AdvancedAIService = {
 contactInfo: {
     phone: string;
     email: string;
-    website: string};
+    website: string;
+  
+
+
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];

@@ -1,8 +1,33 @@
-import { motion } from 'framer-motion';
-import { AlertTriangle, Clock, TrendingUp, Shield, Users, Database, Zap, CheckCircle, ArrowRight, MessageSquare, Phone, Mail, MapPin, Server } from 'lucide-react';
-import { SEO } from '../../components/SEO';
+import React from 'react';
+import { motion   } from 'framer-motion';
+import { AlertTriangle, 
+  Clock, 
+  TrendingUp, 
+  Shield, 
+  Users, 
+  Database, 
+  BarChart3, 
+  Zap,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  DollarSign,
+  Target,
+  Globe,
+  Lock,
+  Search,
+  FileText,
+  Calendar,
+  MessageSquare,
+  Bell,
+  Phone,
+  Mail,
+  MapPin,
+  Server
+  } from 'lucide-react';
+import { SEO   } from '../../components/SEO';
 
-export default function AIIncidentPostmortems() {
+export default function AIIncidentPostmortems(...args: any[]): any {
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -195,8 +220,8 @@ export default function AIIncidentPostmortems() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -234,8 +259,8 @@ export default function AIIncidentPostmortems() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -270,8 +295,8 @@ export default function AIIncidentPostmortems() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -341,8 +366,8 @@ export default function AIIncidentPostmortems() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

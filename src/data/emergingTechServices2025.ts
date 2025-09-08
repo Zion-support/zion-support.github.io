@@ -1,4 +1,4 @@
-export type EmergingTechService = {
+export interface EmergingTechService {
 
   id: string;
   title: string;
@@ -13,25 +13,24 @@ export type EmergingTechService = {
   benefits: string[];
   targetAudience: string[];
   tags: string[];
-  contactInfo: {
+  estimatedDelivery: string;
+  supportLevel: string;
+  marketPrice: string;
+  roi: string;
+  innovationLevel: string;
+contactInfo: {
     phone: string;
     email: string;
     website: string;
-    address: string;
+  
+};
+  technicalSpecs?: {
+    technology: string[];
+    integrations: string[];
+    apiEndpoints: number;
+    uptime: string;
+    security: string[];
   };
-  marketPrice: string;
-  competitors: string[];
-  roi: string;
-  setupTime: string;
-  integrations: string[];
-  freeTier: boolean;
-  trialPeriod: string;
-  innovationScore: number;
-  useCases: string[];
-  compliance: string[];
-  scalability: string;
-  support: string;
-  futurePotential: string;
 }
 
 export const emergingTechServices2025: EmergingTechService[] = [

@@ -1,4 +1,4 @@
-export type EmergingTechService2030 = {
+export interface EmergingTechService2030 {
 
   id: string;
   title: string;
@@ -11,7 +11,9 @@ pricing: {
     custom: string;
     currency: string;
     pricingModel: string;
-    marketPrice: string};
+    marketPrice: string;
+  
+};
   features: string[];
   benefits: string[];
   useCases: string[];
@@ -1033,9 +1035,10 @@ export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
 
 // Utility functions for service management
 export const getEmergingTechServicesByCategory = (category: string): EmergingTechService2030[]  => {
-  return EMERGING_TECH_SERVICES_2030.filter(service => service.category === category)};
+  return EMERGING_TECH_SERVICES_2030.filter(service => service.category === category);
+};
 
-export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number): EmergingTechService2030[]  => {
+export const getEmergingTechServicesByPriceRange = (minPrice: anynumber, maxPrice: number): EmergingTechService2030[]  => {
   return EMERGING_TECH_SERVICES_2030.filter(service => 
     service.pricing.monthly >= minPrice && service.pricing.monthly <= maxPrice
   )};
@@ -1059,7 +1062,8 @@ export const searchEmergingTechServices = (query: string): EmergingTechService20
   )};
 
 export const getEmergingTechServicesByInnovationLevel = (level: string): EmergingTechService2030[]  => {
-  return EMERGING_TECH_SERVICES_2030.filter(service => service.innovationLevel === level)};
+  return EMERGING_TECH_SERVICES_2030.filter(service => service.innovationLevel === level);
+};
 
 export const getEmergingTechServicesByTechnology = (technology: string): EmergingTechService2030[]  => {
   const lowercaseTech = technology.toLowerCase();
@@ -1077,11 +1081,12 @@ export const getEmergingTechServicesStats = () => {
   return {
     totalServices,
     totalRevenue,
-    averageRating: Math.round(averageRating * 100) / 100,
+    averageRating: anyMath.round(averageRating * 100) / 100,
     featuredCount,
     trendingCount,
-    categories[...new Set(EMERGING_TECH_SERVICES_2030.map(service  => service.category))],
-    subcategories[...new Set(EMERGING_TECH_SERVICES_2030.map(service  => service.subcategory))]
-  }};
+    categories: [...new Set(EMERGING_TECH_SERVICES_2030.map(service  => service.category))],
+    subcategories: any[...new Set(EMERGING_TECH_SERVICES_2030.map(service  => service.subcategory))]
+  };
+};
 
 export const ALL_EMERGING_TECH_SERVICES_2030 = EMERGING_TECH_SERVICES_2030;

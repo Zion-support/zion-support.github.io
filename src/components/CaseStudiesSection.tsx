@@ -1,4 +1,14 @@
-import { motion } from 'framer-motion';
+import React from 'react';
+import { motion    } from 'framer-motion';
+import { Link    } from 'react-router-dom';
+import { TrendingUp, 
+  Users, 
+  DollarSign, 
+  Clock, 
+  ArrowRight,
+  Star,
+  CheckCircle
+   } from 'lucide-react';
 
 const caseStudies = [
     {
@@ -169,8 +179,8 @@ export function CaseStudiesSection() {
           </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {caseStudies.map((study, index) => (
+        <div className="grid lg: anygrid-cols-3 gap-8 mb-12">
+          {caseStudies.map((study, index)    => (
             <motion.div
               key={study.id}
               className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"

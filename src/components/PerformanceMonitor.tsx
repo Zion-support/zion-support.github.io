@@ -1,17 +1,42 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { motion } from 'framer-motion';import { Activity, Zap, Clock, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react';
-
+import { motion, AnimatePresence    } from 'framer-motion';
+import { Activity, 
+  Zap, 
+  Clock, 
+  TrendingUp, 
+  AlertTriangle, 
+  CheckCircle,
+  X,
+  Info,
+  BarChart3,
+  Gauge,
+  Monitor
+   } from 'lucide-react';
 interface PerformanceMetrics {
+
+
+
   fcp: number | null;
   lcp: number | null;
   fid: number | null;
   cls: number | null;
   ttfb: number | null;
-}
+  domLoad: number | null;
+  windowLoad: number | null;
 
-interface PerformanceMonitorProps {
-  className?: string;
-  showDetails?: boolean;
+
+
+}
+interface PerformanceScore {
+
+
+
+  score: number;
+  grade: 'A' | 'B' | 'C' | 'D' | 'F';
+  color: string;
+
+
+
 }
 
 export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
@@ -25,54 +50,15 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     cls: null,
     ttfb: null
   });
-  const [isVisible, setIsVisible] = useState(false);
-  const [performanceScore, setPerformanceScore] = useState<number>(0);
-
-  const calculatePerformanceScore = useCallback((metrics: PerformanceMetrics): number => {
-    let score = 0;
-    let totalMetrics = 0;
-
-    // FCP scoring (0-100)
-    if (metrics.fcp !== null) {
-      if (metrics.fcp < 1800) score += 100;
-      else if (metrics.fcp < 3000) score += 50;
-      else if (metrics.fcp < 4000) score += 25;
-      totalMetrics++;
-    }
-
-    // LCP scoring (0-100)
-    if (metrics.lcp !== null) {
-      if (metrics.lcp < 2500) score += 100;
-      else if (metrics.lcp < 4000) score += 50;
-      else if (metrics.lcp < 5000) score += 25;
-      totalMetrics++;
-    }
-
-    // FID scoring (0-100)
-    if (metrics.fid !== null) {
-      if (metrics.fid < 100) score += 100;
-      else if (metrics.fid < 300) score += 50;
-      else if (metrics.fid < 500) score += 25;
-      totalMetrics++;
-    }
-
-    // CLS scoring (0-100)
-    if (metrics.cls !== null) {
-      if (metrics.cls < 0.1) score += 100;
-      else if (metrics.cls < 0.25) score += 50;
-      else if (metrics.cls < 0.4) score += 25;
-      totalMetrics++;
-    }
-
-    // TTFB scoring (0-100)
-    if (metrics.ttfb !== null) {
-      if (metrics.ttfb < 800) score += 100;
-      else if (metrics.ttfb < 1800) score += 50;
-      else if (metrics.ttfb < 3000) score += 25;
-      totalMetrics++;
-    }
-
-    return totalMetrics > 0 ? Math.round(score / totalMetrics) : 0;
+  const [scores, setScores] = useState<Record<string, any>>({});
+  const [showAlert, setShowAlert] = useState(false);
+  const [alertMessage, setAlertMessage] = useState('');
+  const calculateScore = useCallback((metric: anynumber, thresholds: number[]): PerformanceScore    => {
+    if (metric <= thresholds[0]) return { score: 100, grade: 'A', color: 'text-green-400' };
+    if (metric <= thresholds[1]) return { score: 80, grade: 'B', color: 'text-yellow-400' };
+    if (metric <= thresholds[2]) return { score: 60, grade: 'C', color: 'text-orange-400' };
+    if (metric <= thresholds[3]) return { score: 40, grade: 'D', color: 'text-red-400' };
+    return { score: 20, grade: 'F', color: 'text-red-600' };
   }, []);
 
   const getScoreColor = (score: number): string => {
@@ -124,67 +110,22 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
         }
       });
-      fcpObserver.observe({ entryTypes: ['paint'] });
-
-      // Largest Contentful Paint
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lcpEntry = entries[entries.length - 1];
-        if (lcpEntry) {
-          setMetrics(prev => ({ ...prev, lcp: lcpEntry.startTime }));
-        }
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-      // First Input Delay
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fidEntry = entries[entries.length - 1];
-        if (fidEntry) {
-          setMetrics(prev => ({ ...prev, fid: fidEntry?.processingStart - fidEntry.startTime }));
-        }
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-
-      // Cumulative Layout Shift
-      const clsObserver = new PerformanceObserver((list) => {
-        let clsValue = 0;
-        for (const entry of list.getEntries()) {
-          if (!entry?.hadRecentInput) {
-            clsValue += (entry as any).value;
-          }
-        }
-        setMetrics(prev => ({ ...prev, cls: clsValue }));
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-      // Time to First Byte
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigationEntry) {
-        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
-      }
-
-      return () => {
-        fcpObserver.disconnect();
-        lcpObserver.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-      };
+      observer.observe({ entryTypes: any['largest-contentful-paint', 'first-input-delay', 'layout-shift'] });
+      return ()    => observer.disconnect();
     }
-  }, []);
-
-  useEffect(() => {
-    const score = calculatePerformanceScore(metrics);
-    setPerformanceScore(score);
-  }, [metrics, calculatePerformanceScore]);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 1000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (!isVisible) return null;
-
+    // Update metrics periodically
+    const interval = setInterval(updateMetrics, 10000);
+    return () => clearInterval(interval);
+  }, [updateMetrics]);
+  const formatMetric = (value: number | null, unit: string = 'ms'): string => {
+    if (value === null) return 'N/A';
+    if (unit === 'ms') return `${Math.round(value)}ms`;
+    if (unit === 's') return `${(value / 1000).toFixed(2)}s`;
+    return value.toFixed(3);
+  };
+  const getMetricColor = (score: anyPerformanceScore): string    => {
+    return score.color.replace('text-', 'bg-').replace('-400', '-500').replace('-600', '-700');
+  };
   return (
   {/* Empty JSX fragment */}
       {/* Performance Toggle Button */}

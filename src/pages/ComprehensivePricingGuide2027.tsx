@@ -1,16 +1,82 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Brain, GitFork, Shield, Users, BarChart3, Eye, CheckCircle, ArrowRight, Play, Clock, TrendingUp, Cpu, Network, Bot, Sparkles, Globe, Activity, Code, Server, Cpu, Wifi, ShieldCheck, Globe2, MessageCircle, Search, FileText, Settings, Palette, Zap as ZapIcon2, Phone, Mail, MapPin, DollarSign, Star, Award, Rocket, Lightbulb, Users, Target as TargetIcon, Users2, Briefcase, Building, Truck, Leaf, Gamepad2, Coins, Satellite, Atom, Leaf as LeafIcon, Gamepad2 as Gamepad2Icon, Coins as CoinsIcon, Satellite as SatelliteIcon, Zap, Target, GitFork as WorkflowIcon, Globe as GlobeIcon, Shield as ShieldIcon, Eye as EyeIcon, BarChart3 as BarChart3Icon, Users as UsersIcon, CheckCircle as CheckCircleIcon, ArrowRight as ArrowRightIcon, Play as PlayIcon, Clock as ClockIcon, TrendingUp as TrendingUpIcon, Cpu as CpuIcon, Network as NetworkIcon, Bot as BotIcon, Sparkles as SparklesIcon, Globe as GlobeIcon2, Activity as ActivityIcon, Code as CodeIcon, Server as ServerIcon, Wifi as WifiIcon, ShieldCheck as ShieldCheckIcon, Globe2 as Globe2Icon, MessageCircle as MessageCircleIcon, Search as SearchIcon, FileText as FileTextIcon, Settings as SettingsIcon, Palette as PaletteIcon, Zap as ZapIcon3, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, DollarSign as DollarSignIcon, Star as StarIcon, Award as AwardIcon, Rocket as RocketIcon, Lightbulb as LightbulbIcon, Target as TargetIcon2, Users2 as Users2Icon, Briefcase as BriefcaseIcon, Building as BuildingIcon, Truck as TruckIcon, Leaf as LeafIcon2, Gamepad2 as Gamepad2Icon2, Coins as CoinsIcon2, Satellite as SatelliteIcon2, Atom as AtomIcon, Leaf as LeafIcon3, Gamepad2 as Gamepad2Icon3, Coins as CoinsIcon3, Satellite as SatelliteIcon3 } from 'lucide-react';
+import React, { useState, useMemo } from 'react';
+import { motion  } from 'framer-motion';
+import { Search, 
+  Filter, 
+  Star, 
+  TrendingUp, 
+  Shield, 
+  Zap, 
+  Globe, 
+  Cpu,
+  Database,
+  Network,
+  Layers,
+  Brain,
+  Cloud,
+  Smartphone,
+  Monitor,
+  Server,
+  Lock,
+  Users,
+  BarChart3,
+  Target,
+  DollarSign,
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  ChevronDown,
+  ChevronUp
+ } from 'lucide-react';
+import { SEO  } from '../components/SEO';
+import { ADVANCED_AI_SERVICES_2025  } from '../data/advancedAIServices2025';
+import { INNOVATIVE_IT_INFRASTRUCTURE_2025  } from '../data/innovativeITInfrastructure2025';
+import { INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025  } from '../data/innovativeBlockchainWeb3Services2025';
 
-import { SEO } from '../components/SEO';
-import { ADVANCED_AI_SERVICES_2025 } from '../data/advancedAIServices2025';
-import { INNOVATIVE_IT_INFRASTRUCTURE_2025 } from '../data/innovativeITInfrastructure2025';
-import { INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025 } from '../data/innovativeBlockchainWeb3Services2025';
+interface Service {
 
-const ComprehensivePricingGuide2027: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [priceRange, setPriceRange] = useState('all');
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  subcategory: string;
+  price: number;
+  currency: string;
+  pricingModel: string;
+  features: string[];
+  benefits: string[];
+  useCases: string[];
+  targetAudience: string[];
+  tags: string[];
+  estimatedDelivery: string;
+  supportLevel: string;
+  marketPrice: string;
+  roi: string;
+  innovationLevel: string;
+contactInfo: {
+    phone: string;
+    email: string;
+    website: string;
+  
+};
+  technicalSpecs?: {
+    technology: string[];
+    integrations: string[];
+    apiEndpoints: number;
+    uptime: string;
+    security: string[];
+  };
+  competitors?: string[];
+  marketSize?: string;
+}
+
+const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<any>('all');
+  const [expandedServices, setExpandedServices] = useState<Set<string>>(new Set());
 
   const services = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
 
@@ -40,7 +106,7 @@ const ComprehensivePricingGuide2027: React.FC = () => {
     return filtered.sort((a, b) => a.price - b.price);
   }, [services, searchQuery, selectedCategory, priceRange]);
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'AI & Automation':
         return <Brain className="w-6 h-6" />;
@@ -67,22 +133,7 @@ const ComprehensivePricingGuide2027: React.FC = () => {
     }
   };
 
-  const getPriceRangeFilter = (range: string) => {
-    switch (range) {
-      case 'Under $1,000':
-        return (service: InnovativeService2025) => service.price < 1000;
-      case '$1,000 - $2,999':
-        return (service: InnovativeService2025) => service.price >= 1000 && service.price <= 2999;
-      case '$3,000 - $4,999':
-        return (service: InnovativeService2025) => service.price >= 3000 && service.price <= 4999;
-      case '$5,000+':
-        return (service: InnovativeService2025) => service.price >= 5000;
-      default:
-        return () => true;
-    }
-  };
-
-  const getInnovationColor = (level: string) => {
+  const getInnovationLevelColor = (level: string)  => {
     switch (level) {
       case 'Revolutionary':
         return 'bg-gradient-to-r from-purple-500 to-pink-500';
@@ -95,7 +146,7 @@ const ComprehensivePricingGuide2027: React.FC = () => {
     }
   };
 
-  const toggleServiceExpansion = (serviceId: string) => {
+  const toggleServiceExpansion = (serviceId: string)  => {
     const newExpanded = new Set(expandedServices);
     if (newExpanded.has(serviceId)) {
       newExpanded.delete(serviceId);
@@ -106,12 +157,14 @@ const ComprehensivePricingGuide2027: React.FC = () => {
     setExpandedServices(newExpanded);
   };
 
-  const getROIColor = (roi: string) => {
-    const roiValue = parseInt(roi.replace('%', ''));
-    if (roiValue >= 500) return 'text-green-400';
-    if (roiValue >= 300) return 'text-blue-400';
-    if (roiValue >= 200) return 'text-yellow-400';
-    return 'text-gray-400';
+  const getPriceRangeLabel = (range: string)  => {
+    switch (range) {
+      case '0-1000': return '$0 - $1,000/month';
+      case '1000-2500': return '$1,000 - $2,500/month';
+      case '2500-5000': return '$2,500 - $5,000/month';
+      case '5000+': return '$5,000+/month';
+      default: return 'All Prices';
+    }
   };
 
   return (
@@ -141,8 +194,120 @@ const ComprehensivePricingGuide2027: React.FC = () => {
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-400">
                 & Service Guide
               </span>
-            </motion.h1>
-            <motion.p 
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Transparent pricing for all our cutting-edge AI, IT infrastructure, and blockchain services. 
+              Compare features, benefits, and ROI to find the perfect solution for your business.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex items-center text-blue-400">
+                <Star className="w-5 h-5 mr-2" />
+                <span>30+ Services</span>
+              </div>
+              <div className="flex items-center text-green-400">
+                <TrendingUp className="w-5 h-5 mr-2" />
+                <span>Transparent Pricing</span>
+              </div>
+              <div className="flex items-center text-purple-400">
+                <Globe className="w-5 h-5 mr-2" />
+                <span>ROI Guaranteed</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Search and Filters */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* Search */}
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search services..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            {/* Category Filter */}
+            <select
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
+            >
+              {categories.map(category  => (
+                <option key={category} value={category} className="bg-slate-800 text-white">
+                  {category === 'all' ? 'All Categories' : category}
+                </option>
+              ))}
+            </select>
+
+            {/* Price Range Filter */}
+            <select
+              value={selectedPriceRange}
+              onChange={(e) => setSelectedPriceRange(e.target.value)}
+              className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
+            >
+              {priceRanges.map(range  => (
+                <option key={range} value={range} className="bg-slate-800 text-white">
+                  {getPriceRangeLabel(range)}
+                </option>
+              ))}
+            </select>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Pricing Summary */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="grid grid-cols-1 md:grid-cols-4 gap-6"
+        >
+          <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-lg rounded-xl p-6 border border-blue-500/30 text-center">
+            <div className="text-3xl font-bold text-blue-400 mb-2">
+              ${Math.min(...allServices.map(s => s.price)).toLocaleString()}
+            </div>
+            <div className="text-gray-300">Starting Price</div>
+          </div>
+          <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-lg rounded-xl p-6 border border-green-500/30 text-center">
+            <div className="text-3xl font-bold text-green-400 mb-2">
+              ${Math.max(...allServices.map(s => s.price)).toLocaleString()}
+            </div>
+            <div className="text-gray-300">Premium Price</div>
+          </div>
+          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-xl p-6 border border-purple-500/30 text-center">
+            <div className="text-3xl font-bold text-purple-400 mb-2">
+              {allServices.length}
+            </div>
+            <div className="text-gray-300">Total Services</div>
+          </div>
+          <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 backdrop-blur-lg rounded-xl p-6 border border-orange-500/30 text-center">
+                          <div className="text-3xl font-bold text-orange-400 mb-2">
+                {Math.max(...allServices.map(s => parseInt(s.roi.split('%')[0])))}%
+              </div>
+            <div className="text-gray-300">Max ROI</div>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Services List */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+        <div className="space-y-6">
+          {filteredServices.map((service, index) => (
+            <motion.div
+              key={service.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}

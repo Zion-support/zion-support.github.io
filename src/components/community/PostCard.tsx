@@ -1,6 +1,8 @@
+import React from 'react';
 
-interface PostCardProps {
-  post: {
+interface PostCardProps extends React.PropsWithChildren<{}> {
+
+post: {
     id: string;
     title: string;
     content: string;
@@ -9,7 +11,7 @@ interface PostCardProps {
     likes: number;
     replies: number;
     views: number;
-    author: {
+author: {
       name: string;
       avatar: string;
     };

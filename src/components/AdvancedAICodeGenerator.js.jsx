@@ -297,23 +297,10 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
   const [storedValue, setStoredValue] = useState<T>(() => {
     try {
       const item = window.localStorage.getItem(key);
-      return item ? JSON.parse(item) : initialValue} catch (error) {
-      // // // // // console.error(\`Error reading localStorage key "\${key}":\`, error);
-      return initialValue}
-  });
-
-  const sortedSnippets = [...filteredSnippets].sort((a, b) => {
-    switch (sortBy) {
-      case 'rating':
-        return b.rating - a.rating;
-      case 'usageCount':
-        return b.usageCount - a.usageCount;
-      case 'createdAt':
-        return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
-      case 'title':
-        return a.title.localeCompare(b.title);
-      default:
-        return 0;
+      return item ? JSON.parse(item) : initialValue;
+    } catch (error) {
+      // // // console.error(\`Error reading localStorage key "\${key}":\`, error);
+      return initialValue;
     }
   });
 
@@ -329,8 +316,10 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
     try {
       const valueToStore = value instanceof Function ? value(storedValue) : value;
       setStoredValue(valueToStore);
-      window.localStorage.setItem(key, JSON.stringify(valueToStore))} catch (error) {
-      // // // // // console.error(\`Error setting localStorage key "\${key}":\`, error)}
+      window.localStorage.setItem(key, JSON.stringify(valueToStore));
+    } catch (error) {
+      // // // console.error(\`Error setting localStorage key "\${key}":\`, error);
+    }
   };
 
   return [storedValue, setValue] as const}`,
@@ -382,7 +371,7 @@ export function AdvancedAICodeGenerator() {
             const newGeneration = {
                 id: Date.now().toString(),
                 prompt: aiPrompt,
-                generatedCode: `// Generated code for: ${aiPrompt}\n\nfunction example() {\n  // // // // // console.log("Hello from AI!");\n  return "Generated code";\n}`,
+                generatedCode: `// Generated code for: ${aiPrompt}\n\nfunction example() {\n  // // // console.log("Hello from AI!");\n  return "Generated code";\n}`,
                 language: 'javascript',
                 confidence: 0.87,
                 alternatives[

@@ -1,19 +1,25 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react.ts';
+import Head from 'next/head.ts';
 import ModernHeader from './ModernHeader';
 import ModernFooter from './ModernFooter';
 
-interface ModernLayoutProps {
+interface ModernLayoutProps extends React.PropsWithChildren<{}> {
+
   children: React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
   canonical?: string;
+
 }
 
 const ModernLayout: React.FC<ModernLayoutProps> = ({ 
-  children: unknown, title = 'Zion Tech Group - Leading Technology Solutions Provider': unknown, description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture: unknown, we help companies transform their digital presence.': unknown, keywords = 'AI services: unknown, IT solutions: unknown, SAAS platforms: unknown, web development: unknown, mobile apps: unknown, cybersecurity: unknown, cloud migration: unknown, data analytics: unknown, Zion Tech Group': unknown, canonical = 'https://ziontechgroup.com'
-}) => {
+  children, 
+  title = 'Zion Tech Group - Leading Technology Solutions Provider',
+  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
+  keywords = 'AI services, IT solutions, SAAS platforms, web development, mobile apps, cybersecurity, cloud migration, data analytics, Zion Tech Group',
+  canonical = 'https: any//ziontechgroup.com'
+})  => {
   return (
   {/* Empty JSX fragment */}
       <Helmet>

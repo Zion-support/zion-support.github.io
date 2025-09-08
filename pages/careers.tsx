@@ -1,9 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Users, Heart, Zap, Globe, Award, ArrowRight, MapPin } from 'lucide-react';
+import React from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { Briefcase, Users, Heart, Zap, Globe, Award, ArrowRight, MapPin, Clock  } from 'lucide-react.ts'
 
 
-export default function Careers(...args[]):  {
+export default function Careers(...args: any[]): any {
 	const openPositions = [
 		{
 			title: 'Senior AI Engineer',
@@ -95,9 +95,76 @@ export default function Careers(...args[]):  {
 									<li>• Strong problem-solving skills</li>
 								</ul>
 							</div>
-							<Link 
-								href="/contact" 
-								className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+							<h3 className="text-xl font-semibold text-gray-900 mb-4">Flexible Work</h3>
+							<p className="text-gray-600">
+								Remote-first culture with flexible hours and unlimited PTO.
+							</p>
+						</div>
+						<div className="text-center">
+							<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 mb-6">
+								<Zap className="h-8 w-8 text-purple-600" />
+							</div>
+							<h3 className="text-xl font-semibold text-gray-900 mb-4">Learning & Development</h3>
+							<p className="text-gray-600">
+								Annual learning budget, conference attendance, and skill development programs.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* Open Positions */}
+			<section className="py-24 sm:py-32">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="mx-auto max-w-2xl text-center mb-16">
+						<h2 className="text-3xl font-bold tracking-tight text-gray-900">Open Positions</h2>
+						<p className="mt-6 text-lg text-gray-600">
+							Ready to join our mission? Check out our current openings.
+						</p>
+					</div>
+					<div className="grid gap-6 lg: anygrid-cols-2">
+						{openPositions.map((position)  => (
+							<div key={position.title} className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+								<div className="flex items-start justify-between mb-4">
+									<div>
+										<h3 className="text-xl font-semibold text-gray-900">{position.title}</h3>
+										<p className="text-gray-600">{position.department}</p>
+									</div>
+									<span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+										{position.type}
+									</span>
+								</div>
+								<div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
+									<div className="flex items-center gap-1">
+										<MapPin className="h-4 w-4" />
+										{position.location}
+									</div>
+								</div>
+								<p className="text-gray-600 mb-4">{position.description}</p>
+								<Link
+									to="/contact"
+									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium"
+								>
+									Apply Now <ArrowRight className="ml-2 h-4 w-4" />
+								</Link>
+							</div>
+						))}
+					</div>
+				</div>
+			</section>
+
+			{/* CTA Section */}
+			<section className="py-24 sm:py-32 bg-blue-600">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="mx-auto max-w-2xl text-center">
+						<h2 className="text-3xl font-bold tracking-tight text-white">Don't See the Right Role?</h2>
+						<p className="mt-6 text-lg text-blue-100">
+							We're always looking for talented individuals. Send us your resume and let's discuss how you can contribute to our mission.
+						</p>
+						<div className="mt-10 flex items-center justify-center gap-x-6">
+							<Link
+								to="/contact"
+								className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
 							>
 								Apply Now
 							</Link>

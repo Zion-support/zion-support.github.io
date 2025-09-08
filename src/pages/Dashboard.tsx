@@ -1,7 +1,23 @@
-import { motion } from 'framer-motion';
-import { BarChart3, Shield, Cloud, Brain, Zap, Activity, DollarSign, CheckCircle, Settings, Bell, Plus, ArrowRight, Calendar, Database, Network, HelpCircle, Atom } from 'lucide-react';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { BarChart3, 
+  Users, 
+  TrendingUp, 
+  DollarSign,
+  Activity,
+  Shield,
+  Zap,
+  Settings,
+  Bell,
+  Search,
+  Calendar,
+  FileText,
+  MessageSquare,
+  Star,
+  ArrowRight
+ } from 'lucide-react';
 
-export default function Dashboard() {
+export default function Dashboard(...args: any[]): any {
   const stats = [
     { name: 'Active Services', value: '12', icon: Zap, change: '+2', changeType: 'positive', color: 'from-blue-500 to-cyan-500' },
     { name: 'AI Solutions', value: '8', icon: Brain, change: '+3', changeType: 'positive', color: 'from-purple-500 to-pink-500' },
@@ -35,6 +51,32 @@ export default function Dashboard() {
 // Fixed missing name:     { name: 'API Documentation', icon: Code, href: '/api-docs', color: 'from-gray-500 to-slate-500' }
   ];
 
+  const getStatusColor = (status: string)  => {
+    switch (status) {
+      case "Completed":
+        return "bg-green-100 text-green-800";
+      case "In Progress":
+        return "bg-blue-100 text-blue-800";
+      case "Planning":
+        return "bg-yellow-100 text-yellow-800";
+      default:
+        return "bg-gray-100 text-gray-800";
+    }
+  };
+
+  const getPriorityColor = (priority: string)  => {
+    switch (priority) {
+      case "High":
+        return "bg-red-100 text-red-800";
+      case "Medium":
+        return "bg-yellow-100 text-yellow-800";
+      case "Low":
+        return "bg-green-100 text-green-800";
+      default:
+        return "bg-gray-100 text-gray-800";
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Header */}
@@ -62,8 +104,8 @@ export default function Dashboard() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          {stats.map((stat, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          {stats.map((stat, index)  => (
             <motion.div
               key={stat.name}
               initial={{ opacity: 0, y: 20 }}

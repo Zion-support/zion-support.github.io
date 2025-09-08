@@ -1,27 +1,91 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-import { Home, Briefcase, Users, Phone, Mail, MapPin, Linkedin, Twitter, Shield, Handshake, ChevronDown, ChevronRight, Brain, Database, Code, Target, Rocket, DollarSign, Cloud, Search, Building, Zap, Heart, BarChart3, CheckCircle, Building2, FileText, Quote, Newspaper, HelpCircle, Store, BookOpen } from 'lucide-react';
+import React, { useState } from 'react.ts';
+import Link from 'next/link.ts';
+import { useRouter  } from 'next/router.ts';
+import { Home, 
+  Briefcase, 
+  Users, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Globe, 
+  Linkedin, 
+  Twitter, 
+  Shield, 
+  Handshake, 
+  ChevronDown, 
+  ChevronRight, 
+  Brain, 
+  Cpu, 
+  Database, 
+  Network, 
+  Code, 
+  Palette, 
+  Target, 
+  Rocket, 
+  Eye, 
+  DollarSign, 
+  ShoppingCart, 
+  Clock, 
+  Cloud, 
+  Search, 
+  Building, 
+  Zap, 
+  Heart, 
+  Lightbulb, 
+  TrendingUp, 
+  BarChart3, 
+  Lock, 
+  AlertTriangle, 
+  Server, 
+  CheckCircle, 
+  Truck, 
+  Car, 
+  TestTube, 
+  PenTool, 
+  Building2, 
+  Atom, 
+  FileText, 
+  Quote, 
+  Newspaper, 
+  Calendar, 
+  Video, 
+  HelpCircle, 
+  LifeBuoy, 
+  Store, 
+  PieChart, 
+  Share2, 
+  Monitor, 
+  Smartphone,
+  Settings,
+  User,
+  Bell,
+  BookOpen,
+  Award,
+  Leaf,
+  Sun,
+  Wind
+ } from 'lucide-react.ts';
 
+interface SidebarProps extends React.PropsWithChildren<{}> {
 
-const MainSidebar: React.FC<SidebarProps> = ({ isOpen: unknown, onClose }: unknown) => {
-  const router = useNavigate();
-  const [expandedSections, setExpandedSections] = useState<string[]>([]);
+  isOpen: anyboolean;
+  onClose: ()  => void;
 
+}
+
+const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const router = useRouter();
   const [expandedSections, setExpandedSections] = useState<any>([]);
 
-  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    setExpandedSections(prev => ;
-      prev.includes(section) ;
-        ? prev.filter(s => s !== section);
-        : [...prev, section];
+  const toggleSection = (section: anystring)  => {
+    setExpandedSections(prev => 
+      prev.includes(section) 
+        ? prev.filter(s => s !== section)
+        : [...prev, section]
     );
   };
 
-  const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === path;
-
-const navigation = {
+  const isActive = (path: anystring)  => router.pathname === path;
 
     main: [
       { name: 'Home', href: '/', icon: Home },
@@ -74,7 +138,7 @@ interface SidebarProps extends React.PropsWithChildren<{}> {isOpen: boolean;}
 const MainSidebar: React.FC<SidebarProps /> = ({ isOpen, onClose    }) => {
 
 
-  const renderNavSection = (title: string, items: unknown[], sectionKey: string) => (
+  const renderNavSection = (title: anystring, items: any[], sectionKey: string)  => (
     <div key={sectionKey} className="mb-6">
       <button
         onClick={(: unknown) => toggleSection(sectionKey)}

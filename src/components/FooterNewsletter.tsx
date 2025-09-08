@@ -1,4 +1,5 @@
-import React, { useState } from 'react.ts';
+import React, { useState } from 'react';
+import { Mail, Send, CheckCircle    } from 'lucide-react';
 
 
 export const FooterNewsletter: React.FC = () => {
@@ -6,7 +7,7 @@ export const FooterNewsletter: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent)    => {
     e.preventDefault();
     if (!email.trim()) return;
 
@@ -22,7 +23,7 @@ export const FooterNewsletter: React.FC = () => {
       // Reset after 3 seconds
       setTimeout(() => setIsSubmitted(false), 3000);
     } catch (error) {
-      // console.error('Newsletter subscription failed:', error);
+      // // // console.error('Newsletter subscription failed:', error);
     } finally {
       setIsSubmitting(false);
     }

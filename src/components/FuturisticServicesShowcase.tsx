@@ -1,7 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Rocket, Brain, Heart, DollarSign, Eye, Bot, ArrowRight, Star, Play, Pause } from 'lucide-react';
+import { motion, AnimatePresence    } from 'framer-motion';
+import { Rocket, 
+	Brain, 
+	Zap, 
+	Shield, 
+	Globe, 
+	TrendingUp, 
+	Heart, 
+	DollarSign, 
+	Eye, 
+	Bot,
+	ArrowRight,
+	Star,
+	Play,
+	Pause
+   } from 'lucide-react';
 interface ServiceShowcase {
+
+
+
 	id: string;
 	title: string;
 	description: string;
@@ -10,6 +27,9 @@ interface ServiceShowcase {
 	features: string[];
 	price: string;
 	status: 'active' | 'beta' | 'new';
+
+
+
 }
 const futuristicServices: ServiceShowcase[] = [
 	{
@@ -83,7 +103,7 @@ export default function FuturisticServicesShowcase(...args: []):  {
 		}, 5000);
 		return () => clearInterval(interval);
 	}, [isPlaying]);
-	const getStatusColor = (status: string) => {
+	const getStatusColor = (status: string)    => {
 		switch (status) {
 			case 'new': return 'bg-green-500';
 			case 'beta': return 'bg-yellow-500';
@@ -91,7 +111,7 @@ export default function FuturisticServicesShowcase(...args: []):  {
 			default: return 'bg-gray-500';
 		}
 	};
-	const getStatusText = (status: string) => {
+	const getStatusText = (status: string)    => {
 		switch (status) {
 			case 'new': return 'NEW';
 			case 'beta': return 'BETA';
@@ -241,8 +261,8 @@ export default function FuturisticServicesShowcase(...args: []):  {
 					<h3 className="text-3xl font-bold text-white text-center mb-12">
 						Explore All Services
 					</h3>
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-						{futuristicServices.map((service, index) => (
+					<div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+						{futuristicServices.map((service, index)    => (
 							<motion.div
 								key={service.id}
 								initial={{ opacity: 0, y: 20 }}

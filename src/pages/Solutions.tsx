@@ -1,99 +1,24 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Brain, Shield, Cloud, TrendingUp, Zap, Globe, Cpu, Network, Code, Rocket, Heart, ShoppingCart, CheckCircle, ArrowRight, Star, Clock, DollarSign, Search, Filter } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
+import { Building, 
+  Shield, 
+  Cloud, 
+  Brain, 
+  Zap, 
+  Globe,
+  Users,
+  Database,
+  Lock,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Play
+ } from 'lucide-react';
+import { SEO  } from '@/components/SEO';
 
-const solutionCategories = [
-  {
-    id: 'ai-ml',
-    name: 'AI & Machine Learning',
-    icon: Brain,
-    description: 'Transform your business with intelligent automation and predictive insights',
-    color: 'from-purple-500 to-indigo-600',
-    solutions: [
-      'Predictive Analytics',
-      'Natural Language Processing',
-      'Computer Vision',
-      'Recommendation Systems',
-      'Chatbots & Virtual Assistants',
-      'Machine Learning Models'
-    ]
-  },
-  {
-    id: 'cybersecurity',
-    name: 'Cybersecurity',
-    icon: Shield,
-    description: 'Protect your digital assets with enterprise-grade security solutions',
-    color: 'from-red-500 to-pink-600',
-    solutions: [
-      'Threat Detection & Response',
-      'Identity & Access Management',
-      'Security Compliance',
-      'Penetration Testing',
-      'Security Training',
-      'Incident Response'
-    ]
-  },
-  {
-    id: 'cloud-computing',
-    name: 'Cloud Computing',
-    icon: Cloud,
-    description: 'Scale your infrastructure with flexible and cost-effective cloud solutions',
-    color: 'from-blue-500 to-cyan-600',
-    solutions: [
-      'Cloud Migration',
-      'Infrastructure as Code',
-      'Container Orchestration',
-      'Serverless Computing',
-      'Multi-cloud Strategy',
-      'Cloud Security'
-    ]
-  },
-  {
-    id: 'data-analytics',
-    name: 'Data Analytics',
-    icon: TrendingUp,
-    description: 'Turn your data into actionable insights for better decision making',
-    color: 'from-green-500 to-emerald-600',
-    solutions: [
-      'Business Intelligence',
-      'Data Warehousing',
-      'Real-time Analytics',
-      'Predictive Modeling',
-      'Data Visualization',
-      'Big Data Processing'
-    ]
-  },
-  {
-    id: 'iot-edge',
-    name: 'IoT & Edge Computing',
-    icon: Zap,
-    description: 'Connect devices and process data closer to the source for real-time insights',
-    color: 'from-yellow-500 to-orange-600',
-    solutions: [
-      'IoT Smartphone Management',
-      'Edge Computing Platforms',
-      'Sensor Networks',
-      'Real-time Monitoring',
-      'Predictive Maintenance',
-      'Smart City Solutions'
-    ]
-  },
-  {
-    id: 'digital-transformation',
-    name: 'Digital Transformation',
-    icon: Globe,
-    description: 'Modernize your business processes and customer experience',
-    color: 'from-indigo-500 to-purple-600',
-    solutions: [
-      'Process Automation',
-      'Customer Experience',
-      'Legacy Modernization',
-      'Digital Strategy',
-      'Change Management',
-      'Technology Consulting'
-    ]
-  }
-];
+const Solutions: React.FC = (): JSX.Element => {
+  const [selectedIndustry, setSelectedIndustry] = useState('all');
 
 const industrySolutions = [
   {
@@ -251,21 +176,8 @@ const featuredSolutions = [
   }
 ];
 
-export default function Solutions() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedIndustry, setSelectedIndustry] = useState('All');
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const categories = ['All', ...solutionCategories.map(cat => cat.name)];
-  const industries = ['All', ...industrySolutions.map(ind => ind.industry)];
-
-  const filteredSolutions = featuredSolutions.filter(solution => {
-    const matchesCategory = selectedCategory === 'All' || solution.category === selectedCategory;
-    const matchesSearch = solution.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         solution.description.toLowerCase().includes(searchTerm.toLowerCase());
-    
-    return matchesCategory && matchesSearch;
-  });
+  const filteredSolutions = selectedIndustry === 'all' 
+    ? solutions: anysolutions.filter(solution  => solution.industry === selectedIndustry);
 
   return (
   {/* Empty JSX fragment */}
@@ -317,15 +229,116 @@ export default function Solutions() {
                 </button>
               ))}
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Innovative Solutions for Modern Businesses
-            </h1>
-            <p className="text-xl text-zion-slate-light max-w-4xl mx-auto">
-              Discover comprehensive technology solutions designed to transform your business operations, 
-              enhance security, and drive growth through cutting-edge innovation.
-            </p>
-          </motion.div>
-        </div>
+          </div>
+        </section>
+
+        {/* Solutions Grid */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredSolutions.map((solution, index)  => (
+                <motion.div
+                  key={solution.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-[1.02]"
+                >
+                  <div className="w-16 h-16 bg-blue-600/20 rounded-xl flex items-center justify-center mb-6">
+                    <solution.icon className="w-8 h-8 text-blue-400" />
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-white mb-4">{solution.title}</h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">{solution.description}</p>
+                  
+                  {/* Features */}
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-blue-400 mb-3">Key Features</h4>
+                    <div className="grid grid-cols-2 gap-2">
+                      {solution.features.slice(0, 4).map((feature, idx) => (
+                        <div key={idx} className="flex items-center space-x-2 text-gray-300 text-sm">
+                          <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />
+                          <span>{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Benefits */}
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Benefits</h4>
+                    <ul className="space-y-2">
+                      {solution.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-start space-x-2 text-gray-300 text-sm">
+                          <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
+                          <span>{benefit}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Actions */}
+                  <div className="flex items-center justify-between pt-4 border-t border-slate-700/50">
+                    <div className="flex space-x-2">
+                      {solution.demo && (
+                        <button className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-500 transition-colors duration-300">
+                          <Play className="w-4 h-4 mr-1 inline" />
+                          Demo
+                        </button>
+                      )}
+                      {solution.trial && (
+                        <button className="px-4 py-2 border border-blue-600 text-blue-400 text-sm font-medium rounded-lg hover:bg-blue-600 hover:text-white transition-colors duration-300">
+                          Start Trial
+                        </button>
+                      )}
+                    </div>
+                    <Link
+                      to={`/solutions/${solution.id}`}
+                      className="text-blue-400 hover:text-blue-300 text-sm font-medium"
+                    >
+                      Learn More
+                    </Link>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-700/30">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Let our technology solutions drive your digital transformation and unlock new possibilities 
+                for growth and innovation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-cyan-400 transition-all duration-300 transform hover:scale-105"
+                >
+                  Get Started Today
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+                <Link
+                  to="/request-quote"
+                  className="inline-flex items-center justify-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
+                >
+                  Request Quote
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
       </div>
     </React.Fragment>
   )};

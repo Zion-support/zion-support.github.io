@@ -1,4 +1,5 @@
-export type InnovativeITInfrastructureService = {
+export interface InnovativeITInfrastructureService {
+
 
   id: string;
   title: string;
@@ -18,11 +19,13 @@ export type InnovativeITInfrastructureService = {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+contactInfo: {
     phone: string;
     email: string;
     website: string;
-  };
+  
+
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];

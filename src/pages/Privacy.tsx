@@ -1,8 +1,23 @@
-import { motion } from 'framer-motion';
-import { Shield, Lock, Eye, Users, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import React from 'react';
+import { motion   } from 'framer-motion';
+import { SEO   } from '@/components/SEO';
+import { Shield, 
+  Lock, 
+  Eye, 
+  Database, 
+  Globe, 
+  Users, 
+  Mail, 
+  Phone,
+  MapPin,
+  Clock,
+  CheckCircle,
+  AlertTriangle
+  } from 'lucide-react';
 
-export default function Privacy() {
+export default function Privacy(...args: any[]): any {
+  const lastUpdated = 'December 15, 2024';
+
   const privacyPrinciples = [
     {
       icon: Shield,
@@ -148,9 +163,9 @@ export default function Privacy() {
               in how we handle your personal information.
             </p>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {privacyPrinciples.map((principle, index) => (
+          
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {privacyPrinciples.map((principle, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -186,9 +201,9 @@ export default function Privacy() {
               and improve your experience.
             </p>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {dataCategories.map((category, index) => (
+          
+          <div className="grid lg: anygrid-cols-3 gap-8">
+            {dataCategories.map((category, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -350,6 +365,44 @@ export default function Privacy() {
                 </div>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Your Rights */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Your Privacy Rights
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              You have complete control over your personal data and how it is used
+            </p>
+          </motion.div>
+          
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {userRights.map((right, index)   => (
+              <motion.div
+                key={right.right}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="group"
+              >
+                <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105 h-full">
+                  <h3 className="text-xl font-bold text-white mb-4">{right.right}</h3>
+                  <p className="text-slate-300 leading-relaxed">{right.description}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

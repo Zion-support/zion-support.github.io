@@ -1,7 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';import { DollarSign, ArrowRight, ExternalLink, Search, Filter, Phone, Mail, MapPin, Calculator, BarChart3, Target, Zap, Shield, Brain, Rocket } from 'lucide-react';
-import { servicesCatalog } from '../data/servicesCatalog';
-import { innovativeServices2027 } from '../data/innovativeServices2027';
+import { motion, AnimatePresence    } from 'framer-motion';
+import { DollarSign, 
+  TrendingUp, 
+  Clock, 
+  Users, 
+  Star, 
+  CheckCircle,
+  ArrowRight,
+  ExternalLink,
+  Search,
+  Filter,
+  Download,
+  Phone,
+  Mail,
+  MapPin,
+  Calculator,
+  BarChart3,
+  Target,
+  Zap,
+  Shield,
+  Brain,
+  Rocket
+   } from 'lucide-react';
+import { servicesCatalog    } from '../data/servicesCatalog';
+import { innovativeServices2027    } from '../data/innovativeServices2027';
 
 export const ComprehensivePricingGuide2027: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -37,7 +59,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
         category: category.name
       }))
     ),
-    ...innovativeServices2027.map(service => ({
+    ...innovativeServices2027.map(service    => ({
       ...service,
       source: 'innovative',
       category: service.category,
@@ -86,14 +108,14 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
     address: '364 E Main St STE 1008 Middletown DE 19709'
   };
 
-  const getPriceRange = (price: string) => {
+  const getPriceRange = (price: string)    => {
     const numPrice = parseFloat(price.replace(/[^0-9.]/g, ''));
     if (numPrice < 100) return 'Low';
     if (numPrice < 1000) return 'Medium';
     return 'High';
   };
 
-  const getPriceColor = (price: string) => {
+  const getPriceColor = (price: string)    => {
     const range = getPriceRange(price);
     switch (range) {
       case 'Low': return 'text-green-400';
@@ -103,7 +125,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
     }
   };
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string)    => {
     const iconMap: { [key: string]: React.ComponentType<any> } = {
       'AI Solutions': Brain,
       'Micro SaaS': Zap,
@@ -191,7 +213,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
               >
-                {categories.map(category => (
+                {categories.map(category    => (
                   <option key={category} value={category} className="bg-zion-slate-dark text-white">
                     {category}
                   </option>
@@ -204,7 +226,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
                 onChange={(e) => setPriceRange(e.target.value)}
                 className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
               >
-                {priceRanges.map(range => (
+                {priceRanges.map(range    => (
                   <option key={range} value={range} className="bg-zion-slate-dark text-white">
                     {range}
                   </option>
@@ -244,7 +266,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {sortedServices.map((service, index) => (
+          {sortedServices.map((service, index)    => (
             <motion.div
               key={`${service.source}-${service.id}`}
               initial={{ opacity: 0, y: 20 }}

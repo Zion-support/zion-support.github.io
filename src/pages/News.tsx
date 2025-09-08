@@ -1,20 +1,7 @@
-// Removed unused: import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Newspaper, Calendar, User, ArrowRight, Search, Clock, Share2, Bookmark } from 'lucide-react';
+import { Link   } from 'react-router-dom';
+import { Calendar, Clock, User, ArrowRight, ExternalLink   } from 'lucide-react';
 
-export default function News() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const categories = [
-    { id: 'all', name: 'All News', count: 0 },
-    { id: 'ai', name: 'AI & Technology', count: 0 },
-    { id: 'cloud', name: 'Cloud & Infrastructure', count: 0 },
-    { id: 'security', name: 'Security & Compliance', count: 0 },
-    { id: 'quantum', name: 'Quantum Computing', count: 0 },
-    { id: 'comp', name: 'Comp Updates', count: 0 }
-  ];
-
+export default function News(...args: any[]): any {
   const newsArticles = [
     {
       id: 1,
@@ -93,13 +80,14 @@ export default function News() {
     }
   });
 
-  const filteredArticles = newsArticles.filter(article => {
-    const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;
-    const matchesSearch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         article.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+  const formatDate = (dateString: string)   => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
@@ -224,10 +212,68 @@ export default function News() {
           </div>
         )}
 
-        {/* All Articles */}
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            {selectedCategory === 'all' ? 'All News' : `${categories.find(c => c.id === selectedCategory)?.name}`}
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {newsArticles.filter(article   => !article.featured).map((article) => (
+              <article key={article.id} className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                <div className="relative">
+                  <img
+                    src={article.image}
+                    alt={article.title}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-zion-cyan text-white px-3 py-1 rounded-full text-sm font-medium">
+                      {article.category}
+                    </span>
+                  </div>
+                </div>
+                
+                <div className="p-6">
+                  <div className="flex items-center space-x-4 text-sm text-zion-slate-light mb-3">
+                    <div className="flex items-center">
+                      <Calendar className="w-4 h-4 mr-1" />
+                      {formatDate(article.date)}
+                    </div>
+                    <div className="flex items-center">
+                      <Clock className="w-4 h-4 mr-1" />
+                      {article.readTime}
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-zion-slate-dark mb-3 line-clamp-2">
+                    {article.title}
+                  </h3>
+                  
+                  <p className="text-zion-slate-light mb-4 line-clamp-3">
+                    {article.excerpt}
+                  </p>
+                  
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center text-sm text-zion-slate-light">
+                      <User className="w-4 h-4 mr-1" />
+                      {article.author}
+                    </div>
+                    
+                    <Link
+                      to={`/news/${article.id}`}
+                      className="inline-flex items-center text-zion-cyan hover:text-zion-cyan/80 font-medium text-sm transition-colors"
+                    >
+                      Read More
+                      <ArrowRight className="w-3 h-3 ml-1" />
+                    </Link>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Signup */}
+      <section className="py-20 bg-gradient-to-r from-zion-cyan to-zion-purple">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Stay Updated
           </h2>
           <div className="space-y-6">
             {filteredArticles.filter(article => !article.featured).map((article, index) => (

@@ -1,5 +1,7 @@
-import { SEO } from '@/components/SEO';
+import React from 'react';
+import { SEO  } from '@/components/SEO';
 
+export default function Demo(...args: any[]): any {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header Section */}

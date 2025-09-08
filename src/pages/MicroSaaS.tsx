@@ -1,9 +1,8 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Link } from 'react-router-dom';
-import { Zap, BarChart3, Bot, Globe, Database, Shield, ExternalLink, DollarSign } from 'lucide-react';
+import { Link   } from 'react-router-dom';
+import { Mail, MessageSquare, Calendar, PenTool, BarChart3, Users, DollarSign, ExternalLink, Shield, FileSearch, Bug, Globe, CreditCard, ShoppingCart, Bell, Languages   } from 'lucide-react';
 
-const MicroSaaS: React.FC = () => {
+const MicroSaaS: React.FC = (): JSX.Element => {
   const products = [
     {
       icon: Bot,
@@ -85,11 +84,10 @@ const MicroSaaS: React.FC = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-24">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {products.map((p) => (
-            <Link key={p.title} to={p.href} className="group rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition hover:translate-y-[-2px] hover:border-cyan-400/30">
-              <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-cyan-500/15 text-cyan-300">
+        <div className="mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3">
+          {products.map((p)   => (
+            <div key={p.name} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-md">
+              <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-purple-500/15 text-purple-300">
                 <p.icon className="h-5 w-5" />
               </div>
               <h3 className="text-lg font-semibold">{p.title}</h3>

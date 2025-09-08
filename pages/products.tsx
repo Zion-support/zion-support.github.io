@@ -1,7 +1,26 @@
-import type { NextPage } from 'next';
-import { Helmet } from 'react-helmet-async';
-import { useState } from 'react';
-import { Brain, Cloud, Shield, Zap, Code, TrendingUp, Rocket, Network, BarChart3, Sparkles, Target, Users, CheckCircle } from 'lucide-react';
+import type { NextPage } from 'next.ts';
+import Head from 'next/head.ts';
+import { useState  } from 'react.ts';
+import { Brain, 
+  Cloud, 
+  Shield, 
+  Globe, 
+  Zap, 
+  Database, 
+  Smartphone, 
+  Code, 
+  Lock, 
+  TrendingUp,
+  Rocket,
+  Cpu,
+  Network,
+  Palette,
+  BarChart3,
+  Sparkles,
+  Target,
+  Users,
+  CheckCircle
+ } from 'lucide-react.ts';
 
 
 const products = [
@@ -201,86 +220,8 @@ export default function ProductsPage() {
     }
   ];
 
-  const featuredProducts = [
-    {
-      name: 'Zion AI Autonomous Platform',
-      description: 'Complete AI-powered business automation platform that learns and adapts to your business needs.',
-      features: [
-        'Natural Language Processing',
-        'Predictive Analytics',
-        'Automated Decision Making',
-        'Real-time Learning'
-      ],
-      icon: Brain,
-      color: 'from-purple-400 to-pink-500',
-      status: 'Available Now'
-    },
-    {
-      name: 'Quantum Computing Suite',
-      description: 'Enterprise-grade quantum computing solutions for complex optimization and simulation problems.',
-      features: [
-        'Quantum Algorithms',
-        'Hybrid Classical-Quantum',
-        'Optimization Engine',
-        'Simulation Tools'
-      ],
-      icon: Zap,
-      color: 'from-cyan-400 to-blue-500',
-      status: 'Early Access'
-    },
-    {
-      name: 'SecureNet Enterprise',
-      description: 'Comprehensive cybersecurity platform with advanced threat detection and response capabilities.',
-      features: [
-        'AI-Powered Detection',
-        'Zero-Day Protection',
-        'Compliance Management',
-        'Incident Response'
-      ],
-      icon: Shield,
-      color: 'from-red-400 to-pink-500',
-      status: 'Available Now'
-    }
-  ];
-
-  const productBenefits = [
-    {
-      title: 'Increased Efficiency',
-      description: 'Automate repetitive tasks and streamline operations',
-      icon: Rocket,
-      color: 'from-green-400 to-emerald-500'
-    },
-    {
-      title: 'Cost Reduction',
-      description: 'Lower operational costs through intelligent automation',
-      icon: BarChart3,
-      color: 'from-blue-400 to-cyan-500'
-    },
-    {
-      title: 'Enhanced Security',
-      description: 'Protect your business with advanced security measures',
-      icon: Lock,
-      color: 'from-red-400 to-pink-500'
-    },
-    {
-      title: 'Scalability',
-      description: 'Grow your business without infrastructure limitations',
-      icon: Globe,
-      color: 'from-purple-400 to-indigo-500'
-    },
-    {
-      title: 'Real-time Insights',
-      description: 'Make data-driven decisions with instant analytics',
-      icon: Cpu,
-      color: 'from-orange-400 to-yellow-500'
-    },
-    {
-      title: 'Future-Proof',
-      description: 'Built with cutting-edge technology for tomorrow\'s challenges',
-      icon: Zap,
-      color: 'from-cyan-400 to-blue-500'
-    }
-  ];
+  const filteredProducts = activeCategory === 'all' 
+    ? products: anyproducts.filter(product  => product.category === activeCategory);
 
   return (
     <>
@@ -330,42 +271,61 @@ export default function ProductsPage() {
           </div>
         </section>
 
-        {/* Featured Products */}
-        <section className="py-20">
-          <div className="container mx-auto px-6">
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Featured Products
-              </h2>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Our flagship products that are revolutionizing industries worldwide.
-              </p>
-            </motion.div>
-            
-            <div className="grid lg:grid-cols-3 gap-8">
-              {featuredProducts.map((product, index) => (
-                <motion.div
-                  key={product.name}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-cyan-400/30 transition-all duration-300"
-                >
-                  <div className="flex items-center mb-6">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${product.color} rounded-xl flex items-center justify-center mr-4`}>
-                      <product.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-semibold text-white">{product.name}</h3>
-                      <div className="inline-flex items-center px-3 py-1 bg-green-500/20 border border-green-500/30 rounded-full text-sm text-green-400">
-                        {product.status}
+      {/* Category Filter */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="flex flex-wrap justify-center gap-4 mb-16">
+          {productCategories.map((category) => {
+            const IconComponent = category.icon;
+            return (
+              <button
+                key={category.id}
+                onClick={() => setActiveCategory(category.id)}
+                className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+                  activeCategory === category.id
+                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg transform scale-105`
+                    : 'bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm'
+                }`}
+              >
+                <IconComponent className="w-5 h-5" />
+                <span>{category.name}</span>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Products Grid */}
+        <div className="grid lg: anygrid-cols-2 gap-8">
+          {filteredProducts.map((product)  => {
+            const IconComponent = product.icon;
+            return (
+              <div
+                key={product.id}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group"
+              >
+                <div className="flex items-start justify-between mb-6">
+                  <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${product.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                    <IconComponent className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-right">
+                    <span className="text-3xl font-bold text-blue-400">{product.price}</span>
+                    <p className="text-gray-400 text-sm">per month</p>
+                  </div>
+                </div>
+                
+                <h3 className="text-2xl font-bold text-white mb-2">{product.name}</h3>
+                <p className="text-blue-300 font-medium mb-4">{product.tagline}</p>
+                <p className="text-gray-300 mb-6 leading-relaxed">{product.description}</p>
+
+                <div className="mb-6">
+                  <h4 className="text-white font-semibold mb-3 flex items-center">
+                    <Sparkles className="w-5 h-5 text-yellow-400 mr-2" />
+                    Key Features
+                  </h4>
+                  <div className="grid grid-cols-2 gap-2">
+                    {product.features.slice(0, 6).map((feature, index) => (
+                      <div key={index} className="flex items-center text-gray-300 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        <span className="truncate">{feature}</span>
                       </div>
                     </div>
                   </div>

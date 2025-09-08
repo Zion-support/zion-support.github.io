@@ -1,11 +1,37 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Brain, Cpu, Atom, Zap, Rocket, Eye, Globe, Car, Dna, Microscope, Bot, TrendingUp, Users, Target, Phone, Mail, MapPin, ChevronLeft, Play, Pause, RotateCcw } from 'lucide-react';
-import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
+import { motion, AnimatePresence   } from 'framer-motion';
+import { Brain, 
+  Cpu, 
+  Atom, 
+  Zap, 
+  Rocket, 
+  Eye, 
+  Globe, 
+  Car, 
+  Dna, 
+  Microscope, 
+  Bot,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Users,
+  Target,
+  Award,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  ChevronLeft,
+  ChevronRight,
+  Play,
+  Pause,
+  RotateCcw
+  } from 'lucide-react';
+import { EMERGING_TECH_SERVICES_2025   } from '../data/emergingTechServices2025';
 
-const EmergingTechShowcase2025: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedService, setSelectedService] = useState<string | null>(null);
+const EmergingTechShowcase2025: React.FC = (): JSX.Element => {
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [selectedService, setSelectedService] = useState<any>(null);
   const [autoPlay, setAutoPlay] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -26,8 +52,7 @@ const EmergingTechShowcase2025: React.FC = () => {
   ];
 
     const filteredServices = selectedCategory === 'all'
-    ? EMERGING_TECH_SERVICES_2025
-    : EMERGING_TECH_SERVICES_2025.filter(service => service.category === selectedCategory);
+    ? EMERGING_TECH_SERVICES_2025: anyEMERGING_TECH_SERVICES_2025.filter(service   => service.category === selectedCategory);
 
   useEffect(() => {
     if (autoPlay) {
@@ -38,12 +63,12 @@ const EmergingTechShowcase2025: React.FC = () => {
     }
   }, [autoPlay, filteredServices.length]);
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string)   => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Globe;
   };
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: string)   => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.color : 'from-blue-500 to-purple-600';
   };
@@ -231,8 +256,8 @@ const EmergingTechShowcase2025: React.FC = () => {
             <p className="text-xl text-gray-300">Comprehensive overview of our cutting-edge solutions</p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)   => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}

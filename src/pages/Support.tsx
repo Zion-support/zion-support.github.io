@@ -1,8 +1,32 @@
-// Removed unused: import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
-import { MessageCircle, Mail, Phone, Clock, Users, Shield, Cloud, Brain, CheckCircle, Video, BookOpen, HelpCircle, Globe, Send, Ticket, Headphones } from 'lucide-react';
+import React, { useState } from 'react';
+import { Link   } from 'react-router-dom';
+import { motion   } from 'framer-motion';
+import { HelpCircle, 
+  MessageCircle, 
+  Phone, 
+  Mail, 
+  Clock, 
+  CheckCircle, 
+  Search, 
+  BookOpen, 
+  Video, 
+  Users, 
+  Zap, 
+  Shield,
+  Brain,
+  Cloud,
+  Rocket,
+  Heart,
+  Globe,
+  Lock,
+  Cpu,
+  Star
+  } from 'lucide-react';
+import { SEO   } from '../components/SEO';
 
+export default function Support(...args: any[]): any {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
 const Support: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('general');
@@ -142,8 +166,7 @@ const Support: React.FC = () => {
   ];
 
   const filteredIssues = selectedCategory === 'all' 
-    ? commonIssues 
-    : commonIssues.filter(issue => issue.category === selectedCategory);
+    ? commonIssues: anycommonIssues.filter(issue   => issue.category === selectedCategory);
 
   const filteredSearchIssues = searchQuery 
     ? filteredIssues.filter(issue => 
@@ -190,23 +213,149 @@ const Support: React.FC = () => {
         {/* Support Methods */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
-                How Can We Help You?
-              </h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {supportMethods.map((method, index) => (
-                  <motion.div
-                    key={method.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
-                    className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 text-center"
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">How Can We Help You?</h2>
+              <p className="text-xl text-slate-300">Choose the support channel that works best for your needs</p>
+            </div>
+            
+            <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
+              {supportChannels.map((channel, index)   => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300"
+                >
+                  <div className={`w-16 h-16 bg-gradient-to-br ${channel.color} rounded-2xl flex items-center justify-center mb-6`}>
+                    <channel.icon className="h-8 w-8 text-white" />
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-white mb-3">{channel.title}</h3>
+                  <p className="text-slate-300 mb-6">{channel.description}</p>
+                  
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center text-sm text-slate-400">
+                      <Clock className="h-4 w-4 mr-2" />
+                      <span>Available: {channel.availability}</span>
+                    </div>
+                    <div className="flex items-center text-sm text-slate-400">
+                      <CheckCircle className="h-4 w-4 mr-2" />
+                      <span>Response: {channel.responseTime}</span>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    {channel.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center text-sm text-slate-300">
+                        <CheckCircle className="h-3 w-3 text-cyan-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <button className="w-full mt-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
+                    Get Support
+                  </button>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Category Filter */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">Common Issues & Solutions</h2>
+              <p className="text-xl text-slate-300">Find quick solutions to frequently encountered problems</p>
+            </div>
+            
+            {/* Category Tabs */}
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              {supportCategories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    selectedCategory === category.id
+                      ? `bg-gradient-to-r ${category.color} text-white`
+                      : 'bg-slate-700/50 text-slate-300 hover:bg-slate-700/70'
+                  }`}
+                >
+                  <category.icon className="h-5 w-5" />
+                  <span>{category.name}</span>
+                </button>
+              ))}
+            </div>
+            
+            {/* Issues Grid */}
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-6">
+              {filteredSearchIssues.map((issue, index)   => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className={`w-12 h-12 bg-gradient-to-br ${issue.color} rounded-lg flex items-center justify-center flex-shrink-0`}>
+                      <issue.icon className="h-6 w-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-white mb-2">{issue.title}</h3>
+                      <p className="text-slate-300 text-sm mb-3">{issue.description}</p>
+                      <div className="bg-slate-700/50 rounded-lg p-3">
+                        <p className="text-slate-200 text-sm">
+                          <span className="font-semibold text-cyan-400">Solution:</span> {issue.solution}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+            
+            {filteredSearchIssues.length === 0 && (
+              <div className="text-center py-12">
+                <p className="text-slate-400 text-lg">No issues found matching your search. Try a different query or category.</p>
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* Resources Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">Helpful Resources</h2>
+              <p className="text-xl text-slate-300">Access our comprehensive knowledge base and learning materials</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+              {resources.map((resource, index)   => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 text-center"
+                >
+                  <div className={`w-16 h-16 bg-gradient-to-br ${resource.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
+                    <resource.icon className="h-8 w-8 text-white" />
+                  </div>
+                  
+                  <h3 className="text-lg font-semibold text-white mb-2">{resource.title}</h3>
+                  <p className="text-slate-300 text-sm mb-3">{resource.description}</p>
+                  
+                  <div className="text-cyan-400 text-sm mb-4">
+                    {resource.articles || resource.videos || resource.members || resource.endpoints}
+                  </div>
+                  
+                  <Link
+                    to={resource.link}
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold text-sm"
                   >
                     <div className={`w-16 h-16 bg-gradient-to-r ${method.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
                       <method.icon className="w-8 h-8 text-white" /></div>

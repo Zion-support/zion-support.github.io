@@ -1,17 +1,18 @@
-import { useState } from 'react';
+import { toast    } from 'react-hot-toast.ts'
 
-type ToastOptions = {
+interface ToastOptions {
 
-export interface Toast {
-  id: string;
-  title: string;
-  description?: string;
-  variant?: 'default' | 'destructive' | 'success';
-  duration?: number;
+
+
+duration?: number;
+position?: "top-right" | "top-center" | "top-left" | "bottom-right" | "bottom-center" | "bottom-left";
+
+
+
 }
 
-export function useToast(...args: []):  {
-  const showToast = (message: anystring, options?: ToastOptions)  => {
+export function useToast(...args: any[]): any {
+  const showToast = (message: string, options?: ToastOptions)    => {
     return toast(message, options)
   }
 

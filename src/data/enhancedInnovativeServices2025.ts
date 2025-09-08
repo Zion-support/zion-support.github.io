@@ -1,10 +1,12 @@
-export type ServiceContact = {
+export interface ServiceContact {
 
   phone: string;
   email: string;
   website: string;
-  address: string}
-export type MicroSaasService = {
+  address: string;
+
+}
+export interface MicroSaasService {
 
   id: number;
   name: string;
@@ -25,8 +27,10 @@ export type MicroSaasService = {
   setupTime: string;
   integrations: string[];
   freeTier: boolean;
-  trialPeriod: string}
-export type ITService = {
+  trialPeriod: string;
+
+}
+export interface ITService {
 
   id: number;
   name: string;
@@ -44,8 +48,10 @@ export type ITService = {
   sla: string;
   certifications: string[];
   deliveryTime: string;
-  support: string}
-export type AIService = {
+  support: string;
+
+}
+export interface AIService {
 
   id: number;
   name: string;
@@ -66,6 +72,7 @@ export type AIService = {
   compliance: string[];
   aiScore: number;
   useCases: string[];
+
 }
 // Fixed missing name: export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
   // Advanced AI & Machine Learning Services

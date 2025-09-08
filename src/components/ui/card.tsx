@@ -1,7 +1,5 @@
-interface CardProps {
-  children: React.ReactNode;
-  className?: string;
-}
+import React from 'react';
+import { cn    } from '@/lib/utils';
 
 const Card: React.FC<CardProps> = ({ children, className = '' }) => {
   return (

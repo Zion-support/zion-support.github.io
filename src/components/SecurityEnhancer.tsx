@@ -1,12 +1,27 @@
-import React, { useEffect, useState, useCallback } from 'react.ts';
-import { Card, CardContent, CardHeader, CardTitle  } from './ui/card';
-import { Button  } from './ui/button';
-import { Badge  } from './ui/badge';
-import { Alert, AlertDescription  } from './ui/alert';
-import { Progress  } from './ui/progress';
-
+import React, { useEffect, useState, useCallback } from 'react';
+import { Card, CardContent, CardHeader, CardTitle    } from './ui/card';
+import { Button    } from './ui/button';
+import { Badge    } from './ui/badge';
+import { Alert, AlertDescription    } from './ui/alert';
+import { Progress    } from './ui/progress';
+import { Shield, 
+  Lock, 
+  AlertTriangle, 
+  CheckCircle, 
+  Eye, 
+  EyeOff,
+  RefreshCw,
+  Zap,
+  Security,
+  Bug,
+  Network,
+  Database
+   } from 'lucide-react';
 
 interface SecurityThreat {
+
+
+
   id: string;
   type: 'xss' | 'csrf' | 'injection' | 'authentication' | 'authorization' | 'data-leak';
   severity: 'critical' | 'high' | 'medium' | 'low';
@@ -14,24 +29,39 @@ interface SecurityThreat {
   location: string;
   timestamp: Date;
   status: 'active' | 'mitigated' | 'resolved';
+
+
+
 }
 
 interface SecurityMetrics {
+
+
+
   overallScore: number;
   vulnerabilities: number;
   threatsBlocked: number;
   lastScan: Date;
   complianceScore: number;
   encryptionStrength: number;
+
+
+
 }
 
 interface SecurityCheck {
+
+
+
   id: string;
   name: string;
   status: 'pass' | 'fail' | 'warning';
   description: string;
   recommendation: string;
   category: 'authentication' | 'data-protection' | 'network-security' | 'compliance';
+
+
+
 }
 
 const SecurityEnhancer: React.FC = () => {
@@ -85,7 +115,7 @@ const SecurityEnhancer: React.FC = () => {
   }, []);
 
   // Generate security checks
-  useEffect(() => {
+  useEffect(()    => {
     const checks: SecurityCheck[] = [
       {
         id: '1',
@@ -150,7 +180,7 @@ const SecurityEnhancer: React.FC = () => {
     setIsScanning(false);
   }, []);
 
-  const mitigateThreat = useCallback((threatId: string) => {
+  const mitigateThreat = useCallback((threatId: string)    => {
     setThreats(prev => prev.map(threat => 
       threat.id === threatId 
         ? { ...threat, status: 'mitigated' as const }
@@ -158,7 +188,7 @@ const SecurityEnhancer: React.FC = () => {
     ));
   }, []);
 
-  const resolveThreat = useCallback((threatId: string) => {
+  const resolveThreat = useCallback((threatId: string)    => {
     setThreats(prev => prev.map(threat => 
       threat.id === threatId 
         ? { ...threat, status: 'resolved' as const }
@@ -166,7 +196,7 @@ const SecurityEnhancer: React.FC = () => {
     ));
   }, []);
 
-  const getThreatIcon = (type: SecurityThreat['type']) => {
+  const getThreatIcon = (type: anySecurityThreat['type'])    => {
     switch (type) {
       case 'xss': return <Bug className="h-4 w-4" />;
       case 'csrf': return <Network className="h-4 w-4" />;
@@ -178,7 +208,7 @@ const SecurityEnhancer: React.FC = () => {
     }
   };
 
-  const getSeverityColor = (severity: SecurityThreat['severity']) => {
+  const getSeverityColor = (severity: anySecurityThreat['severity'])    => {
     switch (severity) {
       case 'critical': return 'bg-red-500';
       case 'high': return 'bg-orange-500';
@@ -188,7 +218,7 @@ const SecurityEnhancer: React.FC = () => {
     }
   };
 
-  const getStatusColor = (status: SecurityThreat['status']) => {
+  const getStatusColor = (status: anySecurityThreat['status'])    => {
     switch (status) {
       case 'active': return 'bg-red-100 text-red-800';
       case 'mitigated': return 'bg-yellow-100 text-yellow-800';
@@ -197,7 +227,7 @@ const SecurityEnhancer: React.FC = () => {
     }
   };
 
-  const getCheckStatusIcon = (status: SecurityCheck['status']) => {
+  const getCheckStatusIcon = (status: anySecurityCheck['status'])    => {
     switch (status) {
       case 'pass': return <CheckCircle className="h-4 w-4 text-green-600" />;
       case 'fail': return <AlertTriangle className="h-4 w-4 text-red-600" />;
@@ -206,7 +236,7 @@ const SecurityEnhancer: React.FC = () => {
     }
   };
 
-  const getSecurityScoreColor = (score: number) => {
+  const getSecurityScoreColor = (score: anynumber)    => {
     if (score >= 90) return 'text-green-600';
     if (score >= 70) return 'text-yellow-600';
     if (score >= 50) return 'text-orange-600';

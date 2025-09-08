@@ -1,74 +1,35 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { Mail, Phone, MapPin, Send, CheckCircle  } from 'lucide-react.ts'
 
 
-export default function ContactPage() {
-  return (
-    <>
-      <Head>
-        <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for all your technology needs. We're here to help you succeed." />
-      </Head>
+export default function Contact(...args: any[]): any {
+	const [formData, setFormData] = useState({
+		name: '',
+		email: '',
+		company: '',
+		message: ''
+	})
+	const [isSubmitted, setIsSubmitted] = useState(false)
 
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center text-white"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Contact Us
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-                Ready to transform your business? Get in touch with our team of experts.
-              </p>
-            </motion.div>
-          </div>
-        </section>
+	const handleSubmit = (e: anyReact.FormEvent)  => {
+		e.preventDefault()
+		// Here you would typically send the form data to your backend
+		console.log('Form submitted: any', formData)
+		setIsSubmitted(true)
+		// Reset form after submission
+		setTimeout(()  => {
+			setIsSubmitted(false)
+			setFormData({ name: '', email: '', company: '', message: '' })
+		}, 3000)
+	}
 
-        {/* Contact Information */}
-        <section className="py-16 px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12">
-              {/* Contact Details */}
-              <div className="space-y-8">
-                <div><h2 className="text-3xl font-bold mb-8">Get In Touch</h2>
-                  <div className="space-y-6">
-                    <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                      <h3 className="text-xl font-semibold mb-2 text-blue-400">Phone</h3>
-                      <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="text-lg text-slate-300 hover:text-white transition-colors">
-                        {contact.phone}
-                      </a>
-                      <p className="text-slate-400 text-sm mt-1">Available Monday-Friday, 9 AM - 6 PM EST</p>
-                    </div>
-                    <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                      <h3 className="text-xl font-semibold mb-2 text-purple-400">Email</h3>
-                      <a href={`mailto:${contact.email}`} className="text-lg text-slate-300 hover:text-white transition-colors">
-                        {contact.email}
-                      </a>
-                      <p className="text-slate-400 text-sm mt-1">We respond within 24 hours</p>
-                    </div>
-                    <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                      <h3 className="text-xl font-semibold mb-2 text-green-400">Address</h3>
-                      <p className="text-lg text-slate-300">{contact.address}</p>
-                      <p className="text-slate-400 text-sm mt-1">Middletown, Delaware</p>
-                    </div>
-                    <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                      <h3 className="text-xl font-semibold mb-2 text-yellow-400">Website</h3>
-                      <a href={contact.site} className="text-lg text-slate-300 hover:text-white transition-colors">
-                        {contact.site}
-                      </a>
-                      <p className="text-slate-400 text-sm mt-1">Visit our full service catalog</p>
-                    </div>
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Phone</h3>
-                <p className="text-gray-600">+1 302 464 0950</p>
-              </motion.div>
+	const handleChange = (e: anyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>)  => {
+		setFormData({
+			...formData,
+			[e.target.name]: e.target.value
+		})
+	}
 
 	return (
   {/* Empty JSX fragment */}

@@ -1,9 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { ArrowRight, Zap, Shield, Cloud, Brain, Users, CheckCircle, Star, Clock } from 'lucide-react';
+import React from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { ArrowRight, Zap, Shield, Cloud, Brain, Users, Target, Award, Globe, Rocket, Cpu, Database, Lock  } from 'lucide-react.ts'
 
 
-export default function Index(...args[]):  {
+export default function Index(...args: any[]): any {
 	const features = [
 		{
 			icon: Brain,
@@ -99,99 +99,34 @@ export default function Index(...args[]):  {
 				</div>
 			</section>
 
-const contactInfo = [
-  {
-    icon: Mail,
-    title: 'Email Us',
-    value: 'kleber@ziontechgroup.com',
-    href: 'mailto:kleber@ziontechgroup.com'
-  },
-  {
-    icon: Phone,
-    title: 'Call Us',
-    value: '+1 302 464 0950',
-    href: 'tel:+13024640950'
-  },
-  {
-    icon: MapPin,
-    title: 'Visit Us',
-    value: '364 E Main St STE 1008, Middletown DE 19709',
-    href: '#'
-  }
-];
-
-export default function HomePage() {
-  return (
-    <Layout
-      title="Zion Tech Group - AI, IT, and Micro SaaS Solutions"
-      description="Leading provider of AI, IT services, and Micro SaaS solutions. Transform your business with cutting-edge technology."
-      keywords="AI services, IT services, Micro SaaS, technology solutions, business transformation"
-    >
-      <div className="min-h-screen">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Transform Your Business with Technology
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                We deliver cutting-edge AI, IT, and Micro SaaS solutions that drive growth, 
-                efficiency, and innovation for businesses of all sizes.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-                >
-                  Get Started
-                </Link>
-                <Link
-                  href="/about"
-                  className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors"
-                >
-                  Learn More
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className="py-20 px-4 bg-gray-900">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <motion.div
-<<<<<<< HEAD
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-=======
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
-                  className="text-center"
-                >
-                  <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">
-                    {stat.number}
-                  </div>
-                  <div className="text-gray-300">
-                    {stat.label}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+			{/* Features Section */}
+			<section className="py-24 sm:py-32">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="mx-auto max-w-2xl text-center mb-16">
+						<h2 className="text-3xl font-bold tracking-tight text-gray-900">Why Choose Zion Tech Group?</h2>
+						<p className="mt-6 text-lg text-gray-600">
+							We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.
+						</p>
+					</div>
+					<div className="grid gap-8 lg: anygrid-cols-3">
+						{features.map((feature)  => (
+							<div key={feature.title} className="text-center">
+								<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 mb-6">
+									<feature.icon className="h-8 w-8 text-blue-600" />
+								</div>
+								<h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
+								<p className="text-gray-600 mb-6">{feature.description}</p>
+								<Link
+									to={feature.href}
+									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium"
+								>
+									Learn More <ArrowRight className="ml-2 h-4 w-4" />
+								</Link>
+							</div>
+						))}
+					</div>
+				</div>
+			</section>
 
 			{/* CTA Section */}
 			<section className="py-24 sm:py-32 bg-gradient-to-r from-blue-600 to-purple-600">

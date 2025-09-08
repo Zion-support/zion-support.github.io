@@ -1,21 +1,25 @@
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Volume2, VolumeX, Braille } from 'lucide-react';
+import { motion, AnimatePresence    } from 'framer-motion';
+import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon    } from 'lucide-react';
 
 interface AccessibilityContextType {
 
+
+
   highContrast: anyboolean;
-  toggleHighContrast: ()  => void;
+  toggleHighContrast: ()    => void;
   reducedMotion: anyboolean;
-  toggleReducedMotion: ()  => void;
+  toggleReducedMotion: ()    => void;
   fontSize: anynumber;
-  increaseFontSize: ()  => void;
-  decreaseFontSize: ()  => void;
-  resetFontSize: ()  => void;
+  increaseFontSize: ()    => void;
+  decreaseFontSize: any()    => void;
+  resetFontSize: any()    => void;
   showSkipLinks: anyboolean;
-  setShowSkipLinks: (show: boolean)  => void;
+  setShowSkipLinks: (show: boolean)    => void;
   voiceNavigation: anyboolean;
-  toggleVoiceNavigation: ()  => void;
+  toggleVoiceNavigation: ()    => void;
+
+
 
 }
 
@@ -77,7 +81,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
   // Keyboard navigation support
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown = (event: anyKeyboardEvent)    => {
       // Skip links (Alt + S)
       if (event.altKey && event.key === 's') {
         event.preventDefault();
@@ -273,7 +277,7 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown = (event: anyKeyboardEvent)    => {
       if (event.key !== 'Tab') return;
 
       if (event.shiftKey) {

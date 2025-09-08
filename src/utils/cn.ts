@@ -1,5 +1,6 @@
-import { clsx } from 'clsx';import { twMerge } from 'tailwind-merge';
+import { clsx, type ClassValue  } from 'clsx.ts';
+import { twMerge  } from 'tailwind-merge.ts';
 
-export function cn(...inputs: ClassValue[]) {
+export function cn(...args: any[]): any {
   return twMerge(clsx(inputs));
   {/* Removed stray closing brace */}

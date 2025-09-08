@@ -1,7 +1,33 @@
-// Removed unused: import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Rocket, Zap, Shield, Users, Star, Cpu, Database, Cloud, Clock, Check } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion   } from 'framer-motion';
+import { Rocket, 
+  Zap, 
+  Shield, 
+  Users, 
+  TrendingUp, 
+  Globe, 
+  CheckCircle, 
+  Star, 
+  ArrowRight, 
+  Cpu, 
+  Database, 
+  Cloud,
+  Target,
+  Award,
+  Lightbulb,
+  Crown,
+  Sparkles,
+  ChevronRight,
+  Clock,
+  Check,
+  BarChart3,
+  Lock,
+  Eye,
+  Heart
+  } from 'lucide-react';
 
+const DigitalTransformation: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
+  const [selectedPhase, setSelectedPhase] = useState(0);
 
 const transformationServices = [
   {
@@ -177,27 +203,21 @@ export default function DigitalTransformation() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-zion-blue-light/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => {
-              const IconComponent = stat.icon;
-              return (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                    <IconComponent className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                  <div className="text-zion-slate-light">{stat.label}</div>
-                </motion.div>
-              );
-            })}
+      <section className="py-16 bg-zion-slate-dark">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8 max-w-4xl mx-auto">
+            {stats.map((stat, index)   => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="text-4xl md:text-5xl font-bold text-zion-cyan mb-2">{stat.number}</div>
+                <div className="text-zion-slate-light text-sm md:text-base">{stat.label}</div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -219,47 +239,32 @@ export default function DigitalTransformation() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {transformationServices.map((service, index) => {
-              const IconComponent = service.icon;
-              return (
-                <motion.div
-                  key={service.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="group bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-6 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20"
-                >
-                  <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>
-                    <IconComponent className="w-8 h-8" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-zion-slate-light mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  {/* Features List */}
-                  <ul className="mb-6 space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
-                        <CheckCircle className="w-4 h-4 text-zion-cyan" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors group-hover:translate-x-1 transition-transform duration-300"
-                  >
-                    Learn More
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </motion.div>
-              );
-            })}
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {transformationServices.map((service, index)   => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
+                  <service.icon className="w-8 h-8 text-white" />
+                </div>
+                
+                <h3 className="text-xl font-bold text-white mb-4 text-center">{service.title}</h3>
+                <p className="text-zion-slate-light mb-6 text-center leading-relaxed">{service.description}</p>
+                
+                <div className="space-y-3">
+                  {service.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center gap-3">
+                      <Check className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                      <span className="text-zion-slate-light text-sm">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -281,69 +286,9 @@ export default function DigitalTransformation() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {transformationPhases.map((phase, index) => (
-              <motion.div
-                key={phase.phase}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full mx-auto mb-6 flex items-center justify-center text-white text-2xl font-bold">
-                  {phase.phase}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{phase.title}</h3>
-                <p className="text-zion-slate-light mb-2">{phase.description}</p>
-                <span className="text-zion-cyan text-sm font-medium">{phase.duration}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-              Transformation Benefits
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Digital transformation delivers measurable benefits that impact every aspect of your business.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              {
-                title: "Operational Efficiency",
-                description: "Streamlined processes and automation reduce costs and improve productivity by up to 60%.",
-                icon: Zap
-              },
-              {
-                title: "Customer Experience",
-                description: "Enhanced digital touchpoints and personalized experiences increase customer satisfaction and loyalty.",
-                icon: Users
-              },
-              {
-                title: "Data-Driven Insights",
-                description: "Real-time analytics and business intelligence enable informed decision-making and strategic planning.",
-                icon: TrendingUp
-              },
-              {
-                title: "Competitive Advantage",
-                description: "Innovation and agility position your business ahead of competitors in the digital marketplace.",
-                icon: Rocket
-              }
-            ].map((benefit, index) => {
-              const IconComponent = benefit.icon;
-              return (
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+              {transformationPhases.map((phase, index)   => (
                 <motion.div
                   key={benefit.title}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -359,6 +304,24 @@ export default function DigitalTransformation() {
                       <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                       <p className="text-zion-slate-light leading-relaxed">{benefit.description}</p>
                     </div>
+                    
+                    {/* Activities */}
+                    {selectedPhase === index && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        transition={{ duration: 0.3 }}
+                        className="space-y-2"
+                      >
+                        <div className="text-sm font-medium text-zion-slate-light mb-2">Key Activities: any</div>
+                        {phase.activities.map((activity, activityIndex)   => (
+                          <div key={activityIndex} className="flex items-center gap-2 text-zion-slate-light text-xs">
+                            <Check className="w-3 h-3 text-zion-cyan" />
+                            {activity}
+                          </div>
+                        ))}
+                      </motion.div>
+                    )}
                   </div>
                 </motion.div>
               );
@@ -384,8 +347,8 @@ export default function DigitalTransformation() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {testimonials.map((testimonial, index)   => (
               <motion.div
                 key={testimonial.name}
                 initial={{ opacity: 0, y: 20 }}

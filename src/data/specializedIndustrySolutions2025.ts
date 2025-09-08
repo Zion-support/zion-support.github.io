@@ -1,4 +1,4 @@
-export type IndustrySolution = {
+export interface IndustrySolution {
 
   id: string;
   title: string;
@@ -11,10 +11,17 @@ export type IndustrySolution = {
   features: string[];
   benefits: string[];
   useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
+pricing: {
+    starter: string;
+    professional: string;
+    enterprise: string;
+    custom: string;
+  
+};
+  estimatedTime: string;
+  technologies: string[];
+  image?: string;
+  industryScore: number;
   marketPrice: string;
   roi: string;
   innovationLevel: string;

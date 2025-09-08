@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Brain, TrendingUp, Users, Zap, Database, CheckCircle, Activity, Target, Phone, Mail, MapPin } from 'lucide-react';
-import { SEO } from '../../components/SEO';
+import React from 'react';
+import { SEO   } from '@/components/SEO';
+import { motion   } from 'framer-motion';
+import { TrendingUp, Users, Target, BarChart3, Shield, Zap, Globe, Clock, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink   } from 'lucide-react';
 
-export default function AICustomerSuccessPrediction() {
+const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Brain,
@@ -207,8 +207,20 @@ export default function AICustomerSuccessPrediction() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
+      {/* Features Grid */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Powerful Features for Modern Customer Success
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Everything you need to predict, prevent, and optimize customer success outcomes
+            </p>
+          </div>
+          
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -243,10 +255,10 @@ export default function AICustomerSuccessPrediction() {
               Comprehensive tools and features designed to transform your customer success operations 
               and drive measurable business outcomes.
             </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {capabilities.map((capability, index) => (
+          </div>
+          
+          <div className="grid md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingPlans.map((plan, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -291,10 +303,10 @@ export default function AICustomerSuccessPrediction() {
               AI Customer Success Prediction is transforming industries across the globe, 
               enabling proactive customer management and driving unprecedented business growth.
             </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          </div>
+          
+          <div className="grid md: anygrid-cols-3 gap-8">
+            {useCases.map((useCase, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -339,10 +351,10 @@ export default function AICustomerSuccessPrediction() {
               Discover how AI Customer Success Prediction can transform your organization 
               and drive measurable business outcomes.
             </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          </div>
+          
+          <div className="grid grid-cols-2 md: anygrid-cols-4 lg:grid-cols-6 gap-6">
+            {integrations.map((integration, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

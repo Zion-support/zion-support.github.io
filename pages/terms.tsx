@@ -1,25 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react';
+import React from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { FileText, Shield, Users, ArrowRight, CheckCircle, AlertTriangle  } from 'lucide-react.ts'
 
 
-const Page = () => {
-  return (
-    <MainLayout 
-      title="Page - Zion Tech Group"
-      description="Zion Tech Group page"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 py-20">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
-
-export default function Terms() {
+export default function Terms(...args: any[]): any {
 	return (
   {/* Empty JSX fragment */}
 			{/* Hero Section */}

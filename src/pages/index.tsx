@@ -1,1 +1,146 @@
-import React from 'react'; import Head from 'next / head'; import Link from 'next / link'; export default React.memo(function Home () { return (<> <Head> <title > Zion Tech Group - Leading AI & Technology Solutions</title> <meta name="description" content="Transform your business with Zion Tech Group & apos;s cutting - edge AI solutions, quantum computing, and innovative micro SAAS services." / /> <meta name="viewport" content="width = device - width, initial - scale = 1" / /> <link rel="icon" href="/favicon.ico" / /> </Head> <div className="min - h-screen bg - gradient - to - br from - slate - 50 via - white to - blue - 50"> {} <nav className="bg - white / 80 backdrop - blur - md shadow - lg border - b border - gray - 200 sticky top - 0 z - 50"> <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8"> <div className="flex justify - between items - center h - 16"> <div className="flex items - center"> <h1 className="text - 2xl font - bold text - gray - 900">Zion Tech Group</h1> </div> <div className="hidden md:flex space - x-8"> <Link href="/" className="text - gray - 700 hover:text - blue - 600 transition - colors">Home</Link> <Link href="/services" className="text - gray - 700 hover:text - blue - 600 transition - colors">Services</Link> <Link href="/solutions" className="text - gray - 700 hover:text - blue - 600 transition - colors">Solutions</Link> <Link href="/about" className="text - gray - 700 hover:text - blue - 600 transition - colors">About</Link> <Link href="/contact" className="text - gray - 700 hover:text - blue - 600 transition - colors">Contact</Link> </div> </div> </div> </nav> {} <section className="py - 20 sm:py - 32"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center"> <h1 className="text - 4xl sm:text - 6xl font - bold text - gray - 900 mb - 6"> Transform Your Business with < span className="text - blue - 600"> AI - Powered Solutions</span> </h1> <p className="text - xl text - gray - 600 max - w-3xl mx - auto mb - 8"> Leading - edge technology solutions for modern businesses. From AI automation to quantum computing, we help you stay ahead of the curve. </p> <div className="flex flex - col sm: flex - row gap - 4 justify - center"> <Link href="/services" className="bg - blue - 600 text - white px - 8 py - 3 rounded - lg hover:bg - blue - 700 transition - colors"> Explore Services </Link> <Link href="/contact" className="border border - blue - 600 text - blue - 600 px - 8 py - 3 rounded - lg hover:bg - blue - 50 transition - colors"> Get Started </Link> </div> </div> </section> {} <section className="py - 20 bg - white"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8"> <h2 className="text - 3xl font - bold text - center text - gray - 900 mb - 12">Our Core Services</h2> <div className="grid md:grid - cols - 3 gap - 8"> <div className="text - center p - 6 rounded - lg border border - gray - 200"> <h3 className="text - xl font - semibold text - gray - 900 mb - 4">AI Solutions</h3> <p className="text - gray - 600">Cutting - edge artificial intelligence solutions for business automation and optimization.</p> </div> <div className="text - center p - 6 rounded - lg border border - gray - 200"> <h3 className="text - xl font - semibold text - gray - 900 mb - 4">Micro SAAS</h3> <p className="text - gray - 600">Scalable software - as - a-service solutions tailored to your specific business needs.</p> </div> <div className="text - center p - 6 rounded - lg border border - gray - 200"> <h3 className="text - xl font - semibold text - gray - 900 mb - 4">IT Services</h3> <p className="text - gray - 600">Comprehensive IT infrastructure and support services for modern enterprises.</p> </div> </div> </div> </section> {} <section className="py - 20 bg - gray - 50"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center"> <h2 className="text - 3xl font - bold text - gray - 900 mb - 8">Ready to Get Started?</h2> <div className="grid md:grid - cols - 3 gap - 8"> <div> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Phone</h3> <p className="text - gray - 600">+1 302 464 0950</p> </div> <div> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Email</h3> <p className="text - gray - 600">kleber@ziontechgroup.com</p> </div> <div> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Address</h3> <p className="text - gray - 600">364 E Main St STE 1008 < br / />Middletown DE 19709</p> </div> </div> </div> </section> </div> </>) ; }''''";
+
+
+import { Footer   } from '@/components/Footer';
+import { TrustedBySection   } from '@/components/TrustedBySection';
+import { TestimonialCarousel   } from '@/components/TestimonialCarousel';
+import { FloatingCTA   } from '@/components/FloatingCTA';
+import { HeroSection   } from '@/components/HeroSection';
+import { CategoriesSection   } from '@/components/CategoriesSection';
+import { BenefitsSection   } from '@/components/BenefitsSection';
+import { HowItWorksSection   } from '@/components/HowItWorksSection';
+import { WaitlistSection   } from '@/components/WaitlistSection';
+import { BlogSection   } from '@/components/BlogSection';
+import { SEO   } from '@/components/SEO';
+import { Button   } from '@/components/ui/button';
+import { Link   } from 'react-router-dom';
+import { FeaturedListingsSection   } from '@/components/FeaturedListingsSection';
+import { FeaturesGuideSection   } from '@/components/FeaturesGuideSection';
+import { SocialShareSection   } from '@/components/SocialShareSection';
+import { useTranslation   } from 'react-i18next';
+import { useLanguage   } from '@/context/LanguageContext';
+import { ArrowRight, 
+  Users, 
+  Zap, 
+  Settings, 
+  Search,
+  MessageSquare, 
+  Sparkles,
+  BarChart3,
+  Smartphone
+  } from 'lucide-react';
+
+export default function Index(...args: any[]): any {
+  const { t } = useTranslation();
+  const { isRTL } = useLanguage();
+  
+  // Tools and features showcase
+  const toolsFeatures = [
+    {
+      title: t("home.tool_ai_matcher"),
+      description: t("home.tool_ai_matcher_desc"),
+      icon: <Sparkles className="h-6 w-6 text-zion-cyan" />,
+      link: "/match"
+    },
+    {
+      title: t("home.tool_talent"),
+      description: t("home.tool_talent_desc"),
+      icon: <Users className="h-6 w-6 text-zion-purple" />,
+      link: "/talent"
+    },
+    {
+      title: t("home.tool_services"),
+      description: t("home.tool_services_desc"),
+      icon: <Zap className="h-6 w-6 text-zion-cyan" />,
+      link: "/services"
+    },
+    {
+      title: "Comprehensive Services",
+      description: "Explore our complete portfolio of innovative technology solutions and micro SAAS services",
+      icon: <Sparkles className="h-6 w-6 text-zion-purple" />,
+      link: "/comprehensive-services"
+    },
+    {
+      title: t("home.tool_equipment"),
+      description: t("home.tool_equipment_desc"),
+      icon: <Settings className="h-6 w-6 text-zion-purple" />,
+      link: "/equipment"
+    },
+    {
+      title: t("home.tool_analytics"),
+      description: t("home.tool_analytics_desc"),
+      icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />,
+      link: "/analytics"
+    },
+    {
+      title: "Mobile App",
+      description: "Take Zion with you on the go with our mobile app for iOS and Android",
+      icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
+      link: "/mobile-launch"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-zion-blue text-white">
+      <SEO 
+        title={t("home.seo_title")} 
+        description={t("home.seo_description")} 
+        keywords={t("home.seo_keywords")}
+        canonical="https://ziontechgroup.com/"
+      />
+              <HeroSection />
+      
+      {/* Quick Access Tools Section */}
+      <section className="py-16 bg-zion-blue-dark">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-4">
+              {t("home.explore_tools")}
+            </h2>
+            <p className="text-zion-slate-light text-xl max-w-3xl mx-auto">
+              {t("home.tools_description")}
+            </p>
+          </div>
+          
+          <div className={`grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
+            {toolsFeatures.map((feature, index)   => (
+              <Link 
+                key={index} 
+                to={feature.link} 
+                className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300"
+              >
+                <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
+                <p className="text-zion-slate-light mb-4">{feature.description}</p>
+                <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>
+                  <span>{t("general.explore")}</span>
+                  <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      <CategoriesSection />
+      <BenefitsSection />
+      
+      {/* Add the comprehensive features guide section */}
+      <FeaturesGuideSection />
+      
+      <HowItWorksSection />
+      <FeaturedListingsSection />
+      <TestimonialCarousel />
+      <TrustedBySection />
+      <BlogSection />
+      
+      {/* Add social share section to encourage users to spread the word */}
+      <SocialShareSection />
+      
+      <WaitlistSection />
+      <FloatingCTA />
+      <Footer />
+    </div>
+  );
+}

@@ -1,10 +1,38 @@
 
-// Removed unused: import React from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
-import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Brain, Server, TrendingUp, CheckCircle } from 'lucide-react';
+import React from 'react';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle    } from '@/components/ui/card';
+import { Button    } from '@/components/ui/button';
+import { Badge    } from '@/components/ui/badge';
+import { Link    } from 'react-router-dom';
+import { ArrowRight, 
+  Users, 
+  Zap, 
+  Settings, 
+  Search, 
+  MessageSquare, 
+  Smartphone, 
+  Calendar,
+  BookOpen,
+  Code,
+  Building,
+  Clock,
+  Brain,
+  Server,
+  TrendingUp,
+  CheckCircle,
+  Network,
+  Monitor,
+  Bot,
+  FileText,
+  Video,
+  BarChart3,
+  AlertTriangle,
+  Eye,
+  PieChart,
+  PenTool,
+  Shield,
+  Cloud
+   } from 'lucide-react';
 
 export function FeatureCTAs(...args: []):  {
   const features = [
@@ -142,7 +170,7 @@ export function FeatureCTAs(...args: []):  {
         </div>
 
         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {features.map((feature, index)  => (
+          {features.map((feature, index)    => (
             <Card key={index} className="bg-slate-800/50 border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25">
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-between mb-2">

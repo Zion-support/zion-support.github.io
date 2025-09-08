@@ -1,9 +1,8 @@
-import { motion } from 'framer-motion';
-import { Atom, CheckCircle, ArrowRight, Play, Settings, Target, Cloud, Binary, Network, Database2, Lock2, Brain2, Cpu2, Memory, HardDrive, Server2 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-// Removed unused: import { Link } from 'react-router-dom';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Rocket, Atom, Zap, Brain, BarChart3, ArrowRight, Shield, Cloud, Database, Cpu  } from 'lucide-react';
 
-const QuantumComputing = () => {
+export default function QuantumComputing(...args: any[]): any {
   const features = [
     {
       icon: Atom,
@@ -153,8 +152,8 @@ const QuantumComputing = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -191,8 +190,8 @@ const QuantumComputing = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {services.map((service, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}

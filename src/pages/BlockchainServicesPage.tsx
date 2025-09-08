@@ -1,8 +1,31 @@
-// Removed unused: import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Coins, Shield, Zap, Database, Globe, CheckCircle, ArrowRight, Network, Rocket, Users, Clock, Check } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
+import { Link, 
+  Coins, 
+  Shield, 
+  Zap, 
+  Database, 
+  Globe, 
+  TrendingUp, 
+  CheckCircle, 
+  ArrowRight, 
+  Lock, 
+  Network, 
+  Wallet, 
+  BarChart3,
+  Star,
+  Award,
+  Target,
+  Rocket,
+  Crown,
+  Sparkles,
+  ChevronRight,
+  Users,
+  Clock,
+  Check
+ } from 'lucide-react';
 
-const BlockchainServicesPage = () => {
+const BlockchainServicesPage: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const blockchainServices = [
@@ -132,53 +155,23 @@ const BlockchainServicesPage = () => {
         link: "/services",
         image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
     }
-];
-const blockchainBenefits = [
-    {
-        title: "Transparency",
-        description: "Immutable, transparent records that build trust and enable verifiable transactions",
-        icon: <Globe className="h-6 w-6"/>
-    },
-    {
-        title: "Security",
-        description: "Cryptographic security and decentralized architecture protect against fraud and attacks",
-        icon: <Lock className="h-6 w-6"/>
-    },
-    {
-        title: "Efficiency",
-        description: "Automated smart contracts reduce intermediaries and streamline complex processes",
-        icon: <Zap className="h-6 w-6"/>
-    },
-    {
-        title: "Innovation",
-        description: "Enable new business models and revenue streams through tokenization and DeFi",
-        icon: <TrendingUp className="h-6 w-6"/>
-    }
-];
-const useCases = [
-    {
-        title: "Supply Chain Management",
-        description: "Track products from origin to consumer with immutable records and real-time visibility",
-        icon: <LinkIcon className="h-6 w-6"/>
-    },
-    {
-        title: "Digital Identity",
-        description: "Self-sovereign identity solutions for secure, privacy-preserving authentication",
-        icon: <Shield className="h-6 w-6"/>
-    },
-    {
-        title: "Asset Tokenization",
-        description: "Convert real-world assets into digital tokens for fractional ownership and trading",
-        icon: <Coins className="h-6 w-6"/>
-    },
-    {
-        title: "Decentralized Finance",
-        description: "Build financial services without intermediaries using smart contracts and DeFi protocols",
-        icon: <Wallet className="h-6 w-6"/>
-    }
-];
-export default function BlockchainServicesPage() {
-    return (<div className="min-h-screen bg-background">
+  ];
+
+  const categories = [
+    { id: 'all', name: 'All Services', count: blockchainServices.length },
+    { id: 'Development', name: 'Development', count: blockchainServices.filter(s  => s.category === 'Development').length },
+    { id: 'DeFi', name: 'DeFi', count: blockchainServices.filter(s  => s.category === 'DeFi').length },
+    { id: 'NFTs', name: 'NFTs', count: blockchainServices.filter(s  => s.category === 'NFTs').length },
+    { id: 'Enterprise', name: 'Enterprise', count: blockchainServices.filter(s  => s.category === 'Enterprise').length },
+    { id: 'Security', name: 'Security', count: blockchainServices.filter(s  => s.category === 'Security').length },
+    { id: 'Interoperability', name: 'Interoperability', count: blockchainServices.filter(s  => s.category === 'Interoperability').length }
+  ];
+
+  const filteredServices = selectedCategory === 'all' 
+    ? blockchainServices: anyblockchainServices.filter(service  => service.category === selectedCategory);
+
+  return (
+    <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-zion-blue via-zion-purple to-zion-blue-dark py-20">
         <div className="container mx-auto px-4 text-center">
@@ -212,18 +205,140 @@ export default function BlockchainServicesPage() {
       {/* Benefits Section */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Why Choose Blockchain?</h2>
-            <p className="text-zion-slate-light text-lg">
-              Leverage the power of decentralized technology to create trust, transparency, and efficiency
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {filteredServices.map((service, index)  => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"
+              >
+                {/* Service Image */}
+                <div className="h-48 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center relative overflow-hidden">
+                  <service.icon className="w-16 h-16 text-zion-cyan z-10" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/10 to-zion-purple/10"></div>
+                </div>
+                
+                <div className="p-6">
+                  {/* Header */}
+                  <div className="flex items-start justify-between mb-4">
+                    <div>
+                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
+                        {service.title}
+                      </h3>
+                      <p className="text-zion-slate-light text-sm leading-relaxed">
+                        {service.description}
+                      </p>
+                    </div>
+                  </div>
+                  
+                  {/* Badge */}
+                  <div className="mb-4">
+                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                      service.badge === 'Popular' ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white' :
+                      service.badge === 'Enterprise' ? 'bg-gradient-to-r from-zion-purple to-zion-cyan text-white' :
+                      service.badge === 'Featured' ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white' :
+                      service.badge === 'Custom' ? 'bg-gradient-to-r from-zion-purple to-zion-cyan text-white' :
+                      service.badge === 'Essential' ? 'bg-gradient-to-r from-zion-cyan to-zion-green text-white' :
+                      'bg-gradient-to-r from-zion-cyan to-zion-purple text-white'
+                    }`}>
+                      {service.badge}
+                    </span>
+                  </div>
+                  
+                  {/* Price */}
+                  <div className="mb-6">
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-3xl font-bold text-zion-cyan">
+                        {service.currency}{service.price.toLocaleString()}
+                      </span>
+                      <span className="text-zion-slate-light">{service.period}</span>
+                    </div>
+                  </div>
+                  
+                  {/* Features */}
+                  <div className="space-y-3 mb-6">
+                    {service.features.slice(0, 4).map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center gap-3">
+                        <Check className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                        <span className="text-zion-slate-light text-sm">{feature}</span>
+                      </div>
+                    ))}
+                    {service.features.length > 4 && (
+                      <div className="text-zion-cyan text-sm font-medium">
+                        +{service.features.length - 4} more features
+                      </div>
+                    )}
+                  </div>
+                  
+                  {/* CTA */}
+                  <button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
+                    Get Started
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-20 bg-zion-slate-dark">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              We combine deep blockchain expertise with cutting-edge technology to deliver 
+              solutions that drive real business value.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {blockchainBenefits.map((benefit, index) => (<div key={index} className="text-center p-6">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-zion-cyan rounded-full mb-4">
-                  <div className="text-white">
-                    {benefit.icon}
-                  </div>
+
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                icon: Shield,
+                title: "Security First",
+                description: "Enterprise-grade security with comprehensive auditing and testing protocols."
+              },
+              {
+                icon: Rocket,
+                title: "Scalable Solutions",
+                description: "Built for growth with architecture that scales with your business needs."
+              },
+              {
+                icon: Users,
+                title: "Expert Team",
+                description: "Blockchain specialists with years of experience in DeFi, NFTs, and enterprise solutions."
+              },
+              {
+                icon: Clock,
+                title: "Fast Delivery",
+                description: "Agile development process ensuring rapid delivery without compromising quality."
+              },
+              {
+                icon: CheckCircle,
+                title: "Proven Track Record",
+                description: "Successfully delivered blockchain solutions for companies across industries."
+              },
+              {
+                icon: Globe,
+                title: "Multi-Chain Support",
+                description: "Experience with Ethereum, Polygon, Solana, and other leading blockchain networks."
+              }
+            ].map((feature, index)  => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-white text-xl font-semibold mb-2">{benefit.title}</h3>
                 <p className="text-zion-slate-light">{benefit.description}</p>

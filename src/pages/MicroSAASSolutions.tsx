@@ -1,7 +1,29 @@
-import { SEO } from '../components/SEO';
-import { Code, Zap, Users, TrendingUp, Shield, Building, Rocket, Cpu, BarChart3, Cloud, Target, CheckCircle } from 'lucide-react';
+import React from 'react';
+import { SEO   } from '../components/SEO';
+import { Code, 
+  Zap, 
+  Users, 
+  TrendingUp, 
+  Shield, 
+  Globe, 
+  Building, 
+  Rocket, 
+  Cpu, 
+  BarChart3,
+  Database,
+  Cloud,
+  Lock,
+  Smartphone,
+  Target,
+  DollarSign,
+  Clock,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Brain
+  } from 'lucide-react';
 
-export default function MicroSAASSolutions() {
+export default function MicroSAASSolutions(...args: any[]): any {
   const services = [
     {
       title: "Custom SAAS Development",
@@ -183,8 +205,8 @@ export default function MicroSAASSolutions() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index)   => (
                 <div
                   key={service.title}
                   className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -220,8 +242,8 @@ export default function MicroSAASSolutions() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+              {benefits.map((benefit, index)   => (
                 <div
                   key={benefit.title}
                   className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
@@ -248,8 +270,8 @@ export default function MicroSAASSolutions() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {industries.map((industry, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {industries.map((industry, index)   => (
                 <div
                   key={industry.name}
                   className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -276,8 +298,8 @@ export default function MicroSAASSolutions() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {processSteps.map((step, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+              {processSteps.map((step, index)   => (
                 <div key={step.step} className="text-center">
                   <div className="relative mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">

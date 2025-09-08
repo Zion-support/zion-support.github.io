@@ -1,11 +1,31 @@
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { Shield, Zap, Brain, CheckCircle, ArrowRight, Eye, Target } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-// Removed unused: import { Button } from '@/components/ui/button';
-// Removed unused: import { Badge } from '@/components/ui/badge';
+import React from 'react';
+import { SEO   } from '../../components/SEO';
+import { motion   } from 'framer-motion';
+import { Shield, 
+  Brain, 
+  Eye, 
+  Lock, 
+  AlertTriangle, 
+  TrendingUp, 
+  CheckCircle, 
+  ArrowRight, 
+  Mail, 
+  Phone, 
+  Globe, 
+  ExternalLink,
+  Zap,
+  Users,
+  BarChart3,
+  Target,
+  Cpu,
+  Network,
+  Database,
+  FileText,
+  Monitor,
+  Activity
+  } from 'lucide-react';
 
-export default function AICybersecuritySuite() {
+export default function AICybersecuritySuite(...args: any[]): any {
   const features = [
     {
       title: "AI-Powered Threat Detection",
@@ -287,8 +307,8 @@ export default function AICybersecuritySuite() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -302,9 +322,43 @@ export default function AICybersecuritySuite() {
                   </div>
                   <h3 className="text-2xl font-semibold text-white">{feature.title}</h3>
                 </div>
-                
-                <p className="text-gray-300 mb-6">{feature.description}</p>
-                
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services & Pricing Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Comprehensive Security Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the security package that fits your business needs and budget
+            </p>
+          </motion.div>
+
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {services.map((service, index)   => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
+              >
+                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                <div className="text-3xl font-bold text-blue-400 mb-6">{service.price}</div>
                 <ul className="space-y-3">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-gray-300">
@@ -337,8 +391,8 @@ export default function AICybersecuritySuite() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {securityModules.map((module, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -411,8 +465,8 @@ export default function AICybersecuritySuite() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {benefits.map((benefit, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -420,15 +474,45 @@ export default function AICybersecuritySuite() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-red-500 transition-all duration-300"
               >
-                <h3 className="text-xl font-semibold text-white mb-4">{useCase.industry}</h3>
-                <ul className="space-y-2">
-                  {useCase.applications.map((application, appIndex) => (
-                    <li key={appIndex} className="text-gray-300 text-sm flex items-center">
-                      <ArrowRight className="w-4 h-4 text-red-400 mr-2 flex-shrink-0" />
-                      {application}
-                    </li>
-                  ))}
-                </ul>
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
+                  <benefit.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technologies Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Advanced Security Technologies
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Built on cutting-edge AI and cybersecurity technologies for maximum protection
+            </p>
+          </motion.div>
+
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {technologies.map((tech, index)   => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-2xl border border-slate-600 text-center"
+              >
+                <h3 className="text-xl font-semibold text-white mb-3">{tech.name}</h3>
+                <p className="text-gray-300">{tech.description}</p>
               </motion.div>
             ))}
           </div>

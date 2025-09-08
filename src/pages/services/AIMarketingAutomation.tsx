@@ -1,7 +1,38 @@
-import { SEO } from '@/components/SEO';
-import { Target, BarChart3, Users, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, TrendingUp, MessageSquare, Mail as MailIcon, Filter } from 'lucide-react';
+import React from 'react';
+import { motion   } from 'framer-motion';
+import { SEO   } from '@/components/SEO';
+import { Brain, 
+  Target, 
+  TrendingUp, 
+  Users, 
+  BarChart3, 
+  Calendar,
+  Zap,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Globe,
+  Smartphone,
+  Monitor,
+  BookOpen,
+  MessageSquare,
+  Share2,
+  Analytics,
+  Palette,
+  Clock,
+  DollarSign,
+  Shield,
+  Headphones,
+  Rocket,
+  Mail,
+  Phone,
+  MessageCircle,
+  ShoppingCart,
+  Eye,
+  MousePointer
+  } from 'lucide-react';
 
-export default function AIMarketingAutomation() {
+export default function AIMarketingAutomation(...args: any[]): any {
   const features = [
     'AI-powered audience segmentation and targeting',
     'Predictive customer behavior analysis',
@@ -110,11 +141,17 @@ export default function AIMarketingAutomation() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
-                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
-                  <Target className="w-6 h-6 text-purple-400" />
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)   => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-rose-500 transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-rose-600 to-pink-600 rounded-lg flex items-center justify-center mb-4">
+                  <CheckCircle className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{feature}</h3>
               </div>
@@ -131,10 +168,16 @@ export default function AIMarketingAutomation() {
             <p className="text-xl text-slate-300">See how AI transforms your marketing performance</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)   => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="w-20 h-20 bg-gradient-to-r from-rose-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-10 h-10 text-white" />
                 </div>
                 <p className="text-lg text-slate-300">{benefit}</p>
@@ -152,47 +195,20 @@ export default function AIMarketingAutomation() {
             <p className="text-xl text-slate-300">Intelligent, automated, and personalized marketing campaigns</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-10 h-10 text-purple-400" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Audience Analysis</h3>
-              <p className="text-slate-300">AI analyzes customer behavior, preferences, and engagement patterns</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-10 h-10 text-pink-400" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Content Personalization</h3>
-              <p className="text-slate-300">AI automatically personalizes content and messaging for each segment</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <BarChart3 className="w-10 h-10 text-orange-400" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Performance Optimization</h3>
-              <p className="text-slate-300">Continuous optimization based on real-time performance data</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Marketing Channels Section */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Multi-Channel Marketing</h2>
-            <p className="text-xl text-slate-300">Reach your audience across all channels with unified AI automation</p>
-          </div>
-
-          <div className="grid grid-cols-3 md:grid-cols-5 gap-6 max-w-5xl mx-auto">
-            {channels.map((channel, index) => (
-              <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-4 text-center hover:border-purple-500/50 transition-all duration-300">
-                <p className="text-sm font-medium text-slate-300">{channel}</p>
-              </div>
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)   => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-rose-500 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-rose-600 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Target className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white">{useCase}</h3>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -206,14 +222,17 @@ export default function AIMarketingAutomation() {
             <p className="text-xl text-slate-300">Choose the plan that fits your marketing needs</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index) => (
-              <div 
-                key={index} 
-                className={`bg-slate-800/50 border rounded-xl p-8 ${
-                  tier.name === 'Professional' 
-                    ? 'border-purple-500/50 bg-purple-500/5' 
-                    : 'border-slate-700/50'
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {pricing.map((plan, index)   => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
+                  plan.popular 
+                    ? 'border-rose-500 ring-2 ring-rose-500/20' 
+                    : 'border-gray-700'
                 }`}
               >
                 <div className="text-center mb-6">

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState, useEffect } from 'react';
+import { Link  } from 'react-router-dom';
+import { motion  } from 'framer-motion';
 import { Brain, 
   Cloud, 
   Shield, 
@@ -154,12 +154,103 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 py-16 lg:py-20">
-          {/* Hero Section */}
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-full px-6 py-3 mb-8">
-              <Sparkles className="h-5 w-5 text-zion-cyan"/>
-              <span className="text-zion-cyan font-medium">Complete Portfolio</span>
+        {/* Search and Filters */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
+              <div className="flex flex-col lg:flex-row gap-6 mb-8">
+                <div className="flex-1">
+                  <div className="relative">
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                    <input
+                      type="text"
+                      placeholder="Search services..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400/50"
+                    />
+                  </div>
+                </div>
+                
+                <div className="flex flex-wrap gap-4">
+                  <select
+                    value={selectedCategory}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus: anyoutline-none focus:border-blue-400/50"
+                  >
+                    {categories.map(category  => (
+                      <option key={category.id} value={category.id}>{category.name}</option>
+                    ))}
+                  </select>
+                  
+                  <select
+                    value={selectedPricing}
+                    onChange={(e) => setSelectedPricing(e.target.value)}
+                    className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus: anyoutline-none focus:border-blue-400/50"
+                  >
+                    {pricingModels.map(pricing  => (
+                      <option key={pricing.id} value={pricing.id}>{pricing.name}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Grid */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredServices.map((service, index)  => (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-[1.02]"
+                >
+                  <div className="w-16 h-16 bg-blue-600/20 rounded-xl flex items-center justify-center mb-6">
+                    <service.icon className="w-8 h-8 text-blue-400" />
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                  
+                  <div className="mb-6">
+                    <div className="text-3xl font-bold text-blue-400 mb-2">{service.price}</div>
+                    <div className="text-sm text-gray-400 capitalize">{service.pricing} pricing</div>
+                  </div>
+                  
+                  <div className="flex items-center mb-6">
+                    <div className="flex items-center">
+                      {[...Array(5)].map((_, i) => (
+                        <Star 
+                          key={i} 
+                          className={`w-5 h-5 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-600'}`} 
+                        />
+                      ))}
+                    </div>
+                    <span className="text-gray-400 ml-2">({service.reviewCount})</span>
+                  </div>
+                  
+                  <ul className="space-y-2 mb-8">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <Link 
+                    to={`/services/${service.id}`}
+                    className="block w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-cyan-400 transition-all duration-300 text-center"
+                  >
+                    Learn More
+                  </Link>
+                </motion.div>
+              ))}
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 bg-gradient-to-r from-white via-zion-cyan to-zion-purple bg-clip-text text-transparent leading-tight">

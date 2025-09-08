@@ -1,16 +1,28 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Eye, Volume2, Type, Contrast, ZoomIn, ZoomOut, RotateCcw, Accessibility, Settings, X, CheckCircle, Info, Keyboard, MousePointer } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { motion, AnimatePresence    } from 'framer-motion';
+import { Volume2, 
+  VolumeX, 
+  Eye, 
+  EyeOff, 
+  Keyboard, 
+  MousePointer,
+  Accessibility,
+  Settings,
+  X
+   } from 'lucide-react';
 
 interface AccessibilitySettings {
+
+
+
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
   screenReader: boolean;
   keyboardNavigation: boolean;
-  focusIndicator: boolean;
-  colorBlind: boolean;
-  dyslexia: boolean;
+
+
+
 }
 
 interface EnhancedAccessibilityProps {
@@ -38,17 +50,10 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null);
   const [announcements, setAnnouncements] = useState<string[]>([]);
 
-  // Apply accessibility settings to document
-  const applySettings = useCallback((newSettings: AccessibilitySettings) => {
-    const root = document.documentElement;
-    
-    // High contrast
-    if (newSettings.highContrast) {
-      root.classList.add('high-contrast');
-      root.style.setProperty('--text-primary', '#ffffff');
-      root.style.setProperty('--text-secondary', '#e5e7eb');
-      root.style.setProperty('--bg-primary', '#000000');
-      root.style.setProperty('--bg-secondary', '#1f2937');
+  useEffect(()    => {
+    // Apply accessibility settings to document
+    if (settings.highContrast) {
+      document.documentElement.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
       root.style.removeProperty('--text-primary');
@@ -102,13 +107,16 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
   }, []);
 
-  // Load saved settings on mount
-  useEffect(() => {
-    const savedSettings = localStorage.getItem('accessibility-settings');
-    if (savedSettings) {
-      const parsed = JSON.parse(savedSettings);
-      setSettings(parsed);
-      applySettings(parsed);
+  const toggleSetting = (key: anykeyof AccessibilitySettings)    => {
+    setSettings(prev => ({
+      ...prev,
+      [key]: !prev[key]
+    }));
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent)    => {
+    if (e.key === 'Escape') {
+      setIsOpen(false);
     }
   }, [applySettings]);
 

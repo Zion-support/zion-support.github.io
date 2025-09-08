@@ -1,7 +1,8 @@
 // Expanded Services Pricing Guide 2027 - Zion Tech Group
 // Comprehensive pricing information for all expanded innovative services
 
-export type ExpandedServicePricing = {
+export interface ExpandedServicePricing {
+
 
   serviceId: string;
   serviceName: string;
@@ -16,7 +17,10 @@ starter: {
       limitations: string[];
       bestFor: string[];
       setupFee: number;
-      contractTerm: string};
+      contractTerm: string;
+    
+
+};
     professional: {
       price: number;
       currency: string;
@@ -1151,16 +1155,19 @@ export const ALL_EXPANDED_SERVICES_PRICING = [
 ];
 
 // Helper functions
-export const getPricingByServiceId = (serviceId: string): ExpandedServicePricing | undefined  => {
-  return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId)};
+export const getPricingByServiceId = (serviceId: string): ExpandedServicePricing | undefined   => {
+  return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId);
+};
 
-export const getPricingByCategory = (category: string): ExpandedServicePricing[]  => {
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category)};
+export const getPricingByCategory = (category: string): ExpandedServicePricing[]   => {
+  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category);
+};
 
-export const getPricingBySubcategory = (subcategory: string): ExpandedServicePricing[]  => {
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory)};
+export const getPricingBySubcategory = (subcategory: string): ExpandedServicePricing[]   => {
+  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory);
+};
 
-export const searchPricing = (query: string): ExpandedServicePricing[]  => {
+export const searchPricing = (query: string): ExpandedServicePricing[]   => {
   const lowercaseQuery = query.toLowerCase();
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => 
     pricing.serviceName.toLowerCase().includes(lowercaseQuery) ||

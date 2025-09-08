@@ -1,8 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Star, MessageCircle, ThumbsUp, ThumbsDown, Send, Award, Clock, Flag, Share2, Filter, Search } from 'lucide-react';
+import { motion, AnimatePresence    } from 'framer-motion';
+import { Star, 
+  MessageCircle, 
+  ThumbsUp, 
+  ThumbsDown, 
+  Send, 
+  Heart,
+  Award,
+  TrendingUp,
+  Users,
+  Clock,
+  Flag,
+  Share2,
+  Download,
+  Filter,
+  Search
+   } from 'lucide-react';
 
 interface Feedback {
+
+
+
   id: string;
   customerName: string;
   rating: number;
@@ -14,14 +32,22 @@ interface Feedback {
   unhelpful: number;
   tags: string[];
   verified: boolean;
+
+
+
 }
 
 interface FeedbackStats {
+
+
+
   totalFeedback: number;
   averageRating: number;
   positivePercentage: number;
   responseRate: number;
-  topCategories: Array<{ category: string; count: number; percentage: number }>;
+  topCategories: Array<any>;
+
+
 }
 
 interface CustomerFeedbackSystemProps {
@@ -55,7 +81,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   });
 
   // Sample feedback data
-  useEffect(() => {
+  useEffect(()    => {
     const sampleFeedback: Feedback[] = [
       {
         id: '1',
@@ -129,7 +155,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   }, []);
 
   // Calculate stats
-  useEffect(() => {
+  useEffect(()    => {
     if (feedback.length > 0) {
       const totalFeedback = feedback.length;
       const averageRating = feedback.reduce((sum, f) => sum + f.rating, 0) / totalFeedback;
@@ -147,7 +173,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
           count,
           percentage: (count / totalFeedback) * 100
         }))
-        .sort((a, b) => b.count - a.count)
+        .sort((a, b)    => b.count - a.count)
         .slice(0, 4);
 
       setStats({
@@ -201,13 +227,13 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       verified: false
     };
 
-    setFeedback(prev => [feedback, ...prev]);
+    setFeedback(prev    => [feedback, ...prev]);
     setNewFeedback({ rating: 0, comment: '', category: 'overall' });
     setShowFeedbackForm(false);
   };
 
   // Handle helpful/unhelpful votes
-  const handleVote = (feedbackId: string, type: 'helpful' | 'unhelpful') => {
+  const handleVote = (feedbackId: string, type: 'helpful' | 'unhelpful')    => {
     setFeedback(prev => prev.map(f => {
       if (f.id === feedbackId) {
         return {
@@ -221,7 +247,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   };
 
   // Get sentiment color
-  const getSentimentColor = (sentiment: string) => {
+  const getSentimentColor = (sentiment: string)    => {
     switch (sentiment) {
       case 'positive': return 'text-green-400 bg-green-400/20';
       case 'negative': return 'text-red-400 bg-red-400/20';
@@ -230,7 +256,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   };
 
   // Get category color
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: string)    => {
     const colors = {
       'service': 'text-blue-400 bg-blue-400/20',
       'product': 'text-green-400 bg-green-400/20',
@@ -308,8 +334,8 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       {showStats && (
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-white mb-4">Top Categories</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {stats.topCategories.map((category, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-4">
+            {stats.topCategories.map((category, index)    => (
               <motion.div
                 key={category.category}
                 initial={{ opacity: 0, scale: 0.9 }}

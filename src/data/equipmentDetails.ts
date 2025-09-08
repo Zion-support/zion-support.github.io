@@ -1,23 +1,14 @@
-export type EquipmentItem = {
+export interface EquipmentItem {
 
-export interface EquipmentDetails {
   id: string;
   name: string;
   description: string;
   brand: string;
   category: string;
-  subcategory?: string;
-  images: string[];
-  price: number;
-  currency: string;
-  rating?: number;
-  reviewCount?: number;
-  inStock: boolean;
-  expectedShipping?: string;
-  specifications: EquipmentSpecification[];
-  features: string[];
-  warranty?: string;
-  returnPolicy?: string;
+  image: string;
+  specs: string[];
+  availability: boolean;
+
 }
 
 export const EQUIPMENT_DETAILS: Record<string, EquipmentDetails> = {

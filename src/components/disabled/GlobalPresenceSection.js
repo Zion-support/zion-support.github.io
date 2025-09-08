@@ -65,7 +65,7 @@ const globalOffices = [
     {
         id: 5,
         city: "Berlin",
-        country: "Germany",
+        country: "Germ",
         region: "Europe",
         flag: "🇩🇪",
         established: "2021",

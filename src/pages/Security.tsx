@@ -1,13 +1,37 @@
-const Security: React.FC = () => (
-	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-		<div className="text-center text-white">
-			<h1 className="text-4xl font-bold mb-4">Security</h1>
-			<p className="text-xl text-gray-300">Our commitment to security and compliance.</p>
-		</div>
-	</div>
-);
+import React from 'react';
+import { motion   } from 'framer-motion';
+import { Shield, 
+  Lock, 
+  Eye, 
+  CheckCircle, 
+  AlertTriangle, 
+  Server, 
+  Network, 
+  Database, 
+  Key, 
+  Fingerprint,
+  Globe,
+  Users,
+  Clock,
+  Award,
+  FileText,
+  Security,
+  Encryption,
+  Shield,
+  AlertTriangle,
+  AlertCircle,
+  Code,
+  Monitor,
+  Smartphone,
+  Cloud,
+  Zap,
+  Search,
+  Phone,
+  Mail
+  } from 'lucide-react';
+import { SEO   } from '../components/SEO';
 
-export default function Security() {
+export default function Security(...args: any[]): any {
   const securityFeatures = [
     {
       category: 'Data Protection',
@@ -270,8 +294,8 @@ export default function Security() {
               <p className="text-xl text-slate-300">Multi-layered security approach protecting every aspect of your infrastructure</p>
             </div>
             
-            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-              {securityFeatures.map((category, index)  => (
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+              {securityFeatures.map((category, index)   => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -308,8 +332,8 @@ export default function Security() {
               <p className="text-xl text-slate-300">Meeting and exceeding international security standards</p>
             </div>
             
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-              {certifications.map((cert, index)  => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+              {certifications.map((cert, index)   => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -343,8 +367,8 @@ export default function Security() {
               <p className="text-xl text-slate-300">Proactive security measures and continuous improvement</p>
             </div>
             
-            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-              {securityPractices.map((practice, index)  => (
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+              {securityPractices.map((practice, index)   => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -388,8 +412,8 @@ export default function Security() {
               <p className="text-xl text-slate-300">Rapid response and recovery procedures for security incidents</p>
             </div>
             
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-              {incidentResponse.map((phase, index)  => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+              {incidentResponse.map((phase, index)   => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -426,8 +450,8 @@ export default function Security() {
               <p className="text-xl text-slate-300">Industry-leading security tools and platforms</p>
             </div>
             
-            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-              {securityTechnologies.map((tech, index)  => (
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+              {securityTechnologies.map((tech, index)   => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}

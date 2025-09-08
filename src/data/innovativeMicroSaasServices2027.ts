@@ -1,4 +1,4 @@
-export type InnovativeMicroSaasService2027 = {
+export interface InnovativeMicroSaasService2027 {
 
   id: string;
   title: string;
@@ -21,12 +21,13 @@ export type InnovativeMicroSaasService2027 = {
   featured: boolean;
   location: string;
   availability: string;
-  author: {
+author: {
     name: string;
     id: string;
     avatarUrl?: string;
     verified: boolean;
-  };
+  
+};
   images: string[];
   createdAt: string;
   technologyStack: string[];

@@ -1,8 +1,69 @@
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { Cpu, Zap, Globe, Server, Network, Shield, Clock, CheckCircle, TrendingUp, Users, Satellite, Car, Factory, Building, Heart, MapPin } from 'lucide-react';
+import React from 'react';
+import { motion   } from 'framer-motion';
+import { SEO   } from '@/components/SEO';
+import { Cpu, 
+  Zap, 
+  Globe, 
+  Server, 
+  Network, 
+  Cloud, 
+  Shield, 
+  Clock,
+  CheckCircle,
+  TrendingUp,
+  Users,
+  Database,
+  Wifi,
+  Satellite,
+  Smartphone,
+  Car,
+  Factory,
+  Home,
+  Building,
+  Truck,
+  Plane,
+  Ship,
+  Train,
+  Rocket,
+  Target,
+  Gauge,
+  BarChart3,
+  Settings,
+  RefreshCw,
+  Download,
+  Upload,
+  Play,
+  Pause,
+  Stop,
+  FastForward,
+  Rewind,
+  Volume2,
+  VolumeX,
+  WifiOff,
+  Signal,
+  Activity,
+  Pulse,
+  Heart,
+  Battery,
+  Power,
+  PowerOff,
+  Sun,
+  Moon,
+  Star,
+  Sparkles,
+  Flame,
+  Lightning,
+  Thunder,
+  Rain,
+  Snow,
+  Wind,
+  Thermometer,
+  Droplets,
+  Umbrella,
+  MapPin
+  } from 'lucide-react';
 
-const EdgeComputingPlatform: React.FC = () => {
+const EdgeComputingPlatform: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Cpu,
@@ -240,8 +301,8 @@ const EdgeComputingPlatform: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -274,8 +335,8 @@ const EdgeComputingPlatform: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -307,8 +368,8 @@ const EdgeComputingPlatform: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -346,8 +407,8 @@ const EdgeComputingPlatform: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {edgeLocations.map((location, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {edgeLocations.map((location, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -386,8 +447,8 @@ const EdgeComputingPlatform: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

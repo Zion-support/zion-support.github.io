@@ -1,19 +1,24 @@
-// Removed unused: import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Newspaper, Calendar, ArrowRight, Download, Mail, Phone, Globe, Award, Users } from 'lucide-react';
+import React from 'react';
+import { motion   } from 'framer-motion';
+import { SEO   } from '../components/SEO';
+import { Newspaper, 
+  Download, 
+  Mail, 
+  Phone, 
+  MapPin, 
+  Calendar,
+  ExternalLink,
+  FileText,
+  Image,
+  Video,
+  Users,
+  Award,
+  TrendingUp,
+  Globe,
+  Star
+  } from 'lucide-react';
 
-export default function Press() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const categories = [
-    { id: 'all', name: 'All News', count: 45 },
-    { id: 'press-releases', name: 'Press Releases', count: 18 },
-    { id: 'media-coverage', name: 'Media Coverage', count: 15 },
-    { id: 'awards', name: 'Awards & Recognition', count: 8 },
-    { id: 'thought-leadership', name: 'Thought Leadership', count: 4 }
-  ];
-
-const Press: React.FC = () => {
+export default function Press(...args: any[]): any {
   const pressReleases = [
     {
       id: 1,
@@ -186,9 +191,41 @@ const Press: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="flex justify-center mb-8">
-              <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
-                <Newspaper className="w-12 h-12 text-white" />
+            <Newspaper className="w-10 h-10 text-white" />
+          </motion.div>
+          
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
+          >
+            Press & Media
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-xl text-slate-300 max-w-3xl mx-auto mb-12"
+          >
+            Stay updated with the latest news, press releases, and media resources from Zion Tech Group. 
+            We're transforming businesses through innovative AI and technology solutions.
+          </motion.p>
+          
+          {/* Company Stats */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-6 gap-6 max-w-4xl mx-auto"
+          >
+            {companyStats.map((stat, index)   => (
+              <div key={stat.label} className="text-center">
+                <div className="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
+                  <stat.icon className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                <div className="text-xs text-slate-400">{stat.label}</div>
               </div>
             </div>
 
@@ -309,27 +346,17 @@ const Press: React.FC = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              All Press & Media
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Browse our complete collection of press releases, media coverage, and comp updates.
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {filteredContent.filter(item => !item?.featured).map((item) => (
-              <motion.article 
-                key={item.id}
-                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"
-                variants={itemVariants}
-                whileHover={{ y: -5, scale: 1.02 }}
+            Latest Press Releases
+          </motion.h2>
+          
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {pressReleases.map((release, index)   => (
+              <motion.article
+                key={release.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300"
               >
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-4">
@@ -365,8 +392,68 @@ const Press: React.FC = () => {
       </section>
 
       {/* Media Resources */}
-      <section className="py-20 bg-zion-slate-dark">
-        <div className="container mx-auto px-4">
+      <section className="py-20 px-4 bg-slate-800/30">
+        <div className="container mx-auto">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl font-bold text-center mb-16 text-white"
+          >
+            Media Resources
+          </motion.h2>
+          
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {mediaResources.map((resource, index)   => (
+              <motion.div
+                key={resource.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300"
+              >
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
+                    {resource.title.includes('Logo') ? (
+                      <Image className="w-5 h-5 text-white" />
+                    ) : resource.title.includes('Video') ? (
+                      <Video className="w-5 h-5 text-white" />
+                    ) : (
+                      <FileText className="w-5 h-5 text-white" />
+                    )}
+                  </div>
+                  <h3 className="text-lg font-semibold text-white">{resource.title}</h3>
+                </div>
+                
+                <p className="text-slate-300 text-sm mb-4">{resource.description}</p>
+                
+                <div className="mb-4">
+                  <span className="text-xs text-slate-400">Formats: </span>
+                  <div className="flex flex-wrap gap-1 mt-1">
+                    {resource.formats.map((format) => (
+                      <span key={format} className="px-2 py-1 bg-slate-700/50 rounded text-xs text-slate-300">
+                        {format}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                
+                <a 
+                  href={resource.download}
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium"
+                >
+                  <Download className="w-4 h-4 mr-1" />
+                  Download
+                </a>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}

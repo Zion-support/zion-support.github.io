@@ -57,7 +57,7 @@ const LaunchToolkitPage = () => {
             for (const assetPath of toolkitAssets) {
                 const response = await fetch(`/${assetPath}`); // Fetch from public directory
                 if (!response.ok) {
-                    // console.error(`Failed to fetch asset: ${assetPath}`);
+                    // // // console.error(`Failed to fetch asset: ${assetPath}`);
                     // Optionally, decide if one failed asset should stop the whole process
                     // or if it should be skipped. For now, we'll log and continue.
                     continue;
@@ -71,7 +71,7 @@ const LaunchToolkitPage = () => {
             saveAs(zipBlob, 'Zion_Launch_Toolkit.zip');
         }
         catch (error) {
-            // console.error("Error creating ZIP:", error);
+            // // // console.error("Error creating ZIP:", error);
             setZipError(error instanceof Error ? error.message : 'An unknown error occurred while creating ZIP.');
         }
         finally {
@@ -91,7 +91,7 @@ const LaunchToolkitPage = () => {
                 setExplainerCopy(text);
             }
             catch (error) {
-                // console.error("Error loading explainer copy:", error);
+                // // // console.error("Error loading explainer copy:", error);
                 setExplainerCopy('Could not load explainer copy.');
                 setLoadCopyError(error instanceof Error ? error.message : 'An unknown error occurred.');
             }
@@ -116,7 +116,7 @@ const LaunchToolkitPage = () => {
             setSelectedTemplateContent(text);
         }
         catch (error) {
-            // console.error("Error loading template:", error);
+            // // // console.error("Error loading template:", error);
             setSelectedTemplateContent('');
             setLoadError(error instanceof Error ? error.message : 'An unknown error occurred.');
         }

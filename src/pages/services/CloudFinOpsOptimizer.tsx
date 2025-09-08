@@ -1,38 +1,13 @@
-import { motion } from 'framer-motion';
-import { CheckCircle, ArrowRight, Play, Settings, Target, Zap, BarChart3, TrendingUp, Calculator, Cloud, Zap, Gauge, BarChart4, TrendingUp, Lightbulb, Rocket } from 'lucide-react';
+import React from 'react';
+import { Link   } from 'react-router-dom';
+import { Cloud, DollarSign, Gauge, CheckCircle, BarChart3, ArrowRight   } from 'lucide-react';
 
-const CloudFinOpsOptimizer = () => {
-  const features = [
-    {
-      icon: Cloud,
-      title: 'Multi-Cloud Optimization',
-      description: 'Optimize costs across AWS, Azure, GCP, and hybrid environments'
-    },
-    {
-// Fixed missing name:       icon: Zap2,
-      title: 'Automated Optimization',
-      description: 'AI-powered recommendations and automated cost reduction actions'
-    },
-    {
-      icon: Gauge,
-      title: 'Performance Monitoring',
-      description: 'Real-time performance metrics with cost correlation analysis'
-    },
-    {
-      icon: BarChart4,
-      title: 'Advanced Analytics',
-      description: 'Deep insights into spending patterns and optimization opportunities'
-    },
-    {
-// Fixed missing name:       icon: TrendingUp2,
-      title: 'Predictive Modeling',
-      description: 'Forecast future costs and identify optimization trends'
-    },
-    {
-      icon: Lightbulb,
-      title: 'Smart Recommendations',
-      description: 'Intelligent suggestions for cost savings and efficiency improvements'
-    }
+export default function CloudFinOpsOptimizer(...args: any[]): any {
+  const capabilities = [
+    'Multi-cloud cost visibility (AWS, Azure, GCP)',
+    'Idle/underutilized resource detection and rightsizing',
+    'Reserved Instances/Savings Plans recommendations',
+    'Anomaly detection and budget alerts',
   ];
 
   const benefits = [

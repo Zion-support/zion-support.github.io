@@ -2,14 +2,16 @@ import React from 'react';
 // Comprehensive IT Services 2030 - Zion Tech Group
 // Enterprise-grade IT infrastructure, consulting, and managed services
 
-export type ServiceContact = {
+export interface ServiceContact {
 
   phone: string;
   email: string;
   website: string;
-  address: string}
+  address: string;
 
-export type ITService = {
+}
+
+export interface ITService {
 
   id: number;
   name: string;
@@ -34,7 +36,9 @@ export type ITService = {
   technologies: string[];
   useCases: string[];
   roi: string;
-  setupTime: string}
+  setupTime: string;
+
+}
 
 // Zion Tech Group Contact Information
 const zionContact: ServiceContact = {

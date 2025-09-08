@@ -1,9 +1,13 @@
-// Removed unused: import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 interface TabsContextType {
 
-  activeTab: anystring;
-  setActiveTab: (tab: string)  => void;
+
+
+  activeTab: string;
+  setActiveTab: (tab: string)    => void;
+
+
 
 }
 
@@ -11,10 +15,10 @@ const TabsContext = createContext<TabsContextType | undefined>(undefined);
 
 interface TabsProps extends React.PropsWithChildren<{}> {
 
-  children: anyReactNode;
+  children: ReactNode;
   defaultValue?: string;
   value?: string;
-  onValueChange?: (value: string)  => void;
+  onValueChange?: (value: string)    => void;
   className?: string;
 
 }
@@ -22,7 +26,7 @@ interface TabsProps extends React.PropsWithChildren<{}> {
 export function Tabs(...args: []):  {
   const [activeTab, setActiveTab] = useState(value || defaultValue || '');
 
-  const handleTabChange = (tab: anystring)  => {
+  const handleTabChange = (tab: string)    => {
     setActiveTab(tab);
     if (onValueChange) {
       onValueChange(tab);

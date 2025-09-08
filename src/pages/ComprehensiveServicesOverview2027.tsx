@@ -1,64 +1,114 @@
-
-// Removed unused: import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Globe, BarChart3, ArrowRight, Star, Search, Grid, List, MessageCircle, Briefcase } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-
-// Sample data for demonstration
-const MICRO_SAAS_SERVICES = [
-  {
-    id: 'micro-crm',
-    title: 'Micro CRM',
-    description: 'Lightweight customer relationship management for small businesses',
-    category: 'Business Tools',
-    subcategory: 'CRM',
-    pricingModel: 'monthly',
-    price: 29,
-    rating: 4.8,
-    reviewCount: 156,
-    aiScore: 95,
-    featured: true,
-    createdAt: '2024-01-15',
-    href: '/services/micro-crm',
-    tags: ['CRM', 'Business', 'Automation'],
-    images: ['/images/micro-crm.jpg']
-  },
-  {
-    id: 'helpdesk-platform',
-    title: 'Helpdesk Platform',
-    description: 'Streamlined customer support and ticket management system',
-    category: 'Customer Support',
-    subcategory: 'Helpdesk',
-    pricingModel: 'monthly',
-    price: 39,
-    rating: 4.7,
-    reviewCount: 89,
-    aiScore: 92,
-    featured: false,
-    createdAt: '2024-02-01',
-    href: '/services/helpdesk-platform',
-    tags: ['Support', 'Helpdesk', 'Customer Service'],
-    images: ['/images/helpdesk.jpg']
-  },
-  {
-    id: 'website-analytics',
-    title: 'Website Analytics',
-    description: 'Comprehensive website performance and user behavior analytics',
-    category: 'Analytics',
-    subcategory: 'Web Analytics',
-    pricingModel: 'monthly',
-    price: 19,
-    rating: 4.9,
-    reviewCount: 234,
-    aiScore: 98,
-    featured: true,
-    createdAt: '2024-01-10',
-    href: '/services/website-analytics',
-    tags: ['Analytics', 'Web', 'Performance'],
-    images: ['/images/analytics.jpg']
-  }
+import React, { useState, useEffect } from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
+import { Brain, 
+  Shield, 
+  TrendingUp, 
+  Zap, 
+  Globe, 
+  Users, 
+  BarChart3, 
+  Lock, 
+  Eye, 
+  CheckCircle, 
+  ArrowRight, 
+  Star, 
+  Clock, 
+  DollarSign, 
+  Target, 
+  Lightbulb, 
+  Award, 
+  ShieldCheck, 
+  Server, 
+  Smartphone, 
+  Monitor, 
+  Wifi, 
+  Flask, 
+  TestTube, 
+  Syringe, 
+  Stethoscope, 
+  HeartPulse, 
+  BrainCircuit, 
+  Ear, 
+  Hand, 
+  Foot, 
+  Bone, 
+  Tooth, 
+  Pill, 
+  Bandage, 
+  Thermometer, 
+  Scale, 
+  Calculator, 
+  ChartBar, 
+  PieChart, 
+  LineChart, 
+  Activity, 
+  TrendingDown, 
+  Minus, 
+  Plus, 
+  Equal, 
+  Divide, 
+  Percent, 
+  Euro, 
+  Pound, 
+  Yen, 
+  Bitcoin, 
+  Ethereum, 
+  CreditCard, 
+  Wallet, 
+  Banknote, 
+  Coins, 
+  PiggyBank, 
+  Safe, 
+  Vault, 
+  LockKeyhole, 
+  Key, 
+  Fingerprint, 
+  QrCode, 
+  Barcode, 
+  Scan, 
+  Camera, 
+  VideoOff, 
+  Mic, 
+  MicOff, 
+  Volume2, 
+  VolumeX, 
+  Play, 
+  Pause, 
+  Stop, 
+  SkipBack, 
+  SkipForward, 
+  Rewind, 
+  FastForward, 
+  Shuffle, 
+  Repeat, 
+  Repeat1, 
+  Shuffle2, 
+  SkipBack2, 
+  SkipForward2, 
+  PlayCircle, 
+  PauseCircle,
+  Mail,
+  Phone,
+  MapPin,
+  ExternalLink,
+  Search,
+  Filter,
+  Grid,
+  List,
+  ChevronDown,
+  ChevronUp
+ } from 'lucide-react';
+import { MICRO_SAAS_SERVICES  } from '@/data/microSaasServices';
+import { SEO  } from '@/components/SEO';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { Badge  } from '@/components/ui/badge';
+const categories = [
+  { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.length },
+  { id: 'AI Services', name: 'AI Services', icon: <Brain className="w-5 h-5" />, count: anyMICRO_SAAS_SERVICES.filter(s  => s.category === 'AI Services').length },
+  { id: 'IT Services', name: 'IT Services', icon: <Server className="w-5 h-5" />, count: anyMICRO_SAAS_SERVICES.filter(s  => s.category === 'IT Services').length },
+  { id: 'Business Solutions', name: 'Business Solutions', icon: <TrendingUp className="w-5 h-5" />, count: anyMICRO_SAAS_SERVICES.filter(s  => s.category === 'Business Solutions').length }
 ];
 
 const categories = [
@@ -75,17 +125,18 @@ const pricingModels = [
   { id: 'one-time', name: 'One-time' },
   { id: 'usage-based', name: 'Usage-based' }
 ];
-
-export default function ComprehensiveServicesOverview2027() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-
-  // Combine all services
-  const allServices = [...ADVANCED_MICRO_SAAS_SERVICES_2027, ...SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2027];
-
-  // Group services by category
-  const servicesByCategory = allServices.reduce((acc, service) => {
-    if (!acc[service.category]) {
-      acc[service.category] = [];
+export default function ComprehensiveServicesOverview2027(...args: any[]): any {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPricing, setSelectedPricing] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES);
+  const [sortBy, setSortBy] = useState<any>('rating');
+  const [viewMode, setViewMode] = useState<any>('grid');
+  const [expandedService, setExpandedService] = useState<any>(null);
+  useEffect(() => {
+    let filtered = MICRO_SAAS_SERVICES;
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(service => service.category === selectedCategory);
     }
     acc[service.category].push(service);
     return acc;
@@ -133,10 +184,10 @@ export default function ComprehensiveServicesOverview2027() {
       transition: {
         staggerChildren: 0.1
       }
-    }
-  };
-
-  const ServiceCard = ({ service }: { service: unknown }) => (
+    });
+    setFilteredServices(filtered);
+  }, [selectedCategory, selectedPricing, searchQuery, sortBy]);
+  const ServiceCard = ({ service }: { service: any })  => (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -193,8 +244,54 @@ export default function ComprehensiveServicesOverview2027() {
             <span className="text-white font-semibold">{service.pricingModel}</span>
           </div>
           <div className="flex items-center justify-between">
-            <span className="text-zion-slate-light text-sm">Created:</span>
-            <span className="text-white text-sm">{new Date(service.createdAt).toLocaleDateString()}</span>
+            <span className="text-zion-slate-light text-sm">Market Price:</span>
+            <span className="text-zion-purple font-semibold">{service.marketPrice}</span>
+          </div>
+        </div>
+        <div className="space-y-3">
+          <div className="flex items-center justify-between">
+            <span className="text-zion-slate-light text-sm">Key Benefits:</span>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}
+              className="text-zion-cyan hover:text-zion-cyan-light"
+            >
+              {expandedService === service.id ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+            </Button>
+          </div>
+          {expandedService === service.id && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="space-y-2"
+            >
+              {service.benefits.map((benefit: string, index: number)  => (
+                <div key={index} className="flex items-start space-x-2">
+                  <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
+                  <span className="text-zion-slate-light text-sm">{benefit}</span>
+                </div>
+              ))}
+            </motion.div>
+          )}
+        </div>
+        <div className="pt-4 border-t border-zion-blue-light/20">
+          <div className="flex items-center justify-between">
+            <Link
+              to={service.website}
+              className="inline-flex items-center space-x-2 text-zion-cyan hover:text-zion-cyan-light transition-colors"
+            >
+              <span className="text-sm font-medium">Learn More</span>
+              <ExternalLink className="w-4 h-4" />
+            </Link>
+            <Link
+              to={`mailto:${service.contactEmail}`}
+              className="inline-flex items-center space-x-2 text-zion-purple hover:text-zion-purple-light transition-colors"
+            >
+              <span className="text-sm font-medium">Contact</span>
+              <Mail className="w-4 h-4" />
+            </Link>
           </div>
         </div>
         <Button 
@@ -319,117 +416,52 @@ export default function ComprehensiveServicesOverview2027() {
                   variants={itemVariants}
                   className="bg-black/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
                 >
-                  {/* Service Header */}
-                  <div className="flex items-start justify-between mb-4">
-                    <div className={`p-3 rounded-lg ${categoryData?.bgColor || 'bg-gray-500/20'}`}>
-                      <IconComponent className={`w-6 h-6 ${categoryData?.textColor || 'text-gray-400'}`} />
-                    </div>
-                    {service.featured && (
-                      <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                        Featured
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Service Info */}
-                  <div className="space-y-4">
-                    <div>
-                      <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
-                      <p className="text-gray-300 text-sm leading-relaxed">{service.description}</p>
-                    </div>
-
-                    {/* Category and AI Score */}
-                    <div className="flex items-center justify-between">
-                      <span className={`px-3 py-1 rounded-full text-sm ${categoryData?.bgColor || 'bg-gray-500/20'} ${categoryData?.textColor || 'text-gray-400'}`}>
-                        {service.category}
-                      </span>
-                      <div className="flex items-center space-x-2">
-                        <Zap className="w-4 h-4 text-yellow-400" />
-                        <span className="text-yellow-400 font-semibold">{service.aiScore}</span>
-                      </div>
-                    </div>
-
-                    {/* Features Preview */}
-                    <div>
-                      <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
-                      <div className="grid grid-cols-1 gap-1">
-                        {service.features.slice(0, 3).map((feature, index) => (
-                          <div key={index} className="flex items-center space-x-2 text-sm text-gray-400">
-                            <Check className="w-3 h-3 text-green-400" />
-                            <span>{feature}</span>
-                          </div>
-                        ))}
-                        {service.features.length > 3 && (
-                          <div className="text-sm text-cyan-400 mt-1">
-                            +{service.features.length - 3} more features
-                          </div>
-                        )}
-                      </div>
-                    </div>
-
-                    {/* Benefits */}
-                    <div>
-                      <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Benefits:</h4>
-                      <div className="space-y-1">
-                        {service.benefits.slice(0, 2).map((benefit, index) => (
-                          <div key={index} className="flex items-center space-x-2 text-sm text-gray-400">
-                            <TrendingUp className="w-3 h-3 text-green-400" />
-                            <span>{benefit}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Pricing and Rating */}
-                    <div className="flex items-center justify-between pt-4 border-t border-gray-700">
-                      <div>
-                        <div className="text-2xl font-bold text-cyan-400">
-                          ${service.price}
-                          <span className="text-sm text-gray-400 font-normal">/month</span>
-                        </div>
-                        <div className="text-sm text-gray-400">{service.marketPrice}</div>
-                      </div>
-                      <div className="text-right">
-                        <div className="flex items-center space-x-1 mb-1">
-                          {[...Array(5)].map((_, i) => (
-                            <Star
-                              key={i}
-                              className={`w-4 h-4 ${
-                                i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-600'
-                              }`}
-                            />
-                          ))}
-                        </div>
-                        <div className="text-sm text-gray-400">
-                          {service.rating} ({service.reviewCount} reviews)
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* CTA Buttons */}
-                    <div className="flex space-x-3 pt-4">
-                      <a
-                        href={service.website}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-                      >
-                        Learn More
-                      </a>
-                      <a
-                        href={`mailto:${service.contactEmail}?subject=Inquiry about ${service.title}`}
-                        className="bg-transparent border border-cyan-500 text-cyan-400 py-3 px-4 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
-                      >
-                        Contact
-                      </a>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </motion.div>
-
-          {/* No Results */}
+                  <option value="rating">Sort by Rating</option>
+                  <option value="price">Sort by Price</option>
+                  <option value="aiScore">Sort by AI Score</option>
+                  <option value="newest">Sort by Newest</option>
+                </select>
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-4">
+              {categories.map((category) => (
+                <Button
+                  key={category.id}
+                  variant={selectedCategory === category.id ? 'default' : 'outline'}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={selectedCategory === category.id ? 'bg-zion-cyan hover:bg-zion-cyan-light' : 'border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-dark/30'}
+                >
+                  {category.icon}
+                  <span className="ml-2">{category.name}</span>
+                  <Badge variant="secondary" className="ml-2 bg-zion-purple/80">
+                    {category.count}
+                  </Badge>
+                </Button>
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-4">
+              {pricingModels.map((pricing) => (
+                <Button
+                  key={pricing.id}
+                  variant={selectedPricing === pricing.id ? 'default' : 'outline'}
+                  onClick={() => setSelectedPricing(pricing.id)}
+                  className={selectedPricing === pricing.id ? 'bg-zion-purple hover:bg-zion-purple-light' : 'border-zion-purple/20 text-zion-slate-light hover:bg-zion-purple/30'}
+                >
+                  {pricing.name}
+                </Button>
+              ))}
+            </div>
+          </div>
+          {/* Services Grid */}
+          <div className={`grid gap-8 ${
+            viewMode === 'grid' 
+              ? 'grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3' 
+              : 'grid-cols-1'
+          }`}>
+            {filteredServices.map((service)  => (
+              <ServiceCard key={service.id} service={service} />
+            ))}
+          </div>
           {filteredServices.length === 0 && (
             <div className="text-center py-20">
               <div className="text-6xl mb-4">🔍</div>

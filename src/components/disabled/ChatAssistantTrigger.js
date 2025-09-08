@@ -23,8 +23,9 @@ export function ChatAssistantTrigger() {
             return Promise.resolve();
         }
         catch (error) {
-            // // // // // console.error("Error in AI chat:", error);
-            return Promise.resolve()}
+            // // // console.error("Error in AI chat:", error);
+            return Promise.resolve();
+        }
     };
     return (<React.Fragment>
       <Button onClick={() => setIsOpen(true)} size="icon" variant="outline" className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50" aria-label="Open chat assistant">

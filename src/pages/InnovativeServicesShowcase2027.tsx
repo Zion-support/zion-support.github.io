@@ -1,14 +1,17 @@
-// Removed unused: import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Brain, Rocket, Star, CheckCircle, ArrowRight, Search, Filter, Grid, List, ChevronDown } from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '@/data/innovativeMicroSaasServices2027';
-import { EMERGING_TECH_SERVICES_2027 } from '@/data/emergingTechServices2027';
-export default function InnovativeServicesShowcase2027() {
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence   } from 'framer-motion';
+import { Link   } from 'react-router-dom';
+import { Brain, Cpu, Database, Network, Shield, Zap, Rocket, Atom, 
+  Globe, Cloud, Lock, Eye, Target, TrendingUp, Star, CheckCircle,
+  ArrowRight, Search, Filter, Grid, List, ChevronDown
+  } from 'lucide-react';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2027   } from '@/data/innovativeMicroSaasServices2027';
+import { EMERGING_TECH_SERVICES_2027   } from '@/data/emergingTechServices2027';
+export default function InnovativeServicesShowcase2027(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'aiScore' | 'rating' | 'price'>('aiScore');
+  const [viewMode, setViewMode] = useState<any>('grid');
+  const [sortBy, setSortBy] = useState<any>('aiScore');
   const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2027, ...EMERGING_TECH_SERVICES_2027];
   const categories = ['All', ...Array.from(new Set(allServices.map(service => service.category)))];
   const filteredServices = allServices
@@ -424,14 +427,14 @@ export default function InnovativeServicesShowcase2027() {
             className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: any0.8, delay: 0.6 }}
           >
             {[
               { label: 'Total Services', value: allServices.length, icon: Rocket, color: 'from-cyan-500 to-blue-600' },
-              { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s) => acc + s?.aiScore, 0) / allServices.length)}%`, icon: Brain, color: 'from-purple-500 to-pink-600' },
-              { label: 'Rating Avg', value: `${(allServices.reduce((acc, s) => acc + s?.rating, 0) / allServices.length).toFixed(1)}`, icon: Star, color: 'from-yellow-500 to-orange-600' },
+              { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s)   => acc + s.aiScore, 0) / allServices.length)}%`, icon: anyBrain, color: 'from-purple-500 to-pink-600' },
+              { label: 'Rating Avg', value: `${(allServices.reduce((acc, s)   => acc + s.rating, 0) / allServices.length).toFixed(1)}`, icon: anyStar, color: 'from-yellow-500 to-orange-600' },
               { label: 'Categories', value: categories.length - 1, icon: Grid, color: 'from-green-500 to-teal-600' }
-            ].map((stat, index) => (
+            ].map((stat, index)   => (
               <div key={index} className="text-center group">
                 <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${stat.color} rounded-full mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <stat.icon className="w-8 h-8 text-white" />
@@ -473,16 +476,49 @@ export default function InnovativeServicesShowcase2027() {
                 <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center mb-4`}>
                   <Star className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{category.name}</h3>
-                <p className="text-gray-300 mb-4">{category.count} services available</p>
-                <Link
-                  to={`/services#${category.name.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="text-purple-400 hover:text-purple-300 transition-colors duration-300"
+              </div>
+              {/* Category Filter */}
+              <div className="relative">
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
                 >
-                  Explore Services →
-                </Link>
-              </motion.div>
-            ))}
+                  {categories.map(category   => (
+                    <option key={category} value={category}>{category}</option>
+                  ))}
+                </select>
+                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5 pointer-events-none" />
+              </div>
+              {/* Sort By */}
+              <div className="relative">
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value as 'aiScore' | 'rating' | 'price')}
+                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
+                >
+                  <option value="aiScore">Sort by AI Score</option>
+                  <option value="rating">Sort by Rating</option>
+                  <option value="price">Sort by Price</option>
+                </select>
+                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5 pointer-events-none" />
+              </div>
+              {/* View Mode Toggle */}
+              <div className="flex bg-zion-blue-light/20 rounded-lg p-1 border border-zion-purple/20">
+                <button
+                  onClick={() => setViewMode('grid')}
+                  className={`p-2 rounded-md transition-colors ${viewMode === 'grid' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'}`}
+                >
+                  <Grid className="w-5 h-5" />
+                </button>
+                <button
+                  onClick={() => setViewMode('list')}
+                  className={`p-2 rounded-md transition-colors ${viewMode === 'list' ? 'bg-zion-cyan text-white' : 'text-zion-slate-light hover:text-white'}`}
+                >
+                  <List className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -490,30 +526,17 @@ export default function InnovativeServicesShowcase2027() {
       {/* Featured Services */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Featured Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our most popular and innovative solutions that are transforming businesses worldwide
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {services.filter(service => service.featured).map((service, index) => (
-              <motion.div
-                key={service.id}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl p-8 border border-slate-600 hover:border-slate-500 transition-all duration-300 hover:transform hover:scale-105"
+          <AnimatePresence mode="wait">
+            {filteredServices.length > 0 ? (
+              <motion.div 
+                className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
+                key={viewMode}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: any0.3 }}
               >
-                {filteredServices.map((service, index) => (
+                {filteredServices.map((service, index)   => (
                   <motion.div
                     key={service.id}
                     variants={viewMode === 'grid' ? itemVariants : {}}

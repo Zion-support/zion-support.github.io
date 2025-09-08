@@ -1,16 +1,42 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, AlertTriangle, Info, Settings, ArrowUpRight, RefreshCw } from 'lucide-react';
+import { motion, AnimatePresence    } from 'framer-motion';
+import { Search, 
+  TrendingUp, 
+  Target, 
+  Zap, 
+  CheckCircle, 
+  AlertTriangle,
+  Info,
+  Settings,
+  BarChart3,
+  Globe,
+  Smartphone,
+  Monitor,
+  Eye,
+  Clock,
+  Star,
+  ArrowUpRight,
+  RefreshCw
+   } from 'lucide-react';
 
 interface SEOAnalysis {
-  score: number;
+
+
+
+  score: anynumber;
   issues: SEOIssue[];
   suggestions: SEOSuggestion[];
   metrics: SEOMetrics;
   lastUpdated: Date;
+
+
+
 }
 
 interface SEOIssue {
+
+
+
   id: string;
   type: 'error' | 'warning' | 'info';
   title: string;
@@ -18,35 +44,51 @@ interface SEOIssue {
   impact: 'high' | 'medium' | 'low';
   fixable: boolean;
   category: 'content' | 'technical' | 'performance' | 'accessibility';
+
+
+
 }
 
 interface SEOSuggestion {
+
+
+
   id: string;
   title: string;
   description: string;
   priority: 'high' | 'medium' | 'low';
   effort: 'low' | 'medium' | 'high';
   estimatedImpact: number;
+
+
+
 }
 
 interface SEOMetrics {
+
+
+
   pageSpeed: number;
   mobileFriendliness: number;
   accessibility: number;
   bestPractices: number;
   seoScore: number;
-  coreWebVitals: {
+coreWebVitals: {
     lcp: number;
     fid: number;
     cls: number;
-  };
+  
+
+
+};
 }
 
 interface SEOOptimizerProps {
   url?: string;
   autoAnalyze?: boolean;
   showDetails?: boolean;
-  onAnalysisComplete?: (analysis: SEOAnalysis) => void;
+  onAnalysisComplete?: (analysis: SEOAnalysis)    => void;
+
 }
 
 export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
@@ -154,21 +196,21 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   }, [autoAnalyze, analyzeSEO]);
 
   // Get score color
-  const getScoreColor = (score: number) => {
+  const getScoreColor = (score: anynumber)    => {
     if (score >= 90) return 'text-green-500';
     if (score >= 70) return 'text-yellow-500';
     return 'text-red-500';
   };
 
   // Get score background
-  const getScoreBackground = (score: number) => {
+  const getScoreBackground = (score: anynumber)    => {
     if (score >= 90) return 'bg-green-100';
     if (score >= 70) return 'bg-yellow-100';
     return 'bg-red-100';
   };
 
   // Get impact color
-// Removed unused:   const getImpactColor = (impact: string) => {
+  const getImpactColor = (impact: string)    => {
     switch (impact) {
       case 'high': return 'text-red-500';
       case 'medium': return 'text-yellow-500';
@@ -178,7 +220,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   };
 
   // Get priority color
-  const getPriorityColor = (priority: string) => {
+  const getPriorityColor = (priority: string)    => {
     switch (priority) {
       case 'high': return 'text-red-500 bg-red-50 border-red-200';
       case 'medium': return 'text-yellow-500 bg-yellow-50 border-yellow-200';

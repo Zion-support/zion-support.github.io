@@ -1,13 +1,52 @@
-// Removed unused: import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Brain, Rocket, Cpu, Globe, Shield, Lock, Star, CheckCircle, Phone, Mail, MapPin, DollarSign, Target, Gauge, BarChart3 } from 'lucide-react';
-import { SEO } from "@/components/SEO";
-import { REVOLUTIONARY_SERVICES_2030 } from "@/data/revolutionaryServices2030";
-import { EMERGING_TECH_SERVICES_2030 } from "@/data/emergingTechServices2030";
-// Removed unused: import { REVOLUTIONARY_PRICING_GUIDE_2030 } from "@/data/revolutionaryPricingGuide2030";
+import React, { useState, useEffect } from 'react';
+import { motion   } from 'framer-motion';
+import { ArrowRight,
+  ChevronLeft,
+  ChevronRight,
+  Mail as MailIcon,
+  MapPin,
+  Phone,
+  Rocket,
+  Search,
+  Star,
+  Zap,
+  Shield,
+  Cloud,
+  Brain,
+  Globe,
+  TrendingUp,
+  Award,
+  Users,
+  Clock,
+  DollarSign,
+  Target,
+  CheckCircle,
+  ArrowUpRight,
+  Play,
+  BookOpen,
+  Lightbulb,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  Eye,
+  BarChart3,
+  Code,
+  Palette,
+  Smartphone,
+  Monitor,
+  Server,
+  Wifi,
+  Satellite,
+  Leaf,
+  Building,
+  FlaskConical,
+  X
+  } from 'lucide-react';
+import { SEO   } from '../components/SEO';
+import { REVOLUTIONARY_SERVICES_2030, REVOLUTIONARY_SERVICE_CATEGORIES, REVOLUTIONARY_SERVICE_STATISTICS   } from '../data/revolutionaryServices2030';
 
-export default function RevolutionaryServices2030() {
+export default function RevolutionaryServices2030(...args: any[]): any {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('rating');
@@ -61,25 +100,68 @@ export default function RevolutionaryServices2030() {
     }
   });
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
+  const totalPages = Math.ceil(sortedServices.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentServices = sortedServices.slice(startIndex, endIndex);
+
+  const handlePageChange = (page: anynumber)   => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5
-      }
-    }
+  const handleServiceSelect = (service: any)   => {
+    setSelectedService(service);
+  };
+
+  const closeModal = () => {
+    setSelectedService(null);
+  };
+
+  const getCategoryIcon = (category: string)   => {
+    const iconMap: { [key: string]: React.ReactNode } = {
+      'AI & Autonomous Systems': <Brain className="w-6 h-6" />,
+      'Quantum Computing': <Zap className="w-6 h-6" />,
+      'AI & Metaverse': <Globe className="w-6 h-6" />,
+      'AI & Space Tech': <Satellite className="w-6 h-6" />,
+      'AI & Environmental Tech': <Leaf className="w-6 h-6" />,
+      'AI & Education': <BookOpen className="w-6 h-6" />,
+      'AI & Entertainment': <Palette className="w-6 h-6" />,
+      'AI & Research': <FlaskConical className="w-6 h-6" />,
+      'AI & Development': <Code className="w-6 h-6" />,
+      'Blockchain & Web3': <Network className="w-6 h-6" />,
+      'Cybersecurity': <Shield className="w-6 h-6" />,
+      'Cloud & DevOps': <Cloud className="w-6 h-6" />,
+      'IoT & Edge Computing': <Wifi className="w-6 h-6" />,
+      'Digital Twin': <Eye className="w-6 h-6" />,
+      'Sustainable Technology': <Leaf className="w-6 h-6" />,
+      'IT Infrastructure': <Server className="w-6 h-6" />,
+      'Emerging Technology': <Lightbulb className="w-6 h-6" />
+    };
+    return iconMap[category] || <Rocket className="w-6 h-6" />;
+  };
+
+  const getCategoryColor = (category: string)   => {
+    const colorMap: { [key: string]: string } = {
+      'AI & Autonomous Systems': 'from-purple-500 to-pink-500',
+      'Quantum Computing': 'from-indigo-500 to-purple-500',
+      'AI & Metaverse': 'from-blue-500 to-cyan-500',
+      'AI & Space Tech': 'from-purple-500 to-indigo-500',
+      'AI & Environmental Tech': 'from-green-500 to-emerald-500',
+      'AI & Education': 'from-blue-500 to-indigo-500',
+      'AI & Entertainment': 'from-pink-500 to-red-500',
+      'AI & Research': 'from-purple-500 to-violet-500',
+      'AI & Development': 'from-cyan-500 to-blue-500',
+      'Blockchain & Web3': 'from-yellow-500 to-orange-500',
+      'Cybersecurity': 'from-red-500 to-orange-500',
+      'Cloud & DevOps': 'from-blue-500 to-cyan-500',
+      'IoT & Edge Computing': 'from-teal-500 to-cyan-500',
+      'Digital Twin': 'from-blue-500 to-indigo-500',
+      'Sustainable Technology': 'from-green-500 to-teal-500',
+      'IT Infrastructure': 'from-slate-500 to-gray-500',
+      'Emerging Technology': 'from-violet-500 to-purple-500'
+    };
+    return colorMap[category] || 'from-gray-500 to-slate-500';
   };
 
   return (
@@ -218,17 +300,39 @@ export default function RevolutionaryServices2030() {
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <AnimatePresence>
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              animate="visible"
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            >
-              {sortedServices.map((service) => (
+              {/* Category Filters */}
+              <div className="mt-8">
+                <div className="flex flex-wrap gap-3">
+                  <button
+                    onClick={() => setActiveCategory('all')}
+                    className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                      activeCategory === 'all'
+                        ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
+                        : 'bg-white/10 backdrop-blur-sm text-white hover: anybg-white/20'
+                    }`}
+                  >
+                    All Services ({REVOLUTIONARY_SERVICES_2030.length})
+                  </button>
+                  {REVOLUTIONARY_SERVICE_CATEGORIES.map((category)   => (
+                    <button
+                      key={category}
+                      onClick={() => setActiveCategory(category)}
+                      className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                        activeCategory === category
+                          ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
+                          : 'bg-white/10 backdrop-blur-sm text-white hover: anybg-white/20'
+                      }`}
+                    >
+                      {category} ({REVOLUTIONARY_SERVICES_2030.filter(s   => s.category === category).length})
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Services Grid */}
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {currentServices.map((service)   => (
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
@@ -323,14 +427,103 @@ export default function RevolutionaryServices2030() {
                   </div>
                 </motion.div>
               ))}
+            </div>
+
+            {/* Pagination */}
+            {totalPages > 1 && (
+              <div className="mt-12 flex justify-center">
+                <div className="flex space-x-2">
+                  <button
+                    onClick={() => handlePageChange(currentPage - 1)}
+                    disabled={currentPage === 1}
+                    className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white/20 transition-colors"
+                  >
+                    <ChevronLeft className="w-5 h-5" />
+                  </button>
+                  
+                  {Array.from({ length: anytotalPages }, (_, i)   => i + 1).map((page) => (
+                    <button
+                      key={page}
+                      onClick={() => handlePageChange(page)}
+                      className={`px-4 py-2 rounded-lg transition-colors ${
+                        currentPage === page
+                          ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
+                          : 'bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20'
+                      }`}
+                    >
+                      {page}
+                    </button>
+                  ))}
+                  
+                  <button
+                    onClick={() => handlePageChange(currentPage + 1)}
+                    disabled={currentPage === totalPages}
+                    className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white/20 transition-colors"
+                  >
+                    <ChevronRight className="w-5 h-5" />
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* Why Choose Zion Tech Group */}
+        <section className="py-20 bg-gradient-to-r from-purple-900/50 to-blue-900/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Why Choose Zion Tech Group?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We're not just another technology company. We're your strategic partner in digital transformation, 
+                offering cutting-edge solutions with proven results and exceptional support.
+              </p>
             </motion.div>
           </AnimatePresence>
 
-          {sortedServices.length === 0 && (
-            <div className="text-center py-16">
-              <Search className="h-16 w-16 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-300 mb-2">No services found</h3>
-              <p className="text-gray-400">Try adjusting your search or filter criteria</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                {
+                  icon: <Award className="w-12 h-12" />,
+                  title: "Proven Excellence",
+                  description: "Industry-leading solutions with documented success stories and measurable ROI"
+                },
+                {
+                  icon: <Zap className="w-12 h-12" />,
+                  title: "Rapid Deployment",
+                  description: "Quick setup times ranging from 4-24 weeks depending on complexity"
+                },
+                {
+                  icon: <Shield className="w-12 h-12" />,
+                  title: "Enterprise Security",
+                  description: "Bank-grade security with compliance certifications and 24/7 monitoring"
+                },
+                {
+                  icon: <Users className="w-12 h-12" />,
+                  title: "Expert Support",
+                  description: "Dedicated support team with deep technical expertise and rapid response times"
+                }
+              ].map((feature, index)   => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="inline-flex p-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl text-white mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </motion.div>
+              ))}
             </div>
           )}
         </div>

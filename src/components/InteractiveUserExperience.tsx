@@ -1,12 +1,29 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-// Removed unused: import { Progress } from './ui/progress';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
-import { User, Settings, Palette, Eye, MousePointer, Smartphone, Monitor, Zap, Heart, Star, MessageCircle, TrendingUp, Accessibility } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle    } from './ui/card';
+import { Button    } from './ui/button';
+import { Badge    } from './ui/badge';
+import { Progress    } from './ui/progress';
+import { Tabs, TabsContent, TabsList, TabsTrigger    } from './ui/tabs';
+import { User, 
+  Settings, 
+  Palette, 
+  Eye, 
+  MousePointer, 
+  Smartphone,
+  Monitor,
+  Zap,
+  Heart,
+  Star,
+  MessageCircle,
+  TrendingUp,
+  Accessibility,
+  Languages
+   } from 'lucide-react';
 
 interface UserPreference {
+
+
+
   id: string;
   name: string;
   value: string | boolean | number;
@@ -14,23 +31,38 @@ interface UserPreference {
   options?: string[];
   category: 'appearance' | 'accessibility' | 'performance' | 'language';
   description: string;
+
+
+
 }
 
 interface UserActivity {
+
+
+
   id: string;
   action: string;
   timestamp: Date;
   duration?: number;
   success: boolean;
   category: 'navigation' | 'interaction' | 'search' | 'purchase';
+
+
+
 }
 
 interface AccessibilityFeature {
+
+
+
   id: string;
   name: string;
   enabled: boolean;
   description: string;
   impact: 'high' | 'medium' | 'low';
+
+
+
 }
 
 const InteractiveUserExperience: React.FC = () => {
@@ -101,7 +133,7 @@ const InteractiveUserExperience: React.FC = () => {
   }, []);
 
   // Initialize accessibility features
-  useEffect(() => {
+  useEffect(()    => {
     const features: AccessibilityFeature[] = [
       {
         id: '1',
@@ -144,7 +176,7 @@ const InteractiveUserExperience: React.FC = () => {
   }, []);
 
   // Simulate user activities
-  useEffect(() => {
+  useEffect(()    => {
     const activities: UserActivity[] = [
       {
         id: '1',
@@ -183,7 +215,7 @@ const InteractiveUserExperience: React.FC = () => {
     setUserActivities(activities);
   }, []);
 
-  const updatePreference = useCallback((id: string, value: string | boolean | number) => {
+  const updatePreference = useCallback((id: string, value: string | boolean | number)    => {
     setPreferences(prev => prev.map(pref => 
       pref.id === id ? { ...pref, value } : pref
     ));
@@ -212,13 +244,13 @@ const InteractiveUserExperience: React.FC = () => {
     }
   }, [preferences]);
 
-  const toggleAccessibilityFeature = useCallback((id: string) => {
+  const toggleAccessibilityFeature = useCallback((id: string)    => {
     setAccessibilityFeatures(prev => prev.map(feature => 
       feature.id === id ? { ...feature, enabled: !feature.enabled } : feature
     ));
   }, []);
 
-  const getActivityIcon = (category: UserActivity['category']) => {
+  const getActivityIcon = (category: anyUserActivity['category'])    => {
     switch (category) {
       case 'navigation': return <MousePointer className="h-4 w-4" />;
       case 'interaction': return <User className="h-4 w-4" />;
@@ -228,7 +260,7 @@ const InteractiveUserExperience: React.FC = () => {
     }
   };
 
-  const getImpactColor = (impact: AccessibilityFeature['impact']) => {
+  const getImpactColor = (impact: anyAccessibilityFeature['impact'])    => {
     switch (impact) {
       case 'high': return 'bg-red-500';
       case 'medium': return 'bg-yellow-500';

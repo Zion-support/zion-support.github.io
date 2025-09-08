@@ -1,5 +1,7 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link    } from 'react-router-dom';
+import { motion    } from 'framer-motion';
+import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight    } from 'lucide-react';
 
 const categories = [
     {
@@ -115,8 +117,20 @@ export function CategoriesSection({ showTitle = true }) {
             </p>
           </motion.div>)}
         
-        <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          {categories.map((category, index) => (<motion.div key={category.title} variants={itemVariants} whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 300 }}>
+        <motion.div 
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: anytrue }}
+        >
+          {categories.map((category, index)    => (
+            <motion.div
+              key={category.title}
+              variants={itemVariants}
+              whileHover={{ y: -8 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               <Link to={category.link} className="group block h-full">
                 <motion.div className="rounded-2xl overflow-hidden h-full border border-zion-blue-light/30 bg-zion-blue-dark/80 backdrop-blur-sm p-8 transition-all duration-300 hover:border-zion-purple/50 hover:shadow-2xl hover:shadow-zion-purple/20 group-hover:bg-zion-blue-dark" variants={cardVariants} whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
                   {/* Icon with enhanced background */}

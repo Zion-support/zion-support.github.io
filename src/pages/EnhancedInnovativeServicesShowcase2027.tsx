@@ -1,21 +1,72 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Search, Filter, Zap, Brain, Globe, Phone, Mail, MapPin, ExternalLink, CheckCircle, Clock, Users, Target, Rocket, Cpu, Network, Stethoscope, DollarSign, Lightbulb, ArrowRight, ChevronRight, ChevronLeft, Eye, X } from 'lucide-react';
-import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027 } from '../data/enhancedInnovativeServices2027';
-
-const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
-  const [services, setServices] = useState<EnhancedInnovativeService2027[]>(ENHANCED_INNOVATIVE_SERVICES_2027);
+import { motion   } from 'framer-motion';
+import { Brain, 
+  Globe, 
+  Zap, 
+  Shield, 
+  Cloud,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Code,
+  Lock,
+  Rocket,
+  Leaf,
+  Waves,
+  Factory,
+  Building2,
+  Cpu,
+  Network,
+  Eye,
+  Heart,
+  Lightbulb,
+  TrendingUp,
+  Users,
+  Target,
+  Award,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  Filter,
+  Search,
+  Grid3X3,
+  List
+  } from 'lucide-react';
+import { enhancedInnovativeServices2027, enhancedInnovativeServices2027Categories   } from '../data/enhancedInnovativeServices2027';
+const categoryIcons: { [key: string]: React.ComponentType<any> } = {
+  'Web3 Solutions': Globe,
+  'Metaverse Solutions': Eye,
+  'Sustainable Tech': Leaf,
+  'NeuroTech Solutions': Brain,
+  'Fusion Energy Solutions': Zap,
+  'OceanTech Solutions': Waves,
+  'AgriTech Solutions': Factory,
+  'Smart City Solutions': Building2,
+  'Digital Twin Solutions': Cpu,
+  'Edge AI Solutions': Network,
+  'Federated Learning Solutions': Code
+};
+const categoryColors: { [key: string]: string } = {
+  'Web3 Solutions': 'from-purple-500 to-pink-500',
+  'Metaverse Solutions': 'from-blue-500 to-cyan-500',
+  'Sustainable Tech': 'from-green-500 to-emerald-500',
+  'NeuroTech Solutions': 'from-indigo-500 to-purple-500',
+  'Fusion Energy Solutions': 'from-orange-500 to-red-500',
+  'OceanTech Solutions': 'from-blue-500 to-teal-500',
+  'AgriTech Solutions': 'from-green-500 to-lime-500',
+  'Smart City Solutions': 'from-gray-500 to-blue-500',
+  'Digital Twin Solutions': 'from-purple-500 to-indigo-500',
+  'Edge AI Solutions': 'from-red-500 to-pink-500',
+  'Federated Learning Solutions': 'from-yellow-500 to-orange-500'
+};
+export default function EnhancedInnovativeServicesShowcase2027(...args: any[]): any {
+  const [selectedCategory, setSelectedCategory] = useState<any>('All');
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');
-  const [sortBy, setSortBy] = useState('title');
-  const [selectedService, setSelectedService] = useState<EnhancedInnovativeService2027 | null>(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const categories = ['all', ...Array.from(new Set(services.map(s => s.category)))];
-  const innovationLevels = ['all', ...Array.from(new Set(services.map(s => s.innovationLevel)))];
-
-  const filteredServices = services.filter(service => {
+  const [viewMode, setViewMode] = useState<any>('grid');
+  const [sortBy, setSortBy] = useState<any>('name');
+  const filteredServices = enhancedInnovativeServices2027.filter(service => {
+    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -142,15 +193,29 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
             </div>
 
             {/* Category Filter */}
-            <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white focus:outline-none focus:border-zion-cyan"
-            >
-              {categories.map(category => (
-                <option key={category} value={category}>
-                  {category === 'all' ? 'All Categories' : category}
-                </option>
+            <div className="flex flex-wrap gap-2">
+              <button
+                onClick={() => setSelectedCategory('All')}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                  selectedCategory === 'All'
+                    ? 'bg-zion-cyan text-white'
+                    : 'bg-zion-slate-dark/50 text-zion-slate-light hover: anybg-zion-slate-dark/70'
+                }`}
+              >
+                All Categories
+              </button>
+              {enhancedInnovativeServices2027Categories.map((category)   => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                    selectedCategory === category
+                      ? 'bg-zion-cyan text-white'
+                      : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark/70'
+                  }`}
+                >
+                  {category}
+                </button>
               ))}
             </select>
 
@@ -181,23 +246,88 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
           </div>
         </div>
       </div>
-
-      {/* Services Grid */}
-      <div id="services-grid" className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {sortedServices.map((service, index) => (
-            <motion.div
-              key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 cursor-pointer group"
-              onClick={() => handleServiceClick(service)}
-            >
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center space-x-2">
-                  {getCategoryIcon(service.category)}
-                  <span className="text-zion-gray-light text-sm">{service.category}</span>
+      {/* Services Grid/List */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+        {viewMode === 'grid' ? (
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {sortedServices.map((service)   => (
+              <motion.div
+                key={service.id}
+                variants={itemVariants}
+                className="group relative"
+              >
+                <div className="bg-zion-slate-dark/30 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 h-full">
+                  {/* Category Badge */}
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className={`p-2 rounded-lg bg-gradient-to-r ${categoryColors[service.category]}`}>
+                      {React.createElement(categoryIcons[service.category] || Code, { className: "w-5 h-5 text-white" })}
+                    </div>
+                    <span className="text-sm font-medium text-zion-cyan">{service.category}</span>
+                  </div>
+                  {/* Title and Description */}
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-zion-slate-light mb-4 line-clamp-3">
+                    {service.description}
+                  </p>
+                  {/* Price and Billing */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-2xl font-bold text-zion-cyan">{service.price}</div>
+                    <div className="text-sm text-zion-slate-light capitalize">{service.billing}</div>
+                  </div>
+                  {/* Features */}
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                    <div className="space-y-1">
+                      {service.features.slice(0, 4).map((feature, index) => (
+                        <div key={index} className="flex items-center gap-2 text-sm text-zion-slate-light">
+                          <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                          <span>{feature}</span>
+                        </div>
+                      ))}
+                      {service.features.length > 4 && (
+                        <div className="text-sm text-zion-slate-light/70">
+                          +{service.features.length - 4} more features
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                  {/* Innovation Level */}
+                  <div className="flex items-center gap-2 mb-4">
+                    <Star className="w-4 h-4 text-yellow-400" />
+                    <span className="text-sm text-zion-slate-light">
+                      Innovation Level: <span className="text-zion-cyan font-medium">{service.innovationLevel}</span>
+                    </span>
+                  </div>
+                  {/* Market Info */}
+                  <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
+                    <div>
+                      <div className="text-zion-slate-light">Market Size</div>
+                      <div className="text-white font-medium">{service.marketSize}</div>
+                    </div>
+                    <div>
+                      <div className="text-zion-slate-light">Growth Rate</div>
+                      <div className="text-white font-medium">{service.growthRate}</div>
+                    </div>
+                  </div>
+                  {/* CTA Button */}
+                  <div className="mt-auto">
+                    <a
+                      href={service.href}
+                      target={service.external ? "_blank" : "_self"}
+                      rel={service.external ? "noopener noreferrer" : ""}
+                      className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-white py-3 px-6 rounded-xl font-semibold text-center block hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                    >
+                      {service.ctaLabel}
+                      {service.external && <ExternalLink className="w-4 h-4" />}
+                    </a>
+                  </div>
                 </div>
                 <span className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${getInnovationLevelColor(service.innovationLevel)}`}>
                   {service.innovationLevel}

@@ -1,10 +1,13 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield, Sparkles, Brain, Zap, ArrowRight } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
-import { useDebounce } from '@/hooks/useDebounce';
+import { motion, AnimatePresence    } from 'framer-motion';
+import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield    } from 'lucide-react';
+import { useNavigate    } from 'react-router-dom';
+import { useDebounce    } from '@/hooks/useDebounce';
 
 interface SearchResult {
+
+
+
   id: string;
   title: string;
   description: string;
@@ -13,12 +16,21 @@ interface SearchResult {
   category: string;
   tags: string[];
   relevance: number;
+
+
+
 }
 
 interface SearchFilter {
+
+
+
   type: string[];
   category: string[];
   tags: string[];
+
+
+
 }
 
 interface SearchSuggestion {
@@ -209,7 +221,7 @@ export function EnhancedSearch({
 
   // Handle click outside
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (event: anyMouseEvent)    => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false);
         setSelectedIndex(-1);
@@ -222,7 +234,7 @@ export function EnhancedSearch({
 
   // Handle keyboard navigation
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown = (event: anyKeyboardEvent)    => {
       if (event.key === 'Escape') {
         setIsOpen(false);
         setSelectedIndex(-1);
@@ -260,32 +272,20 @@ export function EnhancedSearch({
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, results, selectedIndex, query]);
 
-  const handleSearch = useCallback(async (searchQuery?: string) => {
-    const queryToSearch = searchQuery || query;
-    if (!queryToSearch.trim()) return;
+  const handleSearch = useCallback((searchQuery: string)    => {
+    if (searchQuery.trim()) {
+      // Add to recent searches
+      const updated = [searchQuery, ...recentSearches.filter(s => s !== searchQuery)].slice(0, 5);
+      setRecentSearches(updated);
+      localStorage.setItem('zion-recent-searches', JSON.stringify(updated));
+      
+      // Navigate to search results or close search
+      setIsOpen(false);
+      setQuery('');
+    }
+  }, [recentSearches]);
 
-    setIsLoading(true);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 500));
-    
-    // Filter results based on query
-    const filteredResults = searchData.filter(result =>
-      result.title.toLowerCase().includes(queryToSearch.toLowerCase()) ||
-      result.description.toLowerCase().includes(queryToSearch.toLowerCase())
-    );
-
-    setResults(filteredResults);
-    setIsLoading(false);
-    setIsOpen(true);
-    
-    // Add to recent searches
-    const updated = [queryToSearch, ...recentSearches.filter(s => s !== queryToSearch)].slice(0, 5);
-    setRecentSearches(updated);
-    localStorage.setItem('zion-recent-searches', JSON.stringify(updated));
-  }, [query, recentSearches]);
-
-  const handleResultClick = (result: SearchResult) => {
+  const handleResultClick = (result: anySearchResult)    => {
     handleSearch(result.title);
     navigate(result.url);
     setIsOpen(false);
@@ -296,7 +296,7 @@ export function EnhancedSearch({
     }
   };
 
-  const toggleFilter = (filterType: keyof SearchFilter, value: string) => {
+  const toggleFilter = (filterType: anykeyof SearchFilter, value: string)    => {
     setFilters(prev => ({
       ...prev,
       [filterType]: prev[filterType].includes(value)
@@ -309,34 +309,7 @@ export function EnhancedSearch({
     setFilters({ type: [], category: [], tags: [] });
   };
 
-  const handleSuggestionClick = (suggestion: SearchSuggestion) => {
-    setQuery(suggestion.text);
-    handleSearch();
-  };
-
-  const clearSearch = () => {
-    setQuery('');
-    setResults([]);
-    setIsOpen(false);
-    setSelectedIndex(-1);
-    inputRef.current?.focus();
-  };
-
-  const getSearchIcon = () => {
-    if (isLoading) {
-      return (
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-        >
-          <Search className="w-5 h-5" />
-        </motion.div>
-      );
-    }
-    return <Search className="w-5 h-5" />;
-  };
-
-  const getTypeIcon = (type: string) => {
+  const getTypeIcon = (type: string)    => {
     switch (type) {
       case 'service': return <Code className="h-4 w-4" />;
       case 'page': return <Globe className="h-4 w-4" />;

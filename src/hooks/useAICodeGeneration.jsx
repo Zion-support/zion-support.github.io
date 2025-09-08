@@ -54,7 +54,7 @@ const historyItem = {
             });
         }
         catch (error) {
-            // console.error('Failed to generate code:', error);
+            // // // console.error('Failed to generate code:', error);
             trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -89,7 +89,7 @@ const analyzeCode = useCallback(async (code, language) => {
             });
         }
         catch (error) {
-            // console.error('Failed to analyze code:', error);
+            // // // console.error('Failed to analyze code:', error);
             trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -135,7 +135,7 @@ const optimizeCode = useCallback(async (code, focus) => {
             return optimizedCode;
         }
         catch (error) {
-            // console.error('Failed to optimize code:', error);
+            // // // console.error('Failed to optimize code:', error);
             trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -161,7 +161,7 @@ const generateTests = useCallback(async (code, language) => {
             return testCode;
         }
         catch (error) {
-            // console.error('Failed to generate tests:', error);
+            // // // console.error('Failed to generate tests:', error);
             trackEvent('ai_code_generation', 'test_generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -187,7 +187,7 @@ const generateDocs = useCallback(async (code, language) => {
             return docs;
         }
         catch (error) {
-            // console.error('Failed to generate documentation:', error);
+            // // // console.error('Failed to generate documentation:', error);
             trackEvent('ai_code_generation', 'doc_generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -297,7 +297,7 @@ app.get('/', (req, res) => {
 // TODO: Implement additional routes based on prompt
 
 app.listen(PORT, () => {
-  // console.log(\`Server running on port \${PORT}\`);
+  // // // console.log(\`Server running on port \${PORT}\`);
 });`;
     };
     const generatePythonCode = (prompt, _options) => {
@@ -340,9 +340,9 @@ if __name__ == "__main__":
 // TODO: Implement code based on prompt requirements
 // This is a placeholder implementation
 
-// console.log("Generated code placeholder");
-// console.log("Prompt:", "${prompt}");
-// console.log("Language:", "${options.language}");`;
+// // // console.log("Generated code placeholder");
+// // // console.log("Prompt:", "${prompt}");
+// // // console.log("Language:", "${options.language}");`;
     };
     // Helper functions for code analysis
     const calculateComplexity = (code) => {
@@ -431,11 +431,13 @@ const issues = [];
             issues.push({
                 severity: 'warning',
                 message: 'Usage of "" type reduces type safety',
-                line: code.split('\n').findIndex(line => line.includes('')) + 1
-            })}
-        return issues};
-    // Helper functions for code optimization;
-const optimizeForPerformance = (code) => {
+                line: code.split('\n').findIndex(line => line.includes('any')) + 1
+            });
+        }
+        return issues;
+    };
+    // Helper functions for code optimization
+    const optimizeForPerformance = (code) => {
         return code
             .replace(/console\.log/g, '// console.log removed for performance')
             .replace(/setInterval/g, '// Consider requestAnimationFrame instead of setInterval')
@@ -456,7 +458,9 @@ const optimizeForPerformance = (code) => {
     const optimizeForAccessibility = (code) => {
         return code
             .replace(/<div>/g, '<div role="main">')
+          </div>
             .replace(/<button>/g, '<button aria-label="Action button">')
+          </button>
             .replace(/<img/g, '<img alt="Description"');
     };
     // Helper functions for test generation

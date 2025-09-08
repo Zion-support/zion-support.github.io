@@ -1,9 +1,13 @@
-import { motion } from 'framer-motion';
-// Removed unused: import { Link } from 'react-router-dom';
-import { 
-  Zap, 
-  Target, 
-  CheckCircle, 
+import React from 'react';
+import { motion   } from 'framer-motion';
+import { Rocket, 
+  Cpu, 
+  Database, 
+  Cloud, 
+  Shield, 
+  Users, 
+  BarChart3, 
+  Zap,
   ArrowRight,
   Play,
   Settings,
@@ -100,103 +104,9 @@ import {
   UserStar2,
   UserHeart2,
   Monitor,
-  Eye2,
-  Users2,
-  MousePointer,
-  Clock,
-  MapPin,
-  Device,
-  Globe2,
-  Smartphone2,
-  Tablet,
-  Laptop,
-  Desktop,
-  Server3,
-  Database3,
-  HardDrive2,
-  Memory2,
-  Cpu3,
-  Network2,
-  Wifi2,
-  Bluetooth2,
-  Radio2,
-  Signal2,
-  Antenna2,
-  Satellite2,
-  Orbit2,
-  Planet2,
-  Star2,
-  Telescope2,
-  Navigation2,
-  Earth2,
-  Moon2,
-  Sun2,
-  Binary2,
-  Network3,
-  Database4,
-  Lock3,
-  Key3,
-  Fingerprint3,
-  Eye3,
-  Brain3,
-  Cpu4,
-  Memory3,
-  HardDrive3,
-  Server4,
-  Rocket,
-  Globe,
-  Building,
-  DollarSign,
-  Users,
-  Clock,
-  Search,
-  Sparkles
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-
-export default function DigitalTransformation() {
-  const features = [
-    {
-      icon: Rocket,
-      title: 'Strategic Planning',
-      description: 'Comprehensive digital transformation roadmap and strategy'
-    },
-    {
-      icon: Globe,
-      title: 'Technology Integration',
-      description: 'Seamless integration of modern technologies and systems'
-    },
-    {
-      icon: Building,
-      title: 'Process Optimization',
-      description: 'Streamline and automate business processes for efficiency'
-    },
-    {
-      icon: Users,
-      title: 'Change Management',
-      description: 'Guide organizations through digital transformation journey'
-    },
-    {
-      icon: Clock,
-      title: 'Agile Implementation',
-      description: 'Rapid deployment with iterative improvement cycles'
-    },
-    {
-      icon: Search,
-      title: 'Performance Monitoring',
-      description: 'Track transformation progress and measure ROI'
-    }
-  ];
-
-  const benefits = [
-    'Increase operational efficiency by 40%',
-    'Reduce costs by 30% through automation',
-    'Improve customer experience and satisfaction',
-    'Enable data-driven decision making',
-    'Accelerate time to market',
-    'Enhance competitive advantage'
-  ];
-
+  Smartphone
+  } from 'lucide-react';
+export default function DigitalTransformation(...args: any[]): any {
   const services = [
     {
       icon: Strategy,
@@ -312,10 +222,9 @@ export default function DigitalTransformation() {
               successful digital transformation initiatives.
             </p>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {services.map((service, index)   => (
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -391,36 +300,22 @@ export default function DigitalTransformation() {
               Experience measurable improvements in efficiency, innovation, and business performance.
             </p>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              {benefits.slice(0, 3).map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
-                  <CheckCircle className="w-6 h-6 text-orange-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
-                </motion.div>
-              ))}
-            </div>
-            <div className="space-y-6">
-              {benefits.slice(3).map((benefit, index) => (
-                <motion.div
-                  key={index + 3}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
-                  <CheckCircle className="w-6 h-6 text-orange-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
-                </motion.div>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            {benefits.map((benefit, index)   => (
+              <motion.div 
+                key={index}
+                className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6">
+                  <benefit.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                <p className="text-zion-slate-light leading-relaxed">{benefit.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -442,18 +337,53 @@ export default function DigitalTransformation() {
               tailored strategies for different business challenges.
             </p>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
-              <motion.div
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
+            {industries.map((industry, index)   => (
+              <motion.div 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-orange-500/30 transition-all duration-200"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-white" />
+                <div className="text-zion-cyan font-semibold">{industry}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Process Section */}
+      <section className="py-20 bg-zion-slate-dark/30">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Our Transformation Process
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              A proven methodology that ensures successful digital transformation outcomes.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md: anygrid-cols-4 gap-8">
+            {[
+              { step: '01', title: 'Assessment', description: 'Evaluate current state and identify transformation opportunities' },
+              { step: '02', title: 'Strategy', description: 'Develop comprehensive digital transformation roadmap' },
+              { step: '03', title: 'Implementation', description: 'Execute transformation plan with expert guidance' },
+              { step: '04', title: 'Optimization', description: 'Continuously improve and scale digital capabilities' }
+            ].map((phase, index)   => (
+              <motion.div 
+                key={index}
+                className="text-center"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
+                  {phase.step}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>
                 <p className="text-gray-300 text-sm">{useCase.description}</p>

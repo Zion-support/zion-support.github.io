@@ -1,4 +1,4 @@
-export type AdvancedMicroSaasService = {
+export interface AdvancedMicroSaasService {
 
   id: string;
   title: string;
@@ -22,7 +22,9 @@ contactInfo: {
     phone: string;
     email: string;
     website: string;
-    address: string};
+    address: string;
+  
+};
   technicalSpecs: {
     technology: string[];
     integrations: string[];

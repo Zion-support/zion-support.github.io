@@ -1,4 +1,7 @@
-interface AlertProps {
+import React from 'react';
+
+interface AlertProps extends React.PropsWithChildren<{}> {
+
   children: React.ReactNode;
   className?: string;
   variant?: 'default' | 'destructive' | 'success' | 'warning';

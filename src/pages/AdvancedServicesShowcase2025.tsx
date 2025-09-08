@@ -1,103 +1,41 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Star, CheckCircle, Clock, Users, TrendingUp, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-import { advancedRealServices2025 } from '../data/2025-advanced-real-services-expansion';
-import { specializedITServices2025 } from '../data/2025-specialized-it-ai-services';
-import SEOHead from '../components/SEOHead';
-const AdvancedServicesShowcase2025 = () => {
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [searchTerm, setSearchTerm] = useState('');
-    const [sortBy, setSortBy] = useState('name');
-    // Combine all services
-    const allServices = [...advancedRealServices2025, ...specializedITServices2025];
-    const categories = [
-        'all',
-        'AI & Machine Learning',
-        'Cybersecurity',
-        'Healthcare Technology',
-        'Blockchain & Supply Chain',
-        'Financial Technology',
-        'Edge Computing & IoT',
-        'Marketing Technology',
-        'Quantum Computing',
-        'Human Resources Technology',
-        'Energy & Sustainability',
-        'Legal Technology',
-        'Neuromorphic Computing',
-        'Privacy AI',
-        'AI Governance',
-        'DevOps & Automation',
-        'Data Quality & Analytics',
-        'API Management',
-        'Network Security'
-    ];
-    const filteredServices = allServices
-        .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
-        .filter(service => service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.tagline.toLowerCase().includes(searchTerm.toLowerCase()))
-        .sort((a, b) => {
-        switch (sortBy) {
-            case 'price':
-                return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
-            case 'rating':
-                return b.rating - a.rating;
-            case 'category':
-                return a.category.localeCompare(b.category);
-            case 'name':
-            default:
-                return a.name.localeCompare(b.name);
-        }
-    });
-    const getCategoryIcon = (category) => {
-        const icons = {
-            'AI & Machine Learning': '🤖',
-            'Cybersecurity': '🔐',
-            'Healthcare Technology': '🏥',
-            'Blockchain & Supply Chain': '⛓️',
-            'Financial Technology': '💰',
-            'Edge Computing & IoT': '🌐',
-            'Marketing Technology': '📢',
-            'Quantum Computing': '🔮',
-            'Human Resources Technology': '👥',
-            'Energy & Sustainability': '🌱',
-            'Legal Technology': '⚖️',
-            'Neuromorphic Computing': '🧠',
-            'Privacy AI': '🔒',
-            'AI Governance': '⚖️',
-            'DevOps & Automation': '⚡',
-            'Data Quality & Analytics': '📊',
-            'API Management': '🔌',
-            'Network Security': '🛡️'
-        };
-        return icons[category] || '🚀';
-    };
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1
-            }
-        }
-    };
-    const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.5
-            }
-        }
-    };
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-      <SEOHead config={{
-            title: "Advanced Real Services Showcase 2025 | Zion Tech Group",
-            description: "Discover our comprehensive collection of 20+ advanced real micro SAAS, IT, and AI services. Market-ready solutions with proven ROI and competitive pricing.",
-            keywords: "advanced services, micro SAAS, AI services, IT solutions, real services, enterprise solutions, Zion Tech Group"
-        }}/>
+import { SEO  } from '../components/SEO';
+import { ADVANCED_MICRO_SAAS_SERVICES_2025  } from '../data/advancedMicroSaasServices2025';
+import { SPECIALIZED_IT_SERVICES_2025  } from '../data/specializedITServices2025';
+import { ADVANCED_AI_SERVICES_2025  } from '../data/advancedAIServices2025';
 
+const AdvancedServicesShowcase2025: React.FC = (): JSX.Element => {
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [searchTerm, setSearchTerm] = useState<any>('');
+
+  const allServices = [
+    ...ADVANCED_MICRO_SAAS_SERVICES_2025.map(service => ({ ...service, source: any'Micro SaaS' })),
+    ...SPECIALIZED_IT_SERVICES_2025.map(service  => ({ ...service, source: any'IT Services' })),
+    ...ADVANCED_AI_SERVICES_2025.map(service  => ({ ...service, source: 'AI Solutions' }))
+  ];
+
+  const filteredServices = allServices.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.source === selectedCategory;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    return matchesCategory && matchesSearch;
+  });
+
+  const categories = [
+    { id: 'all', name: 'All Services', count: allServices.length },
+    { id: 'Micro SaaS', name: 'Micro SaaS', count: ADVANCED_MICRO_SAAS_SERVICES_2025.length },
+    { id: 'IT Services', name: 'IT Services', count: SPECIALIZED_IT_SERVICES_2025.length },
+    { id: 'AI Solutions', name: 'AI Solutions', count: ADVANCED_AI_SERVICES_2025.length }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Advanced Services Showcase 2025 - Zion Tech Group"
+        description="Explore our comprehensive portfolio of advanced micro SaaS, IT services, and AI solutions designed for the future of business technology."
+      />
+      
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -181,23 +119,54 @@ const AdvancedServicesShowcase2025 = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="px-4 sm:px-6 lg:px-8 pb-20">
-        <div className="max-w-7xl mx-auto">
-          <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" variants={containerVariants} initial="hidden" animate="visible">
-            {filteredServices.map((service) => (<motion.div key={service.id} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-blue-500/50 transition-all duration-300 hover:scale-105" variants={itemVariants}>
-                {/* Service Header */}
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center space-x-3">
-                    <span className="text-3xl">{service.icon}</span>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white">{service.name}</h3>
-                      <p className="text-sm text-gray-400">{service.category}</p>
-                    </div>
-                  </div>
-                  {service.popular && (<div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full flex items-center space-x-1">
-                      <Star className="w-3 h-3"/>
-                      <span>Popular</span>
-                    </div>)}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map((service)  => (
+            <div key={service.id} className="bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-colors duration-200">
+              <div className="flex items-start justify-between mb-4">
+                <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                  service.source === 'Micro SaaS' ? 'bg-blue-100 text-blue-800' :
+                  service.source === 'IT Services' ? 'bg-green-100 text-green-800' :
+                  'bg-purple-100 text-purple-800'
+                }`}>
+                  {service.source}
+                </span>
+                <span className="text-2xl font-bold text-white">
+                  {service.currency}{service.price.toLocaleString()}
+                </span>
+              </div>
+
+              <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+              <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
+
+              <div className="mb-4">
+                <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Features:</h4>
+                <ul className="space-y-1">
+                  {service.features.slice(0, 3).map((feature, index) => (
+                    <li key={index} className="text-sm text-gray-300 flex items-center gap-2">
+                      <span className="text-green-400">✓</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="mb-4">
+                <h4 className="text-sm font-semibold text-gray-400 mb-2">Benefits:</h4>
+                <ul className="space-y-1">
+                  {service.benefits.slice(0, 2).map((benefit, index) => (
+                    <li key={index} className="text-sm text-gray-300 flex items-center gap-2">
+                      <span className="text-blue-400">→</span>
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="mb-4">
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-gray-400">Market Price:</span>
+                  <span className="text-white font-medium">{service.marketPrice}</span>
                 </div>
 
                 {/* Tagline */}

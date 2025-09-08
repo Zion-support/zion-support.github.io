@@ -5,12 +5,16 @@ import { ProductListing } from "@/types/listings";
 
 export type ServiceContact = {
 
+export interface ServiceContact {
+
   phone: string;
   email: string;
   website: string;
-  address: string}
+  address: string;
 
-export type MicroSaasService = {
+}
+
+export interface MicroSaasService {
 
   id: number;
   name: string;
@@ -37,7 +41,9 @@ export type MicroSaasService = {
   growthRate: string;
   useCases: string[];
   technologies: string[];
-  compliance: string[]}
+  compliance: string[];
+
+}
 
 // Zion Tech Group Contact Information
 const zionContact: ServiceContact = {

@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect  } from 'react.ts';
 
-type User = {
+interface User {
 
   id: string;
   email: string;
@@ -9,16 +9,18 @@ type User = {
   userType?: string;
   displayName?: string;
   avatarUrl?: string;
+
 }
 
-type AuthState = {
+interface AuthState {
 
   user: User | null;
   isAuthenticated: boolean;
   isLoading: boolean;
+
 }
 
-export function useAuth(...args: any[]) {
+export function useAuth(...args: any[]): any {
   const [authState, setAuthState] = useState<any>({
     user: null,
     isAuthenticated: false,
@@ -28,7 +30,7 @@ export function useAuth() {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
+  useEffect(()  => {
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
     const checkAuth = () => {
       const storedUser = localStorage.getItem('zion_user');
@@ -41,7 +43,7 @@ export function useAuth() {
             isLoading: false,
           });
         } catch (error) {
-          // console.error('Error parsing stored user:', error);
+          // // // console.error('Error parsing stored user:', error);
           setAuthState({
             user: null,
             isAuthenticated: false,
@@ -60,8 +62,8 @@ export function useAuth() {
     checkAuth();
   }, []);
 
-  const login = async (email: string, password: string) => {
-    // Implement actual login logic here
+  const login = async (email: string, _password: string)  => {
+    // In a real app, you would make an API call to your backend
     const mockUser: User = {
       id: '1',
       email,
@@ -97,7 +99,7 @@ export function useAuth() {
     localStorage.removeItem('authToken');
   };
 
-  const register = async (email: string, password: string, name: string) => {
+  const register = async (email: string, password: string, name: string)  => {
     // Implement actual registration logic here
     const mockUser: User = {
       id: '1',

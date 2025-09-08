@@ -1,29 +1,45 @@
 import React, { useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { Alert, AlertDescription } from './ui/alert';
-
-
-// Simple Progress component
-const Progress: React.FC<{ value: number; className?: string }> = ({ value, className = "" }) => (
-  <div className={`w-full bg-gray-200 rounded-full h-2 ${className}`}>
-    <div 
-      className="bg-blue-600 h-2 rounded-full transition-all duration-300" 
-      style={{ width: `${Math.min(100, Math.max(0, value))}%` }}
-    />
-  </div>
-);
 
 interface PerformanceMetrics {
+
+
 
   fcp: number;
   lcp: number;
   fid: number;
   cls: number;
   ttfb: number;
-  {/* Removed stray closing brace */}
+
+
+
+}
+
+export const PerformanceOptimizer: React.FC = (): JSX.Element => {
+  const observerRef = useRef<IntersectionObserver | null>(null);
+  const performanceDataRef = useRef<PerformanceMetrics>({
+    fcp: 0,
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    ttfb: 0
+  });
+
+  // Intersection Observer for lazy loading
+  const setupIntersectionObserver = useCallback(() => {
+    if (typeof IntersectionObserver === 'undefined') return;
+
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const target = entry.target as HTMLElement;
+            
+            // Lazy load images
+            if (target.tagName === 'IMG' && target.dataset.src) {
+              target.src = target.dataset.src;
+              target.classList.remove('lazy');
+              observerRef.current?.unobserve(target);
+            }
 
             // Lazy load background images
             if (target.dataset.bgSrc) {
@@ -102,135 +118,69 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       }));
     }, 2000);
 
-    return () => clearInterval(interval);
-  }, []);
+    // First Contentful Paint
+    const fcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.name === 'first-contentful-paint') {
+          performanceDataRef.current.fcp = entry.startTime;
+          // // // console.log('FCP:', entry.startTime);
+        }
+      });
+    });
+    fcpObserver.observe({ entryTypes: ['paint'] });
 
-  const stopMonitoring = useCallback(() => {
-    setIsMonitoring(false);
-  }, []);
-
-  // Generate optimization suggestions
-  useEffect(() => {
-    if (!enabled || typeof window === 'undefined') return;
-
-    const initPerformanceMonitoring = () => {
-      setIsMonitoring(true);
-      navigationStartRef.current = performance.now();
-
-      // Monitor Core Web Vitals
-      if ('PerformanceObserver' in window) {
-        try {
-          // First Contentful Paint
-          observerRef.current = new PerformanceObserver((list) => {
-            const entries = list.getEntries();
-            entries.forEach((entry) => {
-              if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
-                const fcp = entry.startTime;
-                setMetrics(prev => prev ? { ...prev, firstContentfulPaint: fcp } : null);
-                
-                if (logMetrics) {
-                  // // // // // console.log('First Contentful Paint:', fcp, 'ms')}
-                
-                if (fcp > threshold.firstContentfulPaint) {
-                  // // // // // console.warn(`FCP (${fcp}ms) exceeds threshold (${threshold.firstContentfulPaint}ms)`)}
-              }
-            })});
-          observerRef.current.observe({ entryTypes['paint'] });
-
-          // Largest Contentful Paint
-          const lcpObserver = new PerformanceObserver((list) => {
-            const entries = list.getEntries();
-            const lastEntry = entries[entries.length - 1];
-            if (lastEntry) {
-              const lcp = lastEntry.startTime;
-              setMetrics(prev => prev ? { ...prev, largestContentfulPaint: lcp } : null);
-              
-              if (logMetrics) {
-                // // // // // console.log('Largest Contentful Paint:', lcp, 'ms')}
-              
-              if (lcp > threshold.largestContentfulPaint) {
-                // // // // // console.warn(`LCP (${lcp}ms) exceeds threshold (${threshold.largestContentfulPaint}ms)`)}
-            }
-          });
-          lcpObserver.observe({ entryTypes['largest-contentful-paint'] });
-
-          // Cumulative Layout Shift
-          const clsObserver = new PerformanceObserver((list) => {
-            let clsValue = 0;
-            const entries = list.getEntries();
-            entries.forEach((entry)  => {
-              if (!entry.hadRecentInput) {
-                clsValue += entry.value}
-            });
-            
-            setMetrics(prev => prev ? { ...prev, cumulativeLayoutShift: clsValue } : null);
-            
-            if (logMetrics) {
-              // // // // // console.log('Cumulative Layout Shift:', clsValue)}
-            
-            if (clsValue > threshold.cumulativeLayoutShift) {
-              // // // // // console.warn(`CLS (${clsValue}) exceeds threshold (${threshold.cumulativeLayoutShift})`)}
-          });
-          clsObserver.observe({ entryTypes['layout-shift'] });
-
-          // First Input Delay
-          const fidObserver = new PerformanceObserver((list) => {
-            const entries = list.getEntries();
-            entries.forEach((entry)  => {
-              const fid = entry.processingStart - entry.startTime;
-              setMetrics(prev => prev ? { ...prev, firstInputDelay: fid } : null);
-              
-              if (logMetrics) {
-                // // // // // console.log('First Input Delay:', fid, 'ms')}
-              
-              if (fid > threshold.firstInputDelay) {
-                // // // // // console.warn(`FID (${fid}ms) exceeds threshold (${threshold.firstInputDelay}ms)`)}
-            })});
-          fidObserver.observe({ entryTypes['first-input'] })} catch (error) {
-          // // // // // console.warn('Performance monitoring initialization failed:', error)}
+    // Largest Contentful Paint
+    const lcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      if (lastEntry) {
+        performanceDataRef.current.lcp = lastEntry.startTime;
+        // // // console.log('LCP:', lastEntry.startTime);
       }
 
-      // Monitor page load events
-      const handleLoad = () => {
-        const loadTime = performance.now() - navigationStartRef.current;
-        const domContentLoaded = performance.timing?.domContentLoadedEventEnd - performance.timing?.navigationStart || 0;
-        const windowLoad = performance.timing?.loadEventEnd - performance.timing?.navigationStart || 0;
+    // First Input Delay
+    const fidObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        performanceDataRef.current.fid = entry.processingStart - entry.startTime;
+        // // // console.log('FID:', entry.processingStart - entry.startTime);
+      });
+    });
+    fidObserver.observe({ entryTypes: ['first-input'] });
 
     // Cumulative Layout Shift
     const clsObserver = new PerformanceObserver((list) => {
       let clsValue = 0;
       const entries = list.getEntries();
-      entries.forEach((entry: )  => {
+      entries.forEach((entry: any)    => {
         if (!entry.hadRecentInput) {
           clsValue += entry.value;
         }
       });
       performanceDataRef.current.cls = clsValue;
-      console.log('CLS:', clsValue);
+      // // // console.log('CLS:', clsValue);
     });
     clsObserver.observe({ entryTypes: ['layout-shift'] });
 
-        if (logMetrics) {
-          // // // // // console.log('Page Load Time:', loadTime, 'ms');
-          // // // // // console.log('DOM Content Loaded:', domContentLoaded, 'ms');
-          // // // // // console.log('Window Load:', windowLoad, 'ms')}
+    // Time to First Byte
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (navigationEntry) {
+      performanceDataRef.current.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
+      // // // console.log('TTFB:', navigationEntry.responseStart - navigationEntry.requestStart);
+    }
+  }, []);
 
         if (loadTime > threshold.pageLoadTime) {
           // // // // // console.warn(`Page load time (${loadTime}ms) exceeds threshold (${threshold.pageLoadTime}ms)`)}
 
-        // Send metrics to analytics
-        if (sendToAnalytics) {
-          sendMetricsToAnalytics({
-            pageLoadTime: loadTime,
-            firstContentfulPaint: metrics?.firstContentfulPaint || 0,
-            largestContentfulPaint: metrics?.largestContentfulPaint || 0,
-            cumulativeLayoutShift: metrics?.cumulativeLayoutShift || 0,
-            firstInputDelay: metrics?.firstInputDelay || 0,
-            domContentLoaded,
-            windowLoad,
-            timeToInteractive: loadTime,
-          })}
-      };
+    domains.forEach(domain    => {
+      const link = document.createElement('link');
+      link.rel = 'preconnect';
+      link.href = domain;
+      link.crossOrigin = 'anonymous';
+      document.head.appendChild(link);
+    });
 
       // Use both load event and performance timing
       if (document.readyState === 'complete') {
@@ -386,12 +336,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   );
 
   // Debounce utility function
-  function debounce<T extends (...args: [])  => any>(
+  function debounce<T extends (...args: any[])    => any>(
     func: anyT,
     wait: number
-  ): (...args: Parameters<T>)  => void {
+  ): (...args: Parameters<T>)    => void {
     let timeout: anyNodeJS.Timeout;
-    return (...args: Parameters<T>)  => {
+    return (...args: Parameters<T>)    => {
       clearTimeout(timeout);
       timeout = setTimeout(() => func(...args), wait);
     };
@@ -402,38 +352,32 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     if ('serviceWorker' in navigator) {
       try {
         const registration = await navigator.serviceWorker.register('/sw.js');
-        console.log('SW registered: ', registration);
+        // // // console.log('SW registered: any', registration);
       } catch (registrationError) {
-        console.log('SW registration failed: ', registrationError);
+        // // // console.log('SW registration failed: ', registrationError);
       }
     }
   }, []);
 
-      // Send to custom analytics endpoint
-      fetch('/api/analytics/performance', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          url: location.pathname,
-          timestamp: new Date().toISOString(),
-          metrics,
-          score: calculatePerformanceScore(metrics),
-          userAgent: navigator.userAgent,
-        }),
-      }).catch(()  => {
-        // Silently fail if analytics endpoint is not available
-      })} catch (error) {
-      // // // // // console.warn('Failed to send performance metrics:', error)}
-  }, [location.pathname, calculatePerformanceScore]);
+  // Initialize performance optimizations
+  useEffect(()    => {
+    setupIntersectionObserver();
+    measurePerformance();
+    optimizeResourceHints();
+    optimizeImages();
+    registerServiceWorker();
 
   // Don't render thing visible
   return null};
 
-// Hook for accessing performance metrics
-export const usePerformanceMetrics[, React.Dispatch<React.SetStateAction<any>>] = () => {
-  const [metrics, setMetrics] = useState<any>(null);
+    // Cleanup
+    return ()    => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+      window.removeEventListener('scroll', debouncedScrollHandler);
+    };
+  }, [setupIntersectionObserver, measurePerformance, optimizeResourceHints, optimizeImages, registerServiceWorker, debouncedScrollHandler]);
 
   useEffect(() => {
     const updateMetrics = () => {
@@ -451,6 +395,43 @@ export const usePerformanceMetrics[, React.Dispatch<React.SetStateAction<any>>] 
             windowLoad: navigation.loadEventEnd - navigation.startTime,
           })}
       }
+      
+      .lazy.loaded {
+        opacity: 1;
+      }
+      
+      .lazy-bg {
+        background-image: none !important;
+      }
+      
+      .lazy-bg.loaded {
+        background-image: inherit !important;
+      }
+      
+      [data-animate-on-scroll] {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      
+      [data-animate-on-scroll].animate-in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      /* Performance-focused animations */
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
+    return ()    => {
+      document.head.removeChild(style);
     };
 
     updateMetrics();

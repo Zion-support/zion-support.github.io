@@ -1,6 +1,20 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Brain, GitFork, Shield, Atom, Cpu, Cloud, Zap, ArrowRight, Star, CheckCircle } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion    } from 'framer-motion';
+import { Link    } from 'react-router-dom';
+import { Brain, 
+  Shield, 
+  Cloud, 
+  Database, 
+  Globe, 
+  Zap, 
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Users,
+  Clock,
+  CheckCircle,
+  Search
+   } from 'lucide-react';
 
 export const EnhancedServicesShowcase: React.FC = () => {
   const services = [
@@ -78,15 +92,23 @@ export const EnhancedServicesShowcase: React.FC = () => {
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
+
+
+  id: string;
+  title: string;
+  description: string;
+  icon: React.ComponentType<any>;
+  gradient: string;
+  features: string[];
+  price: string;
+  roi: string;
+  marketSize: string;
+  path: string;
+  category: string;
+
+
+
+}
 
 const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, index }) => (
   <motion.div
@@ -392,33 +414,73 @@ export default function EnhancedServicesShowcase(...args[]):  {
           ))}
         </motion.div>
 
-        {/* Bottom CTA */}
-        <motion.div 
-          className="text-center mt-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          <div className="inline-flex items-center space-x-4">
-            <Link 
-              to="/services"
-              className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-            >
-              View All Services
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-            <a 
-              href="tel:+13024640950"
-              className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-            >
-              Call +1 302 464 0950
-            </a>
-          </div>
-          <div className="mt-6 text-zion-slate-light">
-            Questions? Email <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:underline">kleber@ziontechgroup.com</a>
-          </div>
-        </motion.div>
+        {/* Search */}
+        <div className="relative mb-8 text-center">
+          <input
+            type="text"
+            placeholder="Search services..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-64 px-4 py-2 bg-zion-slate-dark/50 border border-zion-slate/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
+          />
+          <Search className="absolute right-3 top-2.5 w-5 h-5 text-zion-slate-light" />
+        </div>
+
+        {/* Services Grid */}
+        <div className="max-w-7xl mx-auto">
+          {filteredServices.length > 0 ? (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredServices.map((service, index)    => (
+                <ServiceCard key={service.id} service={service} index={index} />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-16">
+              <div className="text-zion-slate-light text-lg">No services found matching your criteria.</div>
+              <button
+                onClick={() => {
+                  setSelectedCategory('All');
+                  setSearchTerm('');
+                }}
+                className="mt-4 text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
+              >
+                Clear filters
+              </button>
+            </div>
+          )}
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center mt-20">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="bg-gradient-to-r from-zion-slate-dark/80 to-zion-slate/80 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 max-w-4xl mx-auto"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
+              Our team of experts is ready to help you implement these cutting-edge solutions and drive innovation in your organization.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-semibold hover:from-zion-cyan/90 hover:to-zion-blue/90 transition-all duration-300 flex items-center justify-center"
+              >
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to="/about"
+                className="border border-zion-cyan/30 text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan/10 transition-all duration-300"
+              >
+                Learn More About Us
+              </Link>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

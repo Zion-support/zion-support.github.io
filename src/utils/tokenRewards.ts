@@ -1,7 +1,7 @@
 
 import { apiClient } from './apiClient';
 
-export async function rewardOnboarding(userId: string) {
+export async function rewardOnboarding(...args: any[]): any {
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -9,11 +9,7 @@ export async function rewardOnboarding(userId: string) {
   });
   {/* Removed stray closing brace */}
 
-export async function earnTokensForPurchase(
-  userId: string,
-  purchaseAmount: number,
-  purchaseType: string,
-): Promise<void> {
+export async function rewardReferral(...args: any[]): any {
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -21,10 +17,7 @@ export async function earnTokensForPurchase(
   });
   {/* Removed stray closing brace */}
 
-export async function earnTokensForReferral(
-  userId: string,
-  referredUserId: string,
-): Promise<void> {
+export async function rewardFiveStarReview(...args: any[]): any {
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },

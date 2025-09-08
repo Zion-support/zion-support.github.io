@@ -1,9 +1,28 @@
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { Brain, Shield, TrendingUp, Zap, CheckCircle, Phone, Mail, Globe, Users, BarChart3, FileText, Heart, DollarSign, Truck } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { SEO  } from '@/components/SEO';
+import { Brain, 
+  Shield, 
+  Activity, 
+  TrendingUp, 
+  Zap, 
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  Globe,
+  Users,
+  BarChart3,
+  Lock,
+  FileText,
+  Heart,
+  DollarSign,
+  Truck,
+  Target
+ } from 'lucide-react';
+import { Link  } from 'react-router-dom';
 
-export default function ComprehensiveAIServicesShowcase2025() {
+export default function ComprehensiveAIServicesShowcase2025(...args: any[]): any {
   const aiServices = [
     {
       icon: FileText,
@@ -169,8 +188,8 @@ export default function ComprehensiveAIServicesShowcase2025() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {aiServices.map((service, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {aiServices.map((service, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -236,8 +255,8 @@ export default function ComprehensiveAIServicesShowcase2025() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {industrySolutions.map((solution, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {industrySolutions.map((solution, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -274,8 +293,8 @@ export default function ComprehensiveAIServicesShowcase2025() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {advancedTechnologies.map((tech, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+              {advancedTechnologies.map((tech, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}

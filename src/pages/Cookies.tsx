@@ -1,51 +1,18 @@
-// Removed unused: import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Cookie, 
   Shield, 
   Cookie, 
   Settings, 
   Eye, 
-  EyeOff, 
-  Check, 
-  X, 
-  Info, 
-  AlertTriangle,
-  Lock,
-  Database,
-  Globe,
-  User,
-  Bell,
-  BarChart3,
-  Target,
-  Zap,
-  Heart,
-  Star,
-  Award,
-  TrendingUp,
-  Lightbulb,
-  Rocket,
-  Crown,
-  Sparkles,
-  ArrowRight,
-  ChevronDown} from 'lucide-react';
+  CheckCircle,
+  XCircle,
+  Info
+ } from 'lucide-react';
+import { SEO  } from '@/components/SEO';
 
-const Cookies = () => {
-  const [expandedSections, setExpandedSections] = useState({
-    essential: true,
-    functional: false,
-    analytics: false,
-    marketing: false,
-    preferences: false
-  });
-
-  const toggleSection = (section) => {
-    setExpandedSections(prev => ({
-      ...prev,
-      [section]: !prev[section]
-    }));
-  };
-
-  const cookieCategories = [
+const Cookies: React.FC = (): JSX.Element => {
+  const cookieTypes = [
     {
       id: 'essential',
       name: 'Essential Cookies',
@@ -275,9 +242,102 @@ export default function Cookies() {}
                   )}
                 </div>
               </div>
-            </motion.div>
-          ))}
-        </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Cookie Types */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+              Types of Cookies We Use
+            </h2>
+            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+              {cookieTypes.map((cookieType, index)  => (
+                <motion.div
+                  key={cookieType.type}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-slate-800/50 rounded-xl p-8 border border-slate-700 hover:border-slate-600 transition-all duration-300"
+                >
+                  <div className="flex items-center justify-between mb-6">
+                    <div className={`w-16 h-16 bg-gradient-to-r ${cookieType.color} rounded-xl flex items-center justify-center`}>
+                      <cookieType.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <div className={`px-3 py-1 rounded-full text-xs font-medium ${
+                      cookieType.necessary 
+                        ? 'bg-green-600/20 text-green-400 border border-green-600/30' 
+                        : 'bg-blue-600/20 text-blue-400 border border-blue-600/30'
+                    }`}>
+                      {cookieType.necessary ? 'Necessary' : 'Optional'}
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-white mb-4">{cookieType.type}</h3>
+                  <p className="text-gray-300 mb-6">{cookieType.description}</p>
+                  
+                  <div className="space-y-2">
+                    <h4 className="text-sm font-semibold text-gray-400">Examples:</h4>
+                    <ul className="space-y-1">
+                      {cookieType.examples.map((example, idx) => (
+                        <li key={idx} className="text-sm text-gray-300 flex items-center">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          {example}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Cookie Table */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+              Specific Cookies We Use
+            </h2>
+            <div className="bg-slate-800/50 rounded-xl border border-slate-700 overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="bg-slate-700/50">
+                    <tr>
+                      <th className="px-6 py-4 text-left text-sm font-semibold text-white">Cookie Name</th>
+                      <th className="px-6 py-4 text-left text-sm font-semibold text-white">Purpose</th>
+                      <th className="px-6 py-4 text-left text-sm font-semibold text-white">Duration</th>
+                      <th className="px-6 py-4 text-left text-sm font-semibold text-white">Type</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-700">
+                    {cookieTable.map((cookie, index) => (
+                      <tr key={index} className="hover:bg-slate-700/30 transition-colors">
+                        <td className="px-6 py-4 text-sm text-gray-300 font-mono">{cookie.name}</td>
+                        <td className="px-6 py-4 text-sm text-gray-300">{cookie.purpose}</td>
+                        <td className="px-6 py-4 text-sm text-gray-300">{cookie.duration}</td>
+                        <td className="px-6 py-4">
+                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                            cookie.type === 'Essential' 
+                              ? 'bg-green-600/20 text-green-400 border border-green-600/30'
+                              : cookie.type === 'Performance'
+                              ? 'bg-blue-600/20 text-blue-400 border border-blue-600/30'
+                              : cookie.type === 'Functional'
+                              ? 'bg-emerald-600/20 text-emerald-400 border border-emerald-600/30'
+                              : 'bg-purple-600/20 text-purple-400 border border-purple-600/30'
+                          }`}>
+                            {cookie.type}
+                          </span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Cookie Management */}
         <div className="mt-12 bg-white/10 backdrop-blur-lg rounded-2xl p-8">

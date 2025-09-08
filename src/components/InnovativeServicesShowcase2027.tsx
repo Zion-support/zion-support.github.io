@@ -1,7 +1,28 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Brain, Atom, Rocket, Shield, Dna, Microscope, Cpu, Eye, TrendingUp, Star, ArrowRight, ChevronDown, ChevronUp, ExternalLink, Phone, Mail, MapPin } from 'lucide-react';
-import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from '../data/innovativeServices2027';
+import { motion, AnimatePresence    } from 'framer-motion';
+import { Brain, 
+  Atom, 
+  Rocket, 
+  Shield, 
+  Dna, 
+  Microscope,
+  Cpu,
+  Zap,
+  Globe,
+  Lock,
+  Eye,
+  Network,
+  TrendingUp,
+  Star,
+  ArrowRight,
+  ChevronDown,
+  ChevronUp,
+  ExternalLink,
+  Phone,
+  Mail,
+  MapPin
+   } from 'lucide-react';
+import { innovativeServices2027, serviceCategories2027, getServicesByCategory    } from '../data/innovativeServices2027';
 
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
   'AI & Consciousness': Brain,
@@ -60,7 +81,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
     ? innovativeServices2027 
     : getServicesByCategory(selectedCategory);
 
-  const toggleServiceExpansion = (serviceId: string) => {
+  const toggleServiceExpansion = (serviceId: string)    => {
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
 
@@ -124,7 +145,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
             >
               All Categories
             </button>
-            {serviceCategories2027.map((category) => {
+            {serviceCategories2027.map((category)    => {
               const Icon = categoryIcons[category];
               return (
                 <button
@@ -151,7 +172,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {filteredServices.map((service, index) => (
+          {filteredServices.map((service, index)    => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}

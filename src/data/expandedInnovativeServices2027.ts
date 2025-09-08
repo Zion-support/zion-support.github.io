@@ -1,7 +1,7 @@
 // Expanded Innovative Services 2027 - Zion Tech Group
 // Additional Micro SAAS, IT Infrastructure, and AI Services
 
-export type ExpandedService2027 = {
+export interface ExpandedService2027 {
 
   id: string;
   name: string;
@@ -12,16 +12,17 @@ export type ExpandedService2027 = {
   benefits: string[];
   useCases: string[];
   targetAudience: string[];
-  pricing: {
+pricing: {
     model: string;
     basePrice: number;
     currency: string;
-    pricingTiers: {
+pricingTiers: {
       starter: number;
       professional: number;
       enterprise: number;
       custom: string;
-    };
+    
+};
     freeTier: boolean;
     trialPeriod: string;
   };
@@ -1072,7 +1073,7 @@ export const EXPANDED_SERVICE_CATEGORIES = [
 ];
 
 // Helper function to get services by category
-export const getExpandedServicesByCategory = (category: string): ExpandedService2027[] => {
+export const getExpandedServicesByCategory = (category: string): ExpandedService2027[]  => {
   if (category === 'All') {
     return ALL_EXPANDED_SERVICES_2027;
   }
@@ -1080,12 +1081,12 @@ export const getExpandedServicesByCategory = (category: string): ExpandedService
 };
 
 // Helper function to get services by subcategory
-export const getExpandedServicesBySubcategory = (subcategory: string): ExpandedService2027[] => {
+export const getExpandedServicesBySubcategory = (subcategory: string): ExpandedService2027[]  => {
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory);
 };
 
 // Helper function to search services
-export const searchExpandedServices = (query: string): ExpandedService2027[] => {
+export const searchExpandedServices = (query: string): ExpandedService2027[]  => {
   const lowercaseQuery = query.toLowerCase();
   return ALL_EXPANDED_SERVICES_2027.filter(service => 
     service.name.toLowerCase().includes(lowercaseQuery) ||

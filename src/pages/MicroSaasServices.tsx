@@ -1,5 +1,6 @@
-import { Helmet } from 'react-helmet-async';
-const MicroSaasServices: React.FC = () => {
+import React from 'react';
+import { Helmet   } from 'react-helmet-async';
+const MicroSaasServices: React.FC = (): JSX.Element => {
 	return (
   {/* Empty JSX fragment */}
 			<Helmet>

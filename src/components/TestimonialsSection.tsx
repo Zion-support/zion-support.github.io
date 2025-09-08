@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';import { Quote, Star } from 'lucide-react';
+import { motion, AnimatePresence    } from 'framer-motion';
+import { Quote, Star, ChevronLeft, ChevronRight, User, Building, Globe    } from 'lucide-react';
 const testimonials = [
   {
     id: 1,
@@ -64,8 +65,8 @@ export function TestimonialsSection(...args: []):  {
             Join thousands of satisfied professionals who trust Zion for their technology needs
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+          {testimonials.map((testimonial, index)    => (
             <div 
               key={index}
               className="bg-zion-blue border border-zion-blue-light rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105 group"

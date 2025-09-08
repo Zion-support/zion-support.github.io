@@ -199,13 +199,13 @@ export const QuoteFormSection = () => {
                 
                 <div>
                   <label htmlFor="comp" className="block text-sm font-medium text-gray-700 mb-2">
-                    Comp Name
+                    Company Name
                   </label>
                   <input
                     type="text"
                     id="comp"
                     name="comp"
-                    value={formData.comp}
+                    value={formData.company}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Your Comp Inc."

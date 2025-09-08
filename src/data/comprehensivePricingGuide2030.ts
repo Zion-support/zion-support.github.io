@@ -1,43 +1,37 @@
-// Removed unused: import { ProductListing } from "@/types/listings";
-// Removed unused: import { COMPREHENSIVE_SERVICES_INDEX_2030 } from "./comprehensiveServicesIndex2030";
+import { ProductListing  } from '@/types/listings';
+import { COMPREHENSIVE_SERVICES_INDEX_2030  } from './comprehensiveServicesIndex2030';
 
 // Comprehensive Pricing Guide 2030 - Zion Tech Group
 // Complete pricing information for all services with market analysis and ROI projections
 
-export type PricingTier = {
+export interface PricingTier {
 
   name: string;
   price: number;
   currency: string;
   billing: string;
   features: string[];
-  limitations: string[];
-  bestFor: string[];
-  popular?: boolean;
+  bestFor: string;
+  setupTime: string;
+  support: string;
+
 }
 
-export type ServicePricing = {
+export interface ServicePricing {
 
   serviceId: string;
   serviceName: string;
   category: string;
   description: string;
   pricingTiers: PricingTier[];
-  marketAnalysis: {
-    averagePrice: string;
-    priceRange: string;
-    competitors: string[];
-    roi: string;
-    setupTime: string;
-    marketSize: string;
-    growthRate: string;
-  };
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-    address: string;
-  };
+  marketPrice: string;
+  competitors: string[];
+  roi: string;
+  setupTime: string;
+  paymentOptions: string[];
+  volumeDiscounts: string[];
+  enterpriseFeatures: string[];
+
 }
 
 export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
@@ -274,46 +268,24 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
   {/* Removed stray closing brace */}
 ];
 
-export const getPricingByCategory = (category: string): ServicePricing[] => {
-  return COMPREHENSIVE_PRICING_GUIDE_2030.filter(service => 
-    service.category === category
-  );
-};
-
-export const getPricingByPriceRange = (minPrice: number, maxPrice: number): ServicePricing[] => {
-  return COMPREHENSIVE_PRICING_GUIDE_2030.filter(service => {
-    const avgPrice = service.pricingTiers[1]?.price || service.pricingTiers[0]?.price;
-    return avgPrice >= minPrice && avgPrice <= maxPrice;
-  });
-};
-
-export const getPopularPricing = (): ServicePricing[] => {
-  return COMPREHENSIVE_PRICING_GUIDE_2030.filter(service => 
-    service.pricingTiers.some(tier => tier.popular)
-  );
-};
-
-export const getPricingStats = () => {
-  const totalServices = COMPREHENSIVE_PRICING_GUIDE_2030.length;
-  const totalCategories = [...new Set(COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.category))].length;
-  const avgPrice = COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service) => {
-    const avgPrice = service.pricingTiers[1]?.price || service.pricingTiers[0]?.price;
-    return sum + avgPrice;
-  }, 0) / totalServices;
-
-  return {
-    totalServices,
-    totalCategories,
-    averagePrice: Math.round(avgPrice),
-    priceRanges: {
-      low: "$5,000-10,000/month",
-      medium: "$10,000-20,000/month",
-      high: "$20,000-40,000/month"
+// Pricing Analysis and Insights
+export const PRICING_ANALYSIS_2030 = {
+  averagePrice: anyMath.round(
+    COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service)  => sum + service.basePrice, 0) / 
+    COMPREHENSIVE_PRICING_GUIDE_2030.length
+  ),
+  priceRange: any{
+    min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s  => s.basePrice)),
+    max: anyMath.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s  => s.basePrice))
+  },
+  categoryPricing: anyCOMPREHENSIVE_PRICING_GUIDE_2030.reduce((acc, service)  => {
+    if (!acc[service.category]) {
+      acc[service.category] = [];
     }
     acc[service?.category]?.push(service?.basePrice);
     return acc;
-  }, {} as Record<string, number[]>),
-  roiAnalysis: COMPREHENSIVE_PRICING_GUIDE_2030.map(service => ({
+  }, {} as Record<string, any>),
+  roiAnalysis: anyCOMPREHENSIVE_PRICING_GUIDE_2030.map(service  => ({
     serviceName: service.serviceName,
     roi: service.roi,
     setupTime: service.setupTime,

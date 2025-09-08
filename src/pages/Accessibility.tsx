@@ -1,6 +1,32 @@
-import { SEO } from '@/components/SEO';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Accessibility, 
+  Eye, 
+  Ear, 
+  Hand, 
+  Brain, 
+  CheckCircle, 
+  AlertTriangle, 
+  Info, 
+  Phone, 
+  Mail, 
+  Globe,
+  Monitor,
+  Smartphone,
+  Tablet,
+  Keyboard,
+  Mouse,
+  Headphones,
+  Volume2,
+  VolumeX,
+  Contrast,
+  Type,
+  ZoomIn,
+  ZoomOut
+ } from 'lucide-react';
+import { SEO  } from '../components/SEO';
 
-export default function Accessibility() {
+export default function Accessibility(...args: any[]): any {
   const accessibilityFeatures = [
     {
       category: 'Visual Accessibility',
@@ -212,7 +238,7 @@ export default function Accessibility() {
               <p className="text-xl text-slate-300">Comprehensive accessibility features designed for all users</p>
             </div>
             
-            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
               {accessibilityFeatures.map((category, index)  => (
                 <motion.div
                   key={index}
@@ -250,7 +276,7 @@ export default function Accessibility() {
               <p className="text-xl text-slate-300">We meet and exceed international accessibility standards</p>
             </div>
             
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
               {complianceStandards.map((standard, index)  => (
                 <motion.div
                   key={index}
@@ -284,7 +310,7 @@ export default function Accessibility() {
               <p className="text-xl text-slate-300">Compatible with a wide range of assistive technologies</p>
             </div>
             
-            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
               {assistiveTechnologies.map((tech, index)  => (
                 <motion.div
                   key={index}
@@ -327,7 +353,7 @@ export default function Accessibility() {
               <p className="text-xl text-slate-300">Use these tools to customize your experience</p>
             </div>
             
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
               {accessibilityTools.map((tool, index)  => (
                 <motion.div
                   key={index}

@@ -1,4 +1,16 @@
-import { motion } from 'framer-motion';
+import React from 'react';
+import { motion    } from 'framer-motion';
+import { Award, 
+  Users, 
+  Brain, 
+  Shield, 
+  Cloud, 
+  Zap,
+  Star,
+  CheckCircle,
+  Globe,
+  Rocket
+   } from 'lucide-react';
 
 const teamExpertise = [
   {
@@ -69,33 +81,83 @@ export function TeamExpertiseSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {teamExpertise.map((expertise, index) => (
-            <motion.div
-              key={expertise.title}
-              className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <span className="text-3xl">{expertise.icon}</span>
+        {/* Stats Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="grid grid-cols-2 md: anygrid-cols-4 gap-8 mb-16"
+        >
+          {stats.map((stat, index)    => {
+            const IconComponent = stat.icon;
+            return (
+              <div key={stat.label} className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="p-3 bg-blue-100 rounded-full">
+                    <IconComponent className="h-8 w-8 text-blue-600" />
+                  </div>
+                </div>
+                <div className="text-3xl font-bold text-gray-900 mb-2">
+                  {stat.value}
+                </div>
+                <div className="text-gray-600">{stat.label}</div>
               </div>
-              
-              <div className="text-4xl font-bold text-blue-400 mb-3 group-hover:text-blue-300 transition-colors duration-200">
-                {expertise.count}
-              </div>
-              
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">
-                {expertise.title}
-              </h3>
-              
-              <p className="text-gray-400 text-sm leading-relaxed">
-                {expertise.description}
-              </p>
-            </motion.div>
-          ))}
+            );
+          })}
+        </motion.div>
+
+        {/* Expertise Grid */}
+        <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {expertise.map((item, index)    => {
+            const IconComponent = item.icon;
+            return (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
+              >
+                <div className="flex items-center mb-6">
+                  <div className="p-3 bg-blue-100 rounded-xl mr-4">
+                    <IconComponent className="h-8 w-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">
+                    {item.title}
+                  </h3>
+                </div>
+
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  {item.description}
+                </p>
+
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-600">Experience:</span>
+                    <span className="font-semibold text-gray-900">{item.experience}</span>
+                  </div>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-600">Projects:</span>
+                    <span className="font-semibold text-gray-900">{item.projects}</span>
+                  </div>
+                </div>
+
+                <div className="mt-6">
+                  <h4 className="font-semibold text-gray-900 mb-3 text-sm">Certifications:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {item.certifications.map((cert, certIndex) => (
+                      <span
+                        key={certIndex}
+                        className="px-3 py-1 bg-blue-100 text-blue-800 text-xs rounded-full font-medium"
+                      >
+                        {cert}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
 
         <motion.div 

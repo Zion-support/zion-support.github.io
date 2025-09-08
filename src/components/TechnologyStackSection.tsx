@@ -1,4 +1,16 @@
-import { motion } from 'framer-motion';
+import React from 'react';
+import { motion    } from 'framer-motion';
+import { Code, 
+  Database, 
+  Cloud, 
+  Shield, 
+  Brain,
+  Zap,
+  Globe,
+  Server,
+  Cpu,
+  Network
+   } from 'lucide-react';
 
 const technologyCategories = [
   {
@@ -76,19 +88,24 @@ export function TechnologyStackSection() {
         </motion.div>
 
         {/* Technology Categories */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          {technologyCategories.map((category, index) => (
-            <motion.div
-              key={category.category}
-              className="bg-slate-800 border border-slate-700 rounded-xl p-6"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
-              <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
-                <div className={`w-8 h-8 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center`}>
-                  <span className="text-sm">⚡</span>
+        <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {techCategories.map((category, index)    => {
+            const IconComponent = category.icon;
+            return (
+              <motion.div
+                key={category.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gray-800 rounded-2xl p-6 hover:bg-gray-700 transition-all duration-300"
+              >
+                <div className="flex items-center mb-6">
+                  <div className={`p-3 rounded-xl bg-gradient-to-r ${category.color} mr-4`}>
+                    <IconComponent className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold">
+                    {category.title}
+                  </h3>
                 </div>
                 {category.category}
               </h3>
@@ -133,19 +150,18 @@ export function TechnologyStackSection() {
           <h3 className="text-3xl font-bold text-white text-center mb-8">
             Emerging Technologies
           </h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {emergingTech.map((tech, index) => (
-              <motion.div
-                key={tech.name}
-                className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">{tech.icon}</span>
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {emergingTech.map((tech, index)    => {
+              const IconComponent = tech.icon;
+              return (
+                <div key={tech.name} className="text-center">
+                  <div className="flex justify-center mb-4">
+                    <div className="p-3 bg-blue-600 rounded-full">
+                      <IconComponent className="h-8 w-8 text-white" />
+                    </div>
+                  </div>
+                  <h4 className="text-lg font-semibold mb-2">{tech.name}</h4>
+                  <p className="text-sm text-gray-400">{tech.status}</p>
                 </div>
                 
                 <h4 className="text-lg font-bold text-white mb-2">{tech.name}</h4>

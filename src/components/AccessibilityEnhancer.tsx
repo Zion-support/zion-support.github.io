@@ -1,9 +1,10 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Eye, Volume2, MousePointer, Keyboard, Settings, X, Plus, Minus, Contrast, Accessibility } from 'lucide-react';
+import React, { useEffect, useState, useCallback } from 'react';
+import { Eye, EyeOff, Volume2, VolumeX, Type, Palette, MousePointer, Keyboard    } from 'lucide-react';
 
 interface AccessibilitySettings {
-  fontSize: number;
+
+
+
   highContrast: boolean;
   reducedMotion: boolean;
   screenReader: boolean;
@@ -11,10 +12,8 @@ interface AccessibilitySettings {
   focusIndicator: boolean;
   {/* Removed stray closing brace */}
 
-interface AccessibilityEnhancerProps {
-  className?: string;
-  showPanel?: boolean;
-  onSettingsChange?: (settings: AccessibilitySettings) => void;
+
+
 }
 
 const DEFAULT_SETTINGS: AccessibilitySettings = {
@@ -35,7 +34,44 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   const [settings, setSettings] = useState<AccessibilitySettings>(DEFAULT_SETTINGS);
   const [activeTab, setActiveTab] = useState<'general' | 'visual' | 'navigation'>('general');
 
-const AccessibilityEnhancer: React.FC = () => {
+  // Apply accessibility settings
+  const applySettings = useCallback((newSettings: anyPartial<AccessibilitySettings>)    => {
+    const updatedSettings = { ...settings, ...newSettings };
+    setSettings(updatedSettings);
+    
+    // Apply high contrast
+    if (updatedSettings.highContrast) {
+      document.documentElement.classList.add('high-contrast');
+    } else {
+      document.documentElement.classList.remove('high-contrast');
+    }
+
+    // Apply large text
+    if (updatedSettings.largeText) {
+      document.documentElement.classList.add('large-text');
+    } else {
+      document.documentElement.classList.remove('large-text');
+    }
+
+    // Apply reduced motion
+    if (updatedSettings.reducedMotion) {
+      document.documentElement.classList.add('reduced-motion');
+    } else {
+      document.documentElement.classList.remove('reduced-motion');
+    }
+
+    // Apply focus indicator
+    if (updatedSettings.focusIndicator) {
+      document.documentElement.classList.add('focus-visible');
+    } else {
+      document.documentElement.classList.remove('focus-visible');
+    }
+
+    // Store settings in localStorage
+    localStorage.setItem('accessibility-settings', JSON.stringify(updatedSettings));
+  }, [settings]);
+
+  // Load saved settings
   useEffect(() => {
     const savedSettings = localStorage.getItem('zion-accessibility-settings');
     if (savedSettings) {
@@ -44,18 +80,23 @@ const AccessibilityEnhancer: React.FC = () => {
         setSettings({ ...DEFAULT_SETTINGS, ...parsed });
         applySettings({ ...DEFAULT_SETTINGS, ...parsed });
       } catch (error) {
-        // console.warn('Failed to parse accessibility settings:', error);
+        // // // console.warn('Failed to parse saved accessibility settings');
       }
     };
 
-    // Add focus indicators for keyboard navigation
-    const addFocusStyles = () => {
-      const style = document.createElement('style');
-      style.textContent = `
-        .focus-visible:focus {
-          outline: 2px solid #3b82f6;
-          outline-offset: 2px;
-        }
+  // Keyboard navigation support
+  useEffect(() => {
+    const handleKeyDown = (event: anyKeyboardEvent)    => {
+      // Skip if not in keyboard navigation mode
+      if (!settings.keyboardNavigation) return;
+
+      const target = event.target as HTMLElement;
+      
+      // Tab navigation enhancement
+      if (event.key === 'Tab') {
+        const focusableElements = document.querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
         
         [data-skip-to-main] {
           position: absolute;
@@ -138,10 +179,70 @@ const AccessibilityEnhancer: React.FC = () => {
     // Add event listeners
     document.addEventListener('keydown', handleKeyDown);
 
-    // Re-run enhancements when DOM changes
-    const observer = new MutationObserver(() => {
-      enhanceForms();
-      addAriaLabels();
+  // Arrow key navigation helper
+  const navigateWithArrows = (container: anyElement, direction: string)    => {
+    const focusableElements = Array.from(container.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    )).filter(el => !(el as HTMLElement).hidden);
+
+    const currentIndex = focusableElements.findIndex(el => el === document.activeElement);
+    let nextIndex = currentIndex;
+
+    switch (direction) {
+      case 'ArrowRight':
+      case 'ArrowDown':
+        nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0;
+        break;
+      case 'ArrowLeft':
+      case 'ArrowUp':
+        nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1;
+        break;
+    }
+
+    (focusableElements[nextIndex] as HTMLElement)?.focus();
+  };
+
+  // Screen reader announcements
+  const announceToScreenReader = useCallback((message: string)    => {
+    if (settings.screenReader) {
+      const announcement = document.createElement('div');
+      announcement.setAttribute('aria-live', 'polite');
+      announcement.setAttribute('aria-atomic', 'true');
+      announcement.className = 'sr-only';
+      announcement.textContent = message;
+      
+      document.body.appendChild(announcement);
+      
+      setTimeout(() => {
+        document.body.removeChild(announcement);
+      }, 1000);
+    }
+  }, [settings.screenReader]);
+
+  // Add accessibility attributes to interactive elements
+  useEffect(() => {
+    const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
+    
+    interactiveElements.forEach(element => {
+      const el = element as HTMLElement;
+      
+      // Add role if missing
+      if (el.tagName === 'BUTTON' && !el.getAttribute('role')) {
+        el.setAttribute('role', 'button');
+      }
+      
+      // Add aria-label for elements without text
+      if (!el.textContent?.trim() && !el.getAttribute('aria-label')) {
+        const title = el.getAttribute('title');
+        if (title) {
+          el.setAttribute('aria-label', title);
+        }
+      }
+      
+      // Add focus indicator
+      if (settings.focusIndicator) {
+        el.classList.add('focus-visible');
+      }
     });
 
     observer.observe(document.body, {
@@ -149,9 +250,8 @@ const AccessibilityEnhancer: React.FC = () => {
       subtree: true,
     });
 
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      observer.disconnect();
+    return ()    => {
+      document.head.removeChild(style);
     };
   }, []);
 

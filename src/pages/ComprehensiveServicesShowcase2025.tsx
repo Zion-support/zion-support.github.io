@@ -1,110 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Filter, Star, Globe, Zap, Shield, Brain, Users, TrendingUp, Award, DollarSign, CheckCircle, Rocket, Cpu, Network, BarChart3, Code, ShieldCheck, Phone, Mail, BarChart, FileText, MessageCircle, Truck, Car, Clipboard, Link, Microscope, X, Atom, Heart, Leaf } from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import React from 'react';
+import { SEO  } from '../components/SEO';
+import { servicesCatalog  } from '../data/servicesCatalog';
+import { MICRO_SAAS_SERVICES  } from '../data/microSaasServices';
 
-interface ServiceContact {
-  mobile: string;
-  email: string;
-  address: string;
-  website: string;
-}
-
-const ComprehensiveServicesShowcase2025: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedIndustry, setSelectedIndustry] = useState<string>('all');
-
-  const allServices = [...CUTTING_EDGE_SERVICES_2025, ...SPECIALIZED_INDUSTRY_SOLUTIONS_2025];
-  
-  const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
-  const industries = ['all', ...Array.from(new Set(SPECIALIZED_INDUSTRY_SOLUTIONS_2025.map(service => service.industry)))];
-
-  // Filter services based on selection
-  const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesIndustry = selectedIndustry === 'all' || 
-      ('industry' in service ? service.industry === selectedIndustry : true);
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    
-    return matchesCategory && matchesIndustry && matchesSearch;
-  });
-
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price-low':
-        return a.price - b.price;
-      case 'price-high':
-        return b.price - a.price;
-      case 'name':
-        return a.title.localeCompare(b.title);
-      case 'innovation':
-        const innovationOrder = { 'Breakthrough': 3, 'Revolutionary': 2, 'Advanced': 1 };
-        return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0);
-      default:
-        return 0;
-    }
-  });
-
-  const handleServiceClick = (service: unknown) => {
-    setSelectedService(service);
-  };
-
-  const closeModal = () => {
-    setSelectedService(null);
-  };
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5
-      }
-    }
-  };
-
-  const getCategoryIcon = (category: string) => {
-    const iconMap: { [key: string]: unknown } = {
-      'AI & Automation': Brain,
-      'AI & Analytics': BarChart3,
-      'AI & Legal': Shield,
-      'AI & Logistics': Truck,
-      'AI & Healthcare': Heart,
-      'AI & Marketing': MessageCircle,
-      'AI & Research': Microscope,
-      'AI & HR': Users,
-      'AI & Manufacturing': Cpu,
-      'AI & Content': FileText,
-      'AI & Transportation': Car,
-      'Quantum Computing': Atom,
-      'Cybersecurity': ShieldCheck,
-      'Edge Computing': Network,
-      'Sustainability': Leaf,
-      'Blockchain': Link,
-      'Metaverse': Globe,
-      'Autonomous Vehicles': Car,
-      'Healthcare': Heart,
-      'Financial Services': DollarSign,
-      'Marketing': MessageCircle,
-      'Project Management': Clipboard,
-      'Business Intelligence': BarChart,
-      'Software Development': Code
-    };
-    return iconMap[category] || Rocket;
+const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
   };
 
   return (
@@ -182,70 +86,25 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
         </div>
       </section>
 
-        {/* Services Grid */}
-        <motion.div variants={containerVariants} initial="hidden" animate="visible" className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-          {filteredServices.map((service, index) => (<motion.div key={service.id} variants={itemVariants} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105">
-              {/* Service Header */}
-              <div className="mb-6">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
-                    <p className="text-blue-100 text-sm mb-3">{service.description}</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    {service.tags.slice(0, 2).map((tag, tagIndex) => (<span key={tagIndex} className="px-2 py-1 bg-blue-600/30 text-blue-200 text-xs rounded-full">
-                        {tag}
-                      </span>))}
-                  </div>
-                </div>
-                
-                {/* Industry Badge */}
-                {'industry' in service && (<div className="inline-block px-3 py-1 bg-purple-600/30 text-purple-200 text-sm rounded-full mb-3">
-                    {service.industry}
-                  </div>)}
-              </div>
-
-              {/* Features */}
-              <div className="mb-6">
-                <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-yellow-400"/>
-                  Key Features
-                </h4>
-                <div className="space-y-2">
-                  {service.features.slice(0, 4).map((feature, featureIndex) => (<div key={featureIndex} className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0"/>
-                      <span className="text-blue-100 text-sm">{feature}</span>
-                    </div>))}
-                  {service.features.length > 4 && (<span className="text-blue-300 text-sm">+{service.features.length - 4} more features</span>)}
-                </div>
-              </div>
-
-              {/* Benefits */}
-              <div className="mb-6">
-                <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
-                  <TrendingUp className="w-4 h-4 text-green-400"/>
-                  Benefits
-                </h4>
-                <div className="space-y-2">
-                  {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (<div key={benefitIndex} className="flex items-start gap-2">
-                      <ArrowRight className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0"/>
-                      <span className="text-blue-100 text-sm">{benefit}</span>
-                    </div>))}
-                </div>
-              </div>
-              
-              <div>
-                <div className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-lg p-6 mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-4">Pricing</h3>
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">
-                    {selectedService.currency}{selectedService.price.toLocaleString()}
-                  </div>
-                  <div className="text-gray-300 mb-4">{selectedService.availability}</div>
-                  
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-400" />
-                      <span className="text-gray-300">Full platform access</span>
+          {/* Service Categories */}
+          <div className="grid grid-cols-1 lg: anygrid-cols-2 xl:grid-cols-3 gap-8">
+            {servicesCatalog.map((category)  => (
+              <div key={category.slug} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-blue-500/50 transition-all">
+                <h3 className="text-2xl font-bold text-white mb-4">{category.name}</h3>
+                <div className="space-y-4">
+                  {category.items.slice(0, 3).map((service) => (
+                    <div key={service.id} className="bg-slate-700/50 rounded-lg p-4">
+                      <h4 className="text-lg font-semibold text-white mb-2">{service.title}</h4>
+                      <p className="text-gray-300 text-sm mb-3">{service.description}</p>
+                      <div className="flex justify-between items-center">
+                        <span className="text-blue-400 font-bold">{service.price}/{service.billing}</span>
+                        <a 
+                          href={service.href}
+                          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm transition-colors"
+                        >
+                          {service.ctaLabel}
+                        </a>
+                      </div>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-5 h-5 text-green-400" />
@@ -280,22 +139,29 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                 </div>
               </div>
 
-              {/* Technology & Compliance */}
-              <div className="mb-6">
-                <div className="flex items-center justify-between mb-3">
-                  <h4 className="text-white font-semibold text-sm">Technology Stack</h4>
-                  <h4 className="text-white font-semibold text-sm">Compliance</h4>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div className="flex flex-wrap gap-1">
-                    {service.technology.slice(0, 3).map((tech, techIndex) => (<span key={techIndex} className="px-2 py-1 bg-slate-700/50 text-blue-200 text-xs rounded">
-                        {tech}
-                      </span>))}
-                  </div>
-                  <div className="flex flex-wrap gap-1">
-                    {service.compliance.slice(0, 2).map((comp, compIndex) => (<span key={compIndex} className="px-2 py-1 bg-green-600/30 text-green-200 text-xs rounded">
-                        {comp}
-                      </span>))}
+      {/* Featured Micro SaaS Services */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Featured Micro SaaS Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Innovative, scalable software solutions designed to solve specific business challenges and drive operational efficiency
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {MICRO_SAAS_SERVICES.filter(service  => service.featured).slice(0, 6).map((service) => (
+              <div key={service.id} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-blue-500/50 transition-all">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    Featured
+                  </span>
+                  <div className="flex items-center">
+                    <span className="text-yellow-400">★</span>
+                    <span className="text-white ml-1">{service.rating}</span>
+                    <span className="text-gray-400 ml-1">({service.reviewCount})</span>
                   </div>
                 </div>
               </div>

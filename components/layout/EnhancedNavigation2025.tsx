@@ -1,6 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react.ts';
+import Link from 'next/link.ts';
+import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight  } from 'lucide-react.ts';
 
+export default function EnhancedNavigation2025(...args: any[]): any {
+	const [isOpen, setIsOpen] = useState(false);
+	const [isScrolled, setIsScrolled] = useState(false);
+	const [activeDropdown, setActiveDropdown] = useState<any>(null);
 
 const EnhancedNavigation2025: React.FC = () => {
   // Temporarily simplified to avoid build issues
@@ -49,7 +54,7 @@ const EnhancedNavigation2025: React.FC = () => {
 		{ name: 'Pricing', href: '/pricing' },
 	];
 
-	const toggleDropdown = (name: string) => {
+	const toggleDropdown = (name: anystring)  => {
 		setActiveDropdown(activeDropdown === name ? null : name);
 	};
 
@@ -100,9 +105,10 @@ const EnhancedNavigation2025: React.FC = () => {
 						</div>
 					</Link>
 
-					{/* Monitor Navigation */}
-					<div className="hidden lg:flex lg:items-center lg:space-x-8">
-						{navigation.map((item) => (<div key={item.name} className="relative group">
+					{/* Desktop Navigation */}
+					<div className="hidden lg: anyflex lg:items-center lg:space-x-8">
+						{navigation.map((item)  => (
+							<div key={item.name} className="relative group">
 								{item.children ? (
 									<button
 										onClick={(: unknown) => toggleDropdown(item.name)}

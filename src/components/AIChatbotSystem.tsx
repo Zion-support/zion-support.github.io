@@ -1,8 +1,37 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, Send, Bot, User, Sparkles, X, Settings, Mic, MicOff, Paperclip, RefreshCw, ThumbsUp, ThumbsDown, Clock, CheckCircle } from 'lucide-react';
+import { motion, AnimatePresence    } from 'framer-motion';
+import { MessageCircle, 
+  Send, 
+  Bot, 
+  User, 
+  Sparkles, 
+  X,
+  Settings,
+  Volume2,
+  VolumeX,
+  Mic,
+  MicOff,
+  Paperclip,
+  Image,
+  FileText,
+  Download,
+  Share2,
+  RefreshCw,
+  ThumbsUp,
+  ThumbsDown,
+  Star,
+  Zap,
+  Brain,
+  Globe,
+  Clock,
+  CheckCircle,
+  AlertCircle
+   } from 'lucide-react';
 
 interface ChatMessage {
+
+
+
   id: string;
   content: string;
   sender: 'user' | 'bot';
@@ -14,7 +43,10 @@ metadata?: {
     suggestions?: string[];
     relatedServices?: string[];
     estimatedResponseTime?: number;
-  };
+  
+
+
+};
 }
 
 interface AIChatbotSystemProps {
@@ -68,14 +100,14 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   }, [isOpen, messages.length]);
 
   // Auto-scroll to bottom
-  useEffect(() => {
+  useEffect(()    => {
     if (autoScroll && messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   }, [messages, autoScroll]);
 
   // Simulate AI response
-  const simulateAIResponse = async (userMessage: string) => {
+  const simulateAIResponse = async (userMessage: string)    => {
     setIsTyping(true);
     
     // Simulate processing time
@@ -121,12 +153,12 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
       }
     };
     
-    setMessages(prev => [...prev, botMessage]);
+    setMessages(prev    => [...prev, botMessage]);
     setIsTyping(false);
   };
 
   // Handle message submission
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent)    => {
     e.preventDefault();
     if (!inputValue.trim() || isTyping) return;
 
@@ -139,7 +171,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
       status: 'sent'
     };
 
-    setMessages(prev => [...prev, userMessage]);
+    setMessages(prev    => [...prev, userMessage]);
     setInputValue('');
     
     // Generate AI response
@@ -153,7 +185,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   };
 
   // Handle file upload
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>)    => {
     const file = e.target.files?.[0];
     if (file) {
       const fileMessage: ChatMessage = {
@@ -164,17 +196,17 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         type: 'file',
         status: 'sent'
       };
-      setMessages(prev => [...prev, fileMessage]);
+      setMessages(prev    => [...prev, fileMessage]);
     }
   };
 
   // Handle suggestion click
-  const handleSuggestionClick = (suggestion: string) => {
+  const handleSuggestionClick = (event: React.MouseEvent<HTMLElement>): void   => {
     setInputValue(suggestion);
   };
 
   // Rate response
-  const rateResponse = (messageId: string, rating: 'positive' | 'negative') => {
+  const rateResponse = (messageId: string, rating: 'positive' | 'negative')    => {
     setMessages(prev => prev.map(msg => 
       msg.id === messageId 
         ? { ...msg, metadata: { ...msg.metadata, userRating: rating } }

@@ -1,7 +1,8 @@
-import React from 'react';
-import { useState, useEffect  } from 'react.ts';
+import { useState, useEffect    } from 'react.ts';
 
 type User = {
+
+
 
   id: string;
   email: string;
@@ -11,24 +12,32 @@ type User = {
   isEmailVerified?: boolean;
   createdAt?: string;
   updatedAt?: string;
+
+
+
 }
 
 type AuthTokens = {
 
+
+
   accessToken: string | null;
   refreshToken: string | null;
+
+
+
 }
 
 export const useAuthState = () => {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [onboardingStep, setOnboardingStep] = useState(0);
-  const [tokens, setTokens] = useState<AuthTokens>({
+  const [tokens, setTokens] = useState<any>({
     accessToken: null,
-    refreshToken: null,
+    refreshToken: null
   });
 
-  useEffect(() => {
+  useEffect(()    => {
     // Check for existing auth state on mount
     const checkAuthState = async () => {
       try {
@@ -46,7 +55,7 @@ export const useAuthState = () => {
           }
         }
       } catch (error) {
-        // console.error('Error checking auth state:', error);
+        // // // console.error('Error checking auth state:', error);
       } finally {
         setIsLoading(false);
       }

@@ -1,14 +1,26 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { motion } from 'framer-motion';
+import { Button    } from './ui/button';
+import { AlertTriangle, RefreshCw, Home, Mail    } from 'lucide-react';
 
 
-interface Props { children: ReactNode;
+  children: ReactNode;
   fallback?: ReactNode;
- }
+  onError?: (error: Error, errorInfo: ErrorInfo)    => void;
 
-interface State { hasError: boolean;
-  error?: Error;
- }
+}
+
+interface State {
+
+
+
+  hasError: boolean;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
+  errorId: string;
+
+
+
+}
 
 export class ErrorBoundary extends Component<Props, State> {
   public state: State = { hasError: false
@@ -31,8 +43,15 @@ export class ErrorBoundary extends Component<Props, State> {
       errorInfo
     });
 
-    // Log error to console
-    // console.error('ErrorBoundary caught an error:', error, errorInfo);
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      // // // console.error('ErrorBoundary caught an error:', error, errorInfo);
+    }
+
+    // Log error to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      this.logErrorToService(error, errorInfo);
+    }
 
     // Call custom error handler if provided
     if (this.props.onError) {
@@ -40,7 +59,7 @@ export class ErrorBoundary extends Component<Props, State> {
     }
   }
 
-  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+  private logErrorToService = (error: anyError, errorInfo: ErrorInfo)    => {
     try {
       // Example: Send to error logging service
       const errorData = {
@@ -54,15 +73,16 @@ export class ErrorBoundary extends Component<Props, State> {
         // Add  other relevant information
       };
 
-      // You can send this to your error logging service
-      // console.log('Error logged:', errorData);
-      
-      // Example: Send to external service
-      // fetch('/api/errors', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(errorData)
-      // });
+      // Example: Send to your API endpoint
+      fetch('/api/errors', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(errorData),
+      }).catch(()    => {
+        // Silently fail if error logging fails
+      });
     } catch (logError) {
       // console.error('Failed to log error:', logError);
     }
@@ -173,14 +193,41 @@ User Agent: ${navigator.userAgent}
   {/* Removed stray closing brace */}
 
 // Hook for functional components to catch errors
-export function useErrorHandler() {
-  return React.useCallback((error: Error, errorInfo?: ErrorInfo) => {
-    // console.error('Error caught by useErrorHandler:', error, errorInfo);
-    
-    // You can add custom error handling logic here
-    // For example, sending to an error reporting service
-    
-    // Re-throw the error to trigger error boundaries
-    throw error;
+export const useErrorHandler: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
+  const [error, setError] = React.useState<any>(null);
+
+  React.useEffect(() => {
+    const handleError = (event: anyErrorEvent)    => {
+      setError(event.error);
+    };
+
+    const handleUnhandledRejection = (event: anyPromiseRejectionEvent)    => {
+      setError(new Error(event.reason));
+    };
+
+    window.addEventListener('error', handleError);
+    window.addEventListener('unhandledrejection', handleUnhandledRejection);
+
+    return () => {
+      window.removeEventListener('error', handleError);
+      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+    };
   }, []);
-}
+
+  return error;
+};
+
+// Higher-order component for error boundaries
+export const withErrorBoundary = <P extends object>(
+  Component: React.ComponentType<P>,
+  errorBoundaryProps?: Partial<Props>
+)    => {
+  const WrappedComponent = (props: anyP)    => (
+    <ErrorBoundary {...errorBoundaryProps}>
+      <Component {...props} />
+    </ErrorBoundary>
+  );
+
+  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
+  return WrappedComponent;
+};

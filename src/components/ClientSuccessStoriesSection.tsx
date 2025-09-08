@@ -1,4 +1,14 @@
-import { motion } from 'framer-motion';
+import React from 'react';
+import { motion    } from 'framer-motion';
+import { Star, 
+  Quote, 
+  TrendingUp, 
+  Users, 
+  Award,
+  CheckCircle,
+  ArrowRight,
+  Heart
+   } from 'lucide-react';
 
 const successStories = [
     {
@@ -247,59 +257,64 @@ export function ClientSuccessStoriesSection() {
           </div>
         </motion.div>
 
-        {/* Industry Performance */}
-        <motion.div className="mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
-          <h3 className="text-3xl font-bold text-white text-center mb-12">
-            Industry <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Performance</span>
-          </h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {industryStats.map((stat, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} onHoverStart={() => setHoveredIndustry(index)} onHoverEnd={() => setHoveredIndustry(null)} whileHover={{ y: -4 }} className="p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
-                <h4 className="text-xl font-bold text-white mb-4">{stat.industry}</h4>
-                
-                <div className="grid grid-cols-3 gap-4 text-center mb-4">
-                  <div>
-                    <div className="text-zion-cyan font-bold text-lg">{stat.projects}</div>
-                    <div className="text-zion-slate-light text-xs">Projects</div>
-                  </div>
-                  <div>
-                    <div className="text-zion-purple font-bold text-lg">{stat.successRate}</div>
-                    <div className="text-zion-slate-light text-xs">Success Rate</div>
-                  </div>
-                  <div>
-                    <div className="text-zion-cyan-light font-bold text-lg">{stat.avgROI}</div>
-                    <div className="text-zion-slate-light text-xs">Avg ROI</div>
+        {/* Success Metrics */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="grid grid-cols-2 md: anygrid-cols-4 gap-8 mb-16"
+        >
+          {successMetrics.map((metric, index)    => {
+            const IconComponent = metric.icon;
+            return (
+              <div key={metric.label} className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="p-3 bg-green-100 rounded-full">
+                    <IconComponent className="h-8 w-8 text-green-600" />
                   </div>
                 </div>
               </motion.div>))}
           </div>
         </motion.div>
 
-        {/* Success Stories */}
-        <motion.div className="mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
-          <h3 className="text-3xl font-bold text-white text-center mb-12">
-            Featured <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Success Stories</span>
-          </h3>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {successStories.map((story, index) => (<motion.div key={story.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} whileHover={{ y: -4 }} className="relative">
-                <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedStory(selectedStory === story.id ? null : story.id)}>
-                  {/* Header */}
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-zion-cyan to-zion-purple flex items-center justify-center">
-                        <Building className="w-6 h-6 text-white"/>
-                      </div>
-                      <div>
-                        <h4 className="text-xl font-bold text-white group-hover:text-zion-cyan transition-colors">
-                          {story.client}
-                        </h4>
-                        <div className="text-zion-cyan text-sm">{story.industry}</div>
-                      </div>
-                    </div>
-                    {story.featured && (<div className="px-3 py-1 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold rounded-full">
-                        FEATURED
-                      </div>)}
+        {/* Testimonials Grid */}
+        <div className="grid md: anygrid-cols-2 gap-8 mb-12">
+          {testimonials.map((testimonial, index)    => (
+            <motion.div
+              key={testimonial.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
+            >
+              <div className="flex items-center mb-6">
+                <div className="text-4xl mr-4">{testimonial.avatar}</div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">
+                    {testimonial.name}
+                  </h3>
+                  <p className="text-gray-600">{testimonial.role}</p>
+                  <p className="text-blue-600 font-medium">{testimonial.company}</p>
+                </div>
+                <div className="ml-auto flex">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+              </div>
+
+              <blockquote className="mb-6">
+                <Quote className="h-8 w-8 text-blue-200 mb-2" />
+                <p className="text-gray-700 italic leading-relaxed">
+                  "{testimonial.quote}"
+                </p>
+              </blockquote>
+
+              <div className="space-y-2">
+                {testimonial.metrics.map((metric, metricIndex) => (
+                  <div key={metricIndex} className="flex items-center text-sm text-gray-700">
+                    <TrendingUp className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                    {metric}
                   </div>
 
                   {/* Challenge & Solution */}

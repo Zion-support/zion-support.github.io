@@ -1,8 +1,29 @@
-import { SEO } from '../../components/SEO';
-import { motion } from 'framer-motion';
-import { CheckCircle, TrendingUp, Globe, BarChart3, Phone, Mail, MapPin, ExternalLink, Star, Shield, Brain, Search, PenTool } from 'lucide-react';
+import React from 'react';
+import { SEO  } from '../../components/SEO';
+import { motion  } from 'framer-motion';
+import { CheckCircle, 
+  TrendingUp, 
+  Zap, 
+  Globe, 
+  BarChart3, 
+  Target, 
+  Users, 
+  Award,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  Star,
+  Clock,
+  Shield,
+  Brain,
+  Search,
+  PenTool,
+  Eye,
+  Share2
+ } from 'lucide-react';
 
-const AIContentOptimizerPro: React.FC = () => {
+const AIContentOptimizerPro: React.FC = (): JSX.Element => {
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -226,8 +247,8 @@ const AIContentOptimizerPro: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -273,8 +294,8 @@ const AIContentOptimizerPro: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+              {useCases.map((useCase, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -317,8 +338,8 @@ const AIContentOptimizerPro: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -403,8 +424,8 @@ const AIContentOptimizerPro: React.FC = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+              {testimonials.map((testimonial, index)  => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}

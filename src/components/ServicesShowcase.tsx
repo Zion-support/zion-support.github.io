@@ -1,6 +1,37 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Brain, Cloud, Shield, Users, Globe, Cpu, Lock, ShoppingCart, MessageCircle, BookOpen, DollarSign, Gauge, HelpCircle } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion    } from 'framer-motion';
+import { Brain, 
+  Cloud, 
+  Shield, 
+  Server, 
+  Zap, 
+  Globe, 
+  Cpu, 
+  Database,
+  Network,
+  Lock,
+  Code,
+  Rocket,
+  Users,
+  Search,
+  Filter,
+  Star,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Play,
+  BookOpen,
+  MessageCircle,
+  Phone,
+  Mail,
+  MapPin,
+  Globe as GlobeIcon,
+  ChevronDown,
+  ChevronUp
+   } from 'lucide-react';
+import { innovativeMicroSaasServices2025 as INNOVATIVE_MICRO_SAAS_SERVICES_2025    } from '@/data/innovativeMicroSaasServices2025';
 
 export function ServicesShowcase() {
   const services = [
@@ -166,26 +197,28 @@ export function ServicesShowcase() {
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
+  const toggleCategory = (category: string)    => {
+    setExpandedCategories(prev => 
+      prev.includes(category) 
+        ? prev.filter(c => c !== category)
+        : [...prev, category]
+    );
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5
-      }
-    }
+  const getCategoryIcon = (category: string)    => {
+    const cat = categories.find(c => c.id === category);
+    return cat ? cat.icon : Zap;
   };
+
+  const getCategoryColor = (category: string)    => {
+    const cat = categories.find(c => c.id === category);
+    return cat ? cat.color : 'from-zion-cyan to-zion-blue';
+  };
+
+  const filteredServices = selectedCategory === 'all' 
+    ? allServices: anyallServices.filter(service    => 
+        service.category.toLowerCase().includes(selectedCategory.toLowerCase())
+      );
 
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -208,14 +241,8 @@ export function ServicesShowcase() {
         </motion.div>
 
         {/* Services Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-        >
-          {services.map((service, index) => (
+        <div className="grid grid-cols-1 lg: anygrid-cols-2 xl:grid-cols-3 gap-8">
+          {filteredServices.map((service, index)    => (
             <motion.div
               key={index}
               variants={itemVariants}

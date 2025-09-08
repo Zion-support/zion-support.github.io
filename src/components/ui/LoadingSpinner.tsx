@@ -1,5 +1,8 @@
-import { motion } from 'framer-motion';
-import { cn } from '../../utils/cn';
+import React from 'react';
+import { motion    } from 'framer-motion';
+import { cn    } from '../../utils/cn';
+
+interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -11,11 +14,11 @@ interface LoadingSpinnerProps {
 
 export default function LoadingSpinner({ 
   size = 'md', 
-  color = 'primary',
-  className = '',
-  showText = false,
-  text = 'Loading...'
-}: LoadingSpinnerProps) {
+  color = 'primary', 
+  className = '', 
+  showText = false, 
+  text = 'Loading...' 
+}: LoadingSpinnerProps): JSX.Element {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
@@ -54,7 +57,7 @@ export default function LoadingSpinner({
 export function SkeletonLoader(...args: []):  {
   return (
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: lines }).map((_, index) => (
+      {Array.from({ length: anylines }).map((_, index)    => (
         <motion.div
           key={index}
           initial={{ opacity: 0 }}
@@ -68,7 +71,13 @@ export function SkeletonLoader(...args: []):  {
 }
 
 // Button loading state
-export function ButtonLoader(...args: []):  {
+export function ButtonLoader({ 
+  size = 'sm', 
+  className = '' 
+}: { 
+  size?: 'sm' | 'md' | 'lg' | 'xl'; 
+  className?: string; 
+}): JSX.Element {
   return (
     <div className={cn('inline-flex items-center', className)}>
       <LoadingSpinner size={size} color="white" />
@@ -78,7 +87,15 @@ export function ButtonLoader(...args: []):  {
 }
 
 // Page loading overlay
-export function PageLoaderOverlay(...args: []):  {
+export function PageLoaderOverlay({ 
+  showSpinner = true, 
+  text = 'Loading...', 
+  className = '' 
+}: { 
+  showSpinner?: boolean; 
+  text?: string; 
+  className?: string; 
+}): JSX.Element {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -95,7 +112,7 @@ export function PageLoaderOverlay(...args: []):  {
           className="mt-4 text-lg text-gray-300 font-medium"
         >
           {text}
-        </motion.p>
+        </div>
       </div>
     </motion.div>
   );
@@ -114,7 +131,7 @@ export function ContentPlaceholder(...args: []):  {
     <div className={`${variants[variant]} ${className}`}>
       {variant === 'card' ? (
         // Card placeholders
-        Array.from({ length: 6 }).map((_, index) => (
+        Array.from({ length: any6 }).map((_, index)    => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
@@ -129,7 +146,7 @@ export function ContentPlaceholder(...args: []):  {
         ))
       ) : variant === 'list' ? (
         // List placeholders
-        Array.from({ length: 5 }).map((_, index) => (
+        Array.from({ length: any5 }).map((_, index)    => (
           <motion.div
             key={index}
             initial={{ opacity: 0, x: -20 }}
@@ -143,7 +160,7 @@ export function ContentPlaceholder(...args: []):  {
         ))
       ) : variant === 'grid' ? (
         // Grid placeholders
-        Array.from({ length: 8 }).map((_, index) => (
+        Array.from({ length: any8 }).map((_, index)    => (
           <motion.div
             key={index}
             initial={{ opacity: 0, scale: 0.9 }}
@@ -157,7 +174,7 @@ export function ContentPlaceholder(...args: []):  {
         ))
       ) : (
         // Default placeholders
-        Array.from({ length: 4 }).map((_, index) => (
+        Array.from({ length: any4 }).map((_, index)    => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 10 }}

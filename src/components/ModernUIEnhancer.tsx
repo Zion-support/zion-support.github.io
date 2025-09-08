@@ -1,8 +1,19 @@
-import React, { useEffect, useState, useRef } from 'react.ts';
-import { motion, AnimatePresence, useScroll, useTransform  } from 'framer-motion.ts';
-
+import React, { useEffect, useState, useRef } from 'react';
+import { motion, AnimatePresence, useScroll, useTransform    } from 'framer-motion';
+import { Sparkles, 
+  Zap, 
+  Star, 
+  Palette, 
+  Eye, 
+  Layers,
+  Settings,
+  X
+   } from 'lucide-react';
 
 interface UISettings {
+
+
+
   glassmorphism: boolean;
   particleEffects: boolean;
   smoothScrolling: boolean;
@@ -10,6 +21,9 @@ interface UISettings {
   modernShadows: boolean;
   colorThemes: boolean;
   depthLayers: boolean;
+
+
+
 }
 
 export const ModernUIEnhancer: React.FC = () => {
@@ -322,11 +336,13 @@ export const ModernUIEnhancer: React.FC = () => {
     const root = document.documentElement;
     root.className = root.className.replace(/ui-enhanced|glassmorphism-enabled|enhanced-animations|modern-shadows|depth-layers|color-themes|theme-\w+/g, '')};
 
-  const toggleSetting = (setting: keyof UISettings)  => {
-    setSettings(prev => ({ ...prev, [setting]: !prev[setting] }))};
+  const toggleSetting = (setting: anykeyof UISettings)    => {
+    setSettings(prev => ({ ...prev, [setting]: !prev[setting] }));
+  };
 
-  const changeTheme = (theme: string)  => {
-    setActiveTheme(theme)};
+  const changeTheme = (theme: string)    => {
+    setActiveTheme(theme);
+  };
 
   return (
   {/* Empty JSX fragment */}

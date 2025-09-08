@@ -1,9 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, ChevronRight, ChevronDown, Sparkles, Cloud, BarChart3, Settings, Eye, Award, Heart, Users, HelpCircle, BookOpen, Target } from 'lucide-react';
+import React, { useState, useEffect } from 'react.ts';
+import Link from 'next/link.ts';
+import { useRouter  } from 'next/router.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, 
+  Phone, Mail, MapPin, ChevronRight, ChevronDown, 
+  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, 
+  Award, Clock, Heart, Lightbulb, Users, FileText, 
+  HelpCircle, BookOpen, Target, TrendingUp, Star
+ } from 'lucide-react.ts';
 
 interface SidebarItem {
+
   name: string;
   href: string;
   icon: React.ReactNode;
@@ -14,7 +21,9 @@ interface SidebarItem {
   isNew?: boolean;
   isHot?: boolean;
   isPremium?: boolean;
-category?: string;
+  category?: string;
+
+}
 
 const EnhancedSidebar2025: React.FC = () => {
   // Temporarily simplified to avoid build issues
@@ -23,9 +32,103 @@ const EnhancedSidebar2025: React.FC = () => {
 
 const sidebarSections = [;
   {
-
-title: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Revolutionary Services', icon: Zap,'
-, color: 'from-cyan-500 to-blue-600, items[, '
+    title: any'Revolutionary Services',
+    icon: Zap,
+    color: 'from-cyan-500 to-blue-600',
+    items: [
+      {
+        name: 'AI & Consciousness',
+        href: '/ai-services',
+        icon: Brain,
+        description: 'Advanced AI consciousness and evolution platforms',
+        subItems: [
+          { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution' },
+          { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' },
+          { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' },
+          { name: 'AI Creativity Studio', href: '/ai-creativity-studio' },
+          { name: 'AI Education Platform', href: '/ai-education-platform' },
+          { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics' },
+          { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence' },
+          { name: 'AI Sustainability Platform', href: '/ai-sustainability-platform' },
+          { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform' },
+          { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer' }
+        ]
+      },
+      {
+        name: 'Quantum Computing',
+        href: '/quantum-services',
+        icon: Atom,
+        description: 'Next-generation quantum computing solutions',
+        subItems: [
+          { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' },
+          { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing' },
+          { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' },
+          { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery' },
+          { name: 'Quantum Robotics', href: '/quantum-robotics' },
+          { name: 'Quantum Internet Security', href: '/quantum-internet-security' },
+          { name: 'Quantum Logistics', href: '/quantum-logistics-optimization' },
+          { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-platform' }
+        ]
+      },
+      {
+        name: 'Enterprise IT',
+        href: '/enterprise-it',
+        icon: Shield,
+        description: 'Enterprise-grade IT infrastructure and security',
+        subItems: [
+          { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestration' },
+          { name: 'Zero Trust Security Platform', href: '/zero-trust-network-architecture' },
+          { name: 'Blockchain Enterprise Platform', href: '/blockchain-infrastructure-platform' },
+          { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
+          { name: 'Quantum Networking', href: '/quantum-networking' },
+          { name: 'Autonomous IT Operations', href: '/autonomous-it-operations' },
+          { name: 'Quantum Data Center', href: '/quantum-data-center' },
+          { name: 'Quantum Cloud Migration', href: '/quantum-cloud-migration' }
+        ]
+      },
+      {
+        name: 'Micro SAAS',
+        href: '/micro-saas',
+        icon: Rocket,
+        description: 'AI-powered micro SAAS solutions',
+        subItems: [
+          { name: 'AI Content Factory Platform', href: '/ai-content-factory' },
+          { name: 'CRM Intelligence & Automation', href: '/crm-intelligence-automation' },
+          { name: 'AI Decision Engine Platform', href: '/ai-decision-engine' },
+          { name: 'E-commerce Optimization', href: '/ecommerce-optimization-platform' },
+          { name: 'AI HR & Talent Platform', href: '/ai-hr-talent-platform' },
+          { name: 'Financial Analytics Platform', href: '/financial-analytics-platform' },
+          { name: 'Supply Chain Intelligence', href: '/supply-chain-intelligence' },
+          { name: 'Marketing Automation Platform', href: '/marketing-automation-platform' },
+          { name: 'Project Management AI', href: '/project-management-ai' }
+        ]
+      },
+      {
+        name: 'Space Technology',
+        href: '/space-tech',
+        icon: Globe,
+        description: 'Cutting-edge space exploration and mining',
+        subItems: [
+          { name: 'Space Mining Platform', href: '/space-mining-platform' },
+          { name: 'Satellite Technology', href: '/satellite-technology' },
+          { name: 'Space Resource Management', href: '/space-resource-management' },
+          { name: 'Interplanetary Communication', href: '/interplanetary-communication' }
+        ]
+      },
+      {
+        name: 'Emerging Tech',
+        href: '/emerging-tech',
+        icon: Sparkles,
+        description: 'Future technologies and innovations',
+        subItems: [
+          { name: 'Brain-Computer Interface', href: '/brain-computer-interface' },
+          { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai' },
+          { name: 'Advanced Robotics', href: '/advanced-robotics' },
+          { name: 'Biotechnology Platform', href: '/biotechnology-platform' }
+        ]
+      }
+    ]
+  },
   {
     title: 'Industry Solutions',
     icon: Target,
@@ -148,11 +251,24 @@ title: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Revolutionary Services', ico
 
 interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
 
-export default function EnhancedSidebar2025({ isOpen: unknown, onClose }: EnhancedSidebar2025Props) {
+  isOpen: boolean;
+  onClose: ()  => void;
+
+}
+
+export default function EnhancedSidebar2025(...args: any[]): any {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
 
-      newExpanded.delete(sectionTitle)} else {
+  const toggleSection = (sectionTitle: anystring)  => {
+    const newExpanded = new Set(expandedSections);
+    if (newExpanded.has(sectionTitle)) {
+      newExpanded.delete(sectionTitle);
+    } else {
+      newExpanded.add(sectionTitle);
+    }
+    setExpandedSections(newExpanded);
+  };
 
       newExpanded.add(sectionTitle)}
     setExpandedSections(newExpanded)};
@@ -166,7 +282,15 @@ export default function EnhancedSidebar2025({ isOpen: unknown, onClose }: Enhanc
     );
   );
 
-      newExpanded.delete(itemName)} else {
+  const toggleItem = (itemName: anystring)  => {
+    const newExpanded = new Set(expandedItems);
+    if (newExpanded.has(itemName)) {
+      newExpanded.delete(itemName);
+    } else {
+      newExpanded.add(itemName);
+    }
+    setExpandedItems(newExpanded);
+  };
 
       newExpanded.add(itemName)}
     setExpandedItems(newExpanded)};
@@ -177,7 +301,7 @@ export default function EnhancedSidebar2025({ isOpen: unknown, onClose }: Enhanc
     return () => {
       document.body.style.overflow = 'unset'}}, [isOpen]);
 
-  const isActive = (href: string)  => router.pathname === href;
+  const isActive = (href: anystring)  => router.pathname === href;
 
   return (
   {/* Empty JSX fragment */}

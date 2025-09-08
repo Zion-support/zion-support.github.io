@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-// Removed unused: import { Link } from 'react-router-dom';
-import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield, Database, Globe, Zap, ArrowRight, Filter, TrendingUp, Lightbulb, Target, Award, Eye, MessageCircle, Type, BarChart3, Settings, Rocket, Heart, Download, Share2 } from 'lucide-react';
+import Link from 'next/link';
+import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield, Database, Globe, Zap, ArrowRight, Filter, TrendingUp, Lightbulb, Target, Award, Eye, MessageCircle, Type, BarChart3, Settings, Rocket, Heart, Download, Share2   } from 'lucide-react';
 
 const Tutorials = () => {
 // Removed unused:   const tutorialCategories = [
@@ -150,12 +150,162 @@ const $page: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             This page is under development. Contact us for more information.
           </p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
-          >
-            Contact Us for More Information
-          </Link>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25">
+              Start Learning
+            </button>
+            <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
+              Browse Tutorials
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Tutorials */}
+      <section className="py-20 bg-zion-slate-dark">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Featured Tutorials
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Start your learning journey with our most popular and highly-rated tutorials 
+              covering the latest in AI, cybersecurity, and emerging technologies.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredTutorials.map((tutorial, index)   => (
+              <div 
+                key={index}
+                className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"
+              >
+                {/* Tutorial Image Placeholder */}
+                <div className="h-48 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center">
+                  <BookOpen className="w-16 h-16 text-zion-cyan" />
+                </div>
+                
+                <div className="p-6">
+                  {/* Category Badge */}
+                  <div className="mb-4">
+                    <span className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-3 py-1 rounded-full text-sm font-medium">
+                      {tutorial.category}
+                    </span>
+                  </div>
+                  
+                  {/* Title */}
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
+                    {tutorial.title}
+                  </h3>
+                  
+                  {/* Description */}
+                  <p className="text-zion-slate-light mb-4 leading-relaxed">
+                    {tutorial.description}
+                  </p>
+                  
+                  {/* Tutorial Details */}
+                  <div className="space-y-2 mb-6">
+                    <div className="flex items-center text-zion-slate-light text-sm">
+                      <Users className="w-4 h-4 mr-2" />
+                      {tutorial.instructor}
+                    </div>
+                    <div className="flex items-center text-zion-cyan text-sm">
+                      <Clock className="w-4 h-4 mr-2" />
+                      {tutorial.duration}
+                    </div>
+                    <div className="flex items-center text-zion-slate-light text-sm">
+                      <Users className="w-4 h-4 mr-2" />
+                      {tutorial.students} students
+                    </div>
+                  </div>
+                  
+                  {/* Rating */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center text-zion-cyan text-sm">
+                      <Star className="w-4 h-4 mr-1 fill-current" />
+                      {tutorial.rating}
+                    </div>
+                    <button className="text-zion-cyan hover:text-white transition-colors duration-300">
+                      Start Learning
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Learning Paths */}
+      <section className="py-20 bg-zion-blue-dark">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Learning Paths
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Follow structured learning paths designed to take you from beginner 
+              to expert in your chosen technology domain.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            {learningPaths.map((path, index)   => (
+              <div 
+                key={index}
+                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 text-center hover:border-zion-cyan/40 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <BookOpen className="w-8 h-8 text-white" />
+                </div>
+                
+                <h3 className="text-2xl font-bold text-white mb-4">{path.title}</h3>
+                <p className="text-zion-slate-light mb-6 leading-relaxed">{path.description}</p>
+                
+                <div className="space-y-2 mb-6 text-zion-slate-light">
+                  <div className="flex items-center justify-center gap-2">
+                    <BookOpen className="w-4 h-4" />
+                    {path.courses} courses
+                  </div>
+                  <div className="flex items-center justify-center gap-2">
+                    <Clock className="w-4 h-4" />
+                    {path.duration}
+                  </div>
+                  <div className="flex items-center justify-center gap-2">
+                    <Target className="w-4 h-4" />
+                    {path.level}
+                  </div>
+                </div>
+                
+                <button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 rounded-lg font-semibold hover:scale-105 transition-all duration-300">
+                  Start Path
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Ready to Start Learning?
+          </h2>
+          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+            Join thousands of learners who are already mastering cutting-edge technologies 
+            with our comprehensive tutorial library and expert-led courses.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25">
+              Get Started Today
+            </button>
+            <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
+              Contact Us
+            </button>
+          </div>
         </div>
       </section>
     </div>

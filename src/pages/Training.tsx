@@ -2,9 +2,9 @@ import { SEO } from '@/components/SEO';
 
 
 import React, { useState } from 'react';
-import { GraduationCap, BookOpen, Users, Clock, Star, Search, Play, Brain, Cloud, Shield, Database, Zap, Globe, Target, Calendar, MapPin, DollarSign, FileText, Network, Star as StarIcon } from 'lucide-react';
+import { GraduationCap, BookOpen, Users, Clock, Star, Search, Filter, Play, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon   } from 'lucide-react';
 
-export default function Training() {
+export default function Training(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [activeLevel, setActiveLevel] = useState('all');
@@ -39,7 +39,7 @@ export default function Training() {
 
   const trainingPrograms = [
     {
-      id: 1,
+      id: any1,
       title: 'AI Fundamentals for Business Leaders',
       description: 'Essential AI concepts and strategies for business leaders to drive digital transformation and innovation.',
       category: 'ai-ml',
@@ -203,7 +203,7 @@ export default function Training() {
   ];
 
   // Update counts
-  categories.forEach(cat => {
+  categories.forEach(cat   => {
     cat.count = trainingPrograms.filter(p => p.category === cat.id).length;
   });
 
@@ -227,11 +227,11 @@ export default function Training() {
     return matchesSearch && matchesCategory && matchesLevel && matchesFormat;
   });
 
-  const getCategoryIcon = (categoryId: string) => {
+  const getCategoryIcon = (categoryId: string)   => {
     return categories.find(c => c.id === categoryId)?.icon || <GraduationCap className="w-5 h-5" />;
   };
 
-  const getLevelColor = (level: string) => {
+  const getLevelColor = (level: string)   => {
     switch (level) {
       case 'beginner': return 'text-green-400';
       case 'intermediate': return 'text-yellow-400';
@@ -241,7 +241,7 @@ export default function Training() {
     }
   };
 
-  const getFormatIcon = (format: string) => {
+  const getFormatIcon = (format: string)   => {
     switch (format) {
       case 'online': return <Globe className="w-4 h-4" />;
       case 'in-person': return <MapPin className="w-4 h-4" />;
@@ -251,7 +251,7 @@ export default function Training() {
     }
   };
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString: string)   => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
@@ -276,15 +276,286 @@ export default function Training() {
             Enhance your team's skills with our comprehensive training programs.
           </p>
         </div>
-      </section>
-      
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">
-            Coming Soon
+      </div>
+
+      {/* Search and Filters */}
+      <div className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            {/* Search Bar */}
+            <div className="relative mb-8">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search training programs..."
+                className="w-full pl-12 pr-4 py-4 bg-zion-slate border border-zion-slate-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              />
+            </div>
+
+            {/* Filters */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              {/* Categories */}
+              <div className="space-y-3">
+                <label className="text-white font-medium">Category</label>
+                <div className="flex flex-wrap gap-2">
+                  {categories.slice(0, 4).map((category) => (
+                    <button
+                      key={category.id}
+                      onClick={() => setActiveCategory(category.id)}
+                      className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                        activeCategory === category.id
+                          ? 'bg-zion-cyan text-zion-slate-dark'
+                          : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
+                      }`}
+                    >
+                      {category.icon}
+                      {category.name}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Levels */}
+              <div className="space-y-3">
+                <label className="text-white font-medium">Level</label>
+                <div className="flex flex-wrap gap-2">
+                  {levels.map((level) => (
+                    <button
+                      key={level.id}
+                      onClick={() => setActiveLevel(level.id)}
+                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                        activeLevel === level.id
+                          ? 'bg-zion-purple text-white'
+                          : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
+                      }`}
+                    >
+                      {level.name} ({level.count})
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Formats */}
+              <div className="space-y-3">
+                <label className="text-white font-medium">Format</label>
+                <div className="flex flex-wrap gap-2">
+                  {formats.map((format) => (
+                    <button
+                      key={format.id}
+                      onClick={() => setActiveFormat(format.id)}
+                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                        activeFormat === format.id
+                          ? 'bg-zion-cyan text-zion-slate-dark'
+                          : 'bg-zion-slate text-zion-slate-light hover: anybg-zion-slate-light hover:text-white'
+                      }`}
+                    >
+                      {format.name} ({format.count})
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Featured Programs */}
+      {trainingPrograms.filter(p   => p.featured).length > 0 && (
+        <div className="py-12 bg-zion-slate-dark">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-white mb-12">
+              Featured Training Programs
+            </h2>
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8 max-w-6xl mx-auto">
+              {trainingPrograms.filter(p   => p.featured).map((program) => (
+                <div
+                  key={program.id}
+                  className="bg-zion-slate border border-zion-slate-light rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+                >
+                  <div className="relative h-48 bg-gradient-to-br from-zion-blue to-zion-purple">
+                    <div className="absolute inset-0 bg-black/20"></div>
+                    <div className="absolute top-4 left-4">
+                      <span className="px-3 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
+                        Featured
+                      </span>
+                    </div>
+                    <div className="absolute top-4 right-4">
+                      <div className="flex items-center gap-1 text-white">
+                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                        <span className="text-sm font-medium">{program.rating}</span>
+                      </div>
+                    </div>
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <div className="flex items-center justify-between text-white">
+                        <div className="flex items-center gap-2">
+                          <Calendar className="w-4 h-4" />
+                          <span className="text-sm">{formatDate(program.startDate)}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Clock className="w-4 h-4" />
+                          <span className="text-sm">{program.duration}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 mb-3">
+                      {getCategoryIcon(program.category)}
+                      <span className="text-sm text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded-full">
+                        {categories.find(c => c.id === program.category)?.name}
+                      </span>
+                      <span className={`text-sm font-medium ${getLevelColor(program.level)}`}>
+                        {levels.find(l => l.id === program.level)?.name}
+                      </span>
+                    </div>
+                    
+                    <h3 className="text-xl font-semibold text-white mb-2">{program.title}</h3>
+                    <p className="text-zion-slate-light text-sm mb-4">{program.description}</p>
+                    
+                    <div className="flex items-center justify-between mb-4 text-sm text-zion-slate-light">
+                      <div className="flex items-center gap-1">
+                        <Users className="w-4 h-4" />
+                        {program.students} students
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <DollarSign className="w-4 h-4" />
+                        ${program.price.toLocaleString()}
+                      </div>
+                    </div>
+                    
+                    <button className="w-full bg-zion-cyan text-zion-slate-dark py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* All Training Programs */}
+      <div className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-white mb-12">
+            All Training Programs
           </h2>
-          <p className="text-xl text-slate-600 mb-8">
-            We're developing comprehensive training programs. Check back soon!
+          
+          {filteredPrograms.length > 0 ? (
+            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8 max-w-6xl mx-auto">
+              {filteredPrograms.map((program)   => (
+                <div
+                  key={program.id}
+                  className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center gap-2">
+                      {getCategoryIcon(program.category)}
+                      <span className="text-sm text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded-full">
+                        {categories.find(c => c.id === program.category)?.name}
+                      </span>
+                      {program.featured && (
+                        <span className="px-2 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
+                          Featured
+                        </span>
+                      )}
+                    </div>
+                    <div className="text-right">
+                      <div className="flex items-center gap-1 text-sm text-zion-slate-light mb-1">
+                        {getFormatIcon(program.format)}
+                        <span>{formats.find(f => f.id === program.format)?.name}</span>
+                      </div>
+                      <div className={`text-sm font-medium ${getLevelColor(program.level)}`}>
+                        {levels.find(l => l.id === program.level)?.name}
+                      </div>
+                    </div>
+                  </div>
+
+                  <h3 className="text-xl font-semibold text-white mb-3">{program.title}</h3>
+                  <p className="text-zion-slate-light mb-4">{program.description}</p>
+
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {program.tags.slice(0, 4).map((tag, index) => (
+                      <span
+                        key={index}
+                        className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-zion-slate-light">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="w-4 h-4" />
+                      <span>Starts {formatDate(program.startDate)}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Clock className="w-4 h-4" />
+                      <span>{program.duration} ({program.hours}h)</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <MapPin className="w-4 h-4" />
+                      <span>{program.location}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <DollarSign className="w-4 h-4" />
+                      <span>${program.price.toLocaleString()}</span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-4 text-sm text-zion-slate-light">
+                      <div className="flex items-center gap-1">
+                        <Users className="w-4 h-4" />
+                        {program.students} students
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                        {program.rating}
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-1 text-sm text-zion-slate-light">
+                      <FileText className="w-4 h-4" />
+                      <span>{program.certification}</span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <button className="bg-zion-purple text-white px-6 py-2 rounded-lg font-semibold hover:bg-zion-purple-light transition-colors inline-flex items-center gap-2">
+                      <Play className="w-4 h-4" />
+                      View Details
+                    </button>
+                    <button className="bg-zion-cyan text-zion-slate-dark px-6 py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
+                      Enroll Now
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <GraduationCap className="w-16 h-16 text-zion-slate-light mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">No training programs found</h3>
+              <p className="text-zion-slate-light">
+                Try adjusting your search terms or browse all categories
+              </p>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Advance Your Career?
+          </h2>
+          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
+            Join thousands of professionals who have transformed their careers with our training programs.
           </p>
           <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
             Contact Us

@@ -1,9 +1,9 @@
-// Removed unused: import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { cn } from 'node_modules/@babel/types/lib/utils';
-import { NavLink } from "react-router-dom";
-
-export function MainNavigation({ className }) {
+import React, { useState } from 'react';
+import { Link    } from 'react-router-dom';
+import { cn    } from '@/lib/utils';
+import { NavLink    } from 'react-router-dom';
+import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp    } from 'lucide-react';
+export function MainNavigation(...args: any[]): any {
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
     return (<nav className={cn("hidden md:flex items-center space-x-6", className)}>

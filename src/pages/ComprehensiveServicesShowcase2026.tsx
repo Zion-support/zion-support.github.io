@@ -1,8 +1,30 @@
 import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { Search, Filter, Star, Zap, Brain, Shield, Cpu, Network, Phone, Mail, MapPin, ExternalLink, TrendingUp, CheckCircle } from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { ALL_REVOLUTIONARY_SERVICES_2026 } from '../data/comprehensiveServices2026';const ComprehensiveServicesShowcase2026: React.FC = () => {
+import { motion  } from 'framer-motion';
+import { Search, 
+  Filter, 
+  Star, 
+  Zap, 
+  Brain, 
+  Shield, 
+  Cpu, 
+  Network,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  TrendingUp,
+  Users,
+  Clock,
+  CheckCircle,
+  ArrowRight
+ } from 'lucide-react';
+import { SEO  } from '../components/SEO';
+import { revolutionaryMicroSaasServices2026,
+  revolutionaryITInfrastructureServices2026,
+  revolutionaryAIServices2026,
+  ALL_REVOLUTIONARY_SERVICES_2026
+ } from '../data/comprehensiveServices2026';
+const ComprehensiveServicesShowcase2026: React.FC = (): JSX.Element => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');
@@ -97,8 +119,28 @@ import { ALL_REVOLUTIONARY_SERVICES_2026 } from '../data/comprehensiveServices20
       ],
       cta: "Contact Sales"
     }
-  ];
-
+    return filtered;
+  }, [searchTerm, selectedCategory, selectedInnovationLevel]);
+  const getCategoryIcon = (category: string)  => {
+    switch (category) {
+      case 'Quantum Computing': return <Cpu className="w-5 h-5" />;
+      case 'Neural Networks': return <Brain className="w-5 h-5" />;
+      case 'Blockchain Development': return <Shield className="w-5 h-5" />;
+      case 'Quantum Computing Infrastructure': return <Cpu className="w-5 h-5" />;
+      case 'Edge Computing': return <Network className="w-5 h-5" />;
+      case 'Autonomous Systems': return <Brain className="w-5 h-5" />;
+      case 'Quantum AI': return <Zap className="w-5 h-5" />;
+      default: return <Zap className="w-5 h-5" />;
+    }
+  };
+  const getInnovationLevelColor = (level: string)  => {
+    switch (level) {
+      case 'Revolutionary': return 'bg-gradient-to-r from-purple-600 to-pink-600';
+      case 'Breakthrough': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
+      case 'Advanced': return 'bg-gradient-to-r from-green-600 to-emerald-600';
+      default: return 'bg-gray-600';
+    }
+  };
   return (
   {/* Empty JSX fragment */}
       <SEO 
@@ -172,7 +214,7 @@ import { ALL_REVOLUTIONARY_SERVICES_2026 } from '../data/comprehensiveServices20
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-500"
+                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
                 >
                   {categories.map(category  => (
                     <option key={category} value={category} className="bg-zinc-800 text-white">
@@ -184,7 +226,7 @@ import { ALL_REVOLUTIONARY_SERVICES_2026 } from '../data/comprehensiveServices20
                 <select
                   value={selectedInnovationLevel}
                   onChange={(e) => setSelectedInnovationLevel(e.target.value)}
-                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-500"
+                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
                 >
                   {innovationLevels.map(level  => (
                     <option key={level} value={level} className="bg-zinc-800 text-white">
@@ -195,28 +237,29 @@ import { ALL_REVOLUTIONARY_SERVICES_2026 } from '../data/comprehensiveServices20
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Service Categories */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Complete Service Portfolio
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our comprehensive suite of services covers every aspect of modern business technology needs.
-            </p>
-          </div>
-          
-          <div className="space-y-16">
-            {serviceCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="space-y-8">
-                <div className="text-center">
-                  <div className="inline-flex items-center space-x-3 mb-4">
-                    <div className={`p-3 ${category.bgColor} rounded-lg`}>
-                      <category.icon className={`w-8 h-8 ${category.color}`} />
+        </section>
+        {/* Services Grid */}
+        <section className="py-12">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredServices.map((service, index)  => (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                >
+                  {/* Service Header */}
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center gap-3">
+                      <div className="p-2 bg-blue-500/20 rounded-lg">
+                        {getCategoryIcon(service.category)}
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-white">{service.name}</h3>
+                        <p className="text-sm text-zinc-400">{service.category}</p>
+                      </div>
                     </div>
                     <h3 className={`text-3xl font-bold ${category.color}`}>{category.title}</h3>
                   </div>

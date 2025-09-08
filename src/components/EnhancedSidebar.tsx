@@ -1,6 +1,48 @@
-import React, { useState } from 'react.ts';
-import { Link, useLocation  } from 'react-router-dom.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import React, { useState } from 'react';
+import { Link, useLocation    } from 'react-router-dom';
+import { motion, AnimatePresence    } from 'framer-motion';
+import { Home,
+  Brain,
+  Cloud,
+  Server,
+  Rocket,
+  Users,
+  Briefcase,
+  FileText,
+  HelpCircle,
+  MessageCircle,
+  Settings,
+  BarChart3,
+  Shield,
+  Zap,
+  Globe,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  Code,
+  ShoppingCart,
+  Target,
+  Lightbulb,
+  Award,
+  TrendingUp,
+  BookOpen,
+  Calendar,
+  MapPin,
+  Phone,
+  Mail,
+  ChevronRight,
+  ChevronDown,
+  Handshake,
+  Atom,
+  Link as LinkIcon,
+  Wifi,
+  HeartPulse,
+  DollarSign,
+  Leaf,
+  Building,
+  User
+   } from 'lucide-react';
 
 
 interface SidebarItem {
@@ -18,244 +60,12 @@ const EnhancedSidebar: React.FC = () => {
   const [expandedItems, setExpandedItems] = useState<string[]>([]);
   const location = useLocation();
 
-  const sidebarItems: SidebarItem[] = [
-    {
-      id: 'home',
-      title: 'Home',
-      href: '/',
-      icon: Home,
-      description: 'Main dashboard and overview'
-    },
-    {
-      id: 'services',
-      title: 'AI Services',
-      href: '/services',
-      icon: Brain,
-      description: 'AI-powered solutions',
-      featured: true,
-      children: [
-        {
-          id: 'ai-business-intelligence',
-          title: 'AI Business Intelligence',
-          href: '/services/ai-business-intelligence',
-          icon: BarChart3,
-          description: 'Advanced analytics and insights'
-        },
-        {
-          id: 'ai-cybersecurity',
-          title: 'AI Cybersecurity',
-          href: '/services/ai-cybersecurity',
-          icon: Shield,
-          description: 'Threat detection and prevention'
-        },
-        {
-          id: 'ai-financial-analytics',
-          title: 'AI Financial Analytics',
-          href: '/services/ai-financial-analytics',
-          icon: TrendingUp,
-          description: 'Financial modeling and analysis'
-        },
-        {
-          id: 'ai-healthcare',
-          title: 'AI Healthcare',
-          href: '/services/ai-healthcare-analytics',
-          icon: Heart,
-          description: 'Healthcare optimization'
-        },
-        {
-          id: 'ai-supply-chain',
-          title: 'AI Supply Chain',
-          href: '/services/ai-supply-chain-optimization',
-          icon: Truck,
-          description: 'Supply chain optimization'
-        },
-        {
-          id: 'ai-marketing',
-          title: 'AI Marketing',
-          href: '/services/ai-marketing-automation',
-          icon: Target,
-          description: 'Marketing automation'
-        },
-        {
-          id: 'ai-hr',
-          title: 'AI HR & Talent',
-          href: '/services/ai-hr-platform',
-          icon: Users,
-          description: 'HR and talent management'
-        },
-        {
-          id: 'ai-legal',
-          title: 'AI Legal Tech',
-          href: '/services/ai-legal-document-automation',
-          icon: FileText,
-          description: 'Legal document automation'
-        },
-        {
-          id: 'ai-content',
-          title: 'AI Content Creation',
-          href: '/services/ai-content-creation-suite',
-          icon: PenTool,
-          description: 'Content generation and optimization'
-        }
-      ]
-    },
-    {
-      id: 'revolutionary-services',
-      title: 'Revolutionary Services',
-      href: '/revolutionary-ai-services-2032',
-      icon: Rocket,
-      description: 'Next-generation AI solutions',
-      featured: true,
-      children: [
-        {
-          id: 'revolutionary-2032',
-          title: 'Revolutionary AI Services 2032',
-          href: '/revolutionary-ai-services-2032',
-          icon: Star,
-          description: 'Cutting-edge AI solutions'
-        },
-        {
-          id: 'revolutionary-2030',
-          title: 'Revolutionary Services 2030',
-          href: '/revolutionary-services-2030',
-          icon: Zap,
-          description: 'Future technology solutions'
-        }
-      ]
-    },
-    {
-      id: 'solutions',
-      title: 'Solutions',
-      href: '/solutions',
-      icon: Target,
-      description: 'Industry-specific solutions',
-      children: [
-        {
-          id: 'enterprise',
-          title: 'Enterprise Solutions',
-          href: '/solutions/enterprise',
-          icon: Building,
-          description: 'Large-scale business transformations'
-        },
-        {
-          id: 'healthcare',
-          title: 'Healthcare Solutions',
-          href: '/solutions/healthcare',
-          icon: Heart,
-          description: 'Digital health transformation'
-        }
-      ]
-    },
-    {
-      id: 'resources',
-      title: 'Resources',
-      href: '/resources',
-      icon: BookOpen,
-      description: 'Learning and documentation',
-      children: [
-        {
-          id: 'blog',
-          title: 'Blog & Insights',
-          href: '/blog',
-          icon: FileText,
-          description: 'Latest industry trends'
-        },
-        {
-          id: 'case-studies',
-          title: 'Case Studies',
-          href: '/case-studies',
-          icon: Target,
-          description: 'Success stories'
-        },
-        {
-          id: 'white-papers',
-          title: 'White Papers',
-          href: '/white-papers',
-          icon: FileText,
-          description: 'In-depth research'
-        },
-        {
-          id: 'webinars',
-          title: 'Webinars',
-          href: '/webinars',
-          icon: Play,
-          description: 'Educational sessions'
-        }
-      ]
-    },
-    {
-      id: 'company',
-      title: 'Company',
-      href: '/about',
-      icon: Users,
-      description: 'About our company',
-      children: [
-        {
-          id: 'about',
-          title: 'About Us',
-          href: '/about',
-          icon: Users,
-          description: 'Our story and mission'
-        },
-        {
-          id: 'team',
-          title: 'Our Team',
-          href: '/team',
-          icon: Users,
-          description: 'Meet our experts'
-        },
-        {
-          id: 'careers',
-          title: 'Careers',
-          href: '/careers',
-          icon: Star,
-          description: 'Join our team'
-        },
-                 {
-           id: 'partners',
-           title: 'Partners',
-           href: '/partners',
-           icon: Users,
-           description: 'Strategic partnerships'
-         }
-      ]
-    },
-    {
-      id: 'support',
-      title: 'Support',
-      href: '/help',
-      icon: HelpCircle,
-      description: 'Help and support',
-      children: [
-        {
-          id: 'help-center',
-          title: 'Help Center',
-          href: '/help',
-          icon: HelpCircle,
-          description: 'Self-service support'
-        },
-        {
-          id: 'documentation',
-          title: 'Documentation',
-          href: '/docs',
-          icon: BookOpen,
-          description: 'Technical documentation'
-        },
-        {
-          id: 'api',
-          title: 'API Reference',
-          href: '/api',
-          icon: Code,
-          description: 'API documentation'
-        },
-        {
-          id: 'contact',
-          title: 'Contact Us',
-          href: '/contact',
-          icon: Mail,
-          description: 'Get in touch'
-        }
-      ]
+  const toggleSection = (section: string)    => {
+    const newExpanded = new Set(expandedSections);
+    if (newExpanded.has(section)) {
+      newExpanded.delete(section);
+    } else {
+      newExpanded.add(section);
     }
   ];
 
@@ -267,9 +77,7 @@ const EnhancedSidebar: React.FC = () => {
     );
   };
 
-  const isItemActive = (href: string) => {
-    return location.pathname === href || location.pathname.startsWith(href + '/');
-  };
+  const isActive = (path: string)    => location.pathname === path;
 
   const isItemExpanded = (itemId: string) => {
     return expandedItems.includes(itemId);

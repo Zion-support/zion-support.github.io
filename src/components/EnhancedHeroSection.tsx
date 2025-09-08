@@ -1,9 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Play, Star, CheckCircle, ChevronLeft, ChevronRight, Shield, Globe, Brain, Rocket, Target, TrendingUp } from 'lucide-react';
+import { motion, AnimatePresence    } from 'framer-motion';
+import { Link    } from 'react-router-dom';
+import { ArrowRight, 
+  Play, 
+  Star, 
+  CheckCircle, 
+  ChevronLeft, 
+  ChevronRight,
+  Zap,
+  Shield,
+  Globe,
+  Brain,
+  Rocket,
+  Target,
+  TrendingUp
+   } from 'lucide-react';
 
 interface HeroSlide {
+
+
+
   title: string;
   subtitle: string;
   description: string;
@@ -13,7 +29,10 @@ interface HeroSlide {
   features: string[];
   gradient: string;
   icon: React.ComponentType<any>;
-  stats: { label: string; value: string; icon: React.ComponentType<any> }[];
+  stats: { label: string; value: string; icon: React.ComponentType<any> 
+
+
+}[];
 }
 
 const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: []):  {
@@ -71,7 +90,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: []):  {
     }
   ];
 
-  useEffect(() => {
+  useEffect(()    => {
     if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
@@ -91,7 +110,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: []):  {
     setIsAutoPlaying(false);
   };
 
-  const goToSlide = (index: number) => {
+  const goToSlide = (index: anynumber)    => {
     setCurrentSlide(index);
     setIsAutoPlaying(false);
   };
@@ -129,7 +148,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: []):  {
         ></motion.div>
         
         {/* Floating particles */}
-        {[...Array(6)].map((_, i) => (
+        {[...Array(6)].map((_, i)    => (
           <motion.div
             key={i}
             className="absolute w-2 h-2 bg-zion-cyan/40 rounded-full"
@@ -195,8 +214,8 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: []):  {
                 </p>
 
                 {/* Features */}
-                <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg:mx-0">
-                  {currentSlideData?.features?.map((feature, index) => (
+                <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg: anymx-0">
+                  {currentSlideData.features.map((feature, index)    => (
                     <motion.div
                       key={feature}
                       initial={{ opacity: 0, x: -20 }}

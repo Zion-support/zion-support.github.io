@@ -1,4 +1,4 @@
-import { ProductListing } from "@/types/listings";
+import { ProductListing  } from '@/types/listings';
 
 export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
   // Quantum-Safe Cybersecurity Infrastructure

@@ -1,24 +1,26 @@
-import { GetStaticPaths, GetStaticProps } from 'next'
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import React from 'react'
-import { innovativeRealMicroSaasServices2025 } from '../../data/2025-innovative-real-micro-saas-services'
-import { advancedITServices } from '../../data/advanced-it-services'
-import { innovativeAIServices } from '../../data/innovative-ai-services'
-import { addedMicroSaaS2025 } from '../../data/2025-added-micro-saas'
-import { addedITServices2025 } from '../../data/2025-added-it-services'
-import { addedAIServices2025 } from '../../data/2025-added-ai-services'
+import { GetStaticPaths, GetStaticProps  } from 'next.ts'
+import Head from 'next/head.ts'
+import Link from 'next/link.ts'
+import React from 'react.ts'
+import { innovativeRealMicroSaasServices2025  } from '../../data/2025-innovative-real-micro-saas-services'
+import { advancedITServices  } from '../../data/advanced-it-services'
+import { innovativeAIServices  } from '../../data/innovative-ai-services'
+import { addedMicroSaaS2025  } from '../../data/2025-added-micro-saas'
+import { addedITServices2025  } from '../../data/2025-added-it-services'
+import { addedAIServices2025  } from '../../data/2025-added-ai-services'
 interface ServiceItem {
-	id: string
-	name: string
-	tagline: string
-	price: string
-	period: string
-	description?: string
-	features: string[]
-	icon?: string
-	color?: string
-	textColor?: string
+
+id: string;
+name: string;
+tagline: string;
+price: string;
+period: string;
+description?: string;
+features: string[];
+icon?: string;
+color?: string;
+textColor?: string;
+
 }
 function collectAllServices(): ServiceItem[] {
 	const arrays: unknown[] = [
@@ -63,8 +65,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
 		return { notFound: true }
 	}
 	return { props: { service } }
-  {/* Removed stray closing brace */}
-export default function ServiceDetail(...args[]):  {
+}
+export default function ServiceDetail(...args: any[]): any {
 	const title = `${service.name} — Zion Tech Group`
 	const description = service.tagline || 'Zion Tech Group Service'
 	return (

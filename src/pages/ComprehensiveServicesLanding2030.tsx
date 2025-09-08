@@ -1,61 +1,34 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-
-import { SEO } from '../components/SEO';
-import { 
-  ArrowRight, 
-  Brain, 
-  Shield, 
-  TrendingUp, 
-  Globe, 
-  Heart, 
-  Rocket, 
-  Users, 
-  PenTool, 
-  Settings,
+import { motion  } from 'framer-motion';
+import { ArrowRight,
+  Brain,
   Cloud,
-  Lock,
-  Atom,
-  Cpu,
-  Link,
-  RefreshCw,
-  Leaf,
-  Server,
-  Zap,
-  Star,
-  CheckCircle,
-  DollarSign,
-  Clock,
-  Target,
-  BarChart3,
-  Award,
-  Sparkles,
-  Flame,
-  Crown,
-  Infinity,
-  Gauge,
-  GitFork,
-  Code,
   Database,
-  Network,
-  Smartphone,
-  Building,
-  Factory,
-  City,
-  Car,
-  Home,
-  Truck,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
-import { Link as RouterLink } from 'react-router-dom';
-import { COMPREHENSIVE_SERVICES_INDEX_2030, SERVICE_CATEGORIES_2030, SERVICE_STATISTICS_2030 } from '../data/comprehensiveServicesIndex2030';
-import { COMPREHENSIVE_PRICING_GUIDE_2030, PRICING_CONTACT_2030 } from '../data/comprehensivePricingGuide2030';
-export default function ComprehensiveServicesLanding2030() {
+  Globe,
+  Heart,
+  Lock,
+  Rocket,
+  Search,
+  Shield,
+  Star,
+  TrendingUp,
+  Users,
+  Zap,
+  Phone
+ } from 'lucide-react';
+import { SEO  } from '../components/SEO';
+import { COMPREHENSIVE_SERVICES_INDEX_2030, SERVICE_CATEGORIES_2030, SERVICE_STATISTICS_2030  } from '../data/comprehensiveServicesIndex2030';
+import { COMPREHENSIVE_PRICING_GUIDE_2030, PRICING_ANALYSIS_2030, PAYMENT_OPTIONS_2030, PRICING_CONTACT_2030  } from '../data/comprehensivePricingGuide2030';
+
+export default function ComprehensiveServicesLanding2030(...args: any[]): any {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState('rating');
+  const [priceRange, setPriceRange] = useState<any>([0, 50000]);
+  const [aiScoreRange, setAiScoreRange] = useState<any>([80, 100]);
+  const [showAdvancedFilters, setShowAdvancedFilters] = useState(false);
+  const [selectedService, setSelectedService] = useState<any>(null);
+  const [showModal, setShowModal] = useState(false);
 
   // Featured services for hero section
   const featuredServices = [
@@ -163,7 +136,7 @@ export default function ComprehensiveServicesLanding2030() {
     }
   });
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string)  => {
     const icons: { [key: string]: React.ReactNode } = {
       'AI & Business Intelligence': <Brain className="w-6 h-6" />,
       'AI & Healthcare': <Heart className="w-6 h-6" />,
@@ -188,7 +161,7 @@ export default function ComprehensiveServicesLanding2030() {
     return icons[category] || <Rocket className="w-6 h-6" />;
   };
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: string)  => {
     const colors: { [key: string]: string } = {
       'AI & Business Intelligence': 'from-purple-500 to-pink-500',
       'AI & Healthcare': 'from-pink-500 to-red-500',
@@ -221,7 +194,7 @@ export default function ComprehensiveServicesLanding2030() {
     setAiScoreRange([80, 100]);
   };
 
-  const openServiceModal = (service: unknown) => {
+  const openServiceModal = (service: any)  => {
     setSelectedService(service);
     setShowModal(true);
   };
@@ -419,8 +392,8 @@ export default function ComprehensiveServicesLanding2030() {
               </motion.div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {sortedServices.map((service, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {sortedServices.map((service, index)  => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -502,8 +475,8 @@ export default function ComprehensiveServicesLanding2030() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {COMPREHENSIVE_PRICING_GUIDE_2030.slice(0, 3).map((service, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+              {COMPREHENSIVE_PRICING_GUIDE_2030.slice(0, 3).map((service, index)  => (
                 <motion.div
                   key={service.serviceId}
                   initial={{ opacity: 0, y: 20 }}
@@ -642,51 +615,22 @@ export default function ComprehensiveServicesLanding2030() {
         </div>
       </section>
 
-      {/* Featured Services Section */}
-      <section className="py-20 bg-slate-900">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Featured Services 2030
-            </h2>
-            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-              Our most innovative and high-impact services that are transforming industries and driving unprecedented ROI.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {featuredServices.map((service, index) => (
-              <motion.div
-                key={service.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group"
-              >
-                <RouterLink to={`/services/${service.id}`}>
-                  <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25">
-                    <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                      <service.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
-                      {service.name}
-                    </h3>
-                    <p className="text-slate-400 text-sm mb-4 line-clamp-3">
-                      {service.description}
-                    </p>
-                    <div className="space-y-2 mb-4">
-                      {service.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-center text-xs text-slate-500">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                          {feature}
-                        </div>
+              {/* Service Details */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-4">Description</h3>
+                  <p className="text-gray-300 leading-relaxed">{selectedService.description}</p>
+                  
+                  <div className="mt-6">
+                    <h4 className="text-lg font-semibold text-white mb-3">Tags</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {selectedService.tags.map((tag: string)  => (
+                        <span
+                          key={tag}
+                          className="px-3 py-1 bg-blue-600/20 text-blue-400 text-sm rounded-full border border-blue-600/30"
+                        >
+                          {tag}
+                        </span>
                       ))}
                     </div>
                     <div className="flex items-center justify-between text-sm">

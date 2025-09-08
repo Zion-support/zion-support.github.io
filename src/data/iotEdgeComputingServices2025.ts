@@ -1,18 +1,25 @@
-export type IoTEdgeService = {
+export interface IoTEdgeService {
 
-export interface IoTEdgeComputingService {
-  id: number;
-  name: string;
-  category: string;
+  id: string;
+  title: string;
   description: string;
   pricing: string;
   price: number;
   pricingModel: string;
   features: string[];
   benefits: string[];
-  targetAudience: string[];
-  tags: string[];
-  contactInfo: ServiceContact;
+  useCases: string[];
+pricing: {
+    starter: string;
+    professional: string;
+    enterprise: string;
+    custom: string;
+  
+};
+  estimatedTime: string;
+  technologies: string[];
+  image?: string;
+  iotScore: number;
   marketPrice: string;
   competitors: string[];
   iotScore: number;
@@ -450,5 +457,12 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
     deployment: 'Cloud-based analytics platform'
   {/* Removed stray closing brace */}
 ];
-
-export default iotEdgeComputingServices2025;
+export const getIoTEdgeServicesByCategory = (category: string): IoTEdgeService[]  => {
+  if (category === 'All') {
+    return IOT_EDGE_COMPUTING_SERVICES_2025;
+  }
+  return IOT_EDGE_COMPUTING_SERVICES_2025.filter(service => service.category === category);
+};
+export const getAllIoTEdgeServices = (): IoTEdgeService[] => {
+  return IOT_EDGE_COMPUTING_SERVICES_2025;
+};

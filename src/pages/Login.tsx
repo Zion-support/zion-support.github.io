@@ -1,17 +1,35 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Eye, EyeOff, Mail, Lock, Shield, Zap, Brain, Cloud, ArrowRight, Github, Linkedin, Building, AlertCircle, MessageCircle, Phone, MapPin, Mail as MailIcon, Shield as ShieldIcon, Activity, Atom, Network, Leaf, Lock as LockIcon } from 'lucide-react';
+import { Link   } from 'react-router-dom';
+import { motion   } from 'framer-motion';
+import { Mail, 
+  Lock, 
+  Eye, 
+  EyeOff, 
+  ArrowRight,
+  Shield,
+  Zap,
+  Users
+  } from 'lucide-react';
 
-export default function Login() {
+export default function Login(...args: any[]): any {
+  const [formData, setFormData] = useState({
+    email: '',
+    password: ''
+  });
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [errors, setErrors] = useState<{ email?: string; password?: string }>({});
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>)   => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent)   => {
     e.preventDefault();
     setIsLoading(true);
     setErrors({});
@@ -25,28 +43,10 @@ export default function Login() {
       newErrors.email = 'Email is invalid';
     }
     
-    if (!password) {
-      newErrors.password = 'Password is required';
-    } else if (password.length < 6) {
-      newErrors.password = 'Password must be at least 6 characters';
-    }
-
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
-      setIsLoading(false);
-      return;
-    }
-
-    // Simulate login process
-    try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      // Redirect to dashboard or handle successful login
-      window.location.href = '/dashboard';
-    } catch (error) {
-      // console.error('Login failed:', error);
-    } finally {
-      setIsLoading(false);
-    }
+    // Here you would typically make an API call to authenticate
+    // // // console.log('Login attempt:', formData);
+    
+    setIsLoading(false);
   };
 
   const features = [

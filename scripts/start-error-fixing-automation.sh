@@ -1,145 +1,188 @@
 #!/bin/bash
 
 # Error Fixing Automation Startup Script
-# Launches all PM2 error fixing automations and monitors their status
+# This script starts all error fixing automations using PM2
 
 set -e
 
 echo "🚀 Starting Error Fixing Automation System..."
-echo "=============================================="
+
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+
+# Function to print colored output
+print_status() {
+    echo -e "${BLUE}[INFO]${NC} $1"
+}
+
+print_success() {
+    echo -e "${GREEN}[SUCCESS]${NC} $1"
+}
+
+print_warning() {
+    echo -e "${YELLOW}[WARNING]${NC} $1"
+}
+
+print_error() {
+    echo -e "${RED}[ERROR]${NC} $1"
+}
 
 # Check if PM2 is installed
-if ! command -v pm2 &> /dev/null; then
-    echo "❌ PM2 is not installed. Installing PM2..."
-    npm install -g pm2
-fi
+check_pm2() {
+    if ! command -v pm2 &> /dev/null; then
+        print_error "PM2 is not installed. Please install PM2 first:"
+        echo "npm install -g pm2"
+        exit 1
+    fi
+    print_success "PM2 is available"
+}
 
-# Navigate to project root
-cd "$(dirname "$0")/.."
+# Check if we're in the right directory
+check_directory() {
+    if [ ! -f "ecosystem.config.cjs" ]; then
+        print_error "ecosystem.config.cjs not found. Please run this script from the project root directory."
+        exit 1
+    fi
+    print_success "Project directory confirmed"
+}
 
-echo "📁 Project root: $(pwd)"
+# Start error fixing automations
+start_error_fixing() {
+    print_status "Starting error fixing automations..."
+    
+    # Start the comprehensive error fixer
+    print_status "Starting comprehensive error fixer..."
+    pm2 start ecosystem.config.cjs --only comprehensive-error-fixer
+    
+    # Start the TypeScript error fixer
+    print_status "Starting TypeScript error fixer..."
+    pm2 start ecosystem.config.cjs --only typescript-error-fixer
+    
+    # Start the JSX error fixer
+    print_status "Starting JSX/React error fixer..."
+    pm2 start ecosystem.config.cjs --only jsx-error-fixer
+    
+    # Start the error monitor
+    print_status "Starting error monitor..."
+    pm2 start ecosystem.config.cjs --only error-monitor
+    
+    print_success "All error fixing automations started successfully!"
+}
 
-# Stop any existing PM2 processes
-echo "🛑 Stopping existing PM2 processes..."
-pm2 stop all 2>/dev/null || true
-pm2 delete all 2>/dev/null || true
+# Show status of all automations
+show_status() {
+    print_status "Current PM2 status:"
+    pm2 status
+    
+    print_status "Error fixing automation logs (last 20 lines):"
+    echo "----------------------------------------"
+    pm2 logs --lines 20
+}
 
-# Start the error fixing automation system
-echo "🚀 Starting Error Fixing Automation System..."
+# Show specific automation logs
+show_logs() {
+    local automation_name=$1
+    if [ -z "$automation_name" ]; then
+        print_error "Please specify an automation name"
+        echo "Usage: $0 logs <automation-name>"
+        echo "Available automations:"
+        echo "  - comprehensive-error-fixer"
+        echo "  - typescript-error-fixer"
+        echo "  - jsx-error-fixer"
+        echo "  - error-monitor"
+        exit 1
+    fi
+    
+    print_status "Showing logs for $automation_name:"
+    pm2 logs $automation_name --lines 50
+}
 
-# Start the main ecosystem
-echo "📦 Starting PM2 ecosystem..."
-pm2 start ecosystem.config.cjs
+# Stop all error fixing automations
+stop_automations() {
+    print_status "Stopping all error fixing automations..."
+    
+    pm2 stop comprehensive-error-fixer 2>/dev/null || true
+    pm2 stop typescript-error-fixer 2>/dev/null || true
+    pm2 stop jsx-error-fixer 2>/dev/null || true
+    pm2 stop error-monitor 2>/dev/null || true
+    
+    print_success "All error fixing automations stopped"
+}
 
-# Wait for processes to start
-echo "⏳ Waiting for processes to start..."
-sleep 5
+# Restart all error fixing automations
+restart_automations() {
+    print_status "Restarting all error fixing automations..."
+    
+    stop_automations
+    sleep 2
+    start_error_fixing
+    
+    print_success "All error fixing automations restarted"
+}
 
-# Show status
-echo "📊 PM2 Status:"
-pm2 status
+# Show help
+show_help() {
+    echo "Error Fixing Automation Management Script"
+    echo ""
+    echo "Usage: $0 [COMMAND]"
+    echo ""
+    echo "Commands:"
+    echo "  start     Start all error fixing automations"
+    echo "  stop      Stop all error fixing automations"
+    echo "  restart   Restart all error fixing automations"
+    echo "  status    Show status of all automations"
+    echo "  logs      Show logs for a specific automation"
+    echo "  help      Show this help message"
+    echo ""
+    echo "Examples:"
+    echo "  $0 start                    # Start all automations"
+    echo "  $0 logs error-monitor       # Show error monitor logs"
+    echo "  $0 status                   # Show current status"
+}
 
-# Show logs for error fixing automations
-echo ""
-echo "📋 Error Fixing Automation Logs:"
-echo "================================="
+# Main script logic
+main() {
+    local command=${1:-start}
+    
+    case $command in
+        "start")
+            check_pm2
+            check_directory
+            start_error_fixing
+            show_status
+            ;;
+        "stop")
+            check_pm2
+            stop_automations
+            ;;
+        "restart")
+            check_pm2
+            check_directory
+            restart_automations
+            show_status
+            ;;
+        "status")
+            check_pm2
+            show_status
+            ;;
+        "logs")
+            check_pm2
+            show_logs $2
+            ;;
+        "help"|"--help"|"-h")
+            show_help
+            ;;
+        *)
+            print_error "Unknown command: $command"
+            show_help
+            exit 1
+            ;;
+    esac
+}
 
-# Show logs for each error fixing automation
-echo ""
-echo "🔍 Error Monitoring Dashboard:"
-pm2 logs error-monitoring-dashboard --lines 5
-
-echo ""
-echo "🚨 Comprehensive Error Fixer:"
-pm2 logs comprehensive-error-fixer --lines 5
-
-echo ""
-echo "🔧 TypeScript Error Fixer:"
-pm2 logs typescript-error-fixer --lines 5
-
-echo ""
-echo "🎨 Lucide React Icon Fixer:"
-pm2 logs lucide-react-icon-fixer --lines 5
-
-# Create monitoring script
-cat > scripts/monitor-error-fixing.sh << 'EOF'
-#!/bin/bash
-
-# Error Fixing Automation Monitor
-# Monitors the status of all error fixing automations
-
-echo "📊 Error Fixing Automation Status Monitor"
-echo "========================================"
-echo ""
-
-# Show PM2 status
-echo "🔄 PM2 Process Status:"
-pm2 status
-
-echo ""
-echo "📋 Recent Logs:"
-echo "================"
-
-# Show recent logs for each automation
-echo ""
-echo "🔍 Error Monitoring Dashboard (last 10 lines):"
-pm2 logs error-monitoring-dashboard --lines 10 --nostream
-
-echo ""
-echo "🚨 Comprehensive Error Fixer (last 10 lines):"
-pm2 logs comprehensive-error-fixer --lines 10 --nostream
-
-echo ""
-echo "🔧 TypeScript Error Fixer (last 10 lines):"
-pm2 logs typescript-error-fixer --lines 10 --nostream
-
-echo ""
-echo "🎨 Lucide React Icon Fixer (last 10 lines):"
-pm2 logs lucide-react-icon-fixer --lines 10 --nostream
-
-echo ""
-echo "📊 Reports Directory:"
-echo "====================="
-if [ -d "reports" ]; then
-    ls -la reports/ | head -20
-else
-    echo "No reports directory found"
-fi
-
-echo ""
-echo "💡 Quick Commands:"
-echo "=================="
-echo "pm2 status                    - Show all process status"
-echo "pm2 logs [process-name]       - Show logs for specific process"
-echo "pm2 restart [process-name]    - Restart specific process"
-echo "pm2 stop all                  - Stop all processes"
-echo "pm2 delete all                - Delete all processes"
-echo "npm run type-check            - Run TypeScript check manually"
-echo "npm run lint                  - Run ESLint check manually"
-echo "npm run build                 - Run build check manually"
-EOF
-
-chmod +x scripts/monitor-error-fixing.sh
-
-echo ""
-echo "✅ Error Fixing Automation System Started Successfully!"
-echo ""
-echo "📋 Available Commands:"
-echo "======================"
-echo "pm2 status                    - Show all process status"
-echo "pm2 logs [process-name]       - Show logs for specific process"
-echo "pm2 restart [process-name]    - Restart specific process"
-echo "pm2 stop all                  - Stop all processes"
-echo "pm2 delete all                - Delete all processes"
-echo "scripts/monitor-error-fixing.sh - Monitor automation status"
-echo ""
-echo "📊 Automation Schedule:"
-echo "======================="
-echo "Error Monitoring Dashboard    - Every 5 minutes"
-echo "TypeScript Error Fixer       - Every 10 minutes"
-echo "Comprehensive Error Fixer    - Every 15 minutes"
-echo "Lucide React Icon Fixer      - Every 20 minutes"
-echo ""
-echo "🔍 Monitor the system with: ./scripts/monitor-error-fixing.sh"
-echo ""
-echo "🚀 System is now running and will automatically fix errors!"
+# Run main function with all arguments
+main "$@"

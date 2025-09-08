@@ -1,5 +1,7 @@
-import { ReactNode } from 'react';
-interface LayoutProps {
+import React from 'react';
+import { ReactNode    } from 'react';
+interface LayoutProps extends React.PropsWithChildren<{}> {
+
   children: ReactNode;
 }
 // Fixed missing name: // Removed unused: const navigation: NavItem[] = [
@@ -24,13 +26,13 @@ interface LayoutProps {
   },
   { label: 'Contact', href: '/contact' }
 ];
-export default function Layout({ children }: { children: React.ReactNode }) {
-// Fixed missing name:   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-// Fixed missing name:   const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
-// Fixed missing name:   const location = useLocation();
-// Removed unused:   const isActive = (href: string) => location.pathname === href;
-  const toggleSidebarDropdown = (label: string) => {
-// Fixed missing name: // Fixed missing name:     setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label);
+export default function Layout(...args: any[]): any {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState<any>(null);
+  const location = useLocation();
+  const isActive = (href: string)    => location.pathname === href;
+  const toggleSidebarDropdown = (label: string)    => {
+    setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label);
   };
 
   return (

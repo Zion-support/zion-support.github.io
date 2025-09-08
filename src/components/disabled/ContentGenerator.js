@@ -50,8 +50,9 @@ export default function ContentGenerator() {
             toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`);
         }
         catch (error) {
-            // // // // // console.error("Error generating content:", error);
-            toast.error("Failed to generate content. Please try again.")}
+            // // // console.error("Error generating content:", error);
+            toast.error("Failed to generate content. Please try again.");
+        }
         finally {
             setIsGenerating(false);
         }
@@ -80,8 +81,9 @@ export default function ContentGenerator() {
             toast.success(`Test newsletter sent to ${testEmail}!`);
         }
         catch (error) {
-            // // // // // console.error("Error sending test newsletter:", error);
-            toast.error("Failed to send test newsletter. Please try again.")}
+            // // // console.error("Error sending test newsletter:", error);
+            toast.error("Failed to send test newsletter. Please try again.");
+        }
     };
     // Check if user is still loading
     if (isLoading) {

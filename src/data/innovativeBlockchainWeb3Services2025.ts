@@ -1,4 +1,5 @@
-export type InnovativeBlockchainWeb3Service = {
+export interface InnovativeBlockchainWeb3Service {
+
 
   id: string;
   title: string;
@@ -21,7 +22,10 @@ export type InnovativeBlockchainWeb3Service = {
 contactInfo: {
     phone: string;
     email: string;
-    website: string};
+    website: string;
+  
+
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];

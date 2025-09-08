@@ -1,50 +1,174 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Brain, Shield, Cloud, Star, CheckCircle, Phone, Mail, MapPin, ExternalLink, TrendingUp, Users, Award, Clock, DollarSign, Zap, Target, Search } from 'lucide-react';
-import { innovativeAIServices2030 } from '../data/innovativeAIServices2030';
-import { innovativeCybersecurityServices2030 } from '../data/innovativeCybersecurityServices2030';
-import { innovativeCloudDevOpsServices2030 } from '../data/innovativeCloudDevOpsServices2030';
+import React, { useState, useMemo } from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
+import { CheckCircle, 
+  Star, 
+  Zap, 
+  Shield, 
+  TrendingUp, 
+  Brain, 
+  Server, 
+  Globe, 
+  ArrowRight, 
+  Mail, 
+  Phone, 
+  MapPin, 
+  ExternalLink,
+  DollarSign,
+  CreditCard,
+  Wallet,
+  Coins,
+  PiggyBank,
+  Calculator,
+  BarChart3,
+  Target,
+  Award,
+  Users,
+  Clock,
+  Calendar,
+  Check,
+  X,
+  Crown,
+  Rocket,
+  Cpu,
+  Lock,
+  Heart,
+  Sparkles
+ } from 'lucide-react';
+import { INNOVATIVE_SERVICES_2025  } from '@/data/innovativeServices2025';
+import { SEO  } from '@/components/SEO';
 
-import { INNOVATIVE_SERVICES_2025 } from '@/data/innovativeServices2025';
-import { SEO } from '@/components/SEO';
-
-export default function ComprehensivePricingGuide2030() {
+const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('price');
 
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Zap, color: 'from-cyan-500 to-blue-500' },
-    { id: 'AI & Business Intelligence', name: 'AI & Business Intelligence', icon: Brain, color: 'from-purple-500 to-pink-500' },
-    { id: 'AI & Marketing', name: 'AI & Marketing', icon: TrendingUp, color: 'from-green-500 to-emerald-500' },
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', icon: Users, color: 'from-red-500 to-pink-500' },
-    { id: 'AI & Legal Tech', name: 'AI & Legal Tech', icon: Shield, color: 'from-blue-500 to-indigo-500' },
-    { id: 'AI & Real Estate', name: 'AI & Real Estate', icon: Globe, color: 'from-yellow-500 to-orange-500' },
-    { id: 'AI & Operations', name: 'AI & Operations', icon: Cpu, color: 'from-gray-500 to-slate-500' },
-    { id: 'AI & Green Tech', name: 'AI & Green Tech', icon: Zap, color: 'from-green-500 to-emerald-500' },
-    { id: 'AI & Autonomous Systems', name: 'AI & Autonomous Systems', icon: Rocket, color: 'from-cyan-500 to-blue-500' },
-    { id: 'AI & FinTech', name: 'AI & FinTech', icon: DollarSign, color: 'from-emerald-500 to-green-500' },
-    { id: 'AI & Content', name: 'AI & Content', icon: Code, color: 'from-orange-500 to-red-500' },
-    { id: 'AI & Customer Support', name: 'AI & Customer Support', icon: Users, color: 'from-blue-500 to-purple-500' },
-    { id: 'AI & HR', name: 'AI & HR', icon: Users, color: 'from-indigo-500 to-blue-500' },
-    { id: 'AI & Research', name: 'AI & Research', icon: Brain, color: 'from-purple-500 to-violet-500' },
-    { id: 'AI & Metaverse', name: 'AI & Metaverse', icon: Globe, color: 'from-purple-500 to-indigo-500' },
-    { id: 'AI & Space Tech', name: 'AI & Space Tech', icon: Rocket, color: 'from-indigo-500 to-purple-500' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', icon: ShieldCheck, color: 'from-red-500 to-orange-500' },
-    { id: 'Cloud & DevOps', name: 'Cloud & DevOps', icon: Cloud, color: 'from-blue-500 to-cyan-500' },
-    { id: 'Quantum Computing', name: 'Quantum Computing', icon: Zap, color: 'from-indigo-500 to-purple-500' },
-    { id: 'IoT & Edge Computing', name: 'IoT & Edge Computing', icon: Cpu, color: 'from-teal-500 to-cyan-500' },
-    { id: 'Blockchain & Web3', name: 'Blockchain & Web3', icon: Network, color: 'from-yellow-500 to-orange-500' },
-    { id: 'Digital Twin', name: 'Digital Twin', icon: Globe, color: 'from-blue-500 to-indigo-500' },
-    { id: 'Space Technology', name: 'Space Technology', icon: Rocket, color: 'from-purple-500 to-pink-500' },
-    { id: 'Sustainable Technology', name: 'Sustainable Technology', icon: Zap, color: 'from-green-500 to-teal-500' },
-    { id: 'IT Infrastructure', name: 'IT Infrastructure', icon: Server, color: 'from-slate-500 to-gray-500' },
-    { id: 'IT Consulting', name: 'IT Consulting', icon: BarChart3, color: 'from-violet-500 to-purple-500' },
-    { id: 'Data Analytics', name: 'Data Analytics', icon: Database, color: 'from-indigo-500 to-purple-500' },
-    { id: 'Performance Monitoring', name: 'Performance Monitoring', icon: BarChart3, color: 'from-blue-500 to-cyan-500' },
-    { id: 'Disaster Recovery', name: 'Disaster Recovery', icon: Shield, color: 'from-green-500 to-emerald-500' },
-    { id: 'API Management', name: 'API Management', icon: Code, color: 'from-orange-500 to-red-500' },
-    { id: 'Network Management', name: 'Network Management', icon: Network, color: 'from-blue-500 to-indigo-500' },
-    { id: 'Emerging Technology', name: 'Emerging Technology', icon: Rocket, color: 'from-violet-500 to-purple-500' }
+  const services = INNOVATIVE_SERVICES_2025;
+
+  const categories = useMemo(() => {
+    const cats = services.reduce((acc, service) => {
+      if (!acc.includes(service.category)) {
+        acc.push(service.category);
+      }
+      return acc;
+    }, [] as string[]);
+    return ['all', ...cats];
+  }, [services]);
+
+  const pricingModels = ['all', 'monthly', 'annual', 'enterprise'];
+
+  const filteredServices = useMemo(() => {
+    let filtered = services;
+
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(service => service.category === selectedCategory);
+    }
+
+    if (selectedPricingModel !== 'all') {
+      filtered = filtered.filter(service => service.pricingModel === selectedPricingModel);
+    }
+
+    return filtered;
+  }, [services, selectedCategory, selectedPricingModel]);
+
+  const getCategoryIcon = (category: string)  => {
+    switch (category) {
+      case 'AI & Analytics':
+      case 'AI & Sales':
+      case 'AI & Compliance':
+      case 'AI & Communication':
+      case 'AI & Customer Experience':
+      case 'AI & Content':
+      case 'AI & Finance':
+        return Brain;
+      case 'Cloud & DevOps':
+        return Server;
+      case 'IoT & Digital Twin':
+        return Cpu;
+      case 'Quantum Computing':
+        return Rocket;
+      default:
+        return Zap;
+    }
+  };
+
+  const getCategoryColor = (category: string)  => {
+    switch (category) {
+      case 'AI & Analytics':
+      case 'AI & Sales':
+      case 'AI & Compliance':
+      case 'AI & Communication':
+      case 'AI & Customer Experience':
+      case 'AI & Content':
+      case 'AI & Finance':
+        return 'from-purple-600 to-pink-600';
+      case 'Cloud & DevOps':
+        return 'from-blue-600 to-cyan-600';
+      case 'IoT & Digital Twin':
+        return 'from-green-600 to-emerald-600';
+      case 'Quantum Computing':
+        return 'from-indigo-600 to-purple-600';
+      default:
+        return 'from-gray-600 to-slate-600';
+    }
+  };
+
+  const pricingTiers = [
+    {
+      name: 'Starter',
+      description: 'Perfect for small businesses and startups',
+      price: 299,
+      features: [
+        'Basic AI features',
+        'Email support',
+        'Up to 5 users',
+        'Standard integrations',
+        'Community forum access',
+        'Basic analytics',
+        'Mobile app access'
+      ],
+      color: 'from-cyan-500 to-blue-600',
+      popular: false,
+      bestFor: 'Small businesses, startups, individual professionals'
+    },
+    {
+      name: 'Professional',
+      description: 'Ideal for growing businesses and teams',
+      price: 999,
+      features: [
+        'Advanced AI capabilities',
+        'Priority support',
+        'Up to 25 users',
+        'Advanced integrations',
+        'API access',
+        'Custom branding',
+        'Advanced analytics dashboard',
+        'White-label options',
+        'Training and onboarding'
+      ],
+      color: 'from-purple-500 to-pink-600',
+      popular: true,
+      bestFor: 'Growing businesses, mid-size companies, agencies'
+    },
+    {
+      name: 'Enterprise',
+      description: 'For large organizations with complex needs',
+      price: 2999,
+      features: [
+        'Full AI suite access',
+        '24/7 dedicated support',
+        'Unlimited users',
+        'Custom integrations',
+        'White-label solutions',
+        'Advanced security features',
+        'SLA guarantees',
+        'Dedicated account manager',
+        'Custom development',
+        'On-premise deployment options'
+      ],
+      color: 'from-indigo-500 to-purple-600',
+      popular: false,
+      bestFor: 'Large enterprises, government agencies, Fortune 500 companies'
+    }
   ];
 
   const filteredServices = COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => 
@@ -207,16 +331,151 @@ export default function ComprehensivePricingGuide2030() {
           </div>
         </section>
 
-        {/* Services Grid */}
-        <section className="py-12 pb-20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+      {/* Market Insights */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-3xl font-bold text-center mb-12"
+          >
+            Market Insights & Trends
+          </motion.h2>
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {marketInsights.map((insight, index)  => (
+              <motion.div
+                key={insight.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-900/60 backdrop-blur border border-cyan-400/15 rounded-2xl p-6 text-center"
+              >
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${insight.color} flex items-center justify-center mx-auto mb-4`}>
+                  <TrendingUp className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{insight.title}</h3>
+                <div className="text-3xl font-bold text-cyan-400 mb-1">{insight.value}</div>
+                <div className="text-sm text-green-400 mb-2">{insight.growth} YoY</div>
+                <p className="text-sm text-slate-300">{insight.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Tiers */}
+      <section className="py-16 bg-slate-900/50">
+        <div className="container mx-auto px-4">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-3xl font-bold text-center mb-12"
+          >
+            Flexible Pricing Tiers
+          </motion.h2>
+          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingTiers.map((tier, index)  => (
+              <motion.div
+                key={tier.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className={`relative bg-slate-900/60 backdrop-blur border rounded-2xl p-8 ${
+                  tier.popular 
+                    ? 'border-cyan-400/40 shadow-2xl shadow-cyan-400/20' 
+                    : 'border-cyan-400/15'
+                }`}
+              >
+                {tier.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                  <p className="text-slate-300 mb-6">{tier.description}</p>
+                  <div className="mb-4">
+                    <span className="text-4xl font-bold text-white">${tier.price}</span>
+                    <span className="text-slate-400">/month</span>
+                  </div>
+                  <p className="text-sm text-slate-400 mb-4">Best for: {tier.bestFor}</p>
+                </div>
+
+                <ul className="space-y-3 mb-8">
+                  {tier.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-slate-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <Link
+                  to="/contact"
+                  className={`block w-full text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+                    tier.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:opacity-90'
+                      : 'border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10'
+                  }`}
+                >
+                  Get Started
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Service Pricing Details */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-3xl font-bold text-center mb-12"
+          >
+            Service Pricing Details
+          </motion.h2>
+
+          {/* Filters */}
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <select
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: anyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
             >
-              {sortedServices.map((service, index) => (
+              {categories.map(category  => (
+                <option key={category} value={category} className="bg-slate-800 text-white">
+                  {category === 'all' ? 'All Categories' : category}
+                </option>
+              ))}
+            </select>
+            <select
+              value={selectedPricingModel}
+              onChange={(e) => setSelectedPricingModel(e.target.value)}
+              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: anyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
+            >
+              {pricingModels.map(model  => (
+                <option key={model} value={model} className="bg-slate-800 text-white">
+                  {model === 'all' ? 'All Pricing Models' : model.charAt(0).toUpperCase() + model.slice(1)}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid gap-8 grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3">
+            {filteredServices.map((service, index)  => {
+              const CategoryIcon = getCategoryIcon(service.category);
+              const categoryColor = getCategoryColor(service.category);
+              
+              return (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}

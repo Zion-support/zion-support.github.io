@@ -1,14 +1,16 @@
 // Comprehensive AI Services 2030 - Zion Tech Group
 // Cutting-edge artificial intelligence and machine learning solutions
 
-export type ServiceContact = {
+export interface ServiceContact {
 
   phone: string;
   email: string;
   website: string;
-  address: string}
+  address: string;
 
-export type AIService = {
+}
+
+export interface AIService {
 
   id: number;
   name: string;
@@ -20,11 +22,30 @@ export type AIService = {
   features: string[];
   benefits: string[];
   marketPrice: string;
-  ctaLabel: string;
-  href: string;
-  external?: boolean;
-  accuracy?: string;
-  processingTime?: string;
+  aiModels: string[];
+  accuracy: string;
+  trainingData: string;
+  compliance: string[];
+  aiScore: number;
+  useCases: string[];
+  innovationLevel: string;
+  marketSize: string;
+  ethicalAI: string[];
+  technologies: string[];
+  roi: string;
+  setupTime: string;
+  integrations: string[];
+  freeTier: boolean;
+  trialPeriod: string;
+
+}
+
+// Zion Tech Group Contact Information
+const zionContact: ServiceContact = {
+  phone: "+1 302 464 0950",
+  email: "kleber@ziontechgroup.com",
+  website: "https://ziontechgroup.com",
+  address: "364 E Main St STE 1008 Middletown DE 19709"
 };
 
 export const comprehensiveAIServices2030: AIServiceItem[] = [

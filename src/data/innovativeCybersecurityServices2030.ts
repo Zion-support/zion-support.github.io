@@ -1,21 +1,24 @@
 // Innovative Cybersecurity Services 2030 - Zion Tech Group
 // Advanced security solutions for the digital age
 
-export type CybersecurityService = {
+export interface CybersecurityService {
+
 
   id: string;
   title: string;
   description: string;
   category: string;
   subcategory: string;
-  pricing: {
+pricing: {
     monthly: number;
     yearly: number;
     custom: string;
     currency: string;
     pricingModel: string;
     marketPrice: string;
-  };
+  
+
+};
   features: string[];
   benefits: string[];
   useCases: string[];

@@ -1,4 +1,5 @@
-import React, { useState } from 'react.ts';
+import React, { useState } from 'react';
+import { ChevronDown    } from 'lucide-react';
 
 
 const Accordion = AccordionPrimitive.Root
@@ -22,7 +23,7 @@ export function Accordion(...args: []):  {
     defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : []
   );
 
-  const handleToggle = (value: anystring)  => {
+  const handleToggle = (value: string)    => {
     if (type === 'single') {
       setOpenItems(openItems.includes(value) ? [] : [value]);
     } else {
@@ -40,7 +41,7 @@ export function Accordion(...args: []):  {
         if (React.isValidElement(child)) {
           return React.cloneElement(child, { 
             isOpen: anyopenItems.includes(child.props.value),
-            onToggle: ()  => handleToggle(child.props.value)
+            onToggle: ()    => handleToggle(child.props.value)
           });
         }
         return child;
@@ -51,11 +52,11 @@ export function Accordion(...args: []):  {
 
 interface AccordionItemProps extends React.PropsWithChildren<{}> {
 
-  children: anyReact.ReactNode;
+  children: React.ReactNode;
   value: string;
   className?: string;
   isOpen?: boolean;
-  onToggle?: ()  => void;
+  onToggle?: ()    => void;
 
 }
 
@@ -74,10 +75,10 @@ export function AccordionItem(...args: []):  {
 
 interface AccordionTriggerProps extends React.PropsWithChildren<{}> {
 
-  children: anyReact.ReactNode;
+  children: React.ReactNode;
   className?: string;
   isOpen?: boolean;
-  onToggle?: ()  => void;
+  onToggle?: ()    => void;
 
 }
 

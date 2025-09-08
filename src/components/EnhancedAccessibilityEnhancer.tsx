@@ -1,9 +1,11 @@
-// Removed unused: import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Keyboard, Contrast, Type, Move, Settings, X, CheckCircle, Accessibility, Headphones, Shield, Target, Award, RotateCcw, Save, Loader2 } from 'lucide-react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
+import { useLocation    } from 'react-router-dom';
 
 interface AccessibilitySettings {
-  highContrast: boolean;
+
+
+
+  highContrast: anyboolean;
   largeText: boolean;
   reducedMotion: boolean;
   screenReader: boolean;
@@ -26,23 +28,8 @@ interface AccessibilitySettings {
   };
   {/* Removed stray closing brace */}
 
-interface AccessibilityFeature {
-  id: string;
-  name: string;
-  description: string;
-  enabled: boolean;
-  category: 'visual' | 'motor' | 'cognitive' | 'auditory';
-  wcagLevel: 'A' | 'AA' | 'AAA';
-  impact: 'high' | 'medium' | 'low';
-  {/* Removed stray closing brace */}
 
-interface AccessibilityAudit {
-  id: string;
-  issue: string;
-  severity: 'critical' | 'high' | 'medium' | 'low';
-  element: string;
-  recommendation: string;
-  wcagCriteria: string;
+
 }
 
 export default function EnhancedAccessibilityEnhancer() {
@@ -58,71 +45,73 @@ export default function EnhancedAccessibilityEnhancer() {
   const [keyboardNavigation, setKeyboardNavigation] = useState(true);
   const [colorBlindMode, setColorBlindMode] = useState(false);
 
-  const accessibilityFeatures: AccessibilityFeature[] = [
-    {
-      id: 'high-contrast',
-      name: 'High Contrast Mode',
-      description: 'Increase contrast for better readability',
-      enabled: false,
-      category: 'visual',
-      wcagLevel: 'AA'
-    },
-    {
-      id: 'large-text',
-      name: 'Large Text',
-      description: 'Increase font size for better readability',
-      enabled: false,
-      category: 'visual',
-      wcagLevel: 'AA'
-    },
-    {
-      id: 'reduced-motion',
-      name: 'Reduced Motion',
-      description: 'Reduce animations for vestibular disorders',
-      enabled: false,
-      category: 'motor',
-      wcagLevel: 'A'
-    },
-    {
-      id: 'focus-indicator',
-      name: 'Focus Indicator',
-      description: 'Highlight focused elements clearly',
-      enabled: true,
-      category: 'motor',
-      wcagLevel: 'A'
-    },
-    {
-      id: 'keyboard-navigation',
-      name: 'Keyboard Navigation',
-      description: 'Enable full keyboard navigation',
-      enabled: true,
-      category: 'motor',
-      wcagLevel: 'A'
-    },
-    {
-      id: 'screen-reader',
-      name: 'Screen Reader Support',
-      description: 'Optimize for screen readers',
-      enabled: false,
-      category: 'auditory',
-      wcagLevel: 'AA'
-    },
-    {
-      id: 'color-blind-friendly',
-      name: 'Color Blind Friendly',
-      description: 'Use patterns and labels instead of just colors',
-      enabled: false,
-      category: 'visual',
-      wcagLevel: 'AA'
-    }
-  ];
+  enabled?: boolean;
+  showControls?: boolean;
+  autoDetect?: boolean;
+  onSettingsChange?: (settings: AccessibilitySettings)    => void;
 
   // Apply accessibility features
   const applyFeature = useCallback((featureId: string, enabled: boolean) => {
     const feature = accessibilityFeatures.find(f => f.id === featureId);
     if (!feature) return;
 
-  const accessibilityRef = useRef<HTMLDivElement>(null);
+export const EnhancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  enabled = true,
+  showControls = true,
+  autoDetect = true,
+  onSettingsChange,
+}) => {
+  const location = useLocation();
+  const [settings, setSettings] = useState<any>({
+    highContrast: false,
+    largeText: false,
+    reducedMotion: false,
+    focusIndicator: true,
+    screenReader: false,
+    keyboardNavigation: true,
+  });
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentFocus, setCurrentFocus] = useState<any>(null);
+  const focusHistoryRef = useRef<HTMLElement[]>([]);
+  const skipLinkRef = useRef<HTMLAnchorElement>(null);
+
+  // Auto-detect user preferences
+  useEffect(() => {
+    if (!autoDetect) return;
+
+    const mediaQueries = {
+      prefersReducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)'),
+      prefersHighContrast: window.matchMedia('(prefers-contrast: high)'),
+      prefersLargeText: window.matchMedia('(prefers-contrast: more)'),
+    };
+
+    const updateSettings = () => {
+      setSettings(prev => ({
+        ...prev,
+        reducedMotion: anymediaQueries.prefersReducedMotion.matches,
+        highContrast: mediaQueries.prefersHighContrast.matches,
+        largeText: mediaQueries.prefersLargeText.matches,
+      }));
+    };
+
+    // Initial check
+    updateSettings();
+
+    // Listen for changes
+    mediaQueries.prefersReducedMotion.addEventListener('change', updateSettings);
+    mediaQueries.prefersHighContrast.addEventListener('change', updateSettings);
+    mediaQueries.prefersLargeText.addEventListener('change', updateSettings);
+
+    return ()    => {
+      mediaQueries.prefersReducedMotion.removeEventListener('change', updateSettings);
+      mediaQueries.prefersHighContrast.removeEventListener('change', updateSettings);
+      mediaQueries.prefersLargeText.removeEventListener('change', updateSettings);
+    };
+  }, [autoDetect]);
+
+  // Apply accessibility settings
+  useEffect(() => {
+    if (!enabled) return;
 
   // Apply accessibility settings to the document
   const applyAccessibilitySettings = useCallback((newSettings: AccessibilitySettings) => {
@@ -195,9 +184,10 @@ export default function EnhancedAccessibilityEnhancer() {
 
   // Initialize voice recognition
   useEffect(() => {
-    if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
-      const SpeechRecognition = (window as ).SpeechRecognition || (window as ).webkitSpeechRecognition;
-      const recognition = new SpeechRecognition();
+    if (!enabled || !settings.keyboardNavigation) return;
+
+    const handleKeyDown = (event: anyKeyboardEvent)    => {
+      const target = event.target as HTMLElement;
       
       recognition.continuous = true;
       recognition.interimResults = true;
@@ -210,9 +200,18 @@ export default function EnhancedAccessibilityEnhancer() {
             finalTranscript += event.results[i][0].transcript;
           }
         }
-        if (finalTranscript) {
-          setTranscript(finalTranscript);
-          handleVoiceCommand(finalTranscript.toLowerCase());
+      }
+    };
+
+    const handleFocus = (event: anyFocusEvent)    => {
+      const target = event.target as HTMLElement;
+      setCurrentFocus(target);
+      
+      // Track focus history
+      if (target && !focusHistoryRef.current.includes(target)) {
+        focusHistoryRef.current.push(target);
+        if (focusHistoryRef.current.length > 10) {
+          focusHistoryRef.current.shift();
         }
       };
 
@@ -221,25 +220,52 @@ export default function EnhancedAccessibilityEnhancer() {
         setIsListening(false);
       };
 
-      setVoiceRecognition(recognition);
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('focusin', handleFocus);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('focusin', handleFocus);
+    };
+  }, [enabled, settings.keyboardNavigation, settings.screenReader]);
+
+  // Handle arrow key navigation
+  const handleArrowNavigation = useCallback((key: string, currentElement: HTMLElement, parent: HTMLElement)    => {
+    const focusableChildren = Array.from(parent.querySelectorAll('[tabindex]:not([tabindex="-1"])'));
+    const currentIndex = focusableChildren.indexOf(currentElement);
+    
+    let nextIndex = currentIndex;
+    
+    switch (key) {
+      case 'ArrowRight':
+      case 'ArrowDown':
+        nextIndex = (currentIndex + 1) % focusableChildren.length;
+        break;
+      case 'ArrowLeft':
+      case 'ArrowUp':
+        nextIndex = currentIndex === 0 ? focusableChildren.length - 1 : currentIndex - 1;
+        break;
     }
   }, []);
 
-  // Handle voice commands
-  const handleVoiceCommand = useCallback((command: string) => {
-    if (command.includes('open') || command.includes('show')) {
-      if (command.includes('accessibility') || command.includes('settings')) {
-        setIsOpen(true);
-      }
-    } else if (command.includes('close') || command.includes('hide')) {
-      setIsOpen(false);
-    } else if (command.includes('high contrast')) {
-      toggleFeature('high-contrast');
-    } else if (command.includes('large text')) {
-      toggleFeature('large-text');
-    } else if (command.includes('reduced motion')) {
-      toggleFeature('reduced-motion');
-    }
+  // Announce focus changes for screen readers
+  const announceFocusChange = useCallback((element: anyHTMLElement)    => {
+    const announcement = document.createElement('div');
+    announcement.setAttribute('aria-live', 'polite');
+    announcement.setAttribute('aria-atomic', 'true');
+    announcement.className = 'sr-only';
+    
+    const text = element.getAttribute('aria-label') || 
+                 element.getAttribute('title') || 
+                 element.textContent || 
+                 element.tagName.toLowerCase();
+    
+    announcement.textContent = `Focused: any${text}`;
+    document.body.appendChild(announcement);
+    
+    setTimeout(()    => {
+      document.body.removeChild(announcement);
+    }, 1000);
   }, []);
 
   // Toggle accessibility features
@@ -369,47 +395,12 @@ export default function EnhancedAccessibilityEnhancer() {
       }
     });
 
-    // Check for color contrast (simplified)
-    const textElements = document.querySelectorAll('p, span, div, h1, h2, h3, h4, h5, h6');
-    textElements.forEach((element, index) => {
-      const style = window.getComputedStyle(element);
-      const color = style.color;
-      const backgroundColor = style.backgroundColor;
-
-      // Simple contrast check (this is a simplified version)
-      if (color === backgroundColor) {
-        results.push({
-          id: `contrast-${index}`,
-          issue: 'Poor color contrast',
-          severity: 'medium',
-          element: element.outerHTML.slice(0, 100),
-          recommendation: 'Ensure sufficient color contrast (4.5:1 for normal text)',
-          wcagCriteria: '1.4.3 Contrast (Minimum) (AA)'
-        });
-      }
-    });
-
-    // Check for keyboard navigation
-    const interactiveElements = document.querySelectorAll('a, button, input, select, textarea, [tabindex]');
-    interactiveElements.forEach((element, index) => {
-      const tabIndex = element.getAttribute('tabindex');
-      if (tabIndex === '-1' && !element.getAttribute('aria-hidden')) {
-        results.push({
-          id: `keyboard-${index}`,
-          issue: 'Element not keyboard accessible',
-          severity: 'high',
-          element: element.outerHTML.slice(0, 100),
-          recommendation: 'Ensure element is keyboard accessible or hide with aria-hidden',
-          wcagCriteria: '2.1.1 Keyboard (A)'
-        });
-      }
-    });
-
-    // Simulate audit time
-    await new Promise(resolve => setTimeout(resolve, 2000));
-
-    setAuditResults(results);
-    setIsAuditing(false);
+  // Toggle accessibility settings
+  const toggleSetting = useCallback((key: anykeyof AccessibilitySettings)    => {
+    setSettings(prev => ({
+      ...prev,
+      [key]: !prev[key],
+    }));
   }, []);
 
   // Save settings to localStorage

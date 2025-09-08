@@ -1,8 +1,30 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, ArrowUp, Heart, Zap, Brain, Cloud, Rocket, Users, FileText, Zap as ZapIcon } from 'lucide-react';
-export const FuturisticFooter: React.FC = () => {
+import { Link    } from 'react-router-dom';
+import { motion    } from 'framer-motion';
+import { Phone, 
+  Mail, 
+  MapPin, 
+  Globe, 
+  Linkedin, 
+  Twitter, 
+  Facebook, 
+  Instagram,
+  ArrowUp,
+  Heart,
+  Shield,
+  Zap,
+  Brain,
+  Cloud,
+  Server,
+  Rocket,
+  Users,
+  Briefcase,
+  FileText,
+  HelpCircle,
+  MessageCircle,
+  Zap as ZapIcon
+   } from 'lucide-react';
+export const FuturisticFooter: React.FC = (): JSX.Element => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -35,7 +57,7 @@ export const FuturisticFooter: React.FC = () => {
       ]
     },
     {
-      title: "Company",
+      title: "Comp",
       links: [
         { name: "About Us", href: "/about" },
         { name: "Our Team", href: "/about#team" },
@@ -129,7 +151,7 @@ export const FuturisticFooter: React.FC = () => {
                   <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
                     {section.title === "Services" && <Brain className="w-5 h-5 mr-2 text-zion-cyan" />}
                     {section.title === "Solutions" && <Rocket className="w-5 h-5 mr-2 text-zion-purple" />}
-                    {section.title === "Company" && <Users className="w-5 h-5 mr-2 text-zion-blue" />}
+                    {section.title === "Comp" && <Users className="w-5 h-5 mr-2 text-zion-blue" />}
                     {section.title === "Resources" && <FileText className="w-5 h-5 mr-2 text-zion-cyan" />}
                     {section.title}
                   </h3>

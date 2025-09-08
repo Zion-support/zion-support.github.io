@@ -1,14 +1,14 @@
-// Removed unused: import React from "react";
-import { Header } from "@/components/Header";
-import { Footer } from 'node_modules/react-day-picker/src/components/Footer';
-import { CompanyDashboard } from "@/components/enterprise/workspace/CompanyDashboard";
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate, useParams } from "react-router-dom";
-// Removed unused: import SEOHead from "../components/SEOHead.jsx";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
-import { useWhitelabel } from "@/context/WhitelabelContext";
-export default function CompanyWorkspace() {
+import React from 'react';
+import { Header  } from '@/components/Header';
+import { Footer  } from '@/components/Footer';
+import { CompanyDashboard  } from '@/components/enterprise/workspace/CompanyDashboard';
+import { useAuth  } from '@/hooks/useAuth';
+import { Navigate, useParams  } from 'react-router-dom';
+import SEOHead from '../components/SEOHead.jsx';
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
+import { useCompanyWorkspace  } from '@/hooks/useCompanyWorkspace';
+import { useWhitelabel  } from '@/context/WhitelabelContext';
+export default function CompanyWorkspace(...args: any[]): any {
     const { companySlug } = useParams();
     const { user } = useAuth();
     const { company, isLoading, error } = useCompanyWorkspace(companySlug);

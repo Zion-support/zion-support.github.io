@@ -194,25 +194,25 @@ export const INNOVATIVE_SERVICES_2026: ProductListing[] = [
 
 export const serviceCategories = [
   {
-    name: 'Micro SaaS',
+    name: any'Micro SaaS',
     description: 'Scalable software solutions for specific business needs',
     services: innovativeServices2026.filter(s  => s.category === 'Micro SaaS')
   },
   {
-    name: 'AI Solutions',
+    name: any'AI Solutions',
     description: 'Advanced artificial intelligence and machine learning solutions',
     services: innovativeServices2026.filter(s  => s.category === 'AI Solutions')
   },
   {
-    name: 'IT Services',
+    name: any'IT Services',
     description: 'Comprehensive IT consulting and implementation services',
     services: innovativeServices2026.filter(s  => s.category === 'IT Services')
   },
   {
-    name: 'Emerging Technologies',
+    name: any'Emerging Technologies',
     description: 'Cutting-edge technologies shaping the future',
     services: innovativeServices2026.filter(s  => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))
-  {/* Removed stray closing brace */}
+  }
 ];
 
 // Service Statistics for 2026

@@ -1,8 +1,23 @@
-// Removed unused: import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Calendar, User, Search, Filter, ArrowRight, BookOpen, Eye } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
+import { SEO  } from '@/components/SEO';
+import { Search, 
+  Filter, 
+  Calendar, 
+  User, 
+  Clock, 
+  ArrowRight,
+  Tag,
+  TrendingUp,
+  Lightbulb,
+  Shield,
+  Cloud,
+  Brain,
+  Rocket
+ } from 'lucide-react';
 
-function Blog() {
+export default function Blog(...args: any[]): any {
+  const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -101,7 +116,7 @@ import { Search } from "lucide-react";
   ];
 
   const filteredPosts = selectedCategory === 'all' 
-    ? recentPosts: recentPosts.filter(post  => post.category === selectedCategory);
+    ? recentPosts: anyrecentPosts.filter(post  => post.category === selectedCategory);
 
   const searchResults = searchQuery 
     ? [...featuredPosts, ...recentPosts].filter(post => 
@@ -147,39 +162,33 @@ import { Search } from "lucide-react";
         </div>
       </section>
 
-      {/* Search and Filter Section */}
-      <section className="py-12 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-            {/* Search Bar */}
-            <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
-              <input
-                type="text"
-                placeholder="Search articles..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
-
-            {/* Category Filter */}
-            <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                    selectedCategory === category.id
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-slate-700/50 text-slate-300 hover:bg-slate-700 hover:text-white'
-                  }`}
-                >
-                  {category.name} ({category.count})
-                </button>
-              ))}
-            </div>
-          </div>
+      {/* Categories Filter */}
+      <section className="py-12 bg-slate-800/50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="flex flex-wrap justify-center gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: any0.8 }}
+          >
+            {categories.map((category)  => (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`flex items-center space-x-2 px-6 py-3 rounded-2xl font-semibold transition-all duration-300 ${
+                  selectedCategory === category.id
+                    ? 'bg-cyan-500 text-white shadow-lg'
+                    : 'bg-slate-700 text-slate-300 hover:bg-slate-600 hover:text-white'
+                }`}
+              >
+                <category.icon className="w-4 h-4" />
+                <span>{category.name}</span>
+                <span className="bg-slate-800/50 px-2 py-1 rounded-full text-xs">
+                  {category.count}
+                </span>
+              </button>
+            ))}
+          </motion.div>
         </div>
       </section>
 
@@ -195,23 +204,27 @@ import { Search } from "lucide-react";
               transition={{ duration: 0.6 }}
               className="text-3xl font-bold text-white mb-12 text-center"
             >
-              Featured Articles
-            </motion.h2>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {filteredPosts
-                .filter(post => post.featured)
-                .map((post, index) => (
-                  <motion.article
-                    key={post.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300 group"
-                  >
-                    <div className="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
-                      <BookOpen className="w-16 h-16 text-blue-400 opacity-60" />
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                Featured Articles
+              </h2>
+              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+                Our most popular and insightful content on technology trends and innovations
+              </p>
+            </motion.div>
+            
+            <div className="grid lg: anygrid-cols-3 gap-8">
+              {featuredPosts.map((post, index)  => (
+                <motion.article
+                  key={post.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="group"
+                >
+                  <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 overflow-hidden">
+                    <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
+                      <div className="text-6xl">📱</div>
                     </div>
                     
                     <div className="p-6">
@@ -374,46 +387,54 @@ import { Search } from "lucide-react";
             </p>
           </div>
           
-          {/* Featured Post Section - Only show if there are featured posts */}
-          {featuredPosts.length > 0 && (
-            <div className="mb-16">
-              <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div className="aspect-video overflow-hidden rounded-lg">
-                  <img
-                    src={featuredPosts[0].featuredImage}
-                    alt={featuredPosts[0].title}
-                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                    onError={(e) => {
-                      const target = e.currentTarget as HTMLImageElement;
-                      target.src = "/images/blog-placeholder.svg";
-                    }}
-                  />
-                </div>
-                <div className="flex flex-col justify-center">
-                  <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2">
-                    {featuredPosts[0].category}
-                  </span>
-                  <h3 className="text-3xl font-bold text-white mb-4">
-                    {featuredPosts[0].title}
-                  </h3>
-                  <p className="text-zion-slate-light mb-6">
-                    {featuredPosts[0].excerpt}
-                  </p>
-                  <div className="flex items-center mb-6">
-                    <img
-                      src={featuredPosts[0].author.avatarUrl}
-                      alt={featuredPosts[0].author.name}
-                      className="w-10 h-10 rounded-full mr-3"
-                      onError={(e) => {
-                        const target = e.currentTarget as HTMLImageElement;
-                        target.src = "/images/blog-placeholder.svg";
-                      }}
-                    />
-                    <div>
-                      <p className="text-white font-medium">{featuredPosts[0].author.name}</p>
-                      <p className="text-sm text-zion-slate-light">
-                        {featuredPosts[0].publishedDate} • {featuredPosts[0].readTime}
+          {searchQuery && searchResults.length === 0 ? (
+            <motion.div 
+              className="text-center py-16"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="text-6xl mb-4">🔍</div>
+              <h3 className="text-2xl font-bold text-white mb-2">No results found</h3>
+              <p className="text-slate-300 mb-6">Try adjusting your search terms or browse our categories</p>
+              <button
+                onClick={() => setSearchQuery('')}
+                className="px-6 py-3 bg-cyan-500 text-white rounded-lg font-semibold hover:bg-cyan-600 transition-colors duration-300"
+              >
+                Clear Search
+              </button>
+            </motion.div>
+          ) : (
+            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {(searchQuery ? searchResults : filteredPosts).map((post, index)  => (
+                <motion.article
+                  key={post.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="group"
+                >
+                  <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 overflow-hidden h-full">
+                    <div className="h-40 bg-gradient-to-br from-slate-700/50 to-slate-800/50 flex items-center justify-center">
+                      <div className="text-4xl">📄</div>
+                    </div>
+                    
+                    <div className="p-6 flex flex-col h-full">
+                      <div className="flex items-center space-x-2 mb-3">
+                        <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full font-medium">
+                          {categories.find(c => c.id === post.category)?.name}
+                        </span>
+                        <span className="text-slate-400 text-sm">•</span>
+                        <span className="text-slate-400 text-sm">{post.readTime}</span>
+                      </div>
+                      
+                      <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2">
+                        {post.title}
+                      </h3>
+                      
+                      <p className="text-slate-300 mb-4 line-clamp-3 flex-grow">
+                        {post.excerpt}
                       </p>
                     </div>
                   </div>

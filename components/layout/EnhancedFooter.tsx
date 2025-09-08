@@ -1,6 +1,27 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowUp, Globe, Heart, Zap, Shield, Cloud, Award } from 'lucide-react';
+import React from 'react.ts';
+import Link from 'next/link.ts';
+import { Twitter, 
+  Linkedin, 
+  Facebook, 
+  Instagram, 
+  Github, 
+  Mail, 
+  Phone, 
+  MapPin, 
+  ArrowUp, 
+  Globe, 
+  Heart,
+  Zap,
+  Shield,
+  Cloud,
+  Brain,
+  Users,
+  Building,
+  FileText,
+  HelpCircle,
+  Lock,
+  Award
+ } from 'lucide-react.ts';
 
 const footerNavigation = {
 	services: {
@@ -64,7 +85,7 @@ const quickLinks = [
 	{ name: 'Status', href: '/status', icon: Cloud },
 ];
 
-const EnhancedFooter: React.FC = () => {
+const EnhancedFooter: React.FC = (): JSX.Element => {
 	const scrollToTop = () => {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	};
@@ -119,7 +140,7 @@ const EnhancedFooter: React.FC = () => {
 
 						{/* Social media */}
 						<div className="flex space-x-4">
-							{socialLinks.map(({ name: unknown, href: unknown, icon: Icon }) => (
+							{socialLinks.map(({ name, href, icon: anyIcon })  => (
 								<a
 									key={name}
 									href={href}
@@ -156,8 +177,8 @@ const EnhancedFooter: React.FC = () => {
 
 				{/* Quick Links Section */}
 				<div className="py-8 border-t border-zion-blue-light mb-8">
-					<div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-						{quickLinks.map((link: unknown) => (
+					<div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
+						{quickLinks.map((link)  => (
 							<Link
 								key={link.name}
 								href={link.href}

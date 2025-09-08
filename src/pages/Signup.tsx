@@ -1,8 +1,19 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-
-export default function Signup() {
+import { Link   } from 'react-router-dom';
+import { motion   } from 'framer-motion';
+import { Mail, 
+  Lock, 
+  Eye, 
+  EyeOff, 
+  User,
+  Building,
+  ArrowRight,
+  Shield,
+  Zap,
+  Users,
+  CheckCircle
+  } from 'lucide-react';
+export default function Signup(...args: any[]): any {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -15,13 +26,13 @@ export default function Signup() {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [agreedToTerms, setAgreedToTerms] = useState(false);
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>)   => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent)   => {
     e.preventDefault();
     if (!agreedToTerms) {
       alert('Please agree to the terms and conditions');
@@ -35,7 +46,7 @@ export default function Signup() {
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
     // Here you would typically make an API call to register
-    // console.log('Signup attempt:', formData);
+    // // // console.log('Signup attempt:', formData);
     setIsLoading(false);
   };
   const features = [
@@ -151,16 +162,16 @@ export default function Signup() {
             </div>
             {/* Comp Field */}
             <div>
-              <label htmlFor="company" className="block text-sm font-medium text-zion-slate-light mb-2">
-                Comp Name
+              <label htmlFor="comp" className="block text-sm font-medium text-zion-slate-light mb-2">
+                Company Name
               </label>
               <div className="relative">
                 <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-zion-slate-light" />
                 <input
                   type="text"
-                  id="company"
-                  name="company"
-                  value={formData.comp}
+                  id="comp"
+                  name="comp"
+                  value={formData.company}
                   onChange={handleChange}
                   className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                   placeholder="Comp name (optional)"

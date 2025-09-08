@@ -1,8 +1,22 @@
-import { motion } from 'framer-motion';
-import { FileText, Shield, Users, Globe, CheckCircle, AlertTriangle, Scale, Lock, Mail, Phone, MapPin } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import React from 'react';
+import { motion   } from 'framer-motion';
+import { SEO   } from '@/components/SEO';
+import { Shield, 
+  FileText, 
+  CheckCircle, 
+  AlertTriangle,
+  Users,
+  Globe,
+  Lock,
+  Clock,
+  Mail,
+  Phone,
+  MapPin
+  } from 'lucide-react';
 
-export default function Terms() {
+export default function Terms(...args: any[]): any {
+  const lastUpdated = 'December 15, 2024';
+
   const termsSections = [
     {
       icon: Users,
@@ -138,9 +152,9 @@ export default function Terms() {
               relationship between you and Zion Tech Group.
             </p>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {termsSections.map((section, index) => (
+          
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {termsSections.map((section, index)   => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -195,9 +209,85 @@ export default function Terms() {
       </section>
 
       {/* Prohibited Activities */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="py-20 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent">
+              Prohibited Activities
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              The following activities are strictly prohibited and may result in immediate account termination
+            </p>
+          </motion.div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md: anygrid-cols-2 gap-6">
+              {prohibitedActivities.map((activity, index)   => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="flex items-start space-x-3"
+                >
+                  <AlertTriangle className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-300">{activity}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Termination Conditions */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Service Termination
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              We reserve the right to terminate services under the following conditions
+            </p>
+          </motion.div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md: anygrid-cols-2 gap-6">
+              {terminationConditions.map((condition, index)   => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="flex items-start space-x-3"
+                >
+                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-300">{condition}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Legal Information */}
+      <section className="py-20 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}

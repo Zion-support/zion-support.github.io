@@ -70,7 +70,8 @@ export function ErrorBoundary({ children, fallback, onError }) {
             }
             // Log error to console in development
             if (process.env.NODE_ENV === 'development') {
-                // // // // // console.error('ErrorBoundary caught an error:', event.error)}
+                // // // console.error('ErrorBoundary caught an error:', event.error);
+            }
         };
         
         const handleUnhandledRejection = (event) => {
@@ -81,7 +82,8 @@ export function ErrorBoundary({ children, fallback, onError }) {
             }
             // Log error to console in development
             if (process.env.NODE_ENV === 'development') {
-                // // // // // console.error('ErrorBoundary caught an unhandled rejection:', event.reason)}
+                // // // console.error('ErrorBoundary caught an unhandled rejection:', event.reason);
+            }
         };
         
         window.addEventListener('error', handleError);
@@ -109,7 +111,8 @@ export function useErrorHandler() {
     
     const handleError = React.useCallback((error) => {
         setError(error);
-        // // // // // console.error('Error caught by useErrorHandler:', error)}, []);
+        // // // console.error('Error caught by useErrorHandler:', error);
+    }, []);
     const clearError = React.useCallback(() => {
         setError(null);
     }, []);

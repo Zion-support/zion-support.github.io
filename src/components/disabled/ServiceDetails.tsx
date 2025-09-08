@@ -7,7 +7,7 @@ export function ServiceDetails({ country }) {
         const dataCenters = {
             "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
             "United Kingdom": ["London", "Manchester", "Birmingham"],
-            "Germany": ["Frankfurt", "Berlin", "Munich"],
+            "Germ": ["Frankfurt", "Berlin", "Munich"],
             "Japan": ["Tokyo", "Osaka"],
             "Australia": ["Sydney", "Melbourne", "Perth"],
             "Singapore": ["Singapore Central"],
@@ -23,7 +23,7 @@ export function ServiceDetails({ country }) {
         const regions = {
             "United States": "https://source.unsplash.com/featured/900x700/?datacenter,usa",
             "United Kingdom": "https://source.unsplash.com/featured/900x700/?datacenter,uk",
-            "Germany": "https://source.unsplash.com/featured/900x700/?datacenter,germany",
+            "Germ": "https://source.unsplash.com/featured/900x700/?datacenter,germ",
             "Japan": "https://source.unsplash.com/featured/900x700/?datacenter,japan",
             "Australia": "https://source.unsplash.com/featured/900x700/?datacenter,australia",
             "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore",
@@ -38,7 +38,7 @@ export function ServiceDetails({ country }) {
         const timeZones = {
             "United States": "EST/CST/PST depending on location",
             "United Kingdom": "GMT/BST",
-            "Germany": "CET/CEST",
+            "Germ": "CET/CEST",
             "Japan": "JST",
             "Australia": "AEST/ACDT/AWST depending on location",
             "Singapore": "SGT",

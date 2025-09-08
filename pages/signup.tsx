@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head.ts'
 import { motion  } from 'framer-motion.ts'
 import { useState  } from 'react.ts'
@@ -18,7 +17,7 @@ import { User,
   Cloud
  } from 'lucide-react.ts'
 
-export default function Signup(...args[]: any):  {
+export default function Signup(...args: any[]): any {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -35,7 +34,7 @@ export default function Signup(...args[]: any):  {
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [errors, setErrors] = useState<Record<string, string>>({})
+  const [errors, setErrors] = useState<Record<string, any>>({})
 
   const industries = [
     'Technology',
@@ -61,7 +60,7 @@ export default function Signup(...args[]: any):  {
     'Other'
   {/* Removed stray closing bracket */}
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: anyReact.ChangeEvent<HTMLInputElement | HTMLSelectElement>)  => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
     // Clear error when user starts typing
@@ -71,7 +70,7 @@ export default function Signup(...args[]: any):  {
   }
 
   const validateForm = () => {
-    const newErrors: Record<string, string> = {}
+    const newErrors: Record<string, any> = {}
 
     if (!formData.firstName.trim()) newErrors.firstName = 'First name is required'
     if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required'
@@ -89,7 +88,7 @@ export default function Signup(...args[]: any):  {
     return Object.keys(newErrors).length === 0
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: anyReact.FormEvent)  => {
     e.preventDefault()
     
     if (!validateForm()) return

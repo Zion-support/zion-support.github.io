@@ -1,30 +1,17 @@
-import { toast as hotToast, type ToastOptions as HotToastOptions } from 'react-hot-toast';
+import { useState, useCallback  } from 'react.ts';
 
-type Toast = {
+interface Toast {
 
   id: string;
   title?: string;
   description?: string;
   variant?: 'default' | 'destructive' | 'success';
-};
+  duration?: number;
 
-export const useToast = () => ({ toast });
-
-function toast(options: ToastOptions) {
-  const message = options.description || options.title || '';
-  if (options.variant === 'destructive') {
-    hotToast.error(message, options);
-  } else if (options.variant === 'success') {
-    hotToast.success(message, options);
-  } else {
-    hotToast(message, options);
-  }
 }
 
-toast.title = (title: string) => hotToast(title);
-toast.description = (description: string) => hotToast(description);
-toast.error = (error: string) => hotToast.error(error);
-toast.success = (message: string) => hotToast.success(message);
+export function useToast(...args: any[]): any {
+  const [toasts, setToasts] = useState<any>([]);
 
   const toast = useCallback(({ title, description, variant = 'default', duration = 5000 }: Omit<Toast, 'id'>) => {
     const id = Math.random().toString(36).substr(2, 9);
@@ -41,7 +28,7 @@ toast.success = (message: string) => hotToast.success(message);
     return id;
   }, []);
 
-  const dismiss = useCallback((id: string) => {
+  const dismiss = useCallback((id: string)  => {
     setToasts(prev => prev.filter(toast => toast.id !== id));
   }, []);
 
@@ -60,5 +47,5 @@ toast.success = (message: string) => hotToast.success(message);
 // Export a default toast function for backward compatibility
 export const toast = ({ title, description, variant = 'default', duration = 5000 }: Omit<Toast, 'id'>) => {
   // In a real implementation, this would dispatch to a global toast system
-  // console.log('Toast:', { title, description, variant, duration });
+  // // // console.log('Toast:', { title, description, variant, duration });
 };

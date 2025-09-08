@@ -1,7 +1,6 @@
-// Removed unused: import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Star, 
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence    } from 'framer-motion';
+import { Star, 
   Quote, 
   ChevronLeft, 
   ChevronRight,
@@ -9,9 +8,12 @@ import {
   Building,
   Users,
   Award
-} from 'lucide-react';
+   } from 'lucide-react';
 
 interface Testimonial {
+
+
+
   id: string;
   name: string;
   position: string;
@@ -22,6 +24,9 @@ interface Testimonial {
   industry: string;
   results: string[];
   avatar: string;
+
+
+
 }
 
 const testimonials: Testimonial[] = [
@@ -111,7 +116,7 @@ export default function EnhancedTestimonialsSection(...args: []):  {
     setIsAutoPlaying(false);
   };
 
-  const goToTestimonial = (index: number) => {
+  const goToTestimonial = (index: anynumber)    => {
     setCurrentTestimonial(index);
     setIsAutoPlaying(false);
   };
@@ -190,8 +195,8 @@ export default function EnhancedTestimonialsSection(...args: []):  {
                   </blockquote>
 
                   {/* Results */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                    {currentTestimonialData?.results?.map((result, index) => (
+                  <div className="grid grid-cols-1 md: anygrid-cols-3 gap-4 mb-8">
+                    {currentTestimonialData.results.map((result, index)    => (
                       <motion.div
                         key={result}
                         initial={{ opacity: 0, y: 20 }}
@@ -283,7 +288,7 @@ export default function EnhancedTestimonialsSection(...args: []):  {
                 { icon: Award, label: '15+ Awards', value: 'Industry Recognition' },
                 { icon: Globe, label: '50+ Countries', value: 'Worldwide Service' },
                 { icon: Building, label: '99.9% Uptime', value: 'Reliability' }
-              ].map((indicator, index) => (
+              ].map((indicator, index)    => (
                 <motion.div
                   key={indicator.label}
                   initial={{ opacity: 0, y: 20 }}

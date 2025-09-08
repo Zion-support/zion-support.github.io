@@ -1,7 +1,8 @@
-import { motion } from 'framer-motion';
-import { Cpu, Wifi, Zap, Database, BarChart3, ArrowRight, Shield, Smartphone } from 'lucide-react';
+import React from 'react';
+import { motion   } from 'framer-motion';
+import { Lock, Link, Shield, Zap, BarChart3, ArrowRight, Users, Globe, Database, Cpu   } from 'lucide-react';
 
-export default function IoTEdge() {
+export default function Blockchain(...args: any[]): any {
   const features = [
     {
       icon: Cpu,
@@ -106,8 +107,8 @@ export default function IoTEdge() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)   => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -145,8 +146,8 @@ export default function IoTEdge() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {services.map((service, index)   => (
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}

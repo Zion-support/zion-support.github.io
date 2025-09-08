@@ -1,24 +1,26 @@
-// Removed unused: import React, { useState } from 'react';
-import { BookOpen, Code, FileText, Video, Download, Search, ChevronRight, ExternalLink, Star, Clock, Users, Bookmark, Filter } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion   } from 'framer-motion';
+import { SEO   } from '@/components/SEO';
+import { Search, 
+  BookOpen, 
+  Code, 
+  FileText, 
+  Video, 
+  Download, 
+  ExternalLink, 
+  ArrowRight,
+  CheckCircle,
+  Clock,
+  Star,
+  Users,
+  Zap,
+  Brain,
+  Cloud,
+  Shield,
+  Rocket
+  } from 'lucide-react';
 
-interface DocSection {
-  id: string;
-  title: string;
-  description: string;
-  icon: unknown;
-  color: string;
-  items: DocItem[];
-}
-
-interface DocItem {
-  title: string;
-  description: string;
-  href: string;
-  type: 'api' | 'guide' | 'tutorial' | 'reference';
-  difficulty: 'beginner' | 'intermediate' | 'advanced';
-}
-
-const Documentation: React.FC = () => {
+export default function Documentation(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popular');
@@ -189,7 +191,7 @@ const Documentation: React.FC = () => {
   };
 
   const filteredCategories = selectedCategory === 'all' 
-    ? docCategories: docCategories.filter(category  => category.id === selectedCategory);
+    ? docCategories: anydocCategories.filter(category   => category.id === selectedCategory);
 
   const searchResults = searchQuery 
     ? docCategories.flatMap(category => 
@@ -311,7 +313,117 @@ const Documentation: React.FC = () => {
                 ))}
               </div>
             </motion.div>
-          ))}
+            
+            <div className="grid md: anygrid-cols-2 gap-8">
+              {filteredCategories.map((category, index)   => (
+                <motion.div
+                  key={category.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="group"
+                >
+                  <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 h-full">
+                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                      <category.icon className="w-8 h-8 text-white" />
+                    </div>
+                    
+                    <h3 className="text-2xl font-bold text-white mb-4">{category.name}</h3>
+                    <p className="text-slate-300 mb-6 leading-relaxed">{category.description}</p>
+                    
+                    <div className="mb-6">
+                      <h4 className="text-lg font-semibold text-cyan-400 mb-3">Available Guides:</h4>
+                      <div className="space-y-3">
+                        {category.articles.map((article, idx) => (
+                          <div key={idx} className="flex items-center justify-between p-3 bg-slate-700/50 rounded-lg">
+                            <div>
+                              <h5 className="text-white font-medium text-sm">{article.title}</h5>
+                              <div className="flex items-center space-x-4 mt-1">
+                                <span className="text-slate-400 text-xs flex items-center">
+                                  <Clock className="w-3 h-3 mr-1" />
+                                  {article.readTime}
+                                </span>
+                                <span className="text-slate-400 text-xs">{article.difficulty}</span>
+                              </div>
+                            </div>
+                            <ArrowRight className="w-4 h-4 text-cyan-400" />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <button className="w-full bg-slate-700 text-white py-3 px-6 rounded-xl font-semibold hover:bg-slate-600 transition-colors duration-300">
+                      View All {category.name} Docs
+                    </button>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* API Documentation */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              API Documentation
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Integrate with our services using our comprehensive APIs
+            </p>
+          </motion.div>
+          
+          <div className="grid md: anygrid-cols-2 gap-8">
+            {apiDocs.map((api, index)   => (
+              <motion.div
+                key={api.name}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="group"
+              >
+                <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300">
+                  <div className="flex items-start justify-between mb-4">
+                    <div>
+                      <h3 className="text-xl font-bold text-white mb-2">{api.name}</h3>
+                      <p className="text-slate-300 text-sm mb-3">{api.description}</p>
+                    </div>
+                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                      api.status === 'Stable' ? 'bg-green-500/20 text-green-400' : 'bg-amber-500/20 text-amber-400'
+                    }`}>
+                      {api.status}
+                    </span>
+                  </div>
+                  
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-slate-400 text-sm">Version: {api.version}</span>
+                    <span className="text-slate-400 text-sm">
+                      {api.endpoints ? `${api.endpoints} endpoints` : `${api.languages} languages`}
+                    </span>
+                  </div>
+                  
+                  <div className="flex space-x-3">
+                    <button className="flex-1 bg-slate-700 text-white py-2 px-4 rounded-lg text-sm font-medium hover:bg-slate-600 transition-colors duration-300">
+                      View Docs
+                    </button>
+                    <button className="flex-1 bg-cyan-500 text-white py-2 px-4 rounded-lg text-sm font-medium hover:bg-cyan-600 transition-colors duration-300">
+                      Try API
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
         {/* No Results */}
@@ -331,44 +443,48 @@ const Documentation: React.FC = () => {
             Additional Resources
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center">
-              <Users className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Developer Community</h3>
-              <p className="text-gray-300 mb-4">Join our developer community for support and collaboration</p>
-              <Link
-                to="/community"
-                className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
-              >
-                Join Community
-                <ExternalLink className="w-4 h-4 ml-2" />
-              </Link>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center">
-              <Download className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">SDK Downloads</h3>
-              <p className="text-gray-300 mb-4">Download SDKs and libraries for your preferred language</p>
-              <Link
-                to="/docs/sdks"
-                className="inline-flex items-center px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-lg transition-colors"
-              >
-                Download SDKs
-                <Download className="w-4 h-4 ml-2" />
-              </Link>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center">
-              <Globe className="w-12 h-12 text-green-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">API Status</h3>
-              <p className="text-gray-300 mb-4">Check the status of our APIs and services</p>
-              <Link
-                to="/status"
-                className="inline-flex items-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-colors"
-              >
-                Check Status
-                <ExternalLink className="w-4 h-4 ml-2" />
-              </Link>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md: anygrid-cols-2 gap-8">
+              {popularGuides.map((guide, index)   => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="group"
+                >
+                  <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300">
+                    <div className="flex items-start justify-between mb-4">
+                      <div>
+                        <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                          {guide.title}
+                        </h3>
+                        <p className="text-cyan-400 text-sm">{guide.category}</p>
+                      </div>
+                      <div className="flex items-center space-x-1">
+                        <Star className="w-4 h-4 text-amber-400 fill-current" />
+                        <span className="text-white text-sm font-medium">{guide.rating}</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center space-x-4 text-slate-400 text-sm">
+                        <span className="flex items-center">
+                          <Clock className="w-4 h-4 mr-1" />
+                          {guide.readTime}
+                        </span>
+                        <span>{guide.difficulty}</span>
+                      </div>
+                      <span className="text-slate-400 text-sm">{guide.views} views</span>
+                    </div>
+                    
+                    <button className="w-full bg-slate-700 text-white py-3 px-6 rounded-xl font-semibold hover:bg-slate-600 transition-colors duration-300">
+                      Read Guide
+                    </button>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </div>
@@ -385,21 +501,57 @@ const Documentation: React.FC = () => {
             our documentation, APIs, or integration process.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors"
-            >
-              <Users className="w-5 h-5 mr-2" />
-              Contact Support
-            </Link>
-            <Link
-              to="/schedule-demo"
-              className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors"
-            >
-              <Code className="w-5 h-5 mr-2" />
-              Schedule Technical Demo
-            </Link>
+          <div className="grid md: anygrid-cols-3 gap-8">
+            {[
+              {
+                title: 'Video Tutorials',
+                description: 'Step-by-step video guides for all our services',
+                icon: Video,
+                count: '50+ videos',
+                href: '/tutorials'
+              },
+              {
+                title: 'Code Examples',
+                description: 'Ready-to-use code snippets and examples',
+                icon: Code,
+                count: '200+ examples',
+                href: '/examples'
+              },
+              {
+                title: 'Download Center',
+                description: 'SDKs, tools, and resources for developers',
+                icon: Download,
+                count: '25+ downloads',
+                href: '/downloads'
+              }
+            ].map((resource, index)   => (
+              <motion.div
+                key={resource.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="group"
+              >
+                <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 text-center h-full">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <resource.icon className="w-8 h-8 text-white" />
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-white mb-4">{resource.title}</h3>
+                  <p className="text-slate-300 mb-4">{resource.description}</p>
+                  <div className="text-cyan-400 text-sm font-medium mb-6">{resource.count}</div>
+                  
+                  <a 
+                    href={resource.href}
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:translate-x-1 transition-all duration-300"
+                  >
+                    Explore {resource.title}
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </a>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>

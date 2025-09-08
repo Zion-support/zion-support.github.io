@@ -1,4 +1,4 @@
-export type EnterpriseSolution = {
+export interface EnterpriseSolution {
 
   id: string;
   title: string;
@@ -14,7 +14,9 @@ pricing: {
     starter: string;
     professional: string;
     enterprise: string;
-    custom: string};
+    custom: string;
+  
+};
   estimatedTime: string;
   technologies: string[];
   image?: string;

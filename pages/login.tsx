@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head.ts'
 import { motion  } from 'framer-motion.ts'
 import { useState  } from 'react.ts'
@@ -12,9 +11,9 @@ import { Mail,
   Cloud,
   Zap,
   ArrowRight
- } from 'lucide-react'
+ } from 'lucide-react.ts'
 
-export default function Login(...args[]: any):  {
+export default function Login(...args: any[]): any {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -26,31 +25,54 @@ import { motion } from 'framer-motion';
 import { Eye, EyeOff, Lock, Mail, ArrowRight } from 'lucide-react';
 import Layout from '../components/Layout';
 
-export default function LoginPage() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [showPassword, setShowPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
+  const [showPassword, setShowPassword] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [errors, setErrors] = useState<Record<string, any>>({})
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle login logic here
-<<<<<<< HEAD
-    console.log('Login attempt:', formData);
-  };
+  const handleInputChange = (e: anyReact.ChangeEvent<HTMLInputElement>)  => {
+    const { name, value } = e.target
+    setFormData(prev => ({ ...prev, [name]: value }))
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({ ...prev, [name]: '' }))
+    }
+  }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-=======
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
-  };
+  const validateForm = () => {
+    const newErrors: Record<string, any> = {}
+
+    if (!formData.email.trim()) newErrors.email = 'Email is required'
+    else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid'
+    
+    if (!formData.password) newErrors.password = 'Password is required'
+
+    setErrors(newErrors)
+    return Object.keys(newErrors).length === 0
+  }
+
+  const handleSubmit = async (e: anyReact.FormEvent)  => {
+    e.preventDefault()
+    
+    if (!validateForm()) return
+
+    setIsSubmitting(true)
+    
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000))
+      
+      // Success - redirect or show success message
+      console.log('Login successful:', formData)
+      
+    } catch (error) {
+      console.error('Login error:', error)
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  const title = 'Sign In — Zion Tech Group'
+  const description = 'Access your Zion Tech Group account to manage AI, cloud, and cybersecurity solutions.'
 
 export default function Login() {
   return (

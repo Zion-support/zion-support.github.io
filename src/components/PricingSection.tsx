@@ -1,6 +1,10 @@
-import { motion } from 'framer-motion';
-import { Check, X, Star, Zap, Shield, Users, ArrowRight, Crown, Rocket, Building } from 'lucide-react';
-const plans = [
+import React from 'react';
+import { motion    } from 'framer-motion';
+import { Link    } from 'react-router-dom';
+import { Check, Star, Zap, Shield, Brain, Cloud    } from 'lucide-react';
+
+export const PricingSection: React.FC = (): JSX.Element => {
+  const plans = [
     {
         name: "Starter",
         price: 99,
@@ -162,14 +166,24 @@ export function PricingSection() {
           </div>
         </motion.div>
 
-        {/* Pricing Plans */}
-        <motion.div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          {plans.map((plan, index) => (<motion.div key={plan.name} variants={itemVariants} whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 300 }} className="relative">
-              {/* Popular badge */}
-              {plan.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-                  <div className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
-                    <Star className="w-4 h-4 inline mr-2"/>
-                    Most Popular
+        <div className="grid md: anygrid-cols-3 gap-8 mb-12">
+          {plans.map((plan, index)    => {
+            const IconComponent = plan.icon;
+            return (
+              <motion.div
+                key={plan.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className={`relative bg-white rounded-2xl shadow-lg p-8 ${
+                  plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''
+                }`}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                      Most Popular
+                    </span>
                   </div>
                 </div>)}
 

@@ -1,15 +1,24 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useEffect, useRef, useCallback, useMemo  } from 'react.ts';
 
-type UseAccessibilityOptions = {
+interface UseAccessibilityOptions {
 
-interface AccessibilitySettings {
-  fontSize: 'small' | 'medium' | 'large' | 'xlarge';
-  colorScheme: 'default' | 'high-contrast' | 'dark' | 'light';
-  motionPreference: 'reduce' | 'no-preference';
-  focusStyle: 'default' | 'high-visibility' | 'minimal';
+  enableKeyboardNavigation?: boolean;
+  enableFocusManagement?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrast?: boolean;
+  enableReducedMotion?: boolean;
+  enableLargeText?: boolean;
+
 }
 
-type AccessibilityFeatures = {
+interface AccessibilityFeatures {
+
+  isHighContrast: boolean;
+  isReducedMotion: boolean;
+  isLargeText: boolean;
+  isScreenReader: boolean;
+
+}
 
   const [settings, setSettings] = useState<AccessibilitySettings>({
     fontSize: 'medium',
@@ -40,12 +49,9 @@ type AccessibilityFeatures = {
     }
   }, []);
 
-  // Save preferences to localStorage
-  const savePreferences = useCallback((newPreferences: Partial<AccessibilityPreferences>) => {
-    const updatedPreferences = { ...preferences, ...newPreferences };
-    setPreferences(updatedPreferences);
-    localStorage.setItem('zion-accessibility-preferences', JSON.stringify(updatedPreferences));
-  }, [preferences]);
+  // Keyboard navigation
+  const handleKeyboardNavigation = useCallback((event: anyKeyboardEvent)  => {
+    if (!enableKeyboardNavigation) return;
 
   const saveSettings = useCallback((newSettings: Partial<AccessibilitySettings>) => {
     const updatedSettings = { ...settings, ...newSettings };
@@ -65,14 +71,15 @@ type AccessibilityFeatures = {
       root.classList.remove('high-contrast');
       root.style.removeProperty('--contrast-multiplier');
     }
-    
-    // Apply large text
-    if (preferences.largeText) {
-      root.classList.add('large-text');
-      root.style.setProperty('--font-size-multiplier', '1.2');
-    } else {
-      root.classList.remove('large-text');
-      root.style.removeProperty('--font-size-multiplier');
+  }, [enableKeyboardNavigation]);
+
+  // Focus management
+  const manageFocus = useCallback((element: anyHTMLElement)  => {
+    if (!enableFocusManagement) return;
+
+    // Store last focused element
+    if (document.activeElement instanceof HTMLElement) {
+      lastFocusedElementRef.current = document.activeElement;
     }
     
     // Apply reduced motion
@@ -125,7 +132,7 @@ type AccessibilityFeatures = {
   }, [enableFocusManagement]);
 
   // Focus trap for modals
-  const createFocusTrap = useCallback((container: HTMLElement) => {
+  const createFocusTrap = useCallback((container: anyHTMLElement)  => {
     if (!enableFocusManagement) return;
 
     focusTrapRef.current = container;
@@ -149,7 +156,7 @@ type AccessibilityFeatures = {
   }, []);
 
   // Get all focusable elements
-  const getFocusableElements = useCallback((container: HTMLElement): HTMLElement[] => {
+  const getFocusableElements = useCallback((container: anyHTMLElement): HTMLElement[]  => {
     const selector = [
       'button:not([disabled])',
       'input:not([disabled])',
@@ -164,7 +171,7 @@ type AccessibilityFeatures = {
   }, []);
 
   // Navigate focus
-  const navigateFocus = useCallback((direction: 'forward' | 'backward', currentElement: HTMLElement) => {
+  const navigateFocus = useCallback((direction: any'forward' | 'backward', currentElement: HTMLElement)  => {
     const container = focusTrapRef.current || document.body;
     const focusableElements = getFocusableElements(container);
     
@@ -183,7 +190,7 @@ type AccessibilityFeatures = {
   }, [getFocusableElements, manageFocus]);
 
   // Vertical navigation
-  const navigateVertical = useCallback((direction: 'up' | 'down', currentElement: HTMLElement) => {
+  const navigateVertical = useCallback((direction: any'up' | 'down', currentElement: HTMLElement)  => {
     // Implementation for vertical navigation (e.g., in dropdowns, lists)
     const container = currentElement.closest('[role="listbox"], [role="menu"], .dropdown, .list');
     if (!container) return;
@@ -207,7 +214,7 @@ type AccessibilityFeatures = {
   }, [manageFocus]);
 
   // Horizontal navigation
-  const navigateHorizontal = useCallback((direction: 'left' | 'right', currentElement: HTMLElement) => {
+  const navigateHorizontal = useCallback((direction: any'left' | 'right', currentElement: HTMLElement)  => {
     // Implementation for horizontal navigation (e.g., in tabs, carousels)
     const container = currentElement.closest('[role="tablist"], .tabs, .carousel');
     if (!container) return;

@@ -1,5 +1,18 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence    } from 'framer-motion';
+import { Loader2, 
+  CheckCircle, 
+  AlertCircle, 
+  Zap, 
+  Sparkles,
+  TrendingUp,
+  Cpu,
+  Database,
+  Network,
+  Shield
+   } from 'lucide-react';
+
+interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
@@ -176,7 +189,7 @@ interface SkeletonLoaderProps {
 export function SkeletonLoader(...args: []):  {
   return (
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: lines }).map((_, index) => (
+      {Array.from({ length: anylines }).map((_, index)    => (
         <motion.div
           key={index}
           className="h-4 bg-zion-slate-light/20 rounded"

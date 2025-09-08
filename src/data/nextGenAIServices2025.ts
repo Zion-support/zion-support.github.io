@@ -1,4 +1,4 @@
-export type NextGenAIService = {
+export interface NextGenAIService {
 
   id: string;
   title: string;
@@ -11,10 +11,17 @@ export type NextGenAIService = {
   features: string[];
   benefits: string[];
   useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
+pricing: {
+    starter: string;
+    professional: string;
+    enterprise: string;
+    custom: string;
+  
+};
+  estimatedTime: string;
+  technologies: string[];
+  image?: string;
+  aiScore: number;
   marketPrice: string;
   demoUrl?: string;
   documentationUrl?: string;

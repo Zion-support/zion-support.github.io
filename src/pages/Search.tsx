@@ -1,17 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Search as SearchIcon, Filter, MapPin, Server, Users, Building, Star, ArrowRight } from 'lucide-react';
-import { useSearchParams } from 'react-router-dom';
+import { Search as SearchIcon, Filter, MapPin, Briefcase, Server, Users, Building, Star, Clock, ArrowRight   } from 'lucide-react';
+import { useSearchParams   } from 'react-router-dom';
 
-export default function SearchPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [searchResults, setSearchResults] = useState<any>([]);
-  const [isSearching, setIsSearching] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedType, setSelectedType] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [expandedItem, setExpandedItem] = useState<string | null>(null);
-  const [recentSearches, setRecentSearches] = useState<string[]>([]);
-  const [popularSearches, setPopularSearches] = useState<string[]>([]);
+export default function Search(...args: any[]): any {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('relevance');
+  const [results, setResults] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const categories = [
     { id: 'all', name: 'All Categories', count: 0 },
@@ -40,15 +37,11 @@ export default function SearchPage() {
   const mockSearchData = [
     // AI & Machine Learning
     {
-      id: 'ai-chatbot',
-      title: 'AI Chatbot Platform',
-      category: 'ai-ml',
-      type: 'software',
-      icon: Bot,
-      description: 'Intelligent chatbot platform with natural language processing capabilities for customer service automation.',
-      content: 'Our AI chatbot platform leverages advanced natural language processing to provide human-like conversations. Features include multi-language support, sentiment analysis, and seamless integration with existing systems.',
-      tags: ['AI', 'Chatbot', 'NLP', 'Automation', 'Customer Service'],
-      url: '/marketplace/ai-chatbot',
+      id: any1,
+      type: 'service',
+      title: 'AI-Powered Business Intelligence Platform',
+      description: 'Advanced analytics platform with machine learning capabilities for business insights',
+      category: 'AI Services',
       rating: 4.8,
       reviews: 156,
       date: '2024-01-15',
@@ -174,11 +167,9 @@ export default function SearchPage() {
     }
   ];
 
-  useEffect(() => {
-    // Load recent searches from localStorage
-    const saved = localStorage.getItem('recentSearches');
-    if (saved) {
-      setRecentSearches(JSON.parse(saved));
+  useEffect(()   => {
+    if (searchQuery) {
+      performSearch();
     }
 
     // Set popular searches
@@ -236,7 +227,7 @@ export default function SearchPage() {
     }
   };
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = (e: React.FormEvent)   => {
     e.preventDefault();
     performSearch(searchQuery);
   };
@@ -265,7 +256,7 @@ export default function SearchPage() {
     }
   };
 
-  const getTypeColor = (type: string) => {
+  const getTypeIcon = (type: string)   => {
     switch (type) {
       case 'software': return 'bg-blue-500/20 text-blue-400';
       case 'service': return 'bg-green-500/20 text-green-400';
@@ -277,13 +268,16 @@ export default function SearchPage() {
     }
   };
 
-  const renderStars = (rating: number) => {
-    const stars = [];
-    const fullStars = Math.floor(rating);
-    const hasHalfStar = rating % 1 !== 0;
-    
-    for (let i = 0; i < fullStars; i++) {
-      stars.push(<Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />);
+  const getTypeLabel = (type: string)   => {
+    switch (type) {
+      case 'service':
+        return 'Service';
+      case 'talent':
+        return 'Talent';
+      case 'equipment':
+        return 'Equipment';
+      default:
+        return 'Unknown';
     }
     
     if (hasHalfStar) {
@@ -360,11 +354,27 @@ export default function SearchPage() {
                   {category.icon}
                   {category.name}
                   <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
-                    {category.id === 'all' ? results.length : results.filter(r => r?.type === category.id).length}
+                    {category.id === 'all' ? results.length: anyresults.filter(r   => r.type === category.id).length}
                   </span>
                 </button>
-              </div>
-            </form>
+              ))}
+            </div>
+
+            {/* Sort Options */}
+            <div className="flex items-center gap-2">
+              <span className="text-zion-slate-light">Sort by:</span>
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+              >
+                {sortOptions.map((option)   => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
         </div>
       </section>

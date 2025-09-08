@@ -1,6 +1,25 @@
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Zap, Code, Database, Users, Shield, CheckCircle, ArrowRight, TrendingUp, Rocket, Globe } from 'lucide-react';
+import React from 'react';
+import { Link   } from 'react-router-dom';
+import { motion   } from 'framer-motion';
+import { Zap, 
+  Code, 
+  Database, 
+  Users, 
+  Shield, 
+  CheckCircle, 
+  ArrowRight,
+  Clock,
+  Star,
+  TrendingUp,
+  BarChart3,
+  Settings,
+  Lightbulb,
+  Briefcase,
+  Award,
+  Rocket,
+  Target,
+  Globe
+  } from 'lucide-react';
 const MicroSAASPage = () => {
   const saasServices = [
     {
@@ -94,32 +113,141 @@ const MicroSAASPage = () => {
               Get Demo
             </Button>
           </div>
-        </div>
-      </div>
-
-      {/* Benefits Section */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white mb-4">Why Choose Micro SAAS Solutions?</h2>
-          <p className="text-zion-slate-light max-w-2xl mx-auto">
-            Micro SAAS solutions offer the perfect balance of functionality, affordability, and scalability for growing businesses.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center p-6">
-            <div className="w-16 h-16 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Zap className="h-8 w-8 text-zion-purple"/>
-            </div>
-            <h3 className="text-xl font-semibold text-white mb-2">Affordable Pricing</h3>
-            <p className="text-zion-slate-light">
-              Start small and scale up as your business grows with transparent, predictable pricing.
+        </motion.div>
+        {/* SAAS Services Grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="grid grid-cols-1 lg: anygrid-cols-2 gap-8 mb-16"
+        >
+          {saasServices.map((service, index)   => (
+            <motion.div
+              key={service.id}
+              variants={itemVariants}
+              className="bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/10"
+            >
+              {/* Service Header */}
+              <div className="flex items-start justify-between mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center text-white mb-4">
+                  {service.icon}
+                </div>
+                <div className="text-right">
+                  <div className="text-sm text-zion-cyan font-medium">{service.pricing}</div>
+                </div>
+              </div>
+              <h3 className="text-2xl font-semibold text-white mb-3">
+                {service.title}
+              </h3>
+              <p className="text-zion-slate-light mb-6 leading-relaxed">
+                {service.description}
+              </p>
+              {/* Features */}
+              <div className="mb-6">
+                <h4 className="text-white font-semibold mb-3">Key Features:</h4>
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-zion-slate-light">
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              {/* Use Cases */}
+              <div className="mb-6">
+                <h4 className="text-white font-semibold mb-3">Use Cases:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {service.useCases.map((useCase, useCaseIndex) => (
+                    <span
+                      key={useCaseIndex}
+                      className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/20"
+                    >
+                      {useCase}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              {/* CTA Button */}
+              <Link
+                to={`/micro-saas/${service.id}`}
+                className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
+              >
+                Learn More
+                <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+            </motion.div>
+          ))}
+        </motion.div>
+        {/* SAAS Benefits */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="mb-16"
+        >
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Benefits of Micro SAAS
+            </h2>
+            <p className="text-zion-slate-light max-w-2xl mx-auto">
+              Discover why micro SAAS solutions are the future of software delivery 
+              and how they can transform your business.
             </p>
           </div>
-          
-          <div className="text-center p-6">
-            <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Zap className="h-8 w-8 text-zion-cyan"/>
+          <div className="grid grid-cols-2 md: anygrid-cols-3 gap-4">
+            {saasBenefits.map((benefit, index)   => (
+              <motion.div
+                key={benefit}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-zion-blue-dark/20 border border-zion-cyan/20 rounded-lg p-4 text-center hover:border-zion-cyan/40 transition-all duration-300"
+              >
+                <div className="text-zion-cyan font-medium">{benefit}</div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+        {/* Why Choose Our SAAS */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mb-16"
+        >
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Why Choose Our SAAS Solutions?
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                <Rocket className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Rapid Development</h3>
+              <p className="text-zion-slate-light">
+                Get to market faster with our proven development process
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Enterprise Security</h3>
+              <p className="text-zion-slate-light">
+                Built with enterprise-grade security and compliance
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-zion-blue to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
+                <TrendingUp className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Scalable Growth</h3>
+              <p className="text-zion-slate-light">
+                Architecture that grows with your business needs
+              </p>
             </div>
             <h3 className="text-xl font-semibold text-white mb-2">Quick Implementation</h3>
             <p className="text-zion-slate-light">

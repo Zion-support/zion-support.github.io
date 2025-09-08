@@ -1,5 +1,15 @@
-// Removed unused: import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence    } from 'framer-motion';
+import { Star, 
+  Quote, 
+  ChevronLeft, 
+  ChevronRight, 
+  Play,
+  Pause,
+  Users,
+  Award,
+  TrendingUp
+   } from 'lucide-react';
 
 const testimonials = [
   {
@@ -83,6 +93,27 @@ export function InteractiveTestimonials() {
     );
   };
 
+  const goToTestimonial = (index: anynumber)    => {
+    setCurrentIndex(index);
+  };
+
+  const togglePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+  // Auto-advance testimonials
+  React.useEffect(() => {
+    if (!isPlaying) return;
+    
+    const interval = setInterval(() => {
+      nextTestimonial();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [isPlaying, currentIndex]);
+
+  const currentTestimonial = testimonials[currentIndex];
+
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -143,8 +174,8 @@ export function InteractiveTestimonials() {
                 </p>
               </blockquote>
 
-              <div className="grid md: grid-cols-3 gap-6">
-                {Object.entries(currentTestimonial.metrics).map(([key, value])  => (
+              <div className="grid md: anygrid-cols-3 gap-6">
+                {Object.entries(currentTestimonial.metrics).map(([key, value])    => (
                   <div key={key} className="text-center p-4 bg-blue-50 rounded-xl">
                     <div className="text-2xl font-bold text-blue-600 mb-1">
                       {value}

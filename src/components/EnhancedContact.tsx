@@ -1,18 +1,40 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Clock } from 'lucide-react';
+import { motion, AnimatePresence    } from 'framer-motion';
+import { Mail, 
+  Phone, 
+  MapPin, 
+  Send, 
+  CheckCircle, 
+  AlertCircle,
+  Clock,
+  MessageSquare,
+  Building,
+  Globe
+   } from 'lucide-react';
 
 interface ContactFormData {
+
+
+
   name: string;
   email: string;
   phone: string;
   company: string;
   service: string;
   message: string;
+
+
+
 }
 
 interface ContactFormErrors {
+
+
+
   [key: string]: string;
+
+
+
 }
 
 export function EnhancedContact(...args: []):  {
@@ -63,7 +85,7 @@ export function EnhancedContact(...args: []):  {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleInputChange = (field: keyof ContactFormData, value: string) => {
+  const handleInputChange = (field: anykeyof ContactFormData, value: string)    => {
     setFormData(prev => ({ ...prev, [field]: value }));
     
     // Clear error when user starts typing
@@ -72,7 +94,7 @@ export function EnhancedContact(...args: []):  {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent)    => {
     e.preventDefault();
     
     if (!validateForm()) {
@@ -95,7 +117,7 @@ export function EnhancedContact(...args: []):  {
         message: ''
       });
     } catch (error) {
-      // console.error('Error submitting form:', error);
+      // // // console.error('Error submitting form:', error);
     } finally {
       setIsSubmitting(false);
     }
@@ -352,13 +374,14 @@ export function EnhancedContact(...args: []):  {
                   />
                 </div>
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
-                    Comp </label>
+                  <label htmlFor="comp" className="block text-sm font-medium text-white mb-2">
+                    Company
+                  </label>
                   <input
                     type="text"
-                    id="company"
-                    value={formData.comp}
-                    onChange={(e) => handleInputChange('comp', e.target.value)}
+                    id="comp"
+                    value={formData.company}
+                    onChange={(e) => handleInputChange('company', e.target.value)}
                     className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light"
                     placeholder="Enter your comp name"
                   />
@@ -376,7 +399,7 @@ export function EnhancedContact(...args: []):  {
                   onChange={(e) => handleInputChange('service', e.target.value)}
                   className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white"
                 >
-                  {services.map(service  => (
+                  {services.map(service    => (
                     <option key={service.value} value={service.value}>
                       {service.label}
                     </option>

@@ -1,11 +1,16 @@
-import type { Config } from,
-  tailwindcss'
-export default {
-content: [./pages/**/*.{js,ts,jsx,tsx,mdx}',
-,
-  ./components/**/*.{js,ts,jsx,tsx,mdx}',
-  './app/**/*.{js,ts,jsx,tsx,mdx}',],
-  darkMode: 'class,
+import { Config  } from 'tailwindcss.ts';
+import { fontFamily  } from 'tailwindcss/defaultTheme.ts';
+import plugin from 'tailwindcss/plugin.ts';
+import animatePlugin from 'tailwindcss-animate.ts';
+const config: Config = {
+  darkMode: ["class"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
+  safelist: ['border-border'],
   theme: {
     container: {
       center: true,

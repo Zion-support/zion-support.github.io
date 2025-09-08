@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link    } from 'react-router-dom';
 
 export function BlogSection(...args: []):  {
   const blogPosts = [
@@ -27,8 +28,8 @@ export function BlogSection(...args: []):  {
             View all posts →
           </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {blogPosts.map((post) => (
+        <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+          {blogPosts.map((post)    => (
             <article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold text-white mb-3">
                 <Link to={`/blog/${post.id}`} className="hover:text-zion-cyan">

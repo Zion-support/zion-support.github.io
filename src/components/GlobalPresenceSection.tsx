@@ -1,4 +1,13 @@
-import { motion } from 'framer-motion';
+import React from 'react';
+import { motion    } from 'framer-motion';
+import { Globe, 
+  MapPin, 
+  Users, 
+  Clock, 
+  Star,
+  Award,
+  CheckCircle
+   } from 'lucide-react';
 
 const globalOffices = [
   {
@@ -65,10 +74,19 @@ export function GlobalPresenceSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          {globalStats.map((stat, index) => (
-            <div key={stat.label} className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">{stat.icon}</span>
+          {globalStats.map((stat, index)    => {
+            const IconComponent = stat.icon;
+            return (
+              <div key={stat.label} className="text-center">
+                <div className="flex justify-center mb-3">
+                  <div className="p-2 bg-blue-100 rounded-lg">
+                    <IconComponent className="h-6 w-6 text-blue-600" />
+                  </div>
+                </div>
+                <div className="text-2xl font-bold text-gray-900 mb-1">
+                  {stat.value}
+                </div>
+                <div className="text-sm text-gray-600">{stat.label}</div>
               </div>
               <div className="text-3xl font-bold text-blue-400 mb-2">{stat.value}</div>
               <div className="text-gray-300 text-sm">{stat.label}</div>
@@ -76,30 +94,23 @@ export function GlobalPresenceSection() {
           ))}
         </motion.div>
 
-        {/* Global Offices */}
-        <motion.div 
-          className="mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <h3 className="text-3xl font-bold text-white text-center mb-12">
-            Strategic Global Locations
-          </h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {globalOffices.map((office, index) => (
-              <motion.div
-                key={office.city}
-                className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl">{office.icon}</span>
+        {/* Locations Grid */}
+        <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {locations.map((location, index)    => (
+            <motion.div
+              key={location.city}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300"
+            >
+              <div className="flex items-center mb-4">
+                <span className="text-3xl mr-3">{location.flag}</span>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">
+                    {location.city}
+                  </h3>
+                  <p className="text-gray-600 text-sm">{location.country}</p>
                 </div>
                 
                 <div className="mb-2">

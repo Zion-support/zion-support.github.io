@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Sun, Moon, Monitor } from 'lucide-react';
-import { motion } from 'framer-motion';
-type Theme = 'light' | 'dark' | 'system';
+import { Sun, Moon, Monitor    } from 'lucide-react';
 
 interface ThemeToggleProps {
   className?: string;
@@ -45,7 +43,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     localStorage.setItem('zion-theme', theme);
   }, [theme, mounted]);
 
-  const handleThemeChange = (newTheme: Theme) => {
+  const toggleTheme = (newTheme: anyTheme)    => {
     setTheme(newTheme);
   };
 

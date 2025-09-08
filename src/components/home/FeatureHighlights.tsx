@@ -1,5 +1,20 @@
-import { motion } from 'framer-motion';
-import { Brain, Globe, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Award } from 'lucide-react';
+
+import React from 'react';
+import { motion    } from 'framer-motion';
+import { Brain, 
+  Globe, 
+  Shield, 
+  Zap, 
+  Users, 
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Award,
+  Clock,
+  Heart
+   } from 'lucide-react';
+
 const highlights = [
   {
     icon: Brain,
@@ -133,9 +148,19 @@ export function FeatureHighlights() {
         </motion.div>
 
         {/* Feature Highlights Grid */}
-        <motion.div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          {highlights.map((highlight, index) => (<motion.div key={index} variants={itemVariants} whileHover={{
-                y: -10,
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 lg: anygrid-cols-3 gap-8 mb-20"
+        >
+          {highlights.map((highlight, index)    => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              whileHover={{ 
+                y: -10, 
                 scale: 1.02,
                 transition: { duration: 0.3 }
             }} className="group">
@@ -167,18 +192,76 @@ export function FeatureHighlights() {
                   </ul>
                 </div>
               </div>
-            </motion.div>))}
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Core Features Grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6 mb-20"
+        >
+          {features.map((feature, index)    => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              whileHover={{ 
+                y: -5, 
+                scale: 1.02,
+                transition: { duration: 0.3 }
+              }}
+              className="group"
+            >
+              <div className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300">
+                <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <feature.icon className={`w-6 h-6 ${feature.iconColor}`} />
+                </div>
+                
+                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
+                  {feature.title}
+                </h3>
+                
+                <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                  {feature.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
         </motion.div>
 
         {/* Achievements Section */}
-        <motion.div className="bg-gradient-to-r from-zion-blue/20 to-zion-purple/20 rounded-3xl p-8 md:p-12 border border-zion-blue-light/20 mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Proven Track Record
-            </h3>
-            <p className="text-zion-slate-light text-lg">
-              Our achievements speak volumes about our commitment to excellence
-            </p>
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-center mb-20"
+        >
+          <h3 className="text-2xl font-bold text-white mb-12">
+            Trusted by Industry Leaders
+          </h3>
+          
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
+            {achievements.map((achievement, index)    => (
+              <motion.div
+                key={index}
+                variants={achievementVariants}
+                className="text-center"
+              >
+                <div className={`inline-flex p-4 rounded-full bg-white/5 mb-4`}>
+                  <achievement.icon className={`w-8 h-8 ${achievement.color}`} />
+                </div>
+                <div className={`text-3xl font-bold ${achievement.color} mb-2`}>
+                  {achievement.number}
+                </div>
+                <div className="text-zion-slate-light text-sm">
+                  {achievement.label}
+                </div>
+              </motion.div>
+            ))}
           </div>
 
           <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-8" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>

@@ -1,13 +1,66 @@
-const Team: React.FC = () => (
-	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-		<div className="text-center text-white">
-			<h1 className="text-4xl font-bold mb-4">Our Team</h1>
-			<p className="text-xl text-gray-300">Meet the people behind Zion Tech Group.</p>
-		</div>
-	</div>
-);
+import React from 'react';
+import { motion   } from 'framer-motion';
+import { SEO   } from '../components/SEO';
+import { Users, 
+  Brain, 
+  Shield, 
+  Cloud, 
+  Rocket, 
+  Heart, 
+  Globe, 
+  Award,
+  Linkedin,
+  Github,
+  Mail,
+  Phone,
+  MapPin,
+  Zap,
+  Crown,
+  Star
+  } from 'lucide-react';
 
-  const seniorTeam = [
+export default function Team(...args: any[]): any {
+  const teamMembers = [
+    {
+      name: 'Kleber Santos',
+      role: 'CEO & Chief Technology Officer',
+      expertise: ['AI & Machine Learning', 'Cloud Architecture', 'Digital Transformation'],
+      bio: 'Visionary leader with over 15 years of experience in cutting-edge technology solutions. Passionate about leveraging AI to solve complex business challenges.',
+      avatar: '/avatars/kleber-santos.jpg',
+      linkedin: 'https://linkedin.com/in/kleber-santos',
+      github: 'https://github.com/kleber-santos',
+      email: 'kleber@ziontechgroup.com'
+    },
+    {
+      name: 'Dr. Sarah Chen',
+      role: 'Chief AI Scientist',
+      expertise: ['Machine Learning', 'Neural Networks', 'Quantum Computing'],
+      bio: 'PhD in Computer Science from MIT, specializing in advanced AI algorithms and quantum machine learning applications.',
+      avatar: '/avatars/sarah-chen.jpg',
+      linkedin: 'https://linkedin.com/in/sarah-chen',
+      github: 'https://github.com/sarah-chen',
+      email: 'sarah@ziontechgroup.com'
+    },
+    {
+      name: 'Marcus Rodriguez',
+      role: 'Head of Cybersecurity',
+      expertise: ['Zero Trust Architecture', 'Threat Intelligence', 'Compliance'],
+      bio: 'Former cybersecurity consultant with expertise in building enterprise-grade security solutions for Fortune 500 companies.',
+      avatar: '/avatars/marcus-rodriguez.jpg',
+      linkedin: 'https://linkedin.com/in/marcus-rodriguez',
+      github: 'https://github.com/marcus-rodriguez',
+      email: 'marcus@ziontechgroup.com'
+    },
+    {
+      name: 'Dr. Emily Watson',
+      role: 'VP of Healthcare Technology',
+      expertise: ['Healthcare AI', 'Medical Informatics', 'Regulatory Compliance'],
+      bio: 'Medical doctor turned technologist, leading our healthcare AI initiatives with deep understanding of clinical workflows.',
+      avatar: '/avatars/emily-watson.jpg',
+      linkedin: 'https://linkedin.com/in/emily-watson',
+      github: 'https://github.com/emily-watson',
+      email: 'emily@ziontechgroup.com'
+    },
     {
       name: 'Alex Thompson',
       role: 'VP of Engineering',
@@ -105,8 +158,8 @@ const Team: React.FC = () => (
             <p className="text-xl text-gray-300">Visionary leaders driving innovation and growth</p>
           </motion.div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {leadership.map((member, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {teamMembers.map((member, index)   => (
               <motion.div
                 key={member.name}
                 initial={{ opacity: 0, y: 30 }}
@@ -249,12 +302,43 @@ const Team: React.FC = () => (
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">Our Team Values</h2>
-            <p className="text-xl text-gray-300">The principles that unite us and drive our success</p>
-          </motion.div>
+            Areas of Expertise
+          </motion.h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {expertiseAreas.map((area, index)   => (
+              <motion.div
+                key={area.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center group"
+              >
+                <div className={`w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${area.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                  <area.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{area.title}</h3>
+                <p className="text-slate-300">{area.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Company Values */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl font-bold text-center mb-16 text-white"
+          >
+            Our Values
+          </motion.h2>
+          
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index)   => (
               <motion.div
                 key={value.title}
                 initial={{ opacity: 0, y: 30 }}

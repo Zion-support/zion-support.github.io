@@ -1,6 +1,6 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-export default function PricingPage() {
+import Head from 'next/head.ts';
+import Link from 'next/link.ts';
+export default function PricingPage(...args: any[]): any {
   const pricingTiers = [
     {
       name: 'Starter',
@@ -224,66 +224,34 @@ export default function PricingPage() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Filter and Sort Controls */}
-      <section className="bg-gray-50 py-8 border-b border-gray-200">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-            <div className="flex items-center gap-4">
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
-                {categories.map((category) => (
-                  <option key={category} value={category}>
-                    {category === 'all' ? 'All Categories' : category}
-                  </option>
-                ))}
-              </select>
-
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
-                <option value="price">Price: Low to High</option>
-                <option value="popularity">Most Popular</option>
-                <option value="newest">Newest First</option>
-                <option value="rating">Highest Rated</option>
-              </select>
-            </div>
-
-            <div className="text-sm text-gray-600">
-              Showing {filteredServices.length} services
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Pricing Grid */}
-      <section className="bg-white py-16">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (
-              <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
-                {/* Service Header */}
-                <div className="p-6 border-b border-gray-200">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="text-4xl">{service.icon}</div>
-                    <div className="flex gap-2">
-                      {service.isPopular && (
-                        <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs px-2 py-1 rounded-full">
-                          Popular
-                        </span>
-                      )}
-                      {service.isNew && (
-                        <span className="bg-gradient-to-r from-green-400 to-blue-500 text-white text-xs px-2 py-1 rounded-full">
-                          New
-                        </span>
-                      )}
+        </section>
+        {/* Pricing Tiers */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+              {pricingTiers.map((tier, index)  => (
+                <div 
+                  key={index} 
+                  className={`relative bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8 border transition-all hover:bg-opacity-20 ${
+                    tier.popular 
+                      ? 'border-blue-400 border-2 scale-105' 
+                      : 'border-white border-opacity-10'
+                  }`}
+                >
+                  {tier.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold mb-2">{tier.name}</h3>
+                    <p className="text-gray-300 mb-6">{tier.description}</p>
+                    <div className="mb-4">
+                      <span className="text-4xl font-bold">{tier.price}</span>
+                      <span className="text-gray-400">{tier.period}</span>
                     </div>
                   </div>
 
@@ -305,10 +273,26 @@ export default function PricingPage() {
                     <span className="capitalize">{service.category}</span>
                   </div>
                 </div>
-
-                {/* Features */}
-                <div className="p-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Key Features</h4>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* Add-on Services */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black bg-opacity-20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Additional Services</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Enhance your solution with our specialized add-on services
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+              {addOnServices.map((service, index)  => (
+                <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10">
+                  <h3 className="text-xl font-semibold mb-3">{service.name}</h3>
+                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <div className="text-2xl font-bold text-blue-400 mb-4">{service.price}</div>
                   <ul className="space-y-2 mb-6">
                     {service.features.slice(0, 4).map((feature, index) => (
                       <li key={index} className="flex items-center gap-2 text-sm text-gray-600">

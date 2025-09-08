@@ -1,24 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react.ts'
+import { Link  } from 'react-router-dom.ts'
+import { Calendar, Clock, ArrowRight, Tag, User  } from 'lucide-react.ts'
 
 
-const Page = () => {
-  return (
-    <MainLayout 
-      title="Page - Zion Tech Group"
-      description="Zion Tech Group page"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 py-20">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
-
-export default function News() {
+export default function News(...args: any[]): any {
 	const newsArticles = [
 		{
 			id: 1,
@@ -173,8 +158,8 @@ export default function News() {
 			{/* News Grid */}
 			<section className="py-16">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="grid gap-8 lg:grid-cols-2">
-						{newsArticles.slice(1).map((article) => (
+					<div className="grid gap-8 lg: anygrid-cols-2">
+						{newsArticles.slice(1).map((article)  => (
 							<article key={article.id} className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
 								<div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
 									<Tag className="h-12 w-12 text-gray-400" />
