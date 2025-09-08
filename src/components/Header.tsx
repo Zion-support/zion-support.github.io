@@ -37,34 +37,30 @@ import {
   Brain,
   Shield,
   Cloud,
-  Atom,
-  Rocket,
-  Code,
+  Cpu,
+  Zap,
   Target,
+  Building,
+  Atom,
+  Eye,
   Users,
-  MessageCircle,
-  BookOpen,
-  HelpCircle,
-  DollarSign,
-  Settings
+  FileText,
+  Briefcase,
+  Network,
+  Newspaper,
+  Activity
 } from 'lucide-react';
 
-export function Header() {
+interface HeaderProps {
+  onMenuClick?: () => void;
+}
+
+export function Header({ onMenuClick }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const location = useLocation();
-
-  // Handle scroll effect
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const navigation = [
     {
@@ -205,19 +201,27 @@ export function Header() {
     { name: 'Contact', href: '/contact', icon: MessageCircle }
   ];
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const isActive = (href: string) => location.pathname === href;
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      // Implement search functionality
+      console.log('Searching for:', searchQuery);
+      setIsSearchOpen(false);
+      setSearchQuery('');
+    }
+  };
+
+  const toggleDropdown = (name: string) => {
+    setActiveDropdown(activeDropdown === name ? null : name);
+  };
 
   // Close mobile menu when route changes
   useEffect(() => {
     setIsOpen(false);
     setActiveDropdown(null);
-  }, [location]);
-
-  const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
-  };
+  }, [location.pathname]);
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -461,26 +465,13 @@ export function Header() {
 
           {/* Right side actions */}
           <div className="hidden lg:flex items-center space-x-4">
-            {/* Search */}
             <button
               onClick={() => setIsSearchOpen(!isSearchOpen)}
-              className="p-2 text-gray-400 hover:text-white transition-colors"
-              aria-label="Search"
+              className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
+              aria-label="Toggle search"
             >
               <Search className="w-5 h-5" />
             </button>
-
-            {/* Notifications */}
-            <button className="p-2 text-gray-400 hover:text-white transition-colors" aria-label="Notifications">
-              <Bell className="w-5 h-5" />
-            </button>
-
-            {/* User menu */}
-            <button className="p-2 text-gray-400 hover:text-white transition-colors" aria-label="User menu">
-              <User className="w-5 h-5" />
-            </button>
-
-            {/* CTA Button */}
             <Link
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
