@@ -255,7 +255,7 @@ class ComprehensivePRMerger {
     
     // Create improvement scripts
     const improvements = {
-      'syntax-fixer.js': `#!/usr/bin/env node
+      'syntax-fixer.cjs': `#!/usr/bin/env node
 const { execSync } = require('child_process');
 const fs = require('fs');
 
@@ -301,7 +301,7 @@ function fixSyntaxErrors() {
 
 fixSyntaxErrors();`,
       
-      'build-optimizer.js': `#!/usr/bin/env node
+      'build-optimizer.cjs': `#!/usr/bin/env node
 const { execSync } = require('child_process');
 
 console.log('🔨 Running build optimizer...');
@@ -331,11 +331,11 @@ optimizeBuild();`
     
     // Run syntax fixer
     this.log('🔧 Running syntax fixer...');
-    await this.executeCommand('node syntax-fixer.js', 'Running syntax fixer');
+    await this.executeCommand('node syntax-fixer.cjs', 'Running syntax fixer');
     
     // Run build optimizer
     this.log('🔨 Running build optimizer...');
-    await this.executeCommand('node build-optimizer.js', 'Running build optimizer');
+    await this.executeCommand('node build-optimizer.cjs', 'Running build optimizer');
     
     this.log('✅ Comprehensive improvements completed');
   }
