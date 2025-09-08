@@ -88,3 +88,4 @@ const PerformanceMonitor: React.FC = memo(() => {
 PerformanceMonitor.displayName = 'PerformanceMonitor';
 
 export { PerformanceMonitor };
+export default PerformanceMonitor;

@@ -54,3 +54,4 @@ const LazyLoad: React.FC<LazyLoadProps> = memo(({
 LazyLoad.displayName = 'LazyLoad';
 
 export { LazyLoad };
+export default LazyLoad;
