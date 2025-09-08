@@ -1,7 +1,7 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
 
-const Toggle-group = React.forwardRef<
+const AlertDialog = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
@@ -11,6 +11,6 @@ const Toggle-group = React.forwardRef<
     {...props}
   />
 ))
-Toggle-group.displayName = "Toggle-group"
+AlertDialog.displayName = "AlertDialog"
 
-export { Toggle-group }
+export { AlertDialog }
