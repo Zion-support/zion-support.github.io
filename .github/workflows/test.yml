@@ -37,9 +37,22 @@ jobs:
         continue-on-error: true
       - name: Build verification
         run: npm run build
-        env:
-          NODE_OPTIONS: '--max-old-space-size=4096'
+      - name: Verify build output
+        run: |
+          if [ ! -d .next ]; then
+            echo "Build failed: .next folder not found"
+            exit 1
+          fi
+      - name: Run Jest with Coverage
+        run: npm test
         continue-on-error: true
-      - name: Test completion
-        run: echo "Test workflow completed successfully"
-    runs_on: ubuntu-latest
+      - name: Upload build artifacts
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: .next
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true

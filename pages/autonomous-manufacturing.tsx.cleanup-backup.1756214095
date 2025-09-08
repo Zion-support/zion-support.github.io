@@ -1,94 +1,68 @@
 import React from 'react';
 import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Star } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { motion } from 'framer-motion';
+import { Factory, Brain, Cog, ArrowRight } from 'lucide-react';
 
 export default function AutonomousManufacturingPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/autonomous-manufacturing'));
-  if (!service) return null;
-  const contactInfo = service.contactInfo;
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
   return (
-    <Layout>
+    <div className="min-h-screen bg-black text-white">
       <Head>
-        <title>{service.name} - Zion Tech Group</title>
-        <meta name="description" content={service.description} />
-        <link rel="canonical" href="https://ziontechgroup.com/autonomous-manufacturing" />
+        <title>Autonomous Manufacturing | Zion Tech Group</title>
+        <meta name="description" content="AI-powered autonomous manufacturing platform" />
       </Head>
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10">
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent">{service.name}</h1>
-            <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service.tagline}</p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
-            <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-orange-500/30 p-6">
-              <h2 className="text-2xl font-semibold mb-4">What you get</h2>
-              <p className="text-slate-300 mb-6">{service.description}</p>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {service.features.slice(0, 12).map((feat, i) => (
-                  <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-orange-400 mt-0.5"><Check /><span>{feat}</span></li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-black/30 rounded-2xl border border-orange-500/30 p-6 h-fit">
-              <div className="flex items-end justify-between mb-3">
-                <div>
-                  <div className="text-3xl font-bold text-white text-slate-400 text-base">{service.price}<span >{service.period}</span></div>
-                  <div className="text-slate-400">{service.trialDays}-day free trial • Setup: {service.setupTime}</div>
-                </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <div className="flex items-center text-yellow-400">
-                  <Star className="w-4 h-4 mr-1" />
-                  {service.rating.toFixed(1)}
-                </div>
-=======
-                <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-                <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-              </div>
-              <div className="text-slate-300 text-sm mb-4">Market: {service.marketSize}, Growth: {service.growthRate}</div>
-              <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Get a Demo<ArrowRight /></a>
-              <div className="mt-6 space-y-3 text-sm text-slate-300">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <div className="flex items-center space-x-2">
-                  <Phone className="w-4 h-4 text-cyan-400" />
-                  <span>{service.contactInfo.mobile}</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Mail className="w-4 h-4 text-purple-400" />
-                  <span>{service.contactInfo.email}</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <MapPin className="w-4 h-4 text-green-400" />
-                  <span className="text-xs">{service.contactInfo.address}</span>
-                </div>
-=======
-                <div className="flex items-center space-x-2 w-4 h-4 text-cyan-400"><Phone /><span>{contactInfo.mobile}</span></div>
-                <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{contactInfo.email}</span></div>
-                <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs"><MapPin /><span >{contactInfo.address}</span></div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-                <div className="flex items-center space-x-2 w-4 h-4 text-cyan-400"><Phone /><span>{contactInfo.mobile}</span></div>
-                <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{contactInfo.email}</span></div>
-                <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs"><MapPin /><span >{contactInfo.address}</span></div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-              </div>
-            </div>
-          </div>
+      
+      <main className="container mx-auto px-4 py-24">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Autonomous Manufacturing Platform
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Revolutionary AI platform for intelligent and autonomous manufacturing operations.
+          </p>
         </div>
-      </div>
-    </Layout>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
+          >
+            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Factory className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-3 text-center">Smart Factory</h3>
+            <p className="text-gray-300 text-center">Intelligent manufacturing automation</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
+          >
+            <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Brain className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-3 text-center">AI Control</h3>
+            <p className="text-gray-300 text-center">Machine learning process optimization</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
+          >
+            <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Cog className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-3 text-center">Process Optimization</h3>
+            <p className="text-gray-300 text-center">Efficient production workflows</p>
+          </motion.div>
+        </div>
+      </main>
+    </div>
   );
 }
 

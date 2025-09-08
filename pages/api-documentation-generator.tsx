@@ -5,11 +5,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => <>
   {children}
 </>;
 
-export default function APIDocGeneratorPage() {
-  const [sourcePath, setSourcePath] = useState('src');
-  const [format, setFormat] = useState<DocumentationConfig['outputFormat']>('markdown');
-  const [doc, setDoc] = useState<APIDocumentation | null>(null);
-  const [loading, setLoading] = useState(false);
+
 
   const generate = async () => {
     setLoading(true);

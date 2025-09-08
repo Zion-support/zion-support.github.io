@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ES2024",
     "useDefineForClassFields": true,
 <<<<<<< HEAD
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
@@ -40,49 +40,7 @@
     "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "strict": false,
-=======
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "skipLibCheck": true,
-    "importHelpers": false,
-    "noEmitHelpers": false,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    },
-    /* Bundler mode */
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "strict": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     "noFallthroughCasesInSwitch": true,
-    "baseUrl": ".",
-    "paths": {
-<<<<<<< HEAD
-      "@/*": ["./src/*"]
-    }
-  },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "@/*": ["./src/*"]
-    },
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,

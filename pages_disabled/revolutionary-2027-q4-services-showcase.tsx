@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-// import Card from '../components/ui/Card';
+
 import Button from '../components/ui/Button';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin } from 'lucide-react';
 import { real2027Q4Additions } from '../data/real-2027-q4-additions';

@@ -5,7 +5,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => <>
   {children}
 </>;
 
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+
 
 export default function LLMGatewayPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/llm-gateway'));

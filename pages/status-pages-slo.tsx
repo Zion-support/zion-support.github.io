@@ -5,7 +5,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => <>
   {children}
 </>;
 
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+
 
 export default function StatusPagesSLOPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/status-pages-slo'));

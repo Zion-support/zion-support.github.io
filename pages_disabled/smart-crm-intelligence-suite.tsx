@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-// import Card from '../components/ui/Card';
+
+import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Check, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 

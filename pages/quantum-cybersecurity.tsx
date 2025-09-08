@@ -1,15 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Shield, Lock, Eye, Brain, Atom, Target, Star, 
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
-  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network,
-  FileText, Settings, Monitor, Smartphone, AlertTriangle, ShieldCheck,
-  Zap as ZapIcon, DollarSign, Rocket
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+import { Phone, Mail, MapPin, Check, ArrowRight, Shield, Star } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+
+
 
 export default function QuantumCybersecurityPage() {
   const features = [

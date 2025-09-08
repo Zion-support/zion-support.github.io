@@ -5,7 +5,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => <>
   {children}
 </>;
 
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+
 
 export default function PromptPolicyRegistryPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/prompt-policy-registry'));

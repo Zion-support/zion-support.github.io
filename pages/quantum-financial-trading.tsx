@@ -1,15 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Atom, Brain, Target, Star, Sparkles, Zap, Users, Award, 
-  Clock, CheckCircle, Globe, Code, ChevronRight, ExternalLink, 
-  TrendingUp, BarChart3, Lock, Eye, FileText, Settings, Monitor, Smartphone,
-  Activity, Target as TargetIcon, Zap as ZapIcon, DollarSign, Rocket,
-  Cpu, Network, Database, Play, TrendingDown, LineChart
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+import { Phone, Mail, MapPin, Check, ArrowRight, TrendingUp, Star } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+
+
 
 export default function QuantumFinancialTradingPage() {
   const features = [
