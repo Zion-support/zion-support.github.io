@@ -1,39 +1,18 @@
 #!/usr/bin/env node
 
-<<<<<<< HEAD
-
-
-
-=======
-/**
- * Generate Search Index
- * Creates a search index for the website content
- */
-
-
-
-
-
-
-#!/usr/bin/env node;
-;
-#!/usr/bin/env node;#!/usr/bin/env node;
-#!/usr/bin/env node;
-#!/usr/bin/env node;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-/**;
- * Generate Search Index;
- * Creates a search index for the website content;
- */;}
-
-const fs = require('fs')const path = require('path')const PAGES_DIR = path.join(__dirname, '..pages')const OUTPUT_DIR  = path.join(__dirname, '..public', 'search')const fs = require('fs')const path  = require('path')const PAGES_DIR = path.join(__dirname, '..pages');'
-  const OUTPUT_DIR  = path.join(__dirname, '..public', 'search'),// Content types to index;'
-
-const CONTENT_TYPES = {'pages':{"path":PAGES_DIR;'
- */;
-
-<<<<<<< HEAD
-=======
+function walk(dir, filelist = []) {
+  const files = fs.readdirSync(dir, { withFileTypes: true });
+  for (const entry of files) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+if (entry.name.startsWith(
+  '.') || entry.name.includes(
+  'node_modules')) continue;filelist = walk(full, filelist);
+    } else if (/\.(md|tsx?|jsx?)$/i.test(entry.name)) {
+      filelist.push(full);
+    }
+  }
+  return filelist;
 }
 
 const fs = require('fs');'
@@ -653,248 +632,28 @@ module.exports = { generateSearchIndex }
 }),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) `),"}),"}) }"}),"}) ,"}),"}) main(),"}),"}) ,"}),"}) filelist.push(full)} };"
   return filelist} function main() ;
   const repoRoot = process.cwd();
-
-const srcDirs = [ path.join(repoRoot,'pages') path.join(repoRoot,'src') path.join(repoRoot,'components') ];'
-
-const index = []; for (const dir of srcDirs) { if (!fs.existsSync(dir)) continue; for (const file of walk(dir)) {; try {;
-
-}
-
-const rel = path.relative(repoRoot,file);
-
-const content = fs.readFileSync(file,'utf8');'
-
-const title = titleMatch ? titleMatch[1] |titleMatch[2] : path.basename(file); index.push({ "file": rel,title })} catch {} } }
-
-const outDir = path.join(repoRoot,';public'); if (!fs.existsSync(outDir)) fs.mkdirSync(outDir,{ "recursive": true,'
-});
-
-const outPath = path.join(outDir,'search-index.json'); fs.writeFileSync( outPath JSON.stringify( { "generatedAt": new Date().toISOString(),"items": index,'
-} null 2 ) ); `)} main();`#!/usr/bin/env node,"}),"})"
-import fs from,"}),"})"
-  'fs',"}),"})"
-import path from,"}),"})"
-  'path',"}),"})"
-,"}),"})"
-function walk() {,"}),"})"
-const files = fs && fs.readdirSync(dir, { "withFileTypes": true }),"}),"});"
-  for (const entry of files) {,"}),"})"
-    const full = path && path.join(dir, entry && entry.name),"}),"})"
-    if (entry && entry.isDirectory()) {,"}),"})"
-ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})"
-      filelist = walk(full, filelist),"}),"})"
-    } else if (/\.(md|tsx?|jsx?)$/i && i.test(entry && entry.name)) {,"}),"})"
-      filelist && filelist.push(full),"}),"})"
-    }"}),"})"
-  }"}),"})"
- ;
-return filelist,"}),"});"
-}"}),"})"
-,"}),"})"
-function main() {,"}),"})"
-const repoRoot = process && process.cwd(),"}),"});"
-ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})"
-const index = [],"}),"});"
-  for (const dir of srcDirs) {,"}),"})"
-    if (!fs && fs.existsSync(dir)) continue,"}),"})"
-    for (const file of walk(dir)) {,"}),"})"
-      try {,"}),"})"
-const rel = path && path.relative(repoRoot, file),"}),"});"
-ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})"
-        index && index.push({ "file": rel, title }),"}),"})"
-      } catch {}"}),"})"
-    }"}),"})"
-  }"}),"})"
- ;
-const outDir = path && path.join(repoRoot,,"}),"});"
-  'public'),"}),"})"
-  if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir, { "recursive": true }),"}),"})"
-ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})"
-  console && console.log(`✅ Search index "generated": ${outPath} (${index && index.length} items)`),"}),"})"}"}),"})"
-,"}),"})"
-main(),"}),"})"
-,"}),"})"
-
-      filelist ;
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-const repoRoot = process && process.cwd();
-
-<<<<<<< HEAD
-=======
-const srcDirs = [path && path.join(repoRoot, 'pages');'
-    path && path.join(repoRoot, 'src')'
-    path && path.join(repoRoot, 'components')'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-
-  ];
-  const index = [];
-  for (const dir of srcDirs) {if (!fs && fs.existsSync(dir)) continue;
-    }
-    for (const file of walk(dir)) {try {const rel = path && path.relative(repoRoot, file)const content = fs && fs.readFileSync(file, 'utf8';'
-  }
-  const titleMatch = content && content.match(/export\s+default\s+function\s+(\w+)|export\s+const\s+(\w+)/;
-        )const title = titleMatch;
-          ? titleMatch[1] || titleMatch[2];
-          : path && path.basename(file)index && index.push({ "file": rel, title })} catch {}"
-  }
-
-const outDir = path && path.join(repoRoot, ';public')if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir, { "recursive": true })const outPath = path && path.join(outDir, 'search-index && index.json')fs && fs.writeFileSync(outPath;'
-    JSON && JSON.stringify(filelist.push(full)}
-  }return filelist}
-function main() {const repoRoot = process.cwd(;
-  }
-  return filelist}function main() {const repoRoot = process.cwd(;
-  }
-  const srcDirs = [path.join(repoRoot, 'pages')path.join(repoRoot, 'src')path.join(repoRoot, 'components')filelist ;'
-
-const repoRoot = process && process.cwd()const srcDirs = [path && path.join(repoRoot, 'pages')path && path.join(repoRoot, 'src')path && path.join(repoRoot, 'components';'
-  const srcDirs = [path.join(repoRoot, 'pages')path.join(repoRoot, 'src')path.join(repoRoot, 'components')];'
-
-const index = [];
-  for (const dir of srcDirs) {if (!fs.existsSync(dir)) continue;
-    }
-    for (const file of walk(dir)) {try {const rel = path.relative(repoRoot, file)const content = fs.readFileSync(file, 'utf8';'
-  }
-  const titleMatch = content.match(/export\s+default\s+function\s+(\w+)|export\s+const\s+(\w+)/;
-        )const title = titleMatch;
-          ? titleMatch[1] |titleMatch[2];
-          : path.basename(file)index.push({ "file": rel, title })} catch {}"
-    }
-  }
-
-const outDir = path.join(repoRoot, ';public')if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { "recursive": true })const outPath = path.join(outDir, 'search-index.json')fs.writeFileSync(outPath;'
-    JSON.stringify({ "generatedAt": new Date().toISOString(), "items": index }"
-      null;
-      2;
-    ))#!/usr/bin/env node,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) ,"}),"}) function walk() {,"}),"}) const files = fs && fs.readdirSync(dir,{ "withFileTypes": true,"
-}),"}),"}) for (const entry of files) {,"}),"}) const full = path && path.join(dir,entry && entry.name),"}),"}) if (entry && entry.isDirectory()) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) filelist = walk(full,filelist),"}),"}) } else if (/\.(md|tsx?|jsx?)$/i && i.test(entry && entry.name)) {,"}),"}) filelist && filelist.push(full),"}),"}) }"}),"}) }"}),"});"
-  return filelist,"}),"}) }"}),"}) ,"}),"}) function main() {,"}),"}) const repoRoot = process && process.cwd(),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const index = [],"}),"}) for (const dir of srcDirs) {,"}),"}) if (!fs && fs.existsSync(dir)) continue,"}),"}) for (const file of walk(dir)) {,"}),"}) try {,"}),"}) const rel = path && path.relative(repoRoot,file),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) index && index.push({ "file": rel,title }),"}),"}) } catch {}"}),"}) }"}),"}) }"}),"});"
-  const outDir = path && path.join(repoRoot,,"}),"}) 'public'),"}),"}) if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir,{ "recursive": true,"
-}),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) console && console.log(`✅ Search index "generated": ${outPath} (${index && index.lengt,`} items)`),"}),"}) }"}),"}) ,"}),"}) main(),"}),"}) ,"}),"}) filelist ;"
-
-const repoRoot = process && process.cwd(;
-  const srcDirs = [ path && path.join(repoRoot,'pages') path && path.join(repoRoot,'src') path && path.join(repoRoot,'components') ];'
-
-const index = []; for (const dir of srcDirs) { if (!fs && fs.existsSync(dir)) continue; for (const file of walk(dir)) {try {const rel = path && path.relative(repoRoot,file)const content = fs && fs.readFileSync(file,'utf8')const titleMatch = content && content.match( /export\s+default\s+function\s+(\w+)|export\s+const\s+(\w+)/ )const title = titleMatch ? titleMatch[1] || titleMatch[2] : path && path.basename(file)index && index.push({ "file": rel,title })} catch {} } }'
-;
-  const outDir = path && path.join(repoRoot,';public')if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir,{ "recursive": true,'
-})const outPath = path && path.join(outDir,'search-index && index.json')fs && fs.writeFileSync( outPath JSON && JSON.stringify( { "generatedAt": new Date().toISOString(),"items": index } null 2 ) )console && console.log(`✅ Search index "generated": ${outPath} (${index && index.length} items)`)} main()module && module.exports = { generateSearchIndex,`},module.exports = { generateSearchIndex },// // // console.log(`✅ Search index generated "at": ${indexPat,`}`),// // // console.log(`📊 Indexed ${searchIndex.pages.length} pages and ${searchIndex.blog.length} blog posts`)#!/usr/bin/env node,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) ,"}),"}) function walk() {,"}),"}) const files = fs && fs.readdirSync(dir,{ "withFileTypes": true,"}),"}),"}) for (const entry of files) {,"}),"}) const full = path && path.join(dir,entry && entry.name),"}),"}) if (entry && entry.isDirectory()) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) filelist = walk(full,filelist),"}),"}) } else if (/\.(md|tsx?|jsx?)$/i && i.test(entry && entry.name)) {,"}),"}) filelist && filelist.push(full),"}),"}) }"}),"}) }"}),"});"
-  return filelist,"}),"}) }"}),"}) ,"}),"}) function main() {,"}),"}) const repoRoot = process && process.cwd(),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const index = [],"}),"}) for (const dir of srcDirs) {,"}),"}) if (!fs && fs.existsSync(dir)) continue,"}),"}) for (const file of walk(dir)) {,"}),"}) try {,"}),"}) const rel = path && path.relative(repoRoot,file),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) index && index.push({ "file": rel,title }),"}),"}) } catch {}"}),"}) }"}),"}) }"}),"});"
-  const outDir = path && path.join(repoRoot,,"}),"}) 'public'),"}),"}) if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir,{ "recursive": true,"
-}),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) console && console.log(`✅ Search index "generated": ${outPath} (${index && index.lengt,`} items)`),"}),"}) }"}),"}) ,"}),"}) main(),"}),"}) ,"}),"}) filelist ;"
-
-const repoRoot = process && process.cwd(;
-  const srcDirs = [ path && path.join(repoRoot,'pages') path && path.join(repoRoot,'src') path && path.join(repoRoot,'components') ];'
-
-const index = []; for (const dir of srcDirs) { if (!fs && fs.existsSync(dir)) continue; for (const file of walk(dir)) {try {const rel = path && path.relative(repoRoot,file)const content = fs && fs.readFileSync(file,'utf8')const titleMatch = content && content.match( /export\s+default\s+function\s+(\w+)|export\s+const\s+(\w+)/ )const title = titleMatch ? titleMatch[1] || titleMatch[2] : path && path.basename(file)index && index.push({ "file": rel,title })} catch {} } }'
-;
-  const outDir = path && path.join(repoRoot,';public')if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir,{ "recursive": true,'
-})const outPath = path && path.join(outDir,'search-index && index.json')fs && fs.writeFileSync( outPath JSON && JSON.stringify( { "generatedAt": new Date().toISOString(),"items": index } null 2 ) )console && console.log(`✅ Search index "generated": ${outPath} (${index && index.length} items)`)} main()module && module.exports = { generateSearchIndex },`}),// Ensure output directory exists;
-  if () {) {$2;
-
-}
-
-const outDir = path && path.join(repoRoot, ';public');'
-  if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir, { "recursive": true });"
-
-const outPath = path && path.join(outDir, 'search-index && index.json');'
-  fs && fs.writeFileSync(
-    outPath,
-JSON && JSON.stringify(
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
-  return filelist}
-function main() {const repoRoot = process.cwd();
-  }
-  return filelist};
-function main() {;
-
-<<<<<<< HEAD
-  return filelist})
-  const repoRoot = process.cwd();
-
-      filelist ;
-  const repoRoot = process && process.cwd();'
-  const srcDirs = [path && path.join(repoRoot, 'pages')'
-
-=======
-}
-
-const repoRoot = process.cwd();
-
-const srcDirs = [path.join(repoRoot, 'pages');'
-    path.join(repoRoot, 'src')'
-    path.join(repoRoot, 'components')'
-
-      filelist ;
-
-const repoRoot = process && process.cwd();
-
-const srcDirs = [path && path.join(repoRoot, 'pages');'
->>>>>>> origin/cursor/delete-old-data-records-6bba
-    path && path.join(repoRoot, 'src')'
-    path && path.join(repoRoot, 'components')'
-
-<<<<<<< HEAD
-
-  ];
-  const index = [];
-  for (const dir of srcDirs) {}
-    if (!fs && fs.existsSync(dir)) continue;
-
-    for (const file of walk(dir)) {;
-      try {;
-        const rel = path && path.relative(repoRoot, file);'
-        const content = fs && fs.readFileSync(file, 'utf8');
-        const titleMatch = content && content.match(
-          /export\s+default\s+function\s+(\w+)|export\s+const\s+(\w+)/
-        );
-
-        const title = titleMatch
-
-    }
-  }'
-  const outDir = path && path.join(repoRoot, ';public');"
-  if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir, { "recursive": true });'
-  const outPath = path && path.join(outDir, 'search-index && index.json');
-  fs && fs.writeFileSync(
-    outPath;
-    JSON && JSON.stringify(
-
-
-      { "generatedAt": new Date().toISOString(), "items": index }
-      null;
-      2;
-    )
-  );
-
-
-module.exports = { generateSearchIndex },
-  // // // console.log(`✅ Search index generated at: ${indexPath}`),
-  // // // console.log(`📊 Indexed ${searchIndex.pages.length} pages and ${searchIndex.blog.length} blog posts`)
-;
-
-#!/usr/bin/env node,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) ,"}),"}) function walk(dir,filelist = []) {,"}),"}) const files = fs && fs.readdirSync(dir,{ withFileTypes: true }),"}),"}) for (const entry of files) {,"}),"}) const full = path && path.join(dir,entry && entry.name),"}),"}) if (entry && entry.isDirectory()) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) filelist = walk(full,filelist),"}),"}) } else if (/\.(md|tsx?|jsx?)$/i && i.test(entry && entry.name)) {,"}),"}) filelist && filelist.push(full),"}),"}) }"}),"}) }"}),"}) return filelist,"}),"}) }"}),"}) ,"}),"}) function main() {,"}),"}) const repoRoot = process && process.cwd(),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const index = [],"}),"}) for (const dir of srcDirs) {,"}),"}) if (!fs && fs.existsSync(dir)) continue,"}),"}) for (const file of walk(dir)) {,"}),"}) try {,"}),"}) const rel = path && path.relative(repoRoot,file),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) index && index.push({ file: rel,title }),"}),"}) } catch {}"}),"}) }"}),"}) }"}),"}) const outDir = path && path.join(repoRoot,,"}),"}) 'public'),"}),"}) if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir,{ recursive: true }),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) console && console.log(`✅ Search index generated: ${outPath} (${index && index.length} items)`),"}),"}) }"}),"}) ,"}),"}) main(),"}),"}) ,"}),"}) filelist ; const repoRoot = process && process.cwd(); const srcDirs = [ path && path.join(repoRoot,'pages') path && path.join(repoRoot,'src') path && path.join(repoRoot,'components') ]; const index = []; for (const dir of srcDirs) { if (!fs && fs.existsSync(dir)) continue; for (const file of walk(dir)) {; try {; const rel = path && path.relative(repoRoot,file); const content = fs && fs.readFileSync(file,'utf8'); const titleMatch = content && content.match( /export\s+default\s+function\s+(\w+)|export\s+const\s+(\w+)/ ); const title = titleMatch ? titleMatch[1] || titleMatch[2] : path && path.basename(file); index && index.push({ file: rel,title })} catch {} } } const outDir = path && path.join(repoRoot,';public'); if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir,{ recursive: true }); const outPath = path && path.join(outDir,'search-index && index.json'); fs && fs.writeFileSync( outPath JSON && JSON.stringify( { generatedAt: new Date().toISOString(),items: index } null 2 ) ); console && console.log(`✅ Search index generated: ${outPath} (${index && index.length} items)`)} main();
-module && module.exports = { generateSearchIndex },
-
-
-=======
- ;
-const srcDirs = [path.join(repoRoot, 'pages');'
-    path.join(repoRoot, 'src')'
-    path.join(repoRoot, 'components')'
-  ];
-  const index = [];
+const srcDirs = [path.join(repoRoot,
+  'pages'), path.join(repoRoot,
+  'src'), path.join(repoRoot,
+  'components')];const index = [];
   for (const dir of srcDirs) {
-    }
     if (!fs.existsSync(dir)) continue;
-    for (const file of walk(dir)) {;
-      }
-      try {;
-
+    for (const file of walk(dir)) {
+      try {
+        const rel = path.relative(repoRoot, file);
+const content = fs.readFileSync(file,
+  'utf8');
+        const titleMatch = content.match(/export\s+default\s+function\s+(\w+)|export\s+const\s+(\w+)/);
+        const title = titleMatch ? (titleMatch[1] || titleMatch[2]) : path.basename(file);index.push({ file: rel, title });
+      } catch {}
+    }
+  }
+  const outDir = path.join(repoRoot,
+  'public');
+  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
+const outPath = path.join(outDir,
+  'search-index.json');
+  fs.writeFileSync(outPath, JSON.stringify({ generatedAt: new Date().toISOString(), items: index }, null, 2));console.log(`✅ Search index generated: ${outPath} (${index.length} items)`);
 }
 
 const rel = path.relative(repoRoot, file);

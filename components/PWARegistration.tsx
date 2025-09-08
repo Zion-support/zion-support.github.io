@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { Download, X, Smartphone, Monitor  } from 'lucide-react';
-
-interface BeforeInstallPromptEvent extends Event  {readonly platforms: string[];
-  readonly userChoice: Promise<{outcome: 'accepted' | 'dismissed';}
-    platform: string;}
-  }>;
-  prompt(): Promise<void />;
-}
+React, { useEffect, useState } from, react';'
+import { motion, AnimatePresence } from
+  'framer-motion';
+import { Download, X, Smartphone, Monitor } from'
+  'lucide-react';''
+  'interface BeforeInstallPromptEvent extends Event {'
+  readonly platforms: string[];
+  readonly userChoice: Promise<{;
+    outcome: 'accepted'
+  ' | 'dismissed
+  ';'    platform: string;  }>;prompt(): Promise<void>;}
 
 const PWARegistration: React.FC = () => {const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null />(null)const [showInstallPrompt, setShowInstallPrompt] =;
   useState(false;
@@ -16,64 +17,56 @@ const PWARegistration: React.FC = () => {const [deferredPrompt, setDeferredPromp
     if (window.matchMedia('(display-mode: standalone)').matches) {setIsInstalled(true,}
 }// Listen for the beforeinstallprompt event;
 
-const handleBeforeInstallPrompt = (e.preventDefault()setDeferredPrompt(e as BeforeInstallPromptEvent)setShowInstallPrompt(true,) => {
-  return $3;}
-}
-}
-    // Listen for the appinstalled event;
-
-const handleAppInstalled = (setIsInstalled(true)setShowInstallPrompt(false)setDeferredPrompt(null)) => {
-  return $3;}
-}
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt)window.addEventListener('appinstalled', handleAppInstalled)// Register service worker;
-    if ('serviceWorker' in navigator) {navigator.serviceWorker.register('/sw.js').then((registration) => {console.log('Service Worker registered successfully: ', registration)}).catch((error) => {console.log('Service Worker registration failed: ', error)})}return () => {window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt)window.removeEventListener('appinstalled', handleAppInstalled)}
-  }, [])const handleInstallClick = async () => {if (!deferredPrompt);}
-  return;}
-    deferredPrompt.prompt()const { outcome } = await deferredPrompt.userChoice;
-    if (outcome = == 'accepted') {console.log('User accepted the install prompt')} else {console.log('User dismissed the install prompt')}setDeferredPrompt(null)setShowInstallPrompt(false)}
-;
-  const handleDismiss = (setShowInstallPrompt(false)React, {;) => {
-  return $3;}
-}
-  useEffect, useState } from, react'';
-import { motion, AnimatePresence  } from 'lucide-react';import { Download, X, Smartphone, Monitor  } from 'lucide-react'';
-
-interface BeforeInstallPromptEvent extends Event {';
-  readonly platforms: string[];
-  readonly userChoice: Promise<{outcome: 'accepted';
-  ' | 'dismissed;}
-   platform: string ,}
-}>;prompt(): Promise<void />;
-}
-
-const PWARegistration: React.FC = () => {const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null />(null)const [showInstallPrompt, setShowInstallPrompt] =;
-  useState(false;
-  const [isInstalled, setIsInstalled] = useState(false)useEffect(() => {
-// Check if app is already installed;}
-ursor/automate-test-fix-improve-and-merge-code-48f3;}
-    }
-    // Listen for the beforeinstallprompt event;
+  useEffect(() => {
+    // Check if app is already installed
+if (window.matchMedia(, (display-mode: standalone)').matches) {'
+  '      setIsInstalled(true);      return;'}
 
 const handleBeforeInstallPrompt = (e.preventDefault()setDeferredPrompt(e as BeforeInstallPromptEvent)setShowInstallPrompt(true,) => {
   return $3;}
 }
 }// Listen for the appinstalled event;
 
-const handleAppInstalled = (setIsInstalled(true)setShowInstallPrompt(false)setDeferredPrompt(null)) => {
-  return $3;}
-}window.addEventListener(, beforeinstallprompt', handleBeforeInstallPrompt)'    window.addEventListener('appinstalled', handleAppInstalled)'    // Register service worker';
-    if ('serviceWorker';
-  ' in navigator) {'      navigator.serviceWorker.register('/sw.js')'        .then((registration) => {'          console.log('Service Worker registered successfully:  , registration)})';
-  '        .catch((error) => {';}
-          console.log('Service Worker registration failed:  , error)'        })'    }';
-    return () => {window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt)'      window.removeEventListener(';}
-  'appinstalled', handleAppInstalled)'    }'  }, [])const handleInstallClick = async () => {if (!deferredPrompt);}
-  return;}
-    deferredPrompt.prompt()const { outcome } = await deferredPrompt.userChoice;
-if (outcome ===;
-  'accepted') {'      console.log('User accepted the install prompt;}
-  ')'    } else {'      console.log('User dismissed the install prompt;}
-  ')'    }'setDeferredPrompt(null)    setShowInstallPrompt(false)';
+    // Listen for the appinstalled event
+const handleAppInstalled = () => {;setIsInstalled(true);
+      setShowInstallPrompt(false);
+      setDeferredPrompt(null);
+    };
+
+window.addEventListener(, beforeinstallprompt', handleBeforeInstallPrompt);'    window.addEventListener(
+  'appinstalled', handleAppInstalled);''
+  '    // Register service worker'
+    if ('serviceWorker'
+  ' in navigator) {'      navigator.serviceWorker.register(
+  '/sw.js')
+  '        .then((registration) => {'          console.log(
+  'Service Worker registered successfully:  , registration);, '
+  })
+  '        .catch((error) => {'
+          console.log('Service Worker registration failed:  , error);'        });'    }'
+
+    return () => {
+      window.removeEventListener(
+  'beforeinstallprompt', handleBeforeInstallPrompt);'      window.removeEventListener('
+  'appinstalled', handleAppInstalled);'    };'  }, []);const handleInstallClick = async () => {;if (!deferredPrompt) return;
+
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    
+if (outcome ===
+  'accepted') {
+  '      console.log('User accepted the install prompt
+  ');'    } else {
+  '      console.log('User dismissed the install prompt
+  ');'    }'setDeferredPrompt(null);'setShowInstallPrompt(false);
+  };
+
+const handleDismiss = () => {;setShowInstallPrompt(false);
+    setDeferredPrompt(null);
+  };
+
+  if (isInstalled || !showInstallPrompt) {
+    return null;
   }
 
 const handleDismiss = (setShowInstallPrompt(false)setDeferredPrompt(null)) => {

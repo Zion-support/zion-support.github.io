@@ -1,22 +1,27 @@
-<<<<<<< HEAD
+import { render, screen } from
+  '@testing-library/react';
+import { describe, it, expect } from
+  'vitest';
+import App from
+  './App';
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import App from './App';
-=======
-=======
-import React from 'react';
-import { render, screen } from '@testing-library/react';
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-import { describe, it, expect } from 'vitest';
-import App from './App';
+describe(
+  'App', () => {
+  it(
+  'renders without crashing', () => {
+    render(<App />);
+    expect(screen.getByRole(
+  'main')).toBeInTheDocument();
+  });it(
+  'displays correct content', () => {
+    render(<App />);
+    // Add specific content checks based on component functionality
+  })
 
-
-describe('App', () => {
-  it('renders without crashing', () => {
-    render(React.createElement(App));
-    expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();
+  it(
+  'handles user interactions', () => {
+    render(<App />);
+    // Add interaction tests based on component functionality
   });
 });
 });

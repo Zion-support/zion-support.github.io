@@ -1,6 +1,195 @@
-import React from 'react';
-import Link from 'next/link';
-import { Mail, Phone, MapPin, Globe, Facebook, Twitter, Linkedin, Instagram, Zap } from 'lucide-react';
+import React, { useState } from 'react.ts';
+import { Link               } from 'react-router-dom.ts';
+import { motion               } from 'framer-motion.ts';
+import { Twitter,
+  Linkedin,
+  Instagram,
+  Globe, 
+  Linkedin, 
+  Twitter, 
+  Facebook, 
+  Instagram, 
+  Youtube,
+  Github,
+  Zap,
+  Brain,
+  Shield,
+  Users,
+  HardDrive,
+  TrendingUp,
+  Building2,
+  FileText,
+  HelpCircle,
+  BarChart3,
+  ArrowUp,
+  Heart,
+  Star,
+  CheckCircle,
+  Award,
+  Lock,
+  Eye,
+  Atom,
+  Code,
+  Database,
+  Network,
+  Server
+
+  Rocket,
+  Target,
+  Handshake,
+  Lightbulb,
+  Cpu,
+  Database,
+  Network,
+  Smartphone,
+  Lock,
+  Code,
+  Server,
+  Chip,
+  Wifi,
+  ShieldCheck,
+  Bot,
+  Workflow,
+  Eye,
+  Sparkles,
+  Atom,
+  Leaf,
+  Gamepad2,
+  Coins,
+  Satellite,
+  Activity,
+  MessageCircle,
+  Search,
+  BarChart,
+  Users2,
+  Settings,
+  Palette
+} from 'lucide-react';
+
+export function Footer(...args: any[]): any {
+  const currentYear = new Date().getFullYear();
+  const [activeSection, setActiveSection] = useState<any>(null);
+
+  const footerSections = [
+    {
+      title: 'Comp',
+      icon: Building,
+      links: [
+        { name: 'About Us', path: '/about', icon: Users },
+        { name: 'Our Story', path: '/about/story', icon: FileText },
+        { name: 'Team', path: '/about/team', icon: Users },
+        { name: 'Careers', path: '/careers', icon: Briefcase },
+        { name: 'Partners', path: '/partners', icon: Network },
+        { name: 'Press', path: '/press', icon: Newspaper },
+        { name: 'Contact', path: '/contact', icon: Phone }
+      ]
+    },
+    {
+      title: 'AI & Quantum Solutions',
+      icon: Brain,
+      category: "Core Services",
+      services: [
+        { name: "AI Customer Success Automation", href: "/services/ai-customer-success-automation", badge: "Popular" },
+        { name: "AI Healthcare Analytics Platform", href: "/services/ai-healthcare-analytics-platform", badge: "New" },
+        { name: "AI Financial Risk Management", href: "/services/ai-financial-risk-management-enhanced", badge: "Featured" },
+        { name: "AI Supply Chain Optimization", href: "/services/ai-supply-chain-optimization-enhanced", badge: "Trending" },
+        { name: "AI Legal Document Automation", href: "/services/ai-legal-document-automation-platform", badge: "Innovative" },
+        { name: "AI Mental Health Support", href: "/services/ai-mental-health-support-platform", badge: "Healthcare" },
+        { name: "AI Smart Home Energy Management", href: "/services/ai-smart-home-energy-management-platform", badge: "IoT" },
+        { name: "AI Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform", badge: "Logistics" },
+        { name: "AI-Powered SEO", href: "/services/ai-powered-seo", badge: "Marketing" },
+        { name: "Quantum Edge Computing", href: "/services/quantum-edge-computing-solutions", badge: "Quantum" },
+        { name: "AI Space Technology", href: "/services/ai-space-technology-platform", badge: "Space Tech" },
+        { name: "AI Carbon Footprint Management", href: "/services/ai-carbon-footprint-management-platform", badge: "Green Tech" },
+        { name: "AI Autonomous Manufacturing", href: "/services/ai-autonomous-manufacturing-platform", badge: "Manufacturing" },
+        { name: "AI Enterprise Resource Planning", href: "/services/ai-enterprise-resource-planning", badge: "ERP" },
+        { name: "AI Autonomous Business Operations", href: "/services/ai-autonomous-business-operations-platform", badge: "Automation" },
+        { name: "AI Customer Experience Analytics", href: "/services/ai-customer-experience-analytics-platform", badge: "Analytics" }
+
+      ]
+    },
+    {
+      title: "AI Cybersecurity & Infrastructure",
+      icon: Shield,
+      category: "Security & Infrastructure",
+      services: [
+        { name: "AI-Powered DevOps Automation", href: "/services/ai-powered-devops-automation", badge: "New" },
+        { name: "AI-Powered Cybersecurity Suite", href: "/services/ai-powered-cybersecurity-suite", badge: "Security" },
+        { name: "Enterprise IT Infrastructure Management", href: "/services/enterprise-it-infrastructure-management", badge: "Infrastructure" },
+        { name: "Cloud Migration & Optimization", href: "/services/cloud-migration-and-optimization", badge: "Cloud" },
+        { name: "AI Data Analytics Platform", href: "/services/ai-data-analytics-platform", badge: "Analytics" },
+        { name: "AI DevOps Automation", href: "/services/ai-devops-automation", badge: "DevOps" },
+        { name: "Edge Computing Platform", href: "/services/edge-computing-platform", badge: "Edge" }
+      ]
+    },
+    {
+      title: "Micro SaaS Solutions",
+      icon: Code,
+      category: "Micro SaaS",
+      services: [
+        { name: "AI Email Automation Suite", href: "/services/ai-email-automation-suite", badge: "New" },
+        { name: "AI Social Media Scheduler", href: "/services/ai-social-media-scheduler", badge: "New" },
+        { name: "AI Customer Insights Platform", href: "/services/ai-customer-insights-platform", badge: "New" },
+        { name: "Micro CRM", href: "/services/micro-crm", badge: "Popular" },
+        { name: "Helpdesk Platform", href: "/services/helpdesk-platform", badge: "Support" },
+        { name: "Website Analytics", href: "/services/website-analytics", badge: "Analytics" }
+      ]
+    },
+    {
+      title: 'Solutions',
+      links: [
+        { name: 'Enterprise Solutions', href: '/enterprise' },
+        { name: 'Healthcare Tech', href: '/solutions/healthcare' },
+        { name: 'Financial Solutions', href: '/financial-solutions' },
+        { name: 'Manufacturing', href: '/manufacturing-solutions' },
+        { name: 'Industry Solutions', href: '/industry-solutions' },
+        { name: 'Emerging Tech', href: '/emerging-tech' }
+      ]
+    },
+    {
+      title: 'Company',
+      links: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/about/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'News & Updates', href: '/news' },
+        { name: 'Case Studies', href: '/case-studies' }
+      ]
+    },
+    {
+      title: "Quantum Computing & Emerging Tech",
+      icon: Atom,
+      services: [
+        { name: "AI-Quantum Hybrid Computing Platform", href: "/services/ai-quantum-hybrid-platform" },
+        { name: "Quantum Computing as a Service", href: "/services/quantum-computing-as-a-service" },
+        { name: "AI Space Technology Platform", href: "/services/ai-space-technology-platform" },
+        { name: "AI IoT Edge Computing Platform", href: "/services/ai-iot-edge-computing-platform" }
+      ]
+    },
+    {
+      title: 'Resources',
+      links: [
+        { name: 'Documentation', href: '/docs' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Support Center', href: '/help' },
+        { name: 'Training', href: '/training' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Research', href: '/research-development' }
+      ]
+    }
+  ];
+
+  const solutions = [
+    { name: "Enterprise Solutions", href: "/solutions/enterprise" },
+    { name: "Healthcare Solutions", href: "/solutions/healthcare" },
+    { name: "Financial Solutions", href: "/solutions/financial" },
+    { name: "Government Solutions", href: "/solutions/government" },
+    { name: "Manufacturing Solutions", href: "/solutions/manufacturing" },
+    { name: "Retail Solutions", href: "/solutions/retail" },
+    { name: "Education Solutions", href: "/solutions/education" },
+    { name: "Startup Solutions", href: "/solutions/startup" }
+  ];
 
 export function Footer() {
   return (

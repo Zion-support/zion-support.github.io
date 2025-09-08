@@ -1,23 +1,18 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer.jsx';
-import { ChatAssistant } from './components/ChatAssistant';
-
-// Lazy load all pages
-const Home = React.lazy(() => import('./pages/Home.tsx'));
-const About = React.lazy(() => import('./pages/About.tsx'));
-const Contact = React.lazy(() => import('./pages/Contact.tsx'));
-const Blog = React.lazy(() => import('./pages/Blog.tsx'));
-const PartnersPage = React.lazy(() => import('./pages/Partners.tsx'));
-const Login = React.lazy(() => import('./pages/Login.jsx'));
-const FAQ = React.lazy(() => import('./pages/FAQ.tsx'));
-const Careers = React.lazy(() => import('./pages/Careers.tsx'));
-const Privacy = React.lazy(() => import('./pages/Privacy.tsx'));
-const Terms = React.lazy(() => import('./pages/Terms.tsx'));
-const Sitemap = React.lazy(() => import('./pages/Sitemap.tsx'));
-const GreenIT = React.lazy(() => import('./pages/GreenIT.tsx'));
-const InnovativeServicesShowcase = React.lazy(() => import('./pages/InnovativeServicesShowcase2025.tsx'));
+import { ChatAssistant } from './components/ChatAssistant.tsx';
+('');// Home and main pages'
+const Home = lazy(() => import('./pages/Home.tsx'));
+const About = lazy(() => import('./pages/About.tsx'));
+const Contact = lazy(() => import('./pages/Contact.tsx'));
+const BlogPage = lazy(() => import('./pages/BlogPage.tsx'));
+const PartnersPage = lazy(() => import('./pages/Partners.tsx'));
+const Login = lazy(() => import('./pages/Login.tsx'));
+const FAQ = lazy(() => import('./pages/FAQ.tsx'));
+const Careers = lazy(() => import('./pages/Careers.tsx'));
+const Sitemap = lazy(() => import('./pages/Sitemap.jsx'));
 
 // Loading component
 const LoadingSpinner = () => (
@@ -82,3 +77,13 @@ function App() {
 }
 
 export default App;
+
+export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App };
+
+export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App };
+
+export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App };
+
+export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App };
+
+export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App };

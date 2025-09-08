@@ -1,7 +1,6 @@
-import Link from 'next/link';
+import React from 'react';
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import { ContactInfo, AnimationState } from '../types';
+
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
     isLoaded: false,
@@ -86,15 +85,11 @@ address: '364 E Main St STE 1008 Middletown DE 19709'
           }}
         />
       </Head>
-      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-        {/* Hero Section */}
-        <section className="py-20 px-4 text-center" role="banner">
-          <div className="max-w-4xl mx-auto">
-            <h1
-              id="hero-title"
-              className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-            >
-              Zion Tech Group
+      <main className="min-h-screen bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              Welcome to Zion Tech Group
             </h1>
             <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               Innovative Micro SaaS, AI Services & IT Solutions

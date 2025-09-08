@@ -1,27 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
-import { Users, 
-  Target, 
-  Award, 
-  Globe, 
-  Zap, 
-  Shield, 
-  Rocket, 
-  Heart,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Lightbulb,
-  Cpu,
-  Brain,
-  Cloud,
-  Lock,
-  Database
- } from 'lucide-react';
-
+import Header from '../layout/Header';
+import Footer from '../layout/Footer';return (
+    <>
+      <SEO 
+        title="About Us - Zion Tech Group""        description="Learn about Zion Tech Group&aposs mission, values, and commitment to delivering cutting-edge technology solutions."''      />'      <div className="min-h-screen bg-white py-20">"        <div className="max-w-4xl mx-auto px-4">"          <h1 className="text-4xl font-bold text-gray-900 mb-8">About Zion Tech Group</h1>"          <p className="text-lg text-gray-600 mb-6">"            Zion Tech Group is a leading technology solutions provider dedicated to helping "            organizations transform their digital infrastructure and achieve their business goals.'
+          </p>
+          <p className="text-lg text-gray-600">"            Our team of experts specializes in AI, cybersecurity, cloud infrastructure, and digital transformation services."          </p></div>
+      </div>
+</>);
+};
 export default function About() {
   return (
     <AppLayout>

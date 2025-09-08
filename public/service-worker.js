@@ -13,11 +13,9 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE))
   );
-  self.skipWaiting();
-});
-
-self.addEventListener('activate', event => {
-  event.waitUntil(
+self.skipWaiting()});
+self.addEventListener(
+  'activate', event => {event.waitUntil(
     caches.keys().then(keyList =>
       Promise.all(
         keyList.map(key => {
@@ -28,13 +26,13 @@ self.addEventListener('activate', event => {
       )
     )
   );
-  self.clients.claim();
-});
-
-self.addEventListener('fetch', event => {
-  if (event.request.method !== 'GET') return;
-  if (event.request.url.includes('/api/')) {
-    event.respondWith(
+self.clients.claim()});
+self.addEventListener(
+  'fetch', event => {
+  if (event.request.method !==
+  'GET') return;
+  if (event.request.url.includes(
+  '/api/')) {event.respondWith(
       caches.open(DATA_CACHE_NAME).then(cache =>
         fetch(event.request)
           .then(response => {
@@ -52,8 +50,7 @@ self.addEventListener('fetch', event => {
     caches.match(event.request).then(response => {
       return (
         response ||
-        fetch(event.request).catch(() => caches.match('/offline.html'))
-      );
-    })
-  );
-});
+fetch(event.request).catch(() => caches.match(
+  '/offline.html'))
+      )})
+  )});

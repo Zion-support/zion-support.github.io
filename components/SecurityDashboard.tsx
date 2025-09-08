@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { motion  } from 'framer-motion';
-import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity  } from 'lucide-react';
-
-interface SecurityMetrics  {import React, { useEffect, useState  } from 'react';
+React, { useEffect, useState } from
   'react';
-import { motion  } from 'lucide-react';import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity  } from 'lucide-react'';
-
-interface SecurityMetrics {';
-  overallScore: number;
-  vulnerabilities: {critical: number;
+import { motion } from
+  'framer-motion';
+import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity } from'
+  'lucide-react';''
+  'interface SecurityMetrics {'overallScore: number;
+  vulnerabilities: {;critical: number;
     high: number;
     medium: number;}
     low: number;}
@@ -77,17 +74,15 @@ const getScoreColor = (score: number): string => {if (score >= 90);
   if (isLoading || !security) {return (<div className='flex items-center justify-center p-8' />'        <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500' /></div>'      </div>'    )';}
   }
 
-const getScoreColor = (score: number): string => {if (score >= 90);
-  return 'text-green-500';
-   if (score >= 70) return;
-  'text-yellow-500';
-   return;}
-  'text-red-500';}
- }'';
-  return (<div className='space-y-6' />'      <div className='flex items-center justify-between' />'        <h2 className='text-2xl font-bold text-gray-900 dark: text-white flex items-center' />'          <Shield className='w-6 h-6 mr-2 text-blue-500' />'          Security Dashboard'        </h2></div>';
-      <motion.div;
-        initial={{ opacity: 0, y: 20 ,}
-}
+const getScoreColor = (score: number): string => {;
+    if (score >= 90) return 'text-green-500'
+  ';'    if (score >= 70) return
+  'text-yellow-500';'    return'
+  'text-red-500';'  };'return (
+    <div className="space-y-6">"      <div className="flex items-center justify-between">"        <h2 className="text-2xl font-bold text-gray-900 dark: text-white flex items-center">"          <Shield className="w-6 h-6 mr-2 text-blue-500" />"          Security Dashboard"        </h2></div>"
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
 className='bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700''       />'        <div className='text-center' />'          <div className='inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 dark:bg-green-900/20' />'            <span className={`text-3xl font-bold ${getScoreColor(security.overallScore)}`} />'              {security.overallScor,}
 }`            </span>';

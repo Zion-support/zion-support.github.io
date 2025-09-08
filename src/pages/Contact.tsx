@@ -1,30 +1,11 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  MessageSquare, 
-  Send,
-  Globe,
-  Building,
-  User,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Award,
-  Shield,
-  Zap,
-  Brain,
-  Cpu,
-  Database,
-  Network,
-  Rocket
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
-
-const Contact: React.FC = () => {
+import { Link } from 'react-router-dom';
+import Header from '../layout/Header';
+import Footer from '../layout/Footer';return (
+    <>
+      <SEO title="Contact - Zion Tech Group" />"      <div className="min-h-screen bg-white py-20">"        <div className="max-w-4xl mx-auto px-4">"          <h1 className="text-4xl font-bold text-gray-900 mb-8">Contact</h1>"          <p className="text-lg text-gray-600">Content coming soon...</p>"        </div>"      </div>
+</>);};
+export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',

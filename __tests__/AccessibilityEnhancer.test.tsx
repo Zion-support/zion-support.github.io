@@ -72,14 +72,18 @@ describe('AccessibilityEnhancer', () => {
         <span>Focusable Element</span>
       </AccessibilityEnhancer>
     );
-    const element = screen.getByRole('button');
+
+const element = screen.getByRole(
+  'button');
     expect(element).toHaveClass(
-      'focus:outline-none',
-      'focus:ring-2',
-      'focus:ring-blue-500'
-    );
-  });
-  it('disables focus when not focusable', () => {
+  'focus:outline-none,
+,
+  focus: ring-2,
+,
+  focus: ring-blue-500);});
+
+  it(
+  'disables focus when not focusable', () => {
     render(
       <AccessibilityEnhancer role="button" tabIndex={-1}>
         <span>Non-focusable Element</span>

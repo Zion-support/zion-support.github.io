@@ -162,17 +162,19 @@ class ConsoleCleaner {;
   constructor() {;
     this.projectRoot = process.cwd();
     this.cleanedFiles = [];
-    this.totalConsoleStatements = 0}
-<<<<<<< HEAD
+    this.totalConsoleStatements = 0;
+  }
 
-
-
-=======
-  async cleanConsoleStatements() {;
-    console.log(';🧹 Cleaning console statements from production code...');
-    const directories = [';pages', ';components', ';src', ';lib'];
-    for (const dir of directories) {];
-    for (const dir of directories) {
+  async cleanConsoleStatements() {
+console.log(
+  '🧹 Cleaning console statements from production code...');
+    
+    const directories = [
+  'pages',
+  'components',
+  'src',
+  'lib'
+    ];for (const dir of directories) {
       const dirPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(dirPath)) {;
         await this.processDirectory(dirPath)}

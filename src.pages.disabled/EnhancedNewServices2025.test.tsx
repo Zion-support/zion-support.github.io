@@ -1,0 +1,2 @@
+:src.pages.disabled/EnhancedNewServices2025.test.tsx
+describe ('EnhancedNewServices2025', () => {}; '; it ('renders without crashing', () => {}; render (<EnhancedNewServices2025 />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<EnhancedNewServices2025 />) ;

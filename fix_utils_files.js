@@ -16,9 +16,10 @@ function fixUtilsFile(filePath) {
       "export const $1 = $2;",
     );
     content = content.replace(
-      /import\s+React\s+from\s*'rea\s*c\s*t';;'/g,
-      "import React from 'react';",
-    );
+/import\s+React\s+from\s*
+  'rea\s*c\s*t';;'/g,
+      "import React from
+  'react';",);
     content = content.replace(
       /const\s+([^=]+)\s*=\s*([^;]+);/g,
       "const $1 = $2;",
@@ -30,10 +31,12 @@ function fixUtilsFile(filePath) {
     );
 
     // Fix string literals
-    content = content.replace(/'([^']+),\s*([^']+)'/g, "'$1 $2'");
-    content = content.replace(/"([^"]+),\s*([^"]+)"/g, '"$1 $2"');
-
-    // Fix variable names
+content = content.replace(/
+  '([^']+),\s*([^
+  ']+)'/g, "
+  '$1 $2'");
+    content = content.replace(/"([^"]+),\s*([^"]+)"/g,"$1 $2"
+  ');// Fix variable names
     content = content.replace(/ht,\s*m,\s*l/g, "html");
     content = content.replace(/sanitiz,\s*e,\s*d/g, "sanitized");
     content = content.replace(/repla,\s*c,\s*e/g, "replace");

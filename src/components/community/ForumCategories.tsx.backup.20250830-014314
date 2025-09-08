@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+:src.disabled/components/community/ForumCategories.tsx
 import React from 'react.ts';
 >>>>>>> e220500ccca44de2253ff84a9759db22263da039
 

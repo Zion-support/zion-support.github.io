@@ -1,11 +1,17 @@
 const os = require('os');
 
 const nextConfig = {
-  reactStrictMode: true
-  eslint: { ignoreDuringBuilds: true }
-  typescript: { ignoreBuildErrors: true }
-  pageExtensions: ['tsxtsjsxjs']
-  trailingSlash: true
+  reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  experimental: {
+    esmExternals: false,
+    newNextLinkBehavior: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"]
     formats: ['image/webp', 'image/avif']

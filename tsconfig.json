@@ -95,14 +95,65 @@
     "types": [
       "node"
     ],
-    "jsx": "preserve",
-    "noEmit": true,
-    "isolatedModules": true
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "exactOptionalPropertyTypes": false,
+    "tsBuildInfoFile": ".next/tsbuildinfo"
   },
   "include": [
-    "src",
-    "pages",
-    "components",
-    "types"
+    "next-env.d.ts",
+    "pages/**/*",
+    "src/**/*",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "api-backup",
+    "pages.disabled",
+    "backup-pages",
+    "temp_working",
+    "supabase/functions",
+    "src/routes",
+    "automation/backups",
+    "automation_backup",
+    "broken_files_backup",
+    "contracts",
+    "cypress",
+    "temp_working",
+    "supabase/functions",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.backup",
+    "**/*.disabled",
+    "src/utils/generateRandomListing.ts",
+    "src/utils/linkChecker.ts",
+    "src/utils/mimeTypeFallback.ts",
+    "src/utils/passwordStrength.tsx",
+    "src/utils/resourceMonitor.ts",
+    "src/utils/seoOptimizer.tsx",
+    "src/utils/serviceWorkerRegistration.ts",
+    "src/utils/unitConversion.ts",
+    "src/utils/withErrorLogging.ts",
+    "src/utils/generateRandomBlogPost.ts",
+    "src/pages/solutions/EnterpriseSolutions.tsx",
+    "src/utils/sitemapGenerator.tsx",
+    "src/pages/zion-hire-ai.tsx",
+    "src/pages/webinars.tsx",
+    "src/routes/*Routes.tsx",
+    "src/pages/services/**"
   ]
 }

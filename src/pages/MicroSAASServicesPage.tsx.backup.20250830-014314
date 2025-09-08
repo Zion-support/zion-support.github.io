@@ -1,4 +1,5 @@
-import { SEO } from '@/components/SEO';
+:src.disabled/pages/MicroSAASServicesPage.tsx
+import SEO from '@/src/src/components/SEO';
 
 const MicroSAASServicesPage = () => {
   return (
