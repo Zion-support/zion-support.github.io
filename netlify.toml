@@ -1,5 +1,5 @@
 [build]
-  # Deploy prebuilt static assets in 'dist' and skip building on Netlify
+  # Use prebuilt static site in 'dist' to avoid build step
   command = "echo 'Skipping build: deploying prebuilt dist'"
   publish = "dist"
   functions = "netlify/functions"
@@ -13,8 +13,8 @@
   # Ensure Netlify does not run Yarn and skips dependency install entirely
   NETLIFY_USE_YARN = "false"
   NETLIFY_SKIP_INSTALL = "true"
-  # Extra safety if npm ever runs
-  NPM_FLAGS = "--no-fund --no-audit --quiet"
+  # Force Netlify to use npm instead of Yarn to avoid Yarn classic issues
+  NETLIFY_USE_YARN = "false"
 
 
 
