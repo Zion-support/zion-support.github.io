@@ -17,7 +17,7 @@ export interface LoadingSpinnerProps extends BaseComponentProps {
 
 // Feature card props
 export interface FeatureCardProps extends BaseComponentProps {
-  id: string;
+  id: string | number;
   title: string;
   description: string;
   icon: ReactNode;
@@ -36,6 +36,7 @@ export interface ButtonProps extends BaseComponentProps {
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
   fullWidth?: boolean;
+  asChild?: boolean;
 }
 
 // Input props
