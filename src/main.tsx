@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-// import './index.css';
+import './index.css';
 
 // Import i18n configuration
 import './i18n';
 
 // Register service worker
-import { _registerServiceWorker } from './serviceWorkerRegistration';
+import { registerServiceWorker } from './serviceWorkerRegistration';
 
 // Error handling function
 const showApiError = (error: unknown): void => {
