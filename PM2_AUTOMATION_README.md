@@ -1,171 +1,40 @@
-# Zion Tech Group - PM2 Automation System
+# PM2 Automation Setup
+
+This document describes the PM2 automation system that has replaced the GitHub Actions workflows.
 
 ## Overview
 
-This project now includes a comprehensive PM2 automation system that automatically detects and fixes errors in real-time. The system runs continuously to maintain code quality and prevent errors from accumulating.
+The following GitHub Actions workflows have been replaced with PM2 automation:
 
-## 🚀 Quick Start
+- **CI Workflow** → `ci-automation` (runs every 6 hours)
+- **Deploy Workflow** → `deploy-automation` (runs on demand)
+- **Dependencies Workflow** → `dependency-automation` (runs every Monday at 2 AM)
 
-### 1. Check PM2 Status
+## PM2 Processes
+
+### Current Running Processes
+
+1. **zion-app** - Main application (development mode)
+2. **ci-automation** - Continuous Integration automation
+3. **dependency-automation** - Dependency management automation
+4. **deploy-automation** - Deployment automation
+
+### Automation Scripts
+
+- `scripts/ci-automation.sh` - Runs linting, type checking, building, and testing
+- `scripts/deploy-automation.sh` - Handles deployment process
+- `scripts/dependency-automation.sh` - Updates dependencies and runs security audits
+
+## Commands
+
+### Check Status
 ```bash
 pm2 status
 ```
 
-### 2. View Real-Time Dashboard
+### View Logs
 ```bash
-pm2 logs automation-dashboard
-```
-
-### 3. Monitor All Automations
-```bash
-pm2 logs --lines 50
-```
-
-### 4. Run Comprehensive Error Fixing
-```bash
-./scripts/automation/run-all-fixes.sh
-```
-
-## 🤖 Automation Processes
-
-### Core Error Fixers (High Priority)
-
-| Process | Frequency | Description | Status |
-|---------|-----------|-------------|---------|
-| **enhanced-error-fixer** | Every 10 minutes | Fixes major syntax, TypeScript, and JSX errors | 🟢 Online |
-| **comprehensive-error-fixer** | Every 10 minutes | Comprehensive error fixing across all areas | 🟢 Online |
-| **typescript-error-fixer** | Every 15 minutes | Specialized TypeScript error fixing | 🟢 Online |
-| **general-error-fixer** | Every 20 minutes | General error fixing and linting | 🟢 Online |
-
-### Supporting Automations
-
-| Process | Frequency | Description | Status |
-|---------|-----------|-------------|---------|
-| **console-error-fixer** | Every 15 minutes | Fixes console and runtime errors | 🟢 Online |
-| **link-checker** | Every 30 minutes | Checks and fixes broken links | 🟢 Online |
-| **continuous-improvement** | Every 2 hours | Continuous code improvement | 🟢 Online |
-| **daily-build-test** | Every hour | Regular build and test execution | 🟢 Online |
-| **security-audit** | Every 4 hours | Security vulnerability scanning | 🟢 Online |
-| **dependency-updates** | Every 6 hours | Automated dependency updates | 🟢 Online |
-
-### Coordination & Monitoring
-
-| Process | Frequency | Description | Status |
-|---------|-----------|-------------|---------|
-| **automation-orchestrator** | Every 5 minutes | Coordinates all automations | 🟢 Online |
-| **automation-dashboard** | Every 1 minute | Real-time monitoring dashboard | 🟢 Online |
-| **pm2-monitor** | Every 10 minutes | PM2 process monitoring | 🟢 Online |
-
-## 📊 Current Status
-
-### Project Health
-- **ESLint**: ✅ PASSING (reduced from 4406 problems)
-- **TypeScript**: ✅ IMPROVED (reduced from 25517 errors)
-- **Build**: 🔄 IN PROGRESS
-- **Overall**: 🟡 NEEDS ATTENTION (improving)
-
-### Automation Performance
-- **Total Processes**: 6
-- **Online**: 6
-- **Errored**: 0
-- **Stopped**: 0
-- **Total Memory Usage**: ~390MB
-- **Average CPU Usage**: 0%
-
-### 🚀 Build & Deployment Automation
-- **Smart Build Detection**: Configuration change monitoring with checksums
-- **Priority-based Queuing**: Intelligent build queuing and management
-- **One-command Deployments**: Staging and production deployment automation
-- **Rollback Protection**: Automatic backup creation and failure recovery
-
-### PM2 Control Commands
-
-## 🏗️ System Architecture
-
-### Core Components
-1. **PM2 Ecosystem Configuration** (`ecosystem.config.cjs`)
-   - Frontend and backend process definitions
-   - Environment-specific configurations
-   - Auto-scaling and restart policies
-
-2. **Intelligent Monitor** (`scripts/pm2-monitor.js`)
-   - Health endpoint monitoring
-   - Performance data collection
-   - Alert generation and auto-recovery
-
-3. **Build Watcher** (`scripts/pm2-build-watcher.js`)
-   - Configuration file monitoring
-   - Smart build determination
-   - Optional auto-deployment
-
-4. **Process Manager** (`scripts/pm2-manager.js`)
-   - Auto-scaling logic
-   - Performance optimization
-   - Resource management
-
-5. **Deployment Automator** (`scripts/pm2-deployer.js`)
-   - Automated deployments
-   - Backup and rollback
-   - Health verification
-
-## 🚀 Quick Start
-
-### 1. Initial Setup
-```bash
-# Start all automations
-pm2 start ecosystem.config.cjs
-
-# Start specific automation
-pm2 start ecosystem.config.cjs --only enhanced-error-fixer
-
-# Stop all automations
-pm2 stop ecosystem.config.cjs
-
-# Restart all automations
-pm2 restart ecosystem.config.cjs
-
-# View logs
-pm2 logs --lines 100
-
-# Monitor processes
-pm2 monit
-
-# Save PM2 configuration
-pm2 save
-
-# Setup PM2 to start on boot
-pm2 startup
-pm2 save
-```
-
-### Automation Control Commands
-
-```bash
-# Run comprehensive error fixing
-./scripts/automation/run-all-fixes.sh
-
-# Run specific error fixer
-node scripts/automation/enhanced-error-fixer.cjs
-
-# Run automation orchestrator
-node scripts/automation/automation-orchestrator.cjs --continuous
-
-# View automation dashboard
-node scripts/automation/automation-dashboard.cjs
-
-# Run automation group
-node scripts/automation/automation-orchestrator.cjs --group=error-fixing
-```
-
-### 🔧 PM2 Management
-```bash
-# Process control
-npm run pm2:dev               # Start development
-npm run pm2:prod              # Start production
-npm run pm2:stop              # Stop all processes
-npm run pm2:restart           # Restart all processes
-npm run pm2:reload            # Zero-downtime reload
-npm run pm2:delete            # Remove all processes
+pm2 logs [process-name]
 ```
 scripts/automation/
 ├── enhanced-error-fixer.cjs          # Main error fixer (highest priority)
@@ -178,231 +47,63 @@ scripts/automation/
 ├── run-all-fixes.sh                 # Comprehensive fixing script
 └── ... (other automation scripts)
 
-reports/                              # Generated reports
-├── enhanced-error-fixer-report.json
-├── comprehensive-error-fixer-report.json
-├── typescript-error-fixer-report.json
-├── automation-orchestrator-report.json
-├── automation-dashboard.json
-└── comprehensive-fixing-summary.md
-```
-
-## 🔧 Configuration
-
-### Ecosystem Configuration
-The main PM2 configuration is in `ecosystem.config.cjs` and includes:
-
-- **6 core automation processes**
-- **Automatic restart on failure**
-- **Memory limits and monitoring**
-- **Environment-specific settings**
-- **Process prioritization**
-
-### Environment Variables
+### Restart Process
 ```bash
-NODE_ENV=production
-AUTOMATION_INTERVAL=600000  # 10 minutes for high-priority processes
+pm2 restart [process-name]
 ```
 
-## 📈 Monitoring & Reports
-
-### Real-Time Monitoring
-- **PM2 Status**: `pm2 status`
-- **Live Logs**: `pm2 logs automation-dashboard`
-- **Process Monitor**: `pm2 monit`
-
-### Generated Reports
-- **Error Fixing Reports**: JSON format with detailed results
-- **Dashboard Reports**: Real-time status and recommendations
-- **Summary Reports**: Markdown format with actionable insights
-
-### Report Locations
-- **JSON Reports**: `reports/*-report.json`
-- **Dashboard**: `reports/automation-dashboard.json`
-- **Summary**: `reports/comprehensive-fixing-summary.md`
-
-## 🎯 What Gets Fixed Automatically
-
-### Syntax Errors
-- ✅ Unexpected token errors
-- ✅ Missing semicolons and brackets
-- ✅ JSX fragment syntax issues
-- ✅ Array/object destructuring problems
-
-### TypeScript Issues
-- ✅ Missing type annotations
-- ✅ Parsing errors
-- ✅ Interface definition problems
-- ✅ Import/export syntax
-
-### JSX/React Issues
-- ✅ Fragment wrapper problems
-- ✅ Component structure issues
-- ✅ Missing React imports
-- ✅ JSX syntax errors
-
-### Configuration Issues
-- ✅ ESLint configuration problems
-- ✅ Missing dependencies
-- ✅ Package.json issues
-- ✅ Build configuration
-
-## 🚨 Troubleshooting
-
-### Common Issues
-<<<<<<< HEAD
-
-#### PM2 Process Not Starting
+### Stop Process
 ```bash
-# Check PM2 installation
-pm2 --version
-
-# Reinstall PM2 if needed
-npm install -g pm2
-
-# Clear PM2 processes
-pm2 kill
-pm2 start ecosystem.config.cjs
+pm2 stop [process-name]
 ```
 
-#### Automation Scripts Failing
+### Start Process
 ```bash
-# Check script permissions
-chmod +x scripts/automation/*.sh
-
-# Check Node.js version
-node --version
-
-# Install dependencies
-npm install
+pm2 start [process-name]
 ```
 
-#### High Memory Usage
+### Save Configuration
 ```bash
-# Check memory usage
-pm2 monit
-
-# Restart processes
-pm2 restart all
-
-# Adjust memory limits in ecosystem.config.cjs
+pm2 save
 ```
 
-### Debug Commands
-
+### Load Configuration
 ```bash
-# View detailed logs
-pm2 logs --lines 200
-
-# Check specific process
-pm2 show enhanced-error-fixer
-
-# Monitor resources
-pm2 monit
-
-# Check automation reports
-ls -la reports/
+pm2 resurrect
 ```
 
-## 🔄 Continuous Improvement
+## Scheduling
 
-### Automation Learning
-The system continuously improves by:
-- **Analyzing error patterns**
-- **Learning from successful fixes**
-- **Adapting to project changes**
-- **Optimizing fix strategies**
+- **CI Automation**: Every 6 hours (`0 */6 * * *`)
+- **Dependency Management**: Every Monday at 2 AM (`0 2 * * 1`)
+- **Deploy Automation**: Manual trigger only
 
-### Performance Monitoring
-- **Memory usage tracking**
-- **CPU utilization monitoring**
-- **Process restart analysis**
-- **Error rate tracking**
+## Benefits of PM2 over GitHub Actions
 
-## 📋 Maintenance Schedule
+1. **Faster execution** - No need to wait for GitHub Actions queue
+2. **Cost effective** - No GitHub Actions minutes consumed
+3. **Real-time monitoring** - Live process monitoring and logs
+4. **Immediate feedback** - Instant execution and results
+5. **Resource control** - Better resource management and optimization
 
-### Daily
-- Monitor PM2 status
-- Check automation dashboard
-- Review error reports
+## Maintenance
 
-### Weekly
-- Analyze automation performance
-- Review and update fix strategies
-- Clean up old reports
+The PM2 processes are configured to auto-restart on failure and are saved to persist across server reboots.
 
-### Monthly
-- Update automation scripts
-- Optimize PM2 configuration
-- Review and improve error patterns
-
-## 🎉 Benefits
-
-### Immediate
-- ✅ **Real-time error fixing**
-- ✅ **Reduced manual intervention**
-- ✅ **Consistent code quality**
-- ✅ **Automated problem detection**
-
-### Long-term
-- 🚀 **Improved development velocity**
-- 🛡️ **Better code reliability**
-- 📊 **Comprehensive monitoring**
-- 🔄 **Continuous improvement**
-
-## 🤝 Contributing
-
-### Adding New Automations
-1. Create automation script in `scripts/automation/`
-2. Add to `ecosystem.config.cjs`
-3. Update `automation-orchestrator.cjs`
-4. Test thoroughly
-5. Document in this README
-
-### Improving Existing Automations
-1. Identify improvement areas
-2. Update automation logic
-3. Test with various error scenarios
-4. Monitor performance impact
-5. Update documentation
-
-## 📞 Support
-
-### Getting Help
-- **Check PM2 status**: `pm2 status`
-- **View logs**: `pm2 logs`
-- **Check reports**: `ls reports/`
-- **Run diagnostics**: `./scripts/automation/run-all-fixes.sh`
-
-### Emergency Commands
+To ensure the automation continues working after server restarts:
 ```bash
-# Stop all automations
-pm2 stop all
-
-# Restart all automations
-pm2 restart all
-
-# Kill PM2 completely
-pm2 kill
-
-# Start fresh
-pm2 start ecosystem.config.cjs
+pm2 startup
+pm2 save
 ```
 
----
+## Troubleshooting
 
-## 🎯 Next Steps
+If a process fails:
+1. Check logs: `pm2 logs [process-name]`
+2. Restart: `pm2 restart [process-name]`
+3. Check status: `pm2 status`
 
-1. **Monitor the system** for the next 24 hours
-2. **Review generated reports** for insights
-3. **Test the application** to ensure fixes work
-4. **Deploy when ready** with confidence
-5. **Continue monitoring** for ongoing quality
-
----
-
-*This automation system is designed to continuously improve code quality and reduce manual error fixing. The PM2 processes will run automatically and maintain your project's health around the clock.*
-
-**Last Updated**: $(date)
-**Status**: 🟢 All systems operational
-**Version**: 1.0.0
+For dependency issues:
+1. Run: `npm ci` to clean install
+2. Check for conflicts: `npm ls`
+3. Update lockfile: `rm package-lock.json && npm install`
