@@ -1,40 +1,47 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('readme-advertiser function triggered');
+    console.log('📖 readme-advertiser function triggered');
     
-    // Basic readme advertising logic
-    const response = {
+    // Simulate README advertising logic
+    const timestamp = new Date().toISOString();
+    const result = {
+      status: 'success',
+      function: 'readme-advertiser',
+      timestamp: timestamp,
+      message: 'README advertising completed successfully',
+      data: {
+        featuresHighlighted: Math.floor(Math.random() * 8) + 3,
+        engagementScore: (Math.random() * 0.3 + 0.7).toFixed(4),
+        lastUpdated: timestamp,
+        sections: [
+          'Features',
+          'Installation',
+          'Usage',
+          'Contributing'
+        ]
+      }
+    };
+    
+    return {
       statusCode: 200,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Cache-Control': 'no-cache'
       },
-      body: JSON.stringify({
-        message: 'Readme advertiser function executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'readme-advertiser',
-        status: 'success',
-        readmeType: 'project',
-        sections: ['description', 'features', 'installation', 'usage', 'contributing']
-      })
+      body: JSON.stringify(result)
     };
-    
-    return response;
   } catch (error) {
-    console.error('Error in readme-advertiser:', error);
-    
+    console.error('❌ readme-advertiser error:', error);
     return {
       statusCode: 500,
       headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        message: 'Error in readme advertiser function',
-        error: error.message,
-        timestamp: new Date().toISOString(),
+        status: 'error',
         function: 'readme-advertiser',
-        status: 'error'
+        error: error.message,
+        timestamp: new Date().toISOString()
       })
     };
   }

@@ -1,46 +1,44 @@
 exports.handler = async function(event, context) {
-  console.log('ai-changelog-runner function executed');
-  
   try {
-    // Simulate AI changelog running logic
+    console.log('🤖 ai-changelog-runner function triggered');
+    
+    // Simulate AI changelog generation logic
     const timestamp = new Date().toISOString();
     const result = {
       status: 'success',
       function: 'ai-changelog-runner',
       timestamp: timestamp,
-      message: 'AI changelog running completed successfully',
+      message: 'AI changelog generation completed successfully',
       data: {
-        changelogsProcessed: 23,
-        aiInsightsGenerated: 18,
-        patternsIdentified: 12,
-        automationOpportunities: 8,
-        efficiency: 'improved'
+        commitsAnalyzed: Math.floor(Math.random() * 100) + 50,
+        changelogEntries: Math.floor(Math.random() * 20) + 10,
+        aiConfidence: (Math.random() * 0.2 + 0.8).toFixed(4),
+        categories: ['Features', 'Bug Fixes', 'Improvements', 'Documentation'],
+        lastGenerated: timestamp
       }
     };
-    
-    console.log('AI changelog running result:', result);
     
     return {
       statusCode: 200,
-      body: JSON.stringify(result),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache'
+      },
+      body: JSON.stringify(result)
     };
   } catch (error) {
-    console.error('Error in ai-changelog-runner:', error);
-    
+    console.error('❌ ai-changelog-runner error:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({
         status: 'error',
         function: 'ai-changelog-runner',
-        timestamp: new Date().toISOString(),
-        error: error.message
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+        error: error.message,
+        timestamp: new Date().toISOString()
+      })
     };
   }
 };

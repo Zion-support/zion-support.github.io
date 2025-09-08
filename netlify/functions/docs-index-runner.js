@@ -1,7 +1,7 @@
 exports.handler = async function(event, context) {
-  console.log('docs-index-runner function executed');
-  
   try {
+    console.log('📚 docs-index-runner function triggered');
+    
     // Simulate documentation indexing logic
     const timestamp = new Date().toISOString();
     const result = {
@@ -10,38 +10,35 @@ exports.handler = async function(event, context) {
       timestamp: timestamp,
       message: 'Documentation indexing completed successfully',
       data: {
-        documentsIndexed: 156,
-        searchIndexUpdated: true,
-        metadataExtracted: 89,
-        crossReferences: 67,
-        searchability: 'improved',
-        userExperience: 'enhanced'
+        documentsIndexed: Math.floor(Math.random() * 200) + 100,
+        searchTerms: Math.floor(Math.random() * 50) + 25,
+        indexSize: Math.floor(Math.random() * 1000) + 500,
+        lastIndexed: timestamp,
+        coverage: (Math.random() * 0.2 + 0.8).toFixed(4)
       }
     };
-    
-    console.log('Documentation indexing result:', result);
     
     return {
       statusCode: 200,
-      body: JSON.stringify(result),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache'
+      },
+      body: JSON.stringify(result)
     };
   } catch (error) {
-    console.error('Error in docs-index-runner:', error);
-    
+    console.error('❌ docs-index-runner error:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({
         status: 'error',
         function: 'docs-index-runner',
-        timestamp: new Date().toISOString(),
-        error: error.message
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+        error: error.message,
+        timestamp: new Date().toISOString()
+      })
     };
   }
 };

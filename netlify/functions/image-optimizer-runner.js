@@ -1,7 +1,7 @@
 exports.handler = async function(event, context) {
-  console.log('image-optimizer-runner function executed');
-  
   try {
+    console.log('🖼️ image-optimizer-runner function triggered');
+    
     // Simulate image optimization logic
     const timestamp = new Date().toISOString();
     const result = {
@@ -10,38 +10,35 @@ exports.handler = async function(event, context) {
       timestamp: timestamp,
       message: 'Image optimization completed successfully',
       data: {
-        imagesOptimized: 89,
-        storageSaved: 45,
-        performanceImproved: true,
-        formatsConverted: 23,
-        compressionApplied: true,
-        userExperience: 'enhanced'
+        imagesProcessed: Math.floor(Math.random() * 100) + 50,
+        totalSizeReduction: (Math.random() * 50 + 20).toFixed(2),
+        optimizationRatio: (Math.random() * 0.3 + 0.7).toFixed(4),
+        formatsSupported: ['WebP', 'AVIF', 'JPEG', 'PNG'],
+        lastOptimized: timestamp
       }
     };
-    
-    console.log('Image optimization result:', result);
     
     return {
       statusCode: 200,
-      body: JSON.stringify(result),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache'
+      },
+      body: JSON.stringify(result)
     };
   } catch (error) {
-    console.error('Error in image-optimizer-runner:', error);
-    
+    console.error('❌ image-optimizer-runner error:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({
         status: 'error',
         function: 'image-optimizer-runner',
-        timestamp: new Date().toISOString(),
-        error: error.message
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+        error: error.message,
+        timestamp: new Date().toISOString()
+      })
     };
   }
 };

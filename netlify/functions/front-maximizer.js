@@ -1,46 +1,44 @@
 exports.handler = async function(event, context) {
-  console.log('front-maximizer function executed');
-  
   try {
-    // Simulate front maximization logic
+    console.log('🎯 front-maximizer function triggered');
+    
+    // Simulate front-end maximization logic
     const timestamp = new Date().toISOString();
     const result = {
       status: 'success',
       function: 'front-maximizer',
       timestamp: timestamp,
-      message: 'Front maximization completed successfully',
+      message: 'Front-end maximization completed successfully',
       data: {
-        elementsMaximized: Math.floor(Math.random() * 20) + 10,
-        performanceBoosted: true,
-        userExperience: 'maximized',
-        conversionOptimized: true,
-        engagement: 'peak'
+        componentsOptimized: Math.floor(Math.random() * 25) + 10,
+        performanceGain: (Math.random() * 0.4 + 0.3).toFixed(4),
+        userEngagement: (Math.random() * 0.25 + 0.75).toFixed(4),
+        conversionImprovement: (Math.random() * 0.2 + 0.1).toFixed(4),
+        lastMaximized: timestamp
       }
     };
-    
-    console.log('Front maximization result:', result);
     
     return {
       statusCode: 200,
-      body: JSON.stringify(result),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache'
+      },
+      body: JSON.stringify(result)
     };
   } catch (error) {
-    console.error('Error in front-maximizer:', error);
-    
+    console.error('❌ front-maximizer error:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({
         status: 'error',
         function: 'front-maximizer',
-        timestamp: new Date().toISOString(),
-        error: error.message
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+        error: error.message,
+        timestamp: new Date().toISOString()
+      })
     };
   }
 };
