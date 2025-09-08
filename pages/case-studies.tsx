@@ -2,6 +2,153 @@ import React from 'react';
 import Head from 'next/head';
 
 export default function CaseStudiesPage() {
+  const caseStudies = [
+    {
+      id: 'ai-automation-manufacturing',
+      title: 'AI-Powered Manufacturing Automation',
+      company: 'Global Manufacturing Corp',
+      industry: 'Manufacturing',
+      challenge: 'Inefficient production processes, high downtime, and quality control issues',
+      solution: 'Implemented autonomous AI systems for predictive maintenance, quality control, and production optimization',
+      results: [
+        '40% increase in production efficiency',
+        '60% reduction in unplanned downtime',
+        '35% improvement in product quality',
+        '25% reduction in operational costs'
+      ],
+      technologies: ['Machine Learning', 'Computer Vision', 'IoT Sensors', 'Predictive Analytics'],
+      duration: '6 months',
+      teamSize: '8 engineers',
+      featured: true
+    },
+    {
+      id: 'content-generation-scale',
+      title: 'Scaling Content Generation 10x',
+      company: 'Digital Marketing Agency',
+      industry: 'Marketing',
+      challenge: 'Unable to meet client demand for high-quality content at scale',
+      solution: 'Deployed autonomous content generation systems with human oversight and quality control',
+      results: [
+        '10x increase in content output',
+        '85% improvement in engagement metrics',
+        '70% reduction in content creation time',
+        '95% client satisfaction rate'
+      ],
+      technologies: ['Natural Language Processing', 'Content Optimization', 'SEO Automation', 'Analytics'],
+      duration: '4 months',
+      teamSize: '5 engineers + 3 content specialists',
+      featured: false
+    },
+    {
+      id: 'cloud-infrastructure-optimization',
+      title: 'Cloud Infrastructure Optimization',
+      company: 'E-commerce Platform',
+      industry: 'Technology',
+      challenge: 'High cloud costs, performance issues, and manual scaling requirements',
+      solution: 'Built self-healing, auto-scaling cloud infrastructure with intelligent resource management',
+      results: [
+        '50% reduction in cloud costs',
+        '99.9% uptime achieved',
+        '3x improvement in response times',
+        'Zero manual intervention required'
+      ],
+      technologies: ['Auto-scaling', 'Load Balancing', 'Monitoring', 'Cost Optimization'],
+      duration: '8 months',
+      teamSize: '6 DevOps engineers',
+      featured: false
+    },
+    {
+      id: 'customer-service-automation',
+      title: 'Intelligent Customer Service Automation',
+      company: 'Financial Services Provider',
+      industry: 'Financial Services',
+      challenge: 'High customer service costs and long response times',
+      solution: 'Implemented AI-powered chatbots and automated ticket routing systems',
+      results: [
+        '80% reduction in response time',
+        '60% decrease in customer service costs',
+        '90% customer satisfaction rate',
+        '24/7 automated support coverage'
+      ],
+      technologies: ['Chatbots', 'Natural Language Processing', 'Ticket Routing', 'Sentiment Analysis'],
+      duration: '5 months',
+      teamSize: '4 engineers + 2 customer service specialists',
+      featured: false
+    },
+    {
+      id: 'data-analytics-transformation',
+      title: 'Data Analytics Transformation',
+      company: 'Healthcare Provider',
+      industry: 'Healthcare',
+      challenge: 'Inability to leverage data for patient care improvements and operational efficiency',
+      solution: 'Built comprehensive data analytics platform with real-time insights and predictive modeling',
+      results: [
+        '30% improvement in patient outcomes',
+        '40% reduction in operational costs',
+        'Real-time data insights',
+        'Predictive analytics for patient care'
+      ],
+      technologies: ['Big Data', 'Machine Learning', 'Real-time Analytics', 'Predictive Modeling'],
+      duration: '10 months',
+      teamSize: '10 data scientists + 5 engineers',
+      featured: false
+    },
+    {
+      id: 'supply-chain-optimization',
+      title: 'Supply Chain Optimization with AI',
+      company: 'Retail Chain',
+      industry: 'Retail',
+      challenge: 'Inefficient inventory management, stockouts, and high logistics costs',
+      solution: 'Implemented AI-powered demand forecasting and automated inventory management systems',
+      results: [
+        '45% reduction in stockouts',
+        '30% decrease in inventory carrying costs',
+        '25% improvement in delivery times',
+        '20% increase in profit margins'
+      ],
+      technologies: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Real-time Tracking'],
+      duration: '7 months',
+      teamSize: '6 engineers + 3 supply chain specialists',
+      featured: false
+    },
+    {
+      id: 'quality-control-automation',
+      title: 'Automated Quality Control System',
+      company: 'Automotive Manufacturer',
+      industry: 'Automotive',
+      challenge: 'Manual quality inspection processes causing delays and inconsistent results',
+      solution: 'Deployed computer vision and AI systems for automated quality inspection and defect detection',
+      results: [
+        '95% accuracy in defect detection',
+        '70% reduction in inspection time',
+        'Zero false positives in critical components',
+        '24/7 automated quality monitoring'
+      ],
+      technologies: ['Computer Vision', 'Deep Learning', 'IoT Sensors', 'Real-time Monitoring'],
+      duration: '9 months',
+      teamSize: '7 engineers + 2 quality specialists',
+      featured: false
+    },
+    {
+      id: 'energy-efficiency-optimization',
+      title: 'Energy Efficiency Optimization',
+      company: 'Commercial Building Operator',
+      industry: 'Real Estate',
+      challenge: 'High energy costs and inefficient building management systems',
+      solution: 'Implemented AI-powered building management system with predictive energy optimization',
+      results: [
+        '35% reduction in energy consumption',
+        '40% decrease in utility costs',
+        'Improved occupant comfort',
+        'Predictive maintenance for HVAC systems'
+      ],
+      technologies: ['IoT Sensors', 'Machine Learning', 'Predictive Analytics', 'Building Automation'],
+      duration: '6 months',
+      teamSize: '5 engineers + 2 facility managers',
+      featured: false
+    }
+  ];
+
   return (
     <>
       <Head>
