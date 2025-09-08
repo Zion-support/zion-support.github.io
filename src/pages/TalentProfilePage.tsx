@@ -1,143 +1,120 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 import React, { useState, useEffect } from "react";
-import {useParams, useNavigate} from "react-router-dom";
-import {TalentProfile} from "@/components/profile/TalentProfile";
-import {ProfileLoadingState} from "@/components/profile/ProfileLoadingState";
-import {ProfileErrorState} from "@/components/profile/ProfileErrorState";
-import {BackToDirectoryButton} from "@/components/profile/BackToDirectoryButton";
-import {useTalentProfile} from "@/hooks/useTalentProfile";
-import {HireRequestModal} from "@/components/profile/hire-request";
-import {useAuthStatus} from "@/hooks/talent";
-import {MessageTalentModal} from "@/components/messaging/MessageTalentModal";
-import {StickyAction} from "@/components/ui/sticky-action";
-import {Handshake, MessageSquare} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import {useAuth} from "@/hooks/useAuth";
-import {UserProfile} from "@/types/auth";
-import {toast} from "@/hooks/use-toast";  const navigate = useNavigate();
+import { useParams, useNavigate } from "react-router-dom";
+import { TalentProfile } from "@/components/profile/TalentProfile";
+import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState";
+import { ProfileErrorState } from "@/components/profile/ProfileErrorState";
+import { BackToDirectoryButton } from "@/components/profile/BackToDirectoryButton";
+import { useTalentProfile } from "@/hooks/useTalentProfile";
+import { HireRequestModal } from "@/components/profile/hire-request";
+import { useAuthStatus } from "@/hooks/talent";
+import { MessageTalentModal } from "@/components/messaging/MessageTalentModal";
+import { StickyAction } from "@/components/ui/sticky-action";
+import { Handshake, MessageSquare } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useAuth } from "@/hooks/useAuth";
+import { UserProfile } from "@/types/auth";
+import { toast } from "@/hooks/use-toast";
+
+export default function TalentProfilePage() {
+  const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
   const { profile, isLoading, error } = useTalentProfile(id);
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
   const { userDetails } = useAuthStatus();
-  const { isAuthenticated, user } = useAuth();import React, { useState, useEffect } from "react",
-import { useParams, useNavigate } from "react-router-dom",
-import { TalentProfile } from "@/components/profile/TalentProfile",
-import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",
-import { ProfileErrorState } from "@/components/profile/ProfileErrorState",
-import { BackToDirectoryButton } from "@/components/profile/BackToDirectoryButton",
-import { useTalentProfile } from "@/hooks/useTalentProfile",
-import { HireRequestModal } from "@/components/profile/hire-request",
-import { useAuthStatus } from "@/hooks/talent",
-import { MessageTalentModal } from "@/components/messaging/MessageTalentModal",
-import { StickyAction } from "@/components/ui/sticky-action",
-import { Handshake, MessageSquare } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { useAuth } from "@/hooks/useAuth",
-import { UserProfile } from "@/types/auth",
-import { toast } from "@/hooks/use-toast";
-export default function TalentProfilePage() {
-  // Cast to specify the expected route param type since useParams may be untyped
-
-  const { id } = useParams() as { id?: string }
-  const navigate = useNavigate();
   const { isAuthenticated, user } = useAuth();
 
-  const { profile, isLoading, error } = useTalentProfile(id);
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
-  const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
-  const { userDetails } = useAuthStatus();
-  const { isAuthenticated, user } = useAuth();"
-import { toast } from "@/hooks/use-toast",
-export default function TalentProfilePage() {};
-  // Cast to specify the expected route param type since useParams may be untyped;
-  const { id } = useParams() as { id?: string },
-  const navigate = useNavigate(),
-  const { profile, isLoading, error } = useTalentProfile(id),
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false),
-  const [isMessageModalOpen, setIsMessageModalOpen] = useState(false),
-  const { userDetails } = useAuthStatus(),
-  const { isAuthenticated, user } = useAuth(),  // Handle loading error gracefully
   useEffect(() => {
     if (error) {
       toast({
-        title: "Error loading profile"
-        description: "There was a problem loading this talent profile. Please try again."
-        variant: "destructive"})
+        title: "Error",
+        description: "There was a problem loading this talent profile. Please try again.",
+        variant: "destructive"
+      });
+    }
+  }, [error]);
 
-import React, { useState, useEffect } from "react",;
-import { useParams, useNavigate } from "react-router-dom",;
-import { TalentProfile } from "@/components/profile/TalentProfile",;
-import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",;
-import { ProfileErrorState } from "@/components/profile/ProfileErrorState",;
-import { BackToDirectoryButton } from "@/components/profile/BackToDirectoryButton",;
-import { useTalentProfile } from "@/hooks/useTalentProfile",;
-import { HireRequestModal } from "@/components/profile/hire-request",;
-import { useAuthStatus } from "@/hooks/talent",;
-import { MessageTalentModal } from "@/components/messaging/MessageTalentModal",;
-import { StickyAction } from "@/components/ui/sticky-action",;
-import { Handshake, MessageSquare } from "lucide-react",;
-import { Button } from "@/components/ui/button",;
-import { useAuth } from "@/hooks/useAuth",;
-import { UserProfile } from "@/types/auth",;
-
-
-
-
-  }
-  if (error |!profile) {}
-
-    return <ProfileErrorState error={error} />
-  }  const handleMessageTalent = () => {
+  const handleHireTalent = () => {
     if (!isAuthenticated) {
       toast({
-        title: "Authentication required"
-        description: "Please sign in to message this talent."
-        variant: "default"})
-
-      navigate('/login', { state: { from: `/talent/${id}` } })
-      return
+        title: "Sign In Required",
+        description: "Please sign in to hire this talent.",
+        variant: "default"
+      });
+      return;
     }
-    setIsMessageModalOpen(true)  // Handle loading error gracefully;
-  useEffect(() => {;
-    if (error) {;
-      toast({;
-        onRequestHire={handleRequestHire}
-        onMessageTalent={handleMessageTalent}
-      />;
-      <BackToDirectoryButton />;
-          <Button
-            size="sm"
-            variant="outline"
-            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-            onClick={handleMessageTalent}>;
-            <MessageSquare className="mr-2 h-4 w-4" />;            Message;
-          </Button>;
-        </div>;
-      </StickyAction>;      {/* Request to Hire Modal */}
-      <HireRequestModal
-        talent={profile}
-        isOpen={isHireModalOpen}
-        onClose={() => setIsHireModalOpen(false)}
-        userDetails={userProfile}
+    setIsHireModalOpen(true);
+  };
+
+  const handleMessageTalent = () => {
+    if (!isAuthenticated) {
+      toast({
+        title: "Sign In Required",
+        description: "Please sign in to message this talent.",
+        variant: "default"
+      });
+      return;
+    }
+    setIsMessageModalOpen(true);
+  };
+
+  if (isLoading) {
+    return <ProfileLoadingState />;
+  }
+
+  if (error || !profile) {
+    return <ProfileErrorState />;
+  }
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
+      <div className="container mx-auto px-4 py-8">
+        <BackToDirectoryButton />
+        
+        <div className="max-w-4xl mx-auto">
+          <TalentProfile profile={profile} />
+        </div>
+
+        <StickyAction>
+          <div className="flex gap-4">
+            <Button
+              onClick={handleHireTalent}
+              className="flex-1 bg-zion-cyan hover:bg-zion-cyan-dark text-white"
+            >
+              <Handshake className="h-4 w-4 mr-2" />
+              Hire Talent
+            </Button>
+            <Button
+              onClick={handleMessageTalent}
+              variant="outline"
+              className="flex-1 border-zion-blue-light text-white hover:bg-zion-blue-light"
+            >
+              <MessageSquare className="h-4 w-4 mr-2" />
+              Message
+            </Button>
+          </div>
+        </StickyAction>
+
+        {/* Request to Hire Modal */}
+        {isHireModalOpen && (
+          <HireRequestModal
+            talentId={id}
+            talentName={profile.name}
+            isOpen={isHireModalOpen}
+            onClose={() => setIsHireModalOpen(false)}
+          />
+        )}
+
+        {/* Message Talent Modal */}
+        {isMessageModalOpen && (
+          <MessageTalentModal
+            talentId={id}
+            talentName={profile.name}
+            isOpen={isMessageModalOpen}
+            onClose={() => setIsMessageModalOpen(false)}
+          />
+        )}
+      </div>
+    </div>
+  );
+}
