@@ -138,72 +138,29 @@ const Index: NextPage = () => {
             <a className="text-cyan-300 underline" href="/.netlify/functions/hyper-front-index-accelerator" target="_blank" rel="noopener">Trigger / View</a>
           </li>
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Auto Dependency Maintainer</h2>
-            <p className="text-white/70">Upgrades dependencies safely and syncs to main every 6 hours.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/auto-deps-maintainer" target="_blank" rel="noopener">Trigger / View</a>
+            <h2 className="text-xl font-bold">Innovation Lab</h2>
+            <p className="text-white/70">Invents new automations; updates knowledge graph and metrics.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/innovation-lab" target="_blank" rel="noopener">Trigger / View</a>
           </li>
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Docs Pages Indexer</h2>
-            <p className="text-white/70">Rebuilds docs/pages index and sitemap for instant discovery.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/docs-pages-indexer" target="_blank" rel="noopener">Trigger / View</a>
+            <h2 className="text-xl font-bold">Guardian Orchestrator</h2>
+            <p className="text-white/70">Security audits, dead code, link and image guard with self-healing.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/guardian-orchestrator" target="_blank" rel="noopener">Trigger / View</a>
           </li>
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Dead Code Scanner</h2>
-            <p className="text-white/70">Scans for unused code and proposes safe cleanups daily.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/dead-code-scan" target="_blank" rel="noopener">Trigger / View</a>
+            <h2 className="text-xl font-bold">Media & Newsroom Runner</h2>
+            <p className="text-white/70">Auto media releases, OG images and newsroom updates.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/media-press-runner" target="_blank" rel="noopener">Trigger / View</a>
           </li>
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">AI Changelog Generator</h2>
-            <p className="text-white/70">Regenerates the AI changelog for transparent progress.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/ai-changelog-runner" target="_blank" rel="noopener">Trigger / View</a>
+            <h2 className="text-xl font-bold">Docs & SEO Optimizer</h2>
+            <p className="text-white/70">Docs index, changelog, sitemap and link health checks.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/docs-seo-optimizer" target="_blank" rel="noopener">Trigger / View</a>
           </li>
- 
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Dependency Licenses Audit</h2>
-            <p className="text-white/70">Audits dependency licenses and writes public reports.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/dependency-licenses-audit" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
- 
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Tech Debt Dashboard</h2>
-            <p className="text-white/70">Scans TODO/FIXME/HACK across the repo; publishes a dashboard.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/tech-debt-dashboard" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
- 
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Cloud Autonomous Orchestrator</h2>
-            <p className="text-white/70">Runs cloud orchestrations; fixes, builds, and syncs.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/cloud-autonomous-orchestrator-runner" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
- 
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Branch Cleanup Runner</h2>
-            <p className="text-white/70">Deletes merged or stale ephemeral branches via GitHub API.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/branch-cleanup-runner" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">A11y Audit</h2>
-            <p className="text-white/70">Scans pages/components for missing alt text and empty anchors; writes reports and syncs.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/a11y-audit-runner" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Alt Text Suggester</h2>
-            <p className="text-white/70">Suggests alt text for images in public and writes suggestions to docs.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/alt-text-suggester-runner" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Docs Gap Finder</h2>
-            <p className="text-white/70">Finds TODO/FIXME/TBD markers and compiles a docs gaps report.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/docs-gap-finder-runner" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Code Churn Heatmap</h2>
-            <p className="text-white/70">Analyzes git history to highlight most‑changed files and hotspots.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/code-churn-heatmap-runner" target="_blank" rel="noopener">Trigger / View</a>
+            <h2 className="text-xl font-bold">Daily Deps Upgrade</h2>
+            <p className="text-white/70">Conservative dependency upgrades every night.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/deps-upgrade-daily" target="_blank" rel="noopener">Trigger / View</a>
           </li>
         </ul>
 </main>
