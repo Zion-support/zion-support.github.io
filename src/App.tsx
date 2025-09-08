@@ -41,8 +41,8 @@ function App() {
             <Router>
               <ScrollToTop />
               <PerformanceMonitor />
-              <PerformanceOptimizer enableMonitoring={process.env.NODE_ENV === 'development'} />
-              {process.env.NODE_ENV === 'development' && <PerformanceDashboard />}
+              <PerformanceOptimizer enableMonitoring={import.meta.env.DEV} />
+              {import.meta.env.DEV && <PerformanceDashboard />}
               {/* SEO Meta Tags */}
               <Helmet>
                 <title>Zion Tech Group - AI, IT & Micro SaaS Solutions</title>
