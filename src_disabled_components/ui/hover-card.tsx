@@ -1,7 +1,7 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
 
-const Navigation-menu = React.forwardRef<
+const HoverCard = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
@@ -11,6 +11,6 @@ const Navigation-menu = React.forwardRef<
     {...props}
   />
 ))
-Navigation-menu.displayName = "Navigation-menu"
+HoverCard.displayName = "HoverCard"
 
-export { Navigation-menu }
+export { HoverCard }

@@ -1,7 +1,7 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
 
-const Scroll-area = React.forwardRef<
+const ToggleGroup = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
@@ -11,6 +11,6 @@ const Scroll-area = React.forwardRef<
     {...props}
   />
 ))
-Scroll-area.displayName = "Scroll-area"
+ToggleGroup.displayName = "ToggleGroup"
 
-export { Scroll-area }
+export { ToggleGroup }
