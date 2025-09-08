@@ -1,18 +1,23 @@
+import { useState } from 'react';
+import { User, AuthTokens } from './AuthContext';
 
+export const useAuthState = () => {
+  const [user, setUser] = useState<User | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [onboardingStep, setOnboardingStep] = useState(0);
+  const [tokens, setTokens] = useState<AuthTokens>({
+    accessToken: null,
+    refreshToken: null
+  });
 
-   id: string;
-   emai,l: string;
-
-   displayName?: string;
-   avatar?: string;
-   role?: string;
-   isEmailVerified?: boolean;
-   createdAt?: string;
-
-
-
-
-
-
-
-
+  return {
+    user,
+    setUser,
+    isLoading,
+    setIsLoading,
+    onboardingStep,
+    setOnboardingStep,
+    tokens,
+    setTokens
+  };
+};

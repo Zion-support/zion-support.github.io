@@ -1,8 +1,22 @@
-export function logErrorToProduction(message: string, error?: any): void {
-  // In production, we might want to send errors to a logging service
-  // For now, just console.error in development
-  if (process.env.NODE_ENV === 'development') {
-    // // // console.error(message, error);
+export const productionLogger = {
+  log: (...args: any[]) => {
+    if (process.env.NODE_ENV !== 'production') {
+      console.log(...args);
+    }
+  },
+  error: (...args: any[]) => {
+    if (process.env.NODE_ENV !== 'production') {
+      console.error(...args);
+    }
+  },
+  warn: (...args: any[]) => {
+    if (process.env.NODE_ENV !== 'production') {
+      console.warn(...args);
+    }
+  },
+  info: (...args: any[]) => {
+    if (process.env.NODE_ENV !== 'production') {
+      console.info(...args);
+    }
   }
-  // TODO: Implement production error logging service
-  {/* Removed stray closing brace */}
+};

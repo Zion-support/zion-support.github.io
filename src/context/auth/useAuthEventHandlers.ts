@@ -1,35 +1,21 @@
-import { useCallback    } from 'react.ts';
-
-type User = {
-
-
-
-  id: string;
-  email: string;
-  displayName?: string;
-  avatar?: string;
-  role?: string;
-  isEmailVerified?: boolean;
-  createdAt?: string;
-  updatedAt?: string;
-
-
-
-}
+import { User } from './AuthContext';
 
 export const useAuthEventHandlers = (
-  setUser: any(user: User | null)    => void,
-  setOnboardingStep: any(step: number)    => void
+  setUser: (user: User | null) => void,
+  setOnboardingStep: (step: number) => void
 ) => {
-  const handleSignedIn = useCallback((user: anyUser)    => {
+  const handleSignedIn = (user: User) => {
     setUser(user);
-    setOnboardingStep(0);
-  }, [setUser, setOnboardingStep]);
+    // Set onboarding step based on user data
+    if (user.onboarding_step !== undefined) {
+      setOnboardingStep(user.onboarding_step);
+    }
+  };
 
-  const handleSignedOut = useCallback(() => {
+  const handleSignedOut = () => {
     setUser(null);
     setOnboardingStep(0);
-  }, [setUser, setOnboardingStep]);
+  };
 
   return {
     handleSignedIn,

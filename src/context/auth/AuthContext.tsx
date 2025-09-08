@@ -1,53 +1,35 @@
 import React, { createContext, useContext } from 'react';
 
-interface User {
-
-
-
+export interface User {
   id: string;
   email: string;
-  displayName?: string;
-  avatar?: string;
-  role?: string;
-  isEmailVerified?: boolean;
-  createdAt?: string;
-  updatedAt?: string;
-
-
-
+  display_name?: string;
+  avatar_url?: string;
+  created_at?: string;
+  updated_at?: string;
+  onboarding_step?: number;
 }
 
-interface AuthTokens {
-
-
-
+export interface AuthTokens {
   accessToken: string | null;
   refreshToken: string | null;
-
-
-
 }
 
-interface AuthContextType {
-
-
-
+export interface AuthContextType {
   user: User | null;
   isLoading: boolean;
   onboardingStep: number;
   tokens: AuthTokens;
-login: (email: string, password: string)    => Promise<any>;
-  register: any(name: string, email: string, password: string)    => Promise<any>;
-  signup: any(email: string, password: string, userData: any)    => Promise<any>;
-  logout: any()    => Promise<any>;
-  resetPassword: any(email: string)    => Promise<any>;
-  updateProfile: any(updates: Partial<User>)    => Promise<any>;
-  loginWithGoogle: any()    => Promise<any>;
-  loginWithFacebook: any()    => Promise<any>;
-  loginWithTwitter: any()    => Promise<any>;
-  loginWithWeb3: any()    => Promise<any>;
-
-
+  login: (email: string, password: string) => Promise<{ error: string | null }>;
+  register: (name: string, email: string, password: string) => Promise<{ error: string | null }>;
+  signup: (email: string, password: string, userData: any) => Promise<any>;
+  logout: () => Promise<void>;
+  resetPassword: (email: string) => Promise<{ error: string | null }>;
+  updateProfile: (updates: Partial<User>) => Promise<{ error: string | null }>;
+  loginWithGoogle: () => Promise<void>;
+  loginWithFacebook: () => Promise<void>;
+  loginWithTwitter: () => Promise<void>;
+  loginWithWeb3: () => Promise<void>;
 }
 
 export const AuthContext = createContext<AuthContextType | undefined>(undefined);
