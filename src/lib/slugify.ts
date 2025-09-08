@@ -2,11 +2,11 @@ export function slugify(text: string): string {
   return text
     .toString()
     .toLowerCase()
-    .trim()
-    .replace(/[^\w\s-]/g, '') // Remove special characters except spaces and hyphens
-    .replace(/[\s_-]+/g, '-') // Replace spaces and underscores with hyphens
-    .replace(/^-+|-+$/g, ''); // Remove leading/trailing hyphens
-  {/* Removed stray closing brace */}
+    .replace(/[^a-z0-9\s-]/g, "")
+    .replace(/[\s-]+/g, sep)
+    .replace(new RegExp(`${escaped}{2,}`, "g"), sep)
+    .replace(new RegExp(`^${escaped}+|${escaped}+$`, "g"), "");
+}
 
 export function deslugify(slug: string): string {
   return slug
