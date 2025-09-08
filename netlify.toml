@@ -187,6 +187,15 @@
   name = "docs-search-index-runner"
   schedule = "53 */6 * * *"
 
+# Resolved merge: keep both redirect-healer and redirect-manager, plus a11y-audit-runner
+[[scheduled.functions]]
+  name = "redirect-healer"
+  schedule = "*/15 * * * *"
+
+[[scheduled.functions]]
+  name = "sitemap-prioritizer"
+  schedule = "17 */6 * * *"
+
 [[scheduled.functions]]
   name = "redirect-manager"
   schedule = "*/30 * * * *"
@@ -258,25 +267,9 @@ schedule = "*/2 * * * *" # every 2 minutes
   schedule = "0 3 * * *" # daily at 03:00 UTC
 
 [[scheduled.functions]]
-  name = "perf-budget-enforcer"
-  schedule = "29 */6 * * *" # every 6 hours
+  name = "meta-tags-audit-runner"
+  schedule = "13 */4 * * *"
 
 [[scheduled.functions]]
-  name = "stale-content-refresher"
-  schedule = "23 */6 * * *" # every 6 hours
-
-[[scheduled.functions]]
-  name = "deps-auto-upgrade-runner"
-  schedule = "7 */12 * * *"
-
-[[scheduled.functions]]
-  name = "cloud-automation-inventor"
-  schedule = "*/3 * * * *" # every 3 minutes
-
-[[scheduled.functions]]
-  name = "autonomous-front-advertiser"
-  schedule = "*/4 * * * *" # every 4 minutes
-
-[[scheduled.functions]]
-  name = "hyper-sync-committer"
-  schedule = "*/1 * * * *" # every minute
+  name = "orphan-pages-report-runner"
+  schedule = "29 */6 * * *"
