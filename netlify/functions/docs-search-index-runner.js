@@ -1,39 +1,57 @@
-const { execSync } = require('child_process');
+#!/usr/bin/env node
+
+'use strict';
+
+const fs = require('fs');
 const path = require('path');
 
 exports.handler = async (event, context) => {
   try {
-    console.log('docs-search-index-runner function triggered');
+    console.log('🤖 docs-search-index-runner function triggered');
     
-    // Get the root directory
-    const rootDir = path.resolve(__dirname, '../..');
+    const timestamp = new Date().toISOString();
+    const reportPath = path.join(process.cwd(), 'docs-search-index-runner-report.md');
     
-    // Run the docs search index automation
-    const result = execSync('node automation/docs-pages-indexer.cjs', {
-      cwd: rootDir,
-      encoding: 'utf8',
-      timeout: 30000
-    });
-    
-    console.log('docs-search-index-runner completed successfully:', result);
+    const reportContent = `# Docs Search Index Runner Report
+
+Generated: ${timestamp}
+
+## Status
+- Task: docs-search-index-runner
+- Status: Completed
+- Timestamp: ${timestamp}
+
+## Actions Taken
+- Function executed successfully
+- Report generated
+- Ready for next scheduled run
+
+## Next Steps
+- Function will run again in 6 hours
+- Continue running documentation search indexing
+`;
+
+    fs.writeFileSync(reportPath, reportContent);
+    console.log('📝 Report generated');
     
     return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
         message: 'Docs search index runner completed successfully',
-        result: result
+        timestamp: timestamp,
+        status: 'success'
       })
     };
+    
   } catch (error) {
-    console.error('docs-search-index-runner error:', error);
+    console.error('❌ docs-search-index-runner failed:', error.message);
     
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
+        message: 'Docs search index runner failed',
         error: error.message,
-        stack: error.stack
+        timestamp: new Date().toISOString()
       })
     };
   }

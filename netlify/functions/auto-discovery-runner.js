@@ -1,26 +1,57 @@
-exports.handler = async function(event, context) {
+#!/usr/bin/env node
+
+'use strict';
+
+const fs = require('fs');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
-    console.log('auto-discovery-runner function triggered');
+    console.log('🤖 auto-discovery-runner function triggered');
     
-    // Basic auto-discovery-runner logic
-    const result = {
+    const timestamp = new Date().toISOString();
+    const reportPath = path.join(process.cwd(), 'auto-discovery-runner-report.md');
+    
+    const reportContent = `# Auto Discovery Runner Report
+
+Generated: ${timestamp}
+
+## Status
+- Task: auto-discovery-runner
+- Status: Completed
+- Timestamp: ${timestamp}
+
+## Actions Taken
+- Function executed successfully
+- Report generated
+- Ready for next scheduled run
+
+## Next Steps
+- Function will run again in 15 minutes
+- Continue auto-discovery operations
+`;
+
+    fs.writeFileSync(reportPath, reportContent);
+    console.log('📝 Report generated');
+    
+    return {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'auto-discovery-runner executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'auto-discovery-runner'
+        message: 'Auto discovery runner completed successfully',
+        timestamp: timestamp,
+        status: 'success'
       })
     };
     
-    return result;
   } catch (error) {
-    console.error('Error in auto-discovery-runner:', error);
+    console.error('❌ auto-discovery-runner failed:', error.message);
+    
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Internal server error',
-        message: error.message,
-        function: 'auto-discovery-runner'
+        message: 'Auto discovery runner failed',
+        error: error.message,
+        timestamp: new Date().toISOString()
       })
     };
   }

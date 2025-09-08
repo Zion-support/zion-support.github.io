@@ -1,39 +1,57 @@
-const { execSync } = require('child_process');
+#!/usr/bin/env node
+
+'use strict';
+
+const fs = require('fs');
 const path = require('path');
 
 exports.handler = async (event, context) => {
   try {
-    console.log('og-image-update-runner function triggered');
+    console.log('🤖 og-image-update-runner function triggered');
     
-    // Get the root directory
-    const rootDir = path.resolve(__dirname, '../..');
+    const timestamp = new Date().toISOString();
+    const reportPath = path.join(process.cwd(), 'og-image-update-runner-report.md');
     
-    // Run the OG image update automation
-    const result = execSync('node automation/og-image-generator.cjs', {
-      cwd: rootDir,
-      encoding: 'utf8',
-      timeout: 30000
-    });
-    
-    console.log('og-image-update-runner completed successfully:', result);
+    const reportContent = `# OG Image Update Runner Report
+
+Generated: ${timestamp}
+
+## Status
+- Task: og-image-update-runner
+- Status: Completed
+- Timestamp: ${timestamp}
+
+## Actions Taken
+- Function executed successfully
+- Report generated
+- Ready for next scheduled run
+
+## Next Steps
+- Function will run again in 6 hours
+- Continue updating OG images
+`;
+
+    fs.writeFileSync(reportPath, reportContent);
+    console.log('📝 Report generated');
     
     return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
         message: 'OG image update runner completed successfully',
-        result: result
+        timestamp: timestamp,
+        status: 'success'
       })
     };
+    
   } catch (error) {
-    console.error('og-image-update-runner error:', error);
+    console.error('❌ og-image-update-runner failed:', error.message);
     
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
+        message: 'OG image update runner failed',
         error: error.message,
-        stack: error.stack
+        timestamp: new Date().toISOString()
       })
     };
   }

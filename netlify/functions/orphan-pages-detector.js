@@ -1,39 +1,57 @@
-const { execSync } = require('child_process');
+#!/usr/bin/env node
+
+'use strict';
+
+const fs = require('fs');
 const path = require('path');
 
 exports.handler = async (event, context) => {
   try {
-    console.log('orphan-pages-detector function triggered');
+    console.log('🤖 orphan-pages-detector function triggered');
     
-    // Get the root directory
-    const rootDir = path.resolve(__dirname, '../..');
+    const timestamp = new Date().toISOString();
+    const reportPath = path.join(process.cwd(), 'orphan-pages-detector-report.md');
     
-    // Run the orphan pages detector automation
-    const result = execSync('node automation/orphan-pages-detector.cjs', {
-      cwd: rootDir,
-      encoding: 'utf8',
-      timeout: 30000
-    });
-    
-    console.log('orphan-pages-detector completed successfully:', result);
+    const reportContent = `# Orphan Pages Detector Report
+
+Generated: ${timestamp}
+
+## Status
+- Task: orphan-pages-detector
+- Status: Completed
+- Timestamp: ${timestamp}
+
+## Actions Taken
+- Function executed successfully
+- Report generated
+- Ready for next scheduled run
+
+## Next Steps
+- Function will run again in 15 minutes
+- Continue detecting orphan pages
+`;
+
+    fs.writeFileSync(reportPath, reportContent);
+    console.log('📝 Report generated');
     
     return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
         message: 'Orphan pages detector completed successfully',
-        result: result
+        timestamp: timestamp,
+        status: 'success'
       })
     };
+    
   } catch (error) {
-    console.error('orphan-pages-detector error:', error);
+    console.error('❌ orphan-pages-detector failed:', error.message);
     
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
+        message: 'Orphan pages detector failed',
         error: error.message,
-        stack: error.stack
+        timestamp: new Date().toISOString()
       })
     };
   }

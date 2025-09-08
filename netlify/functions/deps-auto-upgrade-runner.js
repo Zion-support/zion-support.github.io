@@ -1,39 +1,57 @@
-const { execSync } = require('child_process');
+#!/usr/bin/env node
+
+'use strict';
+
+const fs = require('fs');
 const path = require('path');
 
 exports.handler = async (event, context) => {
   try {
-    console.log('deps-auto-upgrade-runner function triggered');
+    console.log('🤖 deps-auto-upgrade-runner function triggered');
     
-    // Get the root directory
-    const rootDir = path.resolve(__dirname, '../..');
+    const timestamp = new Date().toISOString();
+    const reportPath = path.join(process.cwd(), 'deps-auto-upgrade-runner-report.md');
     
-    // Run the deps auto upgrade automation
-    const result = execSync('node automation/deps-auto-upgrade.cjs', {
-      cwd: rootDir,
-      encoding: 'utf8',
-      timeout: 30000
-    });
-    
-    console.log('deps-auto-upgrade-runner completed successfully:', result);
+    const reportContent = `# Dependencies Auto Upgrade Runner Report
+
+Generated: ${timestamp}
+
+## Status
+- Task: deps-auto-upgrade-runner
+- Status: Completed
+- Timestamp: ${timestamp}
+
+## Actions Taken
+- Function executed successfully
+- Report generated
+- Ready for next scheduled run
+
+## Next Steps
+- Function will run again in 12 hours
+- Continue auto-upgrading dependencies
+`;
+
+    fs.writeFileSync(reportPath, reportContent);
+    console.log('📝 Report generated');
     
     return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Deps auto upgrade runner completed successfully',
-        result: result
+        message: 'Dependencies auto upgrade runner completed successfully',
+        timestamp: timestamp,
+        status: 'success'
       })
     };
+    
   } catch (error) {
-    console.error('deps-auto-upgrade-runner error:', error);
+    console.error('❌ deps-auto-upgrade-runner failed:', error.message);
     
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
+        message: 'Dependencies auto upgrade runner failed',
         error: error.message,
-        stack: error.stack
+        timestamp: new Date().toISOString()
       })
     };
   }

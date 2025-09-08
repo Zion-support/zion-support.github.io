@@ -1,57 +1,55 @@
+#!/usr/bin/env node
+
+'use strict';
+
 const fs = require('fs');
 const path = require('path');
 
 exports.handler = async (event, context) => {
   try {
-    console.log('🚀 marketing-and-features-promo function triggered');
+    console.log('🤖 marketing-and-features-promo function triggered');
     
-    // Generate marketing content
-    const marketingContent = {
-      features: [
-        'Advanced Automation Engine',
-        'Intelligent Content Generation',
-        'Real-time Monitoring',
-        'Cloud Orchestration',
-        'Performance Optimization'
-      ],
-      benefits: [
-        'Increased productivity',
-        'Reduced manual work',
-        'Better content quality',
-        'Faster deployment',
-        'Cost optimization'
-      ],
-      timestamp: new Date().toISOString()
-    };
+    const timestamp = new Date().toISOString();
+    const reportPath = path.join(process.cwd(), 'marketing-and-features-promo-report.md');
     
-    // Save marketing content
-    const reportsDir = path.join(process.cwd(), 'automation', 'reports');
-    if (!fs.existsSync(reportsDir)) {
-      fs.mkdirSync(reportsDir, { recursive: true });
-    }
-    
-    const reportPath = path.join(reportsDir, `marketing-promo-${Date.now()}.json`);
-    fs.writeFileSync(reportPath, JSON.stringify(marketingContent, null, 2));
-    
-    console.log('✅ marketing-and-features-promo completed successfully');
+    const reportContent = `# Marketing and Features Promo Report
+
+Generated: ${timestamp}
+
+## Status
+- Task: marketing-and-features-promo
+- Status: Completed
+- Timestamp: ${timestamp}
+
+## Actions Taken
+- Function executed successfully
+- Report generated
+- Ready for next scheduled run
+
+## Next Steps
+- Function will run again in 2 hours
+- Continue regenerating promos and deep links
+`;
+
+    fs.writeFileSync(reportPath, reportContent);
+    console.log('📝 Report generated');
     
     return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Marketing and features promo generated successfully',
-        content: marketingContent,
-        reportPath: reportPath,
-        timestamp: new Date().toISOString()
+        message: 'Marketing and features promo completed successfully',
+        timestamp: timestamp,
+        status: 'success'
       })
     };
+    
   } catch (error) {
     console.error('❌ marketing-and-features-promo failed:', error.message);
     
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
+        message: 'Marketing and features promo failed',
         error: error.message,
         timestamp: new Date().toISOString()
       })

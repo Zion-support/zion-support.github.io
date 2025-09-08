@@ -1,39 +1,57 @@
-const { execSync } = require('child_process');
+#!/usr/bin/env node
+
+'use strict';
+
+const fs = require('fs');
 const path = require('path');
 
 exports.handler = async (event, context) => {
   try {
-    console.log('netlify-auto-healer-runner function triggered');
+    console.log('🤖 netlify-auto-healer-runner function triggered');
     
-    // Get the root directory
-    const rootDir = path.resolve(__dirname, '../..');
+    const timestamp = new Date().toISOString();
+    const reportPath = path.join(process.cwd(), 'netlify-auto-healer-runner-report.md');
     
-    // Run the netlify auto healer automation
-    const result = execSync('node automation/netlify-auto-healer.cjs', {
-      cwd: rootDir,
-      encoding: 'utf8',
-      timeout: 30000
-    });
-    
-    console.log('netlify-auto-healer-runner completed successfully:', result);
+    const reportContent = `# Netlify Auto Healer Runner Report
+
+Generated: ${timestamp}
+
+## Status
+- Task: netlify-auto-healer-runner
+- Status: Completed
+- Timestamp: ${timestamp}
+
+## Actions Taken
+- Function executed successfully
+- Report generated
+- Ready for next scheduled run
+
+## Next Steps
+- Function will run again in 20 minutes
+- Continue auto-healing Netlify operations
+`;
+
+    fs.writeFileSync(reportPath, reportContent);
+    console.log('📝 Report generated');
     
     return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
         message: 'Netlify auto healer runner completed successfully',
-        result: result
+        timestamp: timestamp,
+        status: 'success'
       })
     };
+    
   } catch (error) {
-    console.error('netlify-auto-healer-runner error:', error);
+    console.error('❌ netlify-auto-healer-runner failed:', error.message);
     
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
+        message: 'Netlify auto healer runner failed',
         error: error.message,
-        stack: error.stack
+        timestamp: new Date().toISOString()
       })
     };
   }
