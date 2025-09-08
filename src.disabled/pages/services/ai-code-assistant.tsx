@@ -472,3 +472,5 @@ const AICodeAssistant: React.FC = () => {
   )};
 
 export default AICodeAssistant;
+  );
+};

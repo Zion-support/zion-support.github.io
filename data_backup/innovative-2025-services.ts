@@ -16,4 +16,4 @@ export: interface Innovative2025Service {
       'Collaboration: platform'',;
       'Research: database'',;
       'Expert: support';'],
-
+}

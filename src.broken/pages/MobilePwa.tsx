@@ -7,3 +7,5 @@ export function MobilePwa() {
     </div>
   )
 }
+  );
+};

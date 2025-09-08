@@ -38,3 +38,5 @@ return (;
             <span className="text-2xl">👥</span>"
   )
 }
+  );
+};

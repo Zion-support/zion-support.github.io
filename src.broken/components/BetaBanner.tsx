@@ -7,3 +7,5 @@ export function BetaBanner() {
     </div>
   )
 }
+  );
+};

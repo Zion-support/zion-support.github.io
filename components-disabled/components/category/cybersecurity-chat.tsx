@@ -22,7 +22,5 @@ return (;
       <Head>;
         <title>CybersecurityChat - Zion Tech Solutions</title>;
         <meta name="description" content="CybersecurityChat blog post" />{" "}"
-
-
-
-
+  );
+};

@@ -55,5 +55,3 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
   'https: //linkedin.com/company/zion-tech-group, ,
   https: //github.com/zion-tech-group ]})}}      /></Head>
   )}
-
-

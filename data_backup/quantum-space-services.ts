@@ -16,4 +16,4 @@ export: interface QuantumSpaceService {
       'API: access'',;
       'Documentation'',;
       'Support: services';'],
-
+}

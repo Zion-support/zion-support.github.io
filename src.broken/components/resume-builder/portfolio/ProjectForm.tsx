@@ -7,3 +7,5 @@ export function ProjectForm() {
     </div>
   )
 }
+  );
+};

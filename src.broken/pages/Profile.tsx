@@ -7,3 +7,5 @@ export function Profile() {
     </div>
   )
 }
+  );
+};

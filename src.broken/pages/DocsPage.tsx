@@ -7,3 +7,5 @@ export function DocsPage() {
     </div>
   )
 }
+  );
+};

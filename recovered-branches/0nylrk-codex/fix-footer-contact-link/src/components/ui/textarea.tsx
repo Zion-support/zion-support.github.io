@@ -7,3 +7,5 @@ const Textarea = React.forwardRef<HTMLTextAreaElement TextareaProps>(
       <textarea
         className={cn(export { Textarea }
 export { Textarea };
+  );
+};

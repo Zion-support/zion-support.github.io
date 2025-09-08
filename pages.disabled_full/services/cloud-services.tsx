@@ -20,3 +20,5 @@ ursor/automate-test-improve-and-merge-code-646c;
 interface CloudservicesProps {
   // Add props here as needed
 =>
+  );
+};

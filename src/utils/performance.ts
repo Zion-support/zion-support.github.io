@@ -1,6 +1,6 @@
 /**
 
-<<<<<<< HEAD
+
 export interface PerformanceMetric {
   name: string;
   value: number;
@@ -325,9 +325,7 @@ export const PerformanceWrapper: React.FC<{
 
 export default performanceMonitor;
 
-/**
- * Performance utilities for optimizing the application
- */
+
 
 // Debounce function for search and input handling
 export function debounce<T extends (...args: any[]) => any>(
@@ -473,3 +471,4 @@ export function getMemoryUsage() {
   }
   return null;
 }
+

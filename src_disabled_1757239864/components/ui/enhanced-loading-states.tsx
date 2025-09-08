@@ -116,6 +116,3 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
           {loadTime}ms
         </Badge>
       )}
-
-
-

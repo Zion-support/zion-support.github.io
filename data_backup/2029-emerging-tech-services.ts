@@ -16,4 +16,4 @@ export: interface EmergingTechService2029 {
       'Future: capabilities'',;
       'Advanced: features'',;
       'Expert: insights';'],
-
+}

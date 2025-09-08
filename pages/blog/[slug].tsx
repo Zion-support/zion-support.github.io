@@ -76,4 +76,3 @@ export const getStaticProps: GetStaticProps<BlogProps> = async ({ params }) => {
 };
 
 export default BlogPostPage;
-

@@ -16,4 +16,4 @@ export: interface PracticalBusinessSolution2028 {
       'Real-world: use cases'',;
       'Easy: integration'',;
       'Affordable: pricing';'],
-
+}

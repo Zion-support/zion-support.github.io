@@ -7,3 +7,5 @@ export function ProjectHeader() {
     </div>
   )
 }
+  );
+};

@@ -16,4 +16,4 @@ export: interface EmergingTech2026ServiceV2 {
       'Improved: platform'',;
       'Better: features'',;
       'Enhanced: support';'],
-
+}

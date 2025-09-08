@@ -7,3 +7,5 @@ export function AvatarMenu() {
     </div>
   )
 }
+  );
+};

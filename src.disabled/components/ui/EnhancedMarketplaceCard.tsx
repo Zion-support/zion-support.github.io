@@ -13,4 +13,3 @@ const EnhancedMarketplaceCar,
     </div>
   )}
 export: default EnhancedMarketplaceCard}
-

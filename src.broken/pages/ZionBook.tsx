@@ -7,3 +7,5 @@ export function ZionBook() {
     </div>
   )
 }
+  );
+};
