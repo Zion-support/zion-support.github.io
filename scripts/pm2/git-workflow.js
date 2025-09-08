@@ -1,54 +1,282 @@
-#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-;
-class GitWorkflow {; constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/git-workflow.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/git-workflow-report.json'); this.startTime = Date.now()};
-; log(message) {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`;
-; try {; fs.appendFileSync(this.logFile, logMessage)} catch (error) {; console.error('Error writing to log file: ', error.message)}};
-; async checkGitStatus() {; try {; this.log('📋 Checking git status...');
-; const status = execSync('git status --porcelain', {; cwd: this.projectRoot; encoding: 'utf8'});
-; const branches = execSync('git branch -a', {; cwd: this.projectRoot; encoding: 'utf8'});
-; const currentBranch = execSync('git branch --show-current', {; cwd: this.projectRoot; encoding: 'utf8'}).trim();
-; return {; success: true; hasChanges: status.trim().length > 0; changes: status.trim().split('\n').filter(line = > line.trim()); branches: branches.trim().split('\n'); currentBranch: currentBranch}} catch (error) {; return {; success: false; error: error.message; hasChanges: false; changes: []; branches: []; currentBranch: null}}};
-; async checkBranchHealth() {; try {; this.log('🌿 Checking branch health...');
-; const branches = execSync('git branch -r', {; cwd: this.projectRoot; encoding: 'utf8'}).trim().split('\n');
-; const branchInfo = [];
-; for (const branch of branches) {; const branchName = branch.replace('origin/', '').trim(); if (branchName && !branchName.includes('HEAD')) {; try {; const lastCommit = execSync(`git log -1 --format = "%H %s %an %ad" origin/${branchName}`, {; cwd: this.projectRoot; encoding: 'utf8'}).trim();
-; const commitCount = execSync(`git rev-list --count origin/${branchName}`, {; cwd: this.projectRoot; encoding: 'utf8'}).trim();
-; branchInfo.push({; name: branchName; lastCommit: lastCommit; commitCount: parseInt(commitCount); isActive: true})} catch (error) {; // Skip if can't access branch}}};
-; return {; success: true; branches: branchInfo}} catch (error) {; return {; success: false; error: error.message; branches: []}}};
-; async checkMergeConflicts() {; try {; this.log('🔀 Checking for merge conflicts...');
-; const status = execSync('git status --porcelain', {; cwd: this.projectRoot; encoding: 'utf8'});
-; const conflictFiles = status; .split('\n'); .filter(line = > line.includes('UU') || line.includes('AA') || line.includes('DD')); .map(line = > line.trim().split(/\s+/)[1]);
-; return {; success: true; hasConflicts: conflictFiles.length > 0; conflictFiles: conflictFiles}} catch (error) {; return {; success: false; error: error.message; hasConflicts: false; conflictFiles: []}}};
-; async checkStaleBranches() {; try {; this.log('🍂 Checking for stale branches...');
-; const branches = execSync('git branch -r', {; cwd: this.projectRoot; encoding: 'utf8'}).trim().split('\n');
-; const staleBranches = []; const mainBranch = 'main';
-; for (const branch of branches) {; const branchName = branch.replace('origin/', '').trim(); if (branchName && !branchName.includes('HEAD') && branchName ! = = mainBranch) {; try {; const lastCommit = execSync(`git log -1 --format = "%ad" origin/${branchName}`, {; cwd: this.projectRoot; encoding: 'utf8'}).trim();
-; const lastCommitDate = new Date(lastCommit); const daysSinceLastCommit = (Date.now() - lastCommitDate.getTime()) / (1000 * 60 * 60 * 24);
-; if (daysSinceLastCommit > 30) {; staleBranches.push({; name: branchName; lastCommit: lastCommit; daysSinceLastCommit: Math.floor(daysSinceLastCommit)})}} catch (error) {; // Skip if can't access branch}}};
-; return {; success: true; staleBranches: staleBranches}} catch (error) {; return {; success: false; error: error.message; staleBranches: []}}};
-; async generateReport(statusInfo, branchInfo, conflictInfo, staleInfo) {; const report = {; timestamp: new Date().toISOString(); summary: {; hasChanges: statusInfo.hasChanges; currentBranch: statusInfo.currentBranch; totalBranches: branchInfo.branches?.length || 0; hasConflicts: conflictInfo.hasConflicts; staleBranches: staleInfo.staleBranches?.length || 0; healthScore: 0}; details: {; status: statusInfo; branches: branchInfo; conflicts: conflictInfo; stale: staleInfo}; recommendations: []};
-; // Calculate health score; let score = 100; if (statusInfo.hasChanges) score - = 10; if (conflictInfo.hasConflicts) score - = 30; if (staleInfo.staleBranches?.length > 0) score - = 20; if (branchInfo.branches?.length > 10) score - = 10;
-; report.summary.healthScore = Math.max(score, 0);
-; // Generate recommendations; if (statusInfo.hasChanges) {; report.recommendations.push({; priority: 'medium'; message: 'Uncommitted changes detected'; action: 'Commit or stash changes before switching branches'})};
-; if (conflictInfo.hasConflicts) {; report.recommendations.push({; priority: 'high'; message: 'Merge conflicts detected'; action: 'Resolve merge conflicts before continuing'})};
-; if (staleInfo.staleBranches?.length > 0) {; report.recommendations.push({; priority: 'low'; message: `${staleInfo.staleBranches.length} stale branches found`; action: 'Consider deleting or updating stale branches'})};
-; if (branchInfo.branches?.length > 10) {; report.recommendations.push({; priority: 'low'; message: 'Many branches detected'; action: 'Consider cleaning up unused branches'})};
-; return report};
-; async saveReport(report) {; try {; const reportDir = path.dirname(this.reportFile); if (!fs.existsSync(reportDir)) {; fs.mkdirSync(reportDir, { recursive: true })};
-; fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)); this.log(`Report saved to: ${this.reportFile}`)} catch (error) {; this.log(`Error saving report: ${error.message}`)}};
-; async run() {; this.log('🌿 Starting Git Workflow Monitor...'); this.log(`Project root: ${this.projectRoot}`);
-; try {; // Create logs directory if it doesn't exist; const logsDir = path.dirname(this.logFile); if (!fs.existsSync(logsDir)) {; fs.mkdirSync(logsDir, { recursive: true })};
-; // Run all git checks; const statusInfo = await this.checkGitStatus(); const branchInfo = await this.checkBranchHealth(); const conflictInfo = await this.checkMergeConflicts(); const staleInfo = await this.checkStaleBranches();
-; // Generate report; this.log('📊 Generating git workflow report...'); const report = await this.generateReport(statusInfo, branchInfo, conflictInfo, staleInfo);
-; // Save report; await this.saveReport(report);
-; const duration = Date.now() - this.startTime;
-; // Log summary; this.log('\n📊 Git Workflow Summary: '); this.log(`Current branch: ${report.summary.currentBranch}`); this.log(`Has changes: ${report.summary.hasChanges ? 'Yes': 'No'}`); this.log(`Total branches: ${report.summary.totalBranches}`); this.log(`Has conflicts: ${report.summary.hasConflicts ? 'Yes': 'No'}`); this.log(`Stale branches: ${report.summary.staleBranches}`); this.log(`Health score: ${report.summary.healthScore}/100`); this.log(`Duration: ${duration}ms`);
-; if (report.recommendations.length > 0) {; this.log('\n💡 Recommendations: '); report.recommendations.forEach(rec = > {; this.log(` [${rec.priority.toUpperCase()}] ${rec.message}`); this.log(` Action: ${rec.action}`)})} else {; this.log('\n✨ Git workflow is healthy!')};
-} catch (error) {; this.log(`❌ Error running git workflow monitor: ${error.message}`); process.exit(1)}}};
-;
-// Run the git workflow monitor;
-const gitWorkflow = new GitWorkflow();
-gitWorkflow.run().catch(error = > {; process.exit(1)});
+#!/usr/bin/env node
+
+/**
+ * PM2 Git Workflow Script
+ * Manages git operations and branch workflows
+ */
+
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
+
+class GitWorkflow {
+  constructor() {
+    this.processName = process.env.PM2_PROCESS_NAME || 'git-workflow';
+    this.autoBranchCleanup = process.env.AUTO_BRANCH_CLEANUP === 'true';
+    this.autoMergeSafe = process.env.AUTO_MERGE_SAFE === 'true';
+    this.conflictResolution = process.env.CONFLICT_RESOLUTION === 'true';
+    this.branchStrategy = process.env.BRANCH_STRATEGY || 'gitflow';
+    this.logFile = `logs/pm2/git-workflow.log`;
+    this.errorFile = `logs/pm2/git-workflow-error.log`;
+  }
+
+  log(message, level = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] [${this.processName}] ${message}`;
+    console.log(logMessage);
+    
+    // Write to log file
+    fs.appendFileSync(this.logFile, logMessage + '\n');
+  }
+
+  error(message) {
+    this.log(message, 'ERROR');
+    fs.appendFileSync(this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`);
+  }
+
+  async getGitStatus() {
+    try {
+      const status = execSync('git status --porcelain', { encoding: 'utf8' });
+      const branch = execSync('git branch --show-current', { encoding: 'utf8' }).trim();
+      const lastCommit = execSync('git log -1 --oneline', { encoding: 'utf8' }).trim();
+      
+      return {
+        success: true,
+        branch,
+        lastCommit,
+        changes: status.split('\n').filter(line => line.trim())
+      };
+    } catch (error) {
+      this.error(`Git status check failed: ${error.message}`);
+      return { success: false, error: error.message };
+    }
+  }
+
+  async cleanupBranches() {
+    this.log('Cleaning up merged branches...');
+    
+    try {
+      // Get list of merged branches
+      const mergedBranches = execSync('git branch --merged main', { encoding: 'utf8' })
+        .split('\n')
+        .map(branch => branch.trim())
+        .filter(branch => branch && !branch.includes('main') && !branch.includes('master'));
+      
+      if (mergedBranches.length === 0) {
+        this.log('No merged branches to clean up');
+        return { success: true, cleaned: 0 };
+      }
+      
+      this.log(`Found ${mergedBranches.length} merged branches to clean up`);
+      
+      let cleaned = 0;
+      for (const branch of mergedBranches) {
+        try {
+          execSync(`git branch -d ${branch}`, { stdio: 'pipe' });
+          this.log(`Deleted merged branch: ${branch}`);
+          cleaned++;
+        } catch (err) {
+          this.log(`Could not delete branch ${branch}: ${err.message}`, 'WARNING');
+        }
+      }
+      
+      return { success: true, cleaned, branches: mergedBranches };
+      
+    } catch (error) {
+      this.error(`Branch cleanup failed: ${error.message}`);
+      return { success: false, error: error.message };
+    }
+  }
+
+  async checkForConflicts() {
+    this.log('Checking for merge conflicts...');
+    
+    try {
+      const status = await this.getGitStatus();
+      if (!status.success) {
+        return status;
+      }
+      
+      // Check for conflict markers in files
+      const conflictFiles = [];
+      const sourceFiles = this.getSourceFiles();
+      
+      for (const file of sourceFiles) {
+        try {
+          const content = fs.readFileSync(file, 'utf8');
+          if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
+            conflictFiles.push(file);
+          }
+        } catch (err) {
+          // Skip files that can't be read
+        }
+      }
+      
+      if (conflictFiles.length > 0) {
+        this.log(`Found ${conflictFiles.length} files with merge conflicts`, 'WARNING');
+        return {
+          success: true,
+          hasConflicts: true,
+          conflictFiles
+        };
+      }
+      
+      this.log('No merge conflicts found');
+      return { success: true, hasConflicts: false };
+      
+    } catch (error) {
+      this.error(`Conflict check failed: ${error.message}`);
+      return { success: false, error: error.message };
+    }
+  }
+
+  async safeMerge() {
+    this.log('Attempting safe merge...');
+    
+    try {
+      // Check current status
+      const status = await this.getGitStatus();
+      if (!status.success) {
+        return status;
+      }
+      
+      // Check for conflicts first
+      const conflictCheck = await this.checkForConflicts();
+      if (conflictCheck.hasConflicts) {
+        this.log('Cannot merge due to conflicts', 'WARNING');
+        return { success: false, reason: 'conflicts_detected', conflicts: conflictCheck.conflictFiles };
+      }
+      
+      // Check if there are uncommitted changes
+      if (status.changes.length > 0) {
+        this.log('Cannot merge due to uncommitted changes', 'WARNING');
+        return { success: false, reason: 'uncommitted_changes', changes: status.changes };
+      }
+      
+      // Try to merge
+      try {
+        execSync('git merge --no-ff --no-edit', { stdio: 'pipe' });
+        this.log('Merge completed successfully');
+        return { success: true, message: 'Merge completed' };
+      } catch (mergeError) {
+        this.log(`Merge failed: ${mergeError.message}`, 'WARNING');
+        return { success: false, reason: 'merge_failed', error: mergeError.message };
+      }
+      
+    } catch (error) {
+      this.error(`Safe merge failed: ${error.message}`);
+      return { success: false, error: error.message };
+    }
+  }
+
+  getSourceFiles() {
+    const files = [];
+    const extensions = ['.js', '.ts', '.jsx', '.tsx', '.json', '.md'];
+    
+    function scanDirectory(dir) {
+      try {
+        const items = fs.readdirSync(dir);
+        
+        for (const item of items) {
+          const fullPath = path.join(dir, item);
+          const stat = fs.statSync(fullPath);
+          
+          if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== 'dist') {
+            scanDirectory(fullPath);
+          } else if (stat.isFile()) {
+            const ext = path.extname(item);
+            if (extensions.includes(ext)) {
+              files.push(fullPath);
+            }
+          }
+        }
+      } catch (err) {
+        // Skip directories that can't be read
+      }
+    }
+    
+    scanDirectory('.');
+    return files;
+  }
+
+  async generateWorkflowReport() {
+    this.log('Generating git workflow report...');
+    
+    const report = {
+      timestamp: new Date().toISOString(),
+      processName: this.processName,
+      gitStatus: {},
+      operations: {},
+      summary: {}
+    };
+    
+    try {
+      // Get git status
+      report.gitStatus = await this.getGitStatus();
+      
+      // Run operations
+      if (this.autoBranchCleanup) {
+        report.operations.branchCleanup = await this.cleanupBranches();
+      }
+      
+      if (this.autoMergeSafe) {
+        report.operations.safeMerge = await this.safeMerge();
+      }
+      
+      report.operations.conflictCheck = await this.checkForConflicts();
+      
+      // Generate summary
+      const hasConflicts = report.operations.conflictCheck?.hasConflicts || false;
+      const mergeSuccess = report.operations.safeMerge?.success || false;
+      const branchesCleaned = report.operations.branchCleanup?.cleaned || 0;
+      
+      report.summary = {
+        hasConflicts,
+        mergeSuccessful: mergeSuccess,
+        branchesCleaned,
+        overallStatus: hasConflicts ? 'CONFLICTS' : mergeSuccess ? 'HEALTHY' : 'NEEDS_ATTENTION'
+      };
+      
+      // Save report
+      const reportFile = `reports/git-workflow-report-${Date.now()}.json`;
+      fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+      this.log(`Git workflow report saved to ${reportFile}`);
+      
+      return report;
+      
+    } catch (error) {
+      this.error(`Failed to generate workflow report: ${error.message}`);
+      return { success: false, error: error.message };
+    }
+  }
+
+  async start() {
+    this.log('Git workflow service started');
+    
+    // Ensure directories exist
+    fs.mkdirSync('logs/pm2', { recursive: true });
+    fs.mkdirSync('reports', { recursive: true });
+    
+    // Run initial workflow check
+    await this.generateWorkflowReport();
+    
+    // Set up periodic workflow management
+    setInterval(async () => {
+      this.log('Running scheduled git workflow...');
+      await this.generateWorkflowReport();
+    }, 6 * 60 * 60 * 1000); // Every 6 hours
+    
+    this.log('Git workflow service is running');
+  }
+}
+
+// Start the service
+if (require.main === module) {
+  const gitWorkflow = new GitWorkflow();
+  gitWorkflow.start().catch(error => {
+    console.error('Git workflow failed to start:', error);
+    process.exit(1);
+  });
+}
+
+export default GitWorkflow;
