@@ -1,3 +1,5 @@
+// Simplified duplicate removed; keeping the advanced CaseStudiesPage below
+
 import React from 'react';
 import MainLayout from './components/layout/MainLayout';
 import { motion } from 'framer-motion';
