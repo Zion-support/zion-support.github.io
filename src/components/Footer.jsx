@@ -11,8 +11,167 @@ import {
 
 
 } from 'lucide-react';
+import { Sitemap } from './Sitemap.jsx';
 
-export function Footer() {const currentYear = new Date().getFullYear()]
+export function FooterNewsletter() {
+  const [email, setEmail] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    if (!email) return;
+
+    setIsLoading(true);
+    // Simulate API call
+    setTimeout(() => {
+      setIsSubscribed(true);
+      setIsLoading(false);
+      setEmail('');
+      // Reset after 5 seconds
+      setTimeout(() => setIsSubscribed(false), 5000);
+    }, 1000);
+  };
+
+  return (
+    <div className="bg-zion-blue-dark/30 p-6 rounded-xl border border-zion-cyan/20">
+      <h3 className="text-xl font-semibold text-white mb-4">Stay Updated</h3>
+      <p className="text-zion-slate-light mb-4 text-sm">
+        Get the latest insights on AI, cybersecurity, and technology trends delivered to your inbox.
+      </p>
+      
+      {isSubscribed ? (
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="flex items-center gap-3 p-3 bg-green-500/20 border border-green-500/30 rounded-lg"
+        >
+          <CheckCircle className="w-5 h-5 text-green-400" />
+          <span className="text-green-400 text-sm">Successfully subscribed!</span>
+        </motion.div>
+      ) : (
+        <form onSubmit={handleSubscribe} className="flex gap-2">
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter your email"
+            className="flex-1 px-3 py-2 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent text-sm"
+            required
+          />
+          <motion.button
+            type="submit"
+            disabled={isLoading}
+            className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors disabled:opacity-50"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            {isLoading ? (
+              <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+            ) : (
+              <Send className="w-4 h-4" />
+            )}
+          </motion.button>
+        </form>
+      )}
+    </div>
+  );
+}
+
+export function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const footerSections = [
+    {
+      title: "Company",
+      links: [
+        { label: "About Us", path: "/about" },
+        { label: "Our Team", path: "/about#team" },
+        { label: "Careers", path: "/jobs/post" },
+        { label: "Press", path: "/news" },
+        { label: "Partners", path: "/partners" }
+      ]
+    },
+    {
+      title: "Services",
+      links: [
+        { label: "AI & Business Solutions", path: "/services/ai-business-solutions" },
+        { label: "Cybersecurity Suite", path: "/services/cybersecurity-suite" },
+        { label: "Cloud Infrastructure", path: "/services/cloud-infrastructure" },
+        { label: "Digital Marketing", path: "/services/digital-marketing" },
+        { label: "Financial Solutions", path: "/services/financial-solutions" },
+        { label: "Manufacturing Solutions", path: "/services/manufacturing-solutions" },
+        { label: "IoT Services", path: "/services/iot-services" },
+        { label: "Blockchain Services", path: "/services/blockchain-services" },
+        { label: "Quantum Technology", path: "/services/quantum-technology" },
+        { label: "5G Enterprise Solutions", path: "/services/5g-enterprise-solutions" },
+        { label: "Green IT", path: "/services/green-it" },
+        { label: "Enterprise IT", path: "/services/enterprise-it" },
+        { label: "Micro SaaS Services", path: "/services/micro-saas" },
+        { label: "Onsite IT Services", path: "/services/onsite-it" },
+        { label: "Dispute Management", path: "/services/dispute-management" }
+      ]
+    },
+    {
+      title: "Products",
+      links: [
+        { label: "All Products", path: "/products" },
+        { label: "New Products", path: "/products/new" },
+        { label: "Equipment", path: "/equipment" },
+        { label: "Portfolio Builder", path: "/portfolio-builder" },
+        { label: "Zion Hire AI", path: "/zion-hire-ai" },
+        { label: "AI Research Assistant", path: "/ai-research-assistant" },
+        { label: "AI Content Generator", path: "/ai-content-generator" },
+        { label: "AI Code Review", path: "/ai-code-review" },
+        { label: "Cloud Cost Optimizer", path: "/cloud-cost-optimizer" },
+        { label: "Service Description Generator", path: "/service-description-generator" }
+      ]
+    },
+    {
+      title: "Business Solutions",
+      links: [
+        { label: "Business Solutions", path: "/business-solutions" },
+        { label: "Enterprise Admin", path: "/enterprise" },
+        { label: "Enterprise Billing", path: "/enterprise/billing" },
+        { label: "Enterprise Demo", path: "/enterprise/demo" },
+        { label: "Enterprise Plans", path: "/enterprise/plans" },
+        { label: "Digital Transformation", path: "/digital-transformation" },
+        { label: "Autonomous Business Platform", path: "/autonomous-business-platform" }
+      ]
+    },
+    {
+      title: "Community",
+      links: [
+        { label: "Events", path: "/events" },
+        { label: "News", path: "/news" },
+        { label: "Blog", path: "/blog" },
+        { label: "Forum", path: "/forum/create" },
+        { label: "Post Job", path: "/jobs/post" },
+        { label: "Hiring Tracker", path: "/hiring-tracker" },
+        { label: "Talent Onboarding", path: "/talent-onboarding" }
+      ]
+    },
+    {
+      title: "Support",
+      links: [
+        { label: "FAQ", path: "/faq" },
+        { label: "Contact", path: "/contact" },
+        { label: "Documentation", path: "/docs" },
+        { label: "Developer Portal", path: "/developer" },
+        { label: "How It Works", path: "/how-it-works" },
+        { label: "Get Started", path: "/get-started" },
+        { label: "Site Map", path: "/sitemap" }
+      ]
+    },
+    {
+      title: "Legal",
+      links: [
+        { label: "Terms of Service", path: "/terms" },
+        { label: "Privacy Policy", path: "/privacy" },
+        { label: "Cookie Policy", path: "/cookies" }
+      ]
     }
   ];
 

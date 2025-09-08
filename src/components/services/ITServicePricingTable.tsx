@@ -1,132 +1,81 @@
-import { useState, useMemo } from 'react';
-import {;
-  onsiteServicePricing,;
-  CountryPricing,;
-} from '@/data/onsiteServicePricing';
-import { Input } from '@/components/ui/input';
-import {;
-  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-  TableRow,;
-} from '@/components/ui/table';
-import { Globe, Search, ArrowUpDown } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-export function ITServicePricingTable() {;
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortConfig, setSortConfig] = useState<{;
-    key: keyof CountryPricing;
-    direction: 'ascending' | 'descending';
-  }>({;
-    key: 'country',;
-    direction: 'ascending',;
-  });
+import React from 'react';
 
-  const sortedData = useMemo(() => {;
-    let filteredData = [...onsiteServicePricing];
-    // Filter by search query;
-    if (searchQuery) {;
-      filteredData = filteredData && filteredData.filter(item =>;
-        item && item.country.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
-      );
+export function ITServicePricingTable() {
+  const pricingData = [
+    {
+      service: "Hardware Installation",
+      description: "Installation of computers, servers, and networking equipment",
+      basePrice: "$150",
+      additionalHour: "$75",
+      notes: "Includes first hour of service"
+    },
+    {
+      service: "Software Configuration",
+      description: "Setup and configuration of operating systems and applications",
+      basePrice: "$120",
+      additionalHour: "$60",
+      notes: "Includes first hour of service"
+    },
+    {
+      service: "Network Troubleshooting",
+      description: "Diagnosis and resolution of network connectivity issues",
+      basePrice: "$180",
+      additionalHour: "$90",
+      notes: "Includes first hour of service"
+    },
+    {
+      service: "Data Recovery",
+      description: "Recovery of lost or corrupted data from storage devices",
+      basePrice: "$200",
+      additionalHour: "$100",
+      notes: "Complex cases may require additional time"
+    },
+    {
+      service: "Security Assessment",
+      description: "Comprehensive security audit and vulnerability assessment",
+      basePrice: "$300",
+      additionalHour: "$150",
+      notes: "Includes detailed report"
     }
-
-    // Sort data;
-    filteredData && filteredData.sort((a, b,) => {;
-      if (a[sortConfig && sortConfig.key] < b[sortConfig && sortConfig.key]) {;
-        return sortConfig && sortConfig.direction === 'ascending' ? -1 : 1;
-      }
-      if (a[sortConfig && sortConfig.key] > b[sortConfig && sortConfig.key]) {;
-        return sortConfig && sortConfig.direction === 'ascending' ? 1 : -1;
-      }
-      return 0;
-    });
-  const handleSort = (key: keyof CountryPricing) => {
-    setSortConfig({
-      key,
-      direction: 
-        sortConfig.key === key && sortConfig.direction === "ascending" 
-          ? "descending" 
-          : "ascending"})
-  },
-
-  const handleSort = (key: keyof CountryPricing,) => {;
-    setSortConfig({;
-      key,;
-      direction:;
-        sortConfig && sortConfig.key === key && sortConfig && sortConfig.direction === 'ascending';
-          ? 'descending';
-          : 'ascending',;
-    })
-};
+  ];
 
   return (
-
-        return sortConfig.direction === "ascending" ? -1 : 1
-      }
-      if (a[sortConfig.key] > b[sortConfig.key]) {
-        return sortConfig.direction === "ascending" ? 1 : -1
-      }
-      return 0
-    }),
-    
-    return filteredData
-  }, [onsiteServicePricing, searchQuery, sortConfig]),
-
-  const handleSort = (key: keyof CountryPricing) => {
-    setSortConfig({
-      key,
-      direction: 
-        sortConfig.key === key && sortConfig.direction === "ascending" 
-          ? "descending" 
-          : "ascending"})
-  },
-
-  return (
-    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">
-      <div className="flex items-center mb-6">
-        <div className="relative flex-1">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
-          <Input
-
-            placeholder="Search by country..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white"
-          />
-        </div>
+    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6">
+      <div className="overflow-x-auto">
+        <table className="w-full text-left">
+          <thead>
+            <tr className="border-b border-zion-blue-light">
+              <th className="py-3 px-4 text-zion-cyan font-semibold">Service</th>
+              <th className="py-3 px-4 text-zion-cyan font-semibold">Description</th>
+              <th className="py-3 px-4 text-zion-cyan font-semibold">Base Price</th>
+              <th className="py-3 px-4 text-zion-cyan font-semibold">Additional Hour</th>
+              <th className="py-3 px-4 text-zion-cyan font-semibold">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            {pricingData.map((item, index) => (
+              <tr key={index} className="border-b border-zion-blue-light/30 hover:bg-zion-blue/20 transition-colors">
+                <td className="py-3 px-4 text-white font-medium">{item.service}</td>
+                <td className="py-3 px-4 text-zion-slate-light">{item.description}</td>
+                <td className="py-3 px-4 text-zion-cyan font-semibold">{item.basePrice}</td>
+                <td className="py-3 px-4 text-zion-slate-light">{item.additionalHour}</td>
+                <td className="py-3 px-4 text-zion-slate-light text-sm">{item.notes}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
-
-      <div className="rounded-md border border-zion-blue-light overflow-hidden">
-
-        <Table>
-          <TableHeader className='bg-zion-blue'>
-            <TableRow>
-
-            onChange={e => setSearchQuery(e && e.target.value)}
-            className='pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white'          />;
-        </div>;
-      </div>;
-
-      <div className='rounded-md border border-zion-blue-light overflow-hidden'>;
-        <Table>;
-          <TableHeader className='bg-zion-blue'>;
-            <TableRow>;
-              <TableHead className='text-zion-cyan font-medium'>;
-
-                <Button
-                  variant='ghost'
-                  onClick={() => handleSort('country')}
-                  className='hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light'                >
-              <TableHead className="text-zion-cyan font-medium">
-                <Button 
-                  variant="ghost" 
-                  onClick={() => handleSort("country")}
-                  className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light"
-                >
-                  <span>Country</span>
-                  <ArrowUpDown className="h-4 w-4" />
-                </Button>
-              </TableHead>
+      
+      <div className="mt-6 p-4 bg-zion-blue/20 rounded-lg border border-zion-cyan/30">
+        <h4 className="text-zion-cyan font-semibold mb-2">Important Notes:</h4>
+        <ul className="text-zion-slate-light text-sm space-y-1">
+          <li>• All prices include transportation costs within the service area</li>
+          <li>• Base price covers the first hour of onsite service</li>
+          <li>• Additional hours are billed at the specified rate</li>
+          <li>• Emergency service calls may incur additional fees</li>
+          <li>• Travel outside the service area may require additional charges</li>
+        </ul>
+      </div>
+    </div>
+  );
+}

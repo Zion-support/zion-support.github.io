@@ -1,17 +1,10 @@
-import * as React from "react"
-=======
-import { useState, useRef, useEffect } from 'react'
-=======
-=======
-import * as React from "react"
+import { toast as hotToast } from 'react-hot-toast';
 
-interface Toast {
-
-  id: string;
-  title?: string;
-  description?: string;
-  variant?: 'default' | 'destructive' | 'success';
-  duration?: number;
+export const ToastOptions = {
+  title: '',
+  description: '',
+  variant: 'default'
+};
 
 type ToasterToast = ToastProps & {
   id: string
@@ -21,42 +14,21 @@ type ToasterToast = ToastProps & {
   action?: React.ReactNode
 }
 
-export function useToast() {
-  const [toasts, setToasts] = useState<Toast[]>([])
-  const toastsRef = useRef<Toast[]>([])
-  
-  useEffect(() => {
-    toastsRef.current = toasts
-  }, [toasts])
-
-  function toast({ title, description, variant = 'default', action }: Omit<Toast, 'id'>) {
-    const id = Math.random().toString(36).substr(2, 9)
-    const newToast = { id, title, description, variant, action }
-    
-    setToasts([...toasts, newToast])
-    
-    // Auto remove after 5 seconds
-    setTimeout(() => {
-      const currentToasts = toastsRef.current
-      const filteredToasts = currentToasts.filter((toast) => toast.id !== id)
-      setToasts(filteredToasts)
-    }, 5000)
-    
-    return id
-  }
-
-  function dismiss(toastId?: string) {
-    if (toastId) {
-      const currentToasts = toastsRef.current
-      const filteredToasts = currentToasts.filter((toast) => toast.id !== toastId)
-      setToasts(filteredToasts)
-    } else {
-      setToasts([])
-    }
+function toast(options) {
+  const message = options.description || options.title || '';
+  if (options.variant === 'destructive') {
+    hotToast.error(message, options);
+  } else if (options.variant === 'success') {
+    hotToast.success(message, options);
+  } else {
+    hotToast(message, options);
   }
 }
 
-const listeners: Array<(state: State) => void> = []
+toast.title = (title) => hotToast(title);
+toast.description = (description) => hotToast(description);
+toast.error = (error) => hotToast.error(error);
+toast.success = (message) => hotToast.success(message);
 
 let memoryState: State = { toasts: [] }
 

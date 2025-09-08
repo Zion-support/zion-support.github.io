@@ -1,250 +1,202 @@
-import { Check, X } from 'lucide-react'
+import React from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Check, Star, Crown, Building2, Users, Zap, Shield, Globe } from 'lucide-react';
 
 export function EnterprisePricingTable() {
   const plans = [
     {
-      name: "Teams",
-      price: "$599",
-      billing: "/month",
-      description: "Perfect for small teams",
-      users: "Up to 10 users",
+      name: 'Starter',
+      price: '$999',
+      period: '/month',
+      description: 'Perfect for small to medium enterprises',
+      features: [
+        'Up to 100 users',
+        'Basic support',
+        'Core features',
+        'Email support',
+        'Standard SLA'
+      ],
+      icon: <Building2 className="h-6 w-6" />,
       popular: false,
-      features: [
-        { name: "Private hiring portal", included: true },
-        { name: "Dedicated talent pool", included: true },
-        { name: "Standard SLA (24h)", included: true },
-        { name: "Basic branding", included: true },
-        { name: "Admin dashboard", included: true },
-        { name: "Team collaboration", included: true },
-        { name: "API access", included: false },
-        { name: "Custom integrations", included: false },
-        { name: "Dedicated success manager", included: false }]},
+      cta: 'Get Started'
+    },
     {
-      name: "Business",
-      price: "$1,999",      billing: "/month",
-      description: "Ideal for growing companies",
-      users: "Up to 50 users",
+      name: 'Professional',
+      price: '$2,499',
+      period: '/month',
+      description: 'Ideal for growing enterprises',
+      features: [
+        'Up to 500 users',
+        'Priority support',
+        'Advanced features',
+        'Phone & email support',
+        'Enhanced SLA',
+        'Custom integrations'
+      ],
+      icon: <Users className="h-6 w-6" />,
       popular: true,
-      features: [
-        { name: 'Private hiring portal', included: true }
-        { name: 'Dedicated talent pool', included: true }
-        { name: 'Enhanced SLA (8h)', included: true }
-        { name: 'Advanced branding', included: true }
-        { name: 'Admin dashboard', included: true }
-        { name: 'Team collaboration', included: true }
-        { name: 'API access', included: true }
-        { name: 'Custom integrations', included: false }
-        { name: 'Dedicated success manager', included: false }
-      ]
-    }
+      cta: 'Start Free Trial'
+    },
     {
-      name: 'Enterprise'
-      price: 'Custom'
-      billing: ''
-      description: 'For large organizations'
-      users: 'Unlimited users'
-      popular: false
-      features: [      <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Plans</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+      name: 'Enterprise',
+      price: '$4,999',
+      period: '/month',
+      description: 'For large-scale enterprises',
+      features: [
+        'Unlimited users',
+        '24/7 dedicated support',
+        'All features',
+        'Dedicated account manager',
+        'Premium SLA',
+        'Custom development',
+        'On-premise option',
+        'Advanced security'
+      ],
+      icon: <Crown className="h-6 w-6" />,
+      popular: false,
+      cta: 'Contact Sales'
+    }
+  ];
 
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Check, X } from 'lucide-react';
-import {  Table,  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-  TableRow,;
-} from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
-  TableRow} from "@/components/ui/table",;
-import { Badge } from "@/components/ui/badge";
-export function EnterprisePricingTable() {;
-  const plans = [;
-    {;
-      name: 'Teams',;
-      price: '$599',;
-      billing: '/month',,
-  description: 'Perfect for small teams',;
-      users: 'Up to 10 users',;
-      popular: false,;
-      features: [;
-        { name: 'Private hiring portal', included: true },;
-        { name: 'Dedicated talent pool', included: true },;
-        { name: 'Standard SLA (24h)', included: true },;
-        { name: 'Basic branding', included: true },;
-        { name: 'Admin dashboard', included: true },;
-        { name: 'Team collaboration', included: true },;
-        { name: 'API access', included: false },;
-        { name: 'Custom integrations', included: false },;
-        { name: 'Dedicated success manager', included: false },;
-      ],;
-    },;
-    {;
-      name: 'Business',;
-      price: '$1,999',;
-      billing: '/month',,
-  description: 'Ideal for growing companies',;
-      users: 'Up to 50 users',;
-      popular: true,;
-      features: [;
-        { name: 'Private hiring portal', included: true },;
-        { name: 'Dedicated talent pool', included: true },;
-        { name: 'Enhanced SLA (8h)', included: true },;
-        { name: 'Advanced branding', included: true },;
-        { name: 'Admin dashboard', included: true },;
-        { name: 'Team collaboration', included: true },;
-        { name: 'API access', included: true },;
-        { name: 'Custom integrations', included: false },;
-        { name: 'Dedicated success manager', included: false },;
-      ],;
-    },;
-    {;
-      name: 'Enterprise',;
-      price: 'Custom',;
-      billing: '',,
-  description: 'For large organizations',;
-      users: 'Unlimited users',;
-      popular: false,;
-      features: [;
-        { name: 'Private hiring portal', included: true },;
-        { name: 'Dedicated talent pool', included: true },;
-        { name: 'Premium SLA (1h)', included: true },;
-        { name: 'Full white labeling', included: true },;
-        { name: 'Admin dashboard', included: true },;
-        { name: 'Team collaboration', included: true },;
-        { name: 'API access', included: true },;
-        { name: 'Custom integrations', included: true },;
-        { name: 'Dedicated success manager', included: true },;
-      ],;
-    },;
+  const addOns = [
+    {
+      name: 'Advanced Security',
+      price: '$299',
+      period: '/month',
+      description: 'Enhanced security features and compliance',
+      icon: <Shield className="h-5 w-5" />
+    },
+    {
+      name: 'Global CDN',
+      price: '$199',
+      period: '/month',
+      description: 'Worldwide content delivery network',
+      icon: <Globe className="h-5 w-5" />
+    },
+    {
+      name: 'Performance Monitoring',
+      price: '$149',
+      period: '/month',
+      description: 'Real-time performance analytics',
+      icon: <Zap className="h-5 w-5" />
+    }
   ];
 
   return (
-    <section id='pricing' className='py-20 px-4 md:px-6'>;
-      <div className='container mx-auto max-w-7xl'>;
-        <div className='text-center mb-12'>;
-          <h2 className='text-3xl md:text-4xl font-bold mb-4'>;
-            Enterprise Plans;
-          </h2>;
-          <p className='text-xl text-muted-foreground max-w-2xl mx-auto'>            Choose the perfect plan for your team size and requirements;
-          </p>;
-        </div>;
+    <div className="space-y-8">
+      {/* Main Plans */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {plans.map((plan, index) => (
+          <Card key={index} className={`relative ${plan.popular ? 'border-zion-cyan ring-2 ring-zion-cyan/20' : ''}`}>
+            {plan.popular && (
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                <Badge className="bg-zion-cyan text-zion-blue-dark px-3 py-1">
+                  <Star className="h-3 w-3 mr-1" />
+                  Most Popular
+                </Badge>
+              </div>
+            )}
+            
+            <CardHeader className="text-center">
+              <div className="flex justify-center mb-4">
+                <div className="p-3 bg-zion-blue-dark rounded-full">
+                  {plan.icon}
+                </div>
+              </div>
+              <CardTitle className="text-2xl">{plan.name}</CardTitle>
+              <CardDescription>{plan.description}</CardDescription>
+              <div className="mt-4">
+                <span className="text-4xl font-bold text-zion-cyan">{plan.price}</span>
+                <span className="text-zion-slate-light">{plan.period}</span>
+              </div>
+            </CardHeader>
+            
+            <CardContent>
+              <ul className="space-y-3 mb-6">
+                {plan.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-center gap-3">
+                    <Check className="h-4 w-4 text-green-400 flex-shrink-0" />
+                    <span className="text-zion-slate-light">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              <Button 
+                className={`w-full ${plan.popular ? 'bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan/80' : ''}`}
+                variant={plan.popular ? 'default' : 'outline'}
+              >
+                {plan.cta}
+              </Button>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
 
-        <div className='overflow-x-auto'>;
-          <Table className='border rounded-lg'>    <section id="pricing" className="py-20 px-4 md:px-6">;
-      <div className="container mx-auto max-w-7xl">;
-        <div className="text-center mb-12">;
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Plans</h2>;
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">;
-          </p>;
-        </div>;
+      {/* Add-ons */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-center">Additional Services & Add-ons</CardTitle>
+          <CardDescription className="text-center">
+            Enhance your enterprise plan with these additional services
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {addOns.map((addon, index) => (
+              <div key={index} className="p-4 border border-zion-blue-light rounded-lg">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="p-2 bg-zion-blue-dark rounded-lg">
+                    {addon.icon}
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-white">{addon.name}</h4>
+                    <p className="text-sm text-zion-slate-light">{addon.description}</p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className="text-zion-cyan font-semibold">
+                    {addon.price}{addon.period}
+                  </div>
+                  <Button size="sm" variant="outline">
+                    Add Service
+                  </Button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
 
-        <div className='overflow-x-auto'>;
-          <Table className='border rounded-lg'>;
-            <TableHeader>;
-              <TableRow>;
-                <TableHead className='w-[200px]'>Plan Features</TableHead>;
-                {plans && plans.map(plan => (;
-                  <TableHead key={plan && plan.name} className='text-center'>;
-                    <div className='flex flex-col items-center'>                <TableHead className="w-[200px]">Plan Features</TableHead>;
-                {plans && plans.map((plan,) => (;
-                  <TableHead key={plan && plan.name} className="text-center">;
-                    <div className="flex flex-col items-center">;
-                      {plan && plan.popular && (;
-                        <Badge className='mb-2 bg-zion-purple'>;
-                          Most Popular;
-                        </Badge>;
-                      )}
-                      <span className='font-bold text-xl'>{plan && plan.name}</span>;
-                      <div className='flex items-baseline mt-1'>;
-                        <span className='text-2xl font-bold'>{plan && plan.price}</span>;
-                        <span className='text-sm text-muted-foreground ml-1'>;
-                          {plan && plan.billing}
-                        </span>;
-                      </div>;
-                      <p className='text-sm text-muted-foreground mt-1'>;
-                        {plan && plan.description}
-                      </p>;
-                      <p className='text-sm font-medium mt-2'>{plan && plan.users}</p>                      <Button
-                        className={`mt-4 w-full ${plan && plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90' : ''}`}
-                        variant={plan && plan.popular ? 'default' : 'outline'}>;
-                        {plan && plan.name === 'Enterprise';
-                          ? 'Request Quote';
-                          : 'Get Started'}                      </Button>                      <p className="text-sm font-medium mt-2">{plan && plan.users}</p>;
-                      <Button
-                        className={`mt-4 w-full ${plan && plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90' : ''}`}
-                        variant = {plan && plan.popular ? 'default' : 'outline',}>;
-                        {plan && plan.name === 'Enterprise';
-                          ? 'Request Quote';
-                          : 'Get Started'}                        {plan && plan.name === "Enterprise" ? "Request Quote" : "Get Started"}
-                      </Button>;
-                    </div>;
-                  </TableHead>;
-
-            Choose the perfect plan for your team size and requirements
-          </p>
-        </div>
-
-                          {plan.billing}
-                        </span>
-                      </div>
-                      <p className='text-sm text-muted-foreground mt-1'>
-                        {plan.description}
-
-                      </Button>
-                    </div>
-                  </TableHead>
-                ))}      </div>
-    </section>
-
-      </div>;
-    </section>;
-  )
-};
-
-              </TableRow>;
-            </TableHeader>;
-            <TableBody>;
-              {(plans[0]?.features || []).map((feature, index) => (;
-                <TableRow key={feature.name}>;
-                  <TableCell className="font-medium">{feature.name}</TableCell>;
-                  {plans.map((plan) => (;
-                    <TableCell key={`${plan.name}-${feature.name}`} className="text-center">;
-                      {plan.features[index]?.included ? (;
-                        <Check className="h-5 w-5 text-green-500 mx-auto" />;
-                      ) : (;
-                        <X className="h-5 w-5 text-muted-foreground mx-auto" />;
-                      )}
-                    </TableCell>;
-                  ))}
-                </TableRow>
-              ))}
-
-            </TableBody>;
-          </Table>;
-        </div>;
-
-        <div className='mt-8 text-center text-sm text-muted-foreground'>;
-          All plans include SSL security, 99 && 99.9% uptime SLA, and dedicated;
-          support        </div>;
-      </div>;
-    </section>;
-  );
-}        <div className="mt-8 text-center text-sm text-muted-foreground">;
-          All plans include SSL security, 99 && 99.9% uptime SLA, and dedicated support;
-        </div>;
-      </div>;
-    </section>;
+      {/* Enterprise Features */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-center">Enterprise Features</CardTitle>
+          <CardDescription className="text-center">
+            All enterprise plans include these premium features
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              'Custom integrations',
+              'Advanced analytics',
+              'Multi-region deployment',
+              'Enterprise SSO',
+              'Custom branding',
+              'Advanced reporting',
+              'API access',
+              'White-label options'
+            ].map((feature, index) => (
+              <div key={index} className="flex items-center gap-2 p-3 bg-zion-blue-dark rounded-lg">
+                <Check className="h-4 w-4 text-green-400 flex-shrink-0" />
+                <span className="text-zion-slate-light text-sm">{feature}</span>
+              </div>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+    </div>
   );
 }
-          All plans include SSL security, 99.9% uptime SLA, and dedicated support;
-        </div>;
-      </div>;
-    </section>;
-  );
-}
-;
