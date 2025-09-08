@@ -1,4 +1,5 @@
 import React, { useEffect, useCallback, useRef } from 'react';
+import { motion } from 'framer-motion';
 
 interface PerformanceMetrics {
 
@@ -14,9 +15,12 @@ interface PerformanceMetrics {
 
 }
 
-export const PerformanceOptimizer: React.FC = (): JSX.Element => {
-  const observerRef = useRef<IntersectionObserver | null>(null);
-  const performanceDataRef = useRef<PerformanceMetrics>({
+interface PerformanceOptimizerProps {
+  enabled: boolean;
+}
+
+export function PerformanceOptimizer({ enabled }: PerformanceOptimizerProps) {
+  const metricsRef = useRef<PerformanceMetrics>({
     fcp: 0,
     lcp: 0,
     fid: 0,
@@ -334,111 +338,4 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       </Card>
     </div>
   );
-
-  // Debounce utility function
-  function debounce<T extends (...args: any[])    => any>(
-    func: anyT,
-    wait: number
-  ): (...args: Parameters<T>)    => void {
-    let timeout: anyNodeJS.Timeout;
-    return (...args: Parameters<T>)    => {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => func(...args), wait);
-    };
-  }
-
-  // Service Worker registration for caching
-  const registerServiceWorker = useCallback(async () => {
-    if ('serviceWorker' in navigator) {
-      try {
-        const registration = await navigator.serviceWorker.register('/sw.js');
-        // // // console.log('SW registered: any', registration);
-      } catch (registrationError) {
-        // // // console.log('SW registration failed: ', registrationError);
-      }
-    }
-  }, []);
-
-  // Initialize performance optimizations
-  useEffect(()    => {
-    setupIntersectionObserver();
-    measurePerformance();
-    optimizeResourceHints();
-    optimizeImages();
-    registerServiceWorker();
-
-  // Don't render thing visible
-  return null};
-
-    // Cleanup
-    return ()    => {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
-      window.removeEventListener('scroll', debouncedScrollHandler);
-    };
-  }, [setupIntersectionObserver, measurePerformance, optimizeResourceHints, optimizeImages, registerServiceWorker, debouncedScrollHandler]);
-
-  useEffect(() => {
-    const updateMetrics = () => {
-      if (typeof window !== 'undefined' && 'performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (navigation) {
-          setMetrics({
-            pageLoadTime: navigation.loadEventEnd - navigation.startTime,
-            firstContentfulPaint: 0, // Will be updated by PerformanceObserver
-            largestContentfulPaint: 0, // Will be updated by PerformanceObserver
-            cumulativeLayoutShift: 0, // Will be updated by PerformanceObserver
-            firstInputDelay: 0, // Will be updated by PerformanceObserver
-            timeToInteractive: navigation.loadEventEnd - navigation.startTime,
-            domContentLoaded: navigation.domContentLoadedEventEnd - navigation.startTime,
-            windowLoad: navigation.loadEventEnd - navigation.startTime,
-          })}
-      }
-      
-      .lazy.loaded {
-        opacity: 1;
-      }
-      
-      .lazy-bg {
-        background-image: none !important;
-      }
-      
-      .lazy-bg.loaded {
-        background-image: inherit !important;
-      }
-      
-      [data-animate-on-scroll] {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-      }
-      
-      [data-animate-on-scroll].animate-in {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      
-      /* Performance-focused animations */
-      @media (prefers-reduced-motion: reduce) {
-        *, *::before, *::after {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-        }
-      }
-    `;
-    document.head.appendChild(style);
-
-    return ()    => {
-      document.head.removeChild(style);
-    };
-
-    updateMetrics();
-    window.addEventListener('load', updateMetrics);
-    return ()  => window.removeEventListener('load', updateMetrics)}, []);
-
-  return metrics};
-
-// Export default component
-export default PerformanceOptimizer;
+}

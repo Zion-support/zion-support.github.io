@@ -58,41 +58,34 @@ const FeatureCard = ({ title, description }: { title: string; description: strin
         </motion.div>
 
         {/* Hero Slides */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-6xl mx-auto"
-        >
-          <div className="relative">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentSlide}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
-                transition={{ duration: 0.5 }}
-                className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 md:p-12"
-              >
-                <div className="flex flex-col md:flex-row items-center gap-8">
-                  <div className="flex-1 text-center md:text-left">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl mb-6">
-                      {React?.createElement(heroSlides[currentSlide]?.icon, { className: "w-8 h-8 text-cyan-400" })}
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                      {heroSlides[currentSlide]?.title}
-                    </h3>
-                    <p className="text-gray-300 mb-6">
-                      {heroSlides[currentSlide]?.description}
-                    </p>
-                    <div className="grid grid-cols-2 gap-3">
-                      {heroSlides[currentSlide]?.features?.map((feature, index) => (
-                        <div key={index} className="flex items-center text-sm text-cyan-400">
-                          <CheckCircle className="w-4 h-4 mr-2" />
-                          {feature}
-                        </div>
-                      ))}
-                    </div>
+        <div className="relative max-w-4xl mx-auto">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentSlide}
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -100 }}
+              transition={{ duration: 0.5 }}
+              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-3xl p-8 md:p-12"
+            >
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="flex-1 text-center md:text-left">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl mb-6">
+                    {React.createElement(heroSlides[currentSlide].icon, { className: "w-8 h-8 text-cyan-400" })}
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                    {heroSlides[currentSlide].title}
+                  </h3>
+                  <p className="text-gray-300 mb-6">
+                    {heroSlides[currentSlide].description}
+                  </p>
+                  <div className="grid grid-cols-2 gap-3">
+                    {heroSlides[currentSlide].features.map((feature, index) => (
+                      <div key={index} className="flex items-center text-sm text-cyan-400">
+                        <CheckCircle className="w-4 h-4 mr-2" />
+                        {feature}
+                      </div>
+                    ))}
                   </div>
                 </div>
               </motion.div>

@@ -1,6 +1,6 @@
 # Zion Tech Group - Technology Solutions Platform
 
-## Overview
+## 🚀 Project Overview
 
 Zion Tech Group is a comprehensive technology solutions provider specializing in digital transformation, AI, cloud architecture, and cybersecurity. This platform showcases our extensive portfolio of services, products, and industry-specific solutions.
 
@@ -63,119 +63,19 @@ Industry-specific solutions for various sectors:
 - Supply chain optimization with AI
 - Quality management systems
 
-#### Retail & E-commerce
-- Modern e-commerce platforms
-- Customer analytics and personalization
-- Omnichannel integration solutions
-
-#### Education & EdTech
-- Learning management systems
-- Adaptive learning with AI
-- Virtual reality learning experiences
-
-#### Logistics & Transportation
-- Fleet management systems
-- Route optimization algorithms
-- Supply chain visibility platforms
-
-### 4. Enhanced Services Page (`/services`)
-Expanded service offerings with new categories:
-
-#### New Service Categories Added
-- **Blockchain & Web3**: Smart contracts, DeFi platforms, NFT marketplaces
-- **Mobile Development**: iOS, Android, and cross-platform solutions
-- **Technology Consulting**: Strategy, innovation, and performance optimization
-
-#### Enhanced Existing Services
-- **AI & Machine Learning**: Custom AI development, predictive analytics, NLP
-- **Cloud Architecture**: Migration, microservices, DevOps automation
-- **Cybersecurity**: Auditing, threat detection, compliance management
-- **Data Analytics**: Business intelligence, big data processing, visualization
-- **Digital Transformation**: Process optimization, legacy modernization, change management
-- **IoT Solutions**: Platform development, edge computing, smart infrastructure
-
-### 5. Updated Contact Information
-- **Phone**: +1 302 464 0950
-- **Email**: kleber@ziontechgroup.com
-- **Address**: 364 E Main St STE 1008, Middletown DE 19709
-
-### 6. Improved Home Page
-- **Products Showcase Section**: Highlighting key product categories
-- **Enhanced Services Section**: Better organization and visual appeal
-- **Technology Stack Display**: Showcasing our technical expertise
-- **Improved CTAs**: Better call-to-action buttons and contact options
-
-### 7. Enhanced Responsiveness
-- **Mobile-First Design**: Optimized for all screen sizes
-- **Improved Spacing**: Better page spacing and pagination
-- **Touch-Friendly Interface**: Enhanced mobile user experience
-- **Responsive Grid Layouts**: Adaptive layouts for different devices
-
-## 🛠️ Technical Improvements
-
-### Frontend Enhancements
-- **Framer Motion**: Smooth animations and transitions
-- **Tailwind CSS**: Modern, responsive design system
-- **TypeScript**: Type-safe development
-- **Next.js 14**: Latest framework features and optimizations
-
-### Performance Optimizations
-- **Static Generation**: Pre-rendered pages for better performance
-- **Image Optimization**: Optimized images and assets
-- **Code Splitting**: Efficient bundle loading
-- **SEO Optimization**: Meta tags and structured data
-
-### Accessibility Improvements
-- **Semantic HTML**: Proper heading structure and landmarks
-- **ARIA Labels**: Enhanced screen reader support
-- **Keyboard Navigation**: Full keyboard accessibility
-- **Color Contrast**: WCAG compliant color schemes
-
-## 📱 Responsive Design Features
-
-- **Mobile Navigation**: Collapsible mobile menu
-- **Adaptive Layouts**: Grid systems that adapt to screen size
-- **Touch Interactions**: Mobile-optimized touch targets
-- **Flexible Typography**: Responsive text sizing
-- **Optimized Images**: Responsive image handling
-
-## 🔗 Navigation Structure
-
-```
-Home (/)
-├── About (/about)
-├── Services (/services)
-│   ├── AI & Machine Learning
-│   ├── Cloud Solutions
-│   ├── Cybersecurity
-│   ├── Data Analytics
-│   ├── Digital Transformation
-│   ├── IoT Solutions
-│   ├── Blockchain & Web3
-│   ├── Mobile Development
-│   └── Technology Consulting
-├── Products (/products)
-│   ├── Micro SAAS Solutions
-│   ├── AI-Powered Services
-│   ├── Cloud Infrastructure
-│   ├── Cybersecurity
-│   ├── Development Tools
-│   └── Data Solutions
-├── Solutions (/solutions)
-│   ├── Healthcare
-│   ├── Finance
-│   ├── Manufacturing
-│   ├── Retail
-│   ├── Education
-│   └── Logistics
-└── Contact (/contact)
-```
+- **Frontend**: React 18 + TypeScript
+- **Build Tool**: Vite
+- **Routing**: React Router v6
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Animations**: Framer Motion
+- **State Management**: React Hooks
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js 18.0.0 or higher
-- npm 9.0.0 or higher
+- Node.js 18+ 
+- npm or yarn
 
 ### Installation
 ```bash
@@ -183,13 +83,17 @@ Home (/)
 git clone <repository-url>
 
 # Navigate to project directory
-cd zion-tech-group
-
-# Install dependencies
-npm install
+cd zion-tech-group-website
 
 # Run development server
 npm run dev
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
 # Build for production
 npm run build
@@ -198,76 +102,58 @@ npm run build
 npm start
 ```
 
-### Available Scripts
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm start` - Start production server
-- `npm run lint` - Run ESLint
-- `npm run type-check` - Run TypeScript type checking
+### Development Commands
+```bash
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run preview      # Preview production build
+npm run lint         # Run ESLint
+npm run type-check   # Run TypeScript type checking
+```
 
-## 🌐 Live Demo
+## 🌐 Deployment
 
-Visit the live application at: [https://ziontechgroup.com](https://ziontechgroup.com)
+The website is configured for deployment on `https://ziontechgroup.com` with:
+- Optimized build output
+- Lazy-loaded components for performance
+- SEO-friendly routing
+- Responsive design for all devices
 
-## 📞 Contact Information
+## 📊 Performance Features
 
-- **Phone**: +1 302 464 0950
-- **Email**: kleber@ziontechgroup.com
-- **Address**: 364 E Main St STE 1008, Middletown DE 19709
+- **Lazy Loading**: Components load on-demand for faster initial page load
+- **Code Splitting**: Automatic code splitting by route
+- **Optimized Assets**: Compressed and optimized static assets
+- **Modern Build**: Vite-based build system for optimal performance
 
-## 🔧 Technology Stack
+## 🔍 SEO & Accessibility
 
-### Frontend
-- **React 18** - Modern React with hooks and concurrent features
-- **Next.js 14** - Full-stack React framework
-- **TypeScript** - Type-safe JavaScript
-- **Tailwind CSS** - Utility-first CSS framework
-- **Framer Motion** - Animation library
+- **Semantic HTML**: Proper heading hierarchy and semantic markup
+- **Meta Tags**: Comprehensive meta information for search engines
+- **Sitemap**: XML sitemap for search engine indexing
+- **Accessibility**: ARIA labels and keyboard navigation support
 
-### Development Tools
-- **ESLint** - Code quality and consistency
-- **Prettier** - Code formatting
-- **Husky** - Git hooks for quality assurance
+### Service Worker Capabilities
+- **Offline Support**: Works without internet
+- **Background Sync**: Offline action queuing
+- **Push Notifications**: Real-time updates
+- **App Installation**: Add to home screen
 
-### Deployment
-- **Netlify** - Hosting and deployment platform
-- **Static Generation** - Pre-rendered pages for performance
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-## 📈 Key Metrics
+## 📝 License
 
-- **500+ Projects Completed**
-- **50+ Team Members**
-- **15+ Years Experience**
-- **98% Client Satisfaction**
+This project is proprietary to Zion Tech Group. All rights reserved.
 
-## 🎯 Business Focus
+## 📞 Support
 
-Zion Tech Group specializes in:
-- **Digital Transformation**: End-to-end business modernization
-- **AI & Machine Learning**: Intelligent automation solutions
-- **Cloud Architecture**: Scalable infrastructure design
-- **Cybersecurity**: Enterprise-grade security solutions
-- **Industry Solutions**: Sector-specific technology solutions
-- **Micro SAAS**: Ready-to-deploy business applications
-
-## 🔮 Future Roadmap
-
-- **AI-Powered Chatbots**: Interactive customer support
-- **Advanced Analytics**: Real-time business intelligence
-- **Blockchain Solutions**: Web3 and DeFi platforms
-- **IoT Integration**: Smart device connectivity
-- **Mobile Applications**: Native and cross-platform apps
-- **API Services**: Developer-friendly integrations
-
-## 📄 License
-
-This project is proprietary software owned by Zion Tech Group.
-
-## 🤝 Contributing
-
-For business inquiries and partnerships, please contact:
-- **Email**: kleber@ziontechgroup.com
-- **Phone**: +1 302 464 0950
+For technical support or questions about the website:
+- Email: [contact@ziontechgroup.com]
+- Website: [https://ziontechgroup.com]
 
 ---
 This README is auto-generated. Do not edit manually.

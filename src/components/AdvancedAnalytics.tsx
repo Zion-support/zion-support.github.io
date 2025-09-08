@@ -1,6 +1,29 @@
 // Removed unused: import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BarChart3, Users, Eye, MousePointer, Clock, X, Activity, Zap, Target, Award, Monitor, Smartphone, Tablet } from 'lucide-react';
+import { 
+  BarChart3, 
+  Users, 
+  Eye, 
+  MousePointer, 
+  Clock, 
+  TrendingUp, 
+  TrendingDown,
+  Activity,
+  Zap,
+  Target,
+  MapPin,
+  Globe,
+  Smartphone,
+  Monitor,
+  Tablet,
+  Settings,
+  X,
+  Download,
+  Share2,
+  Filter,
+  Calendar,
+  RefreshCw
+} from 'lucide-react';
 
 interface AnalyticsData {
   pageViews: number;
