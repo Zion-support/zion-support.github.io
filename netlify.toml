@@ -1,11 +1,12 @@
 [build]
-  # Install Python dependencies first, then Node.js dependencies and build
-  command = "pip install -r requirements.txt && npm ci && npm run build"
+  # Use build script with fallback Python handling
+  command = "bash build.sh"
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "18"
+  PYTHON_VERSION = "3.10.12"
 
 [[plugins]]
   package = "netlify-plugin-compress"
