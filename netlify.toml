@@ -1,8 +1,10 @@
 [build]
-  # Build the Vite app and deploy from dist/
-  command = "npm run build"
-  publish = "dist"
+  # Skip build; deploy prebuilt Next.js static export in out/
+  command = "echo 'Skipping build; deploying prebuilt static export'"
+  publish = "out"
   command_timeout = "30m"
+  # Only run when files outside out/ change
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ':(exclude)out'"
 
 [build.environment]
   NODE_VERSION = "20"
@@ -13,7 +15,7 @@
   CYPRESS_INSTALL_BINARY = "0"
   ELECTRON_SKIP_DOWNLOAD = "1"
 
-## Disable Next.js runtime plugin since we're deploying a static export
+# Attempt to disable Next.js plugin if installed via file-based config
 [[plugins]]
   package = "@netlify/plugin-nextjs"
   enabled = false
