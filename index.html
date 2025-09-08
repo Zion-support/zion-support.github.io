@@ -73,36 +73,45 @@
     
     <!-- Structured data (JSON-LD) for SEO -->
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Zion Tech Group",
-        "url": "https://ziontechgroup.com",
-        "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
-        "description": "Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "364 E Main St STE 1008",
-          "addressLocality": "Middletown",
-          "addressRegion": "DE",
-          "postalCode": "19709",
-          "addressCountry": "US"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+1-302-464-0950",
-          "contactType": "customer service",
-          "email": "kleber@ziontechgroup.com"
-        },
-        "sameAs": [
-          "https://twitter.com/ziontechgroup",
-          "https://www.facebook.com/ziontechgroup",
-          "https://www.linkedin.com/company/zion-tech-group"
-        ],
-        "offers": {
-          "@type": "Offer",
-          "description": "AI-powered technology solutions, micro SaaS services, and cutting-edge development services"
-        }
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com",
+      "logo": "https://ziontechgroup.com/logo.png",
+      "description": "Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "364 E Main St STE 1008",
+        "addressLocality": "Middletown",
+        "addressRegion": "DE",
+        "postalCode": "19709",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-302-464-0950",
+        "contactType": "customer service",
+        "email": "kleber@ziontechgroup.com"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/zion-tech-group",
+        "https://twitter.com/ziontechgroup",
+        "https://www.facebook.com/ziontechgroup"
+      ]
+    }
+    </script>
+    
+    <!-- Critical CSS Inline -->
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(registration => console.log('SW registered'))
+            .catch(error => console.log('SW registration failed'));
+        });
       }
     </script>
     
