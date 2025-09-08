@@ -612,132 +612,36 @@ export default function Training() {
           </div>
         </motion.div>
 
-        {/* Training Programs Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mb-16"
-        >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredPrograms.map((program, index) => (
-              <div
-                key={program.id}
-                className={`bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border transition-all duration-300 hover:transform hover:scale-105 ${
-                  program.featured 
-                    ? 'border-purple-500/50 shadow-lg shadow-purple-500/20' 
-                    : 'border-slate-700 hover:border-slate-600'
-                }`}
-              >
-                {program.featured && (
-                  <div className="flex items-center gap-2 mb-4">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <span className="text-yellow-400 text-sm font-medium">Featured Program</span>
-                  </div>
-                )}
-                
-                <div className="flex items-start gap-4 mb-4">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${program.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
-                    <program.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-white mb-2">{program.title}</h3>
-                    <p className="text-slate-400 text-sm mb-3">{program.description}</p>
-                    
-                    <div className="flex items-center gap-3 mb-3">
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getLevelColor(program.level)}`}>
-                        {program.level}
-                      </span>
-                      <span className="text-slate-400 text-xs flex items-center gap-1">
-                        <Clock className="w-3 h-3" />
-                        {program.duration}
-                      </span>
-                      <span className="text-slate-400 text-xs flex items-center gap-1">
-                        <Clock3 className="w-3 h-3" />
-                        {program.hours}h
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-white mb-2">Key Modules:</h4>
-                  <div className="grid grid-cols-2 gap-2">
-                    {program.modules.slice(0, 6).map((module, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-xs text-slate-400">
-                        <CheckCircle className="w-3 h-3 text-green-400" />
-                        {module}
-                      </div>
-                    ))}
-                    {program.modules.length > 6 && (
-                      <div className="text-xs text-slate-500 col-span-2">
-                        +{program.modules.length - 6} more modules
-                      </div>
-                    )}
-                  </div>
-                </div>
-                
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-2">
-                    <img
-                      src={program.instructorAvatar}
-                      alt={program.instructor}
-                      className="w-8 h-8 rounded-full bg-slate-700"
-                    />
-                    <div>
-                      <div className="text-sm font-medium text-white">{program.instructor}</div>
-                      <div className="text-xs text-slate-400">{program.instructorTitle}</div>
-                    </div>
-                  </div>
-                  
-                  <div className="text-right">
-                    <div className="text-lg font-bold text-white">{formatPrice(program.price)}</div>
-                    <div className="text-sm text-slate-400 line-through">{formatPrice(program.originalPrice)}</div>
-                  </div>
-                  
-                  <h4 className="text-sm font-semibold text-gray-300 mb-2">Requirements:</h4>
-                  <ul className="space-y-1">
-                    {cert.requirements.map((req, idx) => (
-                      <li key={idx} className="text-sm text-gray-400 flex items-center">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                        {req}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className="flex items-center justify-between mb-4 text-sm text-slate-400">
-                  <div className="flex items-center gap-4">
-                    <span className="flex items-center gap-1">
-                      <Users className="w-4 h-4" />
-                      {program.students.toLocaleString()}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      {program.rating}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
-                      {program.startDate}
-                    </span>
-                  </div>
-                </div>
-                
-                <div className="flex gap-3">
-                  <button className="flex-1 py-3 px-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 font-medium">
-                    Enroll Now
-                  </button>
-                  <button className="py-3 px-4 border border-slate-600 text-slate-300 rounded-lg hover:border-slate-500 hover:text-white transition-colors">
-                    <Bookmark className="w-4 h-4" />
-                  </button>
-                  <button className="py-3 px-4 border border-slate-600 text-slate-300 rounded-lg hover:border-slate-500 hover:text-white transition-colors">
-                    <Share2 className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
+        {filteredCourses.length > 0 ? (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.2 }}
+            className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
+          >
+            {filteredCourses.map((course, index) => (
+  GraduationCap, 
+  BookOpen, 
+  Video, 
+  Users, 
+  Certificate, 
+  Clock,
+  Star,
+  Play,
+  Download,
+  ExternalLink,
+  ChevronRight,
+  ChevronDown,
+  Search,
+  Filter,
+  Calendar,
+  MapPin,
+  Globe,
+  Zap,
+  Shield,
+  Database,
+  Brain
+} from 'lucide-react';
 
         {/* Upcoming Webinars */}
         <motion.div
@@ -857,6 +761,315 @@ export default function Training() {
           </div>
         </motion.div>
       </div>
+
+      {/* CTA Section */}
+      <div className="bg-zinc-800/30 border-t border-zinc-700/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.6 }}
+            className="text-center"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Start Learning?
+            </h2>
+            <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto">
+              Join thousands of professionals who have already transformed their careers with our training programs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300"
+              >
+                Get Started
+              </Link>
+              <Link
+                to="/webinars"
+                className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300"
+              >
+                Free Webinars
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </div>
+  );
+}
+                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300"
+              >
+                <div className="p-6">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center space-x-2">
+                      <span className={`px-2 py-1 rounded text-xs font-medium ${
+                        course.category === 'ai' ? 'bg-purple-500/20 text-purple-400' :
+                        course.category === 'security' ? 'bg-red-500/20 text-red-400' :
+                        course.category === 'cloud' ? 'bg-blue-500/20 text-blue-400' :
+                        'bg-green-500/20 text-green-400'
+                      }`}>
+                        {course.category.toUpperCase()}
+                      </span>
+                      <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 rounded text-xs font-medium">
+                        {course.level}
+                      </span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <span className="text-white text-sm">{course.rating}</span>
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-xl font-semibold text-white mb-2">{course.title}</h3>
+                  <p className="text-gray-400 text-sm mb-4">{course.description}</p>
+                  
+                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                    <div className="flex items-center">
+                      <Clock className="w-4 h-4 mr-1" />
+                      {course.duration}
+                    </div>
+                    <div className="flex items-center">
+                      <Users className="w-4 h-4 mr-1" />
+                      {course.students} students
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center justify-between">
+                    <span className="text-2xl font-bold text-cyan-400">{course.price}</span>
+                    <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">
+                      Enroll Now
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+
+      {/* All Courses */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.5 }}
+        className="px-4 sm:px-6 lg:px-8 mb-16"
+      >
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">All Courses</h2>
+          <div className="space-y-4">
+            {filteredCourses.map((course, index) => (
+              <motion.div
+                key={course.id}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden"
+              >
+                <button
+                  onClick={() => toggleCourse(course.id)}
+                  className="w-full p-6 flex items-center justify-between text-left hover:bg-white/5 transition-colors duration-300"
+                >
+                  <div className="flex items-center space-x-4">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <BookOpen className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="text-left">
+                      <div className="flex items-center space-x-2 mb-2">
+                        <span className={`px-2 py-1 rounded text-xs font-medium ${
+                          course.category === 'ai' ? 'bg-purple-500/20 text-purple-400' :
+                          course.category === 'security' ? 'bg-red-500/20 text-red-400' :
+                          course.category === 'cloud' ? 'bg-blue-500/20 text-blue-400' :
+                          'bg-green-500/20 text-green-400'
+                        }`}>
+                          {course.category.toUpperCase()}
+                        </span>
+                        <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 rounded text-xs font-medium">
+                          {course.level}
+                        </span>
+                        {course.certification && (
+                          <span className="px-2 py-1 bg-green-500/20 text-green-400 rounded text-xs font-medium">
+                            CERTIFIED
+                          </span>
+                        )}
+                      </div>
+                      <h3 className="text-lg font-semibold text-white mb-1">{course.title}</h3>
+                      <p className="text-gray-400 text-sm">{course.description}</p>
+                      <div className="flex items-center space-x-4 mt-2 text-sm text-gray-400">
+                        <span className="flex items-center">
+                          <Clock className="w-4 h-4 mr-1" />
+                          {course.duration}
+                        </span>
+                        <span className="flex items-center">
+                          <Users className="w-4 h-4 mr-1" />
+                          {course.students} students
+                        </span>
+                        <span className="flex items-center">
+                          <Star className="w-4 h-4 mr-1 text-yellow-400 fill-current" />
+                          {course.rating}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-4">
+                    <div className="text-right">
+                      <div className="text-2xl font-bold text-cyan-400">{course.price}</div>
+                      <div className="text-sm text-gray-400">Next: {course.nextStart}</div>
+                    </div>
+                    {expandedCourse.has(course.id) ? (
+                      <ChevronDown className="w-6 h-6 text-gray-400" />
+                    ) : (
+                      <ChevronRight className="w-6 h-6 text-gray-400" />
+                    )}
+                  </div>
+                </button>
+                
+                {expandedCourse.has(course.id) && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="border-t border-white/10"
+                  >
+                    <div className="p-6">
+                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div>
+                          <h4 className="text-lg font-semibold text-white mb-3">Course Modules</h4>
+                          <div className="space-y-2">
+                            {course.modules.map((module, moduleIndex) => (
+                              <div key={moduleIndex} className="flex items-center space-x-2 text-sm">
+                                <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                                <span className="text-gray-300">{module}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        <div>
+                          <h4 className="text-lg font-semibold text-white mb-3">Course Details</h4>
+                          <div className="space-y-3 text-sm">
+                            <div className="flex justify-between">
+                              <span className="text-gray-400">Instructor:</span>
+                              <span className="text-white">{course.instructor}</span>
+                            </div>
+                            <div className="flex justify-between">
+                              <span className="text-gray-400">Format:</span>
+                              <span className="text-white">{course.format}</span>
+                            </div>
+                            <div className="flex justify-between">
+                              <span className="text-gray-400">Next Start:</span>
+                              <span className="text-white">{course.nextStart}</span>
+                            </div>
+                            <div className="flex justify-between">
+                              <span className="text-gray-400">Certification:</span>
+                              <span className="text-white">{course.certification ? 'Yes' : 'No'}</span>
+                            </div>
+                          </div>
+                          
+                          <div className="mt-4">
+                            <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">
+                              Enroll in Course
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Training Programs */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.7 }}
+        className="px-4 sm:px-6 lg:px-8 mb-16"
+      >
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Training Programs</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {trainingPrograms.map((program, index) => (
+              <motion.div
+                key={program.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+                className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
+                  <program.icon className="w-8 h-8 text-white" />
+                </div>
+                
+                <h3 className="text-xl font-semibold text-white mb-3">{program.title}</h3>
+                <p className="text-gray-400 text-sm mb-4">{program.description}</p>
+                
+                <ul className="space-y-2 mb-6">
+                  {program.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start space-x-2 text-sm">
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Duration:</span>
+                    <span className="text-white">{program.duration}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Participants:</span>
+                    <span className="text-white">{program.participants}</span>
+                  </div>
+                </div>
+                
+                <button className="w-full mt-6 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">
+                  Learn More
+                </button>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Call to Action */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.9 }}
+        className="px-4 sm:px-6 lg:px-8 pb-16"
+      >
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-8">
+            <h2 className="text-2xl font-bold text-white mb-4">Ready to Advance Your Career?</h2>
+            <p className="text-gray-300 mb-6">
+              Join thousands of professionals who have transformed their careers with our training programs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started
+                <ExternalLink className="w-4 h-4 ml-2" />
+              </a>
+              <a
+                href="/support"
+                className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300"
+              >
+                Contact Training Team
+                <Users className="w-4 h-4 ml-2" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </motion.div>
     </div>
   );
 };

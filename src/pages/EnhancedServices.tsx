@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO   } from '@/components/SEO';
+import { SEO } from '@/components/SEO';
 const EnhancedServices = () => {
   return (
   {/* Empty JSX fragment */}
@@ -37,7 +37,8 @@ const EnhancedServices = () => {
           </div>
         </div>
       </div>
-    </React.Fragment>
-  )};
+    </>
+  );
+};
 export default EnhancedServices;
 >

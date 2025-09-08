@@ -1,4 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useCallback } from 'react';
+
+interface PerformanceMetrics {
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
+}
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
@@ -253,71 +261,5 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     });
   };
 
-  const optimizeFonts = () => {
-    if ('fonts' in document) {
-      document.fonts.ready.then(() => {
-        document.documentElement.classList.add('fonts-loaded');
-      });
-    }
-  };
-
-// Bundle Size Optimizer
-export const BundleOptimizer: React.FC = () => {
-  useEffect(() => {
-    // Implement dynamic imports for non-critical components
-    const loadNonCriticalComponents = async () => {
-      // Load components after initial render
-      setTimeout(async () => {
-        try {
-          // Dynamic imports for heavy components
-          await Promise.all([
-            import('../components/HeavyComponent1'),
-            import('../components/HeavyComponent2'),
-          ]);
-        } catch (error) {
-          console.warn('Failed to load non-critical components:', error);
-        }
-      }, 2000);
-    };
-
-    loadNonCriticalComponents();
-  }, []);
-
-  // Performance score calculation
-  const getPerformanceScore = (metrics: PerformanceMetrics): number => {
-    let score = 100;
-    
-    if (metrics.fcp > 1800) score -= 20;
-    if (metrics.lcp > 2500) score -= 25;
-    if (metrics.fid > 100) score -= 20;
-    if (metrics.cls > 0.1) score -= 25;
-    if (metrics.ttfb > 600) score -= 10;
-    
-    return Math.max(0, score);
-  };
-
-  return (
-    <div ref={componentRef} className="performance-optimizer">
-      {/* Performance metrics display (development only) */}
-      {process.env.NODE_ENV === 'development' && metrics && (
-        <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs z-50">
-          <div className="font-bold mb-2">Performance Metrics</div>
-          <div>FCP: {metrics.fcp?.toFixed(0)}ms</div>
-          <div>LCP: {metrics.lcp?.toFixed(0)}ms</div>
-          <div>FID: {metrics.fid?.toFixed(0)}ms</div>
-          <div>CLS: {metrics.cls?.toFixed(3)}</div>
-          <div>TTFB: {metrics.ttfb?.toFixed(0)}ms</div>
-          <div className="mt-2 font-bold">
-            Score: {getPerformanceScore(metrics)}/100
-          </div>
-        </div>
-      )}
-      
-      {/* Hidden performance optimization elements */}
-      <div className="sr-only">
-        <div data-scroll-optimize />
-        <img data-src="/images/placeholder.jpg" alt="" />
-      </div>
-    </div>
-  );
-}
+  return <>{children}</>;
+};

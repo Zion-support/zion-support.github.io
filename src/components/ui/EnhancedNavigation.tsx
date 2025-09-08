@@ -253,6 +253,8 @@ export const EnhancedNavigation: React.FC = () => {
             >
               <div className="px-4 py-6 space-y-6">
                 {/* Mobile Navigation Items */}
+              {/* Mobile Navigation */}
+              <div className="space-y-4">
                 {navigation.map((item) => (
                   <div key={item.name}>
                     {item.children ? (

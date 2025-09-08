@@ -69,74 +69,24 @@ export function Header({ onMenuClick }: HeaderProps) {
       dropdown: true,
       icon: Zap,
       items: [
-        {
-          category: 'AI & Machine Learning',
-          icon: Brain,
-          services: [
-            { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
-            { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
-            { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
-            { name: 'AI Content Marketing', href: '/services/ai-content-marketing-suite' },
-            { name: 'AI Customer Support', href: '/services/ai-customer-support-automation' },
-            { name: 'AI Project Management', href: '/services/ai-project-management' },
-            { name: 'AI Research Assistant', href: '/services/ai-autonomous-research-assistant' },
-            { name: 'AI Financial Trading', href: '/services/ai-financial-trading-platform' },
-            { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform' },
-            { name: 'AI Quantum Hybrid', href: '/services/ai-quantum-hybrid-platform' }
-          ]
-        },
-        {
-          category: 'Cybersecurity',
-          icon: Shield,
-          services: [
-            { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform' },
-            { name: 'Security Headers & CSP', href: '/services/security-headers-csp' },
-            { name: 'DSR Privacy Portal', href: '/services/dsr-portal' },
-            { name: 'Zero Trust Network', href: '/services/zero-trust-network-access' },
-            { name: 'SOC2 Compliance', href: '/services/soc2-compliance-automation' }
-          ]
-        },
-        {
-          category: 'Cloud & DevOps',
-          icon: Cloud,
-          services: [
-            { name: 'Cloud DevOps', href: '/services/cloud-devops' },
-            { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
-            { name: 'FinOps Advisor', href: '/services/finops-advisor' },
-            { name: 'Cloud Migration', href: '/services/cloud-migration-services' },
-            { name: 'Edge Computing', href: '/services/iot-edge-computing' }
-          ]
-        },
-        {
-          category: 'Quantum Computing',
-          icon: Atom,
-          services: [
-            { name: 'Quantum Edge Computing', href: '/services/quantum-edge-computing' },
-            { name: 'Quantum Neural Networks', href: '/services/quantum-neural-networks' },
-            { name: 'Quantum Financial Trading', href: '/services/quantum-financial-trading' },
-            { name: 'AI Quantum Hybrid', href: '/services/ai-quantum-hybrid-platform' }
-          ]
-        },
-        {
-          category: 'Digital Transformation',
-          icon: Rocket,
-          services: [
-            { name: 'Digital Twin Solutions', href: '/services/digital-twin' },
-            { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' },
-            { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
-            { name: '5G Enterprise Solutions', href: '/services/5g-enterprise-solutions' }
-          ]
-        },
-        {
-          category: 'Micro SaaS',
-          icon: Code,
-          services: [
-            { name: 'Custom SaaS Development', href: '/services/micro-saas-solutions' },
-            { name: 'API Development', href: '/services/api-development' },
-            { name: 'Mobile App Development', href: '/services/mobile-development' },
-            { name: 'Web Application Development', href: '/services/web-development' }
-          ]
-        }
+        { name: 'AI & Machine Learning', href: '/ai-services' },
+        { name: 'Quantum Computing', href: '/services/quantum-computing-solutions' },
+        { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity' },
+        { name: 'AI Healthcare', href: '/services/ai-healthcare-analytics-platform' },
+        { name: 'AI Financial Trading', href: '/services/ai-financial-trading-platform' },
+        { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization' },
+        { name: 'AI Marketing & SEO', href: '/services/ai-marketing-automation-platform' },
+        { name: 'AI Project Management', href: '/services/ai-project-management-platform' },
+        { name: 'AI DevOps & Infrastructure', href: '/services/ai-devops-automation-platform' },
+        { name: 'AI IoT & Edge Computing', href: '/services/ai-iot-edge-computing-platform' },
+        { name: 'Space Technology', href: '/services/space-tech' },
+        { name: 'Micro SAAS Solutions', href: '/micro-saas' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity' },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
+        { name: 'Data & Analytics', href: '/services/ai-business-intelligence' },
+        { name: 'Digital Transformation', href: '/services/digital-transformation' },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure-management' },
+        { name: 'Emerging Technologies', href: '/services/quantum-computing-solutions' }
       ]
     },
     {
