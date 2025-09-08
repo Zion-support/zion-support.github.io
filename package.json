@@ -58,6 +58,7 @@
     "audit:accessibility": "node scripts/accessibility-audit.js",
     "audit:performance": "node scripts/performance-audit.js",
     "audit:security": "node scripts/security-audit.js",
+    "advanced-performance": "node scripts/advanced-performance-monitor.js",
     "audit:seo": "node scripts/seo-audit.js",
     "audit:all": "npm run audit:accessibility && npm run audit:performance && npm run audit:security && npm run audit:seo",
     "generate:manifest": "node scripts/generate-manifest.cjs",
