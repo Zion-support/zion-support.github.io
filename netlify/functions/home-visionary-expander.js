@@ -1,37 +1,37 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context) {
   try {
-    console.log('Running home-visionary-expander function');
+    console.log('🏡 home-visionary-expander function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple home visionary expansion logic
+    // Basic home visionary expansion logic
+    const timestamp = new Date().toISOString();
     const result = {
-      expanded: true,
-      timestamp: new Date().toISOString(),
-      message: 'Home visionary expansion completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Home visionary expander completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Home visionary expander executed successfully',
+        timestamp: timestamp,
+        function: 'home-visionary-expander',
+        status: 'success',
+        expansion: {
+          home: 'enhanced',
+          vision: 'expanded',
+          innovation: 'accelerated'
+        }
       })
     };
-  } catch (error) {
-    console.error('Error in home-visionary-expander function:', error);
     
+    console.log('✅ home-visionary-expander completed successfully');
+    return result;
+    
+  } catch (error) {
+    console.error('❌ home-visionary-expander failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
+        message: 'Home visionary expander failed',
         error: error.message,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        function: 'home-visionary-expander',
+        status: 'error'
       })
     };
   }

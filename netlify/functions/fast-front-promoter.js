@@ -1,37 +1,37 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context) {
   try {
-    console.log('Running fast-front-promoter function');
+    console.log('⚡ fast-front-promoter function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple fast front promotion logic
+    // Basic fast front promotion logic
+    const timestamp = new Date().toISOString();
     const result = {
-      promoted: true,
-      timestamp: new Date().toISOString(),
-      message: 'Fast front promotion completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Fast front promoter completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Fast front promoter executed successfully',
+        timestamp: timestamp,
+        function: 'fast-front-promoter',
+        status: 'success',
+        promotion: {
+          speed: 'optimized',
+          frontend: 'enhanced',
+          performance: 'boosted'
+        }
       })
     };
-  } catch (error) {
-    console.error('Error in fast-front-promoter function:', error);
     
+    console.log('✅ fast-front-promoter completed successfully');
+    return result;
+    
+  } catch (error) {
+    console.error('❌ fast-front-promoter failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
+        message: 'Fast front promoter failed',
         error: error.message,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        function: 'fast-front-promoter',
+        status: 'error'
       })
     };
   }

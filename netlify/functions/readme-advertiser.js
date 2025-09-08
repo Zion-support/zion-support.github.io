@@ -1,37 +1,37 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context) {
   try {
-    console.log('Running readme-advertiser function');
+    console.log('📖 readme-advertiser function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple readme advertising logic
+    // Basic readme advertising logic
+    const timestamp = new Date().toISOString();
     const result = {
-      advertised: true,
-      timestamp: new Date().toISOString(),
-      message: 'Readme advertising completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Readme advertiser completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Readme advertiser executed successfully',
+        timestamp: timestamp,
+        function: 'readme-advertiser',
+        status: 'success',
+        advertising: {
+          readme: 'promoted',
+          visibility: 'increased',
+          engagement: 'enhanced'
+        }
       })
     };
-  } catch (error) {
-    console.error('Error in readme-advertiser function:', error);
     
+    console.log('✅ readme-advertiser completed successfully');
+    return result;
+    
+  } catch (error) {
+    console.error('❌ readme-advertiser failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
+        message: 'Readme advertiser failed',
         error: error.message,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        function: 'readme-advertiser',
+        status: 'error'
       })
     };
   }

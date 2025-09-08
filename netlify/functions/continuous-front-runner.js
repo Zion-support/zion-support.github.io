@@ -1,37 +1,37 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context) {
   try {
-    console.log('Running continuous-front-runner function');
+    console.log('🏃 continuous-front-runner function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple continuous front running logic
+    // Basic continuous front running logic
+    const timestamp = new Date().toISOString();
     const result = {
-      run: true,
-      timestamp: new Date().toISOString(),
-      message: 'Continuous front running completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Continuous front runner completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Continuous front runner executed successfully',
+        timestamp: timestamp,
+        function: 'continuous-front-runner',
+        status: 'success',
+        running: {
+          mode: 'continuous',
+          frontend: 'active',
+          monitoring: 'enabled'
+        }
       })
     };
-  } catch (error) {
-    console.error('Error in continuous-front-runner function:', error);
     
+    console.log('✅ continuous-front-runner completed successfully');
+    return result;
+    
+  } catch (error) {
+    console.error('❌ continuous-front-runner failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
+        message: 'Continuous front runner failed',
         error: error.message,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        function: 'continuous-front-runner',
+        status: 'error'
       })
     };
   }

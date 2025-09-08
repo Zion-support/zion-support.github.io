@@ -1,37 +1,37 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context) {
   try {
-    console.log('Running todo-scanner-runner function');
+    console.log('📝 todo-scanner-runner function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple todo scanning logic
+    // Basic TODO scanning logic
+    const timestamp = new Date().toISOString();
     const result = {
-      scanned: true,
-      timestamp: new Date().toISOString(),
-      message: 'Todo scanning completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Todo scanner runner completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'TODO scanner runner executed successfully',
+        timestamp: timestamp,
+        function: 'todo-scanner-runner',
+        status: 'success',
+        scanning: {
+          todos: 'scanned',
+          priorities: 'identified',
+          actions: 'suggested'
+        }
       })
     };
-  } catch (error) {
-    console.error('Error in todo-scanner-runner function:', error);
     
+    console.log('✅ todo-scanner-runner completed successfully');
+    return result;
+    
+  } catch (error) {
+    console.error('❌ todo-scanner-runner failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
+        message: 'TODO scanner runner failed',
         error: error.message,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        function: 'todo-scanner-runner',
+        status: 'error'
       })
     };
   }

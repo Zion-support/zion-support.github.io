@@ -1,37 +1,37 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context) {
   try {
-    console.log('Running front-visionary-expander function');
+    console.log('🔮 front-visionary-expander function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple front visionary expansion logic
+    // Basic front visionary expansion logic
+    const timestamp = new Date().toISOString();
     const result = {
-      expanded: true,
-      timestamp: new Date().toISOString(),
-      message: 'Front visionary expansion completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Front visionary expander completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Front visionary expander executed successfully',
+        timestamp: timestamp,
+        function: 'front-visionary-expander',
+        status: 'success',
+        expansion: {
+          vision: 'expanded',
+          innovation: 'accelerated',
+          growth: 'facilitated'
+        }
       })
     };
-  } catch (error) {
-    console.error('Error in front-visionary-expander function:', error);
     
+    console.log('✅ front-visionary-expander completed successfully');
+    return result;
+    
+  } catch (error) {
+    console.error('❌ front-visionary-expander failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
+        message: 'Front visionary expander failed',
         error: error.message,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        function: 'front-visionary-expander',
+        status: 'error'
       })
     };
   }

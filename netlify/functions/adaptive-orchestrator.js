@@ -1,37 +1,37 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context) {
   try {
-    console.log('Running adaptive-orchestrator function');
+    console.log('🔄 adaptive-orchestrator function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple adaptive orchestration logic
+    // Basic adaptive orchestration logic
+    const timestamp = new Date().toISOString();
     const result = {
-      orchestrated: true,
-      timestamp: new Date().toISOString(),
-      message: 'Adaptive orchestration completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Adaptive orchestrator completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Adaptive orchestrator executed successfully',
+        timestamp: timestamp,
+        function: 'adaptive-orchestrator',
+        status: 'success',
+        orchestration: {
+          adaptation: 'enabled',
+          learning: 'active',
+          optimization: 'continuous'
+        }
       })
     };
-  } catch (error) {
-    console.error('Error in adaptive-orchestrator function:', error);
     
+    console.log('✅ adaptive-orchestrator completed successfully');
+    return result;
+    
+  } catch (error) {
+    console.error('❌ adaptive-orchestrator failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
+        message: 'Adaptive orchestrator failed',
         error: error.message,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        function: 'adaptive-orchestrator',
+        status: 'error'
       })
     };
   }

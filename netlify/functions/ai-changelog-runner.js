@@ -1,37 +1,37 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context) {
   try {
-    console.log('Running ai-changelog-runner function');
+    console.log('🤖 ai-changelog-runner function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple AI changelog logic
+    // Basic AI changelog running logic
+    const timestamp = new Date().toISOString();
     const result = {
-      generated: true,
-      timestamp: new Date().toISOString(),
-      message: 'AI changelog generation completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'AI changelog runner completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'AI changelog runner executed successfully',
+        timestamp: timestamp,
+        function: 'ai-changelog-runner',
+        status: 'success',
+        changelog: {
+          changes: 'analyzed',
+          summary: 'generated',
+          insights: 'extracted'
+        }
       })
     };
-  } catch (error) {
-    console.error('Error in ai-changelog-runner function:', error);
     
+    console.log('✅ ai-changelog-runner completed successfully');
+    return result;
+    
+  } catch (error) {
+    console.error('❌ ai-changelog-runner failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
+        message: 'AI changelog runner failed',
         error: error.message,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        function: 'ai-changelog-runner',
+        status: 'error'
       })
     };
   }

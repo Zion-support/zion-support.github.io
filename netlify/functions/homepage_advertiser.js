@@ -1,37 +1,32 @@
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context) {
   try {
-    console.log('Running homepage_advertiser function');
+    console.log('🏠 homepage_advertiser function triggered');
     
-    // Check if this is a scheduled invocation
-    if (event.source === 'aws.events') {
-      console.log('Scheduled invocation detected');
-    }
-    
-    // Simple homepage advertising logic
+    // Basic homepage advertising logic
+    const timestamp = new Date().toISOString();
     const result = {
-      advertised: true,
-      timestamp: new Date().toISOString(),
-      message: 'Homepage advertising completed'
-    };
-    
-    return {
       statusCode: 200,
       body: JSON.stringify({
-        success: true,
-        message: 'Homepage advertiser completed successfully',
-        result: result,
-        timestamp: new Date().toISOString()
+        message: 'Homepage advertiser executed successfully',
+        timestamp: timestamp,
+        function: 'homepage_advertiser',
+        status: 'success'
       })
     };
-  } catch (error) {
-    console.error('Error in homepage_advertiser function:', error);
     
+    console.log('✅ homepage_advertiser completed successfully');
+    return result;
+    
+  } catch (error) {
+    console.error('❌ homepage_advertiser failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        success: false,
+        message: 'Homepage advertiser failed',
         error: error.message,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        function: 'homepage_advertiser',
+        status: 'error'
       })
     };
   }
