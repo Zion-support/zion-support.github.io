@@ -1,23 +1,22 @@
 [build]
-  # Use prebuilt dist; skip install and build on Netlify
+  # Skip build on Netlify; deploy prebuilt Vite output
   command = "echo 'Skipping build: deploying prebuilt dist'"
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "20"
+  PYTHON_VERSION = "3.11"
+  MISE_PYTHON_COMPILE = "false"
+  # Disable Netlify's auto dependency installers; we handle installs in the build command
   NETLIFY_SKIP_INSTALL = "true"
-  # Avoid optional binary downloads (electron, playwright, cypress)
-  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"
-  PUPPETEER_SKIP_DOWNLOAD = "1"
-  CYPRESS_INSTALL_BINARY = "0"
-  ELECTRON_SKIP_DOWNLOAD = "1"
+  # Disable mise shims entirely during Netlify builds
+  MISE_DISABLE = "1"
+  MISE_SHIMS = "0"
+  # Force mise to use system Python even during Netlify's dependency stage (defensive)
+  MISE_TOOL_VERSIONS__python = "system"
 
-[[plugins]]
-  package = "netlify-plugin-compress"
-  [plugins.inputs]
-    gzip = true
-    brotli = true
+
 
 [[redirects]]
   from = "/*"

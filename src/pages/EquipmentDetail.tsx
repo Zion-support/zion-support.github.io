@@ -1,16 +1,10 @@
-import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import React from "react";
 
 export default function EquipmentDetail() {
-	const { equipmentId } = useParams() as { equipmentId?: string };
-	const [selectedImageIndex] = useState(0);
-
 	return (
-		<div style={{ padding: 24 }}>
-			<h1>Equipment Detail</h1>
-			<p>ID: {equipmentId ?? "unknown"}</p>
-			<p>Selected image index: {selectedImageIndex}</p>
+		<div className="container mx-auto p-8 text-white">
+			<h1 className="text-2xl font-bold mb-2">Equipment Detail</h1>
+			<p className="text-zion-slate-light">This page is temporarily unavailable.</p>
 		</div>
 	);
 }
-
