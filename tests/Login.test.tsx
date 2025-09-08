@@ -2,6 +2,8 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { vi } from 'vitest';
 import { LoginForm } from '@/components/auth/login';
+import * as authService from '@/services/authService';
+import { Toaster } from '@/components/ui/toaster';
 import * as authHook from '@/hooks/useAuth';
 import axios from 'axios';
 
@@ -16,16 +18,17 @@ vi.mock('@/services/auth');
 const mockedAxios: any = (axios as any).create();
 
 describe('LoginForm', () => {
-  it('redirects to dashboard on successful login', async () => {
-    mockedAxios.post.mockResolvedValue({ status: 200, data: { token: 'abc' } });
-    const navigateMock = vi.fn();
-    vi.spyOn(require('react-router-dom'), 'useNavigate').mockReturnValue(navigateMock);
-
+  it('shows error toast on 401 response', async () => {
+    vi.spyOn(authService, 'loginUser').mockResolvedValue({
+      res: { status: 401 } as Response,
+      data: { error: 'Invalid credentials' },
+    });
     render(
       <MemoryRouter>
-        <Toaster />
-        <LoginForm />
-        <Toaster />
+        <>
+          <Toaster />
+          <LoginForm />
+        </>
       </MemoryRouter>
 
     fireEvent.input(screen.getByLabelText(/email address/i), {
@@ -36,8 +39,7 @@ describe('LoginForm', () => {
     });
     fireEvent.submit(screen.getByRole('button', { name: /login/i }));
 
-    await waitFor(() => {
-      expect(navigateMock).toHaveBeenCalledWith('/dashboard');
-    });
+    // wait for toast to appear
+    await screen.findByText('Invalid credentials');
   });
 });

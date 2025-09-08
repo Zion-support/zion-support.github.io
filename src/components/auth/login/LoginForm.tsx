@@ -116,27 +116,18 @@ export function LoginForm() {
 
     try {
       setIsSubmitting(true);
-      const res = await auth.login(data.email, data.password);
-      if (res.status === 200) {
-        navigate('/dashboard');
-      } else if (res.status >= 400 && res.status < 500) {
-        toast.error(res.data?.error || 'Invalid credentials');
+      const { res, data: resData } = await loginUser(data.email, data.password);
+      if (!res.ok) {
+        toast.error(resData?.error || "Invalid credentials");
+        return;
       }
-
-      await login(data.email, data.password);
-
-      const next = searchParams.get('next') || '/';
-      if (next === '/checkout') {
-        const intended = sessionStorage.getItem('intendedProduct');
-        sessionStorage.removeItem('intendedProduct');
-        if (intended) {
-          navigate(`/checkout?product=${intended}`);
-        } else {
-          navigate('/checkout');
-        }
-      } else {
-        navigate(next);
+      toast.success("Logged in successfully");
+      if (resData?.token) {
+        document.cookie = `token=${resData.token}; path=/`;
       }
+      navigate("/");
+    } catch (err) {
+      toast.error("Unable to login. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
