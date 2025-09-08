@@ -5,73 +5,53 @@ module.exports = {
       name: 'zion-app',
       script: 'npm',
       args: 'start',
+      cwd: './',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PORT: 3000
+        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
+      },
+      env_production: {
+        NODE_ENV: 'production',
+        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
       }
     },
 
-    // Core automation processes
+    // Weekly dependency management - runs every 7 days (replaces GitHub Actions dependencies workflow)
     {
-      name: 'console-error-fixer',
-      script: './scripts/automation/console-error-fixer.cjs',
+      name: 'weekly-dependency-manager',
+      script: './scripts/automation/weekly-dependency-manager.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '900000' // 15 minutes
+        AUTOMATION_INTERVAL: '604800000' // 7 days
       }
     },
 
-    // Core CI/CD automation (replaces GitHub Actions CI)
+    // Weekly security analysis - runs every 7 days (replaces GitHub Actions CodeQL workflow)
     {
-      name: 'link-checker',
-      script: './scripts/automation/link-checker.cjs',
+      name: 'weekly-security-analysis',
+      script: './scripts/automation/weekly-security-analysis.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+        AUTOMATION_INTERVAL: '604800000' // 7 days
       }
     },
-    
+
+    // Workflow status monitor - runs every 2 hours (replaces GitHub Actions status workflow)
     {
-      name: 'continuous-improvement',
-      script: './scripts/automation/continuous-improvement.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '3600000' // 1 hour
-      }
-    },
-    
-    {
-      name: 'daily-build-test',
-      script: './scripts/automation/daily-build-test.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '86400000' // 24 hours
-      }
-    },
-    
-    {
-      name: 'security-audit',
-      script: './scripts/automation/security-audit.cjs',
+      name: 'workflow-status-monitor',
+      script: './scripts/automation/workflow-status-monitor.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -79,235 +59,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '7200000' // 2 hours
-      }
-    },
-    
-    {
-      name: 'dependency-updates',
-      script: './scripts/automation/dependency-updates.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '86400000' // 24 hours
-      }
-    },
-    
-    {
-      name: 'performance-monitor',
-      script: './scripts/automation/performance-monitor.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1800000' // 30 minutes
-      }
-    },
-    
-    {
-      name: 'quality-checks',
-      script: './scripts/automation/quality-checks.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '3600000' // 1 hour
-      }
-    },
-    
-    {
-      name: 'link-integrity',
-      script: './scripts/automation/link-integrity.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000' // 2 hours
-      }
-    },
-    
-    {
-      name: 'front-maximizer',
-      script: './scripts/automation/front-maximizer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '3600000' // 1 hour
-      }
-    },
-    
-    {
-      name: 'sitemap-runner',
-      script: './scripts/automation/sitemap-runner.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '86400000' // 24 hours
-      }
-    },
-
-    // Continuous improvement automation (replaces GitHub Actions Continuous Improvement)
-    {
-      name: 'continuous-improvement-automation',
-      script: './scripts/automation/continuous-improvement.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '604800000' // 7 days (weekly)
-      }
-    },
-
-    // Dependencies automation (replaces GitHub Actions Dependencies)
-    {
-      name: 'dependencies-automation',
-      script: './scripts/automation/dependencies-automation.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '604800000' // 7 days (weekly)
-      }
-    },
-
-    // Quality check automation (replaces GitHub Actions Quality Check)
-    {
-      name: 'quality-check-automation',
-      script: './scripts/automation/quality-check-automation.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1800000' // 30 minutes
-      }
-    },
-
-    // Enhanced automation processes
-    {
-      name: 'enhanced-testing',
-      script: './scripts/automation/enhanced-testing-automation.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000' // 2 hours
-      }
-    },
-    
-    {
-      name: 'enhanced-security',
-      script: './scripts/automation/enhanced-security-automation.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '3600000' // 1 hour
-      }
-    },
-    
-    {
-      name: 'enhanced-link-checker',
-      script: './scripts/automation/enhanced-link-checker.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1800000' // 30 minutes
-      }
-    },
-    
-    {
-      name: 'enhanced-ci-cd',
-      script: './scripts/automation/enhanced-ci-cd-automation.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1800000' // 30 minutes
-      }
-    },
-
-    // Dependency review automation - runs every 6 hours
-    {
-      name: 'dependency-review',
-      script: './scripts/automation/dependency-review.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '21600000' // 6 hours
-      }
-    },
-
-    // CodeQL Security Scanner - runs every 24 hours
-    {
-      name: 'codeql-security-scan',
-      script: './scripts/automation/codeql-security-scan.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '86400000' // 24 hours
-      }
-    },
-
-    // Status Monitor - runs every 30 minutes
-    {
-      name: 'status-monitor',
-      script: './scripts/automation/status-monitor.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1800000' // 30 minutes
       }
     }
-  ],
-
-  // PM2 Log Rotation
-  module: {
-    name: 'pm2-logrotate',
-    script: 'pm2-logrotate',
-    instances: 1,
-    autorestart: true,
-    watch: false,
-    max_memory_restart: '100M',
-    env: {
-      NODE_ENV: 'production'
-    }
-  }
+  ]
 };

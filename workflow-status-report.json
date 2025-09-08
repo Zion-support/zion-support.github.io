@@ -1,0 +1,31 @@
+{
+  "timestamp": "2025-08-29T18:45:41.917Z",
+  "status": "completed",
+  "systemStatus": {
+    "disk": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         126G   12G  108G  10% /\n",
+    "memory": "               total        used        free      shared  buff/cache   available\nMem:            15Gi       1.4Gi       2.9Gi        14Mi        11Gi        14Gi\nSwap:             0B          0B          0B\n",
+    "cpu": " 18:45:41 up 2 days, 23:59,  0 user,  load average: 4.23, 8.33, 9.42\n"
+  },
+  "buildStatus": {
+    "exists": false,
+    "status": "missing"
+  },
+  "deploymentStatus": {
+    "hasStartScript": "vite preview",
+    "nodeVersion": "v22.16.0",
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "summary": {
+    "buildExists": false,
+    "buildAge": "N/A",
+    "hasStartScript": "vite preview"
+  },
+  "health": {
+    "score": 70,
+    "status": "warning",
+    "issues": [
+      "Build directory missing"
+    ]
+  }
+}
