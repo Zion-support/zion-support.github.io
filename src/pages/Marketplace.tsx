@@ -271,10 +271,8 @@ export default function Marketplace() {
   return (
     <main className="flex-grow container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto mb-8">
-          <h1 className="font-bold text-white mb-4 text-[clamp(1.5rem,3vw,1.875rem)]">
-            {t('marketplace.title')}
-          </h1>
-          <p className="text-zion-slate-light text-[clamp(1rem,2.5vw,1.125rem)]">
+          <h1 className="text-3xl font-bold text-white mb-4">{t('marketplace.title')}</h1>
+          <p className="text-zion-slate-light">
             {t('marketplace.description')}
           </p>
         </div>
@@ -351,7 +349,7 @@ export default function Marketplace() {
             {/* Results count */}
             <div className="mb-6">
               <p className="text-zion-slate-light">
-                Showing {filteredListings.length} results
+                {t('marketplace.results_count', { count: filteredListings.length })}
                 {searchQuery && ` for "${searchQuery}"`}
               </p>
             </div>
@@ -361,9 +359,24 @@ export default function Marketplace() {
                 <ShoppingCart className="w-5 h-5" />
                 <span>500+ Products & Services</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Star className="w-5 h-5" />
-                <span>4.8+ Average Rating</span>
+            ) : filteredListings.length > 0 ? (
+              viewMode === 'grid' ? (
+                <ProductGrid listings={paginatedListings} onRequestQuote={handleRequestQuote} />
+              ) : (
+                <ProductList listings={paginatedListings} onRequestQuote={handleRequestQuote} />
+              )
+            ) : (
+              <div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">
+                <h2 className="text-2xl font-bold text-white mb-4">{t('marketplace.no_results_title')}</h2>
+                <p className="text-zion-slate-light max-w-md mx-auto mb-8">
+                  {t('marketplace.no_results_description')}
+                </p>
+                <Button
+                  onClick={clearAllFilters}
+                  className="bg-zion-purple hover:bg-zion-purple-dark"
+                >
+                  {t('marketplace.clear_filters')}
+                </Button>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-5 h-5" />

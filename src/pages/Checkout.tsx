@@ -30,7 +30,7 @@ interface CheckoutForm {
 
 export default function Checkout() {
   const navigate = useNavigate();
-  const location = useLocation();
+  const { t } = useTranslation();
   const [items, setItems] = useState<CartItem[]>([]);
   const { user } = useAuth();
   const [showGuest, setShowGuest] = useState(false);
@@ -120,10 +120,7 @@ export default function Checkout() {
 
   return (
     <div className="container max-w-2xl py-10">
-      <div className="flex items-center justify-between mb-6">
-        <h1 className="text-3xl font-bold">{t('checkout.title')}</h1>
-        <PointsBadge />
-      </div>
+      <h1 className="text-3xl font-bold mb-6">{t('checkout.title')}</h1>
       <div className="grid gap-6">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
