@@ -6,11 +6,11 @@ import { ThemeProvider } from './components/ThemeProvider';
 import { ErrorBoundary, setupGlobalErrorHandling } from './components/ErrorHandling';
 import ScrollToTop from './components/ScrollToTop';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceMonitor from './components/PerformanceMonitor';
+import PerformanceWrapper from './components/PerformanceWrapper';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
 import { SEO, HomePageSEO } from './components/SEO';
-import { AccessibilityWrapper } from './components/AccessibilityEnhancements';
+import AccessibilityEnhancements from './components/AccessibilityEnhancements';
 import { PerformanceOptimizations } from './components/PerformanceOptimizations';
 import './App.css';
 import './components/AccessibilityEnhancements.css';
@@ -59,48 +59,49 @@ function App() {
         <HelmetProvider>
           <ThemeProvider>
             <AccessibilityEnhancer>
-              <AccessibilityWrapper>
+              <AccessibilityEnhancements>
                 <Router>
                   <ScrollToTop />
-                  <PerformanceMonitor />
-                  <PerformanceOptimizer enableMonitoring={process.env.NODE_ENV === 'development'} />
-                  
-                  {/* SEO Meta Tags */}
-                  <HomePageSEO />
-                  
-                  <div className="min-h-screen bg-background text-foreground" id="main-content">
-                    <PerformanceOptimizations>
-                      <Suspense fallback={<LoadingSpinner />}>
-                        <Routes>
-                          {/* Main Routes */}
-                          <Route path="/" element={<Home />} />
-                          <Route path="/about" element={<About />} />
-                          <Route path="/services" element={<Services />} />
-                          <Route path="/contact" element={<Contact />} />
-                          <Route path="/pricing" element={<Pricing />} />
-                          
-                          {/* Service Routes */}
-                          <Route path="/services/ai-services" element={<AIServices />} />
-                          <Route path="/services/it-services" element={<ITServices />} />
-                          <Route path="/services/micro-saas" element={<MicroSaaS />} />
-                          <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-                          <Route path="/services/cloud-solutions" element={<CloudMigration />} />
-                          <Route path="/services/mobile-development" element={<MobileDevelopment />} />
-                          
-                          {/* Additional Routes */}
-                          <Route path="/faq" element={<FAQ />} />
-                          <Route path="/privacy" element={<Privacy />} />
-                          <Route path="/terms" element={<Terms />} />
-                          <Route path="/support" element={<Support />} />
-                          
-                          {/* 404 Route */}
-                          <Route path="*" element={<NotFound />} />
-                        </Routes>
-                      </Suspense>
-                    </PerformanceOptimizations>
-                  </div>
+                  <PerformanceWrapper>
+                    <PerformanceOptimizer enableMonitoring={process.env.NODE_ENV === 'development'} />
+                    
+                    {/* SEO Meta Tags */}
+                    <HomePageSEO />
+                    
+                    <div className="min-h-screen bg-background text-foreground" id="main-content">
+                      <PerformanceOptimizations>
+                        <Suspense fallback={<LoadingSpinner />}>
+                          <Routes>
+                            {/* Main Routes */}
+                            <Route path="/" element={<Home />} />
+                            <Route path="/about" element={<About />} />
+                            <Route path="/services" element={<Services />} />
+                            <Route path="/contact" element={<Contact />} />
+                            <Route path="/pricing" element={<Pricing />} />
+                            
+                            {/* Service Routes */}
+                            <Route path="/services/ai-services" element={<AIServices />} />
+                            <Route path="/services/it-services" element={<ITServices />} />
+                            <Route path="/services/micro-saas" element={<MicroSaaS />} />
+                            <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+                            <Route path="/services/cloud-solutions" element={<CloudMigration />} />
+                            <Route path="/services/mobile-development" element={<MobileDevelopment />} />
+                            
+                            {/* Additional Routes */}
+                            <Route path="/faq" element={<FAQ />} />
+                            <Route path="/privacy" element={<Privacy />} />
+                            <Route path="/terms" element={<Terms />} />
+                            <Route path="/support" element={<Support />} />
+                            
+                            {/* 404 Route */}
+                            <Route path="*" element={<NotFound />} />
+                          </Routes>
+                        </Suspense>
+                      </PerformanceOptimizations>
+                    </div>
+                  </PerformanceWrapper>
                 </Router>
-              </AccessibilityWrapper>
+              </AccessibilityEnhancements>
             </AccessibilityEnhancer>
           </ThemeProvider>
         </HelmetProvider>

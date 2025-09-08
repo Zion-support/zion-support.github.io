@@ -1,3 +1,4 @@
+import React, { useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
@@ -219,9 +220,9 @@ export const SEO: React.FC<SEOProps> = ({
 
 // SEO hook for dynamic updates
 export const useSEO = (seoProps: SEOProps) => {
-  const [seo, setSEO] = React.useState<SEOProps>(seoProps);
+  const [seo, setSEO] = useState<SEOProps>(seoProps);
 
-  const updateSEO = React.useCallback((newProps: Partial<SEOProps>) => {
+  const updateSEO = useCallback((newProps: Partial<SEOProps>) => {
     setSEO(prev => ({ ...prev, ...newProps }));
   }, []);
 

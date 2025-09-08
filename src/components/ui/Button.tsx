@@ -2,7 +2,7 @@ import React from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { ButtonProps } from '../../types/components';
 import LoadingSpinner from '../LoadingSpinner';
-import { cn } from '../../utils/cn';
+import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from "class-variance-authority";
 
 const buttonVariants = cva(
