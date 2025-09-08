@@ -1,6 +1,6 @@
 [build]
-  # Skip heavy build; install minimal Node deps non-interactively and deploy prebuilt dist
-  command = "npm ci --ignore-scripts --omit=optional || npm install --ignore-scripts --omit=optional"
+  # Use prebuilt dist; skip install/build entirely in Netlify
+  command = "echo 'Skipping build; using prebuilt dist'"
   publish = "dist"
   command_timeout = "30m"
 
