@@ -2,6 +2,7 @@
   # Use prebuilt dist; skip install/build entirely in Netlify
   command = "echo 'Skipping build; using prebuilt dist'"
   publish = "dist"
+  functions = "netlify/functions"
   command_timeout = "30m"
 
 [build.environment]
