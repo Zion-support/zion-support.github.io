@@ -8,12 +8,17 @@ import './App.css';
 import ErrorBoundary from './components/ErrorBoundary';
 import { AppLayout } from './layout/AppLayout';
 import LazyLoad from './components/LazyLoad';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import Analytics from './components/Analytics';
 import LoadingSpinner from './components/LoadingSpinner';
 
-// Lazy loaded pages for better performance
-import { LazyHome, LazyAbout, LazyContact, LazyNotFound } from './utils/lazyLoad';
+// Lazy loaded pages and components for better performance
+import { 
+  LazyHome, 
+  LazyAbout, 
+  LazyContact, 
+  LazyNotFound,
+  LazyAnalytics,
+  LazyPerformanceMonitor 
+} from './utils/lazyLoad';
 
 // Context Providers
 import { LanguageProvider } from './context/LanguageContext';
@@ -122,8 +127,8 @@ const App: React.FC = () => {
                                   </LazyLoad>
                                 </AppLayout>
                               </Suspense>
-                              <PerformanceMonitor />
-                              <Analytics 
+                              <LazyPerformanceMonitor />
+                              <LazyAnalytics 
                                 trackingId={import.meta.env.VITE_GA_TRACKING_ID}
                                 enablePerformanceTracking={true}
                                 enableErrorTracking={true}

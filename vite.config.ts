@@ -1,9 +1,5 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-<<<<<<< HEAD
-=======
-// import { fileURLToPath } from 'node:url'
->>>>>>> main
 import path from 'path'
 import { visualizer } from 'rollup-plugin-visualizer'
 
@@ -68,6 +64,20 @@ export default defineConfig(({ mode }) => ({
               return 'vendor-forms';
             }
             return 'vendor';
+          }
+          
+          // App chunks for better code splitting
+          if (id.includes('/src/pages/')) {
+            return 'pages';
+          }
+          if (id.includes('/src/components/')) {
+            return 'components';
+          }
+          if (id.includes('/src/utils/')) {
+            return 'utils';
+          }
+          if (id.includes('/src/context/')) {
+            return 'context';
           }
         },
         // Optimize chunk file names
