@@ -138,15 +138,17 @@ export default function FrontLanding() {
 
             {/* Quick Links */}
             <div className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-2">
-              {[
-                ['Automation Hub', '/automation'],
-                ['SEO Audit', '/reports/seo'],
-                ['AI Trends', '/reports/ai-trends'],
-                ['Competitive Intelligence', '/reports/competitive-intel'],
-                ['Performance Budget', '/reports/performance-budget'],
-                ['Newsroom', '/newsroom'],
-                ['Site Health', '/site-health'],
-              ].map(([label, href]) => (
+                             {[
+                 ['Automation Hub', '/automation'],
+                 ['SEO Audit', '/reports/seo'],
+                 ['AI Trends', '/reports/ai-trends'],
+                 ['Redirect Healer', '/.netlify/functions/redirect-healer'],
+                 ['Sitemap Prioritizer', '/.netlify/functions/sitemap-prioritizer'],
+                 ['Duplicate Detector', '/.netlify/functions/duplicate-content-detector'],
+                 ['Unused Media Audit', '/.netlify/functions/unused-media-auditor'],
+                 ['Newsroom', '/newsroom'],
+                 ['Site Health', '/site-health'],
+               ].map(([label, href]) => (
                 <Link key={label as string} href={href as string}>
                   <a className="rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs text-white/80 backdrop-blur hover:bg-white/10">{label as string}</a>
                 </Link>
