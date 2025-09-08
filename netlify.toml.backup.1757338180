@@ -1,0 +1,50 @@
+[build]
+<<<<<<< HEAD
+  # Install dependencies and build the static site via Vite. Publish the dist output.
+  command = "npm ci --no-audit --no-fund && npm run build"
+=======
+  # Install Python dependencies first (if used), then Node.js dependencies and build
+  # Use npm ci with production deps to avoid dev-only native installs during Netlify build
+  command = "/usr/bin/python3 -m pip install -r requirements.txt || true && npm ci --omit=dev && npm run build"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9604
+  publish = "dist"
+  command_timeout = "30m"
+
+[build.environment]
+  NODE_VERSION = "20"
+  PYTHON_VERSION = "3.11"
+  # Ensure Netlify installs dependencies for the build
+  NETLIFY_SKIP_INSTALL = "false"
+  # Avoid optional binary downloads (electron, playwright, cypress)
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"
+  PUPPETEER_SKIP_DOWNLOAD = "1"
+  CYPRESS_INSTALL_BINARY = "0"
+  ELECTRON_SKIP_DOWNLOAD = "1"
+  # Defensive: avoid Python build steps
+  MISE_PYTHON_COMPILE = "false"
+  MISE_DISABLE = "1"
+  MISE_SHIMS = "0"
+  MISE_TOOL_VERSIONS__python = "system"
+
+# Keep the config minimal to avoid plugin-related build failures
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Set basic cache headers for static assets for better performance
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/_next/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300"

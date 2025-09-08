@@ -146,9 +146,7 @@
     "jest-axe": "^8.0.0",
     "jest-environment-jsdom": "^29.7.0",
     "jsdom": "^24.0.0",
-    "netlify-plugin-compress": "^5.1.1",
     "msw": "^2.8.7",
-    "netlify-plugin-compress": "^6.0.0",
     "node-mocks-http": "^1.17.2",
     "postcss": "^8.4.35",
     "prisma": "^6.9.0",
@@ -159,8 +157,14 @@
     "ts-jest": "^29.3.4",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.33.0",
+<<<<<<< HEAD
+    "vite": "^6.3.5",
+    "vitest": "^3.2.1",
+    "netlify-plugin-compress": "latest"
+=======
     "vite": "^6.3.6",
     "vitest": "^3.2.1"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9604
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [

@@ -1,21 +1,19 @@
 [build]
-  # Temporary: skip building and publish existing dist to unblock Netlify deploy
-  command = "/usr/bin/env bash -lc 'echo Skipping build on Netlify; true'"
+<<<<<<< HEAD
+  # Skip building on Netlify and deploy prebuilt dist/ directory
+  command = "echo Skipping build; deploying prebuilt dist"
   publish = "dist"
+=======
+  # Skip build and serve prebuilt static output from the repository
+  command = "echo 'Netlify: Skipping build; serving prebuilt out/ directory'"
+  publish = "out"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-1240
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "20"
-  PYTHON_VERSION = "3.11"
-  # Skip Netlify auto installers; rely on build command
+  # Skip dependency install since we are not building on Netlify
   NETLIFY_SKIP_INSTALL = "true"
-  # Disable mise shims entirely during Netlify builds
-  MISE_DISABLE = "1"
-  MISE_SHIMS = "0"
-  # Force mise to use system Python even during Netlify's dependency stage (defensive)
-  MISE_TOOL_VERSIONS__python = "system"
-  # Skip Electron binary downloads during install to prevent build failures
-  ELECTRON_SKIP_DOWNLOAD = "1"
 
 ## Plugins removed to avoid extra dependency installation during Netlify build
 
