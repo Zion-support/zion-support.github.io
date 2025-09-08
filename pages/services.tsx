@@ -1856,18 +1856,9 @@ export default function Services() {
   return (
     <>
       <Head>
-        <title>Our Services - Zion Tech Group</title>
-        <meta
-          name='description'
-          content='Explore our comprehensive range of micro SaaS products, AI services, and IT solutions. 350+ innovative services to transform your business.'
-        />
-        <meta
-          name='keywords'
-          content='micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity'
-        />
-        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-        <meta name='robots' content='index, follow' />
-        <link rel='canonical' href={`${contact.site}/services`} />
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive AI, IT, and Micro SaaS services to transform your business with cutting-edge technology solutions." />
+        <meta name="keywords" content="AI services, IT solutions, micro SaaS, cloud computing, cybersecurity, blockchain, web development" />
       </Head>
       <ErrorBoundary level='page'>
         <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
@@ -1877,19 +1868,15 @@ export default function Services() {
               <h1
                 className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
-                Our Services
-              </h1>
-              <p
-                className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                Get Started Today
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link 
+                href="/pricing" 
+                className="px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
               >
-                350+ Innovative Solutions for Modern Businesses
-              </p>
-              <p
-                className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              >
-                From cutting-edge AI services to comprehensive IT solutions and
-                specialized micro SaaS products, we provide everything your
-                business needs to thrive in the digital age.              </p>
+                View Pricing
+              </Link>
             </div>
           </section>
           {/* Service Categories */}
@@ -2047,22 +2034,41 @@ export default function Services() {
                   href="/contact"
                   className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
                 >
-                  Get a Quote
-                </Link>
-                <a
-                  href={`tel:${contact.phone.replace(/[^\d+]/g, '')}`}
-                  className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors"
-                >
-                  Call {contact.phone}
-                </a>
-                <a
-                  href={`mailto:${contact.email}`}
-                  className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
-                >
-                  Email Us
-                </a>
-              </div>
-            </motion.div>
+                  <category.icon className={`w-12 h-12 mb-6 ${
+                    category.color === 'blue' ? 'text-blue-400' :
+                    category.color === 'purple' ? 'text-purple-400' :
+                    category.color === 'green' ? 'text-green-400' :
+                    category.color === 'indigo' ? 'text-indigo-400' :
+                    category.color === 'yellow' ? 'text-yellow-400' :
+                    'text-red-400'
+                  }`} />
+                  <h3 className="text-2xl font-bold mb-4 text-white">{category.title}</h3>
+                  <p className="text-slate-300 mb-6">{category.description}</p>
+                  <ul className="space-y-2 mb-6">
+                    {category.services.map((service, serviceIndex) => (
+                      <li key={serviceIndex} className="flex items-center text-slate-400">
+                        <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
+                        {service}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    href="/contact"
+                    className={`inline-flex items-center font-semibold group-hover:translate-x-1 transition-transform ${
+                      category.color === 'blue' ? 'text-blue-400 hover:text-blue-300' :
+                      category.color === 'purple' ? 'text-purple-400 hover:text-purple-300' :
+                      category.color === 'green' ? 'text-green-400 hover:text-green-300' :
+                      category.color === 'indigo' ? 'text-indigo-400 hover:text-indigo-300' :
+                      category.color === 'yellow' ? 'text-yellow-400 hover:text-yellow-300' :
+                      'text-red-400 hover:text-red-300'
+                    }`}
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </Link>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 >>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
@@ -2103,24 +2109,31 @@ export default function Services() {
   );
         <section className="py-16 px-4 bg-slate-900/40">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">
-              Ready to Get Started?
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">
+              Ready to Transform Your Business?
             </h2>
             <p className="text-lg text-slate-300 mb-8">
               Contact our experts to discuss your project requirements and discover
               how our solutions can drive your business forward.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/contact" className="btn-primary">
-                Get a Quote
+              <Link 
+                href="/contact" 
+                className="group px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
+              >
+                Get Started Today
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link href="/contact" className="btn-secondary">
-                Schedule Consultation
-              </Link>
+              <a 
+                href={`tel:${contact.phone}`} 
+                className="px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
+              >
+                <span>Call {contact.phone}</span>
+              </a>
             </div>
-          </section>
-        </main>
-      </ErrorBoundary>
+          </div>
+        </section>
+      </main>
     </>
   );
   )

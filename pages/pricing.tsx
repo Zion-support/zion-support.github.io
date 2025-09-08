@@ -376,7 +376,7 @@ export default function PricingPage() {
   ];
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
-    <>
+    <UltraFuturisticBackground>
       <Head>
         <title>Pricing - Zion Tech Group</title>
         <meta name="description" content="Transparent, flexible pricing for AI, IT, and Micro SaaS services." />
@@ -398,14 +398,11 @@ export default function PricingPage() {
               neural interfaces, and advanced cybersecurity solutions with
               comprehensive pricing and detailed comparisons.
             </p>
-            <Button
-              href='/comprehensive-pricing-2026'
-              variant='primary'
-              size='lg'
-              className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 shadow-2xl hover:shadow-purple-500/30'
-            >
-              <span className='flex items-center'>
-                <Rocket className='mr-3 w-6 h-6' />                View 2026 Comprehensive Pricing
+            
+            {/* Billing Toggle */}
+            <div className="flex items-center justify-center mb-12">
+              <span className={`text-sm font-medium ${billingCycle === 'monthly' ? 'text-white' : 'text-slate-400'}`}>
+                Monthly
               </span>
             </Button>
           </div>
@@ -468,11 +465,6 @@ export default function PricingPage() {
                         {tier.period}
                       </span>
                     </div>
-                    {tier.savings && (
-                      <div className='text-green-400 text-sm mt-2'>
-                        {tier.savings}
-                      </div>
-                    )}
                   </div>
                   <ul className='text-left space-y-3 mb-8'>
                     {tier.features.map((feature, idx) => (
@@ -483,16 +475,18 @@ export default function PricingPage() {
                     ))}
                   </ul>
                   <Button
-                    href={tier.name === 'Enterprise' ? '/contact' : '/services'}
-                    variant={tier.ctaVariant}
-                    size='lg'
-                    className='w-full'
+                    className={`w-full ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700'
+                        : 'bg-slate-700 hover:bg-slate-600'
+                    }`}
                   >
-                    {tier.cta}
-                    <ArrowRight className='ml-2 w-5 h-5' />                  </Button>
-                </div>
-              </UltraFuturisticCard>
-            ))}
+                    Get Started
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </UltraFuturisticCard>
+              ))}
+            </div>
           </div>
         </div>
         {/* Value Propositions */}
@@ -709,18 +703,13 @@ export default function PricingPage() {
           </div>
         </div>
         {/* CTA Section */}
-        <div className='text-center'>
-          <UltraFuturisticCard
-            variant='quantum-holographic-advanced'
-            className='p-12'
-          >
-            <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">
               Ready to Get Started?
             </h2>
-            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-              Start your free trial today and experience the power of
-              revolutionary AI & quantum computing services. No credit card
-              required, instant setup, and full support included.
+            <p className="text-xl text-slate-400 mb-12">
+              Contact us for a custom quote tailored to your specific needs
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Button
@@ -732,14 +721,8 @@ export default function PricingPage() {
                 Start Free Trial
                 <Play className='ml-2 w-5 h-5' />
               </Button>
-              <Button
-                href='/contact'
-                variant='secondary'
-                size='lg'
-                className='text-lg px-8 py-4'
-              >
-                Contact Sales
-                <MessageSquare className='ml-2 w-5 h-5' />
+              <Button className="bg-slate-700 hover:bg-slate-600 px-8 py-4">
+                Schedule Consultation
               </Button>
             </div>
             
