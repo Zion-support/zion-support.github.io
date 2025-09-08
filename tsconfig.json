@@ -61,25 +61,14 @@
     "zion/**",
     "apps/**",
     "utils/**",
-    "types/**"
-
-    "src/main.tsx",
-    "src/App.tsx",
-    "src/App.css",
-    "src/index.css"
-  ],
-  "exclude": [
-    "src/pages/**/*",
-    "src/routes/**/*",
-    "src/components/**/*",
-    "src/context/**/*",
-    "src/hooks/**/*",
-    "src/services/**/*",
-    "src/data/**/*",
-    "src/types/**/*",
-    "src/utils/**/*",
-    "src/layout/**/*",
-    "src/lib/**/*"
-
+    "types/**",
+    "src/components/ui/alert-dialog.tsx",
+    "src/components/ui/context-menu.tsx",
+    "src/components/ui/dropdown-menu.tsx",
+    "src/components/ui/hover-card.tsx",
+    "src/components/ui/navigation-menu.tsx",
+    "src/components/ui/radio-group.tsx",
+    "src/components/ui/scroll-area.tsx",
+    "src/components/ui/toggle-group.tsx"
   ]
 }
