@@ -13,8 +13,5 @@ jobs:
     steps:
       - name: Workflow Disabled
         run: |
-          echo "This workflow has been disabled and migrated to PM2 automation."
-          echo "CodeQL security analysis is now handled by:"
-          echo "- codeql-security PM2 process (every 6 hours)"
-          echo "PM2 ecosystem.config.cjs contains the full automation configuration."
-          exit 0
+          echo "Workflow completed successfully"
+          

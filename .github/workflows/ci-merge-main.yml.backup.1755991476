@@ -32,4 +32,3 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Run workflow
         run: echo "Workflow completed successfully"
-        run: echo "Workflow completed successfully"
