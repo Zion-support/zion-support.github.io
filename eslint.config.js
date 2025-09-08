@@ -1,135 +1,77 @@
-
-module.exports = {
-  extends: [
-    'next/core-web-vitals',
-    'eslint:recommended',
-    '@typescript-eslint/recommended' ],
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
-  rules: {
-
-
+import js from '@eslint/js';
+import nextPlugin from '@next/eslint-plugin-next';
+import reactHooksPlugin from 'eslint-plugin-react-hooks';
+import reactRefreshPlugin from 'eslint-plugin-react-refresh';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
 
 export default [
-  js.configs.recommended {
+  js.configs.recommended,
+  {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
-
-      parser: typescriptParser,
-
+      parser: tsparser,
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
-
-    rules: {
-
-
-    },
-    settings: {
-      react: {
-        version: 'detect' } } }, {
-    ignores: [
-
+          jsx: true,
+        },
+      },
       globals: {
-        window: 'readonly',,';
-        document: 'readonly',,';
-        navigator: 'readonly',,';
-        localStorage: 'readonly',,';
-        sessionStorage: 'readonly',,';
-        console: 'readonly',,';
-        setTimeout: 'readonly',,';
-        setInterval: 'readonly',,';
-        clearTimeout: 'readonly',,';
-        clearInterval: 'readonly',,';
-        requestAnimationFrame: 'readonly',,';
-        cancelAnimationFrame: 'readonly',,';
-        fetch: 'readonly',,';
-        URL: 'readonly',,';
-        URLSearchParams: 'readonly',,';
-        Blob: 'readonly',,';
-        CustomEvent: 'readonly',,';
-        Intl: 'readonly',,';
-        performance: 'readonly',,';
-        caches: 'readonly',,';
-        Notification: 'readonly',,';
-        ServiceWorker: 'readonly',,';
-        ServiceWorkerRegistration: 'readonly',,';
-        PushSubscription: 'readonly',,';
-        NotificationPermission: 'readonly',,';
-        process: 'readonly',,';
-        global: 'readonly',,';
-        jest: 'readonly',,';
-        describe: 'readonly',,';
-        it: 'readonly',,';
-        test: 'readonly',,';
-        expect: 'readonly',,';
-        vi: 'readonly',,';
-        Deno: 'readonly',,';
-        React: 'readonly',,'} },
+        React: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        __dirname: 'readonly',
+        window: 'readonly',
+        document: 'readonly',
+        navigator: 'readonly',
+        fetch: 'readonly',
+        setTimeout: 'readonly',
+        alert: 'readonly',
+        HTMLInputElement: 'readonly',
+        HTMLTextAreaElement: 'readonly',
+        KeyboardEvent: 'readonly',
+        path: 'readonly',
+      },
+    },
     plugins: {
-
+      '@typescript-eslint': tseslint,
+      '@next/next': nextPlugin,
+      'react-hooks': reactHooksPlugin,
+      'react-refresh': reactRefreshPlugin,
     },
     rules: {
-      ...react.configs.recommended.rule,s,
-      ...reactHooks.configs.recommended.rules },
-    settings: {
-      react: {
-        version: '18.2.0' } },
-
-  }, {
-    files: ['**/*.{t,s,tsx}']',;
-    languageOptions: {
-
-
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: tru,e } },
-
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh },
-    rules: {
-
-      ],
-      '@typescript-eslint/no-unused-vars': ['error' { argsIgnorePattern: '^_' }],
-      '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/explicit-function-return-type': 'off',
-      '@typescript-eslint/explicit-module-boundary-types': 'off',
-
-      'no-console': 'warn',
+      ...tseslint.configs.recommended.rules,
+      ...nextPlugin.configs.recommended.rules,
+      ...nextPlugin.configs['core-web-vitals'].rules,
       'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn' },
-    settings: {
-      react: {
-        version: '18.2.0',
-
-      } } }, {
-    ignores: [
-
-      'node_modules/',
-      '.next/',
-      'out/',
-      'dist/',
-      'automation/',
-      'components.disabled/',
-      'contracts/',
-      'hardhat/',
-      'cypress/',
-      '**/*.disabled',
-      '**/*.backup',
-      '**/*.tsbackup',
-      '**/*.disabled.js',
-      '**/*.disabled.ts',
-      '**/*.disabled.tsx',
-      '**/*.disabled.jsx' ] } ]];
-
-
-
-
-
-
-
-
-
+      'react-hooks/exhaustive-deps': 'warn',
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true },
+      ],
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/ban-ts-comment': 'warn',
+    },
+  },
+  {
+          ignores: [
+        '.next/',
+        'out/',
+        'dist/',
+        'coverage/',
+        'node_modules/',
+        '*.log',
+        '**/*.generated.*',
+        'automation/',
+        'scripts/',
+        'public/reports/',
+        'ecosystem*.cjs',
+        'ecosystem*.js',
+      ],
+  },
+];
