@@ -1,24 +1,39 @@
 [build]
-  # Do not run any build. Deploy the prebuilt static export from out/ as-is.
-  command = "echo 'Skipping build; deploying prebuilt static export'"
-  publish = "out"
-  # Netlify expects a numeric timeout (in seconds)
-  command_timeout = 1800
+  # Skipping build: deploying prebuilt dist
+  command = "echo 'Skipping build: deploying prebuilt dist'"
+  publish = "dist"
+  functions = "netlify/functions"
+  command_timeout = "30m"
+  # Only run when files outside dist/ change
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ':(exclude)dist'"
 
 [build.environment]
   NODE_VERSION = "20"
   PYTHON_VERSION = "3.11"
+  # Do not install dependencies during deploy; avoids Yarn on Netlify
   NETLIFY_SKIP_INSTALL = "true"
-  NETLIFY_SKIP_BUILD = "true"
-  # Avoid optional binary downloads (electron, playwright, cypress)
-  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"
-  PUPPETEER_SKIP_DOWNLOAD = "1"
-  CYPRESS_INSTALL_BINARY = "0"
-  ELECTRON_SKIP_DOWNLOAD = "1"
+  NETLIFY_USE_YARN = "false"
+  NPM_FLAGS = "--omit=optional"
 
-# Keep the config minimal to avoid plugin-related build failures
+
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Set basic cache headers for static assets for better performance
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/_next/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300"

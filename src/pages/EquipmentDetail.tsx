@@ -1,14 +1,25 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
-export default function EquipmentDetail() {
-  const { id } = useParams();
+const EquipmentDetail: React.FC = () => {
+  const { id } = useParams<{ id?: string }>();
   return (
-    <div className="min-h-screen bg-zion-blue text-white p-8">
-      <h1 className="text-2xl font-bold">Equipment Detail</h1>
-      <p className="mt-2 text-zion-slate-light">ID: {id}</p>
-      <p className="mt-4">This is a temporary placeholder to restore the build.</p>
-    </div>
+    <>
+      <Header />
+      <main className="min-h-screen bg-zion-blue py-12 px-4">
+        <div className="container mx-auto">
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-8 text-center">
+            <h1 className="text-2xl font-bold text-white mb-2">Equipment Detail</h1>
+            <p className="text-zion-slate-light">{id ? `ID: ${id}` : "No equipment selected."}</p>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
   );
-}
+};
+
+export default EquipmentDetail;
 

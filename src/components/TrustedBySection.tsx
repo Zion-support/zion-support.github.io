@@ -2,46 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 
-const trustedCompanies = [
-  {
-    name: 'TechCorp',
-    logo: '🚀',
-    industry: 'Technology',
-    testimonial: 'Zion Tech Group transformed our AI infrastructure completely.'
-  },
-  {
-    name: 'SecureBank',
-    logo: '🏦',
-    industry: 'Finance',
-    testimonial: 'Their cybersecurity solutions are unmatched in the industry.'
-  },
-  {
-    name: 'CloudFlow',
-    logo: '☁️',
-    industry: 'Cloud Services',
-    testimonial: 'Seamless cloud migration with zero downtime.'
-  },
-  {
-    name: 'DataVault',
-    logo: '💾',
-    industry: 'Data Analytics',
-    testimonial: 'Revolutionary insights through their AI-powered analytics.'
-  },
-  {
-    name: 'InnovateLab',
-    logo: '🔬',
-    industry: 'Research',
-    testimonial: 'Cutting-edge solutions that push the boundaries of possibility.'
-  },
-  {
-    name: 'GlobalTech',
-    logo: '🌍',
-    industry: 'International',
-    testimonial: 'World-class service with local expertise worldwide.'
-  }
-];
-
-export function TrustedBySection() {
+export const TrustedBySection: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-800 to-zion-slate-900">
       <div className="container mx-auto px-4">
