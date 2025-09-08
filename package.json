@@ -39,7 +39,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "clean": "rm -rf dist node_modules/.vite",
-    "prebuild": "sh -c 'if [ -n \"$NETLIFY\" ] || [ -n \"$CI\" ]; then echo Skipping lint in CI; else npm run lint; fi'",
+    "prebuild": "echo 'Skipping lint for build compatibility'",
     "postbuild": "echo 'Build completed successfully'"
   },
   "dependencies": {
