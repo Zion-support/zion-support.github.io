@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+// import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { LanguageProvider } from './context/LanguageContext';
 import { WhitelabelProvider } from './context/WhitelabelContext';
 import { AuthProvider } from './context/auth/AuthProvider';
@@ -115,9 +115,9 @@ const App: React.FC = () => {
               </LanguageProvider>
             </Suspense>
           </Router>
-          {process.env.NODE_ENV === 'development' && (
+          {/* {process.env.NODE_ENV === 'development' && (
             <ReactQueryDevtools initialIsOpen={false} />
-          )}
+          )} */}
         </QueryClientProvider>
       </HelmetProvider>
     </ErrorBoundary>
