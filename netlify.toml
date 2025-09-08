@@ -18,6 +18,7 @@
 
 [context.branch-deploy]
   command = "npm ci --no-audit --no-fund && npm run build"
+
 # Vite/React SPA configuration
 [[redirects]]
   from = "/*"
