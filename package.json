@@ -145,6 +145,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "jsdom": "^24.0.0",
     "msw": "^2.8.7",
+    "netlify-plugin-compress": "^6.0.0",
     "node-mocks-http": "^1.17.2",
     "postcss": "^8.4.35",
     "prisma": "^6.9.0",
