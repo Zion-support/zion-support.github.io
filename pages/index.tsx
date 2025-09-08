@@ -1133,7 +1133,7 @@ export default function HomePage({ updates = [] }: { updates?: { slug: string; t
                   <li>• Predictive analytics</li>
                   <li>• Performance optimization</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_COMPREHENSIVE_REDUNDANCY.md" target="_blank" rel="noopener noreferrer" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                <Link href="/COMPREHENSIVE_REDUNDANCY_README.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
@@ -1340,10 +1340,10 @@ export default function HomePage({ updates = [] }: { updates?: { slug: string; t
               <div>
                 <h3 className="text-lg font-semibold text-yellow-400 mb-4">Automation</h3>
                 <ul className="space-y-2 text-sm text-white/70">
-                  <li><a href="https://github.com/Zion-Holdings/zion.app/blob/main/COMPREHENSIVE_REDUNDANCY_README.md" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300 transition-colors">Redundancy Systems</a></li>
-                  <li><a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_ULTIMATE_REDUNDANCY.md" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300 transition-colors">Ultimate Redundancy</a></li>
-                  <li><a href="https://github.com/Zion-Holdings/zion.app/search?q=pm2+redundancy" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300 transition-colors">PM2 Orchestration</a></li>
-                  <li><a href="https://github.com/Zion-Holdings/zion.app/blob/main/AUTOMATION_COMPLETION_REPORT.md" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300 transition-colors">Automation Status</a></li>
+                  <li><Link href="/COMPREHENSIVE_REDUNDANCY_README.md" className="hover:text-yellow-300 transition-colors">Redundancy Systems</Link></li>
+                  <li><Link href="/README_ULTIMATE_REDUNDANCY.md" className="hover:text-yellow-300 transition-colors">Ultimate Redundancy</Link></li>
+                  <li><Link href="/README_PM2_REDUNDANCY_COMPLETE.md" className="hover:text-yellow-300 transition-colors">PM2 Orchestration</Link></li>
+                  <li><Link href="/AUTOMATION_COMPLETION_REPORT.md" className="hover:text-yellow-300 transition-colors">Automation Status</Link></li>
                 </ul>
               </div>
             </div>
