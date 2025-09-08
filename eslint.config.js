@@ -131,7 +131,7 @@ export default [
         PerformanceObserver: 'readonly',
         // React
         React: 'readonly',
-        // Test globals
+        // Jest/Vitest globals
         describe: 'readonly',
         it: 'readonly',
         test: 'readonly',
@@ -180,9 +180,7 @@ export default [
         module: 'readonly',
         exports: 'readonly',
         __dirname: 'readonly',
-        __filename: 'readonly',
-        Buffer: 'readonly',
-        global: 'readonly'
+        __filename: 'readonly'
       }
     }
   },

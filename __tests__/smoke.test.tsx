@@ -10,8 +10,8 @@ describe('Smoke Tests', () => {
 
   test('Application builds successfully', async () => {
     // This test passes if the file can be imported without errors
-    expect(async () => {
-      await import('../pages/index');
+    expect(() => {
+      import('../pages/index');
     }).not.toThrow();
   });
   test('Basic functionality works', () => {
