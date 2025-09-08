@@ -6,6 +6,7 @@
     "module": "ESNext",
     "skipLibCheck": true,
 
+
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -37,26 +38,44 @@
     /* Path mapping */
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@/components/*": ["./src/components/*"],
-      "@/pages/*": ["./src/pages/*"],
-      "@/utils/*": ["./src/utils/*"],
-      "@/lib/*": ["./src/lib/*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": [
+
     "src/**/*",
     "src/**/*.tsx",
     "src/**/*.ts",
     "src/**/*.js",
     "src/**/*.jsx",
-    "vite.config.ts",
-    "vitest.config.ts"
+    "next-env.d.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
     "dist",
     ".next",
-    "build"
+    "build",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "src.disabled/**/*",
+    "src_disabled_*/**/*",
+    "**/tests/**",
+    "__tests__/**",
+    "temp_*/**",
+    "temp-*/**",
+    "temp*/**",
+    "temp_conflicts/**",
+    "temp_exclude/**",
+    "zion-*/**",
+    "zion_os/**",
+    "zion/**",
+    "apps/**",
+    "utils/**",
+    "types/**"
   ]
 }

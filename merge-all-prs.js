@@ -119,27 +119,10 @@ function processAllBranches() {
   return { mergedCount, conflictCount };
 }
 
-=======// Step 3: Fix syntax errors and merge conflicts in files
-function fixSyntaxAndConflicts() {
-  console.log('\n🔧 Fixing syntax errors and merge conflicts...');
-  
-  // Find all TypeScript/JavaScript files
-  const files = runCommand('find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" | head -100', 'Finding files to fix');
-  if (!files) return 0;
-  
-  const fileList = files.split('\n').filter(f => f.trim());
-  let fixedCount = 0;
-  
-  for (const file of fileList) {
-    try {
-      let content = fs.readFileSync(file, 'utf8');
-      let originalContent = content;
-      
-      // Remove merge conflict markers
->>>>>>> origin/main
+
       content = content.replace(/// Step 3: Resolve conflicts in a specific file
 function resolveConflictsInFile(filePath) {
-  console.log(`🔧 Resolving conflicts in ${filePath}...`);>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+  console.log(`🔧 Resolving conflicts in ${filePath}...`);
   
   try {
     if (!fs.existsSync(filePath)) {
@@ -151,12 +134,11 @@ function resolveConflictsInFile(filePath) {
     let originalContent = content;
     
     // Remove merge conflict markers
-    content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======/g, '');
+    content = content.replace(/
+    content = content.replace(//g, '');
     
     // Fix import statements
-    content = content.replace(/import React from "react",/g, 'import React from "react";');
+    content = content.replace(/import React from "react";/g, 'import React from "react";');
     content = content.replace(/import React from 'react',/g, "import React from 'react';");
     
     // Fix export statements

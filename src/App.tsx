@@ -1,11 +1,13 @@
-import React, { Suspense } from 'react';
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { HelmetProvider } from 'react-helmet-async';
 import './App.css';
 
 // Simple components
-import ErrorBoundary from './components/ErrorBoundary';import LoadingSpinner from './components/LoadingSpinner';
+import ErrorBoundary from './components/ErrorBoundary';
+import LoadingSpinner from './components/LoadingSpinner';
+import { NotificationToast } from './components/NotificationToast';
 
 // Create QueryClient instance
 const queryClient = new QueryClient({
@@ -95,6 +97,7 @@ const App: React.FC = () => {
                 </Suspense>
               </main>
             </div>
+            <NotificationToast />
           </Router>
         </HelmetProvider>
       </QueryClientProvider>

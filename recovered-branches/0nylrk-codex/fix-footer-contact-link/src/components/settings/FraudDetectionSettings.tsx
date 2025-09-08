@@ -18,7 +18,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Switch } from '@/components/ui/switch',
 import { Button } from '@/components/ui/button',
 import { Label } from '@/components/ui/label',
-import { ShieldAlert, Info } from 'lucide-react',import {
+import { ShieldAlert, Info } from 'lucide-react';import {
   Accordion,
   AccordionContent,
   AccordionItem,
