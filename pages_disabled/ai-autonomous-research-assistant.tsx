@@ -1,29 +1,27 @@
+import React from 'react';
+import ServiceLanding from '../components/sections/ServiceLanding';
 
-
-
-
-
-			pricePerMonthUSD={1299  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-
-
-			implementationWeeks="Implementation: 1–2 weeks"
-			roiNote="Average ROI 3–6x within 60 days"
+export default function AiAutonomousResearchAssistant() {
+	return (
+		<ServiceLanding
+			title="AI Autonomous Research Assistant"
+			description="Continuously research competitors, markets, and technology with agentic AI. Summarize findings, cite sources, and notify stakeholders."
+			subtitle="Always-on market and technical research"
+			pricePerMonthUSD={179}
+			implementationWeeks="3-5 days"
+			roiNote="Teams report 5–10 hours saved per week per person"
 			features={[
-				"Automated web and document monitoring with source citations",
-				"Daily/weekly executive briefs and dashboards",
-				"Regulatory watchlists and impact analysis",
-				"RFP/RFI opportunity discovery and alerts",
-				"Export to Slides/Docs/Notion",
-				"Compliance-friendly data handling, audit logs"
-
-
-
-
-
+				"Competitive landscape monitoring and alerts",
+				"Summaries with citations and links",
+				"Research briefs and weekly digests",
+				"Custom topic tracking and stakeholders",
+				"Integrations: Slack, Email, Notion, Confluence",
+				"Model routing with cost controls",
+				"Safe browsing and jailbreak resistance",
+				"One-click share and exports"
+			]}
+			industries={["SaaS", "Consulting", "VC/PE", "Enterprises"]}
+			canonical="https://ziontechgroup.com/ai-autonomous-research-assistant"
+		/>
+	);
+}

@@ -1,18 +1,19 @@
+
 <<<<<<< HEAD
-
-}
-
-              onClose(), // Close mobile menu on any click
-            }}
-          >
-            <div className="relative mr-4">
-              <item.icon className="h-5 w-5" aria-hidden="true" />
-              {item.badge && item.badge > 0 && (
-                <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center">
-                  {item.badge > 9 ? '9+' : item.badge}
-                </span>
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { useAuth } from "@/hooks/useAuth";
+import { Button } from "../ui/button";
+import { useTranslation } from "react-i18next";
 =======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Menu from 'lucide-react/dist/esm/icons/menu';
@@ -28,17 +29,111 @@ import { useAuth } from '@/hooks/useAuth';
 import { useTranslation } from 'react-i18next';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+
 interface MobileMenuProps {
   className?: string;
 }
+
 export function MobileMenu({ className }: MobileMenuProps) {
   const { user, isAuthenticated } = useAuth();
   const location = useLocation();
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
+
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+  const baseItems = [
+    {
+      key: 'home',
+      href: '/',
+      icon: Home,
+      matches: (path: string) => path === '/'
+    },
+    {
+      key: 'marketplace',
+      href: '/marketplace',
+      icon: Search,
+      matches: (path: string) => path.startsWith('/marketplace')
+    },
+    {
+      key: 'services',
+      href: '/services',
+      icon: BriefcaseIcon,
+      matches: (path: string) => path.startsWith('/services')
+    },
+    {
+      key: 'talent',
+      href: '/talent',
+      icon: User,
+      matches: (path: string) => path.startsWith('/talent')
+    },
+    {
+      key: 'equipment',
+      href: '/equipment',
+      icon: BriefcaseIcon,
+      matches: (path: string) => path.startsWith('/equipment')
+    },
+    {
+      key: 'community',
+      href: '/community',
+      icon: MessageCircle,
+      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
+    },
+    {
+      key: 'about',
+      href: '/about',
+      icon: User,
+      matches: (path: string) => path.startsWith('/about')
+    },
+    {
+      key: 'contact',
+      href: '/contact',
+      icon: MessageCircle,
+      matches: (path: string) => path.startsWith('/contact')
+    },
+    {
+      key: 'faq',
+      href: '/faq',
+      icon: MessageCircle,
+      matches: (path: string) => path.startsWith('/faq')
+    },
+    {
+      key: 'post_job',
+      href: '/post-job',
+      icon: BriefcaseIcon,
+      matches: (path: string) => path.startsWith('/post-job'),
+      authRequired: true
+    },
+    {
+      key: 'messages',
+      href: '/messages',
+      icon: MessageSquare,
+      matches: (path: string) => path.startsWith('/messages') || path.startsWith('/inbox'),
+      badge: unreadCount,
+      authRequired: true
+    },
+    {
+      key: 'dashboard',
+      href: '/dashboard',
+      icon: User,
+      matches: (path: string) => path.startsWith('/dashboard'),
+      authRequired: true
+    }
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const toggleMenu = () => setIsOpen(!isOpen);
+
   const navigationItems = [
     { href: '/', label: t('nav.home'), icon: Home, matches: (path: string) => path === '/' },
     { href: '/marketplace', label: t('nav.marketplace'), icon: Store, matches: (path: string) => path.startsWith('/marketplace') },
@@ -46,13 +141,21 @@ export function MobileMenu({ className }: MobileMenuProps) {
     { href: '/categories', label: t('nav.categories'), icon: Store, matches: (path: string) => path.startsWith('/categories') },
     { href: '/equipment', label: t('nav.equipment'), icon: Store, matches: (path: string) => path.startsWith('/equipment') },
     { href: '/community', label: t('nav.community'), icon: Users, matches: (path: string) => path.startsWith('/community') },
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   ];
+
   if (isAuthenticated) {
     navigationItems.push(
       { href: '/dashboard', label: t('nav.dashboard'), icon: Settings, matches: (path: string) => path.startsWith('/dashboard') }
     );
   }
+
   return (
     <div className={cn("md:hidden", className)}>
       {/* Mobile menu button */}
@@ -65,6 +168,7 @@ export function MobileMenu({ className }: MobileMenuProps) {
       >
         {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
       </Button>
+
       {/* Mobile menu overlay */}
       {isOpen && (
         <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm">
@@ -80,11 +184,13 @@ export function MobileMenu({ className }: MobileMenuProps) {
                 <X className="h-5 w-5" />
               </Button>
             </div>
+
             {/* Navigation items */}
             <nav className="p-4 space-y-2">
               {navigationItems.map((item) => {
                 const Icon = item.icon;
                 const isActive = item.matches(location.pathname);
+                
                 return (
                   <Link
                     key={item.href}
@@ -103,6 +209,7 @@ export function MobileMenu({ className }: MobileMenuProps) {
                 );
               })}
             </nav>
+
             {/* User section */}
             <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-zion-purple/20">
               {isAuthenticated ? (
@@ -147,32 +254,11 @@ export function MobileMenu({ className }: MobileMenuProps) {
                     {t('auth.signup')}
                   </Link>
                 </div>
->>>>>>> origin/cursor/delete-old-data-records-6bba
               )}
             </div>
           </div>
         </div>
       )}
     </div>
-<<<<<<< HEAD
-  )
-
-
-
-}
-}
-;
-
-name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),  );
-}
   );
 }
-
-}
-
-;
-
-=======
-  );
-}
->>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,12 +1,6 @@
 <<<<<<< HEAD
-
-
-    allServices = [...allServices, ...newServices]
-    let filteredServices = allServices
-}
-import React from 'react'
+<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from 'react';
 import Link from 'next/link';
 import { 
@@ -24,20 +18,41 @@ import {
   Rocket,
   Users
 } from 'lucide-react';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e899
+
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
+<<<<<<< HEAD
+=======
 import { TrustedBySection } from "@/components/TrustedBySection";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+<<<<<<<< HEAD:src/pages/ServicesPage.tsx
 import { Globe, Shield, Brain, Cloud, Lock, Zap, Users, BarChart3, FileImage, Code, Shield as ShieldIcon, Server, TrendingUp, MessageCircle, Video, FileText, Heart } from "lucide-react";
+========
+<<<<<<< HEAD
+import { Globe, ExternalLink, Star, Clock, Shield, Zap, Database, Code, Smartphone, Blockchain, Cpu, BarChart3 } from "lucide-react";
+=======
+import { Globe, Shield, Brain, Cloud, Lock, Zap, Users, BarChart3, FileImage, Code, Shield as ShieldIcon, Server, TrendingUp, MessageCircle, Video, FileText, Heart } from "lucide-react";
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
+>>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f:src/pages/ServicesPage.tsx.backup.1756208062
 import { useEffect, useState } from "react";
+<<<<<<< HEAD
+import { SEO } from "@/components/SEO";
+=======
 import { EXPANDED_SERVICES } from "@/data/expandedServices";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+
 import { ProductListing } from "@/types/listings";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Globe, Shield, Brain, Cloud, Lock, Zap, Users, BarChart3, FileImage, Code, Shield as ShieldIcon, Server, TrendingUp, MessageCircle, Video, FileText, Heart } from "lucide-react";
 import { useEffect, useState } from "react";
 import { SEO } from "@/components/SEO";
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+
 // Enhanced service listings with new micro SAAS services
 const SERVICE_LISTINGS: ProductListing[] = [
   // AI & Machine Learning Services
@@ -117,6 +132,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     rating: 4.8,
     reviewCount: 67,
   },
+
   // Cybersecurity Services
   {
     id: "ai-threat-detection",
@@ -175,6 +191,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     rating: 4.8,
     reviewCount: 92,
   },
+
   // Cloud & Infrastructure Services
   {
     id: "multi-cloud-management",
@@ -233,6 +250,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     rating: 4.5,
     reviewCount: 73,
   },
+
   // Business Intelligence Services
   {
     id: "ai-crm",
@@ -291,6 +309,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     rating: 4.8,
     reviewCount: 98,
   },
+
   // Communication & Collaboration Services
   {
     id: "ai-meeting-assistant",
@@ -349,6 +368,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     rating: 4.8,
     reviewCount: 178,
   },
+
   // Specialized Tools
   {
     id: "ai-legal-review",
@@ -407,6 +427,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     rating: 4.8,
     reviewCount: 267,
   },
+
   // Legacy services (keeping existing ones)
   {
     id: "service-1",
@@ -520,9 +541,11 @@ const SERVICE_LISTINGS: ProductListing[] = [
     reviewCount: 85,
   },
 ];
+
 function getRandomItem<T>(arr: T[]): T {
   return arr[Math.floor(Math.random() * arr.length)];
 }
+
 function generateRandomService(idNum: number): ProductListing {
   const templates = [
     {
@@ -568,6 +591,7 @@ function generateRandomService(idNum: number): ProductListing {
       tags: ["Transformation", "Strategy", "Business"],
     },
   ];
+
   const authors = [
     "Global AI Experts",
     "InnovateTech",
@@ -576,17 +600,20 @@ function generateRandomService(idNum: number): ProductListing {
     "DataVisor",
     "NexGen Solutions",
   ];
+
   const images = [
     "https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500",
     "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500",
     "https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500",
     "https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500",
   ];
+
   const template = getRandomItem(templates);
   const author = getRandomItem(authors);
   const price = Math.round(
     Math.random() * (template.max - template.min) + template.min
   );
+
   return {
     id: `auto-service-${idNum}`,
     title: template.title,
@@ -603,6 +630,7 @@ function generateRandomService(idNum: number): ProductListing {
     reviewCount: Math.floor(50 + Math.random() * 150),
   };
 }
+
 // Enhanced filter options for all service categories
 const SERVICE_FILTERS = [
   { label: 'AI & ML', value: 'ai-ml' },
@@ -618,17 +646,22 @@ const SERVICE_FILTERS = [
   { label: 'Consulting', value: 'consulting' },
   { label: 'Strategy', value: 'strategy' },
 ];
+
 export default function ServicesPage() {
   const [listings, setListings] = useState<ProductListing[]>(SERVICE_LISTINGS);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setListings(prev => [...prev, generateRandomService(prev.length + 1)]);
     }, 120000);
+
     return () => clearInterval(interval);
   }, []);
+
   return (
 <<<<<<< HEAD
-
+    <>
+<<<<<<< HEAD
 =======
     <div className="min-h-screen bg-background">
       <SEO 
@@ -637,10 +670,20 @@ export default function ServicesPage() {
         keywords="IT services, AI services, technology consulting, Zion Tech Group"
         url="https://ziontechgroup.com/services"
       />
+      
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <h2 className="text-white text-lg font-medium">Featured Services</h2>
           <div className="flex flex-wrap gap-2">
+<<<<<<< HEAD
+            <Link to="/enhanced-services">
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+                <Globe className="h-4 w-4 mr-2" />
+                Enhanced AI & IT Services
+              </Button>
+            </Link>
+=======
       <div className="bg-gradient-to-r from-zion-blue-dark via-zion-purple-dark to-zion-slate-dark py-8 px-4 md:px-8 mb-8 border-b border-zion-purple/30">
         <div className="container mx-auto">
           <div className="text-center mb-6">
@@ -652,6 +695,7 @@ export default function ServicesPage() {
               From AI content generation to cybersecurity, we have the tools you need to succeed.
             </p>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
             <div className="bg-zion-purple/20 backdrop-blur-sm rounded-lg p-4 border border-zion-purple/30">
               <div className="flex items-center gap-3">
@@ -690,7 +734,9 @@ export default function ServicesPage() {
               </div>
             </div>
           </div>
+
           <div className="flex flex-wrap justify-center gap-4">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
             <Link to="/it-onsite-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10 backdrop-blur-sm">
                 <Globe className="h-4 w-4 mr-2" />
@@ -706,6 +752,7 @@ export default function ServicesPage() {
               <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 backdrop-blur-sm">
                 <MessageCircle className="h-4 w-4 mr-2" />
                 Contact Sales
+=======
             <Link to="/comprehensive-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                 <Globe className="h-4 w-4 mr-2" />
@@ -715,11 +762,17 @@ export default function ServicesPage() {
             <Link to="/contact">
               <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                 Request a Quote
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               </Button>
             </Link>
           </div>
         </div>
       </div>
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-zion-blue mb-4">IT & AI Services</h1>
@@ -727,6 +780,7 @@ export default function ServicesPage() {
             Find expert technology service providers for your business needs, from AI development to infrastructure management.
           </p>
         </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {listings.map((service) => (
             <div key={service.id} className="bg-white rounded-lg shadow-lg p-6 border border-zion-blue-light">
@@ -734,6 +788,7 @@ export default function ServicesPage() {
                 <h3 className="text-xl font-semibold text-zion-blue mb-2">{service.title}</h3>
                 <p className="text-zion-slate-light">{service.description}</p>
               </div>
+              
               <div className="flex items-center justify-between mb-4">
                 <div className="text-2xl font-bold text-zion-purple">
                   ${service.price?.toLocaleString()}
@@ -744,6 +799,7 @@ export default function ServicesPage() {
                   <span className="text-zion-slate-light text-sm">({service.reviewCount})</span>
                 </div>
               </div>
+
               <div className="flex flex-wrap gap-2 mb-4">
                 {service.tags.slice(0, 3).map((tag, index) => (
                   <span key={index} className="px-2 py-1 bg-zion-blue/10 text-zion-blue text-xs rounded-full">
@@ -751,6 +807,7 @@ export default function ServicesPage() {
                   </span>
                 ))}
               </div>
+
               <Link to="/contact">
                 <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                   Get Quote
@@ -761,6 +818,8 @@ export default function ServicesPage() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+=======
       <DynamicListingPage 
         title="Comprehensive Micro SAAS Solutions"
         description="Find the perfect AI-powered tools and services to accelerate your business growth. All services include free trials and expert support."
@@ -769,8 +828,11 @@ export default function ServicesPage() {
         categoryFilters={SERVICE_FILTERS}
         initialPrice={{ min: 19, max: 5000 }}
       />
+      
       <TrustedBySection />
     </>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   );
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba

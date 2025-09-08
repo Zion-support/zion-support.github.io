@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React, { useState } from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
@@ -29,21 +32,26 @@ import {
   Clock,
   DollarSign
 } from 'lucide-react';
+
 export default function MicroSaasServices() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPricingTier, setSelectedPricingTier] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('rating');
+
   const categories = ['all', ...Array.from(new Set(MICRO_SAAS_SERVICES.map(service => service.category)))];
   const pricingTiers = ['all', ...Array.from(new Set(MICRO_SAAS_SERVICES.map(service => service.pricingTier)))];
+
   const filteredServices = MICRO_SAAS_SERVICES.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.subcategory.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === selectedPricingTier;
+    
     return matchesSearch && matchesCategory && matchesPricing;
   });
+
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'rating':
@@ -56,6 +64,7 @@ export default function MicroSaasServices() {
         return 0;
     }
   });
+
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI': return <Bot className="h-5 w-5" />;
@@ -71,6 +80,7 @@ export default function MicroSaasServices() {
       default: return <Globe className="h-5 w-5" />;
     }
   };
+
   const getPricingDisplay = (service: MicroSaasService) => {
     if (service.price.oneTime) {
       return `${service.price.currency}${service.price.oneTime.toLocaleString()}`;
@@ -79,6 +89,8 @@ export default function MicroSaasServices() {
     }
     return 'Contact for pricing';
   };
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
+
 const MicroSaasServices: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white pt-20">
@@ -91,6 +103,7 @@ const MicroSaasServices: React.FC = () => {
             Scalable software solutions designed to streamline operations and boost productivity for growing businesses
           </p>
         </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
             <h3 className="text-xl font-semibold text-white mb-4">Custom Development</h3>
@@ -99,6 +112,7 @@ const MicroSaasServices: React.FC = () => {
             </p>
             <div className="text-cyan-400 font-semibold">Starting at $1,999/mo</div>
           </div>
+          
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
             <h3 className="text-xl font-semibold text-white mb-4">Scalable Architecture</h3>
             <p className="text-gray-400 mb-4">
@@ -106,6 +120,7 @@ const MicroSaasServices: React.FC = () => {
             </p>
             <div className="text-cyan-400 font-semibold">Starting at $2,499/mo</div>
           </div>
+          
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
             <h3 className="text-xl font-semibold text-white mb-4">API Integration</h3>
             <p className="text-gray-400 mb-4">
@@ -113,7 +128,13 @@ const MicroSaasServices: React.FC = () => {
             </p>
             <div className="text-cyan-400 font-semibold">Starting at $1,499/mo</div>
           </div>
+<<<<<<< HEAD
+        </div>
+      </div>
+    </div>
+=======
         </section>
+
         {/* Services Grid */}
         <section className="py-12 px-4">
           <div className="container mx-auto">
@@ -125,6 +146,7 @@ const MicroSaasServices: React.FC = () => {
                 Discover the perfect solution for your business needs
               </p>
             </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {sortedServices.map((service) => (
                 <Card key={service.id} className="bg-zion-blue-dark/50 backdrop-blur-md border-zion-blue-light/20 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105 group">
@@ -144,13 +166,16 @@ const MicroSaasServices: React.FC = () => {
                         <span className="text-xs text-zion-slate-light">({service.reviewCount})</span>
                       </div>
                     </div>
+                    
                     <CardTitle className="text-white text-lg group-hover:text-zion-cyan transition-colors">
                       {service.title}
                     </CardTitle>
+                    
                     <CardDescription className="text-zion-slate-light text-sm leading-relaxed">
                       {service.description}
                     </CardDescription>
                   </CardHeader>
+
                   <CardContent className="space-y-4">
                     {/* Pricing */}
                     <div className="flex items-center justify-between">
@@ -161,6 +186,7 @@ const MicroSaasServices: React.FC = () => {
                         {service.pricingTier}
                       </Badge>
                     </div>
+
                     {/* Features */}
                     <div className="space-y-2">
                       <h4 className="text-sm font-semibold text-white">Key Features:</h4>
@@ -177,6 +203,7 @@ const MicroSaasServices: React.FC = () => {
                         )}
                       </div>
                     </div>
+
                     {/* Benefits */}
                     <div className="space-y-2">
                       <h4 className="text-sm font-semibold text-white">Benefits:</h4>
@@ -189,6 +216,7 @@ const MicroSaasServices: React.FC = () => {
                         ))}
                       </div>
                     </div>
+
                     {/* Contact Info */}
                     <div className="pt-4 border-t border-zion-blue-light/20">
                       <div className="flex items-center justify-between text-sm text-zion-slate-light mb-3">
@@ -201,6 +229,7 @@ const MicroSaasServices: React.FC = () => {
                           <span>{service.targetAudience.length} target audiences</span>
                         </div>
                       </div>
+                      
                       <div className="flex flex-col gap-2 text-xs text-zion-slate-light">
                         <div className="flex items-center gap-2">
                           <Mail className="h-3 w-3" />
@@ -212,6 +241,7 @@ const MicroSaasServices: React.FC = () => {
                         </div>
                       </div>
                     </div>
+
                     {/* Action Buttons */}
                     <div className="flex gap-2 pt-4">
                       <Button 
@@ -234,6 +264,7 @@ const MicroSaasServices: React.FC = () => {
                 </Card>
               ))}
             </div>
+
             {sortedServices.length === 0 && (
               <div className="text-center py-12">
                 <div className="text-zion-slate-light text-lg mb-4">
@@ -254,6 +285,7 @@ const MicroSaasServices: React.FC = () => {
             )}
           </div>
         </section>
+
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="container mx-auto text-center">
@@ -282,7 +314,10 @@ const MicroSaasServices: React.FC = () => {
           </div>
         </section>
       </main>
+
     </>
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
   );
 };
+
 export default MicroSaasServices;

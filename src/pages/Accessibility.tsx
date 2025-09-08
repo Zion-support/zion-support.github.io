@@ -1,4 +1,26 @@
 import React from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export default function Accessibility() {
+	return (
+		<div className="min-h-screen bg-background text-foreground py-16">
+			<div className="container mx-auto px-4 max-w-3xl">
+				<h1 className="text-3xl font-bold mb-4">Accessibility</h1>
+				<p className="text-muted-foreground">
+					We are committed to ensuring our website is accessible to all users. If you experience
+					any difficulty accessing content, please contact us at info@ziontechgroup.com.
+				</p>
+			</div>
+		</div>
+	);
+}
+=======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+import { Eye, Ear, Hand, Brain, Shield, Users, Globe, Zap, Target, TrendingUp, Award, CheckCircle } from 'lucide-react';
+
+const Accessibility: React.FC = () => {
   const accessibilityFeatures = [
     {
       icon: Eye,
@@ -25,6 +47,7 @@ import React from 'react';
       features: ["Clear navigation", "Consistent layout", "Readable fonts", "Logical content flow"]
     }
   ];
+
   const complianceStandards = [
     {
       standard: "WCAG 2.1",
@@ -51,6 +74,7 @@ import React from 'react';
       status: "Compliant"
     }
   ];
+
   const toolsAndTechnologies = [
     {
       name: "Screen Readers",
@@ -83,6 +107,7 @@ import React from 'react';
       icon: Eye
     }
   ];
+
   const ongoingImprovements = [
     "Regular accessibility audits and testing",
     "User feedback integration",
@@ -91,6 +116,7 @@ import React from 'react';
     "Third-party accessibility reviews",
     "Compliance monitoring and reporting"
   ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -126,6 +152,7 @@ import React from 'react';
           </div>
         </div>
       </section>
+
       {/* Accessibility Features */}
       <section id="features" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -138,6 +165,7 @@ import React from 'react';
               an inclusive experience for all users.
             </p>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {accessibilityFeatures.map((feature, index) => (
               <div
@@ -162,6 +190,7 @@ import React from 'react';
           </div>
         </div>
       </section>
+
       {/* Compliance Standards */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -174,6 +203,7 @@ import React from 'react';
               and regulations to ensure equal access for all users.
             </p>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {complianceStandards.map((standard, index) => (
               <div
@@ -193,6 +223,7 @@ import React from 'react';
           </div>
         </div>
       </section>
+
       {/* Tools and Technologies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -205,6 +236,7 @@ import React from 'react';
               assistive technologies and accessibility tools.
             </p>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {toolsAndTechnologies.map((tool, index) => (
               <div
@@ -221,6 +253,7 @@ import React from 'react';
           </div>
         </div>
       </section>
+
       {/* Ongoing Improvements */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -260,6 +293,7 @@ import React from 'react';
           </div>
         </div>
       </section>
+
       {/* Contact Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -289,4 +323,10 @@ import React from 'react';
     </div>
   );
 };
+
+<<<<<<< HEAD
 export default Accessibility;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+export default Accessibility;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

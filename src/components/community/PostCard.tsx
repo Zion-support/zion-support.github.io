@@ -1,37 +1,14 @@
-<<<<<<< HEAD
-
-
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { ForumPost } from "@/types/community";
-import { logInfo } from '@/utils/productionLogger';
-interface PostCardProps {
-  post: ForumPost,
-  compact?: boolean
-}
-
-
-import React from 'react',
-import { formatDistanceToNow } from "date-fns",
-import Link from "next/link",
-import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from 'lucide-react'
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { cn } from "@/lib/utils",
-import { ForumPost } from "@/types/community",
-import { logInfo } from '@/utils/productionLogger',
-
-=======
 import React from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { ForumPost } from '@/types/community';
+
 interface PostCardProps {
   post: ForumPost;
 }
+
 export default function PostCard({ post }: PostCardProps) {
   return (
     <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-4">
@@ -53,6 +30,10 @@ export default function PostCard({ post }: PostCardProps) {
             <span>{post.likes} likes</span>
             <span>{post.views} views</span>
           </div>
+=======
+
+interface PostCardProps {
+  post: {
     id: string;
     title: string;
     content: string;
@@ -62,6 +43,7 @@ export default function PostCard({ post }: PostCardProps) {
     replies: number;
   };
 }
+
 const PostCard: React.FC<PostCardProps> = ({ post }) => {
   return (
     <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-4">
@@ -73,11 +55,19 @@ const PostCard: React.FC<PostCardProps> = ({ post }) => {
         <div className="flex items-center space-x-4">
           <span>{post.likes} likes</span>
           <span>{post.replies} replies</span>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
         </div>
       </div>
     </div>
   );
-};
-export default PostCard;
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
+=======
+};
+
+export default PostCard;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

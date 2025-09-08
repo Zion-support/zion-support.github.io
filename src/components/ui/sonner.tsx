@@ -1,10 +1,21 @@
-"use client";
+<<<<<<< HEAD
+import React from 'react';
+import { Toaster as Sonner } from "sonner"
+<<<<<<< HEAD
 =======
+"use client";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+
 import { useTheme } from "../ThemeProvider";
 import { Toaster as Sonner } from "sonner";
+
 type ToasterProps = React.ComponentProps<typeof Sonner>;
+
 const Toaster = ({ ...props }: ToasterProps) => {
   const { theme = "system" } = useTheme();
+
   return (
     <Sonner
       theme={theme as ToasterProps["theme"]}
@@ -24,4 +35,5 @@ const Toaster = ({ ...props }: ToasterProps) => {
     />
   );
 };
+
 export { Toaster };

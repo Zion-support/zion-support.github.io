@@ -1,11 +1,13 @@
-<<<<<<< HEAD
 
-
-=======
 import React from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { Link } from 'react-router-dom';
 import { SEO } from './SEO';
 import { completeSitemap } from '../config/sitemap';
+
 export default function SitemapPage() {
   const publicRoutes = completeSitemap.filter(route => !route.requiredAuth);
   const talentRoutes = completeSitemap.filter(route => 
@@ -25,6 +27,7 @@ export default function SitemapPage() {
     route.requiredRoles && 
     route.requiredRoles.includes('admin')
   );
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO 
@@ -33,6 +36,7 @@ export default function SitemapPage() {
         keywords="sitemap, navigation, website structure, Zion Tech Group"
         canonical="https://ziontechgroup.com/content/sitemap-page"
       />
+      
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-white mb-4">Site Map</h1>
@@ -40,6 +44,7 @@ export default function SitemapPage() {
             Complete navigation guide for Zion Tech Group
           </p>
         </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Public Routes */}
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -57,6 +62,7 @@ export default function SitemapPage() {
               ))}
             </ul>
           </div>
+
           {/* Talent Routes */}
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
             <h2 className="text-2xl font-semibold text-zion-cyan mb-4">Talent & Job Seeker Pages</h2>
@@ -73,6 +79,7 @@ export default function SitemapPage() {
               ))}
             </ul>
           </div>
+
           {/* Employer Routes */}
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
             <h2 className="text-2xl font-semibold text-zion-cyan mb-4">Employer & Buyer Pages</h2>
@@ -89,6 +96,7 @@ export default function SitemapPage() {
               ))}
             </ul>
           </div>
+
           {/* Admin Routes */}
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
             <h2 className="text-2xl font-semibold text-zion-cyan mb-4">Administrative Pages</h2>
@@ -101,10 +109,13 @@ export default function SitemapPage() {
                   >
                     {route.label || route.title}
                   </Link>
+<<<<<<< HEAD
+=======
 import { completeSitemap, dynamicPaths } from '@/config/sitemap';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import { SEO } from './SEO';
+
 // Map sitemap paths to their actual routes in the application
 const pathMap: Record<string, string> = {
   '/about': '/content/about',
@@ -124,7 +135,9 @@ const pathMap: Record<string, string> = {
   '/project/:projectId/room': '/dashboard/project/:projectId/room',
   '/post-job': '/marketplace/post-job',
 };
+
 const resolvePath = (path: string): string => pathMap[path] ?? path;
+
 export const SitemapPage: React.FC = () => {
   return (
     <>
@@ -132,12 +145,19 @@ export const SitemapPage: React.FC = () => {
         title="Sitemap | Zion AI Marketplace"
         description="Complete sitemap of the Zion AI Marketplace"
         keywords="sitemap, zion, ai marketplace, navigation"
-        canonical="https://ziontechgroup.com/sitemap-page"
+<<<<<<< HEAD
+<<<<<<< HEAD
+        canonical="https://ziontechgroup.com/content/sitemap-page"
 =======
         canonical="https://ziontechgroup.com/sitemap-page"
+>>>>>>> origin/cursor/website-audit-and-enhancement-beb3
+=======
+        canonical="https://ziontechgroup.com/sitemap-page"
+>>>>>>> origin/cursor/website-audit-and-enhancement-24ce
       />
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-8">Sitemap</h1>
+        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Public Pages */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
@@ -159,36 +179,24 @@ export const SitemapPage: React.FC = () => {
               }
             </ul>
           </div>
->>>>>>> origin/cursor/delete-old-data-records-6bba
+          
           {/* Talent Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Talent Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Requires talent or creator account</p>
             <ul className="space-y-2">
               {completeSitemap
-<<<<<<< HEAD
-
-                .filter(route =>
-                  route.requiredRoles?.includes('jobSeeker') |
-
-=======
                 .filter(route => 
                   route.requiredRoles?.includes('jobSeeker') || 
->>>>>>> origin/cursor/delete-old-data-records-6bba
                   route.requiredRoles?.includes('creator')
                 )
                 .map(route => (
                   <li key={route.path}>
                     <Link
-<<<<<<< HEAD
-
-
-=======
                       to={resolvePath(route.path)}
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
->>>>>>> origin/cursor/delete-old-data-records-6bba
                       {route.label}
                     </Link>
                   </li>
@@ -196,48 +204,24 @@ export const SitemapPage: React.FC = () => {
               }
             </ul>
           </div>
-<<<<<<< HEAD
-
-ursor/fix-website-loading-errors-and-merge-6662
-          {/* Client Routes */}
-            </ul>
-          </div>
-            </ul>;
-          </div>;
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+          
           {/* Client Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Client Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Requires employer or buyer account</p>
             <ul className="space-y-2">
               {completeSitemap
-<<<<<<< HEAD
-
-                .filter(route =>
-                  route.requiredRoles?.includes('employer') |
-
-=======
                 .filter(route => 
                   route.requiredRoles?.includes('employer') || 
->>>>>>> origin/cursor/delete-old-data-records-6bba
                   route.requiredRoles?.includes('buyer')
                 )
                 .map(route => (
                   <li key={route.path}>
                     <Link
-<<<<<<< HEAD
-
-
-=======
                       to={resolvePath(route.path)}
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
->>>>>>> origin/cursor/delete-old-data-records-6bba
                       {route.label}
                     </Link>
                   </li>
@@ -245,49 +229,24 @@ ursor/fix-website-loading-errors-and-merge-6662
               }
             </ul>
           </div>
-<<<<<<< HEAD
-
-ursor/fix-website-loading-errors-and-merge-6662
-          {/* Shared Routes */}
-            </ul>
-          </div>
-            </ul>;
-          </div>;
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+          
           {/* Shared Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Authenticated User Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Requires any account type</p>
             <ul className="space-y-2">
               {completeSitemap
-<<<<<<< HEAD
-
-                .filter(route =>
-                  route.requiredAuth &&
-                  (!route.requiredRoles |route.requiredRoles.length === 0)
-
-=======
                 .filter(route => 
                   route.requiredAuth && 
                   (!route.requiredRoles || route.requiredRoles.length === 0)
->>>>>>> origin/cursor/delete-old-data-records-6bba
                 )
                 .map(route => (
                   <li key={route.path}>
                     <Link
-<<<<<<< HEAD
-
-
-=======
                       to={resolvePath(route.path)}
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
->>>>>>> origin/cursor/delete-old-data-records-6bba
                       {route.label}
                     </Link>
                   </li>
@@ -295,46 +254,23 @@ ursor/fix-website-loading-errors-and-merge-6662
               }
             </ul>
           </div>
-<<<<<<< HEAD
-
-ursor/fix-website-loading-errors-and-merge-6662
-          {/* Admin Routes */}
-            </ul>
-          </div>
-            </ul>;
-          </div>;
-
-
-
-=======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+          
           {/* Admin Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Admin Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Requires admin account</p>
             <ul className="space-y-2">
               {completeSitemap
-<<<<<<< HEAD
-
-                .filter(route =>
-
-=======
                 .filter(route => 
->>>>>>> origin/cursor/delete-old-data-records-6bba
                   route.requiredRoles?.includes('admin')
                 )
                 .map(route => (
                   <li key={route.path}>
                     <Link
-<<<<<<< HEAD
-
-
-=======
                       to={resolvePath(route.path)}
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
->>>>>>> origin/cursor/delete-old-data-records-6bba
                       {route.label}
                     </Link>
                   </li>
@@ -342,22 +278,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               }
             </ul>
           </div>
-<<<<<<< HEAD
-
-                      href = {resolvePath(route && route.path),}
-                      className="flex items-center hover:text-zion-purple">;
-                      <ChevronRight className="h-4 w-4 mr-2" />;
-                      {route && route.label}
-
-
-                    </Link>;
-                  </li>;
-                ));
-              }
-            </ul>;
-          </div>;
-
-=======
+          
           {/* Dynamic Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>
@@ -369,12 +290,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <ChevronRight className="h-4 w-4 mr-2" />
                     {path} <span className="ml-2 text-xs italic">({key})</span>
                   </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 </li>
               ))}
             </ul>
           </div>
         </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+
         {/* All Routes List */}
         <div className="mt-12 bg-white/10 backdrop-blur-sm rounded-lg p-6">
           <h2 className="text-2xl font-semibold text-zion-cyan mb-6">Complete Route List</h2>
@@ -401,9 +329,12 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>
   );
 }
+<<<<<<< HEAD
+=======
       </div>
     </>
   );
 };
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/delete-old-data-records-6bba
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

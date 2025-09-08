@@ -1,34 +1,10 @@
-<<<<<<< HEAD
-
-
-
-  return (
-    <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">
-      {visibleCategories.map((category) => {
-
-        const Icon = iconMap[category.icon as keyof typeof iconMap],
-        return (
-
-
-          <Link key={category.id} href={`/community/category/${category.id}`}>
-            <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">
-              <CardHeader className="flex flex-row items-center gap-4">
-                <div className="p-2 bg-zion-purple/10 rounded-full">
-                  <Icon className="h-6 w-6 text-zion-purple" />
-                </div>
-                <CardTitle className="text-xl">{category.name}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">{category.description}</CardDescription>
-              </CardContent>
-            </Card>
-          </Link>
-        )
-
-
-=======
 import React from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { ForumCategoryInfo } from '@/types/community';
+
 export default function ForumCategories() {
   const categories: ForumCategoryInfo[] = [
     {
@@ -58,6 +34,7 @@ export default function ForumCategories() {
       }
     }
   ];
+
   return (
     <div className="space-y-4">
       {categories.map((category) => (
@@ -69,6 +46,8 @@ export default function ForumCategories() {
             {category.lastPost && (
               <span>Last: {category.lastPost.title} by {category.lastPost.author}</span>
             )}
+=======
+
 interface ForumCategoriesProps {
   categories: Array<{
     id: string;
@@ -77,6 +56,7 @@ interface ForumCategoriesProps {
     postCount: number;
   }>;
 }
+
 const ForumCategories: React.FC<ForumCategoriesProps> = ({ categories }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -88,12 +68,20 @@ const ForumCategories: React.FC<ForumCategoriesProps> = ({ categories }) => {
             <span className="text-sm text-zion-slate-light">
               {category.postCount} posts
             </span>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
           </div>
         </div>
       ))}
     </div>
   );
-};
-export default ForumCategories;
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
->>>>>>> origin/cursor/delete-old-data-records-6bba
+=======
+};
+
+export default ForumCategories;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

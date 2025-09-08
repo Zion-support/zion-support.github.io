@@ -1,33 +1,88 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+
 export function ScrollToTop() {
 import React, { useState, useEffect } from 'react';
+
 const ScrollToTop: React.FC = () => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+import { ChevronUp } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a577
+
 export function ScrollToTop() {
 =======
 import React, { useState, useEffect } from 'react';
+
 const ScrollToTop: React.FC = () => {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-dfe9
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.pageYOffset > 300) {
-        setIsVisible(true)
+        setIsVisible(true);
       } else {
-        setIsVisible(false)
+        setIsVisible(false);
       }
     };
+
     window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
+<<<<<<< HEAD
+<<<<<<< HEAD
       behavior: 'smooth',
 =======
+<<<<<<< HEAD
+      behavior: 'smooth'
+=======
       behavior: 'smooth',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-dfe9
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+      behavior: 'smooth',
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     });
   };
+
   return (
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+    <AnimatePresence>
+      {isVisible && (
+        <motion.button
+          onClick={scrollToTop}
+<<<<<<< HEAD
+          className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white rounded-full shadow-2xl hover:shadow-zion-purple/50 transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-zion-purple/30"
+          initial={{ opacity: 0, scale: 0, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0, y: 20 }}
+          whileHover={{ y: -2 }}
+          whileTap={{ scale: 0.95 }}
+          aria-label="Scroll to top"
+        >
+          <ChevronUp className="w-6 h-6 mx-auto" />
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center z-50"
           aria-label="Back to top"
           initial={{ opacity: 0, scale: 0, y: 20 }}
@@ -47,18 +102,29 @@ const ScrollToTop: React.FC = () => {
         >
           <svg 
             className="w-6 h-6" 
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     <>
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 p-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:shadow-xl hover:scale-110"
+          className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           aria-label="Scroll to top"
         >
           <svg 
             className="w-6 h-6 mx-auto" 
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-dfe9
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"
@@ -70,11 +136,31 @@ const ScrollToTop: React.FC = () => {
               d="M5 10l7-7m0 0l7 7m-7-7v18" 
             />
           </svg>
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a577
+        </motion.button>
+      )}
+    </AnimatePresence>
+  );
+}
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         </button>
       )}
     </>
   );
 };
+
 export default ScrollToTop;
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-dfe9
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

@@ -37,12 +37,14 @@ export interface SpecializedIndustrySolution {
   rating: number;
   reviews: number;
 }
+
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
+
 export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
   {
     id: 'healthcare-ai-diagnostic-platform',
@@ -69,7 +71,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/healthcare-ai-diagnostic-platform',
     marketPosition: 'Leading healthcare AI diagnostic platform. Competes with IBM Watson Health ($50K+ setup), Google Health AI ($100K+ setup). Our advantage: Cost-effective implementation and comprehensive features.',
-    targetAudience: 'Hospitals, Medical clinics, Diagnostic centers, Research institutions, Healthcare networks',
+    targetAudience: ['Hospitals', 'Medical clinics', 'Diagnostic centers', 'Research institutions', 'Healthcare networks'],
     trialDays: 30,
     setupTime: '4-6 weeks',
     category: 'Healthcare Technology',
@@ -114,7 +116,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/fintech-blockchain-platform',
     marketPosition: 'Leading fintech blockchain platform. Competes with Ripple ($100K+ setup), ConsenSys ($200K+ setup). Our advantage: Cost-effective implementation and comprehensive financial services.',
-    targetAudience: 'Banks, Credit unions, Payment processors, Investment firms, Insurance companies',
+    targetAudience: ['Banks', 'Credit unions', 'Payment processors', 'Investment firms', 'Insurance companies'],
     trialDays: 30,
     setupTime: '6-8 weeks',
     category: 'FinTech Solutions',
@@ -159,7 +161,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/manufacturing-iot-platform',
     marketPosition: 'Leading manufacturing IoT platform. Competes with Siemens Mindsphere ($50K+ setup), GE Predix ($100K+ setup). Our advantage: Cost-effective implementation and comprehensive features.',
-    targetAudience: 'Manufacturing companies, Industrial facilities, Production plants, Logistics companies, Energy companies',
+    targetAudience: ['Manufacturing companies', 'Industrial facilities', 'Production plants', 'Logistics companies', 'Energy companies'],
     trialDays: 30,
     setupTime: '4-6 weeks',
     category: 'Manufacturing Technology',
@@ -204,7 +206,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/retail-ai-optimization-platform',
     marketPosition: 'Leading retail AI optimization platform. Competes with Salesforce Commerce Cloud ($2K+ setup), Adobe Commerce ($2.5K+ setup). Our advantage: AI-powered optimization and comprehensive features.',
-    targetAudience: 'Retail chains, E-commerce companies, Shopping centers, Department stores, Specialty retailers',
+    targetAudience: ['Retail chains', 'E-commerce companies', 'Shopping centers', 'Department stores', 'Specialty retailers'],
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'Retail Technology',
@@ -243,6 +245,33 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
       'Multi-carrier integration',
       'Mobile app for drivers'
     ],
+<<<<<<< HEAD
+    popular: true,
+    icon: '🚚',
+    color: 'from-teal-600 to-green-600',
+    textColor: 'text-teal-400',
+    link: 'https://ziontechgroup.com/logistics-supply-chain-ai',
+    marketPosition: 'Leading logistics AI platform. Competes with Manhattan Associates ($100K+ setup), JDA Software ($150K+ setup). Our advantage: AI-powered optimization and cost-effective implementation.',
+    targetAudience: 'Logistics companies, Supply chain managers, E-commerce companies, Manufacturing firms, Retail chains',
+    trialDays: 30,
+    setupTime: '4-6 weeks',
+    category: 'Logistics Technology',
+    realService: true,
+    technology: ['Machine Learning', 'Python', 'React', 'Node.js', 'GPS tracking', 'IoT sensors'],
+    integrations: ['WMS systems', 'TMS systems', 'ERP systems', 'Carrier APIs', 'Tracking systems'],
+    useCases: ['Route optimization', 'Supply chain management', 'Inventory optimization', 'Cost reduction', 'Performance tracking'],
+    roi: 'Average 350% ROI through reduced costs and improved operational efficiency.',
+    competitors: ['Manhattan Associates', 'JDA Software', 'Oracle SCM', 'SAP SCM'],
+    marketSize: '$67.2B supply chain management market',
+    growthRate: '11.2% annual growth',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Advanced logistics AI platform with comprehensive optimization and tracking capabilities.',
+    launchDate: '2024-02-15',
+    customers: 38,
+    rating: 4.7,
+    reviews: 33
+=======
     capabilities: [
       'Production optimization',
       'Predictive maintenance',
@@ -262,6 +291,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
       'Performance analytics'
     ]
   },
+
   {
     id: 'ai-powered-healthcare-diagnostics',
     name: 'AI-Powered Healthcare Diagnostics',
@@ -312,6 +342,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     rating: 4.9,
     reviews: 35
   },
+
   {
     id: 'smart-manufacturing-orchestrator',
     name: 'Smart Manufacturing Orchestrator',
@@ -362,6 +393,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     rating: 4.8,
     reviews: 48
   },
+
   {
     id: 'financial-ai-trading-platform',
     name: 'Financial AI Trading Platform',
@@ -412,6 +444,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     rating: 4.7,
     reviews: 32
   },
+
   {
     id: 'retail-ai-optimization-platform',
     name: 'Retail AI Optimization Platform',
@@ -437,7 +470,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/retail-ai-optimization-platform',
     marketPosition: 'Leading retail AI optimization platform. Our advantage: Comprehensive AI-powered retail optimization with personalized customer experiences.',
-    targetAudience: 'Retail chains', 'E-commerce companies', 'Department stores', 'Specialty retailers', 'Shopping centers',
+    targetAudience: 'Retail chains, E-commerce companies, Department stores, Specialty retailers, Shopping centers',
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'Retail AI & Customer Experience',
@@ -462,6 +495,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     rating: 4.6,
     reviews: 72
   },
+
   {
     id: 'logistics-ai-orchestrator',
     name: 'Logistics AI Orchestrator',
@@ -487,7 +521,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/logistics-ai-orchestrator',
     marketPosition: 'Leading logistics AI platform. Our advantage: Comprehensive AI-powered logistics optimization with real-time tracking and cost optimization.',
-    targetAudience: 'Logistics companies', 'Transportation companies', 'E-commerce companies', 'Manufacturing companies', 'Retail chains',
+    targetAudience: 'Logistics companies, Transportation companies, E-commerce companies, Manufacturing companies, Retail chains',
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'Logistics AI & Supply Chain Optimization',
@@ -511,9 +545,9 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     customers: 28,
     rating: 4.7,
     reviews: 58
->>>>>>> origin/cursor/expand-services-and-deploy-updates-619a
   }
 ];
+
 export const INDUSTRY_SOLUTION_CATEGORIES = [
   'Healthcare Technology',
   'FinTech Solutions',

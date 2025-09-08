@@ -1,8 +1,10 @@
 import React from 'react';
+
 interface CardProps {
   children: React.ReactNode;
   className?: string;
 }
+
 const Card: React.FC<CardProps> = ({ children, className = '' }) => {
   return (
     <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}>
@@ -10,6 +12,7 @@ const Card: React.FC<CardProps> = ({ children, className = '' }) => {
     </div>
   );
 };
+
 const CardHeader: React.FC<CardProps> = ({ children, className = '' }) => {
   return (
     <div className={`flex flex-col space-y-1.5 p-6 ${className}`}>
@@ -17,6 +20,7 @@ const CardHeader: React.FC<CardProps> = ({ children, className = '' }) => {
     </div>
   );
 };
+
 const CardTitle: React.FC<CardProps> = ({ children, className = '' }) => {
   return (
     <h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}>
@@ -24,6 +28,7 @@ const CardTitle: React.FC<CardProps> = ({ children, className = '' }) => {
     </h3>
   );
 };
+
 const CardDescription: React.FC<CardProps> = ({ children, className = '' }) => {
   return (
     <p className={`text-sm text-muted-foreground ${className}`}>
@@ -31,6 +36,7 @@ const CardDescription: React.FC<CardProps> = ({ children, className = '' }) => {
     </p>
   );
 };
+
 const CardContent: React.FC<CardProps> = ({ children, className = '' }) => {
   return (
     <div className={`p-6 pt-0 ${className}`}>
@@ -38,13 +44,21 @@ const CardContent: React.FC<CardProps> = ({ children, className = '' }) => {
     </div>
   );
 };
+
 const CardFooter: React.FC<CardProps> = ({ children, className = '' }) => {
   return (
     <div className={`flex items-center p-6 pt-0 ${className}`}>
       {children}
     </div>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
 };
+
 export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
 }
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

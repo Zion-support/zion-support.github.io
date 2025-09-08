@@ -1,10 +1,17 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React, { useEffect, useMemo, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
+
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
+
 export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   const location = useLocation();
+
   // Preload critical resources
   useEffect(() => {
     const preloadCriticalResources = () => {
@@ -14,6 +21,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
       criticalCSS.as = 'style';
       criticalCSS.href = '/src/index.css';
       document.head.appendChild(criticalCSS);
+
       // Preload critical fonts
       const criticalFonts = document.createElement('link');
       criticalFonts.rel = 'preload';
@@ -22,8 +30,10 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
       criticalFonts.crossOrigin = 'anonymous';
       document.head.appendChild(criticalFonts);
     };
+
     preloadCriticalResources();
   }, []);
+
   // Optimize images on route change
   useEffect(() => {
     const optimizeImages = () => {
@@ -33,14 +43,17 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
         if (img.getBoundingClientRect().top > window.innerHeight) {
           img.loading = 'lazy';
         }
+        
         // Add decoding="async" for better performance
         img.decoding = 'async';
+        
         // Add error handling
         img.onerror = () => {
           img.style.display = 'none';
         };
       });
     };
+
     // Use requestIdleCallback for non-critical optimization
     if ('requestIdleCallback' in window) {
       requestIdleCallback(optimizeImages);
@@ -48,8 +61,10 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
       setTimeout(optimizeImages, 100);
     }
   }, [location.pathname]);
+
   // Memoize expensive computations
   const optimizedChildren = useMemo(() => children, [children]);
+
   // Optimize scroll performance
   const handleScroll = useCallback(() => {
     // Throttle scroll events for better performance
@@ -60,10 +75,12 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
       }, 16); // ~60fps
     }
   }, []);
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
+
   // Service Worker registration for caching
   useEffect(() => {
     if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
@@ -77,6 +94,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
         });
     }
   }, []);
+
   // Intersection Observer for lazy loading
   useEffect(() => {
     if ('IntersectionObserver' in window) {
@@ -98,14 +116,18 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
           threshold: 0.1,
         }
       );
+
       // Observe all images with data-src
       const lazyImages = document.querySelectorAll('img[data-src]');
       lazyImages.forEach((img) => observer.observe(img));
+
       return () => observer.disconnect();
     }
   }, [location.pathname]);
+
   return <>{optimizedChildren}</>;
 };
+
 // Add global performance optimizations
 if (typeof window !== 'undefined') {
   // Optimize long tasks
@@ -114,6 +136,7 @@ if (typeof window !== 'undefined') {
       // Run non-critical tasks during idle time
     }, { priority: 'background' });
   }
+
   // Optimize memory usage
   if ('memory' in performance) {
     const memoryThreshold = 50 * 1024 * 1024; // 50MB
@@ -125,12 +148,16 @@ if (typeof window !== 'undefined') {
     }
   }
 }
+
 export default PerformanceOptimizer;
+<<<<<<< HEAD
+=======
 import React, { useEffect, useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { AlertTriangle, CheckCircle, Clock, Zap } from 'lucide-react';
+
 interface PerformanceMetrics {
   fcp: number;
   lcp: number;
@@ -139,9 +166,11 @@ interface PerformanceMetrics {
   ttfb: number;
   overall: number;
 }
+
 export function PerformanceOptimizer() {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
     // Only show in development or when explicitly enabled
     if (import.meta.env.DEV || localStorage.getItem('showPerformance') === 'true') {
@@ -149,6 +178,7 @@ export function PerformanceOptimizer() {
       measurePerformance();
     }
   }, []);
+
   const measurePerformance = () => {
     if ('PerformanceObserver' in window) {
       // Measure Core Web Vitals
@@ -163,7 +193,9 @@ export function PerformanceOptimizer() {
           }
         });
       });
+
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
+
       // Measure other metrics
       setTimeout(() => {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -173,10 +205,12 @@ export function PerformanceOptimizer() {
       }, 1000);
     }
   };
+
   const updateMetrics = (key: keyof PerformanceMetrics, value: number) => {
     setMetrics(prev => {
       if (!prev) return null;
       const newMetrics = { ...prev, [key]: value };
+      
       // Calculate overall score
       const scores = [
         newMetrics.fcp < 1800 ? 100 : Math.max(0, 100 - (newMetrics.fcp - 1800) / 10),
@@ -185,21 +219,27 @@ export function PerformanceOptimizer() {
         newMetrics.cls < 0.1 ? 100 : Math.max(0, 100 - newMetrics.cls * 1000),
         newMetrics.ttfb < 800 ? 100 : Math.max(0, 100 - (newMetrics.ttfb - 800) / 8)
       ];
+      
       newMetrics.overall = Math.round(scores.reduce((a, b) => a + b, 0) / scores.length);
+      
       return newMetrics;
     });
   };
+
   const getScoreColor = (score: number) => {
     if (score >= 90) return 'bg-green-500';
     if (score >= 70) return 'bg-yellow-500';
     return 'bg-red-500';
   };
+
   const getScoreIcon = (score: number) => {
     if (score >= 90) return <CheckCircle className="h-4 w-4 text-green-500" />;
     if (score >= 70) return <Clock className="h-4 w-4 text-yellow-500" />;
     return <AlertTriangle className="h-4 w-4 text-red-500" />;
   };
+
   if (!isVisible || !metrics) return null;
+
   return (
     <Card className="fixed bottom-4 right-4 w-80 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20">
       <CardHeader className="pb-2">
@@ -222,6 +262,7 @@ export function PerformanceOptimizer() {
           </div>
           <Progress value={Math.min(100, (metrics.fcp / 1800) * 100)} className="h-1" />
         </div>
+        
         <div className="space-y-2">
           <div className="flex justify-between text-xs">
             <span>Largest Contentful Paint</span>
@@ -229,6 +270,7 @@ export function PerformanceOptimizer() {
           </div>
           <Progress value={Math.min(100, (metrics.lcp / 2500) * 100)} className="h-1" />
         </div>
+        
         <div className="space-y-2">
           <div className="flex justify-between text-xs">
             <span>First Input Delay</span>
@@ -236,6 +278,7 @@ export function PerformanceOptimizer() {
           </div>
           <Progress value={Math.min(100, (metrics.fid / 100) * 100)} className="h-1" />
         </div>
+        
         <div className="space-y-2">
           <div className="flex justify-between text-xs">
             <span>Cumulative Layout Shift</span>
@@ -243,6 +286,7 @@ export function PerformanceOptimizer() {
           </div>
           <Progress value={Math.min(100, (metrics.cls / 0.1) * 100)} className="h-1" />
         </div>
+        
         <div className="space-y-2">
           <div className="flex justify-between text-xs">
             <span>Time to First Byte</span>
@@ -250,6 +294,7 @@ export function PerformanceOptimizer() {
           </div>
           <Progress value={Math.min(100, (metrics.ttfb / 800) * 100)} className="h-1" />
         </div>
+        
         <div className="pt-2 border-t border-border">
           <div className="flex items-center justify-between">
             <span className="text-xs font-medium">Overall Score</span>
@@ -259,136 +304,12 @@ export function PerformanceOptimizer() {
                 {metrics.overall}
               </span>
             </div>
-
-            <div className="bg-white/5 rounded-lg p-3">
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-400">CPU</span>
-                <Cpu className="w-4 h-4 text-yellow-400" />
-              </div>
-              <p className="text-lg font-semibold text-white">
-                {Math.round(metrics.cpuUsage)}%
-              </p>
-            </div>
-
-            <div className="bg-white/5 rounded-lg p-3">
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-400">Score</span>
-                <TrendingUp className="w-4 h-4 text-cyan-400" />
-              </div>
-              <p className="text-lg font-semibold text-white">
-                {Math.round(metrics.score)}/100
-              </p>
-            </div>
-          </div>
-
-          {/* Performance Score Bar */}
-          <div className="mb-4">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-sm text-gray-400">Performance Score</span>
-              <span className="text-sm font-medium text-white">{Math.round(metrics.score)}/100</span>
-            </div>
-            <div className="w-full bg-white/10 rounded-full h-2">
-              <div
-                className={`h-2 rounded-full transition-all duration-500 ${
-                  metrics.score >= 80 ? 'bg-green-500' :
-                  metrics.score >= 60 ? 'bg-yellow-500' : 'bg-red-500'
-                }`}
-                style={{ width: `${Math.max(0, Math.min(100, metrics.score))}%` }}
-              />
-            </div>
-          </div>
-
-          {/* Recommendations */}
-          {recommendations.length > 0 && (
-            <div className="mb-4">
-              <h4 className="text-sm font-medium text-white mb-2">Recommendations</h4>
-              <div className="space-y-2">
-                {recommendations.map((rec, index) => (
-                  <div key={index} className="flex items-start space-x-2 text-sm">
-                    <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-300">{rec}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Optimizations Applied */}
-          {optimizations.length > 0 && (
-            <div className="mb-4">
-              <h4 className="text-sm font-medium text-white mb-2">Optimizations Applied</h4>
-              <div className="space-y-2">
-                {optimizations.map((opt, index) => (
-                  <div key={index} className="flex items-center space-x-2 text-sm">
-                    <CheckCircle className="w-4 h-4 text-green-400" />
-                    <span className="text-gray-300">{opt}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Action Buttons */}
-          <div className="flex space-x-2">
-            <button
-              onClick={measurePerformance}
-              disabled={isOptimizing}
-              className="flex-1 flex items-center justify-center space-x-2 px-3 py-2 bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-400 rounded-lg transition-colors duration-200 disabled:opacity-50"
-            >
-              <RefreshCw className={`w-4 h-4 ${isOptimizing ? 'animate-spin' : ''}`} />
-              <span>Refresh</span>
-            </button>
-            <button
-              onClick={performOptimizations}
-              disabled={isOptimizing}
-              className="flex-1 flex items-center justify-center space-x-2 px-3 py-2 bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 rounded-lg transition-colors duration-200 disabled:opacity-50"
-            >
-              <Zap className="w-4 h-4" />
-              <span>Optimize</span>
-            </button>
           </div>
         </div>
       </CardContent>
     </Card>
   );
 }
-
-// Performance monitoring hook
-export function usePerformanceMonitoring() {
-  const [metrics, setMetrics] = React.useState<PerformanceMetrics | null>(null);
-
-  useEffect(() => {
-    if (!('PerformanceObserver' in window)) return;
-
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const newMetrics: Partial<PerformanceMetrics> = {};
-
-      entries.forEach((entry) => {
-        if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
-          newMetrics.fcp = entry.startTime;
-        } else if (entry.entryType === 'largest-contentful-paint') {
-          newMetrics.lcp = entry.startTime;
-        } else if (entry.entryType === 'first-input') {
-          newMetrics.fid = (entry as any).processingStart - entry.startTime;
-        } else if (entry.entryType === 'layout-shift') {
-          newMetrics.cls = (entry as any).value;
-        }
-      });
-
-      if (Object.keys(newMetrics).length > 0) {
-        setMetrics(prev => ({ ...prev, ...newMetrics }));
-      }
-    });
-
-    try {
-      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
-    } catch (error) {
-      console.warn('PerformanceObserver not supported:', error);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  return metrics;
-}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

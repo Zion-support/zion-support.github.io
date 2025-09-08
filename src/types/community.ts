@@ -14,6 +14,7 @@ export interface ForumPost {
   isPinned: boolean;
   isLocked: boolean;
 }
+
 export interface ForumReply {
   id: string;
   content: string;
@@ -25,6 +26,7 @@ export interface ForumReply {
   likes: number;
   parentId?: string;
 }
+
 export interface ForumCategoryInfo {
   id: string;
   name: string;
@@ -37,6 +39,10 @@ export interface ForumCategoryInfo {
     date: string;
   };
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
 export const FORUM_CATEGORIES: ForumCategoryInfo[] = [
   {
     id: 'general',
@@ -87,4 +93,6 @@ export const FORUM_CATEGORIES: ForumCategoryInfo[] = [
     },
   },
 ];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

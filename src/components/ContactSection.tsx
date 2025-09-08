@@ -1,5 +1,26 @@
 import React from 'react';
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+=======
 import Link from 'next/link';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+import { 
+  Mail, 
+  Phone, 
+  MapPin, 
+  Clock, 
+  MessageSquare, 
+  ArrowRight,
+  Globe,
+  Shield,
+  Users
+} from 'lucide-react';
+
+export function ContactSection() {
+  const contactMethods = [
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email Us",
@@ -25,6 +46,7 @@ import Link from 'next/link';
       color: "from-zion-blue to-zion-purple"
     }
   ];
+
   const officeLocations = [
     {
       city: "Wilmington, DE",
@@ -45,6 +67,7 @@ import Link from 'next/link';
       icon: <MapPin className="w-5 h-5" />
     }
   ];
+
   const supportFeatures = [
     {
       icon: <Clock className="w-6 h-6" />,
@@ -67,6 +90,7 @@ import Link from 'next/link';
       description: "Support available in multiple time zones"
     }
   ];
+
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-zion-blue-dark to-slate-900">
       <div className="container mx-auto px-4">
@@ -80,6 +104,7 @@ import Link from 'next/link';
             Let's discuss how Zion Tech Group can help you achieve your goals.
           </p>
         </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           {/* Contact Methods */}
           <div className="lg:col-span-2">
@@ -107,6 +132,7 @@ import Link from 'next/link';
               ))}
             </div>
           </div>
+
           {/* Office Hours */}
           <div className="lg:col-span-1">
             <h3 className="text-2xl font-bold text-white mb-6 font-tech">Office Hours</h3>
@@ -134,6 +160,7 @@ import Link from 'next/link';
             </div>
           </div>
         </div>
+
         {/* Office Locations */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-white text-center mb-8 font-tech">Our Offices</h3>
@@ -159,6 +186,7 @@ import Link from 'next/link';
             ))}
           </div>
         </div>
+
         {/* Support Features */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-white text-center mb-8 font-tech">Why Choose Our Support?</h3>
@@ -179,6 +207,7 @@ import Link from 'next/link';
             ))}
           </div>
         </div>
+
         {/* CTA Section */}
         <div className="text-center">
           <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>

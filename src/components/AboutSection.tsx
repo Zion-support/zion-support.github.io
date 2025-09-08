@@ -1,6 +1,12 @@
 import React from 'react';
-import Link from 'next/link';
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 =======
+import Link from 'next/link';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { 
   Award, 
   Users, 
@@ -11,6 +17,7 @@ import {
   CheckCircle,
   ArrowRight
 } from 'lucide-react';
+
 export function AboutSection() {
   const achievements = [
     { number: "10+", label: "Years of Experience", icon: <Award className="w-6 h-6" /> },
@@ -18,6 +25,7 @@ export function AboutSection() {
     { number: "50+", label: "Enterprise Clients", icon: <Users className="w-6 h-6" /> },
     { number: "25+", label: "Countries Served", icon: <Globe className="w-6 h-6" /> }
   ];
+
   const values = [
     {
       title: "Innovation First",
@@ -40,11 +48,13 @@ export function AboutSection() {
       icon: <Shield className="w-8 h-8" />
     }
   ];
+
   const technologies = [
     "Artificial Intelligence & ML", "Cloud Computing", "Cybersecurity", "Data Analytics",
     "Blockchain Technology", "IoT Solutions", "Mobile Development", "Web Applications",
     "DevOps & Automation", "Quantum Computing", "Edge Computing", "5G Networks"
   ];
+
   return (
     <section className="py-20 bg-gradient-to-br from-slate-800 via-zion-blue-dark to-slate-900">
       <div className="container mx-auto px-4">
@@ -54,21 +64,25 @@ export function AboutSection() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-futuristic">
               About <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">Zion Tech Group</span>
             </h2>
+            
             <p className="text-lg text-zion-slate-light mb-6 leading-relaxed">
               Founded in 2015, Zion Tech Group has emerged as a leading force in the technology 
               industry, pioneering innovative solutions that transform how businesses operate in 
               the digital age.
             </p>
+            
             <p className="text-lg text-zion-slate-light mb-6 leading-relaxed">
               Our mission is to democratize cutting-edge technology, making advanced AI, 
               quantum computing, and autonomous systems accessible to organizations of all sizes. 
               We believe that innovation should drive progress, not complexity.
             </p>
+
             <p className="text-lg text-zion-slate-light mb-8 leading-relaxed">
               Today, we serve clients across 25+ countries, from startups to Fortune 500 
               companies, helping them navigate the complexities of digital transformation 
               and emerge stronger, more efficient, and future-ready.
             </p>
+
             <Link
               href="/about"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-neon-lg hover:scale-105 transition-all duration-300 transform"
@@ -77,6 +91,7 @@ export function AboutSection() {
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
+
           {/* Right Column - Achievements */}
           <div className="grid grid-cols-2 gap-6">
             {achievements.map((achievement, index) => (
@@ -95,11 +110,13 @@ export function AboutSection() {
             ))}
           </div>
         </div>
+
         {/* Values Section */}
         <div className="mb-20">
           <h3 className="text-3xl font-bold text-white text-center mb-12 font-futuristic">
             Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">Values</span>
           </h3>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <div
@@ -117,6 +134,7 @@ export function AboutSection() {
             ))}
           </div>
         </div>
+
         {/* Technology Expertise */}
         <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark rounded-3xl p-8 md:p-12 border border-white/10">
           <div className="text-center mb-12">
@@ -128,6 +146,7 @@ export function AboutSection() {
               deliver comprehensive solutions for any digital challenge your business faces.
             </p>
           </div>
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
             {technologies.map((tech, index) => (
               <div key={index} className="flex items-center text-zion-slate-light">
@@ -136,6 +155,7 @@ export function AboutSection() {
               </div>
             ))}
           </div>
+
           <div className="text-center">
             <Link
               href="/expertise"
@@ -146,6 +166,7 @@ export function AboutSection() {
             </Link>
           </div>
         </div>
+
         {/* Team Section */}
         <div className="text-center mt-20">
           <h3 className="text-3xl font-bold text-white mb-6 font-futuristic">

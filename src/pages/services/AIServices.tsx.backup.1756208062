@@ -1,7 +1,14 @@
 import React from 'react';
+<<<<<<< HEAD
+import { SEO } from '@/components/SEO';
+import { motion } from 'framer-motion';
+import { Brain, Cpu, Database, Shield, Zap, TrendingUp, Users, Globe } from 'lucide-react';
+=======
 import { SEO } from "@/components/SEO";
 import Link from 'next/link';
 import { Check, Brain, Zap, Shield, Database, Users, TrendingUp, Globe } from 'lucide-react';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e899
+
 const AIServices: React.FC = () => {
   const features = [
     {
@@ -25,6 +32,7 @@ const AIServices: React.FC = () => {
       description: "Responsible AI development and governance"
     }
   ];
+
   const benefits = [
     "Increased operational efficiency by 60%",
     "Enhanced customer insights and personalization",
@@ -32,6 +40,7 @@ const AIServices: React.FC = () => {
     "Competitive advantage through AI innovation",
     "Scalable AI solutions that grow with your business"
   ];
+
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -40,6 +49,7 @@ const AIServices: React.FC = () => {
         keywords="AI services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics"
         canonical="https://ziontechgroup.com/services/ai-services"
       />
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-pink-900 via-pink-800 to-rose-900 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -75,6 +85,7 @@ const AIServices: React.FC = () => {
           </motion.div>
         </div>
       </section>
+
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -84,6 +95,7 @@ const AIServices: React.FC = () => {
               Comprehensive AI services designed to meet your business challenges
             </p>
           </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -104,6 +116,7 @@ const AIServices: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -114,6 +127,7 @@ const AIServices: React.FC = () => {
                 Experience the transformative power of AI with our proven approach
               </p>
             </div>
+
             <div className="space-y-6">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -134,6 +148,7 @@ const AIServices: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-pink-600 to-rose-600 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -149,4 +164,5 @@ const AIServices: React.FC = () => {
     </div>
   );
 };
+
 export default AIServices;

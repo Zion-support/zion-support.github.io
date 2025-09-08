@@ -1,26 +1,27 @@
 import { useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useRouter } from 'next/router'; // Changed from useNavigate, useLocation
 import { useAuth } from '@/hooks/useAuth';
 import { safeStorage } from '@/utils/safeStorage';
 import { LoginContent } from '@/components/auth/login';
 import { ErrorBoundary } from 'react-error-boundary';
+import LoginErrorFallback from '@/components/auth/login/LoginErrorFallback';
 import { useCart } from '@/context/CartContext';
-
+import { SAMPLE_EQUIPMENT } from './EquipmentDetail';
 import { toast } from '@/hooks/use-toast';
 import { useDispatch } from 'react-redux';
 import { setLoggedIn } from '@/store/authSlice';
 
 export default function Login() {
   const { isAuthenticated, user, isLoading } = useAuth();
-  const navigate = useNavigate();
-  const location = useLocation();
+  const router = useRouter(); // Initialized router
+  // location is now router
   const { dispatch } = useCart();
   const reduxDispatch = useDispatch();
 
   useEffect(() => {
     // This effect handles token processing (e.g., from magic link)
-    // It runs when component mounts or location.search changes
-    const queryString = location.search;
+    // It runs when component mounts or router.asPath (containing query) changes
+    const queryString = router.asPath.split('?')[1] || '';
     const params = new URLSearchParams(queryString);
     const token = params.get('token');
     if (token) {
@@ -28,22 +29,22 @@ export default function Login() {
       // Clear token from URL to prevent re-processing and clean up history
       // The actual authentication state will update via useAuth's listeners,
       // which should trigger the other useEffect.
-      navigate(location.pathname, { replace: true });
+      router.replace(router.pathname, undefined, { shallow: true }); // Use router.replace with shallow routing
     }
-  }, [location.search, location.pathname, navigate]);
+  }, [router.asPath, router.pathname, router]); // Depend on router.asPath
 
   useEffect(() => {
     if (!isLoading && isAuthenticated) {
       reduxDispatch(setLoggedIn(true));
-      const next = location.state?.from?.pathname || '/dashboard';
-      navigate(next, { replace: true });
+      const next = typeof router.query.next === 'string' ? router.query.next : '/dashboard';
+      router.replace(next);
     }
-  }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.state]);
+  }, [isAuthenticated, isLoading, router, reduxDispatch]);
 
   // Render LoginContent if not authenticated and auth is not loading
   if (!isAuthenticated && !isLoading) {
     return (
-      <ErrorBoundary fallback={<div>Something went wrong. Please try again.</div>}>
+      <ErrorBoundary FallbackComponent={LoginErrorFallback}>
         <LoginContent />
       </ErrorBoundary>
     );

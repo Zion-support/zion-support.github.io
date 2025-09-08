@@ -1,115 +1,64 @@
 {
   "compilerOptions": {
     "target": "ES2020",
+    "useDefineForClassFields": true,
     "lib": [
-      "dom",
-      "dom.iterable",
-      "es2020"
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
     ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "incremental": true,
     "module": "ESNext",
-    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/pages/*": ["./src/pages/*", "./pages/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/api/*": ["./src/api/*"],
+      "@/types/*": ["./src/types/*", "./types/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/context/*": ["./src/context/*"],
+      "@/services/*": ["./src/services/*"],
+      "react-router-dom": ["./src/stubs/react-router-dom.tsx"],
+      "react-router": ["./src/stubs/react-router-dom.tsx"],
+      "next-cloudinary": ["./types/next-cloudinary.d.ts"],
+      "types/*": ["./types/*"]
+    },
+    "typeRoots": ["./node_modules/@types", "./types"],
+    "types": ["node"],
     "moduleResolution": "node",
+    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "noEmit": true,
     "jsx": "preserve",
-    "baseUrl": ".",
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "paths": {
-<<<<<<< HEAD
-      "@/*": ["./*"],
-      "@/components/*": ["./components/*"],
-      "@/pages/*": ["./pages/*"],
-      "@/utils/*": ["./lib/*"],
-      "@/hooks/*": ["./hooks/*"],
-      "@/types/*": ["./types/*"],
-      "@/styles/*": ["./styles/*"],
-      "@/assets/*": ["./assets/*"],
-      "@/public/*": ["./public/*"]
-    }
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-=======
-      "@/*": [
-        "./src/*"
-      ],
-      "@/components/*": [
-        "./src/components/*"
-      ],
-      "@/pages/*": [
-        "./src/pages/*"
-      ],
-      "@/utils/*": [
-        "./src/utils/*"
-      ],
-      "@/hooks/*": [
-        "./src/hooks/*"
-      ],
-      "@/types/*": [
-        "./src/types/*"
-      ],
-      "@/styles/*": [
-        "./styles/*"
-      ],
-      "@/assets/*": [
-        "./src/assets/*"
-      ],
-      "@/app/*": [
-        "./app/*"
-      ],
-      "@/public/*": [
-        "./public/*"
-      ]
-    },
-    "strictNullChecks": true
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "strictNullChecks": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false,
+    "allowJs": true,
+    "incremental": true,
+    "plugins": [{ "name": "next" }]
   },
   "include": [
     "next-env.d.ts",
-    "app/**/*.ts",
-    "app/**/*.tsx",
+    "**/*.ts",
+    "**/*.tsx",
     ".next/types/**/*.ts"
   ],
->>>>>>> origin/cursor/delete-old-data-records-6bba
   "exclude": [
-    "node_modules",
-    ".next",
-    "out",
-    "dist",
-    "apps/**",
-    "apps.backup/**",
-    "api-backup/**",
-    "backup/**",
-    "backup-merge-conflicts/**",
-    "backup-problematic-files/**",
-    "broken_files_backup/**",
-    "corrupted_backup/**",
-    "_conflicted_disabled/**",
-    "components-disabled/**",
-    "components.disabled/**",
-    "components.disabled_full/**",
-    "api-disabled/**",
-    "api.disabled/**",
-    "api.disabled.temp/**",
-    "src_backup/**",
-    "utils/**",
-    "vite.config-backup.ts",
-    "browserstack.config.ts",
-    "cypress.config.ts",
-    "jest.config.*",
-    "*.config.ts",
-    "types/**",
-    "netlify/**",
-    "components/**",
-    "src/**"
+    "node_modules"
   ]
 }

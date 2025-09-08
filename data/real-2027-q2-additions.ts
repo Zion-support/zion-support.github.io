@@ -1,4 +1,15 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+export const real2027Q2Additions = [
+  {
+    id: 'q2-2027-service-1',
+    name: 'Q2 2027 Service',
+    tagline: 'Q2 2027 service solutions',
+    price: '$499',
+    category: 'Q2 2027 Services'
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 export interface Real2027Q2Addition {
   id: string;
   name: string;
@@ -6,6 +17,7 @@ export interface Real2027Q2Addition {
   price: string;
   features: string[];
 }
+
 export const real2027Q2Additions: Real2027Q2Addition[] = [
   {
     id: 'q2-2027-addition-1',
@@ -13,5 +25,9 @@ export const real2027Q2Additions: Real2027Q2Addition[] = [
     tagline: 'Second quarter 2027 addition',
     price: '$1299',
     features: ['Q2 2027 features', 'Mid-year innovations', 'Advanced solutions']
+<<<<<<< HEAD
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }
 ];

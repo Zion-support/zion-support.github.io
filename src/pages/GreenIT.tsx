@@ -1,20 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { AppLayout } from "@/layout/AppLayout";
+=======
 import React from 'react';
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Leaf, Server, Cloud } from "lucide-react";
 import { Link } from "react-router-dom";
 import { AppLayout } from "@/layout";
+
 export default function GreenIT() {
   const greenITSolutions = [
     {
@@ -36,6 +49,7 @@ export default function GreenIT() {
       title: "Green Data Management",
       description: "Sustainable data storage and management solutions that minimize environmental impact.",
       benefits: ["Efficient Storage", "Data Deduplication", "Green Backup Solutions", "Sustainable Archives"]
+=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
@@ -43,6 +57,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Leaf, Zap, Recycle, Globe, TrendingUp, Shield, Lightbulb, Users } from 'lucide-react';
+
 export default function GreenIT() {
   const greenSolutions = [
     {
@@ -70,6 +85,7 @@ export default function GreenIT() {
       benefits: ["Carbon neutrality", "ESG compliance", "Brand reputation"]
     }
   ];
+
   const services = [
     {
       title: "Green IT Consulting",
@@ -96,6 +112,7 @@ export default function GreenIT() {
       price: "Starting at $3,500"
     }
   ];
+
   const caseStudies = [
     {
       company: "TechCorp Solutions",
@@ -119,6 +136,7 @@ export default function GreenIT() {
       results: ["100% renewable energy usage", "Carbon-neutral operations", "Increased customer satisfaction"]
     }
   ];
+
   return (
     <>
     <AppLayout>
@@ -126,23 +144,40 @@ export default function GreenIT() {
         title="Green IT Solutions - Sustainable Technology | Zion Tech Group"
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance." 
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         canonical="https://ziontechgroup.com/green-it"
+=======
         canonical="https://ziontechgroup.com/marketplace/category/green-it"
+=======
         canonical="https://ziontechgroup.com/green-it"
+=======
         canonical="https://ziontechgroup.com/green-it"
+=======
         canonical="https://ziontechgroup.com/marketplace/category/green-it"
+=======
         canonical="https://ziontechgroup.com/marketplace/category/green-it"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
       />
       <AppHeader />
       <main className="min-h-screen bg-background pt-16 pb-20">
+=======
         canonical="https://ziontechgroup.com/marketplace/category/green-it"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       />
       <AppHeader />
       <main className="min-h-screen bg-background pt-16 pb-20">
+=======
         canonical="https://ziontechgroup.com/marketplace/category/green-it"
 =======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
       />
       <AppHeader />
       <main className="min-h-screen bg-background pt-16 pb-20">
@@ -157,12 +192,14 @@ export default function GreenIT() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Sustainable technology solutions that reduce environmental impact while 
               maintaining high performance and business value
+=======
       <SEO 
         title="Green IT Solutions - Zion Tech Group" 
         description="Transform your IT operations with sustainable, eco-friendly solutions. Reduce carbon footprint and costs while improving efficiency." 
         keywords="green IT, sustainable technology, eco-friendly IT, carbon neutral, renewable energy, e-waste management"
         canonical="https://ziontechgroup.com/green-it"
       />
+      
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
@@ -206,6 +243,7 @@ export default function GreenIT() {
                       Explore Green IT Solutions
                     </Button>
 =======
+
           {/* Why Green IT */}
           <section className="mb-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -241,6 +279,7 @@ export default function GreenIT() {
               </div>
             </div>
           </section>
+
           {/* Green Solutions */}
           <section className="mb-20">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Our Green IT Solutions</h2>
@@ -271,6 +310,7 @@ export default function GreenIT() {
               ))}
             </div>
           </section>
+
           {/* Services */}
           <section className="mb-20">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Green IT Services</h2>
@@ -306,6 +346,7 @@ export default function GreenIT() {
               ))}
             </div>
           </section>
+
           {/* Case Studies */}
           <section className="mb-20">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Success Stories</h2>
@@ -346,6 +387,7 @@ export default function GreenIT() {
               ))}
             </div>
           </section>
+
           {/* Call to Action */}
           <section className="text-center">
             <Card className="bg-zion-blue-dark border-green-400/30 text-white max-w-3xl mx-auto">
@@ -373,8 +415,10 @@ export default function GreenIT() {
           </section>
         </div>
       </main>
+=======
       <Footer />
     </>
   );
 };
+
 export default GreenIT;

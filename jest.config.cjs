@@ -1,167 +1,94 @@
-const nextJest = require('next/jest');
-
-
-const customJestConfig = {
-
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+module.exports = {
+  preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  testPathIgnorePatterns: [
-    '<rootDir>/.next/',
-    '<rootDir>/node_modules/',
-    '<rootDir>/dist/',
-    '<rootDir>/build/',
-    '<rootDir>/out/',
-    '<rootDir>/coverage/',
-    '<rootDir>/src.corrupted/',
-    '<rootDir>/src.disabled/',
-    '<rootDir>/src.broken/',
-    '<rootDir>/src.pages.disabled/',
-    '<rootDir>/solutions.disabled/',
-    '<rootDir>/components.disabled/',
-    '<rootDir>/components.corrupted/',
-    '<rootDir>/hooks.disabled/',
-    '<rootDir>/lib.disabled/',
-    '<rootDir>/lib.corrupted/',
-    '<rootDir>/zion-os.disabled/',
-    '<rootDir>/zion_academy/',
-    '<rootDir>/contracts.disabled/',
-    '<rootDir>/corrupted-files-backup/',
-    '<rootDir>/corrupted_files_backup_2/',
-    '<rootDir>/cypress.disabled/',
-    '<rootDir>/cypress_backup/',
-    '<rootDir>/data/',
-    '<rootDir>/e2e/',
-    '<rootDir>/pages.disabled/',
-    '<rootDir>/pages.disabled_backup/',
-    '<rootDir>/pages_backup/',
-    '<rootDir>/pages.disabled_full/',
-    '<rootDir>/pages_backup_before_cleanup/',
-    '<rootDir>/pages_backup_conflicts/',
-    '<rootDir>/pages.bak/',
-    '<rootDir>/pages.broken/',
-    '<rootDir>/pages.corrupted.*/',
-    '<rootDir>/pages._quarantine/',
-    '<rootDir>/pages._archive_corrupted/',
-    '<rootDir>/pages-quarantine/',
-    '<rootDir>/pages.blog.disabled/',
-    '<rootDir>/pages.disabled_auto/',
-    '<rootDir>/pages_api.disabled/',
-    '<rootDir>/components.disabled_full/',
-    '<rootDir>/components.broken/',
-    '<rootDir>/backup-corrupted-files/',
-    '<rootDir>/lib.broken/',
-    '<rootDir>/data.disabled/',
-    '<rootDir>/test_build/',
-    '<rootDir>/server/',
-    '<rootDir>/types/',
-    '<rootDir>/temp-backup/',
-    '<rootDir>/temp_backup/',
-    '<rootDir>/temp_broken_files/',
-    '<rootDir>/temp_working/',
-    '<rootDir>/tests.disabled/',
-    '<rootDir>/supabase/',
-    '<rootDir>/public/',
-    '<rootDir>/.venv/',
-    '<rootDir>/api/',
-    '<rootDir>/api.disabled/',
-    '<rootDir>/api.disabled.temp/',
-    '<rootDir>/disabled-api/',
-    '<rootDir>/deployments/',
-    '<rootDir>/pages.__backup/',
-    '<rootDir>/pages-disabled/',
-    '<rootDir>/src/',
-    '<rootDir>/automation/',
-    '<rootDir>/automation_backup/',
-    '<rootDir>/data_backup/',
-    '<rootDir>/pm2-automation/',
-    '<rootDir>/scripts/',
-    '<rootDir>/tests/',
-    '<rootDir>/test-results/',
-    '<rootDir>/test-reports/',
-  ],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/$1',
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
-  },
-  collectCoverageFrom: [
-    '**/*.{js,jsx,ts,tsx}',
-    '!**/*.d.ts',
-    '!**/node_modules/**',
-  ],
-  testMatch: [
-    '<rootDir>/tests/**/*.{js,jsx,ts,tsx}',
-    '<rootDir>/**/__tests__/**/*.{js,jsx,ts,tsx}',
-    '<rootDir>/**/*.{test,spec}.{js,jsx,ts,tsx}',
-  ],
-  transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
-  },
-  transformIgnorePatterns: [
-    '/node_modules/',
-    '^.+\\.module\\.(css|sass|scss)$',
-  ],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-  verbose: true,
-  passWithNoTests: true,
-}
-  testMatch: [
-    '**/__tests__/**/*.(js|jsx|ts|tsx)',
-    '**/*.(test|spec).(js|jsx|ts|tsx)'
-  ],
-  testPathIgnorePatterns: [
-    '/node_modules/',
-    '/.next/',
-    '/dist/',
-    '/build/',
-    '/out/'
-  ],
-  moduleNameMapping: {
-    '^@/(.*)$': '<rootDir>/src/$1',
-  },
-  testTimeout: 30000,
-  passWithNoTests: true
-};
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+<<<<<<< HEAD
+    // Handle image imports
+    '\\.(gif|ttf|eot|svg|png|jpg|jpeg)$':
+      '<rootDir>/tests/__mocks__/fileMock.js',
 
+    // Fix path mappings with more specific ordering
+    '^@/pages/api/(.*)$': '<rootDir>/pages/api/$1',
+    '^@/pages/(.*)$': ['<rootDir>/pages/$1', '<rootDir>/src/pages/$1'],
+    '^@/components/ui/CategoryCard$':
+      '<rootDir>/tests/__mocks__/emptyModule.js',
+    '^@/components/ui/(.*)$': '<rootDir>/src/components/ui/$1',
+    '^@/components/(.*)$': '<rootDir>/src/components/$1',
+    '^@/i18n$': '<rootDir>/tests/__mocks__/i18n.js',
+    '^@/utils/(?!devtools)(.*)$': '<rootDir>/src/utils/$1',
+    '^@/context$': '<rootDir>/src/context/index.ts',
+    '^@/context/(.*)$': '<rootDir>/src/context/$1',
+    '^@/hooks/(.*)$': '<rootDir>/src/hooks/$1',
+    '^@/services/(.*)$': '<rootDir>/src/services/$1',
+    '^@/api/(.*)$': '<rootDir>/src/api/$1',
+    '^@/lib/(.*)$': '<rootDir>/src/lib/$1',
+    '^@/styles/(.*)$': '<rootDir>/src/styles/$1',
+    '^@/public/(.*)$': '<rootDir>/public/$1',
+    '^@/data/(.*)$': '<rootDir>/src/data/$1',
+    '^@/integrations/(.*)$': '<rootDir>/src/integrations/$1',
+    '^@/types/(.*)$': '<rootDir>/src/types/$1',
+    '^@/store$': '<rootDir>/src/store/index.ts',
+    '^@/store/(.*)$': '<rootDir>/src/store/$1',
+    '^@/layout$': '<rootDir>/src/layout/index.ts',
+    '^@/layout/(.*)$': '<rootDir>/src/layout/$1',
+    '^@/routes/(.*)$': '<rootDir>/src/routes/$1',
+    '^@/mobile/(.*)$': '<rootDir>/src/mobile/$1',
+    '^@/sdk/(.*)$': '<rootDir>/sdk/$1',
+    '^@/mocks/(.*)$': '<rootDir>/src/mocks/$1',
+    '^@/config/(.*)$': '<rootDir>/src/config/$1',
+    '^@/middleware/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
+    '^vitest$': '<rootDir>/tests/__mocks__/vitestMock.js',
 
-module.exports = createJestConfig(customJestConfig)
-  testMatch: [
-    '**/__tests__/**/*.(test|spec).(js|jsx|ts|tsx)',
-    '**/*.(test|spec).(js|jsx|ts|tsx)',
-  ],
-  testPathIgnorePatterns: [
-    '/node_modules/',
-    '/.next/',
-    '/out/',
-    '/dist/',
-    '/recovered-branches/',
-    '/src_backup/',
-    '/e2e/',
-  ],
-  collectCoverageFrom: [
-    'src/**/*.{js,jsx,ts,tsx}',
-    'components/**/*.{js,jsx,ts|tsx}',
-    '!src/**/*.d.ts',
-    '!src/**/*.stories.{js,jsx,ts,tsx}',
-  ],
-  moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/$1',
+    // Special module mocks
+    '^msw/node$': require.resolve('msw/node'),
+    '^next/router$': 'next-router-mock',
+    '^next/navigation$': '<rootDir>/tests/__mocks__/emptyModule.js',
+    'react-router-dom$': '<rootDir>/src/stubs/react-router-dom.tsx',
+    'react-router$': '<rootDir>/src/stubs/react-router-dom.tsx',
+
+    // Mock heavy libraries not needed for unit tests
+    '^@reown/appkit(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
+    '^@walletconnect/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
+    '^uint8arrays/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
+    '^multiformats/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
+    '^react-markdown$': '<rootDir>/tests/__mocks__/reactMarkdown.js',
+    '^@/pages/(.*)\.jsx$': '<rootDir>/tests/__mocks__/emptyModule.js',
+    '^@/pages/Signup$': '<rootDir>/tests/__mocks__/emptyModule.js',
+    '^@/pages/signup$': '<rootDir>/tests/__mocks__/emptyModule.js',
+    '^@/utils/devtools$': '<rootDir>/tests/__mocks__/emptyModule.js',
+    '^scripts/watchdog$': '<rootDir>/tests/__mocks__/emptyModule.js',
+    '^scripts/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
+    '^os-utils$': '<rootDir>/tests/__mocks__/emptyModule.js',
+    '^@/pages/api/points/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
+    '^@/pages/api/users/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
+    '^@/pages/Login\.jsx$': '<rootDir>/tests/__mocks__/emptyModule.js',
+    '^@/App$': '<rootDir>/src/App.tsx',
+    '^@/pages/api/auth/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
+    // Additional aliases for Jest environment
+    '^@/hooks$': '<rootDir>/src/hooks/index.ts',
+    '^@/i18n/(.*)$': '<rootDir>/src/i18n/$1',
+    '^mongoose(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
+    '^mongodb(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
+    '^bson(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
+    '^@/components/search/(.*)$': '<rootDir>/src/components/talent/$1',
+    // Retain original mocks for middleware to avoid heavy imports in Jest
+    '^@/middleware/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
+=======
+    '\\.(gif|ttf|eot|svg|png|jpg)$': '<rootDir>/__mocks__/fileMock.js'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   },
-  transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
-  },
-  transformIgnorePatterns: [
-    '/node_modules/',
-    '^.+\\.module\\.(css|sass|scss)$',
-  ],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-  verbose: true,
-  collectCoverage: false,
+  testPathIgnorePatterns: ['/node_modules/', '/.next/', '/out/', '/tests.disabled/'],
   coverageDirectory: 'coverage',
-  coverageReporters: ['text', 'lcov', 'html'],
-  testTimeout: 10000,
+  collectCoverage: true,
+  coverageReporters: ['text', 'lcov'],
+  coverageThreshold: {
+    global: {
+      branches: 60,
+      functions: 60,
+      lines: 60,
+      statements: 60
+    }
+  }
 };
-
-module.exports = createJestConfig(customJestConfig);
-module.exports = createJestConfig(customJestConfig)
-// createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
-module.exports = createJestConfig(customJestConfig)

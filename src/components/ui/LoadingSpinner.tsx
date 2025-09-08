@@ -1,5 +1,14 @@
 import React from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { cn } from '@/lib/utils';
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+import { cn } from '@/lib/utils';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { motion } from 'framer-motion';
+
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'white' | 'custom';
@@ -8,6 +17,11 @@ interface LoadingSpinnerProps {
   text?: string;
   showText?: boolean;
 }
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 export function LoadingSpinner({
   size = 'md',
   color = 'primary',
@@ -22,13 +36,16 @@ export function LoadingSpinner({
     lg: 'w-8 h-8',
     xl: 'w-12 h-12'
   };
+
   const colorClasses = {
     primary: 'border-zion-purple',
     secondary: 'border-zion-cyan',
     white: 'border-white',
     custom: ''
   };
+
   const borderColor = customColor || colorClasses[color];
+
   return (
     <div className={cn('flex flex-col items-center justify-center', className)}>
       <motion.div
@@ -45,6 +62,8 @@ export function LoadingSpinner({
         }}
         role="status"
         aria-label="Loading"
+<<<<<<< HEAD
+=======
 export function LoadingSpinner({ 
   size = 'md', 
   color = 'primary', 
@@ -59,18 +78,21 @@ export function LoadingSpinner({
     lg: 'w-12 h-12',
     xl: 'w-16 h-16'
   };
+
   const colorClasses = {
     primary: 'border-zion-cyan border-t-transparent',
     secondary: 'border-zion-blue border-t-transparent',
     white: 'border-white border-t-transparent',
     custom: customColor ? `border-${customColor} border-t-transparent` : 'border-zion-cyan border-t-transparent'
   };
+
   const textSizes = {
     sm: 'text-xs',
     md: 'text-sm',
     lg: 'text-base',
     xl: 'text-lg'
   };
+
   return (
     <div className={`flex flex-col items-center justify-center ${className}`}>
       <motion.div
@@ -80,17 +102,30 @@ export function LoadingSpinner({
         style={{
           borderTopColor: customColor && color === 'custom' ? customColor : undefined
         }}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       />
+      
       {showText && (
         <motion.p
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           className="mt-3 text-sm text-zion-slate-light text-center"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
+<<<<<<< HEAD
+=======
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.3 }}
           className={`mt-3 text-zion-slate-light ${textSizes[size]} font-medium`}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         >
           {text}
         </motion.p>
@@ -98,6 +133,11 @@ export function LoadingSpinner({
     </div>
   );
 }
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 // Skeleton loading component for content
 export function SkeletonLoader({
   className,
@@ -120,6 +160,8 @@ export function SkeletonLoader({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: index * 0.1 }}
+<<<<<<< HEAD
+=======
 // Optimized skeleton loader
 export function SkeletonLoader({ 
   className = '', 
@@ -139,11 +181,19 @@ export function SkeletonLoader({
           animate={{ opacity: 1 }}
           transition={{ delay: index * 0.1, duration: 0.3 }}
           className={`${height} bg-white/10 rounded-lg animate-pulse`}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         />
       ))}
     </div>
   );
 }
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 // Page loading component
 export function PageLoader({
   text = 'Loading page...',
@@ -160,6 +210,7 @@ export function PageLoader({
     </div>
   );
 }
+
 // Button loading state
 export function ButtonLoader({
   size = 'sm',
@@ -172,6 +223,8 @@ export function ButtonLoader({
     <div className={cn('inline-flex items-center', className)}>
       <LoadingSpinner size={size} color="white" />
       <span className="ml-2">Loading...</span>
+<<<<<<< HEAD
+=======
 // Page loading overlay
 export function PageLoader({ 
   text = 'Loading page...',
@@ -201,6 +254,7 @@ export function PageLoader({
     </motion.div>
   );
 }
+
 // Content loading placeholder
 export function ContentPlaceholder({ 
   className = '',
@@ -215,6 +269,7 @@ export function ContentPlaceholder({
     list: 'space-y-3',
     grid: 'grid grid-cols-2 md:grid-cols-4 gap-4'
   };
+
   return (
     <div className={`${variants[variant]} ${className}`}>
       {variant === 'card' ? (
@@ -277,6 +332,9 @@ export function ContentPlaceholder({
           />
         ))
       )}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     </div>
   );
 }
