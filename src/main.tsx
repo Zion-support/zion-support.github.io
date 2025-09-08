@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 console.log("main.tsx: Start");
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';

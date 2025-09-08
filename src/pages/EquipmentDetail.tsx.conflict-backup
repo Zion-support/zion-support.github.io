@@ -1,5 +1,34 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import { SEO } from '@/components/SEO';
+
+import { useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { FuturisticNavigation } from "@/components/FuturisticNavigation";
+import { FuturisticFooter } from "@/components/FuturisticFooter";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { ProductGallery } from "@/components/gallery/ProductGallery";
+import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react";
+import { Switch } from '@/components/ui/switch';
+import { toast } from "@/hooks/use-toast";
+import { useAuth } from "@/hooks/useAuth";
+import { getStripe } from "@/utils/getStripe";
+import { useAppDispatch } from '@/store/hooks';
+import { addItem } from '@/store/cartSlice';
+
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+=======
 import { motion } from 'framer-motion';
 import { ArrowLeft, Star, Clock, DollarSign, Users, MapPin, Phone, Mail } from 'lucide-react';
+>>>>>>> origin/cursor/build-and-fix-errors-e276
 
 interface EquipmentDetails {
   id: string;
@@ -491,4 +520,9 @@ export default function EquipmentDetail() {
       <Footer />
     </>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

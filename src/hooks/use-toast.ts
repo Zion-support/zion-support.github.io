@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { toast as hotToast, type ToastOptions as HotToastOptions } from 'react-hot-toast';
 
 export type ToastOptions = HotToastOptions & {

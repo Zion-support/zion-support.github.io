@@ -33,6 +33,7 @@ const TalentDirectory: React.FC = () => {
 
 export default TalentDirectory;
 =======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 import React from 'react';
 import { Header } from '@/components/header/Header';
 import { Footer } from '@/components/Footer';
@@ -108,4 +109,9 @@ export default function TalentDirectory() {
       <Footer />
     </>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { ChatWidget } from "@/components/ChatWidget";

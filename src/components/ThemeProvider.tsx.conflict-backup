@@ -7,6 +7,20 @@ import { getThemeColors, applyThemeColors } from "@/utils/themeUtils"
   theme: Theme;
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+interface ThemeProviderProps {
+  children: ReactNode;
+  defaultTheme?: Theme;
+}
+
+export const ThemeProvider: React.FC<ThemeProviderProps> = ({ 
+  children, 
+  defaultTheme = 'system' 
+}) => {
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 export function ThemeProvider({ 
   children, 
   defaultTheme = 'dark' 
@@ -14,10 +28,22 @@ export function ThemeProvider({
   children: React.ReactNode;
   defaultTheme?: Theme;
 }) {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/check-and-fix-github-actions-e92c
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   const [theme, setTheme] = useState<Theme>(defaultTheme);
 
   useEffect(() => {
     const root = window.document.documentElement;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    
+    root.classList.remove('light', 'dark');
+    
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     root.classList.remove('light', 'dark');
 
 export const ThemeProviderContext = createContext<ThemeProviderState>(initialState)

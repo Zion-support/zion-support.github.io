@@ -5,10 +5,36 @@ interface SEOProps {
   title: string;
   description: string;
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+interface SEOProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  ogImage?: string;
+  canonicalUrl?: string;
+  structuredData?: object;
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
+  ogType?: 'website' | 'article' | 'book' | 'profile' | 'music.song' | 'music.album' | 'music.playlist' | 'music.radio_station' | 'video.movie' | 'video.episode' | 'video.tv_show' | 'video.other' | 'business.business' | 'website';
+  author?: string;
+  canonical?: string;
+  ogImage?: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  ogType?: 'website' | 'article' | 'product';
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
+=======
   ogUrl?: string;
   canonical?: string;
   ogType?: string;
   twitterCard?: string;
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
   structuredData?: object;
 =======
   title?: string;
@@ -113,6 +139,7 @@ export const SEO: React.FC<SEOProps> = ({
       "https://github.com/ziontechgroup",
       "https://youtube.com/@ziontechgroup"
     ],
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Technology Services",
@@ -121,25 +148,44 @@ export const SEO: React.FC<SEOProps> = ({
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
+<<<<<<< HEAD
+<<<<<<< HEAD
+            "name": "AI Business Intelligence",
+            "description": "Advanced analytics and insights powered by artificial intelligence"
+=======
             "name": "AI-Powered CRM Solutions",
             "description": "Intelligent customer relationship management with predictive analytics"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-60a2
 =======
             "name": "AI & Machine Learning Solutions",
             "description": "Cutting-edge AI solutions for business transformation"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
+<<<<<<< HEAD
+            "name": "Cybersecurity Platform",
+            "description": "Comprehensive threat detection and response system"
+=======
             "name": "Micro SAAS Services",
             "description": "Scalable software solutions for growing businesses"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
+<<<<<<< HEAD
+            "name": "Cloud Cost Optimization",
+            "description": "AI-driven cloud cost management solutions"
+          }
+        }
+      ]
+=======
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
@@ -165,7 +211,27 @@ export const SEO: React.FC<SEOProps> = ({
       addressRegion: 'DE',
       postalCode: '19709',
       streetAddress: '364 E Main St STE 1008'
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
     }
+<<<<<<< HEAD
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
+  };
+
+  // Get metadata for current route
+  const routeMetadata = defaultMetadata[location.pathname] || defaultMetadata['/'];
+  
+  // Merge provided props with route defaults
+  const finalMetadata = useMemo(() => ({
+    title: title || routeMetadata.title,
+    description: description || routeMetadata.description,
+    keywords: [...new Set([...keywords, ...routeMetadata.keywords])],
+    image: currentImage,
+    type,
+    section: section || routeMetadata.section,
+  }), [title, description, keywords, currentImage, type, section, routeMetadata]);
+
+  // Structured data for website
+=======
       "https://linkedin.com/company/ziontechgroup",
       "https://twitter.com/ziontechgroup",
       "https://github.com/Zion-Holdings"
@@ -173,6 +239,7 @@ export const SEO: React.FC<SEOProps> = ({
   };
 
   // Website schema
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
 =======
             "name": "Cloud & DevOps Solutions",
             "description": "Infrastructure optimization and automated deployment"
@@ -465,3 +532,7 @@ export const SEO: React.FC<SEOProps> = ({
 
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
