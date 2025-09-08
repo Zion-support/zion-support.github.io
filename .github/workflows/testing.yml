@@ -1,32 +1,110 @@
-name: Testing & Quality Assurance (DISABLED - Migrated to PM2)
+name: Testing & Quality Assurance
 
 on:
-  # This workflow is disabled and migrated to PM2 automation
-  # The original workflow was handling automation tasks
-  # Now handled by PM2 processes as configured in ecosystem.config.cjs
-  workflow_dispatch: # Only manual triggers allowed
-  # All automatic triggers removed
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  schedule:
+    - cron: '0 3 * * 0'  # Weekly on Sundays at 3 AM UTC
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: '20.18.1'
 
 jobs:
-  disabled:
+  test:
+    name: Run Tests
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Workflow Disabled
-        run: |
-          echo "This workflow has been disabled and migrated to PM2 automation."
-          echo "Automation tasks are now handled by PM2 processes:"
-          echo "- console-error-fixer (every 15 minutes)"
-          echo "- link-checker (every 30 minutes)"
-          echo "- continuous-improvement (every 2 hours)"
-          echo "- daily-build-test (every hour)"
-          echo "- security-audit (every 4 hours)"
-          echo "- dependency-updates (every 6 hours)"
-          echo "- performance-monitor (every 2 hours)"
-          echo "- quality-checks (every 3 hours)"
-          echo "- link-integrity (every 2 hours)"
-          echo "- front-maximizer (every 4 hours)"
-          echo "- sitemap-runner (every 6 hours)"
-          echo ""
-          echo "PM2 ecosystem.config.cjs contains the full automation configuration."
-          echo "Check PM2 status with: pm2 status"
-          exit 0
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Run unit tests
+      run: npm run test:unit
+      
+    - name: Run integration tests
+      run: npm run test:integration
+      
+    - name: Run E2E tests
+      run: npm run test:e2e
+      
+    - name: Upload test results
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-results
+        path: test-results/
+        retention-days: 30
+        
+  quality:
+    name: Quality Checks
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Run linting
+      run: npm run lint
+      
+    - name: Run type checking
+      run: npm run type-check
+      
+    - name: Run code quality checks
+      run: npm run quality:check
+      
+    - name: Upload quality report
+      uses: actions/upload-artifact@v4
+      with:
+        name: quality-report
+        path: quality-report.json
+        retention-days: 30
+        
+  performance:
+    name: Performance Testing
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build application
+      run: npm run build
+      
+    - name: Run performance tests
+      run: npm run test:performance
+      
+    - name: Upload performance report
+      uses: actions/upload-artifact@v4
+      with:
+        name: performance-report
+        path: performance-report.json
+        retention-days: 30
