@@ -271,16 +271,16 @@ export function useHireRequest() {_const [isSubmitting, _setIsSubmitting] = useS
       
       const errorMessage = error instanceof Error         ? error.message 
         : "There was a problem submitting your request. Please try again.",
-      console.error(&quot;Error submitting hire request:&quot;, error);
+      console.error("Error submitting hire request:", error);
       
       const errorMessage = error instanceof Error 
         ? error.message 
-        : &quot;There was a problem submitting your request. Please try again.&quot;;
+        : "There was a problem submitting your request. Please try again.";
       
       setError(errorMessage),
       
       toast({
-        title: &quot;Error&quot;,
+        title: "Error",
         description: errorMessage,
         variant: "destructive"}),      
       return { success: false, error: errorMessage }

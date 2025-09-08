@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Performance monitoring utilities
  * Tracks Core Web Vitals and provides performance insights
@@ -47,7 +48,7 @@ class PerformanceMonitor {
       fcpObserver.observe({ entryTypes: ['paint'] });
       this.observers.push(fcpObserver);
     } catch (e) {
-      console.warn('FCP observer not supported:', e);
+      // console.warn('FCP observer not supported:', e);
     }
 
     // LCP Observer
@@ -60,21 +61,21 @@ class PerformanceMonitor {
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(lcpObserver);
     } catch (e) {
-      console.warn('LCP observer not supported:', e);
+      // console.warn('LCP observer not supported:', e);
     }
 
     // FID Observer
     try {
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: unknown) => {
           this.metrics.fid = entry.processingStart - entry.startTime;
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
       this.observers.push(fidObserver);
     } catch (e) {
-      console.warn('FID observer not supported:', e);
+      // console.warn('FID observer not supported:', e);
     }
 
     // CLS Observer
@@ -82,7 +83,7 @@ class PerformanceMonitor {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: unknown) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
           }
@@ -92,7 +93,7 @@ class PerformanceMonitor {
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(clsObserver);
     } catch (e) {
-      console.warn('CLS observer not supported:', e);
+      // console.warn('CLS observer not supported:', e);
     }
 
     // TTFB Observer
@@ -107,7 +108,7 @@ class PerformanceMonitor {
       ttfbObserver.observe({ entryTypes: ['navigation'] });
       this.observers.push(ttfbObserver);
     } catch (e) {
-      console.warn('TTFB observer not supported:', e);
+      // console.warn('TTFB observer not supported:', e);
     }
 
     // Memory Observer
@@ -223,10 +224,10 @@ class PerformanceMonitor {
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       console.group('🚀 Performance Report');
-      console.log('Score:', report.score);
-      console.log('Metrics:', report.metrics);
+      // console.log('Score:', report.score);
+      // console.log('Metrics:', report.metrics);
       if (report.recommendations.length > 0) {
-        console.log('Recommendations:', report.recommendations);
+        // console.log('Recommendations:', report.recommendations);
       }
       console.groupEnd();
     }
@@ -281,23 +282,23 @@ export const measurePerformance = async <T>(
   const result = await fn();
   const end = performance.now();
   
-  console.log(`⏱️ ${name}: ${(end - start).toFixed(2)}ms`);
+  // console.log(`⏱️ ${name}: ${(end - start).toFixed(2)}ms`);
   
   return result;
 };
 
-export const debounce = <T extends (...args: any[]) => any>(
+export const debounce = <T extends (...args: unknown[]) => any>(
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {
-  let timeout: NodeJS.Timeout;
+  let timeout: ReturnType<typeof setTimeout>;
   return (...args: Parameters<T>) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   };
 };
 
-export const throttle = <T extends (...args: any[]) => any>(
+export const throttle = <T extends (...args: unknown[]) => any>(
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {

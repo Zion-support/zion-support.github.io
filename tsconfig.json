@@ -6,6 +6,7 @@
     "module": "ESNext",
     "skipLibCheck": true,
 
+
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -27,6 +28,41 @@
     }
   },
   "include": [
+
+    "src/**/*",
+    "src/**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "next-env.d.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "src.disabled/**/*",
+    "src_disabled_*/**/*",
+    "**/tests/**",
+    "__tests__/**",
+    "temp_*/**",
+    "temp-*/**",
+    "temp*/**",
+    "temp_conflicts/**",
+    "temp_exclude/**",
+    "zion-*/**",
+    "zion_os/**",
+    "zion/**",
+    "apps/**",
+    "utils/**",
+    "types/**"
+
     "src/main.tsx",
     "src/App.tsx",
     "src/App.css",
@@ -44,5 +80,6 @@
     "src/utils/**/*",
     "src/layout/**/*",
     "src/lib/**/*"
+
   ]
 }

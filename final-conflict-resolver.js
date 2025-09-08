@@ -8,12 +8,12 @@ console.log('🚀 Final comprehensive merge conflict resolution...\n');
 // Function to clean merge conflict markers
 function cleanMergeConflicts(content) {
   return content
-    .replace(/<<<<<<< HEAD[\s\S]*?=======\n?/g, '')
-    .replace(/>>>>>>> [^\n]+/g, '')
-    .replace(/=======\n?[\s\S]*?>>>>>>> [^\n]+/g, '')
-    .replace(/<<<<<<< [^\n]+/g, '')
-    .replace(/=======/g, '')
-    .replace(/>>>>>>> [^\n]+/g, '')
+    .replace(/
+    .replace(/
+    .replace(/\n?[\s\S]*?
+    .replace(/
+    .replace(//g, '')
+    .replace(/
     .replace(/\n\n\n+/g, '\n\n'); // Clean up excessive newlines
 }
 
@@ -24,7 +24,7 @@ function processFile(filePath) {
     
     const content = fs.readFileSync(filePath, 'utf8');
     
-    if (!content.includes('<<<<<<< HEAD')) return false;
+    if (!content.includes('
     
     console.log(`📝 Processing: ${filePath}`);
     
@@ -60,7 +60,7 @@ function findConflictedFiles(dir, extensions = ['.js', '.ts', '.tsx', '.jsx', '.
           if (extensions.includes(ext)) {
             try {
               const content = fs.readFileSync(fullPath, 'utf8');
-              if (content.includes('<<<<<<< HEAD')) {
+              if (content.includes('
                 conflictedFiles.push(fullPath);
               }
             } catch (error) {
@@ -130,3 +130,4 @@ try {
   console.error('💥 Fatal error:', error.message);
   process.exit(1);
 }
+

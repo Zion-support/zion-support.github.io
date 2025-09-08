@@ -3,7 +3,7 @@
 echo "Resolving remaining merge conflicts..."
 
 # Find remaining files with conflicts
-conflict_files=$(find . -name "*.toml" -o -name "*.json" -o -name "*.js" -o -name "*.ts" -o -name "*.tsx" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD\|=======\|>>>>>>> " 2>/dev/null)
+conflict_files=$(find . -name "*.toml" -o -name "*.json" -o -name "*.js" -o -name "*.ts" -o -name "*.tsx" -o -name "*.jsx" | xargs grep -l "\|
 
 total_files=$(echo "$conflict_files" | wc -l)
 echo "Found $total_files files with remaining conflicts"
@@ -17,8 +17,8 @@ echo "$conflict_files" | while read -r file; do
         cp "$file" "$file.backup2"
         
         # More aggressive conflict resolution - keep HEAD version and remove all conflict markers
-        sed -i '/<<<<<<< HEAD/,/=======/!d; /=======/d; />>>>>>> /d' "$file"
-        sed -i '/<<<<<<< HEAD/d; /=======/d; />>>>>>> /d' "$file"
+        sed -i '/
+        sed -i '/
         
         # If file is empty or very small, restore from backup
         if [ ! -s "$file" ] || [ $(wc -c < "$file") -lt 10 ]; then
@@ -29,7 +29,7 @@ echo "$conflict_files" | while read -r file; do
 done
 
 echo "Checking remaining conflicts..."
-remaining=$(find . -name "*.toml" -o -name "*.json" -o -name "*.js" -o -name "*.ts" -o -name "*.tsx" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD\|=======\|>>>>>>> " 2>/dev/null | wc -l)
+remaining=$(find . -name "*.toml" -o -name "*.json" -o -name "*.js" -o -name "*.ts" -o -name "*.tsx" -o -name "*.jsx" | xargs grep -l "
 echo "Remaining conflicts: $remaining"
 
 if [ "$remaining" -eq 0 ]; then

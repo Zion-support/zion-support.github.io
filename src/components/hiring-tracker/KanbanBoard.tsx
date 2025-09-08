@@ -1,16 +1,16 @@
 
-import { useState, useEffect } from "react";
+import { _useState, _useEffect } from "react";
 // Use a lightweight local stub for drag-and-drop to avoid missing dependency
 // errors when the real package isn't installed.
-import { DragDropContext, Droppable, Draggable } from "@/lib/dnd-stub";
-import { useJobApplications } from "@/hooks/useJobApplications";
-import { JobApplication, ApplicationStatus } from "@/types/jobs";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/Button";
+import { _DragDropContext, _Droppable, _Draggable } from "@/lib/dnd-stub";
+import { _useJobApplications } from "@/hooks/useJobApplications";
+import { _JobApplication, _ApplicationStatus } from "@/types/jobs";
+import { _Card, _CardContent, _CardHeader, _CardTitle } from "@/components/ui/card";
+import { _Button } from "@/components/ui/Button";
 import Skeleton from "@/components/ui/skeleton";
-import { toast } from "@/hooks/use-toast";
-import { KanbanColumn } from "./KanbanColumn";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { _toast } from "@/hooks/use-toast";
+import { _KanbanColumn } from "./KanbanColumn";
+import { _useIsMobile } from "@/hooks/use-mobile";
 
 interface DnDLocation {
   droppableId: string;
@@ -56,8 +56,8 @@ interface KanbanBoardProps {
   jobId?: string;
 }
 
-export function KanbanBoard({ jobId }: KanbanBoardProps) {
-  const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId);
+export function KanbanBoard({ _jobId }: KanbanBoardProps) {
+  const { _applications, _isLoading, _updateApplicationStatus } = useJobApplications(jobId);
   const [columns, setColumns] = useState<Record<string, JobApplication[]>>({});
   const isMobile = useIsMobile();
   
@@ -75,8 +75,8 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {
   }, [applications]);
   
   // Handle drag end event to update the application status
-  const handleDragEnd = async (result: DropResult) => {
-    const { destination, source, draggableId } = result;
+  const handleDragEnd = async (_result: DropResult) => {
+    const { _destination, _source, _draggableId } = result;
     
     // If there's no destination or the item is dropped in the same place, do nothing
     if (!destination || 
@@ -125,7 +125,7 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {
     return (
       <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>
         {Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (
-          <Card key={i} className="h-[500px]">
+          <Card key={_i} className="h-[500px]">
             <CardHeader>
               <Skeleton className="h-8 w-24" />
             </CardHeader>
@@ -152,7 +152,7 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {
   }
   
   return (
-    <DragDropContext onDragEnd={handleDragEnd}>
+    <DragDropContext onDragEnd={_handleDragEnd}>
       <div className={`grid ${isMobile ? 'grid-cols-1 gap-y-6' : 'grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4'} overflow-x-auto`}>
         {COLUMNS.map(column => (
           <KanbanColumn

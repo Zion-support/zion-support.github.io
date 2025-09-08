@@ -20,6 +20,16 @@ const lines = fixedContent.split('\n');
     fixedContent = fixedContent.replace(/\\'/g, ')
 // console.log('\n "Summary")
       console.log('\n� Fixed "files")
-<<<<<<< HEAD
 // console.log('\n� "Errors")
     console.log('\n� Report saved "to")
+
+
+
+
+
+
+main
+
+
+
+

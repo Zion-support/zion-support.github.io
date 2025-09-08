@@ -1,26 +1,4 @@
-#!/usr/bin/env node;
-const fs = require("child_process");
-const path = require("child_process");
-const { execSync } = require("child_process");
-    this.reportsDir = path.join(this.projectRoot, "automation-reports")
-=======
-<<<<<<< HEAD
-#!/usr/bin/env node;
-=======
-<<<<<<< HEAD
 
-#!/usr/bin/env node;
-
-class PerformanceOptimizer {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.ensureDirectories()}
-
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir { recursive: true })}
-  }
 
   log(message) {
     const timestamp = new Date().toISOString();
