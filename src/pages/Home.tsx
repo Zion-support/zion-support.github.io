@@ -1,242 +1,27 @@
 
-import React, { Suspense, useState, useEffect, useMemo } from 'react';
-import { motion  } from 'framer-motion';
-import { Link  } from 'react-router-dom';
-
-import { SEO  } from '@/components/SEO';
-import { HeroSection  } from '@/components/HeroSection';
-import { LoadingSpinner  } from '@/components/ui/LoadingSpinner';
-
-// Optimized futuristic animated background component
-const FuturisticBackground = React.memo(() => {
-  const particles = useMemo(() => 
-    [...Array(20)].map((_, i) => ({
-      id: i,
-      left: `${Math.random() * 100}%`,
-      top: `${Math.random() * 100}%`,
-      delay: i * 0.1,
-      duration: 5 + i * 0.3
-    })), []
-  );
-
-  return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none">
-      {particles.map((particle) => (
-        <div
-          key={particle.id}
-          className="absolute w-1 h-1 bg-cyan-400/30 rounded-full animate-pulse"
-          style={{
-            left: particle.left,
-            top: particle.top,
-            animationDelay: `${particle.delay}s`,
-            animationDuration: `${particle.duration}s`
-          }}
-        />
-      ))}
-    </div>
-  );
-});
-
-// Loading fallback component
-const LoadingFallback = ({ message }: { message: string })  => (
-  <div className="py-20 bg-slate-900">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-center">
-        <div className="animate-pulse">
-          <div className="h-12 bg-slate-700 rounded-lg mb-4 max-w-md mx-auto"></div>
-          <div className="h-6 bg-slate-700 rounded-lg max-w-2xl mx-auto"></div>
-        </div>
-        <p className="text-slate-400 mt-4">{message}</p>
-      </div>
-    </div>
-  </div>
-);
-
-// Service categories data
-const serviceCategories = [
-  {
-    name: "AI Solutions",
-    description: "Cutting-edge artificial intelligence services for business transformation",
-    icon: "🤖",
-    href: "/ai-services",
-    count: 20,
-    color: "from-cyan-500 to-blue-600"
-  },
-  {
-    name: "Edge & IoT",
-    description: "Ultra-low latency edge computing and IoT platform solutions",
-    icon: "⚡",
-    href: "/services/edge-computing-platform",
-    count: 8,
-    color: "from-blue-500 to-purple-600"
-  },
-  {
-    name: "Cloud & DevOps",
-    description: "Scalable cloud infrastructure and automated deployment solutions",
-    icon: "☁️",
-    href: "/services/cloud-devops",
-    count: 12,
-    color: "from-green-500 to-emerald-600"
-  },
-  {
-    name: "Cybersecurity",
-    description: "Advanced security protocols and threat protection systems",
-    icon: "🔒",
-    href: "/services/ai-compliance-copilot",
-    count: 10,
-    color: "from-red-500 to-orange-600"
-  },
-  {
-    name: "Data Governance",
-    description: "AI-powered data protection and compliance management",
-    icon: "🛡️",
-    href: "/services/ai-data-governance",
-    count: 6,
-    color: "from-purple-500 to-pink-600"
-  },
-  {
-    name: "Customer Success",
-    description: "AI-driven customer engagement and retention platforms",
-    icon: "💝",
-    href: "/services/ai-customer-success-platform",
-    count: 5,
-    color: "from-yellow-500 to-orange-600"
-  }
-];
-
-// Animation variants for smooth performance
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2
-    }
-  ];
-
-  const services = [
-    {
-      title: 'AI Business Intelligence',
-      description: 'Transform data into actionable insights with our AI-powered analytics platform',
-      icon: BarChart3,
-      href: '/services/ai-business-intelligence',
-      featured: true
-    },
-    {
-      title: 'Cloud & DevOps',
-      description: 'Streamline your development and deployment processes',
-      icon: Cloud,
-      href: '/services/cloud-devops',
-      featured: true
-    },
-    {
-      title: 'Cybersecurity Solutions',
-      description: 'Protect your business with enterprise-grade security',
-      icon: Shield,
-      href: '/services/cybersecurity',
-      featured: false
-    },
-    {
-      title: 'Digital Twin Technology',
-      description: 'Create virtual replicas of your physical systems',
-      icon: Cpu,
-      href: '/services/digital-twin',
-      featured: false
-    }
-  ];
-
-  const stats = [
-    { number: '500+', label: 'Projects Delivered' },
-    { number: '50+', label: 'Enterprise Clients' },
-    { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '24/7', label: 'Support Available' }
-  ];
-
-// AI Services data
-const aiServices = [
-  {
-    icon: Brain,
-    title: "AI Business Intelligence",
-    description: "Transform your data into actionable insights with our advanced AI analytics platform.",
-    path: "/services/ai-business-intelligence",
-    features: [
-      "Predictive Analytics",
-      "Real-time Dashboards",
-      "Automated Reporting",
-      "Custom ML Models"
-    ]
-  },
-  {
-    icon: Cloud,
-    title: "Cloud DevOps",
-    description: "Streamline your development pipeline with automated cloud infrastructure.",
-    path: "/services/cloud-devops",
-    features: [
-      "CI/CD Automation",
-      "Infrastructure as Code",
-      "Container Orchestration",
-      "Security Integration"
-    ]
-  },
-  {
-    icon: Shield,
-    title: "AI Cybersecurity",
-    description: "Protect your business with intelligent threat detection and response systems.",
-    path: "/services/ai-cybersecurity-suite",
-    features: [
-      "Threat Intelligence",
-      "Automated Response",
-      "Zero Trust Architecture",
-      "Compliance Monitoring"
-    ]
-  }
-];
-
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
-
-// Trust Signals data
-const trustSignals = [
-  {
-    icon: Award,
-    label: "ISO 27001 Certified",
-    description: "Information security management"
-  },
-  {
-    icon: Shield,
-    label: "SOC 2 Compliant",
-    description: "Security, availability, and confidentiality"
-  },
-  {
-    icon: Globe,
-    label: "GDPR Ready",
-    description: "Data protection compliance"
-  },
-  {
-    icon: Star,
-    label: "99.9% Uptime",
-    description: "Enterprise-grade reliability"
-  }
-];
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { CategoriesSection } from "@/components/CategoriesSection";
+import { BenefitsSection } from "@/components/BenefitsSection";
+import { HowItWorksSection } from "@/components/HowItWorksSection";
+import { NewsletterSection } from "@/components/NewsletterSection";
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
+import { SEO } from "@/components/SEO";
+import { HeroSection } from "@/components/HeroSection";
+import { QuickAccess } from "@/components/home/QuickAccess";
+import { FeatureCTAs } from "@/components/home/FeatureCTAs";
+import { FeatureHighlights } from "@/components/home/FeatureHighlights";
+import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 
 export default function Home() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
+  const { t } = useTranslation();
   return (
-    <>
-      <SEO 
-        title="Zion Tech Group - Revolutionary AI & Technology Solutions"
-        description="Leading provider of cutting-edge AI, cloud infrastructure, cybersecurity, and digital transformation solutions. Transform your business with Zion Tech Group."
-        keywords="AI solutions, cloud computing, cybersecurity, digital transformation, technology consulting, Zion Tech Group"
-        ogType="website"
+    <div className="min-h-screen bg-background">
+      <SEO
+        title={t('home.seo_title')}
+        description={t('home.seo_description')}
+        keywords="AI, technology, marketplace, services, talent"
+        canonical="https://app.ziontechgroup.com/"
       />
 
       {/* Hero Section */}

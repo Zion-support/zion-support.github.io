@@ -51,38 +51,29 @@ export const LanguageSelector: React.FC = () => {
   const currentLang = languages.find(lang => lang.code === currentLanguage);
 
   return (
-    <div className="relative">
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 text-white hover:text-zion-cyan transition-colors cursor-pointer"
-      >
-        <Globe className="w-4 h-4" />
-        <span className="text-sm font-medium">{currentLang?.code}</span>
-        <ChevronDown className={`w-3 h-3 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
-      </button>
-
-      {isOpen && (
-        <div className="absolute top-full right-0 mt-2 w-48 bg-black/95 backdrop-blur-md rounded-lg shadow-xl border border-gray-800 z-50">
-          <div className="py-2">
-            {languages.map((language) => (
-              <button
-                key={language.code}
-                onClick={() => handleLanguageChange(language.code)}
-                className={`w-full flex items-center gap-3 px-4 py-2 text-sm transition-colors ${
-                  currentLanguage === language.code
-                    ? 'text-zion-cyan bg-gray-800/50'
-                    : 'text-white hover:text-zion-cyan hover:bg-gray-800/30'
-                }`}
-              >
-                <span className="text-lg">{language.flag}</span>
-                <span>{language.name}</span>
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-    </div>
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="ghost" size="icon" className="text-white hover:bg-zion-purple/10">
+          <Globe className="h-5 w-5" />
+          <span className="sr-only">{t('general.select_language')}</span>
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end" className="bg-zion-blue-dark border border-zion-purple/20">
+        {supportedLanguages.map((lang) => (
+          <DropdownMenuItem
+            key={lang.code}
+            className={`cursor-pointer ${
+              currentLanguage === lang.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10'
+            }`}
+            onClick={() => changeLanguage(lang.code)}
+          >
+            <div className="flex items-center gap-2">
+              <span className="text-lg">{lang.flag}</span>
+              <span>{t(`language.${lang.code.split('-')[0]}`)}</span>
+            </div>
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 };
