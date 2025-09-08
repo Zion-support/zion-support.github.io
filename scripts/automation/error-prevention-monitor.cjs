@@ -1,706 +1,380 @@
-#!/""usr/bin/env"" node;
 #!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
-const { execSync } = require('child_process');
+
 const fs = require('fs');
 const path = require('path');
-console.log('🛡️ Starting error prevention monitor...');
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+const { execSync } = require('child_process');
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-console.log('🛡️ Starting error prevention monitor...');
-=======
-#!/usr/bin/env node;"
->>>>>>> origin/chore/fix-lint-and-merge
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> merged-prs-20250907-203621
 class ErrorPreventionMonitor {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'logs', 'error-prevention-monitor.log')}
+    this.logFile = './logs/error-prevention-monitor.log';
+    this.reportsDir = './reports';
+    this.ensureDirectories();
+    this.monitoringData = {
+      timestamp: new Date().toISOString(),
+      services: {},
+      alerts: [],
+      metrics: {
+        totalErrors: 0,
+        totalWarnings: 0,
+        servicesOnline: 0,
+        servicesOffline: 0
+      }
+    };
+  }
+
+  ensureDirectories() {
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
+    }
+    
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
+  }
+
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
-    try {
-  // TODO: Implement
-      fs.appendFileSync(this.logFile, logMessage)} catch (error) {
-      // Ignore logging errors
-    console.log(logMessage.trim())}
-  checkProjectHealth($2) {
-  // TODO: Implement
-
-      // Check for corrupted files
-      const corruptedFiles = this.findCorruptedFiles()
-  if($2) {`
-        this.log(`Found ${corruptedFiles.length} corrupted files`)
-        this.triggerAutoFix()}
-      // Check build status
-      this.checkBuildStatus()
-    sourceDirs.forEach(dir => {)
-      const dirPath = path.join(this.projectRoot, dir)
-      if (fs.existsSync(dirPath)) {
-        this.scanDirectory(dirPath, corruptedFiles)}
-    })
-    return corruptedFiles}
-  scanDirectory($2) {
-  // TODO: Implement
-      const files = fs.readdirSync(dirPath)
-      files.forEach(file => {)
-        const filePath = path.join(dirPath, file)
-        const stat = fs.statSync(filePath)
-        if (stat.isDirectory()) {
-          this.scanDirectory(filePath, corruptedFiles)} else if (file.match(/\.(tsx?|jsx?)$/)) {
-  // TODO: Implement
-
-                corruptedFiles.push(filePath)}
-<<<<<<< HEAD
-          } catch (error) {
-      })} catch (error) {
-=======
-<<<<<<< HEAD
-          } catch (error) {
-      })} catch (error) {
-      // Directory access error
-    }      return false}
-
-  async fixUnsafeCode(line) {
-  let fixedLine = line
-    // Replace eval with safer alternatives
-  fixedLine = line.replace(/eval\s*\(([^)]+)\)/g, "JSON.parse($1)")}"
-    // Replace innerHTML with textContent where possible;"
-    if (line.includes(".innerHTML =")) {"
-  fixedLine = line.replace(;)"
-=======
-          } catch (error) {})} catch (error) {
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-      // Directory access error;
-    }      return false}
-;
-  async fixUnsafeCode(line) {
-  let fixedLine = line;
-    // Replace eval with safer alternatives;
-
-<<<<<<< HEAD
-  fixedLine = line.replace(/eval\s*\(([^)]+)\)/g, "JSON.parse($1)")}"
-    // Replace innerHTML with textContent where possible;"
-    if (line.includes(".innerHTML =")) {"
-  fixedLine = line.replace(;)"
-=======
-  fixedLine = line.replace(/eval\s*\(([^)]+)\)/g, "JSON.parse($1)")}
-    // Replace innerHTML with textContent where possible;
-    if (line.includes(".innerHTML =")) {
-  fixedLine = line.replace(;)
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-        /\.innerHTML\s*=\s*([^]+)/g,.textContent = $1";"
-    // Replace eval with safer alternatives;"
-
-    // Replace innerHTML with textContent where possible;"
-      )}
-    return fixedLine}
-  async fixMemoryLeak(line) {
-    // Add cleanup for event listeners;"
-    if (line.includes("addEventListener")) {"
-
-  async fixAsyncError(line) {
-    // Add error handling for promises;"
-
-  async fixTypeIssue(line) {
-    // Replace any with more specific types;"
-    if (line.includes(": any")) {
-  fixedLine = line.replace(/: any/g, ": unknown");"
-    // Replace any with more specific types;"
-
-  fixedLine = line.replace(/: "any/g", ": unknown")}"
-;"
-    if (line.includes("as any")) {
-  fixedLine = line.replace(/as "any/g", "as unknown")}"
-  async generateReport(fixResults) {"
-  this.log("📊 Generating error prevention monitoring report...");"
-    const report = {"
-  "timestamp": new Date().toISOString(),
-      "summary": {"
-  totalIssues: fixResults.totalIssues,"
-        "fixedIssues": fixResults.fixedCount,
-<<<<<<< HEAD
-        "preventionRate": fixResults.totalIssues > 0;"
-=======
-<<<<<<< HEAD
-        "preventionRate": fixResults.totalIssues > 0;"
-            ? ((fixResults.fixedCount / fixResults.totalIssues) * 100).toFixed(
-=======
-        preventionRate: fixResults.totalIssues > 0;"
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-            ? ((fixResults.fixedCount / fixResults.totalIssues) * 100).toFixed(;
->>>>>>> merged-prs-20250907-203621
-                2;)
-              )
-            : 100},"
-      "fixResults": fixResults.results,
-      "recommendations": ["Review applied fixes to ensure they meet your requirements, "Consider adding more specific type annotations", "Implement proper error handling for async operations, "Regularly review code for potential security issues", ]}"
-    const reportFile = path.join(;"
-      this.reportsPath,error-prevention-monitor-report.json";")
-
-    return report}
-  async run() {"
-  this.log("🚀 Starting Error Prevention Monitor...");"
-  // TODO: Implement
-<<<<<<< HEAD
-  // Scan for potential errors
-      const potentialErrors = await this.scanForPotentialErrors()
-  if($2) {"
-  this.log("🎉 No potential errors detected!")
-        return { "success": true, "issues": [], "fixed": 0 }"
-      // Apply preventive fixes
-      const fixResults = await this.applyPreventiveFixes(potentialErrors)
-      // Generate report
-      const report = await this.generateReport(fixResults);"`
-      this.log("🎉 Error Prevention Monitor completed!");this.log(`📊 Applied ${fixResults.fixedCount} preventive fixes`);"
-=======
-  // Scan for potential errors;
-      const potentialErrors = await this.scanForPotentialErrors();
-      if (potentialErrors.length === 0) {"
-  this.log("🎉 No potential errors detected!");
-        return { "success": true, "issues": [], "fixed": 0 }"
-      // Apply preventive fixes;
-      const fixResults = await this.applyPreventiveFixes(potentialErrors);
-      // Generate report;
-<<<<<<< HEAD
-      const report = await this.generateReport(fixResults);"`;
-      this.log("🎉 Error Prevention Monitor completed!");this.log(`📊 Applied ${fixResults.fixedCount} preventive fixes`);"
-=======
-      const report = await this.generateReport(fixResults);`;
-      this.log(🎉 Error Prevention Monitor completed!");this.log(`📊 Applied ${fixResults.fixedCount} preventive fixes`);"
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-      return {
-  // TODO: Implement
-}"
-  "success": fixResults.fixedCount > 0,
-        "issues": potentialErrors,
-        "fixed": fixResults.fixedCount,"
-        report,
-  // TODO: Implement
-  // Scan for potential errors
-      // Apply preventive fixes
-      // Generate report
-      throw error}
-<<<<<<< HEAD
-      execSync('bash start-simple-error-prevention.sh', { 
-        "cwd": this.projectRoot, 
-        "stdio": 'pipe' 
-=======
-<<<<<<< HEAD
-      execSync('bash start-simple-error-prevention.sh', { 
-        "cwd": this.projectRoot, 
-        "stdio": 'pipe' 
-      });
-      this.log('Auto-fix process completed')} catch (error) {
-      this.log(`Auto-fix process "failed": ${error.message}`)}
-  checkBuildStatus($2) {
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-}
-  triggerAutoFix() {
-    this.log('Triggering auto-fix process...');
-    try {
-<<<<<<< HEAD
-      execSync('bash start-simple-error-prevention.sh', {
-        "cwd": this.projectRoot,
-        "stdio": 'pipe'
-=======
-      execSync('bash start-simple-error-prevention.sh', { 
-        "cwd": this.projectRoot, 
-        "stdio": 'pipe' 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-      });
-      this.log('Auto-fix process completed')} catch (error) {
-      this.log(`Auto-fix process "failed": ${error.message}`)}
+    console.log(logMessage.trim());
+    fs.appendFileSync(this.logFile, logMessage);
   }
-  checkBuildStatus() {
->>>>>>> merged-prs-20250907-203621
+
+  async monitorServices() {
+    this.log('🔍 Monitoring error prevention services...');
+    
     try {
-<<<<<<< HEAD
-      this.log('Checking build status...');
-      execSync('yarn build', { 
-        "cwd": this.projectRoot, 
-        "stdio": 'pipe' 
-=======
-<<<<<<< HEAD
-      this.log('Checking build status...);
+      const status = execSync('pm2 status', { encoding: 'utf8' });
+      const processes = this.parsePM2Status(status);
+      
+      for (const process of processes) {
+        const serviceName = process.name;
+        this.monitoringData.services[serviceName] = {
+          status: process.status,
+          uptime: process.uptime,
+          memory: process.memory,
+          cpu: process.cpu,
+          restarts: process.restarts,
+          lastCheck: new Date().toISOString()
+        };
 
-=======
-      this.log('Checking build status...');
-<<<<<<< HEAD
-      execSync('yarn build', { 
-        "cwd": this.projectRoot, 
-        "stdio": 'pipe' 
-      });
-      this.log('Build check passed')} catch (error) {
-      this.log(`Build check "failed": ${error.message}`)
-      this.triggerAutoFix()}
+        if (process.status === 'online') {
+          this.monitoringData.metrics.servicesOnline++;
+        } else {
+          this.monitoringData.metrics.servicesOffline++;
+          this.monitoringData.alerts.push({
+            type: 'service_offline',
+            service: serviceName,
+            status: process.status,
+            timestamp: new Date().toISOString()
+          });
+        }
 
-    this.reportsDir = path.join(this.projectRoot, 'error-reports')
-    this.logsDir = path.join(this.projectRoot, 'automation/logs')
-    this.checkInterval = parseInt(process.env.PREVENTION_CHECK_INTERVAL) || 600000; // 10 minutes
-    this.preventiveActionsEnabled = process.env.PREVENTIVE_ACTIONS_ENABLED === 'true'
-=======
-<<<<<<< HEAD
-      execSync('yarn build', {
-        "cwd": this.projectRoot,
-        "stdio": 'pipe'
-=======
-      execSync('yarn build', { 
-        "cwd": this.projectRoot, 
-        "stdio": 'pipe' 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-      });
-      this.log('Build check passed')} catch (error) {
-      this.log(`Build check "failed": ${error.message}`);
-      this.triggerAutoFix()}
-  }
-    this.reportsDir = path.join(this.projectRoot, 'error-reports');
-    this.logsDir = path.join(this.projectRoot, 'automation/logs');
-    this.checkInterval = parseInt(process.env.PREVENTION_CHECK_INTERVAL) || 600000; // 10 minutes
-<<<<<<< HEAD
-    this.preventiveActionsEnabled = process.env.PREVENTIVE_ACTIONS_ENABLED === 'true';
-    // Ensure directories exist
-    [this.reportsDir, this.logsDir].forEach(dir => {
-  triggerAutoFix() {"
-=======
-    this.preventiveActionsEnabled = process.env.PREVENTIVE_ACTIONS_ENABLED === 'true;
->>>>>>> merged-prs-20250907-203621
-    // Ensure directories exist
-    [this.reportsDir, this.logsDir].forEach(dir => {
-<<<<<<< HEAD
-  triggerAutoFix() {
-=======
-=======
-  triggerAutoFix() {"
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-
-  checkBuildStatus() {
-  // TODO: Implement
-
-    // Ensure directories exist
-    [this.reportsDir, this.logsDir].forEach(dir => {)
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      if (!fs.existsSync(dir)) {
-<<<<<<< HEAD
-        fs.mkdirSync(dir, { "recursive": true })}"
-    this.preventionHistory = [];
-    this.riskFactors = new Map()}"
-  log(message, level = 'INFO') {
-    console.log(`[${timestamp}] [${level}] ${message}`)}
-  async checkFileSizeIssues() {
-    this.log('Checking for file size issues...', 'INFO');
-=======
-<<<<<<< HEAD
-        fs.mkdirSync(dir, { "recursive": true })}
-    });
-    this.preventionHistory = [];
-    this.riskFactors = new Map()}
-  log(message, level = 'INFO') {
-=======
-        fs.mkdirSync(dir, { recursive": true })}"
-    this.preventionHistory = [];
-<<<<<<< HEAD
-    this.riskFactors = new Map()}
-  log(message, level = INFO') {
-
-    console.log(`[${timestamp}] [${level}] ${message}`)}
-  async checkFileSizeIssues() {
-    this.log('Checking for file size issues..., INFO');
-=======
-    this.riskFactors = new Map()}"
-  log(message, level = 'INFO') {
-<<<<<<< HEAD
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level}] ${message}`)}
-  async checkFileSizeIssues() {
-    this.log('Checking for file size issues...', 'INFO');
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    const largeFiles = [];
-    const maxSize = 1024 * 1024; // 1MB;
-  // TODO: Implement
-<<<<<<< HEAD
-      const files = this.getAllSourceFiles()
-  for($2) {
-        const stats = fs.statSync(file)
-  if($2) {
-=======
-      const files = this.getAllSourceFiles();
-      for (const file of files) {
-        const stats = fs.statSync(file);
-        if (stats.size > maxSize) {
->>>>>>> merged-prs-20250907-203621
-          largeFiles.push({
-            file,
-            "size": stats.size,")"
-            "sizeMB": (stats.size / (1024 * 1024)).toFixed(2)"
-          })}
-
-    const circularDeps = []
-  // TODO: Implement
-
-      if (output.trim()) {
-<<<<<<< HEAD
-        const lines = output.split('\n').filter(line => line.trim());
-=======
-<<<<<<< HEAD
-        const lines = output.split('\n').filter(line => line.trim())
-  for($2) {
-=======
-        const lines = output.split('\n).filter(line => line.trim());
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-        for (const line of lines) {
->>>>>>> merged-prs-20250907-203621
-          circularDeps.push({)
-
-      return circularDeps} catch (error) {
-      // madge returns non-zero exit code when circular dependencies are found
-  if($2) {
-        const output = error.stdout.toString()
-    const unusedDeps = []
-  // TODO: Implement
-
-      const result = JSON.parse(output)
-  if($2) {
-  for($2) {
-          unusedDeps.push({
-
-    const vulnerabilities = []
-  // TODO: Implement
-
-            "recommendation": vuln.recommendation;")
-      return vulnerabilities} catch (error) {
-      // npm audit returns non-zero exit code when vulnerabilities are found
-  // TODO: Implement
-              vulnerabilities.push({"
-
-    const performanceIssues = [];
-<<<<<<< HEAD
-      const foundFrameworks = cssFrameworks.filter(framework => 
-        packageJson.dependencies && packageJson.dependencies[framework]
-      );
-  // TODO: Implement
-
-      const foundFrameworks = cssFrameworks.filter(framework => 
-        packageJson.dependencies && packageJson.dependencies[framework])
-      if (foundFrameworks.length > 1) {
-
-    const qualityIssues = []
-=======
-<<<<<<< HEAD
-      const foundFrameworks = cssFrameworks.filter(framework => 
-        packageJson.dependencies && packageJson.dependencies[framework]
-      );
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-  // TODO: Implement
-
-      const foundFrameworks = cssFrameworks.filter(framework => 
-        packageJson.dependencies && packageJson.dependencies[framework])
-      if (foundFrameworks.length > 1) {
-
-    const qualityIssues = []
-  // TODO: Implement
-      // Check for TODO comments
-      const todoComments = this.findTodoComments()
-  if($2) {
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-    try {
-      // Check for large bundle size indicators
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-      // Check for heavy dependencies
-      const heavyDeps = ['lodash', 'moment', 'date-fns', 'ramda', 'underscore'];
-      for (const dep of heavyDeps) {
-        if (packageJson.dependencies && packageJson.dependencies[dep]) {
-          performanceIssues.push({
-            "type": 'heavy-dependency',
-            "dependency": dep,
-            "severity": 'medium',
-            "recommendation": `Consider using lighter alternatives for ${dep}`
-          })}
+        if (process.restarts > 5) {
+          this.monitoringData.alerts.push({
+            type: 'frequent_restarts',
+            service: serviceName,
+            restarts: process.restarts,
+            timestamp: new Date().toISOString()
+          });
+        }
       }
-      // Check for multiple CSS frameworks
-      const cssFrameworks = ['bootstrap', 'tailwindcss', 'bulma', 'foundation'];
-<<<<<<< HEAD
-      const foundFrameworks = cssFrameworks.filter(framework =>
-=======
-      const foundFrameworks = cssFrameworks.filter(framework => 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-        packageJson.dependencies && packageJson.dependencies[framework]
-      );
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-  // TODO: Implement
-
-      const foundFrameworks = cssFrameworks.filter(framework => 
-        packageJson.dependencies && packageJson.dependencies[framework])
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      if (foundFrameworks.length > 1) {
-
-    const qualityIssues = [];
-  // TODO: Implement
-      // Check for TODO comments;
-      const todoComments = this.findTodoComments();
-      if (todoComments.length > 10) {
->>>>>>> merged-prs-20250907-203621
-        qualityIssues.push({
-
-    if (!fs.existsSync(srcDir)) {
-      return sourceFiles}
-    const walkDir = (dir) => {
-      const files = fs.readdirSync(dir)
-        const filePath = path.join(dir, file)
-          walkDir(filePath)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
-          sourceFiles.push(filePath)}
-<<<<<<< HEAD
-    };
-=======
+      
+      this.log(`✅ Service monitoring completed. Online: ${this.monitoringData.metrics.servicesOnline}, Offline: ${this.monitoringData.metrics.servicesOffline}`);
+    } catch (error) {
+      this.log(`❌ Service monitoring failed: ${error.message}`);
+      this.monitoringData.alerts.push({
+        type: 'monitoring_failure',
+        error: error.message,
+        timestamp: new Date().toISOString()
+      });
     }
-<<<<<<< HEAD
-    walkDir(srcDir)
-  findTodoComments($2) {
-    const todos = []
-      const lines = content.split('\n')
-  for($2) {
-        if (lines[i].includes('TODO') || lines[i].includes('FIXME')) {
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-    walkDir(srcDir);
-  findTodoComments() {
-    const todos = [];
+  }
 
-      const lines = content.split('\n');
-      for (let i = 0; i < lines.length; i++) {
-<<<<<<< HEAD
-        if (lines[i].includes('TODO') || lines[i].includes('FIXME')) {
-=======
-        if (lines[i].includes('TODO) || lines[i].includes(FIXME')) {
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-          todos.push({
+  parsePM2Status(statusOutput) {
+    const processes = [];
+    const lines = statusOutput.split('\n');
+    
+    // Skip header lines
+    let startIndex = 0;
+    for (let i = 0; i < lines.length; i++) {
+      if (lines[i].includes('id') && lines[i].includes('name')) {
+        startIndex = i + 1;
+        break;
+      }
+    }
+    
+    for (let i = startIndex; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (line && !line.includes('─') && !line.includes('Use')) {
+        const parts = line.split(/\s+/);
+        if (parts.length >= 6) {
+          processes.push({
+            name: parts[1],
+            status: parts[2],
+            uptime: parts[3],
+            memory: parts[4],
+            cpu: parts[5],
+            restarts: parts[6] || 0
+          });
+        }
+      }
+    }
+    
+    return processes;
+  }
 
-            "line": i + 1,")"
-            "comment": lines[i].trim()"
-    return todos}
-  findConsoleStatements($2) {
-    const consoleStatements = []
-  for($2) {"
+  async monitorErrorLogs() {
+    this.log('🔍 Monitoring error logs...');
+    
+    const logFiles = [
+      './logs/enhanced-error-prevention-orchestrator-error.log',
+      './logs/syntax-error-fixer-error.log',
+      './logs/typescript-error-fixer-error.log',
+      './logs/linting-error-fixer-error.log',
+      './logs/build-error-fixer-error.log',
+      './logs/dependency-error-fixer-error.log'
+    ];
 
-            "statement": lines[i].trim()"
-    return consoleStatements}
-<<<<<<< HEAD
-  findHardcodedValues($2) {
-    const hardcodedValues = []
-        ]
-  for($2) {
-          const matches = lines[i].match(pattern)
-  if($2) {
-=======
-  findHardcodedValues() {
-    const hardcodedValues = [];
-<<<<<<< HEAD
-    const files = this.getAllSourceFiles();
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-    for (const file of files) {
-      const content = fs.readFileSync(file, 'utf8');
-      const lines = content.split('\n');
-      for (let i = 0; i < lines.length; i++) {
-        // Look for hardcoded URLs, API keys, etc.
-const hardcodedPatterns = [/https?:\/\/[^\s'"]+/g,;
-          /api_key\s*[:=]\s*['"][^'"]+['"]/g,
-          /password\s*[:=]\s*['"][^'"]+['"]/g,
-          /secret\s*[:=]\s*['"][^'"]+['"]/g
-=======
+    for (const logFile of logFiles) {
+      if (fs.existsSync(logFile)) {
+        try {
+          const content = fs.readFileSync(logFile, 'utf8');
+          const lines = content.split('\n');
+          const errorLines = lines.filter(line => 
+            line.includes('ERROR') || 
+            line.includes('Error') || 
+            line.includes('error') ||
+            line.includes('Failed') ||
+            line.includes('failed')
+          );
 
->>>>>>> origin/chore/fix-lint-and-merge
-        ];
-        for (const pattern of hardcodedPatterns) {
-          const matches = lines[i].match(pattern);
-          if (matches) {
->>>>>>> merged-prs-20250907-203621
-            hardcodedValues.push({
-              file,"
+          if (errorLines.length > 0) {
+            this.monitoringData.metrics.totalErrors += errorLines.length;
+            
+            if (errorLines.length > 10) {
+              this.monitoringData.alerts.push({
+                type: 'excessive_errors',
+                logFile: path.basename(logFile),
+                errorCount: errorLines.length,
+                timestamp: new Date().toISOString()
+              });
+            }
+          }
+        } catch (error) {
+          this.log(`⚠️ Could not read log file ${logFile}: ${error.message}`);
+        }
+      }
+    }
+  }
 
-    const actionsTaken = []
-  for($2) {
-  // TODO: Implement
-        const action = await this.takeActionForIssue(issue)
-  if($2) {
-          actionsTaken.push(action)}
+  async monitorProjectHealth() {
+    this.log('🔍 Monitoring project health...');
+    
+    try {
+      // Check for syntax errors
+      const lintResult = execSync('npm run lint 2>&1', { encoding: 'utf8' });
+      const errorCount = (lintResult.match(/error/g) || []).length;
+      
+      if (errorCount > 0) {
+        this.monitoringData.metrics.totalErrors += errorCount;
+        
+        if (errorCount > 100) {
+          this.monitoringData.alerts.push({
+            type: 'excessive_linting_errors',
+            errorCount: errorCount,
+            timestamp: new Date().toISOString()
+          });
+        }
+      }
 
-<<<<<<< HEAD
-        return await this.flagTodosForReview(issue)
-      "default": return null}"
-=======
-        return await this.flagTodosForReview(issue);
-<<<<<<< HEAD
-      "default": return null}"
-=======
-      default: return null}"
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-  async removeUnusedDependency(issue) {
-  // TODO: Implement
+      // Check TypeScript errors
+      try {
+        const tsResult = execSync('npx tsc --noEmit 2>&1', { encoding: 'utf8' });
+        const tsErrorCount = (tsResult.match(/error TS/g) || []).length;
+        
+        if (tsErrorCount > 0) {
+          this.monitoringData.metrics.totalErrors += tsErrorCount;
+          
+          if (tsErrorCount > 50) {
+            this.monitoringData.alerts.push({
+              type: 'excessive_typescript_errors',
+              errorCount: tsErrorCount,
+              timestamp: new Date().toISOString()
+            });
+          }
+        }
+      } catch (tsError) {
+        const tsErrorCount = (tsError.stdout?.match(/error TS/g) || []).length;
+        if (tsErrorCount > 0) {
+          this.monitoringData.metrics.totalErrors += tsErrorCount;
+        }
+      }
 
-      return null}
-  async fixSecurityVulnerability(issue) {
-  // TODO: Implement
+    } catch (error) {
+      this.log(`❌ Project health monitoring failed: ${error.message}`);
+      this.monitoringData.alerts.push({
+        type: 'health_monitoring_failure',
+        error: error.message,
+        timestamp: new Date().toISOString()
+      });
+    }
+  }
 
-  async removeConsoleStatements(issue) {
-  // TODO: Implement
+  async checkAlertThresholds() {
+    this.log('🔍 Checking alert thresholds...');
+    
+    const config = {
+      maxErrors: parseInt(process.env.ALERT_THRESHOLD) || 50,
+      maxOfflineServices: 2,
+      maxRestarts: 5
+    };
 
-<<<<<<< HEAD
-    content += `Total TODOs "found": ${todos.length}\n\n`;"
-=======
-<<<<<<< HEAD
-    content += `Total TODOs "found": ${todos.length}\n\n`;"
-  for($2) {`
-      content += `## ${todo.file}:${todo.line}\n`;`
-      content += `${todo.comment}\n\n`}
-    fs.writeFileSync(reviewFile, content)
-  // TODO: Implement
+    if (this.monitoringData.metrics.totalErrors > config.maxErrors) {
+      this.monitoringData.alerts.push({
+        type: 'error_threshold_exceeded',
+        current: this.monitoringData.metrics.totalErrors,
+        threshold: config.maxErrors,
+        timestamp: new Date().toISOString()
+      });
+    }
 
-  // TODO: Implement
-      // Run all prevention checks
-=======
-    content += `Total TODOs "found: ${todos.length}\n\n`;
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-    for (const todo of todos) {`;
-      content += `## ${todo.file}:${todo.line}\n`;`;
-      content += `${todo.comment}\n\n`}
-    fs.writeFileSync(reviewFile, content);
-  // TODO: Implement
+    if (this.monitoringData.metrics.servicesOffline > config.maxOfflineServices) {
+      this.monitoringData.alerts.push({
+        type: 'too_many_offline_services',
+        current: this.monitoringData.metrics.servicesOffline,
+        threshold: config.maxOfflineServices,
+        timestamp: new Date().toISOString()
+      });
+    }
+  }
 
-  // TODO: Implement
-      // Run all prevention checks;
->>>>>>> merged-prs-20250907-203621
-      const [largeFiles,
-        circularDeps,
-        unusedDeps,
-        vulnerabilities,
-        performanceIssues,
-        qualityIssues;]
-      ] = await Promise.all([this.checkFileSizeIssues(),
-        this.checkCircularDependencies(),
-        this.checkUnusedDependencies(),
-        this.checkSecurityVulnerabilities(),
-        this.checkPerformanceIssues(),
-        this.checkCodeQualityIssues()]
-      ])
-          largeFiles: largeFiles.length,"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-          "circularDeps": circularDeps.length,
-          "unusedDeps": unusedDeps.length,
-          "vulnerabilities": vulnerabilities.length,
-          "performanceIssues": performanceIssues.length,
-          "qualityIssues": qualityIssues.length;"
-<<<<<<< HEAD
-=======
-      // Save report;`
-      const reportPath = path.join(this.reportsDir, `prevention-report-${Date.now()}.json`)
-      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
-      // Update prevention history
-      this.preventionHistory.push(report)
-  if($2) {
-=======
-          "circularDeps: circularDeps.length,
-          unusedDeps": unusedDeps.length,
-          "vulnerabilities: vulnerabilities.length,
-          performanceIssues": performanceIssues.length,
-          "qualityIssues: qualityIssues.length;
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-      // Save report;`;
-      const reportPath = path.join(this.reportsDir, `prevention-report-${Date.now()}.json`);
-      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-      // Update prevention history;
-      this.preventionHistory.push(report);
-      if (this.preventionHistory.length > 50) {
->>>>>>> merged-prs-20250907-203621
+  async generateMonitoringReport() {
+    this.log('📊 Generating monitoring report...');
+    
+    const report = {
+      ...this.monitoringData,
+      generatedAt: new Date().toISOString(),
+      summary: {
+        totalServices: Object.keys(this.monitoringData.services).length,
+        onlineServices: this.monitoringData.metrics.servicesOnline,
+        offlineServices: this.monitoringData.metrics.servicesOffline,
+        totalErrors: this.monitoringData.metrics.totalErrors,
+        totalWarnings: this.monitoringData.metrics.totalWarnings,
+        alerts: this.monitoringData.alerts.length
+      }
+    };
 
-    // Run initial check
-    await this.runPreventionCheck()
-    // Set up periodic checking
-    setInterval(async () => {
-  // TODO: Implement
+    const reportFile = path.join(this.reportsDir, 'error-prevention-monitoring-report.json');
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    
+    this.log(`📊 Monitoring report generated: ${reportFile}`);
+    
+    // Also generate a human-readable summary
+    const summaryFile = path.join(this.reportsDir, 'error-prevention-monitoring-summary.txt');
+    const summary = this.generateHumanReadableSummary(report);
+    fs.writeFileSync(summaryFile, summary);
+    
+    this.log(`📊 Monitoring summary generated: ${summaryFile}`);
+  }
 
-    this.log(`Error prevention monitor started. Checking every ${this.checkInterval / 1000} seconds.`)}
-  getStatus($2) {
-  // TODO: Implement
+  generateHumanReadableSummary(report) {
+    let summary = `Error Prevention Monitoring Report - ${new Date().toLocaleString()}\n`;
+    summary += '='.repeat(50) + '\n\n';
+    
+    summary += `Total Services: ${report.summary.totalServices}\n`;
+    summary += `Online Services: ${report.summary.onlineServices}\n`;
+    summary += `Offline Services: ${report.summary.offlineServices}\n`;
+    summary += `Total Errors: ${report.summary.totalErrors}\n`;
+    summary += `Total Warnings: ${report.summary.totalWarnings}\n`;
+    summary += `Active Alerts: ${report.summary.alerts}\n\n`;
+    
+    if (report.alerts.length > 0) {
+      summary += 'ACTIVE ALERTS:\n';
+      summary += '-'.repeat(20) + '\n';
+      report.alerts.forEach(alert => {
+        summary += `• ${alert.type}: ${JSON.stringify(alert)}\n`;
+      });
+      summary += '\n';
+    }
+    
+    summary += 'Service Status:\n';
+    summary += '-'.repeat(20) + '\n';
+    for (const [serviceName, service] of Object.entries(report.services)) {
+      summary += `${serviceName}: ${service.status} (${service.memory} | ${service.cpu}%)\n`;
+    }
+    
+    return summary;
+  }
 
-      "preventiveActionsEnabled": this.preventiveActionsEnabled;"
-// Main execution
-  if($2) {
-  const monitor = new ErrorPreventionMonitor()
-  // Handle graceful shutdown;"
+  async run() {
+    this.log('🚀 Starting Error Prevention Monitor...');
+    
+    try {
+      await this.monitorServices();
+      await this.monitorErrorLogs();
+      await this.monitorProjectHealth();
+      await this.checkAlertThresholds();
+      await this.generateMonitoringReport();
+      
+      this.log(`🎉 Error Prevention Monitor completed!`);
+      this.log(`Services Online: ${this.monitoringData.metrics.servicesOnline}`);
+      this.log(`Services Offline: ${this.monitoringData.metrics.servicesOffline}`);
+      this.log(`Total Errors: ${this.monitoringData.metrics.totalErrors}`);
+      this.log(`Active Alerts: ${this.monitoringData.alerts.length}`);
+      
+    } catch (error) {
+      this.log(`❌ Error Prevention Monitor failed: ${error.message}`);
+      throw error;
+    }
+  }
 
-<<<<<<< HEAD
-    process.exit(0)})
-  process.on('SIGTERM', () => {
-  // Start monitor
-    process.exit(1)})}
-  run($2) {
-    this.log('Error Prevention Monitor started')
-    // Run initial health check
-    this.checkProjectHealth()
-    // Schedule periodic health checks
-    setInterval(() => {
-=======
-    process.exit(0)});
-  process.on('SIGTERM', () => {
-  // Start monitor;
-
-    process.exit(1)})}
-  run() {
-    this.log('Error Prevention Monitor started');
-    // Run initial health check;
-    this.checkProjectHealth();
-    // Schedule periodic health checks;
-    setInterval(() => {
-<<<<<<< HEAD
-monitor.run();
-
-monitor.run();
-=======
-<<<<<<< HEAD
-
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-      this.checkProjectHealth()}, 15 * 60 * 1000); // Every 15 minutes
-    this.log('Monitoring active - health checks every 15 minutes')}
+  async runContinuousMode(interval = 180000) { // Default: 3 minutes
+    this.log(`🚀 Starting Continuous Error Prevention Monitor (interval: ${interval}ms)...`);
+    
+    const runCycle = async () => {
+      try {
+        this.log('Running monitoring cycle...');
+        await this.run();
+        this.log(`Cycle completed. Next run in ${interval / 1000} seconds.`);
+      } catch (error) {
+        this.log(`Cycle failed: ${error.message}`);
+      }
+    };
+    
+    // Run immediately
+    await runCycle();
+    
+    // Set up continuous execution
+    setInterval(runCycle, interval);
+    
+    this.log('Continuous mode started. Press Ctrl+C to stop.');
+  }
 }
-// Start the monitor
-const monitor = new ErrorPreventionMonitor();
-monitor.run();
+
+// CLI interface
+if (require.main === module) {
+  const monitor = new ErrorPreventionMonitor();
+  
+  const command = process.argv[2] || 'run';
+  
+  switch (command) {
+    case 'run':
+      monitor.run().catch(console.error);
+      break;
+    case 'monitor':
+      const interval = parseInt(process.argv[3]) || 180000;
+      monitor.runContinuousMode(interval).catch(console.error);
+      break;
+    case 'status':
+      monitor.monitorServices().then(() => {
+        console.log(JSON.stringify(monitor.monitoringData.services, null, 2));
+      }).catch(console.error);
+      break;
+    default:
+      console.log('Usage: node error-prevention-monitor.cjs [run|monitor|status]');
+      process.exit(1);
+  }
+}
+
+module.exports = ErrorPreventionMonitor;
