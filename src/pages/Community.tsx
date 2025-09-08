@@ -1,613 +1,588 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  Users, 
-  MessageCircle, 
+  Users,
+  MessageCircle,
   Calendar,
-  MapPin,
-  Globe,
   Star,
+  TrendingUp,
   Award,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  Linkedin,
-  Twitter,
-  Github,
-  Slack,
-  Discord,
+  Globe,
+  Heart,
+  Share2,
   BookOpen,
   Video,
-  Code,
+  FileText,
   Zap,
-  Lightbulb,
-  Rocket,
-  Heart,
-  TrendingUp,
-  Users2,
-  Building2,
-  GraduationCap,
-  Shield,
-  Cloud,
   Brain,
-  Target,
-  Clock
+  Cloud,
+  Shield,
+  ChevronRight,
+  Plus,
+  Search,
+  Filter,
+  Clock,
+  MapPin,
+  User,
+  CheckCircle,
+  ExternalLink,
+  Eye
 } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
-const Community: React.FC = () => {
-  const communityEvents = [
+export default function Community() {
+  const [selectedCategory, setSelectedCategory] = React.useState('all');
+  const [searchQuery, setSearchQuery] = React.useState('');
+
+  const communityCategories = [
+    { id: 'all', name: 'All Communities', count: 12, color: 'from-cyan-500 to-blue-600' },
+    { id: 'ai', name: 'AI & Machine Learning', count: 3, color: 'from-purple-500 to-pink-600' },
+    { id: 'cloud', name: 'Cloud & DevOps', count: 2, color: 'from-blue-500 to-cyan-600' },
+    { id: 'security', name: 'Cybersecurity', count: 2, color: 'from-red-500 to-orange-600' },
+    { id: 'transformation', name: 'Digital Transformation', count: 2, color: 'from-green-500 to-emerald-600' },
+    { id: 'general', name: 'General Discussion', count: 3, color: 'from-slate-500 to-gray-600' }
+  ];
+
+  const communities = [
     {
-      name: 'AI Innovation Summit 2024',
-      description: 'Join industry leaders and innovators for a day of AI insights, networking, and collaboration.',
-      date: '2024-02-15',
-      time: '9:00 AM - 6:00 PM',
-      location: 'Middletown, DE & Virtual',
-      type: 'Conference',
-      attendees: 250,
-      price: 'Free',
+      id: 'ai-enthusiasts',
+      name: 'AI Enthusiasts',
+      category: 'ai',
+      description: 'Connect with AI professionals, share insights, and discuss the latest developments in machine learning and artificial intelligence.',
+      members: 2847,
+      topics: 156,
+      posts: 892,
+      lastActivity: '2 hours ago',
       featured: true,
-      icon: Rocket,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      name: 'Cybersecurity Workshop Series',
-      description: 'Hands-on workshops covering the latest cybersecurity threats and defense strategies.',
-      date: '2024-02-22',
-      time: '2:00 PM - 5:00 PM',
-      location: 'Virtual',
-      type: 'Workshop',
-      attendees: 75,
-      price: '$49',
-      featured: false,
-      icon: Shield,
-      color: 'from-red-500 to-orange-500'
-    },
-    {
-      name: 'Cloud Architecture Meetup',
-      description: 'Monthly meetup for cloud architects and DevOps engineers to share best practices.',
-      date: '2024-03-01',
-      time: '6:00 PM - 8:00 PM',
-      location: 'Middletown, DE',
-      type: 'Meetup',
-      attendees: 45,
-      price: 'Free',
-      featured: false,
-      icon: Cloud,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      name: 'Women in Tech Networking',
-      description: 'Empowering women in technology through networking, mentorship, and skill development.',
-      date: '2024-03-08',
-      time: '5:30 PM - 7:30 PM',
-      location: 'Middletown, DE',
-      type: 'Networking',
-      attendees: 60,
-      price: 'Free',
-      featured: false,
-      icon: Users2,
-      color: 'from-green-500 to-emerald-500'
-    }
-  ];
-
-  const communityGroups = [
-    {
-      name: 'AI & Machine Learning Enthusiasts',
-      description: 'Connect with fellow AI practitioners, share projects, and discuss the latest developments.',
-      members: 1250,
-      category: 'Technology',
       icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-      features: [
-        'Weekly AI challenges',
-        'Project showcase events',
-        'Expert Q&A sessions',
-        'Resource sharing'
-      ]
+      color: 'from-purple-500 to-pink-600',
+      tags: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision']
     },
     {
-      name: 'Cybersecurity Professionals',
-      description: 'Network with security experts and stay updated on the latest threats and solutions.',
-      members: 890,
-      category: 'Security',
-      icon: Shield,
-      color: 'from-red-500 to-orange-500',
-      features: [
-        'Threat intelligence sharing',
-        'Security tool discussions',
-        'Incident response case studies',
-        'Compliance updates'
-      ]
-    },
-    {
-      name: 'Cloud & DevOps Engineers',
-      description: 'Share best practices, tools, and experiences in cloud computing and DevOps.',
-      members: 1100,
-      category: 'Infrastructure',
+      id: 'cloud-practitioners',
+      name: 'Cloud Practitioners',
+      category: 'cloud',
+      description: 'A community for cloud architects, DevOps engineers, and infrastructure specialists to share best practices and solutions.',
+      members: 1923,
+      topics: 89,
+      posts: 456,
+      lastActivity: '4 hours ago',
+      featured: true,
       icon: Cloud,
-      color: 'from-blue-500 to-cyan-500',
-      features: [
-        'Architecture reviews',
-        'Tool comparisons',
-        'Best practice sharing',
-        'Troubleshooting sessions'
-      ]
+      color: 'from-blue-500 to-cyan-600',
+      tags: ['AWS', 'Azure', 'GCP', 'Kubernetes', 'Docker']
     },
     {
-      name: 'Digital Transformation Leaders',
-      description: 'Connect with executives and leaders driving digital transformation initiatives.',
-      members: 450,
-      category: 'Leadership',
+      id: 'security-experts',
+      name: 'Security Experts',
+      category: 'security',
+      description: 'Join cybersecurity professionals to discuss threat intelligence, security best practices, and emerging security challenges.',
+      members: 1456,
+      topics: 67,
+      posts: 234,
+      lastActivity: '6 hours ago',
+      featured: false,
+      icon: Shield,
+      color: 'from-red-500 to-orange-600',
+      tags: ['Threat Detection', 'Compliance', 'Zero Trust', 'Incident Response']
+    },
+    {
+      id: 'digital-transformers',
+      name: 'Digital Transformers',
+      category: 'transformation',
+      description: 'Share experiences and strategies for successful digital transformation initiatives across industries.',
+      members: 1234,
+      topics: 45,
+      posts: 189,
+      lastActivity: '1 day ago',
+      featured: false,
+      icon: Zap,
+      color: 'from-green-500 to-emerald-600',
+      tags: ['Change Management', 'Process Automation', 'Innovation', 'Strategy']
+    },
+    {
+      id: 'tech-innovators',
+      name: 'Tech Innovators',
+      category: 'general',
+      description: 'A space for discussing emerging technologies, innovation trends, and future tech possibilities.',
+      members: 2156,
+      topics: 123,
+      posts: 567,
+      lastActivity: '3 hours ago',
+      featured: false,
       icon: TrendingUp,
-      color: 'from-green-500 to-emerald-500',
-      features: [
-        'Strategy discussions',
-        'Change management insights',
-        'ROI measurement',
-        'Industry benchmarking'
-      ]
+      color: 'from-indigo-500 to-purple-600',
+      tags: ['Innovation', 'Emerging Tech', 'Startups', 'Research']
+    },
+    {
+      id: 'enterprise-architects',
+      name: 'Enterprise Architects',
+      category: 'general',
+      description: 'Connect with enterprise architects to discuss system design, scalability, and architectural best practices.',
+      members: 987,
+      topics: 34,
+      posts: 123,
+      lastActivity: '2 days ago',
+      featured: false,
+      icon: Building,
+      color: 'from-slate-500 to-gray-600',
+      tags: ['Architecture', 'Scalability', 'Integration', 'Design Patterns']
     }
   ];
 
-  const mentorshipPrograms = [
+  const upcomingEvents = [
     {
-      name: 'Tech Career Mentorship',
-      description: 'Get guidance from experienced professionals to advance your technology career.',
-      mentors: 25,
-      mentees: 120,
-      duration: '6 months',
-      focus: 'Career Development',
-      icon: GraduationCap,
-      color: 'from-blue-500 to-cyan-500'
+      title: 'AI in Healthcare: Opportunities & Challenges',
+      date: 'Dec 15, 2024',
+      time: '2:00 PM PST',
+      type: 'webinar',
+      attendees: 156,
+      featured: true,
+      speaker: 'Dr. Sarah Chen',
+      description: 'Explore the latest AI applications in healthcare and discuss ethical considerations and implementation challenges.'
     },
     {
-      name: 'Startup Mentorship',
-      description: 'Connect with successful entrepreneurs and business leaders for startup guidance.',
-      mentors: 15,
-      mentees: 45,
-      duration: '12 months',
-      focus: 'Business Strategy',
-      icon: Rocket,
-      color: 'from-purple-500 to-pink-500'
+      title: 'Cloud Security Best Practices Workshop',
+      date: 'Dec 18, 2024',
+      time: '10:00 AM PST',
+      type: 'workshop',
+      attendees: 89,
+      featured: false,
+      speaker: 'Mike Rodriguez',
+      description: 'Hands-on workshop covering cloud security fundamentals, threat modeling, and security automation.'
     },
     {
-      name: 'Technical Skills Mentorship',
-      description: 'Improve your technical skills with guidance from senior developers and architects.',
-      mentors: 40,
-      mentees: 200,
-      duration: '3 months',
-      focus: 'Technical Skills',
-      icon: Code,
-      color: 'from-green-500 to-emerald-500'
+      title: 'Digital Transformation Success Stories',
+      date: 'Dec 20, 2024',
+      time: '1:00 PM PST',
+      type: 'panel',
+      attendees: 234,
+      featured: true,
+      speaker: 'Industry Leaders Panel',
+      description: 'Learn from successful digital transformation initiatives across different industries and company sizes.'
     }
   ];
 
-  const resources = [
+  const recentDiscussions = [
     {
-      name: 'Knowledge Base',
-      description: 'Comprehensive documentation, tutorials, and best practices.',
+      title: 'Best practices for implementing MLOps pipelines?',
+      author: 'Alex Thompson',
+      community: 'AI Enthusiasts',
+      replies: 23,
+      views: 156,
+      lastReply: '1 hour ago',
+      tags: ['MLOps', 'Best Practices', 'Pipeline']
+    },
+    {
+      title: 'Kubernetes vs Docker Swarm for production environments',
+      author: 'Maria Garcia',
+      community: 'Cloud Practitioners',
+      replies: 18,
+      views: 89,
+      lastReply: '3 hours ago',
+      tags: ['Kubernetes', 'Docker', 'Production']
+    },
+    {
+      title: 'Zero Trust Architecture implementation guide',
+      author: 'David Kim',
+      community: 'Security Experts',
+      replies: 31,
+      views: 234,
+      lastReply: '5 hours ago',
+      tags: ['Zero Trust', 'Security', 'Implementation']
+    },
+    {
+      title: 'How to measure ROI of digital transformation projects?',
+      author: 'Lisa Wang',
+      community: 'Digital Transformers',
+      replies: 27,
+      views: 167,
+      lastReply: '1 day ago',
+      tags: ['ROI', 'Digital Transformation', 'Metrics']
+    }
+  ];
+
+  const communityBenefits = [
+    {
+      title: 'Knowledge Sharing',
+      description: 'Learn from industry experts and share your own experiences',
       icon: BookOpen,
-      color: 'from-blue-500 to-cyan-500',
-      items: ['Technical guides', 'Best practices', 'Tutorials', 'FAQs']
+      color: 'from-blue-500 to-cyan-600'
     },
     {
-      name: 'Video Library',
-      description: 'Recorded webinars, training sessions, and expert interviews.',
-      icon: Video,
-      color: 'from-purple-500 to-pink-500',
-      items: ['Webinars', 'Training videos', 'Expert interviews', 'Case studies']
+      title: 'Networking',
+      description: 'Connect with professionals in your field and build relationships',
+      icon: Users,
+      color: 'from-purple-500 to-pink-600'
     },
     {
-      name: 'Code Repository',
-      description: 'Open-source projects, code samples, and development tools.',
-      icon: Code,
-      color: 'from-green-500 to-emerald-500',
-      items: ['Open source projects', 'Code samples', 'Templates', 'Tools']
+      title: 'Professional Growth',
+      description: 'Stay updated with latest trends and advance your career',
+      icon: TrendingUp,
+      color: 'from-green-500 to-emerald-600'
     },
     {
-      name: 'Innovation Hub',
-      description: 'Ideas, prototypes, and collaborative innovation projects.',
-      icon: Lightbulb,
-      color: 'from-yellow-500 to-orange-500',
-      items: ['Innovation ideas', 'Prototypes', 'Collaborative projects', 'Hackathons']
+      title: 'Problem Solving',
+      description: 'Get help with technical challenges and find solutions',
+      icon: Zap,
+      color: 'from-orange-500 to-red-600'
     }
   ];
+
+  const filteredCommunities = communities.filter(community => 
+    selectedCategory === 'all' || community.category === selectedCategory
+  );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Community - Zion Tech Group"
+        description="Join our vibrant community of technology professionals. Connect, learn, and grow with peers in AI, cloud computing, cybersecurity, and digital transformation."
+      />
+      
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20"></div>
+        <div className="relative container mx-auto px-4 py-20">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
-                <Users className="w-10 h-10 text-white" />
-              </div>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Join Our
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-                {' '}Community
+              <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                Community
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Connect, collaborate, and grow with fellow technology professionals. 
-              Join our vibrant community of innovators, developers, and business leaders.
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
+              Connect with technology professionals, share knowledge, and stay ahead of industry trends in our vibrant community
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                 Join Community
               </button>
-              <button className="px-8 py-4 border border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300">
-                View Events
+              <button className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300">
+                Explore Events
               </button>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white mb-2">12+</div>
+                <div className="text-slate-400 text-sm">Communities</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white mb-2">10K+</div>
+                <div className="text-slate-400 text-sm">Members</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white mb-2">500+</div>
+                <div className="text-slate-400 text-sm">Topics</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white mb-2">2K+</div>
+                <div className="text-slate-400 text-sm">Posts</div>
+              </div>
             </div>
           </motion.div>
         </div>
-      </section>
+      </div>
 
-      {/* Community Stats */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { number: '5,000+', label: 'Community Members', icon: Users, color: 'from-blue-500 to-cyan-500' },
-              { number: '50+', label: 'Events Per Year', icon: Calendar, color: 'from-purple-500 to-pink-500' },
-              { number: '100+', label: 'Expert Mentors', icon: Award, color: 'from-green-500 to-emerald-500' },
-              { number: '25+', label: 'Active Groups', icon: Users2, color: 'from-yellow-500 to-orange-500' }
-            ].map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className={`w-16 h-16 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
-                  <stat.icon className="w-8 h-8 text-white" />
+      <div className="container mx-auto px-4 pb-20">
+        {/* Community Benefits */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mb-16"
+        >
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Join Our Community?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {communityBenefits.map((benefit, index) => (
+              <div key={benefit.title} className="text-center">
+                <div className={`w-16 h-16 bg-gradient-to-br ${benefit.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
+                  <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300">{stat.label}</div>
-              </motion.div>
+                <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
+                <p className="text-slate-400 text-sm">{benefit.description}</p>
+              </div>
             ))}
           </div>
-        </div>
-      </section>
+        </motion.div>
 
-      {/* Upcoming Events */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Upcoming Events
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Join us for exciting events, workshops, and networking opportunities.
-            </p>
-          </motion.div>
+        {/* Community Categories & Search */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mb-12"
+        >
+          <div className="flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between">
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-4">Find Your Community</h2>
+              <p className="text-slate-400">Join communities that match your interests and expertise</p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
+                <input
+                  type="text"
+                  placeholder="Search communities..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pl-10 pr-4 py-2 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                />
+              </div>
+              
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="px-4 py-2 bg-slate-800/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+              >
+                {communityCategories.map((category) => (
+                  <option key={category.id} value={category.id}>
+                    {category.name} ({category.count})
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+        </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {communityEvents.map((event, index) => (
-              <motion.div
-                key={event.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105 ${
-                  event.featured ? 'ring-2 ring-blue-500/50' : ''
+        {/* Communities Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="mb-16"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredCommunities.map((community, index) => (
+              <div
+                key={community.id}
+                className={`bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border transition-all duration-300 hover:transform hover:scale-105 ${
+                  community.featured 
+                    ? 'border-cyan-500/50 shadow-lg shadow-cyan-500/20' 
+                    : 'border-slate-700 hover:border-slate-600'
+                }`}
+              >
+                {community.featured && (
+                  <div className="flex items-center gap-2 mb-4">
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <span className="text-yellow-400 text-sm font-medium">Featured Community</span>
+                  </div>
+                )}
+                
+                <div className="flex items-center gap-3 mb-4">
+                  <div className={`w-12 h-12 bg-gradient-to-br ${community.color} rounded-xl flex items-center justify-center`}>
+                    <community.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white">{community.name}</h3>
+                    <p className="text-slate-400 text-sm">{community.description}</p>
+                  </div>
+                </div>
+                
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {community.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-2 py-1 bg-slate-700 text-slate-300 text-xs rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                
+                <div className="flex items-center justify-between mb-4 text-sm text-slate-400">
+                  <div className="flex items-center gap-4">
+                    <span className="flex items-center gap-1">
+                      <Users className="w-4 h-4" />
+                      {community.members.toLocaleString()}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <MessageCircle className="w-4 h-4" />
+                      {community.posts}
+                    </span>
+                  </div>
+                  <span className="text-xs">Active {community.lastActivity}</span>
+                </div>
+                
+                <button className="w-full py-2 px-4 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition-colors text-sm font-medium">
+                  Join Community
+                </button>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Upcoming Events */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="mb-16"
+        >
+          <div className="flex items-center justify-between mb-8">
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-2">Upcoming Events</h2>
+              <p className="text-slate-400">Join our live events, webinars, and workshops</p>
+            </div>
+            <Link
+              to="/events"
+              className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+            >
+              View All Events
+              <ChevronRight className="w-4 h-4" />
+            </Link>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {upcomingEvents.map((event, index) => (
+              <div
+                key={index}
+                className={`bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border transition-all duration-300 hover:transform hover:scale-105 ${
+                  event.featured 
+                    ? 'border-cyan-500/50 shadow-lg shadow-cyan-500/20' 
+                    : 'border-slate-700 hover:border-slate-600'
                 }`}
               >
                 {event.featured && (
-                  <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center py-2 text-sm font-semibold">
-                    Featured Event
+                  <div className="flex items-center gap-2 mb-4">
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <span className="text-yellow-400 text-sm font-medium">Featured Event</span>
                   </div>
                 )}
-                <div className="p-6">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${event.color} rounded-xl flex items-center justify-center`}>
-                      <event.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="text-right">
-                      <span className="px-3 py-1 bg-slate-700 text-blue-400 text-xs font-medium rounded-full">
-                        {event.type}
-                      </span>
-                    </div>
+                
+                <div className="mb-4">
+                  <h3 className="text-lg font-bold text-white mb-2">{event.title}</h3>
+                  <p className="text-slate-400 text-sm mb-3">{event.description}</p>
+                  
+                  <div className="flex items-center gap-2 text-slate-400 text-sm mb-2">
+                    <Calendar className="w-4 h-4" />
+                    {event.date} at {event.time}
                   </div>
-
-                  <h3 className="text-xl font-bold text-white mb-3">{event.name}</h3>
-                  <p className="text-gray-300 mb-4">{event.description}</p>
-
-                  <div className="space-y-2 mb-4 text-sm text-gray-400">
-                    <div className="flex items-center space-x-2">
-                      <Calendar className="w-4 h-4" />
-                      <span>{new Date(event.date).toLocaleDateString()}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Clock className="w-4 h-4" />
-                      <span>{event.time}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <MapPin className="w-4 h-4" />
-                      <span>{event.location}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Users className="w-4 h-4" />
-                      <span>{event.attendees} attendees</span>
-                    </div>
+                  
+                  <div className="flex items-center gap-2 text-slate-400 text-sm mb-2">
+                    <User className="w-4 h-4" />
+                    {event.speaker}
                   </div>
-
-                  <div className="flex items-center justify-between">
-                    <span className="text-lg font-bold text-blue-400">{event.price}</span>
-                    <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
-                      Register Now
-                    </button>
+                  
+                  <div className="flex items-center gap-2 text-slate-400 text-sm">
+                    <Users className="w-4 h-4" />
+                    {event.attendees} attending
                   </div>
                 </div>
-              </motion.div>
+                
+                <button className="w-full py-2 px-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-sm font-medium">
+                  Register Now
+                </button>
+              </div>
             ))}
           </div>
-        </div>
-      </section>
+        </motion.div>
 
-      {/* Community Groups */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/20">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Community Groups
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Join specialized groups based on your interests and expertise.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {communityGroups.map((group, index) => (
-              <motion.div
-                key={group.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
+        {/* Recent Discussions */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.0 }}
+          className="mb-16"
+        >
+          <div className="flex items-center justify-between mb-8">
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-2">Recent Discussions</h2>
+              <p className="text-slate-400">Latest conversations and questions from our community</p>
+            </div>
+            <Link
+              to="/discussions"
+              className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+            >
+              View All Discussions
+              <ChevronRight className="w-4 h-4" />
+            </Link>
+          </div>
+          
+          <div className="space-y-4">
+            {recentDiscussions.map((discussion, index) => (
+              <div
+                key={index}
+                className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${group.color} rounded-xl flex items-center justify-center`}>
-                    <group.icon className="w-8 h-8 text-white" />
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-white mb-2 hover:text-cyan-400 transition-colors cursor-pointer">
+                      {discussion.title}
+                    </h3>
+                    <div className="flex items-center gap-4 text-sm text-slate-400 mb-3">
+                      <span>By {discussion.author}</span>
+                      <span>In {discussion.community}</span>
+                      <span className="flex items-center gap-1">
+                        <Clock className="w-4 h-4" />
+                        {discussion.lastReply}
+                      </span>
+                    </div>
+                    
+                    <div className="flex flex-wrap gap-2">
+                      {discussion.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-2 py-1 bg-slate-700 text-slate-300 text-xs rounded-full"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                  <div className="text-right">
-                    <span className="px-3 py-1 bg-slate-700 text-blue-400 text-xs font-medium rounded-full">
-                      {group.category}
+                  
+                  <div className="flex items-center gap-4 text-sm text-slate-400 ml-4">
+                    <span className="flex items-center gap-1">
+                      <MessageCircle className="w-4 h-4" />
+                      {discussion.replies}
                     </span>
-                    <div className="text-sm text-gray-400 mt-1">{group.members} members</div>
+                    <span className="flex items-center gap-1">
+                      <Eye className="w-4 h-4" />
+                      {discussion.views}
+                    </span>
                   </div>
                 </div>
-
-                <h3 className="text-xl font-bold text-white mb-3">{group.name}</h3>
-                <p className="text-gray-300 mb-4">{group.description}</p>
-
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-white mb-2">Group Features:</h4>
-                  <ul className="space-y-1">
-                    {group.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center space-x-2">
-                        <CheckCircle className="w-3 h-3 text-green-400" />
-                        <span className="text-gray-300 text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <button className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
-                  Join Group
-                </button>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Mentorship Programs */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Mentorship Programs
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Get guidance from experienced professionals and accelerate your growth.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {mentorshipPrograms.map((program, index) => (
-              <motion.div
-                key={program.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 text-center hover:border-blue-500/50 transition-all duration-300"
-              >
-                <div className={`w-16 h-16 bg-gradient-to-r ${program.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
-                  <program.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-3">{program.name}</h3>
-                <p className="text-gray-300 mb-4">{program.description}</p>
-                
-                <div className="space-y-2 mb-6 text-sm text-gray-400">
-                  <div className="flex items-center justify-center space-x-2">
-                    <Users className="w-4 h-4" />
-                    <span>{program.mentors} mentors</span>
-                  </div>
-                  <div className="flex items-center justify-center space-x-2">
-                    <Users2 className="w-4 h-4" />
-                    <span>{program.mentees} mentees</span>
-                  </div>
-                  <div className="flex items-center justify-center space-x-2">
-                    <Calendar className="w-4 h-4" />
-                    <span>{program.duration}</span>
-                  </div>
-                  <div className="flex items-center justify-center space-x-2">
-                    <Target className="w-4 h-4" />
-                    <span>{program.focus}</span>
-                  </div>
-                </div>
-
-                <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
-                  Apply Now
-                </button>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Community Resources */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/20">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Community Resources
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Access valuable resources to support your learning and development.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {resources.map((resource, index) => (
-              <motion.div
-                key={resource.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 text-center hover:border-blue-500/50 transition-all duration-300"
-              >
-                <div className={`w-16 h-16 bg-gradient-to-r ${resource.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
-                  <resource.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-3">{resource.name}</h3>
-                <p className="text-gray-300 mb-4">{resource.description}</p>
-                
-                <ul className="space-y-1 text-left">
-                  {resource.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-center space-x-2">
-                      <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
-                      <span className="text-gray-300 text-sm">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <button className="w-full mt-4 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
-                  Explore
-                </button>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Get Involved */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Get Involved
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Ready to join our community? Choose how you'd like to get involved.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
-                <h3 className="text-xl font-semibold text-white mb-3">Join as a Member</h3>
-                <p className="text-gray-300 mb-4">Connect with peers, attend events, and access resources.</p>
-                <button className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
-                  Become a Member
-                </button>
               </div>
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
-                <h3 className="text-xl font-semibold text-white mb-3">Become a Mentor</h3>
-                <p className="text-gray-300 mb-4">Share your expertise and help others grow in their careers.</p>
-                <button className="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300">
-                  Apply as Mentor
-                </button>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+            ))}
+          </div>
+        </motion.div>
 
-      {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/20">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Questions About Our Community?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get in touch with our community team for more information and support.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Contact Community Team
-              </a>
-              <a
-                href="mailto:community@ziontechgroup.com"
-                className="px-8 py-4 border border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
-              >
-                Email Us
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.2 }}
+          className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-12 border border-cyan-500/30 text-center"
+        >
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Join Our Community?</h2>
+          <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
+            Connect with thousands of technology professionals, share your expertise, and stay ahead of industry trends
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+              Get Started Today
+            </button>
+            <button className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300">
+              Learn More
+            </button>
+          </div>
+          
+          <p className="text-slate-400 text-sm mt-6">
+            Free to join • No commitment required • Instant access to all communities
+          </p>
+        </motion.div>
+      </div>
     </div>
   );
 };
