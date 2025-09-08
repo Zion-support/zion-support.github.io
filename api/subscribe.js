@@ -1,5 +1,5 @@
-const { withSentry } = require('../withSentry.cjs');
-const { isValidEmail } = require('../emailUtils.cjs');
+const { withSentry } = require('./withSentry.cjs');
+const { isValidEmail } = require('./emailUtils.cjs');
 const fs = require('fs');
 const path = require('path');
 
@@ -13,10 +13,11 @@ async function handler(req, res) {
 
   try {
     const { email } = req.body || {};
-    
-    if (!email) {
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+    if (!isValidEmail(email)) {
       res.statusCode = 400;
+      res.json({ error: 'Invalid email' });
+      return;
+    }
 
   const file = path.join(process.cwd(), 'data', 'newsletter-subscriptions.json');
   let existing = [];
@@ -34,6 +35,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   } catch (err) {
     console.error('Subscribe API error:', err);
     res.statusCode = 500;
-    res.json({ error: err.message ||;
-  'Subscription failed }});'}
-module.exports: = withErrorLogging(handler);
+    res.json({ error: err.message || 'Subscription failed' });
+  }
+}
+
+module.exports = withSentry(handler);
