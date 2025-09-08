@@ -14,7 +14,7 @@
       "@/*": ["./src/*"],
       "@/pages/*": ["./src/pages/*"]
     },
-    "types": ["vite/client", "react", "react-router-dom"],
+    "types": ["vite/client", "react", "react-router-dom", "node"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -43,23 +43,32 @@
     "noEmitOnError": false
   },
   "include": [
-    "src/main.tsx",
-    "src/App.tsx",
-    "src/layout/AppLayout.tsx",
-    "src/context/**/*.tsx",
-    "src/components/ui/**/*.tsx",
-    "src/components/PerformanceWrapper.tsx",
-    "src/components/support/ChatBotPanel.tsx"
+    "src/**/*",
+    "pages/**/*",
+    "*.ts",
+    "*.tsx"
   ],
   "exclude": [
     "node_modules",
-    "src/pages",
-    "src/routes",
-    "src/components",
-    "src/hooks",
-    "src/services",
-    "src/data",
-    "src/layout",
-    "src/context/WalletContext.tsx"
+    "dist",
+    "out",
+    "build",
+    "coverage",
+    "src-disabled",
+    "src.broken",
+    "src_disabled_*",
+    "pages._archive_corrupted",
+    "pages.bak",
+    "*.disabled",
+    "*.backup",
+    "*.bak",
+    "recovered-branches",
+    "backup",
+    "corrupted*",
+    "*_backup*",
+    "temp*",
+    "tmp*",
+    "*.tmp",
+    "*.temp"
   ]
 }

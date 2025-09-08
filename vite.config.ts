@@ -16,9 +16,10 @@ export default defineConfig(({ mode }) => ({
     // Add bundle analyzer in analyze mode
     mode === 'analyze' && visualizer({
       filename: 'dist/stats.html',
-      open: true,
+      open: false,
       gzipSize: true,
       brotliSize: true,
+      template: 'treemap', // Use treemap for better visualization
     })
   ].filter(Boolean),
   build: {
@@ -40,6 +41,8 @@ export default defineConfig(({ mode }) => ({
           router: ['react-router-dom'],
           ui: ['@radix-ui/react-accordion', '@radix-ui/react-alert-dialog', '@radix-ui/react-avatar'],
           utils: ['axios', 'date-fns', 'lodash.debounce'],
+          query: ['@tanstack/react-query'],
+          forms: ['react-hook-form', 'formik', 'yup', 'zod'],
         },
         // Optimize chunk file names
         chunkFileNames: 'assets/[name]-[hash].js',
@@ -51,6 +54,10 @@ export default defineConfig(({ mode }) => ({
     target: 'esnext',
     // Enable CSS code splitting
     cssCodeSplit: true,
+    // Add build size reporting
+    reportCompressedSize: true,
+    // Optimize for production
+    emptyOutDir: true,
   },
   esbuild: {
     target: 'esnext',
@@ -90,13 +97,9 @@ export default defineConfig(({ mode }) => ({
     // Exclude problematic dependencies
     exclude: ['@vite/client', '@vite/env'],
   },
-  // Performance optimizations
-  esbuild: {
-    target: 'esnext',
-    format: 'esm',
-  },
   // CSS optimizations
   css: {
     devSourcemap: true,
+    postcss: './postcss.config.js',
   },
 }))
