@@ -28,7 +28,8 @@ module.exports = {
         AUTOMATION_INTERVAL: '900000' // 15 minutes
       }
     },
-    
+
+    // Core CI/CD automation (replaces GitHub Actions CI)
     {
       name: 'link-checker',
       script: './scripts/automation/link-checker.cjs',
@@ -159,7 +160,49 @@ module.exports = {
       }
     },
 
-    // Enhanced automation processes (GitHub workflow replacements)
+    // Continuous improvement automation (replaces GitHub Actions Continuous Improvement)
+    {
+      name: 'continuous-improvement-automation',
+      script: './scripts/automation/continuous-improvement.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '604800000' // 7 days (weekly)
+      }
+    },
+
+    // Dependencies automation (replaces GitHub Actions Dependencies)
+    {
+      name: 'dependencies-automation',
+      script: './scripts/automation/dependencies-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '604800000' // 7 days (weekly)
+      }
+    },
+
+    // Quality check automation (replaces GitHub Actions Quality Check)
+    {
+      name: 'quality-check-automation',
+      script: './scripts/automation/quality-check-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      }
+    },
+
+    // Enhanced automation processes
     {
       name: 'enhanced-testing',
       script: './scripts/automation/enhanced-testing-automation.cjs',
