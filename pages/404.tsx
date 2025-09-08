@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
-const NotFoundPage: NextPage = () => {
+const NotFound404: NextPage = () => {
   return (
     <div>
       <Head>
@@ -17,4 +17,4 @@ const NotFoundPage: NextPage = () => {
   );
 };
 
-export default NotFoundPage;
+export default NotFound404;

@@ -19,6 +19,7 @@
           <Link href="/blog"><a>Blog</a></Link>
           <Link href="/about"><a>About</a></Link>
           <Link href="/contact"><a>Contact</a></Link>
+          <Link href="/simulator/2040"><a className="font-medium">Simulator</a></Link>
         </div>
 
         {/* Mobile Navigation */}

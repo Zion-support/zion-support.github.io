@@ -5,7 +5,7 @@ const TalentSlugPage: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Talent - Zion Tech Solutions</title>
+        <title>Talent — Zion Tech Solutions</title>
         <meta name="description" content="Talent page" />
       </Head>
       
