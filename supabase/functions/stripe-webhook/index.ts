@@ -8,15 +8,25 @@ const stripe = new Stripe(Deno.env.get('STRIPE_SECRET_KEY') || '', {
 
 const webhookSecret = Deno.env.get('STRIPE_WEBHOOK_SECRET') || '';
 
-const supabase = createClient(
-  Deno.env.get('SUPABASE_URL') || '',
-  Deno.env.get('SUPABASE_ANON_KEY') || ''
-);
-
+// const supabase = createClient(
+//   Deno.env.get('SUPABASE_URL') || '',
+//   Deno.env.get('SUPABASE_ANON_KEY') || ''
+// );
 serve(async (req) => {
   if (req.method === 'POST') {
     const body = await req.text();
-    const signature = req.headers.get('stripe-signature') || '';
+<<<<<<< HEAD
+    const signature = req.headers.get('stripe-signature');
+    
+    if (!signature) {
+      return new Response('No signature provided', { status: 400 });
+    }
+=======
+    const signature = req.headers.get('stripe-signature') || '';=======
+serve(async req => {
+  if (req.method === 'POST') {
+    const body = await req.text();
+    const signature = req.headers.get('stripe-signature') || '';>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 
     let event;
     try {
@@ -24,6 +34,11 @@ serve(async (req) => {
     } catch (err) {
       return new Response(`Webhook Error: ${err.message}`, { status: 400 });
     }
+
+    const supabase = createClient(
+      Deno.env.get('SUPABASE_URL') || '',
+      Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || ''
+    );
 
     if (event.type === 'checkout.session.completed') {
       const session = event.data.object as Stripe.Checkout.Session;

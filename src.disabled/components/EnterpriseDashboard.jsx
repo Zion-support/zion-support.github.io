@@ -1,1 +1,2 @@
-
+======="export": const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [activeTab,setActiveTab] = useState ('overview') const [refreshInterval,setRefreshInterval] = useState (30000) ';"";""=======
+"export": const EnterpriseDashboard = () => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [activeTab,setActiveTab] = useState ('overview') const [refreshInterval,setRefreshInterval] = useState (30000) ';"";"">>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204

@@ -15,12 +15,12 @@ import { Check, ChevronDown, ChevronUp } from 'lucide-react'
 
 
 
-          position === &quot;popper & quot; &&;
-            &quot;h-[var (--radix - select - trigger - height)] w - full min - w-[var (--radix - select - trigger - width)]&quot)}
+          position === "popper & quot; &&;
+            "h-[var (--radix - select - trigger - height)] w - full min - w-[var (--radix - select - trigger - width)]&quot)}
 
-    className={cn(&quot;py-1.5 pl-8 pr-2 text-sm font-semibold&quot; className)}
+    className={cn("py-1.5 pl-8 pr-2 text-sm font-semibold" className)}
   React.ElementRef<typeof SelectPrimitive.Label>;
-    className={cn(&quot;py-1.5 pl-8 pr-2 text-sm font-semibold&quot; className)}
+    className={cn("py-1.5 pl-8 pr-2 text-sm font-semibold" className)}
   React.ElementRef<typeof SelectPrimitive.Item>;
   React.ElementRef<typeof SelectPrimitive.Item>;
 
@@ -37,7 +37,7 @@ import { Check, ChevronDown, ChevronUp } from 'lucide-react'
 
 
 className={cn (
-      &quot;relative flex w - full cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
+      "relative flex w - full cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
       class_name)}
     ref={ref}
 

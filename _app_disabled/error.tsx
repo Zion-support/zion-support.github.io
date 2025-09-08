@@ -24,7 +24,7 @@ export default function Error({ error, reset }: ErrorProps) {
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Oops!</h1>
           <h2 className="text-xl font-semibold text-gray-700 mb-4">Something went wrong</h2>
           <p className="text-gray-600 mb-6">
-            We encountered an unexpected error. Don&apos;t worry, our team has been notified and we&apos;re working to
+            We encountered an unexpected error. Don't worry, our team has been notified and we're working to
             fix it.
           </p>
         </div>

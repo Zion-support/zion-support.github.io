@@ -1,6 +1,37 @@
 #!/usr/bin/env node;
 
 
+
+const { execSync } = require('child_process')
+const fs = require('fs')
+// console.log(' Build Optimizer Starting...')
+    console.log('🧹 Cleaning previous builds...')
+    if (fs.existsSync('.next')
+        execSync('rm -rf .next', { "stdio"})
+        execSync('rm -rf out', { "stdio"})
+    execSync('npm run build', { "stdio"})
+
+    console.error(' Build optimization "failed")
+    console.error(' Build optimization "failed")
+
+    console.error(' Build optimization "failed")
+
+#!/usr/bin/env node
+
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+
+class BuildOptimizer {
+  constructor() {
+    this.projectRoot = process.cwd();
+  }
+
+  async optimize() {
+    console.log('🔨 Starting build optimization...');
+
+    try {
+      // Clean previous builds
       this.cleanBuild();
 ;
       // Run type checking;

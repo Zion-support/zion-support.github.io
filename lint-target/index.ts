@@ -1,48 +1,12 @@
-export const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-module.exports = const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-export const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-module.exports = const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-export const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-module.exports = const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;  const twoPlusTwoEqualsFour = 2 + 2 === 4;
-  return twoPlusTwoEqualsFour};
-export default isLintSetupWorking;
+=======export const isLintSetupWorking = (): boolean => {
+  const twoPlusTwoEqualsFour = 2 + 2 === 4;
+  return twoPlusTwoEqualsFour;
+};
 
-export const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
+export default isLintSetupWorking;=======
+export const isLintSetupWorking = (): boolean => {
+  const twoPlusTwoEqualsFour = 2 + 2 === 4;
+  return twoPlusTwoEqualsFour;
+};
 
-module && module.exports = const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-
-export const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-module && module.exports = const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-
-
-export const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-module && module.exports = const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-export const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-module && module.exports = const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-export const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-module && module.exports = const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-export const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-
-module && module.exports = const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-export const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-module && module.exports = const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-
-export const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-module.exports = const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-module && module.exports = const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-module.exports = const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-export const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-module.exports = const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-ursor/add-new-services-and-deploy-updates-0462
-export const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-module && module.exports = const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-export const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-module && module.exports = const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-export const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-module && module.exports = const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-export const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-
-module && module.exports = const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-export const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-module && module.exports = const isLintSetupWorking = (): boolean => { const twoPlusTwoEqualsFour = 2 + 2 === 4; return twoPlusTwoEqualsFour}; export default isLintSetupWorking;
-
+export default isLintSetupWorking;>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
