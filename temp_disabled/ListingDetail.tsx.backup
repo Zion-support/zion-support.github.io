@@ -1,7 +1,5 @@
 import { useState } from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { ChatWidget } from "@/components/ChatWidget";
-import { useRouter } from "next/router";
+import { useParams } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import ImageWithRetry from '@/components/ui/ImageWithRetry';
@@ -22,9 +20,7 @@ export default function ListingDetail() {
   const router = useRouter();
   const id = router.query.id as string;  const [selectedImageIndex, setSelectedImageIndex] = useState(0);  const [isLoading, setIsLoading] = useState(false);
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
-  const [isChatOpen, setIsChatOpen] = useState(false);
-  const { user } = useAuth();
-  const { formatPrice } = useCurrency();
+
   // Find the listing from our shared data source - now also checking equipment listings
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
   if (!listing) {
@@ -60,17 +56,17 @@ export default function ListingDetail() {
               </Button>
             </div>
           </div>
-        </div>);
-    }
-    const handleContact = () => {
-        if (user) {
-            setIsChatOpen(true);
-        }
-        else {
-            setIsContactDialogOpen(true);
-        }
-    };
-    return (<div className="min-h-screen bg-zion-blue py-12 px-4">
+        </div>
+      );
+  }
+
+  const handleContact = () => {
+    setIsContactDialogOpen(true);
+  };
+
+  return (
+    <>
+      <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Left Column - Images */}
@@ -213,10 +209,9 @@ export default function ListingDetail() {
           </div>
         </div>
       </div>
-  {/* Removed stray comma */}
-            <ChatWidget roomId={listing.id} recipientId={listing.author.id} isOpen={isChatOpen} onClose={() => setIsChatOpen(false)}/>) /* Contact Dialog */;
-    { /* Contact Dialog */ }
-    <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
+
+      {/* Contact Dialog */}
+      <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
         <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
