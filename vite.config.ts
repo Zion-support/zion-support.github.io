@@ -96,6 +96,10 @@ export default defineConfig(({ mode }) => ({
       '@': path.resolve(__dirname, './src')
     }
   },
+  // Exclude corrupted stray directories from dependency scanning
+  // and ensure Vite only serves from project root
+  publicDir: './public',
+  root: '.',
   server: {
     port: 3000,
     host: true,
