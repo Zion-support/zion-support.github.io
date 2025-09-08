@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-11T22:59:02.238Z",
+  "generatedAt": "2025-08-11T22:47:32.677Z",
   "functions": [
     "a11y-audit-runner",
     "ai-changelog-runner",
@@ -31,8 +31,7 @@
     "cache-warmer",
     "cloud-autonomous-orchestrator-runner",
     "cloud_orchestrator",
-    "component-docs-runner",
-    "content-gap-analyzer",
+    "content-freshness-auditor",
     "continuous-front-runner",
     "continuous-orchestrator",
     "contributing-refresher",
@@ -41,7 +40,7 @@
     "cron-supervisor",
     "cta-optimizer",
     "dead-code-report",
-    "docs-glossary-builder",
+    "dependency-intelligence-upgrader",
     "docs-index-runner",
     "docs-knowledge-sync",
     "docs-link-checker-runner",
