@@ -1,33 +1,111 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { useLocation } from 'react-router-dom';
 
-interface AnalyticsContextType {
-  trackEvent: (event: string, data?: any) => void;
+export type AnalyticsEventType = 'page_view' | 'click' | 'form_submit' | 'conversion' | 'error';
+
+export interface AnalyticsEvent {
+  type: AnalyticsEventType;
+  path?: string;
+  component?: string;
+  elementId?: string;
+  timestamp: number;
+  userId?: string | null;
+  metadata?: Record<string, any>;
+}
+
+export interface AnalyticsContextType {
+  trackEvent: (type: AnalyticsEventType, metadata?: Record<string, any>) => void;
+  trackConversion: (conversionType: string, value?: number, metadata?: Record<string, any>) => void;
   pageViews: number;
+  lastEvent: AnalyticsEvent | null;
+  events: AnalyticsEvent[];
+  clearEvents: () => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
-export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [pageViews, setPageViews] = useState(0);
-  
-  const trackEvent = (event: string, data?: any) => {
-    console.log('Analytics event:', event, data);
-    if (event === 'page_view') {
-      setPageViews(prev => prev + 1);
-    }
-  };
-  
-  return (
-    <AnalyticsContext.Provider value={{ trackEvent, pageViews }}>
-      {children}
-    </AnalyticsContext.Provider>
-  );
-};
-
-export const useAnalytics = () => {
+export const useAnalytics = (): AnalyticsContextType => {
   const context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
   return context;
+};
+
+interface AnalyticsProviderProps {
+  children: ReactNode;
+}
+
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  const [pageViews, setPageViews] = useState(0);
+  const [events, setEvents] = useState<AnalyticsEvent[]>([]);
+  const [lastEvent, setLastEvent] = useState<AnalyticsEvent | null>(null);
+  const location = useLocation();
+
+  // Track page views automatically
+  useEffect(() => {
+    const event: AnalyticsEvent = {
+      type: 'page_view',
+      path: location.pathname,
+      timestamp: Date.now(),
+    };
+    
+    setPageViews(prev => prev + 1);
+    setEvents(prev => [...prev, event]);
+    setLastEvent(event);
+  }, [location.pathname]);
+
+  const trackEvent = (type: AnalyticsEventType, metadata?: Record<string, any>) => {
+    const event: AnalyticsEvent = {
+      type,
+      path: location.pathname,
+      timestamp: Date.now(),
+      metadata,
+    };
+    
+    setEvents(prev => [...prev, event]);
+    setLastEvent(event);
+    
+    // In a real app, you would send this to your analytics service
+    console.log('Analytics Event:', event);
+  };
+
+  const trackConversion = (conversionType: string, value?: number, metadata?: Record<string, any>) => {
+    const event: AnalyticsEvent = {
+      type: 'conversion',
+      path: location.pathname,
+      timestamp: Date.now(),
+      metadata: {
+        conversionType,
+        value,
+        ...metadata,
+      },
+    };
+    
+    setEvents(prev => [...prev, event]);
+    setLastEvent(event);
+    
+    // In a real app, you would send this to your analytics service
+    console.log('Conversion Event:', event);
+  };
+
+  const clearEvents = () => {
+    setEvents([]);
+    setLastEvent(null);
+  };
+
+  return (
+    <AnalyticsContext.Provider
+      value={{
+        trackEvent,
+        trackConversion,
+        pageViews,
+        lastEvent,
+        events,
+        clearEvents,
+      }}
+    >
+      {children}
+    </AnalyticsContext.Provider>
+  );
 };
