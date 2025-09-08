@@ -1,7 +1,7 @@
 [build]
   # Do not run any build. Deploy the prebuilt static export from out/ as-is.
-  command = "echo 'Skipping build; deploying prebuilt static export'"
-  publish = "out"
+  command = "echo 'Skipping build; deploying prebuilt dist'"
+  publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
@@ -14,6 +14,10 @@
   PUPPETEER_SKIP_DOWNLOAD = "1"
   CYPRESS_INSTALL_BINARY = "0"
   ELECTRON_SKIP_DOWNLOAD = "1"
+
+# Ensure Netlify picks up serverless functions from this directory
+[functions]
+  directory = "netlify/functions"
 
 # Keep the config minimal to avoid plugin-related build failures
 
