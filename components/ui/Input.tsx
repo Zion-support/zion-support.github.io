@@ -1,62 +1,34 @@
+import React from 'react';
 
-import React from './react';
-;
+type InputProps = React.InputHTMLAttributes<HTMLInputElement> & { label?: string; helperText?: string };
 
-interface InputProps {
-interface InputProps {
-
-interface InputProps {
-interface InputProps {;
-  type?: string;
-  placeholder?: string;
-  value?: string;
-
-
-const Input: React.FC<InputProps> = ({;
-  type = "text",;
-  placeholder,;
-  value,;
-  onChange,;
-  className = "",;
-  disabled = false,;
-  required = false,;
-  ...props;
-}) => {;
-  const baseClasses =;
-
-    "flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50";
-  on_change?: (e: React.ChangeEvent < HTMLInputElement>) => void;
-  class_name?: string;
-  disabled?: boolean;
-  required?: boolean;
-}
-const Input: React.FC < InputProps> = ({
-  type = "text",
-  placeholder,
-  value,
-  on_change,
-  class_name = "",
-  disabled = false,
-  required = false,
-  ...props;
-}) => {
-  const base_classes =;
-    "flex h - 10 w - full rounded - md border border - gray - 300 bg - white px - 3 py - 2 text - sm ring - offset - background file:border - 0 file:bg - transparent file:text - sm file:font - medium placeholder:text - gray - 500 focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - blue - 500 focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50";
-;
+export function TextInput({ label, helperText, className = '', ...props }: InputProps) {
   return (
-    <input;
-      type={type}
-      placeholder={placeholder}
-      value={value}
-      on_change={on_change}
-      className={`${base_classes} ${class_name}`}
-      disabled={disabled}
-      required={required}
-      {...props}
-
-    />);
+    <label className="block space-y-1">
+      {label && <span className="text-sm font-medium">{label}</span>}
+      <input
+        className={`w-full rounded-md border border-gray-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 px-3 h-11 text-base focus:outline-none focus:ring-2 focus:ring-blue-500 ${className}`}
+        {...props}
+      />
+      {helperText && <span className="text-xs text-gray-500">{helperText}</span>}
+    </label>
+  );
 }
-;
-export { Input }
-;
 
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & { variant?: 'primary' | 'secondary' };
+
+export function Button({ variant = 'primary', className = '', ...props }: ButtonProps) {
+  const base = 'inline-flex items-center justify-center h-11 px-4 rounded-md text-base font-medium focus:outline-none focus:ring-2 focus:ring-offset-0';
+  const styles = variant === 'primary'
+    ? 'bg-blue-600 hover:bg-blue-700 text-white'
+    : 'bg-gray-100 hover:bg-gray-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-gray-900 dark:text-gray-100';
+  return <button className={`${base} ${styles} ${className}`} {...props} />;
+}
+
+export function DateInput(props: Omit<InputProps, 'type'>) {
+  return <TextInput type="date" inputMode="numeric" {...props} />;
+}
+
+export function TimeInput(props: Omit<InputProps, 'type'>) {
+  return <TextInput type="time" inputMode="numeric" {...props} />;
+}

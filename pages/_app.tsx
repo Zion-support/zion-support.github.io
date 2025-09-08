@@ -3,6 +3,7 @@ import EnhancedLayout from '../components/layout/EnhancedLayout';
 import '../styles/globals.css';
 import '../styles/enhanced-design-system.css';
 import '../styles/modern-design-system.css';
+import '../styles/mobile.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

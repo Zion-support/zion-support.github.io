@@ -3,26 +3,44 @@ import AnimatedBackground from './AnimatedBackground';
 
 export default function FuturisticHero() {
   return (
-    <section className="relative overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 p-8 md:p-12">
+    <section className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-cyber-dark to-cyber-dark-blue text-white px-6 py-16 sm:py-20">
       <AnimatedBackground />
-      <div className="relative">
-        <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/30 px-3 py-1 text-xs text-blue-600 dark:text-blue-300 bg-blue-50/40 dark:bg-blue-900/10 shadow-[0_0_20px_rgba(59,130,246,0.2)]">
-          <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
-          Live Autonomous Agents
-        </div>
-        <h1 className="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-emerald-400">
-          Build the Future of Talent with AI
+      <div className="relative z-10 max-w-3xl">
+        <p className="inline-flex items-center gap-2 text-xs tracking-widest uppercase bg-white/10 px-3 py-1 rounded-full mb-3">Future of Work</p>
+        <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight">
+          Build with Elite AI Talent, Faster than Ever
         </h1>
-        <p className="mt-3 text-gray-600 dark:text-gray-300 max-w-2xl">
-          Zion unifies learning, AI assistants, certifications, and autonomous cloud agents to accelerate skills and opportunities.
+        <p className="mt-4 text-white/80 text-lg">
+          Zion is a mobile-first marketplace connecting you to world-class AI experts. Post, match, and deliver projects with trust.
         </p>
-        <div className="mt-6 flex flex-wrap gap-3">
-          <Link href="/academy"><a className="rounded-lg bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 shadow-[0_0_20px_rgba(59,130,246,0.4)]">Explore Academy</a></Link>
-          <Link href="/academy/insights"><a className="rounded-lg border border-gray-300 dark:border-gray-700 px-5 py-2.5">View Insights</a></Link>
+        <div className="mt-8 flex flex-col sm:flex-row gap-3">
+          <Link href="/browse">
+            <a className="inline-flex justify-center items-center h-12 px-6 rounded-lg bg-neon-blue text-black font-semibold shadow-neon-blue">Browse Talent</a>
+          </Link>
+          <Link href="/post">
+            <a className="inline-flex justify-center items-center h-12 px-6 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold ring-1 ring-white/20">Post a Job</a>
+          </Link>
         </div>
       </div>
 
-      <div className="absolute -right-12 -bottom-12 w-72 h-72 blur-3xl rounded-full bg-gradient-to-br from-blue-500/20 to-purple-500/20" />
+      <div className="relative z-10 mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+        <div>
+          <div className="text-3xl font-bold">5k+</div>
+          <div className="text-white/70 text-sm">Verified Experts</div>
+        </div>
+        <div>
+          <div className="text-3xl font-bold">48h</div>
+          <div className="text-white/70 text-sm">Avg. Match Time</div>
+        </div>
+        <div>
+          <div className="text-3xl font-bold">98%</div>
+          <div className="text-white/70 text-sm">Milestone Success</div>
+        </div>
+        <div>
+          <div className="text-3xl font-bold">A+</div>
+          <div className="text-white/70 text-sm">Security Grade</div>
+        </div>
+      </div>
     </section>
   );
 }

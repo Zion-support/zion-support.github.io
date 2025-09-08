@@ -1,29 +1,32 @@
+import { useState } from 'react';
 import Link from 'next/link';
-import { useTenant } from '../multiverse/TenantProvider';
+import { Menu } from 'lucide-react';
+import MobileMenu from './MobileMenu';
 
 export default function EnhancedNavigation() {
-  const { tenant } = useTenant();
+  const [open, setOpen] = useState(false);
   return (
-    <nav className="border-b border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 backdrop-blur supports-backdrop-blur:bg-white/50 sticky top-0 z-40">
-      <div className="container mx-auto px-4 h-14 flex items-center justify-between">
-        <Link href="/">
-          <a className="font-semibold flex items-center gap-2">
-            {tenant?.logoUrl ? <img src={tenant.logoUrl} alt={tenant.name} className="w-6 h-6 rounded" /> : null}
-            <span>{tenant?.name ?? 'Zion'}</span>
-          </a>
-        </Link>
-        <div className="flex items-center gap-4 text-sm">
-          <Link href="/startup-os"><a>Startup OS</a></Link>
-          <Link href="/founder-dashboard"><a>Founder Dashboard</a></Link>
-          <Link href="/about"><a>About</a></Link>
-          <Link href="/blog"><a>Blog</a></Link>
-          <Link href="/contact"><a>Contact</a></Link>
-          <span className="inline-flex items-center gap-1 text-xs">
-            <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--accent, #3b82f6)' }} />
-            <span className="text-gray-500">{tenant?.subdomain ?? 'global'}</span>
-          </span>
+    <>
+      <nav className="border-b border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 backdrop-blur supports-backdrop-blur:bg-white/50 sticky top-0 z-40">
+        <div className="container mx-auto px-4 h-14 flex items-center justify-between">
+          <Link href="/">
+            <a className="font-semibold text-lg">Zion</a>
+          </Link>
+          <div className="hidden md:flex items-center gap-6 text-sm">
+            <Link href="/about"><a className="hover:opacity-80">About</a></Link>
+            <Link href="/blog"><a className="hover:opacity-80">Blog</a></Link>
+            <Link href="/contact"><a className="hover:opacity-80">Contact</a></Link>
+          </div>
+          <button
+            className="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            aria-label="Open menu"
+            onClick={() => setOpen(true)}
+          >
+            <Menu className="h-6 w-6" />
+          </button>
         </div>
-      </div>
-    </nav>
+      </nav>
+      <MobileMenu open={open} onClose={() => setOpen(false)} />
+    </>
   );
 }
