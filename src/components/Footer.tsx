@@ -190,37 +190,32 @@ export function Footer() {
 
   const footerSections = [
     {
-      title: "AI & Machine Learning",
-      icon: Brain,
-      services: [
-        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence" },
-        { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" },
-        { name: "AI Sales Copilot", href: "/services/ai-sales-copilot" },
-        { name: "AI Content Marketing", href: "/services/ai-content-marketing-suite" },
-        { name: "AI Customer Support", href: "/services/ai-customer-support-automation" },
-        { name: "AI Project Management", href: "/services/ai-project-management" },
-        { name: "AI Research Assistant", href: "/services/ai-autonomous-research-assistant" },
-        { name: "AI Financial Trading", href: "/services/ai-financial-trading-platform" },
-        { name: "AI Healthcare Platform", href: "/services/ai-healthcare-platform" },
-        { name: "AI Quantum Hybrid", href: "/services/ai-quantum-hybrid-platform" }
+      title: 'Services',
+      links: [
+        { name: 'AI Solutions', href: '/ai-services' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops-automation' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity-solutions' },
+        { name: 'Micro SAAS', href: '/micro-saas' },
+        { name: 'Digital Transformation', href: '/digital-transformation' }
       ]
     },
     {
       title: 'Solutions',
       links: [
         { name: 'Enterprise Solutions', href: '/enterprise' },
-        { name: 'Healthcare Tech', href: '/healthcare-solutions' },
-        { name: 'Financial Solutions', href: '/financial-solutions' },
-        { name: 'Manufacturing', href: '/manufacturing-solutions' },
-        { name: 'Government', href: '/government-solutions' },
-        { name: 'Retail Solutions', href: '/retail-solutions' }
+        { name: 'Healthcare Tech', href: '/solutions/healthcare' },
+        { name: 'Financial Solutions', href: '/solutions/financial' },
+        { name: 'Manufacturing', href: '/solutions/manufacturing' },
+        { name: 'Government', href: '/solutions/government' },
+        { name: 'Retail Solutions', href: '/solutions/retail' }
       ]
     },
     {
       title: 'Company',
       links: [
         { name: 'About Us', href: '/about' },
-        { name: 'Our Team', href: '/about' },
+        { name: 'Our Team', href: '/about/team' },
         { name: 'Careers', href: '/careers' },
         { name: 'Partners', href: '/partners' },
         { name: 'News & Updates', href: '/news' },
@@ -236,26 +231,6 @@ export function Footer() {
         { name: 'Training', href: '/training' },
         { name: 'Blog', href: '/blog' },
         { name: 'Research', href: '/research-development' }
-      ]
-    },
-    {
-      title: "Digital Transformation",
-      icon: Rocket,
-      services: [
-        { name: "Digital Twin Solutions", href: "/services/digital-twin" },
-        { name: "IoT Edge Computing", href: "/services/iot-edge-computing" },
-        { name: "Blockchain Solutions", href: "/services/blockchain-enterprise-solutions" },
-        { name: "5G Enterprise Solutions", href: "/services/5g-enterprise-solutions" }
-      ]
-    },
-    {
-      title: "Micro SaaS",
-      icon: Code,
-      services: [
-        { name: "Custom SaaS Development", href: "/services/micro-saas-solutions" },
-        { name: "API Development", href: "/services/api-development" },
-        { name: "Mobile App Development", href: "/services/mobile-development" },
-        { name: "Web Application Development", href: "/services/web-development" }
       ]
     }
   ];
@@ -307,17 +282,17 @@ export function Footer() {
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Instagram', href: '#', icon: Instagram },
-    { name: 'GitHub', href: '#', icon: Github }
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+    { name: 'Facebook', href: 'https://www.facebook.com/ziontechgroup', icon: Facebook },
+    { name: 'Instagram', href: 'https://www.instagram.com/ziontechgroup', icon: Instagram },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
   ];
 
   const contactInfo = [
     {
       icon: Phone,
-      text: '+1 302 464 0950',
+      text: '+1 (302) 464-0950',
       href: 'tel:+13024640950'
     },
     {
@@ -328,7 +303,7 @@ export function Footer() {
     {
       icon: MapPin,
       text: '364 E Main St STE 1008, Middletown DE 19709',
-      href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008,+Middletown+DE+19709'
+      href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'
     },
     {
       icon: Clock,

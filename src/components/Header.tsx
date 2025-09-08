@@ -459,8 +459,38 @@ export function Header({ onMenuClick }: HeaderProps) {
                     <span>{item.name}</span>
                   </Link>
                 )}
-              </div>
-            ))}
+              </AnimatePresence>
+            </div>
+
+            {/* Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 text-gray-300 hover:text-white transition-colors"
+            >
+              {currentTheme === 'dark' ? (
+                <Sun className="w-5 h-5" />
+              ) : (
+                <Moon className="w-5 h-5" />
+              )}
+            </button>
+
+            {/* Contact Info */}
+            <div className="flex items-center space-x-4 text-sm text-gray-300">
+              <a 
+                href="tel:+13024640950" 
+                className="flex items-center space-x-2 hover:text-cyan-400 transition-colors"
+              >
+                <Phone className="w-4 h-4" />
+                <span className="hidden xl:inline">+1 (302) 464-0950</span>
+              </a>
+              <a 
+                href="mailto:info@ziontechgroup.com" 
+                className="flex items-center space-x-2 hover:text-cyan-400 transition-colors"
+              >
+                <Mail className="w-4 h-4" />
+                <span className="hidden xl:inline">info@ziontechgroup.com</span>
+              </a>
+            </div>
           </div>
 
           {/* Right side actions */}
@@ -556,57 +586,47 @@ export function Header({ onMenuClick }: HeaderProps) {
                             transition={{ duration: 0.2 }}
                             className="ml-4 mt-2 space-y-2"
                           >
-                            {item.name === 'Services' ? (
-                              // Special handling for Services mega menu
-                              <div className="space-y-4">
-                                {item.items.map((category) => (
-                                  <div key={category.category} className="space-y-2">
-                                    <div className="flex items-center space-x-2 text-cyan-400">
-                                      <category.icon className="w-4 h-4" />
-                                      <span className="text-sm font-medium">{category.category}</span>
-                                    </div>
-                                    <div className="ml-6 space-y-1">
-                                      {category.services.slice(0, 3).map((service) => (
-                                        <Link
-                                          key={service.name}
-                                          to={service.href}
-                                          className="block px-3 py-2 text-gray-400 hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-colors duration-200"
-                                          onClick={() => setIsMobileMenuOpen(false)}
-                                        >
-                                          {service.name}
-                                        </Link>
-                                      ))}
-                                    </div>
-                                  </div>
-                                ))}
-                              </div>
-                            ) : (
-                              // Regular dropdown items
-                              item.items?.map((subItem) => (
-                                <Link
-                                  key={subItem.name}
-                                  to={subItem.href}
-                                  className="block px-3 py-2 text-gray-400 hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-colors duration-200"
-                                  onClick={() => setIsMobileMenuOpen(false)}
-                                >
-                                  {subItem.name}
-                                </Link>
-                              ))
-                            )}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  ) : (
-                    <Link
-                      to={item.href}
-                      className="flex items-center space-x-2 px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      <item.icon className="w-4 h-4" />
-                      <span>{item.name}</span>
-                    </Link>
-                  )}
+                            {item.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </nav>
+
+              {/* Mobile Contact Info */}
+              <div className="mt-8 pt-6 border-t border-slate-700/50">
+                <div className="space-y-4">
+                  <a 
+                    href="tel:+13024640950" 
+                    className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors"
+                  >
+                    <Phone className="w-5 h-5" />
+                    <span>+1 (302) 464-0950</span>
+                  </a>
+                  <a 
+                    href="mailto:info@ziontechgroup.com" 
+                    className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors"
+                  >
+                    <Mail className="w-5 h-5" />
+                    <span>info@ziontechgroup.com</span>
+                  </a>
+                  <div className="flex items-center space-x-3 text-gray-300">
+                    <MapPin className="w-5 h-5" />
+                    <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+                  </div>
+                </div>
+
+                {/* Mobile CTA */}
+                <div className="mt-6 pt-6 border-t border-slate-700/50">
+                  <Link
+                    to="/contact"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                  >
+                    Get Started Today
+                  </Link>
                 </div>
               ))}
               
