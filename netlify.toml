@@ -1,6 +1,6 @@
 [build]
   # Use prebuilt static site to avoid CI build failures
-  command = "echo Skipping build; using prebuilt out/ directory"
+  command = "echo 'Skipping build; using prebuilt out/ directory'"
   publish = "out"
   functions = "netlify/functions"
   command_timeout = "30m"
