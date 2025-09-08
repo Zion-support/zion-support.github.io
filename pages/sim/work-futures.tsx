@@ -1,9 +1,13 @@
+import dynamic from 'next/dynamic';
 import React from 'react';
-import Head from 'next/head';
-  return (
-    <>
-      <Head><title>sim/work-futures - Zion App</title><meta name="description" content="sim/work-futures page" /></Head><div className="container mx-auto px-4 py-8"><h1 className="text-3xl font-bold mb-6">sim/work-futures</h1><p className="text-lg mb-4">This page is under construction.</p><div className="mt-4"><a href="/" className="text-blue-600 hover:underline">;
-            ← Back to Home</a></div></div></>;
-  );
 
-export default Workfutures;
+const Simulator = dynamic(() => import('../../components/sim/Simulator'), { ssr: false });
+
+export default function WorkFuturesPage() {
+  return (
+    <div className="space-y-6">
+      <h1 className="text-2xl font-semibold">ZionGPT Simulation: Work Futures</h1>
+      <Simulator routeId="sim/work-futures" />
+    </div>
+  );
+}

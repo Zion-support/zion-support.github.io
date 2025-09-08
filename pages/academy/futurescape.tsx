@@ -1,22 +1,13 @@
+import dynamic from 'next/dynamic';
 import React from 'react';
-import Head from 'next/head';
 
-export default function Futurescape() {
+const Simulator = dynamic(() => import('../../components/sim/Simulator'), { ssr: false });
+
+export default function FuturescapePage() {
   return (
-    <>
-      <Head>
-        <title>Futurescape Academy - Zion Tech Group</title>
-        <meta name="description" content="Explore the future of technology with our Futurescape Academy" />
-      </Head>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">Futurescape Academy</h1>
-        <p className="text-lg mb-4">This page is under construction.</p>
-        <div className="mt-4">
-          <a href="/" className="text-blue-600 hover:underline">
-            ← Back to Home
-          </a>
-        </div>
-      </div>
-    </>
+    <div className="space-y-6">
+      <h1 className="text-2xl font-semibold">ZionGPT Simulation: Futurescape</h1>
+      <Simulator routeId="academy/futurescape" />
+    </div>
   );
 }
