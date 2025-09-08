@@ -1,10 +1,10 @@
-import React from 'react'
-import Link from 'next/link'
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
-  title: "About | Zion Tech Group",
-  description: "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
-}
+  title: 'About Us - Zion Tech Group',
+  description: 'Learn about Zion Tech Group, a leading provider of AI solutions, micro SaaS development, and enterprise IT services.',
+};
 
 export default function AboutPage() {
   const values = [
@@ -38,16 +38,19 @@ export default function AboutPage() {
   ]
 
   return (
-    <div className="animate-fade-in">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">About Zion Tech Group</h1>
-          <p className="text-xl text-gray-600">
-            Delivering enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            About Zion Tech Group
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Leading the future of technology with innovative AI solutions, 
+            micro SaaS development, and enterprise IT services.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           <div className="space-y-8">
             <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Our Mission</h2>
@@ -104,16 +107,19 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="text-center">
           <p className="text-gray-600 mb-4">Ready to transform your business?</p>
           <Link 
             href="/contact" 
-            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
           >
-            Get Started Today
+            Get in Touch
+            <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
           </Link>
         </div>
       </div>
     </div>
-  )
+  );
 }
