@@ -13,18 +13,18 @@ import { SEO, HomePageSEO } from './components/SEO';
 import AccessibilityEnhancements from './components/AccessibilityEnhancements';
 import { PerformanceOptimizations } from './components/PerformanceOptimizations';
 import './App.css';
-import './components/AccessibilityEnhancements.css';
 
-// Create a client
+// Create QueryClient instance
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      staleTime: 5 * 60 * 1000, // 5 minutes
+      staleTime: 5 * 60 * 1000,
       retry: 1,
     },
   },
 });
 
+<<<<<<< HEAD
 // Pages - Lazy loaded for better performance
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));

@@ -10,6 +10,7 @@ export function ModeToggle() {
     <Button
       variant="ghost"
       size="icon"
+=======
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
       aria-label="Toggle theme"
     >
@@ -18,4 +19,4 @@ export function ModeToggle() {
       <span className="sr-only">Toggle theme</span>
     </Button>
   )
-}
+}>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204

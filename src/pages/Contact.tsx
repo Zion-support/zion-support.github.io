@@ -108,8 +108,7 @@ const Contact: React.FC = memo(() => {
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {    setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
@@ -184,6 +183,8 @@ const Contact: React.FC = memo(() => {
           />
         </div>
       </div>
+<<<<<<< HEAD
+=======
 
       {/* Contact Form */}
       <div className="max-w-4xl mx-auto px-4 mb-20">
@@ -356,14 +357,13 @@ const Contact: React.FC = memo(() => {
             <p className="text-blue-200">
               We work with a wide range of modern technologies including React, Node.js, Python, AI/ML frameworks, 
               cloud platforms (AWS, Azure, GCP), and more. We choose the best technology stack for your specific needs.
-            </p>
-          </div>
+            </p>          </div>
         </div>
       </div>
+>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
     </div>
   );
 });
 
 Contact.displayName = 'Contact';
-
 export default Contact;

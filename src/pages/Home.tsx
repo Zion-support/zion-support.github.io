@@ -1,3 +1,16 @@
+import React, { memo } from 'react';
+
+// Service card component for better performance
+const ServiceCard = memo<{ title: string; description: string }>(({ title, description }) => (
+  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-colors">
+    <h3 className="text-lg font-semibold mb-2">{title}</h3>
+    <p className="text-sm text-blue-200">{description}</p>
+  </div>
+));
+
+ServiceCard.displayName = 'ServiceCard';
+
+=======
 import React, { memo, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -105,10 +118,12 @@ const StatsSection = memo(() => {
 
 StatsSection.displayName = 'StatsSection';
 
+>>>>>>> origin/main
 const Home: React.FC = memo(() => {
   const services = [
     {
       title: 'AI Services',
+=======
       description: 'Revolutionary AI-powered solutions that transform businesses and drive innovation',
       icon: '🤖',
       link: '/ai-services',
@@ -126,11 +141,16 @@ const Home: React.FC = memo(() => {
       description: 'Scalable software solutions designed for modern businesses and startups',
       icon: '🚀',
       link: '/micro-saas',
-      features: ['Custom Development', 'API Integration', 'Scalable Architecture', 'Maintenance']
+      features: ['Custom Development', 'API Integration', 'Scalable Architecture', 'Maintenance']>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
     }
   ];
 
   return (
+      <div className="mt-12">
+        <p className="text-sm text-blue-300">
+          Successfully built and deployed on Netlify! 🚀
+        </p>
+=======
     <div className="min-h-screen">
       {/* Hero Section */}
       <div className="text-center py-20">
@@ -191,12 +211,13 @@ const Home: React.FC = memo(() => {
           <p className="text-green-300 font-medium">
             Successfully built and deployed on Netlify! 🚀
           </p>
-        </div>
+        </div>>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
       </div>
     </div>
   );
 });
 
-Home.displayName = 'Home';
+>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======Home.displayName = 'Home';
 
 export default Home;

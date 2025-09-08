@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-
 interface SEOProps {
   title?: string;
   description?: string;
@@ -208,5 +207,4 @@ const EnhancedSEO: React.FC<SEOProps> = ({
 
   return null; // This component doesn't render anything
 };
-
 export default EnhancedSEO;

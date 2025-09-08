@@ -103,12 +103,9 @@ const config: Config = {
   },
   plugins: [
     animatePlugin,
-<<<<<<< HEAD
-    plugin(({ addUtilities }) => {
-=======
     plugin(function({ addUtilities }: { addUtilities: (utilities: Record<string, any>) => void }) {
->>>>>>> c7463fd0584e5d583266e6252c3232de9d3fa475
-      const newUtilities = {
+<<<<<<< HEAD>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+=======      const newUtilities = {
         '.rtl': {
           direction: 'rtl',
           textAlign: 'right',

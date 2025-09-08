@@ -2,6 +2,14 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "noEmit": true,
+=======    "skipLibCheck": true,
+    "incremental": false,
+    "composite": false,
+    "tsBuildInfoFile": ".tsbuildinfo.typecheck"
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"=======
     "skipLibCheck": true,
     "incremental": false,
     "composite": false,
@@ -9,7 +17,7 @@
   },
   "include": [
     "src/**/*.ts",
-    "src/**/*.tsx"
+    "src/**/*.tsx">>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
   ],
   "exclude": [
     "node_modules",
@@ -40,8 +48,10 @@
     "data/**",
     "pages/**",
     "app/**",
+=======    "vite.config-backup.ts",
+    "zion-os/**"=======
     "vite.config-backup.ts",
-    "zion-os/**"
+    "zion-os/**">>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
   ]
 }
 
