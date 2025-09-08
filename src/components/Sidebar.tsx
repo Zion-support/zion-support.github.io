@@ -116,7 +116,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       icon: Rocket,
       items: [
         { name: 'Micro SaaS Products', path: '/services/micro-saas', icon: ShoppingCart, description: 'AI automations with transparent pricing' },
-        { name: 'Innovative Services 2025', path: '/services/innovative-2025', icon: Rocket, description: 'Cutting-edge solutions' },
+        { name: 'Innovative Services 2025', path: '/new-innovative-services-2025', icon: Rocket, description: 'Cutting-edge solutions' },
         { name: 'Revolutionary Services 2030', path: '/revolutionary-services-2030', icon: Rocket, description: 'Future technology solutions' }
       ]
     },
