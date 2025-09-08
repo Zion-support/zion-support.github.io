@@ -61,7 +61,7 @@ export default async function handler(req: Req, res: JsonRes) {
 
     res.status(200).json(data || []);
   } catch (err: any) {
-    let errorMessage = 'Failed to fetch services';
+    const errorMessage = 'Failed to fetch services';
     let errorCode = 'UNKNOWN_ERROR'; // Default error code
     let errorDetails = '';
 

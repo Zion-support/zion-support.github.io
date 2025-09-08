@@ -1,3 +1,4 @@
+=======
 /*
  Automates merging open PRs targeting main using GITHUB token from origin remote.
 */
@@ -85,4 +86,4 @@ async function tryMerge(number) {
 })().catch(e => {
   console.error(e.message);
   process.exit(1);
-});
+});=======>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204

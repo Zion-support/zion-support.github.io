@@ -1,27 +1,27 @@
-import React, { _useState } from "react";
-import { _useForm, _useFieldArray } from "react-hook-form";
-import { _zodResolver } from "@hookform/resolvers/zod";
+import React, { useState } from "react";
+import { useForm, useFieldArray } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { _useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { 
-  _Form, _FormControl, _FormField, _FormItem, _FormLabel, _FormMessage 
+  Form, FormControl, FormField, FormItem, FormLabel, FormMessage 
 } from "@/components/ui/form";
-import { _Input } from "@/components/ui/input";
-import { _Textarea } from "@/components/ui/textarea";
-import { _Button } from "@/components/ui/Button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/Button";
 import { 
-  _Select, _SelectContent, _SelectItem, _SelectTrigger, _SelectValue 
+  Select, SelectContent, SelectItem, SelectTrigger, SelectValue 
 } from "@/components/ui/select";
-import { _AspectRatio } from "@/components/ui/aspect-ratio";
-import { _Separator } from "@/components/ui/separator";
-import { _toast } from "@/components/ui/use-toast";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Separator } from "@/components/ui/separator";
+import { toast } from "@/components/ui/use-toast";
 import { 
-  _User, _Briefcase, _Star, _Calendar, _Globe, _DollarSign, _FileText, _Link, _Upload, _ArrowRight, _ArrowLeft, 
-  _Trash2, _Plus, _CheckCircle2
+  User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft, 
+  Trash2, Plus, CheckCircle2
 } from "lucide-react";
-import { _useAuth } from "@/hooks/useAuth";
-import { _useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
-import { _supabase } from "@/integrations/supabase/client";
+import { useAuth } from "@/hooks/useAuth";
+import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
+import { supabase } from "@/integrations/supabase/client";
 
 // Define the form schema with validation
 const talentSchema = z.object({
@@ -67,7 +67,7 @@ const talentSchema = z.object({
 type TalentFormValues = z.infer<typeof talentSchema>;
 
 export function TalentOnboardingForm() {
-  const { _user } = useAuth();
+  const { user } = useAuth();
   const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(1);
   const [profilePictureUrl, setProfilePictureUrl] = useState<string | null>(null);
@@ -75,7 +75,7 @@ export function TalentOnboardingForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccessScreen, setShowSuccessScreen] = useState(false);
   
-  const { _enhanceProfile, _isGenerating } = useTalentProfileEnhancer();
+  const { enhanceProfile, isGenerating } = useTalentProfileEnhancer();
   
   const totalSteps = 4;
   
@@ -136,7 +136,7 @@ export function TalentOnboardingForm() {
   };
 
   // Handle CV upload
-  const handleCvUpload = async (_file: File) => {
+  const handleCvUpload = async (file: File) => {
     const fileName = `cv-${user?.id}-${Date.now()}`;
     const { error: cvError } = await supabase.storage
       .from('resumes')
@@ -148,7 +148,7 @@ export function TalentOnboardingForm() {
     }
     
     // Get the public URL
-    const { data: { _publicUrl } } = supabase.storage
+    const { data: { publicUrl } } = supabase.storage
       .from('resumes')
       .getPublicUrl(fileName);
     

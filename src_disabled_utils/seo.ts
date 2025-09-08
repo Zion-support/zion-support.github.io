@@ -24,8 +24,7 @@ export interface SEOData {
 export interface StructuredData {
   '@context': string;
   '@type': string;
-  [key: string]: unknown;
-}
+  [key: string]: any;}
 
 // Generate meta tags for SEO
 export const generateMetaTags = (seoData: SEOData): React.ReactElement[] => {
@@ -378,8 +377,7 @@ export const trackSEOMetrics = () => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.name === 'first-contentful-paint') {
-          // console.log('FCP:', entry.startTime);
-        }
+          console.log('FCP:', entry.startTime);        }
       });
     }).observe({ entryTypes: ['paint'] });
 
@@ -387,20 +385,17 @@ export const trackSEOMetrics = () => {
     new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
-      // console.log('LCP:', lastEntry.startTime);
-    }).observe({ entryTypes: ['largest-contentful-paint'] });
+      console.log('LCP:', lastEntry.startTime);    }).observe({ entryTypes: ['largest-contentful-paint'] });
 
     // Cumulative Layout Shift
     let clsValue = 0;
     new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      entries.forEach((entry: unknown) => {
-        if (!entry.hadRecentInput) {
+      entries.forEach((entry: any) => {        if (!entry.hadRecentInput) {
           clsValue += entry.value;
         }
       });
-      // console.log('CLS:', clsValue);
-    }).observe({ entryTypes: ['layout-shift'] });
+      console.log('CLS:', clsValue);    }).observe({ entryTypes: ['layout-shift'] });
   };
 
   trackWebVitals();

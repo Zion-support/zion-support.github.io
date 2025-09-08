@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
+import { toast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/Button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AIMatchingResults } from "@/components/AIMatchingResults";
@@ -9,12 +9,11 @@ import { Sparkles, Search } from "lucide-react";
 
 interface AIMatchmakerProps {
   serviceType?: string;
-  onMatchSelect?: (match: unknown) => void;
+  onMatchSelect?: (match: any) => void;
   className?: string;
 }
 
 export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
-  const { toast } = useToast();
   const [query, setQuery] = useState("");
   const [isMatchmaking, setIsMatchmaking] = useState(false);
   const [matches, setMatches] = useState([] as MatchResult[]);
@@ -34,7 +33,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
     setHasSearched(true);
     
     try {
-      // console.log("Starting AI matching with query:", query, "and service type:", serviceType);
+      console.log("Starting AI matching with query:", query, "and service type:", serviceType);
       
       // Get AI matches
       const results = await findMatches(
@@ -43,7 +42,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         3
       );
       
-      // console.log("AI matching results:", results);
+      console.log("AI matching results:", results);
       setMatches(results);
       
       toast({
@@ -51,7 +50,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         description: `Found ${results.length} matches based on your description.`,
       });
     } catch (error) {
-      // console.error("Error during AI matching:", error);
+      console.error("Error during AI matching:", error);
       toast({
         title: "Matching Error",
         description: "We couldn't find matches for your request. Please try again.",
@@ -64,7 +63,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
     }
   };
   
-  const handleItemSelect = (item: unknown) => {
+  const handleItemSelect = (item: any) => {
     if (onMatchSelect) {
       // Find the original MatchResult that contains this item
       const matchResult = matches.find(match => match.item.id === item.id);

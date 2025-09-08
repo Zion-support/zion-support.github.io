@@ -1,20 +1,5 @@
 
 // Function to resolve merge conflicts in a file;
-<<<<<<< HEAD
-=======
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
-function resolveMergeConflicts(filePath) {
-  try {
-  // TODO: Implement
-}
-    if (!fs.existsSync(filePath)) {
-      console.log(`⚠️  File not found: ${filePath});
-      return false;
-
-<<<<<<< HEAD
-    resolvedContent = resolvedContent.replace(//g, '');
-=======
 
     const content = fs.readFileSync(filePath, 'utf8');
     
@@ -29,20 +14,13 @@ function resolveMergeConflicts(filePath) {
 
     resolvedContent = resolvedContent.replace(//g, '');
 
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
-
     // Write the resolved content
     fs.writeFileSync(filePath, resolvedContent, utf8);
     console.log(`✅ Resolved conflicts in: ${filePath}`);
-<<<<<<< HEAD
-=======
-=======
 
 
     
     // Clean up any remaining conflict markers
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
     if (!content.includes('
     
     // Clean up any remaining conflict markers
@@ -64,10 +42,6 @@ function resolveMergeConflicts(filePath) {
 
 // Function to find all files with merge conflicts;
 function findConflictedFiles() {
-<<<<<<< HEAD
-  // TODO: Implement
-
-=======
 
   try {
     const result = execSync('git diff --name-only --diff-filter=U', { encoding: utf8 });
@@ -77,15 +51,10 @@ function findConflictedFiles() {
 
   // TODO: Implement
 
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
     return [];
 
 // Main resolution process;
 function main() {
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-=======
 
   console.log('🔍 Finding files with merge conflicts...');
   const conflictedFiles = findConflictedFiles();
@@ -95,8 +64,6 @@ function main() {
     return;
   }
 
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
   let resolvedCount = 0;
   let failedCount = 0;
@@ -109,10 +76,6 @@ function main() {
       failedCount++;
   });
 
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
 
   console.log(`\n📊 Resolution Summary:`);
   console.log(`   ✅ Successfully resolved: ${resolvedCount}`);
@@ -139,5 +102,3 @@ main();
 
 
 
-
->>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425

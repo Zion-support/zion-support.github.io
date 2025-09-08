@@ -3,9 +3,6 @@ import React, { memo, Suspense, ReactNode } from 'react';
 interface PerformanceWrapperProps {
   children: ReactNode;
   fallback?: ReactNode;
-  enableLazyLoading?: boolean;
-  lazyImport?: () => Promise<{ default: React.ComponentType<any> }>;
-  memoize?: boolean;
   className?: string;
 }
 
