@@ -7,10 +7,11 @@ describe('Smoke Tests', () => {
     render(<Home />);
     expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
   });
-  test('Application builds successfully', () => {
+
+  test('Application builds successfully', async () => {
     // This test passes if the file can be imported without errors
-    expect(() => {
-      import('../pages/index');
+    expect(async () => {
+      await import('../pages/index');
     }).not.toThrow();
   });
   test('Basic functionality works', () => {

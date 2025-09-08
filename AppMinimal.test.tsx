@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from '@jest/globals';
+import { describe, it, expect } from 'vitest';
 import AppMinimal from './AppMinimal';
+import React from 'react';
 
 describe('AppMinimal', () => {
   it('renders without crashing', () => {
@@ -10,7 +11,7 @@ describe('AppMinimal', () => {
 
   it('displays correct content', () => {
     render(<AppMinimal />);
-    // Add specific content assertions here
+    // Add content tests here
   });
 
   it('handles user interactions', () => {

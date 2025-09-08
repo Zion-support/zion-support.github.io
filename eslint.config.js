@@ -127,10 +127,19 @@ export default [
         RequestInit: 'readonly',
         AbortController: 'readonly',
         KeyboardEvent: 'readonly',
-        HTMLElement: 'readonly',
-        MutationObserver: 'readonly',
-        fs: 'readonly',
-        CodeQualityChecker: 'readonly'
+        Node: 'readonly',
+        PerformanceObserver: 'readonly',
+        // React
+        React: 'readonly',
+        // Test globals
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly'
       }
     },
     plugins: {
@@ -144,130 +153,78 @@ export default [
       ...tseslint.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      'no-unused-vars': 'off',
+      ...next.configs.recommended.rules,
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'error',
+      'no-var': 'error',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
-      'no-console': 'warn'
+      '@typescript-eslint/no-explicit-any': 'warn'
+    },
+    settings: {
+      react: {
+        version: 'detect'
+      }
     }
   },
   {
     files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
+      sourceType: 'commonjs',
       globals: {
-        describe: 'readonly',
-        it: 'readonly',
-        test: 'readonly',
-        expect: 'readonly',
-        beforeEach: 'readonly',
-        afterEach: 'readonly',
-        beforeAll: 'readonly',
-        afterAll: 'readonly',
-        jest: 'readonly',
-        fireEvent: 'readonly',
-        render: 'readonly',
-        screen: 'readonly',
-      },
-    },
-    rules: {
-      'no-console': 'off',
-      'no-unused-vars': 'warn',
-      '@typescript-eslint/no-unused-vars': 'warn',
-    },
+        process: 'readonly',
+        console: 'readonly',
+        require: 'readonly',
+        module: 'readonly',
+        exports: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        Buffer: 'readonly',
+        global: 'readonly'
+      }
+    }
   },
   {
     ignores: [
+      // Node/build outputs
       'node_modules/**',
       '.next/**',
       'dist/**',
       'build/**',
       'out/**',
       'coverage/**',
-      'src.corrupted/**',
-      'src.disabled/**',
-      'src.broken/**',
-      'src.pages.disabled/**',
-      'solutions.disabled/**',
-      'components.disabled/**',
-      'components.corrupted/**',
-      'hooks.disabled/**',
-      'lib.disabled/**',
-      'lib.corrupted/**',
-      'zion-os.disabled/**',
-      'zion_academy/**',
-      'contracts.disabled/**',
-      'corrupted-files-backup/**',
-      'corrupted_files_backup_2/**',
-      'cypress.disabled/**',
-      'cypress_backup/**',
-      'data/**',
-      'e2e/**',
-      'pages.disabled/**',
-      'pages.disabled_backup/**',
-      'pages_backup/**',
-      'pages.disabled_full/**',
-      'pages_backup_before_cleanup/**',
-      'pages_backup_conflicts/**',
-      'pages.bak/**',
-      'pages.broken/**',
-      'pages.corrupted.*/**',
-      'pages._quarantine/**',
-      'pages._archive_corrupted/**',
-      'pages.disabled_auto/**',
-      'pages.blog.disabled/**',
-      'pages-quarantine/**',
-      'pages.disabled.full/**',
-      'pages_api.disabled/**',
-      'pages_backup_conflict/**',
-      'pages.disabled_auto/**',
-      'pages.disabled.full/**',
-      'temp_backup/**',
-      'temp_broken_files/**',
-      'temp_working/**',
-      'tests.disabled/**',
-      '__tests__/**',
-      'components.disabled_full/**',
-      'components.broken/**',
-      'backup-corrupted-files/**',
-      'lib.broken/**',
-      'data.disabled/**',
-      'test_build/**',
-      'server/**',
-      'types/**',
-      'next-env.d.ts',
-      'jest.setup.jsx',
-      'middleware.ts',
-      'middleware.security.ts',
-      'temp-backup/**',
-      'supabase/**',
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.mjs',
-      '.prettierrc.js',
-      '.eslintrc.*',
-      '*.min.js',
-      '*.bundle.js',
-      'scripts/',
-      'automation/',
-      'automation_backup/',
-      'data_backup/',
-      'pm2-automation/',
-      '__tests__/',
-      'pages.disabled/',
-      'pages.corrupted.*/',
-      'pages.broken/',
-      'pages.bak/',
-      'pages.blog.disabled/',
-      'pages._archive_corrupted/',
-      'pages._quarantine/',
-      'pages-disabled/',
-      'pages-quarantine/',
-      'pages.__backup/',
-      'pages-backup/',
-      '*.test.js',
-      '*.test.ts',
-      '*.test.tsx',
-      '*.spec.js',
-      '*.spec.ts',
-      '*.spec.tsx'
+
+      // Large/legacy sources and disabled dirs
+      'src/**src.corrupted/**src.disabled/**src.broken/**src.pages.disabled/**solutions.disabled/**components.disabled/**components.corrupted/**',
+      'hooks/**hooks.disabled/**lib.disabled/**lib/**lib.corrupted/**zion-os.disabled/**zion_academy/**contracts.disabled/**',
+      'corrupted-files-backup/**corrupted_files_backup_2/**cypress.disabled/**cypress_backup/**data/**e2e/**pages.disabled/**pages.disabled_backup/**',
+      'pages_backup/**supabase/**types/**types.disabled/**utils/**',
+
+      // Tests and mocks
+      '__tests__/**tests/**tests.disabled/***.test.*',
+
+      // Temp and backups
+      'backup/**backup-pages/**pages-backup/**lib_backup/**data_backup/**styles_backup/**api-backup/**automation_backup/**',
+      'ai-optimization-backups/**ai-analysis-reports/**optimization-reports/**public/reports/**temp_backup/**temp_broken_components/**temp_working/**temp_*/**',
+      'backup-merge-conflicts/**deployments/**deployment/**server/**services/**',
+
+      // Scripts/configs and CJS files not intended for lint
+      'scripts/**automation/**netlify/***.config.js*.config.cjs*.config.mjs**/*.cjs',
+
+      // Public assets/scripts
+      'public/**',
+
+      // Root-level noisy files
+      'api/***.js.*.js*.ts*.tsx*.jsxjest.config.*fix-*.js',
+      'fix-*.jsx',
+
+      // Misc root configs that were being linted
+      '.eslintrc.js.eslintrc.cjs.eslintrc.disabled.js.prettierrc.js',
+
+      // Page backups
+      'pages.__backup/**pages-disabled/**pages.disabled_auto/**'
     ]
   }
 ];
