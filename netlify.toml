@@ -6,7 +6,9 @@
 
 [build.environment]
   NODE_VERSION = "20"
-  PYTHON_VERSION = "3.11"
+  PYTHON_VERSION = "3.11.9"
+  # Workaround for Netlify mise building Python from source: force precompiled
+  MISE_SETTINGS = "python.compile=false"
 
 [[plugins]]
   package = "netlify-plugin-compress"
