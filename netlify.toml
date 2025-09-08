@@ -209,8 +209,26 @@
 
 # New intelligent cloud automations
 [[scheduled.functions]]
+  name = "competitive-intel-radar"
+  schedule = "*/5 * * * *"
+
+[[scheduled.functions]]
+  name = "performance-budget-watcher"
+  schedule = "*/5 * * * *"
+
+[[scheduled.functions]]
   name = "innovation-lab"
   schedule = "*/10 * * * *" # every 10 minutes
+
+[[scheduled.functions]]
+  name = "revenue-optimizer"
+  schedule = "7 * * * *" # hourly
+
+[[scheduled.functions]]
+  name = "seo-content-gap"
+  schedule = "17 */3 * * *" # every 3 hours
+=======
+>>>>>>> origin/main
 
 [[scheduled.functions]]
   name = "broken-image-scanner"
@@ -219,6 +237,18 @@
 [[scheduled.functions]]
   name = "auto-scheduler"
   schedule = "*/15 * * * *" # every 15 minutes
+
+<<<<<<< HEAD
+[[scheduled.functions]]
+  name = "internal-link-optimizer"
+  schedule = "*/7 * * * *" # every 7 minutes
+
+[[scheduled.functions]]
+  name = "revenue-ideas-orchestrator"
+  schedule = "13 */2 * * *" # every 2 hours at :13
+
+[[scheduled.functions]]
+  name = "internal-redirect-healer"
 
 # Newly added autonomous scanners
 [[scheduled.functions]]
@@ -235,12 +265,21 @@
   schedule = "*/2 * * * *" # every 2 minutes
 
 [[scheduled.functions]]
-  name = "seo-audit-runner"
-  schedule = "*/30 * * * *"
+  name = "secrets-leak-scanner-runner"
+  schedule = "7 * * * *" # every hour
 
 [[scheduled.functions]]
-  name = "ai-trends-radar-runner"
-  schedule = "0 * * * *"
+  name = "ux-heuristics-runner"
+  schedule = "*/15 * * * *" # every 15 minutes
+
+# Fresh autonomous audits
+[[scheduled.functions]]
+  name = "internal-link-graph-runner"
+  schedule = "7 */6 * * *"
+
+[[scheduled.functions]]
+  name = "anchor-integrity-runner"
+  schedule = "17 */6 * * *"
 
 [[scheduled.functions]]
   name = "website-search-index-runner"
