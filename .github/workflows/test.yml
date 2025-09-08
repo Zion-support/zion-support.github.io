@@ -18,60 +18,37 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        
+      
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-          
+          cache: 'yarn'
+      
       - name: Install dependencies
-        run: npm ci
-        
+        run: yarn install --frozen-lockfile
+      
       - name: Build project
-        run: npm run build
-        
+        run: yarn build
+      
       - name: Verify build output
         run: |
-          if [ -d ".next" ]; then
-            echo "Next.js build successful: .next folder found"
-          elif [ -d "dist" ]; then
-            echo "Build successful: dist folder found"
-          elif [ -d "out" ]; then
-            echo "Build successful: out folder found"
-          else
-            echo "Build failed: no build output found"
+          if [ ! -d ".next" ]; then
+            echo "Build failed: .next folder not found"
             exit 1
           fi
-          
-      - name: Run Jest with Coverage
-        run: npm test
+          echo "Build successful - .next folder found"
+      
+      - name: Run tests (if available)
+        run: yarn test --if-present
         continue-on-error: true
-        
-      - name: Upload coverage to Codecov
-        if: success()
-        uses: codecov/codecov-action@v4
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          files: ./coverage/lcov.info
-          fail_ci_if_error: false
-          
-      - name: Upload coverage artifacts
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: coverage-report
-          path: coverage
-          
+      
       - name: Upload build artifacts
-        if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: build
-          path: |
-            .next/
-            dist/
-            out/
+          name: build-output
+          path: .next/
+          retention-days: 7
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

@@ -1,0 +1,116 @@
+name: Dependency Update
+
+on:
+  schedule:
+    - cron: '0 4 * * 1'  # Run every Monday at 4 AM UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Check for outdated packages
+        id: check
+        run: |
+          echo "Checking for outdated packages..."
+          outdated=$(yarn outdated --format json | jq -r '.[] | select(.current != .latest) | .name' | head -10)
+          if [ -n "$outdated" ]; then
+            echo "outdated=true" >> $GITHUB_OUTPUT
+            echo "Found outdated packages:"
+            echo "$outdated"
+          else
+            echo "outdated=false" >> $GITHUB_OUTPUT
+            echo "All packages are up to date"
+          fi
+
+      - name: Update dependencies
+        if: steps.check.outputs.outdated == 'true'
+        run: |
+          echo "Updating dependencies..."
+          yarn upgrade-interactive --latest
+
+      - name: Install updated dependencies
+        if: steps.check.outputs.outdated == 'true'
+        run: yarn install
+
+      - name: Build project
+        if: steps.check.outputs.outdated == 'true'
+        run: yarn build
+
+      - name: Create Pull Request
+        if: steps.check.outputs.outdated == 'true'
+        id: cpr
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore(deps): update dependencies"
+          title: "chore(deps): update dependencies to latest versions"
+          body: |
+            Automated dependency update.
+            
+            **Updated packages:**
+            - Dependencies updated to latest compatible versions
+            - Build verified after updates
+            
+            **Build Status:** ✅ Successful
+            
+            Please review the changes and test thoroughly before merging.
+          branch: chore/dependency-update
+          delete-branch: true
+          signoff: false
+          labels: |
+            dependencies
+            automated
+            maintenance
+
+      - name: Comment on PR
+        if: steps.cpr.outputs.pull-request-number
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.issues.createComment({
+              issue_number: ${{ steps.cpr.outputs.pull-request-number }},
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `🔧 **Dependency Update Complete**
+              
+              This PR updates dependencies to their latest compatible versions.
+              
+              **What was updated:**
+              - All outdated packages have been updated
+              - Build has been verified
+              - Tests should be run to ensure compatibility
+              
+              **Next steps:**
+              1. Review the changes
+              2. Run tests locally
+              3. Test the application
+              4. Merge if everything looks good
+              
+              **Note:** This is an automated update. Please verify compatibility.`
+            })
+
+      - name: Skip if no updates
+        if: steps.check.outputs.outdated == 'false'
+        run: |
+          echo "No dependencies to update. Skipping PR creation."
+          echo "All packages are already up to date."

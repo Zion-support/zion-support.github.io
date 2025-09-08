@@ -24,36 +24,56 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          
+      
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Lint and type-check
+        run: |
+          yarn lint
+          yarn type-check
+
+      - name: Build project
+        run: yarn build
+
+      - name: Verify build output
+        run: |
+          if [ ! -d ".next" ]; then
+            echo "Build failed: .next folder not found"
+            exit 1
+          fi
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
+          cache: 'yarn'
 
       - name: Install dependencies
-        run: npm ci
+        run: yarn install --frozen-lockfile
 
-      - name: Lint and type-check
-        run: |
-          npm run lint
-          npm run type-check
-
-      - name: Build project
-        run: npm run build
-
-      - name: Run tests
-        run: npm test
+      - name: Run tests (if available)
+        run: yarn test --if-present
         continue-on-error: true
 
       - name: Upload build artifacts
-        if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: build-artifacts
-          path: |
-            .next/
-            dist/
-            out/
+          name: build-output
+          path: .next/
+          retention-days: 7
 
 

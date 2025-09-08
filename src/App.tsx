@@ -23,12 +23,9 @@ const Signup = React.lazy(() => import('./pages/Signup'));
 const FAQ = React.lazy(() => import('./pages/FAQ'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
-const Team = React.lazy(() => import('./pages/Team'));
-const Pricing = React.lazy(() => import('./pages/Pricing'));
-const Accessibility = React.lazy(() => import('./pages/Accessibility'));
-const GDPR = React.lazy(() => import('./pages/GDPR'));
-const API = React.lazy(() => import('./pages/API'));
-const Status = React.lazy(() => import('./pages/Status'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage'));
+const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
 
 // Enhanced lazy loading with preloading hints
 const Services = lazy(() => import('./pages/Services'));
@@ -256,9 +253,22 @@ function App() {
         <main className="flex-1">
           <Suspense fallback={<LoadingFallback />}>
             <Routes>
-              {baseRoutes.map((route) => (
-                <Route key={route.path} path={route.path} element={route.element} />
-              ))}
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/green-it" element={<GreenIT />} />
+              <Route path="/partners" element={<PartnersPage />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/services" element={<EnhancedServicesPage />} />
+              <Route path="/services-legacy" element={<ServicesPage />} />
+              <Route path="/it-services" element={<ITServicesPage />} />
             </Routes>
           </Suspense>
         </main>

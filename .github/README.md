@@ -1,247 +1,203 @@
 # GitHub Actions Workflows
 
-This repository contains comprehensive GitHub Actions workflows for the Zion Tech Group application. All workflows are designed to ensure code quality, security, and reliable deployment.
+This directory contains all the GitHub Actions workflows for the Zion Tech Group application. All workflows have been optimized for Node.js 20 and use Yarn as the package manager.
 
-## 🚀 Available Workflows
+## Workflow Overview
 
-### 1. CI (Continuous Integration)
-**File:** `.github/workflows/ci.yml`
-**Triggers:** Push to main/develop/cursor branches, Pull Requests
-**Purpose:** Build, test, and validate code changes
+### 🔄 **CI (Continuous Integration)**
+- **File**: `ci.yml`
+- **Triggers**: Push to main, Pull requests to main
+- **Purpose**: Main CI pipeline for building and testing
+- **Features**:
+  - Linting and type checking
+  - Build verification
+  - Test execution (if available)
+  - Build artifact upload
 
-**Features:**
-- Node.js 20 setup with npm caching
-- Dependency installation
-- Linting and type checking
-- Build verification
-- Test execution
-- Artifact upload
+### 🧪 **Test**
+- **File**: `test.yml`
+- **Triggers**: Push to main, Pull requests to main
+- **Purpose**: Dedicated testing workflow
+- **Features**:
+  - Build verification
+  - Test execution
+  - Build artifact upload
 
-### 2. Test Suite
-**File:** `.github/workflows/test.yml`
-**Triggers:** Push to main/develop/cursor branches, Pull Requests
-**Purpose:** Comprehensive testing and coverage reporting
+### 🚀 **Deploy**
+- **File**: `deploy.yml`
+- **Triggers**: Push to main, Pull requests to main, Manual dispatch
+- **Purpose**: Deployment pipeline with preview and production stages
+- **Features**:
+  - Build and test verification
+  - Security scanning
+  - Preview deployment for PRs
+  - Production deployment for main branch
+  - PR commenting with build status
 
-**Features:**
-- Jest test execution with coverage
-- Codecov integration
-- Build output verification
-- Artifact management
-- Concurrency control
+### 🔍 **CodeQL Security Analysis**
+- **File**: `codeql.yml`
+- **Triggers**: Push to main/develop, Pull requests, Daily schedule
+- **Purpose**: Automated security vulnerability scanning
+- **Features**:
+  - JavaScript/TypeScript analysis
+  - Daily scheduled scans
+  - Security event reporting
 
-### 3. CodeQL Security Analysis
-**File:** `.github/workflows/codeql.yml`
-**Triggers:** Push, Pull Requests, Weekly schedule
-**Purpose:** Advanced security vulnerability detection
+### 🔗 **Link Crawler Factory**
+- **File**: `agent-factory.yml`
+- **Triggers**: Daily schedule (6 AM UTC), Manual dispatch
+- **Purpose**: Automated link checking and broken link detection
+- **Features**:
+  - Parallel URL checking with sharding
+  - Broken link reporting
+  - Automatic issue creation
+  - Queue management for URLs
 
-**Features:**
-- JavaScript/TypeScript analysis
-- Security and quality queries
-- SARIF file generation
-- Artifact upload
-- Scheduled scanning
+### 🔄 **Continuous Improvement**
+- **File**: `continuous-improvement.yml`
+- **Triggers**: Daily schedule (2 AM UTC), Manual dispatch
+- **Purpose**: Automated code improvement suggestions
+- **Features**:
+  - Build verification
+  - Improvement checks
+  - Automated PR creation
+  - Auto-merge capability
 
-### 4. Security & Dependency Scanning
-**File:** `.github/workflows/security.yml`
-**Triggers:** Push, Pull Requests, Weekly schedule
-**Purpose:** Comprehensive security analysis
+### 📦 **NPM Publish**
+- **File**: `npm-publish.yml`
+- **Triggers**: Push to main (excluding docs and GitHub files)
+- **Purpose**: Automated NPM package publishing
+- **Features**:
+  - Build verification
+  - Test execution
+  - NPM publishing
+  - Yarn-based workflow
 
-**Features:**
-- NPM audit vulnerability scanning
-- Dependency outdated checking
-- Code security analysis
-- Sensitive file detection
-- Security summary generation
-- PR commenting
+### 🔧 **Dependency Update**
+- **File**: `dependency-update.yml`
+- **Triggers**: Weekly schedule (Monday 4 AM UTC), Manual dispatch
+- **Purpose**: Automated dependency updates
+- **Features**:
+  - Outdated package detection
+  - Automated updates
+  - Build verification
+  - PR creation with detailed information
 
-### 5. Continuous Improvement
-**File:** `.github/workflows/continuous-improvement.yml`
-**Triggers:** Every 6 hours, Manual dispatch
-**Purpose:** Automated code improvement and diversification
+### ✨ **Code Quality**
+- **File**: `code-quality.yml`
+- **Triggers**: Push to main/develop, Pull requests, Manual dispatch
+- **Purpose**: Comprehensive code quality checks
+- **Features**:
+  - ESLint and TypeScript checking
+  - Code formatting verification
+  - Console statement detection
+  - TODO comment tracking
+  - Bundle size verification
 
-**Features:**
-- Automation script execution
-- Change detection
-- Automated PR creation
-- Auto-merge enablement
-- Branch management
+## Common Features
 
-### 6. Link Crawler Factory
-**File:** `.github/workflows/agent-factory.yml`
-**Triggers:** Every 2 hours, Manual dispatch
-**Purpose:** Automated link health monitoring
+### 🔧 **Environment Setup**
+- **Node.js Version**: 20.x
+- **Package Manager**: Yarn
+- **Cache Strategy**: Yarn cache for faster builds
 
-**Features:**
-- Parallel link checking
-- Broken link detection
-- Queue management
-- Issue creation
-- Report generation
+### 📊 **Artifact Management**
+- Build outputs stored for 7 days
+- Separate artifacts for different job types
+- Efficient artifact upload/download
 
-### 7. NPM Package Publishing
-**File:** `.github/workflows/npm-publish.yml`
-**Triggers:** Push to main (excluding docs)
-**Purpose:** Automated package publishing
+### 🚦 **Concurrency Control**
+- Prevents multiple workflows from running simultaneously
+- Cancels in-progress workflows when new ones start
+- Optimized for resource usage
 
-**Features:**
-- Node.js 20 setup
-- Test execution
-- Build verification
-- NPM publishing
-- Release creation
+### 🔒 **Security**
+- Minimal required permissions
+- Security scanning integration
+- Vulnerability reporting
 
-### 8. Deployment
-**File:** `.github/workflows/deploy.yml`
-**Triggers:** Push to main, Manual dispatch
-**Purpose:** Automated deployment to production
+## Usage
 
-**Features:**
-- Multi-environment support
-- Netlify deployment
-- Vercel deployment
-- Deployment status tracking
-- Notification system
+### Manual Trigger
+All workflows can be triggered manually via the GitHub Actions tab:
+1. Go to Actions tab in your repository
+2. Select the desired workflow
+3. Click "Run workflow"
+4. Choose branch and any required inputs
 
-## 🔧 Configuration
+### Scheduled Runs
+- **Link Crawler**: Daily at 6 AM UTC
+- **Continuous Improvement**: Daily at 2 AM UTC
+- **Dependency Updates**: Weekly on Monday at 4 AM UTC
+- **CodeQL**: Daily at 1:33 AM UTC
+
+### Branch Protection
+- Main branch workflows run on push and PR
+- Develop branch workflows run on push and PR
+- Feature branches can trigger specific workflows
+
+## Configuration
 
 ### Required Secrets
-
-#### For Deployment:
-- `NETLIFY_AUTH_TOKEN`: Netlify authentication token
-- `NETLIFY_SITE_ID`: Netlify site identifier
-- `VERCEL_TOKEN`: Vercel authentication token
-- `VERCEL_ORG_ID`: Vercel organization ID
-- `VERCEL_PROJECT_ID`: Vercel project ID
-
-#### For Publishing:
-- `NPM_TOKEN`: NPM authentication token
-
-#### For Security:
-- `CODECOV_TOKEN`: Codecov authentication token
+- `NPM_TOKEN`: For NPM publishing (if applicable)
+- `GITHUB_TOKEN`: Automatically provided by GitHub
 
 ### Environment Variables
+- Production environment for deployment workflows
+- Branch-specific configurations
+- Workflow-specific variables
 
-All workflows use Node.js 20 and include proper caching for npm dependencies.
+## Monitoring
 
-## 📊 Workflow Dependencies
+### Workflow Status
+- All workflows provide detailed logging
+- Artifact uploads for debugging
+- Failure notifications via GitHub
 
-```mermaid
-graph TD
-    A[Push/PR] --> B[CI]
-    A --> C[Test Suite]
-    A --> D[CodeQL]
-    A --> E[Security Scan]
-    A --> F[Deploy]
-    
-    B --> G[Build Artifacts]
-    C --> H[Test Results]
-    D --> I[Security Report]
-    E --> J[Vulnerability Report]
-    F --> K[Production]
-    
-    L[Schedule] --> M[Continuous Improvement]
-    L --> N[Link Crawler]
-    L --> O[Security Scan]
-```
+### Performance Metrics
+- Build times tracked
+- Cache hit rates monitored
+- Resource usage optimized
 
-## 🚦 Workflow Status
-
-- **CI**: ✅ Active - Runs on all code changes
-- **Test**: ✅ Active - Comprehensive testing
-- **CodeQL**: ✅ Active - Security analysis
-- **Security**: ✅ Active - Vulnerability scanning
-- **Improvement**: ✅ Active - Automated improvements
-- **Link Crawler**: ✅ Active - Link health monitoring
-- **NPM Publish**: ✅ Active - Package publishing
-- **Deploy**: ✅ Active - Production deployment
-
-## 🛠️ Customization
-
-### Adding New Workflows
-
-1. Create a new `.yml` file in `.github/workflows/`
-2. Follow the established naming conventions
-3. Include proper permissions and concurrency controls
-4. Add timeout limits for all jobs
-5. Include artifact uploads where appropriate
-
-### Modifying Existing Workflows
-
-1. Test changes in a feature branch first
-2. Ensure backward compatibility
-3. Update this README if workflow behavior changes
-4. Consider impact on dependent workflows
-
-## 📈 Monitoring
-
-### Workflow Metrics
-
-- **Success Rate**: Track workflow success/failure rates
-- **Execution Time**: Monitor workflow performance
-- **Resource Usage**: Optimize runner usage
-- **Artifact Storage**: Manage artifact retention
-
-### Alerts
-
-- Failed deployments trigger notifications
-- Security vulnerabilities create issues
-- Broken links generate reports
-- Test failures block merges
-
-## 🔒 Security Features
-
-- **Dependency Scanning**: Automated vulnerability detection
-- **Code Analysis**: Static security analysis
-- **Secret Detection**: Hardcoded credential scanning
-- **Access Control**: Minimal required permissions
-- **Audit Logging**: Complete workflow audit trail
-
-## 📝 Best Practices
-
-1. **Always use Node.js 20** for consistency
-2. **Include timeout limits** to prevent hanging workflows
-3. **Use concurrency controls** to manage resource usage
-4. **Upload artifacts** for debugging and analysis
-5. **Handle errors gracefully** with continue-on-error where appropriate
-6. **Document changes** in this README
-7. **Test workflows** before merging to main
-
-## 🆘 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
-
-1. **Workflow Timeout**: Increase timeout-minutes value
-2. **Permission Denied**: Check workflow permissions
-3. **Secret Not Found**: Verify secret names and values
-4. **Build Failures**: Check Node.js version and dependencies
-5. **Artifact Issues**: Verify file paths and permissions
+1. **Build Failures**: Check Node.js version compatibility
+2. **Cache Issues**: Clear Yarn cache if needed
+3. **Permission Errors**: Verify workflow permissions
+4. **Timeout Issues**: Adjust workflow timeouts
 
 ### Debug Steps
+1. Check workflow logs in Actions tab
+2. Verify artifact contents
+3. Test locally with same Node.js version
+4. Check Yarn lock file consistency
 
-1. Check workflow run logs
-2. Verify secret configuration
-3. Test locally with act (GitHub Actions local runner)
-4. Review workflow syntax
-5. Check branch protection rules
+## Best Practices
 
-## 📚 Resources
+### ✅ **Do's**
+- Keep workflows focused and single-purpose
+- Use proper concurrency controls
+- Implement proper error handling
+- Cache dependencies for faster builds
+- Use latest GitHub Actions versions
 
-- [GitHub Actions Documentation](https://docs.github.com/en/actions)
-- [Node.js Setup Action](https://github.com/actions/setup-node)
-- [CodeQL Documentation](https://codeql.github.com/)
-- [Security Best Practices](https://securitylab.github.com/)
+### ❌ **Don'ts**
+- Don't run workflows unnecessarily
+- Don't skip security checks
+- Don't ignore build failures
+- Don't use deprecated actions
+- Don't hardcode secrets
 
-## 🤝 Contributing
+## Support
 
-When modifying workflows:
-
-1. Test changes thoroughly
-2. Update this documentation
-3. Follow established patterns
-4. Consider security implications
-5. Add appropriate error handling
+For workflow issues or improvements:
+1. Check the workflow logs
+2. Review the workflow configuration
+3. Test changes in a feature branch
+4. Create an issue for complex problems
 
 ---
 
-**Last Updated:** $(date)
-**Maintained by:** Zion Tech Group Development Team
+*Last updated: $(date)*
+*Workflow count: 9 active workflows*
