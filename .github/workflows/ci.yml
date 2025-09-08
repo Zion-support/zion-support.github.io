@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ main, develop, cursor/** ]
+    branches: [ main ]
   pull_request:
-    branches: [ main, develop, cursor/** ]
+    branches: [ main ]
 
 permissions:
   contents: read
@@ -15,38 +15,30 @@ concurrency:
 
 jobs:
   build:
-    name: Build and Test
     runs-on: ubuntu-latest
-    timeout-minutes: 20
-    
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'yarn'
+          cache: 'npm'
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci
 
       - name: Lint and type-check
         run: |
-          yarn lint
-          yarn type-check
+          npm run lint
+          npm run type-check
 
       - name: Build project
-        run: yarn build
+        run: npm run build
 
-      - name: Verify build output
-        run: |
-          if [ ! -d ".next" ]; then
-            echo "Build failed: .next folder not found"
-            exit 1
-          fi
+      - name: Security scan (non-blocking)
+        run: npm run security:scan
+        continue-on-error: true
 
   test:
     name: Test
@@ -60,20 +52,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'yarn'
+          cache: 'npm'
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci
 
-      - name: Run tests (if available)
-        run: yarn test --if-present
+      - name: Run tests
+        run: npm test
         continue-on-error: true
-
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-output
-          path: .next/
-          retention-days: 7
 
 

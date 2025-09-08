@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle, Zap, Shield, Users, Clock, TrendingUp, Star, Award, Globe, Lock } from 'lucide-react';
@@ -262,8 +258,6 @@ export function BenefitsSection() {
             </div>
           </div>
         </motion.div>
-<<<<<<< HEAD
-=======
 
 import { GradientHeading } from "./GradientHeading";
 import { FeatureCard } from "./FeatureCard";
@@ -314,9 +308,6 @@ export function BenefitsSection() {
             />
           ))}
         </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       </div>
     </section>
   );

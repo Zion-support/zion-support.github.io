@@ -1,45 +1,44 @@
-import React, { useState, useEffect } from 'react';
-import { SunIcon, MoonIcon } from '@heroicons/react/24/outline';
+import React, { useState, useEffect } from 'react'
+import { Sun, Moon } from 'lucide-react'
 
-const ThemeToggle: React.FC = () => {
-  const [isDark, setIsDark] = useState(true);
+export default function ThemeToggle() {
+  const [isDark, setIsDark] = useState(false)
 
   useEffect(() => {
-    // Check for saved theme preference or default to dark
-    const savedTheme = localStorage.getItem('zion-theme');
-    if (savedTheme) {
-      setIsDark(savedTheme === 'dark');
+    // Check for saved theme preference or default to light mode
+    const savedTheme = localStorage.getItem('zion-theme')
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      setIsDark(true)
+      document.documentElement.classList.add('dark')
     }
-  }, []);
+  }, [])
 
   const toggleTheme = () => {
-    const newTheme = !isDark;
-    setIsDark(newTheme);
-    localStorage.setItem('zion-theme', newTheme ? 'dark' : 'light');
+    const newTheme = !isDark
+    setIsDark(newTheme)
     
-    // Apply theme to document
     if (newTheme) {
-      document.documentElement.classList.add('dark');
-      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('zion-theme', 'dark')
     } else {
-      document.documentElement.classList.add('light');
-      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('zion-theme', 'light')
     }
-  };
+  }
 
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 group"
-      aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
+      className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
     >
       {isDark ? (
-        <SunIcon className="w-5 h-5 text-yellow-400 group-hover:text-yellow-300 transition-colors duration-300" />
+        <Sun className="w-5 h-5 text-yellow-500" />
       ) : (
-        <MoonIcon className="w-5 h-5 text-blue-400 group-hover:text-blue-300 transition-colors duration-300" />
+        <Moon className="w-5 h-5 text-gray-600" />
       )}
     </button>
-  );
-};
-
-export default ThemeToggle;
+  )
+}

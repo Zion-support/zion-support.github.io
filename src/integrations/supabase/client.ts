@@ -1,12 +1,7 @@
 import { createClient } from '@supabase/supabase-js';
 import { supabaseStorageAdapter } from './safeStorageAdapter';
-<<<<<<< HEAD
-=======
 // Mock Supabase client for development
 // In production, this would be the actual Supabase client
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 interface SupabaseClient {
   auth: {

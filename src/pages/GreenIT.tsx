@@ -1,26 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { AppLayout } from "@/layout/AppLayout";
-=======
 import React from 'react';
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
@@ -49,7 +33,6 @@ export default function GreenIT() {
       title: "Green Data Management",
       description: "Sustainable data storage and management solutions that minimize environmental impact.",
       benefits: ["Efficient Storage", "Data Deduplication", "Green Backup Solutions", "Sustainable Archives"]
-=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
@@ -144,40 +127,20 @@ export default function GreenIT() {
         title="Green IT Solutions - Sustainable Technology | Zion Tech Group"
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance." 
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         canonical="https://ziontechgroup.com/green-it"
-=======
         canonical="https://ziontechgroup.com/marketplace/category/green-it"
-=======
         canonical="https://ziontechgroup.com/green-it"
-=======
         canonical="https://ziontechgroup.com/green-it"
-=======
         canonical="https://ziontechgroup.com/marketplace/category/green-it"
-=======
         canonical="https://ziontechgroup.com/marketplace/category/green-it"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       />
       <AppHeader />
       <main className="min-h-screen bg-background pt-16 pb-20">
-=======
         canonical="https://ziontechgroup.com/marketplace/category/green-it"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       />
       <AppHeader />
       <main className="min-h-screen bg-background pt-16 pb-20">
-=======
         canonical="https://ziontechgroup.com/marketplace/category/green-it"
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
       />
       <AppHeader />
       <main className="min-h-screen bg-background pt-16 pb-20">
@@ -192,7 +155,6 @@ export default function GreenIT() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Sustainable technology solutions that reduce environmental impact while 
               maintaining high performance and business value
-=======
       <SEO 
         title="Green IT Solutions - Zion Tech Group" 
         description="Transform your IT operations with sustainable, eco-friendly solutions. Reduce carbon footprint and costs while improving efficiency." 
@@ -242,7 +204,6 @@ export default function GreenIT() {
                     <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                       Explore Green IT Solutions
                     </Button>
-=======
 
           {/* Why Green IT */}
           <section className="mb-20">
@@ -415,7 +376,6 @@ export default function GreenIT() {
           </section>
         </div>
       </main>
-=======
       <Footer />
     </>
   );

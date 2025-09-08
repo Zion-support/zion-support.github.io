@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { useState, useEffect, useCallback, useMemo } from 'react';
-=======
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Activity, 
@@ -394,7 +390,7 @@ export const EnterpriseDashboard: React.FC = () => {
 
       {/* Main Content */}
       <div className="p-6">
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
           {activeTab === 'overview' && (
             <motion.div
               key="overview"

@@ -1,10 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React, { useEffect } from 'react';
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
@@ -87,7 +83,6 @@ export default function Profile() {
         </div>
       </div>
       
-=======
 const Profile: React.FC = () => {
   return (
     <>
@@ -112,7 +107,6 @@ const Profile: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
     </>
   );
 };

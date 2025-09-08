@@ -1,8 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 export function FooterNewsletter() {
   const [email, setEmail] = useState('');
@@ -42,8 +38,6 @@ export function FooterNewsletter() {
     </form>
   );
 }
-<<<<<<< HEAD
-=======
 import { Mail, Send, CheckCircle } from 'lucide-react';
 
 export const FooterNewsletter: React.FC = () => {
@@ -131,6 +125,3 @@ export const FooterNewsletter: React.FC = () => {
     </div>
   );
 };
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

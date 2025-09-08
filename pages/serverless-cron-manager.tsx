@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Clock } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
-import { extraServices } from '../data/extra-services';
+import { enhancedRealMicroSaasServices as extraServices } from '../data/enhanced-real-micro-saas-services';
 
 export default function ServerlessCronManagerPage() {
   const service = extraServices.find(s => s.id === 'serverless-cron-manager');

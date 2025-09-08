@@ -1,0 +1,67 @@
+import React from 'react';
+import EnhancedNavigation from './EnhancedNavigation';
+import UltraAdvancedNavigation from './UltraAdvancedNavigation';
+import EnhancedFooter from './EnhancedFooter';
+import UltraAdvancedFuturisticBackground from '../ui/UltraAdvancedFuturisticBackground';
+import TopContactBar from './TopContactBar';
+
+type LayoutProps = {
+	children: React.ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+	return (
+		<div className="min-h-screen bg-black text-white">
+			<UltraAdvancedFuturisticBackground variant="quantum-holographic" intensity={0.85}>
+				<TopContactBar />
+				<UltraAdvancedNavigation />
+				<main className="pt-24 lg:pt-28">
+					{children}
+				</main>
+				<EnhancedFooter />
+			</UltraAdvancedFuturisticBackground>
+		</div>
+	);
+};
+
+export default function Layout({ children }: LayoutProps) {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  return (
+    <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
+<<<<<<< HEAD
+      {/* Futuristic Background */}
+      <UltraFuturisticBackground2025 />
+=======
+      {/* Skip to content link for accessibility */}
+      <a href="#main" className="skip-link">Skip to main content</a>
+              {/* Futuristic Background */}
+        <UltraFuturisticBackground2036 variant="quantum" intensity="high" />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-917e
+      
+      {/* Layout Structure */}
+      <div className="relative z-10">
+        {/* Top Contact Bar */}
+        <TopContactBar />
+        
+        {/* Navigation */}
+        <UltraFuturisticNavigation2035 />
+        
+        {/* Sidebar and Main Content */}
+        <div className="flex">
+          <EnhancedSidebar2025 
+            isOpen={sidebarOpen} 
+            onClose={() => setSidebarOpen(false)} 
+          />
+          
+          <main id="main" className="flex-1 pt-24 lg:pt-28">
+            {children}
+          </main>
+        </div>
+        
+        {/* Footer */}
+        <UltraFuturisticFooter2035 />
+      </div>
+    </div>
+  );
+}

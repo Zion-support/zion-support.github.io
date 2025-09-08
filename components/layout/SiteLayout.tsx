@@ -1,7 +1,4 @@
 import React from 'react';
-import EnhancedNavigation from './EnhancedNavigation';
-import EnhancedFooter from './EnhancedFooter';
-import Sidebar from './Sidebar';
 
 interface SiteLayoutProps {
 	children: React.ReactNode;
@@ -10,12 +7,13 @@ interface SiteLayoutProps {
 const SiteLayout: React.FC<SiteLayoutProps> = ({ children }) => {
 	return (
 		<div className="min-h-screen flex flex-col bg-gray-50">
-			<EnhancedNavigation />
-			<div className="flex flex-1 container mx-auto px-4 gap-6">
-				<Sidebar />
-				<main className="flex-1 py-8">{children}</main>
-			</div>
-			<EnhancedFooter />
+			<header className="border-b bg-white/80 backdrop-blur sticky top-0 z-40">
+				<div className="container mx-auto px-4 py-3 font-semibold">Zion Tech Group</div>
+			</header>
+			<main className="flex-1 container mx-auto px-4 py-8">{children}</main>
+			<footer className="border-t bg-white">
+				<div className="container mx-auto px-4 py-6 text-sm text-gray-500">© {new Date().getFullYear()} Zion Tech Group</div>
+			</footer>
 		</div>
 	);
 };

@@ -6,13 +6,6 @@ export interface Listing {
   currency: string;
   category: string;
   tags: string[];
-<<<<<<< HEAD
-  author: {
-    name: string;
-    id: string;
-    avatarUrl?: string;
-<<<<<<< HEAD
-=======
   images: string[];
   seller: {
     id: string;
@@ -51,17 +44,8 @@ export interface ListingFilter {
   priceRange?: {
     min: number;
     max: number;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   };
   location?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  availability?: string;
-  aiScore?: number;
-  pricingTier?: string;
-=======
   condition?: string;
   tags?: string[];
   sellerRating?: number;
@@ -107,10 +91,7 @@ export interface ListingStats {
   totalFavorites: number;
   averagePrice: number;
   categoryDistribution: Record<string, number>;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
   availability?: string;
   aiScore?: number;
   pricingTier?: string;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 }

@@ -99,16 +99,20 @@ export default function Events() {
                         <span className="text-gray-400 text-sm">{event.date}</span>
                         <span className="text-gray-400 text-sm">{event.time}</span>
                       </div>
+                      
                       <h3 className="text-2xl font-bold text-white mb-3">
                         {event.title}
                       </h3>
+                      
                       <p className="text-gray-300 mb-4">
                         {event.description}
                       </p>
+                      
                       <div className="flex items-center gap-6 text-sm text-gray-400 mb-4">
                         <span>📍 {event.location}</span>
                         <span>👥 {event.registered}/{event.capacity} registered</span>
                       </div>
+                      
                       <div className="mb-4">
                         <p className="text-gray-400 text-sm mb-2">Speakers:</p>
                         <div className="flex flex-wrap gap-2">
@@ -120,6 +124,7 @@ export default function Events() {
                         </div>
                       </div>
                     </div>
+                    
                     <div className="md:w-1/3 md:text-right mt-4 md:mt-0">
                       <button className="w-full md:w-auto px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-medium rounded-lg transition-colors mb-3">
                         Register Now
@@ -150,12 +155,15 @@ export default function Events() {
                     </span>
                     <span className="text-gray-400 text-sm">{event.date}</span>
                   </div>
+                  
                   <h3 className="text-xl font-semibold text-white mb-2">
                     {event.title}
                   </h3>
+                  
                   <p className="text-gray-300 text-sm mb-3">
                     {event.description}
                   </p>
+                  
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-400">📍 {event.location}</span>
                     <span className="text-gray-400">👥 {event.attendees} attendees</span>

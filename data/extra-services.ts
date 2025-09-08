@@ -1,36 +1,22 @@
-<<<<<<< HEAD
-
-
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },
-];      mobile: "+1 302 464 0950";
-
-
-
-
-=======
 export interface ExtraService {
-  id: string,
-  name: string,
-  tagline: string,
-  price: string,
-  description: string,
-  features: string[],
-  link: string,
-  category: string,
-  realImplementation: boolean,
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  description: string;
+  features: string[];
+  link: string;
+  category: string;
+  realImplementation: boolean;
   contactInfo: {
-    mobile: string,
-    email: string,
-    address: string}
+    mobile: string;
+    email: string;
+    address: string;
+  };
 }
 
 export const extraServices: ExtraService[] = [
   {
->>>>>>> origin/cursor/delete-old-data-records-6bba
     id: "cloud-migration-expert",
     name: "Cloud Migration Expert",
     tagline: "Seamless cloud migration and optimization",
@@ -71,25 +57,7 @@ export const extraServices: ExtraService[] = [
     contactInfo: {
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-<<<<<<< HEAD
-
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },;
-];      mobile: "+1 302 464 0950";
-      email: "kleber@ziontechgroup.com";
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-
-=======
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-],
->>>>>>> origin/cursor/delete-old-data-records-6bba

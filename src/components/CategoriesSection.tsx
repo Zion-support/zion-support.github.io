@@ -1,30 +1,16 @@
+import React from 'react';
+import Link from 'next/link';
 
 import { GradientHeading } from "./GradientHeading";
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Sparkles, Zap, Shield, Rocket } from "lucide-react";
-import { motion } from "framer-motion";
-<<<<<<< HEAD
-=======
 import Link from "next/link";
 import { Briefcase, HardDrive, Lightbulb, Users, Brain } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 const categories = [
   {
     title: "Comprehensive Services",
     description: "Micro SAAS, IT services, and AI solutions",
     icon: <Briefcase className="w-10 h-10" />,
-<<<<<<< HEAD
-    link: "/services",
-    color: "from-zion-purple to-zion-purple-dark",
-    gradient: "from-zion-purple/20 to-zion-purple-dark/20",
-    features: ["24/7 Support", "Expert Team", "Custom Solutions"],
-    stats: "500+ Services"
-=======
     link: "/comprehensive-services",
     color: "from-purple-500 to-indigo-600",
   },
@@ -34,45 +20,20 @@ const categories = [
     icon: <Brain className="w-10 h-10" />,
     link: "/ai-solutions",
     color: "from-pink-500 to-rose-600",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   },
   {
     title: "Talents",
     description: "Connect with AI experts, developers, and tech specialists",
     icon: <Users className="w-10 h-10" />,
     link: "/talent",
-<<<<<<< HEAD
-    color: "from-zion-cyan to-zion-blue",
-    gradient: "from-zion-cyan/20 to-zion-blue/20",
-    features: ["AI Experts", "Global Network", "Verified Profiles"],
-    stats: "10K+ Experts"
-=======
     color: "from-cyan-500 to-blue-600",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   },
   {
     title: "Equipment",
     description: "Rent or buy specialized hardware, servers, and devices",
     icon: <HardDrive className="w-10 h-10" />,
     link: "/equipment",
-<<<<<<< HEAD
-    color: "from-zion-cyan-light to-zion-cyan",
-    gradient: "from-zion-cyan-light/20 to-zion-cyan/20",
-    features: ["High-Performance", "Flexible Rental", "24/7 Monitoring"],
-    stats: "1000+ Devices"
-  },
-  {
-    title: "Innovation",
-    description: "Discover cutting-edge solutions and tech breakthroughs",
-    icon: <Lightbulb className="w-10 h-10" />,
-    link: "/category/innovation",
-    color: "from-zion-purple-light to-zion-purple",
-    gradient: "from-zion-purple-light/20 to-zion-purple/20",
-    features: ["Latest Tech", "AI Solutions", "Future-Ready"],
-    stats: "100+ Innovations"
-=======
     color: "from-amber-500 to-orange-600",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   },
 ];
 
@@ -83,29 +44,6 @@ const specialServices = [
   },
   {
     title: "IT Onsite Services",
-<<<<<<< HEAD
-    link: "/it-onsite-services",
-    icon: <Shield className="w-5 h-5" />,
-    description: "Professional on-site technical support"
-  },
-  {
-    title: "Comprehensive Services",
-    link: "/comprehensive-services",
-    icon: <Rocket className="w-5 h-5" />,
-    description: "End-to-end technology solutions"
-  },
-  {
-    title: "AI Integration",
-    link: "/ai-integration",
-    icon: <Sparkles className="w-5 h-5" />,
-    description: "Seamless AI implementation"
-  },
-  {
-    title: "Cloud Solutions",
-    link: "/cloud-solutions",
-    icon: <Zap className="w-5 h-5" />,
-    description: "Scalable cloud infrastructure"
-=======
     link: "/it-onsite-services"
   },
   {
@@ -119,7 +57,6 @@ const specialServices = [
   {
     title: "Cybersecurity",
     link: "/cybersecurity"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   }
 ];
 
@@ -128,10 +65,6 @@ interface CategoriesSectionProps {
 }
 
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -310,7 +243,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             </Link>
           </motion.div>
         </motion.div>
-=======
   return (
     <section className="py-20 bg-zion-blue">
       <div className="container mx-auto px-4">
@@ -327,51 +259,64 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {categories.map((category, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl p-6 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
-            >
-              <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${category.color} text-white mb-4`}>
-                {category.icon}
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                {category.title}
-              </h3>
-              <p className="text-gray-600 mb-4">
-                {category.description}
-              </p>
-              <Link
-                href={category.link}
-                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors"
-              >
-                Learn More
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
+            <div key={category.title}>
+              <Link href={category.link} className="group block h-full">
+                <div className="rounded-2xl overflow-hidden h-full border border-blue-400/30 bg-gradient-to-br from-slate-800/50 to-slate-800 p-8 transition-all duration-500 hover:border-blue-400/60 hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-blue-400/20 backdrop-blur-sm">
+                  <div className={`rounded-2xl w-20 h-20 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                    <div className="text-white text-3xl">
+                      {category.icon}
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-white text-2xl font-bold mb-4 group-hover:text-blue-400 transition-colors">
+                    {category.title}
+                  </h3>
+                  
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    {category.description}
+                  </p>
+
+                  {/* Feature list */}
+                  <ul className="space-y-2 mb-6">
+                    {category.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center gap-2 text-gray-300 text-sm">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="flex items-center text-blue-400 group-hover:text-blue-300 transition-colors">
+                    <span className="text-sm font-medium">Learn More</span>
+                    <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
               </Link>
             </div>
           ))}
         </div>
         
-        <div className="text-center">
-          <h3 className="text-2xl font-bold text-white mb-8">
-            Specialized Services
-          </h3>
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {specialServices.map((service, index) => (
-              <Link
-                key={index}
+        <div className="mt-16">
+          <h3 className="text-center text-2xl font-bold text-white mb-8">Premium Services</h3>
+          <div className="flex flex-wrap justify-center gap-6">
+            {specialServices.map((service) => (
+              <Link 
+                key={service.title}
                 href={service.link}
-                className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105"
+                className="group flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 hover:from-blue-600/30 hover:to-cyan-600/30 border border-blue-400/30 hover:border-blue-400/50 rounded-2xl text-blue-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-400/20 backdrop-blur-sm"
               >
                 {service.title}
               </Link>
             ))}
           </div>
-          
-          <Link
-            href="/services"
-            className="inline-flex items-center px-8 py-4 bg-white text-zion-blue rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+        </div>
+        
+        <div className="mt-16 flex justify-center">
+          <Link 
+            href="/services" 
+            className="group inline-flex items-center gap-3 text-blue-400 border-b-2 border-blue-400 hover:border-blue-300 transition-colors text-lg font-medium py-2"
           >
             View All Services
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -379,7 +324,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             </svg>
           </Link>
         </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
       </div>
     </section>
   );

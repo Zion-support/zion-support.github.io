@@ -1,0 +1,1 @@
+export default function AutonomousVehicleAIPlatform(){return (<main style={{padding:20,fontFamily:'sans-serif'}}><h1>Autonomous Vehicle AI Platform</h1><p>Advanced perception, planning, and control for self-driving systems.</p></main>);}

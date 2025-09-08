@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { ForumCategoryInfo } from '@/types/community';
 
 export default function ForumCategories() {
@@ -46,7 +42,6 @@ export default function ForumCategories() {
             {category.lastPost && (
               <span>Last: {category.lastPost.title} by {category.lastPost.author}</span>
             )}
-=======
 
 interface ForumCategoriesProps {
   categories: Array<{
@@ -68,20 +63,12 @@ const ForumCategories: React.FC<ForumCategoriesProps> = ({ categories }) => {
             <span className="text-sm text-zion-slate-light">
               {category.postCount} posts
             </span>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
           </div>
         </div>
       ))}
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
 };
 
 export default ForumCategories;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

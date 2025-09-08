@@ -25,16 +25,10 @@ export interface SpecializedITInfrastructureService2025 {
   documentationUrl?: string;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 export const SPECIALIZED_IT_INFRASTRUCTURE_2025: SpecializedITInfrastructureService2025[] = [
   // Edge Computing Orchestration Platform
-=======
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastructureService2025[] = [
   // Edge Computing Infrastructure Platform
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   {
     id: "edge-computing-infrastructure-platform",
     title: "Edge Computing Infrastructure Platform",
@@ -87,14 +81,8 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     websiteUrl: "https://ziontechgroup.com/edge-computing-infrastructure"
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   // Quantum-Ready Cloud Infrastructure
-=======
   // Quantum Network Infrastructure
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   {
     id: "quantum-network-infrastructure",
     title: "Quantum Network Infrastructure",
@@ -200,10 +188,6 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     websiteUrl: "https://ziontechgroup.com/5g-enterprise-infrastructure"
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   // Autonomous DevOps Infrastructure
   {
     id: "autonomous-devops-infrastructure",
@@ -392,7 +376,6 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     category: "IT Infrastructure",
     subcategory: "Cloud Orchestration",
     price: 1900,
-=======
   // Hybrid Cloud Infrastructure Platform
   {
     id: "hybrid-cloud-infrastructure-platform",
@@ -401,7 +384,6 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     category: "Cloud Infrastructure",
     subcategory: "Hybrid Cloud",
     price: 2500,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
     currency: "$",
     pricingModel: "monthly",
     features: [

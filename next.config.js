@@ -1,16 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	reactStrictMode: true,
+	trailingSlash: true,
+	output: 'export',
+	assetPrefix: process.env.NEXT_PUBLIC_ASSET_PREFIX || '',
 	images: {
-		// Using unoptimized to support static hosting/CDN without Next Image optimization
-		unoptimized: true
+		unoptimized: true,
+		domains: ["localhost"]
+	},
+	pageExtensions: ['page.tsx','page.ts','page.jsx','page.js'],
+	typescript: {
+		ignoreBuildErrors: process.env.SKIP_TYPE_CHECK === 'true' || true
 	},
 	eslint: {
 		ignoreDuringBuilds: true
-	},
-	typescript: {
-		// Allow builds to pass even if there are type errors; CI can run type-check separately
-		ignoreBuildErrors: true
 	},
 	async redirects() {
 		return [
@@ -26,4 +29,7 @@ const nextConfig = {
 	}
 };
 
-export default nextConfig;
+// Note: headers, redirects, and rewrites don't work with output: 'export'
+// These are handled by Netlify via _headers and _redirects files
+
+module.exports = nextConfig;

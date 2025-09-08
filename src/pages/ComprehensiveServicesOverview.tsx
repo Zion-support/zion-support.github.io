@@ -196,10 +196,7 @@ export default function ComprehensiveServicesOverview() {
     return service.price?.monthly || 0;
   };
 
-<<<<<<< HEAD
-=======
 <<<<<<<< HEAD:src/pages/ComprehensiveServicesOverview.tsx.backup.1756164650
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const getServiceCurrency = (service: any) => {
     if (typeof service.price === 'number') {
       return service.currency || '$';
@@ -216,28 +213,9 @@ export default function ComprehensiveServicesOverview() {
 
   return (
     <>
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/pages/ComprehensiveServicesOverview.tsx
-========
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-<<<<<<< HEAD
-              <EnhancedSEO
-          title="Comprehensive Services Overview | Zion Tech Group"
-          description="Explore our complete portfolio of AI-powered services, IT solutions, and innovative micro SAAS platforms. From legal tech to quantum computing, discover how we can transform your business."
-          keywords="AI services, IT solutions, micro SAAS, cybersecurity, quantum computing, legal tech, fintech, healthcare AI, supply chain, energy management, comprehensive services"
-          image="/images/comprehensive-services-overview-og.jpg"
-          url="https://ziontechgroup.com/comprehensive-services-overview"
-        />
-=======
-<<<<<<< HEAD
->>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4:src/pages/ComprehensiveServicesOverview.tsx.backup.1756164650
-=======
-========
   return (
     <>
 >>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f:src/pages/ComprehensiveServicesOverview.tsx
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <SEOHead 
         title="Comprehensive Technology Services - Zion Tech Group"
         description="Explore our comprehensive portfolio of cutting-edge technology services including AI, Quantum Computing, Cybersecurity, IT Infrastructure, and more. Transform your business with innovative solutions."
@@ -245,14 +223,7 @@ export default function ComprehensiveServicesOverview() {
         image="/images/services-overview-og.jpg"
         canonical="https://ziontechgroup.com/comprehensive-services-overview"
       />
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/pages/ComprehensiveServicesOverview.tsx
-========
->>>>>>> origin/cursor/expand-services-and-deploy-updates-8cbb
 >>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4:src/pages/ComprehensiveServicesOverview.tsx.backup.1756164650
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-8cbb
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">
         {/* Animated Background */}

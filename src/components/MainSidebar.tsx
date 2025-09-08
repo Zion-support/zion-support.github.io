@@ -41,7 +41,6 @@ export function MainSidebar() {
       title: 'Main',
       items: [
         { key: 'home', href: '/', icon: <Home className="w-4 h-4" />, label: 'Home' },
-        { key: 'marketplace', href: '/marketplace', icon: <ShoppingCart className="w-4 h-4" />, label: 'Marketplace' },
         { key: 'services', href: '/services', icon: <Settings className="w-4 h-4" />, label: 'Services' },
         { key: 'talent', href: '/talent', icon: <Users className="w-4 h-4" />, label: 'Talent' },
         { key: 'equipment', href: '/equipment', icon: <BarChart3 className="w-4 h-4" />, label: 'Equipment' },

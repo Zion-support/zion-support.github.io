@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, Send, X, Bot, User } from 'lucide-react';
@@ -129,232 +125,68 @@ export function ChatAssistant({
                 <p className="text-xs text-white/80">Always here to help</p>
               </div>
             </div>
-            <div className="flex items-center gap-2">
-              <button
-                onClick={() => setIsMinimized(!isMinimized)}
-                className="p-1 hover:bg-white/20 rounded transition-colors"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-<<<<<<< HEAD
-              <button
-                onClick={() => setIsOpen(false)}
-                className="p-1 hover:bg-white/20 rounded transition-colors"
-              >
-                <X className="w-4 h-4" />
-=======
-import React, { useState } from 'react';
-
-export const ChatAssistant: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [message, setMessage] = useState('');
-  const [messages, setMessages] = useState([
-    {
-      id: 1,
-      text: 'Hello! I\'m here to help you with any questions about Zion Tech Group services.',
-      isBot: true,
-      timestamp: new Date()
-    }
-  ]);
-
-  const handleSendMessage = () => {
-    if (!message.trim()) return;
-
-    const userMessage = {
-      id: messages.length + 1,
-      text: message,
-      isBot: false,
-      timestamp: new Date()
-    };
-
-    setMessages(prev => [...prev, userMessage]);
-    setMessage('');
-
-    // Simulate bot response
-    setTimeout(() => {
-      const botMessage = {
-        id: messages.length + 2,
-        text: 'Thank you for your message! Our team will get back to you soon. For immediate assistance, please call us at +1 302 464 0950.',
-        isBot: true,
-        timestamp: new Date()
-      };
-      setMessages(prev => [...prev, botMessage]);
-    }, 1000);
-  };
-
-  return (
-    <>
-      {/* Chat Toggle Button */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 w-14 h-14 bg-zion-cyan text-white rounded-full shadow-lg hover:bg-zion-cyan-light transition-colors z-50"
-      >
-        <span className="text-2xl">💬</span>
-      </button>
-
-      {/* Chat Window */}
-      {isOpen && (
-        <div className="fixed bottom-24 right-6 w-80 h-96 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-xl z-50">
-          <div className="bg-zion-blue p-3 rounded-t-lg">
-            <div className="flex items-center justify-between">
-              <h3 className="text-white font-semibold">Zion Tech Assistant</h3>
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-              <button
-                onClick={() => setIsOpen(false)}
-                className="text-zion-slate-light hover:text-white"
-              >
-<<<<<<< HEAD
-                ✕
-              </button>
-            </div>
-          </div>
-          
-          <div className="h-64 overflow-y-auto p-3 space-y-3">
-            {messages.map((msg) => (
-              <div
-                key={msg.id}
-                className={`flex ${msg.isBot ? 'justify-start' : 'justify-end'}`}
-              >
-                <div
-                  className={`max-w-xs px-3 py-2 rounded-lg ${
-                    msg.isBot
-                      ? 'bg-zion-slate text-white'
-                      : 'bg-zion-cyan text-white'
-                  }`}
-                >
-                  <p className="text-sm">{msg.text}</p>
-                  <p className="text-xs opacity-70 mt-1">
-                    {msg.timestamp.toLocaleTimeString()}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          <div className="p-3 border-t border-zion-blue-light">
-            <div className="flex space-x-2">
-              <input
-                type="text"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-                placeholder="Type your message..."
-                className="flex-1 px-3 py-2 bg-white/10 border border-zion-blue-light rounded text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-              />
-              <button
-                onClick={handleSendMessage}
-                className="px-4 py-2 bg-zion-cyan text-white rounded hover:bg-zion-cyan-light transition-colors"
-              >
-                Send
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-                <X className="w-4 h-4" />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-              </button>
-            </div>
+            <button
+              onClick={() => setIsOpen(false)}
+              className="p-1 hover:bg-white/20 rounded transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
           </div>
         </div>
-<<<<<<< HEAD
 
-        {!isMinimized && (
-          <>
-            {/* Messages */}
-            <div className="flex-1 p-4 overflow-y-auto h-80 bg-gray-50">
-              {chatHistory.length === 0 && (
-                <div className="text-center text-gray-500 py-8">
-                  <Bot className="w-12 h-12 mx-auto mb-3 text-gray-300" />
-                  <p className="text-sm">Hi! I'm your Zion AI assistant. How can I help you today?</p>
-                </div>
-              )}
-              
-              {chatHistory.map((chat) => (
-                <motion.div
-                  key={chat.id}
-                  className={`mb-4 flex ${chat.type === 'user' ? 'justify-end' : 'justify-start'}`}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <div className={`flex gap-2 max-w-[80%] ${chat.type === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
-                    <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white text-sm ${
-                      chat.type === 'user' ? 'bg-zion-cyan' : 'bg-zion-purple'
-                    }`}>
-                      {chat.type === 'user' ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
-                    </div>
-                    <div className={`rounded-2xl px-4 py-2 ${
-                      chat.type === 'user' 
-                        ? 'bg-zion-cyan text-white rounded-br-md' 
-                        : 'bg-white text-gray-800 rounded-bl-md shadow-sm border'
-                    }`}>
-                      <p className="text-sm">{chat.content}</p>
-                      <p className={`text-xs mt-1 ${
-                        chat.type === 'user' ? 'text-white/70' : 'text-gray-500'
-                      }`}>
-                        {formatTime(chat.timestamp)}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-              
-              {/* Typing indicator */}
-              {isTyping && (
-                <motion.div 
-                  className="flex gap-2 mb-4"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                >
-                  <div className="w-8 h-8 bg-zion-purple rounded-full flex items-center justify-center">
-                    <Bot className="w-4 h-4 text-white" />
-                  </div>
-                  <div className="bg-white rounded-2xl px-4 py-2 shadow-sm border">
-                    <div className="flex gap-1">
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                    </div>
-                  </div>
-                </motion.div>
-              )}
-              
-              <div ref={messagesEndRef} />
-            </div>
-            
-            {/* Input */}
-            <div className="p-4 border-t border-gray-100 bg-white">
-              <div className="flex gap-2">
-                <input
-                  ref={inputRef}
-                  type="text"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-                  placeholder="Type your message..."
-                  className="flex-1 px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all"
-                />
-                <motion.button
-                  onClick={handleSendMessage}
-                  className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl hover:shadow-lg transition-all duration-200 flex items-center gap-2"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  disabled={!message.trim()}
-                >
-                  <Send className="w-4 h-4" />
-                </motion.button>
+        {/* Chat Messages */}
+        <div className="flex-1 overflow-y-auto p-4 space-y-4">
+          {chatHistory.map((msg) => (
+            <div
+              key={msg.id}
+              className={`flex ${msg.type === 'user' ? 'justify-end' : 'justify-start'}`}
+            >
+              <div
+                className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
+                  msg.type === 'user'
+                    ? 'bg-zion-cyan text-white'
+                    : 'bg-gray-100 text-gray-800'
+                }`}
+              >
+                <p className="text-sm">{msg.content}</p>
+                <p className="text-xs opacity-70 mt-1">
+                  {formatTime(msg.timestamp)}
+                </p>
               </div>
             </div>
-          </>
-        )}
+          ))}
+          {isTyping && (
+            <div className="flex justify-start">
+              <div className="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg">
+                <p className="text-sm">Typing...</p>
+              </div>
+            </div>
+          )}
+          <div ref={messagesEndRef} />
+        </div>
+
+        {/* Input Area */}
+        <div className="border-t border-gray-100 p-4">
+          <div className="flex gap-2">
+            <input
+              ref={inputRef}
+              type="text"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
+              placeholder="Type your message..."
+              className="flex-1 px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+            />
+            <button
+              onClick={handleSendMessage}
+              disabled={!message.trim()}
+              className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-dark disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            >
+              <Send className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
       </motion.div>
     </AnimatePresence>
   );
 }
-=======
-      )}
-    </>
-  );
-};
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { useState, useCallback } from 'react';
-=======
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Shield,
@@ -238,7 +234,7 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
 
       {/* Content */}
       <div className="p-4">
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
           {activeTab === 'overview' && (
             <motion.div
               key="overview"

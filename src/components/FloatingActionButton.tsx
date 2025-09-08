@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PlusIcon, XMarkIcon, ChatBubbleLeftRightIcon, PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 interface FloatingActionButtonProps {
   className?: string;
@@ -81,7 +81,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ className =
         whileTap={{ scale: 0.95 }}
         aria-label={isOpen ? 'Close quick actions' : 'Open quick actions'}
       >
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
           {isOpen ? (
             <motion.div
               key="close"

@@ -6,53 +6,27 @@ on:
       - main
     paths-ignore:
       - '**/*.md'
-      - '.github/**'
-      - 'docs/**'
 
 jobs:
   publish:
     runs-on: ubuntu-latest
-    # Skip for private packages (this will be checked manually)
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Use Node.js 20
+      - name: Use Node.js 18
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '18'
           registry-url: 'https://registry.npmjs.org'
-          cache: 'yarn'
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci
 
-      - name: Build project
-        run: yarn build
-
-      - name: Run tests (if available)
-        run: yarn test --if-present
-        continue-on-error: true
+      - name: Run tests
+        run: npm test --if-present
 
       - name: Publish to npm
-        run: yarn publish --access public
+        run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          
-      - name: Create Release
-        if: success()
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: v${{ github.run_number }}
-          release_name: Release v${{ github.run_number }}
-          body: |
-            Automated release from CI/CD pipeline
-            
-            - Build: ${{ github.run_number }}
-            - Commit: ${{ github.sha }}
-            - Branch: ${{ github.ref }}
-          draft: false
-          prerelease: false

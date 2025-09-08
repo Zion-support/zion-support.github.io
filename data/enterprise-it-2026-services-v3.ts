@@ -1,39 +1,27 @@
-<<<<<<< HEAD
-
-
-=======
 export interface EnterpriseIt2026ServiceV3 {
-  id: string,
-  name: string,
-  tagline: string,
-  price: string,
-  description: string,
-  features: string[],
-  link: string,
-  category: string,
-  realImplementation: boolean,
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  description: string;
+  features: string[];
+  link: string;
+  category: string;
+  realImplementation: boolean;
   contactInfo: {
-    mobile: string,
-    email: string,
-    address: string}
+    mobile: string;
+    email: string;
+    address: string;
+  };
 }
+
 export const enterpriseIT2026ServicesV3: EnterpriseIt2026ServiceV3[] = [
   {
->>>>>>> origin/cursor/delete-old-data-records-6bba
     id: "2026-enterprise-it-v3",
     name: "2026 Enterprise IT Solutions V3",
     tagline: "Third generation enterprise IT",
     price: "$499/month",
     description: "Third generation of the 2026 enterprise IT solutions with enhanced capabilities and features.",
-<<<<<<< HEAD
-=======
-    id: '2026-enterprise-it-v3'
-    name: '2026 Enterprise IT Solutions V3'
-    tagline: 'Third generation enterprise IT'
-    price: '$499/month'
-    description:
-      'Third generation of the 2026 enterprise IT solutions with enhanced capabilities and features.'
->>>>>>> origin/cursor/delete-old-data-records-6bba
     features: [
       "Third generation IT",
       "Enhanced solutions",
@@ -47,25 +35,7 @@ export const enterpriseIT2026ServicesV3: EnterpriseIt2026ServiceV3[] = [
     contactInfo: {
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-<<<<<<< HEAD
-
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },;
-];      mobile: "+1 302 464 0950";
-      email: "kleber@ziontechgroup.com";
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-
-=======
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-],
->>>>>>> origin/cursor/delete-old-data-records-6bba

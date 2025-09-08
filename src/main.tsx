@@ -1,16 +1,16 @@
-console.log("main.tsx: Start");
-import React from 'react';
-import { createRoot, hydrateRoot } from 'react-dom/client';
-import App from './App.tsx';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
+import App from './App'
+import ErrorBoundary from './components/ErrorBoundary'
+import './index.css'
 
-// Performance monitoring setup
-if (import.meta.env.DEV) {
-  console.log('🚀 Zion Tech Group - Development Mode');
-}
-
-const root = createRoot(rootElement);
-root.render(
+ReactDOM.createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>
-		<App />
-	</React.StrictMode>
-);
+		<ErrorBoundary>
+			<BrowserRouter>
+				<App />
+			</BrowserRouter>
+		</ErrorBoundary>
+	</React.StrictMode>,
+)

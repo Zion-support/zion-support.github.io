@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { useState, useCallback } from 'react';
-=======
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Brain,
@@ -247,7 +243,7 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
 
       {/* Content */}
       <div className="p-4">
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
           {activeTab === 'overview' && (
             <motion.div
               key="overview"

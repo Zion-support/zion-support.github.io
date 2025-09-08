@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -72,29 +65,18 @@ const Sitemap: React.FC = () => {
       ]
     }
   ];
-=======
-=======
 import { AppLayout } from "@/layout/AppLayout";
-=======
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
-=======
 
-<<<<<<< HEAD
-=======
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 import { SEO } from "@/components/SEO";
 import { completeSitemap } from "@/config/sitemap";
 import { Link } from "react-router-dom";
 import { AppLayout } from "@/layout";
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
@@ -182,10 +164,6 @@ import { AppLayout } from "@/layout";
           </h2>
           <p className="text-gray-300 mb-8">
             Can't find what you're looking for? Our team is here to help.
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { 
   MapIcon, 
   CogIcon, 
@@ -511,7 +489,6 @@ const Sitemap: React.FC = () => {
           </div>
         </div>
       </div>
-=======
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
             >
               Contact Us
@@ -526,32 +503,15 @@ const Sitemap: React.FC = () => {
         </div>
       </section>
     </div>
-=======
-=======
     <AppLayout>
-<<<<<<< HEAD
-=======
     <>
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
       <SEO
         title="Sitemap | Zion AI Marketplace"
         description="Human readable sitemap for all public routes"
         keywords="sitemap, navigation"
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-=======
-=======
-=======
-=======
-=======
         canonical="https://ziontechgroup.com/sitemap"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-=======
         title="Sitemap | Zion Tech Group"
         description="Human readable sitemap for all public routes"
         keywords="sitemap, navigation"
@@ -615,9 +575,6 @@ const Sitemap: React.FC = () => {
           </div>
         </div>
       </main>
-=======
-<<<<<<< HEAD
-=======
         canonical="https://ziontechgroup.com/sitemap"
       />
       <Header />
@@ -636,8 +593,6 @@ const Sitemap: React.FC = () => {
         </div>
       </main>
       <Footer />
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
     </>
   );
 };

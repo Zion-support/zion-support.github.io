@@ -1,9 +1,5 @@
 
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { Link } from 'react-router-dom';
 import { SEO } from './SEO';
 import { completeSitemap } from '../config/sitemap';
@@ -109,8 +105,6 @@ export default function SitemapPage() {
                   >
                     {route.label || route.title}
                   </Link>
-<<<<<<< HEAD
-=======
 import { completeSitemap, dynamicPaths } from '@/config/sitemap';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
@@ -145,15 +139,8 @@ export const SitemapPage: React.FC = () => {
         title="Sitemap | Zion AI Marketplace"
         description="Complete sitemap of the Zion AI Marketplace"
         keywords="sitemap, zion, ai marketplace, navigation"
-<<<<<<< HEAD
-<<<<<<< HEAD
-        canonical="https://ziontechgroup.com/content/sitemap-page"
-=======
         canonical="https://ziontechgroup.com/sitemap-page"
->>>>>>> origin/cursor/website-audit-and-enhancement-beb3
-=======
         canonical="https://ziontechgroup.com/sitemap-page"
->>>>>>> origin/cursor/website-audit-and-enhancement-24ce
       />
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-8">Sitemap</h1>
@@ -290,18 +277,11 @@ export const SitemapPage: React.FC = () => {
                     <ChevronRight className="h-4 w-4 mr-2" />
                     {path} <span className="ml-2 text-xs italic">({key})</span>
                   </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 </li>
               ))}
             </ul>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
         {/* All Routes List */}
         <div className="mt-12 bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -329,12 +309,7 @@ export const SitemapPage: React.FC = () => {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
       </div>
     </>
   );
 };
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

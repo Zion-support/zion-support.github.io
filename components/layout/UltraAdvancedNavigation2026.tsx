@@ -95,7 +95,7 @@ const companyLinks = [
   { name: 'Home', href: '/', icon: Home },
   { name: 'About Us', href: '/about', icon: Users },
   { name: '2026 Services', href: '/2026-services-showcase', icon: Rocket },
-  { name: 'Revolutionary V4', href: '/revolutionary-2026-services-showcase-v4', icon: Sparkles },
+  { name: 'Innovative 2026', href: '/2026-innovative-services-showcase', icon: Zap },
   { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', icon: Sparkles },
   { name: '2026 Pricing', href: '/revolutionary-2026-pricing', icon: DollarSign },
   { name: 'Case Studies', href: '/case-studies', icon: Briefcase },

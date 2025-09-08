@@ -1,24 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useMemo } from 'react';
-import { Link } from 'react-router-dom';
-=======
 import React, { useState } from 'react';
 import { EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES, EXPANDED_SERVICE_SUBCATEGORIES } from '@/data/expandedServices';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import {
   Brain, Cloud, Database, Shield, Settings, Zap, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart,
   Phone, Mail, MapPin, Globe, Star, DollarSign, Clock, Users, Search, Filter, Building
@@ -65,8 +53,6 @@ export default function ComprehensiveServicesPage() {
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
                 <DollarSign className="w-5 h-5 mr-2" />
                 View Pricing
-<<<<<<< HEAD
-=======
 import { Search, Mail, Phone, MapPin, Star, Clock, Globe, Shield, Zap, Database, Cloud, Brain, Lock, TrendingUp } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
@@ -152,19 +138,12 @@ export default function ComprehensiveServices() {
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple">
                 <TrendingUp className="w-5 h-5 mr-2" />
                 View Pricing Guide
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               </Button>
             </Link>
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* Contact Information */}
       <div className="bg-zion-blue py-8 px-4">
         <div className="container mx-auto">
@@ -186,8 +165,6 @@ export default function ComprehensiveServices() {
               <a href="https://ziontechgroup.com" className="hover:text-zion-cyan transition-colors">
                 ziontechgroup.com
               </a>
-<<<<<<< HEAD
-=======
       {/* Contact Information Banner */}
       <div className="bg-zion-blue-dark py-6 px-4 border-b border-zion-blue-light">
         <div className="container mx-auto">
@@ -203,18 +180,11 @@ export default function ComprehensiveServices() {
             <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5" />
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </div>
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* Search and Filter Controls */}
       <div className="bg-zion-blue-dark py-8 px-4">
         <div className="container mx-auto">
@@ -250,8 +220,6 @@ export default function ComprehensiveServices() {
                 ))}
               </SelectContent>
             </Select>
-<<<<<<< HEAD
-=======
       {/* Filters Section */}
       <div className="bg-zion-blue py-8 px-4">
         <div className="container mx-auto">
@@ -299,9 +267,6 @@ export default function ComprehensiveServices() {
                 <SelectItem value="high">Over $25K</SelectItem>
               </SelectContent>
             </Select>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
         </div>
       </div>
@@ -309,10 +274,6 @@ export default function ComprehensiveServices() {
       {/* Services Grid */}
       <div className="py-16 px-4">
         <div className="container mx-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredServices.map((service) => (
               <Card key={service.id} className="bg-zion-blue border-zion-blue-light hover:border-zion-cyan transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
@@ -326,8 +287,6 @@ export default function ComprehensiveServices() {
                     </Badge>
                   </div>
                   <CardTitle className="text-white text-lg">{service.title}</CardTitle>
-<<<<<<< HEAD
-=======
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">
               {filteredServices.length} Services Available
@@ -352,22 +311,12 @@ export default function ComprehensiveServices() {
                     )}
                   </div>
                   <CardTitle className="text-white text-xl mb-2">{service.title}</CardTitle>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                   <CardDescription className="text-zion-slate-light">
                     {service.description}
                   </CardDescription>
                 </CardHeader>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <CardContent className="space-y-4">
-=======
                 <CardContent className="pt-0">
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
                 <CardContent className="space-y-4">
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {service.tags.slice(0, 3).map((tag) => (
@@ -385,10 +334,6 @@ export default function ComprehensiveServices() {
                     </div>
                     <div className="flex items-center gap-2 text-zion-slate-light">
                       <Globe className="w-4 h-4" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                       <span>{service.location}</span>
                     </div>
                   </div>
@@ -402,8 +347,6 @@ export default function ComprehensiveServices() {
                     <Button variant="outline" className="border-zion-blue-light text-zion-cyan hover:bg-zion-blue-light/10">
                       <Eye className="w-4 h-4" />
                     </Button>
-<<<<<<< HEAD
-=======
                       <span className="text-sm">{service.location}</span>
                     </div>
                     {service.rating && (
@@ -434,9 +377,6 @@ export default function ComprehensiveServices() {
                         Learn More
                       </Button>
                     </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                   </div>
                 </CardContent>
               </Card>
@@ -470,10 +410,6 @@ export default function ComprehensiveServices() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             {[
               {
                 icon: <Zap className="w-8 h-8" />,
@@ -503,8 +439,6 @@ export default function ComprehensiveServices() {
                 <h3 className="text-white font-semibold mb-2">{feature.title}</h3>
                 <p className="text-zion-slate-light text-sm">{feature.description}</p>
               </div>
-<<<<<<< HEAD
-=======
             {EXPANDED_SERVICE_CATEGORIES.map((category) => (
               <Card key={category.value} className="bg-zion-blue border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300">
                 <CardHeader className="text-center">
@@ -522,9 +456,6 @@ export default function ComprehensiveServices() {
                   </Button>
                 </CardContent>
               </Card>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             ))}
           </div>
         </div>

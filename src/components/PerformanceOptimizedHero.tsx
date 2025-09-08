@@ -1,168 +1,283 @@
-import React, { memo, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Suspense, lazy } from 'react';
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { ArrowRight, Zap, Users, Star, TrendingUp, Shield, Sparkles } from "lucide-react";
+import { useRef, useState, useEffect } from "react";
 
-interface HeroStats {
-  number: string;
+// Lazy load heavy components
+const AnimatedBackground = lazy(() => import("@/components/ui/AnimatedBackground").then(module => ({ default: module.AnimatedBackground })));
+
+interface TrustMetric {
+  icon: React.ComponentType<{ className?: string }>;
   label: string;
-  icon: string;
+  value: string;
   color: string;
 }
 
-const HeroStats = memo<{ stats: HeroStats[] }>(({ stats }) => (
-  <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
-    {stats.map((stat, index) => (
-      <div 
-        key={index} 
-        className="text-center animate-fade-in-up group" 
-        style={{ animationDelay: `${index * 0.2}s` }}
-        role="region"
-        aria-label={`${stat.label} statistics`}
-      >
-        <div className="relative mb-4">
-          <div 
-            className="text-5xl mb-2 group-hover:scale-110 transition-transform duration-300"
-            role="img"
-            aria-label={stat.label}
-          >
-            {stat.icon}
-          </div>
-          <div className={`absolute inset-0 bg-gradient-to-r ${stat.color} rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
-        </div>
-        <div className={`text-4xl font-bold mb-2 bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
-          {stat.number}
-        </div>
-        <div className="text-gray-400 font-medium">{stat.label}</div>
-      </div>
-    ))}
-  </div>
-));
+interface FeatureBadge {
+  icon: React.ComponentType<{ className?: string }>;
+  label: string;
+  description: string;
+  color: string;
+}
 
-const PerformanceOptimizedHero = memo(() => {
+export function PerformanceOptimizedHero() {
+  const { t } = useTranslation();
+  const containerRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
-
+  const [mounted, setMounted] = useState(false);
+  
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  });
+  
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 100);
-    const loadTimer = setTimeout(() => setIsLoaded(true), 500);
+    setMounted(true);
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0.1 }
+    );
     
-    return () => {
-      clearTimeout(timer);
-      clearTimeout(loadTimer);
-    };
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+    
+    return () => observer.disconnect();
   }, []);
 
-  const stats: HeroStats[] = [
-    { number: "100+", label: "AI Services", icon: "🤖", color: "from-cyan-400 to-blue-400" },
-    { number: "150+", label: "Micro SAAS Solutions", icon: "💻", color: "from-blue-400 to-purple-400" },
-    { number: "24/7", label: "IT Support", icon: "🔧", color: "from-purple-400 to-pink-400" },
-    { number: "Global", label: "Service Coverage", icon: "🌍", color: "from-green-400 to-teal-400" }
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const floatingVariants = {
+    animate: {
+      y: [-20, 20, -20],
+      rotate: [0, 5, 0],
+      transition: {
+        duration: 4,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }
+    }
+  };
+
+  const trustMetrics: TrustMetric[] = [
+    { icon: Users, label: "500+", value: "Clients Served", color: "text-zion-cyan" },
+    { icon: TrendingUp, label: "99.9%", value: "Uptime", color: "text-zion-purple" },
+    { icon: Shield, label: "Enterprise", value: "Security", color: "text-zion-cyan-light" },
+    { icon: Star, label: "4.9/5", value: "Rating", color: "text-zion-purple-light" }
   ];
 
-  if (!isVisible) {
+  const featureBadges: FeatureBadge[] = [
+    { 
+      icon: Sparkles, 
+      label: "AI-Powered", 
+      description: "Advanced machine learning algorithms",
+      color: "from-zion-cyan to-zion-blue" 
+    },
+    { 
+      icon: Zap, 
+      label: "Lightning Fast", 
+      description: "Optimized for performance",
+      color: "from-zion-purple to-zion-purple-dark" 
+    },
+    { 
+      icon: Shield, 
+      label: "Secure", 
+      description: "Enterprise-grade security",
+      color: "from-zion-cyan-light to-zion-blue" 
+    }
+  ];
+
+  if (!mounted) {
     return (
-      <section className="relative py-20 px-4 overflow-hidden min-h-[600px] flex items-center justify-center">
-        <div className="text-center">
-          <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-cyan-400 text-lg font-medium">Loading Zion Tech Group...</p>
-        </div>
-      </section>
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple flex items-center justify-center">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan"></div>
+      </div>
     );
   }
 
   return (
     <section 
-      className="relative py-20 px-4 overflow-hidden"
-      role="banner"
-      aria-label="Zion Tech Group Hero Section"
+      ref={containerRef} 
+      className="relative overflow-hidden py-20 md:py-32 min-h-screen flex items-center"
+      aria-label="Hero Section"
     >
-      {/* Optimized Background Elements */}
-      <div className="absolute inset-0 futuristic-bg">
-        <div 
-          className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse animate-quantum-float"
-          aria-hidden="true"
-        ></div>
-        <div 
-          className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse animate-quantum-float animation-delay-1000"
-          aria-hidden="true"
-        ></div>
-        <div 
-          className="absolute bottom-0 left-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse animate-quantum-float animation-delay-2000"
-          aria-hidden="true"
-        ></div>
+      {/* Enhanced background with parallax effect */}
+      <motion.div 
+        className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple opacity-90"
+        style={{ y, opacity }}
+        aria-hidden="true"
+      />
+      
+      {/* Animated floating particles */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        {[...Array(6)].map((_, i) => (
+          <motion.div
+            key={i}
+            className={`absolute w-${2 + (i % 3)} h-${2 + (i % 3)} rounded-full ${
+              i % 3 === 0 ? 'bg-zion-purple-light' : 
+              i % 3 === 1 ? 'bg-zion-cyan' : 'bg-zion-cyan-light'
+            } opacity-${40 + (i * 10)}`}
+            style={{
+              top: `${20 + (i * 15)}%`,
+              left: `${20 + (i * 20)}%`,
+              animationDelay: `${i * 0.5}s`
+            }}
+            variants={floatingVariants}
+            animate="animate"
+          />
+        ))}
       </div>
 
-      {/* Optimized Grid Pattern */}
-      <div className="absolute inset-0 cyber-grid-bg opacity-30" aria-hidden="true"></div>
+      {/* Main content */}
+      <div className="container mx-auto px-4 relative z-10">
+        <motion.div 
+          className="text-center max-w-6xl mx-auto"
+          variants={containerVariants}
+          initial="hidden"
+          animate={isVisible ? "visible" : "hidden"}
+        >
+          {/* Feature badges */}
+          <motion.div 
+            className="flex flex-wrap justify-center gap-4 mb-8"
+            variants={itemVariants}
+          >
+            {featureBadges.map((badge, index) => (
+              <div
+                key={index}
+                className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20"
+              >
+                <badge.icon className="h-4 w-4 text-zion-cyan" />
+                <span className="text-sm font-medium text-white">{badge.label}</span>
+              </div>
+            ))}
+          </motion.div>
 
-      {/* Optimized Matrix Rain Effect - Only render when loaded */}
-      {isLoaded && (
-        <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-          {[...Array(10)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute text-cyan-400 text-xs animate-matrix-rain opacity-20"
-              style={{
-                left: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 20}s`,
-                animationDuration: `${20 + Math.random() * 10}s`
-              }}
-            >
-              {Math.random() > 0.5 ? '1' : '0'}
-            </div>
-          ))}
-        </div>
-      )}
-
-      <div className="relative z-10 max-w-7xl mx-auto text-center">
-        <div className="animate-fade-in-up">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="neon-text">
-              Transform Your Business
+          {/* Main heading */}
+          <motion.h1 
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+            variants={itemVariants}
+          >
+            <span className="bg-gradient-to-r from-white via-zion-cyan to-zion-purple-light bg-clip-text text-transparent">
+              {t("hero.title", "Transform Your Business with AI")}
             </span>
-            <br />
-            <span className="text-white">With AI & Tech</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover cutting-edge AI services, Micro SAAS solutions, and comprehensive IT services 
-            designed to propel your business into the future.
-          </p>
+          </motion.h1>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Link 
-              to="/services"
-              className="quantum-button text-lg px-8 py-4 inline-block"
-              aria-label="Explore our services"
+          {/* Subtitle */}
+          <motion.p 
+            className="text-lg md:text-xl lg:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto leading-relaxed"
+            variants={itemVariants}
+          >
+            {t("hero.subtitle", "Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services. Accelerate your growth with Zion Tech Group.")}
+          </motion.p>
+
+          {/* CTA buttons */}
+          <motion.div 
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
+            variants={itemVariants}
+          >
+            <Button 
+              asChild
+              size="lg"
+              className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 focus:ring-4 focus:ring-zion-cyan/30"
             >
-              Explore Services
-            </Link>
+              <Link to="/contact" aria-label="Get started with Zion Tech Group">
+                <Zap className="mr-2 h-5 w-5" />
+                {t("hero.get_started", "Get Started")}
+              </Link>
+            </Button>
+            
+            <Button 
+              asChild
+              variant="outline"
+              size="lg"
+              className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105 focus:ring-4 focus:ring-zion-cyan/30"
+            >
+              <Link to="/services" aria-label="Explore our services">
+                <Users className="mr-2 h-5 w-5" />
+                {t("hero.explore_services", "Explore Services")}
+              </Link>
+            </Button>
+          </motion.div>
+
+          {/* Trust metrics */}
+          <motion.div 
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-8"
+            variants={itemVariants}
+          >
+            {trustMetrics.map((metric, index) => (
+              <div key={index} className="text-center group">
+                <div className={`flex justify-center mb-2 ${metric.color}`}>
+                  <metric.icon className="h-6 w-6 group-hover:scale-110 transition-transform" />
+                </div>
+                <div className="text-2xl font-bold text-white mb-1">{metric.label}</div>
+                <div className="text-sm text-zion-slate-light">{metric.value}</div>
+              </div>
+            ))}
+          </motion.div>
+
+          {/* Additional CTA */}
+          <motion.div 
+            className="mt-8"
+            variants={itemVariants}
+          >
             <Link
-              to="/contact"
-              className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 neon-border animate-neon-border-glow inline-block"
-              aria-label="Get free consultation"
+              to="/case-studies"
+              className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300 group"
             >
-              Get Free Consultation
+              <span className="text-lg">View Success Stories</span>
+              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
-          </div>
-
-          {/* Optimized Stats Component */}
-          <HeroStats stats={stats} />
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
 
-      {/* Optimized Floating Elements */}
-      {isLoaded && (
-        <>
-          <div className="absolute top-20 right-20 w-2 h-2 bg-cyan-400 rounded-full animate-ping" aria-hidden="true"></div>
-          <div className="absolute bottom-32 left-32 w-3 h-3 bg-blue-400 rounded-full animate-pulse" aria-hidden="true"></div>
-          <div className="absolute top-1/2 left-20 w-1 h-1 bg-purple-400 rounded-full animate-bounce" aria-hidden="true"></div>
-          <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-green-400 rounded-full animate-ping animation-delay-1000" aria-hidden="true"></div>
-        </>
-      )}
+      {/* Scroll indicator */}
+      <motion.div 
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+        aria-hidden="true"
+      >
+        <div className="w-6 h-10 border-2 border-zion-cyan rounded-full flex justify-center">
+          <motion.div 
+            className="w-1 h-3 bg-zion-cyan rounded-full mt-2"
+            animate={{ y: [0, 12, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          />
+        </div>
+      </motion.div>
+
+      {/* Suspense boundary for lazy components */}
+      <Suspense fallback={null}>
+        <AnimatedBackground />
+      </Suspense>
     </section>
   );
-});
-
-PerformanceOptimizedHero.displayName = 'PerformanceOptimizedHero';
-
-export default PerformanceOptimizedHero;
+}

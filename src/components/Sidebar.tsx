@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-=======
 import { 
   X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, 
   Shield, Handshake, ChevronDown, ChevronRight, Brain, Cpu, Database, Network, Code, Palette, 
@@ -9,19 +5,13 @@ import {
   Lightbulb, TrendingUp, BarChart3, Lock, AlertTriangle, Server, CheckCircle, Truck, Car, 
   TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, 
   LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone
-=======
 
 import React from 'react';
 import { motion } from 'framer-motion';
-=======
 import React from 'react';
-=======
 import React, { useState } from 'react';
-=======
 import React from 'react';
-=======
 import React, { useState } from 'react';
-=======
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Rocket, Building, Target, Zap, Database, Network, Cloud, Lock, BarChart3, Palette, Smartphone, Server, Github, Youtube } from 'lucide-react';
@@ -30,150 +20,8 @@ import { cn } from '@/lib/utils';
 import { 
   Home, 
 import React, { useState } from 'react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { Link, useLocation } from 'react-router-dom';
 import { 
-<<<<<<< HEAD
-  X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, 
-  Shield, Handshake, ChevronDown, ChevronRight, Brain, Cpu, Database, Network, Code, Palette, 
-  Target, Rocket, Eye, DollarSign, ShoppingCart, Clock, Cloud, Search, Building, Zap, Heart, 
-  Lightbulb, TrendingUp, BarChart3, Lock, AlertTriangle, Server, CheckCircle, Truck, Car, 
-  TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, 
-  LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone, Github, Youtube
-} from 'lucide-react';
-
-interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-export default function Sidebar({ isOpen, onClose }: SidebarProps) {
-  const location = useLocation();
-  const [expandedSections, setExpandedSections] = useState<string[]>([]);
-
-  // Close sidebar when route changes
-  useEffect(() => {
-    onClose();
-  }, [location.pathname, onClose]);
-
-  const toggleSection = (sectionTitle: string) => {
-    setExpandedSections(prev => 
-      prev.includes(sectionTitle) 
-        ? prev.filter(title => title !== sectionTitle)
-        : [...prev, sectionTitle]
-    );
-  };
-
-  const navigationItems = [
-    {
-      title: 'Main Navigation',
-      items: [
-        { name: 'Home', path: '/', icon: Home, description: 'Welcome to Zion Tech Group' },
-        { name: 'Services Overview', path: '/services', icon: Briefcase, description: 'All our services' },
-        { name: 'Solutions', path: '/solutions/enterprise', icon: Rocket, description: 'Industry solutions' },
-        { name: 'Pricing', path: '/pricing', icon: DollarSign, description: 'Service plans and pricing' },
-        { name: 'About Us', path: '/about', icon: Users, description: 'Learn about our company' },
-        { name: 'Contact', path: '/contact', icon: Phone, description: 'Get in touch with us' }
-      ]
-    },
-    {
-      title: 'AI & Autonomous Systems',
-      items: [
-        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain, description: 'Advanced AI solutions' },
-        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain, description: 'AI-powered research' },
-        { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Brain, description: 'Autonomous business management' },
-        { name: 'AI Business Platform', path: '/ai-autonomous-business-platform', icon: Brain, description: 'Complete business platform' },
-        { name: 'AI Code Review', path: '/ai-autonomous-code-review', icon: Code, description: 'Automated code review' },
-        { name: 'AI Creative Director', path: '/ai-autonomous-creative-director', icon: Palette, description: 'AI creative solutions' },
-        { name: 'AI Data Management', path: '/ai-autonomous-data', icon: Database, description: 'Intelligent data handling' },
-        { name: 'AI Decision Engine', path: '/ai-autonomous-decision-engine', icon: Brain, description: 'Smart decision making' },
-        { name: 'AI DevOps', path: '/ai-autonomous-devops', icon: Server, description: 'Automated DevOps' },
-        { name: 'AI Education', path: '/ai-autonomous-education-professor', icon: Users, description: 'AI learning systems' },
-        { name: 'AI Healthcare', path: '/ai-autonomous-healthcare-physician', icon: Heart, description: 'Medical AI solutions' },
-        { name: 'AI Learning System', path: '/ai-autonomous-learning-system', icon: Lightbulb, description: 'Adaptive learning' },
-        { name: 'AI Legal Counsel', path: '/ai-autonomous-legal-counsel', icon: Shield, description: 'Legal AI assistance' },
-        { name: 'AI Logistics', path: '/ai-autonomous-logistics', icon: Truck, description: 'Smart logistics' },
-        { name: 'AI Manufacturing', path: '/ai-autonomous-manufacturing', icon: Building2, description: 'Smart manufacturing' },
-        { name: 'AI Research', path: '/ai-autonomous-research', icon: Brain, description: 'Research automation' },
-        { name: 'AI Robotics', path: '/ai-autonomous-robotics', icon: Cpu, description: 'Autonomous robotics' },
-        { name: 'AI Security', path: '/ai-autonomous-security', icon: Shield, description: 'Intelligent security' },
-        { name: 'AI Testing', path: '/ai-autonomous-testing', icon: Code, description: 'Automated testing' },
-        { name: 'AI Vehicles', path: '/ai-autonomous-vehicle', icon: Car, description: 'Autonomous vehicles' },
-        { name: 'AI Venture Capital', path: '/ai-autonomous-venture-capitalist', icon: TrendingUp, description: 'AI investment' }
-      ]
-    },
-    {
-      title: 'Core Services',
-      items: [
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Atom, description: 'Quantum computing' },
-        { name: 'Autonomous Business Operations', path: '/autonomous-business-operations-platform', icon: Rocket, description: 'Business automation' },
-        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Database, description: 'IT asset management' },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield, description: 'Security solutions' },
-        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield, description: 'Compliance automation' },
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Atom, description: 'Quantum solutions' },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Server, description: 'Infrastructure services' },
-        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Network, description: '5G technology' },
-        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe, description: 'SAAS platforms' },
-        { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Cloud, description: 'Cloud solutions' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', icon: Zap, description: 'Workflow optimization' },
-        { name: 'Blockchain Solutions', path: '/blockchain-enterprise-solutions', icon: Lock, description: 'Blockchain technology' },
-        { name: 'IoT Data Analytics', path: '/iot-data-analytics', icon: Database, description: 'IoT solutions' },
-        { name: 'Digital Transformation', path: '/digital-transformation', icon: Globe, description: 'Digital strategy' },
-        { name: 'Industry Solutions', path: '/services/industry-solutions', icon: Briefcase, description: 'Industry-specific' }
-      ]
-    },
-    {
-      title: 'Industry Solutions',
-      items: [
-        { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building, description: 'Enterprise technology' },
-        { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart, description: 'Medical technology' },
-        { name: 'Financial Solutions', path: '/solutions/financial', icon: DollarSign, description: 'Fintech solutions' },
-        { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', icon: Building2, description: 'Industry 4.0' },
-        { name: 'Retail Solutions', path: '/solutions/retail', icon: ShoppingCart, description: 'Retail technology' },
-        { name: 'Government Solutions', path: '/solutions/government', icon: Shield, description: 'Public sector tech' },
-        { name: 'Education Solutions', path: '/solutions/education', icon: Users, description: 'Educational technology' },
-        { name: 'Energy Solutions', path: '/solutions/energy', icon: Zap, description: 'Energy technology' },
-        { name: 'Transportation Solutions', path: '/solutions/transportation', icon: Truck, description: 'Mobility solutions' }
-      ]
-    },
-    {
-      title: 'Company & Resources',
-      items: [
-        { name: 'About Us', path: '/about', icon: Users, description: 'Our story' },
-        { name: 'Our Team', path: '/team', icon: Users, description: 'Meet the team' },
-        { name: 'Partners', path: '/partners', icon: Handshake, description: 'Partnerships' },
-        { name: 'Case Studies', path: '/case-studies', icon: FileText, description: 'Success stories' },
-        { name: 'News & Updates', path: '/news', icon: Newspaper, description: 'Latest news' },
-        { name: 'Blog', path: '/blog', icon: FileText, description: 'Insights & articles' },
-        { name: 'Events', path: '/events', icon: Calendar, description: 'Upcoming events' },
-        { name: 'Webinars', path: '/webinars', icon: Video, description: 'Educational content' },
-        { name: 'White Papers', path: '/white-papers', icon: FileText, description: 'Research papers' },
-        { name: 'Testimonials', path: '/testimonials', icon: Quote, description: 'Client feedback' },
-        { name: 'Careers', path: '/careers', icon: Briefcase, description: 'Join our team' }
-      ]
-    },
-    {
-      title: 'Support & Help',
-      items: [
-        { name: 'Help Center', path: '/help', icon: HelpCircle, description: 'Get help' },
-        { name: 'Documentation', path: '/docs', icon: FileText, description: 'Technical docs' },
-        { name: 'Contact Support', path: '/support', icon: Phone, description: 'Support team' },
-        { name: 'FAQ', path: '/faq', icon: HelpCircle, description: 'Frequently asked' },
-        { name: 'Status Page', path: '/status', icon: Monitor, description: 'System status' },
-        { name: 'Training', path: '/training', icon: Users, description: 'Training programs' },
-        { name: 'Tutorials', path: '/tutorials', icon: FileText, description: 'Learning guides' }
-      ]
-    },
-    {
-      title: 'Legal & Compliance',
-      items: [
-        { name: 'Privacy Policy', path: '/privacy', icon: Shield, description: 'Privacy information' },
-        { name: 'Terms of Service', path: '/terms', icon: FileText, description: 'Terms and conditions' },
-        { name: 'Cookie Policy', path: '/cookies', icon: Shield, description: 'Cookie usage' },
-        { name: 'Data Protection', path: '/data-protection', icon: Lock, description: 'Data security' },
-        { name: 'Security', path: '/security', icon: Shield, description: 'Security measures' },
-        { name: 'Compliance', path: '/compliance', icon: CheckCircle, description: 'Regulatory compliance' }
-=======
   Home, 
   Briefcase, 
   Users, 
@@ -226,71 +74,38 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   Calendar,
   Clock,
   Mail,
-<<<<<<< HEAD
-  Phone,
-  MapPin,
-  Globe2,
-  Heart,
-  ThumbsUp,
-  CheckCircle,
-  AlertCircle,
-  Info,
-  ExternalLink
-=======
   MapPin
 } from 'lucide-react';
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Database, Network, Zap, Target, Rocket, Cloud, Github } from 'lucide-react';
-=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Rocket, Zap, ChevronRight, ChevronDown } from 'lucide-react';
-=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Cloud, Database, Code, BarChart3, Target, Heart, Building, Rocket, Lock, Network, Eye, Workflow, Palette, Server, Clock, Zap, Star, TrendingUp, ShoppingCart, Calendar, Video, FileText } from 'lucide-react';
-=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Database, Cloud, Lock, BookOpen, FileText, Calendar, HelpCircle, Settings, Star, TrendingUp, Rocket, Cpu, Network, Server, Code, Palette, Target, Lightbulb, Github } from 'lucide-react';
-=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, ShoppingCart, Code, DollarSign } from 'lucide-react';
-=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Database, Cpu, Lock, Rocket, BookOpen, FileText, Calendar, HelpCircle, Settings, BarChart3, Target, Building2, Heart, Car, Factory, ShoppingCart, GraduationCap, Microscope, Truck, Plane, Satellite, Atom, Cloud, Signal, Github, Link as LinkIcon } from 'lucide-react';
-=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Rocket, Building, Target, Zap, Database, Network, Cloud, Lock, BarChart3, Palette, Smartphone, Server, Github, Youtube } from 'lucide-react';
-=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Zap, FileText, HelpCircle, Settings, Rocket, Brain, Database, Lock, Cloud, Code, BarChart3, Palette, Target, Lightbulb, BookOpen, Calendar, MessageSquare, Star, Award, TrendingUp, Cpu, Network, Server, ShieldCheck, Globe2, Smartphone, Wifi, Satellite, Atom, TestTube, Microscope, Car, Plane, Ship, Truck, Building2, Heart, Pill, Stethoscope, Gavel, Scale, Factory, Cog, Bot, Eye, Key, QrCode, Wallet, Coins, Leaf, Sun, Wind, Store, Cookie, Github } from 'lucide-react';
-=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Cloud, Database, Network, Settings, BookOpen, MessageCircle, FileText, Star, Rocket, Target, Lightbulb, CheckCircle, Eye } from 'lucide-react';
-=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Github, Youtube, Shield, Handshake } from 'lucide-react';
-=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Eye } from 'lucide-react';
-=======
-=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Cloud, Lock, Code, Rocket, Target, Lightbulb, Sparkles } from 'lucide-react';
-=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Rocket, Target } from 'lucide-react';
-=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Rocket, BookOpen, HelpCircle, Settings, Star, Cloud, Code } from 'lucide-react';
-=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Rocket, BookOpen, FileText, TrendingUp, ArrowRight, Cloud, Calendar } from 'lucide-react';
-=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Network, Brain, BarChart3, Zap, Database, Command } from 'lucide-react';
-=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, FileText } from 'lucide-react';
-=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Shield, Handshake, Github } from 'lucide-react';
-=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Atom, Server, Database, Package, Building, Rocket } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useSidebar } from '../context/SidebarContext';
 
 export default function Sidebar() {
   const { isSidebarOpen, setIsSidebarOpen } = useSidebar();
-=======
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-=======
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
-=======
   ShoppingCart, 
   Users, 
   Settings, 
@@ -314,17 +129,13 @@ interface SidebarProps {
       items: [
         { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
         { name: 'Solutions', path: '/solutions/enterprise', icon: Target },
-=======
       title: 'Main Navigation',
       items: [
         { name: 'Home', path: '/', icon: Home },
         { name: 'Solutions', path: '/solutions/enterprise', icon: Briefcase },
         { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
-=======
         { name: 'Solutions', path: '/solutions/enterprise', icon: Target },
         { name: 'Pricing', path: '/pricing', icon: Briefcase },
-=======
-=======
         { name: 'Solutions', path: '/solutions/enterprise', icon: Target },
         { name: 'Pricing', path: '/pricing', icon: Star },
         { name: 'About', path: '/about', icon: Users },
@@ -332,21 +143,17 @@ interface SidebarProps {
         { name: 'Solutions', path: '/solutions/enterprise', icon: Target },
         { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
         { name: 'About', path: '/about', icon: Users },
-=======
       title: 'Main',
       items: [
         { name: 'Home', path: '/', icon: Home },
         { name: 'Services', path: '/services', icon: Briefcase },
         { name: 'AI Solutions', path: '/ai-solutions', icon: Briefcase },
-=======
         { name: 'AI Services', path: '/ai-services', icon: Briefcase },
         { name: 'Solutions', path: '/solutions/enterprise', icon: Briefcase },
         { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
         { name: 'Pricing', path: '/pricing', icon: Briefcase },
-=======
         { name: 'Solutions', path: '/solutions', icon: Globe },
         { name: 'Pricing', path: '/pricing', icon: Star },
-=======
         { name: 'About', path: '/about', icon: Users },
       title: 'Main Navigation',
       items: [
@@ -357,13 +164,11 @@ interface SidebarProps {
         { name: 'Documentation', path: '/docs', icon: BookOpen },
         { name: 'About Us', path: '/about', icon: Users },
         { name: 'Contact', path: '/contact', icon: Phone }
-=======
         { name: 'Contact', path: '/contact', icon: Phone },
         { name: 'Sitemap', path: '/sitemap', icon: Globe }
       ]
     },
     {
-=======
       title: 'AI & Autonomous Systems',
         { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
         { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Briefcase },
@@ -389,16 +194,13 @@ interface SidebarProps {
         { name: 'AI Autonomous Vehicles Platform', path: '/ai-autonomous-vehicles-platform', icon: Briefcase },
         { name: 'AI Autonomous Vehicles', path: '/ai-autonomous-vehicles', icon: Briefcase },
         { name: 'AI Autonomous Venture Capitalist', path: '/ai-autonomous-venture-capitalist', icon: Briefcase }
-=======
         { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
-=======
         { name: 'AI Autonomous Systems Platform', path: '/ai-autonomous-systems-platform', icon: Briefcase },
         { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Briefcase },
         { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
         { name: 'AI Research Platform', path: '/ai-autonomous-research', icon: Briefcase },
         { name: 'AI Code Review', path: '/ai-autonomous-code-review', icon: Briefcase },
         { name: 'AI Business Intelligence', path: '/ai-business-intelligence-suite', icon: Briefcase },
-=======
         { name: 'AI Agent Orchestrator', path: '/ai-agent-orchestrator', icon: Briefcase },
         { name: 'AI Analytics Copilot', path: '/ai-analytics-copilot', icon: Briefcase },
         { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
@@ -414,20 +216,16 @@ interface SidebarProps {
         { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Globe },
         { name: 'Digital Transformation', path: '/digital-transformation', icon: Globe },
         { name: 'Emerging Technology', path: '/emerging-tech', icon: Globe }
-=======
-=======
         { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
         { name: 'AI Autonomous Business Platform', path: '/ai-autonomous-business-platform', icon: Briefcase },
         { name: 'AI & Machine Learning', path: '/services?category=AI%20%26%20Machine%20Learning', icon: Briefcase },
         { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Briefcase },
         { name: 'Advanced Research Automation', path: '/advanced-research-automation', icon: Briefcase },
-=======
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Briefcase },
         { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Briefcase },
         { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', icon: Briefcase },
         { name: 'AI Legal Tech', path: '/services/ai-legal-tech', icon: Briefcase },
         { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics', icon: Briefcase },
-=======
         { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
         { name: 'AI Business Manager 2029', path: '/ai-autonomous-business-manager-2029', icon: Briefcase },
         { name: 'Quantum Neural Network Platform', path: '/quantum-neural-network-platform', icon: Briefcase },
@@ -442,7 +240,6 @@ interface SidebarProps {
         { name: 'Emerging Technology', path: '/services?category=Emerging%20Technology', icon: Globe },
         { name: 'Autonomous Systems', path: '/services?category=AI%20%26%20Autonomous%20Systems', icon: Users },
         { name: 'Accessibility Auditor', path: '/accessibility-auditor', icon: Users }
-=======
       title: 'AI & Technology',
       items: [
         { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
@@ -450,14 +247,12 @@ interface SidebarProps {
         { name: 'AI-Powered IT Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase },
         { name: 'Advanced Research Automation', path: '/advanced-research-automation', icon: Globe },
         { name: 'Machine Learning', path: '/services#ai-ml', icon: Briefcase }
-=======
       title: 'AI & Autonomous Systems',
       items: [
         { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
         { name: 'AI Services', path: '/ai-services', icon: Brain },
         { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
         { name: 'AI Matcher', path: '/match', icon: Brain }
-=======
         { name: 'AI & Machine Learning', path: '/ai-services', icon: Briefcase },
         { name: 'AI Research Assistant', path: '/ai-research-assistant', icon: Briefcase },
         { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
@@ -470,7 +265,6 @@ interface SidebarProps {
         { name: 'Industry Solutions', path: '/services/industry-solutions', icon: Briefcase },
         { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Globe },
         { name: 'Digital Transformation', path: '/digital-transformation', icon: Globe }
-=======
         { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
         { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Shield },
         { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
@@ -525,7 +319,6 @@ interface SidebarProps {
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Globe },
         { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Globe },
         { name: 'Digital Transformation', path: '/digital-transformation', icon: Briefcase },
-=======
       title: 'AI & Autonomous Systems',
       items: [
         { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
@@ -548,7 +341,6 @@ interface SidebarProps {
     {
         { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
         { name: 'AI Business Platform', path: '/ai-autonomous-business-platform', icon: Briefcase },
-=======
         { name: 'Business Intelligence', path: '/services/business-intelligence', icon: Briefcase },
         { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Briefcase },
         { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', icon: Briefcase },
@@ -608,11 +400,9 @@ interface SidebarProps {
         { name: 'AI Autonomous Vehicles Platform', path: '/ai-autonomous-vehicles-platform', icon: Rocket },
         { name: 'AI Autonomous Vehicles', path: '/ai-autonomous-vehicles', icon: Rocket },
         { name: 'AI Autonomous Venture Capitalist', path: '/ai-autonomous-venture-capitalist', icon: Users }
-=======
         { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield },
         { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
         { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe }
-=======
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Cpu },
         { name: 'Cloud DevOps', path: '/cloud-devops', icon: Cpu },
         { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Cpu },
@@ -620,7 +410,6 @@ interface SidebarProps {
         { name: 'Managed IT Services', path: '/services/managed-it-services', icon: Cpu },
         { name: 'DevOps Automation', path: '/services/devops-automation', icon: Cpu },
         { name: 'Cloud Migration', path: '/services/cloud-migration', icon: Cpu }
-=======
       title: 'Core Services',
       items: [
         { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
@@ -809,7 +598,6 @@ interface SidebarProps {
         { name: 'Retail Solutions', path: '/solutions/retail', icon: ShoppingCart },
         { name: 'Government Solutions', path: '/solutions/government', icon: Building },
         { name: 'Digital Transformation', path: '/digital-transformation', icon: Rocket }
-=======
       title: 'AI & Technology Services',
       items: [
         { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
@@ -837,7 +625,6 @@ interface SidebarProps {
     },
     {
       title: 'Company & Resources',
-=======
       title: 'Company & Support',
       items: [
         { name: 'About Us', path: '/about', icon: Users },
@@ -845,7 +632,6 @@ interface SidebarProps {
         { name: 'Our Team', path: '/team', icon: Users },
         { name: 'News', path: '/news', icon: Globe },
         { name: 'Case Studies', path: '/case-studies', icon: Globe }
-=======
         { name: 'Our Team', path: '/team', icon: Users },
         { name: 'Mission', path: '/mission', icon: Target },
         { name: 'Partners', path: '/partners', icon: Handshake },
@@ -854,7 +640,6 @@ interface SidebarProps {
         { name: 'Blog', path: '/blog', icon: Globe },
         { name: 'Our Mission', path: '/mission', icon: Users },
         { name: 'Partners', path: '/partners', icon: Handshake }
-=======
         { name: 'Our Mission', path: '/mission', icon: Users },
         { name: 'Our Team', path: '/team', icon: Users },
         { name: 'Partners', path: '/partners', icon: Handshake }
@@ -874,7 +659,6 @@ interface SidebarProps {
     {
       title: 'Support & Help',
       items: [
-=======
         { name: 'Help Center', path: '/help', icon: Users },
         { name: 'Documentation', path: '/docs', icon: Globe },
       icon: Home,
@@ -916,7 +700,6 @@ interface SidebarProps {
         { name: 'Digital Transformation', path: '/digital-transformation', icon: Briefcase },
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Briefcase },
         { name: 'Emerging Technology', path: '/emerging-tech', icon: Globe }
-=======
       title: 'AI & Autonomous Systems',
       items: [
         { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
@@ -951,7 +734,6 @@ interface SidebarProps {
         { name: 'AI Autonomous Vehicles Platform', path: '/ai-autonomous-vehicles-platform', icon: Car },
         { name: 'AI Autonomous Vehicles', path: '/ai-autonomous-vehicles', icon: Car },
         { name: 'AI Autonomous Venture Capitalist', path: '/ai-autonomous-venture-capitalist', icon: Target },
-=======
         { name: 'Healthcare', path: '/solutions/healthcare', icon: Shield },
         { name: 'Finance', path: '/solutions/finance', icon: Briefcase },
         { name: 'Manufacturing', path: '/solutions/manufacturing', icon: Settings },
@@ -962,7 +744,6 @@ interface SidebarProps {
     },
     {
       title: 'Quantum Technology',
-=======
       title: 'AI & Technology',
       items: [
         { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
@@ -1071,14 +852,12 @@ interface SidebarProps {
         { name: 'Education Technology', path: '/solutions/education', icon: Brain, description: 'AI-powered learning platforms' },
         { name: 'Real Estate Tech', path: '/solutions/real-estate', icon: Globe, description: 'Property management solutions' },
         { name: 'Transportation & Logistics', path: '/solutions/transportation', icon: Rocket, description: 'Smart mobility solutions' }
-=======
         { name: 'Support Center', path: '/support', icon: Phone },
         { name: 'FAQ', path: '/faq', icon: Globe },
         { name: 'Events', path: '/events', icon: Calendar },
         { name: 'Webinars', path: '/webinars', icon: Video },
         { name: 'White Papers', path: '/white-papers', icon: FileText },
         { name: 'Testimonials', path: '/testimonials', icon: Star }
-=======
         { name: 'Home', path: '/', icon: Home, description: 'Welcome to Zion Tech Group' },
         { name: 'Services Overview', path: '/services', icon: Briefcase, description: 'All our services' },
         { name: 'Solutions', path: '/solutions/enterprise', icon: Target, description: 'Industry solutions' },
@@ -1157,7 +936,6 @@ interface SidebarProps {
         { name: 'FAQ', path: '/faq', icon: HelpCircle, description: 'Frequently asked' },
         { name: 'Pricing', path: '/pricing', icon: Star, description: 'Service costs' },
         { name: 'Status Page', path: '/status', icon: Settings, description: 'System status' }
-=======
         { name: 'About Us', path: '/about', icon: Users },
         { name: 'Our Mission', path: '/mission', icon: Target },
         { name: 'Our Team', path: '/team', icon: Users },
@@ -1171,7 +949,6 @@ interface SidebarProps {
         { name: 'Events', path: '/events', icon: Calendar },
         { name: 'Webinars', path: '/webinars', icon: Calendar },
         { name: 'White Papers', path: '/white-papers', icon: FileText },
-=======
         { name: 'Help Center', path: '/help', icon: Globe },
         { name: 'News', path: '/news', icon: Globe },
         { name: 'Blog', path: '/blog', icon: Globe }
@@ -1195,14 +972,12 @@ interface SidebarProps {
         { name: 'Developer Portal', path: '/developer-portal', icon: Code },
         { name: 'Request Quote', path: '/request-quote', icon: DollarSign },
         { name: 'Pricing', path: '/pricing', icon: DollarSign }
-=======
         { name: 'FAQ', path: '/faq', icon: HelpCircle },
         { name: 'Status Page', path: '/status', icon: Globe },
         { name: 'Privacy Policy', path: '/privacy', icon: Shield },
         { name: 'Terms of Service', path: '/terms', icon: FileText },
         { name: 'Cookie Policy', path: '/cookies', icon: Shield },
         { name: 'Sitemap', path: '/sitemap', icon: Globe },
-=======
         { name: 'Blog', path: '/blog', icon: Globe },
         { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
         { name: 'Help Center', path: '/help', icon: Globe }
@@ -1210,7 +985,6 @@ interface SidebarProps {
     },
     {
       title: 'Support & Legal',
-=======
         { name: 'News', path: '/news', icon: Globe },
         { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
         { name: 'Events', path: '/events', icon: Globe },
@@ -1227,9 +1001,7 @@ interface SidebarProps {
         { name: 'Privacy Policy', path: '/privacy', icon: Lock },
         { name: 'Terms of Service', path: '/terms', icon: Lock },
         { name: 'Cookie Policy', path: '/cookies', icon: Lock }
-=======
         { name: 'Solutions', path: '/solutions/enterprise', icon: Zap },
-=======
         { name: 'Solutions', path: '/solutions/enterprise', icon: Target },
         { name: 'Pricing', path: '/pricing', icon: Briefcase },
         { name: 'About', path: '/about', icon: Users },
@@ -1285,7 +1057,6 @@ interface SidebarProps {
         { name: 'AI Customer Support', path: '/services#ai-support', icon: Brain, description: 'Automated support' },
         { name: 'AI HR Automation', path: '/services#ai-hr', icon: Brain, description: 'HR automation' },
         { name: 'AI Marketing Platform', path: '/services#ai-marketing', icon: Brain, description: 'Marketing automation' }
-=======
       title: 'AI & Technology Services',
       items: [
         { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
@@ -1359,7 +1130,6 @@ interface SidebarProps {
         { name: 'Quantum Cloud Infrastructure', path: '/quantum-cloud-infrastructure', icon: Cloud },
         { name: 'Quantum Financial Trading', path: '/quantum-financial-trading', icon: DollarSign },
         { name: 'Quantum Services', path: '/quantum-services', icon: Atom }
-=======
         { name: 'Healthcare AI', path: '/ai-autonomous-healthcare-physician', icon: Users },
         { name: 'Manufacturing AI', path: '/ai-autonomous-manufacturing', icon: Briefcase },
         { name: 'Financial Services', path: '/ai-autonomous-business-operations', icon: TrendingUp },
@@ -1368,7 +1138,6 @@ interface SidebarProps {
         { name: 'Education AI', path: '/ai-autonomous-education-professor', icon: BookOpen },
         { name: 'Legal AI', path: '/ai-autonomous-legal-counsel', icon: Shield },
         { name: 'Logistics AI', path: '/ai-autonomous-logistics', icon: Globe }
-=======
       title: 'AI & Technology',
       items: [
         { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
@@ -1431,14 +1200,12 @@ interface SidebarProps {
         { name: 'Help Center', path: '/help', icon: Globe, description: 'Support resources' },
         { name: 'Documentation', path: '/docs', icon: Globe, description: 'Technical guides' },
         { name: 'Status Page', path: '/status', icon: Globe, description: 'System status' }
-=======
         { name: 'Status Page', path: '/status', icon: Globe },
         { name: 'FAQ', path: '/faq', icon: Users },
         { name: 'Privacy Policy', path: '/privacy', icon: Shield },
         { name: 'Terms of Service', path: '/terms', icon: Shield },
         { name: 'Cookie Policy', path: '/cookies', icon: Shield },
         { name: 'Accessibility', path: '/accessibility', icon: Users }
-=======
       items: [
         { name: 'Mission & Vision', path: '/mission', icon: Star },
         { name: 'Partners', path: '/partners', icon: Handshake },
@@ -1456,7 +1223,6 @@ interface SidebarProps {
         { name: 'Blog & News', path: '/news', icon: BookOpen },
         { name: 'FAQ', path: '/faq', icon: HelpCircle },
         { name: 'Support', path: '/support', icon: HelpCircle }
-=======
         { name: 'Our Mission', path: '/mission', icon: Rocket },
         { name: 'Team', path: '/team', icon: Users },
         { name: 'Blog', path: '/blog', icon: FileText },
@@ -1465,38 +1231,30 @@ interface SidebarProps {
         { name: 'White Papers', path: '/white-papers', icon: BookOpen },
         { name: 'Events', path: '/events', icon: Calendar },
         { name: 'Partners', path: '/partners', icon: Handshake }
-=======
         { name: 'Contact Us', path: '/contact', icon: Phone },
         { name: 'FAQ', path: '/faq', icon: Users },
         { name: 'News', path: '/news', icon: Globe }
-=======
         { name: 'Contact Support', path: '/support', icon: Phone },
         { name: 'Status Page', path: '/status', icon: Globe },
         { name: 'FAQ', path: '/help#faq', icon: FileText }
-=======
         { name: 'Help Center', path: '/help-center', icon: Users },
         { name: 'Case Studies', path: '/case-studies', icon: Globe },
         { name: 'News', path: '/news', icon: Globe },
         { name: 'Webinars', path: '/webinars', icon: Globe },
         { name: 'White Papers', path: '/white-papers', icon: Globe }
-=======
         { name: 'Contact Support', path: '/support', icon: Phone }
-=======
         { name: 'Status Page', path: '/status', icon: Globe },
         { name: 'FAQ', path: '/faq', icon: Users },
         { name: 'Sitemap', path: '/sitemap', icon: Globe }
-=======
         { name: 'Leadership', path: '/leadership', icon: Users },
         { name: 'Careers', path: '/careers', icon: Briefcase },
         { name: 'Partners', path: '/partners', icon: Users },
         { name: 'News', path: '/news', icon: Globe }
-=======
   className?: string;
 }
 
 export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
   const location = useLocation();
-=======
   Users, 
   MessageSquare, 
   Settings, 
@@ -1509,7 +1267,6 @@ export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
   ChevronRight,
   Menu,
   X
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 
@@ -1546,7 +1303,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Globe },
         { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
         { name: 'Industry Solutions', path: '/services/industry-solutions', icon: Briefcase }
-=======
         { name: 'AI Content Generation', href: '/ai-services-showcase', icon: Bot, badge: 'Popular' },
         { name: 'AI Business Intelligence', href: '/ai-services-showcase', icon: BarChart3, badge: 'New' },
         { name: 'AI Customer Support', href: '/ai-services-showcase', icon: MessageSquare, badge: 'Featured' },
@@ -1620,7 +1376,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
         { name: 'Documentation', href: '/docs', icon: BookOpen },
         { name: 'API Reference', href: '/api', icon: Code },
         { name: 'Status Page', href: '/status', icon: CheckCircle }
-=======
         { name: 'Blog', href: '/blog', icon: BookOpen },
         { name: 'Help Center', href: '/help-center', icon: HelpCircle },
         { name: 'Green IT', href: '/green-it', icon: Leaf },
@@ -1632,7 +1387,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
       items: [
         { name: 'Privacy Policy', href: '/privacy', icon: Shield },
         { name: 'Terms of Service', href: '/terms', icon: FileText },
-=======
         { label: 'Home', href: '/', icon: Home },
         { label: 'Marketplace', href: '/marketplace', icon: Briefcase },
         { label: 'Talent', href: '/talent', icon: Users },
@@ -1666,7 +1420,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
         { label: 'Help Center', href: '/help', icon: HelpCircle },
         { label: 'Contact', href: '/contact', icon: MessageSquare },
         { label: 'Sitemap', href: '/sitemap', icon: Globe },
-=======
         { name: 'About Us', path: '/about', icon: Users },
         { name: 'Our Mission', path: '/mission', icon: Target },
         { name: 'Our Team', path: '/team', icon: Users },
@@ -1726,11 +1479,8 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
   // Fixed contact information
   const contactInfo = [
     { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
-=======
     { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
-=======
     { icon: Linkedin, href: 'https://www.linkedin.com/company/zion-tech-group', label: 'LinkedIn' },
-=======
     { icon: Phone, text: '+1 (302) 464-0950', href: 'tel:+13024640950' },
     { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
     { icon: MapPin, text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
@@ -1740,12 +1490,9 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
   const socialLinks = [
     { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
-=======
     { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' },
     { icon: Youtube, href: 'https://www.youtube.com/@ziontechgroup', label: 'YouTube' }
-=======
     { icon: Linkedin, href: 'https://www.linkedin.com/company/zion-tech-group', label: 'LinkedIn' },
-=======
     { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },
@@ -1753,32 +1500,26 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Facebook, href: 'https://www.facebook.com/ziontechgroup', label: 'Facebook' },
     { icon: Instagram, href: 'https://www.instagram.com/ziontechgroup', label: 'Instagram' }
-=======
     { icon: Linkedin, href: 'https://www.linkedin.com/company/zion-tech-group', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Facebook, href: 'https://www.facebook.com/ziontechgroup', label: 'Facebook' },
     { icon: Instagram, href: 'https://www.instagram.com/ziontechgroup', label: 'Instagram' },
     { icon: Globe, href: 'https://www.youtube.com/@ziontechgroup', label: 'YouTube' },
     { icon: Briefcase, href: 'https://github.com/ziontechgroup', label: 'GitHub' }
-=======
     { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' },
     { icon: Users, href: 'https://discord.gg/ziontechgroup', label: 'Discord' }
-=======
     { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Github, href: 'https://github.com/ziontechgroup', label: 'GitHub' },
     { icon: Globe, href: 'https://www.youtube.com/@ziontechgroup', label: 'YouTube' }
-=======
     { icon: Linkedin, href: 'https://www.linkedin.com/company/zion-tech-group', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Facebook, href: 'https://www.facebook.com/ziontechgroup', label: 'Facebook' },
     { icon: Instagram, href: 'https://www.instagram.com/ziontechgroup', label: 'Instagram' }
-=======
     { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Facebook, href: 'https://www.facebook.com/ziontechgroup', label: 'Facebook' },
     { icon: Instagram, href: 'https://www.instagram.com/ziontechgroup', label: 'Instagram' }
-=======
     { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Facebook, href: 'https://www.facebook.com/ziontechgroup', label: 'Facebook' },
@@ -1809,7 +1550,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
     { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },
     { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' }
   ];
-=======
   const overlayVariants = {
     closed: {
       opacity: 0,
@@ -1825,12 +1565,9 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
     }
   };
 
-=======
   return (
   return (
-=======
   return (
-=======
   return (
     <AnimatePresence>
       {isOpen && (
@@ -1841,7 +1578,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
           />
           
           {/* Sidebar */}
-=======
     <>
       <AnimatePresence>
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
@@ -1851,7 +1587,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
       {/* Sidebar */}
       <AnimatePresence>
         {isSidebarOpen && (
-=======
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -1859,7 +1594,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
             className="fixed inset-0 bg-black/50 z-40 lg:hidden"
             onClick={onClose}
           />
-=======
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -1870,7 +1604,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
 
           {/* Sidebar */}
           <motion.aside
-=======
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -1881,14 +1614,12 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
 
           {/* Sidebar */}
           <motion.aside
-=======
     <AnimatePresence>
       {isOpen && (
         <>
           {/* Overlay */}
           <motion.div
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
-=======
     <>
       {/* Overlay */}
       <AnimatePresence>
@@ -1906,7 +1637,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
       <AnimatePresence>
         {isOpen && (
           <motion.aside
-=======
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
             onClick={onClose}
           />
@@ -1917,7 +1647,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-=======
 
           {/* Sidebar */}
           <motion.aside
@@ -1940,7 +1669,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                     </h2>
                     <p className="text-xs text-gray-400">Navigation Menu</p>
                   </div>
-=======
         {isOpen && (
           <>
             {/* Overlay */}
@@ -1972,7 +1700,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 <button
                   onClick={() => setIsSidebarOpen(false)}
                   className="p-2 futuristic-card hover:bg-white/20 rounded-lg transition-colors group"
-=======
             className="fixed left-0 top-0 h-full w-80 max-w-[90vw] bg-background border-r border-border z-50 overflow-y-auto"
           >
             <div className="p-6">
@@ -1989,13 +1716,11 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800/50 transition-all duration-300"
                 >
                   <X className="w-5 h-5" />
-=======
                   className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800/50 transition-all duration-300"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
-=======
             className="fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-md border-r border-gray-800 z-50 lg:hidden overflow-y-auto"
           >
             {/* Header */}
@@ -2017,7 +1742,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
   const overlayVariants = {
     closed: { opacity: 0 },
     open: { opacity: 1 }
-=======
   const handleSocialLinkClick = (social: typeof socialLinks[0]) => {
     try {
       window.open(social.href, '_blank', 'noopener,noreferrer');
@@ -2104,7 +1828,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                       </div>
                     )}
                     <h3 className="text-sm font-semibold text-zion-cyan uppercase tracking-wider neon-text">
-=======
               {/* Navigation */}
               <nav className="space-y-8">
                 {navigationItems.map((section) => (
@@ -2130,7 +1853,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                         </li>
                       ))}
                     </ul>
-=======
                   </div>
                 ))}
               </nav>
@@ -2177,7 +1899,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                         </Link>
                       );
                     })}
-=======
             variants={sidebarVariants}
             className="fixed left-0 top-0 h-full w-80 max-w-[90vw] bg-black/95 backdrop-blur-md border-r border-gray-800 z-50 overflow-y-auto"
           >
@@ -2186,7 +1907,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-lg">Z</span>
-=======
                     <Link 
                       to="/contact"
                       className="w-full quantum-button py-3 px-4 rounded-lg font-medium transform hover:scale-105 transition-transform text-center block"
@@ -2199,7 +1919,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                     >
                       View Pricing
                     </Link>
-=======
             </div>
 
             {/* Navigation Items */}
@@ -2235,8 +1954,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                     <Link to="/contact" className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hover:bg-zion-cyan/10 transition-colors text-center block">
                       Schedule Demo
                     </Link>
-=======
-=======
               {/* Search */}
               <div className="relative">
                 <input
@@ -2275,7 +1992,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                         </div>
                       </Link>
                     ))}
-=======
             {/* Navigation */}
             <div className="p-6 space-y-8">
               {navigationItems.map((section) => (
@@ -2300,7 +2016,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                       </Link>
                     ))}
                   </div>
-=======
                   {contactInfo.map((contact, index) => (
                     <div key={index} className="flex items-center space-x-3 text-sm text-muted-foreground">
                       <contact.icon className="h-4 w-4 text-zion-cyan" />
@@ -2335,7 +2050,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                           </li>
                         ))}
                       </ul>
-=======
             className="fixed left-0 top-0 h-full w-80 max-w-[90vw] z-50 overflow-hidden"
           >
             {/* Futuristic Background */}
@@ -2440,7 +2154,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                     <social.icon className="w-5 h-5 text-zion-slate-light hover:text-zion-cyan transition-colors" />
                   </a>
                 ))}
-=======
                 className="p-2 text-gray-400 hover:text-white hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
               >
                 <X className="w-5 h-5" />
@@ -2536,7 +2249,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                       </a>
                     );
                   })}
-=======
             <div className="p-6 border-t border-gray-800 space-y-6">
               {/* Contact Info */}
               <div>
@@ -2554,7 +2266,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                       <span className="text-sm">{contact.text}</span>
                     </a>
                   ))}
-=======
             {/* Navigation */}
             <nav className="p-6 space-y-8">
               {navigationItems.map((section) => (
@@ -2590,7 +2301,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                       rel="noopener noreferrer"
                       className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-400/10 rounded-lg transition-all duration-200"
                       title={social.label}
-=======
               {/* Social Links */}
               <div className="pt-6 border-t border-cyan-500/20">
                 <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider mb-4 neon-text-cyan">
@@ -2609,7 +2319,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                       <social.icon className="w-5 h-5" />
                     </a>
                   ))}
-=======
               </div>
 
               {/* Footer */}
@@ -2647,8 +2356,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                     {section.items.map((item) => {
                       const IconComponent = item.icon;
                       const isActive = location.pathname === item.path;
-=======
-=======
 
                 {/* Quick Actions */}
                 <div className="space-y-3">
@@ -2686,10 +2393,8 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                           <IconComponent className="w-4 h-4 flex-shrink-0" />
                           <span className="truncate">{item.name}</span>
                         </Link>
-=======
                       );
                     })}
-=======
                     {contactInfo.map((contact, index) => (
                       <a
                         key={index}
@@ -2701,8 +2406,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                       </a>
                     ))}
                   </div>
-=======
-=======
                           <Icon className="w-4 h-4 text-zion-cyan group-hover:neon-text" />
                           <span className="flex-1">{contact.text}</span>
                         </a>
@@ -2877,7 +2580,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               ))}
             </nav>
 
-=======
             {/* Contact Information */}
             <div className="p-6 border-t border-gray-800">
               <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
@@ -2892,7 +2594,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   >
                     <contact.icon className="w-4 h-4 text-cyan-500" />
                     <span className="text-sm">{contact.text}</span>
-=======
                     className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-700 transition-all duration-200"
                     aria-label={social.label}
                   >
@@ -2913,7 +2614,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               </Link>
             </div>
           </motion.aside>
-=======
             {/* Quick Actions */}
             <div className="p-6 border-t border-gray-700 space-y-4">
               <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide">
@@ -2947,11 +2647,9 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               </p>
             </div>
           </motion.aside>
-=======
         </>
       )}
     </AnimatePresence>
-=======
                 </div>
 
                 {/* Company Info */}
@@ -2963,7 +2661,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                     Transforming Business with AI & Tech
                   </p>
                 </div>
-=======
               ))}
             </div>
 
@@ -3025,14 +2722,12 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               </div>
             </div>
           </motion.aside>
-=======
               </div>
             </motion.aside>
           </>
         )}
       </AnimatePresence>
     </>
-=======
               {/* CTA Button */}
               <div className="pt-6">
                 <Link
@@ -3048,7 +2743,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
         </>
       )}
     </AnimatePresence>
-=======
             {/* Social Links */}
             <div className="p-6 border-t border-gray-700">
               <h3 className="text-lg font-semibold text-cyan-400 mb-4">Follow Us</h3>
@@ -3084,12 +2778,10 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
         </>
       )}
     </AnimatePresence>
-=======
           </motion.div>
         )}
       </AnimatePresence>
     </>
-=======
   const quickActions = [
     { name: 'Get Started', href: '/contact', icon: Rocket, color: 'from-zion-cyan to-zion-blue' },
     { name: 'Request Demo', href: '/request-quote', icon: Video, color: 'from-zion-purple to-zion-cyan' },
@@ -3172,7 +2864,6 @@ const CheckCircle = ({ className }: { className?: string }) => (
     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
   </svg>
 );
-=======
   MessageSquare, 
   BarChart3,
   ShoppingCart,
@@ -3210,16 +2901,6 @@ export function Sidebar() {
       path: '/services',
       icon: Briefcase,
       children: [
-<<<<<<< HEAD
-        { name: 'AI Solutions', path: '/services/ai-solutions', icon: Brain },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Server },
-        { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Zap },
-        { name: 'Green IT', path: '/green-it', icon: Leaf },
-        { name: 'Quantum Technology', path: '/quantum-technology', icon: Cpu },
-        { name: 'Space Tech', path: '/space-tech', icon: Rocket },
-=======
         { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
         { name: 'Quantum Technology', path: '/quantum-technology', icon: Cpu },
         { name: 'Space Technology', path: '/space-tech', icon: Rocket },
@@ -3228,7 +2909,6 @@ export function Sidebar() {
         { name: 'IT Infrastructure', path: '/services/infrastructure', icon: Server },
         { name: 'Digital Transformation', path: '/services/transformation', icon: Zap },
         { name: 'Green IT', path: '/green-it', icon: Leaf },
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         { name: 'Mobile Solutions', path: '/mobile', icon: Smartphone },
         { name: 'Financial Solutions', path: '/financial-solutions', icon: DollarSign },
         { name: 'Micro SaaS Services', path: '/micro-saas-services', icon: Building }
@@ -3276,15 +2956,8 @@ export function Sidebar() {
       icon: FileText,
       children: [
         { name: 'Blog & Insights', path: '/blog', icon: BookOpen },
-<<<<<<< HEAD
-        { name: 'Tutorials', path: '/tutorials', icon: Code },
-        { name: 'Webinars', path: '/webinars', icon: Video },
-        { name: 'White Papers', path: '/white-papers', icon: FileSearch },
-        { name: 'Case Studies', path: '/case-studies', icon: Target },
-=======
         { name: 'Case Studies', path: '/case-studies', icon: Target },
         { name: 'White Papers', path: '/white-papers', icon: FileSearch },
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         { name: 'Documentation', path: '/documentation', icon: Code },
         { name: 'API Reference', path: '/api', icon: Code },
         { name: 'Developer Portal', path: '/developer', icon: Code }
@@ -3295,16 +2968,9 @@ export function Sidebar() {
       path: '/support',
       icon: HelpCircle,
       children: [
-<<<<<<< HEAD
-        { name: 'Help Center', path: '/help-center', icon: HelpCircle },
-        { name: 'FAQ', path: '/faq', icon: HelpCircle },
-        { name: 'Contact Support', path: '/contact', icon: MessageSquare },
-        { name: 'Live Chat', path: '/chat', icon: MessageSquare },
-=======
         { name: 'Help Center', path: '/help', icon: HelpCircle },
         { name: 'FAQ', path: '/faq', icon: HelpCircle },
         { name: 'Contact Support', path: '/contact', icon: MessageSquare },
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         { name: 'Status', path: '/status', icon: BarChart3 },
         { name: 'Request Quote', path: '/request-quote', icon: MessageSquare }
       ]
@@ -3316,12 +2982,7 @@ export function Sidebar() {
       children: [
         { name: 'Enterprise Solutions', path: '/solutions', icon: Target },
         { name: 'Custom Solutions', path: '/solutions', icon: Target },
-<<<<<<< HEAD
-        { name: 'Community', path: '/community', icon: Users2 },
-        { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart }
-=======
         { name: 'Community', path: '/community', icon: Users2 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       ]
     },
     {
@@ -3332,169 +2993,11 @@ export function Sidebar() {
         { name: 'Performance Metrics', path: '/analytics/performance', icon: Activity },
         { name: 'User Analytics', path: '/analytics/users', icon: Users },
         { name: 'Business Intelligence', path: '/analytics/bi', icon: PieChart },
-<<<<<<< HEAD
-        { name: 'Reports', path: '/analytics/reports', icon: BarChart }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
         { name: 'Reports', path: '/reports', icon: BarChart }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       ]
     }
   ];
 
-<<<<<<< HEAD
-  const socialLinks = [
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin },
-    { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'GitHub', url: 'https://github.com/Zion-Holdings', icon: Github },
-    { name: 'YouTube', url: 'https://www.youtube.com/@ziontechgroup', icon: Youtube },
-    { name: 'Facebook', url: 'https://facebook.com/ziontechgroup', icon: Facebook },
-    { name: 'Instagram', url: 'https://instagram.com/ziontechgroup', icon: Instagram }
-  ];
-
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
-
-  return (
-    <AnimatePresence>
-      {isOpen && (
-        <>
-          {/* Backdrop */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 z-40"
-            onClick={onClose}
-          />
-          
-          {/* Sidebar */}
-          <motion.div
-            initial={{ x: '-100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '-100%' }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed left-0 top-0 h-full w-80 bg-zion-slate-dark border-r border-zion-blue-light/30 z-50 overflow-y-auto"
-          >
-            {/* Header */}
-            <div className="flex items-center justify-between p-6 border-b border-zion-blue-light/30">
-              <div className="flex items-center space-x-2">
-                <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
-                  <span className="text-xl">🤖</span>
-                </div>
-                <span className="text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                  ZION
-                </span>
-              </div>
-              <button
-                onClick={onClose}
-                className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-
-            {/* Navigation */}
-            <div className="p-4 space-y-2">
-              {navigationItems.map((section) => (
-                <div key={section.title} className="space-y-1">
-                  <button
-                    onClick={() => toggleSection(section.title)}
-                    className="flex items-center justify-between w-full p-3 text-left text-white hover:text-zion-cyan hover:bg-zion-slate-light/10 rounded-lg transition-all duration-200"
-                  >
-                    <span className="font-medium">{section.title}</span>
-                    <ChevronDown 
-                      className={`w-4 h-4 transition-transform duration-200 ${
-                        expandedSections.includes(section.title) ? 'rotate-180' : ''
-                      }`} 
-                    />
-                  </button>
-                  
-                  <AnimatePresence>
-                    {expandedSections.includes(section.title) && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="ml-4 space-y-1"
-                      >
-                        {section.items.map((item) => (
-                          <Link
-                            key={item.path}
-                            to={item.path}
-                            className="flex items-center space-x-3 p-3 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-slate-light/5 rounded-lg transition-all duration-200"
-                            onClick={onClose}
-                          >
-                            <item.icon className="w-4 h-4 flex-shrink-0" />
-                            <div className="flex-1 min-w-0">
-                              <div className="text-sm font-medium">{item.name}</div>
-                              {item.description && (
-                                <div className="text-xs text-zion-slate-light/70 truncate">
-                                  {item.description}
-                                </div>
-                              )}
-                            </div>
-                          </Link>
-                        ))}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              ))}
-            </div>
-
-            {/* Contact Info */}
-            <div className="p-4 border-t border-zion-blue-light/30">
-              <h3 className="text-white font-medium mb-3">Contact Information</h3>
-              <div className="space-y-2 text-sm text-zion-slate-light">
-                <div className="flex items-center space-x-2">
-                  <Phone className="w-4 h-4 text-zion-cyan" />
-                  <a href={`tel:${contactInfo.phone}`} className="hover:text-zion-cyan transition-colors">
-                    {contactInfo.phone}
-                  </a>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Mail className="w-4 h-4 text-zion-cyan" />
-                  <a href={`mailto:${contactInfo.email}`} className="hover:text-zion-cyan transition-colors">
-                    {contactInfo.email}
-                  </a>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <MapPin className="w-4 h-4 text-zion-cyan" />
-                  <span>{contactInfo.address}</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Social Links */}
-            <div className="p-4 border-t border-zion-blue-light/30">
-              <h3 className="text-white font-medium mb-3">Follow Us</h3>
-              <div className="flex space-x-2">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.name}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-8 h-8 bg-zion-slate-light/20 rounded-lg flex items-center justify-center text-zion-slate-light hover:text-zion-cyan hover:bg-zion-slate-light/30 transition-all duration-300"
-                    title={social.name}
-                  >
-                    <social.icon className="w-4 h-4" />
-                  </a>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        </>
-      )}
-    </AnimatePresence>
-  );
-}
-=======
   const toggleItem = (itemName: string) => {
     setExpandedItems(prev => 
       prev.includes(itemName)
@@ -3628,9 +3131,4 @@ export function Sidebar() {
   );
 }
 
-<<<<<<< HEAD
 export default Sidebar;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-export default Sidebar;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
