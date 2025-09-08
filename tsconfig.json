@@ -14,7 +14,7 @@
       "@/*": ["./src/*"],
       "@/pages/*": ["./src/pages/*"]
     },
-    "types": ["vite/client", "react", "react-router-dom"],
+    "types": ["vite/client", "react", "react-router-dom", "node"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -48,8 +48,14 @@
     ]
   },
   "include": [
-    "src",
-    ".next/types/**/*.ts"
+    "src/main.tsx",
+    "src/App.tsx",
+    "src/index.css",
+    "src/layout/AppLayout.tsx",
+    "src/context/**/*.tsx",
+    "src/components/ui/**/*.tsx",
+    "src/components/PerformanceWrapper.tsx",
+    "src/components/support/ChatBotPanel.tsx"
   ],
   "exclude": [
     "node_modules",
