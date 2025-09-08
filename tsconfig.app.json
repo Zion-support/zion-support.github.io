@@ -22,8 +22,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@/pages/*": ["./src/pages/*"],
-      "axios": ["./src/lib/axios.ts"]
+      "axios": ["./src/lib/axios"]
     },
     "types": ["vite/client", "react", "react-router-dom", "storybook__react"]
   },
