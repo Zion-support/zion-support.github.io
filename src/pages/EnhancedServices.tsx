@@ -1,7 +1,7 @@
 import { SEO } from '@/components/SEO';
 const EnhancedServices = () => {
   return (
-    <>
+    <div>
       <SEO 
         title="Enhanced Services - Zion Tech Group"
         description="Advanced technology services with enhanced features and capabilities for modern businesses."
@@ -36,8 +36,7 @@ const EnhancedServices = () => {
           </div>
         </div>
       </div>
-    </
-  );
-};
+    </div>
+  )};
 export default EnhancedServices;
 >

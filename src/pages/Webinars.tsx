@@ -138,16 +138,285 @@ export default function Webinars() {
               </div>))}
           </div>
           
-          <div className="text-center">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold mb-4">Stay Informed</h3>
-              <p className="text-gray-300 mb-6">
-                Subscribe to our webinar series and never miss an opportunity to learn 
-                from industry experts and technology leaders.
-              </p>
-              <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
-                Subscribe to Webinars
-              </Link>
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+            {filteredWebinars.map((webinar, index)  => (
+              <motion.article
+                key={webinar.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105"
+              >
+                {/* Header */}
+                <div className="mb-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-xs rounded-full">
+                      {categories.find(c => c.id === webinar.category)?.name}
+                    </span>
+                    <div className="flex items-center space-x-2 text-sm text-slate-400">
+                      <Clock3 className="w-4 h-4" />
+                      <span>{webinar.duration}</span>
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-white mb-3 line-clamp-2">
+                    {webinar.title}
+                  </h3>
+                  
+                  <div className="flex items-center space-x-4 text-sm text-slate-400 mb-4">
+                    <span>By {webinar.speaker}</span>
+                    <span>•</span>
+                    <time>{new Date(webinar.date).toLocaleDateString()}</time>
+                    <span>•</span>
+                    <span>{webinar.time}</span>
+                  </div>
+                </div>
+
+                {/* Summary */}
+                <p className="text-slate-300 text-sm mb-6 leading-relaxed">
+                  {webinar.summary}
+                </p>
+
+                {/* Tags */}
+                <div className="mb-6">
+                  <div className="flex flex-wrap gap-2">
+                    {webinar.tags.map((tag) => (
+                      <span key={tag} className="px-2 py-1 bg-slate-700/50 rounded-full text-xs text-slate-300">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Attendance Info */}
+                {!showPast && (
+                  <div className="mb-6">
+                    <div className="flex items-center justify-between text-sm text-slate-400 mb-2">
+                      <span>Registration</span>
+                      <span>{webinar.attendees}/{webinar.maxAttendees} registered</span>
+                    </div>
+                    <div className="w-full bg-slate-700 rounded-full h-2">
+                      <div 
+                        className="bg-gradient-to-r from-cyan-400 to-purple-600 h-2 rounded-full transition-all duration-300"
+                        style={{ width: `${(webinar.attendees / webinar.maxAttendees) * 100}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Actions */}
+                <div className="flex items-center justify-between pt-4 border-t border-slate-700/50">
+                  {showPast ? (
+                    <div>
+                      <a 
+                        href={webinar.watchUrl}
+                        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium"
+                      >
+                        <Play className="w-4 h-4 mr-1" />
+                        Watch Recording
+                      </a>
+                      
+                      <div className="flex items-center space-x-4">
+                        <a 
+                          href={webinar.recordingUrl}
+                          className="inline-flex items-center text-slate-400 hover:text-white transition-colors text-sm"
+                        >
+                          <Download className="w-4 h-4 mr-1" />
+                          Download
+                        </a>
+                        <a 
+                          href={webinar.slidesUrl}
+                          className="inline-flex items-center text-slate-400 hover:text-white transition-colors text-sm"
+                        >
+                          <BookOpen className="w-4 h-4 mr-1" />
+                          Slides
+                        </a>
+                      </div>
+                    </div>
+                  ) : (
+                    <div>
+                      <div className="text-sm text-slate-400">
+                        {webinar.maxAttendees - webinar.attendees} spots remaining
+                      </div>
+                      
+                      <a 
+                        href={webinar.registrationUrl}
+                        className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-cyan-400 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                      >
+                        Register Now
+                      </a>
+                    </div>
+                  )}
+                </div>
+              </motion.article>
+            ))}
+          </div>
+
+          {filteredWebinars.length === 0 && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center py-20"
+            >
+              <div className="w-20 h-20 mx-auto mb-6 bg-slate-700/50 rounded-full flex items-center justify-center">
+                <Search className="w-10 h-10 text-slate-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">No webinars found</h3>
+              <p className="text-slate-400">Try adjusting your filters or search terms</p>
+            </motion.div>
+          )}
+        </div>
+      </section>
+
+      {/* Featured Categories */}
+      <section className="py-20 px-4 bg-slate-800/30">
+        <div className="container mx-auto">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl font-bold text-center mb-16 text-white"
+          >
+            Webinar Categories
+          </motion.h2>
+          
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {categories.slice(1).map((category, index)  => (
+              <motion.div
+                key={category.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center group cursor-pointer"
+                onClick={() => setSelectedCategory(category.id)}
+              >
+                <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-cyan-400 to-purple-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <category.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{category.name}</h3>
+                <p className="text-slate-300 text-sm">
+                  {[...upcomingWebinars, ...pastWebinars].filter(wp => wp.category === category.id).length} webinars available
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl mx-auto"
+          >
+            <h2 className="text-3xl font-bold mb-6 text-white">Interested in Speaking?</h2>
+            <p className="text-slate-300 mb-8">
+              Are you an industry expert interested in sharing your knowledge? 
+              We're always looking for speakers to join our webinar series.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="text-center">
+                <Mail className="w-8 h-8 mx-auto mb-3 text-cyan-400" />
+                <h3 className="font-semibold text-white mb-2">Email Us</h3>
+                <a 
+                  href={`mailto:${contactInfo.email}`}
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
+                >
+                  {contactInfo.email}
+                </a>
+              </div>
+              
+              <div className="text-center">
+                <Phone className="w-8 h-8 mx-auto mb-3 text-cyan-400" />
+                <h3 className="font-semibold text-white mb-2">Call Us</h3>
+                <a 
+                  href={`tel:${contactInfo.phone}`}
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
+                >
+                  {contactInfo.phone}
+                </a>
+              </div>
+              
+              <div className="text-center">
+                <MapPin className="w-8 h-8 mx-auto mb-3 text-cyan-400" />
+                <h3 className="font-semibold text-white mb-2">Visit Us</h3>
+                <span className="text-slate-300 text-sm">{contactInfo.address}</span>
+              </div>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+              <a 
+                href="/contact"
+                className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Contact Us
+              </a>
+              <a 
+                href="/white-papers"
+                className="px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
+              >
+                Read Our Research
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Search and Filters */}
+      <section className="py-12 bg-zion-slate">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            {/* Search Bar */}
+            <div className="relative mb-8">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search webinars by title, description, or tags..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 bg-zion-slate-dark border border-zion-slate-light/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              />
+            </div>
+
+            {/* Category Filters */}
+            <div className="flex flex-wrap gap-3 mb-6">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setActiveCategory(category.id)}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-all duration-300 ${
+                    activeCategory === category.id
+                      ? 'bg-zion-cyan border-zion-cyan text-white'
+                      : 'bg-zion-slate-dark border-zion-slate-light/20 text-zion-slate-light hover:border-zion-cyan/50'
+                  }`}
+                >
+                  {category.icon}
+                  <span>{category.name}</span>
+                  <span className="text-sm opacity-75">({category.count})</span>
+                </button>
+              ))}
+            </div>
+
+            {/* Type Filters */}
+            <div className="flex flex-wrap gap-3">
+              {filterTypes.map((type) => (
+                <button
+                  key={type.id}
+                  onClick={() => setFilterType(type.id)}
+                  className={`px-4 py-2 rounded-lg border transition-all duration-300 ${
+                    filterType === type.id
+                      ? 'bg-zion-purple border-zion-purple text-white'
+                      : 'bg-zion-slate-dark border-zion-slate-light/20 text-zion-slate-light hover:border-zion-purple/50'
+                  }`}
+                >
+                  {type.name} ({type.count})
+                </button>
+              ))}
             </div>
           </div>
         </div>

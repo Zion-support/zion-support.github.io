@@ -1,4 +1,6 @@
-export interface SpecializedITService2025 {
+import React from 'react';
+export interface SpecializedITService {
+
   id: string;
   title: string;
   description: string;

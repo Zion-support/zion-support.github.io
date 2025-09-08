@@ -516,7 +516,7 @@ export default function EnhancedAccessibilityEnhancer() {
   }, [screenReaderMode]);
 
   return (
-    <>
+    <div>
       {/* Floating Accessibility Button */}
       <motion.button
         onClick={() => setIsOpen(true)}
@@ -795,6 +795,6 @@ export default function EnhancedAccessibilityEnhancer() {
           cursor: pointer;
         }
       `}</style>
-    </
+    </div>
   );
 }>

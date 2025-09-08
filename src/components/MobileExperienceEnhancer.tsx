@@ -674,18 +674,21 @@ export function MobileExperienceEnhancer({
   }, [mobileOptimizationFeatures, applyMobileOptimization, toggleTouchGesture]);
 
   return (
-    <>
-      {/* Floating Mobile Experience Button */}
-      <motion.button
-        onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 left-24 z-50 p-3 bg-gradient-to-r from-zion-green to-zion-cyan rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        aria-label="Open Mobile Experience Settings"
-      >
-        <Smartphone className="w-6 h-6 text-white" />
-        <div className="absolute -top-2 -right-2 w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-      </motion.button>
+    <div>
+      {/* Mobile Experience Controls Button */}
+      {showControls && isMobile && (
+        <button
+          onClick={togglePanel}
+          className="fixed bottom-20 right-4 z-50 p-3 bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+          aria-label="Mobile experience settings"
+          aria-expanded={isVisible}
+          aria-controls="mobile-panel"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+          </svg>
+        </button>
+      )}
 
       {/* Mobile Experience Dashboard Modal */}
       <AnimatePresence>
@@ -960,19 +963,14 @@ export function MobileExperienceEnhancer({
                             </div>
                           </div>
 
-                          <label className="flex items-center">
-                            <input
-                              type="checkbox"
-                              checked={touchGestures.has(gesture.id)}
-                              onChange={(e) => toggleTouchGesture(gesture.id, e.target.checked)}
-                              className="w-5 h-5 text-zion-cyan rounded focus:ring-zion-cyan"
-                            />
-                          </label>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+      {/* Mobile Status Indicator */}
+      {isMobile && (
+        <div className="fixed top-4 right-4 z-40 px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">
+          📱 Mobile
+        </div>
+      )}
+    </div>
+  )};
 
                 {/* Advanced Settings */}
                 <div className="mb-8">

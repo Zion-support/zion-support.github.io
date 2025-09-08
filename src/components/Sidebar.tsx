@@ -170,7 +170,7 @@ export const Sidebar: React.FC = () => {
   };
 
   return (
-    <>
+    <div>
       {/* Mobile menu button */}
       <button
         onClick={() => setIsOpen(true)}
@@ -232,44 +232,7 @@ export const Sidebar: React.FC = () => {
               </div>
             </motion.div>
           </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Monitor Sidebar */}
-      <div className="hidden lg:block fixed left-0 top-0 h-full w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl z-40">
-        {/* Header */}
-        <div className="p-6 border-b border-slate-700/50">
-          <Link to="/" className="flex items-center space-x-3 group">
-            <div className="relative">
-              <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Zap className="w-6 h-6 text-white" />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
-            </div>
-            <h1 className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              Zion Tech Group
-            </h1>
-          </Link>
         </div>
-
-        {/* Navigation */}
-        <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
-          {navigation.map(item => renderNavItem(item))}
-        </nav>
-
-        {/* Footer */}
-        <div className="p-4 border-t border-slate-700/50">
-          <div className="text-center">
-            <Link
-              to="/contact"
-              className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20"
-            >
-              Get Started
-            </Link>
-          </div>
-        </div>
-      </div>
-    </
-  );
-};
->
+      )}
+    </AnimatePresence>
+  )}

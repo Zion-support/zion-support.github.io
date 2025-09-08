@@ -281,7 +281,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   if (!enabled) return null;
 
   return (
-    <>
+    <div>
       {/* Accessibility Toggle Button */}
       {showControls && (
         <motion.button
@@ -441,6 +441,5 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
           <div key={index}>{announcement}</div>
         ))}
       </div>
-    </
-  );
-};>
+    </div>
+  )};

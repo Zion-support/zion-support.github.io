@@ -1,4 +1,5 @@
-
+import React from 'react';
+import { PenTool, Image, Video, FileText, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database, Globe, Shield } from 'lucide-react';
 
 export default function AIContentCreationSuite() {
   const features = [

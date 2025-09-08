@@ -281,7 +281,7 @@ export function PrimaryNav() {
             {/* Auth links - flex wrap for very small screens */}
             <div className="flex items-center gap-1 flex-wrap">
               {!isLoggedIn && (
-                <>
+                <div>
                   <Link
                     href="/auth/login"
                     className="text-sm hover:text-primary whitespace-nowrap"
@@ -295,7 +295,7 @@ export function PrimaryNav() {
                   >
                     {t('auth.signup')}
                   </Link>
-                </>
+                </div>
               )}
               {isLoggedIn && <UserMenu />}
             </div>
@@ -332,6 +332,5 @@ export function PrimaryNav() {
         </div>
       )}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
-    </>
-  );
-}
+    </div>
+  )}

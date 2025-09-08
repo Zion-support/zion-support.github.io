@@ -268,35 +268,10 @@ export const EnhancedHeader: React.FC = () => {
   ];
 
   return (
-    <motion.header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20' 
-          : 'bg-transparent'
-      }`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6 }}
-    >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <motion.div
-              className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center"
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Star className="w-6 h-6 text-white" />
-            </motion.div>
-            <div>
-              <h1 className="text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                Zion Tech Group
-              </h1>
-              <p className="text-xs text-zion-slate-light">Revolutionary Technology Solutions</p>
-            </div>
-          </Link>
-
+    <div>
+      {/* Matrix Rain Background */}
+      <div className="matrix-rain"></div>
+      
       {/* Enhanced Header */}
       <motion.header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -678,7 +653,7 @@ export const EnhancedHeader: React.FC = () => {
           )}
         </AnimatePresence>
       </motion.header>
-    </
+    </div>
   );
 }
 

@@ -1,3 +1,4 @@
+import React from 'react';
 import { MicroSaasService } from './enhanced-real-micro-saas-services';
 
 const contact = {

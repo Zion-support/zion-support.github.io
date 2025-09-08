@@ -1,126 +1,150 @@
-import React, { useState, useMemo } from 'react';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Search, Users, Zap, Shield, Code, BarChart3, Bot, Building, CheckCircle, Sparkles, Brain, Database, Cloud, Smartphone, FileText, Settings, DollarSign, Clock, Target, Cpu, Heart, Eye, ExternalLink, Play, BookOpen, Mail, Phone, MapPin } from 'lucide-react';
-import { ENHANCED_INNOVATIVE_SERVICES } from '@/data/enhancedInnovativeServices';
-import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
-import { INNOVATIVE_MICRO_SAAS_SERVICES } from '@/data/innovativeMicroSaasServices';
-import { motion } from 'framer-motion';
-// Combine all services
-const ALL_SERVICES = [
-    ...ENHANCED_INNOVATIVE_SERVICES,
-    ...COMPREHENSIVE_SERVICES,
-    ...INNOVATIVE_MICRO_SAAS_SERVICES
-];
-const categoryIcons = {
-    'AI & Legal Tech': FileText,
-    'AI & FinTech': DollarSign,
-    'AI & Healthcare': Heart,
-    'Cybersecurity & Quantum': Shield,
-    'AI & Supply Chain': Building,
-    'AI & Energy': Zap,
-    'AI & Customer Experience': Users,
-    'Quantum & AI': Cpu,
-    'AI & Data Governance': Database,
-    'AI & HR Tech': Users,
-    'AI & Machine Learning': Brain,
-    'AI & Business Intelligence': BarChart3,
-    'AI & Marketing Automation': Target,
-    'AI & CRM': Users,
-    'AI & ERP': Building,
-    'AI & Project Management': Code,
-    'AI & Autonomous Systems': Bot,
-    'AI & Research': Brain,
-    'AI & Content Generation': FileText,
-    'AI & Voice Technology': Smartphone,
-    'AI & Video Generation': Eye,
-    'AI & Threat Intelligence': Shield,
-    'AI & Cloud Management': Cloud,
-    'AI & DevOps': Code
-};
-const categoryColors = {
-    'AI & Legal Tech': 'from-blue-500 to-indigo-500',
-    'AI & FinTech': 'from-green-500 to-emerald-500',
-    'AI & Healthcare': 'from-red-500 to-pink-500',
-    'Cybersecurity & Quantum': 'from-purple-500 to-violet-500',
-    'AI & Supply Chain': 'from-orange-500 to-red-500',
-    'AI & Energy': 'from-yellow-500 to-orange-500',
-    'AI & Customer Experience': 'from-pink-500 to-rose-500',
-    'Quantum & AI': 'from-cyan-500 to-blue-500',
-    'AI & Data Governance': 'from-indigo-500 to-purple-500',
-    'AI & HR Tech': 'from-teal-500 to-green-500',
-    'AI & Machine Learning': 'from-purple-500 to-pink-500',
-    'AI & Business Intelligence': 'from-indigo-500 to-purple-500',
-    'AI & Marketing Automation': 'from-pink-500 to-rose-500',
-    'AI & CRM': 'from-blue-500 to-cyan-500',
-    'AI & ERP': 'from-green-500 to-emerald-500',
-    'AI & Project Management': 'from-orange-500 to-red-500',
-    'AI & Autonomous Systems': 'from-purple-500 to-violet-500',
-    'AI & Research': 'from-cyan-500 to-blue-500',
-    'AI & Content Generation': 'from-indigo-500 to-purple-500',
-    'AI & Voice Technology': 'from-teal-500 to-green-500',
-    'AI & Video Generation': 'from-pink-500 to-rose-500',
-    'AI & Threat Intelligence': 'from-red-500 to-pink-500',
-    'AI & Cloud Management': 'from-blue-500 to-cyan-500',
-    'AI & DevOps': 'from-orange-500 to-red-500'
-};
-const supportLevelColors = {
-    'premium': 'bg-gradient-to-r from-blue-500 to-cyan-500',
-    'enterprise': 'bg-gradient-to-r from-purple-500 to-pink-500',
-    'basic': 'bg-gradient-to-r from-green-500 to-emerald-500'
-};
-export default function ComprehensiveServicesOverview() {
-    const [searchQuery, setSearchQuery] = useState('');
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [priceRange, setPriceRange] = useState('all');
-    const [selectedSupportLevel, setSelectedSupportLevel] = useState('all');
-    const filteredServices = useMemo(() => {
-        let filtered = ALL_SERVICES;
-        // Search filter
-        if (searchQuery) {
-            const lowerQuery = searchQuery.toLowerCase();
-            filtered = filtered.filter(service => service.title.toLowerCase().includes(lowerQuery) ||
-                service.description.toLowerCase().includes(lowerQuery) ||
-                (service.tags && service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))));
-        }
-        // Category filter
-        if (selectedCategory !== 'all') {
-            filtered = filtered.filter(service => service.category === selectedCategory);
-        }
-        // Price range filter
-        if (priceRange !== 'all') {
-            switch (priceRange) {
-                case 'low':
-                    filtered = filtered.filter(service => {
-                        const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
-                        return price <= 1000;
-                    });
-                    break;
-                case 'medium':
-                    filtered = filtered.filter(service => {
-                        const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
-                        return price > 1000 && price <= 3000;
-                    });
-                    break;
-                case 'high':
-                    filtered = filtered.filter(service => {
-                        const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
-                        return price > 3000;
-                    });
-                    break;
-            }
-        }
-    });
-    const getServicePrice = (service) => {
-        if (typeof service.price === 'number') {
-            return service.price;
-        }
-    };
-    return (<>
-      <SEOHead title="Comprehensive Technology Services - Zion Tech Group" description="Explore our comprehensive portfolio of cutting-edge technology services including AI, Quantum Computing, Cybersecurity, IT Infrastructure, and more. Transform your business with innovative solutions." keywords="technology services, AI services, quantum computing, cybersecurity, IT infrastructure, micro SaaS, autonomous systems, space technology, neurotechnology" image="/images/services-overview-og.jpg" canonical="https://ziontechgroup.com/comprehensive-services-overview"/>
+import React, { useState, useEffect } from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain, 
+  Cloud, 
+  Shield, 
+  Server, 
+  Zap, 
+  Globe, 
+  Cpu, 
+  Database,
+  Network,
+  Lock,
+  Code,
+  Rocket,
+  Users,
+  BarChart3,
+  FileImage,
+  TrendingUp,
+  MessageCircle,
+  Video,
+  FileText,
+  Heart,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Search,
+  Filter,
+  Sparkles,
+  Phone,
+  Mail,
+  MapPin
+ } from 'lucide-react';
+import { SEO  } from '@/components/SEO';
+
+const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPricing, setSelectedPricing] = useState('all');
+
+  const categories = [
+    { id: 'all', name: 'All Categories', icon: Globe },
+    { id: 'ai-services', name: 'AI Services', icon: Brain },
+    { id: 'it-services', name: 'IT Services', icon: Server },
+    { id: 'micro-saas', name: 'Micro SaaS', icon: Rocket },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },
+    { id: 'cloud', name: 'Cloud Solutions', icon: Cloud }
+  ];
+
+  const pricingModels = [
+    { id: 'all', name: 'All Pricing' },
+    { id: 'monthly', name: 'Monthly' },
+    { id: 'yearly', name: 'Yearly' },
+    { id: 'one-time', name: 'One-time' },
+    { id: 'usage-based', name: 'Usage-based' }
+  ];
+
+  const services = [
+    {
+      id: 'ai-workflow-automation',
+      title: 'AI Workflow Automation',
+      description: 'Intelligent automation platform that streamlines business processes',
+      category: 'ai-services',
+      pricing: 'monthly',
+      price: '$1,200',
+      features['Process automation', 'AI decision making', 'Integration APIs', 'Analytics dashboard'],
+      icon: Brain,
+      rating: 4.9,
+      reviewCount: 127
+    },
+    {
+      id: 'ai-customer-experience',
+      title: 'AI Customer Experience Platform',
+      description: 'Personalized customer engagement powered by artificial intelligence',
+      category: 'ai-services',
+      pricing: 'monthly',
+      price: '$2,500',
+      features['Customer segmentation', 'Predictive analytics', 'Omnichannel support', 'Real-time insights'],
+      icon: Users,
+      rating: 4.8,
+      reviewCount: 89
+    },
+    {
+      id: 'ai-supply-chain',
+      title: 'AI Supply Chain Optimization',
+      description: 'End-to-end supply chain management with AI-driven insights',
+      category: 'ai-services',
+      pricing: 'monthly',
+      price: '$3,800',
+      features['Demand forecasting', 'Inventory optimization', 'Route planning', 'Risk management'],
+      icon: Network,
+      rating: 4.7,
+      reviewCount: 156
+    },
+    {
+      id: 'ai-cybersecurity',
+      title: 'AI Cybersecurity Suite',
+      description: 'Advanced threat detection and response using machine learning',
+      category: 'cybersecurity',
+      pricing: 'monthly',
+      price: '$2,200',
+      features['Threat detection', 'Behavioral analysis', 'Incident response', 'Compliance reporting'],
+      icon: Shield,
+      rating: 4.9,
+      reviewCount: 203
+    },
+    {
+      id: 'cloud-devops',
+      title: 'Cloud & DevOps Solutions',
+      description: 'Scalable cloud infrastructure and automated deployment',
+      category: 'it-services',
+      pricing: 'monthly',
+      price: '$1,800',
+      features['Cloud migration', 'CI/CD pipelines', 'Monitoring', 'Auto-scaling'],
+      icon: Cloud,
+      rating: 4.6,
+      reviewCount: 94
+    },
+    {
+      id: 'data-governance',
+      title: 'AI Data Governance',
+      description: 'Comprehensive data protection and compliance management',
+      category: 'ai-services',
+      pricing: 'monthly',
+      price: '$1,500',
+      features['Data classification', 'Privacy controls', 'Audit trails', 'GDPR compliance'],
+      icon: Database,
+      rating: 4.5,
+      reviewCount: 67
+    }
+  ];
+
+  const filteredServices = services.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing;
+    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase());
+    
+    return matchesCategory && matchesPricing && matchesSearch});
+
+  return (
+    <div>
+      <SEO 
+        title="Comprehensive Services Overview | Zion Tech Group"
+        description="Explore our complete range of AI services, IT solutions, and micro SaaS platforms designed to transform your business operations."
+        keywords="AI services, IT solutions, micro SaaS, cybersecurity, cloud solutions, business automation"
+      />
       
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">
         {/* Animated Background */}
@@ -380,5 +404,7 @@ export default function ComprehensiveServicesOverview() {
           </div>
         </div>
       </div>
-    </>);
-}
+    </div>
+  )};
+
+export default ComprehensiveServicesOverview;

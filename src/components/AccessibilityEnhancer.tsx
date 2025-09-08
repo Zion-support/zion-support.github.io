@@ -255,15 +255,13 @@ const AccessibilityEnhancer: React.FC = () => {
   ] as const;
 
   return (
-    <>
-      {/* Floating Action Button */}
-      <motion.button
-        onClick={() => setIsOpen(!isOpen)}
-        className={`fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400 focus:ring-offset-2 ${className}`}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        aria-label="Open accessibility settings"
-        aria-expanded={isOpen}
+    <div>
+      {/* Accessibility Toggle Button */}
+      <button
+        onClick={togglePanel}
+        className="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+        aria-label="Toggle accessibility options"
+        title="Accessibility Options"
       >
         <Accessibility className="w-6 h-6" />
       </motion.button>
@@ -544,11 +542,72 @@ const AccessibilityEnhancer: React.FC = () => {
                   </button>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </
+              <button
+                onClick={() => applySettings({ reducedMotion: !settings.reducedMotion })}
+                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                  settings.reducedMotion ? 'bg-blue-600' : 'bg-gray-300'
+                }`}
+                aria-label={`${settings.reducedMotion ? 'Disable' : 'Enable'} reduced motion`}
+              >
+                <span
+                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                    settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'
+                  }`}
+                />
+              </button>
+            </div>
+
+            {/* Keyboard Navigation */}
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Keyboard className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+                <span className="text-sm text-gray-700 dark:text-gray-300">Keyboard Navigation</span>
+              </div>
+              <button
+                onClick={() => applySettings({ keyboardNavigation: !settings.keyboardNavigation })}
+                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                  settings.keyboardNavigation ? 'bg-blue-600' : 'bg-gray-300'
+                }`}
+                aria-label={`${settings.keyboardNavigation ? 'Disable' : 'Enable'} keyboard navigation`}
+              >
+                <span
+                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                    settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-1'
+                  }`}
+                />
+              </button>
+            </div>
+
+            {/* Focus Indicator */}
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Eye className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+                <span className="text-sm text-gray-700 dark:text-gray-300">Focus Indicator</span>
+              </div>
+              <button
+                onClick={() => applySettings({ focusIndicator: !settings.focusIndicator })}
+                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                  settings.focusIndicator ? 'bg-blue-600' : 'bg-gray-300'
+                }`}
+                aria-label={`${settings.focusIndicator ? 'Disable' : 'Enable'} focus indicator`}
+              >
+                <span
+                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                    settings.focusIndicator ? 'translate-x-6' : 'translate-x-1'
+                  }`}
+                />
+              </button>
+            </div>
+          </div>
+
+          <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
+            <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
+              These settings are saved in your browser and will persist across sessions.
+            </p>
+          </div>
+        </div>
+      )}
+    </div>
   );
 };
 

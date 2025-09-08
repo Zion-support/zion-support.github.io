@@ -2,32 +2,22 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 
-const team = [
-  {
-    name: "Dr. Sarah Chen",
-    role: "Chief AI Officer",
-    expertise: "Machine Learning & AI Strategy",
-    image: "/team/sarah-chen.jpg"
-  },
-  {
-    name: "Michael Rodriguez",
-    role: "Lead Software Architect",
-    expertise: "Cloud Computing & DevOps",
-    image: "/team/michael-rodriguez.jpg"
-  },
-  {
-    name: "Emily Johnson",
-    role: "Head of Product",
-    expertise: "User Experience & Product Strategy",
-    image: "/team/emily-johnson.jpg"
-  },
-  {
-    name: "David Kim",
-    role: "Senior Data Scientist",
-    expertise: "Data Analytics & Predictive Modeling",
-    image: "/team/david-kim.jpg"
-  }
-];
+export default function About(...args[]):  {
+	return (
+		<div>
+			{/* Hero Section */}
+			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="mx-auto max-w-2xl text-center">
+						<h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+							About Zion Tech Group
+						</h1>
+						<p className="mt-6 text-lg leading-8 text-gray-600">
+							We're a team of innovators, engineers, and strategists building the future of business technology.
+						</p>
+					</div>
+				</div>
+			</section>
 
 const values = [
   {
@@ -234,7 +224,7 @@ export default function AboutPage() {
 					</div>
 				</div>
 		</section>
-		</
+		</div>
 	)
 }
 >

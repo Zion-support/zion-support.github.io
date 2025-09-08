@@ -59,16 +59,47 @@ export const HelpCenter: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      <div className="container mx-auto px-4 py-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Help <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Center</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Find answers to your questions, learn how to use our services, and get the support you need.
-            </p>
+    <div>
+      <Helmet>
+        <title>Help Center - Zion Tech Group | Support & Documentation</title>
+        <meta name="description" content="Get help with Zion Tech Group services. Access documentation, tutorials, video guides, and support resources." />
+        <meta name="keywords" content="help center, support, documentation, tutorials, Zion Tech Group, user guide" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center"
+            >
+              <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <HelpCircle className="w-10 h-10 text-white" />
+              </div>
+              
+              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent mb-6">
+                Help Center
+              </h1>
+              
+              <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
+                Find answers, learn best practices, and get the most out of Zion Tech Group services with our comprehensive help resources.
+              </p>
+              
+              {/* Search Bar */}
+              <div className="max-w-2xl mx-auto relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search for help articles, tutorials, or topics..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-12 pr-4 py-4 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
+                />
+              </div>
+            </motion.div>
           </div>
 
           {/* Search Bar */}

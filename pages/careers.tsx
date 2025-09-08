@@ -5,16 +5,7 @@ import { Link } from 'react-router-dom'
 
 export default function Careers() {
 	return (
-		<AppLayout>
-			<Head>
-				<title>Careers - Zion Tech Group</title>
-				<meta name="description" content="Join Zion Tech Group's innovative team and help shape the future of AI, cloud, and cybersecurity technology." />
-				<meta property="og:title" content="Careers - Zion Tech Group" />
-				<meta property="og:description" content="Join Zion Tech Group's innovative team and help shape the future of AI, cloud, and cybersecurity technology." />
-				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://ziontechgroup.com/careers" />
-			</Head>
-			
+		<div>
 			{/* Hero Section */}
 			<section className="relative py-20 bg-gradient-to-br from-black via-gray-900 to-blue-900 overflow-hidden">
 				<div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.05)_1px,transparent_1px)] bg-[size:50px_50px]" />
@@ -83,7 +74,7 @@ export default function Careers() {
 					</div>
 				</div>
 			</section>
-		</
+		</div>
 	)
 }
 >

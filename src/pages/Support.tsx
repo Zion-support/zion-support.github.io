@@ -141,30 +141,23 @@ const Support: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-              Support
-            </span>
-            <br />
-            <span className="text-white">Center</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Get the help you need with our comprehensive support resources, expert assistance, and detailed documentation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-            >
-              <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Headphones className="w-10 h-10 text-white" /></div>
-              
-              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent mb-6">
-                We're Here to Help
+    <div>
+      <SEO 
+        title="Support Center - Zion Tech Group"
+        description="Get expert technical support for all Zion Tech Group services. 24/7 AI-powered assistance, phone support, and comprehensive resources."
+        canonical="/support"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mb-6">
+                <HelpCircle className="h-10 w-10 text-white" />
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Support Center
               </h1>
               
               <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
@@ -438,164 +431,5 @@ const Support: React.FC = () => {
           </div>
         </section>
       </div>
-
-      {/* Support Channels */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Support Channels
-            </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Multiple ways to get the help you need, when you need it
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {contactMethods.map((method, index) => (
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
-              >
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
-                  <method.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{method.title}</h3>
-                <p className="text-gray-300 mb-4">{method.description}</p>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">Contact:</span>
-                    <span className="text-white">{method.contact}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">Availability:</span>
-                    <span className="text-white">{method.availability}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">Response:</span>
-                    <span className="text-white">{method.response}</span>
-                  </div>
-                </div>
-                {method.link && (
-                  <Link
-                    to={method.link}
-                    className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300 mt-4"
-                  >
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16 bg-white/5 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Quick answers to common questions about our services and solutions
-            </p>
-          </div>
-          
-          <div className="mb-8">
-            <div className="flex flex-wrap justify-center gap-4">
-              {Object.keys(faqCategories).map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setActiveCategory(category)}
-                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    activeCategory === category
-                      ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'
-                      : 'bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hover:bg-white/20'
-                  }`}
-                >
-                  {category.charAt(0).toUpperCase() + category.slice(1)}
-                </button>
-              ))}
-            </div>
-          </div>
-          
-          <div className="space-y-6">
-            {faqCategories[activeCategory as keyof typeof faqCategories].map((faq, index) => (
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"
-              >
-                <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
-                <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Documentation & Resources */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Documentation & Resources
-            </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Comprehensive guides, tutorials, and resources to help you succeed
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {supportChannels.map((channel, index) => (
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
-              >
-                <div className="text-4xl mb-4">{channel.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{channel.title}</h3>
-                <p className="text-gray-300 mb-4">{channel.description}</p>
-                <Link
-                  to={channel.link}
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300"
-                >
-                  Access Resource
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Support CTA */}
-      <section className="py-16 bg-gradient-to-r from-blue-800 to-cyan-800 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Still Need Help?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Our support team is here to help you succeed. Contact us for personalized assistance.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
-            >
-              Contact Support
-            </Link>
-            <Link
-              to="/docs"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-900 transition-all duration-300"
-            >
-              Browse Documentation
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
-  );
-};
-
-export default Support;
+  )}

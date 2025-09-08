@@ -106,7 +106,7 @@ export default function ComprehensiveAIServicesShowcase2025() {
   ];
 
   return (
-    <>
+    <div>
       <SEO 
         title="Comprehensive AI Services Showcase 2025 - Zion Tech Group"
         description="Discover our comprehensive portfolio of AI-powered micro SAAS services, IT solutions, and innovative technology services. Transform your business with cutting-edge AI solutions."
@@ -403,6 +403,5 @@ export default function ComprehensiveAIServicesShowcase2025() {
           </div>
         </section>
       </div>
-    </
-  );
-}>
+    </div>
+  )}

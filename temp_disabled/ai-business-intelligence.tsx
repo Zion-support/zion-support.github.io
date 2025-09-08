@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function AIBusinessIntelligence() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Business Intelligence - Zion Tech Group</title>
         <meta name="description" content="Transform your business data into actionable insights with AI-powered business intelligence, predictive analytics, and intelligent reporting." />
@@ -258,6 +258,6 @@ export default function AIBusinessIntelligence() {
           </div>
         </section>
       </div>
-    </
+    </div>
   );
 }>

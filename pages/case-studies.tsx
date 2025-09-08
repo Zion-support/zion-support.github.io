@@ -635,16 +635,18 @@ export default CaseStudies;
 =======
 export default function CaseStudiesPage() {
 	return (
-		<>
-			<Head>
-				<title>Case Studies | Zion Tech Group</title>
-				<meta name="description" content="Case Studies by Zion Tech Group" />
-				<link rel="canonical" href="https://ziontechgroup.com/case-studies" />
-			</Head>
-			<main className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-				<div className="container mx-auto px-6 py-16">
-					<h1 className="text-4xl font-bold mb-4">Case Studies</h1>
-					<p className="text-white/80 max-w-2xl">Coming soon: success stories and outcomes.</p>
+		<div>
+			{/* Hero Section */}
+			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="mx-auto max-w-2xl text-center">
+						<h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+							Case Studies
+						</h1>
+						<p className="mt-6 text-lg leading-8 text-gray-600">
+							Real results from real clients. See how we've transformed businesses across industries.
+						</p>
+					</div>
 				</div>
 			</section>
 
@@ -867,6 +869,6 @@ export default function CaseStudiesPage() {
 					</div>
 				</div>
 			</section>
-		</
+		</div>
 	)
 }>

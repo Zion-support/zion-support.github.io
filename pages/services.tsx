@@ -339,7 +339,7 @@ export default function Services() {
 	}
 
 	return (
-		<PageTransition>
+		<div>
 			{/* Hero Section */}
 			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -631,7 +631,7 @@ export default function Services() {
 					</div>
 				</div>
 			</section>
-		</
+		</div>
 	)
 }
 >

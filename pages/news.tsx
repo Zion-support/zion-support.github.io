@@ -85,7 +85,7 @@ export default function News() {
 	const categories = ['All', 'Product Launch', 'Comp News', 'Industry Insights', 'Customer Success', 'Security']
 
 	return (
-		<>
+		<div>
 			{/* Hero Section */}
 			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -270,6 +270,6 @@ export default function News() {
 					</div>
 				</div>
 			</section>
-		</
+		</div>
 	)
 }>

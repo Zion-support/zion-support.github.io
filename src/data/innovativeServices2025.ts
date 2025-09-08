@@ -1,4 +1,6 @@
-export interface InnovativeService2025 {
+import React from 'react';
+export interface InnovativeService {
+
   id: string;
   title: string;
   description: string;

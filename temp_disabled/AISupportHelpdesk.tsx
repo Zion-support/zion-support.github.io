@@ -177,7 +177,7 @@ export default function AISupportHelpdesk() {
   ];
 
   return (
-    <>
+    <div>
       <SEO 
         title="AI Support Helpdesk - Zion Tech Group"
         description="Professional AI-powered support helpdesk platform with intelligent chatbots, multi-channel support, and advanced analytics for exceptional customer service."
@@ -452,8 +452,7 @@ export default function AISupportHelpdesk() {
           </div>
         </section>
       </div>
-    </
-  );
-}
+    </div>
+  )}
 
 >

@@ -99,19 +99,157 @@ export default function Partners() {
 
 const Page = () => {
   return (
-    <MainLayout 
-      title="Page - Zion Tech Group"
-      description="Zion Tech Group page"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 py-20">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
+    <div>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href="https://ziontechgroup.com/partners/" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/partners/" />
+      </Helmet>
+      
+      <main className="min-h-screen bg-white text-gray-900">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark text-white py-20">
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-10 left-10 w-32 h-32 border border-zion-cyan rounded-full"></div>
+            <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
+          </div>
+          <div className="relative max-w-7xl mx-auto px-6 text-center">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="mb-6"
+            >
+              <Handshake className="w-20 h-20 mx-auto text-zion-cyan mb-4" />
+            </motion.div>
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-4xl md:text-6xl font-bold mb-6"
+            >
+              Strategic
+              <span className="block bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                Partnerships
+              </span>
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8"
+            >
+              We collaborate with industry leaders to deliver comprehensive, cutting-edge 
+              technology solutions that drive business transformation.
+            </motion.p>
+          </div>
+        </section>
+        {/* Partnership Benefits */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-6">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Partner with Zion Tech Group?</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Our strategic partnerships enable us to deliver comprehensive solutions 
+                that combine the best technologies and expertise in the industry.
+              </p>
+            </motion.div>
+            
+            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index)  => (
+                <motion.div
+                  key={benefit.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center p-6 rounded-xl hover:shadow-lg transition-all duration-300"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
+                    <benefit.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
+                  <p className="text-gray-600">{benefit.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* Partner Categories */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-6">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Partner Ecosystem</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We've built strategic relationships across the technology landscape 
+                to provide comprehensive solutions for our clients.
+              </p>
+            </motion.div>
+            
+            <div className="space-y-12">
+              {partnerCategories.map((category, categoryIndex) => (
+                <motion.div
+                  key={category.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: categoryIndex * 0.2 }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-2xl p-8 shadow-sm"
+                >
+                  <div className="flex items-center gap-4 mb-8">
+                    <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">
+                      <category.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold">{category.title}</h3>
+                      <p className="text-gray-600">{category.description}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6">
+                    {category.partners.map((partner, partnerIndex)  => (
+                      <motion.div
+                        key={partner.name}
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.4, delay: partnerIndex * 0.1 }}
+                        viewport={{ once: true }}
+                        className="text-center p-4 rounded-lg border hover:shadow-md transition-all duration-300"
+                      >
+                        <div className="text-4xl mb-3">{partner.logo}</div>
+                        <h4 className="font-semibold mb-1">{partner.name}</h4>
+                        <p className="text-sm text-gray-600 mb-2">{partner.description}</p>
+                        <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${
+                          partner.tier === 'Platinum' ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white' :
+                          partner.tier === 'Gold' ? 'bg-gradient-to-r from-yellow-500 to-orange-500 text-white' :
+                          'bg-gray-500 text-white'
+                        }`}>
+                          {partner.tier}
+                        </span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* Partnership Levels */}
         <section className="py-20">
@@ -207,6 +345,6 @@ const Page = () => {
           </div>
         </section>
       </main>
-    </
+    </div>
   )
 }>

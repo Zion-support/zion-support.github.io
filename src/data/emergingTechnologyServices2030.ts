@@ -1,4 +1,8 @@
-import { ProductListing } from "@/types/listings";
+import React from 'react';
+import { ProductListing  } from '@/types/listings';
+
+// Emerging Technology Services 2030 - Zion Tech Group
+// Next-generation technology solutions for the future
 
 export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
   // Neuromorphic Computing Services

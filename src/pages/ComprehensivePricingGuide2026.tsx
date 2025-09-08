@@ -103,7 +103,7 @@ export default function ComprehensivePricingGuide2026() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div>
       <SEO 
         title="Comprehensive Pricing Guide 2026 | Zion Tech Group"
         description="Complete pricing guide for our 2026 innovative services. Compare AI, IT, and micro SAAS solutions with market prices and ROI analysis."
@@ -444,8 +444,7 @@ export default function ComprehensivePricingGuide2026() {
           </div>
         </section>
       </div>
-    </
-  );
-};
+    </div>
+  )};
 
 export default ComprehensivePricingGuide2026;>

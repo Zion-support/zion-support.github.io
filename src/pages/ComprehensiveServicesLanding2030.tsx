@@ -230,11 +230,11 @@ export default function ComprehensiveServicesLanding2030() {
   };
 
   return (
-    <div className="min-h-screen bg-futuristic">
-      <SEO 
-        title="Comprehensive AI & IT Services 2030 | Zion Tech Group"
-        description="Discover our comprehensive suite of AI-powered services, micro SAAS solutions, and enterprise IT services for 2030. Transform your business with cutting-edge technology."
-        keywords="AI services 2030, micro SAAS, enterprise IT, quantum computing, cybersecurity, cloud migration, digital transformation"
+    <div>
+      <SEO
+        title="Comprehensive Services 2030 - Zion Tech Group"
+        description="Discover our cutting-edge AI, IT infrastructure, and emerging technology services for 2030. Transform your business with innovative solutions."
+        keywords="AI services, IT infrastructure, emerging technology, Zion Tech Group, 2030 services"
       />
 
       {/* Hero Section */}
@@ -423,6 +423,5 @@ export default function ComprehensiveServicesLanding2030() {
           </motion.div>
         )}
       </div>
-    </
-  );
-}>
+    </div>
+  )}

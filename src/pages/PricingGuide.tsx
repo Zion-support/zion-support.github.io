@@ -113,15 +113,15 @@ export default function PricingGuide() {
                   ))}
                   
                   {plan.notIncluded.length > 0 && (
-                    <>
-                      <h4 className="text-lg font-semibold text-white mb-4 mt-6">Not Included:</h4>
-                      {plan.notIncluded.map((feature, featureIndex) => (
+                    <div>
+                      <h4 className="text-lg font-semibold text-white mb-4 mt-6">Not Included: any</h4>
+                      {plan.notIncluded.map((feature, featureIndex)  => (
                         <div key={featureIndex} className="flex items-center text-slate-500">
                           <X className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
                           <span className="text-sm">{feature}</span>
                         </div>
                       ))}
-                    </
+                    </div>
                   )}
                 ></div>
               </div>

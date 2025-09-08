@@ -83,8 +83,8 @@ export default function RevolutionaryServices2030() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+    <div>
+      <SEO
         title="Revolutionary Services 2030 - Zion Tech Group"
         description="Discover our cutting-edge revolutionary services for 2030 including AI-powered autonomous operations, quantum cybersecurity, and next-generation technology solutions."
       />
@@ -370,7 +370,6 @@ export default function RevolutionaryServices2030() {
             </div>
           </motion.div>
         </div>
-      </section>
+      )}
     </div>
-  );
-}
+  )}

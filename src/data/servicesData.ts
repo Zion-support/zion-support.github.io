@@ -1,4 +1,5 @@
-import { ProductListing } from "@/types/listings";
+import React from 'react';
+export interface InnovativeMicroSaasService {
 
 export const SERVICES: ProductListing[] = [
   {

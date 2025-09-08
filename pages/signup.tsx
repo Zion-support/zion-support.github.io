@@ -1,9 +1,24 @@
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion'
-import { useState } from 'react'
+import React from 'react';
+import Head from 'next/head.ts'
+import { motion  } from 'framer-motion.ts'
+import { useState  } from 'react.ts'
+import { User,
+  Mail,
+  Lock,
+  Eye,
+  EyeOff,
+  CheckCircle,
+  AlertCircle,
+  Building,
+  Phone,
+  Globe,
+  Shield,
+  Zap,
+  Brain,
+  Cloud
+ } from 'lucide-react'
 
-
-export default function Signup() {
+export default function Signup(...args[]: any):  {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -99,10 +114,24 @@ export default function Signup() {
   const description = 'Join Zion Tech Group and unlock access to cutting-edge AI, cloud, and cybersecurity solutions.'
 
   return (
-    <>
-      <Head><title>signup - Zion App</title><meta name="description" content="signup page" /></Head><div className="container mx-auto px-4 py-8"><h1 className="text-3xl font-bold mb-6">signup</h1><p className="text-lg mb-4">This page is under construction.</p><div className="mt-4"><a href="/" className="text-blue-600 hover:underline">;
-            ← Back to Home</a></div></div></>;
-  );
+    <div>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://ziontechgroup.com/signup" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content="https://ziontechgroup.com/signup" />
+        <meta property="og:type" content="website" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+      </Helmet>
 
       <main className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark text-white">
         {/* Hero Section */}
@@ -522,6 +551,6 @@ export default function Signup() {
           </div>
         </section>
       </main>
-    </
+    </div>
   )
 }>

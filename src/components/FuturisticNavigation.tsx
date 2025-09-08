@@ -94,7 +94,7 @@ export const FuturisticNavigation: React.FC = (): JSX.Element => {
     }
   ];
   return (
-    <>
+    <div>
       <header className={`sticky top-0 z-50 w-full transition-all duration-500 ${
         scrolled 
           ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' 
@@ -265,6 +265,5 @@ export const FuturisticNavigation: React.FC = (): JSX.Element => {
           </div>
         </div>
       </header>
-    </
-  );
-};>
+    </div>
+  )};

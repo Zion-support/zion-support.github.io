@@ -195,17 +195,45 @@ const ComprehensivePricingGuide2027: React.FC = () => {
               </div>
             </div>
 
-              {/* Category Filter */}
-              <div className="relative">
-                <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-500/50 focus:border-transparent appearance-none cursor-pointer">
-                  {categories.map(category => (
-                    <option key={category} value={category}>{category}</option>
-                  ))}
-                </select>
+                {/* Key Metrics */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                  <div className="text-center p-3 bg-white/5 rounded-lg">
+                    <div className="text-sm text-gray-400 mb-1">Delivery</div>
+                    <div className="text-white font-semibold">{service.estimatedDelivery}</div>
+                  </div>
+                  <div className="text-center p-3 bg-white/5 rounded-lg">
+                    <div className="text-sm text-gray-400 mb-1">Support</div>
+                    <div className="text-white font-semibold capitalize">{service.supportLevel}</div>
+                  </div>
+                  <div className="text-center p-3 bg-white/5 rounded-lg">
+                    <div className="text-sm text-gray-400 mb-1">Market Price</div>
+                    <div className="text-white font-semibold">{service.marketPrice}</div>
+                  </div>
+                  {service.marketSize && (
+                    <div className="text-center p-3 bg-white/5 rounded-lg">
+                      <div className="text-sm text-gray-400 mb-1">Market Size</div>
+                      <div className="text-white font-semibold text-sm">{service.marketSize}</div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Expand/Collapse Button */}
+                <button
+                  onClick={() => toggleServiceExpansion(service.id)}
+                  className="w-full flex items-center justify-center py-3 bg-white/5 hover:bg-white/10 rounded-lg transition-colors text-white"
+                >
+                  {expandedServices.has(service.id) ? (
+                    <div>
+                      <span>Show Less</span>
+                      <ChevronUp className="w-5 h-5 ml-2" />
+                    </div>
+                  ) : (
+                    <div>
+                      <span>Show Details</span>
+                      <ChevronDown className="w-5 h-5 ml-2" />
+                    </div>
+                  )}
+                </button>
               </div>
 
               {/* Price Range Filter */}
@@ -243,6 +271,65 @@ const ComprehensivePricingGuide2027: React.FC = () => {
                       <div className="p-3 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl border border-green-400/30">
                         {getCategoryIcon(service.category)}
                       </div>
+
+                      <h4 className="text-lg font-semibold text-white mb-4">Key Benefits</h4>
+                      <div className="space-y-2">
+                        {service.benefits.map((benefit, idx) => (
+                          <div key={idx} className="flex items-center text-gray-300">
+                            <TrendingUp className="w-4 h-4 text-blue-400 mr-3 flex-shrink-0" />
+                            <span>{benefit}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Technical Specs and Use Cases */}
+                    <div>
+                      <h4 className="text-lg font-semibold text-white mb-4">Use Cases</h4>
+                      <div className="space-y-2 mb-6">
+                        {service.useCases.map((useCase, idx) => (
+                          <div key={idx} className="flex items-center text-gray-300">
+                            <Target className="w-4 h-4 text-purple-400 mr-3 flex-shrink-0" />
+                            <span>{useCase}</span>
+                          </div>
+                        ))}
+                      </div>
+
+                      {service.technicalSpecs && (
+                        <div>
+                          <h4 className="text-lg font-semibold text-white mb-4">Technical Specifications</h4>
+                          <div className="grid grid-cols-2 gap-4 text-sm text-gray-300">
+                            <div>
+                              <span className="text-gray-400">Uptime:</span>
+                              <div className="text-white font-semibold">{service.technicalSpecs.uptime}</div>
+                            </div>
+                            <div>
+                              <span className="text-gray-400">API Endpoints:</span>
+                              <div className="text-white font-semibold">{service.technicalSpecs.apiEndpoints}</div>
+                            </div>
+                            <div>
+                              <span className="text-gray-400">Technologies:</span>
+                              <div className="text-white font-semibold text-xs">
+                                {service.technicalSpecs.technology.slice(0, 3).join(', ')}
+                                {service.technicalSpecs.technology.length > 3 && '...'}
+                              </div>
+                            </div>
+                            <div>
+                              <span className="text-gray-400">Security:</span>
+                              <div className="text-white font-semibold text-xs">
+                                {service.technicalSpecs.security.slice(0, 2).join(', ')}
+                                {service.technicalSpecs.security.length > 2 && '...'}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Target Audience and Competitors */}
+                  <div className="mt-8 pt-6 border-t border-white/20">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                       <div>
                         <div className="text-sm uppercase tracking-wide text-cyan-300/70 font-medium mb-1">
                           {service.category}

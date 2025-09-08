@@ -47,67 +47,54 @@ const services = [
   }
 ];
 
-const benefits = [
-  {
-    icon: Target,
-    title: 'Focused Solutions',
-    description: 'Tailored technology solutions that address your specific business needs'
-  },
-  {
-    icon: Clock,
-    title: 'Fast Delivery',
-    description: 'Rapid development and deployment to get you to market quickly'
-  },
-  {
-=======
-    description: '20+ cutting-edge AI solutions including machine learning, computer vision, NLP, and quantum AI',
-    icon: Brain,
-    link: '/ai-services',
-    color: 'from-blue-500 to-purple-600',
-    stats: '20+ AI Solutions',
-    pricing: 'Starting at $1,800/month'
-  },
-  {
-    title: 'IT Services',
-    description: '25+ comprehensive IT services from cloud infrastructure to quantum computing and 6G networks',
-    icon: Network,
-    link: '/it-services',
-    color: 'from-green-500 to-blue-600',
-    stats: '25+ IT Services',
-    pricing: 'Starting at $1,999/month'
-  },
-  {
-    title: 'Micro SAAS',
-    description: '30+ innovative micro SaaS solutions for modern businesses across all industries',
-    icon: Cloud,
-    link: '/micro-saas',
-    color: 'from-purple-500 to-pink-600',
-    stats: '30+ SaaS Solutions',
-    pricing: 'Starting at $15/month'
-  },
-  {
-    title: 'Cloud Solutions',
-    description: 'Scalable cloud infrastructure, migration services, and DevOps automation',
-    icon: Globe,
-    link: '/cloud-solutions',
-    color: 'from-indigo-500 to-cyan-600',
-    stats: 'Multi-Cloud Support',
-    pricing: 'Starting at $1,800/month'
-  },
-  {
-    title: 'Cybersecurity',
-    description: 'Advanced security solutions with AI-powered threat detection and zero-trust architecture',
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
-    icon: Shield,
-    title: 'Enterprise Security',
-    description: 'Bank-level security and compliance for all our solutions'
-  },
-  {
-    icon: BarChart3,
-    title: 'Proven Results',
-    description: 'Track record of delivering measurable business value'
-  }
-];
+	return (
+		<div>
+			{/* Hero Section */}
+			<section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20 sm:py-32 overflow-hidden">
+				{/* Animated Background Elements */}
+				<div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,212,255,0.1),transparent_50%)]" />
+				<div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.1),transparent_50%)]" />
+				
+				<div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="mx-auto max-w-4xl text-center">
+						<div className="mb-8">
+							<div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
+								<Zap className="w-4 h-4 mr-2" />
+								Leading Technology Innovation Since 2020
+							</div>
+						</div>
+						
+						<h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl">
+							Building the Future of
+							<span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+								Business Technology
+							</span>
+						</h1>
+						
+						<p className="mt-8 text-xl leading-8 text-gray-300 max-w-3xl mx-auto">
+							Zion Tech Group delivers cutting-edge AI, cloud, and cybersecurity solutions that transform how businesses operate and compete in the digital economy.
+						</p>
+						
+						<div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+							<Link
+								to="/services"
+								className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
+							>
+								<span className="relative z-10">Explore Our Services</span>
+								<div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+							</Link>
+							
+							<Link
+								to="/contact"
+								className="group px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-xl hover:bg-blue-400 hover:text-white transition-all duration-300"
+							>
+								Get in Touch 
+								<ArrowRight className="ml-2 h-5 w-5 inline transition-transform group-hover:translate-x-1" />
+							</Link>
+						</div>
+					</div>
+				</div>
+			</section>
 
 const contactInfo = [
   {
@@ -230,6 +217,6 @@ export default function HomePage() {
 					</div>
 				</div>
 			</section>
-		</
+		</div>
 	)
 }>

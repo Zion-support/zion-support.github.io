@@ -15,7 +15,8 @@ declare module 'jspdf' {
     splitTextToSize(text: string, size: number): string[];
     output(type?: string): unknown;
   }
-  export function autoTable(...args: unknown[]): void;
+  export function autoTable(...args: any[]): void;
+  return null;
 }
 
 declare module 'jspdf-autotable' {

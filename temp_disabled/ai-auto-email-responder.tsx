@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function AIAutoEmailResponder() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Auto Email Responder - Zion Tech Group</title>
         <meta name="description" content="Automate your email responses with AI-powered email management. Faster replies, CRM logging, and intelligent email automation." />
@@ -374,6 +374,6 @@ export default function AIAutoEmailResponder() {
           </div>
         </section>
       </div>
-    </
+    </div>
   );
 }>

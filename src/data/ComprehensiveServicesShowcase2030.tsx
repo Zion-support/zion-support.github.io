@@ -384,7 +384,7 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {
   };
 
   return (
-    <>
+    <div>
       <SEO
         title="Comprehensive Services Showcase 2030 - Zion Tech Group"
         description="Explore our cutting-edge micro SAAS, IT infrastructure, and AI services. Discover innovative solutions with real market data, competitive pricing, and proven ROI."
@@ -557,8 +557,7 @@ const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {
           </div>
         </div>
       </div>
-    </
-  );
-};
+    </div>
+  )};
 
 export default ComprehensiveServicesShowcase2030;>

@@ -260,10 +260,10 @@ import { Search } from "lucide-react";
                     </div>
                   </motion.article>
                 ))}
+              </div>
             </div>
-          </div>
-        </section>
-      )}
+          </section>
+        )}
 
       {/* All Posts Grid */}
       <section className="py-16 px-4">

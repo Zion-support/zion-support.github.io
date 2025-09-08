@@ -1,295 +1,450 @@
 #!/usr/bin/env node
 
-/**
- * Build Error Fixer - PM2 Automation
- * Automatically detects and fixes build errors
- * Runs every 30 minutes to ensure successful builds
- */
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+const glob = require('glob');
 
 class BuildErrorFixer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.reportFile = path.join(this.projectRoot, 'build-error-fixer-report.json');
-    this.fixesApplied = 0;
-    this.errorsFixed = [];
-    this.warnings = [];
+    this.reportsDir = path.join(this.projectRoot, 'reports');
+    this.errorsFixed = 0;
+    this.filesProcessed = 0;
     this.startTime = Date.now();
+    
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
   }
 
-  log(message, type = 'info') {
+  log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
-    const colors = {
-      info: '\x1b[34m',
-      success: '\x1b[32m',
-      warning: '\x1b[33m',
-      error: '\x1b[31m',
-      reset: '\x1b[0m'
-    };
-    
-    console.log(`${colors[type]}[${type.toUpperCase()}]${colors.reset} [${timestamp}] ${message}`);
+    console.log(`[${timestamp}] [${level}] ${message}`);
   }
 
-  async run() {
-    this.log('🚀 Starting Build Error Fixer...', 'info');
-    
+  async runCommand(command, options = {}) {
     try {
-      // Step 1: Check current build status
-      const buildStatus = await this.checkBuildStatus();
-      
-      if (buildStatus.success) {
-        this.log('✅ Build is already successful, no fixes needed', 'success');
-        return;
-      }
-      
-      // Step 2: Fix build errors
-      await this.fixBuildErrors(buildStatus.errors);
-      
-      // Step 3: Verify build after fixes
-      const verificationStatus = await this.verifyBuild();
-      
-      // Step 4: Generate report
-      await this.generateReport(buildStatus, verificationStatus);
-      
-      this.log(`✅ Build Error Fixer completed! Fixed ${this.fixesApplied} issues`, 'success');
-      
-    } catch (error) {
-      this.log(`❌ Error in Build Error Fixer: ${error.message}`, 'error');
-      this.warnings.push(`Runtime error: ${error.message}`);
-    }
-  }
-
-  async checkBuildStatus() {
-    this.log('🔍 Checking build status...', 'info');
-    
-    try {
-      const result = execSync('npm run build', { 
+      const result = execSync(command, { 
         cwd: this.projectRoot, 
         encoding: 'utf8',
-        stdio: 'pipe'
+        stdio: 'pipe',
+        ...options 
       });
-      
-      return { success: true, errors: [] };
-      
+      return { success: true, output: result };
     } catch (error) {
-      const output = error.stdout ? error.stdout.toString() : '';
-      const errors = this.parseBuildErrors(output);
-      
-      return { success: false, errors };
+      return { 
+        success: false, 
+        error: error.message, 
+        output: error.stdout?.toString() || error.stderr?.toString() || ''
+      };
     }
   }
 
-  parseBuildErrors(buildOutput) {
-    const errors = [];
+  async fixBuildErrors() {
+    this.log('Starting build error fixing...');
     
-    // Parse esbuild errors
-    const esbuildErrors = buildOutput.match(/ERROR:\s*([^\n]+)/g);
-    if (esbuildErrors) {
-      esbuildErrors.forEach(error => {
-        const message = error.replace('ERROR:', '').trim();
-        errors.push({
-          type: 'esbuild',
-          message,
-          file: this.extractFileName(message),
-          line: this.extractLineNumber(message)
-        });
-      });
-    }
+    // Fix configuration issues
+    await this.fixConfigurationIssues();
     
-    // Parse Vite errors
-    const viteErrors = buildOutput.match(/Build failed[^:]*:\s*([^\n]+)/g);
-    if (viteErrors) {
-      viteErrors.forEach(error => {
-        const message = error.replace(/Build failed[^:]*:\s*/, '').trim();
-        errors.push({
-          type: 'vite',
-          message,
-          file: this.extractFileName(message),
-          line: this.extractLineNumber(message)
-        });
-      });
-    }
+    // Fix dependency issues
+    await this.fixDependencyIssues();
     
-    return errors;
+    // Fix specific build errors
+    await this.fixSpecificBuildErrors();
+    
+    // Fix import and export issues
+    await this.fixImportExportIssues();
   }
 
-  extractFileName(errorMessage) {
-    const fileMatch = errorMessage.match(/\/workspace\/([^:]+)/);
-    return fileMatch ? fileMatch[1] : 'unknown';
-  }
-
-  extractLineNumber(errorMessage) {
-    const lineMatch = errorMessage.match(/:(\d+):/);
-    return lineMatch ? parseInt(lineMatch[1]) : 0;
-  }
-
-  async fixBuildErrors(errors) {
-    this.log(`🔧 Fixing ${errors.length} build errors...`, 'info');
+  async fixConfigurationIssues() {
+    this.log('Fixing configuration issues...');
     
-    for (const error of errors) {
+    // Fix package.json
+    await this.fixPackageJson();
+    
+    // Fix ESLint config
+    await this.fixESLintConfig();
+    
+    // Fix TypeScript config
+    await this.fixTypeScriptConfig();
+    
+    // Fix Vite config
+    await this.fixViteConfig();
+  }
+
+  async fixPackageJson() {
+    const packageJsonPath = path.join(this.projectRoot, 'package.json');
+    if (fs.existsSync(packageJsonPath)) {
       try {
-        await this.fixSpecificError(error);
-      } catch (fixError) {
-        this.warnings.push(`Could not fix error in ${error.file}: ${fixError.message}`);
-      }
-    }
-  }
+        const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+        let modified = false;
 
-  async fixSpecificError(error) {
-    const filePath = path.join(this.projectRoot, error.file);
-    
-    if (!fs.existsSync(filePath)) {
-      this.warnings.push(`File not found: ${error.file}`);
-      return;
-    }
-    
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    
-    switch (error.type) {
-      case 'esbuild':
-        content = await this.fixESBuildError(content, error);
-        break;
-      case 'vite':
-        content = await this.fixViteError(content, error);
-        break;
-      default:
-        content = await this.fixGenericBuildError(content, error);
-    }
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      this.errorsFixed.push(`Fixed ${error.type} error in ${error.file}: ${error.message}`);
-      this.fixesApplied++;
-    }
-  }
+        // Ensure all required dependencies are present
+        const requiredDevDeps = [
+          'globals',
+          '@types/node',
+          'typescript',
+          'eslint',
+          '@typescript-eslint/eslint-plugin',
+          '@typescript-eslint/parser'
+        ];
 
-  async fixESBuildError(content, error) {
-    // Fix duplicate symbol declarations
-    if (error.message.includes('already been declared')) {
-      const symbolMatch = error.message.match(/The symbol "([^"]+)" has already been declared/);
-      if (symbolMatch) {
-        const symbol = symbolMatch[1];
-        const duplicatePattern = new RegExp(`\\b${symbol}\\b.*=.*\\b${symbol}\\b`, 'g');
-        content = content.replace(duplicatePattern, symbol);
-      }
-    }
-    
-    // Fix unexpected token errors
-    if (error.message.includes('Expected ";" but found')) {
-      const tokenMatch = error.message.match(/Expected "([^"]+)" but found "([^"]+)"/);
-      if (tokenMatch) {
-        const expected = tokenMatch[1];
-        const found = tokenMatch[2];
-        
-        if (expected === ';' && found === ')') {
-          // Fix missing semicolon before closing parenthesis
-          content = content.replace(/\)\s*\)/g, '); )');
+        for (const dep of requiredDevDeps) {
+          if (!packageJson.devDependencies[dep]) {
+            this.log(`Adding missing dev dependency: ${dep}`);
+            await this.runCommand(`npm install --save-dev ${dep}`);
+            modified = true;
+          }
         }
-      }
-    }
-    
-    // Fix malformed JSX
-    if (error.message.includes('JSX element')) {
-      // Fix unclosed JSX tags
-      const openTags = (content.match(/<([A-Z][a-zA-Z]*)/g) || []);
-      const closeTags = (content.match(/<\/([^>]*)/g) || []);
-      
-      if (openTags.length > closeTags.length) {
-        const missingTags = openTags.length - closeTags.length;
-        for (let i = 0; i < missingTags; i++) {
-          content += '\n      </div>';
+
+        // Ensure all required dependencies are present
+        const requiredDeps = [
+          'react',
+          'react-dom',
+          'vite',
+          '@vitejs/plugin-react'
+        ];
+
+        for (const dep of requiredDeps) {
+          if (!packageJson.dependencies[dep]) {
+            this.log(`Adding missing dependency: ${dep}`);
+            await this.runCommand(`npm install ${dep}`);
+            modified = true;
+          }
         }
-      }
-    }
-    
-    return content;
-  }
 
-  async fixViteError(content, error) {
-    // Fix module resolution issues
-    if (error.message.includes('Cannot resolve module')) {
-      const moduleMatch = error.message.match(/Cannot resolve module '([^']+)'/);
-      if (moduleMatch) {
-        const module = moduleMatch[1];
-        
-        // Fix common module resolution issues
-        if (module.includes('.ts')) {
-          content = content.replace(new RegExp(`from ['"]${module}['"]`, 'g'), `from '${module.replace('.ts', '')}'`);
+        if (modified) {
+          this.log('Fixed package.json dependencies');
+          this.errorsFixed++;
         }
+      } catch (error) {
+        this.log(`Error fixing package.json: ${error.message}`, 'ERROR');
       }
     }
-    
-    // Fix syntax errors
-    if (error.message.includes('Unexpected token')) {
-      // Fix common syntax issues
-      content = content.replace(/any'([^']+)'/g, "'$1'");
-      content = content.replace(/any\(/g, '(');
-      content = content.replace(/any\)/g, ')');
-      content = content.replace(/any\{/g, '{');
-      content = content.replace(/any\}/g, '}');
-    }
-    
-    return content;
   }
 
-  async fixGenericBuildError(content, error) {
-    // Generic fixes for common build issues
-    
-    // Fix malformed imports
-    content = content.replace(/from 'lucide-react\.ts';/g, "from 'lucide-react';");
-    content = content.replace(/}\s*from '([^']+)';/g, "} from '$1';");
-    
-    // Fix malformed JSX
-    content = content.replace(/<\/>([a-zA-Z][a-zA-Z0-9]*)/g, '</$1>');
-    content = content.replace(/transition=\{\{\s*duration:\s*any(\d+\.?\d*)/g, 'transition={{ duration: $1');
-    
-    // Fix malformed TypeScript
-    content = content.replace(/:\s*any\(([^)]+)\)\s*=>/g, ': ($1) =>');
-    content = content.replace(/:\s*any\{/g, ': {');
-    
-    return content;
-  }
+  async fixESLintConfig() {
+    const eslintConfigPath = path.join(this.projectRoot, 'eslint.config.js');
+    if (fs.existsSync(eslintConfigPath)) {
+      try {
+        let content = fs.readFileSync(eslintConfigPath, 'utf8');
+        let modified = false;
 
-  async verifyBuild() {
-    this.log('✅ Verifying build after fixes...', 'info');
-    
-    try {
-      const result = execSync('npm run build', { 
-        cwd: this.projectRoot, 
-        encoding: 'utf8',
-        stdio: 'pipe'
-      });
-      
-      return { success: true, message: 'Build successful after fixes' };
-      
-    } catch (error) {
-      const output = error.stdout ? error.stdout.toString() : '';
-      return { success: false, message: 'Build still failing after fixes', output };
+        // Ensure proper module syntax
+        if (content.includes('module.exports =')) {
+          content = content.replace('module.exports =', 'export default');
+          modified = true;
+        }
+
+        // Ensure globals import is present
+        if (!content.includes("import globals from 'globals'")) {
+          content = content.replace(
+            "import js from '@eslint/js';",
+            "import js from '@eslint/js';\nimport globals from 'globals';"
+          );
+          modified = true;
+        }
+
+        if (modified) {
+          fs.writeFileSync(eslintConfigPath, content);
+          this.log('Fixed ESLint configuration');
+          this.errorsFixed++;
+        }
+      } catch (error) {
+        this.log(`Error fixing ESLint config: ${error.message}`, 'ERROR');
+      }
     }
   }
 
-  async generateReport(initialStatus, verificationStatus) {
-    const report = {
-      timestamp: new Date().toISOString(),
-      duration: Date.now() - this.startTime,
-      initialBuildStatus: initialStatus,
-      verificationStatus: verificationStatus,
-      fixesApplied: this.fixesApplied,
-      errorsFixed: this.errorsFixed,
-      warnings: this.warnings,
-      status: verificationStatus.success ? 'success' : 'partial-success'
-    };
-    
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`📊 Report generated: ${this.reportFile}`, 'info');
+  async fixTypeScriptConfig() {
+    const tsConfigPath = path.join(this.projectRoot, 'tsconfig.json');
+    if (fs.existsSync(tsConfigPath)) {
+      try {
+        const tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'));
+        let modified = false;
+
+        // Ensure proper TypeScript configuration
+        if (!tsConfig.compilerOptions) {
+          tsConfig.compilerOptions = {};
+          modified = true;
+        }
+
+        const requiredOptions = {
+          target: 'ES2020',
+          lib: ['ES2020', 'DOM', 'DOM.Iterable'],
+          allowJs: true,
+          skipLibCheck: true,
+          esModuleInterop: true,
+          allowSyntheticDefaultImports: true,
+          strict: true,
+          forceConsistentCasingInFileNames: true,
+          noFallthroughCasesInSwitch: true,
+          module: 'ESNext',
+          moduleResolution: 'node',
+          resolveJsonModule: true,
+          isolatedModules: true,
+          noEmit: true,
+          jsx: 'react-jsx'
+        };
+
+        for (const [key, value] of Object.entries(requiredOptions)) {
+          if (tsConfig.compilerOptions[key] !== value) {
+            tsConfig.compilerOptions[key] = value;
+            modified = true;
+          }
+        }
+
+        if (modified) {
+          fs.writeFileSync(tsConfigPath, JSON.stringify(tsConfig, null, 2));
+          this.log('Fixed TypeScript configuration');
+          this.errorsFixed++;
+        }
+      } catch (error) {
+        this.log(`Error fixing TypeScript config: ${error.message}`, 'ERROR');
+      }
   }
 }
 
-// Main execution
+  async fixViteConfig() {
+    const viteConfigPath = path.join(this.projectRoot, 'vite.config.ts');
+    if (fs.existsSync(viteConfigPath)) {
+      try {
+        let content = fs.readFileSync(viteConfigPath, 'utf8');
+        let modified = false;
+
+        // Ensure proper Vite configuration
+        if (!content.includes('@vitejs/plugin-react')) {
+          content = content.replace(
+            "import { defineConfig } from 'vite'",
+            "import { defineConfig } from 'vite'\nimport react from '@vitejs/plugin-react'"
+          );
+          modified = true;
+        }
+
+        if (!content.includes('plugins: [react()]')) {
+          content = content.replace(
+            'export default defineConfig({',
+            'export default defineConfig({\n  plugins: [react()],'
+          );
+          modified = true;
+        }
+
+        if (modified) {
+          fs.writeFileSync(viteConfigPath, content);
+          this.log('Fixed Vite configuration');
+          this.errorsFixed++;
+        }
+      } catch (error) {
+        this.log(`Error fixing Vite config: ${error.message}`, 'ERROR');
+      }
+    }
+  }
+
+  async fixDependencyIssues() {
+    this.log('Fixing dependency issues...');
+    
+    try {
+      // Clean install dependencies
+      this.log('Cleaning and reinstalling dependencies...');
+      await this.runCommand('rm -rf node_modules package-lock.json');
+      await this.runCommand('npm install');
+      
+      this.log('Dependencies reinstalled successfully');
+      this.errorsFixed++;
+    } catch (error) {
+      this.log(`Error fixing dependencies: ${error.message}`, 'ERROR');
+    }
+  }
+
+  async fixSpecificBuildErrors() {
+    this.log('Fixing specific build errors...');
+    
+    // Fix the specific ChatAssistant.tsx error
+    const chatAssistantPath = path.join(this.projectRoot, 'src/components/ChatAssistant.tsx');
+    if (fs.existsSync(chatAssistantPath)) {
+      try {
+        let content = fs.readFileSync(chatAssistantPath, 'utf8');
+        let modified = false;
+
+        // Fix the specific syntax error
+        if (content.includes('(window as ).webkitSpeechRecognition')) {
+          content = content.replace(
+            '(window as ).webkitSpeechRecognition',
+            '(window as any).webkitSpeechRecognition'
+          );
+          modified = true;
+        }
+
+        if (modified) {
+          fs.writeFileSync(chatAssistantPath, content);
+          this.log('Fixed ChatAssistant.tsx build error');
+          this.errorsFixed++;
+        }
+      } catch (error) {
+        this.log(`Error fixing ChatAssistant.tsx: ${error.message}`, 'ERROR');
+      }
+    }
+
+    // Fix other common build errors
+    await this.fixJSXSyntaxErrors();
+  }
+
+  async fixJSXSyntaxErrors() {
+    this.log('Fixing JSX syntax errors...');
+    
+    const patterns = ['src/**/*.{ts,tsx}', 'pages/**/*.{ts,tsx}'];
+    
+    for (const pattern of patterns) {
+      const files = glob.sync(pattern, { cwd: this.projectRoot });
+      
+      for (const file of files) {
+        const filePath = path.join(this.projectRoot, file);
+        if (fs.existsSync(filePath)) {
+          await this.fixJSXInFile(filePath);
+        }
+      }
+    }
+  }
+
+  async fixJSXInFile(filePath) {
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      let modified = false;
+
+      // Fix JSX syntax errors
+      if (content.includes('<>') || content.includes('</>')) {
+        content = content.replace(/<>/g, '<div>');
+        content = content.replace(/<\/>/g, '</div>');
+        modified = true;
+      }
+
+      // Fix missing React imports
+      if (content.includes('React') && !content.includes("import React") && !content.includes("import * as React")) {
+        content = "import React from 'react';\n" + content;
+        modified = true;
+      }
+
+      if (modified) {
+        fs.writeFileSync(filePath, content);
+        this.errorsFixed++;
+        this.log(`Fixed JSX issues in: ${filePath}`);
+      }
+      
+      this.filesProcessed++;
+    } catch (error) {
+      this.log(`Error processing file ${filePath}: ${error.message}`, 'ERROR');
+    }
+  }
+
+  async fixImportExportIssues() {
+    this.log('Fixing import/export issues...');
+    
+    const patterns = ['src/**/*.{ts,tsx}', 'pages/**/*.{ts,tsx}'];
+    
+    for (const pattern of patterns) {
+      const files = glob.sync(pattern, { cwd: this.projectRoot });
+      
+      for (const file of files) {
+        const filePath = path.join(this.projectRoot, file);
+        if (fs.existsSync(filePath)) {
+          await this.fixImportExportInFile(filePath);
+        }
+      }
+    }
+  }
+
+  async fixImportExportInFile(filePath) {
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      let modified = false;
+
+      // Fix relative imports
+      content = content.replace(/from\s+['"]\.\.\/\.\.\/\.\.\/\.\.\//g, "from '../../../");
+      content = content.replace(/from\s+['"]\.\.\/\.\.\/\.\.\//g, "from '../../");
+      content = content.replace(/from\s+['"]\.\.\/\.\.\//g, "from '../");
+      
+      // Fix missing file extensions
+      content = content.replace(/from\s+['"]([^'"]+)['"]/g, (match, importPath) => {
+        if (importPath.startsWith('.') && !importPath.includes('.')) {
+          return `from '${importPath}.tsx'`;
+        }
+        return match;
+      });
+
+      if (modified) {
+        fs.writeFileSync(filePath, content);
+        this.errorsFixed++;
+        this.log(`Fixed imports in: ${filePath}`);
+      }
+    } catch (error) {
+      this.log(`Error fixing imports in ${filePath}: ${error.message}`, 'ERROR');
+    }
+  }
+
+  async testBuild() {
+    this.log('Testing build...');
+    
+    try {
+      const result = await this.runCommand('npm run build');
+      if (result.success) {
+        this.log('Build test passed successfully');
+        return true;
+      } else {
+        this.log(`Build test failed: ${result.error}`, 'WARN');
+        return false;
+      }
+    } catch (error) {
+      this.log(`Build test error: ${error.message}`, 'ERROR');
+      return false;
+    }
+  }
+
+  async generateReport() {
+    const endTime = Date.now();
+    const duration = endTime - this.startTime;
+    
+    const report = {
+      timestamp: new Date().toISOString(),
+      duration: `${duration}ms`,
+      filesProcessed: this.filesProcessed,
+      errorsFixed: this.errorsFixed,
+      success: this.errorsFixed > 0,
+      summary: `Processed ${this.filesProcessed} files and fixed ${this.errorsFixed} build errors in ${duration}ms`
+    };
+
+    const reportPath = path.join(this.reportsDir, 'build-error-fixer-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
+    this.log(`Report generated: ${reportPath}`);
+    this.log(report.summary);
+    
+    return report;
+  }
+
+  async run() {
+    this.log('Starting Build Error Fixer...');
+    
+    try {
+      await this.fixBuildErrors();
+      
+      // Test the build
+      const buildSuccess = await this.testBuild();
+      
+      const report = await this.generateReport();
+      report.buildSuccess = buildSuccess;
+      
+      this.log('Build Error Fixer completed successfully');
+      return report;
+      
+    } catch (error) {
+      this.log(`Build error fixing failed: ${error.message}`, 'ERROR');
+      throw error;
+    }
+  }
+}
+
+// Run the automation if called directly
 if (require.main === module) {
   const fixer = new BuildErrorFixer();
   fixer.run().catch(console.error);

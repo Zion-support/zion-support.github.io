@@ -56,29 +56,44 @@ export default function AutonomousBusinessOperationsPlatform() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Autonomous Business Operations Platform
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Transform your business with AI-powered autonomous systems that operate independently and optimize operations 24/7.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Get Started
-            </Link>
-            <Link 
-              to="/request-quote" 
-              className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-900 transition-colors"
-            >
-              Request Quote
-            </Link>
+    <div>
+      <SEO 
+        title="AI Autonomous Business Operations Platform | Zion Tech Group"
+        description="Transform your business with AI-powered autonomous operations. Reduce costs by 40%, improve efficiency by 60%, and achieve 24/7 automated operations."
+        keywords="AI autonomous operations, business automation, process optimization, intelligent workflows, enterprise automation"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <div className="mb-8">
+              <div className="inline-flex items-center px-4 py-2 bg-green-600/20 text-green-400 rounded-full text-sm font-medium mb-6">
+                <Bot className="w-4 h-4 mr-2"/>
+                Autonomous Operations
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                AI-Powered Autonomous
+                <span className="block bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
+                  Business Operations
+                </span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Transform your business with intelligent automation that learns, adapts, and optimizes operations 24/7. 
+                Reduce costs by 40% and improve efficiency by 60%.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-green-400 hover:to-cyan-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-green-500/30 flex items-center">
+                  <Rocket className="w-5 h-5 mr-2"/>
+                  Start Free Trial
+                </button>
+                <button className="px-8 py-4 border border-green-400/50 text-green-400 font-semibold rounded-xl hover:bg-green-400/20 transition-all duration-300 flex items-center">
+                  <ArrowRight className="w-5 h-5 mr-2"/>
+                  Schedule Demo
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -116,8 +131,7 @@ export default function AutonomousBusinessOperationsPlatform() {
           </div>
         </section>
       </div>
-    </
-  );
-};
+    </div>
+  )};
 
 export default AutonomousBusinessOperationsPlatform;>

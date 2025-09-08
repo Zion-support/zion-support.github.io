@@ -264,9 +264,83 @@ export const ModernUIEnhancer: React.FC = () => {
           </motion.button>)}
       </AnimatePresence>
 
-      {/* Floating Action Button */}
-      <motion.button initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsVisible(!isVisible)} className="fixed bottom-6 right-6 z-50 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300" title="UI Enhancements">
-        <Palette className="w-5 h-5"/>
+  const setupSmoothScrolling = () => {
+    // Add smooth scrolling to all anchor links
+    const links = document.querySelectorAll('a[href^="#"]');
+    
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href')?.substring(1);
+        const targetElement = document.getElementById(targetId || '');
+        
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          })}
+      })})};
+
+  const applyUISettings = () => {
+    const root = document.documentElement;
+    
+    // Apply glassmorphism
+    if (settings.glassmorphism) {
+      root.classList.add('glassmorphism-enabled')} else {
+      root.classList.remove('glassmorphism-enabled')}
+    
+    // Apply enhanced animations
+    if (settings.enhancedAnimations) {
+      root.classList.add('enhanced-animations')} else {
+      root.classList.remove('enhanced-animations')}
+    
+    // Apply modern shadows
+    if (settings.modernShadows) {
+      root.classList.add('modern-shadows')} else {
+      root.classList.remove('modern-shadows')}
+    
+    // Apply depth layers
+    if (settings.depthLayers) {
+      root.classList.add('depth-layers')} else {
+      root.classList.remove('depth-layers')}
+    
+    // Apply color themes
+    if (settings.colorThemes) {
+      root.classList.add('color-themes')} else {
+      root.classList.remove('color-themes')}
+    
+    // Apply active theme
+    root.className = root.className.replace(/theme-\w+/g, '');
+    root.classList.add(`theme-${activeTheme}`)};
+
+  const cleanupUIEnhancements = () => {
+    // Remove added styles
+    const addedStyles = document.querySelectorAll('style[data-ui-enhancer]');
+    addedStyles.forEach(style => style.remove());
+    
+    // Remove added classes
+    const root = document.documentElement;
+    root.className = root.className.replace(/ui-enhanced|glassmorphism-enabled|enhanced-animations|modern-shadows|depth-layers|color-themes|theme-\w+/g, '')};
+
+  const toggleSetting = (setting: keyof UISettings)  => {
+    setSettings(prev => ({ ...prev, [setting]: !prev[setting] }))};
+
+  const changeTheme = (theme: string)  => {
+    setActiveTheme(theme)};
+
+  return (
+    <div>
+      {/* UI Enhancement Toggle Button */}
+      <motion.button
+        whileHover={{ scale: 1.05, rotate: 5 }}
+        whileTap={{ scale: 0.95 }}
+        onClick={() => setIsOpen(!isOpen)}
+        className="fixed bottom-4 left-20 bg-gradient-to-r from-pink-500 to-purple-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 z-50 glass-effect"
+        aria-label="UI Enhancement settings"
+        aria-expanded={isOpen}
+        aria-controls="ui-enhancement-panel"
+      >
+        <Sparkles size={24} />
       </motion.button>
 
       {/* UI Enhancement Panel */}
@@ -383,6 +457,5 @@ export const ModernUIEnhancer: React.FC = () => {
           />
         </div>
       )}
-    </
-  );
-};>
+    </div>
+  )};

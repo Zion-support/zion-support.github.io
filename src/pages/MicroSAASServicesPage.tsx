@@ -437,6 +437,8 @@ export default function MicroSAASServicesPage() {
           </div>
         </div>
       </div>
+    </div>
+  )};
 
       {/* Category Filter */}
       <div className="py-8 bg-zion-blue-dark/50">

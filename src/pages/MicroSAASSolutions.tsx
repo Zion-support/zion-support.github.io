@@ -123,7 +123,7 @@ export default function MicroSAASSolutions() {
   ];
 
   return (
-    <>
+    <div>
       <SEO 
         title="Micro SAAS Solutions - Custom Software Development"
         description="Transform your business with custom Micro SAAS solutions. From development to deployment, we deliver scalable, secure, and efficient software-as-a-service applications."
@@ -327,6 +327,5 @@ export default function MicroSAASSolutions() {
           </div>
         </section>
       </div>
-    </
-  );
-}>
+    </div>
+  )}

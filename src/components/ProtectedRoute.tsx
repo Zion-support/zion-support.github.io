@@ -27,6 +27,6 @@ export function ProtectedRoute({ children, requireAuth = true, roles = [] }: Pro
     return <Navigate to="/unauthorized" replace />;
   }
 
-  return <>{children}</;
+  return <div>{children}</div>;
 }
 >

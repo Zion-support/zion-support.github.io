@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function MicroSAASSolutions() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group</title>
         <meta name="description" content="Build and scale your micro SaaS business with our comprehensive solutions. From development to deployment and growth strategies." />
@@ -406,6 +406,6 @@ export default function MicroSAASSolutions() {
           </div>
         </section>
       </div>
-    </
+    </div>
   );
 }>

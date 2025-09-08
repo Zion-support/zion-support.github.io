@@ -163,14 +163,14 @@ export default function Login() {
               className="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
             >
               {isLoading ? (
-                <div className="flex items-center">
-                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                  Signing in...
+                <div>
+                  <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                  Signing In...
                 </div>
               ) : (
-                <div className="flex items-center">
+                <div>
                   Sign In
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight className="h-5 w-5" />
                 </div>
               )}
             </button>

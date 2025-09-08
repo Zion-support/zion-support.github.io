@@ -1,5 +1,5 @@
-// Comprehensive Pricing Guide 2027 - Zion Tech Group
-// Complete pricing information for all innovative micro SAAS services
+import React from 'react';
+export interface ComprehensivePricingItem2027 {
 
 export interface PricingTier {
   name: string;

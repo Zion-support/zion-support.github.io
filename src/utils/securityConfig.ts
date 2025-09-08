@@ -1,3 +1,4 @@
+import React from 'react';
 export const securityConfig = {
   // Content Security Policy
   csp: {
@@ -49,7 +50,7 @@ export const securityConfig = {
 };
 
 // Security middleware for Express/Node.js
-export const securityMiddleware = (req: any, res: any, next: any) => {
+export const securityMiddleware = (req: any, res: any, next: anyany) => {
   // Set security headers
   Object.entries(securityConfig.headers).forEach(([key, value]) => {
     res.setHeader(key, value);
@@ -64,7 +65,7 @@ export const securityMiddleware = (req: any, res: any, next: any) => {
 // Input sanitization
 export const sanitizeInput = (input: string): string => {
   return input
-    .replace(/[<>]/g, '') // Remove < and >
+    .replace(/[<div>]/g, '') // Remove < and >
     .replace(/javascript:/gi, '') // Remove javascript: protocol
     .replace(/on\w+=/gi, '') // Remove event handlers
     .trim();
@@ -79,7 +80,7 @@ export const escapeHtml = (text: string): string => {
     '"': '&quot;',
     "'": '&#039;',
   };
-  return text.replace(/[&<>"']/g, (m) => map[m]);
+  return text.replace(/[&<div>"']/g, (m) => map[m]);
 };
 
 // CSRF Token generation

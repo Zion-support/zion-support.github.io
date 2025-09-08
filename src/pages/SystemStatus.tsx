@@ -1,150 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-
-import { SEO } from '../components/SEO';
-
-interface ServiceStatus {
-  id: string;
-  name: string;
-  status: 'operational' | 'degraded' | 'outage' | 'maintenance';
-  uptime: number;
-  responseTime: number;
-  lastUpdated: string;
-  description: string;
-  icon: React.ComponentType<any>;
-}
-
-interface Incident {
-  id: string;
-  title: string;
-  description: string;
-  status: 'investigating' | 'identified' | 'monitoring' | 'resolved';
-  severity: 'low' | 'medium' | 'high' | 'critical';
-  startTime: string;
-  endTime?: string;
-  affectedServices: string[];
-}
-
-const services: ServiceStatus[] = [
-  {
-    id: 'api',
-    name: 'API Services',
-    status: 'operational',
-    uptime: 99.99,
-    responseTime: 45,
-    lastUpdated: '2025-08-27T16:48:00Z',
-    description: 'Core API endpoints and microservices',
-    icon: Server
-  },
-  {
-    id: 'database',
-    name: 'Database Systems',
-    status: 'operational',
-    uptime: 99.95,
-    responseTime: 12,
-    lastUpdated: '2025-08-27T16:48:00Z',
-    description: 'Primary and replica database clusters',
-    icon: Database
-  },
-  {
-    id: 'web',
-    name: 'Web Application',
-    status: 'operational',
-    uptime: 99.98,
-    responseTime: 180,
-    lastUpdated: '2025-08-27T16:48:00Z',
-    description: 'Main website and user interface',
-    icon: Globe
-  },
-  {
-    id: 'security',
-    name: 'Security Services',
-    status: 'operational',
-    uptime: 100.00,
-    responseTime: 8,
-    lastUpdated: '2025-08-27T16:48:00Z',
-    description: 'Authentication, authorization, and threat detection',
-    icon: Shield
-  },
-  {
-    id: 'ai',
-    name: 'AI Services',
-    status: 'operational',
-    uptime: 99.92,
-    responseTime: 320,
-    lastUpdated: '2025-08-27T16:48:00Z',
-    description: 'Machine learning models and AI processing',
-    icon: Brain
-  },
-  {
-    id: 'analytics',
-    name: 'Analytics Platform',
-    status: 'operational',
-    uptime: 99.89,
-    responseTime: 95,
-    lastUpdated: '2025-08-27T16:48:00Z',
-    description: 'Data analytics and reporting systems',
-    icon: BarChart3
-  }
-];
-
-const incidents: Incident[] = [
-  {
-    id: 'inc-001',
-    title: 'Scheduled Maintenance - Database Optimization',
-    description: 'Routine database maintenance to improve performance and reliability.',
-    status: 'monitoring',
-    severity: 'low',
-    startTime: '2025-08-27T14:00:00Z',
-    affectedServices: ['database', 'analytics'],
-    endTime: '2025-08-27T16:00:00Z'
-  }
-];
-
-const getStatusColor = (status: ServiceStatus['status']) => {
-  switch (status) {
-    case 'operational':
-      return 'text-green-400 bg-green-400/10 border-green-400/20';
-    case 'degraded':
-      return 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20';
-    case 'outage':
-      return 'text-red-400 bg-red-400/10 border-red-400/20';
-    case 'maintenance':
-      return 'text-blue-400 bg-blue-400/10 border-blue-400/20';
-    default:
-      return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
-  }
-};
-
-const getStatusIcon = (status: ServiceStatus['status']) => {
-  switch (status) {
-    case 'operational':
-      return CheckCircle;
-    case 'degraded':
-      return AlertTriangle;
-    case 'outage':
-      return XCircle;
-    case 'maintenance':
-      return Clock;
-    default:
-      return Clock;
-  }
-};
-
-const getSeverityColor = (severity: Incident['severity']) => {
-  switch (severity) {
-    case 'low':
-      return 'text-blue-400 bg-blue-400/10 border-blue-400/20';
-    case 'medium':
-      return 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20';
-    case 'high':
-      return 'text-orange-400 bg-orange-400/10 border-orange-400/20';
-    case 'critical':
-      return 'text-red-400 bg-red-400/10 border-red-400/20';
-    default:
-      return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
-  }
-};
+import React from 'react';
+import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Cloud, Shield, Brain, Zap, Globe, BarChart3, RefreshCw, ExternalLink } from 'lucide-react';
 
 export default function SystemStatus() {
   const [lastUpdated, setLastUpdated] = useState(new Date());
@@ -279,11 +134,9 @@ export default function SystemStatus() {
                     <p className="text-sm text-gray-400">{service.description}</p>
                   </div>
                   
-                  <div className="mt-4">
-                    <div className={`px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(service.status)}`}>
-                      {React.createElement(getStatusIcon(service.status), { className: "w-3 h-3 inline mr-1" })}
-                      {service.status.charAt(0).toUpperCase() + service.status.slice(1)}
-                    </div>
+                  <div className={`px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(service.status)}`}>
+                    {React.createElement(getStatusIcon(service.status), { className: "w-3 h-3 inline mr-1" })}
+                    {service.status.charAt(0).toUpperCase() + service.status.slice(1)}
                   </div>
 
                   <div className="space-y-3 mt-4">
@@ -307,7 +160,6 @@ export default function SystemStatus() {
             </div>
           </div>
         </div>
-      </div>
 
       {/* Incidents */}
       {incidents.length > 0 && (

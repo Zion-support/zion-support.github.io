@@ -88,7 +88,7 @@ export default function ServicesPage() {
   };
 
   return (
-    <>
+    <div>
       <SEO 
         title="Innovative Micro SAAS Services - Zion Tech Group"
         description="Discover cutting-edge micro SAAS solutions including AI, Quantum Computing, Blockchain, IoT, and more. Transform your business with our innovative technology services."
@@ -470,6 +470,5 @@ export default function ServicesPage() {
           </motion.div>
         </div>
       </section>
-    </>
-  );
-}
+    </div>
+  )}

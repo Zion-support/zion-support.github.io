@@ -1,4 +1,6 @@
-import { ProductListing } from "@/types/listings";
+import React from 'react';
+// Comprehensive IT Services 2030 - Zion Tech Group
+// Enterprise-grade IT infrastructure, consulting, and managed services
 
 export const COMPREHENSIVE_IT_SERVICES_2030: ProductListing[] = [
   // Cloud Infrastructure & DevOps

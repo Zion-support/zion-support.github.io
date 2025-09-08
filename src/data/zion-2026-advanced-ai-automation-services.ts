@@ -1,3 +1,4 @@
+import React from 'react';
 import { ServiceVariant } from '../src/types/service-variants';
 
 export interface Zion2026AdvancedAIAutomationService {

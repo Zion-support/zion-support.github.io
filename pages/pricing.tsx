@@ -113,13 +113,19 @@ export default function PricingPage() {
     }
   ];
   return (
-    <>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Transparent Pricing for Innovative Solutions
+    <div>
+      <Helmet>
+        <title>Pricing - Zion Tech Group</title>
+        <meta name="description" content="Transparent pricing for Zion Tech Group's AI, cloud, and cybersecurity solutions. Choose the plan that fits your business needs." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Helmet>
+      <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl sm:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Simple, Transparent Pricing
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Competitive pricing for cutting-edge AI, IT, and micro SaaS services. 
@@ -414,7 +420,5 @@ export default function PricingPage() {
           </div>
         </section>
       </main>
-    </
-  );
-}
->
+    </div>
+  )}

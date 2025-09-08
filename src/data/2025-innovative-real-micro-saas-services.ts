@@ -1,3 +1,4 @@
+import React from 'react';
 export interface InnovativeMicroSaasService {
   id: string;
   name: string;

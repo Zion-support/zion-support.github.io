@@ -177,7 +177,7 @@ export default function EmployeeSchedulingSaaS() {
   ];
 
   return (
-    <>
+    <div>
       <SEO 
         title="Employee Scheduling SaaS - Zion Tech Group"
         description="Professional employee scheduling platform with AI-powered automation, time tracking, and comprehensive workforce management tools."
@@ -452,7 +452,7 @@ export default function EmployeeSchedulingSaaS() {
           </div>
         </section>
       </div>
-    </
+    </div>
   );
 }
 

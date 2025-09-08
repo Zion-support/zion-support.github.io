@@ -110,6 +110,8 @@ const ComprehensiveServices: React.FC = () => {
           </div>
         </div>
       </div>
+    </div>
+  )};
 
       {/* Contact Information */}
       <div className="bg-zion-blue py-8 px-4">

@@ -70,31 +70,21 @@ export default function ContactPage() {
                 <p className="text-gray-600">+1 302 464 0950</p>
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-center p-6"
-              >
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Mail className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Email</h3>
-                <p className="text-gray-600">kleber@ziontechgroup.com</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-center p-6"
-              >
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Address</h3>
-                <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
-              </motion.div>
+	return (
+		<div>
+			{/* Hero Section */}
+			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="mx-auto max-w-2xl text-center">
+						<h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+							Get in Touch
+						</h1>
+						<p className="mt-6 text-lg leading-8 text-gray-600">
+							Ready to transform your business with cutting-edge technology? Let's discuss how we can help.
+						</p>
+					</div>
+				</div>
+			</section>
 
 			{/* Contact Form & Info */}
 			<section className="py-24 sm:py-32">
@@ -244,6 +234,6 @@ export default function ContactPage() {
 					</div>
 				</div>
 			</section>
-		</
+		</div>
 	)
 }>
