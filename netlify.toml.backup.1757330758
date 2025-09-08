@@ -5,8 +5,13 @@
   command_timeout = "30m"
 
 [build.environment]
+<<<<<<< HEAD
+  NODE_VERSION = "20"
+  PYTHON_VERSION = "3.12"
+=======
   NODE_VERSION = "18"
   PYTHON_VERSION = "3.11"
+>>>>>>> origin/cursor/build-project-with-dependency-installation-db97
 
 [[plugins]]
   package = "netlify-plugin-compress"
