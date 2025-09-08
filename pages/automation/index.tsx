@@ -121,61 +121,19 @@ const Index: NextPage = () => {
             <a className="text-cyan-300 underline" href="/.netlify/functions/hyper-front-index-accelerator" target="_blank" rel="noopener">Trigger / View</a>
           </li>
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Auto Reports Suite</h2>
-            <p className="text-white/70">SEO audit, search index, AI trends, docs and repo intel.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/auto-reports-suite" target="_blank" rel="noopener">Trigger / View</a>
+            <h2 className="text-xl font-bold">Knowledge & Innovation</h2>
+            <p className="text-white/70">Builds repo knowledge graph, newsroom, and changelogs; then syncs.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/knowledge-and-innovation" target="_blank" rel="noopener">Trigger / View</a>
           </li>
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">AI Changelog Broadcaster</h2>
-            <p className="text-white/70">Refreshes AI changelog and newsroom content.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/ai-changelog-broadcaster" target="_blank" rel="noopener">Trigger / View</a>
+            <h2 className="text-xl font-bold">Guardian Security</h2>
+            <p className="text-white/70">Security audit, dead code scan, link/image checks, and sitemap refresh.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/guardian-security-fast" target="_blank" rel="noopener">Trigger / View</a>
           </li>
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Guardian Ultra</h2>
-            <p className="text-white/70">Auto-healing, image optimization, broken-image scanning.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/guardian-ultra" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Newsroom Auto</h2>
-            <p className="text-white/70">Regenerates newsroom updates automatically.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/newsroom-auto" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">OG Image Refresh</h2>
-            <p className="text-white/70">Regenerates page OG images on a cadence.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/og-image-refresh" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Orphan Page Detector</h2>
-            <p className="text-white/70">Finds unlinked/orphaned pages and recommends links.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/orphan-page-detector" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Content Staleness Auditor</h2>
-            <p className="text-white/70">Flags stale content by last git change and suggests refresh.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/content-staleness-runner" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Revenue Ideas Orchestrator</h2>
-            <p className="text-white/70">Generates monetization proposals and components; syncs to main.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/revenue-agents-runner" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Content Freshness</h2>
-            <p className="text-white/70">Analyzes staleness and curates updates automatically.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/content-freshness-runner" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Internal Link Graph</h2>
-            <p className="text-white/70">Builds a link graph to improve navigation and SEO.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/internal-link-graph-runner" target="_blank" rel="noopener">Trigger / View</a>
-          </li>
-          <li className="rounded-lg bg-white/5 border border-white/10 p-5">
-            <h2 className="text-xl font-bold">Roadmap Auto-Generator</h2>
-            <p className="text-white/70">Synthesizes a living roadmap from TODOs and changelogs.</p>
-            <a className="text-cyan-300 underline" href="/.netlify/functions/roadmap-auto-generator" target="_blank" rel="noopener">Trigger / View</a>
+            <h2 className="text-xl font-bold">Autonomous Factory Expander</h2>
+            <p className="text-white/70">Expands front factories, OG images, and homepage promos automatically.</p>
+            <a className="text-cyan-300 underline" href="/.netlify/functions/autonomous-factory-expander" target="_blank" rel="noopener">Trigger / View</a>
           </li>
         </ul>
         <div className="mt-12">
