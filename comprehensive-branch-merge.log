@@ -8802,3 +8802,130 @@ fatal: couldn't find remote ref cursor/automate-test-fix-improve-and-merge-code-
 [2025-09-08T20:51:39.353Z] ✅ Success: Get git status
 [2025-09-08T20:51:39.354Z] 📄 Found 0 conflicted files
 [2025-09-08T20:51:39.354Z] 🚀 Add resolved files: git add .
+[2025-09-08T20:51:39.446Z] ✅ Success: Add resolved files
+[2025-09-08T20:51:39.447Z] 🚀 Commit merge for cursor/automate-test-fix-improve-and-merge-code-c3aa: git commit -m "Resolve conflicts and merge cursor/automate-test-fix-improve-and-merge-code-c3aa"
+[2025-09-08T20:51:39.507Z] ✅ Success: Commit merge for cursor/automate-test-fix-improve-and-merge-code-c3aa
+[2025-09-08T20:51:39.507Z] ✅ Successfully resolved conflicts and merged: cursor/automate-test-fix-improve-and-merge-code-c3aa
+[2025-09-08T20:51:39.508Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-c782
+[2025-09-08T20:51:39.508Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-c782: git fetch origin cursor/automate-test-fix-improve-and-merge-code-c782
+[2025-09-08T20:51:39.857Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-c782
+[2025-09-08T20:51:39.857Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-c782: git merge origin/cursor/automate-test-fix-improve-and-merge-code-c782 --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-c782 into main"
+[2025-09-08T20:51:40.325Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-c782
+[2025-09-08T20:51:40.326Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-c782
+[2025-09-08T20:51:40.326Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-cd2a
+[2025-09-08T20:51:40.326Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-cd2a: git fetch origin cursor/automate-test-fix-improve-and-merge-code-cd2a
+[2025-09-08T20:51:40.697Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-cd2a
+[2025-09-08T20:51:40.697Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-cd2a: git merge origin/cursor/automate-test-fix-improve-and-merge-code-cd2a --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-cd2a into main"
+[2025-09-08T20:51:41.175Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-cd2a
+[2025-09-08T20:51:41.175Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-cd2a
+[2025-09-08T20:51:42.177Z] 📦 Processing batch 101/509
+[2025-09-08T20:51:42.177Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-cf4c
+[2025-09-08T20:51:42.177Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-cf4c: git fetch origin cursor/automate-test-fix-improve-and-merge-code-cf4c
+[2025-09-08T20:51:42.556Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-cf4c
+[2025-09-08T20:51:42.556Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-cf4c: git merge origin/cursor/automate-test-fix-improve-and-merge-code-cf4c --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-cf4c into main"
+[2025-09-08T20:51:42.997Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-cf4c
+[2025-09-08T20:51:42.997Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-cf4c
+[2025-09-08T20:51:42.997Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-d365
+[2025-09-08T20:51:42.997Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-d365: git fetch origin cursor/automate-test-fix-improve-and-merge-code-d365
+[2025-09-08T20:51:43.396Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-d365
+[2025-09-08T20:51:43.396Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-d365: git merge origin/cursor/automate-test-fix-improve-and-merge-code-d365 --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-d365 into main"
+[2025-09-08T20:51:43.840Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-d365
+[2025-09-08T20:51:43.840Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-d365
+[2025-09-08T20:51:43.840Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-dfdc
+[2025-09-08T20:51:43.840Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-dfdc: git fetch origin cursor/automate-test-fix-improve-and-merge-code-dfdc
+[2025-09-08T20:51:44.211Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-dfdc
+[2025-09-08T20:51:44.211Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-dfdc: git merge origin/cursor/automate-test-fix-improve-and-merge-code-dfdc --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-dfdc into main"
+[2025-09-08T20:51:44.643Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-dfdc
+[2025-09-08T20:51:44.643Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-dfdc
+[2025-09-08T20:51:44.643Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-e394
+[2025-09-08T20:51:44.643Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-e394: git fetch origin cursor/automate-test-fix-improve-and-merge-code-e394
+[2025-09-08T20:51:44.961Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-e394
+[2025-09-08T20:51:44.961Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-e394: git merge origin/cursor/automate-test-fix-improve-and-merge-code-e394 --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-e394 into main"
+[2025-09-08T20:51:45.387Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-e394
+[2025-09-08T20:51:45.387Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-e394
+[2025-09-08T20:51:45.387Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-ee3b
+[2025-09-08T20:51:45.387Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-ee3b: git fetch origin cursor/automate-test-fix-improve-and-merge-code-ee3b
+[2025-09-08T20:51:45.715Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-ee3b
+[2025-09-08T20:51:45.715Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-ee3b: git merge origin/cursor/automate-test-fix-improve-and-merge-code-ee3b --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-ee3b into main"
+[2025-09-08T20:51:46.134Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-ee3b
+[2025-09-08T20:51:46.134Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-ee3b
+[2025-09-08T20:51:46.134Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-f049
+[2025-09-08T20:51:46.134Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-f049: git fetch origin cursor/automate-test-fix-improve-and-merge-code-f049
+[2025-09-08T20:51:46.439Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-f049
+[2025-09-08T20:51:46.439Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-f049: git merge origin/cursor/automate-test-fix-improve-and-merge-code-f049 --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-f049 into main"
+[2025-09-08T20:51:46.856Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-f049
+[2025-09-08T20:51:46.856Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-f049
+[2025-09-08T20:51:46.856Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-f0bd
+[2025-09-08T20:51:46.856Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-f0bd: git fetch origin cursor/automate-test-fix-improve-and-merge-code-f0bd
+[2025-09-08T20:51:47.177Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
+[2025-09-08T20:51:47.177Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-f0bd: git merge origin/cursor/automate-test-fix-improve-and-merge-code-f0bd --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-f0bd into main"
+[2025-09-08T20:51:47.615Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-f0bd
+[2025-09-08T20:51:47.615Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-f0bd
+[2025-09-08T20:51:47.615Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-f1cc
+[2025-09-08T20:51:47.615Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-f1cc: git fetch origin cursor/automate-test-fix-improve-and-merge-code-f1cc
+[2025-09-08T20:51:47.925Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-f1cc
+[2025-09-08T20:51:47.925Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-f1cc: git merge origin/cursor/automate-test-fix-improve-and-merge-code-f1cc --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-f1cc into main"
+[2025-09-08T20:51:48.357Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-f1cc
+[2025-09-08T20:51:48.357Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-f1cc
+[2025-09-08T20:51:48.357Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-f30e
+[2025-09-08T20:51:48.357Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-f30e: git fetch origin cursor/automate-test-fix-improve-and-merge-code-f30e
+[2025-09-08T20:51:48.668Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-f30e
+[2025-09-08T20:51:48.668Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-f30e: git merge origin/cursor/automate-test-fix-improve-and-merge-code-f30e --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-f30e into main"
+[2025-09-08T20:51:49.094Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-f30e
+[2025-09-08T20:51:49.094Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-f30e
+[2025-09-08T20:51:49.094Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-f9e9
+[2025-09-08T20:51:49.094Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-f9e9: git fetch origin cursor/automate-test-fix-improve-and-merge-code-f9e9
+[2025-09-08T20:51:49.483Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-f9e9
+[2025-09-08T20:51:49.483Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-f9e9: git merge origin/cursor/automate-test-fix-improve-and-merge-code-f9e9 --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-f9e9 into main"
+[2025-09-08T20:51:49.936Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-f9e9
+[2025-09-08T20:51:49.936Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-f9e9
+[2025-09-08T20:51:50.937Z] 📦 Processing batch 102/509
+[2025-09-08T20:51:50.937Z] 🔄 Attempting to merge branch: cursor/automate-test-improve-and-merge-code-02ef
+[2025-09-08T20:51:50.937Z] 🚀 Fetch origin/cursor/automate-test-improve-and-merge-code-02ef: git fetch origin cursor/automate-test-improve-and-merge-code-02ef
+[2025-09-08T20:51:51.257Z] ✅ Success: Fetch origin/cursor/automate-test-improve-and-merge-code-02ef
+[2025-09-08T20:51:51.257Z] 🚀 Merge cursor/automate-test-improve-and-merge-code-02ef: git merge origin/cursor/automate-test-improve-and-merge-code-02ef --no-ff -m "Merge branch cursor/automate-test-improve-and-merge-code-02ef into main"
+[2025-09-08T20:51:51.688Z] ✅ Success: Merge cursor/automate-test-improve-and-merge-code-02ef
+[2025-09-08T20:51:51.689Z] ✅ Successfully merged: cursor/automate-test-improve-and-merge-code-02ef
+[2025-09-08T20:51:51.689Z] 🔄 Attempting to merge branch: cursor/automate-test-improve-and-merge-code-0b75
+[2025-09-08T20:51:51.689Z] 🚀 Fetch origin/cursor/automate-test-improve-and-merge-code-0b75: git fetch origin cursor/automate-test-improve-and-merge-code-0b75
+[2025-09-08T20:51:52.046Z] ✅ Success: Fetch origin/cursor/automate-test-improve-and-merge-code-0b75
+[2025-09-08T20:51:52.046Z] 🚀 Merge cursor/automate-test-improve-and-merge-code-0b75: git merge origin/cursor/automate-test-improve-and-merge-code-0b75 --no-ff -m "Merge branch cursor/automate-test-improve-and-merge-code-0b75 into main"
+[2025-09-08T20:51:52.472Z] ✅ Success: Merge cursor/automate-test-improve-and-merge-code-0b75
+[2025-09-08T20:51:52.472Z] ✅ Successfully merged: cursor/automate-test-improve-and-merge-code-0b75
+[2025-09-08T20:51:52.472Z] 🔄 Attempting to merge branch: cursor/automate-test-improve-and-merge-code-0dff
+[2025-09-08T20:51:52.472Z] 🚀 Fetch origin/cursor/automate-test-improve-and-merge-code-0dff: git fetch origin cursor/automate-test-improve-and-merge-code-0dff
+[2025-09-08T20:51:52.832Z] ✅ Success: Fetch origin/cursor/automate-test-improve-and-merge-code-0dff
+[2025-09-08T20:51:52.832Z] 🚀 Merge cursor/automate-test-improve-and-merge-code-0dff: git merge origin/cursor/automate-test-improve-and-merge-code-0dff --no-ff -m "Merge branch cursor/automate-test-improve-and-merge-code-0dff into main"
+[2025-09-08T20:51:53.291Z] ✅ Success: Merge cursor/automate-test-improve-and-merge-code-0dff
+[2025-09-08T20:51:53.291Z] ✅ Successfully merged: cursor/automate-test-improve-and-merge-code-0dff
+[2025-09-08T20:51:53.291Z] 🔄 Attempting to merge branch: cursor/automate-test-improve-and-merge-code-0e13
+[2025-09-08T20:51:53.291Z] 🚀 Fetch origin/cursor/automate-test-improve-and-merge-code-0e13: git fetch origin cursor/automate-test-improve-and-merge-code-0e13
+[2025-09-08T20:51:53.655Z] ✅ Success: Fetch origin/cursor/automate-test-improve-and-merge-code-0e13
+[2025-09-08T20:51:53.655Z] 🚀 Merge cursor/automate-test-improve-and-merge-code-0e13: git merge origin/cursor/automate-test-improve-and-merge-code-0e13 --no-ff -m "Merge branch cursor/automate-test-improve-and-merge-code-0e13 into main"
+[2025-09-08T20:51:54.110Z] ✅ Success: Merge cursor/automate-test-improve-and-merge-code-0e13
+[2025-09-08T20:51:54.111Z] ✅ Successfully merged: cursor/automate-test-improve-and-merge-code-0e13
+[2025-09-08T20:51:54.111Z] 🔄 Attempting to merge branch: cursor/automate-test-improve-and-merge-code-10c5
+[2025-09-08T20:51:54.111Z] 🚀 Fetch origin/cursor/automate-test-improve-and-merge-code-10c5: git fetch origin cursor/automate-test-improve-and-merge-code-10c5
+[2025-09-08T20:51:54.473Z] ✅ Success: Fetch origin/cursor/automate-test-improve-and-merge-code-10c5
+[2025-09-08T20:51:54.473Z] 🚀 Merge cursor/automate-test-improve-and-merge-code-10c5: git merge origin/cursor/automate-test-improve-and-merge-code-10c5 --no-ff -m "Merge branch cursor/automate-test-improve-and-merge-code-10c5 into main"
+[2025-09-08T20:51:54.907Z] ✅ Success: Merge cursor/automate-test-improve-and-merge-code-10c5
+[2025-09-08T20:51:54.908Z] ✅ Successfully merged: cursor/automate-test-improve-and-merge-code-10c5
+[2025-09-08T20:51:54.908Z] 🔄 Attempting to merge branch: cursor/automate-test-improve-and-merge-code-18b6
+[2025-09-08T20:51:54.908Z] 🚀 Fetch origin/cursor/automate-test-improve-and-merge-code-18b6: git fetch origin cursor/automate-test-improve-and-merge-code-18b6
+[2025-09-08T20:51:55.239Z] ✅ Success: Fetch origin/cursor/automate-test-improve-and-merge-code-18b6
+[2025-09-08T20:51:55.239Z] 🚀 Merge cursor/automate-test-improve-and-merge-code-18b6: git merge origin/cursor/automate-test-improve-and-merge-code-18b6 --no-ff -m "Merge branch cursor/automate-test-improve-and-merge-code-18b6 into main"
+[2025-09-08T20:51:55.669Z] ✅ Success: Merge cursor/automate-test-improve-and-merge-code-18b6
+[2025-09-08T20:51:55.669Z] ✅ Successfully merged: cursor/automate-test-improve-and-merge-code-18b6
+[2025-09-08T20:51:55.669Z] 🔄 Attempting to merge branch: cursor/automate-test-improve-and-merge-code-1b30
+[2025-09-08T20:51:55.669Z] 🚀 Fetch origin/cursor/automate-test-improve-and-merge-code-1b30: git fetch origin cursor/automate-test-improve-and-merge-code-1b30
+[2025-09-08T20:51:55.774Z] ❌ Error in Fetch origin/cursor/automate-test-improve-and-merge-code-1b30: Command failed: git fetch origin cursor/automate-test-improve-and-merge-code-1b30
+fatal: couldn't find remote ref cursor/automate-test-improve-and-merge-code-1b30
+
+[2025-09-08T20:51:55.775Z] ❌ Failed to merge cursor/automate-test-improve-and-merge-code-1b30: Command failed: git fetch origin cursor/automate-test-improve-and-merge-code-1b30
+fatal: couldn't find remote ref cursor/automate-test-improve-and-merge-code-1b30
+
+[2025-09-08T20:51:55.775Z] 🔧 Attempting to resolve conflicts for: cursor/automate-test-improve-and-merge-code-1b30
+[2025-09-08T20:51:55.775Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T20:51:55.826Z] ✅ Success: Get git status
+[2025-09-08T20:51:55.826Z] 📄 Found 0 conflicted files
+[2025-09-08T20:51:55.826Z] 🚀 Add resolved files: git add .
