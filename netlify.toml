@@ -29,8 +29,17 @@
   command = "echo 'Skipping build; using prebuilt out/ directory'"
 
 [context.branch-deploy]
+<<<<<<< HEAD
   command = "echo 'Skipping build; using prebuilt out/ directory'"
 # Vite/React SPA configuration
+=======
+  command = "npm ci --no-audit --no-fund && npm run build"
+
+# Vite/React SPA configuration
+
+
+
+>>>>>>> ad7bb3f9dc8d57024c75a80db3d63d3086fe1779
 [[redirects]]
   from = "/*"
   to = "/index.html"
