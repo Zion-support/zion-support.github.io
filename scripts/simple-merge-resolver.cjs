@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
+
+
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs").promises;"const path = require("path");"const { exec } = require("child_process");"const util = require("util");const execAsync = util.promisify(exec);class SimpleMergeResolver { constructor() {" this.projectRoot = path.join(__dirname, "."); this.fixedFiles = []; this.errors = []}" async log(message, level = "INFO") { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`)} async findConflictedFiles() { try {" const { stdout } = await execAsync("git diff --name-only --diff-filter=U", { cwd: this.projectRoot });" return stdout.trim().split("\n").filter(file => file)} catch (error) {""` await this.log(`Error finding conflicted files: ${error.message}`, "ERROR"); return []} } async resolveFileConflicts(filePath) { try {" const content = await fs.readFile(filePath, "utf8"); / Simple conflict resolution - take the first version (HEAD) let resolvedContent = content; / Remove merge conflict markers and keep HEAD version""`"`
 #!/usr/bin/env node
 const fs = require('fs');
@@ -10,25 +7,25 @@ console.log('🔧 Simple merge resolver - fixing syntax errors...');
   async log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     }
-<<<<<<< HEAD
->>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
-=======
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
+
+
+
+
 // Fix the specific syntax errors we identified
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 const files = [
-=======
+
 // Fix the specific syntax errors we identified,
   const files = [
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
+
+
 const files = [;
->>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
-=======
+
+
 // Fix the specific syntax errors we identified,
   const files = [
->>>>>>> merged-prs-20250907-203621
+
   'components/Footer.tsx',
   'components/Header.tsx',
   'pages/about.tsx',
@@ -37,13 +34,13 @@ const files = [;
   'pages/contact.tsx',
   'pages/index.tsx'
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
-=======
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
+
+
+
+
+
+
 files.forEach(file => {
   try {
     if (fs.existsSync(file)) {
@@ -110,14 +107,14 @@ files.forEach(file => {
   } catch (error) {
     console.log(`❌ Error fixing ${file}: ${error.message}`);
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 }
 });
 
-=======
-=======
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
+
+
+
   async resolveFileConflicts(filePath) {
     try {
       const content = await fs.readFile(filePath, 'utf8');
@@ -160,16 +157,16 @@ async function main() {
 if (require.main === module) {
   main().catch(console.error)}
 module.exports = SimpleMergeResolver;
-<<<<<<< HEAD
->>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
-=======
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
+
+
+
+
 console.log('✅ Syntax fixes completed!');
 console.log('🎉 Ready for merge process!');
 #!/usr/bin/env node;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 ]
 files.forEach(file => {
   try {
@@ -229,25 +226,25 @@ files.forEach(file => {
 console.log('✅ Syntax fixes completed!')
 console.log('🎉 Ready for merge process!')
 ///usr/bin/env node
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-f954
-=======
->>>>>>> merged-prs-20250907-203621
+
+
+
+
+
+
 const fs = require('fs')
 const path = require('path')
 const { exec } = require('child_process')
 const util = require('util')
-<<<<<<< HEAD
-=======
+
+
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
 const util = require('util');
->>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
-=======
->>>>>>> merged-prs-20250907-203621
+
+
+
     this.projectRoot = path.join(__dirname, '..')
   async log(message, level = 'INFO')
       const { stdout } = await execAsync('git diff --name-only --diff-filter=U')
@@ -255,12 +252,12 @@ return stdout.trim().split('\n');
       await this.log(`Error finding conflicted "files"`)
       await this.log(`Encountered ${this.errors.length} "errors"`)
     console.log('You can now commit the changes "with": git add . && git commit -m "Resolve merge conflicts")
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 cursor/fix-lint-push-and-merge-to-main-f3c1;
-=======
+
 cursor/fix-lint-push-and-merge-to-main-f3c1;
->>>>>>> 174fce51876ed4c24ba1d6792b97a808cc5820d5
-=======
+
+
 cursor/fix-lint-push-and-merge-to-main-f3c1;
->>>>>>> ede6a6c5e68aff29c3e98caf43b1ead111d5b92e
+

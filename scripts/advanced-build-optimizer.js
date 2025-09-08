@@ -275,7 +275,7 @@ const optimizer = new AdvancedBuildOptimizer();
 optimizer.optimizeBuild()
   .then(() => optimizer.generateReport())
   .catch(console.error);
-<<<<<<<< HEAD:backup-problematic-files/scripts/advanced-build-optimizer.js
+<
 >
 
 
