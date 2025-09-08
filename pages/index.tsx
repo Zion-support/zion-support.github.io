@@ -41,30 +41,37 @@ const Index: NextPage = () => {
             <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
               Autonomous innovation hub delivering cutting-edge technology solutions and intelligent automation systems.
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/services" className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 transform hover:scale-105">
-                Explore Services
+            <div className="flex flex-wrap justify-center gap-6 mb-12">
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl px-6 py-3 border border-white/20">
+                <span className="text-cyan-400 font-bold">227+</span> Intelligent Automations
+              </div>
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl px-6 py-3 border border-white/20">
+                <span className="text-fuchsia-400 font-bold">20+</span> Dynamic Pages
+              </div>
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl px-6 py-3 border border-white/20">
+                <span className="text-blue-400 font-bold">12</span> Core Components
+              </div>
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl px-6 py-3 border border-white/20">
+                <span className="text-green-400 font-bold">100%</span> Autonomous
+              </div>
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl px-6 py-3 border border-white/20">
+                <span className="text-yellow-400 font-bold">99.99%</span> Uptime
+              </div>
+            </div>
+            
+            {/* Primary Navigation Links */}
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              <Link href="/about" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                About Our Mission
               </Link>
               <Link href="/services" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-fuchsia-400/50">
                 Our Services
               </Link>
-              <Link href="/resources" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50">
-                Resources
+              <Link href="/reports" className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Reports
               </Link>
-              <Link href="/case-studies" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-yellow-400/50">
-                Case Studies
-              </Link>
-              <Link href="/platform" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50">
-                Platform
-              </Link>
-              <Link href="/blog" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50">
-                Blog
-              </Link>
-              <Link href="/contact" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
-                Contact
-              </Link>
-              <Link href="/faq" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-orange-400/50">
-                FAQ
+              <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Get Started
               </Link>
             </div>
           </section>
@@ -174,7 +181,7 @@ const Index: NextPage = () => {
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <span className="text-xl">⚛️</span>
                 </div>
-                <h3 className="text-lg font-semibold text-blue-400 mb-2">Next.js 15</h3>
+                <h3 className="text-lg font-semibold text-blue-400 mb-2">Next.js 14</h3>
                 <p className="text-white/70 text-sm">React framework with SSR/SSG</p>
               </div>
               
@@ -317,6 +324,14 @@ const Index: NextPage = () => {
                 <h3 className="text-lg font-semibold text-purple-400 mb-2">Blog & Insights</h3>
                 <p className="text-white/70 text-sm">Latest trends</p>
               </Link>
+
+              <Link href="/reports" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-amber-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">📰</span>
+                </div>
+                <h3 className="text-lg font-semibold text-amber-400 mb-2">Reports</h3>
+                <p className="text-white/70 text-sm">Autonomous updates</p>
+              </Link>
               
               <Link href="/contact" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-green-400/30 transition-all duration-300 text-center">
                 <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -325,6 +340,76 @@ const Index: NextPage = () => {
                 <h3 className="text-lg font-semibold text-green-400 mb-2">Contact Us</h3>
                 <p className="text-white/70 text-sm">Get started</p>
               </Link>
+
+              <Link href="/privacy" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-slate-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-slate-400 to-slate-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">⚖️</span>
+                </div>
+                <h3 className="text-lg font-semibold text-slate-300 mb-2">Privacy</h3>
+                <p className="text-white/70 text-sm">Your data & trust</p>
+              </Link>
+            </div>
+          </section>
+
+          {/* Advanced Automation Systems Showcase */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🤖 Advanced Automation Systems</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">🔄 Redundancy Systems</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Ultimate Redundancy V2</li>
+                  <li>• Comprehensive Redundancy</li>
+                  <li>• PM2 Process Management</li>
+                  <li>• GitHub Actions Redundancy</li>
+                  <li>• Netlify Functions Redundancy</li>
+                </ul>
+                <Link href="/automation" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  Explore Redundancy Systems →
+                </Link>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">🧠 AI Automation</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• AI Trends Research</li>
+                  <li>• Content Generation</li>
+                  <li>• Intelligent Orchestration</li>
+                  <li>• Autonomous Agents</li>
+                  <li>• Innovation Systems</li>
+                </ul>
+                <Link href="/automation" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                  Explore AI Systems →
+                </Link>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">⚡ Build & Deploy</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Smart Build Orchestration</li>
+                  <li>• Continuous Monitoring</li>
+                  <li>• Self-Healing Systems</li>
+                  <li>• Performance Optimization</li>
+                  <li>• Quality Assurance</li>
+                </ul>
+                <Link href="/automation" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  Explore Build Systems →
+                </Link>
+              </div>
+            </div>
+          </section>
+
+          {/* Technology & Infrastructure Deep Dive */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🏗️ Technology & Infrastructure Deep Dive</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <span className="text-xl">🔧</span>
+                </div>
+                <h3 className="text-lg font-semibold text-blue-400 mb-2">Development Tools</h3>
+                <p className="text-white/70 text-sm">TypeScript, ESLint, Husky</p>
+              </div>
               
               <Link href="/privacy" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-red-400/30 transition-all duration-300 text-center">
                 <div className="w-12 h-12 bg-gradient-to-br from-red-400 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
