@@ -1,0 +1,67 @@
+[
+  {
+    "route": "/_app",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/_document",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/about",
+    "title": "About Us — Zion Tech Group | Leading-Edge Technology Solutions",
+    "h1": "About Zion Tech Group"
+  },
+  {
+    "route": "/comprehensive-2025-services-showcase",
+    "title": "Comprehensive 2025 Innovative Services Showcase — Zion Tech Group",
+    "h1": "2025 Innovative Services Showcase"
+  },
+  {
+    "route": "/contact",
+    "title": "Contact Us — Zion Tech Group | Get In Touch",
+    "h1": ""
+  },
+  {
+    "route": "/cookies",
+    "title": "Cookie Policy — Zion Tech Group | Cookie Usage & Management",
+    "h1": "Cookie Policy"
+  },
+  {
+    "route": "/",
+    "title": "Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform",
+    "h1": "Zion Tech Group"
+  },
+  {
+    "route": "/pricing-2025",
+    "title": "2025 Pricing & Services — Zion Tech Group",
+    "h1": "2025 Pricing & Services"
+  },
+  {
+    "route": "/pricing",
+    "title": "Pricing — Zion Tech Group | Transparent Technology Solutions Pricing",
+    "h1": "Transparent Pricing"
+  },
+  {
+    "route": "/privacy",
+    "title": "Privacy Policy — Zion Tech Group | Data Protection & Privacy",
+    "h1": "Privacy Policy"
+  },
+  {
+    "route": "/services",
+    "title": "Services — Zion Tech Group | Cutting-Edge Technology Solutions",
+    "h1": "Our Services"
+  },
+  {
+    "route": "/solutions",
+    "title": "Solutions — Zion Tech Group | Industry-Specific Technology Solutions",
+    "h1": "Industry Solutions"
+  },
+  {
+    "route": "/terms",
+    "title": "Terms of Service — Zion Tech Group | Service Terms & Conditions",
+    "h1": "Terms of Service"
+  }
+]
