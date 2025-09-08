@@ -1,13 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-// import './index.css';
-
-// Import i18n configuration
-import './i18n';
+import './index.css';
 
 // Register service worker
-import { _registerServiceWorker } from './serviceWorkerRegistration';
+import { registerServiceWorker } from './serviceWorkerRegistration';
 
 // Error handling function
 const showApiError = (error: unknown): void => {
@@ -55,7 +52,7 @@ try {
   );
 
   // Register service worker in production
-  if (import.meta.env.PROD) {
+  if (process.env.NODE_ENV === 'production') {
     registerServiceWorker();
   }
 } catch (error) {

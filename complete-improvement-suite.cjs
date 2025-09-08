@@ -535,8 +535,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
       );
 
-        content.includes('<<<<<<< HEAD') ||
-        content.includes('=======') ||
+        content.includes('') ||
         content.includes('
         content.includes('')
 
@@ -634,13 +633,13 @@ content.includes('
       );
       // Clean up any remaining markers
 
-        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n
+        /
 
 
         /
 
         '$1'
-        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n        '$1'
+        /
       );
       // Clean up any remaining markers
         /\n([\s\S]*?)\n\n([\s\S]*?)\n        '$1'

@@ -1,6 +1,6 @@
 [build]
   # Build the project on Netlify
-  command = "npm install && npm run build"
+  command = "npm ci && npm run build"
   publish = "dist"
   functions = "netlify/functions"
   command_timeout = "30m"
@@ -32,9 +32,6 @@
   command = "npm ci --no-audit --no-fund && npm run build"
 
 # Vite/React SPA configuration
-
-
-
 [[redirects]]
   from = "/*"
   to = "/index.html"

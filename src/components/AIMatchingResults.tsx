@@ -38,7 +38,7 @@ export function AIMatchingResults({
     const lowerCategory = category.toLowerCase();
     if (lowerCategory.includes("talent")) return User;
     if (lowerCategory.includes("equipment")) return Monitor;
-    return Briefcase;
+    return BriefcaseIcon;
   };
   
   if (isLoading) {

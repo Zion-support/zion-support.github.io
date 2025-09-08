@@ -1,50 +1,28 @@
+"use client"
+
 import * as React from "react"
+import * as SliderPrimitive from "@radix-ui/react-slider"
+
 import { cn } from "@/lib/utils"
 
-export interface SliderProps
-  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'> {
-  min?: number;
-  max?: number;
-  step?: number;
-  value?: number;
-  defaultValue?: number;
-  onValueChange?: (value: number) => void;
-}
-
-const Slider = React.forwardRef<HTMLInputElement, SliderProps>(
-  ({ className, min = 0, max = 100, step = 1, value, defaultValue, onValueChange, ...props }, ref) => {
-    const [internalValue, setInternalValue] = React.useState(value ?? defaultValue ?? min);
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-      const newValue = Number(e.target.value);
-      setInternalValue(newValue);
-      onValueChange?.(newValue);
-    };
-
-    return (
-      <div className="relative w-full">
-        <input
-          type="range"
-          min={min}
-          max={max}
-          step={step}
-          value={value ?? internalValue}
-          onChange={handleChange}
-          className={cn(
-            "w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider",
-            className
-          )}
-          ref={ref}
-          {...props}
-        />
-        <div className="flex justify-between text-xs text-gray-500 mt-1">
-          <span>{min}</span>
-          <span>{max}</span>
-        </div>
-      </div>
-    )
-  }
-)
-Slider.displayName = "Slider"
+const Slider = React.forwardRef<
+  React.ElementRef<typeof SliderPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>
+>(({ className, ...props }, ref) => (
+  <SliderPrimitive.Root
+    ref={ref}
+    className={cn(
+      "relative flex w-full touch-none select-none items-center",
+      className
+    )}
+    {...props}
+  >
+    <SliderPrimitive.Track className="relative h-2 w-full grow overflow-hidden rounded-full bg-secondary">
+      <SliderPrimitive.Range className="absolute h-full bg-primary" />
+    </SliderPrimitive.Track>
+    <SliderPrimitive.Thumb className="block h-5 w-5 rounded-full border-2 border-primary bg-background ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50" />
+  </SliderPrimitive.Root>
+))
+Slider.displayName = SliderPrimitive.Root.displayName
 
 export { Slider }

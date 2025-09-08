@@ -6,8 +6,11 @@ import EnhancedFooter from './layout/EnhancedFooter';
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
-<<<<<<< HEAD:components.disabled/components/Layout.tsx
+<<<<<<< HEAD
+=======
+
   description?: string}
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
   description?: string;
   keywords?: string;
   ogImage?: string;
@@ -16,8 +19,11 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({
   children,
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
-<<<<<<< HEAD:components.disabled/components/Layout.tsx
+<<<<<<< HEAD
+=======
+
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.' }) => {
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
   keywords = 'technology solutions, AI development, cloud architecture, blockchain, data analytics, web development, mobile development'
 }) => {
@@ -45,9 +51,12 @@ const Layout: React.FC<LayoutProps> = ({
         <EnhancedFooter />
       </div>
     </>
-<<<<<<< HEAD:components.disabled/components/Layout.tsx
+<<<<<<< HEAD
+  );
+};
+=======
+
   )};
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 export default Layout;
-  );
-}
