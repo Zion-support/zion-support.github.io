@@ -389,6 +389,14 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                 <h3 className="text-lg font-semibold text-yellow-400 mb-1">Reports</h3>
                 <p className="text-white/70 text-sm">Analytics & updates</p>
               </Link>
+
+              <Link href="/privacy" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-red-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-red-400 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">🛡️</span>
+                </div>
+                <h3 className="text-lg font-semibold text-red-400 mb-2">Privacy</h3>
+                <p className="text-white/70 text-sm">Our policy</p>
+              </Link>
             </div>
           </section>
 
@@ -775,11 +783,11 @@ export default function HomePage({ latestUpdates }: HomeProps) {
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-green-400 mb-4 text-center">🚀 Advanced Features</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/PERFORMANCE.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Performance Guide</a> - Optimization & monitoring</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/search?q=SECURITY.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Security Docs</a> - Protection measures</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/search?q=TESTING.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Testing Docs</a> - Quality assurance</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_ULTIMATE_REDUNDANCY_V2.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Redundancy V2</a> - System details</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/search?q=EXPONENTIAL_GROWTH_AUTOMATION.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Growth Automation</a> - Scaling systems</li>
+                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Security Guide</a> - Protection measures</li>
+                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/TESTING.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Testing Guide</a> - Quality assurance</li>
+                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/SERVICE_GENERATION_README.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Service Generation</a> - Auto-creation</li>
+                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/ULTIMATE_REDUNDANCY_AUTOMATION_README.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Automation README</a> - System details</li>
+                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/EXPONENTIAL_GROWTH_AUTOMATION.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Growth Automation</a> - Scaling systems</li>
                 </ul>
                 <Link href="/docs/README_PM2_REDUNDANCY_COMPLETE.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   Learn More →
@@ -1105,9 +1113,9 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Predictive insights</li>
                   <li>• Automated reporting</li>
                 </ul>
-                <Link href="/docs/ARCHITECTURE.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  View Architecture Guide →
-                </Link>
+                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  View Security Guide →
+                </a>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -1119,9 +1127,9 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Continuous monitoring</li>
                   <li>• Proactive alerts</li>
                 </ul>
-                <Link href="/docs/DEPLOYMENT.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  View Deployment Guide →
-                </Link>
+                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/TESTING.md" target="_blank" rel="noopener noreferrer" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                  View Testing Guide →
+                </a>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -1133,123 +1141,9 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Continuous improvement</li>
                   <li>• Intelligent orchestration</li>
                 </ul>
-                <Link href="/docs/API.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  View API Documentation →
-                </Link>
-              </div>
-            </div>
-          </section>
-
-          {/* Automation Ecosystem */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🏗️ Architecture & Infrastructure Excellence</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="space-y-6">
-                <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                  <h3 className="text-xl font-bold text-blue-400 mb-4">🌐 Netlify Integration</h3>
-                  <ul className="text-white/80 text-sm space-y-2 mb-4">
-                    <li>• Serverless functions automation</li>
-                    <li>• Edge computing optimization</li>
-                    <li>• Global CDN distribution</li>
-                    <li>• Automatic deployments</li>
-                    <li>• Health monitoring</li>
-                  </ul>
-                  <Link href="/netlify-auto-healer-report.md" className="text-blue-400 hover:text-blue-300 text-sm font-semibold">
-                    View Netlify Report →
-                  </Link>
-                </div>
-                
-                <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                  <h3 className="text-xl font-bold text-purple-400 mb-4">🚀 GitHub Actions CI/CD</h3>
-                  <ul className="text-white/80 text-sm space-y-2 mb-4">
-                    <li>• Automated testing pipelines</li>
-                    <li>• Quality gates enforcement</li>
-                    <li>• Security scanning</li>
-                    <li>• Performance validation</li>
-                    <li>• Deployment automation</li>
-                  </ul>
-                  <Link href="/github-actions-fixes-summary.md" className="text-purple-400 hover:text-purple-300 text-sm font-semibold">
-                    View CI/CD Report →
-                  </Link>
-                </div>
-              </div>
-              
-              <div className="space-y-6">
-                <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                  <h3 className="text-xl font-bold text-green-400 mb-4">🐳 Container Orchestration</h3>
-                  <ul className="text-white/80 text-sm space-y-2 mb-4">
-                    <li>• PM2 process management</li>
-                    <li>• Docker containerization</li>
-                    <li>• Load balancing</li>
-                    <li>• Auto-scaling</li>
-                    <li>• Health monitoring</li>
-                  </ul>
-                  <Link href="/ecosystem-ultimate-redundancy.pm2.cjs" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                    View PM2 Config →
-                  </Link>
-                </div>
-                
-                <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                  <h3 className="text-xl font-bold text-yellow-400 mb-4">📱 Responsive Design</h3>
-                  <ul className="text-white/80 text-sm space-y-2 mb-4">
-                    <li>• Mobile-first approach</li>
-                    <li>• Adaptive layouts</li>
-                    <li>• Performance optimization</li>
-                    <li>• Accessibility compliance</li>
-                    <li>• Cross-browser support</li>
-                  </ul>
-                  <Link href="/responsive-content-orchestrator.cjs" className="text-yellow-400 hover:text-yellow-300 text-sm font-semibold">
-                    View Responsive System →
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Innovation & Future Technologies */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🚀 Innovation & Future Technologies</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">🧠 AI Content Factory</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Autonomous content generation</li>
-                  <li>• Quality assurance automation</li>
-                  <li>• SEO optimization</li>
-                  <li>• Multi-format publishing</li>
-                  <li>• Performance tracking</li>
-                </ul>
-                <Link href="/docs/content-generation-report.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  Learn More →
-                </Link>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">🎯 Marketing Automation</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• LinkedIn automation</li>
-                  <li>• Instagram marketing</li>
-                  <li>• Content synchronization</li>
-                  <li>• Performance analytics</li>
-                  <li>• Campaign optimization</li>
-                </ul>
-                <Link href="/docs/GITHUB_ACTIONS_IMPROVEMENTS.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  Learn More →
-                </Link>
-              </div>
-
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">🔍 Intelligent Discovery</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• Auto-discovery systems</li>
-                  <li>• Pattern recognition</li>
-                  <li>• Optimization suggestions</li>
-                  <li>• Performance insights</li>
-                  <li>• Continuous learning</li>
-                </ul>
-                <Link href="/docs/performance-weekly-report.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  Learn More →
-                </Link>
+                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/PERFORMANCE.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  View Performance Guide →
+                </a>
               </div>
             </div>
           </section>
