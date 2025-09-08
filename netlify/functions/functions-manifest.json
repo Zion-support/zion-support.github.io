@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-11T23:11:07.285Z",
+  "generatedAt": "2025-08-11T22:46:17.128Z",
   "functions": [
     "a11y-audit-runner",
     "ai-changelog-runner",
@@ -17,6 +17,7 @@
     "changelog-publisher",
     "cloud-autonomous-orchestrator-runner",
     "cloud_orchestrator",
+    "component-usage-index-runner",
     "content-freshness-runner",
     "continuous-front-runner",
     "continuous-orchestrator",
@@ -57,7 +58,7 @@
     "image-optimizer-runner",
     "innovation-generator",
     "innovation-lab",
-    "license-compliance-runner",
+    "internal-link-graph-runner",
     "link-and-health-scheduler",
     "link-crawler",
     "linting-orchestrator-runner",
