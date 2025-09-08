@@ -155,33 +155,14 @@ const Index: NextPage = () => {
                 <p className="text-sm text-white/75 mb-3">AI agent infrastructure deployment and research breakthroughs across multiple domains.</p>
                 <div className="inline-flex items-center gap-1 text-xs text-cyan-300/90">Read Full Report <span aria-hidden>→</span></div>
               </a>
-              
-              <a href="/reports/updates/update-2025-08-15-0404" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold mb-2">Autonomous Update — 2025: 08: 15: 0404</h3>
-                <p className="text-sm text-white/75 mb-3">Quantum computing milestones and AI governance framework implementation.</p>
-                <div className="inline-flex items-center gap-1 text-xs text-cyan-300/90">Read Full Report <span aria-hidden>→</span></div>
+              <a href="/blog" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50">
+                Blog
               </a>
-              
-              <a href="/reports/updates/update-2025-08-15-0111" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold mb-2">Autonomous Update — 2025: 08: 15: 0111</h3>
-                <p className="text-sm text-white/75 mb-3">Blockchain innovations and decentralized governance systems deployment.</p>
-                <div className="inline-flex items-center gap-1 text-xs text-cyan-300/90">Read Full Report <span aria-hidden>→</span></div>
+              <a href="/automation-health" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
+                System Health
               </a>
-              
-              <a href="/reports/updates/update-2025-08-15-0403" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold mb-2">Autonomous Update — 2025: 08: 15: 0403</h3>
-                <p className="text-sm text-white/75 mb-3">Robotics breakthroughs and autonomous systems revolutionizing industries.</p>
-                <div className="inline-flex items-center gap-1 text-xs text-cyan-300/90">Read Full Report <span aria-hidden>→</span></div>
-              </a>
-              
-              <a href="/reports/updates/update-2025-08-15-0402" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold mb-2">Autonomous Update — 2025: 08: 15: 0402</h3>
-                <p className="text-sm text-white/75 mb-3">Cybersecurity advances and autonomous defense systems protecting critical infrastructure.</p>
-                <div className="inline-flex items-center gap-1 text-xs text-cyan-300/90">Read Full Report <span aria-hidden>→</span></div>
+              <a href="/contact" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50">
+                Contact
               </a>
             </div>
           </section>
@@ -258,6 +239,54 @@ const Index: NextPage = () => {
               </div>
             </div>
           </section>
+          {/* AUTO-GENERATED: HOME_LATEST_CONTENT_END */}
+
+          {/* Footer Section */}
+          <footer className="mt-20 border-t border-white/20">
+            <div className="container mx-auto px-6 py-12">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                  <h3 className="text-lg font-semibold mb-4 text-cyan-400">Zion Tech Group</h3>
+                  <p className="text-white/70 text-sm">
+                    Leading-edge technology solutions and autonomous innovation systems.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-md font-semibold mb-4 text-white">Services</h4>
+                  <ul className="space-y-2 text-sm text-white/70">
+                    <li><a href="/services" className="hover:text-cyan-400 transition-colors">AI Development</a></li>
+                    <li><a href="/services" className="hover:text-cyan-400 transition-colors">Automation Systems</a></li>
+                    <li><a href="/services" className="hover:text-cyan-400 transition-colors">Cloud Infrastructure</a></li>
+                    <li><a href="/services" className="hover:text-cyan-400 transition-colors">DevOps & CI/CD</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="text-md font-semibold mb-4 text-white">Resources</h4>
+                  <ul className="space-y-2 text-sm text-white/70">
+                    <li><a href="/blog" className="hover:text-fuchsia-400 transition-colors">Blog</a></li>
+                    <li><a href="/api-documentation" className="hover:text-fuchsia-400 transition-colors">API Docs</a></li>
+                    <li><a href="/automation-health" className="hover:text-fuchsia-400 transition-colors">System Health</a></li>
+                    <li><a href="/privacy" className="hover:text-fuchsia-400 transition-colors">Privacy Policy</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="text-md font-semibold mb-4 text-white">Connect</h4>
+                  <ul className="space-y-2 text-sm text-white/70">
+                    <li><a href="/about" className="hover:text-green-400 transition-colors">About Us</a></li>
+                    <li><a href="/contact" className="hover:text-green-400 transition-colors">Contact</a></li>
+                    <li><a href="/automation-health" className="hover:text-green-400 transition-colors">Status</a></li>
+                    <li><a href="/api-documentation" className="hover:text-green-400 transition-colors">Developers</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div className="mt-8 pt-8 border-t border-white/20 text-center">
+                <p className="text-white/60 text-sm">
+                  © 2025 Zion Tech Group. All rights reserved. | 
+                  <a href="/privacy" className="ml-2 hover:text-cyan-400 transition-colors">Privacy Policy</a>
+                </p>
+              </div>
+            </div>
+          </footer>
         </main>
 
         {/* Footer */}
