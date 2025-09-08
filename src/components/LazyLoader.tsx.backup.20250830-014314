@@ -11,9 +11,7 @@ props?: any;
 interface LazyLoaderProps {
   component: React.ComponentTypeg<div>
   fallback?: React.ReactNode
-  props?: any
-=======
->>>>>>> e220500ccca44de2253ff84a9759db22263da039
+  props?: unknown
 }
 
 export const LazyLoader: React.FC<LazyLoaderProps> = ({ 

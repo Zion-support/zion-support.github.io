@@ -529,7 +529,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
       'Quantum device security',
       'AI edge computing',
       'Real-time processing',
-      'Device management',
+      'Smartphone management',
       'Data analytics',
       'Security monitoring',
       'Scalability tools',

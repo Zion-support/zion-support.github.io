@@ -20,11 +20,119 @@ interface TouchGesture {
   enabled: boolean;
 }
 
-export function MobileExperienceEnhancer() {
+interface SmartphoneInfo {
+  type: 'mobile' | 'tablet' | 'desktop';
+  platform: 'ios' | 'android' | 'web' | 'unknown';
+  screenSize: { width: number; height: number };
+  pixelRatio: number;
+  orientation: 'portrait' | 'landscape';
+  touchSupport: boolean;
+  pwaSupport: boolean;
+  networkType: string;
+  batteryLevel: number;
+}
+
+export function MobileExperienceEnhancer({ 
+  enabled = true 
+}: { 
+  enabled?: boolean; 
+}) {
   const [isOpen, setIsOpen] = useState(false);
-  const [deviceType, setDeviceType] = useState<'mobile' | 'tablet' | 'desktop'>('desktop');
-  const [touchGestures, setTouchGestures] = useState<Set<string>>(new Set());
-  const [mobileOptimizations, setMobileOptimizations] = useState<Set<string>>(new Set());
+  const [settings, setSettings] = useState<MobileSettings>({
+    touchGestures: true,
+    orientationLock: false,
+    mobileOptimizations: true,
+    pwaFeatures: true,
+    touchFeedback: true,
+    hapticFeedback: false,
+    adaptiveLayout: true,
+    mobileNavigation: true,
+    touchTargets: true,
+    mobilePerformance: true,
+    gestureHistory: true,
+    mobileAnalytics: true,
+    deviceOrientation: 'auto',
+    touchSensitivity: 'medium',
+    hapticIntensity: 'medium'
+  });
+
+  const [features, setFeatures] = useState<MobileFeature[]>([
+    {
+      id: 'touch-gestures',
+      name: 'Touch Gestures',
+      description: 'Advanced touch gesture recognition and handling',
+      category: 'touch',
+      enabled: true,
+      priority: 'high',
+      impact: 'high'
+    },
+    {
+      id: 'mobile-optimizations',
+      name: 'Mobile Optimizations',
+      description: 'Performance and layout optimizations for mobile devices',
+      category: 'performance',
+      enabled: true,
+      priority: 'high',
+      impact: 'high'
+    },
+    {
+      id: 'pwa-features',
+      name: 'PWA Features',
+      description: 'Progressive Web App capabilities and offline support',
+      category: 'pwa',
+      enabled: true,
+      priority: 'medium',
+      impact: 'medium'
+    },
+    {
+      id: 'adaptive-layout',
+      name: 'Adaptive Layout',
+      description: 'Responsive design that adapts to different screen sizes',
+      category: 'navigation',
+      enabled: true,
+      priority: 'high',
+      impact: 'high'
+    },
+    {
+      id: 'mobile-navigation',
+      name: 'Mobile Navigation',
+      description: 'Touch-optimized navigation and menu systems',
+      category: 'navigation',
+      enabled: true,
+      priority: 'high',
+      impact: 'high'
+    },
+    {
+      id: 'touch-targets',
+      name: 'Touch Targets',
+      description: 'Properly sized touch targets for mobile interaction',
+      category: 'accessibility',
+      enabled: true,
+      priority: 'medium',
+      impact: 'medium'
+    },
+    {
+      id: 'mobile-performance',
+      name: 'Mobile Performance',
+      description: 'Performance monitoring and optimization for mobile',
+      category: 'performance',
+      enabled: true,
+      priority: 'high',
+      impact: 'high'
+    },
+    {
+      id: 'gesture-history',
+      name: 'Gesture History',
+      description: 'Track and analyze user gesture patterns',
+      category: 'touch',
+      enabled: false,
+      priority: 'low',
+      impact: 'low'
+    }
+  ]);
+
+  const [deviceInfo, setSmartphoneInfo] = useState<SmartphoneInfo | null>(null);
+  const [touchGestures, setTouchGestures] = useState<TouchGesture[]>([]);
   const [isOptimizing, setIsOptimizing] = useState(false);
   const [showAdvanced, setShowAdvanced] = useState(false);
 
@@ -44,7 +152,7 @@ export function MobileExperienceEnhancer() {
 
   // Detect device type
   useEffect(() => {
-    const detectDevice = () => {
+    const detectSmartphone = () => {
       const userAgent = navigator.userAgent;
       const screen = window.screen;
       
@@ -68,7 +176,7 @@ export function MobileExperienceEnhancer() {
         type = screen.width <= 480 ? 'mobile' : 'tablet';
       }
       
-      const deviceInfo: DeviceInfo = {
+      const deviceInfo: SmartphoneInfo = {
         type,
         platform,
         screenSize: { width: screen.width, height: screen.height },
@@ -80,19 +188,24 @@ export function MobileExperienceEnhancer() {
         batteryLevel: 0
       };
       
-      setDeviceInfo(deviceInfo);
+      setSmartphoneInfo(deviceInfo);
       
       // Get battery level if available
       if ('getBattery' in navigator) {
-        (navigator as ).getBattery().then((battery: ) => {
-          setDeviceInfo(prev => prev ? { ...prev, batteryLevel: battery.level * 100 } : null);
+        (navigator as any).getBattery().then((battery: unknown) => {
+          setSmartphoneInfo(prev => prev ? { ...prev, batteryLevel: battery.level * 100 } : null);
         });
       }
     };
-
-    detectDevice();
-    window.addEventListener('resize', detectDevice);
-    return () => window.removeEventListener('resize', detectDevice);
+    
+    detectSmartphone();
+    window.addEventListener('resize', detectSmartphone);
+    window.addEventListener('orientationchange', detectSmartphone);
+    
+    return () => {
+      window.removeEventListener('resize', detectSmartphone);
+      window.removeEventListener('orientationchange', detectSmartphone);
+    };
   }, []);
 
   // Mobile optimizations

@@ -30,7 +30,22 @@ export default function Community() {
     { label: 'Countries', value: '45+', icon: Globe, color: 'from-orange-500 to-red-500' }
   ];
 
-  const communityForums = [
+interface CommunityCategory {
+  id: string;
+  name: string;
+  description: string;
+  icon: unknown;
+  color: string;
+  postCount: number;
+  topics: string[];
+}
+
+const Community: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<string>('latest');
+
+  const communityCategories: CommunityCategory[] = [
     {
       title: 'AI & Machine Learning',
       description: 'Discuss AI technologies, share projects, and get help with ML implementations',

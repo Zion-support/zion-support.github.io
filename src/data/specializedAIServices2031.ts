@@ -644,7 +644,7 @@ export const SPECIALIZED_AI_SERVICES_2031: SpecializedAIService2031[] = [
       "Technology companies",
       "Healthcare providers"
     ],
-    tags: ["Edge AI", "IoT", "Edge Computing", "Real-time Processing", "Smart Devices"],
+    tags: ["Edge AI", "IoT", "Edge Computing", "Real-time Processing", "Smart Smartphones"],
     estimatedDelivery: "8-16 weeks",
     supportLevel: "premium",
     marketPrice: "$800 - $5,000/month",

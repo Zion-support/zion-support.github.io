@@ -3,7 +3,24 @@ import { motion } from 'framer-motion';
 
 import { Link } from 'react-router-dom';
 
-export default function Documentation() {
+interface DocSection {
+  id: string;
+  title: string;
+  description: string;
+  icon: unknown;
+  color: string;
+  items: DocItem[];
+}
+
+interface DocItem {
+  title: string;
+  description: string;
+  href: string;
+  type: 'api' | 'guide' | 'tutorial' | 'reference';
+  difficulty: 'beginner' | 'intermediate' | 'advanced';
+}
+
+const Documentation: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popular');

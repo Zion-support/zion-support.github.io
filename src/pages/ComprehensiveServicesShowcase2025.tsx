@@ -48,7 +48,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
     }
   });
 
-  const handleServiceClick = (service: ) => {
+  const handleServiceClick = (service: unknown) => {
     setSelectedService(service);
   };
 
@@ -78,7 +78,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
   };
 
   const getCategoryIcon = (category: string) => {
-    const iconMap: { [key: string]:  } = {
+    const iconMap: { [key: string]: unknown } = {
       'AI & Automation': Brain,
       'AI & Analytics': BarChart3,
       'AI & Legal': Shield,

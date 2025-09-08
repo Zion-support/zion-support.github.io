@@ -202,7 +202,7 @@ export default function EnhancedAccessibilityEnhancer() {
       recognition.interimResults = true;
       recognition.lang = 'en-US';
 
-      recognition.onresult = (event: ) => {
+      recognition.onresult = (event: unknown) => {
         let finalTranscript = '';
         for (let i = event.resultIndex; i < event.results.length; i++) {
           if (event.results[i].isFinal) {
@@ -215,7 +215,7 @@ export default function EnhancedAccessibilityEnhancer() {
         }
       };
 
-      recognition.onerror = (event: ) => {
+      recognition.onerror = (event: unknown) => {
         console.error('Speech recognition error:', event.error);
         setIsListening(false);
       };

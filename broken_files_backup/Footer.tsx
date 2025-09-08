@@ -1,24 +1,56 @@
-
 =======
-
 =======
-
 =======
-
 =======
-
 =======
-
 =======
-
 =======
-
 =======
-
-import { Link } from "react-router-dom";
 =======
-import { Link } from 'react-router-dom';
-
+  Mail, 
+  Phone, 
+  MapPin, 
+  Globe, 
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+  Instagram, 
+  Youtube,
+  Zap,
+  Shield,
+  Cpu,
+  Brain,
+  Building,
+  FileText,
+  HelpCircle,
+  Code,
+  Target,
+  BookOpen,
+  Handshake,
+  Award,
+  TrendingUp,
+  Palette,
+  Monitor,
+  Server,
+  Cloud,
+  Key,
+  Eye,
+  ShieldCheck,
+  Bug,
+  Activity,
+  PieChart,
+  BarChart,
+  LineChart,
+  Map,
+  Calendar,
+  Clock,
+  Heart,
+  ThumbsUp,
+  CheckCircle,
+  AlertCircle,
+  Info,
+  ExternalLink
+} from 'lucide-react';
 
 export function Footer() {
   return (<footer className="bg-slate-900 text-white">
@@ -53,10 +85,6 @@ export function Footer() {
               </a>
 =======
 =======
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-import { motion, Variants } from 'framer-motion';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();

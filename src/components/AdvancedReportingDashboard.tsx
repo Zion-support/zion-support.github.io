@@ -7,7 +7,7 @@ interface ReportData {
   title: string;
   type: 'financial' | 'operational' | 'performance' | 'security' | 'customer' | 'technical';
   category: string;
-  data: any;
+  data: unknown;
   lastUpdated: string;
   status: 'active' | 'archived' | 'draft';
   priority: 'low' | 'medium' | 'high' | 'critical';
@@ -199,7 +199,9 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
     // Sort reports
     filtered.sort((a, b) => {
-      let aValue: any, bValue;switch (sortBy) {
+      let aValue: unknown, bValue: unknown;
+      
+      switch (sortBy) {
         case 'date':
           aValue = new Date(a.lastUpdated).getTime();
           bValue = new Date(b.lastUpdated).getTime();

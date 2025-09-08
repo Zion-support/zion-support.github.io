@@ -7,7 +7,7 @@ interface SEOProps {
   keywords?: string;
   ogImage?: string;
   canonicalUrl?: string;
-  ogType?: 'website' | 'article' | 'product' | 'profile' | 'book';
+  structuredData?: unknown;
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
   noindex?: boolean;
   nofollow?: boolean;

@@ -21,7 +21,7 @@ interface ServiceItem {
 	textColor?: string
 }
 function collectAllServices(): ServiceItem[] {
-	const arrays: [] = [
+	const arrays: unknown[] = [
 		innovativeRealMicroSaasServices2025,
 		advancedITServices,
 		innovativeAIServices,

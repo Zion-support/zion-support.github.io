@@ -203,7 +203,7 @@ const AccessibilityEnhancer: React.FC = () => {
     }
   }, []);
 
-  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: ) => {
+  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: unknown) => {
     const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
     applySettings(newSettings);

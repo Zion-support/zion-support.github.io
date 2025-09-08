@@ -167,7 +167,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   }, []);
 
   // Debounced function utility
-  const debounce = useCallback(<T extends (...args: []) => any>(
+  const debounce = useCallback(<T extends (...args: unknown[]) => any>(
     func: T,
     delay: number
   ): ((...args: Parameters<T>) => void) => {
@@ -180,7 +180,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   }, []);
 
   // Throttled function utility
-  const throttle = useCallback(<T extends (...args: []) => any>(
+  const throttle = useCallback(<T extends (...args: unknown[]) => any>(
     func: T,
     delay: number
   ): ((...args: Parameters<T>) => void) => {
@@ -233,6 +233,6 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 // Type declaration for gtag
 declare global {
   interface Window {
-    gtag?: (...args: []) => void;
+    gtag?: (...args: unknown[]) => void;
   }
 }

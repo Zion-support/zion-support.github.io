@@ -86,7 +86,7 @@ export function Accessibility() {
     }
   };
 
-  const updateSetting = (key: keyof AccessibilitySettings, value: ) => {
+  const updateSetting = (key: keyof AccessibilitySettings, value: unknown) => {
     const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
     applySettings(newSettings);

@@ -194,7 +194,7 @@ export default function SupportRequests() {
                 <Input
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
-                  onChange={(e: ) => setSearchQuery(e.target.value)}
+                  onChange={(e: unknown) => setSearchQuery(e.target.value)}
                   className="pl-10"
                 />
               </div>

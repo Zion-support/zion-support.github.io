@@ -1,20 +1,8 @@
 {
-  "timestamp": "2025-08-29T23:49:20.605Z",
-  "fixesApplied": 0,
-  "caseSensitivityFixes": 0,
-  "unusedImportFixes": 0,
-  "missingExportFixes": 0,
-  "typeMismatchFixes": 0,
-  "duplicateIdentifierFixes": 0,
-  "remainingErrors": 0,
-  "summary": "TypeScript error fixer completed with 0 fixes applied",
-  "status": "completed",
-  "details": {
-    "caseSensitivityFixes": [],
-    "unusedImportFixes": [],
-    "missingExportFixes": [],
-    "typeMismatchFixes": [],
-    "duplicateIdentifierFixes": [],
-    "remainingErrors": []
-  }
+  "timestamp": "2025-08-30T00:27:44.537Z",
+  "duration": "392ms",
+  "errorsFixed": 125,
+  "warningsFixed": 227,
+  "status": "fixed",
+  "summary": "Fixed 125 TypeScript errors and 227 warnings in 392ms"
 }

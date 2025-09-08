@@ -42,12 +42,10 @@ export function FormLabel(...args: []):  {
   return <label className={`block text-sm font-medium ${className}`}>{children}</label>;
 }
 
-interface FormFieldProps extends React.PropsWithChildren<{}> {
-
-  control: anyany;
+interface FormFieldProps {
+  control: unknown;
   name: string;
-  render: (props: )  => React.ReactNode;
-
+  render: (props: unknown) => React.ReactNode;
 }
 
 export function FormField(...args: []):  {

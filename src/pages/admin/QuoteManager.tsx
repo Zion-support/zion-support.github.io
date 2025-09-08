@@ -9,33 +9,56 @@ import { QuoteDetails } from "@/components/quotes/QuoteDetails";
 import { ExportToCSV } from "@/components/quotes/ExportToCSV";
 import { QuoteStatusCards, QuotesFilter, QuotesTable } from "@/components/admin/quotes";
 export default function QuoteManager() {
-    const { user } = useAuth();
-    const isAdmin = user?.userType === 'admin';
-    const [selectedQuote, setSelectedQuote] = useState(null);
-    const [showDetails, setShowDetails] = useState(false);
-    const { quotes, isLoading, error, statusFilter, setStatusFilter, archiveFilter, setArchiveFilter, searchQuery, setSearchQuery, dateRange, setDateRange, updateStatus, toggleArchive, deleteQuote } = useAdminQuotes();
-    // Count quotes by status
-    const statusCounts = {
-        new: quotes.filter(q => q.status === 'new').length,
-        in_review: quotes.filter(q => q.status === 'in_review').length,
-        accepted: quotes.filter(q => q.status === 'accepted').length,
-        responded: quotes.filter(q => q.status === 'responded').length,
-        closed: quotes.filter(q => q.status === 'closed').length
-    };
-    const handleViewDetails = (quote) => {
-        setSelectedQuote(quote);
-        setShowDetails(true);
-    };
-    const handleResetFilters = () => {
-        setStatusFilter('all');
-        setArchiveFilter('all');
-        setSearchQuery('');
-        setDateRange({ from: undefined, to: undefined });
-    };
-    if (!isAdmin) {
-        return <Navigate to="/unauthorized" replace/>;
-    }
-    return (<ProtectedRoute adminOnly>
+  const { user } = useAuth();
+  const isAdmin = user?.userType === 'admin';
+  
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
+  const [showDetails, setShowDetails] = useState(false);
+
+  const {
+    quotes,
+    isLoading,
+    error,
+    statusFilter,
+    setStatusFilter,
+    archiveFilter,
+    setArchiveFilter,
+    searchQuery,
+    setSearchQuery,
+    dateRange,
+    setDateRange,
+    updateStatus,
+    toggleArchive,
+    deleteQuote
+  } = useAdminQuotes();
+
+  // Count quotes by status
+  const statusCounts = {
+    new: quotes.filter((q: QuoteRequest) => q.status === 'new').length,
+    in_review: quotes.filter((q: QuoteRequest) => q.status === 'in_review').length,
+    accepted: quotes.filter((q: QuoteRequest) => q.status === 'accepted').length,
+    responded: quotes.filter((q: QuoteRequest) => q.status === 'responded').length,
+    closed: quotes.filter((q: QuoteRequest) => q.status === 'closed').length
+  };
+
+  const handleViewDetails = (quote: QuoteRequest) => {
+    setSelectedQuote(quote);
+    setShowDetails(true);
+  };
+
+  const handleResetFilters = () => {
+    setStatusFilter('all');
+    setArchiveFilter('all');
+    setSearchQuery('');
+    setDateRange({ from: undefined | null, to: undefined | null });
+  };
+
+  if (!isAdmin) {
+    return <Navigate to="/unauthorized" replace />;
+  }
+
+  return (
+    <ProtectedRoute adminOnly>
       <div>
         
         <div className="min-h-screen bg-zion-blue px-4 py-8">

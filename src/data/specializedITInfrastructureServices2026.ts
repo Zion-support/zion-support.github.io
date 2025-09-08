@@ -285,7 +285,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     },
     technicalSpecs: {
       technology: ["OpenFlow", "OpenDaylight", "OVS", "Linux", "Python", "Java"],
-      integrations: ["Network Devices", "Management Systems", "Security Tools", "Monitoring"],
+      integrations: ["Network Smartphones", "Management Systems", "Security Tools", "Monitoring"],
       apiEndpoints: 200,
       uptime: "99.9%",
       security: ["Network Security", "Access Control", "Encryption", "Audit Logging"]
@@ -350,7 +350,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     },
     technicalSpecs: {
       technology: ["Docker", "Kubernetes", "Edge Runtime", "Message Queues", "Databases"],
-      integrations: ["Cloud Platforms", "IoT Devices", "Monitoring Tools", "Security Systems"],
+      integrations: ["Cloud Platforms", "IoT Smartphones", "Monitoring Tools", "Security Systems"],
       apiEndpoints: 150,
       uptime: "99.8%",
       security: ["Edge Security", "Data Encryption", "Access Control", "Smartphone Authentication"]
@@ -480,7 +480,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     },
     technicalSpecs: {
       technology: ["Machine Learning", "AI", "Network APIs", "Policy Engine", "Analytics"],
-      integrations: ["Network Devices", "Management Systems", "Security Tools", "Monitoring"],
+      integrations: ["Network Smartphones", "Management Systems", "Security Tools", "Monitoring"],
       apiEndpoints: 300,
       uptime: "99.9%",
       security: ["AI Security", "Policy Enforcement", "Access Control", "Audit Logging"]
@@ -545,7 +545,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     },
     technicalSpecs: {
       technology: ["Python", "Ansible", "Terraform", "Jenkins", "Git", "APIs"],
-      integrations: ["Network Devices", "Management Systems", "Monitoring Tools", "Security"],
+      integrations: ["Network Smartphones", "Management Systems", "Monitoring Tools", "Security"],
       apiEndpoints: 120,
       uptime: "99.8%",
       security: ["Access Control", "Audit Logging", "Encryption", "Role-based Security"]
@@ -610,7 +610,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     },
     technicalSpecs: {
       technology: ["SNMP", "NetFlow", "Packet Analysis", "Analytics Engine", "Web Technologies"],
-      integrations: ["Network Devices", "Management Systems", "Ticketing Systems", "APIs"],
+      integrations: ["Network Smartphones", "Management Systems", "Ticketing Systems", "APIs"],
       apiEndpoints: 80,
       uptime: "99.8%",
       security: ["Access Control", "Data Encryption", "Audit Logging", "Secure Communication"]

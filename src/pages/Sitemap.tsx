@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 
 interface SitemapSection {
   title: string;
-  icon: any;
-  links: SitemapLink[];
+  icon: unknown;
+  color: string;
+  pages: SitemapPage[];
 }
 
 const sitemapData: SitemapSection[] = [

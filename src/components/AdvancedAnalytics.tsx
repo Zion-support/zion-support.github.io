@@ -105,9 +105,9 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
       }
       
       setAnalyticsData(prev => {
-        const existingDevice = prev.userAgents.find(d => d.device === device);
-        if (existingDevice) {
-          existingDevice.count++;
+        const existingSmartphone = prev.userAgents.find(d => d.device === device);
+        if (existingSmartphone) {
+          existingSmartphone.count++;
         } else {
           prev.userAgents.push({ device, count: 1 });
         }

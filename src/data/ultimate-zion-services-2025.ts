@@ -424,11 +424,11 @@ export const ultimateZionServices2025: UltimateZionService[] = [
       'Accelerate neuroscience research'
     ],
     technology: ['Neural Engineering', 'AI/ML', 'Signal Processing', 'Hardware Integration', 'Software Development'],
-    integrations: ['EEG Devices', 'EMG Sensors', 'Gaming Platforms', 'Medical Devices', 'Research Equipment'],
+    integrations: ['EEG Smartphones', 'EMG Sensors', 'Gaming Platforms', 'Medical Smartphones', 'Research Equipment'],
     useCases: ['Accessibility', 'Gaming', 'Medical applications', 'Research', 'Entertainment'],
     targetAudience: 'Medical device companies, Gaming companies, Research institutions, Accessibility organizations, Developers',
     marketPosition: 'Leading BCI platform; competes with traditional accessibility and gaming solutions',
-    competitors: ['Traditional Accessibility Tools', 'Gaming Controllers', 'Medical Devices', 'Research Equipment'],
+    competitors: ['Traditional Accessibility Tools', 'Gaming Controllers', 'Medical Smartphones', 'Research Equipment'],
     roi: 'Enable new markets and applications worth billions of dollars',
     trialDays: 60,
     setupTime: '12-16 weeks',

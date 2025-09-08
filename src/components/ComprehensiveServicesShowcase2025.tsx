@@ -72,7 +72,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
     }
   });
 
-  const handleServiceClick = (service: ) => {
+  const handleServiceClick = (service: unknown) => {
     setSelectedService(service);
   };
 

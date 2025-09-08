@@ -226,7 +226,7 @@ export const real2026Q2Additions = [
   },
   {
     id: 'msp-remote-device-ops',
-    name: 'MSP Remote Device Ops',
+    name: 'MSP Remote Smartphone Ops',
     category: 'Cloud & FinOps',
     tagline: 'Manage and secure fleets of endpoints with remote scripts and patches.',
     description: 'MSP-grade remote monitoring and management for SMB fleets: inventory, patching, scripts, alerts, and remote access with compliance-ready logs.',

@@ -103,13 +103,13 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       recognitionRef.current.interimResults = false;
       recognitionRef.current.lang = 'en-US';
 
-      recognitionRef.current.onresult = (event: any) => {
+      recognitionRef.current.onresult = (event: unknown) => {
         const transcript = event.results[0][0].transcript;
         setInputValue(transcript);
         setIsListening(false);
       };
 
-      recognitionRef.current.onerror = (event: any) => {
+      recognitionRef.current.onerror = (event: unknown) => {
         console.error('Speech recognition error:', event.error);
         setIsListening(false);
       };
@@ -137,9 +137,154 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
     }
   }, [enabled, messages.length]);
 
-  // Handle voice input
-  const toggleVoiceInput = useCallback(() => {
-    if (!recognitionRef.current) return;
+  // Auto-scroll to bottom
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages]);
+
+  // Handle input change
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(e.target.value);
+  };
+
+  // Handle send message
+  const handleSendMessage = useCallback(async () => {
+    if (!inputValue.trim() || isProcessing) return;
+
+    const userMessage: Message = {
+      id: `user-${Date.now()}`,
+      type: 'user',
+      content: inputValue.trim(),
+      timestamp: new Date()
+    };
+
+    setMessages(prev => [...prev, userMessage]);
+    setChatHistory(prev => [...prev, userMessage]);
+    setInputValue('');
+    setIsTyping(true);
+    setIsProcessing(true);
+
+    // Simulate AI response
+    setTimeout(() => {
+      const aiResponse = generateAIResponse(inputValue.trim());
+      const assistantMessage: Message = {
+        id: `assistant-${Date.now()}`,
+        type: 'assistant',
+        content: aiResponse.content,
+        timestamp: new Date(),
+        metadata: aiResponse.metadata
+      };
+
+      setMessages(prev => [...prev, assistantMessage]);
+      setChatHistory(prev => [...prev, assistantMessage]);
+      setSuggestions(aiResponse.metadata?.suggestions || []);
+      setIsTyping(false);
+      setIsProcessing(false);
+    }, 1000 + Math.random() * 2000); // Random delay for realism
+  }, [inputValue, isProcessing]);
+
+  // Generate AI response
+  const generateAIResponse = (userInput: string): { content: string; metadata: unknown } => {
+    const input = userInput.toLowerCase();
+    
+    // AI response logic based on user input
+    if (input.includes('ai') || input.includes('artificial intelligence')) {
+      return {
+        content: `At Zion Tech Group, we offer cutting-edge AI solutions including:\n\n🤖 **AI Autonomous Research Assistant** - Automates research tasks\n📊 **AI Business Intelligence** - Data-driven insights\n🔄 **AI Process Automation** - Streamline operations\n🎯 **AI Predictive Analytics** - Future-proof decisions\n\nOur AI solutions are designed to transform your business operations and drive innovation. Would you like to learn more about any specific AI service?`,
+        metadata: {
+          confidence: 0.95,
+          sources: ['AI Solutions Catalog', 'Case Studies'],
+          suggestions: [
+            'Tell me about your AI pricing',
+            'Show me AI case studies',
+            'How do I implement AI in my business?',
+            'What industries do you serve?'
+          ]
+        }
+      };
+    } else if (input.includes('quantum') || input.includes('computing')) {
+      return {
+        content: `Our quantum computing services are at the forefront of innovation:\n\n⚛️ **Quantum Machine Learning** - Next-gen AI algorithms\n🔐 **Quantum Cryptography** - Unbreakable security\n🧮 **Quantum Optimization** - Solve complex problems\n🌐 **Quantum Cloud Platform** - Access quantum power\n\nWe're working with leading quantum hardware providers to bring these capabilities to businesses like yours.`,
+        metadata: {
+          confidence: 0.92,
+          sources: ['Quantum Computing Research', 'Partnerships'],
+          suggestions: [
+            'What quantum problems can you solve?',
+            'How much does quantum computing cost?',
+            'When will quantum be commercially available?',
+            'Show me quantum use cases'
+          ]
+        }
+      };
+    } else if (input.includes('saas') || input.includes('software')) {
+      return {
+        content: `Our micro SAAS solutions are designed for modern businesses:\n\n💼 **AI Sales Copilot** - Boost sales performance\n📈 **AI Marketing Automation** - Scale your marketing\n👥 **AI HR Platform** - Streamline HR processes\n📊 **AI Analytics Dashboard** - Real-time insights\n\nEach solution is modular, scalable, and designed to integrate seamlessly with your existing systems.`,
+        metadata: {
+          confidence: 0.88,
+          sources: ['SAAS Portfolio', 'Integration Guide'],
+          suggestions: [
+            'What are your SAAS pricing tiers?',
+            'Do you offer free trials?',
+            'How do integrations work?',
+            'Can I customize the solutions?'
+          ]
+        }
+      };
+    } else if (input.includes('pricing') || input.includes('cost') || input.includes('price')) {
+      return {
+        content: `We offer flexible pricing to meet your business needs:\n\n🚀 **Starter Plan** - $99/month\n   • Basic AI features\n   • Email support\n   • 5 user licenses\n\n💎 **Professional Plan** - $299/month\n   • Advanced AI capabilities\n   • Priority support\n   • Unlimited users\n   • Custom integrations\n\n🏢 **Enterprise Plan** - Custom pricing\n   • Full AI suite\n   • Dedicated support\n   • Custom development\n   • SLA guarantees\n\nWould you like me to connect you with our sales team for a personalized quote?`,
+        metadata: {
+          confidence: 0.90,
+          sources: ['Pricing Guide', 'Sales Team'],
+          suggestions: [
+            'Schedule a demo',
+            'Get a custom quote',
+            'Compare plans in detail',
+            'Talk to sales team'
+          ]
+        }
+      };
+    } else if (input.includes('demo') || input.includes('trial')) {
+      return {
+        content: `Great choice! Here's how to get started:\n\n📅 **Free Demo** - 30-minute personalized walkthrough\n🎯 **Free Trial** - 14 days with full features\n👨‍💼 **Consultation** - Free strategy session\n\nI can help you schedule any of these options. What would you prefer?`,
+        metadata: {
+          confidence: 0.85,
+          suggestions: [
+            'Schedule a demo',
+            'Start free trial',
+            'Book consultation',
+            'Download demo guide'
+          ]
+        }
+      };
+    } else {
+      return {
+        content: `I understand you're asking about "${userInput}". While I'm a specialized AI assistant for Zion Tech Group, I'd be happy to help you with:\n\n• Our AI and technology services\n• Business solutions and consulting\n• Product information and demos\n• Technical support and guidance\n\nCould you rephrase your question or ask about our specific services?`,
+        metadata: {
+          confidence: 0.75,
+          suggestions: [
+            'What services do you offer?',
+            'Tell me about Zion Tech Group',
+            'How can AI help my business?',
+            'Show me your solutions'
+          ]
+        }
+      };
+    }
+  };
+
+  // Handle suggestion click
+  const handleSuggestionClick = (suggestion: string) => {
+    setInputValue(suggestion);
+    inputRef.current?.focus();
+  };
+
+  // Toggle speech recognition
+  const toggleSpeechRecognition = () => {
+    if (!recognitionRef.current) {
+      alert('Speech recognition is not supported in your browser');
+      return;
+    }
 
     if (isListening) {
       recognitionRef.current.stop();

@@ -1,5 +1,31 @@
-import { motion } from 'framer-motion';
-
+  Shield, 
+  Zap, 
+  Brain, 
+  TrendingUp, 
+  Users, 
+  CheckCircle, 
+  ArrowRight, 
+  Star,
+  Award,
+  Lightbulb,
+  Database,
+  Network,
+  Server,
+  Globe,
+  Clock,
+  BarChart3,
+  Cpu,
+  Lock,
+  Eye,
+  Target,
+  Rocket,
+  Sparkles,
+  AlertTriangle,
+  Fingerprint,
+  Key,
+  Monitor,
+  Activity
+} from 'lucide-react';
 
 export default function AICybersecuritySuite() {
   const features = [

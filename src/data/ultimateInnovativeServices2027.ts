@@ -373,8 +373,8 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
-      technology: ["Advanced AI", "Machine Learning", "Medical Imaging AI", "Natural Language Processing", "IoT Health Devices"],
-      integrations: ["EMR Systems", "Medical Devices", "Lab Systems", "Pharmacy Systems", "Insurance Systems"],
+      technology: ["Advanced AI", "Machine Learning", "Medical Imaging AI", "Natural Language Processing", "IoT Health Smartphones"],
+      integrations: ["EMR Systems", "Medical Smartphones", "Lab Systems", "Pharmacy Systems", "Insurance Systems"],
       apiEndpoints: 600,
       uptime: "99.99%",
       security: ["HIPAA Compliance", "Data Encryption", "Access Control", "Audit Logging"],
@@ -510,7 +510,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     },
     technicalSpecs: {
       technology: ["Quantum Computing", "Edge Computing", "IoT", "5G", "Advanced AI"],
-      integrations: ["IoT Platforms", "Edge Devices", "Cloud Platforms", "5G Networks", "AI Frameworks"],
+      integrations: ["IoT Platforms", "Edge Smartphones", "Cloud Platforms", "5G Networks", "AI Frameworks"],
       apiEndpoints: 600,
       uptime: "99.99%",
       security: ["Quantum Encryption", "Edge Security", "Zero Trust", "Threat Detection"],

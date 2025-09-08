@@ -1,3 +1,5 @@
+export default result;
+
 import * as client from '@/integrations/supabase/client';
 
 // Test that checkOnline returns false when navigator is offline
@@ -12,8 +14,8 @@ it('checkOnline returns false when navigator is offline', async () => {
 
 // Test that checkOnline returns false when navigator is undefined
 it('checkOnline returns false when navigator is undefined', async () => {
-  const original = (global as ).navigator;
-  Object.defineProperty(global, 'navigator', { value: undefined, configurable: true, writable: true });
+  const original = (global as any).navigator;
+  Object.defineProperty(global, 'navigator', { value: undefined | null, configurable: true, writable: true });
   const result = await client.checkOnline();
   expect(result).toBe(false);
   Object.defineProperty(global, 'navigator', { value: original, configurable: true, writable: true });

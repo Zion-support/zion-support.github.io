@@ -139,7 +139,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
       }
     },
     category: 'Neural Technology',
-    tags: ['Brain-Computer Interface', 'Neural Technology', 'Medical Devices', 'Research', 'Neuroscience'],
+    tags: ['Brain-Computer Interface', 'Neural Technology', 'Medical Smartphones', 'Research', 'Neuroscience'],
     website: 'https://ziontechgroup.com/brain-computer-interface-platform',
     contact: {
       phone: '+1 302 464 0950',
@@ -155,8 +155,8 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Assistive technology',
       'Cognitive enhancement research'
     ],
-    integrations: ['Medical Device Systems', 'Research Platforms', 'Neuroscience Tools', 'Healthcare Systems', 'Analytics Platforms'],
-    compliance: ['Medical Device Regulations', 'FDA Standards', 'Research Ethics Guidelines', 'Patient Safety Standards']
+    integrations: ['Medical Smartphone Systems', 'Research Platforms', 'Neuroscience Tools', 'Healthcare Systems', 'Analytics Platforms'],
+    compliance: ['Medical Smartphone Regulations', 'FDA Standards', 'Research Ethics Guidelines', 'Patient Safety Standards']
   },
   {
     id: 'quantum-energy-platform',

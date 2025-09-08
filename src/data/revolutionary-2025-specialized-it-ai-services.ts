@@ -198,7 +198,7 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     features: [
       'Quantum-resistant encryption',
       'AI-powered threat detection',
-      'Device authentication',
+      'Smartphone authentication',
       'Network monitoring',
       'Behavioral analysis',
       'Automated response',
@@ -220,7 +220,7 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     realService: true,
     technology: ['IBM Qiskit', 'Microsoft Q#', 'TensorFlow', 'PyTorch', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Azure'],
     integrations: ['Palo Alto Networks', 'Check Point', 'Fortinet', 'Cisco IoT', 'IBM Watson IoT', 'Microsoft Azure IoT'],
-    useCases: ['Device protection', 'Network security', 'Threat detection', 'Compliance management', 'Performance monitoring', 'Automated response'],
+    useCases: ['Smartphone protection', 'Network security', 'Threat detection', 'Compliance management', 'Performance monitoring', 'Automated response'],
     roi: 'Average customer sees 700% ROI through improved security, reduced incidents, and automated protection.',
     competitors: ['Palo Alto Networks IoT', 'Check Point IoT', 'Fortinet IoT', 'Cisco IoT', 'IBM Watson IoT'],
     marketSize: '$8.9B IoT security market',

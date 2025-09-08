@@ -1,3 +1,5 @@
+export default when;
+
 import { render, fireEvent, waitFor } from @testing-library/react'; // Added waitFor
 // Mock Sentry to prevent errors in test environment
 jest.mock('@sentry/nextjs', () => ({'  captureException: jest.fn(),

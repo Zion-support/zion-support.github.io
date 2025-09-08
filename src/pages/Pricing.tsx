@@ -1,6 +1,18 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
+interface PricingTier {
+  name: string;
+  description: string;
+  price: string;
+  period: string;
+  features: string[];
+  popular?: boolean;
+  color: string;
+  icon: unknown;
+  cta: string;
+  ctaLink: string;
+}
 
 const Pricing: React.FC = () => {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');

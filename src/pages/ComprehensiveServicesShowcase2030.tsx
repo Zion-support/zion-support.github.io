@@ -57,7 +57,7 @@ export default function ComprehensiveServicesShowcase2030() {
   const [selectedService, setSelectedService] = useState(null);
 
   const getFilteredServices = () => {
-    let services: [] = [];
+    let services: unknown[] = [];
     
     switch (activeTab) {
       case 'microsaas':
@@ -78,7 +78,7 @@ export default function ComprehensiveServicesShowcase2030() {
   };
 
   const getCategories = () => {
-    let services: [] = [];
+    let services: unknown[] = [];
     
     switch (activeTab) {
       case 'microsaas':
@@ -96,7 +96,7 @@ export default function ComprehensiveServicesShowcase2030() {
     return categories;
   };
 
-  const renderServiceCard = (service: ) => {
+  const renderServiceCard = (service: unknown) => {
     if (activeTab === 'microsaas') {
       return (
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">

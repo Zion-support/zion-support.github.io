@@ -135,7 +135,7 @@ export default function ComprehensiveServicesOverview2027() {
     }
   };
 
-  const ServiceCard = ({ service }: { service:  }) => (
+  const ServiceCard = ({ service }: { service: unknown }) => (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}

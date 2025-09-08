@@ -46,9 +46,9 @@ const CloudDevOps = () => {
 
   const services = [
     {
-      icon: Server,
-      title: 'Infrastructure as Code',
-      description: 'Terraform, CloudFormation, and ARM templates for automated infrastructure'
+      icon: Circuit,
+      title: 'Edge Smartphone Development',
+      description: 'Custom IoT edge device design and development'
     },
     {
       icon: Workflow,

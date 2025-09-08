@@ -749,7 +749,7 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
       "Automotive companies",
       "Energy companies"
     ],
-    tags: ["IoT", "Edge Computing", "Connected Devices", "Real-time", "Automation"],
+    tags: ["IoT", "Edge Computing", "Connected Smartphones", "Real-time", "Automation"],
     estimatedDelivery: "8-12 weeks",
     supportLevel: "premium",
     marketPrice: "$2,499 - $7,999/month",
