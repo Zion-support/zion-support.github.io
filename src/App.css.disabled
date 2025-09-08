@@ -42,7 +42,6 @@
   min-height: 200px;
 }
 
-<<<<<<< HEAD
 .App-header h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -103,13 +102,11 @@
   border-radius: 12px;
   padding: 2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-=======
 /* Error states */
 .error {
   text-align: center;
   padding: 2rem;
   color: #ff6b6b;
->>>>>>> origin/main
 }
 
 /* Accessibility improvements */

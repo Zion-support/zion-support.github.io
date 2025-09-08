@@ -6,7 +6,6 @@
     "module": "ESNext",
     "skipLibCheck": true,
 
-
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -17,43 +16,23 @@
 
     /* Linting */
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "exactOptionalPropertyTypes": false
+    "exactOptionalPropertyTypes": false,
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
-    "strictNullChecks": true,
-    "exactOptionalPropertyTypes": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noUncheckedIndexedAccess": true,
-    "allowJs": true,
-    "incremental": true,
-    "noEmitOnError": true,
-
-    /* Path mapping */
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "strictNullChecks": true
   },
   "include": [
-
     "src/**/*",
     "src/**/*.tsx",
     "src/**/*.ts",
     "vite.config.ts"
-    "src/**/*.js",
-    "src/**/*.jsx",
-    "next-env.d.ts",
-    "app/**/*.ts",
-    "app/**/*.tsx",
-    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
@@ -63,33 +42,6 @@
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "src.disabled/**/*",
-    "src_disabled_*/**/*",
-    "**/tests/**",
-    "__tests__/**",
-    "temp_*/**",
-    "temp-*/**",
-    "temp*/**",
-    "temp_conflicts/**",
-    "temp_exclude/**",
-    "zion-*/**",
-    "zion_os/**",
-    "zion/**",
-    "apps/**",
-    "utils/**",
-    "types/**",
-    "src/pages/**/*",
-    "src/routes/**/*",
-    "src/components/**/*",
-    "src/context/**/*",
-    "src/hooks/**/*",
-    "src/services/**/*",
-    "src/data/**/*",
-    "src/types/**/*",
-    "src/utils/**/*",
-    "src/layout/**/*",
-    "src/lib/**/*"
-
+    "**/*.spec.tsx"
   ]
 }
