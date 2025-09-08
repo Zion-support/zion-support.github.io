@@ -4,18 +4,38 @@ import Head from 'next/head';
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
-import fs from 'fs';
-import path from 'path';
+import type { GetStaticProps } from 'next';
 
-export default function HomePage() {
-  const repoBaseUrl = 'https://github.com/Zion-Holdings/zion.app/blob/main';
+type HomePageProps = {
+  routes: { href: string; label: string }[];
+  latestUpdates: { href: string; title: string; subtitle: string }[];
+  docs: {
+    readme: string;
+    architecture: string;
+    api: string;
+    deployment: string;
+    contributing: string;
+    security: string;
+    testing: string;
+    serviceGeneration: string;
+    automationReadme: string;
+    growthAutomation: string;
+    ultimateRedundancy: string;
+    comprehensiveRedundancy: string;
+    pm2Redundancy: string;
+    githubActions: string;
+    continuousOperation: string;
+  };
+};
+
+export default function HomePage({ routes, latestUpdates, docs }: HomePageProps) {
   return (
     <div>
       <Head>
-        <title>Zion Tech Group — Autonomous Innovation Hub & AI Automation Platform</title>
-        <meta name="description" content="Leading-edge autonomous technology platform with 227+ automations, AI-powered content generation, comprehensive redundancy systems, and cloud-native solutions." />
-        <meta property="og:title" content="Zion Tech Group — Autonomous Innovation Hub & AI Automation Platform" />
-        <meta property="og:description" content="Leading-edge autonomous technology platform with 227+ automations, AI-powered content generation, comprehensive redundancy systems, and cloud-native solutions." />
+        <title>Zion Tech Group — World&#39;s Most Advanced Autonomous Innovation Hub & AI-Powered Cloud Platform</title>
+        <meta name="description" content="Experience the future of autonomous technology with 227+ intelligent automations, AI-powered cloud systems, comprehensive redundancy infrastructure, and zero-downtime operations. The most advanced autonomous platform ever built." />
+        <meta property="og:title" content="Zion Tech Group — World&#39;s Most Advanced Autonomous Innovation Hub & AI-Powered Cloud Platform" />
+        <meta property="og:description" content="Experience the future of autonomous technology with 227+ intelligent automations, AI-powered cloud systems, comprehensive redundancy infrastructure, and zero-downtime operations." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="keywords" content="AI automation, autonomous systems, cloud infrastructure, machine learning, DevOps, CI/CD, technology consulting, Zion Tech Group" />
       </Head>
@@ -24,10 +44,27 @@ export default function HomePage() {
         {/* Hero Section */}
         <main className="container mx-auto px-6 py-12">
           <section className="text-center mb-20">
-            <div className="mb-8">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 mb-6">
-                <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                <span className="text-sm text-green-400">227+ Active Automations</span>
+            <h1 className="text-6xl font-extrabold mb-8 bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-blue-400 bg-clip-text text-transparent">
+              Zion Tech Group
+            </h1>
+            <p className="text-2xl text-white/90 max-w-4xl mx-auto mb-8">
+              The world&#39;s most advanced autonomous innovation hub delivering cutting-edge technology solutions, intelligent automation systems, and the future of cloud-native AI infrastructure.
+            </p>
+            <div className="flex flex-wrap justify-center gap-6 mb-12">
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl px-6 py-3 border border-white/20">
+                <span className="text-cyan-400 font-bold">227+</span> Intelligent Automations
+              </div>
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl px-6 py-3 border border-white/20">
+                <span className="text-fuchsia-400 font-bold">2960+</span> Dynamic Pages
+              </div>
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl px-6 py-3 border border-white/20">
+                <span className="text-blue-400 font-bold">12</span> Core Components
+              </div>
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl px-6 py-3 border border-white/20">
+                <span className="text-green-400 font-bold">100%</span> Autonomous
+              </div>
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl px-6 py-3 border border-white/20">
+                <span className="text-yellow-400 font-bold">99.99%</span> Uptime
               </div>
             </div>
             
@@ -161,7 +198,8 @@ export default function HomePage() {
                 <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <span className="text-2xl">⚛️</span>
                 </div>
-                <div className="text-sm font-semibold text-white/90">React 18</div>
+                <h3 className="text-lg font-semibold text-blue-400 mb-2">Next.js 14</h3>
+                <p className="text-white/70 text-sm">React framework with SSR/SSG</p>
               </div>
               
               <div className="text-center group">
@@ -565,7 +603,25 @@ export default function HomePage() {
             </div>
           </section>
 
-          {/* Technical Automation & Scripts Showcase */}
+          {/* All Pages */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🧭 All Pages</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {routes.map((route) => (
+                <Link key={route.href} href={route.href} className="group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="text-white font-semibold">{route.label}</h3>
+                      <p className="text-white/70 text-sm mt-1">{route.href}</p>
+                    </div>
+                    <div className="text-cyan-300/90 text-sm">Open →</div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+
+          {/* Advanced Automation Systems Showcase */}
           <section className="mx-auto max-w-7xl px-6 pb-16">
             <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🔧 Technical Automation & Scripts Showcase</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -628,6 +684,182 @@ export default function HomePage() {
                     View Build Scripts →
                   </Link>
                 </div>
+                <h3 className="text-lg font-semibold text-blue-400 mb-2">Development Tools</h3>
+                <p className="text-white/70 text-sm">TypeScript, ESLint, Husky</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <span className="text-xl">📊</span>
+                </div>
+                <h3 className="text-lg font-semibold text-green-400 mb-2">Monitoring</h3>
+                <p className="text-white/70 text-sm">Performance, Health, Analytics</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <span className="text-xl">🚀</span>
+                </div>
+                <h3 className="text-lg font-semibold text-purple-400 mb-2">Deployment</h3>
+                <p className="text-white/70 text-sm">Netlify, PM2, Docker</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <span className="text-xl">🔒</span>
+                </div>
+                <h3 className="text-lg font-semibold text-yellow-400 mb-2">Security</h3>
+                <p className="text-white/70 text-sm">Scanning, Compliance, Protection</p>
+              </div>
+            </div>
+          </section>
+
+          {/* Advanced Automation Systems Deep Dive */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🔧 Advanced Automation Systems Deep Dive</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">🔄 Ultimate Redundancy V2</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Multi-layer redundancy</li>
+                  <li>• Automatic failover</li>
+                  <li>• Self-healing systems</li>
+                  <li>• Geographic distribution</li>
+                  <li>• Real-time monitoring</li>
+                </ul>
+                <div className="text-cyan-400 text-sm font-semibold">
+                  Status: Active & Monitoring
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">🧠 AI Content Factory</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Autonomous content generation</li>
+                  <li>• AI-powered optimization</li>
+                  <li>• Intelligent scheduling</li>
+                  <li>• Quality assurance</li>
+                  <li>• Performance analytics</li>
+                </ul>
+                <div className="text-fuchsia-400 text-sm font-semibold">
+                  Status: Continuously Learning
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">⚡ Build Orchestration</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Smart dependency management</li>
+                  <li>• Automated testing</li>
+                  <li>• Performance optimization</li>
+                  <li>• Error recovery</li>
+                  <li>• Deployment automation</li>
+                </ul>
+                <div className="text-green-400 text-sm font-semibold">
+                  Status: Self-Optimizing
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Project Documentation & Resources */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">📚 Project Documentation & Resources</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-blue-400 mb-4 text-center">📖 Core Documentation</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• <a href={docs.readme} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Main README</a> - Project overview</li>
+                  <li>• <a href={docs.architecture} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Architecture Guide</a> - System design</li>
+                  <li>• <a href={docs.api} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">API Documentation</a> - Integration guide</li>
+                  <li>• <a href={docs.deployment} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Deployment Guide</a> - Setup instructions</li>
+                  <li>• <a href={docs.contributing} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Contributing Guide</a> - Development workflow</li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-purple-400 mb-4 text-center">🔧 Automation Guides</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• <a href={docs.ultimateRedundancy} target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">Ultimate Redundancy</a> - System overview</li>
+                  <li>• <a href={docs.comprehensiveRedundancy} target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">Comprehensive Redundancy</a> - Advanced features</li>
+                  <li>• <a href={docs.pm2Redundancy} target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">PM2 Redundancy</a> - Process management</li>
+                  <li>• <a href={docs.githubActions} target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">GitHub Actions</a> - CI/CD automation</li>
+                  <li>• <a href={docs.continuousOperation} target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">Continuous Operation</a> - Zero-downtime</li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">🚀 Advanced Features</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• <a href={docs.security} target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Security Guide</a> - Protection measures</li>
+                  <li>• <a href={docs.testing} target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Testing Guide</a> - Quality assurance</li>
+                  <li>• <a href={docs.serviceGeneration} target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Service Generation</a> - Auto-creation</li>
+                  <li>• <a href={docs.automationReadme} target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Automation README</a> - System details</li>
+                  <li>• <a href={docs.growthAutomation} target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Growth Automation</a> - Scaling systems</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* Latest Autonomous Content */}
+          <section className="mx-auto max-w-7xl px-6 pb-14">
+            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Latest Autonomous Content</h2>
+            <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {latestUpdates.map((item) => (
+                <Link key={item.href} href={item.href} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
+                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                  <h3 className="text-lg font-semibold">{item.title}</h3>
+                  <p className="mt-1 text-sm text-white/75">{item.subtitle}</p>
+                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+                </Link>
+              ))}
+            </div>
+          </section>
+
+          {/* Advanced Features Showcase */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🌟 Advanced Features & Capabilities</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">🔐 Security & Compliance</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Automated security scanning</li>
+                  <li>• Vulnerability assessment</li>
+                  <li>• Compliance monitoring</li>
+                  <li>• Threat detection & response</li>
+                  <li>• Zero-trust architecture</li>
+                </ul>
+                <Link href="/SECURITY.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  View Security Guide →
+                </Link>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">🧪 Testing & Quality</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Automated testing suites</li>
+                  <li>• Quality assurance</li>
+                  <li>• Performance testing</li>
+                  <li>• Security testing</li>
+                  <li>• Continuous validation</li>
+                </ul>
+                <Link href="/TESTING.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                  View Testing Guide →
+                </Link>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">📈 Performance & Monitoring</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Real-time monitoring</li>
+                  <li>• Performance optimization</li>
+                  <li>• Health checks</li>
+                  <li>• Analytics dashboard</li>
+                  <li>• Predictive maintenance</li>
+                </ul>
+                <Link href="/PERFORMANCE.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  View Performance Guide →
+                </Link>
               </div>
             </div>
           </section>
@@ -766,3 +998,94 @@ export default function HomePage() {
   );
 }
 
+export const getStaticProps: GetStaticProps = async () => {
+  const fs = await import('fs');
+  const path = await import('path');
+  type PackageJson = {
+    repository?: { url?: string } | string;
+    homepage?: string;
+  };
+
+  const toTitleCase = (slug: string): string => {
+    return slug
+      .replace(/-/g, ' ')
+      .replace(/\b\w/g, (c) => c.toUpperCase());
+  };
+
+  const pagesDir = path.join(process.cwd(), 'pages');
+  const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
+  const routes = entries
+    .filter((entry) => entry.isFile() && entry.name.endsWith('.tsx') && !entry.name.startsWith('_') && entry.name !== 'index.tsx')
+    .map((entry) => entry.name.replace(/\.tsx$/, ''))
+    .map((name) => ({ href: `/${name}`, label: toTitleCase(name) }))
+    .sort((a, b) => a.label.localeCompare(b.label));
+
+  const updatesDir = path.join(pagesDir, 'reports', 'updates');
+  let latestUpdates: { href: string; title: string; subtitle: string }[] = [];
+  if (fs.existsSync(updatesDir)) {
+    const files = fs
+      .readdirSync(updatesDir)
+      .filter((f) => /^update-\d{4}-\d{2}-\d{2}-\d{4}\.tsx$/.test(f))
+      .sort()
+      .reverse()
+      .slice(0, 6);
+    latestUpdates = files.map((file) => {
+      const slug = file.replace(/\.tsx$/, '');
+      const match = slug.match(/^update-(\d{4})-(\d{2})-(\d{2})-(\d{2})(\d{2})$/);
+      let pretty = slug;
+      if (match) {
+        const [, y, m, d, hh, mm] = match;
+        pretty = `Autonomous Update — ${y}-${m}-${d} ${hh}:${mm}`;
+      } else {
+        pretty = `Autonomous Update — ${slug.replace('update-', '').replace(/-/g, ' ')}`;
+      }
+      return {
+        href: `/reports/updates/${slug}`,
+        title: pretty,
+        subtitle: 'Freshly published by autonomous agents.',
+      };
+    });
+  }
+
+  // Docs links
+  const pkgJsonPath = path.join(process.cwd(), 'package.json');
+  const pkgJson = JSON.parse(fs.readFileSync(pkgJsonPath, 'utf-8')) as PackageJson;
+  const repositoryField = pkgJson.repository;
+  let repoUrlRaw: string = 'https://github.com/Zion-Holdings/zion.app';
+  if (repositoryField) {
+    if (typeof repositoryField === 'string') {
+      repoUrlRaw = repositoryField;
+    } else if (typeof repositoryField === 'object' && repositoryField.url) {
+      repoUrlRaw = repositoryField.url;
+    }
+  }
+  const repoBase = repoUrlRaw.replace(/\.git$/, '');
+  const branch = 'main';
+  const blobBase = `${repoBase}/blob/${branch}`;
+  const docs = {
+    readme: pkgJson.homepage || `${repoBase}#readme`,
+    architecture: `${blobBase}/ARCHITECTURE.md`,
+    api: `${blobBase}/API.md`,
+    deployment: `${blobBase}/DEPLOYMENT.md`,
+    contributing: `${blobBase}/CONTRIBUTING.md`,
+    security: `${blobBase}/SECURITY.md`,
+    testing: `${blobBase}/TESTING.md`,
+    serviceGeneration: `${blobBase}/SERVICE_GENERATION_README.md`,
+    automationReadme: `${blobBase}/ULTIMATE_REDUNDANCY_AUTOMATION_README.md`,
+    growthAutomation: `${blobBase}/EXPONENTIAL_GROWTH_AUTOMATION.md`,
+    ultimateRedundancy: `${blobBase}/README_ULTIMATE_REDUNDANCY.md`,
+    comprehensiveRedundancy: `${blobBase}/README_COMPREHENSIVE_REDUNDANCY.md`,
+    pm2Redundancy: `${blobBase}/README_PM2_REDUNDANCY_COMPLETE.md`,
+    githubActions: `${blobBase}/README_GITHUB_ACTIONS.md`,
+    continuousOperation: `${blobBase}/README_CONTINUOUS_OPERATION.md`,
+  };
+
+  return {
+    props: {
+      routes,
+      latestUpdates,
+      docs,
+    },
+    revalidate: 3600,
+  };
+};
