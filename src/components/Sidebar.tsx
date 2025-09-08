@@ -55,24 +55,40 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       id: 'main',
       title: 'Main',
       icon: Home,
-      items: [
-        { name: 'Home', href: '/', icon: Home },
-        { name: 'About Us', href: '/about', icon: Building },
-        { name: 'Contact', href: '/contact', icon: Phone },
-        { name: 'Request Quote', href: '/request-quote', icon: DollarSign }
+      description: 'Main dashboard and overview'
+    },
+    {
+      name: 'Services',
+      href: '/services',
+      icon: Zap,
+      description: 'Our technology services',
+      subItems: [
+        { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: BarChart3 },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users },
+        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', icon: TrendingUp },
+        { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', icon: Heart },
+        { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target },
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', icon: Shield },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Rocket },
+        { name: 'IoT & Edge', href: '/services/iot-edge-computing', icon: Activity },
+        { name: 'Space Technology', href: '/services/space-technology', icon: Rocket },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud }
       ]
     },
     {
-      id: 'services',
-      title: 'Services',
-      icon: Settings,
-      items: [
-        { name: 'Services Overview', href: '/services-overview', icon: Settings },
-        { name: 'AI Services', href: '/ai-services', icon: Brain },
-        { name: 'IT Services', href: '/it-services', icon: Cpu },
-        { name: 'Micro SaaS', href: '/micro-saas', icon: ShoppingCart },
-        { name: 'Services Catalog', href: '/services-catalog', icon: BookOpen },
-        { name: 'Services Comparison', href: '/services-comparison', icon: TrendingUp }
+      name: 'Solutions',
+      href: '/solutions',
+      icon: Target,
+      description: 'Industry-specific solutions',
+      subItems: [
+        { name: 'Enterprise', href: '/solutions/enterprise', icon: Building },
+        { name: 'AI Business Intelligence', href: '/solutions/ai-business-intelligence', icon: Brain },
+        { name: 'Quantum AI Platform', href: '/solutions/quantum-ai-platform', icon: Atom },
+        { name: 'Digital Twin', href: '/solutions/digital-twin', icon: Eye },
+        { name: 'Healthcare', href: '/solutions/healthcare', icon: Heart },
+        { name: 'Financial', href: '/solutions/financial', icon: DollarSign }
       ]
     },
     {
@@ -141,9 +157,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       items: [
         { name: 'Blog', href: '/blog', icon: FileText },
         { name: 'Case Studies', href: '/case-studies', icon: FileText },
-        { name: 'White Papers', href: '/white-papers', icon: FileText },
-        { name: 'Webinars', href: '/webinars', icon: Video },
-        { name: 'Training', href: '/training', icon: BookOpen }
+        { name: 'Research & Development', href: '/research-development', icon: Activity },
+        { name: 'Documentation', href: '/docs', icon: FileText },
+        { name: 'API Reference', href: '/api', icon: Cpu },
+        { name: 'Support', href: '/support', icon: HelpCircle },
+        { name: 'Training', href: '/training', icon: GraduationCap },
+        { name: 'Helpdesk', href: '/help', icon: HelpCircle },
+        { name: 'Sitemap', href: '/sitemap', icon: FileText }
       ]
     },
     {

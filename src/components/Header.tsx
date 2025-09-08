@@ -59,12 +59,21 @@ export function Header({ onMenuClick }: HeaderProps) {
       name: 'Services',
       href: '/services',
       dropdown: [
-        { name: 'AI Solutions', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI platforms' },
-        { name: 'IT Services', href: '/it-services', icon: Cpu, description: 'Digital transformation' },
-        { name: 'Cloud & DevOps', href: '/cloud-solutions', icon: Cloud, description: 'Scalable infrastructure' },
-        { name: 'Cybersecurity', href: '/services/ai-cybersecurity-suite', icon: Shield, description: 'Advanced security' },
-        { name: 'Micro SAAS', href: '/micro-saas', icon: Zap, description: 'Custom software solutions' },
-        { name: 'Digital Transformation', href: '/digital-transformation', icon: Rocket, description: 'Business transformation' }
+        { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: BarChart3 },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users },
+        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', icon: TrendingUp },
+        { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', icon: Heart },
+        { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target },
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', icon: Shield },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cpu },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Rocket },
+        { name: 'IoT & Edge Computing', href: '/services/iot-edge-computing', icon: Activity },
+        { name: 'Space Technology', href: '/services/space-technology', icon: Rocket },
+        { name: 'Comprehensive Portfolio', href: '/comprehensive-services', icon: Globe },
+        { name: 'Revolutionary Services', href: '/revolutionary-services', icon: Sparkles },
+        { name: 'Pricing', href: '/pricing', icon: DollarSign }
       ]
     },
     {
