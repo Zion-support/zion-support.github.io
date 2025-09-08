@@ -8,16 +8,7 @@
 [build.environment]
   NODE_VERSION = "20"
   PYTHON_VERSION = "3.11"
-<<<<<<< HEAD
-<<<<<<< HEAD
-  NPM_FLAGS = "--legacy-peer-deps"
-  # Skip the Next.js plugin when deploying a prebuilt static dist
-=======
   NPM_FLAGS = "--omit=optional"
->>>>>>> 2d860f6d988467851b2af614020911fca7341f41
-=======
-  NPM_FLAGS = "--omit=optional"
->>>>>>> 5d2b73ddc50f8086b5094ad4ebbdbbf8f784766b
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
   NETLIFY_FUNCTIONS_TIMEOUT = "30"
   # Avoid optional binary downloads (electron, playwright, cypress)
