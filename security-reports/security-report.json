@@ -1,12 +1,12 @@
 {
-  "timestamp": "2025-08-29T15:51:21.088Z",
+  "timestamp": "2025-08-29T15:31:50.673Z",
   "summary": {
     "totalVulnerabilities": 0,
     "criticalVulnerabilities": 0,
     "highVulnerabilities": 0,
     "outdatedPackages": 0,
-    "securityIssues": 0,
-    "potentialSecrets": 5
+    "securityIssues": 8,
+    "potentialSecrets": 6
   },
   "results": {
     "audit": {
@@ -108,6 +108,12 @@
           "file": "/workspace/src/components/AdvancedCollaborationPlatform.jsx",
           "line": 99,
           "match": "password: 'Q4Review2024'..."
+        },
+        {
+          "type": "API Key",
+          "file": "/workspace/src/pages/Documentation.tsx",
+          "line": 122,
+          "match": "apiKey: 'your-api-key'..."
         },
         {
           "type": "Password",
