@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+<<<<<<< HEAD
     "target": "ES2024",
     "useDefineForClassFields": true,
     "lib": [
@@ -43,6 +44,10 @@
     "skipLibCheck": true
   },
   "include": [
+    "next-env.d.ts", 
+    "app/**/*.ts", 
+    "app/**/*.tsx", 
+    ".next/types/**/*.ts",
     "src/**/*",
     "pages/**/*",
     "*.ts",
@@ -69,6 +74,19 @@
     "temp*",
     "tmp*",
     "*.tmp",
-    "*.temp"
+    "*.temp",
+    "**/tests/**",
+    "__tests__/**",
+    "temp_*/**",
+    "temp-*/**",
+    "temp*/**",
+    "temp_conflicts/**",
+    "temp_exclude/**",
+    "zion-*/**",
+    "zion_os/**",
+    "zion/**",
+    "apps/**",
+    "utils/**",
+    "types/**"
   ]
 }
