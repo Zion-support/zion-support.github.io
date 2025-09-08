@@ -5,7 +5,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import './App.css';
 
 // Simple components
-import ErrorBoundary from './components/ErrorBoundary';
+import { ErrorBoundary } from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
 import { NotificationToast } from './components/NotificationToast';
 
