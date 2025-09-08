@@ -242,5 +242,17 @@
   schedule = "0 * * * *" # hourly
 
 [[scheduled.functions]]
-  name = "ai-issue-labeler"
-  schedule = "*/5 * * * *" # every 5 minutes
+  name = "deps-auto-upgrade-runner"
+  schedule = "7 */12 * * *"
+
+[[scheduled.functions]]
+  name = "content-freshness-runner"
+  schedule = "*/30 * * * *" # every 30 minutes
+
+[[scheduled.functions]]
+  name = "meta-tags-audit-runner"
+  schedule = "13 */4 * * *" # every 4 hours, offset
+
+[[scheduled.functions]]
+  name = "internal-link-graph-runner"
+  schedule = "*/30 * * * *" # every 30 minutes
