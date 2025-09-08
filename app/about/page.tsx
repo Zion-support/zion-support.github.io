@@ -7,35 +7,7 @@ export const metadata = {
 };
 
 export default function AboutPage() {
-  const values = [
-    {
-      title: 'Innovation',
-      description: 'We constantly push the boundaries of what\'s possible with cutting-edge technology and creative solutions.',
-      icon: '💡'
-    },
-    {
-      title: 'Excellence',
-      description: 'We maintain the highest standards in everything we do, from code quality to customer service.',
-      icon: '⭐'
-    },
-    {
-      title: 'Collaboration',
-      description: 'We work closely with our clients as partners, ensuring solutions that truly meet their needs.',
-      icon: '🤝'
-    },
-    {
-      title: 'Integrity',
-      description: 'We conduct business with honesty, transparency, and respect for all stakeholders.',
-      icon: '🛡️'
-    }
-  ]
-
-  const stats = [
-    { label: 'Years of Experience', value: '10+' },
-    { label: 'Projects Delivered', value: '500+' },
-    { label: 'Happy Clients', value: '200+' },
-    { label: 'Team Members', value: '50+' }
-  ]
+  // Removed unused variables to fix linting warnings
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
@@ -60,7 +32,7 @@ export default function AboutPage() {
               </p>
               <p className="text-gray-600">
                 Our team of experts combines deep technical knowledge with business acumen to create 
-                solutions that not only meet today's challenges but anticipate tomorrow's opportunities.
+                solutions that not only meet today&apos;s challenges but anticipate tomorrow&apos;s opportunities.
               </p>
             </div>
 
