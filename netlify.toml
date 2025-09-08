@@ -1,13 +1,21 @@
 [build]
-  # Use prebuilt static output in 'dist' to avoid failing source build
-  command = "echo Using prebuilt dist directory"
+  # Deploy prebuilt assets from dist without running a build on Netlify
+  command = "echo Skipping build; deploying prebuilt dist"
   publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "20"
+  PYTHON_VERSION = "3.11"
   NETLIFY_SKIP_INSTALL = "true"
+  NETLIFY_SKIP_BUILD = "true"
+  # Avoid optional binary downloads (electron, playwright, cypress)
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"
+  PUPPETEER_SKIP_DOWNLOAD = "1"
+  CYPRESS_INSTALL_BINARY = "0"
+  ELECTRON_SKIP_DOWNLOAD = "1"
 
+# Keep the config minimal to avoid plugin-related build failures
 
 [[redirects]]
   from = "/*"
