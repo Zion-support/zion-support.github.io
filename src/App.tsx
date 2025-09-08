@@ -24,7 +24,6 @@ const queryClient = new QueryClient({
   },
 });
 
-<<<<<<< HEAD
 // Pages - Lazy loaded for better performance
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
