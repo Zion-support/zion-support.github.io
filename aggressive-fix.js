@@ -45,19 +45,9 @@ function fixFile(filePath) {
     const content = fs.readFileSync(filePath, "utf8");
     
     // Check if file is too small or has merge conflicts
-    if (content.trim().length < 20 || content.includes("<<<<<<< HEAD")) {
-      const newContent = createValidReactComponent(filePath);
-      fs.writeFileSync(filePath, newContent);
-      return true;
-    }
-    
-    // Fix common issues
-    let fixedContent = content;
-    
-    // Remove merge conflict markers
-    fixedContent = fixedContent.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    fixedContent = fixedContent.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    fixedContent = fixedContent.replace(/<<<<<<< [^\n]+[\s\S]*?=======/g, '');
+    if (content.trim().length < 20 || content.includes("[\s\S]*?
+    fixedContent = fixedContent.replace(/[\s\S]*?
+    fixedContent = fixedContent.replace(/
     
     // Fix import statements
     fixedContent = fixedContent.replace(/import React from "react",/g, 'import React from "react";');

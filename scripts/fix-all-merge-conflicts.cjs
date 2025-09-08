@@ -9,10 +9,10 @@ function fixMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Remove all merge conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?    content = content.replace(/<<<<<<< HEAD[\s\S]*?    content = content.replace(/=======[\s\S]*?    
+    content = content.replace(/[\s\S]*?    content = content.replace(/
     // Clean up any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD/g, '');
-    content = content.replace(/=======/g, '');
+    content = content.replace(/
+    content = content.replace(//g, '');
     content = content.replace(/    
     // Clean up extra semicolons and syntax issues
     content = content.replace(/;{2,}/g, ';');
@@ -68,7 +68,7 @@ function findFilesWithConflicts(dir) {
         if (['.tsx', '.ts', '.jsx', '.js', '.json', '.css', '.md'].includes(ext)) {
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
-            if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+            if (content.includes('
               files.push(fullPath);
             }
           } catch (error) {

@@ -8,23 +8,17 @@ function resolveConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    if (!content.includes('<<<<<<< HEAD')) {
-      return false;
-    }
-    
-    console.log(`📝 Resolving: ${filePath}`);
-    
-    // Keep incoming changes (after =======)
+    if (!content.includes(')
     let resolved = content
-      .replace(/<<<<<<< HEAD[\s\S]*?=======\n?/, '')
-      .replace(/>>>>>>> [^\n]+/g, '')
-      .replace(/=======\n?[\s\S]*?>>>>>>> [^\n]+/g, '');
+      .replace(/
+      .replace(/
+      .replace(/\n?[\s\S]*?
     
     // Clean up any remaining markers
     resolved = resolved
-      .replace(/<<<<<<< [^\n]+/g, '')
-      .replace(/=======/g, '')
-      .replace(/>>>>>>> [^\n]+/g, '');
+      .replace(/
+      .replace(//g, '')
+      .replace(/
     
     fs.writeFileSync(filePath, resolved);
     return true;
@@ -39,7 +33,7 @@ const { execSync } = require('child_process');
 let conflictedFiles = [];
 
 try {
-  const result = execSync('grep -r "<<<<<<< HEAD" . --include="*.js" --include="*.ts" --include="*.tsx" --include="*.jsx" --include="*.json" --include="*.md" --include="*.sh" --include="*.cjs" --include="*.xml" -l', { encoding: 'utf8' });
+  const result = execSync('grep -r "
   conflictedFiles = result.trim().split('\n').filter(f => f && !f.includes('node_modules'));
 } catch (error) {
   console.log('Using fallback method to find conflicted files...');
