@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons";
+import { BarChart3, Briefcase, Monitor, User } from "@/components/icons";
 import Skeleton from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 
@@ -38,7 +38,7 @@ export function AIMatchingResults({
     const lowerCategory = category.toLowerCase();
     if (lowerCategory.includes("talent")) return User;
     if (lowerCategory.includes("equipment")) return Monitor;
-    return BriefcaseIcon;
+    return Briefcase;
   };
   
   if (isLoading) {

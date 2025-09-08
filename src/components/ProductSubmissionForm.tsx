@@ -21,7 +21,7 @@ import { Button } from "@/components/ui/Button";
 import { Textarea } from "@/components/ui/textarea";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
+import { AIListingGenerator } from "@/components/AIListingGenerator";
 import { Sparkles } from "lucide-react";
 
 // Define the form schema with zod
