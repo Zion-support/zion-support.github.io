@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -14,10 +14,12 @@ import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSpinner } from './components/LoadingSpinner';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
 import { AppConfig } from './types/app';
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import NotFound from './pages/NotFound';
+
+// Lazy load pages for better performance
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Contact = lazy(() => import('./pages/Contact'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Initialize React Query client with better configuration
 const queryClient = new QueryClient({
