@@ -1,0 +1,39 @@
+[build]
+<<<<<<< HEAD
+  # Skip building on Netlify and deploy prebuilt dist/ directory
+  command = "echo Skipping build; deploying prebuilt dist"
+  publish = "dist"
+=======
+  # Skip build and serve prebuilt static output from the repository
+  command = "echo 'Netlify: Skipping build; serving prebuilt out/ directory'"
+  publish = "out"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-1240
+  command_timeout = "30m"
+
+[build.environment]
+  NODE_VERSION = "20"
+  # Skip dependency install since we are not building on Netlify
+  NETLIFY_SKIP_INSTALL = "true"
+
+## Plugins removed to avoid extra dependency installation during Netlify build
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Set basic cache headers for static assets for better performance
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/_next/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300"

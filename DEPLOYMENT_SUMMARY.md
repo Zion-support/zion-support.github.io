@@ -1,5 +1,11 @@
 # 🚀 Zion Tech Group Website - Deployment Summary
 
+## 2025-09-08 Netlify configuration verification
+
+- Verified `netlify.toml` is configured to skip install/build and publish prebuilt static export from `out/`.
+- Confirmed `out/` exists with a complete static export, including `index.html`, localized assets, and redirects via `[[redirects]]` in `netlify.toml`.
+- Rationale: A full TypeScript build currently fails with type errors; skipping build ensures successful deploy of the known-good static output while application build issues are addressed separately.
+
 ## 📋 Project Overview
 **Project**: Zion Tech Group Website Audit, Content Update, and Deployment  
 **Branch**: `cursor/website-audit-content-update-and-deployment-6427`  

@@ -1,5 +1,5 @@
 [build]
-  # Do not run any build. Deploy the prebuilt static export from out/ as-is.
+  # Deploy prebuilt Next.js static export in `out/`
   command = "echo 'Skipping build; deploying prebuilt static export'"
   publish = "out"
   command_timeout = "30m"
@@ -7,17 +7,38 @@
 [build.environment]
   NODE_VERSION = "20"
   PYTHON_VERSION = "3.11"
+  # Skip Netlify auto installers; rely on build command
   NETLIFY_SKIP_INSTALL = "true"
-  NETLIFY_SKIP_BUILD = "true"
-  # Avoid optional binary downloads (electron, playwright, cypress)
-  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"
-  PUPPETEER_SKIP_DOWNLOAD = "1"
-  CYPRESS_INSTALL_BINARY = "0"
+  # Disable mise shims entirely during Netlify builds
+  MISE_DISABLE = "1"
+  MISE_SHIMS = "0"
+  # Force mise to use system Python even during Netlify's dependency stage (defensive)
+  MISE_TOOL_VERSIONS__python = "system"
+  # Skip Electron binary downloads during install to prevent build failures
   ELECTRON_SKIP_DOWNLOAD = "1"
 
-# Keep the config minimal to avoid plugin-related build failures
+## Disable Next.js runtime plugin since we're deploying a static export
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  enabled = false
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Set basic cache headers for static assets for better performance
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/_next/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300"

@@ -1,13 +1,4 @@
 <<<<<<< HEAD
-  "name": "Zion Tech Group - AI-Powered Tech Marketplace",
-  "short_name": "Zion Tech",
-  "description": "Discover top AI and tech talent, services, and equipment in one place. AI-powered matching for your tech needs.",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#172d67",
-  "theme_color": "#2e73ea",
-<<<<<<< HEAD
-<<<<<<< HEAD
   "name": "Zion Tech Group - Micro SAAS Services",
   "short_name": "Zion Tech",
   "description": "Transform your business with Zion Tech Group's micro SAAS services. AI-powered solutions for productivity, finance, marketing, CRM, analytics, and more.",
@@ -17,28 +8,30 @@
   "theme_color": "#10B981",
 <<<<<<< HEAD
 <<<<<<< HEAD
-      "src": "/images/zion-logo-192.png",
+  "name": "Zion Tech Group - Micro SAAS Services",
+  "short_name": "Zion Tech",
+  "description": "Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative micro SAAS services.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#10B981",
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      "src": "/images/zion-logo-512.png",
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "src": "/icons/icon-192x192.png",
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      "src": "/logo192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/logo512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
 <<<<<<< HEAD
 <<<<<<< HEAD
-      "src": "/images/screenshot-desktop.png",
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "src": "/screenshots/desktop-1280x720.png",
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide",
@@ -47,57 +40,46 @@
     {
       "src": "/images/screenshot-mobile.png",
       "sizes": "390x844",
-<<<<<<< HEAD
-      "src": "/screenshot-wide.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "Zion Tech Group Homepage"
-    },
-    {
-      "src": "/screenshot-narrow.png",
-      "sizes": "750x1334",
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Zion Tech Group Mobile View"
 <<<<<<< HEAD
-      "name": "Find Talent",
-      "short_name": "Talent",
-      "description": "Browse and find tech talent",
-      "url": "/talent",
-      "icons": [
-        {
-          "src": "/images/talent-icon.png",
-          "sizes": "96x96"
 <<<<<<< HEAD
 <<<<<<< HEAD
       "name": "Micro SAAS Services",
       "short_name": "Services",
       "description": "Browse our micro SAAS services",
       "url": "/micro-saas-services",
+<<<<<<< HEAD
       "icons": [
         {
-          "src": "/images/ai-solutions-icon.png",
+          "src": "/icons/icon-96x96.png",
           "sizes": "96x96"
 <<<<<<< HEAD
-      "name": "Browse Services",
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+      "icons": [
+        {
+          "src": "/icons/icon-96x96.png",
+          "sizes": "96x96"
 <<<<<<< HEAD
           "src": "/images/services-icon.png",
-          "sizes": "96x96"
 <<<<<<< HEAD
-      "name": "AI Matcher",
-      "short_name": "AI Match",
-      "description": "AI-powered talent matching",
-      "url": "/match",
+      "description": "Get in touch with us",
+      "url": "/#contact",
       "icons": [
         {
-          "src": "/images/ai-icon.png",
+          "src": "/icons/icon-96x96.png",
           "sizes": "96x96"
-        }
-      ]
+<<<<<<< HEAD
+      "description": "Get in touch with us",
+      "url": "/contact",
+      "icons": [
+        {
+<<<<<<< HEAD
+          "src": "/images/contact-icon.png",
 <<<<<<< HEAD
 <<<<<<< HEAD
   "screenshots": [
@@ -109,36 +91,46 @@
       "label": "Homepage - Desktop View"
     },
     {
-      "name": "Equipment",
-      "short_name": "Equipment",
-      "description": "Browse tech equipment",
-      "url": "/equipment",
-      "icons": [
-        {
-          "src": "/images/equipment-icon.png",
-          "sizes": "96x96"
-        }
-      ]
+      "src": "/screenshots/mobile-1.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Homepage - Mobile View"
     }
   ],
 <<<<<<< HEAD
-      "action": "/upload",
+<<<<<<< HEAD
+  "capture_links": "new-client",
 <<<<<<< HEAD
 <<<<<<< HEAD
-      "action": "/file-handler",
-      "accept": {
-        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".webp"],
-        "application/pdf": [".pdf"],
+        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".webp"]
+      }
+    }
+  ],
 <<<<<<< HEAD
-        "text/*": [".txt", ".md", ".json"]
+  "protocol_handlers": [
+    {
+      "protocol": "web+zion",
+      "url": "/protocol-handler?protocol=%s"
+    }
+  ],
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "permissions": [
+    "notifications",
+    "background-sync",
+    "storage"
+  ],
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-    "ai-powered",
+    "responsive",
     "offline-capable"
 <<<<<<< HEAD
 <<<<<<< HEAD
     "responsive",
     "offline-capable"
+<<<<<<< HEAD
+  }
