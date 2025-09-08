@@ -129,19 +129,16 @@ export type EnhancedLayoutProps = {
 };
 
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
-  useEffect(() => {;
-    const lng = i18n.resolvedLanguage || i18n.language;
-    document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
-    document.documentElement.setAttribute('lang', lng);
-  }, []);
-
-      </main>      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>;
-      <footer>;
-        <EnhancedFooter />;
-      </footer>;
-    </div>;
-}
-}
+  return (
+    <div className="min-h-screen flex flex-col bg-white dark:bg-black text-gray-900 dark:text-gray-100" style={{ color: 'var(--brand, #111827)' }}>
+      <header>
+        <EnhancedNavigation />
+      </header>
+      <main className="flex-1 container mx-auto px-4 py-6">{children}</main>
+      <footer>
+        <EnhancedFooter />
+      </footer>
+    </div>
   );
 }
   );

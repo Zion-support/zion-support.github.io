@@ -1,18 +1,30 @@
-import React from 'react';
-import type { AppProps } from 'next/app';
-import Head from 'next/head';
+import App, { AppProps, AppContext } from 'next/app';
+import EnhancedLayout from '../components/layout/EnhancedLayout';
+import { TenantProvider } from '../components/multiverse/TenantProvider';
+import { getServerSideTenant } from '../utils/tenant';
+import '../styles/enhanced-design-system.css';
+import '../styles/modern-design-system.css';
 import '../styles/globals.css';
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+function ZionApp({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <Head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#1e40af" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Component {...pageProps} />
-    </>
+    <TenantProvider initialTenant={pageProps?.tenant ?? null}>
+      <EnhancedLayout>
+        <Component {...pageProps} />
+      </EnhancedLayout>
+    </TenantProvider>
   );
 }
+
+ZionApp.getInitialProps = async (appContext: AppContext) => {
+  const appProps = await App.getInitialProps(appContext);
+  const req = (appContext?.ctx as any)?.req;
+  let tenant = null;
+  if (req) {
+    const result = await getServerSideTenant({ req });
+    tenant = result.tenant;
+  }
+  return { ...appProps, pageProps: { ...appProps.pageProps, tenant } } as any;
+};
+
+export default ZionApp;
