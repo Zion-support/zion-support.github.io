@@ -10,16 +10,24 @@
 
 | Test Suite | Status | Details |
 |------------|--------|---------|
-| Unit | ✅ PASS | No unit tests found
+| Unit | ✅ PASS | 
+> bolt.new.zion.app@0.1.0 test
+> vitest
+
+No unit tests found
 ... |
 | Integration | ❌ FAIL | Command failed: npm run build... |
 | E2e | ✅ PASS | No E2E testing framework available... |
 | Performance | ✅ PASS | Hello, this is AnupamAS01!
 ... |
 | Accessibility | ✅ PASS | Lint check failed: Command failed: npm run lint
-Invalid option '--ext' - perhaps you meant '-c'?
-You... |
-| Coverage | ✅ PASS | Coverage generation failed
+sh: 1: eslint: not found
+... |
+| Coverage | ✅ PASS | 
+> bolt.new.zion.app@0.1.0 test
+> vitest --coverage
+
+Coverage generation failed
 ... |
 
 ## Quality Gates
