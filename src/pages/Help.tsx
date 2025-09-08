@@ -1,430 +1,342 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { 
-  Search, 
-  HelpCircle, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  BookOpen, 
-  Video, 
-  FileText,
-  ArrowRight,
-  Star,
-  CheckCircle,
+  Search,
+  HelpCircle,
+  BookOpen,
+  MessageCircle,
+  Phone,
+  Mail,
+  MapPin,
   Clock,
+  ChevronDown,
+  ChevronUp,
+  ExternalLink,
+  FileText,
+  Video,
+  Download,
   Users,
   Zap,
-  Brain,
-  Rocket,
   Shield,
   Cloud,
-  Cpu,
-  Globe,
+  Brain,
+  Atom,
+  Rocket,
+  Code,
   TrendingUp,
+  CheckCircle,
+  Star,
+  ArrowRight,
   Building2,
-  HeartHandshake,
-  Award,
-  GraduationCap,
+  Network,
+  Briefcase,
+  DollarSign,
+  Clock as ClockIcon,
+  Shield as ShieldIcon,
+  Cpu,
+  Database,
+  Workflow,
+  Palette,
+  Monitor,
+  Smartphone,
+  Server,
+  Lock,
+  BarChart3,
   LifeBuoy,
   Settings,
-  Key,
-  Globe2,
-  ShieldCheck,
-  Scale,
-  Car,
-  Home,
-  Factory,
-  City,
-  ChevronDown,
-  ChevronRight,
-  ExternalLink
+  Tool,
+  Wrench,
+  Lightbulb,
+  Target,
+  Award
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
 
-export default function Help() {
+interface FAQ {
+  id: string;
+  question: string;
+  answer: string;
+  category: string;
+  tags: string[];
+}
+
+interface HelpCategory {
+  id: string;
+  name: string;
+  description: string;
+  icon: any;
+  articles: number;
+  color: string;
+}
+
+const Help: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [expandedFAQ, setExpandedFAQ] = useState<string | null>(null);
 
-  const helpCategories = [
+  const helpCategories: HelpCategory[] = [
     {
       id: 'getting-started',
-      title: 'Getting Started',
+      name: 'Getting Started',
+      description: 'Quick start guides and onboarding information',
       icon: Rocket,
-      color: 'from-blue-500 to-cyan-500',
-      description: 'Essential information to get you started with our services',
-      articles: [
-        {
-          title: 'How to Choose the Right Service',
-          description: 'A comprehensive guide to selecting the best service for your needs',
-          href: '/blog/how-to-choose-service',
-          readTime: '5 min read',
-          popular: true
-        },
-        {
-          title: 'First Steps After Purchase',
-          description: 'What to expect and how to proceed after purchasing a service',
-          href: '/blog/first-steps-after-purchase',
-          readTime: '3 min read',
-          popular: false
-        },
-        {
-          title: 'Account Setup Guide',
-          description: 'Complete guide to setting up your account and profile',
-          href: '/blog/account-setup-guide',
-          readTime: '4 min read',
-          popular: false
-        }
-      ]
+      articles: 12,
+      color: 'bg-blue-500/20 text-blue-400 border-blue-500/30'
     },
     {
-      id: 'services',
-      title: 'Services & Solutions',
+      id: 'ai-services',
+      name: 'AI Services',
+      description: 'Help with AI and machine learning services',
       icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-      description: 'Detailed information about our services and how to use them',
-      articles: [
-        {
-          title: 'AI Business Intelligence Setup',
-          description: 'Complete setup guide for AI Business Intelligence services',
-          href: '/services/ai-business-intelligence',
-          readTime: '8 min read',
-          popular: true
-        },
-        {
-          title: 'Micro SaaS Implementation',
-          description: 'Step-by-step implementation guide for Micro SaaS solutions',
-          href: '/services/micro-saas',
-          readTime: '10 min read',
-          popular: true
-        },
-        {
-          title: 'Digital Twin Configuration',
-          description: 'How to configure and optimize Digital Twin solutions',
-          href: '/services/digital-twin',
-          readTime: '6 min read',
-          popular: false
-        }
-      ]
+      articles: 18,
+      color: 'bg-purple-500/20 text-purple-400 border-purple-500/30'
     },
     {
-      id: 'billing',
-      title: 'Billing & Pricing',
-      icon: TrendingUp,
-      color: 'from-green-500 to-emerald-500',
-      description: 'Information about pricing, billing, and payment options',
-      articles: [
-        {
-          title: 'Understanding Our Pricing Structure',
-          description: 'Detailed breakdown of our pricing models and what\'s included',
-          href: '/pricing',
-          readTime: '7 min read',
-          popular: true
-        },
-        {
-          title: 'Payment Methods & Security',
-          description: 'Available payment methods and security measures',
-          href: '/blog/payment-methods',
-          readTime: '4 min read',
-          popular: false
-        },
-        {
-          title: 'Invoice & Receipt Management',
-          description: 'How to access and manage your invoices and receipts',
-          href: '/blog/invoice-management',
-          readTime: '3 min read',
-          popular: false
-        }
-      ]
+      id: 'quantum-computing',
+      name: 'Quantum Computing',
+      description: 'Quantum computing platform support',
+      icon: Atom,
+      articles: 8,
+      color: 'bg-cyan-500/20 text-cyan-400 border-cyan-500/30'
     },
     {
-      id: 'technical',
-      title: 'Technical Support',
-      icon: Cpu,
-      color: 'from-orange-500 to-red-500',
-      description: 'Technical documentation and troubleshooting guides',
-      articles: [
-        {
-          title: 'API Documentation',
-          description: 'Complete API reference and integration guides',
-          href: '/documentation',
-          readTime: '15 min read',
-          popular: true
-        },
-        {
-          title: 'Common Issues & Solutions',
-          description: 'Solutions to frequently encountered technical problems',
-          href: '/blog/common-issues',
-          readTime: '6 min read',
-          popular: true
-        },
-        {
-          title: 'Performance Optimization',
-          description: 'Tips and best practices for optimizing service performance',
-          href: '/blog/performance-optimization',
-          readTime: '8 min read',
-          popular: false
-        }
-      ]
+      id: 'cybersecurity',
+      name: 'Cybersecurity',
+      description: 'Security platform and compliance help',
+      icon: Shield,
+      articles: 15,
+      color: 'bg-red-500/20 text-red-400 border-red-500/30'
+    },
+    {
+      id: 'cloud-infrastructure',
+      name: 'Cloud & Infrastructure',
+      description: 'Cloud services and infrastructure support',
+      icon: Cloud,
+      articles: 22,
+      color: 'bg-green-500/20 text-green-400 border-green-500/30'
+    },
+    {
+      id: 'billing-support',
+      name: 'Billing & Support',
+      description: 'Billing, account, and general support',
+      icon: DollarSign,
+      articles: 10,
+      color: 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30'
     }
   ];
 
-  const popularArticles = [
+  const faqs: FAQ[] = [
     {
-      title: 'How to Choose the Right Service',
-      description: 'A comprehensive guide to selecting the best service for your needs',
-      href: '/blog/how-to-choose-service',
-      category: 'Getting Started',
-      readTime: '5 min read',
-      views: '2.5k'
+      id: '1',
+      question: 'How do I get started with Zion Tech Group services?',
+      answer: 'Getting started is easy! Simply contact our team through our contact form or call us directly. We\'ll schedule a consultation to understand your needs and recommend the best solutions. Our onboarding process includes a comprehensive assessment, custom implementation plan, and dedicated support throughout your journey.',
+      category: 'getting-started',
+      tags: ['onboarding', 'consultation', 'getting-started']
     },
     {
-      title: 'AI Business Intelligence Setup',
-      description: 'Complete setup guide for AI Business Intelligence services',
-      href: '/services/ai-business-intelligence',
-      category: 'Services',
-      readTime: '8 min read',
-      views: '1.8k'
+      id: '2',
+      question: 'What AI services do you offer for enterprises?',
+      answer: 'We offer a comprehensive suite of AI services including enterprise automation platforms, data analytics, business intelligence, cybersecurity solutions, autonomous research assistants, financial trading platforms, healthcare platforms, and quantum hybrid solutions. Each service is customizable to meet your specific business requirements.',
+      category: 'ai-services',
+      tags: ['AI', 'enterprise', 'automation', 'analytics']
     },
     {
-      title: 'Understanding Our Pricing Structure',
-      description: 'Detailed breakdown of our pricing models and what\'s included',
-      href: '/pricing',
-      category: 'Billing',
-      readTime: '7 min read',
-      views: '1.6k'
+      id: '3',
+      question: 'How secure are your AI and quantum computing platforms?',
+      answer: 'Security is our top priority. All our platforms implement enterprise-grade security measures including end-to-end encryption, multi-factor authentication, regular security audits, and compliance with industry standards like SOC 2, ISO 27001, and GDPR. Our quantum platforms also include quantum-resistant encryption protocols.',
+      category: 'cybersecurity',
+      tags: ['security', 'encryption', 'compliance', 'quantum']
     },
     {
-      title: 'API Documentation',
-      description: 'Complete API reference and integration guides',
-      href: '/documentation',
-      category: 'Technical',
-      readTime: '15 min read',
-      views: '1.4k'
+      id: '4',
+      question: 'Can you help with legacy system integration?',
+      answer: 'Absolutely! We specialize in modernizing legacy systems and integrating them with cutting-edge AI and cloud solutions. Our team has extensive experience in enterprise architecture, data migration, and creating seamless integration pathways that preserve your existing investments while unlocking new capabilities.',
+      category: 'cloud-infrastructure',
+      tags: ['legacy', 'integration', 'migration', 'modernization']
+    },
+    {
+      id: '5',
+      question: 'What support options are available for enterprise clients?',
+      answer: 'Enterprise clients receive premium support including 24/7 technical assistance, dedicated account managers, priority response times, custom training programs, and regular health checks. We also offer on-site support for critical implementations and emergency response services.',
+      category: 'billing-support',
+      tags: ['enterprise', 'support', '24/7', 'dedicated']
+    },
+    {
+      id: '6',
+      question: 'How do your quantum computing solutions work?',
+      answer: 'Our quantum computing solutions combine classical and quantum computing approaches to solve complex problems that are intractable for traditional computers. We offer quantum edge computing, quantum neural networks, and hybrid platforms that can be deployed on-premises or in the cloud, depending on your security and performance requirements.',
+      category: 'quantum-computing',
+      tags: ['quantum', 'computing', 'hybrid', 'edge-computing']
+    },
+    {
+      id: '7',
+      question: 'What industries do you specialize in?',
+      answer: 'We serve a wide range of industries including healthcare, financial services, manufacturing, government, retail, and emerging tech sectors. Our solutions are designed to be industry-agnostic while incorporating domain-specific expertise and compliance requirements for each sector.',
+      category: 'getting-started',
+      tags: ['industries', 'healthcare', 'finance', 'manufacturing']
+    },
+    {
+      id: '8',
+      question: 'How do you handle data privacy and compliance?',
+      answer: 'We maintain strict data privacy standards and comply with all major regulations including GDPR, HIPAA, SOX, and industry-specific requirements. Our data handling practices include data minimization, purpose limitation, and robust consent management. We also provide compliance reporting and audit support.',
+      category: 'cybersecurity',
+      tags: ['privacy', 'compliance', 'GDPR', 'HIPAA']
+    }
+  ];
+
+  const filteredFAQs = faqs.filter(faq => {
+    if (selectedCategory !== 'all' && faq.category !== selectedCategory) return false;
+    if (searchQuery) {
+      return faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+             faq.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
+             faq.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    }
+    return true;
+  });
+
+  const toggleFAQ = (faqId: string) => {
+    setExpandedFAQ(expandedFAQ === faqId ? null : faqId);
+  };
+
+  const quickActions = [
+    {
+      icon: BookOpen,
+      title: 'Documentation',
+      description: 'Comprehensive guides and API references',
+      link: '/documentation',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      icon: Video,
+      title: 'Video Tutorials',
+      description: 'Step-by-step video guides',
+      link: '/training',
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      icon: Download,
+      title: 'Downloads',
+      description: 'SDKs, tools, and resources',
+      link: '/downloads',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      icon: Users,
+      title: 'Community',
+      description: 'Connect with other users',
+      link: '/community',
+      color: 'from-orange-500 to-red-500'
     }
   ];
 
   const supportChannels = [
     {
-      title: 'Live Chat Support',
-      description: 'Get instant help from our support team',
-      icon: MessageCircle,
-      color: 'from-blue-500 to-cyan-500',
-      href: '/contact',
-      responseTime: 'Instant',
-      available: '24/7'
-    },
-    {
-      title: 'Email Support',
-      description: 'Send us a detailed message for complex issues',
       icon: Mail,
-      color: 'from-green-500 to-emerald-500',
-      href: 'mailto:kleber@ziontechgroup.com',
-      responseTime: '2-4 hours',
-      available: '24/7'
+      title: 'Email Support',
+      description: 'support@ziontechgroup.com',
+      response: 'Within 4 hours',
+      link: 'mailto:support@ziontechgroup.com'
     },
     {
-      title: 'Phone Support',
-      description: 'Call us directly for urgent issues',
       icon: Phone,
-      color: 'from-purple-500 to-pink-500',
-      href: 'tel:+13024640950',
-      responseTime: 'Immediate',
-      available: '9 AM - 6 PM EST'
+      title: 'Phone Support',
+      description: '+1 (302) 464-0950',
+      response: 'Immediate',
+      link: 'tel:+13024640950'
     },
     {
-      title: 'Documentation',
-      description: 'Comprehensive guides and technical documentation',
-      icon: BookOpen,
-      color: 'from-orange-500 to-red-500',
-      href: '/documentation',
-      responseTime: 'Instant',
-      available: '24/7'
+      icon: MessageCircle,
+      title: 'Live Chat',
+      description: 'Available 24/7',
+      response: 'Instant',
+      link: '/chat'
+    },
+    {
+      icon: MapPin,
+      title: 'Office Hours',
+      description: 'Middletown, DE',
+      response: 'Mon-Fri 9AM-6PM EST',
+      link: '/contact'
     }
   ];
 
-  const filteredCategories = helpCategories.filter(category =>
-    category.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    category.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    category.articles.some(article =>
-      article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      article.description.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  );
-
-  const toggleCategory = (categoryId: string) => {
-    setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-black text-white">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 lg:py-32">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-cyan-600/20"></div>
-        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10"></div>
-        
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto"
-          >
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent mb-6">
-              How Can We Help?
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Find answers to your questions, get support, and learn how to make the most of our services
-            </p>
-            
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto mb-8">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                <input
-                  type="text"
-                  placeholder="Search for help articles, guides, or topics..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-lg"
-                />
-              </div>
-            </div>
-          </motion.div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* Header */}
+      <div className="bg-slate-900/50 backdrop-blur-md border-b border-slate-700/50">
+        <div className="container mx-auto px-6 py-16">
+          <div className="text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                Help & <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Support</span>
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                Get the help you need to succeed with Zion Tech Group. 
+                Find answers, documentation, and connect with our support team.
+              </p>
+            </motion.div>
+          </div>
         </div>
       </div>
 
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-              >
-                Contact Support
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                to="/faq"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-semibold rounded-lg transition-all duration-300"
-              >
-                View FAQ
-              </Link>
+      {/* Search Bar */}
+      <section className="py-12">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl mx-auto"
+          >
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search for help articles, FAQs, or documentation..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-14 pr-4 py-4 bg-slate-800/30 backdrop-blur-md border border-slate-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-lg"
+              />
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Support Channels */}
-      <section className="py-16 lg:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Quick Actions */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Get Support
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Multiple ways to get the help you need, when you need it
-            </p>
+            <h2 className="text-4xl font-bold text-white mb-4">Quick Actions</h2>
+            <p className="text-xl text-gray-300">Get started quickly with these helpful resources</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {supportChannels.map((channel, index) => (
+            {quickActions.map((action, index) => (
               <motion.div
-                key={channel.name}
+                key={action.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group"
               >
-                <Link
-                  to={channel.href}
-                  className="block p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:bg-slate-800/70 h-full text-center"
+                <a
+                  href={action.link}
+                  className="block bg-slate-800/30 backdrop-blur-md rounded-xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 text-center"
                 >
-                  <div className={`p-3 rounded-xl bg-gradient-to-br ${channel.color} w-fit mx-auto mb-4`}>
-                    <channel.icon className="w-6 h-6 text-white" />
+                  <div className={`w-16 h-16 bg-gradient-to-r ${action.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <action.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {channel.title}
-                  </h3>
-                  <p className="text-gray-400 text-sm mb-4">
-                    {channel.description}
-                  </p>
-                  <div className="space-y-2 text-xs text-gray-500">
-                    <div className="flex items-center justify-center gap-2">
-                      <Clock className="w-3 h-3" />
-                      <span>Response: {channel.responseTime}</span>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                      <CheckCircle className="w-3 h-3" />
-                      <span>Available: {channel.available}</span>
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Popular Articles */}
-      <section className="py-16 lg:py-24 bg-slate-800/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Popular Help Articles
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Most viewed and helpful articles to get you started
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {popularArticles.map((article, index) => (
-              <motion.div
-                key={article.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group"
-              >
-                <Link
-                  to={article.href}
-                  className="block p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:bg-slate-800/70 h-full"
-                >
-                  <div className="flex items-start justify-between mb-4">
-                    <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-xs rounded-full font-medium">
-                      {article.category}
-                    </span>
-                    <div className="flex items-center gap-2 text-xs text-gray-500">
-                      <Users className="w-3 h-3" />
-                      <span>{article.views} views</span>
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {article.title}
-                  </h3>
-                  <p className="text-gray-400 text-sm mb-4 leading-relaxed">
-                    {article.description}
-                  </p>
-                  
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2 text-xs text-gray-500">
-                      <Clock className="w-3 h-3" />
-                      <span>{article.readTime}</span>
-                    </div>
-                    <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors" />
-                  </div>
-                </Link>
+                  <h3 className="text-xl font-semibold text-white mb-2">{action.title}</h3>
+                  <p className="text-gray-300 text-sm">{action.description}</p>
+                </a>
               </motion.div>
             ))}
           </div>
@@ -432,87 +344,100 @@ export default function Help() {
       </section>
 
       {/* Help Categories */}
-      <section className="py-16 lg:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-slate-800/20">
+        <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Help Categories
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Organized help content to find answers quickly
-            </p>
+            <h2 className="text-4xl font-bold text-white mb-4">Help Categories</h2>
+            <p className="text-xl text-gray-300">Find help organized by topic and service area</p>
           </motion.div>
 
-          <div className="space-y-6">
-            {filteredCategories.map((category, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {helpCategories.map((category, index) => (
               <motion.div
                 key={category.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 rounded-2xl border border-slate-700/50 overflow-hidden"
+                className="group"
               >
                 <button
-                  onClick={() => toggleCategory(category.id)}
-                  className="w-full p-6 text-left hover:bg-slate-700/50 transition-colors"
+                  onClick={() => setSelectedCategory(category.id === selectedCategory ? 'all' : category.id)}
+                  className={`w-full bg-slate-800/30 backdrop-blur-md rounded-xl p-6 border transition-all duration-300 hover:scale-105 text-left ${
+                    selectedCategory === category.id
+                      ? 'border-cyan-500/50 bg-cyan-500/10'
+                      : 'border-slate-700/50 hover:border-cyan-500/30'
+                  }`}
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <div className={`w-12 h-12 ${category.color} rounded-lg flex items-center justify-center`}>
+                      <category.icon className="w-6 h-6" />
+                    </div>
+                    <span className="text-sm text-gray-400">{category.articles} articles</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{category.name}</h3>
+                  <p className="text-gray-300 text-sm">{category.description}</p>
+                </button>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+            <p className="text-xl text-gray-300">Find answers to common questions about our services</p>
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto space-y-4">
+            {filteredFAQs.map((faq, index) => (
+              <motion.div
+                key={faq.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/30 backdrop-blur-md rounded-xl border border-slate-700/50 overflow-hidden"
+              >
+                <button
+                  onClick={() => toggleFAQ(faq.id)}
+                  className="w-full px-6 py-4 text-left hover:bg-slate-700/30 transition-colors duration-200"
                 >
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-4">
-                      <div className={`p-3 rounded-xl bg-gradient-to-br ${category.color}`}>
-                        <category.icon className="w-6 h-6 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-white">{category.title}</h3>
-                        <p className="text-gray-400">{category.description}</p>
-                      </div>
-                    </div>
-                    {expandedCategory === category.id ? (
-                      <ChevronDown className="w-5 h-5 text-gray-400" />
+                    <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
+                    {expandedFAQ === faq.id ? (
+                      <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                     ) : (
-                      <ChevronRight className="w-5 h-5 text-gray-400" />
+                      <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
                     )}
                   </div>
                 </button>
                 
-                {expandedCategory === category.id && (
+                {expandedFAQ === faq.id && (
                   <motion.div
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="border-t border-slate-700/50"
+                    className="px-6 pb-4 border-t border-slate-700/50"
                   >
-                    <div className="p-6 space-y-4">
-                      {category.articles.map((article) => (
-                        <Link
-                          key={article.title}
-                          to={article.href}
-                          className="flex items-center justify-between p-4 rounded-xl hover:bg-slate-700/50 transition-all duration-300 group"
-                        >
-                          <div className="flex-1">
-                            <div className="flex items-center gap-3 mb-2">
-                              <h4 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                                {article.title}
-                              </h4>
-                              {article.popular && (
-                                <span className="inline-flex items-center gap-1 px-2 py-1 bg-cyan-400/20 text-cyan-400 text-xs rounded-full">
-                                  <Star className="w-3 h-3" />
-                                  Popular
-                                </span>
-                              )}
-                            </div>
-                            <p className="text-sm text-gray-400">{article.description}</p>
-                          </div>
-                          <div className="flex items-center gap-4">
-                            <span className="text-xs text-gray-500">{article.readTime}</span>
-                            <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors" />
-                          </div>
-                        </Link>
+                    <p className="text-gray-300 leading-relaxed mb-4">{faq.answer}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {faq.tags.map(tag => (
+                        <span key={tag} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
+                          {tag}
+                        </span>
                       ))}
                     </div>
                   </motion.div>
@@ -520,38 +445,106 @@ export default function Help() {
               </motion.div>
             ))}
           </div>
+
+          {filteredFAQs.length === 0 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-center py-12"
+            >
+              <p className="text-gray-400 text-lg">No FAQs match your current search. Try adjusting your search terms or category filter.</p>
+            </motion.div>
+          )}
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Support Channels */}
+      <section className="py-20 bg-slate-800/20">
+        <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto"
+            className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Still Need Help?
-            </h2>
-            <p className="text-xl text-gray-400 mb-8">
-              Can't find what you're looking for? Our support team is here to help you get the answers you need.
+            <h2 className="text-4xl font-bold text-white mb-4">Get Support</h2>
+            <p className="text-xl text-gray-300">Multiple ways to get the help you need</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {supportChannels.map((channel, index) => (
+              <motion.div
+                key={channel.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <a
+                  href={channel.link}
+                  className="block bg-slate-800/30 backdrop-blur-md rounded-xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <channel.icon className="w-8 h-8 text-cyan-400" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{channel.title}</h3>
+                  <p className="text-gray-300 mb-2">{channel.description}</p>
+                  <p className="text-cyan-400 text-sm font-medium">{channel.response}</p>
+                </a>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Support CTA */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto text-center"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">Still Need Help?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Can't find what you're looking for? Our support team is here to help. 
+              We're committed to ensuring you get the most out of our services.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <a
+                href="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
               >
-                Contact Support Team
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                to="/request-quote"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-semibold rounded-lg transition-all duration-300"
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Contact Support
+              </a>
+              <a
+                href="mailto:support@ziontechgroup.com"
+                className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center justify-center"
               >
-                Request Custom Quote
-              </Link>
+                <Mail className="w-5 h-5 mr-2" />
+                Email Support
+              </a>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <Clock className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
+                <h3 className="text-lg font-semibold text-white mb-2">Response Time</h3>
+                <p className="text-gray-300">Within 4 hours</p>
+              </div>
+              <div className="text-center">
+                <Award className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
+                <h3 className="text-lg font-semibold text-white mb-2">Support Quality</h3>
+                <p className="text-gray-300">99% satisfaction</p>
+              </div>
+              <div className="text-center">
+                <Users className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
+                <h3 className="text-lg font-semibold text-white mb-2">Expert Team</h3>
+                <p className="text-gray-300">Certified professionals</p>
+              </div>
             </div>
           </motion.div>
         </div>

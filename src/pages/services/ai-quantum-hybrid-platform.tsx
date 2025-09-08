@@ -1,280 +1,187 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Atom, Zap, Brain, Shield, Cpu, Database, Network, Lightbulb } from 'lucide-react';
+import { 
+  Atom, Brain, Zap, Cpu, Database, Network, 
+  BarChart3, CheckCircle, ArrowRight, Play, 
+  Download, BookOpen, MessageCircle, Phone,
+  Quantum, Circuit, Globe, Server, Shield
+} from 'lucide-react';
 
-export default function AIQuantumHybridPlatform() {
+const AIQuantumHybridPlatform: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('overview');
+
   const features = [
     {
       icon: Atom,
-      title: "Quantum-Classical Hybrid Computing",
-      description: "Seamlessly integrate quantum and classical computing for optimal performance"
+      title: 'Quantum Computing',
+      description: 'Leverage quantum bits for exponential computational power',
+      color: 'from-purple-500 to-pink-500'
     },
     {
       icon: Brain,
-      title: "AI-Quantum Optimization",
-      description: "Advanced AI algorithms enhanced by quantum computing capabilities"
+      title: 'AI Integration',
+      description: 'Seamless integration of classical and quantum AI algorithms',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      icon: Circuit,
+      title: 'Hybrid Architecture',
+      description: 'Optimized workflows combining quantum and classical computing',
+      color: 'from-green-500 to-emerald-500'
     },
     {
       icon: Zap,
-      title: "Ultra-Fast Processing",
-      description: "Exponential speedup for complex computational problems"
-    },
-    {
-      icon: Shield,
-      title: "Quantum-Safe Security",
-      description: "Next-generation cryptography and quantum-resistant security protocols"
-    },
-    {
-      icon: Database,
-      title: "Quantum Data Analytics",
-      description: "Process massive datasets with quantum-enhanced machine learning"
-    },
-    {
-      icon: Network,
-      title: "Scalable Architecture",
-      description: "Flexible platform that scales from prototype to enterprise deployment"
+      title: 'Real-time Processing',
+      description: 'Ultra-fast computation for complex problem solving',
+      color: 'from-orange-500 to-red-500'
     }
   ];
 
-  const applications = [
+  const capabilities = [
+    'Quantum machine learning',
+    'Optimization algorithms',
+    'Cryptography and security',
+    'Financial modeling',
+    'Drug discovery',
+    'Climate modeling',
+    'Logistics optimization',
+    'Quantum simulation'
+  ];
+
+  const benefits = [
     {
-      title: "Financial Modeling",
-      description: "Risk analysis, portfolio optimization, and fraud detection",
-      icon: "💰"
+      title: 'Computational Speed',
+      value: '1000x',
+      description: 'Faster than classical computing'
     },
     {
-      title: "Drug Discovery",
-      description: "Molecular simulation and pharmaceutical research acceleration",
-      icon: "🧬"
+      title: 'Problem Solving',
+      value: '100x',
+      description: 'Complex problem resolution'
     },
     {
-      title: "Supply Chain Optimization",
-      description: "Complex logistics and resource allocation problems",
-      icon: "📦"
+      title: 'Energy Efficiency',
+      value: '90%',
+      description: 'Lower power consumption'
     },
     {
-      title: "Climate Modeling",
-      description: "Weather prediction and environmental impact analysis",
-      icon: "🌍"
-    },
-    {
-      title: "Cryptography & Security",
-      description: "Advanced encryption and cybersecurity applications",
-      icon: "🔐"
-    },
-    {
-      title: "Machine Learning",
-      description: "Quantum-enhanced neural networks and AI training",
-      icon: "🤖"
+      title: 'Accuracy',
+      value: '99.9%',
+      description: 'Precision in calculations'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
-      <section className="pt-24 pb-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-pink-900/20"></div>
+        <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            transition={{ duration: 0.6 }}
+            className="text-center max-w-4xl mx-auto"
           >
-            <div className="flex justify-center mb-6">
-              <div className="p-4 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full">
-                <Atom className="w-12 h-12 text-white animate-spin" style={{ animationDuration: '3s' }} />
-              </div>
+            <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <Atom className="w-10 h-10 text-white" />
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Quantum-AI
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
-                Hybrid Platform
-              </span>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              AI Quantum <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">Hybrid Platform</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Harness the power of quantum computing combined with advanced AI to solve 
-              previously impossible computational challenges and unlock new frontiers of innovation.
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              The future of computing is here. Our AI Quantum Hybrid Platform combines 
+              the power of quantum computing with artificial intelligence to solve 
+              previously impossible problems.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center">
+                <Play className="w-5 h-5 mr-2" />
+                Watch Demo
+              </button>
+              <button className="px-8 py-4 border border-purple-400 text-purple-400 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center">
+                <Download className="w-5 h-5 mr-2" />
+                Download Whitepaper
+              </button>
+            </div>
           </motion.div>
         </div>
       </section>
 
       {/* Features Grid */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20">
+        <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Revolutionary Quantum-AI Capabilities
-            </h2>
-            <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-              Experience the next generation of computing with our hybrid quantum-classical platform
-            </p>
+            <h2 className="text-4xl font-bold text-white mb-4">Revolutionary Platform Features</h2>
+            <p className="text-xl text-gray-300">Combining quantum and classical computing for unprecedented power</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <motion.div
-                key={index}
+                key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 * index }}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-purple-400/20"
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group"
               >
-                <div className="flex items-center mb-4">
-                  <div className="p-3 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mr-4">
-                    <feature.icon className="w-6 h-6 text-white" />
+                <div className="bg-slate-800/30 backdrop-blur-md rounded-xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 text-center h-full">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 text-sm">{feature.description}</p>
                 </div>
-                <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Performance Metrics */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Quantum Performance Advantage
-            </h2>
-            <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-              Experience exponential improvements in computational speed and problem-solving capabilities
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              { metric: "Processing Speed", value: "1000x", description: "Faster than classical computing" },
-              { metric: "Problem Complexity", value: "Exponential", description: "Scale advantage" },
-              { metric: "Energy Efficiency", value: "90%", description: "Reduction in power consumption" },
-              { metric: "Accuracy", value: "99.9%", description: "Quantum error correction" }
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 * index }}
-                className="text-center bg-gradient-to-br from-purple-500/20 to-blue-600/20 rounded-xl p-6"
-              >
-                <div className="text-4xl font-bold text-purple-400 mb-2">{stat.value}</div>
-                <div className="text-xl font-semibold text-white mb-2">{stat.metric}</div>
-                <div className="text-gray-300 text-sm">{stat.description}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Applications Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Real-World Applications
-            </h2>
-            <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-              Our quantum-AI hybrid platform is transforming industries across the board
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {applications.map((app, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.1 * index }}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105"
-              >
-                <div className="text-4xl mb-4 text-center">{app.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3 text-center">{app.title}</h3>
-                <p className="text-gray-300 text-center">{app.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technical Architecture */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20">
-        <div className="max-w-7xl mx-auto">
+      {/* Capabilities */}
+      <section className="py-20 bg-slate-800/20">
+        <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Advanced Quantum Architecture
-              </h2>
-              <p className="text-gray-300 text-lg mb-8">
-                Our platform seamlessly integrates quantum processors with classical computing infrastructure
+              <h2 className="text-4xl font-bold text-white mb-6">Quantum-Classical Capabilities</h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Our hybrid platform provides unprecedented computational power for 
+                solving the most complex problems in science, finance, and industry.
               </p>
-              <div className="space-y-4">
-                {[
-                  "Quantum Processing Units (QPUs)",
-                  "Classical-Quantum Interface",
-                  "Hybrid Algorithm Optimization",
-                  "Quantum Error Correction",
-                  "Distributed Quantum Networks",
-                  "Real-time Quantum State Monitoring"
-                ].map((feature, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
-                    className="flex items-center"
-                  >
-                    <Lightbulb className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-                    <span className="text-white">{feature}</span>
-                  </motion.div>
+              <div className="grid grid-cols-2 gap-4">
+                {capabilities.map((capability, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                    <span className="text-gray-300">{capability}</span>
+                  </div>
                 ))}
               </div>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
               className="relative"
             >
-              <div className="bg-gradient-to-br from-purple-500/20 to-blue-600/20 rounded-2xl p-8">
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between p-4 bg-white/10 rounded-lg">
-                    <span className="text-white font-medium">Quantum Layer</span>
-                    <Atom className="w-6 h-6 text-purple-400" />
-                  </div>
-                  <div className="flex items-center justify-between p-4 bg-white/10 rounded-lg">
-                    <span className="text-white font-medium">AI/ML Layer</span>
-                    <Brain className="w-6 h-6 text-blue-400" />
-                  </div>
-                  <div className="flex items-center justify-between p-4 bg-white/10 rounded-lg">
-                    <span className="text-white font-medium">Classical Layer</span>
-                    <Cpu className="w-6 h-6 text-cyan-400" />
-                  </div>
-                  <div className="flex items-center justify-between p-4 bg-white/10 rounded-lg">
-                    <span className="text-white font-medium">Application Layer</span>
-                    <Network className="w-6 h-6 text-green-400" />
-                  </div>
+              <div className="bg-slate-800/30 backdrop-blur-md rounded-2xl p-8 border border-slate-700/50">
+                <div className="grid grid-cols-2 gap-6">
+                  {benefits.map((benefit, index) => (
+                    <div key={index} className="text-center">
+                      <div className="text-3xl font-bold text-purple-400 mb-2">{benefit.value}</div>
+                      <div className="text-sm text-gray-300">{benefit.title}</div>
+                      <div className="text-xs text-gray-400 mt-1">{benefit.description}</div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </motion.div>
@@ -283,30 +190,59 @@ export default function AIQuantumHybridPlatform() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20">
+        <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto text-center"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Enter the Quantum Era
-            </h2>
-            <p className="text-gray-300 text-lg mb-8">
-              Be among the first to harness the revolutionary power of quantum-AI hybrid computing
+            <h2 className="text-4xl font-bold text-white mb-6">Ready for the Quantum Future?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join the quantum revolution and solve problems that were once impossible. 
+              Our hybrid platform is the bridge to the future of computing.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-                Schedule Consultation
-              </button>
-              <button className="px-8 py-4 border border-purple-400 text-purple-400 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
-                Download Whitepaper
-              </button>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <a
+                href="/request-quote"
+                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
+              >
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </a>
+              <a
+                href="/contact"
+                className="px-8 py-4 border border-purple-400 text-purple-400 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center"
+              >
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Contact Sales
+              </a>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <BookOpen className="w-8 h-8 text-purple-400 mx-auto mb-3" />
+                <h3 className="text-lg font-semibold text-white mb-2">Documentation</h3>
+                <p className="text-gray-300">Complete setup guides</p>
+              </div>
+              <div className="text-center">
+                <MessageCircle className="w-8 h-8 text-purple-400 mx-auto mb-3" />
+                <h3 className="text-lg font-semibold text-white mb-2">24/7 Support</h3>
+                <p className="text-gray-300">Expert assistance</p>
+              </div>
+              <div className="text-center">
+                <Phone className="w-8 h-8 text-purple-400 mx-auto mb-3" />
+                <h3 className="text-lg font-semibold text-white mb-2">Live Demo</h3>
+                <p className="text-gray-300">See it in action</p>
+              </div>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default AIQuantumHybridPlatform;
