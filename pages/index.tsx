@@ -850,8 +850,8 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Threat detection & response</li>
                   <li>• Zero-trust architecture</li>
                 </ul>
-                <Link href="/privacy" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  Security & Privacy →
+                <Link href="/docs/security" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  View Security Guide →
                 </Link>
               </div>
 
@@ -864,8 +864,8 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Security testing</li>
                   <li>• Continuous validation</li>
                 </ul>
-                <Link href="/resources" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  Explore Testing Resources →
+                <Link href="/docs/testing" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                  View Testing Guide →
                 </Link>
               </div>
 
@@ -878,8 +878,8 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Analytics dashboard</li>
                   <li>• Predictive maintenance</li>
                 </ul>
-                <Link href="/case-studies" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  See Performance Case Studies →
+                <Link href="/docs/performance" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  View Performance Guide →
                 </Link>
               </div>
             </div>
@@ -898,11 +898,8 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Master Redundancy Orchestrator</li>
                   <li>• PM2 Process Management</li>
                 </ul>
-                <div className="text-cyan-400 text-sm font-semibold mb-2">
-                  Status: Multi-Layer Active
-                </div>
-                <Link href="/README_ULTIMATE_REDUNDANCY_V2.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  View System Details →
+                <Link href="/docs/ultimate-redundancy" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  Learn More →
                 </Link>
               </div>
 
@@ -915,11 +912,8 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Autonomous Agents (227+)</li>
                   <li>• Innovation Systems</li>
                 </ul>
-                <div className="text-fuchsia-400 text-sm font-semibold mb-2">
-                  Status: Continuously Learning
-                </div>
-                <Link href="/EXPONENTIAL_GROWTH_AUTOMATION.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  View AI Systems →
+                <Link href="/docs/comprehensive-redundancy" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                  Learn More →
                 </Link>
               </div>
 
@@ -932,11 +926,8 @@ export default function HomePage({ pageLinks }: HomePageProps) {
                   <li>• Performance Optimization</li>
                   <li>• Quality Assurance Automation</li>
                 </ul>
-                <div className="text-green-400 text-sm font-semibold mb-2">
-                  Status: Self-Optimizing
-                </div>
-                <Link href="/README_BUILD_AUTOMATION.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  View Build Systems →
+                <Link href="/docs/pm2-redundancy-complete" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  Learn More →
                 </Link>
               </div>
             </div>

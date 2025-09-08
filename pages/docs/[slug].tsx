@@ -1,66 +1,103 @@
 import React from 'react';
 import Head from 'next/head';
+import fs from 'fs';
+import path from 'path';
 import Link from 'next/link';
 
-type DocPageProps = {
+type DocProps = {
   title: string;
-  content: string;
+  html: string;
 };
 
-export default function DocPage({ title, content }: DocPageProps) {
+const slugToFile: Record<string, string> = {
+  'ultimate-redundancy': 'README_ULTIMATE_REDUNDANCY.md',
+  'comprehensive-redundancy': 'README_COMPREHENSIVE_REDUNDANCY.md',
+  'pm2-redundancy-complete': 'README_PM2_REDUNDANCY_COMPLETE.md',
+  'performance': 'PERFORMANCE.md',
+  'security': '',
+  'testing': ''
+};
+
+export async function getStaticPaths() {
+  const paths = Object.keys(slugToFile).map((slug) => ({ params: { slug } }));
+  return { paths, fallback: false };
+}
+
+function markdownToHtml(markdown: string): string {
+  // Minimal markdown handling to keep dependencies light
+  let html = markdown
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+  // headings
+  html = html.replace(/^# (.*)$/gm, '<h1>$1</h1>');
+  html = html.replace(/^## (.*)$/gm, '<h2>$1</h2>');
+  html = html.replace(/^### (.*)$/gm, '<h3>$1</h3>');
+  // bold & italics
+  html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+  html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
+  // code blocks
+  html = html.replace(/```[\s\S]*?```/g, (block) => {
+    const code = block.replace(/```/g, '');
+    return `<pre><code>${code.trim()}</code></pre>`;
+  });
+  // inline code
+  html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+  // links
+  html = html.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-cyan-400">$1</a>');
+  // paragraphs
+  html = html.replace(/^(?!<h\d|<pre|<ul|<li|<p|<blockquote)(.+)$/gm, '<p>$1</p>');
+  return html;
+}
+
+export async function getStaticProps({ params }: { params: { slug: string } }) {
+  const { slug } = params;
+  const fileName = slugToFile[slug] || '';
+
+  let title = 'Documentation';
+  let html = '';
+
+  if (fileName) {
+    const filePath = path.join(process.cwd(), fileName);
+    if (fs.existsSync(filePath)) {
+      const md = fs.readFileSync(filePath, 'utf8');
+      title = md.split('\n')[0]?.replace(/^#\s*/, '') || title;
+      html = markdownToHtml(md);
+    }
+  }
+
+  if (!html) {
+    if (slug === 'security') {
+      title = 'Security & Compliance';
+      html = markdownToHtml(`# Security & Compliance\n\n- Automated security scanning\n- Vulnerability assessments\n- Compliance monitoring\n- Threat detection & response\n- Zero-trust architecture`);
+    } else if (slug === 'testing') {
+      title = 'Testing & Quality Assurance';
+      html = markdownToHtml(`# Testing & Quality\n\n- Automated testing suites\n- Performance & security testing\n- Continuous validation\n- Quality gates in CI/CD`);
+    } else {
+      title = 'Documentation';
+      html = markdownToHtml(`# Documentation\n\nContent coming soon.`);
+    }
+  }
+
+  return { props: { title, html } };
+}
+
+export default function DocPage({ title, html }: DocProps) {
   return (
     <>
       <Head>
-        <title>{title} | Zion Tech Group Docs</title>
-        <meta name="description" content={`${title} - Documentation`} />
+        <title>{title} — Zion Tech Group</title>
+        <meta name="description" content={`${title} documentation`} />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
-          <nav className="mb-8">
-            <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">← Back to Home</Link>
-            <span className="mx-2 text-white/40">/</span>
-            <Link href="/docs" className="text-cyan-400 hover:text-cyan-300 transition-colors">Docs</Link>
-          </nav>
-          <article className="prose prose-invert max-w-4xl mx-auto">
-            <h1 className="text-4xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">{title}</h1>
-            <div className="bg-white/5 rounded-lg p-8 border border-white/10">
-              <h2 className="text-2xl font-bold mb-4">Documentation Coming Soon</h2>
-              <p className="text-white/80 mb-4">
-                We're currently developing comprehensive documentation for our services and solutions.
-              </p>
-              <p className="text-white/60 mb-6">
-                In the meantime, please contact us for any technical questions or support needs.
-              </p>
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-blue-800">
-                <h3 className="font-semibold mb-2">Contact Information</h3>
-                <div className="space-y-1 text-sm">
-                  <p>📞 <a href="tel:+13024640950" className="hover:underline">+1 302 464 0950</a></p>
-                  <p>✉️ <a href="mailto:kleber@ziontechgroup.com" className="hover:underline">kleber@ziontechgroup.com</a></p>
-                  <p>📍 364 E Main St STE 1008 Middletown DE 19709</p>
-                </div>
-              </div>
-            </div>
-          </article>
+          <div className="mb-8">
+            <Link href="/" className="text-cyan-400">← Back to Home</Link>
+          </div>
+          <article className="prose prose-invert max-w-3xl" dangerouslySetInnerHTML={{ __html: html }} />
         </main>
       </div>
     </>
   );
-}
-
-export async function getStaticPaths() {
-  // For now, return empty paths since we don't have documentation
-  return { paths: [], fallback: 'blocking' };
-}
-
-export async function getStaticProps(context: { params: { slug: string } }) {
-  const slug = context.params.slug;
-  
-  // Return a simple documentation page
-  const title = slug.charAt(0).toUpperCase() + slug.slice(1).replace(/-/g, ' ');
-  const content = `Documentation for ${title}`;
-
-  return {
-    props: { title, content }
-  };
 }
 
