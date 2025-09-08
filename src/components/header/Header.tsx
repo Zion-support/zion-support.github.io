@@ -145,7 +145,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <Link to="/help" className="text-zinc-400 hover:text-cyan-400 transition-colors">
+              <Link to="/support" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                 Support
               </Link>
               <span className="text-zinc-600">|</span>
@@ -253,50 +253,52 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
                 <Menu className="block h-6 w-6" aria-hidden="true" />
               )}
             </button>
-          </div>
-        </div>
-      </div>
 
-      {/* Search Bar */}
-      {isSearchOpen && (
-        <div className="border-t border-zinc-800/50 bg-zinc-900/98">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <div className="relative max-w-2xl mx-auto">
-              <input
-                type="text"
-                placeholder="Search services, solutions, or resources..."
-                className="w-full px-4 py-3 pl-12 pr-4 bg-zinc-800/50 border border-zinc-700 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                autoFocus
-              />
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zinc-400" />
+            {/* Right Side Actions */}
+            <div className="flex items-center space-x-4">
+              {/* Search */}
               <button
-                onClick={() => setIsSearchOpen(false)}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zinc-400 hover:text-white"
+                type="button"
+                className="p-2 text-zion-slate-light hover:bg-zion-purple/20 hover:text-white rounded-lg transition-all duration-300"
+                onClick={() => setIsSearchOpen(!isSearchOpen)}
+                aria-label="Toggle search"
               >
                 <X className="w-5 h-5" />
               </button>
+
+              {/* User Menu */}
+              <div className="relative">
+                <button
+                  type="button"
+                  className="p-2 text-zion-slate-light hover:bg-zion-purple/20 hover:text-white rounded-lg transition-all duration-300"
+                  aria-label="User menu"
+                >
+                  <User className="h-5 w-5" />
+                </button>
+              </div>
+
+              {/* CTA Button */}
+              <Link
+                to="/contact"
+                className="hidden sm:inline-flex items-center px-4 py-2 bg-zion-cyan hover:bg-zion-cyan/80 text-zion-slate-dark font-semibold rounded-lg transition-all duration-300"
+              >
+                Get Started
+              </Link>
             </div>
           </div>
         </div>
       )}
 
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        <div className="lg:hidden bg-zion-blue-dark/95 backdrop-blur-xl border-t border-zion-purple/20">
-          <div className="container px-4 py-6">
-            {/* Mobile Search */}
-            <form onSubmit={handleSubmit} className="mb-6">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-5 w-5" />
+        {/* Search Bar */}
+        {isSearchOpen && (
+          <div className="border-t border-zion-purple/20 bg-zion-slate-dark py-4">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="relative max-w-2xl mx-auto">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-zion-slate-light" />
                 <input
                   type="text"
-                  placeholder="Search services, products..."
-                  value={query}
-                  onChange={(e) => setQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-zion-blue-dark border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none"
+                  placeholder="Search for services, solutions, or information..."
+                  className="w-full pl-10 pr-4 py-3 bg-zion-slate-darker border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
                 />
               </div>
             </form>
@@ -335,421 +337,11 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
               {!hideLogin && <UserMenu />}
             </div>
           </div>
-        </div>
-      )}
-
-      {/* Enhanced Navigation Bar for Larger Screens */}
-      <div className="hidden xl:block border-t border-zion-purple/10 bg-zion-blue-dark/50">
-        <div className="container px-4">
-          <div className="flex items-center justify-center py-3 space-x-8">
-            {enhancedNavigationItems.map((item) => (
-              <Link
-                key={item.label}
-                to={item.href}
-                className="group flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-zion-purple/10 transition-all duration-300"
-              >
-                <div className="text-zion-cyan group-hover:text-zion-purple transition-colors">
-                  {item.icon}
-                </div>
-                <div className="text-center">
-                  <div className="flex items-center gap-2">
-                    <span className="text-white font-medium group-hover:text-zion-cyan transition-colors">
-                      {item.label}
-                    </span>
-                    {item.badge && (
-                      <Badge className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30 text-xs">
-                        {item.badge}
-                      </Badge>
-                    )}
-                  </div>
-                  <p className="text-zion-slate-light text-xs group-hover:text-zion-slate-light/80 transition-colors">
-                    {item.description}
-                  </p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-445a
-      </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* Mobile Navigation */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-      {isMobileMenuOpen && (
-        <div className="lg:hidden border-t border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-md">
-          <div className="px-4 py-4 space-y-3">
-            <Link 
-              to="/" 
-              className="block text-sm font-medium text-zion-slate-light hover:text-zion-cyan"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Home
-            </Link>
-            <Link 
-              to="/services" 
-              className="block text-sm font-medium text-zion-slate-light hover:text-zion-cyan"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              All Services
-            </Link>
-            <Link 
-              to="/ai-solutions" 
-              className="block text-sm font-medium text-zion-slate-light hover:text-zion-cyan"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              AI Solutions
-            </Link>
-            <Link 
-              to="/it-services" 
-              className="block text-sm font-medium text-zion-slate-light hover:text-zion-cyan"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              IT Services
-            </Link>
-            <Link 
-              to="/enterprise" 
-              className="block text-sm font-medium text-zion-slate-light hover:text-zion-cyan"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Enterprise Solutions
-            </Link>
-            <Link 
-              to="/developers" 
-              className="block text-sm font-medium text-zion-slate-light hover:text-zion-cyan"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Developer Portal
-            </Link>
-            <Link 
-              to="/help-center" 
-              className="block text-sm font-medium text-zion-slate-light hover:text-zion-cyan"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Help Center
-            </Link>
-            <Link 
-              to="/sitemap" 
-              className="block text-sm font-medium text-zion-slate-light hover:text-zion-cyan"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Sitemap
-            </Link>
-          </div>
-        </div>
-      )}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
-      {isMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-200 shadow-lg">
-          <div className="container mx-auto px-4 py-4">
-            <nav className="space-y-2">
-              {navigationItems.map((item) => (
-                <div key={item.name}>
-                  <Link
-                    to={item.path}
-                    className={`block py-3 px-4 rounded-lg transition-colors ${
-                      isActive(item.path) 
-                        ? 'text-zion-blue bg-zion-blue/10' 
-                        : 'text-gray-700 hover:text-zion-blue hover:bg-gray-50'
-                    }`}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                  {item.hasDropdown && item.name === 'Services' && (
-                    <div className="ml-4 mt-2 space-y-1">
-                      {serviceDropdownItems.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          to={subItem.path}
-                          className="block py-2 px-4 text-gray-600 hover:text-zion-blue transition-colors"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          • {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                  {item.hasDropdown && item.name === 'Talent' && (
-                    <div className="ml-4 mt-2 space-y-1">
-                      {talentDropdownItems.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          to={subItem.path}
-                          className="block py-2 px-4 text-gray-600 hover:text-zion-blue transition-colors"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          • {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </nav>
-            
-            <div className="mt-6 pt-6 border-t border-gray-200 space-y-3">
-              <Button variant="outline" className="w-full">
-                <Search className="h-4 w-4 mr-2" />
-                Search
-              </Button>
-              <Button className="w-full">
-                Get Started
-              </Button>
-=======
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden bg-zion-blue-dark/98 border-t border-zion-purple/20 backdrop-blur-md">
-          <div className="container px-4 py-6 space-y-4">
-            {/* Mobile Search */}
-            <form onSubmit={handleSubmit} className="w-full">
-=======
-            />
-          </form>
-
-          {/* Right Side Actions */}
-          <div className="flex items-center gap-3">
-            <LanguageSelector />
-            {!hideLogin && <UserMenu />}
-            
-            {/* Mobile Menu Button */}
-            <Button
-              variant="ghost"
-              size="sm"
-              className="lg:hidden p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10"
-              onClick={toggleMobileMenu}
-            >
-              {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-            </Button>
-          </div>
-        </div>
-
-        {/* Mobile Search Bar */}
-        <div className="lg:hidden border-t border-zion-purple/20 bg-zion-blue-dark/50">
-          <div className="container px-4 py-3">
-            <form onSubmit={handleSubmit}>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d816
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
-=======
-        <div className="lg:hidden bg-zion-blue-dark border-t border-zion-purple/20">
-          <div className="container px-4 py-4">
-            {/* Mobile Search */}
-            <form onSubmit={handleSubmit} className="mb-6">
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
-              <EnhancedSearchInput
-                value={query}
-                onChange={setQuery}
-                onSelectSuggestion={(text) => {
-                  navigate(`/search?q=${encodeURIComponent(text)}`);
-                  setQuery("");
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  setIsMobileMenuOpen(false);
-                }}
-                searchSuggestions={searchSuggestions}
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden bg-zion-blue-dark/98 border-t border-zion-purple/20 backdrop-blur-xl">
-          <div className="container px-4 py-6 space-y-4">
-            {/* Mobile Search */}
-            <form onSubmit={handleSubmit} className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
-              <input
-                type="text"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search services, talent, equipment..."
-                className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-purple focus:ring-2 focus:ring-zion-purple/20 transition-all duration-300"
-              />
-            </form>
-
-            {/* Mobile Navigation */}
-            <nav className="space-y-2">
-              <Link 
-                to="/" 
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block px-4 py-3 text-white hover:bg-zion-purple/20 rounded-lg transition-colors"
-              >
-                Home
-              </Link>
-              <Link 
-                to="/marketplace" 
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block px-4 py-3 text-white hover:bg-zion-purple/20 rounded-lg transition-colors"
-              >
-                Marketplace
-              </Link>
-              <Link 
-                to="/services" 
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block px-4 py-3 text-white hover:bg-zion-purple/20 rounded-lg transition-colors"
-              >
-                Services
-              </Link>
-              <Link 
-                to="/talent" 
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block px-4 py-3 text-white hover:bg-zion-purple/20 rounded-lg transition-colors"
-              >
-                Talent
-              </Link>
-              <Link 
-                to="/equipment" 
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block px-4 py-3 text-white hover:bg-zion-purple/20 rounded-lg transition-colors"
-              >
-                Equipment
-              </Link>
-              <Link 
-                to="/zion-hire-ai" 
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block px-4 py-3 text-white hover:bg-zion-purple/20 rounded-lg transition-colors"
-              >
-                AI Assistant
-              </Link>
-              <Link 
-                to="/contact" 
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block px-4 py-3 text-white hover:bg-zion-purple/20 rounded-lg transition-colors"
-              >
-                Contact
-              </Link>
-            </nav>
-
-            {/* Mobile CTA */}
-            <div className="pt-4 border-t border-zion-purple/20">
-              <Link 
-                to="/request-quote"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block w-full text-center px-6 py-3 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/30"
-              >
-                Request Quote
-              </Link>
-=======
-=======
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
-                  closeMobileMenu();
-                }}
-                searchSuggestions={searchSuggestions}
-              />
-            </form>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          </div>
-        </div>
+        )}
       </header>
 
-      {/* Mobile Navigation Menu */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-40 bg-black/50 backdrop-blur-sm">
-          <div className="fixed inset-y-0 right-0 w-80 bg-zion-blue-dark/95 backdrop-blur-xl border-l border-zion-purple/30 shadow-2xl shadow-zion-purple/20">
-            <div className="flex flex-col h-full">
-              <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">
-                <h2 className="text-xl font-semibold text-white">Menu</h2>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={closeMobileMenu}
-                  className="text-zion-slate-light hover:text-zion-cyan"
-                >
-                  <X className="h-5 w-5" />
-                </Button>
-              </div>
-              
-              <nav className="flex-1 p-4 space-y-6">
-                <div>
-                  <h3 className="text-zion-cyan font-semibold mb-3">Services</h3>
-                  <div className="space-y-2 ml-4">
-                    <Link to="/services" onClick={closeMobileMenu} className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
-                      IT & AI Services
-                    </Link>
-                    <Link to="/micro-saas-services" onClick={closeMobileMenu} className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
-                      Micro SAAS Services
-                    </Link>
-                    <Link to="/it-onsite-services" onClick={closeMobileMenu} className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
-                      Onsite Services
-                    </Link>
-                    <Link to="/equipment" onClick={closeMobileMenu} className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
-                      Equipment
-                    </Link>
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="text-zion-purple font-semibold mb-3">Solutions</h3>
-                  <div className="space-y-2 ml-4">
-                    <Link to="/zion-hire-ai" onClick={closeMobileMenu} className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
-                      Zion Hire AI
-                    </Link>
-                    <Link to="/match" onClick={closeMobileMenu} className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
-                      AI Matcher
-                    </Link>
-                    <Link to="/talent" onClick={closeMobileMenu} className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
-                      Talent Directory
-                    </Link>
-                    <Link to="/enterprise" onClick={closeMobileMenu} className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
-                      Enterprise
-                    </Link>
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="text-zion-cyan font-semibold mb-3">Company</h3>
-                  <div className="space-y-2 ml-4">
-                    <Link to="/community" onClick={closeMobileMenu} className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
-                      Community
-                    </Link>
-                    <Link to="/blog" onClick={closeMobileMenu} className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
-                      Blog
-                    </Link>
-                    <Link to="/partners" onClick={closeMobileMenu} className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
-                      Partners
-                    </Link>
-                    <Link to="/contact" onClick={closeMobileMenu} className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
-                      Contact
-                    </Link>
-                  </div>
-                </div>
-              </nav>
-
-              <div className="p-4 border-t border-zion-purple/20">
-                <Button className="w-full bg-zion-cyan text-zion-slate hover:bg-zion-cyan/90">
-                  Get Started
-                </Button>
-              </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d816
-            </div>
-          </div>
-        </div>
-      )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-    </header>
-=======
+      {/* Mobile Menu */}
+      <MobileMenu isOpen={isMobileMenuOpen} onClose={closeMobileMenu} />
     </>
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2f34
