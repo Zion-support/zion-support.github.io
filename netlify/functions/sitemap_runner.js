@@ -1,14 +1,11 @@
-#!/usr/bin/env node
-
-'use strict';
-
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context) {
+  console.log('🤖 Starting sitemap_runner function...');
+  
   try {
-    console.log('🤖 sitemap_runner function triggered');
-    
     const timestamp = new Date().toISOString();
     const reportPath = path.join(process.cwd(), 'sitemap-runner-report.md');
     
@@ -21,18 +18,29 @@ Generated: ${timestamp}
 - Status: Completed
 - Timestamp: ${timestamp}
 
-## Actions Taken
-- Function executed successfully
-- Report generated
-- Ready for next scheduled run
+## Function Details
+- Schedule: Twice per day
+- Purpose: Generate and update sitemap
+- Execution: Netlify Function
 
 ## Next Steps
-- Function will run again in 12 hours
-- Continue keeping sitemap fresh for SEO
+- Implement sitemap generation logic
+- Add sitemap validation
+- Add sitemap optimization features
 `;
 
     fs.writeFileSync(reportPath, reportContent);
     console.log('📝 Report generated');
+    
+    // Commit the report
+    try {
+      execSync('git add ' + reportPath, { stdio: 'inherit' });
+      execSync('git commit -m "🤖 Add sitemap runner report [skip ci]"', { stdio: 'inherit' });
+      execSync('git push', { stdio: 'inherit' });
+      console.log('✅ Report committed and pushed');
+    } catch (gitError) {
+      console.log('Git error:', gitError.message);
+    }
     
     return {
       statusCode: 200,
@@ -44,8 +52,7 @@ Generated: ${timestamp}
     };
     
   } catch (error) {
-    console.error('❌ sitemap_runner failed:', error.message);
-    
+    console.error('❌ Sitemap runner failed:', error.message);
     return {
       statusCode: 500,
       body: JSON.stringify({

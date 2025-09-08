@@ -1,14 +1,11 @@
-#!/usr/bin/env node
-
-'use strict';
-
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context) {
+  console.log('🤖 Starting auto-discovery-runner function...');
+  
   try {
-    console.log('🤖 auto-discovery-runner function triggered');
-    
     const timestamp = new Date().toISOString();
     const reportPath = path.join(process.cwd(), 'auto-discovery-runner-report.md');
     
@@ -21,18 +18,29 @@ Generated: ${timestamp}
 - Status: Completed
 - Timestamp: ${timestamp}
 
-## Actions Taken
-- Function executed successfully
-- Report generated
-- Ready for next scheduled run
+## Function Details
+- Schedule: Every 15 minutes
+- Purpose: Auto-discover content
+- Execution: Netlify Function
 
 ## Next Steps
-- Function will run again in 15 minutes
-- Continue auto-discovery operations
+- Implement auto-discovery logic
+- Add content detection features
+- Add optimization mechanisms
 `;
 
     fs.writeFileSync(reportPath, reportContent);
     console.log('📝 Report generated');
+    
+    // Commit the report
+    try {
+      execSync('git add ' + reportPath, { stdio: 'inherit' });
+      execSync('git commit -m "🤖 Add auto discovery runner report [skip ci]"', { stdio: 'inherit' });
+      execSync('git push', { stdio: 'inherit' });
+      console.log('✅ Report committed and pushed');
+    } catch (gitError) {
+      console.log('Git error:', gitError.message);
+    }
     
     return {
       statusCode: 200,
@@ -44,8 +52,7 @@ Generated: ${timestamp}
     };
     
   } catch (error) {
-    console.error('❌ auto-discovery-runner failed:', error.message);
-    
+    console.error('❌ Auto discovery runner failed:', error.message);
     return {
       statusCode: 500,
       body: JSON.stringify({

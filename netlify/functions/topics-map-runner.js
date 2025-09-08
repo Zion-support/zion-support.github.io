@@ -1,14 +1,11 @@
-#!/usr/bin/env node
-
-'use strict';
-
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context) {
+  console.log('🤖 Starting topics-map-runner function...');
+  
   try {
-    console.log('🤖 topics-map-runner function triggered');
-    
     const timestamp = new Date().toISOString();
     const reportPath = path.join(process.cwd(), 'topics-map-runner-report.md');
     
@@ -21,18 +18,29 @@ Generated: ${timestamp}
 - Status: Completed
 - Timestamp: ${timestamp}
 
-## Actions Taken
-- Function executed successfully
-- Report generated
-- Ready for next scheduled run
+## Function Details
+- Schedule: Every 20 minutes
+- Purpose: Generate topics map
+- Execution: Netlify Function
 
 ## Next Steps
-- Function will run again in 20 minutes
-- Continue mapping topics
+- Implement topics map generation logic
+- Add mapping features
+- Add optimization mechanisms
 `;
 
     fs.writeFileSync(reportPath, reportContent);
     console.log('📝 Report generated');
+    
+    // Commit the report
+    try {
+      execSync('git add ' + reportPath, { stdio: 'inherit' });
+      execSync('git commit -m "🤖 Add topics map runner report [skip ci]"', { stdio: 'inherit' });
+      execSync('git push', { stdio: 'inherit' });
+      console.log('✅ Report committed and pushed');
+    } catch (gitError) {
+      console.log('Git error:', gitError.message);
+    }
     
     return {
       statusCode: 200,
@@ -44,8 +52,7 @@ Generated: ${timestamp}
     };
     
   } catch (error) {
-    console.error('❌ topics-map-runner failed:', error.message);
-    
+    console.error('❌ Topics map runner failed:', error.message);
     return {
       statusCode: 500,
       body: JSON.stringify({

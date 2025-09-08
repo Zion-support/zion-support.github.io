@@ -1,14 +1,11 @@
-#!/usr/bin/env node
-
-'use strict';
-
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context) {
+  console.log('🤖 Starting license-compliance-auditor function...');
+  
   try {
-    console.log('🤖 license-compliance-auditor function triggered');
-    
     const timestamp = new Date().toISOString();
     const reportPath = path.join(process.cwd(), 'license-compliance-auditor-report.md');
     
@@ -21,18 +18,29 @@ Generated: ${timestamp}
 - Status: Completed
 - Timestamp: ${timestamp}
 
-## Actions Taken
-- Function executed successfully
-- Report generated
-- Ready for next scheduled run
+## Function Details
+- Schedule: Every Monday at 2 AM
+- Purpose: Audit license compliance
+- Execution: Netlify Function
 
 ## Next Steps
-- Function will run again on Monday at 2 AM
-- Continue auditing license compliance
+- Implement license compliance auditing logic
+- Add compliance checking features
+- Add reporting mechanisms
 `;
 
     fs.writeFileSync(reportPath, reportContent);
     console.log('📝 Report generated');
+    
+    // Commit the report
+    try {
+      execSync('git add ' + reportPath, { stdio: 'inherit' });
+      execSync('git commit -m "🤖 Add license compliance auditor report [skip ci]"', { stdio: 'inherit' });
+      execSync('git push', { stdio: 'inherit' });
+      console.log('✅ Report committed and pushed');
+    } catch (gitError) {
+      console.log('Git error:', gitError.message);
+    }
     
     return {
       statusCode: 200,
@@ -44,8 +52,7 @@ Generated: ${timestamp}
     };
     
   } catch (error) {
-    console.error('❌ license-compliance-auditor failed:', error.message);
-    
+    console.error('❌ License compliance auditor failed:', error.message);
     return {
       statusCode: 500,
       body: JSON.stringify({

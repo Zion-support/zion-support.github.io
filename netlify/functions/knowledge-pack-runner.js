@@ -1,14 +1,11 @@
-#!/usr/bin/env node
-
-'use strict';
-
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context) {
+  console.log('🤖 Starting knowledge-pack-runner function...');
+  
   try {
-    console.log('🤖 knowledge-pack-runner function triggered');
-    
     const timestamp = new Date().toISOString();
     const reportPath = path.join(process.cwd(), 'knowledge-pack-runner-report.md');
     
@@ -21,18 +18,29 @@ Generated: ${timestamp}
 - Status: Completed
 - Timestamp: ${timestamp}
 
-## Actions Taken
-- Function executed successfully
-- Report generated
-- Ready for next scheduled run
+## Function Details
+- Schedule: Every 10 minutes
+- Purpose: Generate knowledge packs
+- Execution: Netlify Function
 
 ## Next Steps
-- Function will run again in 10 minutes
-- Continue running knowledge pack operations
+- Implement knowledge pack generation logic
+- Add content packaging features
+- Add distribution mechanisms
 `;
 
     fs.writeFileSync(reportPath, reportContent);
     console.log('📝 Report generated');
+    
+    // Commit the report
+    try {
+      execSync('git add ' + reportPath, { stdio: 'inherit' });
+      execSync('git commit -m "🤖 Add knowledge pack runner report [skip ci]"', { stdio: 'inherit' });
+      execSync('git push', { stdio: 'inherit' });
+      console.log('✅ Report committed and pushed');
+    } catch (gitError) {
+      console.log('Git error:', gitError.message);
+    }
     
     return {
       statusCode: 200,
@@ -44,8 +52,7 @@ Generated: ${timestamp}
     };
     
   } catch (error) {
-    console.error('❌ knowledge-pack-runner failed:', error.message);
-    
+    console.error('❌ Knowledge pack runner failed:', error.message);
     return {
       statusCode: 500,
       body: JSON.stringify({

@@ -1,14 +1,11 @@
-#!/usr/bin/env node
-
-'use strict';
-
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-exports.handler = async (event, context) => {
+exports.handler = async function(event, context) {
+  console.log('🤖 Starting homepage_advertiser function...');
+  
   try {
-    console.log('🤖 homepage_advertiser function triggered');
-    
     const timestamp = new Date().toISOString();
     const reportPath = path.join(process.cwd(), 'homepage-advertiser-report.md');
     
@@ -21,18 +18,29 @@ Generated: ${timestamp}
 - Status: Completed
 - Timestamp: ${timestamp}
 
-## Actions Taken
-- Function executed successfully
-- Report generated
-- Ready for next scheduled run
+## Function Details
+- Schedule: Every 15 minutes
+- Purpose: Advertise and promote homepage content
+- Execution: Netlify Function
 
 ## Next Steps
-- Function will run again in 15 minutes
-- Continue monitoring homepage performance
+- Implement actual homepage advertising logic
+- Add content promotion features
+- Add analytics and tracking
 `;
 
     fs.writeFileSync(reportPath, reportContent);
     console.log('📝 Report generated');
+    
+    // Commit the report
+    try {
+      execSync('git add ' + reportPath, { stdio: 'inherit' });
+      execSync('git commit -m "🤖 Add homepage advertiser report [skip ci]"', { stdio: 'inherit' });
+      execSync('git push', { stdio: 'inherit' });
+      console.log('✅ Report committed and pushed');
+    } catch (gitError) {
+      console.log('Git error:', gitError.message);
+    }
     
     return {
       statusCode: 200,
@@ -44,8 +52,7 @@ Generated: ${timestamp}
     };
     
   } catch (error) {
-    console.error('❌ homepage_advertiser failed:', error.message);
-    
+    console.error('❌ Homepage advertiser failed:', error.message);
     return {
       statusCode: 500,
       body: JSON.stringify({
