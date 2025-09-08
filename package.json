@@ -79,6 +79,7 @@
     "@tanstack/react-query-devtools": "^5.87.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "cssnano": "^7.1.1",
     "framer-motion": "^11.0.3",
     "lucide-react": "^0.323.0",
     "react": "^18.2.0",
