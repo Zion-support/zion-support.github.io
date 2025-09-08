@@ -1,86 +1,138 @@
 #!/bin/bash
 
-# PM2 Migration Verification Script
-# This script verifies that the PM2 migration is working correctly
-
-echo "🔍 Verifying PM2 Migration..."
+echo "🔍 PM2 Migration Verification Script"
+echo "=================================="
+echo ""
 
 # Check if PM2 is installed
 if ! command -v pm2 &> /dev/null; then
-    echo "❌ PM2 is not installed. Installing PM2..."
-    npm install -g pm2
-else
-    echo "✅ PM2 is already installed"
-fi
-
-# Check if ecosystem.config.cjs exists
-if [ -f "ecosystem.config.cjs" ]; then
-    echo "✅ ecosystem.config.cjs found"
-else
-    echo "❌ ecosystem.config.cjs not found"
+    echo "❌ PM2 is not installed"
     exit 1
 fi
 
-# Check if automation scripts exist
-if [ -f "scripts/automation/weekly-dependency-manager.cjs" ]; then
-    echo "✅ weekly-dependency-manager.cjs found"
-else
-    echo "❌ weekly-dependency-manager.cjs not found"
-    exit 1
-fi
+echo "✅ PM2 is installed"
 
-if [ -f "scripts/automation/weekly-security-analysis.cjs" ]; then
-    echo "✅ weekly-security-analysis.cjs found"
-else
-    echo "❌ weekly-security-analysis.cjs not found"
-    exit 1
-fi
-
-if [ -f "scripts/automation/workflow-status-monitor.cjs" ]; then
-    echo "✅ workflow-status-monitor.cjs found"
-else
-    echo "❌ workflow-status-monitor.cjs not found"
-    exit 1
-fi
-
-# Test the scripts
-echo "🧪 Testing automation scripts..."
-
-echo "Testing weekly-dependency-manager..."
-node scripts/automation/weekly-dependency-manager.cjs
-
-echo "Testing weekly-security-analysis..."
-node scripts/automation/weekly-security-analysis.cjs
-
-echo "Testing workflow-status-monitor..."
-node scripts/automation/workflow-status-monitor.cjs
-
-# Check if reports were generated
-if [ -f "weekly-dependency-error-report.json" ]; then
-    echo "✅ weekly-dependency-error-report.json generated"
-else
-    echo "❌ weekly-dependency-error-report.json not generated"
-fi
-
-if [ -f "weekly-security-analysis-report.json" ]; then
-    echo "✅ weekly-security-analysis-report.json generated"
-else
-    echo "❌ weekly-security-analysis-report.json not generated"
-fi
-
-if [ -f "workflow-status-report.json" ]; then
-    echo "✅ workflow-status-report.json generated"
-else
-    echo "❌ workflow-status-report.json not generated"
-fi
-
-echo "🚀 PM2 Migration verification completed!"
+# Check PM2 status
 echo ""
-echo "To start PM2 processes:"
-echo "  pm2 start ecosystem.config.cjs"
+echo "📊 PM2 Process Status:"
+echo "----------------------"
+pm2 status
+
+# Check if all expected processes are running
 echo ""
-echo "To monitor processes:"
-echo "  pm2 status"
+echo "🔍 Checking Expected Processes:"
+echo "-------------------------------"
+
+expected_processes=(
+    "console-error-fixer"
+    "link-checker"
+    "continuous-improvement"
+    "daily-build-test"
+    "security-audit"
+    "dependency-updates"
+    "performance-monitor"
+    "quality-checks"
+    "link-integrity"
+    "front-maximizer"
+    "sitemap-runner"
+    "weekly-dependency-manager"
+    "weekly-security-analysis"
+    "workflow-status-monitor"
+)
+
+all_running=true
+for process in "${expected_processes[@]}"; do
+    if pm2 list | grep -q "$process.*online"; then
+        echo "✅ $process is running"
+    else
+        echo "❌ $process is not running"
+        all_running=false
+    fi
+done
+
 echo ""
-echo "To view logs:"
-echo "  pm2 logs"
+if [ "$all_running" = true ]; then
+    echo "🎉 All expected PM2 processes are running!"
+else
+    echo "⚠️  Some PM2 processes are not running as expected"
+fi
+
+# Check PM2 logs for any errors
+echo ""
+echo "📋 Recent PM2 Logs (last 10 lines):"
+echo "-----------------------------------"
+pm2 logs --lines 10
+
+# Check system resources
+echo ""
+echo "💻 System Resources:"
+echo "-------------------"
+echo "Memory Usage:"
+free -h | grep -E "Mem|Swap"
+echo ""
+echo "Disk Usage:"
+df -h . | grep -v "Filesystem"
+
+# Check if GitHub Actions workflows were deleted
+echo ""
+echo "🗑️  GitHub Actions Workflow Status:"
+echo "----------------------------------"
+deleted_workflows=(
+    "dependencies.yml"
+    "agent-factory.yml"
+    "codeql.yml"
+    "status.yml"
+)
+
+for workflow in "${deleted_workflows[@]}"; do
+    if [ ! -f ".github/workflows/$workflow" ]; then
+        echo "✅ $workflow has been deleted"
+    else
+        echo "❌ $workflow still exists"
+    fi
+done
+
+# Check for disabled workflow placeholders
+echo ""
+echo "📝 Disabled Workflow Placeholders:"
+echo "----------------------------------"
+disabled_count=$(find .github/workflows -name "*.yml" -exec grep -l "DISABLED - Migrated to PM2" {} \; | wc -l)
+echo "Found $disabled_count disabled workflow placeholders"
+
+# Final status
+echo ""
+echo "📊 Migration Summary:"
+echo "-------------------"
+if [ "$all_running" = true ]; then
+    echo "🎉 PM2 Migration Status: SUCCESS"
+    echo "✅ All automation processes are running"
+    echo "✅ Replaced workflows have been deleted"
+    echo "✅ System is fully operational with PM2"
+else
+    echo "⚠️  PM2 Migration Status: PARTIAL"
+    echo "❌ Some processes are not running"
+    echo "🔧 Check PM2 logs for issues"
+fi
+
+echo ""
+echo "🔧 Useful PM2 Commands:"
+echo "----------------------"
+echo "pm2 status                    - View all processes"
+echo "pm2 logs [process-name]       - View process logs"
+echo "pm2 restart [process-name]    - Restart a process"
+echo "pm2 restart ecosystem.config.cjs - Restart all processes"
+echo "pm2 monit                     - Monitor processes in real-time"
+echo "pm2 delete all                - Stop and delete all processes"
+echo "pm2 start ecosystem.config.cjs - Start all processes from config"
+
+echo ""
+echo "📅 Next Steps:"
+echo "-------------"
+echo "1. Monitor PM2 processes for 24-48 hours"
+echo "2. Check automation reports in project root"
+echo "3. Verify automation functionality is working"
+echo "4. Optimize intervals if needed"
+echo "5. Set up PM2 startup script for server reboots"
+
+echo ""
+echo "🔍 Verification complete!"

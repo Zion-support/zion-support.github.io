@@ -1,190 +1,209 @@
 #!/usr/bin/env node
 
-/**
- * Workflow Status Monitor
- * Replaces GitHub Actions status workflow
- * Runs every 2 hours to monitor system status
- */
-
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-class WorkflowStatusMonitor {
-  constructor() {
-    this.reportFile = 'workflow-status-report.json';
-    this.startTime = new Date();
-  }
+console.log('📊 Starting workflow status monitor automation...');
 
-  async run() {
-    console.log('📊 Starting Workflow Status Monitor...');
+// This script runs every 2 hours to replace the GitHub Actions status workflow
+const MONITOR_INTERVAL = 2 * 60 * 60 * 1000; // 2 hours in milliseconds
+
+async function runWorkflowStatusMonitor() {
+  try {
+    console.log(`📊 Running workflow status monitor at ${new Date().toISOString()}`);
+    
+    // Get PM2 process status
+    console.log('🔍 Checking PM2 process status...');
+    let pm2Status = {};
+    let overallStatus = 'healthy';
+    let issues = [];
     
     try {
-      // Check system status
-      await this.checkSystemStatus();
+      const statusOutput = execSync('pm2 jlist', { encoding: 'utf8' });
+      const processes = JSON.parse(statusOutput);
       
-      // Check build status
-      await this.checkBuildStatus();
+      processes.forEach(process => {
+        pm2Status[process.name] = {
+          status: process.pm2_env.status,
+          restarts: process.pm2_env.restart_time,
+          memory: process.monit.memory,
+          cpu: process.monit.cpu,
+          uptime: process.pm2_env.pm_uptime
+        };
+        
+        if (process.pm2_env.status !== 'online') {
+          overallStatus = 'issues_detected';
+          issues.push(`${process.name}: ${process.pm2_env.status}`);
+        }
+        
+        if (process.pm2_env.restart_time > 5) {
+          issues.push(`${process.name}: excessive restarts (${process.pm2_env.restart_time})`);
+        }
+      });
       
-      // Check deployment status
-      await this.checkDeploymentStatus();
-      
-      // Generate report
-      await this.generateReport();
-      
-      console.log('✅ Workflow Status Monitor completed successfully');
+      console.log(`✅ PM2 status check completed - ${processes.length} processes monitored`);
     } catch (error) {
-      console.error('❌ Workflow Status Monitor failed:', error.message);
-      await this.generateErrorReport(error);
+      console.log('❌ Failed to get PM2 status');
+      overallStatus = 'monitoring_failed';
+      issues.push('PM2 status monitoring failed');
     }
-  }
-
-  async checkSystemStatus() {
-    console.log('🖥️  Checking system status...');
+    
+    // Check system resources
+    console.log('🔍 Checking system resources...');
+    let systemResources = {};
     
     try {
-      // Check disk space
+      // Check disk usage
       const diskOutput = execSync('df -h .', { encoding: 'utf8' });
-      this.diskStatus = diskOutput;
+      const diskLines = diskOutput.split('\n')[1].split(/\s+/);
+      systemResources.disk = {
+        used: diskLines[2],
+        available: diskLines[3],
+        usage: diskLines[4]
+      };
       
       // Check memory usage
       const memoryOutput = execSync('free -h', { encoding: 'utf8' });
-      this.memoryStatus = memoryOutput;
-      
-      // Check CPU load
-      const cpuOutput = execSync('uptime', { encoding: 'utf8' });
-      this.cpuStatus = cpuOutput;
-      
-      console.log('✅ System status check completed');
-      
-    } catch (error) {
-      console.log('ℹ️  System status check completed with limited info');
-    }
-  }
-
-  async checkBuildStatus() {
-    console.log('🔨 Checking build status...');
-    
-    try {
-      // Check if dist directory exists and has recent files
-      if (fs.existsSync('dist')) {
-        const distStats = fs.statSync('dist');
-        const distAge = Date.now() - distStats.mtime.getTime();
-        const hoursOld = Math.floor(distAge / (1000 * 60 * 60));
-        
-        this.buildStatus = {
-          exists: true,
-          lastModified: distStats.mtime.toISOString(),
-          hoursOld: hoursOld,
-          status: hoursOld < 24 ? 'recent' : 'stale'
-        };
-        
-        if (hoursOld < 24) {
-          console.log('✅ Build is recent (less than 24 hours old)');
-        } else {
-          console.log(`⚠️  Build is ${hoursOld} hours old`);
-        }
-      } else {
-        this.buildStatus = {
-          exists: false,
-          status: 'missing'
-        };
-        console.log('❌ Build directory not found');
-      }
-      
-    } catch (error) {
-      console.log('ℹ️  Build status check completed');
-    }
-  }
-
-  async checkDeploymentStatus() {
-    console.log('🚀 Checking deployment status...');
-    
-    try {
-      // Check if package.json has start script
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-      const hasStartScript = packageJson.scripts && packageJson.scripts.start;
-      
-      this.deploymentStatus = {
-        hasStartScript: hasStartScript,
-        nodeVersion: process.version,
-        platform: process.platform,
-        arch: process.arch
+      const memoryLines = memoryOutput.split('\n')[1].split(/\s+/);
+      systemResources.memory = {
+        total: memoryLines[1],
+        used: memoryLines[2],
+        free: memoryLines[3]
       };
       
-      if (hasStartScript) {
-        console.log('✅ Deployment configuration looks good');
-      } else {
-        console.log('⚠️  No start script found in package.json');
+      // Check CPU load
+      const loadOutput = execSync('uptime', { encoding: 'utf8' });
+      const loadMatch = loadOutput.match(/load average: ([\d.]+), ([\d.]+), ([\d.]+)/);
+      if (loadMatch) {
+        systemResources.cpu = {
+          load1: parseFloat(loadMatch[1]),
+          load5: parseFloat(loadMatch[2]),
+          load15: parseFloat(loadMatch[3])
+        };
       }
       
+      console.log('✅ System resource check completed');
     } catch (error) {
-      console.log('ℹ️  Deployment status check completed');
+      console.log('⚠️  System resource check failed');
+      issues.push('System resource monitoring failed');
     }
-  }
-
-  async generateReport() {
+    
+    // Check application health
+    console.log('🔍 Checking application health...');
+    let appHealth = {};
+    
+    try {
+      // Check if main app is responding
+      const appProcess = pm2Status['zion-app'];
+      if (appProcess && appProcess.status === 'online') {
+        appHealth.mainApp = 'healthy';
+      } else {
+        appHealth.mainApp = 'unhealthy';
+        issues.push('Main application is not running properly');
+      }
+      
+      // Check if backend is responding
+      const backendProcess = pm2Status['zion-backend'];
+      if (backendProcess && backendProcess.status === 'online') {
+        appHealth.backend = 'healthy';
+      } else {
+        appHealth.backend = 'unhealthy';
+        issues.push('Backend service is not running properly');
+      }
+      
+      // Check automation processes
+      const automationProcesses = [
+        'console-error-fixer',
+        'link-checker',
+        'continuous-improvement',
+        'daily-build-test',
+        'security-audit',
+        'dependency-updates'
+      ];
+      
+      automationProcesses.forEach(processName => {
+        const process = pm2Status[processName];
+        if (process && process.status === 'online') {
+          appHealth[processName] = 'healthy';
+        } else {
+          appHealth[processName] = 'unhealthy';
+          issues.push(`${processName} automation is not running properly`);
+        }
+      });
+      
+      console.log('✅ Application health check completed');
+    } catch (error) {
+      console.log('⚠️  Application health check failed');
+      issues.push('Application health monitoring failed');
+    }
+    
+    // Generate comprehensive status report
     const report = {
-      timestamp: this.startTime.toISOString(),
-      status: 'completed',
-      systemStatus: {
-        disk: this.diskStatus || 'N/A',
-        memory: this.memoryStatus || 'N/A',
-        cpu: this.cpuStatus || 'N/A'
+      timestamp: new Date().toISOString(),
+      summary: 'Workflow status monitor report',
+      status: overallStatus,
+      metrics: {
+        totalProcesses: Object.keys(pm2Status).length,
+        healthyProcesses: Object.values(pm2Status).filter(p => p.status === 'online').length,
+        issuesDetected: issues.length,
+        systemHealth: issues.length === 0 ? 'healthy' : 'needs_attention'
       },
-      buildStatus: this.buildStatus || {},
-      deploymentStatus: this.deploymentStatus || {},
-      summary: {
-        buildExists: this.buildStatus?.exists || false,
-        buildAge: this.buildStatus?.hoursOld || 'N/A',
-        hasStartScript: this.deploymentStatus?.hasStartScript || false
+      details: {
+        pm2Status: pm2Status,
+        systemResources: systemResources,
+        appHealth: appHealth,
+        issues: issues
       },
-      health: this.calculateHealthScore()
+      recommendations: issues.length > 0 ? [
+        'Investigate identified issues',
+        'Check PM2 process logs',
+        'Review system resource usage',
+        'Restart failed processes if needed'
+      ] : [
+        'Continue monitoring',
+        'Maintain current configuration',
+        'Schedule regular health checks'
+      ]
     };
-
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    console.log(`📊 Status report generated: ${this.reportFile}`);
-  }
-
-  calculateHealthScore() {
-    let score = 100;
-    let issues = [];
     
-    if (!this.buildStatus?.exists) {
-      score -= 30;
-      issues.push('Build directory missing');
-    } else if (this.buildStatus?.hoursOld > 24) {
-      score -= 15;
-      issues.push('Build is stale');
-    }
+    const reportPath = path.join(process.cwd(), 'workflow-status-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    console.log(`📊 Status report saved to ${reportPath}`);
     
-    if (!this.deploymentStatus?.hasStartScript) {
-      score -= 20;
-      issues.push('No start script');
-    }
-    
-    if (score < 50) {
-      return { score, status: 'critical', issues };
-    } else if (score < 80) {
-      return { score, status: 'warning', issues };
+    if (issues.length === 0) {
+      console.log('✅ Workflow status monitor completed - all systems healthy');
     } else {
-      return { score, status: 'healthy', issues };
+      console.log(`⚠️  Workflow status monitor completed - ${issues.length} issues detected`);
+      console.log('📋 Issues:', issues.join(', '));
     }
-  }
-
-  async generateErrorReport(error) {
+    
+  } catch (error) {
+    console.error('❌ Workflow status monitor failed:', error.message);
+    
+    // Generate error report
     const errorReport = {
-      timestamp: this.startTime.toISOString(),
+      timestamp: new Date().toISOString(),
+      summary: 'Workflow status monitor failed',
       status: 'failed',
       error: error.message,
-      stack: error.stack
+      actions: [
+        'Attempted status monitoring',
+        'Encountered error during process'
+      ]
     };
-
-    fs.writeFileSync(this.reportFile, JSON.stringify(errorReport, null, 2));
-    console.log(`❌ Error report generated: ${this.reportFile}`);
+    
+    const errorReportPath = path.join(process.cwd(), 'workflow-status-error-report.json');
+    fs.writeFileSync(errorReportPath, JSON.stringify(errorReport, null, 2));
+    console.log(`📊 Error report saved to ${errorReportPath}`);
   }
 }
 
-// Run the status monitor
-const statusMonitor = new WorkflowStatusMonitor();
-statusMonitor.run().catch(console.error);
+// Run the function immediately
+runWorkflowStatusMonitor();
+
+// Set up interval for monitoring
+setInterval(runWorkflowStatusMonitor, MONITOR_INTERVAL);
+
+console.log(`⏰ Workflow status monitor scheduled to run every ${MONITOR_INTERVAL / (60 * 60 * 1000)} hours`);
+console.log('🔄 Process will continue running...');
