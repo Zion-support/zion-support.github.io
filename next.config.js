@@ -65,78 +65,11 @@ const nextConfig = {
           '**/performance-*.txt'
         ],
         poll: 1000,
-        aggregateTimeout: 300,
-      };
+        aggregateTimeout: 300
+      }
     }
-    
-    return config;
-  },
-  
-  // Headers for security and performance
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-          {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()',
-          },
-        ],
-      },
-      {
-        source: '/api/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=0, s-maxage=86400, stale-while-revalidate',
-          },
-        ],
-      },
-    ];
-  },
-  
-  // Redirects
-  async redirects() {
-    return [
-      {
-        source: '/home',
-        destination: '/',
-        permanent: true,
-      },
-    ];
-  },
-  
-  // Environment variables
-  env: {
-    CUSTOM_KEY: process.env.CUSTOM_KEY,
-  },
-  
-  // Output configuration
-  output: 'standalone',
-  
-  // Generate ETags
-  generateEtags: true,
-  
-  // Dist directory
-  distDir: '.next',
-  
-  // Build ID
-  generateBuildId: async () => {
-    return 'build-' + Date.now();
-  },
+    return config
+  }
 };
 
 export default nextConfig;

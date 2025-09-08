@@ -38,7 +38,7 @@ export default function Home() {
           </button>
         </div>
       </div>
-    )
+    );
   }
   return (;
     <>;
@@ -529,8 +529,17 @@ We deliver exceptional results through innovation, expertise, and dedication
               </Link>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+          </main>
+        </Suspense>
+        {/* <PerformanceMonitor 
+          showMetrics={process.env.NODE_ENV === 'development'}
+          logMetrics={true}
+          onThresholdExceeded={(metrics) => {
+            console.warn('Performance thresholds exceeded:', metrics)
+          }}
+        /> */}
+      </ErrorBoundary>
     </>
   );
 }

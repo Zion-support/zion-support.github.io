@@ -15,8 +15,17 @@ interface PerformanceData {
 }
 
 interface PerformanceMonitorProps {
-  onPerformanceData?: (data: PerformanceData) => void;
+  showMetrics?: boolean;
+  logMetrics?: boolean;
+  onThresholdExceeded?: (metrics: PerformanceMetrics) => void;
 }
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
+  showMetrics = false, 
+  logMetrics = false, 
+  onThresholdExceeded 
+}) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
 
 // Declare Performance and PerformanceNavigationTiming types for TypeScript
 declare global {
@@ -45,29 +54,22 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         const paint = performance.getEntriesByType('paint');
         
-        const performanceData: PerformanceData = {
-          // Navigation timing
-          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-          loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-          totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
+        if (navigationEntry) {
+          const newMetrics = {
+            loadTime: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
+            renderTime: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
+            memoryUsage: (window.performance as any).memory?.usedJSHeapSize || 0
+          };
           
-          // Paint timing
-          firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
-          firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+          setMetrics(newMetrics);
           
-          // Resource timing
-          resourceCount: performance.getEntriesByType('resource').length,
+          if (logMetrics) {
+            console.log('Performance metrics:', newMetrics);
+          }
           
-          // Memory usage (if available)
-          memory: (performance as any).memory ? {
-            used: (performance as any).memory.usedJSHeapSize,
-            total: (performance as any).memory.totalJSHeapSize,
-            limit: (performance as any).memory.jsHeapSizeLimit
-          } : null
-        };
-
-        if (onPerformanceData) {
-          onPerformanceData(performanceData);
+          if (onThresholdExceeded) {
+            onThresholdExceeded(newMetrics);
+          }
         }
 
         // Log performance data in development
@@ -85,9 +87,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
     } else {
       window.addEventListener('load', measurePerformance);
     }
-  }, []);
+  }, [logMetrics, onThresholdExceeded]);
 
-  if (!isVisible) return null;
+  if (!showMetrics || !metrics) return null;
 
 const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
 if (value <= thresholds.good) return 'text-green-600'
