@@ -6,15 +6,6 @@ export const supabase = {
       })
     }),
 
-          error: null
-        })
-      })
-    }),
-    delete: () => ({
-
-          error: null
-        })
-      })
     })
   })
 };

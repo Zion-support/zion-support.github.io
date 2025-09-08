@@ -184,6 +184,7 @@ const Contact: React.FC = memo(() => {
         </div>
       </div>
 
+
     </div>
   );
 });

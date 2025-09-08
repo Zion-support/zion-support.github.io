@@ -11,26 +11,9 @@ const ServiceCard = memo<{ title: string; description: string }>(({ title, descr
 ServiceCard.displayName = 'ServiceCard';
 
 
-const Home: React.FC = memo(() => {
-  const services = [
-    {
-      title: 'AI Services',
-
-    }
-  ];
-
-  return (
-      <div className="mt-12">
-        <p className="text-sm text-blue-300">
-          Successfully built and deployed on Netlify! 🚀
-        </p>
-
-      </div>
     </div>
   );
 });
 
-
-Home.displayName = 'Home';
 
 export default Home;

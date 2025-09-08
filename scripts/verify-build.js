@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 console.log('\n🔍 Build Verification Report');
-console.log('==================================================\n');
+console.log('=\n');
 
 // Check if dist directory exists
 const distDir = path.join(process.cwd(), 'dist');

@@ -554,3 +554,4 @@ export function getErrorBoundaryFallback(error: Error): {
     action: 'Reload Page',
   };
 }
+

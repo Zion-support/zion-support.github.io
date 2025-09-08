@@ -24,7 +24,7 @@
     "build": "NODE_ENV=production vite build",
     "build:analyze": "NODE_ENV=production vite build --mode analyze",
     "build:preview": "npm run build && npm run preview",
-    "lint": "eslint .",
+
     "lint:fix": "eslint . --fix",
     "type-check": "tsc --noEmit",
     "preview": "NODE_ENV=production vite preview",
@@ -38,16 +38,7 @@
     "test:e2e": "playwright test",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "clean": "rm -rf dist node_modules/.vite",
-    "prebuild": "echo 'Skipping prebuild checks'",
-    "postbuild": "echo 'Build completed successfully' && npm run optimize",
-    "optimize": "node scripts/optimize-build.js",
-    "verify": "node scripts/verify-build.js",
-    "build:optimize": "npm run build && npm run optimize",
-    "build:verify": "npm run build && npm run verify",
-    "health-check": "node scripts/health-check.js",
-    "performance": "node scripts/performance-monitor.js",
-    "monitor": "npm run health-check && npm run performance"
+    "clean": "rm -rf dist node_modules/.vite"
   },
   "dependencies": {
     "@google-analytics/data": "^4.12.1",
@@ -148,13 +139,12 @@
     "@testing-library/react": "^16.3.0",
     "@types/node": "^24.2.1",
     "@types/node-cron": "^3.0.11",
-    "@types/react": "^17.0.34",
-    "@types/react-dom": "17.0.11",
+
     "@typescript-eslint/eslint-plugin": "^5.8.1",
     "@typescript-eslint/parser": "^8.39.0",
     "@vitejs/plugin-react": "^5.0.2",
     "autoprefixer": "^10.4.16",
-    "cssnano": "^7.1.1",
+
     "dotenv": "^17.2.1",
     "eslint": "^0.6.2",
     "eslint-config-next": "^11.0.0",
@@ -162,11 +152,7 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.2.0",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^25.0.0",
-    "jest-axe": "^3.1.1",
-    "jest-environment-jsdom": "^27.0.0",
-    "jsdom": "^16.5.3",
-    "msw": "^0.3.1",
+
     "node-mocks-http": "^1.17.2",
     "postcss": "^8.4.35",
     "prettier": "^3.3.3",
@@ -174,7 +160,7 @@
     "rimraf": "^5.0.5",
     "rollup-plugin-visualizer": "^2.7.2",
     "tailwindcss": "^3.4.1",
-    "terser": "^5.44.0",
+
     "ts-jest": "^29.3.4",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.33.0",
