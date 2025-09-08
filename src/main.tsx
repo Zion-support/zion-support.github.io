@@ -56,8 +56,8 @@ import { store } from './store';
 
 // Import analytics provider
 import { AnalyticsProvider } from './context/AnalyticsContext';
-import { initGA } from './lib/gtag';
-import ErrorBoundary from './components/ErrorBoundary';
+import { ViewModeProvider } from './context/ViewModeContext';
+import { registerServiceWorker } from './serviceWorkerRegistration';
 
 // Initialize a React Query client with global error handling
 const queryClient = new QueryClient({

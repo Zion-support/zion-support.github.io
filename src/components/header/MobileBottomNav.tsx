@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle, ShoppingCart } from "lucide-react";
+import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle, Heart } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { useAppSelector } from "@/store/hooks";
@@ -11,7 +11,7 @@ export function MobileBottomNav() {
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
-  const cartCount = useAppSelector(selectCartCount);
+  const { count: favoritesCount } = useFavorites();
 
   const navItems = [
     {

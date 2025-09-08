@@ -1,22 +1,10 @@
 
-import React, { useState, useRef, useEffect } from 'react';
-import { Link, useLocation  } from 'react-router-dom.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { ChevronDown, 
-  Menu, 
-  X, 
-  Home, 
-  Settings, 
-  Users, 
-  Building, 
-  Globe,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Code,
-  BarChart3
- } from 'lucide-react';
+import { Link, useLocation } from "react-router-dom";
+import { cn } from "@/lib/utils";
+import { useAuth } from "@/hooks/useAuth";
+import { MessageSquare, Heart } from "lucide-react";
+import { useFavorites } from "@/hooks/useFavorites";
+import { useTranslation } from "react-i18next";
 
 export function MainNavigation(): JSX.Element {
 	return (
@@ -33,6 +21,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const { user } = useAuth();
   const isAuthenticated = !!user;
   const location = useLocation();
+  const { t } = useTranslation();
 
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [moreOpen, setMoreOpen] = useState(false);
@@ -216,31 +205,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             </Link>
           </li>
         )}
-
-        {/* Admin link (optional) */}
-        {isAdmin && (
-          <li>
-            <Link
-              to="/analytics"
-              className={cn(
-                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
-                location.pathname.startsWith("/analytics") ? "bg-zion-purple/20 text-zion-cyan" : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
-              )}
-            >
-              Analytics
-            </Link>
-          </li>
-        )}
-
-        {/* Request Quote CTA */}
-        <li>
-          <Link
-            to="/request-quote"
-            className="inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium bg-zion-purple hover:bg-zion-purple/80 text-white transition-colors"
-          >
-            Get Quote
-          </Link>
-        </li>
       </ul>
     </nav>
   );
