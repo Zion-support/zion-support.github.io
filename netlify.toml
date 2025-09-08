@@ -1,7 +1,7 @@
 [build]
-  # Temporary: skip building and publish existing dist to unblock Netlify deploy
-  command = "/usr/bin/env bash -lc 'echo Skipping build on Netlify; true'"
-  publish = "dist"
+  # Deploy prebuilt Next.js static export in `out/`
+  command = "echo 'Skipping build; deploying prebuilt static export'"
+  publish = "out"
   command_timeout = "30m"
 
 [build.environment]
@@ -17,7 +17,10 @@
   # Skip Electron binary downloads during install to prevent build failures
   ELECTRON_SKIP_DOWNLOAD = "1"
 
-## Plugins removed to avoid extra dependency installation during Netlify build
+## Disable Next.js runtime plugin since we're deploying a static export
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  enabled = false
 
 [[redirects]]
   from = "/*"
