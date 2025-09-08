@@ -83,11 +83,34 @@ const footerSections = [
       { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
       { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: Shield },
       { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
-      { name: 'AI-Powered SEO', path: '/services/ai-seo', icon: TrendingUp },
-      { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', icon: FileText },
-      { name: 'AI Customer Support', path: '/services/ai-customer-support-automation', icon: MessageCircle },
-      { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
-      { name: 'AI Financial Analytics', path: '/services/ai-financial-analytics', icon: DollarSign }
+      { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: TrendingUp },
+      { name: 'AI Financial Analytics', path: '/services/ai-financial-analytics', icon: DollarSign },
+      { name: 'AI Customer Support Automation', path: '/services/ai-customer-support-automation', icon: MessageCircle }
+    ]
+  },
+  {
+    title: 'AI Autonomous Services',
+    icon: Shield,
+    links: [
+      { name: 'AI Autonomous Forensics', path: '/ai-autonomous-forensics', icon: Shield },
+      { name: 'AI Threat Intelligence', path: '/ai-autonomous-threat-intelligence', icon: AlertTriangle },
+      { name: 'AI Mobile Security', path: '/ai-autonomous-mobile-security', icon: Smartphone },
+      { name: 'AI Governance', path: '/ai-autonomous-governance', icon: Gavel }
+    ]
+  },
+  {
+    title: 'Advanced Technology',
+    icon: Cpu,
+    links: [
+      { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Cpu },
+      { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: Shield },
+      { name: 'Quantum Computing', path: '/services/quantum-computing', icon: Atom },
+      { name: 'Space Technology', path: '/space-tech', icon: Satellite },
+      { name: 'Digital Twin', path: '/services/digital-twin', icon: Eye },
+      { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Network },
+      { name: 'Zero Trust Network', path: '/services/zero-trust-network-access', icon: Lock },
+      { name: 'Sustainable Technology', path: '/services/sustainable-technology', icon: Leaf },
+      { name: 'AI Predictive Maintenance', path: '/services/ai-predictive-maintenance', icon: TrendingUp }
     ]
   },
   {
