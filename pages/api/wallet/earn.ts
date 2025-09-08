@@ -1,22 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import { earnTokens } from "../../../utils/token/service";
-export default function handler(,
-    req: NextApiRequest, r,
-    es: NextApiResponse) {
-  if (req.method !== "POST") return res.status(405).json({,
-    error: "Method not allowed" });
-  const { userId, amount, reason, metadata } = req.body || {};
-  if (!userId || typeof amount !== "number" || !reason) {
-    return res.status(400).json({,
-    error: "userId, amount, reason required" })
-  }
+export default async function handler(req, res) {
+  res.status(200).json({ message: 'API endpoint' });
 }
-  try {
-    const tx = earnTokens(userId, Math.floor(amount), reason, metadata);
-    return res.status(200).json({ tx })
-  } catch (,
-    err: any) {
-    return res.status(400).json({,
-    error: err.message })
-  }
-};

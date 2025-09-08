@@ -78,11 +78,11 @@ type Service = typeof enhancedRealMicroSaasServices[number];
     if (byLink) return byLink;
 
 function getAllServices(): Service[] {
-	return enhancedRealMicroSaasServices
-		.concat(extraServices as Service[], additionalEnhancedServices as Service[])
-		.concat(newlyAddedServices as unknown as Service[])
-		.concat(curatedMarketServices as Service[])
-		.concat(new2025Services as unknown as Service[])
+  return enhancedRealMicroSaasServices
+    .concat(extraServices as Service[], additionalEnhancedServices as Service[])
+    .concat(newlyAddedServices as unknown as Service[])
+    .concat(curatedMarketServices as Service[])
+    .concat(new2025Services as unknown as Service[])
 		.concat(marketValidatedServices as unknown as Service[])
 		.concat(moreRealServices2025 as unknown as Service[])
 		.concat(verified2025Additions as unknown as Service[])
@@ -103,11 +103,9 @@ function getAllServices(): Service[] {
 		.concat(added2026Q2Services as unknown as Service[])
 		.concat(real2026Q3Additions as unknown as Service[])
 		.concat(real2026Q4Additions as unknown as Service[])
-		          .concat(real2026Q4NewServices as unknown as Service[])
-          .concat(real2027Q1Additions as unknown as Service[])
-          .concat(newSaasItAiServices2025 as unknown as Service[]);
-}
-
+		.concat(real2026Q4NewServices as unknown as Service[])
+		.concat(real2027Q1Additions as unknown as Service[])
+		.concat(newSaasItAiServices2025 as unknown as Service[]);
 function toSlug(value: string): string {
 	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }

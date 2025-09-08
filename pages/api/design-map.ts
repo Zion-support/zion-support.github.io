@@ -1,6 +1,4 @@
-import type {
-  NextApiRequest, NextApiResponse
-} from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -22,7 +20,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         }
       }
     };
-
+    
     res.status(200).json({
       route: base.route,
       products: base.products,
@@ -35,24 +33,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 
-// Placeholder functions - implement these based on your needs
 function getZionDesignMap() {
   return {
-    route: '/design',
+    route: '/design-map',
     products: []
   };
 }
 
-async function buildTokenSet() {
+function buildTokenSet() {
   return {
     colors: {},
     typography: { fontSizes: {} }
   };
 }
 
-async function fetchLovableTokens() {
-  return {
+function fetchLovableTokens() {
+  return Promise.resolve({
     colors: {},
     typography: { fontSizes: {} }
-  };
+  });
 }

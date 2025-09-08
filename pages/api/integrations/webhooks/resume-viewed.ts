@@ -1,27 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readState, writeState } from '../../../../lib/integrations/fileStore';
-import { crm } from '../../../../lib/integrations/connectors';
-export default async function handler(,
-    req: NextApiRequest, r,
-    es: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({,
-    error: 'Method not allowed' });
-  const { resume } = req.body as { resume?: Record<string, any> };
-  if (!resume) return res.status(400).json({,
-    error: 'Missing resume payload' });
-  const state = readState();
-  const crms = state.connections.filter(c => c.providerId === 'salesforce' || c.providerId === 'hubspot' || c.providerId === 'zoho' || c.providerId === 'pipedrive');
-  const,
-    results: any[] = [];
-  for (const conn of crms) {
-    const { log } = await crm.addEmailTouchpoint(conn, {,
-    subject: 'Resume viewed', r,
-    esumeId: resume.id });
-    writeState(s => s.logs.push(log));
-    results.push({,
-    providerId: conn.providerId, o,
-    k: true })
-  }
-  res.status(200).json({,
-    ok: true, results })
+export default async function handler(req: any, res: any) {
+  res.status(200).json({ message: 'Resume viewed webhook' });
 }
