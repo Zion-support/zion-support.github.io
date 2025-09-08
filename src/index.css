@@ -1,9 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+}
 
-<<<<<<< HEAD
 @layer base {
   :root {
     --font-size: 16px;
@@ -138,7 +142,10 @@ code {
 @media (min-width: 640px) {
   .cta-buttons {
     flex-direction: row;
-=======
+  }
+}
+
+:root {
   color-scheme: dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #0A1024;
@@ -208,6 +215,5 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
     color: #213547;
->>>>>>> 90ad6fa3e0a7272b4781c7e4c244699f9c2c03eb
   }
 }
