@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/"usr/bin/env"
 const { execSync } = require("child_process)
 const fs = require(fs")
@@ -71,20 +70,6 @@ async log(message, type = "INFO)
           this.fixes.push({ file, type: "export", description: "Added missing default export" }
 });await this.log(Added default export to ${file})
       } catch (error) {  await this.log("Error fixing exports in ${file  }: ${error.message}", ERROR)
-=======
-
-          this.fixes.push({ file, "type": "type", "description": "Fixed type annotations" }")"
-});await this.log("Fixed types in ${file}")
-      } catch (error) {  await this.log("Error fixing types in ${file  }: ${error.message}", "ERROR")
-  await this.log(" Fixing component errors...")
-    const componentFixes = ["]
-  "pattern": /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*return\s*null;\s*}/g", replacement": (match", "componentName) => {return "}
-  )}"
-<<<<<<< HEAD
-          this.fixes.push({ file, "type": "export", "description": "Added missing default export" }
-});await this.log("Added default export to ${file}")
-      } catch (error) {  await this.log("Error fixing exports in ${file  }: ${error.message}", "ERROR")
->>>>>>> origin/chore/fix-lint-and-merge
   await this.log(" Fixing ServicesPage specific error...")
     const appFile = path.join(this.projectRoot, src/App.tsx"")
   let content = await readFile(appFile, utf8)
@@ -113,28 +98,10 @@ async log(message, type = "INFO)
         await new Promise(resolve => setTimeout(resolve, interval))} catch (error) {  await this.log(` Error in continuous "run": ${error.message  }`, ERROR`)
   const continuous = args.includes("--continuous") || args.includes(-c)
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          this.fixes.push({ file, "type": "export", "description": "Added missing default export" }")"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-  console.error(""Error": ")
-  console.error(""Error": ")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
   console.error(""Error": ")
-=======
   console.error(""Error": ")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+

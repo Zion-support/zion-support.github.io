@@ -1,8 +1,7 @@
 const fs = require('fs'); const path = require('path');  const performanceChecks = { bundleSize: () => {  return true},loadTime: () => {  return true},memoryUsage: () => {  return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } }); 
-const fs = require('fs'); const path = require('path');  const performanceChecks = { bundleSize: () => {  return true},loadTime: () => {  return true},memoryUsage: () => {  return true} }; Object && Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } }); 
 const fs = require('fs');
 const path = require('path');
-console && console.log('📊 Enhanced Performance Monitor Starting...');
+console.log('📊 Enhanced Performance Monitor Starting...');
 const performanceChecks = {
   "bundleSize": () => {
 
@@ -21,8 +20,9 @@ const performanceChecks = {
   }
 };
 // Run all performance checks
-Object && Object.entries(performanceChecks).forEach(([name, check]) => {
+Object.entries(performanceChecks).forEach(([name, check]) => {
   try {
+<<<<<<< HEAD
 
     const result = check();
     console && console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`);
@@ -33,3 +33,7 @@ Object && Object.entries(performanceChecks).forEach(([name, check]) => {
 console.log('🎉 Performance monitoring completed!');
 const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
 
+=======
+    const result = check();
+    const result = check();
+>>>>>>> origin/cursor/delete-old-data-records-6bba

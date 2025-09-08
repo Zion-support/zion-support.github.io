@@ -1,4 +1,4 @@
-const WebVitals = dynamic(() => import("./WebVitals"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default WebVitals' ,'
+const WebVitals = dynamic(() => import('./WebVitals'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default WebVitals' ,'
 
 </p>'
 </p>'
@@ -23,8 +23,8 @@ const WebVitals = dynamic(() => import("./WebVitals"),{'; "loading": () => <p>Lo
 </p>'
 
 ursor/integrate-build-improve-and-re-verify-8f7d
-const WebVitals = dynamic(() => import(\"./WebVitals\"),{\'; \"loading\": () => <p />Loading...</p,>}) \"export\": \'default WebVitals\' ,const WebVitals = dynamic(() => import(\"./WebVitals\"),{\"; loading: () => <p />Loading.</p,>}) export: \"default WebVitals\" ,\"\"\";
-const WebVitals = dynamic(() => import(\"./WebVitals\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default WebVitals' ,';
+const WebVitals = dynamic(() => import(\'./WebVitals\'),{\'; \'loading\': () => <p />Loading...</p,>}) \'export\': \'default WebVitals\' ,const WebVitals = dynamic(() => import(\'./WebVitals\'),{\'; loading: () => <p />Loading.</p,>}) export: \'default WebVitals\' ,\'\'\';
+const WebVitals = dynamic(() => import(\'./WebVitals\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default WebVitals' ,';
 </p>';
 </p>';
 </p>';
@@ -60,7 +60,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 </p>';
 </p>';
 </p>'</p>';
-const WebVitals = dynamic(() => import(\"./WebVitals\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default WebVitals' ,'
+const WebVitals = dynamic(() => import(\'./WebVitals\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default WebVitals' ,'
 </p>'
 </p>'
 </p>'

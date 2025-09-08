@@ -1,33 +1,6 @@
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-const statusReport = {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -46,34 +19,6 @@ async function checkAutomationStatus() {
 systemHealth:
 
   try {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    // Check PM2 processes
-    console.log('📋 Checking PM2 processes...');
-    try {
-      const pm2List = execSync('pm2 jlist', { encoding: 'utf8' });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-  const statusReport = {
-<<<<<<< HEAD
-
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> merged-prs-20250907-203621
 main
 
 
@@ -81,67 +26,12 @@ main
 
 
   const statusReport = {
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
     "timestamp": new Date().toISOString(),
     "pm2Processes": [],
     "automationScripts": [],
     "systemHealth": {},
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    "overallStatus": 'unknown'};
-  try {
-    // Check PM2 processes
-    try {
-      const pm2List = execSync('pm2 jlist', { "encoding": 'utf8' });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-2480
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> merged-prs-20250907-203621
+
 ursor/automate-test-improve-and-merge-code-2480
 origin/automation-improvements-final
 
@@ -153,19 +43,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
       const pm2Data = JSON.parse(pm2List);
       statusReport.pm2Processes = pm2Data;
       const runningProcesses = pm2Data.filter(
@@ -178,120 +57,25 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   // TODO: Implement
 
       );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> merged-prs-20250907-203621
-    } catch (error) {
-      
-    } catch (error) {
-      
       console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
     } catch (error) {
       console.log('⚠️  PM2 not available or no processes running');
-      
+      console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
     } catch (error) {
-      
-      
-    } catch (error) {
-      
+      console.log('⚠️  PM2 not available or no processes running');
 
-
-    } catch (error) {
-    } catch (error) {
-      
-    } catch (error) {
-      
-      console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
-    } catch (error) {
-      console.log('⚠️  PM2 not available or no processes running');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
-<<<<<<< HEAD
-=======
-=======
-    } catch (error) {
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-<<<<<<< HEAD
-      console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
-    } catch (error) {
-      console.log('⚠️  PM2 not available or no processes running');
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-      console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
-    } catch (error) {
-      console.log('⚠️  PM2 not available or no processes running');
-=======
-<<<<<<< HEAD
-      console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
-    } catch (error) {
-      console.log('⚠️  PM2 not available or no processes running');
-<<<<<<< HEAD
-    } catch (error) {
-=======
-      
-    } catch (error) {
-      
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-2480
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-      
-    } catch (error) {
-      
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-<<<<<<< HEAD
       
     } catch (error) {
       
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/automate-test-improve-and-merge-code-2480
 origin/automation-improvements-final
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     } catch (error) {
-<<<<<<< HEAD
       
 main
 
-=======
     } catch (error) {
       
     } catch (error) {
@@ -299,9 +83,6 @@ main
       console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
     } catch (error) {
       console.log('⚠️  PM2 not available or no processes running');
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> merged-prs-20250907-203621
       console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
 
 
@@ -341,56 +122,14 @@ main
       
 
       statusReport.pm2Processes = [];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
       statusReport.pm2Processes = [];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     }
     // Check automation scripts
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-      console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
-    } catch (error) {
-      console.log('⚠️  PM2 not available or no processes running');
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-<<<<<<< HEAD
     console.log('📋 Checking automation scripts...');
     const automationScripts = [
       'automation/master-orchestrator.cjs',
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> merged-prs-20250907-203621
       statusReport.pm2Processes = [];
     }
     // Check automation scripts
@@ -405,83 +144,22 @@ main
 
 
     
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
     const automationScripts = ['scripts/comprehensive-automation-suite.cjs',
       'scripts/automation-orchestrator.cjs',
       'scripts/start-all-automations.sh',
       'automation/security-scanner.cjs',
-<<<<<<< HEAD
-      'automation/master-orchestrator.cjs',
-      'automation/master-orchestrator.cjs',
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       'automation/master-orchestrator.cjs',
       'automation/master-orchestrator.cjs',
     console.log('📋 Checking automation scripts...');
     const automationScripts = [
       'automation/master-orchestrator.cjs',
       'automation/master-orchestrator.cjs',
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-=======
       'automation/master-orchestrator.cjs',
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
+
       'automation/master-orchestrator.cjs',
->>>>>>> cursor/automate-test-improve-and-merge-code-2480
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
       'automation/master-orchestrator.cjs',
->>>>>>> merged-prs-20250907-203621
 ursor/automate-test-improve-and-merge-code-2480
 origin/automation-improvements-final
 
@@ -500,71 +178,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'automation/health-check.cjs',
       'automation/security-scanner.cjs',
       'automation/code-quality-monitor.cjs',
-<<<<<<< HEAD
-      'automation/performance-optimizer.cjs',
-=======
-      'automation/performance-optimizer.cjs',']
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'automation/health-check.cjs',
       'automation/security-scanner.cjs',
       'automation/code-quality-monitor.cjs',
       'automation/performance-optimizer.cjs',
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
     ];
     for (const script of automationScripts) {
       const scriptPath = path.join(process.cwd(), script);
       const exists = fs.existsSync(scriptPath);
       statusReport.automationScripts.push({
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> merged-prs-20250907-203621
+
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -603,32 +228,8 @@ main
             : 'not_executable'
           : 'missing'});
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+
     try {
       const healthCheck = execSync('node automation/health-check.cjs', { encoding: 'utf8' });
       statusReport.systemHealth.healthCheck = 'passed';
@@ -636,19 +237,7 @@ main
     } catch (error) {
       statusReport.systemHealth.healthCheck = 'failed';
       console.log('❌ Health check failed');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> merged-prs-20250907-203621
 ursor/automate-test-improve-and-merge-code-2480
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -663,33 +252,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "platform": process.platform};
     statusReport.systemHealth = systemHealth;
 
-<<<<<<< HEAD
-    // Determine overall status
-    const runningProcesses = statusReport.pm2Processes.filter(
-      proc => proc.pm2_env && proc.pm2_env.status === 'online'
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-2480
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
     }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     // Determine overall status
     const runningProcesses = statusReport.pm2Processes.filter(
       proc => proc.pm2_env && proc.pm2_env.status === 'online'
-<<<<<<< HEAD
     ).length;
-<<<<<<< HEAD
-=======
->>>>>>> merged-prs-20250907-203621
+
+    // Determine overall status
+    const runningProcesses = statusReport.pm2Processes.filter(
+      proc => proc.pm2_env && proc.pm2_env.status === 'online'
     );
     const availableScripts = statusReport.automationScripts.filter(
       script => script.exists && script.isExecutable
@@ -810,13 +383,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     const availableScripts = statusReport.automationScripts.filter(s => s.exists).length;
     const totalScripts = statusReport.automationScripts.length;
 
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     if (availableScripts === totalScripts && statusReport.systemHealth.healthCheck === 'passed') {
       statusReport.overallStatus = 'healthy';
     } else if (availableScripts >= totalScripts * 0.8) {
@@ -824,68 +392,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     } else {
       statusReport.overallStatus = 'critical';
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
     console.log(`\n📊 Status Summary:`);
     console.log(`   Scripts Available: ${availableScripts}/${totalScripts}`);
     console.log(`   PM2 Processes: ${runningProcesses}`);
     console.log(`   Health Check: ${statusReport.systemHealth.healthCheck}`);
     console.log(`   Overall Status: ${statusReport.overallStatus.toUpperCase()}`);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     // Save report
-=======
-=======
->>>>>>> merged-prs-20250907-203621
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-    // Save report
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> merged-prs-20250907-203621
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     return statusReport;
   } catch (error) {
     console.error('❌ Error checking automation "status": ', error.message);
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
     const reportPath = path.join(process.cwd(), 'logs', 'automation-status-report.json');
     try {
       fs.mkdirSync(path.dirname(reportPath), { recursive: true });
@@ -906,26 +426,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     return statusReport;
   } catch (error) {
     console.error('❌ Error checking automation "status": ', error.message);
-<<<<<<< HEAD
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-main
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-=======
+
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 main
-=======
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> merged-prs-20250907-203621
     return statusReport;
   } catch (error) {
     console.error('❌ Error checking automation "status": ', error.message);
@@ -934,21 +438,7 @@ main
   } catch (error) {
     console.error('❌ Error checking automation "status": ', error.message);
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
     const reportPath = path.join(process.cwd(), 'logs', 'automation-status-report.json');
     try {
   // TODO: Implement
@@ -960,34 +450,7 @@ main
       console.log('⚠️  Could not save report file');
     }
   } catch (error) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    console.error('❌ Error checking automation status:', error.message);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> merged-prs-20250907-203621
 ursor/automate-test-improve-and-merge-code-2480
 origin/automation-improvements-final
 
@@ -1001,92 +464,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     statusReport.overallStatus = 'error';
   }
 
-<<<<<<< HEAD
-module.exports = checkAutomationStatus;
-=======
-<<<<<<< HEAD
-  return statusReport;
-}
-<<<<<<< HEAD
 
 
-// Run if called directly
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-2480
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     statusReport.overallStatus = 'error';
   }
   return statusReport;
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-if (require.main === module) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  checkAutomationStatus().then(report => {
-    process.exit(report.overallStatus === 'healthy' ? 0 : 1);
-  });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-
-<<<<<<< HEAD
-=======
 module.exports = checkAutomationStatus;
-=======
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  checkAutomationStatus().then(report => {
-    process.exit(report.overallStatus === 'healthy' ? 0 : 1);
-  });
-}
-
-module.exports = checkAutomationStatus;
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> merged-prs-20250907-203621
 
 if (require.main === module) {
+
+
+if (require.main === module) {
+
 
 
   checkAutomationStatus()
@@ -1094,68 +484,13 @@ if (require.main === module) {
       process.exit(0);
     })
     .catch(error => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
       console.error('Fatal "error": ', error);
       process.exit(1);
     });
 }
 module.exports = { checkAutomationStatus };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
-<<<<<<< HEAD
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");async function checkAutomationStatus() {" console.log(" Checking Automation Status."); const statusReport = { timestamp: new Date().toISOString()," pm2Processes: []," automationScripts: []," systemHealth: {},"" overallStatus: "unknown"}; try { / Check PM2 processes" console.log(" Checking PM2 processes."); try {"" const pm2List = execSync("pm2 jlist", { encoding: "utf8" }); const pm2Data = JSON.parse(pm2List); statusReport.pm2Processes = pm2Data; const runningProcesses = pm2Data.filter(" proc => proc.pm2_env && proc.pm2_env.status === "online" ); console.log(` Found ${runningProcesses.length} running PM2 processes`); } catch (error) {" console.log(" PM2 not available or no processes running"); statusReport.pm2Processes = []; } / Check automation scripts" console.log(" Checking automation scripts.");" const automationScripts = ["scripts/comprehensive-automation-suite.cjs"," "scripts/automation-orchestrator.cjs"," "scripts/start-all-automations.sh"," "automation/security-scanner.cjs"," "automation/health-check.cjs", ]; for (const script of automationScripts) { const exists = fs.existsSync(script); const isExecutable = exists" ? fs.statSync(script).mode & parseInt("111", 8) : false; statusReport.automationScripts.push({" name: script, exists, isExecutable," status: exists ? isExecutable" ? "ready"" : "not_executable"" : "missing"}); } / Check system health" console.log(" Checking system health."); const systemHealth = {" memoryUsage: process.memoryUsage()," uptime: process.uptime()," nodeVersion: process.version," platform: process.platform}; statusReport.systemHealth = systemHealth; / Determine overall status const runningProcesses = statusReport.pm2Processes.filter(" proc => proc.pm2_env && proc.pm2_env.status === "online" ); const availableScripts = statusReport.automationScripts.filter( script => script.exists && script.isExecutable ); if (runningProcesses.length > 0 && availableScripts.length > 0) {" statusReport.overallStatus = "healthy"; } else if (availableScripts.length > 0) {" statusReport.overallStatus = "ready"; } else {" statusReport.overallStatus = "needs_attention"; } / Save report const reportPath = path.join( process.cwd()," "automation-status-report.json" ); fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2));"" console.log(" Status Report: ");` console.log(` Overall Status: ${statusReport.overallStatus}`);"` console.log(` PM2 Processes: ${runningProcesses.length} running`); console.log("` ` Available Scripts: ${availableScripts.length}/${automationScripts.length}` );"` console.log(` Report saved to: ${reportPath}`); return statusReport; } catch (error) {"" console.error(" Error checking automation status: ", error.message);" statusReport.overallStatus = "error"; statusReport.error = error.message; return statusReport; }}/ Run if called directlyif (require.main === module) { checkAutomationStatus() .then(() => { process.exit(0); }) .catch(error => {"" console.error("Fatal error: ", error); process.exit(1); });}module.exports = { checkAutomationStatus };'"`'"`
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> merged-prs-20250907-203621
 main
 if (require.main === module) {
 
@@ -1199,69 +534,17 @@ const path = require('path')
 const { execSync } = require('child_process')
   console.log(' Checking Automation Status...')
       console.error('Fatal "error")
-<<<<<<< HEAD
+
 
 if (require.main === module) {
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-
-if (require.main === module) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
   checkAutomationStatus().then(report => {
     process.exit(report.overallStatus === 'healthy' ? 0 : 1);
   });
 }
-<<<<<<< HEAD
+
 module.exports = checkAutomationStatus;
 
 module.exports = checkAutomationStatus;
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-module.exports = checkAutomationStatus;
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-module.exports = checkAutomationStatus;
-
-module.exports = checkAutomationStatus;
-<<<<<<< HEAD
-module.exports = checkAutomationStatus;
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-improve-and-merge-code-2480
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> merged-prs-20250907-203621
 ursor/automate-test-improve-and-merge-code-2480
 origin/automation-improvements-final
     "overallStatus"""
@@ -1285,16 +568,4 @@ origin/automation-improvements-final
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+

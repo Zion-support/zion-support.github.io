@@ -1,6 +1,5 @@
 
 const fs = require('fs');
-<<<<<<< HEAD
 const path = require(path');
 
 class AppImportsFixer {}
@@ -15,20 +14,6 @@ class AppImportsFixer {}
         return { "exists: false, hasDefault": false, "hasNamed: [] }}
       const content = fs.readFileSync(filePath, utf8');
       const hasDefault = content.includes('export default);
-=======
-const path = require('path');
-class AppImportsFixer {}
-  constructor() {}
-    this.projectRoot = process.cwd();
-
-  log(message) {}
-    console.log(`[${new Date().toISOString()}] ${message})};
-  checkFileExports(filePath) {}
-    try {}
-      if (!fs.existsSync(filePath)) {}
-
-      const hasDefault = content.includes('export default');
->>>>>>> origin/chore/fix-lint-and-merge
       const namedExports = [];
       // Check for named exports;
       const exportMatches = content.match(/export\s+(?:function|const|class)\s+(\w+)/g);
@@ -36,7 +21,6 @@ class AppImportsFixer {}
         exportMatches.forEach(match => {})
           const nameMatch = match.match(/export\s+(?:function|const|class)\s+(\w+)/);
           if (nameMatch) {}
-<<<<<<< HEAD
             namedExports.push(nameMatch[1])}
         })}
       return { exists": true, hasDefault, "hasNamed: namedExports }} catch (error) {}
@@ -90,16 +74,9 @@ class AppImportsFixer {}
         
         this.log(`Fixed import for ${page.name}: ${exports.hasDefault ? 'default : named'} export`)} else {`}
         this.log(`"Warning: ${page.path}.tsx does not exist`)}
-=======
-            namedExports.push(nameMatch[1])};
-        })};
-
-        this.log(`"Warning": ${page.path}.tsx does not exist`)};"
->>>>>>> origin/chore/fix-lint-and-merge
     }
 });
     // Write the fixed content back;
-<<<<<<< HEAD
     fs.writeFileSync(this.appPath, content);
     this.log('App.tsx imports fixed successfully!)}
   async run() {}
@@ -112,50 +89,24 @@ class AppImportsFixer {}
       throw error}
   }
 }
-=======
-    fs.writeFileSync(this.appPath, content);"
-
-      throw error};
->>>>>>> origin/chore/fix-lint-and-merge
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
   const automation = new AppImportsFixer();
   automation.run();
-<<<<<<< HEAD
     .then(() => {}
       console.log(App Imports Fixer completed successfully!');
       process.exit(0)}
 });
     .catch(error => {})
       console.error('App Imports Fixer "failed": ', error);
-<<<<<<< HEAD
-      process.exit(1)})}
 
-=======
-      process.exit(1)})};
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
 module.exports = AppImportsFixer;
 module.exports = AppImportsFixer;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
     .then(() => {}"
 
       process.exit(1)})};
-<<<<<<< HEAD
 module.exports = AppImportsFixer;
-<<<<<<< HEAD
 `;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-=======
+
 module.exports = AppImportsFixer;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

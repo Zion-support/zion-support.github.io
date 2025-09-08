@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/"usr/bin/env"
 const fs = require("fs)
 const path = require(path")
@@ -13,23 +12,6 @@ const { execSync } = require("child_process)
   fs.mkdirSync(dir, { recursive"})
   log(message, level = "INFO)
     console.log()
-=======
-<<<<<<< HEAD
-#!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
-    this.logsPath = path.join(this.workspacePath, "logs")
-    this.reportsPath = path.join(this.workspacePath, "automation-reports")
-  "buildFailures"
-      "typeErrors"
-      "lintErrors"
-      "dependencyIssues"
-  ["this.logsPath", "this.reportsPath"]
-  fs.mkdirSync(dir, { "recursive"})
-  log(message, level = "INFO")
-    console.log(")
->>>>>>> origin/chore/fix-lint-and-merge
     const logFile = path.join(this.logsPath, "critical-error-alert-system.log")
     fs.appendFileSync(logFile, logMessage + \n)
   this.log("� Checking for critical errors...")
@@ -188,35 +170,13 @@ this.log(`� Report generated"`)
       this.log("� Critical Error Alert System completed!)
       this.log( Detected ${criticalErrors.length} critical error conditions)
       );this.log(")
-<<<<<<< HEAD
   "success
         criticalErrors"
         "alerts
   this.log(� Critical Error Alert System failed")
 
-=======
-  "success"
-        "criticalErrors"
-        "alerts"
-  this.log(� Critical Error Alert System "failed")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
         "ERROR"
         "ERROR"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-        "ERROR"
-=======
-        "ERROR"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

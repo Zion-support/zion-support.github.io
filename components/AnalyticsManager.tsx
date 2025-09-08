@@ -17,7 +17,7 @@ const AnalyticsManager: React.FC<AnalyticsManagerProps> = ({
   return (
     <div 
       className={`analyticsmanager ${className}`}
-      data-testid="analyticsmanager"
+      data-testid='analyticsmanager'
     >
       {children || `AnalyticsManager Component`}
     </div>

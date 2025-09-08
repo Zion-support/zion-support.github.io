@@ -57,7 +57,7 @@ const allServices = null;
 ...emergingTechServices2025;
 ...additionalRealServices2025;
 ...newInnovativeAIServices ];
-}transition= {{duration: 0.8, delay: 0.8;}
+}transition= {duration: 0.8, delay: 0.8;}
 }> ⭐ Popular </span>)}</div> </div> </div> </motion.div>) )}</div> > <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" /> <h3 className="text-xl font-semibold text-white mb-2"  />No services found</h3> <p className="text-gray-400"  />Try adjusting your search criteria or browse all services</p> <button /> Clear Filters </button> </motion.div>)}</div> </section> </li>) )}</ul> </div> > Explore Service <ArrowRight className="w-5 h-5 inline ml-2 group-hover: translate-x-1 transition-transform duration-300" /> </a> </div> </motion.div>) )}</div> Popular </span>)}</div> </span>) )}</div> </div> </div> </div> <a /> Learn More <ArrowRight className="w-4 h-4 inline ml-2" /> </a> </div> </div> </motion.div>) ,
 }</div>)opacity: 1, y: 0;
   opacity: 1, y: 0;
@@ -151,7 +151,7 @@ const allServices = null;
   /* Enhanced CTA Section */ ,}
 }<motion.div <div className="relative z-10"  /> <motion.div  /> <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6"  /> <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse"  /></span> Transform Your Business Today </div> </motion.div> <h2 className="text-5xl md:text-6xl font-bold text-white mb-8"  /> <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"  /> Ready to Get Started? </span> </h2> <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed"  /> Choose from our comprehensive suite of revolutionary services and start transforming your business today with cutting-edge AI, quantum computing, and emerging technologies. </p> <div className="flex flex-col sm: flex-row gap-6 justify-center"  /> <motion.a  /> 🚀 Get Started Today </motion.a> <motion.a mt-10 text-sm text-gray-400" /> <p />Need help choosing? <a href=" /contact"className=" text-cyan-400 hover:text-cyan-300 underline"  />Contact our experts</a> for personalized guidance.</p> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)
                     setSelectedCategory('All')
-                  }}
+                  }
                   className="mt-4 px-6 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
                 >
                   Clear Filters;
@@ -233,11 +233,11 @@ const allServices = null;
               ) : (<div className="space-y-4" />;
                   {sortedServices && sortedServices.map((service, index) => (<motion&& motion.div;}
                       key={service && service.id}
-                      initial={{ opacity: 0, x: -20 ,}
+                      initial={ opacity: 0, x: -20 ,}
 }
-                      animate={{ opacity: 1, x: 0 ,}
+                      animate={ opacity: 1, x: 0 ,}
 }
-                      transition={{ duration: 0 && 0.8, delay: 1 + index * 0 && 0.05 ,}
+                      transition={ duration: 0 && 0.8, delay: 1 + index * 0 && 0.05 ,}
 }
                       className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-gray-600/50 transition-all duration-300" />;
                       <div className="flex flex-col lg:flex-row gap-6" />;
@@ -300,22 +300,22 @@ const allServices = null;
               )}
             {/* Enhanced CTA Section */}
             <motion&& motion.div;
-              initial={{ opacity: 0, y: 30 ,}
+              initial={ opacity: 0, y: 30 ,}
 }
-              animate={{ opacity: 1, y: 0 ,}
+              animate={ opacity: 1, y: 0 ,}
 }
-              transition={{ duration: 0 && 0.8, delay: 1 && 1.2 ,}
+              transition={ duration: 0 && 0.8, delay: 1 && 1.2 ,}
 }
               className="text-center mt-24" />;
               <div className="relative overflow-hidden bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 border border-cyan-500/20 rounded-3xl p-16 shadow-2xl shadow-cyan-500/10" />;
                 {/* Animated Background Elements */}
             {/* Enhanced Category Overview */}
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 ,}
+              initial={ opacity: 0, coordinate_y: 20 ,}
 }
-              animate={{ opacity: 1, coordinate_y: 0 ,}
+              animate={ opacity: 1, coordinate_y: 0 ,}
 }
-              transition={{ duration: 0.8, delay: 0.4 ,}
+              transition={ duration: 0.8, delay: 0.4 ,}
 }
               className="mb-20" />
 
@@ -333,11 +333,11 @@ const allServices = null;
                 {categories.map ((category, index) => {const stats = getCategoryStats (category.id;}
   return (<motion.div;}
                       key={category.id}
-                      initial={{ opacity: 0, coordinate_y: 20 ,}
+                      initial={ opacity: 0, coordinate_y: 20 ,}
 }
-                      animate={{ opacity: 1, coordinate_y: 0 ,}
+                      animate={ opacity: 1, coordinate_y: 0 ,}
 }
-                      transition={{ duration: 0.8, delay: 0.6 + index * 0.1 ,}
+                      transition={ duration: 0.8, delay: 0.6 + index * 0.1 ,}
 }
                       className="bg - gray - 900 / 60 backdrop - blur - xl border border - gray - 700 / 50 rounded - 3xl p - 8 hover:border - cyan - 500 / 30 hover:shadow - 2xl hover:shadow - cyan - 500 / 20 transition - all duration-500 cursor-pointer group";
                       on_click={() = /> setSelectedCategory (category.id)}
@@ -371,11 +371,11 @@ const allServices = null;
                       </div>;
             {/* Services Grid / List */}
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 ,}
+              initial={ opacity: 0, coordinate_y: 20 ,}
 }
-              animate={{ opacity: 1, coordinate_y: 0 ,}
+              animate={ opacity: 1, coordinate_y: 0 ,}
 }
-              transition={{ duration: 0.8, delay: 0.8 ,}
+              transition={ duration: 0.8, delay: 0.8 ,}
 }
              />;
               <h2 className="text - 3xl font - bold text-center mb-12" />;
@@ -386,9 +386,9 @@ const allServices = null;
               {view_mode === 'grid' ? (<div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-8" />;}
                   {sorted_services.map ((service, index) => (<motion.div;}
                       key={service.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 1 + index * 0.05 }}
+                      initial={ opacity: 0, y: 20 }
+                      animate={ opacity: 1, y: 0 }
+                      transition={ duration: 0.8, delay: 1 + index * 0.05 }
                       className="bg - gray - 900 / 60 backdrop - blur - xl border border - gray - 700 / 50 rounded - 3xl p - 8 hover:border - cyan - 500 / 30 hover:shadow - 2xl hover:shadow - cyan - 500 / 20 transition - all duration - 500 hover:transform hover:scale-105 group relative overflow-hidden" />
 
                       {/* Animated Background *,}
@@ -414,8 +414,8 @@ const allServices = null;
                     </div>;
                   </motion.div>))}
               </div>) : (<motion.div;
-                initial={{ opacity: 0 }}
-                animate={{opacity: 1 }
+                initial={ opacity: 0 }
+                animate={opacity: 1 }
 }
                 className="text-center py-20" />
 
@@ -423,7 +423,7 @@ const allServices = null;
                 <h3 className="text - xl font - semibold text-white mb-2" />No services found</h3>;
                 <p className="text-gray-400" />Try adjusting your search criteria or browse all services</p>;
                 <button;
-                  on_click={() = /> {setSearchTerm ('')setSelectedCategory ('All')}}
+                  on_click={() = /> {setSearchTerm ('')setSelectedCategory ('All')}
                   className="mt - 4 px - 6 py - 2 bg - cyan - 500 text - white rounded - lg hover:bg - cyan-600 transition-colors">
 
                   Clear Filters;
@@ -478,11 +478,11 @@ const allServices = null;
                 </div>) : (<div className="space-y-4" />;
                   {sorted_services.map ((service, index) => (<motion.div;}
                       key={service.id}
-                      initial={{ opacity: 0, coordinate_x: -20 ,}
+                      initial={ opacity: 0, coordinate_x: -20 ,}
 }
-                      animate={{ opacity: 1, coordinate_x: 0 ,}
+                      animate={ opacity: 1, coordinate_x: 0 ,}
 }
-                      transition={{ duration: 0.8, delay: 1 + index * 0.05 ,}
+                      transition={ duration: 0.8, delay: 1 + index * 0.05 ,}
 }
                       className="bg - gray - 900 / 50 backdrop - blur - sm border border - gray - 700 / 50 rounded - 2xl p - 6 hover:border - gray - 600 / 50 transition-all duration-300" />
 
@@ -533,11 +533,11 @@ const allServices = null;
             </motion.div>;
             {/* Enhanced CTA Section */}
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 ,}
+              initial={ opacity: 0, coordinate_y: 30 ,}
 }
-              animate={{ opacity: 1, coordinate_y: 0 ,}
+              animate={ opacity: 1, coordinate_y: 0 ,}
 }
-              transition={{ duration: 0.8, delay: 1.2 ,}
+              transition={ duration: 0.8, delay: 1.2 ,}
 }
               className="text-center mt-24" />
 
@@ -547,12 +547,12 @@ const allServices = null;
                 <div className="absolute bottom - 0 right - 0 w - 64 h - 64 bg - gradient - to - br from - purple - 500 / 20 to - transparent rounded-full blur-3xl" /></div>;
                 <div className="relative z-10" />;
                   <motion.div;
-                    initial={{ opacity: 0, scale: 0.9 ,}
+                    initial={ opacity: 0, scale: 0.9 ,}
 }
-                    animate={{ opacity: 1, scale: 1 ,}
+                    animate={ opacity: 1, scale: 1 ,}
 }
 
-                    transition={{ duration: 1, delay: 1.4 ,}
+                    transition={ duration: 1, delay: 1.4 ,}
 }
 
                     className="mb-8"
@@ -574,8 +574,8 @@ const allServices = null;
                     <motion.a;
 href="/contact"
 
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{scale: 0.95 }
+                      whileHover={ scale: 1.05 }
+                      whileTap={scale: 0.95 }
 }
                       className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-2xl shadow-cyan-500/25 hover:shadow-cyan-500/40" />
 
@@ -583,8 +583,8 @@ href="/contact"
                     </motion.a>;
                     <motion.a;
                       href="/pricing";
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
+                      whileHover={ scale: 1.05 }
+                      whileTap={ scale: 0.95 }
 
                       className="border-2 border-cyan-500/50 text-white px-10 py-5 rounded-2xl font-bold text-xl hover: border-cyan-400 hover:bg-cyan-500/10 transition-all duration-300 backdrop-blur-sm"
                      />

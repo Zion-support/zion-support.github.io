@@ -9,34 +9,7 @@ class ComprehensiveAutomationRunner {
   }
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  async runScript(scriptPath, scriptName) {
-    this.log(`\n🚀 Running ${scriptName}`);
-    try {
-      const result = execSync(`node ${scriptPath}`, {
-        cwd: this.projectRoot,
-        stdio: 'pipe',
-        encoding: 'utf8',
-      });
-      this.log(`✅ ${scriptName} completed successfully`);
-      this.results.push({ script: scriptName, success: true, output: result });
-      return { success: true, output: result };
-    } catch (error) {
-      this.log(`❌ ${scriptName} failed: ${error.message}`, 'ERROR');
-      this.results.push({ script: scriptName, success: false, error: error.message });
-      return { success: false, error: error.message };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-=======
->>>>>>> merged-prs-20250907-203621
+
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
@@ -65,71 +38,17 @@ class ComprehensiveAutomationRunner {
     this.log('🚀 Starting Comprehensive Automation Runner...');
 
 
-<<<<<<< HEAD
-=======
-  async runAutomationScript(scriptName, scriptPath) {
-    try {
-      this.log(`🤖 Running ${scriptName}...`);
-      execSync(`node ${scriptPath}`, { stdio: 'inherit' });
-      this.log(`✅ ${scriptName} completed successfully`);
-      return { success: true, script: scriptName };
-    } catch (error) {
-      this.log(`❌ ${scriptName} failed: ${error.message}`);
-      return { success: false, script: scriptName, error: error.message };
-<<<<<<< HEAD
-main
-
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
     }
   }
 
   async runAllAutomations() {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-this.log('🎯 Starting Comprehensive Automation Runner');
-    this.log('
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-<<<<<<< HEAD
-<<<<<<< HEAD
-    this.log('🚀 Starting Comprehensive Automation Runner...');
-    
-=======
->>>>>>> merged-prs-20250907-203621
+
+
 
 
     const automations = [
@@ -174,12 +93,7 @@ this.log('🎯 Starting Comprehensive Automation Runner');
 const runner = new ComprehensiveAutomationRunner();
 runner.runAllAutomations().catch(console.error);
 
-<<<<<<< HEAD
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
+
 this.log('🎯 Starting Comprehensive Automation Runner');
 
     const scripts = [
@@ -313,17 +227,4 @@ module.exports = ComprehensiveAutomationRunner;
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621

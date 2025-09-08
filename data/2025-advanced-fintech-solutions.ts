@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
   }
 ];
@@ -265,4 +268,8 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     reviews: 52;
   }
 ];
+<<<<<<< HEAD
 
+=======
+];
+>>>>>>> origin/cursor/delete-old-data-records-6bba

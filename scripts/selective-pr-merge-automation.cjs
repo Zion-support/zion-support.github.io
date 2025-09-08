@@ -52,7 +52,7 @@ const path = require('path');
 >>>>>>> merged-prs-20250907-203621
 console.log('===')
   log(message, type = 'info')
-      const result = execSync(command, {"encoding": 'utf8',"stdio"})
+const result = execSync(command, {"encoding": 'utf8',"stdio"});
       this.log(` ${description} "failed"`)
       this.log(`Error getting priority "branches"`)
         await this.runCommand("git commit -m "Resolve merge conflicts with main branch"")
@@ -86,6 +86,9 @@ console.log('===)
     console.log('\n Detailed report saved to")
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
   console.error('Automation "failed")
+<<<<<<< HEAD
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+=======
 <<<<<<< HEAD
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 
@@ -124,3 +127,4 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
   console.error('Automation "failed")
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

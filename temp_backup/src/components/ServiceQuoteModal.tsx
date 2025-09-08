@@ -42,7 +42,7 @@ else if (currentStep = == 'timeline') setCurrentStep ('contact')}
   if (currentStep === 'timeline') setCurrentStep ('details')';) => {
   return $3;}
 }"
-else if (currentStep === 'contact') setCurrentStep ('timeline')}}> <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]"  /> text-2xl font-semibold text-white"> Request Service Quote </DialogTitle> </DialogHeader> </div> <div className=" space-y-2" /> <Label htmlFor=" description"className=" text-white" />Project Description</Label> <Textarea required /> </div> <div className=" space-y-2" /> <Label htmlFor=" budget"className=" text-white" />Estimated Budget</Label> <Select value= {formData.budget ;}
+else if (currentStep === 'contact') setCurrentStep ('timeline')}> <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]"  /> text-2xl font-semibold text-white"> Request Service Quote </DialogTitle> </DialogHeader> </div> <div className=" space-y-2" /> <Label htmlFor=" description"className=" text-white" />Project Description</Label> <Textarea required /> </div> <div className=" space-y-2" /> <Label htmlFor=" budget"className=" text-white" />Estimated Budget</Label> <Select value= {formData.budget ;}
 }onValueChange= {(value) = /> setFormData (prev => ({...prev, budget: value ;}"
 }) ) ";"
 }> <SelectTrigger className=" bg-zion-blue-dark border-zion-blue-light text-white" /> <SelectValue placeholder=" Select your budget range"/> </SelectTrigger> </SelectItem>) )}</SelectContent> </Select> </div> </div>)}<Select value= {formData.timeframe ;}

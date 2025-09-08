@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 // Types used across fraud detection modules;
 import {FraudSeverity} from '@/types / fraud';
 
@@ -10,9 +13,12 @@ export interface AnalysisResult {
   reasons: string[];
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 export interface MessageAnalysisResult extends AnalysisResult {
   severity: FraudSeverity;
@@ -28,7 +34,10 @@ export interface AnalysisResult {};
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export interface MessageAnalysisResult extends AnalysisResult {
   severity: FraudSeverity
 }
@@ -36,6 +45,25 @@ export interface MessageAnalysisResult extends AnalysisResult {
 export interface MessageAnalysisResult extends AnalysisResult {
 
 
+<<<<<<< HEAD
 
 
 
+=======
+}
+
+export interface EmailAnalysisResult extends AnalysisResult {}
+export interface FlagResult {
+}
+
+;
+export interface SignupCheckResult extends AnalysisResult {}
+;
+// Types used across fraud detection modules;
+
+;
+;
+
+
+export interface SignupCheckResult extends AnalysisResult {}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

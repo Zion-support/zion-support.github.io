@@ -1,12 +1,16 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export type InterviewStatus = 
   | 'requested' 
   | 'confirmed' 
   | 'declined' 
   | 'rescheduled' 
   | 'completed' ;
+<<<<<<< HEAD
 
 
 export type MeetingPlatform =
@@ -29,6 +33,14 @@ export interface Interview {;
 
 
 
+=======
+  | 'cancelled';
+export type InterviewType = 'video' | 'phone' | 'in-person';
+export type MeetingPlatform = 'zoom' | 'google-meet' | 'teams' | 'other' | 'in-app';
+export interface Interview {
+
+export interface Interview {;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   id: string;
   client_id: string;
   talent_id: string;
@@ -50,15 +62,21 @@ export interface Interview {;
   talent_avatar?: string;
 
 }
+<<<<<<< HEAD
 
 export interface InterviewRequest {
 }
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 export interface InterviewRequest {;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   talent_id: string;
   client_id: string;
   scheduled_date: string;
@@ -70,7 +88,10 @@ export interface InterviewRequest {;
 }
 export interface InterviewResponse {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 }
 
@@ -87,7 +108,10 @@ export interface InterviewResponse {
 export interface InterviewResponse {;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   interview_id: string;
   status: InterviewStatus;
 
@@ -142,8 +166,13 @@ export interface InterviewResponse {;
   message?: string;
 }
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

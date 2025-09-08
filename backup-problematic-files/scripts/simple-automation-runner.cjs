@@ -1,23 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
+
 totalSize = getDirectorySize(buildDir);
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-=======
-totalSize = getDirectorySize(buildDir);
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')      return size}}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 /**
  * Simple Automation Runner;
@@ -37,7 +23,6 @@ class SimpleAutomationRunner {
         testsFailed: 0,
         buildSuccess: false,
         securityIssues: 0,
-<<<<<<< HEAD
         improvementsApplied: 0
       }
     };
@@ -91,40 +76,17 @@ async function runSimpleAutomation() {
         const result = execSync('npm audit --json', { "encoding": 'utf8', "stdio": 'pipe' };);
         const auditData = JSON.parse(result;);
         return { ;
-<<<<<<< HEAD
-          "status": 'success',
-=======
-          "status": 'success', 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-          "vulnerabilities": auditData.vulnerabilities || 0,
-          "advisories": auditData.advisories || 0
-        }} catch (error) {
-        return { "status": 'partial', "error": error.message }}
-    });
-    // Task "7": Performance check
-    await runTask('Performance Analysis', async () => {
-      const buildDir = '.next;';
-=======
+
         improvementsApplied: 0;
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if () {
         const stats = analyzeBuildSize(buildDi) {
     ) {
         const stats = analyzeBuildSize(buildDi}r;);
-<<<<<<< HEAD
         return { ;
-<<<<<<< HEAD
-          "status": 'success',
-=======
-          "status": 'success', 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-          "totalSize": stats.totalSize,
-          "recommendations": stats.recommendations
-=======
+
 
           "recommendations": stats.recommendations;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         }} else {
   // TODO: Implement
 }"
@@ -146,11 +108,6 @@ async function runSimpleAutomation() {
         }} else if ( {)
   // TODO: Implement
       return result} catch (error) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      const duration = Date.now() - startTi;m;e;
->>>>>>> origin/chore/fix-lint-and-merge
       report.tasks.push({
         "name": taskName,
         "status": 'failed',
@@ -159,25 +116,14 @@ async function runSimpleAutomation() {
         "timestamp": new Date().toISOString()
       });
       throw error}
-<<<<<<< HEAD
 
-=======
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
   log(message) {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] ${message}`);
   }
-=======
       report.tasks.push({"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async runCommand(command, description) {
   // TODO: Implement
 
@@ -191,7 +137,6 @@ const path = require('path')
       if (audit.vulnerabilities) {
         this.results.summary.securityIssues = Object.keys(audit.vulnerabilities).length;`;
         this.log(`Found ${this.results.summary.securityIssues} security issues`);
-<<<<<<< HEAD
       } else {
         this.log('No security issues found');
       }
@@ -228,50 +173,18 @@ const path = require('path')
   async run() {
     this.log('🚀 Starting Simple Automation Runner...');
     try {
-=======
-  // TODO: Implement
-
-  // TODO: Implement
->>>>>>> origin/chore/fix-lint-and-merge
       await this.runTests();
       await this.runBuild();
       await this.runSecurityAudit();
       await this.applyImprovements();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-      this.generateReport();
-      this.log('✅ Automation completed successfully');
-    } catch (error) {
-      this.log(`❌ Automation failed: ${error.message}`);
-      this.results.status = 'failed';
-    }
-  }
 
-      return size}}
-
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
       
       return size}}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     totalSize = getDirectorySize(buildDir);
-=======
       return size}}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
     totalSize = getDirectorySize(buildDir);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     const recommendations = [];
 
       recommendations.push('Consider code splitting to reduce bundle size')}
@@ -287,58 +200,27 @@ if (require.main === module) {
   runner.run().catch(error => {)"
 
     process.exit(1);
-<<<<<<< HEAD
   });
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
+
 module.exports = SimpleAutomationRunner;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 module.exports = SimpleAutomationRunner;
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 module.exports = { runSimpleAutomation }) {
-  runSimpleAutomation().catch(console.error)}
-<<<<<<< HEAD
-module.exports = { runSimpleAutomation }) {
-     {
-  runSimpleAutomation().catch(console.error)}
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-module.exports = { runSimpleAutomation }) {
-     {
   runSimpleAutomation().catch(console.error)}
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 module.exports = { runSimpleAutomation }}
 const { execSync } = require('child_process')
   console.log(' Starting Simple Automation Runner...')
@@ -361,55 +243,18 @@ const { execSync } = require('child_process')
           "status"
         return { "status": 'skipped', "message"}
     console.error(' Simple automation "failed")
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        "status"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        "status"
-        "status"
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-        "status"
-        "status"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-        "status"
-        "status"
-        "status"
-        "status"
-        "status"
-        "status"
-        "status"
-        "status"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+        "status"
+        "status"
+
+        "status"
+        "status"
+        "status"
+        "status"
+        "status"
+        "status"
+        "status"
+        "status"
+
+

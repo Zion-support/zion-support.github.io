@@ -48,7 +48,10 @@ function fixUnescapedEntities(content) {
   // This regex looks for single quotes that are not preceded by import, from, or within quotes;
 
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     // Only replace if it's likely JSX content (contains spaces or common JSX patterns)
 <<<<<<< HEAD
     if (content.includes('&') || content.includes('<') || content.includes('>')) {
@@ -226,8 +229,6 @@ function findFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
   if (error.code !== 'ENOENT' && error.code !== 'EACCES') {
             console.warn(`⚠️  Skipping ${fullPath}: ${error.message}`);
           }
-        }
-      }
     } catch (error) {
       // Skip inaccessible directories,
   if (error.code !== 'EACCES') {
@@ -270,6 +271,9 @@ function findFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
   main();
 }
 <<<<<<< HEAD
+module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities };
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities }
@@ -290,3 +294,4 @@ module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities };
 =======
 module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities };
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

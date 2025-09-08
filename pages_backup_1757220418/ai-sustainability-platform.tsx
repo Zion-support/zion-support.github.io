@@ -18,6 +18,11 @@ export default function aisustainabilityplatform() {
           </p>
         </div>
       </div>
+<<<<<<< HEAD
+    </Layout>
+  );
+=======
     </div>
   )
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }

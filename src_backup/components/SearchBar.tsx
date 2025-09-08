@@ -271,7 +271,11 @@ export function SearchBar() {const router = useRouter()const [suggestions, setSu
               e && e.target.value && value.length;
             );
 
+<<<<<<< HEAD
+          }
+=======
           }}
+>>>>>>> origin/resolved-merge-conflicts
           onBlur={e => {;
             // Only blur if not clicking on suggestions;
             const relatedTarget = e && e.relatedTarget as HTMLElement;
@@ -291,14 +295,24 @@ export function SearchBar() {const router = useRouter()const [suggestions, setSu
 
 
 
+<<<<<<< HEAD
+          aria-autocomplete='list'
+          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
+          autoComplete='search'
+=======
           aria-autocomplete="list"
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
           autoComplete="search"
+>>>>>>> origin/resolved-merge-conflicts
           onKeyDown={(e) => {
 
 
           autoComplete='search';
+<<<<<<< HEAD
+          onKeyDown={e => {            if (!focused |suggestions.length === 0) {className='pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder: text-zion-slate';
+=======
           onKeyDown={e => {            if (!focused |suggestions.length === 0) {className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder: text-zion-slate";
+>>>>>>> origin/resolved-merge-conflicts
 import React, { useState, useEffect, useRef } from 'react',import { useRouter } from 'next/router',import { Input } from '@/components/ui/input',import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions',import { fireEvent } from '@/lib/analytics',import { SearchSuggestion } from '@/types/search',import { slugify } from '@/lib/slugify',import { useDebounce } from '@/hooks/useDebounce',import { useOnClickOutside } from '@/hooks/useOnClickOutside',import { Search, X } from 'lucide-react';import { Input } from '@/components/ui/input';import { Search, X  } from 'lucide-react';
 /**;
  * SearchBar component props;
@@ -344,7 +358,7 @@ export function SearchBar(): any ({value,onChange,onSelectSuggestion,placeholder
           value={value}if (true) {}) {setFocused(false)setHighlightedIndex(-1)onChange={e => onChange(e && e.target.value)}
           onFocus={e => {setFocused(true)// Ensure the input receives focus properly;
             e && e.target.setSelectionRange(e && e.target.value && value.length,e && e.target.value && value.length;
-            )}}
+            )}
           onBlur={e => {// Only blur if not clicking on suggestions;
             const relatedTarget = e && e.relatedTarget as HTMLElement;
             if (!relatedTarget ||;
@@ -387,7 +401,11 @@ export function SearchBar(): any ({value,onChange,onSelectSuggestion,placeholder
                 break;
 origin/cursor/automate-test-improve-and-merge-code-2533
             }
+<<<<<<< HEAD
+          }
+=======
           }}
+>>>>>>> origin/resolved-merge-conflicts
         />
         {value && (
           <button
@@ -453,14 +471,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 break,case 'Escape:;
                 e.preventDefault(),setFocused(false),setHighlightedIndex(-1),inputRef.current?.blur()break;
               default: break;break;}
-          }}
+          }
         />;
         {value && (;
           <button
 
 
 
+<<<<<<< HEAD
+            aria-label='Clear search'
+=======
             aria-label="Clear search"
+>>>>>>> origin/resolved-merge-conflicts
 className='absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white'
             onClick={() => onChange('')}
             aria-label='Clear search'
@@ -560,7 +582,7 @@ if ( {) {$2;
           value={value}
           on_change={e => on_change (e.target.value)}
           on_focus={e => {set_focused (true)// Ensure the input receives focus properly;
-            e.target.setSelectionRange (e.target.value.length,e.target.value.length)}}
+            e.target.setSelectionRange (e.target.value.length,e.target.value.length)}
           on_blur={e => {// Only blur if not clicking on suggestions;
             const related_target = e.related_target as HTMLElement;
             // Check condition;
@@ -630,7 +652,7 @@ if ( {) {$2;
               default:;
                 break }              default: break;
             }
-          }}
+          }
         />;
         {value && (<button;
             className='absolute right - 3 top - 1/2 -translate - y-1 / 2 text - zion - slate hover:text - white';
@@ -668,7 +690,11 @@ if ( {) {$2;
 }list_id= {
   list_id;
 }/> </div>);
+<<<<<<< HEAD
+}''  );
+=======
 }'"  );
+>>>>>>> origin/resolved-merge-conflicts
 }
 ;
 
@@ -686,8 +712,13 @@ if ( {) {$2;
 
 
 }/> onClick={';
+<<<<<<< HEAD
+  () => onChange ('') ';
+}aria-label='Clear search' > <X className='h-4 w-4' /> </button>) ;
+=======
   () => onChange ('') ";
 }aria-label="Clear search" > <X className="h-4 w-4" /> </button>) ;
+>>>>>>> origin/resolved-merge-conflicts
 }</div> <AutocompleteSuggestions suggestions= {;
   suggestions ;
 }searchTerm= {;
@@ -701,5 +732,9 @@ if ( {) {$2;
 }listId= {;
   listId ;
 }/> </div>) ;
+<<<<<<< HEAD
+}''
+=======
 }'"
+>>>>>>> origin/resolved-merge-conflicts
 origin/cursor/automate-test-improve-and-merge-code-2533

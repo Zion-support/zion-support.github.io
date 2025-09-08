@@ -1,11 +1,21 @@
+<<<<<<< HEAD
 
 
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+=======
+import Card from '../components/ui/Card';'
+import Button from '../components/ui/Button';'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 import { Brain;
 
+<<<<<<< HEAD
+=======
+  }
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   Monitor;
   Search;
@@ -14,8 +24,17 @@ import { Brain;
   Share2;
   Check;
 
+<<<<<<< HEAD
 
 
+=======
+import {
+
+import Head from 'next / head';
+import Card from '../components / ui / Card';
+import Button from '../components / ui / Button';
+import {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   Brain,
   Monitor,
@@ -25,6 +44,19 @@ import { Brain;
   Share2,
   Check,
 
+<<<<<<< HEAD
+=======
+import { 
+  Brain;
+  Monitor, 
+  Search, 
+  Shield, 
+  Mail, 
+  Share2, 
+  Check, 
+
+  Star;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   Star,
   Zap,
   TrendingUp,
@@ -32,7 +64,19 @@ import { Brain;
   Globe,
   Lock,
   BarChart3,
+<<<<<<< HEAD
 
+=======
+  Brain;
+  Monitor,Search,Shield,Mail,Share2,Check,import { Brain;
+  Monitor;
+  Search;
+  Shield;
+  Mail;
+  Share2;
+  Check;Star;
+  Star;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   Star;
 
   Zap;
@@ -41,6 +85,7 @@ import { Brain;
   Globe;
   Lock;
   BarChart3;
+<<<<<<< HEAD
 
 
       useCases: [
@@ -1469,9 +1514,38 @@ href='/pricing'
   );
 }
 
+=======
+  Calendar;
+
+    </>);
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
 
 
+=======
+  );
+}
+    </>);
+}
+              href='/pricing'
+              variant='outline'
+              size='lg'
+              className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl'              href="/pricing"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl"
+              View Pricing
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+);
+}
+            <Button
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 

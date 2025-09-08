@@ -28,7 +28,7 @@ profileType = 'service' ;''
 }` ;
 }</Badge>) ) ;
 }</div>) ;
-}) : (<div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />) ;
-}</div>) ;'"
-}</div> </Link>) ;'"'"
-}'"'"'"`
+}) : (<div className='h-8 w-8 rounded-full bg-zion-purple/20 mr-2' />) ;
+}</div>) ;''
+}</div> </Link>) ;''''
+}''''''`

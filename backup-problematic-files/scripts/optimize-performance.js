@@ -33,9 +33,12 @@ const OPTIMIZATIONS = {
     "brotli": true}};
 function optimizeNextConfig() {
 
+<<<<<<< HEAD
   const configPath = 'next && next.config.js';
   if (!fs && fs.existsSync(configPath)) {
     console && console.log('❌ next && next.config.js not found');
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     return false}
   let config = fs && fs.readFileSync(configPath, 'utf8');
@@ -43,7 +46,7 @@ function optimizeNextConfig() {
   const performanceConfig = "
   // Performance optimizations
   "experimental": {
-    ...config && config.experimental,
+    ...config.experimental,
     "optimizeCss": true,
     "optimizePackageImports": ['lucide-react', '@radix-ui/react-icons'],
     "turbo": {
@@ -53,7 +56,7 @@ function optimizeNextConfig() {
           "as": '*.js'}}}},
   // Image optimization
   "images": {
-    ...config && config.images,
+    ...config.images,
     "formats": ['image/webp', 'image/avif'],
     "deviceSizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     "imageSizes": [16, 32, 48, 64, 96, 128, 256, 384],
@@ -155,11 +158,12 @@ function optimizeNextConfig() {
   },
   ";
   // Insert performance config before the closing brace
-  config = config && config.replace(
+  config = config.replace(
     /export default nextConfig;/,
     `${performanceConfig}\n\nexport default nextConfig;`
   );
 
+<<<<<<< HEAD
   fs && fs.writeFileSync(configPath, config);
   console && console.log('✅ Next && Next.js config optimized for performance');
   return true}
@@ -172,6 +176,35 @@ function optimizePackageJson() {
   const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath, 'utf8'));
   // Add performance scripts
 
+=======
+    return false}
+  const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
+  // Add performance scripts
+    return false}
+  const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath, 'utf8'));
+  // Add performance scripts
+  packageJson.scripts = {
+    ...packageJson.scripts,
+            "key": 'X-XSS-Protection',
+            "value": '1; mode=block'},
+            "key": 'Referrer-Policy',
+            "value": 'origin-when-cross-origin'},']
+        ]},
+        "source": '/static/(.*)',
+        "headers": [{""
+            key: 'Cache-Control',
+            "value": 'public, max-age=31536000, immutable'},']
+        "source": '/_next/static/(.*)',
+    ]
+  ";"
+  // Insert performance config before the closing brace;
+  config = config && config.replace(
+    /export default nextConfig;/,
+    `${performanceConfig}\n\nexport default nextConfig;`)
+  );
+  const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath, 'utf8'));
+  // Add performance scripts;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   packageJson && packageJson.scripts = {
     ...packageJson && packageJson.scripts,
@@ -179,20 +212,21 @@ function optimizePackageJson() {
     '"build": production': 'NODE_ENV=production npm run build',
     '"perf": audit': 'npm run build:analyze',
     '"perf": lighthouse':
-      'lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report && report.html'};
+      'lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html'};
   // Add performance dependencies if not present
   const perfDeps = {
-    '@next/bundle-analyzer': '^15 && 15.5.2',
-    "lighthouse": '^12 && 12.0.0',
-    'web-vitals': '^5 && 5.1.0'};
-  for (const [dep, version] of Object && Object.entries(perfDeps)) {
-    if (!packageJson && packageJson.devDependencies[dep]) {
-      packageJson && packageJson.devDependencies[dep] = version}
+    '@next/bundle-analyzer': '^15.5.2',
+    "lighthouse": '^12.0.0',
+    'web-vitals': '^5.1.0'};
+  for (const [dep, version] of Object.entries(perfDeps)) {
+    if (!packageJson.devDependencies[dep]) {
+      packageJson.devDependencies[dep] = version}
   }
-  fs && fs.writeFileSync(packagePath, JSON && JSON.stringify(packageJson, null, 2));
-  console && console.log('✅ package && package.json optimized for performance');
+  fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2));
+  console.log('✅ package.json optimized for performance');
   return true}
 function createPerformanceComponents() {
+<<<<<<< HEAD
 
   const componentsDir = 'components/performance';
   if (!fs && fs.existsSync(componentsDir)) {
@@ -201,6 +235,18 @@ function createPerformanceComponents() {
   const optimizedImageComponent = "import React from 'react'
 import Image from 'next/image'
 
+=======
+  }
+  const componentsDir = 'components/performance';'
+  if (!fs && fs.existsSync(componentsDir)) {
+    }
+    fs && fs.mkdirSync(componentsDir, { "recursive": true })}"
+  // Create optimized image component,
+import Image from 'next/image''
+  // Create optimized image component
+  const optimizedImageComponent = "import React from 'react'
+import Image from 'next/image'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface OptimizedImageProps {
   "src": string
   alt: string
@@ -236,8 +282,8 @@ export const "OptimizedImage": React.FC<OptimizedImageProps> = ({
 }
 export default OptimizedImage
 ";
-  fs && fs.writeFileSync(
-    path && path.join(componentsDir, 'OptimizedImage && OptimizedImage.tsx'),
+  fs.writeFileSync(
+    path.join(componentsDir, 'OptimizedImage.tsx'),
     optimizedImageComponent
   );
   // Create lazy loading component
@@ -265,12 +311,12 @@ export default LazyComponent
     path.join(componentsDir, 'LazyComponent.tsx'),
     lazyLoadingComponent
   );
-  console && console.log('✅ Performance components created');
+  console.log('✅ Performance components created');
   return true}
 function optimizeImages() {
   const publicDir = 'public';
-  if (!fs && fs.existsSync(publicDir)) {
-    console && console.log('❌ public directory not found');
+  if (!fs.existsSync(publicDir)) {
+    console.log('❌ public directory not found');
     return false}
   // Create images directory structure
   const imageDirs = ['images', 'images/optimized', 'images/thumbnails'];
@@ -285,12 +331,12 @@ function optimizeImages() {
     if (!fs.existsSync(gitkeepPath)) {
       fs.writeFileSync(gitkeepPath, '')}
   }
-  console && console.log('✅ Image directories optimized');
+  console.log('✅ Image directories optimized');
   return true}
 function main() {
-  console && console.log('🚀 Starting performance optimization...');
-  const optimizations = [{ "name": 'Next && Next.js Config', "fn": optimizeNextConfig },
-    { "name": 'Package && Package.json', "fn": optimizePackageJson },
+  console.log('🚀 Starting performance optimization...');
+  const optimizations = [{ "name": 'Next.js Config', "fn": optimizeNextConfig },
+    { "name": 'Package.json', "fn": optimizePackageJson },
     { "name": 'Performance Components', "fn": createPerformanceComponents },
     { "name": 'Image Directories', "fn": optimizeImages },
   ];
@@ -300,7 +346,7 @@ function main() {
       if (optimization.fn()) {
         successCount++}
     } catch (error) {
-      console && console.error(`❌ Error in ${optimization && optimization.name}:`, error && error.message)}
+      console.error(`❌ Error in ${optimization.name}:`, error.message)}
   }
   console.log("\n📊 Optimization "Summary": ");
   console.log(`   Total optimizations: ${optimizations.length}`);

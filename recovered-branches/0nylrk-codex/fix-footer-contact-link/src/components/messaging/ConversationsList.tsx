@@ -1,4 +1,12 @@
 
+<<<<<<< HEAD
+=======
+export function ConversationsList({ ;
+  conversations;
+
+export function ConversationsList({ ;
+  conversations;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import { ConversationItem } from './ConversationItem',;
 interface ConversationsListProps {;
@@ -9,11 +17,14 @@ interface ConversationsListProps {;
 }
 
 
+<<<<<<< HEAD
 export function ConversationsList({ 
   conversations,
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }: ConversationsListProps) {
 
   return (
@@ -32,8 +43,21 @@ export function ConversationsList({
       ) : (
         <div>
 
+<<<<<<< HEAD
           {conversations.map((conversation) => (
 
+=======
+
+              key={conversation.id}
+              conversation={conversation}
+              isActive={activeConversation?.id === conversation.id}
+
+import React from 'react',;
+import { User } from 'lucide-react',;
+import { Conversation } from '@/types/messaging',;
+import { ConversationItem } from './ConversationItem',;
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface ConversationsListProps {;
   conversations:Conversation[],;
   activeConversation:Conversation | null,;
@@ -48,6 +72,7 @@ export function ConversationsList({ ;
   markAsRead ;
 } ConversationsListProps) {;
   return (;
+<<<<<<< HEAD
 
     <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">;
       <div className="p-3 border-b border-zion-purple/20">;
@@ -56,6 +81,14 @@ export function ConversationsList({ ;
       ;
       {conversations.length === 0 ? (;
         <div className="p-8 text-center text-zion-slate">;
+=======
+
+
+      <div className="p-3 border-b border-zion-purple/20">;
+        <h3 className="font-medium text-white">Conversations</h3>;
+      </div>;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
           <User className="h-10 w-10 mx-auto mb-2 text-zion-purple/40" />;
           <p>No conversations yet</p>;"
@@ -70,7 +103,10 @@ export function ConversationsList({ ;
               onClick={() => {;
                 setActiveConversation(conversation);
 
+<<<<<<< HEAD
                 markAsRead(conversation && conversation.id);
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
               }}
             />;
@@ -78,6 +114,7 @@ export function ConversationsList({ ;
         </div>;
       )}
 
+<<<<<<< HEAD
     </div>;
   );
 }
@@ -85,6 +122,8 @@ import {User} from 'lucide-react';
 import {Conversation} from '@/types / messaging';
 import {ConversationItem} from './ConversationItem';
 interface ConversationsListProps {
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   conversations: Conversation[],
   active_conversation: Conversation | null,
@@ -112,6 +151,9 @@ interface ConversationsListProps {
     </div>);
 
 }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

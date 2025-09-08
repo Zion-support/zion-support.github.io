@@ -16,14 +16,15 @@ const {;
 }= useLanguage ();
 //Form fields with translations const [budget, setBudget] = useState ("");";""
 const [deadline, setDeadline] = useState ("");
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Handle text changes //Complete any missing translations with auto-translation await ensureAllTranslations ();
+>>>>>>> origin/resolved-merge-conflicts
 onSubmit ({;
   //Find first non-empty content to translate for (const lang of supportedLanguages.map (l => l.code) ) {;
   if (field === 'title' && title[lang]) {;
   return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
 }return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
 }
 ;
 export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {;

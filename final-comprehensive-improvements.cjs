@@ -42,15 +42,9 @@ class FinalComprehensiveImprovements {
       // Find files with syntax errors that ESLint can't parse
       const command = `find . -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" | grep -v node_modules | grep -v .next | grep -v dist | head -20`;
       const files = await this.runCommand(command, 'Find JS/TS files');
-<<<<<<< HEAD
-
-      const fileList = files.split('\n').filter(f => f.trim());
-
-=======
       
       const fileList = files.split('\n').filter(f => f.trim());
       
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       for (const file of fileList) {
         try {
           if (fs.existsSync(file)) {
@@ -58,15 +52,11 @@ class FinalComprehensiveImprovements {
             let modified = false;
 
             // Fix common syntax errors
-<<<<<<< HEAD
-            if (content.includes('<<<<<<<') || content.includes('
-=======
             if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
               // Remove merge conflict markers
               content = content
                 .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '')
                 .replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               modified = true;
             }
 
@@ -184,11 +174,7 @@ class SecurityAuditor {
     try {
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
-<<<<<<< HEAD
-
-=======
       
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       // Basic security checks
       Object.keys(dependencies).forEach(dep => {
         if (dep.includes('http://')) {
@@ -278,29 +264,17 @@ class AccessibilityChecker {
   checkFile(filePath) {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
-
-=======
       
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       // Check for missing alt attributes
       if (content.includes('<img') && !content.includes('alt=')) {
         this.issues.push(\`Missing alt attribute in \${filePath}\`);
       }
-<<<<<<< HEAD
-
-=======
       
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       // Check for missing aria labels
       if (content.includes('<button') && !content.includes('aria-label') && !content.includes('aria-labelledby')) {
         this.issues.push(\`Button missing aria-label in \${filePath}\`);
       }
-<<<<<<< HEAD
-
-=======
       
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       // Check for proper heading structure
       if (content.includes('<h2') && !content.includes('<h1')) {
         this.issues.push(\`Missing h1 before h2 in \${filePath}\`);
@@ -346,15 +320,6 @@ console.log('Accessibility check completed');
     try {
       // Run performance monitoring
       await this.runCommand('node scripts/performance-monitor.cjs', 'Performance Monitoring');
-<<<<<<< HEAD
-
-      // Run security audit
-      await this.runCommand('node scripts/security-audit.cjs', 'Security Audit');
-
-      // Run accessibility check
-      await this.runCommand('node scripts/accessibility-checker.cjs', 'Accessibility Check');
-
-=======
       
       // Run security audit
       await this.runCommand('node scripts/security-audit.cjs', 'Security Audit');
@@ -362,7 +327,6 @@ console.log('Accessibility check completed');
       // Run accessibility check
       await this.runCommand('node scripts/accessibility-checker.cjs', 'Accessibility Check');
       
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       this.log('✅ All improvement scripts completed successfully');
     } catch (error) {
       this.log(`❌ Some scripts failed: ${error.message}`);
@@ -379,11 +343,7 @@ console.log('Accessibility check completed');
       await this.runAllScripts();
 
       this.log('\n📊 FINAL IMPROVEMENTS REPORT');
-<<<<<<< HEAD
-      this.log('');
-=======
       this.log('============================');
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       this.log(`✅ Improvements made: ${this.improvements.length}`);
       this.improvements.forEach(improvement => this.log(`  - ${improvement}`));
 

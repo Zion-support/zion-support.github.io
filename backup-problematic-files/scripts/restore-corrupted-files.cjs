@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 
 const path = require("path);
-=======
-#!/usr/bin/env node
-const fs = require("child_process");
-const path = require("path");"
->>>>>>> origin/chore/fix-lint-and-merge
 class FileRestorer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -13,7 +7,6 @@ class FileRestorer {}
     this.errors = []}
   log(message) {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
     console.log(`[${timestamp}] ${message}`)}
   async restoreFile(filePath) {}
     try {}
@@ -62,55 +55,12 @@ class FileRestorer {}
       this.log(`[ERROR] Failed to restore ${filePath}: ${error.message}`);
       return false}
   }
-=======
-    console.log(`[${timestamp}] ${message})};
-  async restoreFile(filePath) {}
-    try {}"
-      const content = fs.readFileSync(filePath, "utf8");"
-      // Fix common corruption patterns;
-      let fixedContent = content;
-        // Remove extra semicolons and quotes at end of lines;"
-
-        // Fix unterminated strings;"
-        .replace(/from "([^"]*);$/gm, "from "$1);
-        .replace(/from "([^"]*);$/gm, "from "$1);"
-        // Fix malformed imports;"
-        .replace(/import type { AppProps } from "next \/ app",/g, "import type { AppProps } from "next/app);
-        .replace(/import "([^"]*);$/gm, "import "$1);
-        .replace(/import "([^"]*);$/gm, "import "$1);"
-        // Fix malformed JSX returns;"
-        .replace(/return \(/g, "return (");
-        .replace(/return \(,/g, "return (");
-        .replace(/<([^>]*);$/gm, "<$1>");
-        .replace(/<([^>]*),$/gm, "<$1>");"
-        // Fix malformed component syntax;"
-        .replace(/<([A-Z][a-zA-Z]*)\s+([^>]*);$/gm, "<$1 $2>");
-        .replace(/<([A-Z][a-zA-Z]*)\s+([^>]*),$/gm, "<$1 $2>");"
-        // Remove stray import statements inside JSX;"
-        .replace(/\s+import\s+[^]+;/g, );"
-        // Fix malformed quotes in attributes;"
-        .replace(/title\s*=\s*"([^"]*)/g, "title="$1);
-        .replace(/description\s*=\s*"([^"]*)/g, "description="$1);"
-        // Fix malformed closing tags;"
-        .replace(/<\/>;/g, "</>");
-        .replace(/<\/>,/g, "</>");"
-        // Clean up extra whitespace and newlines;"
-        .replace(/\n\s*\n\s*\n/g, "\n\n");"
-        .trim();
-      // Only write if content actually changed;
-      if (fixedContent !== content) {}"
-        fs.writeFileSync(filePath, fixedContent, "utf8");"
-
-      return false};
-  };
->>>>>>> origin/chore/fix-lint-and-merge
   async findCorruptedFiles(dir) {}
     const corruptedFiles = [];
     const scanDir = (currentDir) => {}
       const items = fs.readdirSync(currentDir);
       for (const item of items) {}
         const fullPath = path.join(currentDir, item);
-<<<<<<< HEAD
         const stat = fs.statSync(fullPath);
         if (stat.isDirectory() && !item.startsWith(.") && item !== "node_modules) {}
           scanDir(fullPath)} else if (stat.isFile() && (item.endsWith(.tsx") || item.endsWith(".jsx) || item.endsWith(.ts") || item.endsWith(".js))) {}
@@ -132,42 +82,16 @@ class FileRestorer {}
     return corruptedFiles}
   async restoreCorruptedFiles() {}
     this.log("[INFO] Starting file restoration process);
-=======
-        const stat = fs.statSync(fullPath);"
-        if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {}
-          scanDir(fullPath)} else if (stat.isFile() && (item.endsWith(".tsx") || item.endsWith(".jsx") || item.endsWith(".ts") || item.endsWith(".js"))) {}"
-            const content = fs.readFileSync(fullPath, "utf8");"
-            // Check for corruption patterns;"
-            if (content.includes(";) ||
-                content.includes(") ||
-                content.includes("from ) && content.includes() ||
-                content.includes("return (") ||
-                content.includes("return (,")) {}"
-              corruptedFiles.push(fullPath)};
-          } catch (error) {}"
-            // Skip files that can"t be read};"
-    scanDir(dir);
-    return corruptedFiles};
-  async restoreCorruptedFiles() {}"
-    this.log("[INFO] Starting file restoration process");"
->>>>>>> origin/chore/fix-lint-and-merge
     // Find corrupted files;
     const corruptedFiles = await this.findCorruptedFiles(this.projectRoot);`;
     this.log(`[INFO] Found ${corruptedFiles.length} potentially corrupted files`);
-<<<<<<< HEAD
     if (corruptedFiles.length === 0) {}
       this.log([INFO] No corrupted files found");
       return}
-=======
-    if (corruptedFiles.length === 0) {}"
-      this.log("[INFO] No corrupted files found");"
-      return};
->>>>>>> origin/chore/fix-lint-and-merge
     // Restore each corrupted file;
     for (const filePath of corruptedFiles) {}
       await this.restoreFile(filePath)}
     // Generate report;
-<<<<<<< HEAD
     const report = {}
       "timestamp: new Date().toISOString();
       summary: {totalFiles: corruptedFiles.length,fixedFiles": this.fixedFiles.length;}
@@ -185,41 +109,8 @@ if (require.main === module) {}
   const restorer = new FileRestorer();
   restorer.restoreCorruptedFiles().catch(console.error)}
 
-=======
-    const report = {}"
-      "timestamp": new Date().toISOString();
-      summary: {totalFiles: corruptedFiles.length,"fixedFiles": this.fixedFiles.length;}"
-        errors: this.errors.length};"
-      "fixedFiles": this.fixedFiles;"
-      errors: this.errors};"
-    const reportPath = path.join(this.projectRoot, "file-restoration-report.json");"
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));"
 
-// Main execution;
-if (require.main === module) {}
-  const restorer = new FileRestorer();
-  restorer.restoreCorruptedFiles().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = FileRestorer;
-module.exports = FileRestorer;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 module.exports = FileRestorer;
 "`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-module.exports = FileRestorer;
-=======
-module.exports = FileRestorer;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

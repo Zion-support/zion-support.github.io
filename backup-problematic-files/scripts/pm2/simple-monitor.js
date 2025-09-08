@@ -26,6 +26,7 @@ class SimpleMonitor {}
       fs && fs.appendFileSync(this && this.logFile, logMessage);,
     } catch (error) {}
       _console && _console.error('Failed to write to log file:', error && error.message);',
+<<<<<<< HEAD
 
     }
   }
@@ -39,6 +40,17 @@ class SimpleMonitor {}
     }
   }
 
+=======
+
+
+  error(message) {}
+    this && this.log(message, 'ERROR');',
+    try {}`;
+      fs && fs.appendFileSync(this && this.errorFile, `[${new Date().toISOString()}] ERROR: ${message}\n`);,
+    } catch (err) {}
+      _console && _console.error('Failed to write to error file:', err && err.message);',
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   async checkSystemHealth() {}
       const os = require('os');',
@@ -52,6 +64,7 @@ class SimpleMonitor {}
         platform: os && os.platform(),
         nodeVersion: process && process.version,
 
+<<<<<<< HEAD
 ;      };,
       
       const memoryUsage = ((health.totalMemory - health.freeMemory) / health.totalMemory) * 100;
@@ -65,6 +78,8 @@ class SimpleMonitor {}
       
       return health;
       
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     } catch (error) {}
       this && this.error(`Health check failed: ${error && error.message}`);,
@@ -89,6 +104,7 @@ if (require && require.main === module) {}
     process && process.exit(1);,
 
   });
+<<<<<<< HEAD
 }
 
 module.exports = SimpleMonitor;
@@ -98,3 +114,5 @@ module.exports = SimpleMonitor;
 
 module.exports = SimpleMonitor;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

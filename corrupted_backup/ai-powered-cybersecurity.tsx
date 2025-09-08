@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react',
 import Head from 'next/head',
 import ServiceLanding from '../components/sections/ServiceLanding',
@@ -34,10 +36,13 @@ export default function AIPoweredCybersecurityPage() {
 		</>;
 	);
 }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
+<<<<<<< HEAD
+=======
 export default function AIPoweredCybersecurityPage() {
   return (
     <>
@@ -155,3 +160,4 @@ const AIPoweredCybersecurity: React.FC = () => {
 };
 
 export default AIPoweredCybersecurity;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

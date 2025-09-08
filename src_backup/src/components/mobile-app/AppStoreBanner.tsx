@@ -67,7 +67,11 @@ export const "AppStoreBanner": React.FC = () => {const [isVisible, setIsVisible]
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
+  )}'"}// Only render on mobile devices;"
+=======
   )}'"}}// Only render on mobile devices;"
+>>>>>>> origin/resolved-merge-conflicts
   // Check condition;
 if (return null) {$2;
 }
@@ -95,4 +99,8 @@ if (return null) {$2;
         </div>;
       </div>;
     </div>)}
+<<<<<<< HEAD
+'"}))}'";
+=======
 '"}}))}'";
+>>>>>>> origin/resolved-merge-conflicts

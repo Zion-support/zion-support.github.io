@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -14,6 +15,30 @@ interface DnDLocation {
   index: number
 
 
+=======
+
+import { useIsMobile } from "@/hooks/use-mobile";
+interface DnDLocation {"
+import { KanbanColumn } from "./KanbanColumn","
+import { useIsMobile } from "@/hooks/use-mobile",
+interface DnDLocation {}
+  droppableId: string,
+  index: number";
+import { useState, useEffect } from "react",;"
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd",;"
+import { useJobApplications } from "@/hooks/useJobApplications",;"
+import { JobApplication, ApplicationStatus } from "@/types/jobs",;"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;"
+import { Button } from "@/components/ui/button",;"
+import { Skeleton } from "@/components/ui/skeleton",;"
+import { toast } from "@/hooks/use-toast",;"
+import { KanbanColumn } from "./KanbanColumn",;"
+import { useIsMobile } from "@/hooks/use-mobile",;
+interface DnDLocation {;
+  droppableId: string,;
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 ;
 interface DropResult {;
@@ -23,9 +48,12 @@ interface DropResult {;
 }
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   droppableId: string
 
   droppableId: string;
@@ -65,8 +93,11 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {
 export function KanbanBoard({ jobId }: KanbanBoardProps) {;
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId);
   const [columns, setColumns] = useState<Record<string, JobApplication[]>>({});
   const isMobile = useIsMobile();
@@ -91,7 +122,10 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
       return;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {useState, useEffect} from "react";
 import {DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -116,6 +150,47 @@ interface DropResult {;
 
 ;
 
+<<<<<<< HEAD
+=======
+    // Get the application that was dragged
+    const application = applications.find(app => app.id === draggableId);
+    if (!application) return;
+    // Update the application status in the database
+    const newStatus = destination.droppableId as ApplicationStatus;
+    // Optimistically update the UI
+    const sourceColumn = [...columns[source.droppableId]];
+    const destColumn = [...columns[destination.droppableId]];
+    const [removed] = sourceColumn.splice(source.index, 1);
+    destColumn.splice(destination.index, 0, { ...removed, status: newStatus })
+    setColumns({
+      ...columns;
+      [source.droppableId]: sourceColumn;
+      [destination.droppableId]: destColumn});
+;
+import {useState, useEffect} from "react";
+import {DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
+import {useJobApplications} from "@/hooks/useJobApplications";
+import {JobApplication, ApplicationStatus} from "@/types/jobs";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Skeleton} from "@/components/ui/skeleton";
+import {toast} from "@/hooks/use-toast";
+import {KanbanColumn} from "./KanbanColumn";
+
+import {useIsMobile} from "@/hooks/use-mobile";
+interface DnDLocation {;
+  droppableId: string,;
+  index: number;
+}
+
+interface DropResult {;
+  draggableId: string,;
+  source: DnDLocation,;
+  destination?: DnDLocation | null;
+}
+
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 // Define the kanban board columns based on application statuses;
   {;
@@ -136,15 +211,43 @@ interface DropResult {;
     description: "Successful candidates"},;
   {;
     id: "rejected",;
+<<<<<<< HEAD
 
     title: "Rejected",;
     description: "Not moving forward"}],;
 
+=======
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface KanbanBoardProps {;
   jobId?: string;
 }
 
 
+<<<<<<< HEAD
+=======
+      const groupedApplications = COLUMNS && COLUMNS.reduce((acc, column) => {;
+        acc[column && column.id] = applications && applications.filter(app => app && app.status === column && column.id);
+        return acc;
+      }, {} as Record<string, JobApplication[]>);
+
+      setColumns(groupedApplications);
+    }
+  }, [applications]);
+
+  // Handle drag end event to update the application status;
+  const handleDragEnd = async (result: DropResult) => {;
+    const { destination, source, draggableId } = result;
+
+    // If there's no destination or the item is dropped in the same place, do nothing;
+    if (!destination || ;
+        (destination && destination.droppableId === source && source.droppableId && ;
+         destination && destination.index === source && source.index)) {;
+      return;
+    }
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       await updateApplicationStatus(draggableId, newStatus),
       toast({"
@@ -157,11 +260,38 @@ interface KanbanBoardProps {;
         description: "Please try again""
         variant: "destructive"})
     }
+<<<<<<< HEAD
 
 
   }
 
 
+=======
+  },
+  
+
+  }
+
+  },
+  
+  if (isLoading) {
+    return (
+      <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>
+        {Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (
+          <Card key={i} className="h-[500px]">
+            <CardHeader>
+              <Skeleton className="h-8 w-24" />
+            </CardHeader>
+            <CardContent>
+              <Skeleton className="h-[400px] w-full" />
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    )
+  }
+  if (!applications |applications.length === 0) {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     // Get the application that was dragged;
 
     const application = applications && applications.find(app => app && app.id === draggableId);
@@ -170,44 +300,163 @@ interface KanbanBoardProps {;
     // Update the application status in the database;
     const newStatus = destination && destination.droppableId as ApplicationStatus;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     // Optimistically update the UI;
     const sourceColumn = [...columns[source && source.droppableId]];
     const destColumn = [...columns[destination && destination.droppableId]];
     const [removed] = sourceColumn && sourceColumn.splice(source && source.index, 1);
     destColumn && destColumn.splice(destination && destination.index, 0, { ...removed, status: newStatus }),;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     setColumns({;
       ...columns;
       [source && source.droppableId]: sourceColumn;
       [destination && destination.droppableId]: destColumn});
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     // Update status in the database;
     try {;
       await updateApplicationStatus(draggableId, newStatus);
 
+<<<<<<< HEAD
       toast({;
         title: "Status updated",;
         description: `Candidate moved to ${COLUMNS && COLUMNS.find(col => col && col.id === newStatus)?.title}`});
 
+=======
+    // Update status in the database;
+    try {;
+      await updateApplicationStatus(draggableId, newStatus);
+
+
+        variant: "destructive"});
+    }
+  };
+  if (isLoading) {;
+    return (
+      <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>;
+        {Array && Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (;
+      const groupedApplications = COLUMNS.reduce((acc, column) => {;
+        acc[column.id] = applications.filter(app => app.status === column.id),;
+        return acc,;
+      }, {} as Record<string JobApplication[]>),;
+      ;
+      setColumns(groupedApplications),;
+    }
+  }, [applications]),;
+  ;
+  // Handle drag end event to update the application status;
+  const handleDragEnd = async (result:DropResult) => {;
+    const { destination, source, draggableId } = result,;
+    ;
+    // If there's no destination or the item is dropped in the same place, do nothing;
+    if (!destination || ;
+        (destination.droppableId === source.droppableId && ;
+         destination.index === source.index)) {;
+      return,;
+    }
+    ;
+    // Get the application that was dragged;
+    const application = applications.find(app => app.id === draggableId),;
+    if (!application) return,;
+    ;
+    // Update the application status in the database;
+    const newStatus = destination.droppableId as ApplicationStatus,;
+    ;
+;
+    // Get the application that was dragged;
+    const application = applications.find(app => app.id === draggableId),;
+    if (!application) return,;
+    // Update the application status in the database;
+    const newStatus = destination.droppableId as ApplicationStatus,;
+    // Optimistically update the UI;
+    const sourceColumn = [...columns[source.droppableId]],;
+    const destColumn = [...columns[destination.droppableId]],;
+    const [removed] = sourceColumn.splice(source.index, 1),;
+    destColumn.splice(destination.index, 0, { ...removed, status: newStatus }),;
+    setColumns({;
+      ...columns,;
+      [source.droppableId]: sourceColumn,;
+      [destination.droppableId]: destColumn}),;
+    // Update status in the database;
+    try {;
+      await updateApplicationStatus(draggableId, newStatus),;
+      toast({;
+        title: "Status updated",;
+        description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`});
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     } catch (error) {;
       // Revert the UI changes if the database update fails;
       toast({;
         title: "Failed to update status",;
+<<<<<<< HEAD
 
         description: "Please try again",;
+=======
+        description: "Please try again";
+        variant: "destructive"});
+    }
+  };
+  if (isLoading) {;
+    return (;
+      <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>;
+        {Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         variant: "destructive"});
     }
   };
 
   if (isLoading) {;
+<<<<<<< HEAD
 
           <Card key={i} className="h-[500px]">;
             <CardHeader>;
+=======
+
+
+    // Get the application that was dragged;
+    const application = applications.find(app => app.id === draggableId),;
+    if (!application) return,;
+    ;
+    // Update the application status in the database;
+    const newStatus = destination.droppableId as ApplicationStatus,;
+    ;
+;
+    // Get the application that was dragged;
+    const application = applications.find(app => app.id === draggableId),;
+    if (!application) return,;
+    // Update the application status in the database;
+    const newStatus = destination.droppableId as ApplicationStatus,;
+    // Optimistically update the UI;
+    const sourceColumn = [...columns[source.droppableId]],;
+    const destColumn = [...columns[destination.droppableId]],;
+    const [removed] = sourceColumn.splice(source.index, 1),;
+    destColumn.splice(destination.index, 0, { ...removed, status: newStatus }),;
+    setColumns({;
+      ...columns,;
+      [source.droppableId]: sourceColumn,;
+      [destination.droppableId]: destColumn}),;
+    // Update status in the database;
+    try {;
+      await updateApplicationStatus(draggableId, newStatus),;
+
+        variant: "destructive"});
+    }
+  };
+  if (isLoading) {;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
               <Skeleton className="h-8 w-24" />;
             </CardHeader>;
@@ -215,6 +464,7 @@ interface KanbanBoardProps {;
               <Skeleton className="h-[400px] w-full" />;
             </CardContent>;
           </Card>;
+<<<<<<< HEAD
 
 
         ))}
@@ -223,6 +473,13 @@ interface KanbanBoardProps {;
   }
 
 
+=======
+  if (!applications || applications && applications.length === 0) {;
+
+    return (
+"
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       <Card className="text-center py-16">;
 
         <CardContent>;
@@ -234,6 +491,7 @@ interface KanbanBoardProps {;
         </CardContent>;
       </Card>;
 
+<<<<<<< HEAD
   return (
     <DragDropContext onDragEnd={handleDragEnd}>;
       <div className={`grid ${isMobile ? 'grid-cols-1 gap-y-6' : 'grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4'} overflow-x-auto`}>;
@@ -248,6 +506,8 @@ import { Button } from '@/components / ui / button';
 import { Skeleton } from '@/components / ui / skeleton';
 import { toast } from '@/hooks / use - toast';
 import { KanbanColumn } from './KanbanColumn';
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import { useIsMobile } from '@/hooks / use - mobile';
 interface DnDLocation {}
@@ -260,6 +520,7 @@ interface DropResult {}
   destination?: DnDLocation | null;
 }
 // Define the kanban board columns based on application statuses;
+<<<<<<< HEAD
 
 const COLUMNS = [;
   {"
@@ -284,6 +545,35 @@ const COLUMNS = [;
     description: "Not moving forward"}],
 interface KanbanBoardProps {}
 
+=======
+  {
+    }
+    "id": "new","
+    "title": "Applied","
+    "description": "New applications"},"
+  {
+    }
+    "id": "shortlisted","
+    "title": "Shortlisted","
+    "description": "Candidates selected for review"},"
+  {
+    }
+    "id": "interview","
+    "title": "Interview","
+    "description": "Scheduled for interview"},"
+  {
+    }
+    "id": "hired","
+    "title": "Hired","
+    "description": "Successful candidates"},"
+  {
+    }
+    "id": "rejected","
+    "title": "Rejected","
+    "description": "Not moving forward"}],"
+interface KanbanBoardProps {
+  }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   job_id?: string;
 }
 export /**;
@@ -311,9 +601,13 @@ if ( {) {}
   }, [applications]);
 ;
   // Handle drag end event to update the application status;
+<<<<<<< HEAD
 
   const handleDragEnd = async (result: DropResult) => {}
 
+=======
+    }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     const { destination, source, draggable_id } = result;
 ;'
     // If there's no destination or the item is dropped in the same place, do nothing;
@@ -385,21 +679,45 @@ if ( {) {}
       <div className={`grid ${is_mobile ? 'grid - cols - 1 gap - y-6' : 'grid - cols - 1 md:grid - cols - 3 lg:grid - cols - 5 gap - 4'} overflow - x-auto`}>;
         {COLUMNS.map (column => (
 
+<<<<<<< HEAD
           <KanbanColumn;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
             key={column.id}
             id={column.id}
             title={column.title}
             description={column.description}
 
+<<<<<<< HEAD
 
+=======
+            key={column && column.id}
+            id={column && column.id}
+            title={column && column.title}
+            description={column && column.description}
+            applications={columns[column && column.id] || []}
+            count={columns[column && column.id]?.length || 0}
+
+
+          />;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
             applications={columns[column.id] || []}
             count={columns[column.id]?.length || 0}
           />;
 
 
+<<<<<<< HEAD
+=======
+      </div>;
+    </DragDropContext>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
+<<<<<<< HEAD
+=======
+if (applications) {}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

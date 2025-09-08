@@ -4,22 +4,94 @@ import { Button } from "@/components/ui/button";
 import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSelector";
 import { RolePicker } from "../components/onboarding/RolePicker";
 import { SignUpForm } from "../components/onboarding/SignUpForm";
+<<<<<<< HEAD
 
 type OnboardingStep = "language" | "role" | "signup";
 
+=======
+type OnboardingStep = "language" | "role" | "signup";
+
+export function MobileOnboarding() {;
+
+  const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
+  const navigate = useNavigate();
+import React, { useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { Button } from "@/components/ui/button",
+import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSelector",
+import { RolePicker } from "../components/onboarding/RolePicker",
+import { SignUpForm } from "../components/onboarding/SignUpForm",
+type OnboardingStep = "language" | "role" | "signup",
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 export function MobileOnboarding() {
 
 
+<<<<<<< HEAD
 
 
+=======
+  const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
+  const navigate = useNavigate();
+
+
+export function MobileOnboarding() {
+}
+const [currentStep, setCurrentStep] = useState<OnboardingStep>("language"),;"
+const navigate = useNavigate(),;
+export function MobileOnboarding() {;
+  }
+
+  const goToNextStep = () => {
+    }
+    if (currentStep === "language") {"
+      }
+      setCurrentStep("role");"
+    } else if (currentStep === "role") {"
+      }
+      setCurrentStep("signup");"
+    } else {
+      }
+      navigate("/mobile");"
+    }
+  };
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   },
   
   const handleRoleSelect = () => {
+<<<<<<< HEAD
 
     setCurrentStep("signup")
   },
+=======
+  },
+  
+  const handleRoleSelect = () => {
+    }
+    setCurrentStep("signup")"
+};
+import React, { useState } from "react";"
+import { useNavigate } from "react-router-dom";"
+import { Button } from "@/components/ui/button",;"
+import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSelector",;"
+import { RolePicker } from "../components/onboarding/RolePicker",;"
+import { SignUpForm } from "../components/onboarding/SignUpForm",;"
+type OnboardingStep = "language" | "role" | "signup",;"
+export function MobileOnboarding() {;
+  }
+  const goToNextStep = () => {;
+    }
+    if (currentStep === "language") {;"
+      }
+      setCurrentStep("role");"
+    } else if (currentStep === "role") {;"
+      }
+      setCurrentStep("signup");"
+    } else {;
+      }
+      navigate("/mobile");"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -32,16 +104,26 @@ export function MobileOnboarding() {
             </div>
             <LanguageThemeSelector />
             <div className="px-4 mt-8">
+<<<<<<< HEAD
 
 
               <Button size="lg" className="w-full py-6" onClick={goToNextStep}>
                 Continue;
 
+=======
+              <Button size="lg" className="w-full py-6" onClick={goToNextStep}>
+                Continue
+              <Button size="lg" className="w-full py-6" onClick={goToNextStep}>
+                Continue;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               </Button>
             </div>
           </div>
         )}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 "
         {currentStep === "role" && ("
           <div className="space-y-6">"
@@ -57,12 +139,18 @@ export function MobileOnboarding() {
             <div className="px-4 mt-8">"
               <Button size="lg" className="w-full py-6" onClick={goToNextStep}>
                 Continue;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               </Button>
             </div>
           </div>
         )}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 "
         {currentStep === "signup" && ("
           <div className="space-y-6">"
@@ -80,6 +168,7 @@ export function MobileOnboarding() {
       setCurrentStep("signup");
     } else {;"
       navigate("/mobile");
+<<<<<<< HEAD
 
     }
   };
@@ -92,6 +181,23 @@ export function MobileOnboarding() {
 
             <LanguageThemeSelector />;
 
+=======
+    }
+  };
+
+    <div className="min-h-screen flex flex-col">;
+      <div className="flex-1 py-8">;
+        {currentStep === "language" && (;
+          <div className="space-y-6">;
+            <div className="text-center mb-8">;
+              <h1 className="text-3xl font-bold mb-2">Welcome to Zion</h1>;
+              <p className="text-muted-foreground">Let's set up your experience</p>;
+            </div>;
+            <LanguageThemeSelector />;
+            <div className="px-4 mt-8">;
+"
+            <div className="px-4 mt-8">;"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               <Button size="lg" className="w-full py-6" onClick={goToNextStep}>;
                 Continue;
               </Button>;
@@ -100,12 +206,20 @@ export function MobileOnboarding() {
 
         )}
 
+<<<<<<< HEAD
 
   );
 }
 
 
 
+=======
+      </div>
+    </div>
+  );
+}
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React, { useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { Button } from '@/components / ui / button';
@@ -300,7 +414,10 @@ if ( {) {
           </div>)}
       </div>;
     </div>);
+}
 
+
+<<<<<<< HEAD
 
 import React, { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
@@ -342,6 +459,27 @@ export function MobileOnboarding() {;
             <LanguageThemeSelector />;
             ;
             <div className="px-4 mt-8">;
+=======
+"
+import React, { useState } from "react",;"
+import { useNavigate } from "react-router-dom",;"
+import { Button } from "@/components/ui/button",;"
+import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSelector",;"
+import { RolePicker } from "../components/onboarding/RolePicker",;"
+import { SignUpForm } from "../components/onboarding/SignUpForm",;
+;"
+type OnboardingStep = "language" | "role" | "signup",;
+;
+export function MobileOnboarding() { return null; }
+    } else if (currentStep === "role") {;"
+      setCurrentStep("signup"),;
+    } else {;"
+
+              <p className="text-muted-foreground">Let's set up your experience</p>;
+            </div>;
+            <LanguageThemeSelector />;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
               <Button size="lg" className="w-full py-6" onClick={goToNextStep}>;
                 Continue;
@@ -350,19 +488,25 @@ export function MobileOnboarding() {;
           </div>;
         )}
 
+<<<<<<< HEAD
         ;
         {currentStep === "role" && (;
           <div className="space-y-6">;
             <div className="text-center mb-8">;
               <h1 className="text-3xl font-bold mb-2">Tell us about you</h1>;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
               <p className="text-muted-foreground">Choose what brought you to Zion</p>;
             </div>;
             ;
             <RolePicker onSelect={handleRoleSelect} />;
 
+<<<<<<< HEAD
             ;
             <div className="px-4 mt-8">;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
               <Button size="lg" className="w-full py-6" onClick={goToNextStep}>;
                 Continue;
@@ -371,11 +515,14 @@ export function MobileOnboarding() {;
           </div>;
         )}
 
+<<<<<<< HEAD
         ;
         {currentStep === "signup" && (;
           <div className="space-y-6">;
             <div className="text-center mb-6">;
               <h1 className="text-3xl font-bold mb-2">Almost there!</h1>;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
               <p className="text-muted-foreground">Create your account to get started</p>;
             </div>;
@@ -385,6 +532,7 @@ export function MobileOnboarding() {;
         )}
       </div>;
     </div>;
+<<<<<<< HEAD
 
   ),; const goToNextStep = () => {
   if (currentStep === "language") {
@@ -396,3 +544,23 @@ export function MobileOnboarding() {;
 
 
 
+=======
+
+
+}
+;
+
+};
+
+}/> Continue </Button> </div> </div>) 
+
+}</div> <SignUpForm /> </div>) 
+
+}</div> </div>) "
+pr-12325
+      </div>;
+    </div>);
+}
+
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

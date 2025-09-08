@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { use_auth } from '@/hooks / use_auth';
 import { use_points } from '@/hooks / use_points';
 import {
@@ -20,10 +21,14 @@ import {
   TrendingUp,;
   History;
 
+=======
+} from 'lucide-react';
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
 import React, { useState } from 'react';
 
+<<<<<<< HEAD
 
   Card,
   CardContent,
@@ -32,6 +37,8 @@ import React, { useState } from 'react';
   CardTitle;
 } from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
 import { useAuth  } from '@/hooks/useAuth';
 import { usePoints  } from '@/hooks/usePoints';
@@ -45,26 +52,37 @@ import { formatDistanceToNow  } from 'date-fns';
 import Link from 'next/link';
 import { LoginModal } from '@/components/auth/LoginModal';
 
+<<<<<<< HEAD
 
 
+=======
+export default function PointsPage() {
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const { isAuthenticated, user } = useAuth();
   const { ledger, balance, loading, fetchLedger } = usePoints();
   const [loginOpen, setLoginOpen] = useState(false);
   const [redeeming, setRedeeming] = useState(false);
 
 
+<<<<<<< HEAD
   async function handleRedeem(reward: {
     id: string;
     cost: number;
     title: string;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     if (!user?.id) return;
     setRedeeming(true);
     try {
       await fetch('/api/points/redeem', {
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         method: 'POST';
         headers: { 'Content-Type': 'application/json' },
@@ -77,8 +95,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       });
       await fetchLedger();
     } finally {
+<<<<<<< HEAD
 
 
+=======
+      setRedeeming(false);    }      });
+      await fetchLedger()
+    } finally {
+      setRedeeming(false)
+import React, { useState } from 'react',;
+import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth',;
+import { usePoints } from '@/hooks/usePoints',;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Button } from '@/components/ui/button',;
+import { Badge } from '@/components/ui/badge',;
+import { ScrollArea } from '@/components/ui/scroll-area',;
+import { formatDistanceToNow } from 'date-fns',;
+import Link from 'next/link',;
+import { LoginModal } from '@/components/auth/LoginModal',;
+export default function PointsPage() {;
+  const { isAuthenticated, user } = useAuth(),;
+  const { ledger, balance, loading, fetchLedger } = usePoints(),;
+  const [loginOpen, setLoginOpen] = useState(false),;
+  const [redeeming, setRedeeming] = useState(false),;
+  async function handleRedeem(reward: { id: string, cost: number, title: string }) {;
+    if (!user?.id) return,;
+    setRedeeming(true),;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     try {;
       await fetch('/api/points/redeem', {;
         method: 'POST',;
@@ -104,7 +148,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       await fetchLedger()
     } finally {
       setRedeeming(false)
+<<<<<<< HEAD
 
+=======
+    }
+  }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       set_redeeming (false);    }      });
       await fetch_ledger ();
     } finally {
@@ -113,6 +162,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   const earning_opportunities = [;
     {
+<<<<<<< HEAD
 
 ursor/fix-website-loading-errors-and-merge-6662
 
@@ -129,6 +179,31 @@ ursor/fix-website-loading-errors-and-merge-6662
       action: 'Browse Marketplace',
 
 
+=======
+      icon: <Users className='h - 5 w - 5' />,'
+      title: 'Sign Up & Profile Setup','
+      description: 'Complete your profile and verify your email','
+      points: '50 pts','
+      action: is_authenticated ? '✓ Completed' : 'Get Started','
+    },
+      icon: <ShoppingBag className='h - 5 w - 5' />,'
+      icon: <Users className='h-5 w-5' />,'
+      title: 'Sign Up & Profile Setup','
+      description: 'Complete your profile and verify your email','
+      points: '50 pts','
+      action: isAuthenticated ? '✓ Completed' : 'Get Started','
+    },
+      icon: <ShoppingBag className='h-5 w-5' />,'
+      title: 'First Purchase','
+      description: 'Make your first purchase on the marketplace','
+      points: '100 pts','
+      action: 'Browse Marketplace','
+      icon: <Users className='h-5 w-5' />',
+      title: 'Sign Up & Profile Setup'',
+      description: 'Complete your profile and verify your email'',
+      points: '50 pts'',
+      action: isAuthenticated ? '✓ Completed' : 'Get Started''
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     }
       icon: <ShoppingBag className='h-5 w-5' />',
       title: 'First Purchase'',
@@ -136,8 +211,36 @@ ursor/fix-website-loading-errors-and-merge-6662
       points: '100 pts'',
       action: 'Browse Marketplace''
     }
+<<<<<<< HEAD
 
 
+=======
+    {
+      icon: <MessageSquare className='h - 5 w - 5' />,'
+      title: 'Community Engagement','
+      description: 'Post in the community or comment on discussions','
+      points: '25 pts per post','
+      action: 'Join Community','
+    },
+    {
+      icon: <Users className='h - 5 w - 5' />,'
+      title: 'Refer Friends','
+      description: 'Invite friends to join Zion marketplace','
+      points: '200 pts per referral','
+      action: 'Share Referral Link','
+      icon: <Users className="h-5 w-5" />,"
+      title: "Sign Up & Profile Setup","
+      description: "Complete your profile and verify your email","
+      points: "50 pts","
+      action: isAuthenticated ? "✓ Completed" : "Get Started""
+    },
+    {
+      icon: <ShoppingBag className="h-5 w-5" />,"
+      title: "First Purchase","
+      description: "Make your first purchase on the marketplace","
+      points: "100 pts","
+      action: "Browse Marketplace""
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     },  ];
 ;
   const upcoming_rewards = [;,
@@ -146,9 +249,19 @@ ursor/fix-website-loading-errors-and-merge-6662
       points: "200 pts per referral","
       action: "Share Referral Link";
     }
+<<<<<<< HEAD
 
 
 
+=======
+      icon: <Users className='h-5 w-5' />',
+      title: 'Refer Friends'',
+      description: 'Invite friends to join Zion marketplace'',
+      points: '200 pts per referral'',
+      action: 'Share Referral Link''
+    },  ];,
+  const upcomingRewards = [
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     {
       id: 'premium1'',
       title: 'Premium Features (1,  month)'',
@@ -162,14 +275,41 @@ ursor/fix-website-loading-errors-and-merge-6662
       category: 'Merchandise''
     }
     {
+<<<<<<< HEAD
 
 
+=======
+      id: 'coupon25'',
+      title: '$25 Off Coupon'',
+      cost: 2000,
+      category: 'Discount''
+    }
+    { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }',
+
+
+
+    }
+  }
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   if (!isAuthenticated) {
     return (
       <>
+<<<<<<< HEAD
 
 
+=======
+        <div className='container py-10 max-w-4xl'>
+          <div className='text-center mb-8'>
+            <Gift className='h-16 w-16 text-primary mx-auto mb-4' />
+            <h1 className='text-4xl font-bold mb-4'>Zion Rewards Program</h1>
+            <p className='text-xl text-muted-foreground mb-6'>
+              Earn points for every action you take and redeem them for
+              exclusive rewards!
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             </p>
             <Button onClick={() => setLoginOpen(true)} size='lg'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -181,20 +321,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <TrendingUp className="h-5 w-5" />
+<<<<<<< HEAD
 
 
+=======
+                  How to Earn Points
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 </CardTitle>
                   Multiple ways to accumulate rewards
                 </CardDescription>
               </CardHeader>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   // Check condition
 if ( {) {
   $2
@@ -287,8 +437,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <h4 className="font-medium">{opportunity.title}</h4>
                       <p className="text-sm text-muted-foreground">{opportunity.description}</p>
                     </div>
+<<<<<<< HEAD
 
 
+=======
+                    <Badge variant="secondary">{opportunity.points}</Badge>
+                      <h4 className="font-medium">{opportunity.title}</h4>
+                      <p className="text-sm text-muted-foreground">{opportunity.description}</p>
+                    </div>
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                     <Badge variant="secondary">{opportunity.points}</Badge>
                       </p>
                     </div>
@@ -300,8 +462,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Card>
             <Card>
               <CardHeader>
+<<<<<<< HEAD
 
 
+=======
+                <CardTitle className="flex items-center gap-2">"
+                <CardTitle className="flex items-center gap-2">"
+                  <Gift className="h-5 w-5" />"
+
+            <Card>
+              <CardHeader>
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 <CardTitle className="flex items-center gap-2">
                   <Gift className="h-5 w-5" />
                   <Gift className="h-5 w-5" />
@@ -314,8 +485,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   What you can redeem your points for
                 </CardDescription>
               </CardHeader>
+<<<<<<< HEAD
 
 
+=======
+              <CardContent className="space-y-4">"
+                {upcomingRewards.map((reward, index) => (
+                  <div key={index} className="flex items-center justify-between p-3 rounded-lg border">"
+                    <div>
+                      <h4 className="font-medium">{reward.title}</h4>"
+                      <p className="text-sm text-muted-foreground">{reward.category}</p>"
+                    </div>
+                    <Badge variant="outline">{reward.cost}</Badge>"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               <CardContent className="space-y-4">
                 {upcomingRewards.map((reward, index) => (
                   <div key={index} className="flex items-center justify-between p-3 rounded-lg border">
@@ -323,8 +505,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <h4 className="font-medium">{reward.title}</h4>
                       <p className="text-sm text-muted-foreground">{reward.category}</p>
                     </div>
+<<<<<<< HEAD
 
 
+=======
+                    <Badge variant="outline">{reward.cost}</Badge>
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
@@ -347,8 +533,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </CardContent>
             </Card>
           </div>
+<<<<<<< HEAD
 
 
+=======
+          <Card className="text-center">"
+            <CardContent className="pt-6">"
+              <Star className="h-12 w-12 text-primary mx-auto mb-4" />"
+              <h3 className="text-2xl font-bold mb-2">Coming Soon</h3>"
+              <p className="text-muted-foreground mb-4">"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           <Card className="text-center">
             <CardContent className="pt-6">
               <Star className="h-12 w-12 text-primary mx-auto mb-4" />
@@ -360,8 +556,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Create Account
               </Button>
             </CardContent>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           </Card>
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
       </>
@@ -538,8 +737,45 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     );
   }
   return (
+<<<<<<< HEAD
 
 
+=======
+          <p className="text-sm text-muted-foreground mt-2">"
+            You haven't earned any points yet. Complete the tasks below to start'
+    )
+  }
+
+  return (
+    <div className="container py-10 max-w-4xl">
+      <div className="text-center mb-8">
+        <Gift className="h-16 w-16 text-primary mx-auto mb-4" />
+        <h1 className="text-4xl font-bold mb-4">Your Rewards</h1>
+        <div className="text-6xl font-bold text-primary mb-2">
+          {loading ? "..." : balance}
+
+
+
+<Card className='text-center'>
+            <CardContent className='pt-6'>
+              <Star className='h-12 w-12 text-primary mx-auto mb-4' />
+              <h3 className='text-2xl font-bold mb-2'>Coming Soon</h3>
+              <p className='text-muted-foreground mb-4'>
+                Our full rewards system is launching soon! Sign up now to start
+                earning points immediately.
+              </p>
+              <Button onClick={() => setLoginOpen(true)}>Create Account</Button>
+            </CardContent>
+origin/cursor/automate-test-improve-and-merge-code-2533
+          </Card>
+        <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+      </>
+
+
+        </div>
+        <p className="text-xl text-muted-foreground">Points Available</p>
+        {!loading && balance === 0 && (
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           <p className="text-sm text-muted-foreground mt-2">
     );
   }
@@ -560,22 +796,38 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
         )}
       </div>
+<<<<<<< HEAD
 
 
+=======
+      <div className="grid md:grid-cols-2 gap-8 mb-12">"
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">"
+              <TrendingUp className="h-5 w-5" />"
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       <div className="grid md:grid-cols-2 gap-8 mb-12">
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <TrendingUp className="h-5 w-5" />
               Keep Earning
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             </CardTitle>
               More ways to boost your point balance
             </CardDescription>
           </CardHeader>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
       </>);
   }
@@ -682,8 +934,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <h4 className="font-medium">{opportunity.title}</h4>
                   <p className="text-sm text-muted-foreground">{opportunity.description}</p>
                 </div>
+<<<<<<< HEAD
 
 
+=======
+                <div className="text-right">
+                  <Badge variant="secondary" className="mb-1">{opportunity.points}</Badge>
+                  <p className="text-xs text-muted-foreground">{opportunity.action}</p>
+                  <h4 className="font-medium">{opportunity.title}</h4>
+                  <p className="text-sm text-muted-foreground">{opportunity.description}</p>
+                </div>
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 <div className="text-right">
                   <p className="text-xs text-muted-foreground">{opportunity.action}</p>
                 <div className='text-right'>
@@ -701,8 +967,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Card>
         <Card>
           <CardHeader>
+<<<<<<< HEAD
 
 
+=======
+            <CardTitle className="flex items-center gap-2">"
+            <CardTitle className="flex items-center gap-2">"
+              <Gift className="h-5 w-5" />"
+
+        <Card>
+          <CardHeader>
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             <CardTitle className="flex items-center gap-2">
               <Gift className="h-5 w-5" />
               <Gift className="h-5 w-5" />
@@ -715,8 +990,46 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Redeem your points for these rewards
             </CardDescription>
           </CardHeader>
+<<<<<<< HEAD
 
 
+=======
+                  </p>                </div>                </div>;
+                <div className="text - right">;
+                  <Badge variant="secondary" className="mb - 1">{opportunity.points}</Badge>;
+                  <p className="text - xs text - muted - foreground">{opportunity.action}</p>;
+                </div>;
+              </div>))}
+          </CardContent>;
+        </Card>;
+        <Card>;
+          <CardHeader>;
+            <CardTitle className='flex items - center gap - 2'>;
+              <Gift className='h - 5 w - 5' />              Available Rewards            <CardTitle className="flex items - center gap - 2">;
+              <Gift className="h - 5 w - 5" />;
+              Available Rewards;
+            </CardTitle>;
+            <CardDescription>;
+              Redeem your points for these rewards;
+            </CardDescription>;
+          </CardHeader>;
+          <CardContent className='space - y-4'>;
+            {upcoming_rewards.map (reward => (
+              <div;
+                key={reward.id}
+                className='flex items - center justify - between p - 3 rounded - lg border';
+              >;
+                  <h4 className='font - medium'>{reward.title}</h4>;
+                  <p className='text - sm text - muted - foreground'>;
+                    {reward.category}
+                  </p>;
+                </div>;
+                <div className='text - right space - y-1'>;
+                  <Badge variant='outline' className='mb - 1'>;
+                    {reward.cost} pts;
+                  </Badge>;
+                  {balance >= reward.cost ? (
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         </div>;
         <p className='text-xl text-muted-foreground'>Points Available</p>;
         {!loading && balance === 0 && (;
@@ -832,6 +1145,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {upcomingRewards.map((reward) => (
               <div key={reward.id} className="flex items-center justify-between p-3 rounded-lg border">"
                 <div>
+<<<<<<< HEAD
 
                   <h4 className="font-medium">{reward.title}</h4>
                   <p className="text-sm text-muted-foreground">{reward.category}</p>
@@ -843,6 +1157,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   ) : (
                     <p className='text-xs text-muted-foreground'>
 
+=======
+                  <h4 className="font-medium">{reward.title}</h4>"
+                  <p className="text-sm text-muted-foreground">{reward.category}</p>"
+                    <Button;
+                      size='sm';
+                      on_click={() => handle_redeem (reward)}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                      disabled={redeeming}
+                    >                      {redeeming ? 'Processing...' : 'Redeem'}'
+                    </Button>
+                  ) : (
+                    <p className='text-xs text-muted-foreground'>'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                       Need more points
                     </p>                  )}
 
@@ -927,29 +1254,163 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </CardHeader>
         <CardContent>
           {ledger.length === 0 ? (
+<<<<<<< HEAD
 
 
+=======
+            <p className="text-center py-8 text-muted-foreground">No points activity yet.</p>"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           ) : (
             <ScrollArea className="h-64">"
               <div className="space-y-2 mt-2">"
                 {ledger.map(entry => (
+<<<<<<< HEAD
 
                   <div key={entry.id} className="flex items-center justify-between py-2 border-b">
                     <div>
 
+=======
+                  <div key={entry.id} className="flex items-center justify-between py-2 border-b">"
+                    <div>
+          </CardContent>;
+        </Card>;
+      </div>;
+      <Card>;
+        <CardHeader>;
+          <CardTitle className='flex items-center gap-2'>;
+            <History className='h-5 w-5' />            Points History          <CardTitle className="flex items-center gap-2">;
+            <History className="h-5 w-5" />;
+            Points History;
+          </CardTitle>;
+          <CardDescription>Your recent points activity</CardDescription>;
+        </CardHeader>;
+        <CardContent>;
+          {ledger && ledger.length === 0 ? (;
+            <p className='text-center py-8 text-muted-foreground'>;
+              No points activity yet.;
+            </p>;
+            <ScrollArea className='h-64'>;
+              <div className='space-y-2 mt-2'>;
+                {ledger && ledger.map(entry => (;
+                  <div
+                    key={entry && entry.id}
+                    className='flex items-center justify-between py-2 border-b'>;
+                    <div>;
+                      <p className='font-medium capitalize'>;
+                        {entry && entry.reason || 'adjustment'}'
+                      </p>;
+                      <p className='text-xs text-muted-foreground'>;
+                        {formatDistanceToNow(new Date(entry && entry.created_at), {;
+                          addSuffix: true,;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                         })}
                       </p>
                     </div>
                     <Badge
                       variant='outline''
                       className={
+<<<<<<< HEAD
 
 
+=======
+                        entry && entry.delta>= 0;
+                          ? 'bg-green-100 text-green-800';
+                          : 'bg-red-100 text-red-800';
+                      }                      variant="outline";
+                      className = {entry && entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800',}'
+                    >;
+                      {entry.delta >= 0 ? '+' : ''}'
+            <p className="text-center py-8 text-muted-foreground">No points activity yet.</p>
+          ) : (
+            <ScrollArea className="h-64">
+              <div className="space-y-2 mt-2">
+                {ledger.map(entry => (
+                  <div key={entry.id} className="flex items-center justify-between py-2 border-b">
+                    <div>
+                      <p className="font-medium capitalize">{entry.reason || 'adjustment'}</p>
+                      <p className="text-xs text-muted-foreground">
+                        {formatDistanceToNow(new Date(entry.created_at), { addSuffix: true })}
+                      </p>
+                    </div>
+                    <Badge
+                      variant="outline"
+                      className={entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                     >;
                       {entry.delta >= 0 ? '+' : ''}
                       {entry.delta} pts;
                     </Badge>;
                   </div>;
+<<<<<<< HEAD
+=======
+                ))}
+              </div>;
+            </ScrollArea>;
+          )}
+      <Card className="text-center">"
+        <CardContent className="pt-6">"
+          <Star className="h-12 w-12 text-primary mx-auto mb-4" />"
+          <h3 className="text-2xl font-bold mb-2">Full Rewards System Coming Soon</h3>"
+          <p className="text-muted-foreground mb-4">"
+            We're finalizing the redemption system. Keep earning points - they'll be ready to spend soon!'
+          </p>
+          <div className="flex gap-4 justify-center">"
+            <Button variant="outline" asChild>"
+              <Link href="/marketplace" />Browse Marketplace</Link>"
+            </Button>
+            <Button variant="outline" asChild>"
+              <Link href="/community" />Join Community</Link>"
+        </CardContent>
+      </Card>
+
+<p className='text-center py-8 text-muted-foreground'>
+              No points activity yet.
+            </p>
+            <ScrollArea className='h-64'>
+              <div className='space-y-2 mt-2'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+                {ledger.map(entry => (
+                  <div key={entry.id} className="flex items-center justify-between py-2 border-b">
+                    <div>
+                      variant='outline'
+                      className={
+                        entry.delta >= 0
+                          ? 'bg-green-100 text-green-800'
+                          : 'bg-red-100 text-red-800'
+                      }                      variant="outline"
+                      className = {entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800',}
+                    >
+                      {entry.delta >= 0 ? '+' : ''}
+                      {entry.delta} pts
+                    </Badge>
+                  </div>
+                      variant="outline"
+                      className={entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
+                    >;
+                      {entry.delta >= 0 ? '+' : ''}
+                      {entry.delta} pts;
+                    </Badge>;
+                  </div>;
+<<<<<<< HEAD
+                ))}
+              </div>
+            </ScrollArea>
+          )}
+        </CardContent>
+      </Card>
+
+
+      <Card className='text-center'>
+        <CardContent className='pt-6'>
+          <Star className='h-12 w-12 text-primary mx-auto mb-4' />
+          <h3 className='text-2xl font-bold mb-2'>
+            Full Rewards System Coming Soon
+          </h3>
+          <p className='text-muted-foreground mb-4'>
+            We're finalizing the redemption system. Keep earning points -
+            they'll be ready to spend soon!
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
@@ -969,14 +1430,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+<<<<<<< HEAD
 
 
+=======
+        </CardContent>
+      </Card>
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           </p>
             <Button variant="outline" asChild>
               <Link href="/marketplace">Browse Marketplace</Link>
             </Button>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             <Button variant="outline" asChild>
               <Link href="/community">Join Community</Link>
 
@@ -1005,8 +1474,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </CardContent>
       </Card>
     </div>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         </CardContent>;
       </Card>;
       <Card className='text-center'>;
@@ -1124,5 +1596,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ;
   )
 }
+<<<<<<< HEAD
 
 
+=======
+;))))))))))))]
+  )
+}
+;
+
+;
+  )
+}
+;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/delete-old-data-records-6bba

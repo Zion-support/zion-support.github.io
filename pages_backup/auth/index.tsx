@@ -1,31 +1,70 @@
 
 
+<<<<<<< HEAD
+=======
+import EnhancedButton from "../../components / ui / EnhancedButton";
+;
+"
+const steps = ["Account", "Profile", "Preferences", "Preview"];
+'
+import type { NextPage } from 'next';'
+import Head from 'next/head';'
+import { useState } from 'react';'
+import EnhancedButton from '../../components/ui/EnhancedButton';'
+const steps = ['AccountProfilePreferencesPreview'];
+
+
+'
+
+
+import type { NextPage } from 'next';'
+import Head from 'next/head';'
+import { useState } from 'react';'
+import EnhancedButton from '../../components/ui/EnhancedButton';'
+const steps = ['AccountProfilePreferencesPreview'];
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import { useState } from 'react',
 import EnhancedButton from '../../components/ui/EnhancedButton',
 
 const steps = ['AccountProfilePreferencesPreview'],
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 const Onboarding: NextPage = () => {
   const [step, setStep] = useState(0),
   const next = () => setStep((s) => Math.min(s + 1, steps.length - 1)),
   const prev = () => setStep((s) => Math.max(s - 1, 0)),
 
+<<<<<<< HEAD
 
   return (
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     <div className="space-y-6">
       <Head>
         <title>Onboarding - Zion</title>
       </Head>
 
 
+<<<<<<< HEAD
+=======
+      <h1 className="text-2xl font-semibold">Get Started</h1>
+
+      <div className="flex items-center gap-2 text-sm flex-wrap">
+        {steps.map((label, i) => (
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       </div>
       <div className="flex gap-2">
 
@@ -36,6 +75,7 @@ const Onboarding: NextPage = () => {
     </div>
 
 
+<<<<<<< HEAD
   const [step, set_step] = useState (0);
 ;
   const next = () =>: any set_step ((s) => Math.min (s + 1, steps.length - 1));
@@ -81,14 +121,22 @@ const Onboarding: NextPage = () => {
 }
 ;
 export default Onboarding;
+=======
+  )
+},
+export default Onboarding,
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
   )
 },
 export default Onboarding,
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

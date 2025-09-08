@@ -1,21 +1,8 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 ;
 function fixSyntaxErrors(filePath) {;
   try {;
@@ -114,22 +101,14 @@ console.log(' Starting comprehensive syntax fixer...')
   fixed = fixed.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];?/g, 'import { $1 } from "$2"
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
-<<<<<<< HEAD
+
 const fs = require('fs');
 const path = require('path');
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 class ComprehensiveSyntaxFixer {
   // TODO: Implement
 }
@@ -137,17 +116,9 @@ class ComprehensiveSyntaxFixer {
     this.projectRoot = process.cwd();
     this.fixedFiles = 0;
     this.totalErrors = 0;
-<<<<<<< HEAD
+
   log(message) {
 
-=======
-  }
-  log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
-  async fixAllSyntaxErrors() {
-    this.log('🔧 Starting comprehensive syntax error fixing...');
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     try {
   // TODO: Implement
       // Get all TypeScript and JavaScript files;
@@ -155,74 +126,26 @@ class ComprehensiveSyntaxFixer {
       this.log(`Found ${files.length} files to check`);
       for (const file of files) {
         await this.fixFileSyntax(file);
-<<<<<<< HEAD
+
 
       throw error;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      }
-      this.log(`✅ Fixed syntax errors in ${this.fixedFiles} files`);
-      this.log(`📊 Total errors fixed: ${this.totalErrors}`);
-    } catch (error) {
-      this.log(`❌ Error during syntax fixing: ${error.message}`);
-      throw error;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     }
   }
 
   getAllCodeFiles() {
-<<<<<<< HEAD
     
-=======
-    const files = [];
-<<<<<<< HEAD
-
->>>>>>> origin/chore/fix-lint-and-merge
     const scanDirectory = (dir) => {
       const items = fs.readdirSync(dir);
 
       for (const item of items) {
         const fullPath = path.join(dir, item);
-<<<<<<< HEAD
-=======
-        const stat = fs.statSync(fullPath);
-
-=======
-    
-=======
-
-  getAllCodeFiles() {
-    const files = [];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const scanDirectory = (dir) => {
       const items = fs.readdirSync(dir);
       for (const item of items) {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
         
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         if (stat.isDirectory()) {
           // Skip node_modules and other irrelevant directories;
 
@@ -230,14 +153,7 @@ class ComprehensiveSyntaxFixer {
         } else if (this.isCodeFile(item)) {
           files.push(fullPath);
     };
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     scanDirectory(this.projectRoot);
     return files;
 
@@ -246,152 +162,38 @@ class ComprehensiveSyntaxFixer {
 
 
   async fixFileSyntax(filePath) {
-<<<<<<< HEAD
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       const fixedContent = this.fixSyntaxErrors(content, filePath);
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-      if (content !== fixedContent) {
-        fs.writeFileSync(filePath, fixedContent, 'utf8');
-        this.fixedFiles++;
-        this.log(`✅ Fixed syntax errors in ${path.relative(this.projectRoot, filePath)}`);
-      }
-    } catch (error) {
-      this.log(`⚠️  Could not fix ${path.relative(this.projectRoot, filePath)}: ${error.message}`);
-    }
-  }
-=======
   // TODO: Implement
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   fixSyntaxErrors(content, filePath) {
     let fixed = content;
     let errorCount = 0;
 
-<<<<<<< HEAD
     // Fix semicolon issues in object properties
     fixed = fixed.replace(/(\w+):\s*([^,;}\n]+);\s*([^,;}\n]*);/g, '$1: $2, $3,');
     fixed = fixed.replace(/(\w+):\s*([^,;}\n]+);\s*$/gm, '$1: $2,');
-<<<<<<< HEAD
 
-    // Fix object property semicolons to commas
-    fixed = fixed.replace(/(\w+):\s*([^,;}\n]+);\s*(\w+):/g, '$1: $2,\n    $3: '),
-    fixed = fixed.replace(/(\w+):\s*([^,;}\n]+);\s*}/g, '$1: $2\n  }');
-
-    // Fix array element semicolons
-    fixed = fixed.replace(/\[\s*([^[\]]+);\s*([^[\]]+);\s*\]/g, '[\n    $1,\n    $2\n  ]');
-
-=======
     
-    // Fix object property semicolons to commas
-    fixed = fixed.replace(/(\w+):\s*([^,;}\n]+);\s*(\w+):/g, '$1: $2,\n    $3: '),
-    fixed = fixed.replace(/(\w+):\s*([^,;}\n]+);\s*}/g, '$1: $2\n  }');
-    
-    // Fix array element semicolons
-    fixed = fixed.replace(/\[\s*([^[\]]+);\s*([^[\]]+);\s*\]/g, '[\n    $1,\n    $2\n  ]');
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    // Fix string concatenation issues
-    fixed = fixed.replace(/(\w+):\s*'([^']+)';\s*(\w+):/g, '$1: \'$2\',\n    $3: '),
-    // Fix function parameter semicolons
-    fixed = fixed.replace(/\(\s*([^,)]+);\s*([^,)]+);\s*([^,)]+);\s*\)/g, '($1, $2, $3)');
-    fixed = fixed.replace(/\(\s*([^,)]+);\s*([^,)]+);\s*\)/g, '($1, $2)');
-<<<<<<< HEAD
-
-    // Fix object literal semicolons in function calls
-    fixed = fixed.replace(/\{\s*([^,;{}]+);\s*([^,;{}]+);\s*\}/g, '{\n    $1,\n    $2\n  }');
-
-=======
-    
-    // Fix object literal semicolons in function calls
-    fixed = fixed.replace(/\{\s*([^,;{}]+);\s*([^,;{}]+);\s*\}/g, '{\n    $1,\n    $2\n  }');
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    // Fix specific patterns
-    fixed = fixed.replace(/id:\s*'([^']+)';\s*title:/g, 'id: \'$1\',\n      title: '), fixed = fixed.replace(/title:\s*'([^']+)',\s*description:/g, 'title: \'$1\',\n      description: '), fixed = fixed.replace(/description:\s*'([^']+)',\s*path:/g, 'description: \'$1\',\n      path: '),
-    // Fix array literals
-    fixed = fixed.replace(/\[\s*([^[\]]+);\s*([^[\]]+);\s*\]/g, '[\n    $1,\n    $2\n  ]');
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    // Fix specific API patterns
-    fixed = fixed.replace(/activeUsers30d:\s*(\d+);/g, 'activeUsers30d: $1,');
-    fixed = fixed.replace(/gmv:\s*(\d+);/g, 'gmv: $1,');
-    fixed = fixed.replace(/mrr:\s*(\d+);/g, 'mrr: $1,');
-    fixed = fixed.replace(/yoyGrowth:\s*([\d.]+);/g, 'yoyGrowth: $1,');
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    // Fix string literals in objects
-    fixed = fixed.replace(/title:\s*'([^']+)';\s*content:/g, 'title: \'$1\',\n    content: '),
-    // Fix long string concatenations
-    fixed = fixed.replace(/'([^']+)';\s*'([^']+)'\]/g, '\'$1\',\n    \'$2\'\n  ]');
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    // Count errors fixed
-    const originalSemicolons = (content.match(/;/g) || []).length;
-    const fixedSemicolons = (fixed.match(/;/g) || []).length;
-    errorCount = originalSemicolons - fixedSemicolons;
-<<<<<<< HEAD
-
-    this.totalErrors += errorCount;
-
-    return fixed;
-  }
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Run the fixer
-const fixer = new ComprehensiveSyntaxFixer();
-fixer.fixAllSyntaxErrors().catch(console.error);
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-=======
-    
-=======
     // Fix semicolon issues in object properties;
 
     // Count errors fixed;
     const originalSemicolons = (content.match(/;/g) || []).length;
     const fixedSemicolons = (fixed.match(/;/g) || []).length;
     errorCount = originalSemicolons - fixedSemicolons;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.totalErrors += errorCount;
     return fixed;
-<<<<<<< HEAD
   }
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 // Run the fixer;
 const fixer = new ComprehensiveSyntaxFixer();
 fixer.fixAllSyntaxErrors().catch(console.error);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-}
-
-=======
 `;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     this.log(`📋 Found ${problematicFiles.length} files with syntax issues`);
     for (const file of problematicFiles) {;
   const result = await this.fixFile(file);
@@ -466,23 +268,6 @@ if (require.main === module) {;
       process.exit(1);,
 
 module.exports = ComprehensiveSyntaxFixer}}}}}}}}}}}}}))))))))))))
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
+
 "`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-=======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

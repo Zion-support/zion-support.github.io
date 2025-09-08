@@ -55,7 +55,7 @@
   name: 'Virtual Event Holograms', href: '/virtual-event-hologram-platform', description: 'Holographic events', price: '$2, 499/month' 
 }] 
 }];
-</div> </div> </div> </div> </div> > <Link href="/" className="flex items-center space-x-3" > <div className="relative" > <div className="w-12 h-12 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-2xl" > <Rocket className="w-7 h-7 text-white" /> </div> <div className="absolute -inset-1 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl blur opacity-75 animate-pulse" ></div> </div> <div className="flex flex-col" > <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </span> <span className="text-xs text-purple-300 font-medium" > Future Technology Solutions </span> </div> </a> </motion.div> > <span>Services</span> <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" /> </button> {
+</div> </div> </div> </div> </div> > <Link href='/' className='flex items-center space-x-3' > <div className='relative' > <div className='w-12 h-12 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-2xl' > <Rocket className='w-7 h-7 text-white' /> </div> <div className='absolute -inset-1 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl blur opacity-75 animate-pulse' ></div> </div> <div className='flex flex-col' > <span className='text-2xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent' > Zion Tech Group </span> <span className='text-xs text-purple-300 font-medium' > Future Technology Solutions </span> </div> </a> </motion.div> > <span>Services</span> <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' /> </button> {
   /* Mega Menu */ 
 }<AnimatePresence> </div> </a>) ) 
 }</div> </div>) ) 
@@ -76,7 +76,7 @@
   {
   scale: 0.95 
 }
-}> <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg" > Get Started </a> </motion.div> </div> </button> </div> </div> </div> {
+}> <Link href='/contact' className='px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg' > Get Started </a> </motion.div> </div> </button> </div> </div> </div> {
   /* Mobile Menu */ 
 }<AnimatePresence>) ) 
 }</div> </div>) ) 

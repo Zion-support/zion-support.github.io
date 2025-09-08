@@ -43,6 +43,7 @@ return (<> <Button > <MessageSquare className="h-5 w-5" />  {;"
   isOpen ;
 }onClose= {;)
   () => setIsOpen (false) ;
+<<<<<<< HEAD
 
 }recipient= {;
   {';
@@ -53,3 +54,8 @@ return (<> <Button > <MessageSquare className="h-5 w-5" />  {;"
 }/>) ;
 }</>) ;
 
+=======
+
+
+}</>) ;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

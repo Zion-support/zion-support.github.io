@@ -1,13 +1,20 @@
+<<<<<<< HEAD
 
 
 
 
 
+=======
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class ErrorReportAggregator { constructor() { this.logFile = path.join(__dirname,'logs','error-report-aggregator.log'); this.reportsDir = path.join(__dirname,'reports'); this.summaryFile = path.join(this.reportsDir,'error-summary.json'); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(this.reportsDir,{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; ); fs.appendFileSync(this.logFile,logMessage)} async aggregateReports() { this.log('Aggregating error reports...'); const summary = { timestamp: new Date().toISOString(),reports: {},overallHealth: { buildHealth: 0,codeQuality: 0,dependencyHealth: 0,overallScore: 0,},trends: {},recommendations: [],}; try { const reportFiles = [ 'build-status.json','code-quality.json','dependency-health.json','error-fixer-report.json','real-time-validation.json',]; `)} catch (error) { this.log(`Error reading ${file}: ${error.message}`,'WARN')} } } if (summary.reports['build-status.json']) { summary.overallHealth.buildHealth = summary.reports['build-status.json'].healthScore || 0} if (summary.reports['code-quality.json']) { summary.overallHealth.codeQuality = summary.reports['code-quality.json'].qualityScore || 0} if (summary.reports['dependency-health.json']) { summary.overallHealth.dependencyHealth = summary.reports['dependency-health.json'].healthScore || 0} const scores = [ summary.overallHealth.buildHealth,summary.overallHealth.codeQuality,summary.overallHealth.dependencyHealth,].filter(score => score > 0); if (scores.length > 0) { summary.overallHealth.overallScore = Math.round( scores.reduce((sum,score) => sum + score,0) / scores.length )} summary.recommendations = this.generateRecommendations(summary); fs.writeFileSync(this.summaryFile,JSON.stringify(summary,null,2)); this.log(`Error summary report generated: ${this.summaryFile}`); return summary} catch (error) { this.log(`Error aggregating reports: ${error.message}`,'ERROR'); return null} } generateRecommendations(summary) { const recommendations = []; if (summary.overallHealth.buildHealth < 70) { recommendations.push({ priority: 'high',type: 'build',message: 'Build health is critical. Run intelligent error fixer immediately.',})} if (summary.overallHealth.codeQuality < 70) { recommendations.push({ priority: 'medium',type: 'quality',message: 'Code quality needs improvement. Address linting and TypeScript errors.',})} if (summary.overallHealth.dependencyHealth < 70) { recommendations.push({ priority: 'medium',type: 'dependencies',message: 'Dependencies need attention. Update outdated packages and fix vulnerabilities.',})} if (summary.overallHealth.overallScore > 90) { recommendations.push({ priority: 'info',type: 'maintenance',message: 'Excellent project health! Consider regular maintenance schedule.',})} return recommendations} async generateHealthDashboard() { const summary = await this.aggregateReports(); if (!summary) return; const dashboard = ` # Project Health Dashboard Generated: ${summary.timestamp} ## Overall Health Score: ${summary.overallHealth.overallScore}/100 ### Component Scores: - 🏗️ Build Health: ${summary.overallHealth.buildHealth}/100 - 🎯 Code Quality: ${summary.overallHealth.codeQuality}/100 - 📦 Dependencies: ${summary.overallHealth.dependencyHealth}/100 ### Recommendations: ${summary.recommendations .map(rec => `- **${rec.priority.toUpperCase()}**: ${rec.message}`) .join('\n')} ### Quick Actions: - View logs: \`pm2 logs\` - Restart automation: \`pm2 restart ecosystem-error-prevention.config.cjs\` - Manual error fix: \`node automation/intelligent-error-fixer.js\` `; fs.writeFileSync( path.join(this.reportsDir,'health-dashboard.md'),dashboard ); this.log('Health dashboard generated: health-dashboard.md')} async run() { this.log('Starting Error Report Aggregator...'); try { await this.aggregateReports(); await this.generateHealthDashboard(); this.log('Error report aggregation completed successfully')} catch (error) { this.log(`Error in report aggregator: ${error.message}`,'ERROR')} } } if (require.main === module) { const aggregator = new ErrorReportAggregator(); aggregator.run().catch(console.error)} module.exports = ErrorReportAggregator;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 #!/usr/bin/env node
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class ErrorReportAggregator { constructor() { this.logFile = path.join(__dirname,'logs','error-report-aggregator.log'); this.reportsDir = path.join(__dirname,'reports'); this.summaryFile = path.join(this.reportsDir,'error-summary.json'); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(this.reportsDir,{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; ); fs.appendFileSync(this.logFile,logMessage)} async aggregateReports() { this.log('Aggregating error reports...'); const summary = { timestamp: new Date().toISOString(),reports: {},overallHealth: { buildHealth: 0,codeQuality: 0,dependencyHealth: 0,overallScore: 0,},trends: {},recommendations: [],}; try { const reportFiles = [ 'build-status.json','code-quality.json','dependency-health.json','error-fixer-report.json','real-time-validation.json',]; `)} catch (error) { this.log(`Error reading ${file}: ${error.message}`,'WARN')} } } if (summary.reports['build-status.json']) { summary.overallHealth.buildHealth = summary.reports['build-status.json'].healthScore || 0} if (summary.reports['code-quality.json']) { summary.overallHealth.codeQuality = summary.reports['code-quality.json'].qualityScore || 0} if (summary.reports['dependency-health.json']) { summary.overallHealth.dependencyHealth = summary.reports['dependency-health.json'].healthScore || 0} const scores = [ summary.overallHealth.buildHealth,summary.overallHealth.codeQuality,summary.overallHealth.dependencyHealth,].filter(score => score > 0); if (scores.length > 0) { summary.overallHealth.overallScore = Math.round( scores.reduce((sum,score) => sum + score,0) / scores.length )} summary.recommendations = this.generateRecommendations(summary); fs.writeFileSync(this.summaryFile,JSON.stringify(summary,null,2)); this.log(`Error summary report generated: ${this.summaryFile}`); return summary} catch (error) { this.log(`Error aggregating reports: ${error.message}`,'ERROR'); return null} } generateRecommendations(summary) { const recommendations = []; if (summary.overallHealth.buildHealth < 70) { recommendations.push({ priority: 'high',type: 'build',message: 'Build health is critical. Run intelligent error fixer immediately.',})} if (summary.overallHealth.codeQuality < 70) { recommendations.push({ priority: 'medium',type: 'quality',message: 'Code quality needs improvement. Address linting and TypeScript errors.',})} if (summary.overallHealth.dependencyHealth < 70) { recommendations.push({ priority: 'medium',type: 'dependencies',message: 'Dependencies need attention. Update outdated packages and fix vulnerabilities.',})} if (summary.overallHealth.overallScore > 90) { recommendations.push({ priority: 'info',type: 'maintenance',message: 'Excellent project health! Consider regular maintenance schedule.',})} return recommendations} async generateHealthDashboard() { const summary = await this.aggregateReports(); if (!summary) return; const dashboard = ` # Project Health Dashboard Generated: ${summary.timestamp} ## Overall Health Score: ${summary.overallHealth.overallScore}/100 ### Component Scores: - 🏗️ Build Health: ${summary.overallHealth.buildHealth}/100 - 🎯 Code Quality: ${summary.overallHealth.codeQuality}/100 - 📦 Dependencies: ${summary.overallHealth.dependencyHealth}/100 ### Recommendations: ${summary.recommendations .map(rec => `- **${rec.priority.toUpperCase()}**: ${rec.message}`) .join('\n')} ### Quick Actions: - View logs: \`pm2 logs\` - Restart automation: \`pm2 restart ecosystem-error-prevention.config.cjs\` - Manual error fix: \`node automation/intelligent-error-fixer.js\` `; fs.writeFileSync( path.join(this.reportsDir,'health-dashboard.md'),dashboard ); this.log('Health dashboard generated: health-dashboard.md')} async run() { this.log('Starting Error Report Aggregator...'); try { await this.aggregateReports(); await this.generateHealthDashboard(); this.log('Error report aggregation completed successfully')} catch (error) { this.log(`Error in report aggregator: ${error.message}`,'ERROR')} } } if (require.main === module) { const aggregator = new ErrorReportAggregator(); aggregator.run().catch(console.error)} module.exports = ErrorReportAggregator;
 #!/usr/bin/env node;
 const fs = require('fs');
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class ErrorReportAggregator { constructor() { this.logFile = path.join(__dirname,'logs','error-report-aggregator.log'); this.reportsDir = path.join(__dirname,'reports'); this.summaryFile = path.join(this.reportsDir,'error-summary.json'); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(this.reportsDir,{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; ); fs.appendFileSync(this.logFile,logMessage)} async aggregateReports() { this.log('Aggregating error reports...'); const summary = { timestamp: new Date().toISOString(),reports: {},overallHealth: { buildHealth: 0,codeQuality: 0,dependencyHealth: 0,overallScore: 0,},trends: {},recommendations: [],}; try { const reportFiles = [ 'build-status.json','code-quality.json','dependency-health.json','error-fixer-report.json','real-time-validation.json',]; for (const file of reportFiles) { const filePath = path.join(this.reportsDir,file); if (fs.existsSync(filePath)) { try { const content = JSON.parse(fs.readFileSync(filePath,'utf8')); summary.reports[file] = content; this.log(`Loaded report: ${file}`)} catch (error) { this.log(`Error reading ${file}: ${error.message}`,'WARN')} } } if (summary.reports['build-status.json']) { summary.overallHealth.buildHealth = summary.reports['build-status.json'].healthScore || 0} if (summary.reports['code-quality.json']) { summary.overallHealth.codeQuality = summary.reports['code-quality.json'].qualityScore || 0} if (summary.reports['dependency-health.json']) { summary.overallHealth.dependencyHealth = summary.reports['dependency-health.json'].healthScore || 0} const scores = [ summary.overallHealth.buildHealth,summary.overallHealth.codeQuality,summary.overallHealth.dependencyHealth,].filter(score => score > 0); if (scores.length > 0) { summary.overallHealth.overallScore = Math.round( scores.reduce((sum,score) => sum + score,0) / scores.length )} summary.recommendations = this.generateRecommendations(summary); fs.writeFileSync(this.summaryFile,JSON.stringify(summary,null,2)); this.log(`Error summary report generated: ${this.summaryFile}`); return summary} catch (error) { this.log(`Error aggregating reports: ${error.message}`,'ERROR'); return null} } generateRecommendations(summary) { const recommendations = []; if (summary.overallHealth.buildHealth < 70) { recommendations.push({ priority: 'high',type: 'build',message: 'Build health is critical. Run intelligent error fixer immediately.',})} if (summary.overallHealth.codeQuality < 70) { recommendations.push({ priority: 'medium',type: 'quality',message: 'Code quality needs improvement. Address linting and TypeScript errors.',})} if (summary.overallHealth.dependencyHealth < 70) { recommendations.push({ priority: 'medium',type: 'dependencies',message: 'Dependencies need attention. Update outdated packages and fix vulnerabilities.',})} if (summary.overallHealth.overallScore > 90) { recommendations.push({ priority: 'info',type: 'maintenance',message: 'Excellent project health! Consider regular maintenance schedule.',})} return recommendations} async generateHealthDashboard() { const summary = await this.aggregateReports(); if (!summary) return; const dashboard = ` # Project Health Dashboard Generated: ${summary.timestamp} ## Overall Health Score: ${summary.overallHealth.overallScore}/100 ### Component Scores: - 🏗️ Build Health: ${summary.overallHealth.buildHealth}/100 - 🎯 Code Quality: ${summary.overallHealth.codeQuality}/100 - 📦 Dependencies: ${summary.overallHealth.dependencyHealth}/100 ### Recommendations: ${summary.recommendations .map(rec => `- **${rec.priority.toUpperCase()}**: ${rec.message}`) .join('\n')} ### Quick Actions: - View logs: \`pm2 logs\` - Restart automation: \`pm2 restart ecosystem-error-prevention.config.cjs\` - Manual error fix: \`node automation/intelligent-error-fixer.js\` `; fs.writeFileSync( path.join(this.reportsDir,'health-dashboard.md'),dashboard ); this.log('Health dashboard generated: health-dashboard.md')} async run() { this.log('Starting Error Report Aggregator...'); try { await this.aggregateReports(); await this.generateHealthDashboard(); this.log('Error report aggregation completed successfully')} catch (error) { this.log(`Error in report aggregator: ${error.message}`,'ERROR')} } } if (require.main === module) { const aggregator = new ErrorReportAggregator(); aggregator.run().catch(console.error)} module.exports = ErrorReportAggregator;
@@ -26,6 +33,7 @@ class ErrorReportAggregator {
     // Ensure directories exist
 
 
+<<<<<<< HEAD
 
 
 
@@ -36,6 +44,43 @@ class ErrorReportAggregator {
 
 
 
+=======
+    fs.mkdirSync(path.dirname(this.logFile), { recursive: true });
+    fs.mkdirSync(this.reportsDir, { recursive: true });
+  }
+
+    fs.mkdirSync(path.dirname(this.logFile), { "recursive": true });
+    fs.mkdirSync(this.reportsDir, { "recursive": true });
+  }
+  log(message, level = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+    console.log(logMessage.trim());
+    fs.appendFileSync(this.logFile, logMessage);
+  }
+  async aggregateReports() {
+    this.log('Aggregating error reports...');
+    const summary = {
+      'timestamp': new Date().toISOString(),
+      'reports': {},
+      'overallHealth': {
+        buildHealth: 0,
+        'codeQuality': 0,
+        'dependencyHealth': 0,
+        'overallScore': 0},
+      'trends': {},
+      'recommendations': []};
+    try {
+      // Read all report files
+      const reportFiles = ['build-status.json',
+        'code-quality.json',
+        'dependency-health.json',
+        'error-fixer-report.json',
+        'real-time-validation.json',
+      ];
+
+      `);
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       for (const file of reportFiles) {
         const filePath = path.join(this.reportsDir, file);
         if (fs.existsSync(filePath)) {
@@ -45,7 +90,7 @@ class ErrorReportAggregator {
 
             this.log(`Loaded report: ${file}`);
 
-            this.log(`Loaded "report": ${file}`);
+            this.log(`Loaded 'report': ${file}`);
           } catch (error) {
             this.log(`Error reading ${file}: ${error.message}`, 'WARN');
           }
@@ -54,6 +99,7 @@ class ErrorReportAggregator {
       // Calculate overall health scores
       if (summary.reports['build-status.json']) {
 
+<<<<<<< HEAD
 
 
       `);
@@ -61,6 +107,10 @@ class ErrorReportAggregator {
 
 
 
+=======
+
+      `);
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             this.log(`Loaded "report": ${file}`);
           } catch (error) {
             this.log(`Error reading ${file}: ${error.message}`, 'WARN');
@@ -73,10 +123,13 @@ class ErrorReportAggregator {
 
 
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         summary.overallHealth.buildHealth = summary.reports['build-status.json'].healthScore || 0;
       }
       if (summary.reports['code-quality.json']) {
@@ -88,6 +141,7 @@ class ErrorReportAggregator {
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -95,6 +149,8 @@ class ErrorReportAggregator {
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         summary.overallHealth.buildHealth =
 
           summary.reports['build-status.json'].healthScore || 0
@@ -109,11 +165,14 @@ class ErrorReportAggregator {
       fs.writeFileSync(this.summaryFile, JSON.stringify(summary, null, 2));
 
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       this.log(`Error summary report generated: ${this.summaryFile}`);
       return summary;
     } catch (error) {
@@ -121,31 +180,40 @@ class ErrorReportAggregator {
 
 
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       this.log(`Error summary report "generated": ${this.summaryFile}`);
       return summary;
     } catch (error) {
-      this.log(`Error aggregating "reports": ${error.message}`, 'ERROR');
+      this.log(`Error aggregating 'reports': ${error.message}`, 'ERROR');
       return null;
     }
   }
   generateRecommendations(summary) {
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     const recommendations = [];
     if (summary.overallHealth.buildHealth < 70) {
       recommendations.push({
 
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         priority: 'high',
         type: 'build',
 
@@ -175,6 +243,7 @@ class ErrorReportAggregator {
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -182,19 +251,24 @@ class ErrorReportAggregator {
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         "priority": 'high',
         "type": 'build',
 
-        "message": 'Build health is critical. Run intelligent error fixer immediately.'})
+        'message': 'Build health is critical. Run intelligent error fixer immediately.'})
     const dashboard = `
 # Project Health Dashboard
 
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 Generated: ${summary.timestamp}
 ## Overall Health Score: ${summary.overallHealth.overallScore}/100
 ### Component Scores:
@@ -217,6 +291,7 @@ Generated: ${summary.timestamp}
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -224,6 +299,8 @@ Generated: ${summary.timestamp}
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 "Generated": ${summary.timestamp}
 ## Overall Health "Score": ${summary.overallHealth.overallScore}/100
 ### Component "Scores": - 🏗️  Build Health: ${summary.overallHealth.buildHealth}/100
@@ -232,21 +309,21 @@ Generated: ${summary.timestamp}
 ### "Recommendations": ${summary.recommendations
   .map(rec => `- **${rec.priority.toUpperCase()}**: ${rec.message}")
 
-"Generated": ${summary.timestamp}""
-## Overall Health "Score": ${summary.overallHealth.overallScore}/100;""
-### Component "Scores": - 🏗️  Build Health: ${summary.overallHealth.buildHealth}/100;""
-- 🎯 Code "Quality": ${summary.overallHealth.codeQuality}/100;""
-- 📦 "Dependencies": ${summary.overallHealth.dependencyHealth}/100;""
-### "Recommendations": ${summary.recommendations;""`
-  .map(rec => `- **${rec.priority.toUpperCase()}**: ${rec.message}")""
+'Generated': ${summary.timestamp}''
+## Overall Health 'Score': ${summary.overallHealth.overallScore}/100;''
+### Component 'Scores': - 🏗️  Build Health: ${summary.overallHealth.buildHealth}/100;''
+- 🎯 Code 'Quality': ${summary.overallHealth.codeQuality}/100;''
+- 📦 'Dependencies': ${summary.overallHealth.dependencyHealth}/100;''
+### 'Recommendations': ${summary.recommendations;''`
+  .map(rec => `- **${rec.priority.toUpperCase()}**: ${rec.message}')''
   .join('\n')}
 
-"
+'
     fs.writeFileSync('
       path.join(this.reportsDir, 'health-dashboard.md'),
       dashboard
     );
-    this.log('Health dashboard "generated": health-dashboard.md');
+    this.log('Health dashboard 'generated': health-dashboard.md');
   }
   async run() {
     this.log('Starting Error Report Aggregator...');
@@ -255,15 +332,18 @@ Generated: ${summary.timestamp}
       await this.generateHealthDashboard();
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       this.log('Error report aggregation completed successfully');
     } catch (error) {
       this.log(`Error in report aggregator: ${error.message}`, 'ERROR');
 
       this.log('Error report aggregation completed successfully');
     } catch (error) {
-      this.log(`Error in report "aggregator": ${error.message}`, 'ERROR');
+      this.log(`Error in report 'aggregator': ${error.message}`, 'ERROR');
     }
   }
 
@@ -271,6 +351,7 @@ Generated: ${summary.timestamp}
 if (require.main === module) {
   const aggregator = new ErrorReportAggregator();
   aggregator.run().catch(console.error);
+<<<<<<< HEAD
 
 
 module.exports = ErrorReportAggregator;
@@ -284,6 +365,12 @@ module.exports = ErrorReportAggregator;
 }
 
 
+=======
+}
+
+}
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 module.exports = ErrorReportAggregator;
 module.exports = ErrorReportAggregator;
@@ -293,6 +380,7 @@ module.exports = ErrorReportAggregator;
 module.exports = ErrorReportAggregator;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class ErrorReportAggregator { constructor() { this.logFile = path.join(__dirname,'logs','error-report-aggregator.log'); this.reportsDir = path.join(__dirname,'reports'); this.summaryFile = path.join(this.reportsDir,'error-summary.json'); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(this.reportsDir,{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} async aggregateReports() { this.log('Aggregating error reports...'); const summary = { timestamp: new Date().toISOString(),reports: {},overallHealth: { buildHealth: 0,codeQuality: 0,dependencyHealth: 0,overallScore: 0,},trends: {},recommendations: [],}; try { const reportFiles = [ 'build-status.json','code-quality.json','dependency-health.json','error-fixer-report.json','real-time-validation.json',]; `)} catch (error) { this.log(`Error reading ${file}: ${error.message}`,'WARN')} } } if (summary.reports['build-status.json']) { summary.overallHealth.buildHealth = summary.reports['build-status.json'].healthScore || 0} if (summary.reports['code-quality.json']) { summary.overallHealth.codeQuality = summary.reports['code-quality.json'].qualityScore || 0} if (summary.reports['dependency-health.json']) { summary.overallHealth.dependencyHealth = summary.reports['dependency-health.json'].healthScore || 0} const scores = [ summary.overallHealth.buildHealth,summary.overallHealth.codeQuality,summary.overallHealth.dependencyHealth,].filter(score => score > 0); if (scores.length > 0) { summary.overallHealth.overallScore = Math.round( scores.reduce((sum,score) => sum + score,0) / scores.length )} summary.recommendations = this.generateRecommendations(summary); fs.writeFileSync(this.summaryFile,JSON.stringify(summary,null,2)); this.log(`Error summary report generated: ${this.summaryFile}`); return summary} catch (error) { this.log(`Error aggregating reports: ${error.message}`,'ERROR'); return null} } generateRecommendations(summary) { const recommendations = []; if (summary.overallHealth.buildHealth < 70) { recommendations.push({ priority: 'high',type: 'build',message: 'Build health is critical. Run intelligent error fixer immediately.',})} if (summary.overallHealth.codeQuality < 70) { recommendations.push({ priority: 'medium',type: 'quality',message: 'Code quality needs improvement. Address linting and TypeScript errors.',})} if (summary.overallHealth.dependencyHealth < 70) { recommendations.push({ priority: 'medium',type: 'dependencies',message: 'Dependencies need attention. Update outdated packages and fix vulnerabilities.',})} if (summary.overallHealth.overallScore > 90) { recommendations.push({ priority: 'info',type: 'maintenance',message: 'Excellent project health! Consider regular maintenance schedule.',})} return recommendations} async generateHealthDashboard() { const summary = await this.aggregateReports(); if (!summary) return; const dashboard = ` # Project Health Dashboard Generated: ${summary.timestamp} ## Overall Health Score: ${summary.overallHealth.overallScore}/100 ### Component Scores: - 🏗️ Build Health: ${summary.overallHealth.buildHealth}/100 - 🎯 Code Quality: ${summary.overallHealth.codeQuality}/100 - 📦 Dependencies: ${summary.overallHealth.dependencyHealth}/100 ### Recommendations: ${summary.recommendations .map(rec => `- **${rec.priority.toUpperCase()}**: ${rec.message}`) .join('\n')} ### Quick Actions: - View logs: \`pm2 logs\` - Restart automation: \`pm2 restart ecosystem-error-prevention.config.cjs\` - Manual error fix: \`node automation/intelligent-error-fixer.js\` `; fs.writeFileSync( path.join(this.reportsDir,'health-dashboard.md'),dashboard ); this.log('Health dashboard generated: health-dashboard.md')} async run() { this.log('Starting Error Report Aggregator...'); try { await this.aggregateReports(); await this.generateHealthDashboard(); this.log('Error report aggregation completed successfully')} catch (error) { this.log(`Error in report aggregator: ${error.message}`,'ERROR')} } } if (require.main === module) { const aggregator = new ErrorReportAggregator(); aggregator.run().catch(console.error)} module.exports = ErrorReportAggregator;
 
+<<<<<<< HEAD
 
 
 }
@@ -305,3 +393,6 @@ module.exports = ErrorReportAggregator;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class ErrorReportAggregator { constructor() { this.logFile = path.join(__dirname,'logs','error-report-aggregator.log'); this.reportsDir = path.join(__dirname,'reports'); this.summaryFile = path.join(this.reportsDir,'error-summary.json'); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(this.reportsDir,{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} async aggregateReports() { this.log('Aggregating error reports...'); const summary = { timestamp: new Date().toISOString(),reports: {},overallHealth: { buildHealth: 0,codeQuality: 0,dependencyHealth: 0,overallScore: 0,},trends: {},recommendations: [],}; try { const reportFiles = [ 'build-status.json','code-quality.json','dependency-health.json','error-fixer-report.json','real-time-validation.json',]; `)} catch (error) { this.log(`Error reading ${file}: ${error.message}`,'WARN')} } } if (summary.reports['build-status.json']) { summary.overallHealth.buildHealth = summary.reports['build-status.json'].healthScore || 0} if (summary.reports['code-quality.json']) { summary.overallHealth.codeQuality = summary.reports['code-quality.json'].qualityScore || 0} if (summary.reports['dependency-health.json']) { summary.overallHealth.dependencyHealth = summary.reports['dependency-health.json'].healthScore || 0} const scores = [ summary.overallHealth.buildHealth,summary.overallHealth.codeQuality,summary.overallHealth.dependencyHealth,].filter(score => score > 0); if (scores.length > 0) { summary.overallHealth.overallScore = Math.round( scores.reduce((sum,score) => sum + score,0) / scores.length )} summary.recommendations = this.generateRecommendations(summary); fs.writeFileSync(this.summaryFile,JSON.stringify(summary,null,2)); this.log(`Error summary report generated: ${this.summaryFile}`); return summary} catch (error) { this.log(`Error aggregating reports: ${error.message}`,'ERROR'); return null} } generateRecommendations(summary) { const recommendations = []; if (summary.overallHealth.buildHealth < 70) { recommendations.push({ priority: 'high',type: 'build',message: 'Build health is critical. Run intelligent error fixer immediately.',})} if (summary.overallHealth.codeQuality < 70) { recommendations.push({ priority: 'medium',type: 'quality',message: 'Code quality needs improvement. Address linting and TypeScript errors.',})} if (summary.overallHealth.dependencyHealth < 70) { recommendations.push({ priority: 'medium',type: 'dependencies',message: 'Dependencies need attention. Update outdated packages and fix vulnerabilities.',})} if (summary.overallHealth.overallScore > 90) { recommendations.push({ priority: 'info',type: 'maintenance',message: 'Excellent project health! Consider regular maintenance schedule.',})} return recommendations} async generateHealthDashboard() { const summary = await this.aggregateReports(); if (!summary) return; const dashboard = ` # Project Health Dashboard Generated: ${summary.timestamp} ## Overall Health Score: ${summary.overallHealth.overallScore}/100 ### Component Scores: - 🏗️ Build Health: ${summary.overallHealth.buildHealth}/100 - 🎯 Code Quality: ${summary.overallHealth.codeQuality}/100 - 📦 Dependencies: ${summary.overallHealth.dependencyHealth}/100 ### Recommendations: ${summary.recommendations .map(rec => `- **${rec.priority.toUpperCase()}**: ${rec.message}`) .join('\n')} ### Quick Actions: - View logs: \`pm2 logs\` - Restart automation: \`pm2 restart ecosystem-error-prevention.config.cjs\` - Manual error fix: \`node automation/intelligent-error-fixer.js\` `; fs.writeFileSync( path.join(this.reportsDir,'health-dashboard.md'),dashboard ); this.log('Health dashboard generated: health-dashboard.md')} async run() { this.log('Starting Error Report Aggregator...'); try { await this.aggregateReports(); await this.generateHealthDashboard(); this.log('Error report aggregation completed successfully')} catch (error) { this.log(`Error in report aggregator: ${error.message}`,'ERROR')} } } if (require.main === module) { const aggregator = new ErrorReportAggregator(); aggregator.run().catch(console.error)} module.exports = ErrorReportAggregator;
 
 
+=======
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class ErrorReportAggregator { constructor() { this.logFile = path.join(__dirname,'logs','error-report-aggregator.log'); this.reportsDir = path.join(__dirname,'reports'); this.summaryFile = path.join(this.reportsDir,'error-summary.json'); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(this.reportsDir,{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} async aggregateReports() { this.log('Aggregating error reports...'); const summary = { timestamp: new Date().toISOString(),reports: {},overallHealth: { buildHealth: 0,codeQuality: 0,dependencyHealth: 0,overallScore: 0,},trends: {},recommendations: [],}; try { const reportFiles = [ 'build-status.json','code-quality.json','dependency-health.json','error-fixer-report.json','real-time-validation.json',]; for (const file of reportFiles) { const filePath = path.join(this.reportsDir,file); if (fs.existsSync(filePath)) { try { const content = JSON.parse(fs.readFileSync(filePath,'utf8')); summary.reports[file] = content; this.log(`Loaded report: ${file}`)} catch (error) { this.log(`Error reading ${file}: ${error.message}`,'WARN')} } } if (summary.reports['build-status.json']) { summary.overallHealth.buildHealth = summary.reports['build-status.json'].healthScore || 0} if (summary.reports['code-quality.json']) { summary.overallHealth.codeQuality = summary.reports['code-quality.json'].qualityScore || 0} if (summary.reports['dependency-health.json']) { summary.overallHealth.dependencyHealth = summary.reports['dependency-health.json'].healthScore || 0} const scores = [ summary.overallHealth.buildHealth,summary.overallHealth.codeQuality,summary.overallHealth.dependencyHealth,].filter(score => score > 0); if (scores.length > 0) { summary.overallHealth.overallScore = Math.round( scores.reduce((sum,score) => sum + score,0) / scores.length )} summary.recommendations = this.generateRecommendations(summary); fs.writeFileSync(this.summaryFile,JSON.stringify(summary,null,2)); this.log(`Error summary report generated: ${this.summaryFile}`); return summary} catch (error) { this.log(`Error aggregating reports: ${error.message}`,'ERROR'); return null} } generateRecommendations(summary) { const recommendations = []; if (summary.overallHealth.buildHealth < 70) { recommendations.push({ priority: 'high',type: 'build',message: 'Build health is critical. Run intelligent error fixer immediately.',})} if (summary.overallHealth.codeQuality < 70) { recommendations.push({ priority: 'medium',type: 'quality',message: 'Code quality needs improvement. Address linting and TypeScript errors.',})} if (summary.overallHealth.dependencyHealth < 70) { recommendations.push({ priority: 'medium',type: 'dependencies',message: 'Dependencies need attention. Update outdated packages and fix vulnerabilities.',})} if (summary.overallHealth.overallScore > 90) { recommendations.push({ priority: 'info',type: 'maintenance',message: 'Excellent project health! Consider regular maintenance schedule.',})} return recommendations} async generateHealthDashboard() { const summary = await this.aggregateReports(); if (!summary) return; const dashboard = ` # Project Health Dashboard Generated: ${summary.timestamp} ## Overall Health Score: ${summary.overallHealth.overallScore}/100 ### Component Scores: - 🏗️ Build Health: ${summary.overallHealth.buildHealth}/100 - 🎯 Code Quality: ${summary.overallHealth.codeQuality}/100 - 📦 Dependencies: ${summary.overallHealth.dependencyHealth}/100 ### Recommendations: ${summary.recommendations .map(rec => `- **${rec.priority.toUpperCase()}**: ${rec.message}`) .join('\n')} ### Quick Actions: - View logs: \`pm2 logs\` - Restart automation: \`pm2 restart ecosystem-error-prevention.config.cjs\` - Manual error fix: \`node automation/intelligent-error-fixer.js\` `; fs.writeFileSync( path.join(this.reportsDir,'health-dashboard.md'),dashboard ); this.log('Health dashboard generated: health-dashboard.md')} async run() { this.log('Starting Error Report Aggregator...'); try { await this.aggregateReports(); await this.generateHealthDashboard(); this.log('Error report aggregation completed successfully')} catch (error) { this.log(`Error in report aggregator: ${error.message}`,'ERROR')} } } if (require.main === module) { const aggregator = new ErrorReportAggregator(); aggregator.run().catch(console.error)} module.exports = ErrorReportAggregator;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

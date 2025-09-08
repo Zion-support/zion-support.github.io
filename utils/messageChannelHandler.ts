@@ -1,13 +1,17 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 }
 }
 },
 
 ,
+<<<<<<< HEAD
 
 
 ursor/fix-lint-push-and-merge-to-main-28da
@@ -46,11 +50,15 @@ export const messageChannelHandler: MessageHandler = {
 
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 };
 };
 };
 };
 ,
+<<<<<<< HEAD
 
 
 
@@ -62,6 +70,11 @@ export const messageChannelHandler: MessageHandler = {
 
 
 
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 // Message channel handler for real-time communication
 export class MessageChannelHandler {;
   private channels: Map<string, MessageChannel> = new Map();
@@ -90,6 +103,7 @@ export default MessageChannelHandler;
 
 ;
 
+<<<<<<< HEAD
 
 
 
@@ -98,3 +112,25 @@ export default MessageChannelHandler;
 
 
 
+=======
+},;
+,;
+
+
+
+origin/main
+}}}};
+;
+},;
+,;
+}}}};
+;
+
+},;
+,;
+
+
+
+,
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -76,7 +76,7 @@ export const validateAriaLabel = (elemen: HTMLElement): boolean => {
 
 export const getFocusableElements = (containe: HTMLElement): HTMLElement[] => {
   const focusableSelectors = [
-    'butto: not([disabled])inpu: not([disabled])selec: not([disabled])textare: a: not([disabled])a[href][tabindex]:not([tabindex="-1"])'
+    'butto: not([disabled])inpu: not([disabled])selec: not([disabled])textare: a: not([disabled])a[href][tabindex]:not([tabindex='-1'])'
   ].join($2);
   return Array.from(
     container.querySelectorAll(focusableSelectors)

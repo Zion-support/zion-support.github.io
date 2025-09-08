@@ -1,4 +1,4 @@
-const EnhancedErrorBoundary = dynamic(() => import("./EnhancedErrorBoundary"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedErrorBoundary' ,'
+const EnhancedErrorBoundary = dynamic(() => import('./EnhancedErrorBoundary'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default EnhancedErrorBoundary' ,'
 </p>'
 </p>'
 </p>'
@@ -23,8 +23,8 @@ const EnhancedErrorBoundary = dynamic(() => import("./EnhancedErrorBoundary"),{'
 </p>'
 
 ursor/integrate-build-improve-and-re-verify-8f7d
-const EnhancedErrorBoundary = dynamic(() => import(\"./EnhancedErrorBoundary\"),{\'; \"loading\": () => <p />Loading...</p,>}) \"export\": \'default EnhancedErrorBoundary\' ,const EnhancedErrorBoundary = dynamic(() => import(\"./EnhancedErrorBoundary\"),{\"; loading: () => <p />Loading.</p,>}) export: \"default EnhancedErrorBoundary\" ,\"\"\";
-const EnhancedErrorBoundary = dynamic(() => import(\"./EnhancedErrorBoundary\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default EnhancedErrorBoundary' ,';
+const EnhancedErrorBoundary = dynamic(() => import(\'./EnhancedErrorBoundary\'),{\'; \'loading\': () => <p />Loading...</p,>}) \'export\': \'default EnhancedErrorBoundary\' ,const EnhancedErrorBoundary = dynamic(() => import(\'./EnhancedErrorBoundary\'),{\'; loading: () => <p />Loading.</p,>}) export: \'default EnhancedErrorBoundary\' ,\'\'\';
+const EnhancedErrorBoundary = dynamic(() => import(\'./EnhancedErrorBoundary\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default EnhancedErrorBoundary' ,';
 </p>';
 </p>';
 </p>';
@@ -60,7 +60,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 </p>';
 </p>';
 </p>'</p>';
-const EnhancedErrorBoundary = dynamic(() => import(\"./EnhancedErrorBoundary\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default EnhancedErrorBoundary' ,'
+const EnhancedErrorBoundary = dynamic(() => import(\'./EnhancedErrorBoundary\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default EnhancedErrorBoundary' ,'
 </p>'
 </p>'
 </p>'

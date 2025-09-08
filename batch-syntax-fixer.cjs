@@ -27,9 +27,12 @@
 const fixer = new BatchSyntaxFixer();
 fixer.run().catch(console.error);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======#!/usr/bin/env node;
 =======
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -90,7 +93,10 @@ ursor/automate-test-improve-and-merge-code-59d5
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 #!/usr/bin/env node;
+<<<<<<< HEAD
+=======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const fs = require('fs')
 const path = require(path')
 const { execSync } = require('child_process')

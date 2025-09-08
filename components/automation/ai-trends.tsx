@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 }</div> </div>) import fs from 'fs';
@@ -25,6 +26,13 @@ export type Trend = {
   tags: string[]
 }
 export async function getServerSideProps() {
+=======
+
+
+
+import fs from 'fs';'
+import path from 'path';'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 </div> </div>) ) 
 
@@ -44,6 +52,7 @@ export async function getServerSideProps() {;
   let items: Trend[] = [];  try {;
     const raw = fs && fs.readFileSync(file, 'utf-8');
     items = JSON && JSON.parse(raw);
+<<<<<<< HEAD
 
 
 </div> </div>) )
@@ -163,3 +172,9 @@ function AiTrendsPage() {}
 
 
 
+=======
+</div> </div>) ) 
+}</div> </div>) 
+}
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba

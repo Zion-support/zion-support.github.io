@@ -52,9 +52,9 @@ export default function TutorialsPage() {
         <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Tutorials</h1>
@@ -69,9 +69,9 @@ export default function TutorialsPage() {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Tutorial Categories</h2>
@@ -83,9 +83,9 @@ export default function TutorialsPage() {
               {tutorialCategories.map((category, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={ opacity: 0, y: 20 }
+                  animate={ opacity: 1, y: 0 }
+                  transition={ duration: 0.5, delay: index * 0.1 }
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 text-center"
                 >
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -106,9 +106,9 @@ export default function TutorialsPage() {
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Tutorials</h2>
@@ -161,9 +161,9 @@ export default function TutorialsPage() {
         <section className="py-20 bg-green-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 20 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Start Learning?

@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {useState} from "react";
 import {toast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -8,6 +11,7 @@ import {AIMatchingResults} from "@/components/AIMatchingResults";
 import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
 import {Textarea} from "@/components/ui/textarea";
 import {Sparkles, Search} from "lucide-react";
+<<<<<<< HEAD
 
   serviceType?: string;
 
@@ -15,6 +19,60 @@ import {Sparkles, Search} from "lucide-react";
 import { Textarea } from "@/components/ui/textarea",
 import { Sparkles, Search } from "lucide-react",
 
+=======
+
+import { useState } from "react",
+import { toast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { AIMatchingResults } from "@/components/AIMatchingResults",
+import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
+
+import { Sparkles, Search } from "lucide-react";
+interface AIMatchmakerProps {}
+
+interface AIMatchmakerProps {;
+
+  serviceType?: string;
+  onMatchSelect?: (match: any) => void,;}
+  className?: string;}
+}
+
+import { Sparkles, Search } from "lucide-react",
+
+  serviceType?: string,
+  onMatchSelect?: (match: any) => void,;
+  className?: string;
+}
+export function AIMatchmaker(): any ({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {;"
+  }
+  const [query, setQuery] = useState("");"
+  const [isMatchmaking, setIsMatchmaking] = useState(false);
+  const [matches, setMatches] = useState([] as MatchResult[]);
+  const [hasSearched, setHasSearched] = useState(false);
+
+  onMatchSelect?: ("match": any) => void,
+import { Textarea } from "@/components/ui/textarea","
+import { Sparkles, Search } from "lucide-react","
+interface AIMatchmakerProps {
+  }
+  serviceType?: string,
+  onMatchSelect?: ("match": any) => void,
+  className?: string
+}
+export function AIMatchmaker() {;"
+  }
+export function AIMatchmaker() {"
+  }
+const [query, setQuery] = useState(""),;"
+const [isMatchmaking, setIsMatchmaking] = useState(false),;
+const [matches, setMatches] = useState([] as MatchResult[]),;
+const [hasSearched, setHasSearched] = useState(false),;
+
+
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
@@ -22,18 +80,46 @@ import { Sparkles, Search } from "lucide-react",
         description: "Tell us what you're looking for so we can find matches."
         variant: "destructive"})
       return
+<<<<<<< HEAD
 
 
 
+=======
+
+    }
+
+    try {;
+
+      console && console.log("Starting AI matching with query:", query, "and service type:", serviceType);
+
+    }
+
+
+
+  const handleSearch = async () => {;
+    if (!query && query.trim()) {;
+      toast({;
+        title: "Please enter a description",;
+        description: "Tell us what you're looking for so we can find matches.",;
+        variant: "destructive"}),;
+      return;
+    }
+    setIsMatchmaking(true);
+    setHasSearched(true);
+    }
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     try {;
 
       console && console.log("Starting AI matching with query:", query, "and service type:", serviceType);
       // Get AI matches;
       const results = await findMatches(;
+
         query;
         serviceType;
         3;
       );
+<<<<<<< HEAD
 
     }
     setIsMatchmaking(true);
@@ -48,23 +134,60 @@ import { Sparkles, Search } from "lucide-react",
       // // // console.log("Starting AI matching with query:", query, "and service type:", serviceType),
       
 
+=======
+
+      toast({"
+        title: "Matches Found"
+        description: `Found ${results.length} matches based on your description.`})
+    } catch (error) {"
+      console.error("Error during AI matching:", error),
+      toast({"
+        title: "Matching Error"'"
+        description: "We couldn't find matches for your request. Please try again.""
+        variant: "destructive"})
+      // Set empty matches to show no results found UI;
+      setMatches([])
+
+  const matchItems = matches.map(match => match.item);
+
+  };
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       setIsMatchmaking(false)
 
   };
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { Sparkles, Search } from "lucide-react",;
 interface AIMatchmakerProps {;
   serviceType?: string,;
   onMatchSelect?: (match: any) => void,;
   className?: string;
 }
+<<<<<<< HEAD
 
 
         variant: "destructive"}),;
 
+=======
+;
+export function AIMatchmaker() {;"
+  }
+  const handleSearch = async () => {;
+    }
+    if (!query.trim()) {;
+      }
+      toast({;
+        }
+        "title": "Please enter a description",,"
+  "description": "Tell us what you're looking for so we can find matches.",;"
+        "variant": "destructive"}),;"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       return;
     }
   }
@@ -77,6 +200,7 @@ interface AIMatchmakerProps {;
       }
     }
 
+<<<<<<< HEAD
 
 
 
@@ -88,6 +212,12 @@ interface AIMatchmakerProps {;
         <CardTitle className="flex items-center text-white">
 
 
+=======
+
+  // Extract just the items from each MatchResult;
+  const matchItems = matches.map(match => match.item),
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
           AI Matchmaker;
         </CardTitle>"
@@ -99,14 +229,44 @@ interface AIMatchmakerProps {;
         <div className="space-y-4">"
           <div className="space-y-2">
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               onSelectMatch={handleItemSelect}
               isLoading={isMatchmaking}
               serviceType={serviceType}
               projectDescription={query}
+<<<<<<< HEAD
+=======
+
+          )}
+        </div />;
+      </CardContent>;
+    </Card>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
 }
 
 
+=======
+                </>)}
+            </Button>;
+          </div>;
+          {has_searched && (}
+            <AIMatchingResults;}
+              matches={match_items}
+              onSelectMatch={handleItemSelect}
+              is_loading={is_matchmaking}
+              service_type={service_type}
+              project_description={query}
+            />)}
+        </div>;
+      </CardContent>;
+    </Card>);
+
+}'"`
+>>>>>>> origin/cursor/delete-old-data-records-6bba

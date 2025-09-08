@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
       'Modern alternative to legacy APM add‑ons with focused insights.',
@@ -151,3 +152,5 @@
 
 		reviews: 9
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

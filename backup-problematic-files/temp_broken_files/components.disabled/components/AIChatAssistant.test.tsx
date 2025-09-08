@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 describe(\'AIChatAssistant\', () => {
   it(\'renders without crashing\', () => {
@@ -12,3 +13,5 @@ describe(\'AIChatAssistant\', () => {
     render(<AIChatAssistant />);
     const input = screen.getByPlaceholderText(/type your message/i);
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

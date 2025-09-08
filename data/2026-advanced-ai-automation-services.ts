@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
       'Autonomous process discovery and mapping',
       'Real-time optimization algorithms',
       'Cross-departmental coordination',
@@ -14,6 +15,56 @@
       'First autonomous business processor; competes with traditional BPM tools like Pega and Appian.',
 
 
+=======
+    customers: 198,
+    rating: 4 && 4.9,
+    reviews: 267,
+  },
+
+];
+origin/cursor/automate-test-improve-and-merge-code-2533
+  }
+];
+    rating: 4.9
+    reviews: 267
+
+
+];      'Automatic lead scoring_behavioral analysis_predictive lead qualification_personalized nurturing sequences_sales forecasting AIPipeline optimization_competitor intelligence_market opportunity detection';
+      'ROI trackingCRM integration';
+    ];
+    popular: true;
+    icon: '💰';
+    color: 'from - yellow - 600 to - orange - 700';
+    text_color: 'text - yellow - 400';
+    link: 'https://ziontechgroup.com / ai - autonomous - sales - intelligence',
+    market_position: 'First autonomous sales intelligence platform, competes with SalesLoft, Outreach, and HubSpot Sales.';
+    target_audience: ['Sales teamsB2B companiesenterprise softwareconsulting firms'];
+    trial_days: 14;
+    setup_time: '1 week';
+    category: 'AI & Sales';
+    real_service: true,
+    technology: ['GPT - 4, Claude 3, Python, React, Node.js, PostgreSQL, Redis, Elasticsearch'];
+    integrations: ['Salesforce, HubSpot, Pipedrive, LinkedIn Sales Navigator, Zoom, Calendly'];
+    use_cases: ['Lead generation_sales qualification_pipeline management_revenue optimization'];
+  }
+];
+    technology: ['GPT-4, Claude 3, Python, React, Node.js, PostgreSQL, Redis, Elasticsearch'],
+    integrations: ['Salesforce, HubSpot, Pipedrive, LinkedIn Sales Navigator, Zoom, Calendly'],
+    useCases: ['Lead generationSales qualificationPipeline managementRevenue optimization'],
+    roi: 'Increase sales conversion rates by 45% and reduce sales cycle by 30%.',
+    competitors: ['SalesLoft, Outreach, HubSpot Sales, Pipedrive, Close'];
+    market_size: '$12B+ sales intelligence market';
+    growth_rate: '130% YoY';
+    variant: 'ai - futuristic';
+    contact_info: contact;
+    real_implementation: true,
+    implementation_details: 'Multi - tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.';
+    launch_date: '2026 - 01 - 25';
+    customers: 198;
+    rating: 4.9,
+    reviews: 267;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
   }
@@ -260,4 +311,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     reviews: 267;
   }
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

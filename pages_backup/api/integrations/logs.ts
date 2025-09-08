@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../lib/integrations/fileStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -10,23 +11,54 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { providerId } = req && req.query as { providerId?: string };
 
 
+=======
+
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState } from "../../../lib/integrations/fileStore";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const state = readState();
   const logs = providerId;
 }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     ? state.logs.filter((l) => l.providerId === providerId)
     : state.logs;
   res.status(200).json({ logs });
 }
 
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler() { return null; }
   res.status(200).json({ message: 'API endpoint' });
 
+<<<<<<< HEAD
 
 
+=======
+
+'
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import { readState } from '../../../lib/integrations/fileStore';
+export default function handler() { return null; }
+  if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
+  const { providerId } = req.query as { providerId?: string };
+  const logs = providerId ? state.logs.filter(l => l.providerId === providerId) : state.logs;
+  res.status(200).json({ logs })
+
+
+}
+
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import type { NextApiRequest, NextApiResponse } from './next';
 
 import { read_state  } from '../../../lib / integrations / file_store';
@@ -45,6 +77,10 @@ export default /**;
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -55,5 +91,8 @@ export default /**;
 ursor/fix-website-loading-errors-and-merge-6662
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

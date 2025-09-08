@@ -1,4 +1,4 @@
-const ContactForm = dynamic(() => import("./ContactForm"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default ContactForm' ,'
+const ContactForm = dynamic(() => import('./ContactForm'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default ContactForm' ,'
 
 </p>'
 </p>'
@@ -23,8 +23,8 @@ const ContactForm = dynamic(() => import("./ContactForm"),{'; "loading": () => <
 </p>'
 
 ursor/integrate-build-improve-and-re-verify-8f7d
-const ContactForm = dynamic(() => import(\"./ContactForm\"),{\'; \"loading\": () => <p />Loading...</p,>}) \"export\": \'default ContactForm\' ,const ContactForm = dynamic(() => import(\"./ContactForm\"),{\"; loading: () => <p />Loading.</p,>}) export: \"default ContactForm\" ,\"\"\";
-const ContactForm = dynamic(() => import(\"./ContactForm\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default ContactForm' ,';
+const ContactForm = dynamic(() => import(\'./ContactForm\'),{\'; \'loading\': () => <p />Loading...</p,>}) \'export\': \'default ContactForm\' ,const ContactForm = dynamic(() => import(\'./ContactForm\'),{\'; loading: () => <p />Loading.</p,>}) export: \'default ContactForm\' ,\'\'\';
+const ContactForm = dynamic(() => import(\'./ContactForm\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default ContactForm' ,';
 </p>';
 </p>';
 </p>';
@@ -60,7 +60,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 </p>';
 </p>';
 </p>'</p>';
-const ContactForm = dynamic(() => import(\"./ContactForm\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default ContactForm' ,'
+const ContactForm = dynamic(() => import(\'./ContactForm\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default ContactForm' ,'
 </p>'
 </p>'
 </p>'

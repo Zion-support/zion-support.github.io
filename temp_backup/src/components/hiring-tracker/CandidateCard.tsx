@@ -9,11 +9,17 @@ import {;
 DropdownMenuContent;
 DropdownMenuItem;';''
 import Image from 'next/image';''
+<<<<<<< HEAD
+//Import next/image   //Here you would save the notes to the database //For now, we'll just show a toast toast ({;
+  setShowNotes (false);
+};
+=======
 //Import next/image >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const handleSaveNotes = () => {';''
   //Here you would save the notes to the database //For now, we'll just show a toast toast ({;
   setShowNotes (false);
 };
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const handleHireConfirmed = () => {;
+>>>>>>> origin/resolved-merge-conflicts
   //Hiring process completed via the modal toast ({;
   application.id ;
 }index= {;

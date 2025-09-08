@@ -104,9 +104,9 @@ export default function HomePage() {
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={ opacity: 0, y: 30 }
+              animate={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Transform Your Business with{' '}
@@ -150,9 +150,9 @@ export default function HomePage() {
                   </div>
                   <div className="container mx-auto px-4 relative z-10">
                   <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -183,10 +183,10 @@ export default function HomePage() {
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Services
@@ -231,10 +231,10 @@ export default function HomePage() {
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Trusted by Industry Leaders
@@ -249,10 +249,10 @@ export default function HomePage() {
                 <motion.div
                   key={index}
                   className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={ opacity: 0, y: 30 }
+                  whileInView={ opacity: 1, y: 0 }
+                  transition={ duration: 0.8, delay: index * 0.1 }
+                  viewport={ once: true }
                 >
                   <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
                     {stat.number}
@@ -268,10 +268,10 @@ export default function HomePage() {
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Ready to Transform Your Business?
@@ -302,10 +302,10 @@ export default function HomePage() {
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0.8 }
+              viewport={ once: true }
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Get in Touch
@@ -318,10 +318,10 @@ export default function HomePage() {
             <div className="grid md:grid-cols-3 gap-8">
               <motion.div 
                 className="text-center p-6 bg-white rounded-lg shadow-lg"
-                initial={{ opacity: 0, y: 30 }} 
-                whileInView={{ opacity: 1, y: 0 }} 
-                transition={{ duration: 0.8, delay: 0.1 }} 
-                viewport={{ once: true }} 
+                initial={ opacity: 0, y: 30 } 
+                whileInView={ opacity: 1, y: 0 } 
+                transition={ duration: 0.8, delay: 0.1 } 
+                viewport={ once: true } 
               >
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Phone className="w-8 h-8 text-blue-600" />
@@ -335,10 +335,10 @@ export default function HomePage() {
 
               <motion.div 
                 className="text-center p-6 bg-white rounded-lg shadow-lg"
-                initial={{ opacity: 0, y: 30 }} 
-                whileInView={{ opacity: 1, y: 0 }} 
-                transition={{ duration: 0.8, delay: 0.2 }} 
-                viewport={{ once: true }} 
+                initial={ opacity: 0, y: 30 } 
+                whileInView={ opacity: 1, y: 0 } 
+                transition={ duration: 0.8, delay: 0.2 } 
+                viewport={ once: true } 
               >
                 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Mail className="w-8 h-8 text-green-600" />
@@ -352,10 +352,10 @@ export default function HomePage() {
 
               <motion.div 
                 className="text-center p-6 bg-white rounded-lg shadow-lg"
-                initial={{ opacity: 0, y: 30 }} 
-                whileInView={{ opacity: 1, y: 0 }} 
-                transition={{ duration: 0.8, delay: 0.3 }} 
-                viewport={{ once: true }} 
+                initial={ opacity: 0, y: 30 } 
+                whileInView={ opacity: 1, y: 0 } 
+                transition={ duration: 0.8, delay: 0.3 } 
+                viewport={ once: true } 
               >
                 <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <MapPin className="w-8 h-8 text-purple-600" />

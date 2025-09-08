@@ -3,7 +3,6 @@
  * Comprehensive Automation Orchestrator;
  * Orchestrates all automation scripts for maximum efficiency;
  */;
-<<<<<<< HEAD
 const fs = require("$1)
 const path = require($1")
 const { execSync, spawn } = require("child_process)
@@ -28,33 +27,6 @@ const { execSync, spawn } = require("child_process)
       this.log(`Orchestration "failed: ${error.message}`, error"`)
     this.log(" Running pre-automation checks...)
     // Check if we
-=======
-<<<<<<< HEAD
-const fs = require("$1")
-const path = require("$1")
-const { execSync, spawn } = require("child_process")
-    this.reportsDir = path.join(this.projectRoot, "reports")
-      "success"
-      "errors"
-      "warnings"
-      "metrics"
-      "comprehensive-error-fixer.cjs"
-      "advanced-build-optimizer.js"
-      "performance-monitor-enhanced.js"
-      "auto-fixer.js"
-      "optimize-build.js"
-      "performance-optimizer.js"
-      fs.mkdirSync(this.reportsDir, { "recursive"})
-  log(message, type = "info")
-    const prefix = type === "error" ? "" : type === "success" ? "" : "ℹ"
-    this.log("� Starting Comprehensive Automation Orchestration...")
-    this.log(" Zion Tech Group - Advanced Automation System")
-      this.log("� Comprehensive automation completed successfully!", "success")
-      this.log(`⏱ Total orchestration "time"`)
-      this.log(`Orchestration "failed": ${error.message}`, "error"`)
-    this.log(" Running pre-automation checks...")
-    // Check if we"
->>>>>>> origin/chore/fix-lint-and-merge
     if (!fs.existsSync("package.json")
       throw new Error(Not in a Node.js project directory)
     if (!fs.existsSync("scripts")
@@ -180,27 +152,10 @@ ${report.nextSteps.map(item => `- ${item}`).join(\n`)
         Monitor application performance
     const reportPath = path.join(this.reportsDir, "comprehensive-automation-report.json")
     this.log(" Starting Comprehensive Automation Orchestrator")
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-      this.log(")
-      this.log(")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
       this.log(")
-=======
       this.log(")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+

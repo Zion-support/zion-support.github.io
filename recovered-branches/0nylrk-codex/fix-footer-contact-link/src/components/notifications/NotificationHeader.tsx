@@ -1,9 +1,13 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 interface NotificationHeaderProps {;
   unreadCount: number,;
+<<<<<<< HEAD
 
   onMarkAllAsRead: () => Promise<void>;
 
@@ -20,6 +24,18 @@ interface NotificationHeaderProps {;
           variant="ghost"
           size="sm"
 
+=======
+
+
+}
+
+export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
+
+  unreadCount
+  onMarkAllAsRead
+
+import React from './react';
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { Button  } from '@/components / ui / button';
 interface NotificationHeaderProps {}
   unread_count: number;
@@ -62,8 +78,23 @@ export const NotificationHeader: React.FC < NotificationHeaderProps> = ({}
     </div>);
 }
 ;
+<<<<<<< HEAD
 
 
 
 
 
+=======
+
+
+          className="text-xs text-zion-cyan hover:text-white hover:bg-zion-blue-dark";
+        >;
+          Mark all as read;
+        </Button>;
+      )}
+    </div>
+    </div>;
+  );
+};
+};
+>>>>>>> origin/cursor/delete-old-data-records-6bba

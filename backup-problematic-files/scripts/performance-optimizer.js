@@ -1,48 +1,29 @@
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() {  this.optimizations.push('Images optimized')} async optimizeCode() {  this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this && this.optimizations = []} async optimizeImages() {  this && this.optimizations.push('Images optimized')} async optimizeCode() {  this && this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this && this.optimizations }; const reportPath = path && path.join(process && process.cwd(),'performance-reports','optimization-report && report.json'); if (!fs && fs.existsSync(path && path.dirname(reportPath))) { fs && fs.mkdirSync(path && path.dirname(reportPath),{ recursive: true })} fs && fs.writeFileSync(reportPath,JSON && JSON.stringify(report,null,2))} } module && module.exports = PerformanceOptimizer;
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 class PerformanceOptimizer {
   constructor() {
-    this && this.metrics = {};
+    this.metrics = {};
   }
   async analyzeBundle() {
-    const buildDir = path && path.join(process && process.cwd(), '.next');
-    if (fs && fs.existsSync(buildDir)) {
-      const stats = this && this.getDirectorySize(buildDir);
-      this && this.metrics.bundleSize = stats;
-      console && console.log(`Bundle size: ${(stats / 1024 / 1024).toFixed(2)} MB`);
+    const buildDir = path.join(process.cwd(), '.next');
+    if (fs.existsSync(buildDir)) {
+      const stats = this.getDirectorySize(buildDir);
+      this.metrics.bundleSize = stats;
+      console.log(`Bundle size: ${(stats / 1024 / 1024).toFixed(2)} MB`);
     }
   }
   getDirectorySize(dirPath) {
     let totalSize = 0;
-    const files = fs && fs.readdirSync(dirPath);
-    files && files.forEach(file => {
-      const filePath = path && path.join(dirPath, file);
-      const stats = fs && fs.statSync(filePath);
-      if (stats && stats.isDirectory()) {
-        totalSize += this && this.getDirectorySize(filePath);
+    const files = fs.readdirSync(dirPath);
+    files.forEach(file => {
+      const filePath = path.join(dirPath, file);
+      const stats = fs.statSync(filePath);
+      if (stats.isDirectory()) {
+        totalSize += this.getDirectorySize(filePath);
       } else {
-        totalSize += stats && stats.size;
+        totalSize += stats.size;
       }
     });
     return totalSize;
@@ -50,26 +31,26 @@ class PerformanceOptimizer {
   generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
-      metrics: this && this.metrics,
-      recommendations: this && this.generateRecommendations()
+      metrics: this.metrics,
+      recommendations: this.generateRecommendations()
     };
-    fs && fs.writeFileSync('performance-report && report.json', JSON && JSON.stringify(report, null, 2));
-    console && console.log('Performance report generated');
+    fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2));
+    console.log('Performance report generated');
   }
   generateRecommendations() {
     const recommendations = [];
-    if (this && this.metrics.bundleSize > 1000000) { // 1MB
-      recommendations && recommendations.push('Consider implementing code splitting');
-      recommendations && recommendations.push('Use dynamic imports for large components');
-      recommendations && recommendations.push('Optimize images and assets');
+    if (this.metrics.bundleSize > 1000000) { // 1MB
+      recommendations.push('Consider implementing code splitting');
+      recommendations.push('Use dynamic imports for large components');
+      recommendations.push('Optimize images and assets');
     }
     return recommendations;
   }
 }
-if (require && require.main === module) {
+if (require.main === module) {
   const optimizer = new PerformanceOptimizer();
-  optimizer && optimizer.analyzeBundle();
-  optimizer && optimizer.generateReport();
+  optimizer.analyzeBundle();
+  optimizer.generateReport();
 }
 
 const fs = // // require('fs');
@@ -79,40 +60,29 @@ class PerformanceOptimizer {
   constructor() {
 
     this.ensureDirectories();
-    this && this.projectRoot = process && process.cwd();
-    this && this.srcDir = path && path.join(this && this.projectRoot, 'src');
-    this && this.reportsDir = path && path.join(this && this.projectRoot, 'automation-reports');
-    this && this.ensureDirectories();
   }
   ensureDirectories() {
-    if (!fs && fs.existsSync(this && this.reportsDir)) {
-      fs && fs.mkdirSync(this && this.reportsDir, { recursive: true });
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
     }
 
     this.ensureDirectories()}
-    this && this.ensureDirectories()}
   ensureDirectories() {
-    if (!fs && fs.existsSync(this && this.reportsDir)) {
-      fs && fs.mkdirSync(this && this.reportsDir, { "recursive": true })}
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { "recursive": true })}
   }
   log(message) {
     const timestamp = new Date().toISOString();
 
     console.log(`[${timestamp}] ${message}`)}
-    console && console.log(`[${timestamp}] ${message}`);
-  }
-    console && console.log(`[${timestamp}] ${message}`);
-  }
-    console && console.log(`[${timestamp}] ${message}`);
-  }
-    console && console.log(`[${timestamp}] ${message}`);
-  }
-    console && console.log(`[${timestamp}] ${message}`)}
   async optimizePerformance() {
 
+<<<<<<< HEAD
     this && this.log('⚡ Starting performance optimization');
     const files = glob && glob.sync('**/*.{js,jsx,ts,tsx}', {
       "cwd": this && this.srcDir,
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       "ignore": ['**/*.test.*', '**/*.spec.*', '**/node_modules/**']
     });
@@ -146,27 +116,27 @@ class PerformanceOptimizer {
 
             fileOptimizations++}
           // Add useCallback to event handlers
-          if (content && content.includes('onClick') && !content && content.includes('useCallback')) {
+          if (content.includes('onClick') && !content.includes('useCallback')) {
             // This is a complex optimization that would need more context
             // For now, we'll just log it as a potential optimization
 
             fileOptimizations++}
           // Add useMemo to expensive calculations
-          if (content && content.includes('useState') && content && content.includes('map(') && !content && content.includes('useMemo')) {
+          if (content.includes('useState') && content.includes('map(') && !content.includes('useMemo')) {
             fileOptimizations++;
           }
         }
         // Optimize imports - remove unused imports
-        const importLines = newContent && newContent.split('\n').filter(line => line && line.trim().startsWith('import'));
+        const importLines = newContent.split('\n').filter(line => line.trim().startsWith('import'));
         const usedImports = new Set();
         // Simple heuristic to find used imports
-        importLines && importLines.forEach(importLine => {
-          const matches = importLine && importLine.match(/import\s*\{([^}]+)\}/);
+        importLines.forEach(importLine => {
+          const matches = importLine.match(/import\s*\{([^}]+)\}/);
           if (matches) {
-            const imports = matches[1].split(',').map(imp => imp && imp.trim());
-            imports && imports.forEach(imp => {
-              if (newContent && newContent.includes(imp) && !importLine && importLine.includes(imp)) {
-                usedImports && usedImports.add(imp);
+            const imports = matches[1].split(',').map(imp => imp.trim());
+            imports.forEach(imp => {
+              if (newContent.includes(imp) && !importLine.includes(imp)) {
+                usedImports.add(imp);
               }
             });
           }
@@ -181,16 +151,17 @@ class PerformanceOptimizer {
         if (newContent !== content) {
 
           this.log(`✅ Optimized: ${file} (${fileOptimizations} optimizations)`);
-          fs && fs.writeFileSync(filePath, newContent, 'utf8');
-          this && this.log(`✅ Optimized: ${file} (${fileOptimizations} optimizations)`);
         }
-        results && results.processed++;
-        results && results.optimizations += fileOptimizations;
+        results.processed++;
+        results.optimizations += fileOptimizations;
       } catch (error) {
 
+<<<<<<< HEAD
         results && results.errors.push({ file, error: error && error.message });
         this && this.log(`❌ Error optimizing ${file}: ${error && error.message}`);
       }
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
           this.log(`✅ "Optimized": ${file} (${fileOptimizations} optimizations)`)}
         results.processed++;
@@ -202,16 +173,24 @@ class PerformanceOptimizer {
         results && results.optimizations += fileOptimizations} catch (error) {
         results && results.errors.push({ file, "error": error && error.message });
         this && this.log(`❌ Error optimizing ${file}: ${error && error.message}`)}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     }
     // Generate report
     const report = {
       "timestamp": new Date().toISOString(),
       "summary": {
-        filesProcessed: results && results.processed,
-        "optimizationsApplied": results && results.optimizations,
-        "errors": results && results.errors.length
+        filesProcessed: results.processed,
+        "optimizationsApplied": results.optimizations,
+        "errors": results.errors.length
       },
       "details": results
     };
@@ -223,17 +202,9 @@ class PerformanceOptimizer {
 
     this.log(`📊 Report "generated": ${reportPath}`);
     this.log(`✅ Performance optimization "completed": ${results.optimizations} optimizations applied to ${results.processed} files`);
-    const reportPath = path && path.join(this && this.reportsDir, 'performance-optimization-report && report.json');
-    fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2));
-    this && this.log(`📊 Report generated: ${reportPath}`);
-    this && this.log(`✅ Performance optimization completed: ${results && results.optimizations} optimizations applied to ${results && results.processed} files`);
-    return report;
-  }
-    this && this.log(`📊 Report "generated": ${reportPath}`);
-    this && this.log(`✅ Performance optimization "completed": ${results && results.optimizations} optimizations applied to ${results && results.processed} files`);
     return report}
   async createPerformanceMonitoringScript() {
-    this && this.log('📊 Creating performance monitoring script');
+    this.log('📊 Creating performance monitoring script');
     const monitoringScript = "#!/usr/bin/env node
 const fs = // // require('fs');
 const path = // // require('path');
@@ -259,34 +230,24 @@ class PerformanceMonitor {
       // Monitor page load time
 
         this.reportMetrics()});
-      window && window.addEventListener('load', () => {
-        this && this.metrics.pageLoadTime = performance && performance.now();
-        this && this.reportMetrics();
-      });
-        this && this.reportMetrics();
-      });
-    this && this.metrics.pageLoadTime = performance && performance.now(),
-            this && this.reportMetrics()
-  });
-        this && this.reportMetrics()});
       // Monitor Web Vitals
       if ('PerformanceObserver' in window) {
         const observer = new PerformanceObserver((list) => {
-          for (const entry of list && list.getEntries()) {
-            switch (entry && entry.entryType) {
+          for (const entry of list.getEntries()) {
+            switch (entry.entryType) {
               case 'paint':
-                if (entry && entry.name === 'first-contentful-paint') {
-                  this && this.metrics.firstContentfulPaint = entry && entry.startTime;
+                if (entry.name === 'first-contentful-paint') {
+                  this.metrics.firstContentfulPaint = entry.startTime;
                 }
                 break;
               case 'largest-contentful-paint':
-                this && this.metrics.largestContentfulPaint = entry && entry.startTime;
+                this.metrics.largestContentfulPaint = entry.startTime;
                 break;
               case 'layout-shift':
-                this && this.metrics.cumulativeLayoutShift += entry && entry.value;
+                this.metrics.cumulativeLayoutShift += entry.value;
                 break;
               case 'first-input':
-                this && this.metrics.firstInputDelay = entry && entry.processingStart - entry && entry.startTime;
+                this.metrics.firstInputDelay = entry.processingStart - entry.startTime;
                 break;
             }
           }
@@ -299,42 +260,20 @@ class PerformanceMonitor {
     if (process.env.NODE_ENV === 'development') {
 
       console.log('Performance "Metrics": ', this.metrics)}
-        observer && observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
-      }
-        observer && observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
-      }
-        observer && observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
-      }
-        observer && observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
-      }
-        observer && observer.observe({ "entryTypes": ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] })}
-    }
-  }
-  reportMetrics() {
-    if (process && process.env.NODE_ENV === 'development') {
-      console && console.log('Performance Metrics:', this && this.metrics);
-    }
-      console && console.log('Performance Metrics:', this && this.metrics);
-    }
-      console && console.log('Performance Metrics:', this && this.metrics);
-    }
-      console && console.log('Performance Metrics:', this && this.metrics);
-    }
-      console && console.log('Performance "Metrics": ', this && this.metrics)}
     // Send to analytics in production
     if (typeof gtag !== 'undefined') {
-      Object && Object.entries(this && this.metrics).forEach(([key, value]) => {
+      Object.entries(this.metrics).forEach(([key, value]) => {
         gtag('event', key, {
 
           event_category: 'Performance',
-          value: Math && Math.round(value),
+          value: Math.round(value),
           non_interaction: true
         });
       });
     }
 
           "event_category": 'Performance',
-          "value": Math && Math.round(value),
+          "value": Math.round(value),
           "non_interaction": true
         })})}
   }
@@ -346,15 +285,14 @@ export default PerformanceMonitor;";
     if (!fs.existsSync(utilsDir)) {
 
       fs.mkdirSync(utilsDir, { recursive: true });
-    const scriptPath = path && path.join(this && this.srcDir, 'utils', 'PerformanceMonitor && PerformanceMonitor.js');
-    const utilsDir = path && path.dirname(scriptPath);
-    if (!fs && fs.existsSync(utilsDir)) {
-      fs && fs.mkdirSync(utilsDir, { recursive: true });
     }
 
+<<<<<<< HEAD
     fs && fs.writeFileSync(scriptPath, monitoringScript);
     this && this.log(`✅ Performance monitoring script created: ${scriptPath}`);
   }
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       fs.mkdirSync(utilsDir, { "recursive": true })}
     fs.writeFileSync(scriptPath, monitoringScript);
@@ -362,10 +300,10 @@ export default PerformanceMonitor;";
 
 }
 // Run the script
-if (require && require.main === module) {
+if (require.main === module) {
   const optimizer = new PerformanceOptimizer();
-  optimizer && optimizer.optimizePerformance()
-    .then(() => optimizer && optimizer.createPerformanceMonitoringScript())
+  optimizer.optimizePerformance()
+    .then(() => optimizer.createPerformanceMonitoringScript())
     .then(() => {
 
       console.log('🎉 Performance optimization completed successfully');

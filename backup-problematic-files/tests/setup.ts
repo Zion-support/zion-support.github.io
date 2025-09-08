@@ -16,11 +16,14 @@ afterEach(() => {;
   vi.restoreAllMocks(); // Changed from jest to vi;
 });
 
+<<<<<<< HEAD
 ;
 // -----------------------------------------------------------------------------;
 // Jest - compatibility shim ------------------------------------------------------;
 // -----------------------------------------------------------------------------;
 // A lot of legacy test files still call `jest.fn ()`, `jest.mock ()` etc.  Rather;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 // than refactor them all at once we map those calls to Vitest's equivalent;
 // (`vi`).  The shim only runs in the test environment and has no effect on;
@@ -73,4 +76,7 @@ export default function Setup({ }: SetupProps) {
     </div>
 
   );
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

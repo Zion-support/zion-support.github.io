@@ -5,16 +5,76 @@ attachment_url?: string,
 }
 // Define the shape of a conversation;
 
+<<<<<<< HEAD
 export interface Conversation {
 
 
+=======
+
+  id: string;
+  sender_id: string;
+  recipient_id: string;
+  content: string;
+  created_at: string;
+  read: boolean;
+  sender_name?: string;
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   id: string;
   user_id: string;
   other_user: {}
     id: string;
     name: string;
 
+<<<<<<< HEAD
+=======
+  }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
+
+<<<<<<< HEAD
+=======
+  attachment_url?: string;
+// Define the shape of a conversation;
+export interface Conversation {;
+export interface Conversation {
+  id: string;
+  // TODO: Implement
+  user_id: string;
+  other_user: {,
+  id: string;
+    name: string;
+
+    avatar_url?: string,
+    user_type?: string;
+
+avatar_url?: string
+    user_type?: string
+  }
+
+  name: string;
+pr-12325
+  avatar_url?: string;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+  }
+  updated_at: string;
+  unread_count: number;
+  context_type?: 'job' | 'talent' | 'general';
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+  context_id?: string,
+  context_data?: ConversationContextData;
+}
+
+
+  name: string;
+pr-12325
+  avatar_url?: string;
 
   }
   updated_at: string;
@@ -22,16 +82,7 @@ export interface Conversation {
   context_type?: 'job' | 'talent' | 'general';
 
 
-  context_id?: string,
-  context_data?: ConversationContextData;
-}
-// Context data for creating a conversation;
-
-export interface ConversationContextData {
-  // TODO: Implement
-  title?: string;
-  description?: string;
-  image_url?: string;
+  context_id?: string
 
   context_data?: ConversationContextData
 }
@@ -71,6 +122,7 @@ export interface MessagingContextType {;
   loadMessages: (conversationId: string) => Promise<void>
 }
 
+<<<<<<< HEAD
 
 // Define the shape of a message;
 export interface Message {;
@@ -105,3 +157,6 @@ export interface ConversationContextData {;
 ;
 
 
+=======
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

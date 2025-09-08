@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 
 
@@ -38,3 +39,8 @@ import _React from 'react'; import Head from 'next/head'; import Link from 'next
 
 
 
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,4 +1,17 @@
 
+<<<<<<< HEAD
+=======
+import {useState, useMemo} from 'react';
+import {TalentProfile} from '@/types/talent';
+export function useFilterTalents(talents: TalentProfile[]) {;
+
+import { useState, useMemo  } from 'react';
+import { TalentProfile } from '@/types/talent';
+export function useFilterTalents(talents: TalentProfile[]) {
+import {useState, useMemo} from 'react';
+import {TalentProfile} from '@/types/talent';
+export function useFilterTalents(talents: TalentProfile[]) {;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -9,37 +22,87 @@
   const [experienceRange, setExperienceRange] = useState<[number, number]>([0, 15]);
   const [sortOption, setSortOption] = useState<string>('relevance');
   const toggleSkill = (skill: string) => {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     setSelectedSkills(prev => 
       prev && prev.includes(skill) 
         ? prev && prev.filter(s => s !== skill)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         : [...prev, skill]
     )
   }
   const toggleAvailability = (availability: string) => {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     setSelectedAvailability(prev => 
       prev && prev.includes(availability) 
         ? prev && prev.filter(a => a !== availability)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         : [...prev, availability]
     )
   }
   const toggleRegion = (region: string) => {
 
+<<<<<<< HEAD
     setSelectedRegions(prev => 
       prev && prev.includes(region) 
         ? prev && prev.filter(r => r !== region)
 
+=======
+import { useState, useMemo  } from 'react';
+import { TalentProfile } from '@/types/talent';
+export function useFilterTalents(talents: TalentProfile[]) {
+  const [searchTerm, setSearchTerm] = useState($2);
+  const [selectedSkills, setSelectedSkills] = useState<string[]>([]),
+  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]),
+  const [selectedRegions, setSelectedRegions] = useState<string[]>([]),
+  const [priceRange, setPriceRange] = useState<[number, number]>([50, 200]),
+  const [experienceRange, setExperienceRange] = useState<[number, number]>([0, 15]),
+  const [sortOption, setSortOption] = useState<string>('relevance'),
+  
+  const toggleSkill = (skill: string) => {
+    setSelectedSkills(prev =>
+      prev.includes(skill)
+        ? prev.filter(s => s !== skill)
+        : [...prev, skill]
+    )
+  },
+  
+  const toggleAvailability = (availability: string) => {
+    setSelectedAvailability(prev =>
+      prev.includes(availability)
+        ? prev.filter(a => a !== availability)
+        : [...prev, availability]
+    )
+  },
+  
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     setSelectedRegions(prev =>
       prev.includes(region)
         ? prev.filter(r => r !== region)
 
+<<<<<<< HEAD
+=======
+    setSelectedRegions(prev => 
+      prev && prev.includes(region) 
+        ? prev && prev.filter(r => r !== region)
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         : [...prev, region]
     )
   }
@@ -50,6 +113,7 @@
     setSelectedAvailability([]);
     setSelectedRegions([]);
     setPriceRange([50, 200]);
+<<<<<<< HEAD
 
     setExperienceRange([0, 15]);
     setSortOption('relevance')
@@ -60,6 +124,10 @@
     // Filter by search term
     if (searchTerm) {
 
+=======
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       const lowerSearch = searchTerm && searchTerm.toLowerCase();
       result = result && result.filter(talent => 
         talent && talent.full_name.toLowerCase().includes(lowerSearch) ||
@@ -67,8 +135,11 @@
         talent && talent.bio?.toLowerCase().includes(lowerSearch) ||
         talent && talent.skills?.some(skill => skill && skill.toLowerCase().includes(lowerSearch))
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { useState, useMemo } from 'react',;
 
 import { TalentProfile } from '@/types/talent',;
@@ -112,9 +183,12 @@ export function useFilterTalents() { return null; }
       );
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     if (selectedSkills && selectedSkills.length > 0) {
 
       result = result && result.filter(talent => 
@@ -122,20 +196,27 @@ export function useFilterTalents() { return null; }
           talent && talent.skills?.some(talentSkill => 
             talentSkill && talentSkill.toLowerCase().includes(skill && skill.toLowerCase())
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           )
         )
       )
     }
 
+<<<<<<< HEAD
     // Filter by availability
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       result = result && result.filter(talent => 
         selectedRegions && selectedRegions.some(region => 
           talent && talent.location?.includes(region)
 
 
+<<<<<<< HEAD
     
 
 
@@ -152,11 +233,17 @@ export function useFilterTalents() { return null; }
       const years = talent && talent.years_experience || 0;
 
 
+=======
+      return hourlyRate >= priceRange[0] && hourlyRate <= priceRange[1]
+    });
+    // Filter by experience range;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       return years >= experienceRange[0] && years <= experienceRange[1]
     });
     // Sort talents;
     switch (sortOption) {'
       case 'price-low':
+<<<<<<< HEAD
 
 
         result && result.sort((a, b) => (a && a.hourly_rate || 0) - (b && b.hourly_rate || 0));
@@ -164,6 +251,23 @@ export function useFilterTalents() { return null; }
         result.sort((a, b) => (a.hourly_rate || 0) - (b.hourly_rate || 0));
 
 
+=======
+        result && result.sort((a, b) => (a && a.hourly_rate || 0) - (b && b.hourly_rate || 0));
+
+        result.sort((a, b) => (a.hourly_rate || 0) - (b.hourly_rate || 0));
+
+        result.sort((a, b) => (a.hourly_rate |0) - (b.hourly_rate |0));
+        break;
+      case 'price-high':
+        result.sort((a, b) => (b.hourly_rate |0) - (a.hourly_rate |0));
+        break;
+      case 'rating':
+        result.sort((a, b) => (b.average_rating |0) - (a.average_rating |0));
+        break;
+      case 'experience':
+        result.sort((a, b) => (b.years_experience |0) - (a.years_experience |0));
+        result.sort((a, b) => (a.hourly_rate || 0) - (b.hourly_rate || 0));
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
     // Filter by price range;
     result = result.filter(talent => {;
@@ -192,8 +296,11 @@ export function useFilterTalents() { return null; }
       default: // Default sorting by relevance (no specific order);
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         break;
 
       case 'price-high':
@@ -204,8 +311,11 @@ export function useFilterTalents() { return null; }
         break;'
       case 'experience':
 
+<<<<<<< HEAD
         result && result.sort((a, b) => (b && b.years_experience || 0) - (a && a.years_experience || 0));
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         break;
 
@@ -217,8 +327,11 @@ export function useFilterTalents() { return null; }
         break;
     }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     return result
 
   }, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption]);
@@ -238,8 +351,13 @@ export function useFilterTalents() { return null; }
 
     toggleSkill;
 
+<<<<<<< HEAD
 
 
+=======
+;
+    return result;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   }, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption]),;
   return {;
     filteredTalents,;
@@ -257,14 +375,20 @@ export function useFilterTalents() { return null; }
     toggleSkill,;
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     toggleAvailability;
     toggleRegion;
     clearFilters}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {TalentProfile} from '@/types / talent';
 export /**;
  * useFilterTalents - Function description;
@@ -331,7 +455,12 @@ function useFilterTalents() { return null; }
     toggle_region;
     clear_filters}
 
+<<<<<<< HEAD
 
 }
 
 
+=======
+}
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

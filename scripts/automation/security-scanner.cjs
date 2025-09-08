@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -13,6 +15,7 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
@@ -28,7 +31,7 @@
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
 const fs = require('fs');
-const path = require(path');
+const path = require('path');
 const { execSync } = require('child_process');
 =======
 
@@ -48,6 +51,10 @@ class SecurityScanner {}
         if () {}
 <<<<<<< HEAD
             fs.mkdirSync(logsDir, { "recursive": true })};"
+    };
+=======
+<<<<<<< HEAD
+            fs.mkdirSync(logsDir, { "recursive": true })};"
     }
   log($2) {}
         const timestamp = new Date().toISOString() {}
@@ -59,6 +66,7 @@ class SecurityScanner {}
 =======
             fs.mkdirSync(logsDir, { "recursive: true })}
     }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     log(message) {}
         const timestamp = new Date().toISOString() {}
     ) {}"
@@ -66,6 +74,9 @@ class SecurityScanner {}
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
+<<<<<<< HEAD
+        console.log(message)};
+=======
 <<<<<<< HEAD
 
         console.log(message)}
@@ -78,31 +89,33 @@ class SecurityScanner {}
 >>>>>>> merged-prs-20250907-203621
         console.log(message)};
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     scanForVulnerabilities() {}
-        this.log(Scanning for security vulnerabilities...');
+        this.log('Scanning for security vulnerabilities...');
         try {}
+<<<<<<< HEAD
+const auditResult = execSync('npm audit --json', { });
+                "cwd": this.projectRoot, 
+                "encoding": 'utf8',
+                "stdio": 'pipe'
+            };);
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||;0;
-        console.log(message)}
-    scanForVulnerabilities() {}
+        console.log(message)};
+    scanForVulnerabilities() {}"
 
-            });
-
-
-        const secretPatterns = [{ "name": API Keys', pattern: /api[_-]?key\s*[:=]\s*['"][^"]+[]/gi },
-            { name": 'Passwords', "pattern: /password\s*[:=]\s*[][^"]+['"]/gi },
-            { name: 'Secrets, "pattern": /secret\s*[:=]\s*[][^']+['"]/gi },
-            { "name: Tokens, pattern": /token\s*[:=]\s*['"][^']+[]/gi },
-            { "name": Private Keys', pattern: /private[_-]?key\s*[:=]\s*['"][^"]+[]/gi },
-            { name": 'Database URLs', "pattern: /database[_-]?url\s*[:=]\s*[][^"]+['"]/gi },
-            { name: 'AWS Keys, "pattern": /aws[_-]?access[_-]?key[_-]?id\s*[:=]\s*[][^']+['"]/gi },
-            { "name: GitHub Tokens, pattern": /github[_-]?token\s*[:=]\s*['"][^']+[]/gi }
-       ];
-
+<<<<<<< HEAD
+            };);
+            const auditData = JSON.parse(auditResult;);
+            const vulnerabilities = auditData.vulnerabilities?.total ||;0;
+        
+=======
 =======
 >>>>>>> merged-prs-20250907-203621
             const auditResult = execSync('npm audit --json', { })
@@ -187,6 +200,7 @@ class SecurityScanner {}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 for (const secretType of secretPatterns) {}
                     const matches = content.match(secretType.pattern;);
                     if ( {})
@@ -194,9 +208,17 @@ class SecurityScanner {}
 
         const files = [];
 <<<<<<< HEAD
+        
+        const scanDirectory = (dir) => {}
+            if () retu) {}
+    ) retu}r;n;
+            
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         const scanDirectory = (dir) => {}
             if () retu) {}
     ) retu}r;n;
@@ -232,19 +254,27 @@ class SecurityScanner {}
                 const stat = fs.statSync(fullPath;);
 <<<<<<< HEAD
                 
+                if (&& !item.startsWith('.') && item !== 'node_modules') {}
+=======
+<<<<<<< HEAD
+                
 =======
 <<<<<<< HEAD
 
                 if (&& !item.startsWith(.') && item !== 'node_modules) {}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
-                    files.push(fullPath)}
-            }
+                    files.push(fullPath)};
+            };
         }) {}
-    && !item.startsWith(.') && item !== 'node_modules) {}
+    && !item.startsWith('.') && item !== 'node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
-                    files.push(fullPath)}
-            }
+                    files.push(fullPath)};
+            };
 
+<<<<<<< HEAD
+        }};
+=======
         }}
 =======
 <<<<<<< HEAD
@@ -267,9 +297,23 @@ class SecurityScanner {}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         }};
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         scanDirectory(this.projectRoot);
-        return files}
+        return files};
     checkFilePermissions() {}
+<<<<<<< HEAD
+        
+const criticalFiles = ['package.json',];
+            'package-lock.json',
+            '.env',
+            '.env.local',
+            '.env.production',
+            '.env.development'
+        ];
+        
+        const permissionIssues = [];
+        
+=======
 <<<<<<< HEAD
         
 =======
@@ -307,6 +351,7 @@ class SecurityScanner {}
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         const permissionIssues = [];
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -323,6 +368,9 @@ class SecurityScanner {}
                 
 =======
 <<<<<<< HEAD
+                
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -332,11 +380,18 @@ class SecurityScanner {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 if ( {})
                     permissionIssues.push({})
                         "file": file,
-                        readableByOthers: isReadableByOthers,
+                        "readableByOthers": isReadableByOthers,
                         "writableByOthers": isWritableByOthers,
+<<<<<<< HEAD
+                        "executableByOthers": isExecutableByOthers,
+                        "severity": 'medium'
+                    })};
+            };
+=======
 <<<<<<< HEAD
                         "executableByOthers": isExecutableByOthers,
                         "severity": 'medium'
@@ -347,20 +402,45 @@ class SecurityScanner {}
                     })}
             }
         }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         this.log(`Found ${permissionIssues.length} permission issues`)) {`}
      {}
                     permissionIssues.push({})
-                        file: file,
+                        "file": file,
                         "readableByOthers": isReadableByOthers,
-                        writableByOthers: isWritableByOthers,
+                        "writableByOthers": isWritableByOthers,
                         "executableByOthers": isExecutableByOthers,
-                        severity: 'medium
-                    })}
-            }
-        }
-        this.log(`Found ${permissionIssues.length} permission issues`)}
-        return permissionIssues}
+                        "severity": 'medium'
+                    })};
+            };
+        this.log(`Found ${permissionIssues.length} permission issues`)};
+        return permissionIssues};
     checkDependencies() {}
+<<<<<<< HEAD
+        this.log('Checking dependencies for security issues...');
+        
+        try {}
+            const packageJsonPath = path.join(this.projectRoot, 'package.json';);
+            const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
+            
+            const dependencies = {}
+                ...packageJson.dependencies || {},
+                ...packageJson.devDependencies || {};
+           };
+            
+            const totalDeps = Object.keys(dependencies).lengt;h;
+
+            const dependencies = {}
+                ...packageJson.dependencies || {},
+                ...packageJson.devDependencies || {};
+            const totalDeps = Object.keys(dependencies).lengt;h;`;
+            this.log(`Analyzing ${totalDeps} dependencies`);
+            // Check for known vulnerable packages;
+            const vulnerablePackages = this.checkForVulnerablePackages(dependencies;);
+        
+        const vulnerable = [];
+        
+=======
 <<<<<<< HEAD
         this.log(Checking dependencies for security issues...');
 
@@ -448,11 +528,18 @@ class SecurityScanner {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         for (const [name, version] of Object.entries(dependencies)) {}
             const packageVersion = \`\${name}@\${version}\;`;`
             if ([0]))) {}
                 vulnerable.push({})
                     "name": name,
+<<<<<<< HEAD
+                    "version": version,
+                    "severity": 'high'
+                })};
+        };
+=======
 <<<<<<< HEAD
                     "version": version,
                     "severity": 'high'
@@ -462,16 +549,26 @@ class SecurityScanner {}
 >>>>>>> merged-prs-20250907-203621
                 })}
         }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         return vulnerable) {}
     [0]))) {}
                 vulnerable.push({})
-                    name: name,
+                    "name": name,
                     "version": version,
-                    severity: high'
-                })}
-        }
-        return vulnerable}}
+                    "severity": 'high'
+                })};
+        };
+        return vulnerable}};
     generateSecurityHeaders() {}
+<<<<<<< HEAD
+        this.log('Generating security headers configuration...');
+        
+        const nextConfigPath = path.join(this.projectRoot, 'next.config.js';);
+        let nextConfig = ;';';
+        
+        if () {}
+            nextConfig = fs.readFileSync(nextConfigPath, 'utf8')};
+=======
 <<<<<<< HEAD
         this.log('Generating security headers configuration...);
 
@@ -499,6 +596,7 @@ class SecurityScanner {}
             nextConfig = fs.readFileSync(nextConfigPath, 'utf8')};
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         const vulnerable = [];
         for (const [name, version] of Object.entries(dependencies)) {}`;
@@ -508,6 +606,21 @@ class SecurityScanner {}
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         // Add security headers if not already present;
+<<<<<<< HEAD
+        if (!nextConfig.includes('X-Frame-Options')) {}
+const securityHeaders = ';
+  // Security headers;
+  async headers() {}
+    return ) {}
+    ) {}
+            nextConfig = fs.readFileSync(nextConfigPath, 'utf8')};
+        // Add security headers if not already present;
+        if (!nextConfig.includes('X-Frame-Options')) {}
+const securityHeaders = ';
+  // Security headers;
+  async headers() {}
+return }[;];
+=======
 <<<<<<< HEAD
 
 =======
@@ -534,6 +647,7 @@ class SecurityScanner {}
 =======
     return }[;]
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       {}
         "source": '/(.*)',
         "headers": []
@@ -557,16 +671,23 @@ class SecurityScanner {}
             "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-ancestors 'none';"}]}]},";
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
             
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             // Insert security headers before the closing brace;
             const updatedConfig = nextConfig.replace(/(\s*)(module\.exports\s*=\s*nextConf;i;g;)/, "$1${securityHeaders}$1$2");
             fs.writeFileSync(nextConfigPath, updatedConfig);
-            this.log(Security headers added to Next.js config')}
-        return { status: 'success }}
+            this.log('Security headers added to Next.js config')};
+        return { "status": 'success' }};
     generateSecurityReport() {}
+<<<<<<< HEAD
+        this.log('Generating security scan report...');
+        
+=======
 <<<<<<< HEAD
         this.log(Generating security scan report...');
 
@@ -581,13 +702,17 @@ class SecurityScanner {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         const report = {}
             "timestamp": new Date().toISOString(),
-            project: this.projectRoot,
+            "project": this.projectRoot,
             "security": {}
                 vulnerabilities: this.scanForVulnerabilities(),
-                secrets: this.scanForSecrets(),
+                "secrets": this.scanForSecrets(),
                 "permissions": this.checkFilePermissions(),
+<<<<<<< HEAD
+                "dependencies": this.checkDependencies(),
+=======
 <<<<<<< HEAD
                 "dependencies": this.checkDependencies(),
                 "headers": this.generateSecurityHeaders()
@@ -634,10 +759,18 @@ class SecurityScanner {}
                 secrets: this.scanForSecrets(),
                 "permissions": this.checkFilePermissions(),
                 dependencies: this.checkDependencies(),
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 "headers": this.generateSecurityHeaders();
 >>>>>>> merged-prs-20250907-203621
             },
             "recommendations": this.generateSecurityRecommendations();
+<<<<<<< HEAD
+       };
+
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        this.log("Security scan report saved to ${this.reportFile}");
+        
+=======
 <<<<<<< HEAD
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
@@ -660,6 +793,7 @@ class SecurityScanner {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         return report};
     generateSecurityRecommendations() {}
         return [;]
@@ -680,6 +814,9 @@ class SecurityScanner {}
         this.log('Security Scanner started');
 <<<<<<< HEAD
         
+=======
+<<<<<<< HEAD
+        
         try {}
             const report = this.generateSecurityReport(;)
             this.log('Security Scanner completed successfully')
@@ -692,7 +829,9 @@ class SecurityScanner {}
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         try {}
+            const report = this.generateSecurityReport(;);
             this.log('Security Scanner completed successfully');
 >>>>>>> merged-prs-20250907-203621
             return report} catch (error) {}
@@ -714,17 +853,26 @@ class SecurityScanner {}
             "recommendations": this.generateSecurityRecommendations();"
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));"
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
         this.log("Security scan report saved to ${this.reportFile}");"
+<<<<<<< HEAD
+        return report};
+=======
         return report}
 <<<<<<< HEAD
   generateSecurityRecommendations($2) {}
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     generateSecurityRecommendations() {}
 >>>>>>> merged-prs-20250907-203621
         return [;]"
 
+<<<<<<< HEAD
+            throw error};
+// Run the scanner if this script is executed directly;
+    const scanner = new SecurityScanner) {}
+    const scanner = new SecurityScanner}(;);
+    scanner.run().catch(console.error)};
+=======
 <<<<<<< HEAD
             throw error}
 // Run the scanner if this script is executed directly;
@@ -746,6 +894,7 @@ class SecurityScanner {}
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 =======
 module.exports = SecurityScanner;
@@ -753,6 +902,12 @@ module.exports = SecurityScanner;
 module.exports = SecurityScanner;
 module.exports = SecurityScanner;
 
+<<<<<<< HEAD
+
+
+
+
+=======
 
 
 =======
@@ -779,3 +934,4 @@ module.exports = SecurityScanner;
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -2,16 +2,11 @@
 const fs = require('fs').promises;
 const path = require(path');
 const { exec } = require('child_process');
-<<<<<<< HEAD
 const util = require(util');
 
-=======
-const util = require('util');
->>>>>>> origin/chore/fix-lint-and-merge
 const execAsync = util.promisify(exec);
 class SimpleScriptFixer {}
   constructor() {}
-<<<<<<< HEAD
     this.projectRoot = path.join(__dirname, '..);
     this.fixedCount = 0;
     this.errorCount = 0}
@@ -21,8 +16,6 @@ class SimpleScriptFixer {}
     const scriptDirs = [path.join(this.projectRoot, scripts')]
       path.join(this.projectRoot, 'scripts/automation);
     ];
-=======
->>>>>>> origin/chore/fix-lint-and-merge
 
     ];
     const scriptFiles = [];
@@ -30,7 +23,6 @@ class SimpleScriptFixer {}
       try {}
         const files = await fs.readdir(dir);
         for (const file of files) {}
-<<<<<<< HEAD
           if (file.endsWith(.cjs') || file.endsWith('.js)) {}
             scriptFiles.push(path.join(dir, file))}
         }
@@ -93,24 +85,10 @@ class SimpleScriptFixer {}
     for (const scriptFile of scriptFiles) {}
       await this.log(`"Processing: ${path.basename(scriptFile)}`);
       
-=======
-          if (file.endsWith('.cjs') || file.endsWith('.js')) {}
-            scriptFiles.push(path.join(dir, file))};
-        };
-
-      this.errorCount++;
-      return false};
-  async testScript(filePath) {}
-    try {}"`;
-      const { stdout, stderr } = await execAsync(`node -c "${filePath}"`, { "timeout": 5000 }")
-});"
-
->>>>>>> origin/chore/fix-lint-and-merge
       const wasFixed = await this.fixScriptFile(scriptFile);
       // Test the script;
       const testResult = await this.testScript(scriptFile);
       testedCount++;
-<<<<<<< HEAD
       
       if (testResult.success) {}
         await this.log(`✓ Syntax OK": ${path.basename(scriptFile)}`)} else {`}
@@ -124,35 +102,8 @@ if (require.main === module) {}
   const fixer = new SimpleScriptFixer();
   fixer.run().catch(console.error)}
 
-=======
 
-    await this.log(`Script fixing completed. Fixed ${this.fixedCount} scripts, found ${this.errorCount} errors`);"
-    return { "fixed": this.fixedCount, "errors": this.errorCount, "total": scriptFiles.length }};"
-// Run the fixer;
-if (require.main === module) {}
-  const fixer = new SimpleScriptFixer();
-  fixer.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = SimpleScriptFixer;
-module.exports = SimpleScriptFixer;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 module.exports = SimpleScriptFixer;
 "`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-module.exports = SimpleScriptFixer;
-=======
-module.exports = SimpleScriptFixer;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

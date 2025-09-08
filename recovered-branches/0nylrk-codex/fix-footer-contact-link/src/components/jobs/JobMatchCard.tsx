@@ -4,7 +4,10 @@
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from 'react';
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
@@ -124,6 +127,7 @@ interface JobMatchProps {;
 
   return (
 
+<<<<<<< HEAD
 
         {/* Talent details */}
         <div className="p-4">;
@@ -193,18 +197,149 @@ interface JobMatchProps {;
 
 
 
+=======
+          </Badge>
+        </div>
+        {/* Talent details */}
+        <div className="p-4">
+          <div className="flex justify-between items-start gap-2 mb-3">
+            <h3 className="text-lg font-bold line-clamp-2">{name}</h3>
+            <Badge variant="default">
+              Available
+            </Badge>
+          </div>
+          <div className="text-lg font-medium mb-2">{title}</div>
+          <div className="flex flex-wrap gap-2 mb-3">
+            <Badge variant="outline">{category}</Badge>
+          </div>
+          <div className="flex items-center gap-2 mb-2">
+            <Avatar className="h-6 w-6">
+              {avatar ? (
+                <AvatarImage src={avatar} alt={name} />
+              ) : (
+                <AvatarFallback>
+                  <Building className="h-3 w-3" />
+                </AvatarFallback>
+              )}
+            </Avatar>
+            <span className="text-sm font-medium">{company |'Independent'}</span>
+          </div>
+          <div className="space-y-1 text-sm text-muted-foreground mb-3">
+            <div className="flex items-center gap-1">
+              <MapPin className="h-3.5 w-3.5" />
+              <span>{location |'Remote'}</span>
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-1 mb-4">
+            {skills?.slice(0, 5).map((skill) => (
+              <Badge key={skill} variant="secondary" className="text-xs">
+                {skill}
+              </Badge>
+            ))}
+          </div>
+          <div className="flex gap-2 justify-end">
+            {onInvite && (
+              <Button onClick={handleInvite} variant="default" size="sm">
+                Invite
+              </Button>
+            )}
+            {onViewDetails && (
+              <Button onClick={handleViewDetails} variant="outline" size="sm">
+                View Details
+              </Button>
+            )}
+            {onApply && (
+              <Button onClick={handleApply} className="w-full">
+                Apply Now
+              </Button>
+            )}
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
+            {formatDistanceToNow(postedDate, { addSuffix: true })}
+          </Badge>
+        </div>
+        {/* Talent details */}
+        <div className="p-4">
+          <div className="flex justify-between items-start gap-2 mb-3">
+            <h3 className="text-lg font-bold line-clamp-2">{name}</h3>
+            <Badge variant="default">
+              Available
+            </Badge>
+          </div>
+          <div className="text-lg font-medium mb-2">{title}</div>
+          <div className="flex flex-wrap gap-2 mb-3">
+            <Badge variant="outline">{category}</Badge>
+          </div>
+          <div className="flex items-center gap-2 mb-2">
+            <Avatar className="h-6 w-6">
+              {avatar ? (
+                <AvatarImage src={avatar} alt={name} />
+              ) : (
+                <AvatarFallback>
+                  <Building className="h-3 w-3" />
+                </AvatarFallback>
+              )}
+            </Avatar>
+            <span className="text-sm font-medium">{company |'Independent'}</span>
+          </div>
+          <div className="space-y-1 text-sm text-muted-foreground mb-3">
+            <div className="flex items-center gap-1">
+              <MapPin className="h-3.5 w-3.5" />
+              <span>{location |'Remote'}</span>
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-1 mb-4">
+            {skills?.slice(0, 5).map((skill) => (
+              <Badge key={skill} variant="secondary" className="text-xs">
+                {skill}
+              </Badge>
+            ))}
+          </div>
+          <div className="flex gap-2 justify-end">
+            {onInvite && (
+              <Button onClick={handleInvite} variant="default" size="sm">
+                Invite
+              </Button>
+            )}
+            {onViewDetails && (
+              <Button onClick={handleViewDetails} variant="outline" size="sm">
+                View Details
+              </Button>
+            )}
+            {onApply && (
+              <Button onClick={handleApply} className="w-full">
+                Apply Now
+              </Button>
+            )}
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
 
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+}
+
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -246,6 +381,7 @@ interface JobMatchProps {}
           <div className="flex justify - between items - start gap - 2 mb - 3">;
             <h3 className="text - lg font - bold line - clamp - 2">{name}</h3>;
 
+<<<<<<< HEAD
 import React from 'react',;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -273,3 +409,94 @@ interface JobMatchProps {;
 
 
 
+=======
+          ;
+          <div className="text-lg font-medium mb-2">{title}</div>;
+          ;
+          <div className="flex flex-wrap gap-2 mb-3">;
+            <Badge variant="outline">{category}</Badge>;
+          </div>;
+          ;
+          <div className="flex items-center gap-2 mb-2">;
+            <Avatar className="h-6 w-6">;
+              {avatar ? (;
+                <AvatarImage src={avatar} alt={name} />;
+              ) :(;
+                <AvatarFallback>;
+                  <Building className="h-3 w-3" />;
+                </AvatarFallback>;
+              )}
+            </Avatar>;
+            <span className="text-sm font-medium">{company || 'Independent'}</span>;
+          </div>;
+          ;
+          <div className="space-y-1 text-sm text-muted-foreground mb-3">;
+            <div className="flex items-center gap-1">;
+              <MapPin className="h-3.5 w-3.5" />;
+              <span>{location || 'Remote'}</span>;
+            </div>;
+          </div>;
+          ;
+          <div className="flex flex-wrap gap-1 mb-4">;
+            {skills?.slice(0, 5).map((skill) => (;
+              <Badge key={skill} variant="secondary" className="text-xs">;
+                {skill}
+              </Badge>;
+            ))}
+          </div>;
+          ;
+          <div className="flex gap-2 justify-end">;
+            {onInvite && (;
+              <Button onClick={handleInvite} variant="default" size="sm">;
+                Invite;
+              </Button>;
+            )}
+            {onViewDetails && (;
+              <Button onClick={handleViewDetails} variant="outline" size="sm">;
+                View Details;
+              </Button>;
+            )}
+            {onApply && (;
+              <Button onClick={handleApply} className="w-full">;
+                Apply Now;
+              </Button>;
+            )}
+          </div>;
+        </div>;
+      </CardContent>;
+    </Card>;
+  ),; interface JobMatchProps {
+  matchId: string;
+talentId: string;
+name: string;
+title: string;
+company: string;
+avatar: string;
+location: string;
+category: string;
+matchPercent: number;
+skills: string[];
+onApply?: (matchId: string) => void;
+onViewDetails?: (matchId: string) => void;
+onInvite?: (matchId: string) => void 
+}export function JobMatchCard ({
+  matchId;
+talentId;
+name;
+title;
+company;
+avatar;
+location;
+category;
+matchPercent;
+skills;
+onApply;
+onViewDetails;
+onInvite 
+}: JobMatchProps) {
+  const handleApply = () => {
+  if (onApply) {
+  onApply (matchId) 
+}
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba

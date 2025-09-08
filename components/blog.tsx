@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import React from 'react';
 
@@ -14,6 +15,8 @@ export default function BlogPage() {
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         canonical='https://ziontechgroup.com/blog/'
       />
       <div className='container mx-auto px-4 py-16 text-white'    />
@@ -26,10 +29,20 @@ articles are published regularly. For press or guest posts, contact;
 kleber@ziontechgroup.com.
         </p>
       </div>
+<<<<<<< HEAD
 
 
     </UltraFuturisticBackground>
 
+=======
+    </UltraFuturisticBackground>
+
+  );export default function BlogPage() {
+    </UltraFuturisticBackground>;
+    </UltraFuturisticBackground>
+  );export default function BlogPage() {
+export default function BlogPage() {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <UltraFuturisticBackground intensity="high" variant="quantum">
       <SEO title="Blog | Zion Tech Group" description="Insights and updates on AI, cloud, and automation." canonical="https://ziontechgroup.com/blog/" />
@@ -41,8 +54,11 @@ kleber@ziontechgroup.com.
   );
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 }
 
@@ -52,6 +68,13 @@ kleber@ziontechgroup.com.
 
 
 
+<<<<<<< HEAD
 
 
 
+=======
+}
+    </UltraFuturisticBackground>
+  )
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

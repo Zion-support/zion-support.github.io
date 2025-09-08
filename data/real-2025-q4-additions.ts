@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -108,23 +109,259 @@
 
 
 
+=======
+export interface Q4Service {
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular?: boolean,
+  icon?: string,
+  color?: string,
+  textColor?: string,
+  link: string,
+  marketPosition?: string,
+  targetAudience?: string,
+  trialDays?: number,
+  setupTime?: string,
+  category: string,
+  realService: boolean,
+  technology?: string[],
+  integrations?: string[],
+  useCases?: string[],
+  roi?: string,
+  competitors?: string[],
+  marketSize?: string,
+  growthRate?: string,
+  variant?: string,
+  contactInfo?: {
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  realImplementation: boolean,
+  implementationDetails?: string,
+  launchDate?: string,
+  customers?: number,
+  rating?: number,
+  reviews?: number
+}
+
+const contact = $2;
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
+
+export const realQ4Services2025: RealQ4Service[] = [
+	{
+		id: 'affiliate-marketing-hub',
+		name: 'Affiliate Marketing Hub',
+		tagline: 'Track affiliates, prevent fraud, and automate payouts',
+		price: '$99',
+		period: '/month',
+		description: 'Full-stack affiliate tracking with multi-touch attribution, fraud detection, and automated commissions. Built for SMB e-commerce and content sites.',
+		features: [
+			'Multi-channel attribution and cookie-less trackingFraud rules, device fingerprinting, IP reputation checksCustomizable commission structures and tiersAutomated payouts and tax form collectionShareable links, coupons, and influencer codesPartner portal and real-time analytics'
+		],
+		popular: true,
+		icon: '🔗',
+		color: 'from-violet-600 to-fuchsia-700',
+		textColor: 'text-fuchsia-400',
+		link: 'https://ziontechgroup.com/services/affiliate-marketing-hub',
+		marketPosition: 'Comparable to Refersion and LeadDyno, stronger fraud prevention and flexible payouts.',
+		targetAudience: 'E-commerce stores, marketplaces, media sites',
+		trialDays: 14,
+		setupTime: '1 day',
+		category: 'Developer Tools',
+		realService: true,
+		technology: ['Next.jsNode.jsPostgreSQLRedis'],
+		integrations: ['ShopifyWooCommerceStripePayPal'],
+		useCases: ['Affiliate programsInfluencer trackingPartnership analytics'],
+		roi: 'Increase attributed sales 10–25% with optimized partnerships.',
+		competitors: ['RefersionLeadDynoTapfiliate'],
+		marketSize: '$1.5B affiliate software',
+		growthRate: '15% YoY',
+		variant: 'ai-futuristic',
+		contactInfo: contact,
+		realImplementation: true,
+		implementationDetails: 'Server-side tracking with webhook ingestion and fraud-scoring pipeline.',
+		launchDate: '2025-10-01',
+		customers: 120,
+		rating: 4.7,
+		reviews: 48},
+	{
+		id: 'podcast-transcription-studio',
+		name: 'Podcast Transcription Studio',
+		tagline: 'Fast, accurate multi-speaker transcriptions with summaries',
+		price: '$29',
+		period: '/month',
+		description: 'Upload audio and receive punctuated transcripts, speaker diarization, show notes, and SEO-optimized summaries.',
+		features: [
+			'Multi-speaker diarizationTimestamps and filler removalChapter detection and show notesEmbeddings and semantic searchExport to SRT, VTT, DOCXPodcast platform integrations'
+		],
+		popular: false,
+		icon: '🎧',
+		color: 'from-cyan-600 to-blue-700',
+		textColor: 'text-cyan-400',
+		link: 'https://ziontechgroup.com/services/podcast-transcription-studio',
+		marketPosition: 'Competitive with Otter and Descript, better show notes and SEO summary pipeline.',
+		targetAudience: 'Podcasters, media teams, agencies',
+		trialDays: 7,
+		setupTime: '10 minutes',
+		category: 'AI & Data',
+		realService: true,
+		technology: ['Whisper Large v3Next.jsNode.js'],
+		integrations: ['SpotifyApple PodcastsYouTube'],
+		useCases: ['TranscriptsSEO summariesEpisode search'],
+		roi: 'Save 4–8 hours per episode and improve SEO traffic.',
+		competitors: ['OtterDescriptRev'],
+		marketSize: '$500M transcription tools',
+		growthRate: '20% YoY',
+		variant: 'ai-futuristic',
+		contactInfo: contact,
+		realImplementation: true,
+		implementationDetails: 'Batch transcription queue with GPU support, diarization and summarization pipeline.',
+		launchDate: '2025-09-15',
+		customers: 60,
+		rating: 4.6,
+		reviews: 22},
+	{
+		id: 'micro-crm-local-business',
+		name: 'Micro CRM for Local Business',
+		tagline: 'Simple contacts, pipelines, and reminders that just work',
+		price: '$19',
+		period: '/month',
+		description: 'Lightweight, mobile-first CRM with contacts, tasks, deals, and SMS/email reminders. Built for solo and small teams.',
+		features: [
+			'Contact management and segmentationPipelines and kanban viewsCalendar with SMS/email remindersImport/export CSV and simple APIMobile-friendly PWABasic reporting'
+		],
+		popular: true,
+		icon: '📇',
+		color: 'from-emerald-600 to-teal-700',
+		textColor: 'text-emerald-400',
+		link: 'https://ziontechgroup.com/services/micro-crm-local-business',
+		marketPosition: 'Simpler than HubSpot/Zoho, fast and focused for local SMBs.',
+		targetAudience: 'Local businesses, consultants, freelancers',
+		trialDays: 14,
+		setupTime: '15 minutes',
+		category: 'Developer Tools',
+		realService: true,
+		technology: ['Next.jsSQLite/PostgresTwilio'],
+		integrations: ['GmailOutlookStripe'],
+		useCases: ['LeadsFollow-upsDeal tracking'],
+		roi: 'Increase follow-through and close rates 10–20% via reminders.',
+		competitors: ['HubSpot StarterZoho CRMPipedrive'],
+		marketSize: '$5B SMB CRM',
+		growthRate: '12% YoY',
+		variant: 'ai-futuristic',
+		contactInfo: contact,
+		realImplementation: true,
+		implementationDetails: 'PWA with offline storage, task reminders, and webhook-based integrations.',
+		launchDate: '2025-10-20',
+		customers: 210,
+		rating: 4.5,
+		reviews: 77},
+	{
+		id: 'returns-automation-saas',
+		name: 'E‑commerce Returns Automation',
+		tagline: 'Self-serve returns portal and automated labels',
+		price: '$49',
+		period: '/month',
+		description: 'Plug-and-play returns workflows with label generation, RMA approvals, and status tracking for Shopify/WooCommerce.',
+		features: [
+			'Customer returns portalPrepaid label generationRMA approval rulesInventory and refund syncEmail/SMS notificationsAnalytics on reasons and cost'
+		],
+		popular: false,
+		icon: '📦',
+		color: 'from-amber-600 to-orange-700',
+		textColor: 'text-amber-400',
+		link: 'https://ziontechgroup.com/services/returns-automation-saas',
+		marketPosition: 'Competes with Returnly/Loop, quick setup for SMBs.',
+		targetAudience: 'DTC brands, Shopify/WooCommerce stores',
+		trialDays: 14,
+		setupTime: '2 hours',
+		category: 'Developer Tools',
+		realService: true,
+		technology: ['Next.jsNode.jsStripeShippo'],
+		integrations: ['ShopifyWooCommerceShippoStripe'],
+		useCases: ['Returns portalExchange workflowsRefund automation'],
+		roi: 'Reduce support tickets ~30% and speed refunds.',
+		competitors: ['Loop ReturnsReturnly'],
+		marketSize: '$800M returns software',
+		growthRate: '18% YoY',
+		variant: 'ai-futuristic',
+		contactInfo: contact,
+		realImplementation: true,
+		implementationDetails: 'Webhook-driven order sync, label/provider adapters.',
+		launchDate: '2025-10-05',
+		customers: 95,
+		rating: 4.6,
+		reviews: 35},
+	{
+		id: 'it-helpdesk-for-msps',
+		name: 'IT Helpdesk for MSPs',
+		tagline: 'Ticketing, SLAs, and client portal built for MSPs',
+		price: '$149',
+		period: '/month',
+		description: 'Email/portal/API ticketing, SLA rules, KBs, and RMM/network integrations with client-facing reporting.',
+		features: [
+			'Inbox and portal ticket intakeAuto-routing, SLAs, and escalationsPublic/private knowledge baseClient portal with reportsRMM and network tool integrationsBilling export and time tracking'
+		],
+		popular: true,
+		icon: '🛠️',
+		color: 'from-blue-600 to-indigo-700',
+		textColor: 'text-indigo-400',
+		link: 'https://ziontechgroup.com/services/it-helpdesk-for-msps',
+		marketPosition: 'Simpler than Zendesk/Freshdesk, MSP-first workflows and pricing.',
+		targetAudience: 'Managed service providers, internal IT teams',
+		trialDays: 14,
+		setupTime: '1 day',
+		category: 'Quality & Monitoring',
+		realService: true,
+		technology: ['Next.jsNode.jsPostgreSQL'],
+		integrations: ['ZendeskFreshdeskDatadogGrafana'],
+		useCases: ['IT supportSLA managementClient reporting'],
+		roi: 'Faster resolution, less toil, better client satisfaction.',
+		competitors: ['ZendeskFreshdeskHaloPSA'],
+		marketSize: '$10B helpdesk software',
+		growthRate: '10% YoY',
+		variant: 'ai-futuristic',
+		contactInfo: contact,
+		realImplementation: true,
+		implementationDetails: 'Email ingestion, rules engine, and portal with RBAC.',
+		launchDate: '2025-09-28',
+		customers: 70,
+		rating: 4.5,
+		reviews: 28}
+],
+export const real2025Q4Additions = $2;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     name: 'AI-Governed RAG Platform',
     tagline: 'Enterprise-grade RAG with guardrails, approvals, and evals',
     price: '$699',
     period: '/month',
     description: 'Production-ready retrieval augmented generation with content pipelines, PII redaction, policy guardrails, evals, and human approvals for high-stakes workflows.',
     features: [
+<<<<<<< HEAD
 
       'Document sync and chunking pipelinesMetadata and policy guardrails',
       'Evals and drift trackingHuman-in-the-loop approvals',
       'Observability and cost capsSDKs for Node/Python'
 
+=======
+      'Document sync and chunking pipelinesMetadata and policy guardrailsEvals and drift trackingHuman-in-the-loop approvalsObservability and cost capsSDKs for Node/Python'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     ],
     popular: true,
     icon: '🧠',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: `https://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
+<<<<<<< HEAD
 
 
     marketPosition: 'Safer alternative to DIY RAG, comparable to Guardrails/Evals + vector DB stacks.',
@@ -210,6 +447,8 @@
     rating: 4 && 4.6,
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     marketPosition: 'Safer alternative to DIY RAG, comparable to Guardrails/Evals + vector DB stacks.',
     targetAudience: 'Platform, data, and compliance teams',
     trialDays: 14,
@@ -230,10 +469,14 @@
     launchDate: '2025-03-01',
     customers: 18,
     rating: 4.8,
+<<<<<<< HEAD
 
     reviews: 11
   },
 
+=======
+    reviews: 11},
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   {
     id: 'edge-personalization-engine',
     name: 'Edge Personalization Engine',
@@ -242,11 +485,15 @@
     period: '/month',
     description: 'Low-latency personalization rules and ML scoring at the edge with audience definitions, A/B tests, and analytics.',
     features: [
+<<<<<<< HEAD
 
       'Audience builder and traitsEdge functions and KV cache',
       'A/B and holdout testsPrivacy-first scoring',
       'Dashboards and exports'
 
+=======
+      'Audience builder and traitsEdge functions and KV cacheA/B and holdout testsPrivacy-first scoringDashboards and exports'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     ],
     popular: true,
     icon: '⚡',
@@ -273,10 +520,14 @@
     launchDate: '2025-03-10',
     customers: 42,
     rating: 4.6,
+<<<<<<< HEAD
 
     reviews: 23
   },
 
+=======
+    reviews: 23},
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   {
     id: 'devx-preview-environments',
     name: 'DevX Preview Environments',
@@ -285,11 +536,15 @@
     period: '/month',
     description: 'Spin up ephemeral environments per PR with seed data, smoke tests, screenshots, and teardown policies.',
     features: [
+<<<<<<< HEAD
 
       'One-PR one-env automationSeed data and fixtures',
       'Smoke tests and screenshotsSecrets and policies as code',
       'Cost and TTL controls'
 
+=======
+      'One-PR one-env automationSeed data and fixturesSmoke tests and screenshotsSecrets and policies as codeCost and TTL controls'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     ],
     icon: '🚀',
     color: 'from-blue-600 to-indigo-700',
@@ -315,10 +570,14 @@
     launchDate: '2025-03-05',
     customers: 27,
     rating: 4.7,
+<<<<<<< HEAD
 
     reviews: 16
   },
 
+=======
+    reviews: 16},
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   {
     id: 'real-time-log-anomaly-guard',
     name: 'Real-time Log Anomaly Guard',
@@ -327,11 +586,15 @@
     period: '/month',
     description: 'Stream logs to detect anomalies, regressions, and hotspots with LLM summaries and remediation hints.',
     features: [
+<<<<<<< HEAD
 
       'Streaming ingestion and rulesAnomaly detection and drift',
       'LLM summaries and hintsSlack/Email alerts and tickets',
       'Dashboards and exports'
 
+=======
+      'Streaming ingestion and rulesAnomaly detection and driftLLM summaries and hintsSlack/Email alerts and ticketsDashboards and exports'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     ],
     icon: '📈',
     color: 'from-rose-600 to-red-700',
@@ -357,10 +620,14 @@
     launchDate: '2025-03-08',
     customers: 33,
     rating: 4.5,
+<<<<<<< HEAD
 
     reviews: 19
   },
 
+=======
+    reviews: 19},
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   {
     id: 'governed-feature-flags',
     name: 'Governed Feature Flags',
@@ -369,11 +636,15 @@
     period: '/month',
     description: 'Lightweight feature flags with policy checks, approvals, change logs, and automatic rollbacks based on SLOs.',
     features: [
+<<<<<<< HEAD
 
       'Policies and approvalsChange logs and RBAC',
       'SLO-based rollbacksSDKs and edge eval',
       'Experiments and cohorts'
 
+=======
+      'Policies and approvalsChange logs and RBACSLO-based rollbacksSDKs and edge evalExperiments and cohorts'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     ],
     icon: '🏳️',
     color: 'from-amber-600 to-orange-700',
@@ -399,10 +670,14 @@
     launchDate: '2025-03-02',
     customers: 21,
     rating: 4.6,
+<<<<<<< HEAD
 
     reviews: 12
   },
 
+=======
+    reviews: 12},
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   {
     id: 'email-sequence-copilot',
     name: 'Email Sequence Copilot',
@@ -411,11 +686,15 @@
     period: '/month',
     description: 'Compose, schedule, and monitor outbound sequences with domain warm-up, safety guardrails, and reply intent scoring.',
     features: [
+<<<<<<< HEAD
 
       'Sequence composer and AI draftWarm-up and safety checks',
       'Reply intent and routingBlacklist monitoring',
       'CRM sync'
 
+=======
+      'Sequence composer and AI draftWarm-up and safety checksReply intent and routingBlacklist monitoringCRM sync'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     ],
     icon: '✉️',
     color: 'from-fuchsia-600 to-pink-700',
@@ -441,10 +720,14 @@
     launchDate: '2025-03-12',
     customers: 38,
     rating: 4.5,
+<<<<<<< HEAD
 
     reviews: 20
   },
 
+=======
+    reviews: 20},
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   {
     id: 'data-contracts-guardrails',
     name: 'Data Contracts Guardrails',
@@ -453,11 +736,15 @@
     period: '/month',
     description: 'Define and enforce data contracts with compatibility checks, lineage, owners, and alerting integrated with CI/CD.',
     features: [
+<<<<<<< HEAD
 
       'Schema registry and versioningBack/forward compatibility checks',
       'Lineage and ownershipAlerts and SLOs',
       'CI/CD integrations'
 
+=======
+      'Schema registry and versioningBack/forward compatibility checksLineage and ownershipAlerts and SLOsCI/CD integrations'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     ],
     icon: '🧮',
     color: 'from-sky-600 to-indigo-700',
@@ -483,10 +770,14 @@
     launchDate: '2025-03-03',
     customers: 12,
     rating: 4.6,
+<<<<<<< HEAD
 
     reviews: 9
   },
 
+=======
+    reviews: 9},
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   {
     id: 'managed-sso-fast-track',
     name: 'Managed SSO Fast Track',
@@ -495,10 +786,14 @@
     period: '/fixed',
     description: 'Done-with-you SSO rollout for SaaS teams, including IdP app, mappings, SCIM, test plans, and enterprise-ready documentation.',
     features: [
+<<<<<<< HEAD
 
       'Okta/Entra app configsSAML/OIDC + SCIM',
       'Security test plansCustomer enablement kit'
 
+=======
+      'Okta/Entra app configsSAML/OIDC + SCIMSecurity test plansCustomer enablement kit'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     ],
     icon: '🔐',
     color: 'from-slate-600 to-gray-700',
@@ -524,10 +819,14 @@
     launchDate: '2025-03-06',
     customers: 9,
     rating: 4.7,
+<<<<<<< HEAD
 
     reviews: 7
   },
 
+=======
+    reviews: 7},
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   {
     id: 'ai-sales-pipeline-insights',
     name: 'AI Sales Pipeline Insights',
@@ -536,10 +835,14 @@
     period: '/month',
     description: 'Connect CRM to compute forecast hygiene, risk scores, and next-best actions with weekly reports and alerts.',
     features: [
+<<<<<<< HEAD
 
       'Risk scoring and hygiene checksStage SLAs and alerts',
       'Next-best action copilotReporting and dashboards'
 
+=======
+      'Risk scoring and hygiene checksStage SLAs and alertsNext-best action copilotReporting and dashboards'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     ],
     icon: '📊',
     color: 'from-amber-600 to-orange-700',
@@ -565,10 +868,14 @@
     launchDate: '2025-03-04',
     customers: 14,
     rating: 4.5,
+<<<<<<< HEAD
 
     reviews: 10
   },
 
+=======
+    reviews: 10},
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   {
     id: 'secure-webhook-relay',
     name: 'Secure Webhook Relay',
@@ -577,11 +884,15 @@
     period: '/month',
     description: 'Reliably receive, verify, replay, and audit webhooks with DLQs, retries, and fan-out to multiple services.',
     features: [
+<<<<<<< HEAD
 
       'Signature verification and secretsReplay and DLQs',
       'Retries and backoffFan-out and transformations',
       'Audit logs and RBAC'
 
+=======
+      'Signature verification and secretsReplay and DLQsRetries and backoffFan-out and transformationsAudit logs and RBAC'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     ],
     icon: '🔁',
     color: 'from-cyan-600 to-blue-700',
@@ -607,10 +918,14 @@
     launchDate: '2025-03-09',
     customers: 31,
     rating: 4.6,
+<<<<<<< HEAD
 
     reviews: 18
   },
 
+=======
+    reviews: 18},
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   {
     id: 'managed-postgres-ha-lite',
     name: 'Managed Postgres HA Lite',
@@ -619,10 +934,14 @@
     period: '/month',
     description: 'Hands-off Postgres ops: backups, PITR, failover drills, index maintenance, and baseline dashboards.',
     features: [
+<<<<<<< HEAD
 
       'Automated backups and PITRFailover drills and runbooks',
       'Index and bloat maintenancePerformance dashboards'
 
+=======
+      'Automated backups and PITRFailover drills and runbooksIndex and bloat maintenancePerformance dashboards'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     ],
     icon: '🗄️',
     color: 'from-emerald-600 to-teal-700',
@@ -648,8 +967,13 @@
     launchDate: '2025-03-11',
     customers: 17,
     rating: 4.6,
+<<<<<<< HEAD
 
     reviews: 9
   }
 ];
 
+=======
+    reviews: 9}
+],
+>>>>>>> origin/cursor/delete-old-data-records-6bba

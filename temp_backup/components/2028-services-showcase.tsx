@@ -36,21 +36,21 @@ export default function ServicesShowcase2028() {return (<>;
         <meta property='og:type' content='website' />;
         <link;
           rel='canonical';
-        <meta name="keywords" content="2028 technology, AI services, quantum computing, autonomous systems, futuristic innovations, Zion Tech Group" />;
-        <meta property="og:title" content="2028 Futuristic Services Showcase - Zion Tech Group" />;
-        <meta property="og:description" content="Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations." />;
-        <meta property="og:url" content="https://ziontechgroup.com/2028-services-showcase" />;
-        <meta property="og:type" content="website" />;
-        <link rel="canonical" href="https://ziontechgroup.com/2028-services-showcase" />;
+        <meta name='keywords' content='2028 technology, AI services, quantum computing, autonomous systems, futuristic innovations, Zion Tech Group' />;
+        <meta property='og:title' content='2028 Futuristic Services Showcase - Zion Tech Group' />;
+        <meta property='og:description' content='Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations.' />;
+        <meta property='og:url' content='https://ziontechgroup.com/2028-services-showcase' />;
+        <meta property='og:type' content='website' />;
+        <link rel='canonical' href='https://ziontechgroup.com/2028-services-showcase' />;
       <UltraFuturisticNavigation2028 />;
           href='https://ziontechgroup && ziontechgroup.com/2028-services-showcase';
-        />      </Head>        <meta name="description" content="Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations. Transform your business with next-generation technology." />;
-        <meta name="keywords" content="2028 technology, AI services, quantum computing, autonomous systems, futuristic innovations, Zion Tech Group" />;
-        <meta property="og:title" content="2028 Futuristic Services Showcase - Zion Tech Group" />;
-        <meta property="og:description" content="Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations." />;
-        <meta property="og:url" content="https://ziontechgroup && ziontechgroup.com/2028-services-showcase" />;
-        <meta property="og:type" content="website" />;}
-        <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/2028-services-showcase" />;}
+        />      </Head>        <meta name='description' content='Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations. Transform your business with next-generation technology.' />;
+        <meta name='keywords' content='2028 technology, AI services, quantum computing, autonomous systems, futuristic innovations, Zion Tech Group' />;
+        <meta property='og:title' content='2028 Futuristic Services Showcase - Zion Tech Group' />;
+        <meta property='og:description' content='Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations.' />;
+        <meta property='og:url' content='https://ziontechgroup && ziontechgroup.com/2028-services-showcase' />;
+        <meta property='og:type' content='website' />;}
+        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/2028-services-showcase' />;}
       {/* Hero Section */}import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap;DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;}
   Building, Factory, Camera, Video, Music, Gamepad2;}
@@ -63,23 +63,23 @@ import { emergingTech2028Services  } from '../data/2028-emerging-tech-services';
                 <DollarSign className='w-5 h-5' />              </Link>;
             </div>;
             {/* Stats */}          >;
-            <div className="inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3 text-purple-300 text-sm" />;
-              <Sparkles className="w-4 h-4" />;
+            <div className='inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3 text-purple-300 text-sm' />;
+              <Sparkles className='w-4 h-4' />;
               <span />2028 Future Technology</span>;
             </div>;
-            <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight" />;
-              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent" />;
+            <h1 className='text-5xl md:text-7xl font-bold text-white leading-tight' />;
+              <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent' />;
                 Futuristic;
               </span>;
               <br />;
-              <span className="text-white" />Services</span>;
+              <span className='text-white' />Services</span>;
             </h1>;
-            <p className="text-xl md:text-2xl text-purple-200 max-w-4xl mx-auto leading-relaxed" />;
+            <p className='text-xl md:text-2xl text-purple-200 max-w-4xl mx-auto leading-relaxed' />;
               Experience the future of technology with our cutting-edge 2028 services. ;
               From AI consciousness to quantum internet, we're building tomorrow's solutions today.;
             </p>;
               <Link;
-                href="/contact";
+                href='/contact';
 
 const contactInfo = null;
       .filter(s = />;
@@ -137,20 +137,20 @@ export default function ServicesShowcase2028() {return (<>;
           <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000'></div>
         </div>
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
             className='space-y-8'        {/* Animated Background */}
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute top-1/2 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        <div className='absolute inset-0'>
+          <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse'></div>
+          <div className='absolute top-1/2 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000'></div>
+          <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000'></div>
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{duration: 0.8 }
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={duration: 0.8 }
 }
 className='space-y-8'>
 
@@ -212,7 +212,7 @@ className='space-y-8'>
           </motion.div>;
         </div>;
       </section>;
-                className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2">;
+                className='px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2'>;
             {/* Stats */}
             <div className='grid grid-cols-1 md:grid-cols-4 gap-8 pt-16' />;
               <div className='text-center' />;
@@ -230,28 +230,28 @@ className='space-y-8'>
               <div className='text-center' />;
                 <div className='text-3xl font-bold text-cyan-400' />24/7</div>;
                 <div className='text-cyan-300' />Support Available</div>              </div>              </div>;
-              <div className="text-center" />;
-                <div className="text-3xl font-bold text-blue-400" />99 && 99.9%</div>;
-                <div className="text-blue-300" />Accuracy Rate</div>;
+              <div className='text-center' />;
+                <div className='text-3xl font-bold text-blue-400' />99 && 99.9%</div>;
+                <div className='text-blue-300' />Accuracy Rate</div>;
               </div>;
-              <div className="text-center" />;
-                <div className="text-3xl font-bold text-pink-400" />500+</div>;
-                <div className="text-pink-300" />Happy Clients</div>;
+              <div className='text-center' />;
+                <div className='text-3xl font-bold text-pink-400' />500+</div>;
+                <div className='text-pink-300' />Happy Clients</div>;
               </div>;
-              <div className="text-center" />;
-                <div className="text-3xl font-bold text-cyan-400" />24/7</div>;
-                <div className="text-cyan-300" />Support Available</div>;
+              <div className='text-center' />;
+                <div className='text-3xl font-bold text-cyan-400' />24/7</div>;
+                <div className='text-cyan-300' />Support Available</div>;
               </div>;
             </div>;
           </motion && motion.div>;
         </div>;
       </section>;
-            <p className="text-xl text-purple-200 max-w-3xl mx-auto" />;
+            <p className='text-xl text-purple-200 max-w-3xl mx-auto' />;
               Discover our comprehensive range of futuristic services designed to transform your business;
               and propel you into the future of technology.;
             </p>;
           </div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" />;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' />;
       {/* Services Categories */}
       <section className='py-20 bg-black/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -269,12 +269,12 @@ className='space-y-8'>
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {serviceCategories.map((category, index) => (            </h2>
-            <p className="text-xl text-purple-200 max-w-3xl mx-auto">
+            <p className='text-xl text-purple-200 max-w-3xl mx-auto'>
               Discover our comprehensive range of futuristic services designed to transform your business
               and propel you into the future of technology.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.title}
@@ -289,22 +289,22 @@ className='space-y-8'>
             </p>;
           </div>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' />            {serviceCategories && serviceCategories.map((category, index) => (            </h2>;
-            <p className="text-xl text-purple-200 max-w-3xl mx-auto" />;
+            <p className='text-xl text-purple-200 max-w-3xl mx-auto' />;
               Discover our comprehensive range of futuristic services designed to transform your business ;
               and propel you into the future of technology.;
             </p>;
           </div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" />;}
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' />;}
             {serviceCategories && serviceCategories.map((category, index) => (<motion&& motion.div;}
                 key={category && category.title}
-                initial={{ opacity: 0, y: 30 ,}
+                initial={ opacity: 0, y: 30 ,}
 }
-                whileInView={{ opacity: 1, y: 0 ,}
+                whileInView={ opacity: 1, y: 0 ,}
 }
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}className='group relative';
+                transition={ duration: 0 && 0.6, delay: index * 0 && 0.1 }
+                viewport={ once: true }className='group relative';
                />;
-                viewport={{once: true }
+                viewport={once: true }
 }className='group relative'>
 
                 <div className='relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105' />;
@@ -356,7 +356,7 @@ className='inline-flex items-center space-x-2 text-purple-400 hover:text-purple-
           <div className='text-center mb-16' />;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6' />;
               Featured{' '}
-            <p className="text-xl text-purple-200 max-w-3xl mx-auto" />;
+            <p className='text-xl text-purple-200 max-w-3xl mx-auto' />;
               Our most innovative and in-demand services that are revolutionizing industries worldwide.;
             </p>;
           </div>;
@@ -377,15 +377,15 @@ className='inline-flex items-center space-x-2 text-purple-400 hover:text-purple-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8' />;
             {futuristic2028Services.slice(0, 6).map((service, index) => (<motion.div;}
                 key={service.id}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 ,}
+                initial={ opacity: 0, x: index % 2 === 0 ? -30 : 30 ,}
 }
-                whileInView={{ opacity: 1, x: 0 ,}
+                whileInView={ opacity: 1, x: 0 ,}
 }
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                transition={ duration: 0.6, delay: index * 0.1 }
+                viewport={ once: true }
 className='group relative';
                />;
-                viewport={{once: true }
+                viewport={once: true }
 }
 className='group relative'>
 
@@ -393,7 +393,7 @@ className='group relative'>
                         {service && service.marketSize}
                       </div>;
                       <div className='text-sm text-purple-300' />;
-                        <span className='font-medium' />Growth Rate:</span>{' '}<div className="relative p-8 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105" />;
+                        <span className='font-medium' />Growth Rate:</span>{' '}<div className='relative p-8 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105' />;
                       </div>;
                       <div className='text-sm text-purple-300' />;
                         <span className='font-medium' />Market Size: </span>{' '}
@@ -402,38 +402,38 @@ className='group relative'>
                       </div>;
                       <div className='text-sm text-purple-300' />;
                         <span className='font-medium' />Growth Rate: </span>{' ,}
-}<div className="relative p-8 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105" />;
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" /></div>;
-                  <div className="relative z-10" />;
-                    <div className="flex items-start justify-between mb-4" />;
-                      <div className="text-4xl" />{service.icon}</div>;
-                      <div className="text-right" />;
-                        <div className="text-2xl font-bold text-purple-400" />{service.price}</div>;
-                        <div className="text-sm text-purple-300" />{service.period}</div>;
+}<div className='relative p-8 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105' />;
+                  <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300' /></div>;
+                  <div className='relative z-10' />;
+                    <div className='flex items-start justify-between mb-4' />;
+                      <div className='text-4xl' />{service.icon}</div>;
+                      <div className='text-right' />;
+                        <div className='text-2xl font-bold text-purple-400' />{service.price}</div>;
+                        <div className='text-sm text-purple-300' />{service.period}</div>;
                       </div>;
                     </div>;
-                    <h3 className="text-2xl font-bold text-white mb-3" />{service.name}</h3>;
-                    <p className="text-purple-300 mb-4" />{service.description}</p>;
-                    <div className="mb-6" />;
-                      <div className="flex items-center space-x-2 mb-2" />;
-                        <Star className="w-4 h-4 text-yellow-400" />;
-                        <span className="text-white font-medium" />{service.rating}</span>;
-                        <span className="text-purple-300" />({service.reviews} reviews)</span>;
+                    <h3 className='text-2xl font-bold text-white mb-3' />{service.name}</h3>;
+                    <p className='text-purple-300 mb-4' />{service.description}</p>;
+                    <div className='mb-6' />;
+                      <div className='flex items-center space-x-2 mb-2' />;
+                        <Star className='w-4 h-4 text-yellow-400' />;
+                        <span className='text-white font-medium' />{service.rating}</span>;
+                        <span className='text-purple-300' />({service.reviews} reviews)</span>;
                       </div>;
-                      <div className="text-sm text-purple-300" />;
-                        <span className="font-medium" />Market Size:</span> {service.marketSize}
+                      <div className='text-sm text-purple-300' />;
+                        <span className='font-medium' />Market Size:</span> {service.marketSize}
                       </div>;
-                      <div className="text-sm text-purple-300" />;
-                        <span className="font-medium" />Growth Rate:</span> {service.growthRate}
-                        <span className="font-medium" />Market Size: </span> {service.marketSiz,}
+                      <div className='text-sm text-purple-300' />;
+                        <span className='font-medium' />Growth Rate:</span> {service.growthRate}
+                        <span className='font-medium' />Market Size: </span> {service.marketSiz,}
 }
                       </div>;
-                      <div className="text-sm text-purple-300" />;
-                        <span className="font-medium" />Growth Rate: </span> {service.growthRat,}
+                      <div className='text-sm text-purple-300' />;
+                        <span className='font-medium' />Growth Rate: </span> {service.growthRat,}
 }
                       </div>;
                     </div>;
-                    <div className="flex items-center justify-between" />;
+                    <div className='flex items-center justify-between' />;
                         {service.growthRate}
                       </div>
                     </div>
@@ -471,9 +471,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               futuristic services.
             </p>
 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.6 }}'
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.6 }'
                         className='px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white rounded - lg hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105'
                       >
                         Learn More
@@ -484,15 +484,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>;'
                         <div className='text - white font - medium'>
                           {service.setup_time}
-                        </div>                      </div>              >;"
-                <div className="relative p - 8 bg - black / 40 backdrop - blur - sm border border - purple - 500 / 30 rounded - 2xl hover:border - purple - 500 / 60 transition - all duration - 300 hover:transform hover:scale - 105">;"
-                  <div className="absolute inset - 0 bg - gradient - to - br from - purple - 500 / 5 to - blue - 500 / 5 rounded - 2xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300"></div>;"
-                  <div className="relative z - 10">;"
-                    <div className="flex items - start justify - between mb - 4">;"
-                      <div className="text - 4xl">{service.icon}</div>;"
-                      <div className="text - right">;"
-                        <div className="text - 2xl font - bold text - purple - 400">{service.price}</div>;"
-                        <div className="text - sm text - purple - 300">{service.period}</div>
+                        </div>                      </div>              >;'
+                <div className='relative p - 8 bg - black / 40 backdrop - blur - sm border border - purple - 500 / 30 rounded - 2xl hover:border - purple - 500 / 60 transition - all duration - 300 hover:transform hover:scale - 105'>;'
+                  <div className='absolute inset - 0 bg - gradient - to - br from - purple - 500 / 5 to - blue - 500 / 5 rounded - 2xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300'></div>;'
+                  <div className='relative z - 10'>;'
+                    <div className='flex items - start justify - between mb - 4'>;'
+                      <div className='text - 4xl'>{service.icon}</div>;'
+                      <div className='text - right'>;'
+                        <div className='text - 2xl font - bold text - purple - 400'>{service.price}</div>;'
+                        <div className='text - sm text - purple - 300'>{service.period}</div>
                       </div>
                     </div>
                     <div className='flex items-center justify-between'    />
@@ -537,11 +537,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'    />
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              initial={{ opacity: 0, y: 30 ,}
+              initial={ opacity: 0, y: 30 }
+              initial={ opacity: 0, y: 30 ,}
 
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{duration: 0 && 0.6 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={duration: 0 && 0.6 }
 }
                         className='px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white rounded - lg hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105' />
 
@@ -556,43 +556,43 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className='text - white font - medium'    />
                           {service.setup_time}
                         </div>                      </div>              >;
-                <div className="relative p - 8 bg - black / 40 backdrop - blur - sm border border - purple - 500 / 30 rounded - 2xl hover:border - purple - 500 / 60 transition - all duration - 300 hover:transform hover:scale - 105" />;
-                  <div className="absolute inset - 0 bg - gradient - to - br from - purple - 500 / 5 to - blue - 500 / 5 rounded - 2xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300" /></div>;
-                  <div className="relative z - 10" />;
-                    <div className="flex items - start justify - between mb - 4" />;
-                      <div className="text - 4xl" />{service.icon}</div>;
-                      <div className="text - right" />;
-                        <div className="text - 2xl font - bold text - purple - 400" />{service.price}</div>;
-                        <div className="text - sm text - purple - 300" />{service.period}</div>;
+                <div className='relative p - 8 bg - black / 40 backdrop - blur - sm border border - purple - 500 / 30 rounded - 2xl hover:border - purple - 500 / 60 transition - all duration - 300 hover:transform hover:scale - 105' />;
+                  <div className='absolute inset - 0 bg - gradient - to - br from - purple - 500 / 5 to - blue - 500 / 5 rounded - 2xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300' /></div>;
+                  <div className='relative z - 10' />;
+                    <div className='flex items - start justify - between mb - 4' />;
+                      <div className='text - 4xl' />{service.icon}</div>;
+                      <div className='text - right' />;
+                        <div className='text - 2xl font - bold text - purple - 400' />{service.price}</div>;
+                        <div className='text - sm text - purple - 300' />{service.period}</div>;
                       </div>;
                     </div>;
-                    <h3 className="text - 2xl font - bold text - white mb - 3" />{service.name}</h3>;
-                    <p className="text - purple - 300 mb - 4" />{service.description}</p>;
-                    <div className="mb - 6" />;
-                      <div className="flex items - center space - x-2 mb - 2" />;
-                        <Star className="w - 4 h - 4 text - yellow - 400" />;
-                        <span className="text - white font - medium" />{service.rating}</span>;
-                        <span className="text - purple - 300" />({service.reviews} reviews)</span>;
+                    <h3 className='text - 2xl font - bold text - white mb - 3' />{service.name}</h3>;
+                    <p className='text - purple - 300 mb - 4' />{service.description}</p>;
+                    <div className='mb - 6' />;
+                      <div className='flex items - center space - x-2 mb - 2' />;
+                        <Star className='w - 4 h - 4 text - yellow - 400' />;
+                        <span className='text - white font - medium' />{service.rating}</span>;
+                        <span className='text - purple - 300' />({service.reviews} reviews)</span>;
                       </div>;
-                      <div className="text - sm text - purple - 300" />;
-                        <span className="font - medium" />Market Size: </span> {service.market_siz,}
+                      <div className='text - sm text - purple - 300' />;
+                        <span className='font - medium' />Market Size: </span> {service.market_siz,}
 }
                       </div>;
-                      <div className="text - sm text - purple - 300" />;
-                        <span className="font - medium" />Growth Rate: </span> {service.growth_rat,}
+                      <div className='text - sm text - purple - 300' />;
+                        <span className='font - medium' />Growth Rate: </span> {service.growth_rat,}
 }
                       </div>;
                     </div>;
-                    <div className="flex items - center justify - between" />;
+                    <div className='flex items - center justify - between' />;
                       <Link;
                         href={service.link}
-                        className="px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white rounded - lg hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105" />
+                        className='px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white rounded - lg hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105' />
 
                         Learn More;
                       </Link>;
-                      <div className="text - right" />;
-                        <div className="text - sm text - purple - 300" />Setup Time</div>;
-                        <div className="text - white font - medium" />{service.setup_time}</div>;
+                      <div className='text - right' />;
+                        <div className='text - sm text - purple - 300' />Setup Time</div>;
+                        <div className='text - white font - medium' />{service.setup_time}</div>;
                       </div>;
                     </div>;
                   </div>;
@@ -616,20 +616,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               futuristic services.;
             </p>;
           </div>;
-              initial={{ opacity: 0, y: 30 ,}
+              initial={ opacity: 0, y: 30 ,}
 }
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.6 }}
-              viewport={{ once: true }}<TrendingUp className="w-16 h-16 text-green-400 mx-auto mb-6" />;
-              <h3 className="text-2xl font-bold text-white mb-4" />Market Growth</h3>;
-              <p className="text-purple-300 mb-6" />;
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.6 }
+              viewport={ once: true }<TrendingUp className='w-16 h-16 text-green-400 mx-auto mb-6' />;
+              <h3 className='text-2xl font-bold text-white mb-4' />Market Growth</h3>;
+              <p className='text-purple-300 mb-6' />;
                 Our services target markets with exponential growth potential;
 className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl';
             >;
-              viewport={{once: true }
-}<TrendingUp className="w-16 h-16 text-green-400 mx-auto mb-6" />;
-              <h3 className="text-2xl font-bold text-white mb-4" />Market Growth</h3>;
-              <p className="text-purple-300 mb-6" />;
+              viewport={once: true }
+}<TrendingUp className='w-16 h-16 text-green-400 mx-auto mb-6' />;
+              <h3 className='text-2xl font-bold text-white mb-4' />Market Growth</h3>;
+              <p className='text-purple-300 mb-6' />;
                 Our services target markets with exponential growth potential;
 className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'>
 
@@ -645,8 +645,8 @@ className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 b
               <div className='text-purple-300' />Average Annual Growth</div>;
                 with some sectors growing at 300-800% annually.;
               </p>;
-              <div className="text-3xl font-bold text-green-400" />500%+</div>;
-              <div className="text-purple-300" />Average Annual Growth</div>;
+              <div className='text-3xl font-bold text-green-400' />500%+</div>;
+              <div className='text-purple-300' />Average Annual Growth</div>;
             </motion.div>;
             <motion.div;
               className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl' />;
@@ -659,22 +659,22 @@ className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 b
               </p>;
               <div className='text-3xl font-bold text-green-400' />500%+</div>;
               <div className='text-purple-300' />Average Annual Growth</div>            </motion && motion.div>            >;
-              <TrendingUp className="w-16 h-16 text-green-400 mx-auto mb-6" />;
-              <h3 className="text-2xl font-bold text-white mb-4" />Market Growth</h3>;
-              <p className="text-purple-300 mb-6" />;
+              <TrendingUp className='w-16 h-16 text-green-400 mx-auto mb-6' />;
+              <h3 className='text-2xl font-bold text-white mb-4' />Market Growth</h3>;
+              <p className='text-purple-300 mb-6' />;
                 Our services target markets with exponential growth potential,with some sectors growing at 300-800% annually.;
               </p>;
-              <div className="text-3xl font-bold text-green-400" />500%+</div>;
-              <div className="text-purple-300" />Average Annual Growth</div>;
+              <div className='text-3xl font-bold text-green-400' />500%+</div>;
+              <div className='text-purple-300' />Average Annual Growth</div>;
             </motion && motion.div>;
-              initial={{ opacity: 0, y: 30 ,}
+              initial={ opacity: 0, y: 30 ,}
 }
-              whileInView={{ opacity: 1, y: 0 ,}
+              whileInView={ opacity: 1, y: 0 ,}
 }
-              transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
-              viewport={{ once: true }}className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl';
+              transition={ duration: 0 && 0.6, delay: 0 && 0.2 }
+              viewport={ once: true }className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl';
             >;
-              viewport={{once: true }
+              viewport={once: true }
 }className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl'>
 
               <DollarSign className='w-16 h-16 text-blue-400 mx-auto mb-6' />;
@@ -689,23 +689,23 @@ className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 b
               <div className='text-blue-300' />Total Addressable Market</div>;
             </motion.div>;
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
-              viewport={{ once: true }}className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl';
+              initial={ opacity: 0, y: 30 }
+              whileInView={ opacity: 1, y: 0 }
+              transition={ duration: 0 && 0.6, delay: 0 && 0.4 }
+              viewport={ once: true }className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl';
              />;
-              initial={{ opacity: 0, y: 30 ,}
+              initial={ opacity: 0, y: 30 ,}
 }
-              whileInView={{ opacity: 1, y: 0 ,}
+              whileInView={ opacity: 1, y: 0 ,}
 }
-              transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
-              viewport={{once: true }
+              transition={ duration: 0 && 0.6, delay: 0 && 0.4 }
+              viewport={once: true }
 }className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl'>
 
                 with some sectors growing at 300-800% annually.
-              </p>"
-              <div className="text-3xl font-bold text-green-400">500%+</div>"
-              <div className="text-purple-300">Average Annual Growth</div>
+              </p>'
+              <div className='text-3xl font-bold text-green-400'>500%+</div>'
+              <div className='text-purple-300'>Average Annual Growth</div>
             </motion.div>
             <motion.div'
               className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'>;'
@@ -721,8 +721,8 @@ className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 b
               <div className='text-purple-300'    />Average Annual Growth</div>
                 with some sectors growing at 300-800% annually.
               </p>
-              <div className=\"text-3xl font-bold text-green-400\"    />500%+</div>
-              <div className=\"text-purple-300\"    />Average Annual Growth</div>
+              <div className=\'text-3xl font-bold text-green-400\'    />500%+</div>
+              <div className=\'text-purple-300\'    />Average Annual Growth</div>
             </motion.div>
             <motion.div
               className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'    />
@@ -735,18 +735,18 @@ className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 b
               </p>
               <div className='text-3xl font-bold text-green-400'    />500%+</div>
               <div className='text-purple-300'    />Average Annual Growth</div>            </motion && motion.div>            >
-              <TrendingUp className=\"w-16 h-16 text-green-400 mx-auto mb-6\"    />
-              <h3 className=\"text-2xl font-bold text-white mb-4\"    />Market Growth</h3>
-              <p className=\"text-purple-300 mb-6\"    />
+              <TrendingUp className=\'w-16 h-16 text-green-400 mx-auto mb-6\'    />
+              <h3 className=\'text-2xl font-bold text-white mb-4\'    />Market Growth</h3>
+              <p className=\'text-purple-300 mb-6\'    />
                 Our services target markets with exponential growth potential,with some sectors growing at 300-800% annually.
               </p>
-              <div className=\"text-3xl font-bold text-green-400\"    />500%+</div>
-              <div className=\"text-purple-300\"    />Average Annual Growth</div>
+              <div className=\'text-3xl font-bold text-green-400\'    />500%+</div>
+              <div className=\'text-purple-300\'    />Average Annual Growth</div>
             </motion && motion.div>
-              initial={{ opacity: 0;, y: 30 ;}}
-              whileInView={{ opacity: 1;, y: 0 ;}}
-              transition={{ duration: 0 && 0.6;, delay: 0 && 0.2 ;}}
-              viewport={{ once: true ;}}
+              initial={ opacity: 0;, y: 30 ;}
+              whileInView={ opacity: 1;, y: 0 ;}
+              transition={ duration: 0 && 0.6;, delay: 0 && 0.2 ;}
+              viewport={ once: true ;}
 className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl'
             >
               <DollarSign className='w-16 h-16 text-blue-400 mx-auto mb-6' />
@@ -784,16 +784,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section className='py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}className='space-y-8';
+            initial={ opacity: 0, y: 30 }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={ once: true }className='space-y-8';
            />;
-            initial={{ opacity: 0, y: 30 ,}
+            initial={ opacity: 0, y: 30 ,}
 }
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{once: true }
+            whileInView={ opacity: 1, y: 0 }
+            transition={ duration: 0 && 0.8 }
+            viewport={once: true }
 }className='space-y-8'>
 
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6' />;
@@ -839,7 +839,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <UltraFuturisticFooter2028 />;
     </>;
 ))</>;
-)}}<div className='flex items-center justify-center space-x-8 text-purple-300' />;
+)}<div className='flex items-center justify-center space-x-8 text-purple-300' />;
               <div className='flex items-center space-x-2' />;
                 <CheckCircle className='w-5 h-5 text-green-400' />                <span />30-Day Free Trial</span>;
               </div>;
@@ -848,8 +848,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span />24/7 Expert Support</span>;
               </div>;
               <div className='flex items-center space-x-2' />;
-                <CheckCircle className='w-5 h-5 text-green-400' />                <span />Money-Back Guarantee</span>              <div className="flex items-center space-x-2" />;
-                <CheckCircle className="w-5 h-5 text-green-400" />;
+                <CheckCircle className='w-5 h-5 text-green-400' />                <span />Money-Back Guarantee</span>              <div className='flex items-center space-x-2' />;
+                <CheckCircle className='w-5 h-5 text-green-400' />;
                 <span />Money-Back Guarantee</span>;
               </div>;
             </div>;
@@ -861,17 +861,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )}
 }
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8' />            <motion.div            </h2 />;
-            <p className="text - xl text - purple - 200 max - w-3xl mx - auto" />;
+            <p className='text - xl text - purple - 200 max - w-3xl mx - auto' />;
               Understand the market dynamics and growth potential of our futuristic services.;
             </p>;
           </div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8" />;
+          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8' />;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 ,}
+              initial={ opacity: 0, coordinate_y: 30 ,}
 }
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{once: true }
+              whileInView={ opacity: 1, coordinate_y: 0 }
+              transition={ duration: 0.6 }
+              viewport={once: true }
 }
               className='text - center p - 8 bg - gradient - to - br from - purple - 900 / 20 to - blue - 900 / 20 border border - purple - 500 / 30 rounded - 2xl' />
 
@@ -884,23 +884,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>;
               <div className='text - 3xl font - bold text - green - 400' />500%+</div>;
               <div className='text - purple - 300' />Average Annual Growth</div>            </motion.div>            >;
-              <TrendingUp className="w - 16 h - 16 text - green - 400 mx - auto mb - 6" />;
-              <h3 className="text - 2xl font - bold text - white mb - 4" />Market Growth</h3>;
-              <p className="text - purple - 300 mb - 6" />;
+              <TrendingUp className='w - 16 h - 16 text - green - 400 mx - auto mb - 6' />;
+              <h3 className='text - 2xl font - bold text - white mb - 4' />Market Growth</h3>;
+              <p className='text - purple - 300 mb - 6' />;
                 Our services target markets with exponential growth potential,with some sectors growing at 300 - 800% annually.;
               </p>;
-              <div className="text - 3xl font - bold text - green - 400" />500%+</div>;
-              <div className="text - purple - 300" />Average Annual Growth</div>;
+              <div className='text - 3xl font - bold text - green - 400' />500%+</div>;
+              <div className='text - purple - 300' />Average Annual Growth</div>;
             </motion.div>;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 ,}
+              initial={ opacity: 0, coordinate_y: 30 ,}
 }
 }viewport= {
   {
   once: true 
 }
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{once: true }
+              transition={ duration: 0.6, delay: 0.2 }
+              viewport={once: true }
 }
               className='text - center p - 8 bg - gradient - to - br from - blue - 900 / 20 to - cyan - 900 / 20 border border - blue - 500 / 30 rounded - 2xl' />
 
@@ -914,24 +914,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>;
               <div className='text - 3xl font - bold text - blue - 400' />$500B+</div>;
               <div className='text - blue - 300' />Total Addressable Market</div>            </motion.div>            >;
-              <DollarSign className="w - 16 h - 16 text - blue - 400 mx - auto mb - 6" />;
-              <h3 className="text - 2xl font - bold text - white mb - 4" />Market Size</h3>;
-              <p className="text - blue - 300 mb - 6" />;
+              <DollarSign className='w - 16 h - 16 text - blue - 400 mx - auto mb - 6' />;
+              <h3 className='text - 2xl font - bold text - white mb - 4' />Market Size</h3>;
+              <p className='text - blue - 300 mb - 6' />;
                 Combined market size of our service categories exceeds;
                 $500 billion with rapid expansion expected.;
               </p>;
-              <div className="text - 3xl font - bold text - blue - 400" />$500B+</div>;
-              <div className="text - blue - 300" />Total Addressable Market</div>;
+              <div className='text - 3xl font - bold text - blue - 400' />$500B+</div>;
+              <div className='text - blue - 300' />Total Addressable Market</div>;
             </motion.div>;
             <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 ,}
+              initial={ opacity: 0, coordinate_y: 30 ,}
 }
 }transition= {
   {
   duration: 0.6 
 }
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{once: true }
+              transition={ duration: 0.6, delay: 0.4 }
+              viewport={once: true }
 }
               className='text - center p - 8 bg - gradient - to - br from - pink - 900 / 20 to - rose - 900 / 20 border border - pink - 500 / 30 rounded - 2xl' />
 
@@ -945,28 +945,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>;
               <div className='text - 3xl font - bold text - pink - 400' />90%</div>;
               <div className='text - pink - 300' />Market Share in Niche</div>            </motion.div>            >;
-              <Shield className="w - 16 h - 16 text - pink - 400 mx - auto mb - 6" />;
-              <h3 className="text - 2xl font - bold text - white mb - 4" />Competitive Edge</h3>;
-              <p className="text - pink - 300 mb - 6" />;
+              <Shield className='w - 16 h - 16 text - pink - 400 mx - auto mb - 6' />;
+              <h3 className='text - 2xl font - bold text - white mb - 4' />Competitive Edge</h3>;
+              <p className='text - pink - 300 mb - 6' />;
                 First - to - market solutions with proprietary technology;
                 and AI algorithms that competitors cannot replicate.;
               </p>;
-              <div className="text - 3xl font - bold text - pink - 400" />90%</div>;
-              <div className="text - pink - 300" />Market Share in Niche</div>;
+              <div className='text - 3xl font - bold text - pink - 400' />90%</div>;
+              <div className='text - pink - 300' />Market Share in Niche</div>;
             </motion.div>;
           </div>;
         </div>;
       </section>;
       {/* CTA Section */}
       <section className='py - 20 bg - gradient - to - r from - purple - 900 / 30 to - blue - 900 / 30' />;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center' />          <motion.div      <section className="py - 20 bg - gradient - to - r from - purple - 900 / 30 to - blue - 900 / 30" />;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center" />;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center' />          <motion.div      <section className='py - 20 bg - gradient - to - r from - purple - 900 / 30 to - blue - 900 / 30' />;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center' />;
           <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 ,}
+            initial={ opacity: 0, coordinate_y: 30 ,}
 }
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{once: true }
+            whileInView={ opacity: 1, coordinate_y: 0 }
+            transition={ duration: 0.8 }
+            viewport={once: true }
 }
             className='space - y-8' />
 
@@ -1007,8 +1007,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span /> 24 / 7 Expert Support</span>;
               </div>;
               <div className='flex items - center space - x-2' />;
-                <CheckCircle className='w - 5 h - 5 text - green - 400' />                <span /> Money - Back Guarantee</span>              <div className="flex items - center space - x-2" />;
-                <CheckCircle className="w - 5 h - 5 text - green - 400" />;
+                <CheckCircle className='w - 5 h - 5 text - green - 400' />                <span /> Money - Back Guarantee</span>              <div className='flex items - center space - x-2' />;
+                <CheckCircle className='w - 5 h - 5 text - green - 400' />;
                 <span /> Money - Back Guarantee</span>;
               </div>;
             </div>;

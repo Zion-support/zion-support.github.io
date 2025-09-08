@@ -1,5 +1,18 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src-disabled/components/jobs/applications/ApplicationRow.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+:src/components/jobs/applications/ApplicationRow.tsx
+import { formatDistanceToNow } from 'date-fns'
+import { Calendar, User, FileText, BarChart } from 'lucide-react'
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface ApplicationRowProps {
 
 import { Button } from "@/components/ui/button",
@@ -174,6 +187,8 @@ export function ApplicationRow({
 
 
               <Image
+<<<<<<< HEAD
+=======
                 src={application.talent_profile.profile_picture_url}
                 alt={talentName}
                 width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px)
@@ -184,6 +199,7 @@ export function ApplicationRow({
 ursor/fix-website-loading-errors-and-merge-6662
   const talentName = application.talent_profile?.full_name |'Unknown'
   const talentName = application.talent_profile?.full_name |'Unknown'
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   const talentName = application.talent_profile?.full_name || 'Unknown'
 
@@ -226,6 +242,21 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
       </TableCell>
       <TableCell>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <div className='flex items-center gap-1'>
+          <Calendar className='h-4 w-4 text-muted-foreground' />
+          <span>
+            {formatDistanceToNow(new Date(application.created_at), {
+              addSuffix: true
+            })}
+          </span>
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
@@ -240,6 +271,29 @@ ursor/fix-website-loading-errors-and-merge-6662
         <StatusBadge status={application.status} />
       </TableCell>
       <TableCell>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <div className="flex items-center gap-1">
+          <Calendar className="h-4 w-4 text-muted-foreground" />
+          <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>
+        </div>
+      </TableCell>
+      <TableCell>
+        <StatusBadge status={application.status} />
+      </TableCell>
+      <TableCell>
+        <Button
+          variant='ghost'
+          size='sm'
+          onClick={() => onViewScore(application)}
+          className='flex items-center gap-1'        >
+          <BarChart className='h-4 w-4 mr-1' />
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
@@ -259,6 +313,22 @@ ursor/fix-website-loading-errors-and-merge-6662
       </TableCell>
       <TableCell>
         {application.resume ? (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          <Button variant='ghost' size='sm' asChild>
+            <a
+              href={application.resume.file_url |'#'}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <FileText className='h-4 w-4 mr-1' /> View
+            </a>
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
@@ -275,6 +345,39 @@ ursor/fix-website-loading-errors-and-merge-6662
       </TableCell>
       <TableCell className="text-right">
         <ApplicationActions
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+ursor/fix-website-loading-errors-and-merge-6662
+          </AvatarPrimitive>;
+          <div>;
+            <div className='font-medium'>{talentName}</div>;
+            <div className='text-xs text-muted-foreground'>;
+              {application && application.talent_profile?.professional_title || 'Talent'}
+    application_id: string,
+    new_status: ApplicationStatus) => Promise < void>;
+  onViewScore: (application: JobApplication) => void;
+interface ApplicationRowProps {
+  application: JobApplication,
+  processing_id: string | null,
+  onViewApplication: (application_id: string, ) => Promise < void>,
+  onStatusChange: (application_id: string, new_status: ApplicationStatus, ) => Promise < void>,
+  onViewScore: (application: JobApplication, ) => void;
+          application = {application,}
+          processingId = {processingId,}
+          onViewApplication = {onViewApplication,}
+          onStatusChange = {onStatusChange,}
+        />
+      </TableCell>
+    </TableRow>
+  );
+};
+}
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
@@ -435,4 +538,22 @@ interface ApplicationRowProps {
     </TableRow>);
 }
 
+<<<<<<< HEAD
 
+=======
+        />
+      </TableCell>
+    </TableRow>
+<<<<<<< HEAD
+  );
+=======
+  );
+=======
+<<<<<<< HEAD
+;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/jobs/applications/ApplicationRow.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba

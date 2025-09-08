@@ -1,11 +1,26 @@
 
+<<<<<<< HEAD
 
 
+=======
+const AIAssistant: React.FC = () => {
+import React from 'react',
+import Head from 'next/head';
+import Button from '../components/ui/Button';
+export default function AIAssistantPage() {
+import Layout from '../components/layout/Layout';
+const AIAssistant: React.FC = () => {
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <Layout>;
       <Head>;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/ai-assistant' />;
       </Head>;
@@ -31,7 +46,10 @@
             </h1>;
             <p className='text - gray - 300 text - lg'>;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               Automate research, summarization, drafting, scheduling, and inbox;
               triage.;
             </p>;
@@ -61,15 +79,21 @@
               className='px - 8 py - 4 bg - gradient - to - r from - cyan - 600 to - blue - 700 text - white';
             >;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               Request a Demo;
             </Button>;
           </div>;
         </div>;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <div className="bg - blue - 50 rounded - lg p - 8 text - center">;
           <h2 className="text - 2xl font - bold mb - 4">Ready to Get Started?</h2>;
           <p className="text - lg text - gray - 700 mb - 6">;
@@ -81,8 +105,11 @@
             </a>;
             <a href="/about" className="border border - blue - 600 text - blue - 600 px - 6 py - 3 rounded - lg hover:bg - blue - 50">;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               Learn More;
             </a>;
           </div>;
@@ -92,6 +119,10 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <>
       <Head>
@@ -125,7 +156,10 @@
 }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import Button from '../components/ui/Button';
 import React from 'react';
 import Head from 'next/head';
@@ -140,7 +174,10 @@ const AIAssistant: React.FC = () => {
 
 import Head from 'next/head',
 import Button from '../components/ui/Button',
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export default function AIAssistantPage() {
   return (
     <>
@@ -153,8 +190,60 @@ export default function AIAssistantPage() {
         <div className="max-w-6xl mx-auto space-y-10">
           <header className="text-center">
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">AI Assistant</h1>
+<<<<<<< HEAD
 
 
 
+=======
+            <p className="text-gray-300 text-lg">Automate research, summarization, drafting, scheduling, and inbox triage.</p>
+          </header>
+          <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              'Research and summarize documents and web sourcesDraft emails, posts, briefs, and reportsAuto-schedule meetings and follow-upsIntegrations: Gmail, Google Drive, Slack, CalendarTeam approvals and audit trailStarting at $99/mo'
+            ].map((f) => (
+              <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>
+            ))}
+          </section>
+          <div className="text-center">
+            <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Request a Demo</Button>
+          </div>
+        </div>
+        <div className="bg-blue-50 rounded-lg p-8 text-center">
+          <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
+          <p className="text-lg text-gray-700 mb-6">
+            Experience the power of AI assistance for your business operations.
+          </p>
+          <div className="flex justify-center gap-4">
+            <a href="/contact" className="bg-blue-600 text-white px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-lg hover: bg-blue-700">
+              Request a Demo
+            </a>
+            <a href="/about" className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </main>
+    </Layout>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+        <div className="bg-blue-50 rounded-lg p-8 text-center">
+          <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
+          <p className="text-lg text-gray-700 mb-6">
+            Experience the power of AI assistance for your business operations.
+          </p>
+          <div className="flex justify-center gap-4">
+            <a href="/contact" className="bg-blue-600 text-white px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-lg hover: bg-blue-700">
+              Request a Demo
+            </a>
+            <a href="/about" className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </main>
+    </Layout>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 

@@ -67,10 +67,10 @@ const os = require('os')
 >>>>>>> merged-prs-20250907-203621
 // console.log(' Comprehensive Monitoring & Alerting v2.0')
 console.log('')
-    const output = execSync('df -h /', { "encoding"})
+const output = execSync('df -h /', { "encoding"});
       "percentage"
-    const output = execSync('cat /proc/net/dev', { "encoding"})
-    const output = execSync('ps aux | wc -l', { "encoding"})
+const output = execSync('cat /proc/net/dev', { "encoding"});
+const output = execSync('ps aux | wc -l', { "encoding"});
     execSync('npm run build', { "encoding": 'utf8', "stdio"})
       "stdio"
           "error"
@@ -110,6 +110,9 @@ console.log('')
     "message"
     "action"
       log('warn', 'Alerts "generated")
+<<<<<<< HEAD
+      log('info', 'Monitoring "Recommendations")
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       log('info', 'Monitoring "Recommendations")
@@ -211,3 +214,4 @@ console.log(')
 =======
       log('info', 'Monitoring "Recommendations")
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

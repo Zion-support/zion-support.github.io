@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 #!/"usr/bin/env"
 const fs = require("fs)
 const path = require(path")
 const { execSync, spawn } = require("child_process)
       this.projectRoot,logs
-=======
-<<<<<<< HEAD
-#!/""usr/bin/env""
-const fs = require("fs")
-const path = require("path")
-const { execSync, spawn } = require("child_process")
-      this.projectRoot,logs"
->>>>>>> origin/chore/fix-lint-and-merge
       "ai-code-review.log"
       this.projectRoot,logs
       code-review-history.json"
@@ -256,30 +247,11 @@ this.logError(Code review failed")
         .split("\n")
         .map(line => line.split( )
         .filter(file => file && !file.startsWith(".")
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-  const content = fs.readFileSync(filePath, ")
-  const content = fs.readFileSync(filePath, ")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
+
 
         .map(line => line.split(" ")"
 </button>"`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-  const content = fs.readFileSync(filePath, ")
-=======
-  const content = fs.readFileSync(filePath, ")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

@@ -52,10 +52,10 @@ const path = require('path');
 >>>>>>> merged-prs-20250907-203621
 console.log('===')
   log(message, type = 'info')
-      const result = execSync(command, {"encoding": 'utf8',"stdio"})
+const result = execSync(command, {"encoding": 'utf8',"stdio"});
       this.log(` ${description} "failed"`)
       this.log(`Error getting additional "branches"`)
-      const statusResult = execSync('git status --porcelain', { "encoding"})
+const statusResult = execSync('git status --porcelain', { "encoding"});
           "encoding"
         const changesResult = execSync('git diff --cached --name-only', { "encoding"})
         await this.runCommand("git commit -m "Resolve merge conflicts with main branch"")
@@ -96,6 +96,9 @@ console.log('===)
   console.error('Automation "failed")
 <<<<<<< HEAD
 cursor/fix-lint-push-and-merge-to-main-f3c1;
+=======
+<<<<<<< HEAD
+cursor/fix-lint-push-and-merge-to-main-f3c1;
 
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
@@ -132,3 +135,4 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
   console.error('Automation "failed")
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

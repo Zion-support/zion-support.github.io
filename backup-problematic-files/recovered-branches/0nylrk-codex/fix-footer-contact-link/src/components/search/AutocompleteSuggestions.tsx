@@ -49,6 +49,7 @@ export function AutocompleteSuggestions({ ;
                 </span>;
 
               </div>;
+<<<<<<< HEAD
             </li>;
           ),;
         })}
@@ -181,3 +182,5 @@ return (<li key= {
 }</ul> </div>) 
 }
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

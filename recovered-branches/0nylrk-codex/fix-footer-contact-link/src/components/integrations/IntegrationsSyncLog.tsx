@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { Card } from "@/components/ui/card";
 
 
@@ -7,19 +10,28 @@ import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/c
 import {Badge} from "@/components/ui/badge";
 
 
+<<<<<<< HEAD
 
 import { Card } from "@/components/ui/card",
 import {}
 
 
+=======
+import { Card } from "@/components/ui/card",
+import {}
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   Table,
   TableBody,
   TableCell,
   TableHead,
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 // Sample data for integration sync logs
 
 const syncLogs = [
@@ -29,10 +41,15 @@ const syncLogs = [
     event: "contact_synced"
     status: "success"
     timestamp: "2024-05-20T12:30:45Z"
+<<<<<<< HEAD
 
     details: "Successfully synced contact data for Job #1234"
 
 
+=======
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   {
     id: "2"
     integration: "Greenhouse"
@@ -42,7 +59,10 @@ const syncLogs = [
     details: "New applicant created in Greenhouse from Zion application"
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   {
 
     id: "3"
@@ -53,7 +73,10 @@ const syncLogs = [
     details: "Failed to update deal - API rate limit exceeded"
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   {
     id: "4"
     integration: "Zoho CRM"
@@ -63,7 +86,10 @@ const syncLogs = [
     details: "Job synced but some fields were skipped due to mapping issues"
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   {
     id: "5"
     integration: "Lever"
@@ -73,14 +99,38 @@ const syncLogs = [
 
     details: "Updated candidate status to 'Interview Scheduled'"
 
+<<<<<<< HEAD
 
+import {Card} from "@/components/ui/card";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+=======
 import {Card} from "@/components/ui/card";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
 
 
+],
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+
+<<<<<<< HEAD
+
+=======
+    switch (status) {
+      case "success": return <Badge className="bg-green-500">Success</Badge>,
+
+];
+],
+
+export function IntegrationsSyncLog() {
+  const getStatusBadge = (status: string) => {
+    switch (status) {;
+      case "success": return <Badge className="bg-green-500">Success</Badge>;
+    switch (status) {
+      case "success": return <Badge className="bg-green-500">Success</Badge>,
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       case "error":
 
         return <Badge variant="destructive">Error</Badge>,
@@ -92,11 +142,19 @@ import {Badge} from "@/components/ui/badge";
         return <Badge variant="outline">Unknown</Badge>
     }
 
+<<<<<<< HEAD
 
 
   return (
     <Card>"
 
+=======
+  return (
+    <Card>"
+
+  return (
+    <Card>"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       <div className="p-4">
         <Table>
@@ -106,15 +164,66 @@ import {Badge} from "@/components/ui/badge";
               <TableHead>Event</TableHead>
               <TableHead>Status</TableHead>
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               <TableHead className="hidden md:table-cell">Details</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {syncLogs.map((log) => (
 
+<<<<<<< HEAD
 
+=======
+            ))}
+            ))}
+
+          </TableBody>
+        </Table>
+      </div>
+    </Card>
+  )
+
+          </TableBody>
+        </Table>
+      </div>
+    </Card>
+  )
+}// Sample data for integration sync logs;
+  {;
+    }
+    "id": "1",;"
+    "integration": "Salesforce",;"
+    "event": "contact_synced",;"
+    "status": "success",;"
+    "timestamp": "2024-05-"20T12":"30":45Z",;"
+    "details": "Successfully synced contact data for Job #1234""
+};  {;
+    }
+    "id": "2",;"
+    "integration": "Greenhouse",;"
+    "event": "applicant_created",;  {;"
+    }
+    "id": "4",;"
+    "integration": "Zoho CRM",;"
+    "event": "job_synced",;"
+    "status": "warning",;"
+    "timestamp": "2024-05-"19T14":"22":33Z",;"
+    "details": "Job synced but some fields were skipped due to mapping issues";  {;"
+    }
+    "id": "5",;"
+    "integration": "Lever",;"
+    "event": "candidate_status_changed",;"
+    "status": "success",;"
+    "timestamp": "2024-05-"18T09":"10":05Z",;"
+    "details": "Updated candidate status to 'Interview Scheduled'";"
+  }  return (
+    <Card>;
+      <div className="p-4">;"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import React from "react",;
 
@@ -125,15 +234,19 @@ import {;
   TableCell,;
   TableHead,;
 
+<<<<<<< HEAD
   TableHeader,;
   TableRow} from "@/components/ui/table",;
 import { Badge } from "@/components/ui/badge",;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       case "success": return <Badge className="bg-green-500">Success</Badge>;
       case "error":;
 
         return <Badge variant="destructive">Error</Badge>;
 
+<<<<<<< HEAD
 
 
       case "warning":;
@@ -141,11 +254,14 @@ import { Badge } from "@/components/ui/badge",;
         return <Badge className="bg-amber-500">Warning</Badge>,;
       default:;"
         return <Badge variant="outline">Unknown</Badge>;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
   return (
 
       <div className="p-4">;
+<<<<<<< HEAD
 
         <Table>;
           <TableHeader>;
@@ -177,6 +293,11 @@ import { Badge } from "@/components/ui/badge",;
 
 
 
+=======
+            ))}
+
+            ))}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           </TableBody>;
 
           </TableBody>;
@@ -186,9 +307,13 @@ import { Badge } from "@/components/ui/badge",;
     </Card>;
   );
 }
+<<<<<<< HEAD
 
 
 
+=======
+            ))}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from './react';
 import { Card } from '@/components / ui / card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
@@ -409,6 +534,7 @@ pr-12325
         </Table>;
       </div>;
 
+<<<<<<< HEAD
     </Card>);
     }
   },;
@@ -467,3 +593,6 @@ return (<Card> <div className="p-4" > hidden md:table-cell" >Details</TableHead>
 
 
 
+=======
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

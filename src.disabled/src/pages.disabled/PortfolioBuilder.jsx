@@ -5,7 +5,10 @@ interface PortfolioBuilderProps {
 }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -18,5 +21,8 @@ export default function PortfolioBuilder({ }: PortfolioBuilderProps) {
     </div>
   );
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

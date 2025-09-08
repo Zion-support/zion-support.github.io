@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -26,6 +27,9 @@ interface IndexProps {
 const Index: React.FC<IndexProps> = ({ className }) => {
   return (
 
+=======
+return (
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     <div className={className || ''}>
       <h1>Index</h1>
       <p>This component is under development.</p>

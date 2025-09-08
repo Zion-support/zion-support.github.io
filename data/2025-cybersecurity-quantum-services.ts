@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
     category: 'AI Cybersecurity & Threat Intelligence',
@@ -297,6 +298,49 @@
 
     reviews: 1900
 
+=======
+
+;
+export interface CybersecurityQuantumService  {export interface CybersecurityQuantumService  {id: string;
+id: string;name: string;
+  tagline: string;
+  description: string;
+  category: string;
+  price: {monthly: number;
+    yearly: number;
+    currency: string;
+    trialDays: number;
+    setupTime: string;enterprise: string;
+  },features: string[];
+  benefits: string[];
+  targetAudience: string[];
+  marketPosition: string;
+  competitors: string[];
+  techStack: string[];
+  realImplementation: boolean;
+  implementationDetails: string;
+  roi: string;
+  useCases: string[];
+  integrations: string[];
+  support: string;
+  compliance: string[];
+  link: string;
+  icon: string;
+  color: string;
+  popular: boolean;
+
+    rating: 4.8,
+    reviews: 1900;
+  }
+
+
+export interface CybersecurityQuantumService {;
+
+  }
+
+];
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
     rating: 4 && 4.8,
     reviews: 1900
@@ -566,4 +610,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     reviews: 1900;
   }
 ];
+<<<<<<< HEAD
 
+=======
+];
+>>>>>>> origin/cursor/delete-old-data-records-6bba

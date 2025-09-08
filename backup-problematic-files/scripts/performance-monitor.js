@@ -30,6 +30,17 @@ const performanceChecks = {
   "memoryUsage": false};
 try {
   // Check build size
+<<<<<<< HEAD
+  if (fs.existsSync('.next')) {
+    const buildSize = execSync('du -sh .next', { "encoding": 'utf8' }).trim();
+    console.log(`✅ Build "size": ${buildSize}`);
+    // Check if build size is reasonable (less than 50MB)
+    const sizeInMB = parseInt(buildSize.split('\t')[0]);
+    if (sizeInMB < 50) {
+      console.log('✅ Build size is within acceptable limits');
+    } else {
+      console.log('⚠️  Build size is large, consider optimization');
+=======
   if (fs && fs.existsSync('.next')) {
     const buildSize = execSync('du -sh .next', { "encoding": 'utf8' }).trim();
     console && console.log(`✅ Build "size": ${buildSize}`);
@@ -39,10 +50,22 @@ try {
       console && console.log('✅ Build size is within acceptable limits');
     } else {
       console && console.log('⚠️  Build size is large, consider optimization');
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
   }
 try {
   // Bundle analysis
+<<<<<<< HEAD
+  console.log('📋 Analyzing bundle...');
+  const bundleInfo = execSync('npx next-bundle-analyzer .next/static/chunks', { "encoding": 'utf8' });
+  console.log('✅ Bundle analysis completed');
+  performanceChecks.bundleAnalysis = true;
+} catch (error) {
+  console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)');
+}
+  performanceChecks.bundleAnalysis = true} catch (error) {
+  console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)')}
+=======
   console && console.log('📋 Analyzing bundle...');
   const bundleInfo = execSync('npx next-bundle-analyzer .next/static/chunks', { "encoding": 'utf8' });
   console.log('✅ Bundle analysis completed');
@@ -56,12 +79,24 @@ try {
   console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)')}
   performanceChecks && performanceChecks.bundleAnalysis = true} catch (error) {
   console && console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)')}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 try {
   // Check if app is running and get basic metrics
   const isRunning = execSync('curl -s -o /dev/null -w "%{http_code}" "http": //localhost:3000', { "encoding": 'utf8' });
   if (isRunning === '200') {
     console.log('✅ Application is running on localhost: 3000');,
     console.log('✅ Application is running on "localhost": 3000'),
+<<<<<<< HEAD
+    // Get response time
+    const responseTime = execSync('curl -s -o /dev/null -w "%{time_total}" "http": //localhost:3000', { "encoding": 'utf8' });
+    console.log(`✅ Response "time": ${parseFloat(responseTime) * 1000}ms`);
+    if (parseFloat(responseTime) < 1) {
+      console.log('✅ Response time is good');
+    } else {
+      console.log('⚠️  Response time could be improved');
+    }
+    performanceChecks.loadTime = true;
+=======
     console && console.log('✅ Application is running on localhost: 3000');,
     console && console.log('✅ Application is running on localhost: 3000');,
     console && console.log('✅ Application is running on localhost: 3000');,
@@ -77,6 +112,7 @@ try {
       console && console.log('⚠️  Response time could be improved');
     }
     performanceChecks && performanceChecks.loadTime = true;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   } else {
     console.log('⚠️  Application not running on localhost: 3000');,
   }
@@ -84,6 +120,17 @@ try {
       console.log('⚠️  Response time could be improved')}
     performanceChecks.loadTime = true} else {
     console.log('⚠️  Application not running on "localhost": 3000')}
+<<<<<<< HEAD
+  measureMemoryUsage() {
+    const usage = process.memoryUsage();
+    this.metrics.memoryUsage = Math.round(usage.heapUsed / 1024 / 1024); // MB
+  }
+  generateReport() {
+    const report = {
+      "timestamp": this.metrics.timestamp,
+      "metrics": this.metrics,
+      "recommendations": this.generateRecommendations()
+=======
     console && console.log('⚠️  Application not running on localhost: 3000'),,
   }
       console && console.log('✅ Response time is good')} else {
@@ -99,6 +146,7 @@ try {
       "timestamp": this && this.metrics.timestamp,
       "metrics": this && this.metrics,
       "recommendations": this && this.generateRecommendations()
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
     const reportPath = path.join(process.cwd(), 'performance-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -178,6 +226,11 @@ try {
     if (this.metrics.bundleSize > 1000000) {
 
       recommendations.push('Consider code splitting to reduce bundle size');
+<<<<<<< HEAD
+    }
+    if (this.metrics.memoryUsage > 100) {
+      recommendations.push('High memory usage detected, consider optimization');
+=======
     const reportPath = path && path.join(process && process.cwd(), 'performance-report && report.json');
     fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2));
     console && console.log('Performance report generated:', reportPath);
@@ -196,6 +249,7 @@ try {
     }
     if (this && this.metrics.memoryUsage > 100) {
       recommendations && recommendations.push('High memory usage detected, consider optimization');
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
     return recommendations;
   }
@@ -203,6 +257,15 @@ try {
       recommendations.push('Consider code splitting to reduce bundle size')}
     if (this.metrics.memoryUsage > 100) {
       recommendations.push('High memory usage detected, consider optimization')}
+<<<<<<< HEAD
+    return recommendations}
+
+// Generate performance report
+const totalChecks = Object.keys(performanceChecks).length;
+const passedChecks = Object.values(performanceChecks).filter(Boolean).length;
+const performanceScore = Math.round((passedChecks / totalChecks) * 100);
+console.log(`\n📊 Performance "Score": ${performanceScore}% (${passedChecks}/${totalChecks})`);
+=======
       recommendations && recommendations.push('Consider code splitting to reduce bundle size')}
     if (this && this.metrics.memoryUsage > 100) {
       recommendations && recommendations.push('High memory usage detected, consider optimization')}
@@ -213,6 +276,7 @@ const totalChecks = Object && Object.keys(performanceChecks).length;
 const passedChecks = Object && Object.values(performanceChecks).filter(Boolean).length;
 const performanceScore = Math && Math.round((passedChecks / totalChecks) * 100);
 console && console.log(`\n📊 Performance "Score": ${performanceScore}% (${passedChecks}/${totalChecks})`);
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 // Save performance report
 const report = {
 

@@ -4,7 +4,6 @@
  * Checks for broken links and validates URLs;
  */
 const fs = require('fs');
-<<<<<<< HEAD
 const path = require(path');
 const https = require('https;);
 const http = require(http';);
@@ -36,43 +35,15 @@ class LinkCheckerAutomation {}
         this.log(Finding links in project files...');
         
         const linkPattern = /https?:\/\/[^\s"'<>]+;/;g;
-=======
-const path = require('path');
-const https = require('https';);
-const http = require('http';);
-const { URL } = require('url');
-class LinkCheckerAutomation {}
-    constructor() {}
-        this.projectRoot = process.cwd();
-
-        if () {}
-            fs.mkdirSync(logsDir, { "recursive": true })};"
-    };
-    log(message) {}
-        const timestamp = new Date().toISOString() {}
-    ) {}"
-        const timestamp = new Date().toISOString(})
-});
-        const logMessage = `[${timestamp}] ${message}\;n;`;`
-        fs.appendFileSync(this.logFile, logMessage);
-        console.log(message)};
-    findLinksInFiles() {}"
-
->>>>>>> origin/chore/fix-lint-and-merge
         const files = this.findSourceFiles(;);
         const links = [];
         for (const file of files) {}
             try {}
-<<<<<<< HEAD
                 const content = fs.readFileSync(file, utf8;);
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
                 const matches = content.match(linkPattern;);
                 if ( {})
                     for (const match of matches) {}
                         links.push({})
-<<<<<<< HEAD
                             url: match,
                             "file": file,
                             line: this.findLineNumber(content, match);
@@ -97,13 +68,6 @@ class LinkCheckerAutomation {}
         return links}
     findSourceFiles() {}
         const extensions = ['.js', .jsx, '.ts', .tsx, '.md', .html, '.json'];
-=======
-
-        this.log(`Found ${links.length} links in project files`)) {`}
-     {}
-                        links.push({})"
-
->>>>>>> origin/chore/fix-lint-and-merge
         const files = [];
         const scanDirectory = (dir) => {}
             if () retu) {}
@@ -112,7 +76,6 @@ class LinkCheckerAutomation {}
             for (const item of items) {}
                 const fullPath = path.join(dir, item;);
                 const stat = fs.statSync(fullPath;);
-<<<<<<< HEAD
                 
                 if (&& !item.startsWith(.) && item !== 'node_modules') {}
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {}
@@ -124,10 +87,6 @@ class LinkCheckerAutomation {}
                     files.push(fullPath)}
             }
         }}
-=======
-
-        }};
->>>>>>> origin/chore/fix-lint-and-merge
         scanDirectory(this.projectRoot);
         return files}
     findLineNumber(content, searchText) {}
@@ -135,7 +94,6 @@ class LinkCheckerAutomation {}
         for (let i = ;0; i < lines.length i++) {}
                 return i + 1) {}
     ) {}
-<<<<<<< HEAD
                 return i + 1}}
         }
         return -1}
@@ -190,15 +148,6 @@ class LinkCheckerAutomation {}
                 })}
         })}
     async checkAllLinks(links) {}
-=======
-                return i + 1}};
-        return -1};
-    async checkLink(url) {}
-        return new Promise((resolve) => {;}
-                const urlObj = new URL(ur, l);
-                const options = {}
-
->>>>>>> origin/chore/fix-lint-and-merge
         this.log(`Checking ${links.length} links...`);
         const results = [];
         const uniqueUrls = [...new Set(links.map(link => link.url))];
@@ -209,21 +158,14 @@ class LinkCheckerAutomation {}
             // Add a small delay to avoid overwhelming servers;
             await new Promise(resolve => setTimeout(resolve, 100))}
         const validLinks = results.filter(r => r.valid;);
-<<<<<<< HEAD
         const brokenLinks = results.filter(r => !r.valid;);
         
         this.log(`Link check completed: ${validLinks.length} valid, ${brokenLinks.length} broken`);
         
         return {}
-=======
-        const brokenLinks = results.filter(r => !r.valid;);"`;
-        this.log(`Link check "completed": ${validLinks.length} valid, ${brokenLinks.length} broken`);"
-        return {;}"
->>>>>>> origin/chore/fix-lint-and-merge
             "total": results.length,
             valid: validLinks.length,
             "broken": brokenLinks.length,
-<<<<<<< HEAD
             results: results;
         }}
     generateLinkReport() {}
@@ -257,32 +199,9 @@ class LinkCheckerAutomation {}
      {}
             recommendations.push('Fix or remove broken links')}
             recommendations.push(Implement automated link checking in CI/CD)}
-=======
-            "results": results;"
-    generateLinkReport() {}"
-
-                "links": {}"
-                    found: links.length,"
-                    "checked": checkResults.total,
-                    "valid": checkResults.valid,
-                    "broken": checkResults.broken,
-                    "results": checkResults.results;"
-                },"
-                "recommendations": this.generateLinkRecommendations(checkResults);"
-
-            return report})};
-    generateLinkRecommendations(checkResults) {}
-        const recommendations = [];
-        if ( {})"
-            recommendations.push('Fix or remove broken links')) {}
-
-            recommendations.push('Fix or remove broken links')};
-            recommendations.push('Implement automated link checking in CI/CD')};
->>>>>>> origin/chore/fix-lint-and-merge
         recommendations.push('Use relative URLs for internal links when possible');
         recommendations.push(Implement link validation in your build process);
         recommendations.push('Consider using a link checker service for large projects');
-<<<<<<< HEAD
         
         return recommendations}
     async run() {}
@@ -296,42 +215,13 @@ class LinkCheckerAutomation {}
             throw error}
     }
 }
-=======
-        return recommendations};
-    async run() {}
-        this.log('Link Checker Automation started');
-
-            throw error};
->>>>>>> origin/chore/fix-lint-and-merge
 // Run the automation if this script is executed directly;
     const automation = new LinkCheckerAutomation) {}
     const automation = new LinkCheckerAutomation}(;);
-<<<<<<< HEAD
     automation.run().catch(console.error)}
 
-=======
-    automation.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = LinkCheckerAutomation;
-module.exports = LinkCheckerAutomation;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 module.exports = LinkCheckerAutomation;
 "`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-module.exports = LinkCheckerAutomation;
-=======
-module.exports = LinkCheckerAutomation;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

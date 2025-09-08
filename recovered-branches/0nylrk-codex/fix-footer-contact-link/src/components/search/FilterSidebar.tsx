@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 
@@ -28,12 +29,29 @@ interface FilterSidebarProps {;
     selectedRating: number | null;
 
 
+=======
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {Checkbox} from "@/components/ui/checkbox";
+import {Filter, X, Star} from "lucide-react";
+import {FilterOptions} from "@/types/search";
+
+  };
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   filterOptions: FilterOptions,;
   onFilterChange: (filterType: string, value: string) => void,;
   onRatingChange: (rating: number | null) => void,;
   onClearFilters: () => void;
+
 }
 
+<<<<<<< HEAD
+=======
+export function FilterSidebar(): any ({;
+
+  filters;
+  filterOptions;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
   filterOptions: FilterOptions
@@ -45,12 +63,17 @@ export function FilterSidebar({
 export function FilterSidebar({;
   filters;
   filterOptions;
+<<<<<<< HEAD
 
   onFilterChange;
   onRatingChange;
 
   onClearFilters;
 }: FilterSidebarProps) {;
+=======
+  onFilterChange;
+  onRatingChange;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
   filters,
@@ -210,11 +233,14 @@ export function FilterSidebar(): any ({;
       </div>;
 
 
+<<<<<<< HEAD
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Checkbox } from "@/components/ui/checkbox",;
 import { Filter, X, Star } from "lucide-react",;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { FilterOptions } from "@/types/search",;
 ;
 interface FilterSidebarProps {;
@@ -231,6 +257,7 @@ interface FilterSidebarProps {;
 }
 ;
 
+<<<<<<< HEAD
 export function FilterSidebar({;
   filters,;
   filterOptions,;
@@ -252,33 +279,45 @@ export function FilterSidebar({;
 selectedLocations: string[];
 selectedAvailability: string[];
 selectedRating: number | null 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 };
 filterOptions: FilterOptions;
 onFilterChange: (filterType: string, value: string) => void;
 onRatingChange: (rating: number | null) => void;
 
+<<<<<<< HEAD
 onClearFilters: () => void 
 }export function FilterSidebar ({
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   filters;
 filterOptions;
 onFilterChange;
 onRatingChange;
 
+<<<<<<< HEAD
 onClearFilters 
 }: FilterSidebarProps) {
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   return (
     <div className=&quot;bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4&quot;>
       <div className=&quot;flex items-center justify-between mb-4&quot;>
         <h3 className=&quot;text-lg font-medium text-white flex items-center&quot;>
 
+<<<<<<< HEAD
           <Filter className=&quot;mr-2 h-5 w-5&quot; /> Filters
 import React from "react";
 
 interface FilterSidebarProps {_filters: {
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     selectedProductTypes: string[];
     selectedLocations: string[];
     selectedAvailability: string[];
@@ -286,6 +325,7 @@ interface FilterSidebarProps {_filters: {
   filterOptions: FilterOptions;
   onFilterChange: (_filterType: string, _value: string) => void;
   onRatingChange: (_rating: number | null) => void;
+<<<<<<< HEAD
 
   onClearFilters: () => void;
 }
@@ -384,13 +424,51 @@ export function FilterSidebar(_{_filters, _filterOptions, _onFilterChange, _onRa
         </label>;
         <div className="flex flex-wrap gap-2">;
 
+=======
+
+          {[null, ...filterOptions && filterOptions.ratingOptions].map((rating) => (;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             <Button
               key={rating === null ? 'any' : rating}
               variant="outline"
               size="sm"
+<<<<<<< HEAD
               onClick={() => onRatingChange(rating)}
 
 
+=======
+
+              className={`${;
+                filters && filters.selectedRating === rating ;
+                  ? "bg-zion-purple/20 border-zion-purple text-zion-purple" ;
+                  : "border-zion-blue-light text-zion-slate-light";
+          {[null, ...filterOptions.ratingOptions].map((rating) => (;
+            <Button;
+              key={rating === null ? 'any' :rating}
+              variant="outline";
+              size="sm";
+              onClick={() => onRatingChange(rating)}
+              className={`${;
+                filters.selectedRating === rating ;
+                  ? "bg-zion-purple/20 border-zion-purple text-zion-purple" ;
+                  :"border-zion-blue-light text-zion-slate-light";
+              }`}
+            >;
+              {rating === null ? (;"
+                "Any";
+
+                  {[...Array(rating)].map((_, i) => (;
+
+                    <Star key={i} className="h-3 w-3 fill-zion-cyan text-zion-cyan" />;
+                  ))}"
+                  <span className="ml-1">& Up</span>;
+
+            </Button>;
+          ))}
+        </div>;
+      </div>;
+    </div>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   onClearFilters: () => void;
 }
 
@@ -450,8 +528,12 @@ export function FilterSidebar(_{_filters, _filterOptions, _onFilterChange, _onRa
         </div>;
       </div>;
 
+<<<<<<< HEAD
     </div>);
 }
 
 
 
+=======
+  filters: {}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

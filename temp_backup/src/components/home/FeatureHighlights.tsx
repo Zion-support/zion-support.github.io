@@ -184,13 +184,13 @@ function FeatureHighlights() {return (";"
     <section className="py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900" />";"
       <div className="max - w-7xl mx - auto px - 6" />;"
         <motion.div          className="text - center mb - 16";}
-          initial = {{ opacity: 0,coordinate_y: 20;}
-}}
-          whileInView = {{ opacity: 1,coordinate_y: 0;}
-}}
-          viewport={{ once: true }}
+          initial = { opacity: 0,coordinate_y: 20;}
+}
+          whileInView = { opacity: 1,coordinate_y: 0;}
+}
+          viewport={ once: true }
 
-          transition={{ duration: 0.6 }}"
+          transition={ duration: 0.6 }"
         >";"
 </motion>"
           <div className="inline - flex items - center gap - 2 px - 4 py - 2 bg - zion - purple / 10 border border - zion - purple / 20 rounded - full text - zion - purple text - sm font - medium mb - 6">";"
@@ -310,13 +310,13 @@ export function FeatureHighlights() {
           initial = {
   { opacity: 0
   y: 20
-}}
+}
           whileInView = {
   { opacity: 1
   y: 0
-}}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+}
+          viewport={ once: true }
+          transition={ duration: 0.6 }
         >"
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-purple/10 border border-zion-purple/20 rounded-full text-zion-purple text-sm font-medium mb-6">"
             <Award className="w-4 h-4"  />            <span>Why Choose Zion</span>
@@ -336,11 +336,11 @@ export function FeatureHighlights() {
             <motion.div
               key={index}
               variants={itemVariants}
-              whileHover={{
+              whileHover={
                 y: -5
                 scale: 1.02
                 transition: { duration: 0.3 }
-              }}"
+              }"
               className="group"
 "
               <div className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300">
@@ -366,13 +366,13 @@ export function FeatureHighlights() {
           ))}
         </div>
         <motion.div          className="mt-16 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          initial={ opacity: 0, y: 20 }
+          whileInView={ opacity: 1, y: 0 }
+          viewport={ once: true }
           transition = {
   { duration: 0.6
   delay: 0.4
-}}
+}
         >"
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
             <span>Experience the difference</span>"

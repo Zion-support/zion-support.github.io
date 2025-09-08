@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { useState  } from 'react';
 import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
 import { quoteRequestService  } from '@/services/quoteRequestService';
@@ -11,8 +14,44 @@ import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
 import {quoteRequestService} from '@/services/quoteRequestService';
 import {useAuth} from '@/hooks/useAuth';
 
+<<<<<<< HEAD
 
 
+=======
+  const { user } = useAuth();
+  const { toast } = useToast();
+  const queryClient = useQueryClient();
+  const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all');
+  const [archiveFilter, setArchiveFilter] = useState<'active' | 'archived' | 'all'>('active');
+  // Get the talent's ID (user's ID)
+  const talentId = user?.id |'';
+  // Fetch quotes for this talent
+  const { data: allQuotes = [], isLoading, error } = useQuery({
+    queryKey: ['quotestalent', talentId];
+queryFn: () => quoteRequestService && quoteRequestService.getByTalentId(talentId),
+    enabled: !!talentId});
+  // Count unread quotes
+  const unreadCount = allQuotes && allQuotes.filter(
+    quote => quote && quote.status === 'new' && !quote && quote.viewed_at
+  ).length;
+  // Filter quotes based on selected filters
+  const filteredQuotes = allQuotes && allQuotes.filter((quote) => {
+    // Status filter
+    if (statusFilter !== 'all' && quote && quote.status !== statusFilter) {
+      return false
+
+    queryFn: () => quoteRequestService.getByTalentId(talentId)
+    enabled: !!talentId});
+  // Count unread quotes
+  const unreadCount = allQuotes.filter(
+    quote => quote.status === 'new' && !quote.viewed_at
+  ).length;
+  // Filter quotes based on selected filters
+  const filteredQuotes = allQuotes.filter((quote) => {
+    // Status filter
+    if (statusFilter !== 'all' && quote.status !== statusFilter) {
+      return false
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { useState } from 'react',;
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;
 import { quoteRequestService } from '@/services/quoteRequestService',;
@@ -38,8 +77,11 @@ export const useTalentQuotes = () => {;
       return false;
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     }
     // Archive filter
     if (archiveFilter === 'active' && quote && quote.is_archived) {
@@ -52,6 +94,18 @@ export const useTalentQuotes = () => {;
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
       quoteRequestService && quoteRequestService.updateStatus(id, status);
 
+<<<<<<< HEAD
+=======
+
+    }
+    // Archive filter'
+    if (archiveFilter === 'active' && quote && quote.is_archived) {}
+      return false;
+    }'
+    if (archiveFilter === 'archived' && !quote && quote.is_archived) {}
+      return false;
+    }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
@@ -63,24 +117,43 @@ export const useTalentQuotes = () => {;
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
       quoteRequestService.updateStatus(id, status),
 
+<<<<<<< HEAD
 
 
 
+=======
+    return true
+  });
+  // Mark as viewed/responded mutation
+  const updateStatusMutation = useMutation({
+    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
+      quoteRequestService && quoteRequestService.updateStatus(id, status);
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     onSuccess: (_, variables) => {
       let message = "Status updated";
       if (variables && variables.status === 'in_review') {
         message = "Quote marked as viewed"
       } else if (variables && variables.status === 'responded') {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         message = "Quote marked as responded"
       }
       toast({
         title: message
 
 
+<<<<<<< HEAD
       });
 
+=======
+        description: "The quote request status has been updated"
+'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       queryClient && queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
     };
     onError: (error: Error) => {}
@@ -88,17 +161,27 @@ export const useTalentQuotes = () => {;
         title: "Error";"
         description: "Failed to update status: " + error && error.message,
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         variant: "destructive"
 
       })
     }
   });
 
+<<<<<<< HEAD
   // Archive/Unarchive mutation
   const toggleArchiveMutation = useMutation({
 
+=======
+
+      }),
+      queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     },
     onError: (error: Error) => {}
       toast({"
@@ -113,17 +196,35 @@ export const useTalentQuotes = () => {;
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
       quoteRequestService.toggleArchive(id, isArchived),
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     onSuccess: (_, variables) => {
 
       toast({
         title: variables.isArchived ? "Quote archived" : "Quote unarchived"
         description: variables.isArchived
           ? "The quote request has been archived"
+<<<<<<< HEAD
 
           : "The quote request has been moved back to active quotes"
 
+=======
+
+
+          : "The quote request has been moved back to active quotes"
+
+    };
+
+
+    onError: (error: Error) => {
+      toast({
+        title: "Error";
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
 
       quoteRequestService && quoteRequestService.toggleArchive(id, isArchived);
@@ -137,11 +238,14 @@ export const useTalentQuotes = () => {;
       queryClient && queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
     };
 
+<<<<<<< HEAD
     onError: (error: Error) => {
       toast({
         title: "Error";
         description: "Failed to update quote: " + error && error.message,
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         variant: "destructive"
       })
@@ -255,22 +359,37 @@ if ( {) {}
     }
   });
 ;
+<<<<<<< HEAD
 
   return {
 
+=======
+
+
+  return {}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     quotes: filtered_quotes;
     unread_count;
     is_loading;
     error;
     status_filter;
     setStatusFilter;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     toggleArchive: (id: string, isArchived: boolean) =>
 
     toggleArchive: (id: string, isArchived: boolean) => 
 
 
+<<<<<<< HEAD
 
+=======
+    toggleArchive: (id: string, isArchived: boolean) => 
+    },
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     onError: (error: Error) => {
       toast({
         title: "Error",
@@ -335,6 +454,15 @@ if ( {) {}
       updateStatusMutation.mutate({ id, status: 'responded' });
     toggleArchive: (id: string, isArchived: boolean) =>;
 
+<<<<<<< HEAD
+=======
+
+      toggleArchiveMutation.mutate({ id, isArchived })}
+}
+
+      toggleArchiveMutation.mutate({ id, isArchived })}
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
@@ -360,6 +488,9 @@ if ( {) {}
 }
 
 ;
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

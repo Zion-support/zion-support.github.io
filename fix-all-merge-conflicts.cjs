@@ -131,6 +131,8 @@ class MergeConflictResolver {
 <<<<<<< HEAD
       return content.includes('') || 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
              content.includes('>>>>>>>');
 =======
       return content.includes(<<<<<<< HEAD) || 
@@ -139,6 +141,7 @@ class MergeConflictResolver {
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 =======
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     } catch (error) {
       return false;
     }

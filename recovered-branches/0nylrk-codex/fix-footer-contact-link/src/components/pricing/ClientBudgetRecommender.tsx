@@ -1,38 +1,71 @@
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+import {Button} from "@/components/ui/button";
+import {getClientBudgetSuggestion, PricingSuggestion, ClientBudgetParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
+import {PricingSuggestionBox} from "./PricingSuggestionBox";
+import {useAuth} from "@/hooks/useAuth";
+import {Sparkles} from "lucide-react";
+<<<<<<< HEAD
+
+
+
+
+=======
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+import { 
+
+  getClientBudgetSuggestion;
+  PricingSuggestion;
+
+<<<<<<< HEAD
+  ClientBudgetParams;
+  trackPricingSuggestion
+} from "@/services/pricingSuggestionService",
+import { PricingSuggestionBox } from "./PricingSuggestionBox",
+
+=======
 
 import {Button} from "@/components/ui/button";
 import {getClientBudgetSuggestion, PricingSuggestion, ClientBudgetParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
 import {PricingSuggestionBox} from "./PricingSuggestionBox";
 import {useAuth} from "@/hooks/useAuth";
 import {Sparkles} from "lucide-react";
+interface ClientBudgetRecommenderProps {;
+  jobTitle: string,;
+  category: string,;
 
-
-
-
-import { 
-
-  getClientBudgetSuggestion;
-  PricingSuggestion;
-
-  ClientBudgetParams;
-  trackPricingSuggestion
-} from "@/services/pricingSuggestionService",
-import { PricingSuggestionBox } from "./PricingSuggestionBox",
-
+interface ClientBudgetRecommenderProps {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   timeline?: string;
   scope?: string;
   experienceLevel?: string;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   jobTitle;
   category;
   timeline;
   scope;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface ClientBudgetRecommenderProps {
 
   jobTitle: string,
@@ -40,14 +73,66 @@ interface ClientBudgetRecommenderProps {
   timeline?: string,
   scope?: string,
   experienceLevel?: string,
+<<<<<<< HEAD
 
   onSuggestionApplied: (minValue: number, maxValue: number) => void
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 import React, { useState } from "react",;
 
+<<<<<<< HEAD
 
 
+=======
+import { Button } from "@/components/ui/button",;
+import {;
+  getClientBudgetSuggestion,;
+  PricingSuggestion,;
+  ClientBudgetParams,;
+  trackPricingSuggestion;"
+} from "@/services/pricingSuggestionService",;"
+import { PricingSuggestionBox } from "./PricingSuggestionBox",;"
+import { useAuth } from "@/hooks/useAuth",;"
+import { Sparkles } from "lucide-react",;
+interface ClientBudgetRecommenderProps {;
+  jobTitle: string,;
+  category: string,;
+  timeline?: string,;
+  scope?: string,;
+  experienceLevel?: string,;
+  onSuggestionApplied: (minValue: number, maxValue: number) => void;
+}
+;
+export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({;
+  jobTitle,;
+  category,;
+  timeline,;
+  scope,;
+  experienceLevel,;
+  onSuggestionApplied}) => {;
+  const [isLoading, setIsLoading] = useState(false),;
+  const { user } = useAuth(),;
+  const generateSuggestion = async () => {;
+    if (!jobTitle || !category) {;
+      return;
+
+    setIsLoading($2);
+    try {
+      const params: ClientBudgetParams = $2;
+        category},
+
+      if (timeline) params.timeline = $2;
+      if (scope) params.scope = $2;
+      if (experienceLevel) params.experienceLevel = $2;
+      const result = await getClientBudgetSuggestion($2);
+      setSuggestion(result)
+    } catch (error) {
+      console.error("Error generating budget suggestion:", error)
+    } finally {
+      setIsLoading(false)
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     }
   },
@@ -62,15 +147,22 @@ import React, { useState } from "react",;
       if (scope) params.scope = scope,
       if (experienceLevel) params.experienceLevel = experienceLevel,
 
+<<<<<<< HEAD
 
 
+=======
+const result = await getClientBudgetSuggestion(params),;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       setSuggestion(result)
     } catch (error) {
       console.error("Error generating budget suggestion:", error)
     } finally {
       setIsLoading(false)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
     setIsLoading(true),;
     try {;
@@ -92,13 +184,23 @@ import React, { useState } from "react",;
     }
   },;
 
+<<<<<<< HEAD
 
 
+=======
+  };
+  const handleApplySuggestion = () => {;
+    if (suggestion) {;
+      onSuggestionApplied(suggestion && suggestion.minRate, suggestion && suggestion.maxRate);
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const handleApplySuggestion = () => {;
     if (suggestion) {;
       onSuggestionApplied(suggestion && suggestion.minRate, suggestion && suggestion.maxRate);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       // Track this suggestion application;
       if (user) {;
         trackPricingSuggestion({;
@@ -106,13 +208,19 @@ import React, { useState } from "react",;
           suggestionType: 'client',;
           suggestedMin: suggestion && suggestion.minRate,;
           suggestedMax: suggestion && suggestion.maxRate,;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           accepted: true;
         });
       }
     }
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       setSuggestion(result);
     } catch (error) {;"
@@ -125,6 +233,7 @@ import React, { useState } from "react",;
   }
 
 
+<<<<<<< HEAD
 
 
   return (
@@ -132,13 +241,30 @@ import React, { useState } from "react",;
       <div>;
         {!suggestion && !isLoading ? (;
 
+=======
+    <div className="space-y-4">;
+      <div>;
+        {!suggestion && !isLoading ? (;
+          <Button"
+            type="button""
+            variant="outline"
+            onClick={generateSuggestion}
+}
+      </div>;
+    </div>;
+  );
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             disabled={!jobTitle || !category}
             className="w-full">;"
             <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation;"
           </Button>;
         ) : (;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface ClientBudgetRecommenderProps {
   }
   "job_title": string,
@@ -241,6 +367,7 @@ return (;
             suggestion={suggestion}
             is_loading={is_loading}
             onApplySuggestion={handleApplySuggestion}
+<<<<<<< HEAD
 
 
 
@@ -253,6 +380,14 @@ return (;
 
 
 
+=======
+      </div>;
+    </div>;
+
+};
+      </div>;
+    </div>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
             rate_type="hourly";
           />)}
@@ -261,6 +396,9 @@ return (;
 }
 
 ;
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

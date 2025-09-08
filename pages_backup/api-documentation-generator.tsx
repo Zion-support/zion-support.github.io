@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 export default function APIDocumentationGeneratorPage() {
   if (!service) return null,
@@ -8,6 +9,12 @@ export default function APIDocumentationGeneratorPage() {
 
 
 
+=======
+export default function APIDocumentationGeneratorPage() {
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-documentation-generator'))
+  if (!service) return null,
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <Layout>
       <Head>
@@ -31,8 +38,11 @@ export default function APIDocumentationGeneratorPage() {
                   <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-indigo-400 mt-0.5"><Check /><span>{feat}</span></li>
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               </ul>
             </div>"
             <div className="bg-black/30 rounded-2xl border border-indigo-500/30 p-6 h-fit">"
@@ -44,13 +54,52 @@ export default function APIDocumentationGeneratorPage() {
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
               </div>
 
+<<<<<<< HEAD
 
 
+=======
+
+:pages/api-documentation-generator.tsx
+              <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Generate Docs<ArrowRight /></a>
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2 w-4 h-4 text-cyan-400"><Phone /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs"><MapPin /><span >{service.contactInfo.address}</span></div>
 
+"
+              <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Generate Docs<ArrowRight /></Link>
+
+              <a
+                href='/contact'
+                className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2'
+              >
+                Generate Docs
+                <ArrowRight />
+              </a>
+              <div className='mt-6 space-y-3 text-sm text-slate-300'>
+                <div className='flex items-center space-x-2 w-4 h-4 text-cyan-400'>
+                  <Phone />
+                  <span>{service.contactInfo.mobile}</span>
+                </div>
+                <div className='flex items-center space-x-2 w-4 h-4 text-purple-400'>
+                  <Mail />
+                  <span>{service.contactInfo.email}</span>
+                </div>
+                <div className='flex items-center space-x-2 w-4 h-4 text-green-400 text-xs'>
+                  <MapPin />
+                  <span>{service.contactInfo.address}</span>
+                </div>
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+              <div className="mt-6 space-y-3 text-sm text-slate-300">
+                <div className="flex items-center space-x-2 w-4 h-4 text-cyan-400"><Phone /><span>{service.contactInfo.mobile}</span></div>
+                <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{service.contactInfo.email}</span></div>
+                <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs"><MapPin /><span >{service.contactInfo.address}</span></div>
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               </div>
             </div>
           </div>
@@ -58,6 +107,7 @@ export default function APIDocumentationGeneratorPage() {
       </div>
     </Layout>
 
+<<<<<<< HEAD
   )
 
 
@@ -71,3 +121,10 @@ export default function APIDocumentationGeneratorPage() {
 
 
 
+=======
+  } catch (error) {"
+    console.error("Error:", error);"
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

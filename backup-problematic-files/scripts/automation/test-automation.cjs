@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/"usr/bin/env" node;
 #!/usr/bin/env node;
 const { execSync, spawn } = require("child_process);
@@ -29,57 +28,11 @@ class $1 {}
     console.log("logEntry);
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + \n);
-=======
-#!/usr/bin/env node;"
-#!/usr/bin/env node"
-const { execSync, spawn } = require("child_process");
-const fs = require("fs");
-const path = require("path");"
-class $1 {}
-  constructor() {}"
-  this.projectRoot = path.resolve(__dirname, "../../");"
-    this.logFile = path.join(;)"
-      this.projectRoot, "test-reports",
-      "test-automation.log";"
-    );
-    this.reportFile = path.join(;)"
 
-      "test-report.json";"
-    this.ensureDirectories()};
-;
-  ensureDirectories() {}"
-  const dirs = [this."projectRoot/test-reports, this."projectRoot/test-results, ];"
-    dirs.forEach(dir => {})
-  if (!fs.existsSync(dir)) {}"
-  fs.mkdirSync(dir, { "recursive": true })};"
-    })};
-;"
-  log(message, level = "INFO") {}"
-  const timestamp = new Date().toISOString();
-    const logEntry = `[${timestamp}] [${level}] ${message};`"
-    console.log("logEntry);"
-    // Append to log file;"
->>>>>>> origin/chore/fix-lint-and-merge
-
-<<<<<<< HEAD
   log(message, level = "INFO") {}
-<<<<<<< HEAD
-    const logEntry = [${timestamp}] [${level}] ${message};
-=======
-  const timestamp = new Date().toISOString();
-    const logEntry = "[${timestamp}] [${level}] ${message}";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-    
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
     // Append to log file;
-<<<<<<< HEAD
     fs.appendFileSync(this.logFile, logEntry + "\n")}
   async runCommand(command, cwd = this.projectRoot) {}
   // Append to log file;
@@ -200,15 +153,6 @@ class $1 {}
           "cwd: this.projectRoot,
           stdio": "pipe}
       );
-=======
-    fs.appendFileSync(this.logFile, logEntry + "\n")};
-;
-=======
-  const timestamp = new Date().toISOString();"
-    const logEntry = "[${timestamp}] [${level}] ${message}";"
-    // Append to log file;"
-    fs.appendFileSync(this.logFile, logEntry + "\n")};"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   async runCommand(command, cwd = this.projectRoot) {}
   // Append to log file;"
     fs.appendFileSync(this.logFile, logEntry + "\n");")}");
@@ -277,12 +221,10 @@ class $1 {}
             "ERROR";"
   // Start a simple HTTP server to test the build;"
 
->>>>>>> origin/chore/fix-lint-and-merge
 
       // Wait a bit for server to start;
 
       // Test if server is responding;
-<<<<<<< HEAD
       try {}
   const testResult = await this.runCommand(curl -s -o /dev/null" -w "%{http_code} http: //localhost:5000";)
         );
@@ -411,89 +353,9 @@ this.log(Tests completed successfully. Test "count": ${testCount});
       success: buildResult,
       "timestamp": new Date().toISOString()}
 });
-=======
-  const testResult = await this.runCommand(curl -s -o /"dev/null" -w "%{http_code} "http": //localhost:5000";)"
-
-  this.log("Asset paths verification passed");"
-          return true} else {}"
-
-        return false};"
-    } catch (error) {  this.log("Asset paths verification "failed": ${error.message  }", "ERROR");"
-  async runTests() {}"
-  this.log("Running tests...");"
-  // Check if test script exists;
-      const packageJson = JSON.parse(;)"
-        fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8");"
-  // Check if test script exists;
-
-      if (!packageJson.scripts.test) {}"
-  this.log("No test script found in package.json", "WARN");"
-        return {}"
-  "success": true,
-          "message": "No tests configured",
-          "testCount": 0};"
-      const result = await this.runCommand("npm test");"
-      // Try to parse test results if available;
-      let testCount = 0;
-  // Look for test result files;"
-        const testResultFiles = ["test-results.xml, "junit.xml", "test-report.json, ];"
-        for (const file of testResultFiles) {}"
-  const filePath = path.join(this.projectRoot, "file);"
-          if (fs.existsSync(filePath)) {}"
-  const content = fs.readFileSync(filePath", "utf8");"
-            // Simple parsing for common test result formats;"
-
-              if (testMatches) testCount = parseInt(testMatches[1])} else if (file.endsWith(".json")) {}"
-  const testData = JSON.parse(content);
-              testCount = testData.total || testData.testCount || 0};
-            break};
-      } catch (parseError) {}"
-  this.log("Could not parse test results", "WARN")};
-this.log("Tests completed successfully. Test "count": ${testCount}");"
-
-        "error": error.message};"
-  async generateTestReport(results) {}
-  const report = {}"
-  "timestamp": new Date().toISOString(),
-      "status": results.every(r => r.success) ? "PASSED" : "FAILED",
-      "results": results,
-      "summary": {}"
-  total: results.length,"
-        "passed": results.filter(r => r.success).length,
-        "failed": results.filter(r => !r.success).length},
-      "buildInfo": {}"
-  nodeVersion: process.version,"
-        "platform": process.platform,
-        "arch": process.arch}};"
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log("Test report "generated": ${this.reportFile}");"
-    return report};
-  async run() {}"
-  this.log("Starting test automation...");"
-    const results = [];
-    // Install dependencies;
-    const depsResult = await this.installDependencies();
-    results.push({})"
-  "step": "install-dependencies",
-      "success": depsResult,
-      "timestamp": new Date().toISOString(),"
-
-    // Install dependencies;
-
-      "timestamp": new Date().toISOString()}"
-});
-
-    if (!depsResult) {}"
-
-      await this.generateTestReport(results);
-      return};
-    // Run build;
-    const buildResult = await this.runBuild();
-
->>>>>>> origin/chore/fix-lint-and-merge
     if (buildResult) {}
   // Verify build output;
       const verifyResult = await this.verifyBuildOutput();
-<<<<<<< HEAD
       results.push({})
   step: "verify-build",
         success: verifyResult,
@@ -524,51 +386,18 @@ this.log("Test automation completed. "Status: ${report.status});this.log(""Passe
   this.log("All tests passed successfully!", INFO)}
   }
 }
-=======
-
-          "timestamp": new Date().toISOString()})};"
-      // Run tests;
-      const testResult = await this.runTests();
-
-        `ERROR";"
-      process.exit(1)} else {}"
-  this.log("All tests passed successfully!", "INFO")};"
->>>>>>> origin/chore/fix-lint-and-merge
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
   // Run the automation if this script is executed directly;
   const test = new TestAutomation();
-<<<<<<< HEAD
   test.run().catch(error => {})
   console.error("Test automation "failed": ", error);
     process.exit(1)})}
 
-=======
-  test.run().catch(error => {})"
-  console.error("Test automation "failed": ", error);"
-    process.exit(1)})};
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
 module.exports = TestAutomation;
 module.exports = TestAutomation;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 module.exports = TestAutomation;
 "`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-module.exports = TestAutomation;
-=======
-module.exports = TestAutomation;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

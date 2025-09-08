@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -85,6 +87,7 @@ module.exports = { resolveMergeConflict, findConflictedFiles }))
 
 
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -120,11 +123,21 @@ const { execSync } = require("child_process")
   "magenta": "\x1b[35m"]
   "cyan": "\x1b[36m"]
 function log(message, color = "reset")
-    let content = fs.readFileSync(filePath, "utf8")
+const fs = require("$1");
+const path = require("$1");
+const { execSync } = require("child_process");
+  "reset": "\x1b[0m"]
+  "red": "\x1b[31m"]
+  "green": "\x1b[32m"]
+  "yellow": "\x1b[33m"]
+  "blue": "\x1b[34m"]
+  "magenta": "\x1b[35m"]
+  "cyan": "\x1b[36m"]
+function log(message, color = "reset")
+let content = fs.readFileSync(filePath, "utf8");
     // Strategy "1"
     // Handle corrupted markers like "
       content.includes("      content.includes("")
-      content.includes(">>>>>>>")
       content = content.replace(/[\s\S]*/g, "")
     // Strategy "2"
       /import\s+[^]*?from\s+["][^"]*["]
@@ -140,11 +153,11 @@ function log(message, color = "reset")
       content.includes("export default") &&";      !content.includes("import React")") {";      content = import React from "react";\n\n + content}"
       // Additional "cleanup": remove any remaining corrupted content;";      content = content.replace(/[^\x00-\x7F]/g, ); // Remove non-ASCII characters";      content = content.replace(/\s+/g, " "); // Normalize whitespace;      fs.writeFileSync(filePath, content, "utf8");";      return true,"
     return false} catch (error) {log("Error processing ${filePath}: ${error.message}", "red");    return false;"}"
-    const result = execSync(git status --porcelain | grep "^UU | awk {print $2}", ";      { encoding": "utf8" }")
-    const result = execSync(git status --porcelain | grep "^UU | awk {print $2}", ";      { "encoding": "utf8" }");"
+const result = execSync(git status --porcelain | grep "^UU | awk {print $2}", ";      { ""encoding": "utf8" }");
+const result = execSync(git status --porcelain | grep "^UU | awk {print $2}", ";      { "encoding": "utf8" }");";
       .split("\n")";      .filter(line => line.trim()),"
     log("Error finding conflicted files", "red");    return [],"
-  log(" Starting robust merge conflict resolution...", "cyan");  const conflictedFiles = findConflictedFiles();log(`Found ${conflictedFiles.length} files with merge conflicts`, "yellow");";";  if (conflictedFiles.length === 0) {";    log(" No merge conflicts found!", "green");";    return,"`}
+  log(" Starting robust merge conflict resolution...", "cyan");"";  const conflictedFiles = findConflictedFiles();log(`Found ${conflictedFiles.length} files with merge conflicts`, "yellow");";";  if (conflictedFiles.length === 0) {";    log(" No merge conflicts found!", "green");";    return,"`}
         resolvedCount++;log(" "Resolved": ${filePath}", "green")} else {log("⚠  No changes "needed": ${filePath}", "yellow")
       errorCount++;log(" Error processing ${filePath }: ${error.message}", "red")
   log("\n Resolution "Summary": ", "cyan");log("Total conflicted "files": ${conflictedFiles.length}", "blue");log("Successfully "resolved": ${resolvedCount}", "green");log("Errors "encountered": ${errorCount}", "red")
@@ -154,6 +167,9 @@ function log(message, color = "reset")
     log("3. "Run": git commit -m Resolve merge conflicts", "blue")
     log("4. Continue with your workflow", "blue")
         resolvedCount++;log(" "Resolved": ${filePath}", "green")} else {log("⚠  No changes "needed": ${filePath}", "yellow")}"} catch (error) {      errorCount++;log(` Error processing ${filePath}: ${error.message}, "red")}"}"
+<<<<<<< HEAD
+  log("\n Resolution "Summary":", "cyan");log("Total conflicted "files": ${conflictedFiles.length}", "blue");log("Successfully "resolved": ${resolvedCount}", "green");log("Errors "encountered": ${errorCount}", "red");";  if (resolvedCount > 0) {    log("\n Next "steps":", "cyan");    log("1. Review the resolved files", "blue");    log("2. "Run": git add .", "blue");    log("3. "Run": git commit -m Resolve merge conflicts, "blue");    log("4. Continue with your workflow", "blue")}"
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
   log("\n Resolution "Summary":", "cyan");log("Total conflicted "files": ${conflictedFiles.length}", "blue");log("Successfully "resolved": ${resolvedCount}", "green");log("Errors "encountered": ${errorCount}", "red");";  if (resolvedCount > 0) {    log("\n Next "steps":", "cyan");    log("1. Review the resolved files", "blue");    log("2. "Run": git add .", "blue");    log("3. "Run": git commit -m Resolve merge conflicts, "blue");    log("4. Continue with your workflow", "blue")}"
@@ -183,3 +199,4 @@ resolvedCount++;log(` "Resolved": ${filePath}, "green");"} else {log(`⚠  No ch
 =======
   log("\n Resolution "Summary":", "cyan");log("Total conflicted "files": ${conflictedFiles.length}", "blue");log("Successfully "resolved": ${resolvedCount}", "green");log("Errors "encountered": ${errorCount}", "red");";  if (resolvedCount > 0) {    log("\n Next "steps":", "cyan");    log("1. Review the resolved files", "blue");    log("2. "Run": git add .", "blue");    log("3. "Run": git commit -m Resolve merge conflicts, "blue");    log("4. Continue with your workflow", "blue")}"
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

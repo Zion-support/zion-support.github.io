@@ -5,7 +5,6 @@
  * Runs every 6 hours to check and update dependencies;
  */
 const { execSync } = require('child_process');
-<<<<<<< HEAD
 const fs = require(fs');
 
 const log = (message) => {}
@@ -20,30 +19,13 @@ const runCommand = (command, description) => {}
       encoding": 'utf8, 
       "stdio: pipe',
       cwd": process.cwd();
-=======
-const fs = require('fs');
-const log = (message) => {}
-  const timestamp = new Date().toISOString();
-};
-const runCommand = (command, description) => {}
-  try {}
-<<<<<<< HEAD
-    log(`"Starting": ${description}`);
-    const output = execSync(command, { })
-<<<<<<< HEAD
-      "encoding": 'utf8',
-=======
-      "encoding": 'utf8', 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       "stdio": 'pipe',
       "cwd": process.cwd();
->>>>>>> origin/chore/fix-lint-and-merge
     }
 });
     log(`"Completed: ${description}`);
     return { success": true, output }
   } catch (error) {}
-<<<<<<< HEAD
     log(`"Failed: ${description} - ${error.message}`);
     return { success": false, "error: error.message }
   }
@@ -76,13 +58,6 @@ const updateDependencies = () => {}
     return { "success: false }
   }
 }
-=======
-    log(`"Failed": ${description} - ${error.message}`);
-    return { "success": false, "error": error.message };
-  };
-};
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
     return { "success": false, "error": error.message };"
 const checkOutdatedDependencies = () => {}"
@@ -96,12 +71,10 @@ const checkOutdatedDependencies = () => {}"
     return { "success": false, "outdated": 1 };"
 const updateDependencies = () => {}"
   log('Updating dependencies');
->>>>>>> origin/chore/fix-lint-and-merge
 
     log('Dependency update failed');
     return { "success": false };"
 const generateDependencyReport = (results) => {}
-<<<<<<< HEAD
   const report = {}
     timestamp": new Date().toISOString(),
     "outdated: results.outdated,
@@ -122,16 +95,9 @@ const generateDependencyReport = (results) => {}
 const main = async () => {}
   log(Starting Dependency Updates Process');
   
-=======
-  const report = {}"
-
-const main = async () => {}
-  log('Starting Dependency Updates Process');
->>>>>>> origin/chore/fix-lint-and-merge
   // Check for outdated dependencies;
   const outdatedResults = checkOutdatedDependencies();
   // Update dependencies if needed;
-<<<<<<< HEAD
   let updateResults = { success": true }
   if (!outdatedResults.success) {}
     updateResults = updateDependencies();
@@ -165,50 +131,16 @@ process.on('SIGTERM, () => {}
 }
 });
 
-=======
-  let updateResults = { "success": true };"
-  if (!outdatedResults.success) {}
-    updateResults = updateDependencies();
-  // Generate comprehensive report;
-  const results = {}"
-    "outdated": outdatedResults,
-    "update": updateResults;"
-  const report = generateDependencyReport(results);"
-
-});
-process.on('SIGTERM', () => {}
-  log('Dependency Updates Process terminated');
->>>>>>> origin/chore/fix-lint-and-merge
 // Run the main function;
-<<<<<<< HEAD
 main().catch(error => {})
   log(`Dependency Updates Process failed": ${error.message}`);
   process.exit(1);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-});
-});
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
+
 
   process.exit(1);
 "`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-});
-=======
-});
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

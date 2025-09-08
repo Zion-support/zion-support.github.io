@@ -10,6 +10,7 @@ import {BlockchainNetwork, DeploymentOptions} from "@/types/smart-contracts";
 import {Loader2, ShieldCheck, Download} from "lucide-react";
 import {toast} from "sonner";
 
+<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -60,6 +61,8 @@ export function SmartContractDeployment({
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const handleDeployContract = async () => {
     // Check condition
 if ( {) {
@@ -76,8 +79,11 @@ if ( {) {
     }
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     a.download = 'ZionContract.sol',
     document.body.appendChild(a),
     a.click(),
@@ -101,9 +107,17 @@ interface SmartContractDeploymentProps {;
   onDeploy: (options: DeploymentOptions) => Promise<void>,;
   isDeploying: boolean;
 }
+<<<<<<< HEAD
 
 
 
+=======
+;
+export function SmartContractDeployment({;
+  solidityCode,;
+  onDeploy,;
+  isDeploying;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }: SmartContractDeploymentProps) {;
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({;'
     network: 'none',;
@@ -112,24 +126,328 @@ interface SmartContractDeploymentProps {;
     walletAddress: '';
 
 
+<<<<<<< HEAD
+=======
+  }
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           Smart Contract Deployment;
         </CardTitle>;
         <CardDescription>;
           Deploy your agreement as a smart contract for enhanced security and automation;
         </CardDescription>;
       </CardHeader>;
+<<<<<<< HEAD
+=======
+
+              })}
+
+            />
+
+            <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>
+          </div>
+          {deploymentOptions.deployToChain && (
+            <>"
+              <div className="space-y-2">
+                <Label>Select blockchain network</Label>
+
+                  defaultValue={deploymentOptions.network}
+                  onValueChange={(value) => setDeploymentOptions({;
+                    ...deploymentOptions,;
+                    network: value as BlockchainNetwork;
+                  onValueChange={(value) => setDeploymentOptions({;
+                    ...deploymentOptions,;
+                    network: value as BlockchainNetwork;
+
+                  onValueChange={(value) => setDeploymentOptions({;
+                    ...deploymentOptions,;
+                    network: value as BlockchainNetwork;
+                  onValueChange={(value) => setDeploymentOptions({;
+                    ...deploymentOptions,;
+                    network: value as BlockchainNetwork;
+
+                  })}
+                  className="flex flex-col space-y-1"
+                >
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="ethereum" id="ethereum" />
+                    <Label htmlFor="ethereum">Ethereum (higher fees, more secure)</Label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="polygon" id="polygon" />
+                    <Label htmlFor="polygon">Polygon (lower fees, faster)</Label>
+                  </div>
+                </RadioGroup>
+              </div>
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
               <div className="space-y-2">
                 <Label htmlFor="wallet-address">Wallet address for transactions</Label>
 
+<<<<<<< HEAD
+=======
+              })}
+
+            />;
+            <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>;
+          </div>;
+
+          {deploymentOptions && deploymentOptions.deployToChain && (;
+            <>;
+              <div className="space-y-2">;
+                <Label>Select blockchain network</Label>;
+                <RadioGroup
+                  defaultValue={deploymentOptions && deploymentOptions.network}
+                  onValueChange={(value) => setDeploymentOptions({;
+
+                    ...deploymentOptions;
+                    network: value as BlockchainNetwork;
+
+
+                >;
+                  <div className="flex items-center space-x-2">;
+                    <RadioGroupItem value="ethereum" id="ethereum" />;
+
+                    <Label htmlFor="ethereum">Ethereum (higher fees, more secure)</Label>;
+                  </div>;"
+                  <div className="flex items-center space-x-2">;"
+                    <RadioGroupItem value="polygon" id="polygon" />;"
+                    <Label htmlFor="polygon">Polygon (lower fees, faster)</Label>;
+                  </div>;
+                </RadioGroup>;
+              </div>;
+
+
+              <div className="space-y-2">;
+
+                <Label htmlFor="wallet-address">Wallet address for transactions</Label>;
+                <Input"
+                  id="wallet-address" "
+                  placeholder="0x..." '
+
+                  value={deploymentOptions && deploymentOptions.walletAddress || ''}
+                  onChange={(e) => setDeploymentOptions({;
+
+                    ...deploymentOptions;
+
+
+                <Input 
+                  id="wallet-address" 
+                  placeholder="0x..." 
+                  value={deploymentOptions.walletAddress || ''}
+
+                  })}
+
+                />;
+              </div>;
+
+              <div className="flex items-center space-x-2">;
+
+                  onChange={(e) => setDeploymentOptions({
+
+                    ...deploymentOptions;
+                    walletAddress: e.target.value;
+                  onChange={(e) => setDeploymentOptions({;
+                    ...deploymentOptions;
+                    walletAddress: e.target.value;
+
+                  })}
+
+                    ...deploymentOptions;
+                    useEscrow: checked;
+                  onCheckedChange={(checked) => setDeploymentOptions({;
+                    ...deploymentOptions;
+                    useEscrow: checked;
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                   })}
                 />;"
                 <Label htmlFor="use-escrow">Use escrow for payments</Label>;
               </div>;
             </>;
           )}
+<<<<<<< HEAD
 
 
+=======
+
+                    walletAddress: e.target.value
+                  onChange={(e) => setDeploymentOptions({;
+                    ...deploymentOptions;
+                    walletAddress: e.target.value;
+                  })}
+                />
+              </div>
+              <div className="flex items-center space-x-2">
+                <Switch
+                  id="use-escrow"
+                  checked={deploymentOptions.useEscrow}
+                  onCheckedChange={(checked) => setDeploymentOptions({
+                    ...deploymentOptions;
+
+                    useEscrow: checked
+                <Switch 
+                  id="use-escrow"
+                  checked={deploymentOptions.useEscrow}
+                  onCheckedChange={(checked) => setDeploymentOptions({;
+                    ...deploymentOptions;
+                    useEscrow: checked;
+
+                  onCheckedChange={(checked) => setDeploymentOptions({
+                    ...deploymentOptions;
+
+                    useEscrow: checked
+                  onCheckedChange={(checked) => setDeploymentOptions({;
+                    ...deploymentOptions;
+                    useEscrow: checked;
+
+                  })}
+                />
+                <Label htmlFor="use-escrow">Use escrow for payments</Label>
+              </div>
+            </>
+          )}
+
+          <div className="rounded-md bg-muted p-4">
+            <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>
+            <div className="max-h-52 overflow-y-auto bg-background p-3 rounded text-xs font-mono">
+              <pre>{solidityCode.slice(0, 500)}...</pre>
+            </div>
+          </div>
+        </div>
+      </CardContent>
+      <CardFooter className="flex justify-between">
+        <Button variant="outline" onClick={handleDownloadSolidity}>
+          <Download className="mr-2 h-4 w-4" />
+          Download .sol File
+        </Button>
+        <Button onClick={handleDeployContract} disabled={isDeploying}>
+          {isDeploying ? (
+            <>
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              Deploying...
+            </>
+          ) : (
+            'Deploy Contract'
+          )}
+
+}
+
+        </Button>;
+      </CardFooter>;
+    </Card>;
+  );
+
+          <div className="rounded-md bg-muted p-4">;
+            <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>;
+            <div className="max-h-52 overflow-y-auto bg-background p-3 rounded text-xs font-mono">;
+              <pre>{solidityCode && solidityCode.slice(0, 500)}...</pre>;
+
+      <CardContent className="space - y-6">;
+        <div className="space - y-4">;
+          <div className="flex items - center space - x-2">;
+
+            <Switch;
+
+              id="deploy - blockchain";
+              checked={deployment_options.deployToChain}
+              onCheckedChange={(checked) => setDeploymentOptions ({}
+                ...deployment_options;
+                deployToChain: checked;
+              })}
+            />;"
+            <Label html_for="deploy - blockchain">Deploy to blockchain</Label>;
+          </div>;
+          {deployment_options.deployToChain && (
+
+                <Label > Select blockchain network</Label>;
+                <RadioGroup;
+                  default_value={deployment_options.network}
+                  onValueChange={(value) => setDeploymentOptions ({}
+                    ...deployment_options;
+                    network: value as BlockchainNetwork;
+
+                <Label html_for="wallet - address">Wallet address for transactions</Label>;
+                <Input;"
+                  id="wallet - address";"
+                  placeholder="0x...";'
+                  value={deployment_options.wallet_address || ''}
+                  on_change={(e) => setDeploymentOptions ({}
+                    ...deployment_options;
+                    wallet_address: e.target.value;
+                  })}
+                />;
+
+                  id="use - escrow";
+                  checked={deployment_options.use_escrow}
+                  onCheckedChange={(checked) => setDeploymentOptions ({}
+                    ...deployment_options;
+                    use_escrow: checked;
+                  })}
+                />;"
+                <Label html_for="use - escrow">Use escrow for payments</Label>;
+              </div>;
+
+          ;
+
+          <div className="rounded-md bg-muted p-4">;
+            <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>;
+            <div className="max-h-52 overflow-y-auto bg-background p-3 rounded text-xs font-mono">;
+              <pre>{solidityCode.slice(0, 500)}...</pre>;
+
+            </div>;
+          </div>;
+        </div>;
+      </CardContent>;
+
+      <CardFooter className="flex justify - between">;
+
+        <Button variant="outline" on_click={handleDownloadSolidity}>;
+          <Download className="mr - 2 h - 4 w - 4" />;
+          Download .sol File;
+        </Button>;
+        <Button on_click={handleDeployContract} disabled={is_deploying}>;
+          {is_deploying ? (
+            <>;
+              <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
+              Deploying...;
+            </>) : (
+            'Deploy Contract')}
+        </Button>;
+      </CardFooter>;
+    </Card>);
+}
+
+          <Download className="mr-2 h-4 w-4" />;
+          Download .sol File;
+        </Button>;
+        ;
+        <Button onClick={handleDeployContract} disabled={isDeploying}>;
+          {isDeploying ? (;
+
+            'Deploy Contract';
+          )}
+        </Button>;
+      </CardFooter>;
+    </Card>;
+
+a.download = 'ZionContract.sol';
+document.body.appendChild (a);
+a.click ();
+//Clean up URL.revokeObjectURL (url);
+
+}disabled= {
+  isDeploying;
+}> {
+  isDeploying ? (<> <Loader2 className=" mr-2 h-4 w-4 animate-spin" /> Deploying... </>) : ('Deploy Contract') 
+}</Button> </CardFooter> </Card>) 
+}
+        </Button>;
+      </CardFooter>;
+    </Card>;
+  );
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                   })}
                 />
@@ -200,9 +518,12 @@ interface SmartContractDeploymentProps {;
               <pre>{solidityCode && solidityCode.slice(0, 500)}...</pre>;
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       <CardContent className="space - y-6">;
         <div className="space - y-4">;
           <div className="flex items - center space - x-2">;
@@ -247,12 +568,17 @@ interface SmartContractDeploymentProps {;
                 />;"
                 <Label html_for="use - escrow">Use escrow for payments</Label>;
               </div>;
+<<<<<<< HEAD
 
             </>)}
           <div className="rounded - md bg - muted p - 4">;
             <h4 className="text - sm font - medium mb - 2">Smart Contract Preview</h4>;
             <div className="max - h-52 overflow - y-auto bg - background p - 3 rounded text - xs font - mono">;
               <pre>{solidity_code.slice (0, 500)}...</pre>;
+=======
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           ;
 
           <div className="rounded-md bg-muted p-4">;
@@ -266,11 +592,14 @@ interface SmartContractDeploymentProps {;
         </div>;
       </CardContent>;
 
+<<<<<<< HEAD
       ;
       <CardFooter className="flex justify-between">;
         <Button variant="outline" onClick={handleDownloadSolidity}>;
           <Download className="mr-2 h-4 w-4" />;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           Download .sol File;
         </Button>;
         ;
@@ -310,6 +639,26 @@ const handleDeployContract = async () => {
   
 }
 
+<<<<<<< HEAD
 
 
 
+=======
+a.download = 'ZionContract.sol';
+document.body.appendChild (a);
+a.click ();
+//Clean up URL.revokeObjectURL (url);
+
+
+}disabled= {
+  isDeploying;
+}> {
+  isDeploying ? (<> <Loader2 className=" mr-2 h-4 w-4 animate-spin" /> Deploying... </>) : ('Deploy Contract') 
+}</Button> </CardFooter> </Card>) 
+}
+}
+;
+
+}
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

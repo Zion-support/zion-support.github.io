@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
   onAction: (;
@@ -15,12 +16,57 @@ export default function ModerationModal(): any ({;
   onAction,;
 }: ModerationModalProps) {;
 
+=======
+export type ModerationModalProps = {
+  flag: any | null;
+
+export type ModerationModalProps = {
+export type ModerationModalProps = {};
+  flag: any | null;
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false ;};
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true ;};
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary: ';, error, errorInfo);
+
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+
+</div> <div className="p-4 space-y-4 text-sm" > <div className="grid grid-cols-2 gap-4" > <div> </div> </div> </div>) 
+}
+import React, { useState } from 'react';
+
+  onAction: (;
+    action: approve' | 'remove | warn' | 'ban,
+    adminNotes?: string;
+  ) => Promise<void>;
+
+export default function ModerationModal(): any ({
+  flag,
+  onClose,
+  onAction}: ModerationModalProps) {
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   flag,
   onClose,
   onAction,
 }: ModerationModalProps) {;
 
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {}
   constructor(props) {}
@@ -29,11 +75,44 @@ class ErrorBoundary extends React.Component {}
   }
 
 
+=======
+
+  flag,
+  onClose,
+  onAction}: ModerationModalProps) {
+
+
+
+
+
+  flag,
+  onClose,
+  onAction}: ModerationModalProps) {
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false }
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true }
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error(Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 
+<<<<<<< HEAD
 
 
   const [adminNotes, setAdminNotes] = useState(');
@@ -44,6 +123,8 @@ class ErrorBoundary extends React.Component {}
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50>;
       <div className=bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg'>;
@@ -51,9 +132,62 @@ class ErrorBoundary extends React.Component {}
           <div className=font-semibold'>Review Flag — {flag && flag.id}</div>;
           <button
             onClick={onClose}
+<<<<<<< HEAD
 
 
 
+=======
+
+
+
+            className='text-gray-500 hover:text-gray-700>;
+            ✕;
+          </button>;
+        </div>;
+        <div className=p-4 space-y-4 text-sm'>;
+          <div className='grid grid-cols-2 gap-4>;
+            <div>;
+              <div className=text-gray-500'>Content Type</div>;
+              <div className='font-medium>{flag && flag.contentType}</div>;
+            </div>;
+            <div>;
+              <div className=text-gray-500'>User</div>;
+              <div className='font-medium>{flag && flag.userEmail}</div>;
+            </div>;
+            <div>;
+              <div className=text-gray-500'>Reason</div>;
+              <div className='font-medium>{flag && flag.reason}</div>;
+            </div>;
+            <div>;
+              <div className=text-gray-500'>Status</div>;
+              <div className='font-medium>{flag && flag.status}</div>;
+            </div>;
+          </div>;
+          <div>;
+            <div className=text-gray-500 mb-1'>Preview</div>;
+            <div className='border rounded p-3 bg-gray-50 dark:bg-gray-900 whitespace-pre-wrap max-h-48 overflow-auto>;
+              {flag && flag.snippet}
+            </div>;
+          </div>;
+          <div className='grid grid-cols-3 gap-4'>;
+            <div className='p-3 border rounded'>;
+              <div className='text-gray-500'>Toxicity</div>;
+              <div className='font-semibold'>;
+                {Math && Math.round((flag && flag.aiScores?.toxicity || 0) * 100)}%;
+              </div>;
+            </div>;
+            <div className='p-3 border rounded'>;
+              <div className='text-gray-500'>NSFW</div>;
+              <div className='font-semibold'>;
+                {Math && Math.round((flag && flag.aiScores?.nsfw || 0) * 100)}%;
+              </div>;
+            </div>;
+            <div className='p-3 border rounded'>;
+              <div className='text-gray-500'>Scam</div>;
+              <div className='font-semibold'>;
+                {Math && Math.round((flag && flag.aiScores?.scam || 0) * 100)}%;
+              </div>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             className='text-gray-500 hover:text-gray-700'>;
             ✕;
           </button>;
@@ -77,6 +211,7 @@ class ErrorBoundary extends React.Component {}
               <div className='font-medium'>{flag && flag.status}</div>;
             </div>;
           </div>;
+<<<<<<< HEAD
           <div>;'
             <div className='text-gray-500 mb-1'>Preview</div>;'
             <div className='border rounded p-3 bg-gray-50 dark:bg-gray-900 whitespace-pre-wrap max-h-48 overflow-auto'>;
@@ -108,15 +243,25 @@ class ErrorBoundary extends React.Component {}
           <div>;'
             <label className='block text-sm font-medium mb-1'>;
 
+=======
+          <div>;
+            <label className='block text-sm font-medium mb-1'>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               Admin Notes;
             </label>;
 
 
 
-            <textarea
+<<<<<<< HEAD
+=======
+              Admin Notes;
+            </label>;
 
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+            <textarea
               value={adminNotes}
               onChange={e => setAdminNotes(e && e.target.value)}
+<<<<<<< HEAD
 
               rows={3}'
               className='w-full border rounded px-3 py-2 bg-white dark:bg-black';
@@ -146,6 +291,35 @@ class ErrorBoundary extends React.Component {}
             onClick={() => onAction('ban', adminNotes)}'
             className='px-3 py-2 rounded bg-gray-800 text-white';
 
+=======
+              rows={3}
+              className='w-full border rounded px-3 py-2 bg-white dark:bg-black;
+            />;
+          </div>;
+        </div>;
+        <div className='p-4 border-t flex items-center justify-end gap-2'>;
+          <button
+            onClick={() => onAction('approve, adminNotes)}
+            className=px-3 py-2 rounded bg-green-600 text-white';
+          >;
+            Approve;
+          </button>;
+          <button
+            onClick={() => onAction('remove, adminNotes)}
+            className=px-3 py-2 rounded bg-red-600 text-white';
+          >;
+            Remove;
+          </button>;
+          <button
+            onClick={() => onAction('warn, adminNotes)}
+            className=px-3 py-2 rounded bg-yellow-600 text-white';
+          >;
+            Warn;
+          </button>;
+          <button
+            onClick={() => onAction('ban', adminNotes)}
+            className='px-3 py-2 rounded bg-gray-800 text-white';
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           >;
             Ban User;
           </button>        </div>;
@@ -157,6 +331,7 @@ class ErrorBoundary extends React.Component {}
   onClose: () => void;,
   onAction: (action: 'approve' | 'remove' | 'warn' | 'ban';, adminNotes?: string) => Promise<void>
 };
+<<<<<<< HEAD
 
 export default function ModerationModal({ flag, onClose, onAction }: ModerationModalProps) {
   if (!flag) return null;
@@ -283,33 +458,102 @@ if (return null) {}
           <div className='grid grid - cols - 3 gap - 4'>;'
             <div className='p - 3 border rounded'>;'
               <div className='text - gray - 500'>Toxicity</div>;'
+=======
+export default function ModerationModal({ flag, onClose, onAction }: ModerationModalProps) {
+  if (!flag) return null;
+  return (
+
+}
+  on_close: () => void;
+  on_action: (
+    action: approve' | 'remove | warn' | 'ban,
+    admin_notes?: string) => Promise < void>;
+export default /**
+ * ModerationModal - Function description
+ */
+function ModerationModal() {
+  const [admin_notes, setAdminNotes] = useState (');
+  // Check condition
+if (return null) {
+  $2
+}
+  return (
+    <div className='fixed inset - 0 z - 50 flex items - center justify - center bg - black / 50>;
+      <div className=bg - white dark:bg - black w - full max - w-2xl rounded shadow - lg'>;
+        <div className='p - 4 border - b flex items - center justify - between>;
+          <div className=font - semibold'>Review Flag — {flag.id}</div>;
+          <button;
+            on_click={on_close}
+            className='text - gray - 500 hover:text - gray - 700;
+          >;
+            ✕;
+          </button>;
+        </div>;
+        <div className=p - 4 space - y-4 text - sm'>;
+          <div className='grid grid - cols - 2 gap - 4>;
+            <div>;
+              <div className=text - gray - 500'>Content Type</div>;
+              <div className='font - medium>{flag.content_type}</div>;
+            </div>;
+            <div>;
+              <div className=text - gray - 500'>User</div>;
+              <div className='font - medium>{flag.user_email}</div>;
+            </div>;
+            <div>;
+              <div className=text - gray - 500'>Reason</div>;
+              <div className='font - medium>{flag.reason}</div>;
+            </div>;
+            <div>;
+              <div className=text - gray - 500'>Status</div>;
+              <div className='font - medium>{flag.status}</div>;
+            </div>;
+          </div>;
+          <div>;
+            <div className=text - gray - 500 mb - 1'>Preview</div>;
+            <div className='border rounded p - 3 bg - gray - 50 dark:bg - gray - 900 whitespace - pre - wrap max - h-48 overflow - auto>;
+              {flag.snippet}
+            </div>;
+          </div>;
+          <div className='grid grid - cols - 3 gap - 4'>;
+            <div className='p - 3 border rounded'>;
+              <div className='text - gray - 500'>Toxicity</div>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               <div className='font - semibold'>;
                 {Math.round ((flag.ai_scores?.toxicity || 0) * 100)}%;
               </div>;
-            </div>;'
-            <div className='p - 3 border rounded'>;'
-              <div className='text - gray - 500'>NSFW</div>;'
+            </div>;
+            <div className='p - 3 border rounded'>;
+              <div className='text - gray - 500'>NSFW</div>;
               <div className='font - semibold'>;
                 {Math.round ((flag.ai_scores?.nsfw || 0) * 100)}%;
               </div>;
-            </div>;'
-            <div className='p - 3 border rounded'>;'
-              <div className='text - gray - 500'>Scam</div>;'
+            </div>;
+            <div className='p - 3 border rounded'>;
+              <div className='text - gray - 500'>Scam</div>;
               <div className='font - semibold'>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 {Math.round ((flag.ai_scores?.scam || 0) * 100)}%;
               </div>;
             </div>;
           </div>;
+<<<<<<< HEAD
 
           <div>;'
             <label className='block text - sm font - medium mb - 1'>;
 
+=======
+          <div>;
+            <label className='block text - sm font - medium mb - 1'>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               Admin Notes;
             </label>;
             <textarea;
               value={admin_notes}
               on_change={e => setAdminNotes (e.target.value)}
+<<<<<<< HEAD
 
               rows={3}'
               className='w - full border rounded px - 3 py - 2 bg - white dark:bg - black';
@@ -339,10 +583,40 @@ if (return null) {}
             on_click={() => on_action ('ban', admin_notes)}'
             className='px - 3 py - 2 rounded bg - gray - 800 text - white';
 
+=======
+              rows={3}
+              className='w - full border rounded px - 3 py - 2 bg - white dark:bg - black;
+            />;
+          </div>;
+        </div>;
+        <div className='p - 4 border - t flex items - center justify - end gap - 2'>;
+          <button;
+            on_click={() => on_action ('approve, admin_notes)}
+            className=px - 3 py - 2 rounded bg - green - 600 text - white';
+          >;
+            Approve;
+          </button>;
+          <button;
+            on_click={() => on_action ('remove, admin_notes)}
+            className=px - 3 py - 2 rounded bg - red - 600 text - white';
+          >;
+            Remove;
+          </button>;
+          <button;
+            on_click={() => on_action ('warn, admin_notes)}
+            className=px - 3 py - 2 rounded bg - yellow - 600 text - white';
+          >;
+            Warn;
+          </button>;
+          <button;
+            on_click={() => on_action ('ban', admin_notes)}
+            className='px - 3 py - 2 rounded bg - gray - 800 text - white';
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           >;
             Ban User;
           </button>        </div>;
       </div>;
+<<<<<<< HEAD
 
     </div>);"
 }        <div className="p - 4 border - t flex items - center justify - end gap - 2">;'"
@@ -351,72 +625,54 @@ if (return null) {}
           <button on_click={() => on_action ('warn', admin_notes)} className="px - 3 py - 2 rounded bg - yellow - 600 text - white">Warn</button>;'"
           <button on_click={() => on_action ('ban', admin_notes)} className="px - 3 py - 2 rounded bg - gray - 800 text - white">Ban User</button>;
 
+=======
+    </div>);
+}        <div className='p - 4 border - t flex items - center justify - end gap - 2'>;
+          <button on_click={() => on_action ('approve', admin_notes)} className='px - 3 py - 2 rounded bg - green - 600 text - white'>Approve</button>;
+          <button on_click={() => on_action ('remove', admin_notes)} className='px - 3 py - 2 rounded bg - red - 600 text - white'>Remove</button>;
+          <button on_click={() => on_action ('warn', admin_notes)} className='px - 3 py - 2 rounded bg - yellow - 600 text - white'>Warn</button>;
+          <button on_click={() => on_action ('ban', admin_notes)} className='px - 3 py - 2 rounded bg - gray - 800 text - white'>Ban User</button>;
       </div>;
     </div>);
-        </div>
-        <div className=&quot;p-4 space-y-4 text-sm&quot;>
-          <div className=&quot;grid grid-cols-2 gap-4&quot;>
-            <div>
-              <div className=&quot;text-gray-500&quot;>Content Type</div>
-              <div className=&quot;font-medium&quot;>{flag.contentType}</div>
-            </div>
-            <div>
-              <div className=&quot;text-gray-500&quot;>User</div>
-              <div className=&quot;font-medium&quot;>{flag.userEmail}</div>
-            </div>
-            <div>
-              <div className=&quot;text-gray-500&quot;>Reason</div>
-              <div className=&quot;font-medium&quot;>{flag.reason}</div>
-            </div>
-            <div>
-              <div className=&quot;text-gray-500&quot;>Status</div>
-              <div className=&quot;font-medium&quot;>{flag.status}</div>
-            </div>
-          </div>
-          <div>
-            <div className=&quot;text-gray-500 mb-1&quot;>Preview</div>
-            <div className=&quot;border rounded p-3 bg-gray-50 dark:bg-gray-900 whitespace-pre-wrap max-h-48 overflow-auto&quot;>{flag.snippet}</div>
-          </div>
-          <div className=&quot;grid grid-cols-3 gap-4&quot;>
-            <div className=&quot;p-3 border rounded&quot;>
-              <div className=&quot;text-gray-500&quot;>Toxicity</div>
-              <div className=&quot;font-semibold&quot;>{Math.round((flag.aiScores?.toxicity || 0) * 100)}%</div>
-            </div>
-            <div className=&quot;p-3 border rounded&quot;>
-              <div className=&quot;text-gray-500&quot;>NSFW</div>
-              <div className=&quot;font-semibold&quot;>{Math.round((flag.aiScores?.nsfw || 0) * 100)}%</div>
-            </div>
-            <div className=&quot;p-3 border rounded&quot;>
-              <div className=&quot;text-gray-500&quot;>Scam</div>
-              <div className=&quot;font-semibold&quot;>{Math.round((flag.aiScores?.scam || 0) * 100)}%</div>
-            </div>
-          </div>
-          <div>
-            <label className=&quot;block text-sm font-medium mb-1&quot;>Admin Notes</label>
-            <textarea value={adminNotes} onChange={e => setAdminNotes(e.target.value)} rows={3} className=&quot;w-full border rounded px-3 py-2 bg-white dark:bg-black&quot; />
-          </div>
-        </div>
-        <div className=&quot;p-4 border-t flex items-center justify-end gap-2&quot;>
-          <button onClick={() => onAction('approve', adminNotes)} className=&quot;px-3 py-2 rounded bg-green-600 text-white&quot;>Approve</button>
-          <button onClick={() => onAction('remove', adminNotes)} className=&quot;px-3 py-2 rounded bg-red-600 text-white&quot;>Remove</button>
-          <button onClick={() => onAction('warn', adminNotes)} className=&quot;px-3 py-2 rounded bg-yellow-600 text-white&quot;>Warn</button>
-          <button onClick={() => onAction('ban', adminNotes)} className=&quot;px-3 py-2 rounded bg-gray-800 text-white&quot;>Ban User</button>
-        </div>
-      </div>
-    </div>
-  )
-
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+      </div>;
+    </div>);
 }
 
+<<<<<<< HEAD
 import React, { useState } from 'react';
 
 export type ModerationModalProps = {;
 
+=======
+
+
+
+  );
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+  );
+
+export type ModerationModalProps = {;
+
+export type ModerationModalProps = {
+  flag: any | null;
+
+import React, { useState } from 'react';
+export type ModerationModalProps = {
+import React, { useState } from 'react';
+
+export type ModerationModalProps = {;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 export type ModerationModalProps = {};
   flag: any | null;
 
 
+<<<<<<< HEAD
   onClose: () => void;
   onAction: ('
     action: 'approve' | 'remove' | 'warn' | 'ban'
@@ -431,6 +687,8 @@ export default function ModerationModal({};
   flag,
   onClose,
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   onAction,
 }: ModerationModalProps) {;'
   const [adminNotes, setAdminNotes] = useState('');
@@ -496,12 +754,55 @@ export default function ModerationModal({};
           </div>
           <div>'
             <label className='block text-sm font-medium mb-1'>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               Admin Notes;
-            </label>
+            </label>;
             <textarea;
               value={adminNotes}
               onChange={e => setAdminNotes(e.target.value)}
+<<<<<<< HEAD
+=======
+              rows={3}
+              className='w-full border rounded px-3 py-2 bg-white dark:bg-black;
+            />;
+          </div>;
+        </div>;
+
+        <div className=p-4 border-t flex items-center justify-end gap-2'>;
+          <button;
+            onClick={() => onAction('approve, adminNotes)}
+            className=px-3 py-2 rounded bg-green-600 text-white';
+          >;
+            Approve;
+          </button>;
+          <button;
+            onClick={() => onAction('remove, adminNotes)}
+            className=px-3 py-2 rounded bg-red-600 text-white';
+          >;
+            Remove;
+          </button>;
+          <button;
+            onClick={() => onAction('warn, adminNotes)}
+            className=px-3 py-2 rounded bg-yellow-600 text-white';
+          >;
+            Warn;
+          </button>;
+          <button;
+            onClick={() => onAction('ban, adminNotes)}
+            className=px-3 py-2 rounded bg-gray-800 text-white';
+          >;
+            Ban User;
+          </button>        </div>;
+      </div>;
+    </div>;
+  )</button>;
+        </div>;
+      </div>;
+    </div>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
               rows={3}'
               className='w-full border rounded px-3 py-2 bg-white dark:bg-black'
@@ -530,12 +831,38 @@ export default function ModerationModal({};
           <button'
             onClick={() => onAction('ban', adminNotes)}'
             className='px-3 py-2 rounded bg-gray-800 text-white'
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           >
 
       </div>
     </div>
+<<<<<<< HEAD
 
+=======
+  );
+}        <div className=p-4 border-t flex items-center justify-end gap-2">
+          <button onClick={() => onAction(approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white>Approve</button>
+          <button onClick={() => onAction('remove, adminNotes)} className=px-3 py-2 rounded bg-red-600 text-white">Remove</button>
+          <button onClick={() => onAction(warn', adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white>Warn</button>
+          <button onClick={() => onAction('ban', adminNotes)} className=px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
+
+      </div>
+    </div>
+);
+}
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+
+
+
+
+}
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   );"
 }        <div className="p-4 border-t flex items-center justify-end gap-2">'"
           <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>'"
@@ -557,9 +884,12 @@ export default function ModerationModal({};
 );
 });
   );
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

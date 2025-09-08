@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+=======
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",";
+import {JobData, MatchResult} from "./types ;"
+import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher ;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher ;
 
@@ -10,6 +16,19 @@ import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
 
 
 
+<<<<<<< HEAD
+=======
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
+import {JobData, MatchResult} from "./types.ts";
+import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
+// Initialize the Supabase client
+const supabaseUrl = Deno.env.get("SUPABASE_URL") |"";
+const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") |"";
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
+import {JobData, MatchResult} from "./types.ts";
+import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
 import {JobData, MatchResult} from "./types ;
 import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher ;
@@ -29,28 +48,76 @@ import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
 import {JobData, MatchResult} from "./types.ts";
 import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
 
+<<<<<<< HEAD
 
+=======
+
+import { normalizeSkillsWithAI, findBestMatches } from "./ai-matcher.ts",
+
+;
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
+// Initialize the Supabase client
+const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",
+const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",
+const supabase = createClient(supabaseUrl, supabaseAnonKey),
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { JobData, MatchResult } from "./types.ts",
 import { normalizeSkillsWithAI, findBestMatches } from "./ai-matcher.ts",
 
+<<<<<<< HEAD
 
 
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 
+=======
+
+// Initialize the Supabase client
+const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",
+const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",
+const supabase = createClient(supabaseUrl, supabaseAnonKey),
+
+
+
+
+// Initialize the Supabase client
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") || "";
+const supabaseAnonKey = Deno && Deno.env.get("SUPABASE_ANON_KEY") || "";
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 /**
  * Main function to process job-talent matching;
  * @param job The job data to find matches for;
  * @param talents Array of talent profiles;
  * @returns Array of matches with talent IDs, scores, and reasons;
  */
+<<<<<<< HEAD
 
 
+=======
+
+export async function storeMatchResults("jobId": string, "matchedTalents": MatchResult[], "jobTitle": string): Promise<void> {    if (matchError) {
+      }
+      console && console.error(`Error storing match for talent ${match && match.talentId}:`, matchError)`    } else {
+      // Create notifications for each matched talent
+
+
+    const jobSkillsNormalized = await normalizeSkillsWithAI(job && job.skills);
+    
+
+    // Prepare job details for matching prompt;
+    const jobDetails = {}
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       title: job && job.title;
       description: job && job.description;
       category: job && job.category;
       skills: jobSkillsNormalized,
+<<<<<<< HEAD
 
       budget: job && job.budget
     };
@@ -64,6 +131,17 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
     throw error
 
+=======
+
+
+    // Use OpenAI to find best matches
+
+    const bestMatches = await findBestMatches(jobDetails, talents),
+    return bestMatches;
+  } catch (error) {}
+    throw error;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   }
 
 }
@@ -73,21 +151,44 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey);
  * @param matchedTalents Array of match results;
  */
 
+<<<<<<< HEAD
 export async function storeMatchResults(jobId: string, matchedTalents: MatchResult[], jobTitle: string): Promise<void> {
+=======
+
+  const matchInsertPromises = matchedTalents && matchedTalents.map(async (match) => {
+    const { error: matchError } = await supabase
+      .from("job_talent_matches")
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+
+        talent_id: match && match.talentId;
+        match_score: match && match.score;
+        matched_skills: match && match.matchedSkills,
+<<<<<<< HEAD
+
+        reason: match && match.reason
+
+
+=======
+        reason: match && match.reason;
+      });
 
         talent_id: match && match.talentId;
         match_score: match && match.score;
         matched_skills: match && match.matchedSkills,
 
-        reason: match && match.reason
+        reason: match && match.reason;
+      });
 
-
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     if (matchError) {
 
       console && console.error(`Error storing match for talent ${match && match.talentId}:`, matchError)
     } else {
       // Create notifications for each matched talent
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       await supabase && supabase.rpc('create_notification', {
         _user_id: match && match.talentId;
@@ -102,7 +203,10 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
       // Create notifications for each matched talent
       await supabase.rpc('create_notification', {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         _message: `A new job "${jobTitle}" matches your skills. Check it out!`;
 
         _type: "job_match"
@@ -112,8 +216,18 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
     }
   });
 
+<<<<<<< HEAD
+=======
+
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
+import { JobData, MatchResult } from "./types.ts",;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",;
 const supabase = createClient(supabaseUrl, supabaseAnonKey),;
 /**;
@@ -138,12 +252,16 @@ export async function processJobMatching(job: JobData, talents: any[]): Promise<
     const bestMatches = await findBestMatches(jobDetails, talents),;
     return bestMatches;
 
+<<<<<<< HEAD
   } catch (error) {;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     console.error("Error in processJobMatching:", error),;
     throw error;
   }
 
+<<<<<<< HEAD
 
       await supabase && supabase.rpc('create_notification', {
         _user_id: match && match.talentId;
@@ -163,11 +281,48 @@ export async function processJobMatching(job: JobData, talents: any[]): Promise<
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';,
 import { JobData, MatchResult } from './types.ts';
 
+=======
+
+}
+;
+/**;
+ * Stores match results in the database and creates notifications;
+ * @param jobId The ID of the job;
+ * @param matchedTalents Array of match results;
+ */;
+
+      .from("job_talent_matches");
+      .insert({;
+        job_id: jobId,;
+        talent_id: match.talentId,;
+        match_score: match.score,;
+        matched_skills: match.matchedSkills,;
+        reason: match.reason;
+      }),;
+
+      console.error(`Error storing match for talent ${match.talentId}:`, matchError);
+    } else {;
+      // Create notifications for each matched talent;
+      await supabase.rpc('create_notification', {;
+
+        _type: "job_match";
+        _related_id: jobId;
+      });
+    }
+  });
+
+}
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { normalizeSkillsWithAI, findBestMatches } from './ai - matcher.ts';
 // Initialize the Supabase client;"
 const supabase_url = Deno.env.get ("SUPABASE_URL") || "";"
 const supabaseAnonKey = Deno.env.get ("SUPABASE_ANON_KEY") || "";
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 const supabase = create_client (supabase_url, supabaseAnonKey);
 /**;
 * Main function to process job - talent matching;
@@ -188,10 +343,15 @@ export async function processJobMatching (job: JobData, talents: any[]): Promise
     // Use OpenAI to find best matches;
     const best_matches = await findBestMatches (job_details, talents);
     return best_matches;
+<<<<<<< HEAD
 
   } catch (error) {"
     console.error ("Error in processJobMatching:", error);
 
+=======
+  } catch (error) {
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     throw error;
   }
 }
@@ -200,6 +360,7 @@ export async function processJobMatching (job: JobData, talents: any[]): Promise
 * @param job_id The ID of the job;
 * @param matched_talents Array of match results;
 */;
+<<<<<<< HEAD
 
 export async function storeMatchResults (job_id: string, matched_talents: MatchResult[], job_title: string): Promise < void> {}
   const matchInsertPromises = matched_talents.map (async (match) => {};
@@ -226,6 +387,26 @@ if ( {) {}
         _message: `A new job "${job_title}" matches your skills. Check it out!`;"
         _type: "job_match",
         _related_id: job_id;
+=======
+export async function storeMatchResults ("job_id": string, "matched_talents": MatchResult[], "job_title": string): Promise < void> {
+  }
+  const matchInsertPromises = matched_talents.map (async (match) => {
+
+      .insert ({
+        }
+        "job_id": job_id;
+        "talent_id": match.talent_id;
+        "match_score": match.score;
+        "matched_skills": match.matched_skills,
+        "reason": match.reason;
+      });
+
+if ( {) {
+  $2
+}
+      console.error (`Error storing match for talent ${match.talent_id}:`, match_error);`    } else {
+      // Create notifications for each matched talent;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       });
     }
@@ -235,6 +416,7 @@ if ( {) {}
  * @param matchedTalents Array of match results;
  */;
 
+<<<<<<< HEAD
 export async function storeMatchResults(jobId: string, matchedTalents: MatchResult[], jobTitle: string): Promise<void> {;
   const matchInsertPromises = matchedTalents.map(async (match) => {;
     const { error: matchError } = await supabase;
@@ -284,12 +466,19 @@ const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",;
 const supabase = createClient(supabaseUrl, supabaseAnonKey),;
 ;
 
+=======
+  await Promise.all(matchInsertPromises);
+  await Promise.all (matchInsertPromises);
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 /**;
  * Main function to process job-talent matching;
  * @param job The job data to find matches for;
  * @param talents Array of talent profiles;
  * @returns Array of matches with talent IDs, scores, and reasons;
  */;
+<<<<<<< HEAD
 
 export async function processJobMatching(job:JobData, talents:any[]):Promise<MatchResult[]> {;
   try {;
@@ -318,4 +507,56 @@ export async function processJobMatching(job:JobData, talents:any[]):Promise<Mat
 ;
 
 
+=======
+
+
+}
+/**;
+ * Stores match results in the database and creates notifications;
+ * @param jobId The ID of the job;
+ * @param matchedTalents Array of match results;
+ */;
+
+
+    const { error:matchError } = await supabase;
+      .from(\"job_talent_matches\");
+      .insert({;
+        job_id:jobId,;
+        talent_id:match.talentId,;
+        match_score:match.score,;
+
+        matched_skills:match.matchedSkills,;}
+        reason:match.reason;}
+      }),;
+    ;
+    if (matchError) {;}
+
+      console.error(`Error storing match for talent ${match.talentId} `, matchError),;
+    } else {;
+      // Create notifications for each matched talent;
+      await supabase.rpc('create_notification', {;
+
+        _user_id:match.talentId,;}
+        _title:\"New Job Match\",;}
+        _message:`A new job \"${jobTitle}\" matches your skills. Check it out!`,;
+        _type:\"job_match\",;
+
+        _related_id:jobId;
+      }),;
+    }
+  }),;
+  ;
+
+  await Promise.all(matchInsertPromises),; try {}
+  //Normalize job skills and generate embeddings via OpenAI }
+}
+}/** * Stores match results in the database and creates notifications * @param jobId The ID of the job * @param matchedTalents Array of match results */ related id: jobId;
+
+}) 
+}
+});
+await Promise.all (matchInsertPromises) 
+}
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 

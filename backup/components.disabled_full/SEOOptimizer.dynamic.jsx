@@ -1,4 +1,4 @@
-const SEOOptimizer = dynamic(() => import("./SEOOptimizer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default SEOOptimizer' ,'
+const SEOOptimizer = dynamic(() => import('./SEOOptimizer'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default SEOOptimizer' ,'
 
 </p>'
 </p>'
@@ -23,8 +23,8 @@ const SEOOptimizer = dynamic(() => import("./SEOOptimizer"),{'; "loading": () =>
 </p>'
 
 ursor/integrate-build-improve-and-re-verify-8f7d
-const SEOOptimizer = dynamic(() => import(\"./SEOOptimizer\"),{\'; \"loading\": () => <p />Loading...</p,>}) \"export\": \'default SEOOptimizer\' ,const SEOOptimizer = dynamic(() => import(\"./SEOOptimizer\"),{\"; loading: () => <p />Loading.</p,>}) export: \"default SEOOptimizer\" ,\"\"\";
-const SEOOptimizer = dynamic(() => import(\"./SEOOptimizer\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default SEOOptimizer' ,';
+const SEOOptimizer = dynamic(() => import(\'./SEOOptimizer\'),{\'; \'loading\': () => <p />Loading...</p,>}) \'export\': \'default SEOOptimizer\' ,const SEOOptimizer = dynamic(() => import(\'./SEOOptimizer\'),{\'; loading: () => <p />Loading.</p,>}) export: \'default SEOOptimizer\' ,\'\'\';
+const SEOOptimizer = dynamic(() => import(\'./SEOOptimizer\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default SEOOptimizer' ,';
 </p>';
 </p>';
 </p>';
@@ -60,7 +60,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 </p>';
 </p>';
 </p>'</p>';
-const SEOOptimizer = dynamic(() => import(\"./SEOOptimizer\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default SEOOptimizer' ,'
+const SEOOptimizer = dynamic(() => import(\'./SEOOptimizer\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default SEOOptimizer' ,'
 </p>'
 </p>'
 </p>'

@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 export default function DataPlatformAccelerator() {return (<>;
@@ -68,3 +69,5 @@ import Head from 'next/head'; import Link from 'next/link'; export default funct
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

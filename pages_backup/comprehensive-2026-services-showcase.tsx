@@ -1,8 +1,11 @@
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React, { useState, useEffect } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -13,6 +16,7 @@ import {}
   Globe, Database, Cloud, Lock, Palette, Target, Layers, 
   Sparkles, Atom, Microscope, Satellite, CheckCircle, 
 
+<<<<<<< HEAD
   ArrowRight, Phone, Mail, MapPin, Rocket, Users, 
   BarChart3, Award, Clock, DollarSign
 } from 'lucide-react',;
@@ -24,14 +28,20 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026',;
 export default function Comprehensive2026ServicesShowcase() {
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {;
   Search, Filter, Star, TrendingUp, Zap, Brain, Shield,;
   Globe, Database, Cloud, Lock, Palette, Target, Layers,;
@@ -39,18 +49,62 @@ import {;
   ArrowRight, Phone, Mail, MapPin, Rocket, Users,;
   BarChart3, Award, Clock, DollarSign;'
 } from 'lucide-react',;
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { nextGenAIServices2026 } from '../data/next-gen-ai-services-2026';
 import { revolutionaryITInfrastructure2026 } from '../data/revolutionary-it-infrastructure-2026';
 import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
+<<<<<<< HEAD
 
 
 
+=======
+import {
+  Search,
+  Filter,
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Shield,
+  Globe,
+  Database,
+  Cloud,
+  Lock,
+  Palette,
+  Target,
+  Layers,
+  Sparkles,
+  Atom,
+  Microscope,
+  Satellite,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Users,
+  BarChart3,
+  Award,
+  Clock,
+  DollarSign,;
+} from 'lucide-react';
+import { nextGenAIServices2026  } from '../data/next-gen-ai-services-2026';
+import { revolutionaryITInfrastructure2026  } from '../data/revolutionary-it-infrastructure-2026';
+
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   };
 
   // Combine all services
@@ -69,11 +123,15 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
     .filter(service => {
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     })
     .sort((a, b) => {}
       switch (sortBy) {'
         case 'price-low':
+<<<<<<< HEAD
 
 
         default: return a.popular ? -1 : 1
@@ -95,17 +153,38 @@ default:
           return a.popular ? -1 : 1;
 
 
+=======
+          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''))
+        case 'price-high':
+          return parseFloat(b.price.replace('$', '').replace(, '')) - parseFloat(a.price.replace('$', '').replace(, ''))
+        case 'rating':
+          return b.rating - a.rating
+        case 'customers':
+          return b.customers - a.customers
+        default: return a.popular ? -1 : 1
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       }
     })
   const containerVariants = {
     hidden: { opacity: 0 }
 
 
+<<<<<<< HEAD
     hidden: { y: 20, opacity: 0 }
+=======
+    visible: {
+      opacity: 1
+      transition: {
+
+      }
+    })
+    hidden: { opacity: 0 }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
       y: 0
       opacity: 1
+<<<<<<< HEAD
 
 
               {/* Contact Information */  } catch (error) {
@@ -179,6 +258,18 @@ default:
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+    hidden: { y: 20, opacity: 0 }
+
+  },
+  const item_variants = {}
+    hidden: { coordinate_y: 20, opacity: 0 },
+    visible: {}
+      coordinate_y: 0,
+      opacity: 1,
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     >
       <Head>
@@ -193,15 +284,19 @@ default:
       </Head>
       <UltraAdvancedNavigation />
 
+<<<<<<< HEAD
       <div className="min-h-screen relative z-10">
         {/* Hero Section */}
         {/* Hero Section */  } catch (error) {
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+<<<<<<< HEAD
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
@@ -241,6 +336,8 @@ default:
   }
 }
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
                 <div className="bg-gradient-to-br from-cyan-900/50 to-blue-900/50 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{allServices.length}+</div>
@@ -258,7 +355,10 @@ default:
                 </div>
               </div>
 
+<<<<<<< HEAD
               {/* Contact Information */}
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
               {/* Contact Information */  } catch (error) {
     console.error("Error:", error);
@@ -338,11 +438,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 
         {/* Search and Filter Section */}
         <section className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-3xl p-8 border border-gray-600/30">
+=======
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               {/* Search Bar */}
 
         {/* Search and Filter Section */  } catch (error) {
@@ -367,6 +472,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <input"
                   type="text""
                   placeholder="Search services by name, description, or category..."
+<<<<<<< HEAD
 
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
@@ -377,6 +483,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
                 {/* Category Filter */}
 
+=======
+
+
+                {/* Category Filter */  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -386,6 +498,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
         {/* Search and Filter Section */}
@@ -409,6 +522,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='flex flex-wrap gap-3'>
                   {categories.map(category => (
 
+=======
+                <div className="flex flex-wrap gap-3">
+                  {categories.map((category) => (
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                     <button
                       key={category.id  } catch (error) {
     console.error("Error:", error);
@@ -430,6 +547,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
                     >
+<<<<<<< HEAD
 
                 <div className="flex flex-wrap gap-3">
                   {categories.map((category) => (
@@ -458,6 +576,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         {category.count}
 
 
+=======
+                      <category.icon className="w-4 h-4" />
+                      {category.name}
+                      <span className="bg-gray-700/50 px-2 py-1 rounded-lg text-xs">
+                        {category.count}
+                      </span>
+                    </button>
+                  ))}
+                </div>
+                {/* Sort and View Controls */}
+                <div className="flex items-center gap-4">
+                  <select
+                    value={sortBy}
+                    onChange={(e) => setSortBy(e.target.value)}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                       {category.name  } catch (error) {
     console.error("Error:", error);
 
@@ -471,10 +604,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                     className="bg-gray-800/50 border border-gray-600/30 rounded-xl px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >"
                     <option value="popularity">Most Popular</option>"
@@ -485,7 +621,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </select>"
                   <div className="flex bg-gray-800/50 rounded-xl p-1 border border-gray-600/30">
 
+<<<<<<< HEAD
                     <button
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                       }`}
                     >;"
@@ -546,7 +685,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className={view_mode === 'grid' ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8' : 'space - y-6'}
 
 
+<<<<<<< HEAD
 
+=======
+        {/* Services Grid */  } catch (error) {"
+    console.error("Error:", error);"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     return res.status(500).json({ error: "Internal server error" });
   }
 }"
@@ -565,6 +709,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 
@@ -589,6 +734,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   >;
 
 
+=======
+            >;
+              <AnimatePresence>;
+
+                    key={service.id}
+                    variants={item_variants}
+                    layout;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                     <div className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}>
                       <div className="flex items-start justify-between mb-4">
                         <div className="text-4xl">{service.icon}</div>
@@ -599,11 +753,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                           <span className="text-gray-400 text-sm font-normal">{service.period}</span>
                         </div>"
                         <div className="flex items-center gap-1 text-yellow-400">"
@@ -615,6 +772,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">"
                         <div className="flex items-center gap-1">"
                           <Users className="w-4 h-4" />
+<<<<<<< HEAD
 
 
                   >
@@ -667,10 +825,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className='flex items-center gap-1'>
                           <Clock className='w-4 h-4' />
 
+=======
+                          <div className="bg - gradient - to - r from - yellow - 500 to - orange - 500 text - white text - xs px - 3 py - 1 rounded - full font - semibold flex items - center gap - 1">;
+                          {service.customers.toLocaleString()}
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Clock className="w-4 h-4" />
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                           {service.setupTime}
                         </div>
                       </div>
                     </div>
+<<<<<<< HEAD
 
                         </div>;
                       </div>;
@@ -689,6 +855,39 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <h4 className='text-sm font-semibold text-gray-400 mb-2 uppercase tracking-wider'>
                           Key Features
                         </h4>
+=======
+                        <div className='grid grid-cols-1 gap-2'>
+                          {service.features
+                            .slice(0, 3)
+                            .map((feature, index) => (
+                              <div
+                                key={index}
+                                className='flex items-center gap-2 text-sm text-gray-300'
+                              >
+                                <CheckCircle className='w-4 h-4 text-green-400 flex-shrink-0' />
+                                {feature}
+                              </div>
+                            ))}
+origin/cursor/automate-test-improve-and-merge-code-2533
+                    <div className={`px - 6 pb - 6 ${view_mode === 'list' ? 'lg:w - 2/3' : ''}`}>;
+                      <p className="text - gray - 300 mb - 4 leading - relaxed">;
+                        {service.description}
+
+                              {feature}
+                            </div>))}
+
+                              {feature  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                            </div>;
+                          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                           {service.features.length > 3 && (
                             <div className='text-sm text-cyan-400'>
@@ -716,8 +915,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                       <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                         <div>"
                           <div className="text-gray-400 mb-1">Market Size</div>"
@@ -729,6 +931,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
                       </div>
 
+<<<<<<< HEAD
 
 
                       {/* ROI */  } catch (error) {
@@ -739,12 +942,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                       <div className="bg-gradient-to-r from-green-900/30 to-emerald-900/30 rounded-xl p-4 mb-6 border border-green-500/20">
                         <div className="text-sm text-gray-400 mb-1">Expected ROI</div>
                         <div className="text-green-400 font-semibold">{service.roi}</div>
                       </div>
 
 
+<<<<<<< HEAD
 
                       <div className="flex flex - col sm:flex - row gap - 3">;
                         <Link;
@@ -806,6 +1013,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </motion.div>
 
 
+=======
+                      {/* Action Buttons */}"
+                      <div className="flex flex - col sm:flex - row gap - 3">;
+                        <Link;
+                          href={service.link}
+
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </AnimatePresence>;
+            </motion.div>;
+            {/* No Results */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             {filteredServices.length === 0 && (
               <div className="text-center py-20">
                 <div className="text-6xl mb-4">🔍</div>
@@ -942,7 +1170,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               viewport={{ once: true }}
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                   href={`tel:${contactInfo.mobile}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -963,10 +1194,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                   className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg"
                 >"
                   <Mail className="w-5 h-5" />
@@ -1002,7 +1236,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Link>
               </div>
 
+<<<<<<< HEAD
 
+=======
+
+<div className='mt-8 text-gray-400'>
+                <p>📍 {contactInfo.address}</p>
+                <p>
+                  🌐{' '}
+                  <a
+                    href={contactInfo.website}
+                    className='text-cyan-400 hover:text-cyan-300 transition-colors'
+                  >
+                    {contactInfo.website}
+                  </a>
+                </p>
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
               </div>
@@ -1012,7 +1261,47 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </UltraAdvancedFuturisticBackground>
 
+<<<<<<< HEAD
 
 
 
 
+=======
+            >;
+
+              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
+                Ready to Transform Your Business?;
+              </h2>;"
+              <p className="text - xl text - gray - 300 mb - 8 leading - relaxed">;
+                Our team of experts is ready to help you implement the perfect solution;
+                for your business needs. Get started today with a free consultation.;
+              </p>;"
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+                <Link;`
+                  href={`tel:${contact_info.mobile}`}"
+                  className="bg - gradient - to - r from - cyan - 600 to - blue - 600 hover:from - cyan - 700 hover:to - blue - 700 text - white font - semibold py - 4 px - 8 rounded - xl transition - all duration - 300 flex items - center justify - center gap - 3 text - lg";
+                >;"
+                  <Phone className="w - 5 h - 5" />;
+                  Call Now: {contact_info.mobile}
+                </Link>;
+                <Link;`
+                  href={`mailto:${contact_info.email}`}"
+                  className="bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold py - 4 px - 8 rounded - xl transition - all duration - 300 flex items - center justify - center gap - 3 text - lg";
+                >;"
+                  <Mail className="w - 5 h - 5" />;
+                  Email Us;
+                </Link>;
+              </div>;"
+              <div className="mt - 8 text - gray - 400">;
+                <p>📍 {contact_info.address}</p>;"
+                <p>🌐 <a href={contact_info.website} className="text - cyan - 400 hover:text - cyan - 300 transition - colors">{contact_info.website}</a></p>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </UltraAdvancedFuturisticBackground>);
+}
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba

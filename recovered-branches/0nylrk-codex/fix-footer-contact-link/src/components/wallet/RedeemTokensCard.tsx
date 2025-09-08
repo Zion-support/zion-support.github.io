@@ -1,11 +1,22 @@
 import React, { useState } from "react";
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Gift, ArrowRight, ExternalLink} from "lucide-react";
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 
+<<<<<<< HEAD
+=======
+import React, { useState } from "react",
+import { useWallet } from "@/hooks/useWallet",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Gift, ArrowRight, ExternalLink } from "lucide-react",
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {
   Dialog,
   DialogContent,
@@ -14,12 +25,21 @@ import {
   DialogTitle,
   DialogTrigger} from "@/components/ui/dialog",
 
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+type RewardOption = $2;
+  title: string,
+  description: string,
+  cost: number,
+  type: 'credit' | 'feature' | 'course'
+},
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 type RewardOption = {
   id: string
@@ -28,6 +48,7 @@ type RewardOption = {
   cost: number
   type: 'credit' | 'feature' | 'course'
 
+<<<<<<< HEAD
 
 
 },
@@ -36,6 +57,9 @@ type RewardOption = {
 
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 const REWARD_OPTIONS: RewardOption[] = [
   {
     id: 'premium-week'
@@ -44,6 +68,7 @@ const REWARD_OPTIONS: RewardOption[] = [
     cost: 100
     type: 'feature'
 
+<<<<<<< HEAD
 
 
 
@@ -67,32 +92,54 @@ const REWARD_OPTIONS: RewardOption[] = [
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const handleRedeem = async (option: RewardOption) => {
     if (!wallet |wallet.balance < option.cost) return
     await spendTokens(option.cost, `Redeemed: ${option.title}`)
     setOpen(false)
 
+<<<<<<< HEAD
 
 
   },
 
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <Card />
       <CardHeader />
         <CardTitle className=\"flex items-center gap-2\" />
           <Gift className=\"h-5 w-5\" /> Redeem Rewards;
+<<<<<<< HEAD
 
         </CardTitle>
         <CardDescription />Exchange your ZION$ for rewards and perks</CardDescription>
       </CardHeader>
 
+=======
+        </CardTitle>
+        <CardDescription />Exchange your ZION$ for rewards and perks</CardDescription>
+      </CardHeader>
+        </CardTitle>
+        <CardDescription />Exchange your ZION$ for rewards and perks</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <Dialog open={open} onOpenChange={setOpen}>
+          <DialogTrigger asChild>
+            <Button className="w-full">View Available Rewards</Button>
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       <CardContent />
         <Dialog open={open} onOpenChange={setOpen} />
           <DialogTrigger asChild />
             <Button className=\"w-full\" />View Available Rewards</Button>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           </DialogTrigger>
           <DialogContent />
             <DialogHeader />
@@ -101,7 +148,10 @@ const REWARD_OPTIONS: RewardOption[] = [
                 Exchange your tokens for these rewards. You currently have {wallet?.balance |0} ZION$.
               </DialogDescription>
             </DialogHeader>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             <div className=\"space-y-4 py-4\" />
               {REWARD_OPTIONS.map((option) => (}
                 <div key={option.id} className=\"flex justify-between items-center border-b pb-4\" />
@@ -114,10 +164,15 @@ const REWARD_OPTIONS: RewardOption[] = [
                     <Button;
 size=\"sm\"
                       variant={wallet && wallet.balance  />= option.cost ? \"default\" : \"outline\"}
+<<<<<<< HEAD
 
                       disabled={!wallet |wallet.balance < option.cost}
 
 
+=======
+                      disabled={!wallet |wallet.balance < option.cost}
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                       onClick={() => handleRedeem(option)}
                     >
                       Redeem <ArrowRight className="ml-1 h-3 w-3" />
@@ -138,7 +193,10 @@ size=\"sm\"
     </Card>
   )
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {;
   }
   Dialog,;
@@ -146,8 +204,11 @@ import {;
   DialogDescription,;
   DialogHeader,;
   DialogTitle,;
+<<<<<<< HEAD
 
   DialogTrigger} from "@/components/ui/dialog",;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     <Card>;
       <CardHeader>;
@@ -171,7 +232,10 @@ import {;
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                       onClick={() => handleRedeem(option)}
                     >;
                       Redeem <ArrowRight className=\"ml-1 h-3 w-3\" />;
@@ -180,6 +244,7 @@ import {;
                 </div>;
               ))}
 
+<<<<<<< HEAD
 
 
             </div>;
@@ -189,6 +254,9 @@ import {;
                 Learn More <ExternalLink className="ml-1 h-3 w-3" />;
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               </Button>;
             </div>;
           </DialogContent>;
@@ -196,6 +264,7 @@ import {;
       </CardContent>;
 
 
+<<<<<<< HEAD
 
 
 
@@ -209,3 +278,13 @@ import {;
 
 
 
+=======
+}
+;
+    </Card>);
+}
+}
+;
+    </Card>);
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
   return (
     <Card className="w-full max-w-2xl mx-auto">
@@ -19,8 +22,14 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
       </CardContent>
     </Card>
 
+<<<<<<< HEAD
 
 
+=======
+
+  );
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   )
 },"
 import { Card, CardContent } from "@/components/ui/card",;"
@@ -28,6 +37,7 @@ import { Button } from "@/components/ui/button",;"
 import { FilePlus } from "lucide-react",;"
 import { EmptyResumeProps } from "./types",;
 
+<<<<<<< HEAD
 
 export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {;
   return (
@@ -50,12 +60,18 @@ export const EmptyResumeState = ({ onCreateClick } EmptyResumeProps) => {;
           >;
             <FilePlus className="h-4 w-4" />;
 
+=======
+
+};            Create Resume;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             Create Resume;
 
           </Button>;
         </div>;
       </CardContent>;
 
+<<<<<<< HEAD
 
 export default EmptyResumeState;
 
@@ -76,3 +92,12 @@ export default EmptyResumeState;
 
 
 
+=======
+
+    </Card>);
+}
+;
+
+
+'"
+>>>>>>> origin/cursor/delete-old-data-records-6bba

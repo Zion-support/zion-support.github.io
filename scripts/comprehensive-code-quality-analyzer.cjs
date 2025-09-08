@@ -111,13 +111,13 @@ main();
 main();
 
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 // console.log(' Comprehensive Code Quality Analyzer v2.0')
-console.log()
-    const content = fs.readFileSync(filePath, 'utf8')
-    const lines = content.split('\n')
+console.log('')
+const content = fs.readFileSync(filePath, 'utf8');
+const lines = content.split('\n');
     const codeLines = lines.filter(line => line.trim() && !line.trim().startsWith('//')
     const commentLines = lines.filter(line => line.trim().startsWith('//')
     log('warn')
@@ -251,6 +251,9 @@ console.log()
     "action"
       log('warn', 'Issues "found")
 <<<<<<< HEAD
+      log('info', 'Quality "Recommendations")
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       pattern: /api[_-]?key\s*=\s*["][^'']
@@ -338,3 +341,4 @@ console.log()
 =======
       log('info', 'Quality "Recommendations")
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

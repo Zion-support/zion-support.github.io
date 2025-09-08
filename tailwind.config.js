@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+<<<<<<< HEAD
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -6,6 +7,16 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+=======
+<
+    extend: {},
+  },
+  plugins: [],
+};
+module.exports = $2;
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}./components/**/*.{js,ts,jsx,tsx}'],
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   theme: {
     extend: {
       colors: {
@@ -16,6 +27,7 @@ module.exports = {
           700: '#1d4ed8',
           800: '#1e40af',
           900: '#1e3a8a',
+
           950: '#172554'
         }
       },
@@ -53,6 +65,7 @@ module.exports = {
           '0%': { transform: 'scale(0)' },
           '100%': { transform: 'scale(1)' },
         },
+<<<<<<< HEAD
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-20px)' }
@@ -62,3 +75,7 @@ module.exports = {
   },
   plugins: [],
 };
+=======
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba

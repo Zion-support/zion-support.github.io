@@ -1,4 +1,14 @@
+<<<<<<< HEAD
 
+=======
+
+
+export const quantumSpaceTechServices2026 = [] as []; export interface QuantumSpaceTechService2026 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [ { id: "2026-quantum-space-tech",name: "2026 Quantum Space Tech Platform",tagline: "Quantum computing meets space technology",price: "$599/month",description: "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],link: "/services/2026-quantum-space-tech",category: "Quantum Space Tech 2026",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export const quantumSpaceTechServices2026 = [] as []; export interface QuantumSpaceTechService2026 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [ { id: "2026-quantum-space-tech",name: "2026 Quantum Space Tech Platform",tagline: "Quantum computing meets space technology",price: "$599/month",description: "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],link: "/services/2026-quantum-space-tech",category: "Quantum Space Tech 2026",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+export const quantumSpaceTechServices2026 = [] as []; export interface QuantumSpaceTechService2026 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [ { id: "2026-quantum-space-tech",name: "2026 Quantum Space Tech Platform",tagline: "Quantum computing meets space technology",price: "$599/month",description: "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],link: "/services/2026-quantum-space-tech",category: "Quantum Space Tech 2026",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 export const quantumSpaceTechServices2026 = [] as [];
@@ -8,6 +18,7 @@ export interface QuantumSpaceTechService2026 {}
   id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
 }
 
+<<<<<<< HEAD
 
 export const quantumSpaceTechServices2026 = [] as []; export interface QuantumSpaceTechService2026 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [ { id: "2026-quantum-space-tech",name: "2026 Quantum Space Tech Platform",tagline: "Quantum computing meets space technology",price: "$599/month",description: "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],link: "/services/2026-quantum-space-tech",category: "Quantum Space Tech 2026",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
 
@@ -25,96 +36,13 @@ export interface QuantumSpaceTechService2026 {}
 }
 
 export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [ { id: \"2026-quantum-space-tech\",name: \"2026 Quantum Space Tech Platform\",tagline: \"Quantum computing meets space technology\",price: \"$599/month\",description: \"Revolutionary platform combining quantum computing with advanced space technology for 2026.\",features[ \"Quantum computing\",\"Space technology\",\"Advanced algorithms\",\"Innovation platform\",\"Expert support\" ],link: \"/services/2026-quantum-space-tech\",category: \"Quantum Space Tech 2026\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
-}
-
-export const quantumSpaceTechServices2026 = [] as [];
-
-export interface QuantumSpaceTechService2026 {}
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
-}
-
+=======
 export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [ { id: \"2026-quantum-space-tech\",name: \"2026 Quantum Space Tech Platform\",tagline: \"Quantum computing meets space technology\",price: \"$599/month\",description: \"Revolutionary platform combining quantum computing with advanced space technology for 2026.\",features[ \"Quantum computing\",\"Space technology\",\"Advanced algorithms\",\"Innovation platform\",\"Expert support\" ],link: \"/services/2026-quantum-space-tech\",category: \"Quantum Space Tech 2026\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
 }
 
-export const quantumSpaceTechServices2026 = [] as [];
-
-export interface QuantumSpaceTechService2026 {}
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
-}
-
-export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [ { id: \"2026-quantum-space-tech\",name: \"2026 Quantum Space Tech Platform\",tagline: \"Quantum computing meets space technology\",price: \"$599/month\",description: \"Revolutionary platform combining quantum computing with advanced space technology for 2026.\",features[ \"Quantum computing\",\"Space technology\",\"Advanced algorithms\",\"Innovation platform\",\"Expert support\" ],link: \"/services/2026-quantum-space-tech\",category: \"Quantum Space Tech 2026\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
-}
-
-export const quantumSpaceTechServices2026 = [] as [];
-
-export interface QuantumSpaceTechService2026 {}
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
-}
-
-export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [ { id: \"2026-quantum-space-tech\",name: \"2026 Quantum Space Tech Platform\",tagline: \"Quantum computing meets space technology\",price: \"$599/month\",description: \"Revolutionary platform combining quantum computing with advanced space technology for 2026.\",features[ \"Quantum computing\",\"Space technology\",\"Advanced algorithms\",\"Innovation platform\",\"Expert support\" ],link: \"/services/2026-quantum-space-tech\",category: \"Quantum Space Tech 2026\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
-}ursor/fix-syntax-push-and-merge-to-main-40de;
-
-export const quantumSpaceTechServices2026 = [] as [];
-
-export interface QuantumSpaceTechService2026 {}
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
-}
-
-export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [ { id: \"2026-quantum-space-tech\",name: \"2026 Quantum Space Tech Platform\",tagline: \"Quantum computing meets space technology\",price: \"$599/month\",description: \"Revolutionary platform combining quantum computing with advanced space technology for 2026.\",features[ \"Quantum computing\",\"Space technology\",\"Advanced algorithms\",\"Innovation platform\",\"Expert support\" ],link: \"/services/2026-quantum-space-tech\",category: \"Quantum Space Tech 2026\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
-}
-
-export const quantumSpaceTechServices2026 = [] as [];
-
-export interface QuantumSpaceTechService2026 {}
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
-}
-
-export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [ { id: \"2026-quantum-space-tech\",name: \"2026 Quantum Space Tech Platform\",tagline: \"Quantum computing meets space technology\",price: \"$599/month\",description: \"Revolutionary platform combining quantum computing with advanced space technology for 2026.\",features[ \"Quantum computing\",\"Space technology\",\"Advanced algorithms\",\"Innovation platform\",\"Expert support\" ],link: \"/services/2026-quantum-space-tech\",category: \"Quantum Space Tech 2026\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
-}
-
-export const quantumSpaceTechServices2026 = [] as [];
-
-export interface QuantumSpaceTechService2026 {}
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
-}
-
-export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [ { id: \"2026-quantum-space-tech\",name: \"2026 Quantum Space Tech Platform\",tagline: \"Quantum computing meets space technology\",price: \"$599/month\",description: \"Revolutionary platform combining quantum computing with advanced space technology for 2026.\",features[ \"Quantum computing\",\"Space technology\",\"Advanced algorithms\",\"Innovation platform\",\"Expert support\" ],link: \"/services/2026-quantum-space-tech\",category: \"Quantum Space Tech 2026\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
-}
-
-export const quantumSpaceTechServices2026 = [] as [];
-
-export interface QuantumSpaceTechService2026 {}
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
-}
-
-export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [ { id: \"2026-quantum-space-tech\",name: \"2026 Quantum Space Tech Platform\",tagline: \"Quantum computing meets space technology\",price: \"$599/month\",description: \"Revolutionary platform combining quantum computing with advanced space technology for 2026.\",features[ \"Quantum computing\",\"Space technology\",\"Advanced algorithms\",\"Innovation platform\",\"Expert support\" ],link: \"/services/2026-quantum-space-tech\",category: \"Quantum Space Tech 2026\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
-}
-
-export const quantumSpaceTechServices2026 = [] as [];
-
-export interface QuantumSpaceTechService2026 {}
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
-}
-
-export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [ { id: \"2026-quantum-space-tech\",name: \"2026 Quantum Space Tech Platform\",tagline: \"Quantum computing meets space technology\",price: \"$599/month\",description: \"Revolutionary platform combining quantum computing with advanced space technology for 2026.\",features[ \"Quantum computing\",\"Space technology\",\"Advanced algorithms\",\"Innovation platform\",\"Expert support\" ],link: \"/services/2026-quantum-space-tech\",category: \"Quantum Space Tech 2026\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
-}
-
-export const quantumSpaceTechServices2026 = [] as [];
-
-export interface QuantumSpaceTechService2026 {}
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
-}
-
-export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [ { id: \"2026-quantum-space-tech\",name: \"2026 Quantum Space Tech Platform\",tagline: \"Quantum computing meets space technology\",price: \"$599/month\",description: \"Revolutionary platform combining quantum computing with advanced space technology for 2026.\",features[ \"Quantum computing\",\"Space technology\",\"Advanced algorithms\",\"Innovation platform\",\"Expert support\" ],link: \"/services/2026-quantum-space-tech\",category: \"Quantum Space Tech 2026\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
-}
-
-export const quantumSpaceTechServices2026 = [] as [];
-
-export interface QuantumSpaceTechService2026 {}
-  id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string,}
-}
-
-export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [ { id: \"2026-quantum-space-tech\",name: \"2026 Quantum Space Tech Platform\",tagline: \"Quantum computing meets space technology\",price: \"$599/month\",description: \"Revolutionary platform combining quantum computing with advanced space technology for 2026.\",features[ \"Quantum computing\",\"Space technology\",\"Advanced algorithms\",\"Innovation platform\",\"Expert support\" ],link: \"/services/2026-quantum-space-tech\",category: \"Quantum Space Tech 2026\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+export const quantumSpaceTechServices2026 = [] as []; export interface QuantumSpaceTechService2026 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [ { id: "2026-quantum-space-tech",name: "2026 Quantum Space Tech Platform",tagline: "Quantum computing meets space technology",price: "$599/month",description: "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],link: "/services/2026-quantum-space-tech",category: "Quantum Space Tech 2026",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 
 export const quantumSpaceTechServices2026 = [] as [];
@@ -129,6 +57,194 @@ export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [ { i
 export const quantumSpaceTechServices2026 = [] as [];
 
 export interface QuantumSpaceTechService2026 {
+  }
+  "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": string
+}
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 {
+  }
+  "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": string
+}
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 {
+  }
+  "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": string
+}
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 {
+  }
+  "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": string
+}
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}ursor/integrate-build-improve-and-re-verify-8f7d;
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 {
+  }
+  "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": string
+}
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 {
+  }
+  "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": string
+}
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}ursor/automate-test-improve-and-merge-code-646c;
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 { "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": strin
+};
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 { "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": strin
+};
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 { "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": strin
+};
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 { "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": strin
+};
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 { "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": strin
+};
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 {
+  "id": string;"
+  }
+  "name": string;
+  "tagline": string;
+  "price": string;
+  "description": string;
+  "features": string[];
+  "link": string;
+  "category": string;
+  "realImplementation": boolean;
+  "contactInfo": {"mobile": string;
+    }
+    "email": string;
+"address": string
+}
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [{"id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[;"
+      "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support";"
+    ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": {"mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709";"
+]}}}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 {
+  }
+  "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": string
+}
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 {
+  }
+  "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": string
+}
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 {
+  }
+  "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": string
+}
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 {
+  }
+  "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": string
+}
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 {
+  }
+  "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": string
+}
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+
+export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [ { id: \"2026-quantum-space-tech\",name: \"2026 Quantum Space Tech Platform\",tagline: \"Quantum computing meets space technology\",price: \"$599/month\",description: \"Revolutionary platform combining quantum computing with advanced space technology for 2026.\",features[ \"Quantum computing\",\"Space technology\",\"Advanced algorithms\",\"Innovation platform\",\"Expert support\" ],link: \"/services/2026-quantum-space-tech\",category: \"Quantum Space Tech 2026\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
+}ursor/fix-syntax-push-and-merge-to-main-40de;
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 {
+  }
+  "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": string
+}
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 {
+<<<<<<< HEAD
   \"id\": string;
   name: string;
   tagline: string;
@@ -167,6 +283,205 @@ address: string};export const "quantumSpaceTechServices2026": QuantumSpaceTechSe
 export const quantumSpaceTechServices2026 = [] as []; export interface QuantumSpaceTechService2026 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [ { id: "2026-quantum-space-tech",name: "2026 Quantum Space Tech Platform",tagline: "Quantum computing meets space technology",price: "$599/month",description: "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],link: "/services/2026-quantum-space-tech",category: "Quantum Space Tech 2026",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
 
 
+=======
+  }
+  "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": string
+}
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
 
+=======
+export interface QuantumSpaceTechService2026 {
+  }
+  "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": string
+}
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 {
+  }
+  "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": string
+}
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 {
+  }
+  "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": string
+}
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 {
+  }
+  "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": string
+}
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 {
+  }
+  "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": string
+}
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 {
+  }
+  "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": string
+}
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 {
+  "id": string;"
+  }
+  "name": string;
+  "tagline": string;
+  "price": string;
+  "description": string;
+  "features": string[];
+  "link": string;
+  "category": string;
+  "realImplementation": boolean;
+  "contactInfo": {"mobile": string;
+    }
+    "email": string;
+"address": string
+}
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [{"id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[;"
+      "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support";"
+    ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": {"mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709";"
+]}}}ursor/automate-test-improve-and-merge-code-646c;
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 {
+  }
+  "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": string
+}
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 {
+  }
+  "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": string
+}
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 {
+  }
+  "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": string
+}
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 {
+  }
+  "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": string
+}
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]}}}"
+"address": strin
+};
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [{"
+    }
+    "id": "2026-quantum-space-tech","
+    "name": "2026 Quantum Space Tech Platform","
+    "tagline": "Quantum computing meets space technology","
+    "price": "$599/month","
+    "description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.","
+    features[
+      "Quantum computing","
+      "Space technology","
+      "Advanced algorithms","
+      "Innovation platform","
+      "Expert support""
+    ],
+    "link": "/services/2026-quantum-space-tech","
+    "category": "Quantum Space Tech 2026","
+    "realImplementation": true,"
+    "contactInfo": {"
+      }
+      "mobile": "+1 302 464 0950","
+      "email": "kleber@ziontechgroup.com","
+      "address": "364 E Main St STE 1008 Middletown DE 19709""
+]}}}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 { "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": strin
+};
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 { "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": strin
+};
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 { "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": strin
+};
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 { "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": strin
+};
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+
+export const quantumSpaceTechServices2026 = [] as [];
+
+export interface QuantumSpaceTechService2026 { "id": string; "name": string; "tagline": string; "price": string; "description": string; "features": string[]; "link": string; "category": string; "realImplementation": boolean; "contactInfo": { "mobile": string; "email": string; "address": strin
+};
+
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+export const "quantumSpaceTechServices2026": QuantumSpaceTechService2026[] = [ { "id": "2026-quantum-space-tech","name": "2026 Quantum Space Tech Platform","tagline": "Quantum computing meets space technology","price": "$599/month","description": "Revolutionary platform combining quantum computing with advanced space technology for 2026.",features[ "Quantum computing","Space technology","Advanced algorithms","Innovation platform","Expert support" ],"link": "/services/2026-quantum-space-tech","category": "Quantum Space Tech 2026","realImplementation": true,"contactInfo": { "mobile": "+1 302 464 0950","email": "kleber@ziontechgroup.com","address": "364 E Main St STE 1008 Middletown DE 19709" ]},"
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

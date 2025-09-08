@@ -1,15 +1,15 @@
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
-export default function UseTokensButton({
-  serviceId
-  defaultType
-}: {
-  serviceId?: string;
-  defaultType?: RedemptionType;
-}) {
-origin/cursor/automate-test-improve-and-merge-code-2533
-
+<<<<<<< HEAD
+=======
+export default function UseTokensButton() {
+  }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   const [open, setOpen] = useState(false);
 return (;
@@ -25,14 +25,10 @@ return (;
         onClose={() => setOpen(false)}
         serviceId={serviceId}
         defaultType={defaultType}
-  );
+      />;
+    </>);
   const [open, setOpen] = useState(false);
   return (
-    <>;
-      <button;
-        onClick={() => setOpen(true)}"
-        className="enhanced-button enhanced-button-primary";
-      >;
         Use Tokens;
       </button>;
       <UseTokensModal;
@@ -40,6 +36,7 @@ return (;
         onClose={() => setOpen(false)}
         serviceId={serviceId}
         defaultType={defaultType}
+<<<<<<< HEAD
 
 
 export default function UseTokensButton({ serviceId, defaultType }: { serviceId?: string, defaultType?: RedemptionType }) {
@@ -56,6 +53,8 @@ export default function UseTokensButton({ serviceId, defaultType }: { serviceId?
         onClose={() => setOpen(false)}
         serviceId={serviceId}
         defaultType={defaultType}
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       />
     </>
   );
@@ -117,6 +116,25 @@ onClick={() = /> setOpen(true)}
         className=\enhanced-button enhanced-button-primary\>
 
 
+<<<<<<< HEAD
+=======
+
+export default function UseTokensButton({
+  serviceId;}
+defaultType}
+}: {
+  serviceId?: string;
+  defaultType?: RedemptionType;}
+}
+}) {
+  const [open, setOpen] = useState(false);
+  return (
+    <>;}
+      <button;}
+onClick={() =    /> setOpen(true)}
+        className=\"enhanced-button enhanced-button-primary\">
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         Use Tokens;
       </button>;
       <UseTokensModal;
@@ -138,6 +156,7 @@ onClick={() = /> setOpen(true)}
         serviceId={serviceId}
         defaultType={defaultType}
       />;
+<<<<<<< HEAD
 
     <   />;
 )))const [open, setOpen] = useState(false)return (<UseTokensModal;
@@ -157,3 +176,15 @@ onClick={() = /> setOpen(true)}
 
 
 
+=======
+    </>);
+origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
+    </>;
+  )const [open, setOpen] = useState(false)return (<>;
+      <button;
+        on_click={() => set_open (true)}
+
+
+"
+>>>>>>> origin/cursor/delete-old-data-records-6bba

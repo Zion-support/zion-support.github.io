@@ -9,6 +9,7 @@ export function middleware(request: NextRequest) {
   response.headers.set('X-Content-Type-Options', 'nosniff');
   response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
   response.headers.set('X-XSS-Protection', '1; mode=block');
+  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
   
   // Content Security Policy
   const csp = [
@@ -18,7 +19,7 @@ export function middleware(request: NextRequest) {
     "img-src 'self' data: https:",
     "font-src 'self' data: https://fonts.gstatic.com",
     "connect-src 'self'",
-    "frame-ancestors 'none'",
+    "frame-ancestors 'none'"
   ].join('; ');
   
   response.headers.set('Content-Security-Policy', csp);

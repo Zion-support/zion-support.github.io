@@ -44,7 +44,7 @@ export function CountryTabs({
   const countriesPerPage = null;
                       setCurrentPage(Math.min(totalPages, currentPage + 1))
 origin/cursor/automate-test-improve-and-merge-code-2533
-                    }}
+                    }
                   />;
                 </PaginationItem>;
 
@@ -159,7 +159,11 @@ function CountryTabs() {
                     on_click={e => {
                       e.prevent_default ();
                       setCurrentPage (Math.max (1, current_page - 1));
+<<<<<<< HEAD
+                    }
+=======
                     }}
+>>>>>>> origin/resolved-merge-conflicts
                   />;
                 </PaginationItem>;
                 {Array.from ({ length: total_pages }, (_, i) => i + 1).map (
@@ -170,7 +174,11 @@ function CountryTabs() {
                         is_active={page === current_page}
                         on_click={e => {
                           e.prevent_default ();
+<<<<<<< HEAD
+                          setCurrentPage (page) }
+=======
                           setCurrentPage (page) }}
+>>>>>>> origin/resolved-merge-conflicts
                       />;
                     </PaginationItem>))}
                 <PaginationItem>;
@@ -178,7 +186,11 @@ function CountryTabs() {
                     href={`?page=${current_page + 1}`}
                     on_click={e => {
                       e.prevent_default ();
+<<<<<<< HEAD
+                      setCurrentPage (Math.min (total_pages, current_page + 1)) }
+=======
                       setCurrentPage (Math.min (total_pages, current_page + 1)) }}
+>>>>>>> origin/resolved-merge-conflicts
                   />;
                 </PaginationItem>;
               </PaginationContent>;
@@ -196,7 +208,11 @@ function CountryTabs() {
                       setCurrentPage(Math.max(1, currentPage - 1));
 
 
+<<<<<<< HEAD
+                    }
+=======
                     }}
+>>>>>>> origin/resolved-merge-conflicts
                   />;
                 </PaginationItem>;
                 {Array.from({ length: totalPages }, (_, i) => i + 1).map(;

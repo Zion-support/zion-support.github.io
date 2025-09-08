@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
   id: string;
 
   name: string;
@@ -11,17 +12,57 @@
     trialDays?: number;
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   period?: string;
   pricing?: any;
-
+  "features": string[],;
   popular?: boolean;
 
+<<<<<<< HEAD
     switch (variant) {case 'ai':;
         return {}
 
     }
   }
   const styles = getVariantStyles()return (<motion&& motion.div;
+=======
+
+
+interface ServiceCardProps {
+  service: Service,
+  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'
+}
+
+
+
+  service: Service
+  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'
+}
+const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant = 'default' }) => {
+  const getVariantStyles = () => {
+  category: string,
+  icon: string,
+  market_price?: string;
+  competitors?: string[];
+  target_market?: string;
+  use_cases?: string[];
+  integration?: string[];
+  benefits?: string[];
+}
+interface ServiceCardProps {
+  service: Service,
+  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default';
+}
+const UltraFuturisticServiceCard2026: React.FC < ServiceCardProps> = ({ service, variant = 'default' }) => {
+  const getVariantStyles = () =>: any {
+    switch (variant) {
+      case 'ai':;
+        return {
+    switch (variant) {
+      case 'ai':;
+        return {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   integration?: string[];
   benefits?: string[];
@@ -112,13 +153,130 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
           textColor: 'text-gray-400',;
           iconBg: 'bg-gray-500/20',;
           iconBorder: 'border-gray-400/30';
+<<<<<<< HEAD
+=======
+import { motion  } from 'framer-motion';
+import { Star, Check, Zap, TrendingUp, Shield, Brain, Atom, Rocket } from 'lucide-react';
+interface Service {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
+<<<<<<< HEAD
+=======
+  }
+  period?: string;
+  pricing?: any;
+  features: string[]
+  popular?: boolean;
+  category: string
+  icon: string
+
+  marketPrice?: string;
+  competitors?: string[];
+  targetMarket?: string;
+  useCases?: string[];
+  integration?: string[],
+  benefits?: string[]
+}
+interface ServiceCardProps {
+
+interface ServiceCardProps {
+  service: Service,
+  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'
+}
+
+  service: Service
+  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'
+}
+const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant = 'default' }) => {
+  const getVariantStyles = () => {
+    switch (variant) {
+      case 'ai':
+        return {
+          gradient: 'from-purple-600 via-pink-600 to-purple-700'
+          borderColor: 'border-purple-400/30'
+          textColor: 'text-purple-400'
+          iconBg: 'bg-purple-500/20'
+          iconBorder: 'border-purple-400/30'
+        }
+      case 'quantum':
+        return {
+          gradient: 'from-cyan-600 via-blue-600 to-cyan-700'
+          borderColor: 'border-cyan-400/30'
+          textColor: 'text-cyan-400'
+          iconBg: 'bg-cyan-500/20'
+          iconBorder: 'border-cyan-400/30'
+        }
+      case 'space':
+        return {
+          gradient: 'from-indigo-600 via-purple-600 to-indigo-700'
+          borderColor: 'border-indigo-400/30'
+          textColor: 'text-indigo-400'
+          iconBg: 'bg-indigo-500/20'
+          iconBorder: 'border-indigo-400/30'
+        }
+      case 'cybersecurity':
+        return {
+          gradient: 'from-red-600 via-orange-600 to-red-700'
+          borderColor: 'border-red-400/30'
+          textColor: 'text-red-400'
+          iconBg: 'bg-red-500/20'
+          iconBorder: 'border-red-400/30'
+        }
+      case 'enterprise':
+        return {
+          gradient: 'from-indigo-600 via-purple-600 to-indigo-700'
+          borderColor: 'border-indigo-400/30'
+          textColor: 'text-indigo-400'
+          iconBg: 'bg-indigo-500/20'
+          iconBorder: 'border-indigo-400/30'
+        }
+      case 'automation':
+        return {
+          gradient: 'from-green-600 via-emerald-600 to-green-700'
+          borderColor: 'border-green-400/30'
+          textColor: 'text-green-400'
+          iconBg: 'bg-green-500/20'
+          iconBorder: 'border-green-400/30'
+        }
+      case 'it':
+        return {
+          gradient: 'from-blue-600 via-indigo-600 to-blue-700'
+          borderColor: 'border-blue-400/30'
+          textColor: 'text-blue-400'
+          iconBg: 'bg-blue-500/20'
+          iconBorder: 'border-blue-400/30'
+        }
+      case 'emerging':
+        return {
+          gradient: 'from-yellow-600 via-orange-600 to-yellow-700'
+          borderColor: 'border-yellow-400/30'
+          textColor: 'text-yellow-400'
+          iconBg: 'bg-yellow-500/20'
+          iconBorder: 'border-yellow-400/30'
+        }
+      case 'premium':
+        return {
+          gradient: 'from-amber-600 via-yellow-600 to-amber-700'
+          borderColor: 'border-amber-400/30'
+          textColor: 'text-amber-400'
+          iconBg: 'bg-amber-500/20'
+          iconBorder: 'border-amber-400/30'
+        }
+      default:
+        return {
+          gradient: 'from-gray-600 via-gray-700 to-gray-800'
+          borderColor: 'border-gray-400/30'
+          textColor: 'text-gray-400'
+          iconBg: 'bg-gray-500/20'
+          iconBorder: 'border-gray-400/30'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         }
     }
   }
   const styles = getVariantStyles();
+<<<<<<< HEAD
 
 
 
@@ -137,6 +295,11 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
   return (
     <motion&& motion.div
 
+=======
+  const CategoryIcon = getCategoryIcon(service && service.category);
+  return (
+    <motion&& motion.div
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0 && 0.6 }}
@@ -145,9 +308,12 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
       <div className="relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm overflow-hidden">;
         {/* Enhanced Background Glow */}
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         {/* Popular Badge */}
         {service && service.popular && (<motion&& motion.div;
             initial={{ scale: 0 }}
@@ -159,6 +325,7 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
           </motion && motion.div>;
         )}
 
+<<<<<<< HEAD
 
         }
       case 'quantum':;
@@ -189,6 +356,8 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
         return {gradient: 'from - gray - 600 via - gray - 700 to - gray - 800',border_color: 'border - gray - 400 / 30',text_color: 'text - gray - 400',icon_bg: 'bg - gray - 500 / 20',icon_border: 'border - gray - 400 / 30';
 
 import React from 'react';
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         
 
@@ -197,6 +366,7 @@ import React from 'react';
           <div className={`w-24 h-24 mx-auto mb-6 rounded-full ${styles.iconBg} flex items-center justify-center border ${styles.iconBorder} text-4xl backdrop-blur-sm`}>
             {service.icon}
 
+<<<<<<< HEAD
 
 
         {/* Features List */}
@@ -331,6 +501,25 @@ export default UltraFuturisticServiceCard2026;
 
 
 
+=======
+}
+    setupTime?: string}
+  },
+  period?: string;
+  pricing?: any;
+  features: string[],;
+  popular?: boolean;
+
+  category: string;
+
+  icon: string;
+  marketPrice?: string;
+  competitors?: string[];
+  targetMarket?: string;
+  useCases?: string[];
+  integration?: string[],benefits?: string[];
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           </div>;
           <h3 className="text - 2xl font - bold text - white mb - 3 group - hover:text - gray - 100 transition - colors">;
             {service.name}
@@ -419,7 +608,10 @@ export default UltraFuturisticServiceCard2026;
         {/* Enhanced Hover Effects */}
         <div className="absolute inset - 0 bg - gradient - to - br from - white / 0 via - white / 0 to - white / 0 group - hover: from - white / 5 group - hover:via - white / 2 group - hover:to - white / 5 transition - all duration - 500 rounded - 2xl"></div>;
       </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     </motion.div>),
 });
 ;
@@ -427,8 +619,34 @@ UltraFuturisticServiceCard2026.display_name = 'UltraFuturisticServiceCard2026';
 ;
 export default UltraFuturisticServiceCard2026;
 ;
+<<<<<<< HEAD
 
 
+=======
+}const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps>  = ({ service, variant;
+            )}
+          </div>
+        )}
+        
+        {/* Target Market & Use Cases */}
+        {service.targetMarket && (
+          <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">
+            <div className="text-xs">
+              <div className="text-gray-400 mb-2">Target Market:</div>
+              <div className="text-gray-300">{service.targetMarket}</div>
+            </div>
+            
+            {service.useCases && (
+              <div className="text-xs mt-3">
+                <div className="text-gray-400 mb-2">Use Cases:</div>
+                <div className="text-gray-300">{service.useCases.slice(0, 3).join()}</div>
+              </div>
+            )}
+          </div>
+        )}
+        
+        {/* Benefits Section */}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         {service.benefits && (
           <div className="border-t border-white/10 pt-4 mb-6 relative z-10">
             <h4 className="text-sm font-semibold text-gray-300 mb-3 flex items-center">
@@ -437,8 +655,11 @@ export default UltraFuturisticServiceCard2026;
             </h4>
             <div className="space-y-2">
               {service.benefits.slice(0, 3).map((benefit, idx) => (
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 <div key={idx} className="text-xs text-gray-400 flex items-start space-x-2">
                   <Check className="w-3 h-3 text-green-400 mt-0.5 flex-shrink-0" />
                   <span>{benefit}</span>
@@ -447,9 +668,12 @@ export default UltraFuturisticServiceCard2026;
             </div>
           </div>
         )}
+<<<<<<< HEAD
 
         
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         {/* CTA Button */}
         <div className="relative z-10">
           <motion.button
@@ -460,9 +684,12 @@ export default UltraFuturisticServiceCard2026;
             Get Started
           </motion.button>
         </div>
+<<<<<<< HEAD
 
         
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         {/* Enhanced Hover Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover: from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
       </div>
@@ -471,6 +698,7 @@ export default UltraFuturisticServiceCard2026;
 });
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 export default UltraFuturisticServiceCard2026;
+<<<<<<< HEAD
 
 
 export default UltraFuturisticServiceCard2026;
@@ -480,3 +708,5 @@ export default UltraFuturisticServiceCard2026;
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

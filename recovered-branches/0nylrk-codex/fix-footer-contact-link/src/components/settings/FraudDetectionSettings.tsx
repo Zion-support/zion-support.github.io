@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
 import {Switch} from '@/components/ui/switch';
 import {Button} from '@/components/ui/button';
@@ -10,7 +13,10 @@ import {toast} from '@/hooks/use-toast';
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
 export function FraudDetectionSettings() {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import React, { useState } from "react";
 import {}
@@ -41,7 +47,10 @@ import { toast } from "@/hooks/use-toast";"
 import { supabase } from "@/integrations/supabase/client";"
 import { useAuth } from "@/hooks/useAuth";
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const { user } = useAuth();
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
   const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true);
@@ -49,9 +58,12 @@ import { useAuth } from "@/hooks/useAuth";
   const [isSaving, setIsSaving] = useState(false);
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React, { useState } from 'react',
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
 import { Switch } from '@/components/ui/switch',
@@ -74,6 +86,7 @@ export function FraudDetectionSettings() {
   const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true),
   const [isSaving, setIsSaving] = useState(false),
 
+<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Switch  } from '@/components/ui/switch';
 import { Button  } from '@/components/ui/button';
@@ -115,6 +128,22 @@ const handleSavePreferences = async () => {
       // For now, we'll just simulate a successful save
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+  const handleSavePreferences = async () => {
+
+    if (!user?.id) return;
+    setIsSaving(true);
+    try {
+      // In a real implementation, we would save these preferences to the database
+      // For now, we'll just simulate a successful save
+
+<<<<<<< HEAD
+
+
+=======
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+  
   const handleSavePreferences = async () => {
 
     if (!user?.id) return;
@@ -124,7 +153,7 @@ const handleSavePreferences = async () => {
       // For now, we'll just simulate a successful save
 
 
-
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     <Card className="mb-8">
       <CardHeader className="space-y-1">
         <div className="flex items-center gap-2">
@@ -150,6 +179,7 @@ const handleSavePreferences = async () => {
                 </p>
               </div>
 
+<<<<<<< HEAD
 
 
       toast({
@@ -285,6 +315,9 @@ export function FraudDetectionSettings() {;
                 id="ai-analysis";
                 checked={aiAnalysisEnabled}
 
+=======
+                onCheckedChange={setAiAnalysisEnabled}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
               />;
             </div>;
@@ -314,8 +347,11 @@ export function FraudDetectionSettings() {;
               </AccordionContent>;
             </AccordionItem>;
           </Accordion>;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 "
           <Accordion type="single" collapsible className="w-full">"
@@ -369,12 +405,20 @@ export function FraudDetectionSettings() {;
 }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             </Button>;
           </div>;
         </div>;
       </CardContent>;
 
+<<<<<<< HEAD
 
 
 
+=======
+}
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
 ;
 export type JobCategory =;
@@ -12,12 +15,27 @@ export type JobCategory =;
 ;
 export interface JobBudget {
 
+<<<<<<< HEAD
 
 
 export interface JobBudget {;
 
 
 
+=======
+
+export type JobCategory =
+  | "development"
+  | "design"
+  | "marketing"
+  | "content"
+  | "data"
+  | "business"
+  | "other";
+
+
+export interface JobBudget {;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   min: number;
 
 export type JobCategory =
@@ -33,6 +51,12 @@ export interface Job {
 
 export interface Job {;
 
+<<<<<<< HEAD
+=======
+
+  max: number;
+  currency: string;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
@@ -50,21 +74,49 @@ export interface Job {;
   updated_at: string;
 
 }
+<<<<<<< HEAD
 
 export interface JobFormData {
 }
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 export interface JobFormData {;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   title: string;
   description: string;
   category: JobCategory;
   skills: string;
+<<<<<<< HEAD
+=======
+
+  budgetMin: number;
+  budgetMax: number;
+  deadline: Date;
+}
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
+=======
+
+export interface JobMatch {};
+  budgetMin: number;
+  budgetMax: number;
+  deadline: Date;
+}
+// Add JobMatch interface to be shared across components;
+export interface JobMatch {;
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   id: string;
   job_id: string;
   talent_id: string;
@@ -87,6 +139,7 @@ export interface JobFormData {;
     skills: string[];
     location?: string;
 
+<<<<<<< HEAD
 
 
   id: string;
@@ -122,6 +175,19 @@ export interface JobFormData {;
 
 
       matching: string[],
+=======
+    category?: string;
+    company_name?: string;
+  };
+}
+
+
+  description: string;
+  category: JobCategory;
+  skills: string;
+  budgetMin: number;
+  budgetMax: number;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   deadline: Date;
 }
@@ -222,7 +288,10 @@ export interface JobBudget {;
   file_url?: string,;
   resume_id?: string,;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       missing: string[];
     };
     experience_match?: {}
@@ -262,6 +331,10 @@ export interface JobBudget {;
 }
 ;
 
+<<<<<<< HEAD
 
 
 
+=======
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

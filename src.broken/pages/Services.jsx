@@ -18,11 +18,15 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
+<<<<<<< HEAD
 
 
 }
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
 
     <div className={className || ''}>
@@ -30,6 +34,12 @@ import React from 'react';
       <p>This component is under development.</p>
     </div>
 
+<<<<<<< HEAD
   );
 
 
+=======
+  )
+
+};
+>>>>>>> origin/cursor/delete-old-data-records-6bba

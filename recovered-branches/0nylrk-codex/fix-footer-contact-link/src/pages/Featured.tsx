@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 export default function Featured() {
@@ -19,13 +20,27 @@ export default function Featured() {
 
 
 
+=======
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {FeaturedListingsSection} from "@/components/FeaturedListingsSection";
+import {GradientHeading} from "@/components/GradientHeading";
+
+
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { GradientHeading } from "@/components/GradientHeading";
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",
 
 export default function Featured() {
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
 import { FeaturedListingsSection } from '@/components / FeaturedListingsSection';
@@ -44,13 +59,18 @@ function Featured() {
               Featured Listings;
             </GradientHeading>;
 
+<<<<<<< HEAD
             <p className="text - zion - slate - light text - lg max - w-3xl mx - auto">;
 
 
+=======
+            <p className="text - zion - slate - light text - lg max - w-3xl mx-auto">;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               Discover our handpicked selection of premium AI products and services.;
               These featured listings represent the best that the Zion Marketplace has to offer.;
             </p>;
           </div>;
+<<<<<<< HEAD
 
 
 import { Header } from "@/components/Header",;
@@ -100,12 +120,25 @@ function Featured() {
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           {/* Reuse the FeaturedListings component */}
           <FeaturedListingsSection showTitle={false} />
         </div>
       </div>
       <Footer />
     </>
+<<<<<<< HEAD
+
+=======
 
 
+  );
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
+
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

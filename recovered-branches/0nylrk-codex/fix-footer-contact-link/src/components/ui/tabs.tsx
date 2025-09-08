@@ -1,14 +1,33 @@
 
+<<<<<<< HEAD
 
+=======
+import * as React from 'react';
+import * as TabsPrimitive from '@radix-ui/react-tabs';
+
+import {cn} from '@/lib/utils';
+const Tabs = TabsPrimitive.Root;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import * as React from "react"
 import * as TabsPrimitive from "@radix-ui/react-tabs"
 import * as React from "react"
 import * as TabsPrimitive from "@radix-ui/react-tabs"
 
+<<<<<<< HEAD
+=======
+import * as React from "react"
+import * as TabsPrimitive from "@radix-ui/react-tabs"
+import * as React from "react"
+import * as TabsPrimitive from "@radix-ui/react-tabs"
+"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 const TabsList = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.List>
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>
@@ -16,6 +35,88 @@ const TabsList = React.forwardRef<
 
   <TabsPrimitive.List
 
+<<<<<<< HEAD
+=======
+import * as React from "react";
+import * as TabsPrimitive from "@radix-ui/react-tabs";
+;
+import { cn } from "@/lib/utils";
+;
+const Tabs = TabsPrimitive.Root;
+;
+const TabsList = React.forwardRef<;
+  React.ElementRef<typeof TabsPrimitive.List>,;
+  React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>;
+>(({ className, ...props }, ref) => (;
+  <TabsPrimitive.List;
+    ref={ref}
+
+      "inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground",
+
+
+      className
+    className={cn(;
+      "inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground",;
+      className;
+    )}
+    {...props}
+  />;
+));
+
+import {cn} from '@/lib/utils';
+const Tabs = TabsPrimitive.Root;
+import * as React from "react"""
+import * as TabsPrimitive from "@radix-ui/react-tabs"""
+import { cn } from "@/lib/utils""
+const TabsList = React.forwardRef<
+  React.ElementRef<typeof TabsPrimitive.List>
+</typeof>
+  React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>
+></typeof>(({ className, ...props }, ref) => (
+  <TabsPrimitive.List;
+const Tabs = TabsPrimitive && TabsPrimitive.Root;
+
+const TabsList = React && React.forwardRef<;
+  React && React.ElementRef<typeof TabsPrimitive && TabsPrimitive.List>,;
+
+  React && React.ComponentPropsWithoutRef<typeof TabsPrimitive && TabsPrimitive.List>;
+</typeof>)
+></typeof>(({ className, ...props }, ref) => (;
+  <TabsPrimitive&& TabsPrimitive.List;
+    ref={ref}
+    className={cn(
+"
+import * as React from "react";""
+import * as TabsPrimitive from "@radix-ui/react-tabs";"
+;"
+import { cn } from "@/lib/utils";"
+;
+const TabsList = React.forwardRef<;
+  React.ElementRef<typeof TabsPrimitive.List>,;
+
+  React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>;
+      "inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground","
+      className;
+      className;)
+    )}
+    {...props}
+  />
+));
+TabsList.displayName = TabsPrimitive.List.displayName;
+  />;
+pr-12325
+
+      'inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground'
+      "inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground",
+
+      className
+    )}
+    {...props}
+  />
+));
+TabsList.displayName = TabsPrimitive.List.displayName;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
     ref={ref}
@@ -52,7 +153,19 @@ const TabsTrigger = React.forwardRef<;
 
 
 
+<<<<<<< HEAD
 
+=======
+    ref={ref}
+    className={cn(
+      "inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm",
+      className
+    )}
+    {...props}
+  />
+));
+TabsTrigger.displayName = TabsPrimitive.Trigger.displayName;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 const TabsTrigger = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.Trigger>
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.T</typeof>rigger>
@@ -88,6 +201,18 @@ const TabsTrigger = React.forwardRef<;
   />;
 ));
 
+<<<<<<< HEAD
+=======
+
+    ref={ref}
+    className={cn(
+      "inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm",
+      className
+    )}
+    {...props}
+  />;
+));
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 const TabsContent = React.forwardRef<
@@ -96,7 +221,11 @@ const TabsContent = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <TabsPrimitive.Content
 
+<<<<<<< HEAD
 
+=======
+TabsTrigger && TabsTrigger.displayName = TabsPrimitive && TabsPrimitive.Trigger.displayName;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 TabsTrigger && TabsTrigger.displayName = TabsPrimitive && TabsPrimitive.Trigger.displayName;
 const TabsContent = React && React.forwardRef<;
@@ -104,29 +233,51 @@ const TabsContent = React && React.forwardRef<;
   React && React.ComponentPropsWithoutRef<typeof TabsPr</typeof>imitive && imitive.Content>;
 >(({ className, ...props }, ref) => (;
   <TabsPrimitive&& TabsPrimitive.Content
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     ref={ref}
     className={cn(
       'mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
 
+<<<<<<< HEAD
+=======
+ref={ref}
+    className={cn(
+      'mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 const TabsContent = React.forwardRef<;
   React.ElementRef<typeof TabsPrimitive.Content>,;
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content>;
 >(({ className, ...props }, ref) => (;
   <TabsPrimitive.Content;
 
+<<<<<<< HEAD
+=======
+
+    ref={ref}
+    className={cn(
+      'inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
 
       className
 
 
+=======
+      className;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     )}
     {...props}
   />;
 ));
 
+<<<<<<< HEAD
 
 TabsContent && TabsContent.displayName = TabsPrimitive && TabsPrimitive.Content.displayName;
 
@@ -142,6 +293,52 @@ export { Tabs, TabsList, TabsTrigger, TabsContent };
 
 import * as TabsPrimitive from '@radix - ui / react - tabs';
 
+=======
+
+      className
+    )}
+    {...props}
+  />
+));
+TabsTrigger.displayName = TabsPrimitive.Trigger.displayName;
+
+const TabsContent = React.forwardRef<
+  React.ElementRef<typeof TabsPrimitive.Content>
+  React.ComponentPropsWithoutRef<typeof TabsPr</typeof>imitive.Content>
+>(({ className, ...props }, ref) => (
+
+TabsTrigger && TabsTrigger.displayName = TabsPrimitive && TabsPrimitive.Trigger.displayName;
+
+const TabsContent = React && React.forwardRef<;
+  React && React.ElementRef<typeof TabsPrimitive && TabsPrimitive.Content>,;
+  React && React.ComponentPropsWithoutRef<typeof TabsPr</typeof>imitive && imitive.Content>;
+>(({ className, ...props }, ref) => (;
+  <TabsPrimitive&& TabsPrimitive.Content;
+    ref={ref}
+    className={cn('
+      'mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
+
+const TabsContent = React.forwardRef<;
+  React.ElementRef<typeof TabsPrimitive.Content>,;
+  React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content>;
+>(({ className, ...props }, ref) => (;
+  <TabsPrimitive.Content;
+
+    ref={ref}
+
+    className={cn(
+
+      "mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+    ref={ref}
+    className={cn('
+      'mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
+
+import * as TabsPrimitive from '@radix - ui / react - tabs';
+
+
+TabsContent && TabsContent.displayName = TabsPrimitive && TabsPrimitive.Content.displayName;
+export { Tabs, TabsList, TabsTrigger, TabsContent };
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
 
 export { Tabs, TabsList, TabsTrigger, TabsContent };'
@@ -259,7 +456,10 @@ TabsContent.displayName = TabsPrimitive.Content.displayName;
 
 export { Tabs, TabsList, TabsTrigger, TabsContent }import * as React from "react" import * as TabsPrimitive from "@radix-ui/react-tabs" const Tabs = TabsPrimitive.Root const TabsList = React.forwardRef< React.ElementRef<typeof TabsPrimitive.List>;
       'inline - flex items - center justify - center whitespace - nowrap rounded - sm px - 3 py - 1.5 text - sm font - medium ring - offset - background transition - all focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:pointer - events - none disabled:opacity - 50 data-[state = active]:bg - background data-[state = active]:text - foreground data-[state = active]:shadow - sm',')
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 const TabsContent = React.forward_ref<;
   React.ElementRef < typeof TabsPrimitive.Content>,
@@ -285,7 +485,15 @@ TabsContent.displayName = TabsPrimitive.Content.displayName;
 export { Tabs, TabsList, TabsTrigger, TabsContent }
 export { Tabs, TabsList, TabsTrigger, TabsContent }
 ;
+<<<<<<< HEAD
 
 
 
 
+=======
+
+
+export { Tabs, TabsList, TabsTrigger, TabsContent };
+export { Tabs, TabsList, TabsTrigger, TabsContent }
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

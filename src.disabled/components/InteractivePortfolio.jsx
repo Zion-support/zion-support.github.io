@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export function InteractivePortfolio() { import { ExternalLink,Github,Eye,X,ChevronLeft,ChevronRight,Star,Users,Calendar const portfolioProjects = [; { "id": "1","title": "AI-Powered E-commerce Platform","description": "A next-generation e-commerce solution with AI-driven product recommendations,dynamic pricing,and intelligent inventory management.","category": "AI & ML",technologies["_React",Node.js",TensorFlow",MongoDB",AWS"],; "image": "https:
 
 
@@ -9,3 +10,8 @@ export function InteractivePortfolio() { import { ExternalLink,Github,Eye,X,Chev
 
 
 
+=======
+export function InteractivePortfolio() { import { ExternalLink,Github,Eye,X,ChevronLeft,ChevronRight,Star,Users,Calendar const portfolioProjects = [; { \"id\": \"1\",\"title\": \"AI-Powered E-commerce Platform\",\"description\": \"A next-generation e-commerce solution with AI-driven product recommendations,dynamic pricing,and intelligent inventory management.\",\"category\": \"AI & ML\",technologies[\"React\",Node.js\",TensorFlow\",MongoDB\",AWS\"],; \"image\": \"https:
+module.exports = function InteractivePortfolio() { import { ExternalLink,Github,Eye,X,ChevronLeft,ChevronRight,Star,Users,Calendar const portfolioProjects = [; { id: "1",title: "AI-Powered E-commerce Platform",description: "A next-generation e-commerce solution with AI-driven product recommendations,dynamic pricing,and intelligent inventory management.",category: "AI & ML",technologies["React",Node.js",TensorFlow",MongoDB",AWS"],; image: "https:""
+export function InteractivePortfolio() { import { ExternalLink,Github,Eye,X,ChevronLeft,ChevronRight,Star,Users,Calendar const portfolioProjects = [; { "id": "1","title": "AI-Powered E-commerce Platform","description": "A next-generation e-commerce solution with AI-driven product recommendations,dynamic pricing,and intelligent inventory management.","category": "AI & ML",technologies["_React",Node.js",TensorFlow",MongoDB",AWS"],; "image": "https:
+>>>>>>> origin/cursor/delete-old-data-records-6bba

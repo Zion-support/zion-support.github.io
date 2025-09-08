@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 lastMessage: string,;
   timestamp: string,;
   unreadCount: number,;
@@ -20,6 +23,23 @@ interface Conversation {
   id: string
 
 
+<<<<<<< HEAD
+=======
+  lastMessage: string,;
+  timestamp: string,;
+  unreadCount: number,;
+  isTyping?: boolean;
+}
+
+interface MobileConversationListProps {;
+  conversations: Conversation[],;
+
+  onSelectConversation: (id: string) => void
+}
+import { Input } from "@/components/ui/input",
+import { cn } from "@/lib/utils",
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface Conversation {
 
   id: string,
@@ -29,6 +49,7 @@ interface Conversation {
   timestamp: string,
   unreadCount: number,
 
+<<<<<<< HEAD
   isTyping?: boolean
 
   onSelectConversation;
@@ -37,6 +58,43 @@ interface Conversation {
   return (;
     <div className="space-y-4">;
 
+=======
+
+export function MobileConversationList({
+
+export function MobileConversationList(): any ({;
+  activeConversation?: string;
+  onSelectConversation: (id: string) => void;
+}
+
+import { cn } from "@/lib/utils",;
+interface Conversation {;
+  id: string,;
+  name: string,;
+  avatar?: string,;
+  lastMessage: string,;
+  timestamp: string,;
+  unreadCount: number,;
+  isTyping?: boolean;
+}
+;
+interface MobileConversationListProps {;
+  conversations: Conversation[],;
+  activeConversation?: string,;
+  onSelectConversation: (id: string) => void;
+}
+
+  activeConversation?: string;
+  onSelectConversation: (id: string) => void;
+}
+export function MobileConversationList(): any ({;
+
+  conversations;
+  activeConversation;
+  onSelectConversation;
+  onSelectConversation;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       <div className="px-4 mb-2">;
         <div className="relative">;
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />;
@@ -55,11 +113,24 @@ interface Conversation {
           <Badge variant="outline" className="rounded-full px-3">Projects</Badge>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
               "px-4";
 
               "px-4",
 
+=======
+
+
+      <div className="space-y-2 pb-24">;
+        {conversations && conversations.map((conversation) => (;
+
+          <div
+            key={conversation && conversation.id}
+            className={cn(
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               activeConversation === conversation.id && "bg-primary/5"
             )}
             onClick={() => onSelectConversation(conversation.id)}
@@ -72,6 +143,7 @@ interface Conversation {
                 <AvatarImage src={conversation.avatar} />
 
                 <AvatarFallback>
+<<<<<<< HEAD
 
                   {conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>
@@ -87,6 +159,10 @@ interface Conversation {
                   <p className="text-sm text-muted-foreground truncate">
 
 
+=======
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                       ? <em>Typing...</em>
                       : conversation.lastMessage}
                   </p>
@@ -94,8 +170,16 @@ interface Conversation {
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
                       {conversation.unreadCount}
                     </Badge>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               activeConversation === conversation && conversation.id && "bg-primary/5"
             )}
             onClick={() => onSelectConversation(conversation && conversation.id)}
@@ -107,6 +191,7 @@ interface Conversation {
                 <AvatarImage src={conversation && conversation.avatar} />;
 
                 <AvatarFallback>;
+<<<<<<< HEAD
 
                   {conversation && conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>;
@@ -164,6 +249,17 @@ interface Conversation {
                   {conversation.unreadCount > 0 && (;
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;
                       {conversation.unreadCount}
+=======
+
+
+                      ? <em>Typing...</em> ;
+                  </p>;"
+                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;"
+
+</Badge>
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                     </Badge>;
 
                   )}
@@ -174,6 +270,7 @@ interface Conversation {
           </div>;
         ))}
 
+<<<<<<< HEAD
       </div>;
     </div>;
 import React from './react';
@@ -233,3 +330,6 @@ interface Conversation {
 
 
 
+=======
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

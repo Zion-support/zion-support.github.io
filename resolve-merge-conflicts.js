@@ -1,5 +1,5 @@
-console && console.log('🔧 Starting automatic merge conflict resolution...');
 
+<<<<<<< HEAD
 
 
 
@@ -163,3 +163,5 @@ function mergePR() {
 
 }
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

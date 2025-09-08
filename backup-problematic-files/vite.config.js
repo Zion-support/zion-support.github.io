@@ -4,8 +4,12 @@
   server: {,
     port: 3000,
 
+<<<<<<< HEAD
     host: true
 
+=======
+    host: true;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   },
 
     rollupOptions: {,

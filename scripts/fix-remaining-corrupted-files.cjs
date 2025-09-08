@@ -78,6 +78,8 @@ const corruptedFiles = ['pages/docs/integration-examples.tsx']
   'pages/login.tsx,
   let content =
     if (filePath === 'pages/docs/integration-examples.tsx')
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -86,3 +88,4 @@ const corruptedFiles = ['pages/docs/integration-examples.tsx']
   let content =
     if (filePath === 'pages/docs/integration-examples.tsx')
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

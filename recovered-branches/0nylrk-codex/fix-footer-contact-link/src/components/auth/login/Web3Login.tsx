@@ -1,13 +1,22 @@
+<<<<<<< HEAD
 
 export function Web3Login() {
   const { loginWithWeb3 } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),
 
 
+=======
+  const handleWeb3Login = async () => {
+    try {
+
+      // Check if wallet is available
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const handleWeb3Login = async () => {;
     try {;
       setIsLoading(true);
 
+<<<<<<< HEAD
 
 
   const handleWeb3Login = async () => {
@@ -19,6 +28,9 @@ export function Web3Login() {
       // Check if wallet is available
       const ethereum = (window as any).ethereum;
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           description: "Please install MetaMask or another compatible wallet"})
         return;
       }
@@ -29,16 +41,31 @@ export function Web3Login() {
       console.error("Web3 login error:", error)
     } finally {}
       setIsLoading(false)
+<<<<<<< HEAD
 
 
 
+=======
+      // Check if wallet is available;
+      const ethereum = (window as any).ethereum;
+      if (!ethereum) {;
+        toast("Web3 wallet not found", {;
+          description: "Please install MetaMask or another compatible wallet"}),;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         return;
       }
       await loginWithWeb3();
 
+<<<<<<< HEAD
     } catch (error: any) {;
       toast("Login failed", {;
         description: error && error.message || "Failed to connect wallet"}),;
+=======
+
+        return;
+      }
+      await loginWithWeb3();
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       console && console.error("Web3 login error:", error);
     } finally {;
@@ -47,15 +74,21 @@ export function Web3Login() {
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     }
 
   },
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <Button"
       type="button""
@@ -63,7 +96,10 @@ export function Web3Login() {
       className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
       onClick={handleWeb3Login}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       disabled={isLoading}
     >
       {isLoading ? ("
@@ -80,6 +116,14 @@ export function Web3Login() {
           <Wallet className="h-5 w-5" />
         </>
 
+<<<<<<< HEAD
+=======
+
+      )}
+    </Button>
+  )
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 import { useState } from "react",;
@@ -120,6 +164,14 @@ export function Web3Login() { return null; }
       disabled={isLoading}
     >;
 
+<<<<<<< HEAD
+=======
+
+      {isLoading ? (;"
+        <span className="flex items-center">;"
+          <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">;"
+            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
           </svg>;
@@ -132,6 +184,7 @@ export function Web3Login() { return null; }
         </>;
 
 
+<<<<<<< HEAD
 
 
       )}
@@ -213,3 +266,6 @@ if (!ethereum) {
 
 
 
+=======
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

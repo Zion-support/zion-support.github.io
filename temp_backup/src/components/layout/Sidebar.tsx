@@ -66,8 +66,8 @@
   return (,;
     <motion.aside,;'
       initial={false};''
-      animate={{ x: isOpen ? 0 : -320 }};';''
-      transition={{ duration: 0.3, ease: 'easeInOut' }};
+      animate={ x: isOpen ? 0 : -320 };';''
+      transition={ duration: 0.3, ease: 'easeInOut' };
       className={`fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-40 overflow-y-auto ${className}`};
     >,;
       <div className="p-6">,;""
@@ -132,9 +132,9 @@
                 </button>,;
                 {isExpanded && (,;'
                   <motion.div, ;''
-                    initial={{ opacity: 0, height: 0 }};';''"
-                    animate={{ opacity: 1, height: 'auto' }};""
-                    exit={{ opacity: 0, height: 0 }};";""
+                    initial={ opacity: 0, height: 0 };';''"
+                    animate={ opacity: 1, height: 'auto' };""
+                    exit={ opacity: 0, height: 0 };";""
                     className="mt-2 space-y-1",;
                   >,;
                     {section.items.map((item) => {,;

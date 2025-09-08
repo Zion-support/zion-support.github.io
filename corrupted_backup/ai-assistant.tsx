@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+const AIAssistant: React.FC = () => {
+  return (
+    <Layout>
+      <Head>
+
+=======
 import React from 'react',
 import Head from 'next/head',
 import Button from '../components/ui/Button',
@@ -121,6 +132,7 @@ export default function AIAssistantPage() {
               <li>• Data visualization</li>
               <li>• Trend analysis</li>
             </ul>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           </div>
         </div>
 
@@ -141,7 +153,11 @@ export default function AIAssistantPage() {
       </main>
     </Layout>
   );
+<<<<<<< HEAD
+
+=======
 }
 };
 
 export default AIAssistant;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

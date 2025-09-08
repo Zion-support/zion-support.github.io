@@ -1,6 +1,25 @@
+<<<<<<< HEAD
 
 
 
+=======
+import { App } from '@slack/bolt';
+import dotenv from 'dotenv';
+import fetch from 'node-fetch';
+dotenv.config($2);
+const apiBase = $2;
+const app = new App($2);
+function helpText(): string {
+  return [
+    '*Zion Assistant Commands*`/zion post-job [role]` – generate a job post`/zion suggest-talent [query]` – AI match talent`/zion track-project [name]` – milestone status`/zion help` – command list'
+  ].join('\n')
+}
+
+
+
+import { App } from '@slack/bolt';
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
@@ -9,6 +28,7 @@ dotenv.config()const apiBase = null;
 '*Zion Assistant Commands*','`/zion post-job [role]` – generate a job post','`/zion suggest-talent [query]` – AI match talent','`/zion track-project [name]` – milestone status','`/zion help` – command list',].join('\n')app.command('/zion', async ({ command, ack, respond    }) => {
 
 
+<<<<<<< HEAD
 
 
   socketMode: true
@@ -18,13 +38,173 @@ function helpText(): string {
   return [
 
 
+=======
+await ack()const text = (command.text |'').trim()const [sub, ...rest] = text.split(' ';
+  const userId = command.user_id;
+  try {if (!sub |sub.toLowerCase() === 'help') {await respond({ response_type: 'ephemeral',}
+  text: helpText(),}
+})return;
+    }
+
+
+    if (sub = == 'post-job') {
+     ;
+  const role = rest.join(' ') |'Cloud Engineer';}
+}
+const res = await fetch(`${apiBase}/jobs/generate`, {}
+        method: 'POST',}
+headers: { 'content-type': 'application/json', 'x-user-id': userId },
+        body: JSON.stringify({ role,}
+}),
+      });
+
+const data = (await res.json()) as any;
+      await respond({}
+        response_type: 'ephemeral'}
+        text: `Here is a draft job post for *${role}*:\n\n${data.description}`
+     ,
+});
+function helpText(): string {
+  return [
+import { App } from '@slack / bolt';
+import dotenv from 'dotenv';
+import fetch from 'node - fetch';
+;
+const api_base = process.env.API_ORIGIN || 'http://localhost:4000';
+;
+const app = new App ({
+  token: process.env.SLACK_BOT_TOKEN,
+  signing_secret: process.env.SLACK_SIGNING_SECRET,
+  app_token: process.env.SLACK_APP_LEVEL_TOKEN,
+  socket_mode: true, });
+;
+function help_text (): string {
+  return [  token: process.env.SLACK_BOT_TOKEN;
+  signing_secret: process.env.SLACK_SIGNING_SECRET;
+  app_token: process.env.SLACK_APP_LEVEL_TOKEN;
+  socket_mode: true;
+});
+;
+function help_text (): string {
+  return [;
+    '*Zion Assistant Commands*',
+    '`/zion post - job [role]` – generate a job post',
+    '`/zion suggest - talent [query]` – AI match talent',
+    '`/zion track - project [name]` – milestone status',
+    '`/zion help` – command list',
+  ].join ('\n');
+    '*Zion Assistant Commands*`/zion post - job [role]` – generate a job post`/zion suggest - talent [query]` – AI match talent`/zion track - project [name]` – milestone status`/zion help` – command list';
+  ].join ('\n');
+}
+app.command ('/zion', async ({ command, ack, respond }) => {
+  await ack ();
+  const text = (command.text || '').trim ();
+  const [sub, ...rest] = text.split (' ');
+  const user_id = command.user_id;
+;
+  try {
+    // Check condition
+if (=== 'help') {) {
+  $2
+}
+      await respond ({ response_type: 'ephemeral', text: help_text () });
+      return;    }
+    // Check condition
+if ( {) {
+  $2
+}
+      const role = rest.join (' ') || 'Cloud Engineer';
+      const res = await fetch (`${api_base}/jobs / generate`, {      return;
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      const role = rest.join (' ') || 'Cloud Engineer';
+      const res = await fetch (`${api_base}/jobs / generate`, {
+        method: 'POST',
+        headers: { 'content - type': 'application / json', 'x - user - id': user_id },
+        body: JSON.stringify ({ role }),
+      });
+      const data = (await res.json ()) as any;
+      await respond ({
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         response_type: 'ephemeral',
         text: `Here is a draft job post for *${role}*:\n\n${data && data.description}`,
       });
       return;
+<<<<<<< HEAD
 
 
 
+=======
+    if (sub === 'post-job) {const role = rest.join( ') |'Cloud Engineer;
+      const res = await fetch(`${apiBase}/jobs/generate`, {method: POST',headers: { 'content-type: application/json', 'x-user-id: userId },body: JSON.stringify({ role })})const data = (await res.json()) as any;
+      await respond({response_type: ephemeral';
+
+    }
+      const q = rest && rest.join(' ') || 'AI researcher in Brazil';
+    }
+    if (sub = == 'track-project') ;'
+  const res = await fetch(`${apiBase}/projects/${encodeURIComponent(name)}/track`;`        {"headers": { 'x-user-id': userId }'
+       
+}
+      )const data = (await res && res.json()) as any;
+      if (!data && data.project) {await respond({"response_type": 'ephemeral';'
+          }
+          "text": 'Project not found.';'
+        })return;
+      }
+      await respond({})return;
+    }
+    await respond({ "response_type": 'ephemeral', "text": helpText() })} catch ("err": any) {await respond({const res = await fetch(`${apiBase}/projects/${encodeURIComponent(name,`}/track`, {"headers": { 'x-user-id': userId }'
+     
+};
+  const data = (await res && res.json()) as any;
+      if (!data && data.project) {await respond({ "response_type": 'ephemeral', "text": 'Project not found.','
+})return;
+      }
+      return;
+    }
+
+    await respond({ "response_type": 'ephemeral', "text": helpText(),'
+});
+  } catch ("err": any) {
+    }
+    await respond({
+
+      }
+
+      "response_type": 'ephemeral','
+      "text": `"Error": ${err.message || 'unknown,'}`,`    });
+const res = await fetch(`${apiBase}/talent/search?q=${encodeURIComponent(q)}`;
+        {headers: { 'x-user-id': userId }
+      const res = await fetch(
+        `${apiBase}/talent/search?q=${encodeURIComponent(q)}`
+        {
+          headers: { 'x-user-id': userId }
+        }
+      );
+      const data = (await res && res.json()) as any;
+      const lines = (data && data.results || [])
+        .slice(0, 5)
+        .map(
+          (t: any) =>
+            `• ${t && t.full_name} – ${t && t.country} – ${t && t.skills?.slice(0, 3).join(', ') || ''}`
+        );
+      await respond({
+        response_type: 'ephemeral',
+        text: lines && lines.length ? lines && lines.join('\n') : 'No matches yet.',
+      });
+      return;
+    }
+    if (sub === 'track-project') {
+      const name = rest && rest.join(' ') || 'Kleber';
+      const res = await fetch(
+        `${apiBase}/projects/${encodeURIComponent(name)}/track`
+        {
+          headers: { 'x-user-id': userId }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         }
       ,
 })return;
@@ -50,6 +230,7 @@ function helpText(): string {
   text: 'Project not found.',}
 })return;
       }
+<<<<<<< HEAD
 
       await respond({
 
@@ -65,6 +246,37 @@ function helpText(): string {
     await respond ({ response_type: 'ephemeral', text: help_text () });
   } catch (err: any) {
     await respond ({
+=======
+      });
+      return;
+    }
+    await respond({ response_type: 'ephemeral', text: helpText() })} catch (err: any) {}
+})(async () => {})()console.log(`⚡️ Zion Slack bot running on port ${port}`)})()console.log(`⚡️ Zion Slack bot running on port ${port}`)})()const data = (await res.json ()) as any;
+      await respond ({ response_type: 'ephemeral', text: `Here is a draft job post for *${role}*:\n\n${data.description}` })return;
+    }
+    await respond({
+
+const res = await fetch(`${apiBase}/jobs/generate`, {`        }
+        "method": 'POST','
+"headers": { 'content-type': 'application/json', 'x-user-id': userId },'
+        "body": JSON.stringify({ role
+})
+      });
+      const data = (await res.json()) as any;
+      await respond({
+        }
+        "response_type": 'ephemeral''
+        "text": `Here is a draft job post for *${role}*:\n\n${data.description}``     
+});
+      return;
+    if (sub === 'post-job') {const role = rest.join(' ') |'Cloud Engineer';
+      const res = await fetch(`${apiBase}/jobs/generate`, {method: 'POST',headers: { 'content-type': 'application/json', 'x-user-id': userId },body: JSON.stringify({ role }),})const data = (await res.json()) as any;
+      await respond({response_type: 'ephemeral';
+        text: `Here is a draft job post for *${role}*:\n\n${data.description}`;
+      })return;
+    }
+    if (sub === 'suggest-talent') {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       const q = rest && rest.join(' ') || 'AI researcher in Brazil';
       const res = await fetch(`${apiBase}/talent/search?q=${encodeURIComponent(q)}`, {
@@ -78,6 +290,7 @@ function helpText(): string {
     if (sub === 'track-project') {
       const name = rest && rest.join(' ') || 'Kleber';
 
+<<<<<<< HEAD
 
 
 
@@ -88,15 +301,34 @@ function helpText(): string {
       if (!data && data.project) {
         await respond({ response_type: 'ephemeral', text: 'Project not found.' });
         return
+=======
+const res = await fetch(`${apiBase}/talent/search?q=${encodeURIComponent(q)}`;`        {"headers": { 'x-user-id': userId }'
+        }
+      
+})return;
+    }
+    if (sub = == 'track-project') ;'
+  const res = await fetch(`${apiBase}/projects/${encodeURIComponent(name)}/track`;`        {"headers": { 'x-user-id': userId }'
+       
+}
+      )const data = (await res && res.json()) as any;
+      if (!data && data.project) {await respond({"response_type": 'ephemeral';'
+          }
+          "text": 'Project not found.';'
+        })return;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       }
       return
     }
     await respond({ response_type: 'ephemeral', text: helpText() })
   } catch (err: any) {
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   }
 });
 (async () => {
@@ -104,6 +336,7 @@ function helpText(): string {
 }),
 
 (async () => {
+<<<<<<< HEAD
 
 })(),
 
@@ -216,6 +449,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       const data = (await res.json ()) as any;
 
+=======
+console.log(`⚡️ Zion Slack bot running on port ${port}`)})()
+  const port = Number($2);
+  await app.start($2);
+  // eslint-disable-next-line no-console
+  console.log(`⚡️ Zion Slack bot running on port ${port}`)
+
+      const data = (await res.json ()) as any;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       await respond ({ response_type: 'ephemeral', text: `Here is a draft job post for *${role}*:\n\n${data.description}` });
       return;
     }
@@ -254,6 +496,13 @@ if ( {) {}
     await respond ({ response_type: 'ephemeral', text: help_text () });
   } catch (err: any) {'`
     await respond ({ response_type: 'ephemeral', text: `Error: ${err.message || 'unknown'}` });
+      }
+
+      "response_type": 'ephemeral','
+      "text": `"Error": ${err.message || 'unknown,'}`,`    });
+  }
+});
+(async () => {
   }
 });
 ;
@@ -264,6 +513,7 @@ if ( {) {}
 console.log (`⚡️ Zion Slack bot running on port ${port}`);`
 })();  console.log (`⚡️ Zion Slack bot running on port ${port}`);
 })();
+<<<<<<< HEAD
 
 
     await respond({ response_type: 'ephemeral',}
@@ -286,6 +536,20 @@ console.log (`⚡️ Zion Slack bot running on port ${port}`);`
 console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
 
+=======
+
+;
+  }
+}),
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
+<<<<<<< HEAD
+=======
+  console.log(`⚡️ Zion Slack bot running on port ${port}`);
+})();
+  console.log(`⚡️ Zion Slack bot running on port ${port}`);
+})();
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba

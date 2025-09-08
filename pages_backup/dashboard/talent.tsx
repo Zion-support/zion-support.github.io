@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
     setCompleted(c => ({ ...c, [key]: !c[key] }));
@@ -30,6 +31,70 @@
               <div className='flex items-center gap-2'>;
 
 
+=======
+
+import {useEffect, useState} from 'react';
+const STEPS = [
+  { key: 'profile', label: 'Profile completed' }
+  { key: 'skills', label: 'Skills added' }
+  { key: 'availability', label: 'Availability set' }
+  { key: 'match', label: 'First match received' }
+
+
+import EnhancedCard from '../../components/ui/EnhancedCard',
+import EnhancedButton from '../../components/ui/EnhancedButton';
+import { useEffect, useState } from 'react';
+const STEPS = null;
+
+] as const;
+type StepKey = (typeof STEPS)[number]['key'];
+
+const STEPS = ['
+  { key: 'profile', label: 'Profile completed' },'
+  { key: 'skills', label: 'Skills added' },'
+  { key: 'availability', label: 'Availability set' },'
+  { key: 'match', label: 'First match received' }] as const,
+'
+type StepKey = typeof STEPS[number]['key'];
+
+      const raw = window.localStorage.getItem('onboarding.talent');
+      if (raw) setCompleted(JSON.parse(raw))
+    } catch {}
+
+  }, []);
+
+] as const;
+type StepKey = (typeof STEPS)[number]['key'];
+
+  { key: 'profile', label: 'Profile completed' },
+  { key: 'skills', label: 'Skills added' },
+  { key: 'availability', label: 'Availability set' },
+  { key: 'match', label: 'First match received' }] as const,
+
+type StepKey = typeof STEPS[number]['key'];
+
+export default function TalentDashboard() {
+  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({
+
+  useEffect(() => {
+    try {
+
+      if (raw) setCompleted(JSON.parse(raw))
+    } catch {}
+
+  }, []);
+  useEffect(() => {
+
+
+
+import EnhancedCard from '../../components/ui/EnhancedCard';
+import EnhancedButton from '../../components/ui/EnhancedButton';
+import { useEffect, useState } from 'react';
+const STEPS = [;
+  { key: 'profile', label: 'Profile completed' },;
+  { key: 'skills', label: 'Skills added' },;
+  { key: 'availability', label: 'Availability set' },;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                 <span
                   className={`inline-flex h-5 w-5 items-center justify-center rounded-full border ${completed[s && s.key] ? 'bg-emerald-500 text-white border-emerald-500' : 'border-gray-300 dark:border-gray-700'}`}>;
@@ -53,16 +118,22 @@
                   {s && s.key === 'skills' ? 'Add skills' : 'Mark done'}
                 </EnhancedButton>              )}
             </li>;
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     try { window.localStorage.setItem('onboarding.talent', JSON.stringify(completed)) } catch {}
   }, [completed]);
   const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100);
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] }));
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
     <div className="space-y-4">
       <EnhancedCard>"
@@ -77,10 +148,17 @@
           <div className="h-2 rounded bg-blue-600" style={{ width: `${progress}%` }} />
         </div>
       </EnhancedCard>
+<<<<<<< HEAD
 
       <EnhancedCard>
         <h2 className="font-semibold mb-2">Checklist</h2>
 
+=======
+
+
+      <EnhancedCard>"
+        <h2 className="font-semibold mb-2">Checklist</h2>"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <ul className="space-y-2">
           {STEPS.map((s) => ("
             <li key={s.key} className="flex items-center justify-between">"
@@ -93,9 +171,12 @@
               ) : (
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 
                 <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'skills' ? 'Add skills' : 'Mark done'}</EnhancedButton>
@@ -118,8 +199,16 @@
   );
 
 
+<<<<<<< HEAD
 
 
+=======
+import {useEffect, useState} from 'react';
+const STEPS = [;
+  { key: 'profile', label: 'Profile completed' },
+  { key: 'skills', label: 'Skills added' },
+  { key: 'availability', label: 'Availability set' },
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   { key: 'match', label: 'First match received' },
 ] as const;
 ;'
@@ -211,8 +300,11 @@ function TalentDashboard() {}
 ;
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -220,6 +312,9 @@ function TalentDashboard() {}
 }
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

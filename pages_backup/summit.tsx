@@ -4,6 +4,11 @@ const partners: Partner[] = [ {
 
 
 
+<<<<<<< HEAD
+=======
+  method: 'POST';
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 headers: {;
   'Content-Type': 'application/json' ;
 };
@@ -29,21 +34,36 @@ setForm ({;
   setSubmitting (false) ;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export default function SummitPage() {;
   const [platform, setPlatform] = React && React.useState<;
     'youtube' | 'twitch' | 'twitter';
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   >('youtube');
   const [embedId, setEmbedId] = React && React.useState<string>('dQw4w9WgXcQ');
   const { isPast, days, hours, minutes, seconds } =;
     useCountdown(EVENT_START_ISO);
+<<<<<<< HEAD
 
 
+=======
+  const [form, setForm] = React && React.useState({;
+    name: '',;
+    email: '',;
+    role: '',;
+    country: '',;
+  const [form, setForm] = React.useState({
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     name: '',
     email: '',
@@ -51,14 +71,18 @@ export default function SummitPage() {;
     country: '',
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   });
   const [submitting, setSubmitting] = React && React.useState(false);
   const [result, setResult] = React && React.useState<{;
     ok?: boolean;
     error?: string;
   } | null>(null);
+<<<<<<< HEAD
 
 
 
@@ -68,6 +92,42 @@ export default function SummitPage() {;
   ];
 
 
+=======
+  ];
+
+  const partners: Partner[] = [;'
+    { name: 'Gov Partner' },;'
+    { name: 'Venture Partner' },;'
+  const speakers: Speaker[] = [;
+    {;
+      name: 'Featured Speaker: Your Name',;
+      title: 'Founder, Zion',;
+      avatarUrl: '/favicon && favicon.svg',;
+      bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',;
+      twitter: 'https://twitter && twitter.com',;
+      linkedin: 'https://www && www.linkedin.com',;
+      highlight: true,;
+    },    {;
+      name: 'Alex Rivera',;
+      title: 'Head of Protocol Engineering',;
+      avatarUrl: '/favicon && favicon.svg',;
+      bio: 'Leading the architecture of ZionDAO and trust rails.',;
+    },    {;
+      name: 'Jordan Lee',;
+      title: 'Zion Alumni | AI Fellow',;
+      avatarUrl: '/favicon && favicon.svg',;
+      bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.',;
+      twitter: 'https://twitter && twitter.com',;
+    },;
+  ];
+  const partners: Partner[] = [;
+    { name: 'Gov Partner' },;
+    { name: 'Venture Partner' },;
+    { name: 'University Partner' },;
+  ];
+  const onSubmit = async (e: React && React.FormEvent) => {;
+    e && e.preventDefault();
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import Head from 'next/head';
 
 import React from 'react';
@@ -80,6 +140,7 @@ twitter?: string;
   linkedin?: string;
   highlight?: boolean;
 };
+<<<<<<< HEAD
 
 type Partner = {
 
@@ -95,6 +156,24 @@ function useCountdown(targetIso: string) {
   React.useEffect(() => {
     const id = setInterval(() => {
 
+=======
+
+
+type Partner = {}
+  name: string,
+  logoUrl?: string;
+};
+'
+const EVENT_START_ISO = '2025-11-12T16: 00:00Z',
+
+function useCountdown(targetIso: string) {}
+  const [remainingMs, setRemainingMs] = React.useState<number>(() => {}
+    return new Date(targetIso).getTime() - Date.now()
+  });
+
+  React.useEffect(() => {}
+    const id = setInterval(() => {}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       setRemainingMs(new Date(targetIso).getTime() - Date.now())
     }, 1000);
     return () => clearInterval(id)
@@ -108,6 +187,7 @@ function useCountdown(targetIso: string) {
   return { isPast, days, hours, minutes, seconds }
 }
 
+<<<<<<< HEAD
 export default function SummitPage() {
   const [platform, setPlatform] = React.useState<'youtube' | 'twitch' | 'twitter'>('youtube');
   const [embedId, setEmbedId] = React.useState<string>('dQw4w9WgXcQ');
@@ -116,14 +196,19 @@ export default function SummitPage() {
   const [submitting, setSubmitting] = React.useState(false);
   const [result, setResult] = React.useState<{ ok?: boolean, error?: string } | null>(null);
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const speakers: Speaker[] = [
     {
       name: 'Featured Speaker: Your Name',
       title: 'Founder, Zion',
 
+<<<<<<< HEAD
 avatarUrl: '/favicon.svg',
       bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
   'Content - Type': 'application / json';
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 }
 body: JSON.stringify ({
@@ -212,6 +297,7 @@ setForm ({'
 
   >('youtube');
 
+<<<<<<< HEAD
   const [embed_id, setEmbedId] = React.useState < string>('dQw4w9WgXcQ');
   const { is_past, days, hours, minutes, seconds } =;
     use_countdown (EVENT_START_ISO);
@@ -263,28 +349,52 @@ export default function SummitPage() {
     'youtube' | 'twitch' | 'twitter';
   >('youtube');
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const [embedId, setEmbedId] = React.useState<string>('dQw4w9WgXcQ');
   const { isPast, days, hours, minutes, seconds } =
     useCountdown(EVENT_START_ISO);
   const [form, setForm] = React.useState({
 
+<<<<<<< HEAD
     name: ''
     email: ''
     role: ''
     country: ''
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     name: '',
     email: '',
     role: '',
     country: '',
 
+<<<<<<< HEAD
 
+=======
+
+  });
+  const [submitting, setSubmitting] = React.useState(false);
+  const [result, setResult] = React.useState<{
+    ok?: boolean;
+    error?: string;
+  } | null>(null);
+
+    {
+      name: 'Featured Speaker: Your Name',
+      title: 'Founder, Zion',
+      avatarUrl: '/favicon.svg',
+      bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       twitter: 'https://twitter.com',
       linkedin: 'https://www.linkedin.com',
       highlight: true},
     {
       name: 'Alex Rivera',
       title: 'Head of Protocol Engineering',
+<<<<<<< HEAD
 
 
     setResult(null),;
@@ -314,6 +424,60 @@ bio: 'Leading the architecture of ZionDAO and trust rails.',
       bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.',
 
 
+=======
+    try {
+      const res = await fetch('/api/summit/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+
+    setResult(null),;
+    try {;
+      const res = await fetch('/api/summit/register', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({ ...form, source: 'summit-page' }),;
+      });
+      const data = await res && res.json();
+      if (!res && res.ok) throw new Error(data?.error || 'Failed');
+      setResult({ ok: true });
+      setForm({ name: '', email: '', role: '', country: '' });
+    } catch (err: any) {;
+      setResult({ error: err?.message || 'Unexpected error' });
+    } finally {;
+      setSubmitting(false);    }
+
+
+
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...form, source: 'summit-page' })}),
+      const data = await res.json();
+      if (!res.ok) throw new Error(data?.error || 'Failed');
+      avatarUrl: '/favicon.svg',
+      bio: 'Leading the architecture of ZionDAO and trust rails.'},
+    {
+      name: 'Jordan Lee',
+      title: 'Zion Alumni | AI Fellow',
+      avatarUrl: '/favicon.svg',
+      bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.',
+      twitter: 'https://twitter.com'}],
+  const partners: Partner[] = [
+    { name: 'Gov Partner' },
+    { name: 'Venture Partner' },
+    { name: 'University Partner' }],
+  const onSubmit = async (e: React.FormEvent) => {
+    e.preventDefault(),
+    setSubmitting(true),
+    setResult(null),
+    try {
+      const res = await fetch('/api/summit/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...form, source: 'summit-page' })}),
+      const data = await res.json(),
+      if (!res.ok) throw new Error(data?.error || 'Failed'),
+      setResult({ ok: true }),
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       setForm({ name: '', email: '', role: '', country: '' })
     } catch (err: any) {'
       setResult({ error: err?.message || 'Unexpected error' })
@@ -325,6 +489,7 @@ bio: 'Leading the architecture of ZionDAO and trust rails.',
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   },
   const livestreamEmbed = () => {
     if (platform === 'youtube') {
@@ -335,6 +500,13 @@ bio: 'Leading the architecture of ZionDAO and trust rails.',
       )
 
 
+=======
+    if (platform === 'twitch') {
+
+
+  return (
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             <a
               href='#register'
 
@@ -348,6 +520,7 @@ bio: 'Leading the architecture of ZionDAO and trust rails.',
             </a>;
             <a'
               href='#agenda'
+<<<<<<< HEAD
 
 
               className='inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10'
@@ -359,24 +532,90 @@ bio: 'Leading the architecture of ZionDAO and trust rails.',
       </section>
 
 <div className='grid md:grid-cols-3 gap-6 mt-8'>
+=======
+    <>
+      <Head>
+        <title>Zion Global Summit 2025 — AI, Talent, Trust</title>
+        <meta name="description" content="Zion Global Summit: AI, Talent, Trust — Globalized" />
+      </Head>
+      <section className='relative overflow-hidden rounded-xl bg-gradient-to-br from-cyber-dark to-cyber-blue text-white p-8 md:p-12 shadow-neon-blue'>
+        <div className='max-w-4xl'>
+          <p className='uppercase tracking-widest text-neon-blue'>
+            Zion Global Summit 2025
+          </p>
+          <h1 className='mt-2 text-3xl md:text-5xl font-extrabold'>
+            AI, Talent, Trust — Globalized
+          </h1>
+          <p className='mt-4 text-white/80'>
+            Date: Nov 12, 2025 • Time: 16:00 UTC • Location: Hybrid (Virtual +
+            In‑Person)
+          </p>
+          <div className='mt-6 flex flex-wrap gap-3'>
+            <a
+              href='#register'
+              className='inline-flex items-center px-4 py-2 rounded-md bg-neon-blue text-black font-semibold shadow-neon-blue'
+            >
+              Register
+            </a>
+            <a
+              href='#livestream'
+              className='inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10'
+            >
+              Livestream
+            </a>
+            <a
+              href='#agenda'
+              className='inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10'
+            >
+              Agenda
+            </a>          </div>
+        </div>
+      </section>
+      <div className='grid md:grid-cols-3 gap-6 mt-8'>
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <section
           id='agenda'
           className='md:col-span-2 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
         >
           <h2 className='text-2xl font-bold mb-4'>Agenda</h2>
+<<<<<<< HEAD
           <ol className='space-y-3 list-decimal list-inside'>
             <li>Opening Keynote — Launching Zion Protocol</li>
 
 
+=======
+          <ol className='space-y-3 list-decimal list-inside'>            <li>Opening Keynote — Launching Zion Protocol</li>
+      <section className="relative overflow-hidden rounded-xl bg-gradient-to-br from-cyber-dark to-cyber-blue text-white p-8 md:p-12 shadow-neon-blue">
+        <div className="max-w-4xl">
+          <p className="uppercase tracking-widest text-neon-blue">Zion Global Summit 2025</p>
+          <h1 className="mt-2 text-3xl md:text-5xl font-extrabold">AI, Talent, Trust — Globalized</h1>
+          <p className="mt-4 text-white/80">Date: Nov 12, 2025 • Time: 16:00 UTC • Location: Hybrid (Virtual + In‑Person)</p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a href="#register" className="inline-flex items-center px-4 py-2 rounded-md bg-neon-blue text-black font-semibold shadow-neon-blue">Register</Link>
+            <a href="#livestream" className="inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10">Livestream</Link>
+            <a href="#agenda" className="inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10">Agenda</Link>
+          </div>
+        </div>
+      </section>
+      <div className="grid md:grid-cols-3 gap-6 mt-8">
+        <section id="agenda" className="md:col-span-2 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
+          <h2 className="text-2xl font-bold mb-4">Agenda</h2>
+          <ol className="space-y-3 list-decimal list-inside">
+            <li>Opening Keynote — Launching Zion Protocol</li>
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             <li>Panel 1 — The Future of Digital Nations</li>
             <li>Panel 2 — ZionDAO in Action</li>
             <li>Demo — ZionGPT Live</li>
             <li>Featured Speaker — Founder</li>
           </ol>
         </section>
+<<<<<<< HEAD
 
 
 
+=======
+        <section className="p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           <h2 className="text-2xl font-bold mb-4">Event Info</h2>
           <ul className="space-y-2">
             <li><span className="font-medium">Date:</span> Nov 12, 2025</li>
@@ -385,24 +624,63 @@ bio: 'Leading the architecture of ZionDAO and trust rails.',
 
             <li><span className="font-medium">Tagline:</span> AI, Talent, Trust — Globalized</li>
           </ul>
+<<<<<<< HEAD
 
 
 
 
+=======
+        </section>
+      </div>
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               Agenda;
             </a>          </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 
 
 
+=======
+      <div className='grid md:grid - cols - 3 gap - 6 mt - 8'>;
+        <section;
+          id='agenda';
+          className='md:col - span - 2 p - 6 rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - black';
+        >;
+          <h2 className='text - 2xl font - bold mb - 4'>Agenda</h2>;
+          <ol className='space - y-3 list - decimal list - inside'>            <li > Opening Keynote — Launching Zion Protocol</li>;
+            <li > Panel 1 — The Future of Digital Nations</li>;
+            <li > Panel 2 — ZionDAO in Action</li>;
+            <li > Demo — ZionGPT Live</li>;
+            <li > Featured Speaker — Founder</li>;
+          </ol>;
+        </section>;
+        <section className='p - 6 rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - black'>;
+          <h2 className='text - 2xl font - bold mb - 4'>Event Info</h2>;
+          <ul className='space - y-2'>;
+            <li>;
+              <span className='font - medium'>Date:</span> Nov 12, 2025;
+            </li>;
+            <li>;
+              <span className='font - medium'>Time:</span> 16:00 UTC;
+            </li>;
+            <li>;
+              <span className='font - medium'>Location:</span> Hybrid (Virtual +;
+              In‑Person);
+            </li>;
+            <li>;
+              <span className='font - medium'>Tagline:</span> AI, Talent, Trust —;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               Globalized;
             </li>          </ul>;
         </section>;
       </div>;
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       <section
 
 <section className='p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>
@@ -430,6 +708,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <section
 
         id='speakers'
+<<<<<<< HEAD
 
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
       >
@@ -446,6 +725,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   alt={s.name}
                   className='w-14 h-14 rounded-full border border-gray-200 dark:border-gray-800'
 
+=======
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       <section id="speakers" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <h2 className="text-2xl font-bold mb-6">Speakers</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -453,20 +736,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div key={s.name} className={`p-4 rounded-lg border ${s.highlight ? 'border-neon-blue shadow-neon-blue' : 'border-gray-200 dark:border-gray-800'}`}>
               <div className="flex items-center gap-4">
                 <img src={s.avatarUrl} alt={s.name} className="w-14 h-14 rounded-full border border-gray-200 dark:border-gray-800" />
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 <div>
                   <div className="font-semibold">{s.name}</div>
                   <div className="text-sm opacity-70">{s.title}</div>
                 </div>
               </div>
 
+<<<<<<< HEAD
               <p className="mt-3 text-sm">{s.bio}</p>
               <div className="mt-3 flex gap-3 text-sm">
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
           ))}
 
@@ -529,7 +818,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               )}            </div>;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         </div>
 
         <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
@@ -539,8 +831,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           ))}
 
         </div>;
@@ -559,12 +854,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="flex flex-wrap items-center gap-2">
 
 
+<<<<<<< HEAD
             <select
               aria-label='Platform'
               className='px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
               value={platform}
               onChange={e => setPlatform(e && e.target.value as any)}
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       <section;
         id='speakers';
 
@@ -678,9 +976,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <option value='twitch'>Twitch</option>;
               <option value='twitter'>Twitter</option>;
             </select>;
+<<<<<<< HEAD
 
 
 
+=======
+            <input;
+              aria - label='Embed ID';
+              className='px - 3 py - 2 rounded border border - gray - 300 dark:border - gray - 700 bg - transparent';
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               placeholder={
                 platform === 'youtube';
                   ? 'YouTube Video ID';
@@ -688,9 +992,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     ? 'Twitch Channel';
                     : 'Twitter Broadcast ID';
               }
+<<<<<<< HEAD
 
 
 
+=======
+          </div>;
+        </div>;
+        <div className='mt-4'>{livestreamEmbed()}</div>;
+      </section>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       <section
         id='register'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
@@ -700,6 +1011,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div>;'
             <label className='block text-sm mb-1'>Name</label>;
 
+<<<<<<< HEAD
 
       <section id="register" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <h2 className="text-2xl font-bold mb-4">Register</h2>
@@ -708,6 +1020,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div>
             <label className="block text-sm mb-1">Name</label>
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             <input
               required
 
@@ -756,9 +1071,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Thank you! You are registered.;
               </span>;
             )}
+<<<<<<< HEAD
 
 
 
+=======
+            {result?.error && (;
+              <span className='text-red-600'>{result && result.error}</span>;
+            )}          </div>;
+        </form>;
+      </section>;
+      <section className='mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black'>;
+        <h2 className='text-xl font-semibold'>;
+          AI Session Summaries (Optional);
+        </h2>;
+        <p className='text-sm opacity-70 mt-2'>;
+          Auto-generated summaries and ZionGPT moderation prompts coming soon.;
+        </p>;
+      </section>;
+    </>;
+  );
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       <section id="livestream" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <h2 className="text-2xl font-bold">Livestream</h2>
@@ -996,6 +1329,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <span className="px-3 py-2 rounded bg-green-600 text-white">Watch Replay</span>
             ) : (
               <span className="px-3 py-2 rounded bg-blue-600 text-white">Live in {days}d {hours}h {minutes}m {seconds}s</span>
+<<<<<<< HEAD
 
             )}
           </div>
@@ -1165,3 +1499,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
+=======
+
+<section className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>
+        <h2 className='text-xl font-semibold'>
+          AI Session Summaries (Optional)
+        </h2>
+        <p className='text-sm opacity-70 mt-2'>
+          Auto-generated summaries and ZionGPT moderation prompts coming soon.
+        </p>
+      </section>
+    </>
+  );
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba

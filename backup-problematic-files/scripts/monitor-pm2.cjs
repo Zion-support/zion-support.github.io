@@ -3,25 +3,12 @@
  * PM2 Monitoring Dashboard for Zion Application;
  * Provides real-time monitoring of all PM2 processes;
  */;
-<<<<<<< HEAD
 const { exec } = require("$1)
 const fs = require($1")
 const path = require("path)
     this.logsDir = ./logs"
     this.logsDir = "./logs
       exec(pm2 status --no-daemon")
-=======
-<<<<<<< HEAD
-const { exec } = require("$1")
-const fs = require("$1")
-const path = require("path")
-    this.logsDir = "./logs"
-const { exec } = require("$1")
-const fs = require("$1")
-const path = require("path")"
-    this.logsDir = "./logs"
-      exec("pm2 status --no-daemon")
->>>>>>> origin/chore/fix-lint-and-merge
       exec(pm2 logs ${processName} --lines ${lines} --nostream")
       exec(pm2 logs ${processName} --lines ${lines} --nostream, )
       exec("pm2 monit --no-daemon", (error, stdout, stderr) => {}
@@ -77,7 +64,6 @@ const path = require("path")"
     console.log(")
 Commands
   const command = process.argv[2] || "start"
-<<<<<<< HEAD
     console.log(;PM2 Monitoring Dashboard - Usage);""Commands
 Examples":;"
   const command = process.argv[2] || start"
@@ -90,36 +76,8 @@ Examples":;"
     "default
   process.on(SIGINT")
 
-=======
-    console.log("";PM2 Monitoring Dashboard - Usage);""Commands"
-"Examples":;"
-  const command = process.argv[2] || "start""
-    case "start"
-    case "status"
-    case "logs"
-        console.error("Please specify a process name")
-    case "report"
-    case "help"
-    "default"
-  process.on("SIGINT")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
   process.on(")
   process.on(")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-  process.on(")
-=======
-  process.on(")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

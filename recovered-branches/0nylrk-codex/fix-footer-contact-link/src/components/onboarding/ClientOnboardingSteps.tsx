@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
 
   const steps: OnboardingStep[] = [
@@ -18,7 +21,10 @@ import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
     },
     {
   
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from "react";
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { PlusCircle, SendIcon, InboxIcon } from "lucide-react";
@@ -33,7 +39,24 @@ export function ClientOnboardingSteps() {  const onboardingStatus = useOnboardin
       link: "/post-job",
       action: "Post Job",
 
+<<<<<<< HEAD
 
+=======
+
+    },
+    {"
+      id: "invite","
+      label: "Send invitation to talent",
+      completed: onboardingStatus.inviteSent,"
+      link: "/talent","
+      action: "Find Talent",
+    },
+
+
+  const onboardingStatus = useOnboardingStatus();
+import { PlusCircle, SendIcon, InboxIcon } from "lucide-react",
+import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 export function ClientOnboardingSteps() {
@@ -55,15 +78,71 @@ export function ClientOnboardingSteps() {
       action: "Find Talent"
     }
     {
+<<<<<<< HEAD
 
 
+=======
+
+      id: "response"
+      label: "Receive your first application"
+      completed: onboardingStatus.responseReceived
+      link: "/client-dashboard"
+      action: "Check Dashboard"
+    }
+  ];
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       id: "response",
       label: "Receive your first application",
       completed: onboardingStatus.responseReceived,
       link: "/client-dashboard",
 
+<<<<<<< HEAD
+=======
+
+      action: "Check Dashboard",
+    },
+  ];
+"
+  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
 
+<<<<<<< HEAD
+=======
+export function ClientOnboardingSteps() {;
+  const onboardingStatus = useOnboardingStatus(),;
+  ;
+  const steps:OnboardingStep[] = [;
+    {;
+      id:"post-job",;
+      label:"Post your first job",;
+      completed:onboardingStatus.jobPosted,;
+      link:"/post-job",;
+
+      action:"Post Job"},;
+    {;"
+      id:"invite",;"
+      label:"Send invitation to talent",;
+      completed:onboardingStatus.inviteSent,;"
+      link:"/talent",;"
+      action:"Find Talent"},;
+    {;"
+      action: "Check Dashboard",
+    },
+  ];
+"
+  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
+"
+      id: "response",;"
+      label: "Receive your first application",;
+      completed: onboardingStatus.responseReceived,;"
+      link: "/client-dashboard";"
+      action: "Check Dashboard"}];"
+  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
+}
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,5 +1,23 @@
 
 
+<<<<<<< HEAD
+=======
+  appName?: string;
+  appIconSrc?: string;
+  appStoreUrl?: string;
+  googlePlayUrl?: string;
+<<<<<<< HEAD
+=======
+  delay?: number; // Delay in milliseconds before showing the banner
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+import React, { useState, useEffect } from "react",
+import { safeStorage } from "@/utils/safeStorage",
+import { X, ArrowRight } from 'lucide-react'
+import Link from "next/link";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { useIsMobile } from "@/hooks/use-mobile";
 interface SmartAppBannerProps {
   appName?: string;
@@ -13,6 +31,8 @@ interface SmartAppBannerProps {
 
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 
+<<<<<<< HEAD
+=======
   appName = "Zion Marketplace"
   appIconSrc
   appStoreUrl = "/download"
@@ -22,6 +42,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   const [isVisible, setIsVisible] = useState(false)
   const isMobile = useIsMobile()
   useEffect((,) => {
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   appName = "Zion Marketplace",
   appIconSrc,
   appStoreUrl = "/download",
@@ -35,6 +56,30 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
       const timer = setTimeout(() => {
         setIsVisible(true)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
+      const timer = setTimeout(() => {
+        setIsVisible(true)
+      }, delay)
+      return () => clearTimeout(timer)
+    }
+    return undefined
+  }, [isMobile, delay])
+  const dismissBanner = () => {
+    setIsVisible(false)
+    safeStorage.setItem("smartBannerDismissed", "true")
+  }
+  const resetBanner = () => {
+    safeStorage.removeItem("smartBannerDismissed")
+    setIsVisible(true)
+  }
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
@@ -62,8 +107,32 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
       </div>
     ) : null
   }
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src-disabled/components/mobile-app/SmartAppBanner.tsx
+=======
+<<<<<<< HEAD
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
+  const bannerLink = isIOS ? appStoreUrl : googlePlayUrl
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
+  const bannerLink = isIOS ? appStoreUrl : googlePlayUrl
+  // Detect iOS or Android
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
+  const bannerLink = isIOS ? appStoreUrl : googlePlayUrl
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  delay?: number; // Delay in milliseconds before showing the banner;
+}
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/mobile-app/SmartAppBanner.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   
   // Detect iOS or Android
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),
@@ -86,6 +155,18 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
             <div className="text-zion-cyan font-bold text-lg">Z</div>
           )}
         </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          <h4 className="font-semibold text-white">{appName}</h4>
+          <p className="text-xs text-gray-300">Get our app for the best experience</p>
+        </div>
+        
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
@@ -93,6 +174,14 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
           <h4 className="font-semibold text-white">{appName}</h4>
           <p className="text-xs text-gray-300">Get our app for the best experience</p>
         </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
@@ -104,6 +193,15 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
             View
             <ArrowRight className="w-3 h-3 ml-1" />
           </Link>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          <button onClick={dismissBanner} className="text-gray-300" aria-label="Dismiss">
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
@@ -114,8 +212,18 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
       </div>
     </div>
   )
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+'"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 },
 import React, { useState, useEffect } from "react",;
@@ -202,7 +310,16 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+};
+=======
+<<<<<<< HEAD:src-disabled/components/mobile-app/SmartAppBanner.tsx
+};
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 };
 
   const banner_link = isIOS ? appStoreUrl : googlePlayUrl;
@@ -286,4 +403,14 @@ if ( {) {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+'";
+=======
+'";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/mobile-app/SmartAppBanner.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -13,9 +15,10 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 #!/usr/bin/env node;
 const fs = require('fs');
-const path = require(path');
+const path = require('path');
 const { execSync } = require('child_process');
 <<<<<<< HEAD
 
@@ -25,10 +28,14 @@ const { execSync } = require('child_process');
 =======
 <<<<<<< HEAD
 
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+
+<<<<<<< HEAD
 =======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-
-
 =======
 >>>>>>> merged-prs-20250907-203621
 
@@ -50,14 +57,24 @@ const { execSync } = require('child_process');
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 class QualityAssuranceMonitor {}
   constructor() {}
     this.projectRoot = process.cwd();
     this.automationInterval = parseInt(process.env.AUTOMATION_INTERVAL) || 300000; // 5 minutes;
     this.issuesFound = [];
-    this.startTime = Date.now()}
-  log(message, type = info') {}
+    this.startTime = Date.now()};
+  log(message, type = 'info') {}
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
+    console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`)};
+  async runCommand(command, options = {}) {}
+    try {}
+const result = execSync(command, {});
+        "cwd": this.projectRoot,
+        "encoding": 'utf8',
+        "stdio": options.silent ? 'pipe' : 'inherit',
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -145,21 +162,26 @@ this.log('Running quality assurance checks...')
     this.log(`Quality assurance check completed. Found ${this.issuesFound.length} issues.`)
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         ...options;
       }
 });
-      return { success": true, "output: result }} catch (error) {}
-      return { success": false, "output: error.stdout || error.stderr || error.message }}
-  }
+      return { "success": true, "output": result }} catch (error) {}
+      return { "success": false, "output": error.stdout || error.stderr || error.message }};
+  };
   async checkCodeQuality() {}
+<<<<<<< HEAD
+    this.log('Running quality assurance checks...');
+=======
 <<<<<<< HEAD
     this.log(Running quality assurance checks...');
 
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+    
+<<<<<<< HEAD
 =======
-    
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
@@ -169,37 +191,43 @@ this.log('Running quality assurance checks...')
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     // Check TypeScript errors;
-    const tsResult = await this.runCommand('npx tsc --noEmit, { silent": true }
+    const tsResult = await this.runCommand('npx tsc --noEmit', { "silent": true }
 });
     if (!tsResult.success) {}
       this.issuesFound.push({})
-        "type: typescript',
-        severity": 'high,
-        "description: TypeScript compilation errors found',
-        details": tsResult.output.substring(0, 500);
-      })}
+        "type": 'typescript',
+        "severity": 'high',
+        "description": 'TypeScript compilation errors found',
+        "details": tsResult.output.substring(0, 500);
+      })};
     // Check ESLint errors;
-    const eslintResult = await this.runCommand('npx eslint src/**/*.{js,jsx,ts,tsx}, { "silent: true }
+    const eslintResult = await this.runCommand('npx eslint src/**/*.{js,jsx,ts,tsx}', { "silent": true }
 });
     if (!eslintResult.success) {}
       this.issuesFound.push({})
-        type": eslint',
-        "severity: 'medium,
-        description": ESLint errors found',
-        "details: eslintResult.output.substring(0, 500);
-      })}
+        "type": 'eslint',
+        "severity": 'medium',
+        "description": 'ESLint errors found',
+        "details": eslintResult.output.substring(0, 500);
+      })};
     // Check for security vulnerabilities;
-    const auditResult = await this.runCommand('npm audit --audit-level=high, { silent": true }
+    const auditResult = await this.runCommand('npm audit --audit-level=high', { "silent": true }
 });
     if (!auditResult.success) {}
       this.issuesFound.push({})
-        "type: security',
-        severity": 'high,
-        "description: Security vulnerabilities found',
-        details": auditResult.output.substring(0, 500);
-      })}
+        "type": 'security',
+        "severity": 'high',
+        "description": 'Security vulnerabilities found',
+        "details": auditResult.output.substring(0, 500);
+      })};
     this.log(`Quality assurance check completed. Found ${this.issuesFound.length} issues.`);
+<<<<<<< HEAD
+    return this.issuesFound};
+  async run() {}
+    this.log('Starting Quality Assurance Monitor...');
+=======
 >>>>>>> merged-prs-20250907-203621
     return this.issuesFound}
   async run() {}
@@ -219,10 +247,13 @@ this.log('Running quality assurance checks...')
 =======
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     
     try {}
       const issues = await this.checkCodeQuality();
       
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     
     try {}
@@ -237,9 +268,15 @@ this.log('Running quality assurance checks...')
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       if (issues.length > 0) {}
-        this.log(`Found ${issues.length} quality issues that need attention`, warn');
+        this.log(`Found ${issues.length} quality issues that need attention`, 'warn');
         for (const issue of issues) {}
+<<<<<<< HEAD
+          this.log(`${issue.type.toUpperCase()}: ${issue.description}`, 'warn')};
+      } else {}
+        this.log('No quality issues found', 'info')};
+=======
 <<<<<<< HEAD
           this.log(`${issue.type.toUpperCase()}: ${issue.description}`, 'warn')};
 this.log('Starting Quality Assurance Monitor...')
@@ -267,21 +304,38 @@ this.log('Starting Quality Assurance Monitor...')
 =======
         this.log('No quality issues found', 'info')};
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       return { "success": true, "issuesFound": issues.length }} catch (error) {}
       this.log(`Error during quality "check": ${error.message}`, 'error');
       return { "success": false, "error": error.message }};
   };
+<<<<<<< HEAD
+    console.log(`[${timestamp}] [${type.toUpperCase()}] ${message})};
+=======
 };
 =======
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message})};
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   async runCommand(command, options = {}) {}
     try {}
       const result = execSync(command, {})
 
-        details": eslintResult.output.substring(0, 500);"
-    // Check for security vulnerabilities;
+        "details": eslintResult.output.substring(0, 500);"
+    // Check for security vulnerabilities;"
 
+<<<<<<< HEAD
+        "details": auditResult.output.substring(0, 500);"
+      })};`;
+    this.log(`Quality assurance check completed. Found ${this.issuesFound.length} issues.`);
+    return this.issuesFound};
+  async run() {}"
+
+      return { "success": false, "error": error.message }};"
+if (require.main === module) {}
+  const monitor = new QualityAssuranceMonitor();
+  monitor.run().catch(console.error)};
+=======
 <<<<<<< HEAD
         "details": auditResult.output.substring(0, 500);"
       })};`
@@ -315,6 +369,7 @@ if (require.main === module) {}
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 =======
 module.exports = QualityAssuranceMonitor;
@@ -322,6 +377,12 @@ module.exports = QualityAssuranceMonitor;
 module.exports = QualityAssuranceMonitor;
 module.exports = QualityAssuranceMonitor;
 
+<<<<<<< HEAD
+
+
+
+
+=======
 
 
 =======
@@ -348,3 +409,4 @@ module.exports = QualityAssuranceMonitor;
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

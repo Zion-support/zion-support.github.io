@@ -125,6 +125,7 @@ function checkSyntaxErrors(content")
         "line"
         "message": "Missing semicolon"
         "type": "syntax"
+<<<<<<< HEAD
   console.error(" Error detection "failed": ")
   console.error(" Error detection "failed": ")
 

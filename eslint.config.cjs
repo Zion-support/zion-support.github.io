@@ -6,6 +6,23 @@ module.exports = [
   {
     ignores: [
 <<<<<<< HEAD
+      'node_modules/**/*',
+      '.next/**/*',
+      'out/**/*',
+      'dist/**/*',
+      'build/**/*',
+      'automation/**/*',
+      'scripts/**/*',
+      '*.cjs',
+      '*.mjs',
+      '*.js',
+      '*.report.json',
+      'test_build/**/*',
+      'tests/**/*',
+      'pages/**/*',
+      'api/**/*'
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       node_modules/**/*',
@@ -114,10 +131,46 @@ module.exports = [
 =======
       '*.js',
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       '!jest.config.*',
       '!next.config.*',
       '!tailwind.config.*',
       '!postcss.config.*',
+<<<<<<< HEAD
+      'node_modules/**/*,app-optimizer.js,zion-os/**/*,apps.backup/**/*,zion-website/**/*,automation/**/*,advanced-automation-improvements.cjs,analyze_links.cjs,app-enhancement-suite.cjs,]
+    ],
+  },
+  js.configs.recommended,
+  {
+    files: ['**/*.{js,jsx}'],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      },
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        global: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly',
+      },
+    rules: {
+      "no-unused-vars": "off",
+      "no-console": "off",
+      "prefer-const": "warn",
+      "no-var": "warn",
+      "no-undef": "off"
+=======
 <<<<<<< HEAD
 =======
       'node_modules/**/*,app-optimizer.js,zion-os/**/*,apps.backup/**/*,zion-website/**/*,automation/**/*,advanced-automation-improvements.cjs,analyze_links.cjs,app-enhancement-suite.cjs,]
@@ -255,6 +308,7 @@ module.exports = [
       'prefer-const': 'warn',
 <<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
 =======
     },
@@ -266,6 +320,41 @@ module.exports = [
       parser: tsparser,
       ecmaVersion: 2022,
       sourceType: 'module',
+<<<<<<< HEAD
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        global: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly',
+        React: 'readonly',
+      },
+    plugins: {
+      '@typescript-eslint': tseslint,
+    },
+    rules: {
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'warn',
+    }
+  },
+  {
+    files: ['**/*.test.{js,jsx,ts,tsx}', '**/*.spec.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      globals: {
+        describe: 'readonly',
+=======
 <<<<<<< HEAD
       parserOptions: {
         ecmaFeatures: {
@@ -289,13 +378,19 @@ module.exports = [
         exports: 'readonly',
         describe: 'readonly',
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         it: 'readonly',
-        test: readonly,
+        test: 'readonly',
         expect: 'readonly',
-        beforeEach: readonly,
+        beforeEach: 'readonly',
         afterEach: 'readonly',
-        beforeAll: readonly,
+        beforeAll: 'readonly',
         afterAll: 'readonly',
+<<<<<<< HEAD
+        jest: 'readonly',
+      },
+  }
+=======
 <<<<<<< HEAD
         jest: 'readonly'}}}
 =======
@@ -344,4 +439,5 @@ module.exports = [
     },
   },
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ];

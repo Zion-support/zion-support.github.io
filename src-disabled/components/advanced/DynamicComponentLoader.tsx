@@ -2,6 +2,10 @@
 'use client';
 import React, { Suspense, lazy, useState, useEffect, ComponentType } from 'react';
 
+<<<<<<< HEAD
+=======
+import { logErrorToProduction } from '@/utils/productionLogger';
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 interface LoadingState {;
 
@@ -19,6 +23,10 @@ interface DynamicLoaderProps {;
   prefetch?: boolean;
   className?: string;
 
+<<<<<<< HEAD
+=======
+                background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
               }}
               initial={{ rotate: 0 }}
@@ -27,6 +35,7 @@ interface DynamicLoaderProps {;
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -41,6 +50,8 @@ const EnhancedError: React.FC<{
   maxRetries: number
 }> = ({ error, retry, isOnline, retryCount, maxRetries }) => (
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   <Card className="w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10">
     <CardContent className="p-6">
       <div className="flex flex-col items-center space-y-4">
@@ -49,8 +60,11 @@ const EnhancedError: React.FC<{
           {isOnline ? ("
             <AlertTriangle className="h-6 w-6 text-red-600" />
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           ) : (
             <WifiOff className="h-6 w-6 text-red-600" />
 
@@ -78,12 +92,28 @@ const EnhancedError: React.FC<{
 
           <Button 
 
+<<<<<<< HEAD
             onClick={retry} 
             variant="outline" 
             size="sm"
             className="border-red-300 text-red-700 hover:bg-red-100"
           >
             <RefreshCw className="h-4 w-4 mr-2" />
+=======
+    return () => {
+
+      window.removeEventListener ('online', updateOnlineStatus);
+
+      window.removeEventListener ('offline', updateOnlineStatus);
+    }
+  }, []);
+  return is_online;
+
+}
+
+    };
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     return () => {}; // Return empty cleanup function for other paths
 
@@ -172,10 +202,15 @@ const useNetworkStatus = () => {;
 
   }, []);
   return isOnline;
+<<<<<<< HEAD
 
 };
 
 
+=======
+}
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 // Advanced Dynamic Component Loader;
 export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
   importFn,;
@@ -188,20 +223,75 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
   className,;
   children,;
   ...props;
+<<<<<<< HEAD
 
 
+=======
+}) => {;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const [loadingState, setLoadingState] = useState<LoadingState>({;
     isLoading: true,;
     error: null,;
     retryCount: 0,;
+<<<<<<< HEAD
 
 
+=======
+    isOnline: true;
+  });
+  const [progress, setProgress] = useState(0);
+  const [DynamicComponent, setDynamicComponent] = useState<ComponentType<any> | null>(null);
+  const isOnline = useNetworkStatus();
+  // Simulate loading progress for better UX;
+  useEffect(() => {;
+    if (loadingState.isLoading && !loadingState.error) {;
+      const interval = setInterval(() => {;
+        setProgress(prev => {;
+          if (prev >= 90) return prev;
+          return prev + Math.random() * 10;
+        });
+      }, 100);
+      return () => clearInterval(interval);
+    }
+;
+    return () => {} // Return empty cleanup function for other paths;
+  }, [loadingState.isLoading, loadingState.error]);
+  // Load component;
+  const loadComponent = async () => {;
+    try {;
+      setLoadingState(prev => ({ ...prev, isLoading: true, error: null, isOnline }));
+      setProgress(0);
+      const component = await importFn();
+      setDynamicComponent(() => component.default);
+      setProgress(100);
+      setTimeout(() => {;
+        setLoadingState(prev => ({ ...prev, isLoading: false }));
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       setLoadingState(prev => ({;
         ...prev,;
         isLoading: false,;
         error: error as Error,;
+<<<<<<< HEAD
 
 
+=======
+        retryCount: prev.retryCount + 1,;
+        isOnline;
+      }));
+    }
+  }
+;
+  // Retry functionality;
+  const retry = () => {;
+    if (loadingState.retryCount < maxRetries) {;
+      loadComponent();
+    }
+  }
+;
+  // Prefetch on hover/focus;
+  useEffect(() => {;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     if (prefetch) {;
       const prefetchTimer = setTimeout(() => {;
         loadComponent();
@@ -213,14 +303,35 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
       return () => {} // Return empty cleanup function;
     }
   }, []);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   // Update online status;
   useEffect(() => {;
     setLoadingState(prev => ({ ...prev, isOnline }));
   }, [isOnline]);
   // Loading state;
+<<<<<<< HEAD
 
 
+=======
+  if (loadingState.isLoading) {;
+    if (loadingComponent) {;
+      return React.createElement(loadingComponent);
+    });
+  }
+;
+  // Error state;
+  if (loadingState.error) {;
+    if (errorFallback) {;
+      return React.createElement(errorFallback, {;
+        error: loadingState.error,;
+        retry;
+      });
+    }
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           error={loadingState.error}
           retry={retry}
           isOnline={loadingState.isOnline}
@@ -240,8 +351,11 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ) => {;
 
     <DynamicComponentLoader
@@ -249,8 +363,18 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
       importFn = {importFn,}
       {...(options |{})}
 
+<<<<<<< HEAD
       {...(props as any)}
 
+=======
+      {...(props as any)});
+}
+
+// Predefined dynamic loaders for common heavy components
+// Note: These are examples - uncomment and install types as needed
+
+// export const DynamicChartComponent = createDynamicComponent(
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 //   () => import('recharts').then(module => ({ default: module.LineChart })),
 
 // Predefined dynamic loaders for common heavy components;
@@ -489,11 +613,14 @@ export const createDynamicComponent = <T extends ComponentType < any>>(
 // Predefined dynamic loaders for common heavy components;
 // Note: These are examples - uncomment and install types as needed;
 
+<<<<<<< HEAD
 // export const DynamicChartComponent = createDynamicComponent (
 //   (, ) => import ('recharts').then (module => ({ default: module.LineChart })),
 
 //   () => import('three').then(module => ({ default: module.WebGLRenderer })),
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 //   {
 //     loadingComponent: () => (
 //       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">
@@ -502,6 +629,7 @@ export const createDynamicComponent = <T extends ComponentType < any>>(
 //     )
 
 //   }
+<<<<<<< HEAD
 // )
 export default DynamicComponentLoader; export default DynamicComponentLoader
 // );
@@ -516,6 +644,8 @@ export default DynamicComponentLoader; export default DynamicComponentLoader ;
 export default DynamicComponentLoader;
 export default DynamicComponentLoader;
 // export const DynamicThreeComponent = createDynamicComponent (
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 //   (, ) => import ('three').then (module => ({ default: module.WebGLRenderer })),
 //   {};
@@ -557,5 +687,79 @@ export default DynamicComponentLoader;export default DynamicComponentLoader ;
 export default DynamicComponentLoader; export default DynamicComponentLoader;
 // );
 
+<<<<<<< HEAD
+=======
+// Enhanced Loading Component
+  progress?: number
+  message?: string
+  showProgress?: boolean
+}> = ({ 
+  progress = 0,
+  message = 'Loading component...', 
+  showProgress = true 
+}) => (
+  <Card className="w-full max-w-md mx-auto">
+    <CardContent className="p-6">
+      <div className="flex flex-col items-center space-y-4">
+        <div className="relative">
+          <Loader2 className="h-8 w-8 animate-spin text-primary" />
+          {showProgress && (
+            <motion.div
+              className="absolute inset-0 rounded-full border-2 border-primary"
+              style={{
+                background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
+              }}
+              initial={{ rotate: 0 }}
+              animate={{ rotate: 360 }}
+              transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
+            />;
+          )}
+        </div>
+        <div className="text-center">
+          <p className="text-sm font-medium">{message}</p>
+          {showProgress && (
+            <p className="text-xs text-muted-foreground mt-1">
+              {Math.round(progress)}% loaded
+            </p>
+          )}
+        </div>
+      </div>
+    </CardContent>
+  </Card>
+)
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
+=======
+// Predefined dynamic loaders for common heavy components
+// Note: These are examples - uncomment and install types as needed
+
+// export const DynamicChartComponent = createDynamicComponent(
+//   () => import('recharts').then(module => ({ default: module.LineChart })),
+//   {
+//     loadingComponent: () => (
+//       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center">
+//         <span className="text-muted-foreground">Loading chart...</span>
+//       </div>
+//     ),
+//     prefetch: true
+//   }
+// )
+
+// export const DynamicThreeComponent = createDynamicComponent(
+//   () => import('three').then(module => ({ default: module.WebGLRenderer })),
+//   {
+//     loadingComponent: () => (
+//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">
+//         <span className="text-muted-foreground">Loading 3D renderer...</span>
+//       </div>
+//     )
+//   }
+// );
+export default DynamicComponentLoader;
+export default DynamicComponentLoader;
+
+export default DynamicComponentLoader;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/delete-old-data-records-6bba

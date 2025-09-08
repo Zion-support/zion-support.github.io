@@ -76,21 +76,21 @@ export function TalentProfile({
   })) || [],
   
   return (
-    <div className="container mx-auto px-4 py-8">
-import React from "react",;
+    <div className='container mx-auto px-4 py-8'>
+import React from 'react',;
 import { Handshake, MessageSquare, Star } from 'lucide-react';
-import { Button } from "@/components/ui/button",;
-import { HireNowCTA } from "./HireNowCTA",;
-import { ProfileHero } from "./ProfileHero",;
-import { ProfileSkills } from "./ProfileSkills",;
-import { ProfileExperience } from "./ProfileExperience",;
-import { ProfileProjects } from "./ProfileProjects",;
-import { ProfileAvailability } from "./ProfileAvailability",;
-import { ProfileContact } from "./ProfileContact",;
-import { ProfileRatings } from "./ProfileRatings",;
-import { TalentProfile as TalentProfileType } from "@/types/talent",;
-import { useAuth } from "@/hooks/useAuth",;
-import { Availability } from "@/types/profile",;
+import { Button } from '@/components/ui/button',;
+import { HireNowCTA } from './HireNowCTA',;
+import { ProfileHero } from './ProfileHero',;
+import { ProfileSkills } from './ProfileSkills',;
+import { ProfileExperience } from './ProfileExperience',;
+import { ProfileProjects } from './ProfileProjects',;
+import { ProfileAvailability } from './ProfileAvailability',;
+import { ProfileContact } from './ProfileContact',;
+import { ProfileRatings } from './ProfileRatings',;
+import { TalentProfile as TalentProfileType } from '@/types/talent',;
+import { useAuth } from '@/hooks/useAuth',;
+import { Availability } from '@/types/profile',;
 interface TalentProfileProps {;
   profile: TalentProfileType,;
   onRequestHire: () => void,;
@@ -140,10 +140,10 @@ return (</div> </div> {;
   profile.hourly rate && `Rate starts at $$ {;
   profile.hourly rate ;`
 }/hour.` ;
-}</p> <div className="flex flex-wrap gap-4 justify-center" > <Button > <Handshake className="mr-2 h-5 w-5" /> Hire Now </Button> {";""
-  onMessageTalent && (<Button size="lg" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick={;""
-  onMessageTalent ";""
-}> <MessageSquare className="mr-2 h-5 w-5" /> Message </Button>) ;
-}</div> </div> </div>) ;'"
-}</div> </div> </div>) ;'"'"
-}'"'"'"`
+}</p> <div className='flex flex-wrap gap-4 justify-center' > <Button > <Handshake className='mr-2 h-5 w-5' /> Hire Now </Button> {';''
+  onMessageTalent && (<Button size='lg' variant='outline' className='border-zion-purple text-zion-purple hover:bg-zion-purple/10' onClick={;''
+  onMessageTalent ';''
+}> <MessageSquare className='mr-2 h-5 w-5' /> Message </Button>) ;
+}</div> </div> </div>) ;''
+}</div> </div> </div>) ;''''
+}''''''`

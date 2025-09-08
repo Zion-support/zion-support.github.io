@@ -1,22 +1,48 @@
+<<<<<<< HEAD
 import { useEffect  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { Message, Conversation  } from '@/types/messaging';
 import { toast } from '@/hooks/use-toast';
 
+=======
+import { useEffect  } from 'react';'
+import { supabase  } from '@/integrations/supabase/client';'
+import { UserProfile, UserDetails  } from '@/types/auth';'
+import { Message, Conversation  } from '@/types/messaging';'
+import { toast } from '@/hooks/use-toast';'
+import {useEffect} from 'react';'
+import {supabase} from '@/integrations / supabase / client';'
+import {UserProfile, UserDetails} from '@/types / auth';'
+import {Message, Conversation} from '@/types / messaging';'
+import {toast} from '@/hooks / use - toast';'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import {toast} from '@/hooks / use - toast';
 // Allow either UserProfile or UserDetails;
 type UserWithProfile = UserProfile | UserDetails | null;
 ;
 export function useMessagingRealtime (
+<<<<<<< HEAD
 
+=======
+
+import {supabase} from '@/integrations/supabase/client';'
+import {UserProfile, UserDetails} from '@/types/auth';'
+import {Message, Conversation} from '@/types/messaging';'
+import {toast} from '@/hooks/use-toast';'
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {UserProfile, UserDetails} from '@/types/auth';
 import {Message, Conversation} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 // Allow either UserProfile or UserDetails
 
@@ -27,9 +53,15 @@ export function useMessagingRealtime(;
   active_conversation: Conversation | null;
   setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;
 
+<<<<<<< HEAD
         'postgres_changes', 
 
 
+=======
+'
+        'postgres_changes', 
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         { 
           event: 'INSERT', 
           schema: 'public', 
@@ -37,6 +69,7 @@ export function useMessagingRealtime(;
           filter: `recipient_id=eq.${user && user.id}` 
         }, 
 
+<<<<<<< HEAD
 
 
         (payload) => {
@@ -52,12 +85,56 @@ export function useMessagingRealtime(;
           // Show toast notification for new message
           toast({
 
+=======
+        (payload) => {
+          // Update messages if the conversation is selected
+}
+if (activeConversation && payload && payload.new.sender_id === activeConversation && activeConversation.other_user.id) {
+            }
+            setActiveMessages(prev => { return [...prev, payload && payload.new as Message])
+          }
+          // Update conversations,
+fetchConversations(); }
+          // Show toast notification for new message,
+toast({          })
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         }
       )
       .subscribe();
 
 
+<<<<<<< HEAD
     return () => {
+=======
+          if (activeConversation && payload && payload.new.sender_id === activeConversation && activeConversation.other_user.id) {
+            setActiveMessages(prev => [...prev, payload && payload.new as Message])
+
+          }
+          // Update conversations;
+          fetchConversations();
+
+        }
+      )
+      .subscribe();
+
+
+import { useEffect } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import { UserProfile, UserDetails } from '@/types/auth',;
+import { Message, Conversation } from '@/types/messaging',;
+import { toast } from '@/hooks/use-toast',;
+// Allow either UserProfile or UserDetails;
+type UserWithProfile = UserProfile | UserDetails | null,;
+export function useMessagingRealtime(;
+  user: UserWithProfile,;
+  activeConversation: Conversation | null,;
+  setActiveMessages: (updater: (prev: Message[]) => Message[]) => void,;
+  fetchConversations: () => Promise<void>;
+) {;
+  // Setup real-time subscription when user is logged in;
+  useEffect(() => {;
+    if (!user) return,;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       supabase && supabase.removeChannel(subscription)
     }
@@ -163,10 +240,14 @@ export function useMessagingRealtime(;
     if (!user) return,;
 ;
     // Subscribe to new messages;
+<<<<<<< HEAD
 
     const subscription = supabase;
       .channel('messages');
 
+=======
+      .channel('messages');'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       .on(;
         'postgres_changes',;
         {;
@@ -194,6 +275,7 @@ export function useMessagingRealtime(;
       supabase.removeChannel(subscription);
 
 
+<<<<<<< HEAD
 
 
     }
@@ -201,3 +283,9 @@ export function useMessagingRealtime(;
 
 
 
+=======
+    }
+  }, [user, activeConversation, fetchConversations, setActiveMessages])
+}
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

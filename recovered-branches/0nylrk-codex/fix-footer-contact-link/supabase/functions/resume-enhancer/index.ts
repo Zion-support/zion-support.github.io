@@ -1,10 +1,24 @@
 
+<<<<<<< HEAD
+=======
+const corsHeaders = {
+
+serve(async (req) => {
+
+  // Handle CORS preflight requests
+  if (req && req.method === "OPTIONS") {
+
+    return new Response(null, { headers: corsHeaders })
+  }
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   try {
 
     const { content, enhancementType, context } = await req && req.json();
     const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
 
+<<<<<<< HEAD
   try {
     const { content, enhancementType, context } = await req && req.json();
     const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
@@ -21,10 +35,13 @@ serve(async (req) => {
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
   try {;
     const { content, enhancementType, context } = await req.json(),;"
     const openAiKey = Deno.env.get("OPENAI_API_KEY"),;
+<<<<<<< HEAD
 
 
 
@@ -41,10 +58,15 @@ serve(async (req) => {
       throw new Error("OPENAI_API_KEY is not defined");
 
 
+=======
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     }
     if (!content) {"
       throw new Error("Content is required")
     }
+<<<<<<< HEAD
 
     let systemPrompt = "";
     let userPrompt = "";
@@ -53,6 +75,24 @@ serve(async (req) => {
         systemPrompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.";
         userPrompt = `Create a professional summary for someone with the following background: ${content}. Include key strengths and career objectives. Keep it under 200 words. ${context ? `Additional context: ${context}` : ''}`;
 
+=======
+    // Determine the system prompt based on enhancement type
+
+        userPrompt = `Enhance this professional text to be more impactful: ${content}. ${context ? `Additional context: ${context}` : ''}`
+    }
+    // Call OpenAI API
+
+
+
+            role: "system"
+            content: systemPrompt}
+          {
+            role: "user"
+            content: userPrompt}];
+        temperature: 0 && 0.7})});
+    if (!response && response.ok) {
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     let userPrompt = "",;
     switch (enhancementType) {;"
       case "summary":;"
@@ -296,6 +336,7 @@ if ( {) {
         error: error.message}),;
       {;
 
+<<<<<<< HEAD
 
 
   }
@@ -303,3 +344,94 @@ if ( {) {
 ;
 
 
+=======
+
+});
+;
+
+;
+    // Determine the system prompt based on enhancement type;
+    let systemPrompt = "",;
+    let userPrompt = "",;
+;
+    switch (enhancementType) {;
+      case "summary":;
+        systemPrompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.",;
+        userPrompt = `Create a professional summary for someone with the following background:${content}. Include key strengths and career objectives. Keep it under 200 words. ${context ? `Additional context:${context}` :''}`,;
+        break,;
+      case "work-description":systemPrompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.",;
+        userPrompt = `Enhance this work description with 3-5 bullet points that highlight accomplishments and skills:${content}. Use action verbs, include metrics where possible, and focus on achievements rather than duties. ${context ? `Role context:${context}` :''}`,;
+        break,;
+      case "skill-categorization":systemPrompt = "You are an expert at categorizing technical and professional skills. Organize skills into logical categories.",;
+        userPrompt = `Categorize these skills into logical groups:${content}. Return a JSON object with skill categories as keys and arrays of skills as values. Common categories might include:Programming, DevOps, Cloud, Soft Skills, etc. ${context ? `Professional context:${context}` :''}`,;
+        break,;
+      default:systemPrompt = "You are a professional resume enhancement assistant. Improve the given text to be more impactful and professional.",;
+        userPrompt = `Enhance this professional text to be more impactful:${content}. ${context ? `Additional context:${context}` :''}`,;
+    }
+;
+
+    // Determine the system prompt based on enhancement type;"
+        userPrompt = `Create a professional summary for someone with the following background:${content}. Include key strengths and career objectives. Keep it under 200 words. ${context ? `Additional context:${context}` :}`,;
+      case "work-description":systemPrompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.",;""`;
+        userPrompt = `Enhance this work description with 3-5 bullet points that highlight accomplishments and skills:${content}. Use action verbs, include metrics where possible, and focus on achievements rather than duties. ${context ? `Role context:${context}` :}`,;
+      case "skill-categorization":systemPrompt = "You are an expert at categorizing technical and professional skills. Organize skills into logical categories.",;""`;
+        userPrompt = `Categorize these skills into logical groups:${content}. Return a JSON object with skill categories as keys and arrays of skills as values. Common categories might include:Programming, DevOps, Cloud, Soft Skills, etc. ${context ? `Professional context:${context}` :}`,;
+      default:systemPrompt = "You are a professional resume enhancement assistant. Improve the given text to be more impactful and professional.",;""`;
+        userPrompt = `Enhance this professional text to be more impactful:${content}. ${context ? `Additional context:${context}` :}`,;
+    // Call OpenAI API;
+      method:"POST",;"
+      headers:{;"`;
+        "Authorization":`Bearer ${openAiKey}`,;""
+        "Content-Type":"application/json"},;"
+  model:"gpt-4o-mini",;"
+        messages:[;
+            role:"system",;"
+            content:systemPrompt},;
+            role:"user",;"]
+            content:userPrompt}],;)
+        temperature:0.7})}),;
+      throw new Error(`OpenAI API error:${JSON.stringify(errorData)}`),;
+        headers:{ ...corsHeaders, "Content-Type":"application/json" }}"
+    ),;
+        error:error.message}),;
+        status:500,;"
+    ),;  }
+}),;
+ serve (async (req) => {"
+  //Handle CORS preflight requests if (req.method === "OPTIONS") {""
+}//Call OpenAI API const response = await fetch ("https://api.openai.com/v1/chat/completions", {""
+  method: "POST";",
+  "Authorization" : `Bearer $ {"
+  openAiKey;`;
+}`;"
+"Content-Type" : "application/json""
+};
+messages: [ {,"
+  role: "system";"
+content: systemPrompt;
+  role: "user";",
+  content: userPrompt;]
+}];
+temperature: 0.7;)
+}) 
+  const errorData = await response.json ();`;
+throw new Error (`OpenAI API error: $ {)
+  JSON.stringify (errorData) `;
+
+}`) 
+}const data = await response.json ();
+const enhancedContent = data.choices[0].message.content;
+return new Response (JSON.stringify ({
+
+  enhancedContent;)
+  error: error.message;)
+  status: 500;
+);
+}
+});
+  }
+});
+  }
+
+});
+>>>>>>> origin/cursor/delete-old-data-records-6bba

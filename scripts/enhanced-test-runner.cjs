@@ -67,7 +67,12 @@ const { execSync, spawn } = require('child_process');
     "coverage": 0;"
   },"
   "recommendations": [];"
+<<<<<<< HEAD
+};
+
+=======
 }
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 function log(level, message) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -93,7 +98,11 @@ async function runJestTests() {}
   log('info', 'Running Jest tests');
   try {}
     const startTime = Date.now();
+<<<<<<< HEAD
+const output = execSync('npm test -- --coverage --json', { });
+=======
     const output = execSync('npm test -- --coverage --json', { })
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       "encoding": 'utf8',
       "stdio": 'pipe'
     }
@@ -186,7 +195,11 @@ async function runPlaywrightTests() {}
   log('info', 'Running Playwright tests');
   try {}
     const startTime = Date.now();
+<<<<<<< HEAD
+const output = execSync('npx playwright test --reporter=json', { });
+=======
     const output = execSync('npx playwright test --reporter=json', { })
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       "encoding": 'utf8',
       "stdio": 'pipe'
     }
@@ -210,7 +223,11 @@ async function runCypressTests() {}
   log('info', 'Running Cypress tests');
   try {}
     const startTime = Date.now();
+<<<<<<< HEAD
+const output = execSync('npx cypress run --reporter json', { });
+=======
     const output = execSync('npx cypress run --reporter json', { })
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       "encoding": 'utf8',
       "stdio": 'pipe'
     }
@@ -234,7 +251,11 @@ async function runLintTests() {}
   log('info', 'Running linting tests');
   try {}
     const startTime = Date.now();
+<<<<<<< HEAD
+const output = execSync('npm run lint', { });
+=======
     const output = execSync('npm run lint', { })
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       "encoding": 'utf8',
       "stdio": 'pipe'
     }
@@ -262,7 +283,11 @@ async function runTypeTests() {}
   log('info', 'Running TypeScript type tests');
   try {}
     const startTime = Date.now();
+<<<<<<< HEAD
+const output = execSync('npx tsc --noEmit', { });
+=======
     const output = execSync('npx tsc --noEmit', { })
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       "encoding": 'utf8',
       "stdio": 'pipe'
     }
@@ -412,6 +437,9 @@ main();
     process.exit(1)};
 };
 <<<<<<< HEAD
+main();
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 main();
 <<<<<<< HEAD
@@ -445,3 +473,4 @@ main();
 =======
 main();
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

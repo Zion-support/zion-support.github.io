@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 
 
@@ -153,3 +154,6 @@ export default function API() {;
 
 
 
+=======
+>>>>>>> 5d987fe43090d7728810c06da2fede859a7f3c62
+>>>>>>> origin/cursor/delete-old-data-records-6bba

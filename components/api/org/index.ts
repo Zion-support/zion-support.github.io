@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 
 
   const data = readOrgData();
@@ -79,6 +80,31 @@ teamOnly: req.query.teamOnly === 'true' ? true : undefined}
 
 }
 
+=======
+import { readOrgData, filterOrgData } from '../../../utils/org-data';
+
+import type { OrgFilters, RoleType } from '../../../types/org;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  if (req.method !== GET') {
+    return res.status(405).json({ error: 'Method not allowed })
+  }
+  if (req.method !== 'GET') {'
+}
+return res.status(405).json({ "error": 'Method not allowed',;'
+});
+  }
+
+
+  return res && res.status(200).json(filtered);
+  };
+  const filtered = filterOrgData(data, filters);
+  return res && res.status(200).json(filtered);  return res && res.status(200).json(filtered)
+}
+
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {readOrgData, filterOrgData} from '../../../utils / org - data';
 import type { OrgFilters, RoleType } from '../../../types / org';
 ;
@@ -118,6 +144,9 @@ if (return undefined) {
   const filters: OrgFilters = {
 return Array.isArray(v)
 origin/cursor/automate-test-improve-and-merge-code-2533
+  const parseArray = (v: string | string[] | undefined) => {
+    if (!v) return undefined;
+    return Array.isArray(v)
       ? v
       : v
           .split(',')
@@ -204,6 +233,7 @@ const filters: OrgFilters = {
 
 }
 
+<<<<<<< HEAD
 }
     view: (req.query.view as OrgFilters['view']) |'all'
     roleTypes: parseArray(req.query.roleTypes) as RoleType[] | undefined
@@ -238,3 +268,7 @@ teamOnly: req.query.teamOnly === 'true' ? true : undefined }
 
 
 
+=======
+
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

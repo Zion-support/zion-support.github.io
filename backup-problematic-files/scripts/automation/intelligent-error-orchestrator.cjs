@@ -5,7 +5,6 @@ const { execSync } = require('child_process');
 class IntelligentErrorOrchestrator {}
   constructor() {}
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
     this.reportsDir = path.join(this.projectRoot, error-reports');
     this.logsDir = path.join(this.projectRoot, 'automation/logs);
     this.orchestrationInterval = parseInt(process.env.ORCHESTRATION_INTERVAL) || 300000; // 5 minutes;
@@ -15,18 +14,10 @@ class IntelligentErrorOrchestrator {}
     [this.reportsDir, this.logsDir].forEach(dir => {})
       if (!fs.existsSync(dir)) {}
         fs.mkdirSync(dir, { "recursive: true })}
-=======
-
-    // Ensure directories exist;
-    [this.reportsDir, this.logsDir].forEach(dir => {})
-      if (!fs.existsSync(dir)) {}
-        fs.mkdirSync(dir, { "recursive": true })};"
->>>>>>> origin/chore/fix-lint-and-merge
     }
 });
     this.errorHistory = [];
     this.fixHistory = [];
-<<<<<<< HEAD
     this.lastOrchestration = null}
   log(message, level = 'INFO) {}
     const timestamp = new Date().toISOString();
@@ -37,20 +28,9 @@ class IntelligentErrorOrchestrator {}
         .filter(file => file.startsWith(error-report-'));
         .map(file => {})
           const content = fs.readFileSync(path.join(this.reportsDir, file), 'utf8);
-=======
-    this.lastOrchestration = null};"
-  log(message, level = 'INFO') {}
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level}] ${message})};
-  async checkErrorReports() {}
-    try {}
-      const reports = fs.readdirSync(this.reportsDir);
-
->>>>>>> origin/chore/fix-lint-and-merge
           return JSON.parse(content)}
         .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
 
-<<<<<<< HEAD
       return reports.length > 0 ? reports[0] : null} catch (error) {}
       this.log(`Error reading error reports": ${error.message}`, ERROR');
       return null}
@@ -65,13 +45,8 @@ class IntelligentErrorOrchestrator {}
     ];
 
     const results = {}
-=======
-    ];
-    const results = {};
->>>>>>> origin/chore/fix-lint-and-merge
     let totalErrors = 0;
     for (const check of checks) {}
-<<<<<<< HEAD
       try {}
         execSync(check.command, { "stdio: pipe' }
 });
@@ -92,23 +67,10 @@ class IntelligentErrorOrchestrator {}
       message": line.trim(),
       "severity: error'
     }))}
-=======
-
-        const output = error.stdout?.toString() || error.stderr?.toString() || ;
-        const errors = this.parseErrors(output, check.name);
-        results[check.name] = { "success": false, errors, "count": errors.length };"
-        totalErrors += errors.length};
-    return { results, totalErrors }};
-  parseErrors(output, checkType) {}"
-    const errorLines = output.split('\n').filter(line => )
-
-    }))};
->>>>>>> origin/chore/fix-lint-and-merge
   async prioritizeErrors(errorReport) {}
     if (!errorReport || !errorReport.checks) {}
       return []}
     const prioritizedErrors = [];
-<<<<<<< HEAD
     
     // Priority 1": Build errors (critical);
     if (errorReport.checks.Build && !errorReport.checks.Build.success) {}
@@ -150,12 +112,6 @@ class IntelligentErrorOrchestrator {}
     this.log('Executing intelligent error fixes...);
     
     const fixResults = [];
-=======
-    // Priority "1": Build errors (critical);"
-    if (errorReport.checks.Build && !errorReport.checks.Build.success) {}
-      prioritizedErrors.push({})
-        priority: 1,"
->>>>>>> origin/chore/fix-lint-and-merge
 
       })};
     // Priority "2": TypeScript errors (high);"
@@ -173,7 +129,6 @@ class IntelligentErrorOrchestrator {}
     const fixResults = [];
     for (const errorGroup of prioritizedErrors) {}
         const result = await this.fixErrorGroup(errorGroup);
-<<<<<<< HEAD
         fixResults.push(result)} catch (error) {}
         this.log(`Failed to fix ${errorGroup.type} errors": ${error.message}`, ERROR');
         fixResults.push({})
@@ -235,26 +190,10 @@ class IntelligentErrorOrchestrator {}
       return { type": 'dependency, "success: true, fixed": errors.length }} catch (error) {}
       return { "type: dependency', success": false, "error: error.message }}
   }
-=======
-
-          "error": error.message;"
-    return fixResults};
-
-  async fixESLintErrors(errors) {}
-      // Run ESLint auto-fix;"
-
-  async fixBuildErrors(errors) {}
-      // Try to fix build errors by cleaning and rebuilding;"
-
-  async fixDependencyErrors(errors) {}
-      // Try to fix dependency issues;"
-
->>>>>>> origin/chore/fix-lint-and-merge
   async applyTypeScriptFixes(errors) {}
     let fixesApplied = 0;
     for (const error of errors) {}
         if (await this.fixSingleTypeScriptError(error)) {}
-<<<<<<< HEAD
           fixesApplied++}
       } catch (error) {}
         this.log(`Failed to fix TypeScript error": ${error.message}`, 'ERROR)}
@@ -270,19 +209,10 @@ class IntelligentErrorOrchestrator {}
         this.log(`Failed to fix ESLint "error: ${error.message}`, ERROR')}
     }
     return fixesApplied}
-=======
-          fixesApplied++};
-
-    return fixesApplied};
-  async applyESLintFixes(errors) {}
-        if (await this.fixSingleESLintError(error)) {}
-
->>>>>>> origin/chore/fix-lint-and-merge
   async fixSingleTypeScriptError(error) {}
     // Basic TypeScript error fixing logic;
     if (error.message.includes('Cannot find module)) {}
       // Try to install missing module;
-<<<<<<< HEAD
       const moduleMatch = error.message.match(/Cannot find module []([^'"]+)['"]/);
       if (moduleMatch) {}
         try {}
@@ -293,15 +223,10 @@ class IntelligentErrorOrchestrator {}
       }
     }
     return false}
-=======
-
-    return false};
->>>>>>> origin/chore/fix-lint-and-merge
   async fixSingleESLintError(error) {}
     // Basic ESLint error fixing logic;
     if (error.message.includes(Unexpected console statement)) {}
       // Add eslint-disable comment;
-<<<<<<< HEAD
       return true}
     return false}
   async runOrchestration() {}
@@ -330,27 +255,17 @@ class IntelligentErrorOrchestrator {}
         this.log('No fixable errors found', INFO);
         return}
       this.log(`Prioritized ${prioritizedErrors.length} error groups for fixing`, 'INFO');
-=======
-      return true};
-
-      // Prioritize errors;
-      const prioritizedErrors = await this.prioritizeErrors({ "checks": currentErrors.results }")
-      if (prioritizedErrors.length === 0) {}"
->>>>>>> origin/chore/fix-lint-and-merge
 
       // Execute fixes;
       const fixResults = await this.executeErrorFixes(prioritizedErrors);
       // Generate orchestration report;
       const report = {}
-<<<<<<< HEAD
         timestamp: new Date().toISOString(),
         "initialErrors": currentErrors.totalErrors,
         prioritizedErrors: prioritizedErrors.length,
         fixResults,
         "success": fixResults.some(result => result.success);
       }
-=======
->>>>>>> origin/chore/fix-lint-and-merge
 
         "prioritizedErrors": prioritizedErrors.length,"
         fixResults,"
@@ -361,7 +276,6 @@ class IntelligentErrorOrchestrator {}
       // Update history;
       this.fixHistory.push(report);
       if (this.fixHistory.length > 50) {}
-<<<<<<< HEAD
         this.fixHistory = this.fixHistory.slice(-50)}
       this.lastOrchestration = new Date();
       
@@ -371,15 +285,10 @@ class IntelligentErrorOrchestrator {}
   async startOrchestrator() {}
     this.log(Starting intelligent error orchestrator...);
     
-=======
-        this.fixHistory = this.fixHistory.slice(-50)};
-
->>>>>>> origin/chore/fix-lint-and-merge
     // Run initial orchestration;
     await this.runOrchestration();
     // Set up periodic orchestration;
     setInterval(async () => {}
-<<<<<<< HEAD
       try {}
         await this.runOrchestration()} catch (error) {}
         this.log(`Error in periodic "orchestration": ${error.message}`, 'ERROR')}
@@ -415,37 +324,8 @@ if (require.main === module) {}
     orchestrator.log(`Failed to start "orchestrator": ${error.message}`, 'ERROR');
     process.exit(1)})}
 
-=======
 
-      "intelligentFixingEnabled": this.intelligentFixingEnabled;"
-    }};
-// Main execution;
-if (require.main === module) {}
-  const orchestrator = new IntelligentErrorOrchestrator();
-  // Handle graceful shutdown;"
 
-    process.exit(1)})};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-module.exports = IntelligentErrorOrchestrator;
-module.exports = IntelligentErrorOrchestrator;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 module.exports = IntelligentErrorOrchestrator;
 `;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-module.exports = IntelligentErrorOrchestrator;
-=======
-module.exports = IntelligentErrorOrchestrator;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

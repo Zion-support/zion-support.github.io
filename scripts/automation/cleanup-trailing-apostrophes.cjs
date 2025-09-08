@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 #!/""usr/bin/env"" node;
+=======
+<<<<<<< HEAD
+#!/""usr/bin/env"" node;
 #!/usr/bin/env node;
 const fs = require("fs");
 const path = require("path");
@@ -9,19 +12,16 @@ const path = require("path");
 <<<<<<< HEAD
 
 #!/"usr/bin/env" node;
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 #!/usr/bin/env node;
-const fs = require("fs);
-const path = require(path");
+const fs = require("fs");
+const path = require("path");
 
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-const exts = new Set([".js, .jsx", ".ts, .tsx"]);
+const exts = new Set([".js", ".jsx", ".ts", ".tsx"]);
 #!/usr/bin/env node;"
+<<<<<<< HEAD
+=======
 #!/usr/bin/env node
 const exts = new Set([.js", ".jsx, .ts", ".tsx]);
 =======
@@ -45,12 +45,16 @@ const path = require("path");
 const exts = new Set([".js", ".jsx", ".ts", ".tsx"]);
 =======
 #!/usr/bin/env node;"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 #!/usr/bin/env node"
 const fs = require("fs");
 const path = require("path");
 const exts = new Set([".js", ".jsx", ".ts", ".tsx"]);"
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 /**;
  * Returns true if the file should be processed;
  */;
@@ -62,7 +66,8 @@ function shouldProcess(filePath) {}
  * Clean content by removing stray trailing apostrophes introduced at EOL
 =======
   const ext = path.extname(filePath);
-  return exts.has(ext)}
+  return exts.has(ext)};
+;
 /**;
  * Clean content by removing stray trailing apostrophes introduced at EOL;
 >>>>>>> merged-prs-20250907-203621
@@ -71,6 +76,11 @@ function cleanContent(content) {}
   const lines = content.split(/\r?\n/).map(line =>;)
     line
       // Remove a single trailing apostrophe after common closing tokens;"
+<<<<<<< HEAD
+      .replace(/([)}\]>])\s*"\s*$/u, "$1");
+      .replace(/>\s*"\s*$/u, ">");
+      .replace(/^"\s*$/u, );"
+=======
 <<<<<<< HEAD
       .replace(/([)}\]>])\s*"\s*$/u, "$1")
       .replace(/>\s*"\s*$/u, ">")
@@ -96,19 +106,16 @@ function cleanContent(content) {}
       .replace(/([)}\]>])\s*"\s*$/u, $1);
       .replace(/>\s*"\s*$/u, ">);
       .replace(/^\s*$/u, );"
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   );
 <<<<<<< HEAD
 
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-  let out = lines.join("\n);
 
   let out = lines.join("\n");
+<<<<<<< HEAD
+"
+  let out = lines.join("\n");"
+=======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -121,31 +128,30 @@ function cleanContent(content) {}
   let out = lines.join("\n");"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   // In-line fixes across the whole file;
-  out = out;
+  out = out;"
     // Comma followed by stray apostrophe (e.g., "Shield,");
 <<<<<<< HEAD
 
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
-    .replace(/,\s*/g, ,");"
-    // Remove apostrophe after closing tokens if followed by punctuation or end;
-    .replace(/([)}>])\s*\s*(?=\s*[, ")}\]"]|\s*$)/g, $1);
-    // "JSX": >< to ><;
+    .replace(/,\s*"/g, ",");"
+    // Remove apostrophe after closing tokens if followed by punctuation or end;"
+    .replace(/([)}>])\s*"\s*(?=\s*[, ")}\]"]|\s*$)/g, "$1");
+    // "JSX": >"< to ><;"
 
-=======
 
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   // In-line fixes across the whole file;
 
     // Remove apostrophe after closing tokens if followed by punctuation or end;"
-    .replace(/([)}>])\s*"\s*(?=\s*[, )}\]"]|\s*$)/g, "$1);
-    // JSX": >"< to ><;
+    .replace(/([)}>])\s*"\s*(?=\s*[", ")}\]"]|\s*$)/g, "$1");
+    // "JSX": >"< to ><;
 
+<<<<<<< HEAD
+    .replace(/>\s*"\s*</g, "><");"
+
+
+  return out};
+=======
 =======
     .replace(/>\s*\s*</g, ><");"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -220,11 +226,19 @@ function walk(dir, files = []) {}
     .replace(/>\s*"\s*</g, "><");"
 
   return out}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 function walk(dir, files = []) {}"
   for (const entry of fs.readdirSync(dir, { "withFileTypes": true })) {}
   if (entry.name === "node_modules" || entry.name.startsWith(".git"));"
       continue;"
     const p = path.join(dir, "entry.name);"
+<<<<<<< HEAD
+    if (entry.isDirectory()) {}"
+  walk(p", files)} else if (shouldProcess(p)) {}"
+  files.push(p)};
+  };
+  return files};
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
     if (entry.isDirectory()) {}"
 <<<<<<< HEAD
@@ -235,12 +249,16 @@ function walk(dir, files = []) {}"
   files.push(p)}
   }
   return files}
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 function $1() {}
   const root = process.cwd()
   const files = walk(root)
   let changed = 0
   for($2) {}
   try {}"
+<<<<<<< HEAD
+  const original = fs.readFileSync(f, "utf8");"
+=======
 <<<<<<< HEAD
   const original = fs.readFileSync(f, "utf8");"
       const updated = cleanContent(original)
@@ -254,13 +272,21 @@ function $1() {}
 
 =======
   const original = fs.readFileSync(f, "utf8);
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       const updated = cleanContent(original);
       if (updated !== original) {}"
 
-        changed += 1}
+        changed += 1};
     } catch (e) {}
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+  
+
+  
+
+
+=======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -285,6 +311,7 @@ function $1() {}
 
 
 <<<<<<< HEAD
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 } catch (e) {}
 =======
 <<<<<<< HEAD
@@ -299,8 +326,8 @@ function $1() {}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> merged-prs-20250907-203621
   // ignore file-level errors} catch (e) {}
-  // ignore file-level errors}
-  console.log(`Cleaned ${changed} files.`)}
+  // ignore file-level errors};
+  console.log(`Cleaned ${changed} files.`)};
 if (require.main === module) {}
 <<<<<<< HEAD
 
@@ -313,6 +340,14 @@ if (require.main === module) {}
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+  main()};
+
+
+
+
+
+=======
 
   main()}
 
@@ -345,3 +380,4 @@ if (require.main === module) {}
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

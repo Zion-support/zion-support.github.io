@@ -1,4 +1,22 @@
 <<<<<<< HEAD
+#!/""usr/bin/env""
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+      this.projectRoot,merge-conflict-resolver-report.json"
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+      this.projectRoot,merge-conflict-resolver-report.json"
+  this.log(" Starting Merge Conflict Resolver...")
+  this.log("� Stopping Merge Conflict Resolver...")
+  this.log(" Checking for merge conflicts...")
+  this.log(" No merge conflicts found")
+      this.saveReport()} catch (error) {  this.log(` Error during conflict "resolution"`})
+const files = this.findFiles(".ts,.tsx,.js,.jsx,.json,.md,.yml,.yaml");
+const content = fs.readFileSync(file, "utf8");
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -35,46 +53,64 @@ const { execSync } = require("child_process")
       this.saveReport()} catch (error) {  this.log(` Error during conflict "resolution"`})
     const files = this.findFiles(".ts,.tsx,.js,.jsx,.json,.md,.yml,.yaml")
   const content = fs.readFileSync(file, "utf8")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           content.includes("")
           content.includes(")
             "type": "merge_conflict"
             "markers"
+<<<<<<< HEAD
+const lines = content.split("\n");
+=======
     const lines = content.split("\n")
     const lines = content.split("\n")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       if (line.includes("")
   // Middle marker} else if (line.includes(")
   "start"
           "end"
           "content": lines.slice(conflictStart, conflictEnd + 1).join("\n")
   try {this.log(" Resolving conflict in ${conflict.file}")
+<<<<<<< HEAD
+const content = fs.readFileSync(conflict.file, "utf8");
+=======
       const content = fs.readFileSync(conflict.file, "utf8")
       const content = fs.readFileSync(conflict.file, "utf8")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   fs.writeFileSync(conflict.file, resolvedContent);this.log(" Auto-resolved conflict in ${conflict.file}")
         try {execSync("git add "${conflict.file}", { "stdio": "pipe" }
 });this.log("� Staged resolved file ${conflict.file}")} catch (error) {  this.log("⚠ Could not stage ${conflict.file  }: ${error.message}")
       } else {this.log("})
   this.log( Error resolving conflict in ${conflict.file}: ${error.message}")
+<<<<<<< HEAD
+=======
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   case ".ts"
-      case .tsx
+      case ".tsx"
       case ".js"
-      case .jsx
+      case ".jsx"
       case ".json"
-      case .md
+      case ".md"
       "default"
-    resolved = resolved.replace(/\n?/g, )
+    resolved = resolved.replace(/\n?/g, "")
     resolved = resolved.replace(/\n?/g, ")
-    resolved = resolved.replace(/\n?/g, ")
-  this.log(⚠ Could not parse JSON in "conflict": ${error.message  })
-    // Fallback"
-      .replace(/\n?/g, ")
-  this.log(⚠ Could not parse JSON in "conflict": ${error.message})
-    // Fallback"
-      .replace(/\n?/g, ")
-      .replace(/\n?/g, )
+    resolved = resolved.replace(/\n?/g, "")
+  this.log("⚠ Could not parse JSON in "conflict": ${error.message  }")
     // "Fallback"
-      .replace(/\n?/g, )
+      .replace(/\n?/g, "")
+  this.log("⚠ Could not parse JSON in "conflict": ${error.message}")
+    // "Fallback"
+      .replace(/\n?/g, ")
+      .replace(/\n?/g, "")
+    // "Fallback"
+      .replace(/\n?/g, "")
   // Generic "resolution"
+<<<<<<< HEAD
+      .replace(/\n?/g, "")
+const lines = content.split("\n");
+  if (line.trim().startsWith("import ")
+return cleanedLines.join("\n");
+=======
 <<<<<<< HEAD
 
 =======
@@ -82,12 +118,25 @@ const { execSync } = require("child_process")
   const lines = content.split("\n")
   if (line.trim().startsWith("import ")
     return cleanedLines.join("\n")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     fixed = fixed.replace(/} catch \("error": \)/g, "} catch ("error": any)"
     fixed = fixed.replace(/\(([^)]+): \)/g, "($"1": any)"
       /<>([\s\S]*?)<\/>/g,<React.Fragment>$1</React.Fragment>"
     fixed = fixed.replace(/} catch \("error": \)/g, "} catch ("error": any)"
     fixed = fixed.replace(/\(([^)]+): \)/g, "($"1": any)"
       /<>([\s\S]*?)<\/>/g,<React.Fragment>$1</React.Fragment>"
+<<<<<<< HEAD
+const status = execSync("git status --porcelain", { "encoding": "utf8"});
+        .split("\n")
+        .filter(line => line.length > 0)} catch (error) {  this.log(" Could not check git "status": ${error.message  }")
+        line => line.startsWith("M ") || line.startsWith("A ")
+      if (resolvedFiles.length > 0) {this.log("� Committing ${resolvedFiles.length} resolved files...")
+const message = "Auto-resolve merge "conflicts": ${resolvedFiles.length} files resolved";execSync("git commit -m ${message}"", { "stdio": "pipe"});
+        this.log(" Conflicts committed successfully")
+    } catch (error) {  this.log(" Could not commit resolved "conflicts": ${error.message  }")
+const exts = extensions.split(",");
+          !item.startsWith(")
+=======
   const status = execSync("git status --porcelain", { "encoding": "utf8"})
         .split("\n")
         .filter(line => line.length > 0)} catch (error) {  this.log(" Could not check git "status": ${error.message  }")
@@ -104,17 +153,17 @@ const message = "Auto-resolve merge "conflicts": ${resolvedFiles.length} files r
   const exts = extensions.split(",")
           !item.startsWith(")
 >>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           item !== "node_modules"
-  timestamp
+  "timestamp"
       "conflictsResolved"
-      conflictsFound
-      "status": completed
-  "isRunning"
-      conflictsResolved
       "conflictsFound"
-      lastCheck
+      "status": "completed"
+  "isRunning"
+      "conflictsResolved"
+      "conflictsFound"
+      "lastCheck"
       "logFile"
-  process.on(SIGINT)
   process.on("SIGINT")
 <<<<<<< HEAD
 
@@ -127,6 +176,8 @@ const message = "Auto-resolve merge "conflicts": ${resolvedFiles.length} files r
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 
   process.on()
 
@@ -147,9 +198,16 @@ const message = "Auto-resolve merge "conflicts": ${resolvedFiles.length} files r
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   process.on(")
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+
+
+
+
+=======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -161,3 +219,4 @@ const message = "Auto-resolve merge "conflicts": ${resolvedFiles.length} files r
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

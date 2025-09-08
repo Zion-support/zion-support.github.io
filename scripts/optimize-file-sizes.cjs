@@ -1,4 +1,17 @@
 <<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs');
+const path = require('path');
+console.log('� Starting File Size Optimization...')
+const largeFiles = ['pages/ai-services.tsx'];
+  'pages/it-services.tsx'
+  'pages/micro-saas.tsx'
+  'pages/services.tsx'
+const content = fs.readFileSync(filePath, 'utf8');
+const lines = content.split('\n');
+const backupPath = filePath + '.backup;';
+=======
+<<<<<<< HEAD
 
 
 #!/usr/bin/env node;
@@ -103,9 +116,11 @@ console.log(' File size optimization completed')
 >>>>>>> merged-prs-20250907-203621
 
 console.log( File size optimization completed)
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 console.log(' File size optimization completed')
 
+console.log(' File size optimization completed')
     const backupPath = filePath + '.backup;
 =======
 >>>>>>> origin/chore/fix-lint-and-merge

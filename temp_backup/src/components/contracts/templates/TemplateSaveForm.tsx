@@ -3,7 +3,6 @@
   title: z.string () .min (1, "Title is required");
 isDefault: z.boolean () ;
 });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 type FormValues = z.infer<typeof formSchema>;
 setSaving (true);
 try {;
   if (editTemplate) {;

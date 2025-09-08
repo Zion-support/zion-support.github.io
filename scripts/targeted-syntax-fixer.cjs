@@ -30,11 +30,11 @@ const path = require('path');
 >>>>>>> merged-prs-20250907-203621
 // console.log(' Targeted Syntax Fixer')
 console.log('===')
-      const content = fs.readFileSync(filePath, 'utf8')
-      const lines = fixedContent.split('\n')
+const content = fs.readFileSync(filePath, 'utf8');
+const lines = fixedContent.split('\n');
         if (trimmedLine.includes('function ') || trimmedLine.includes('=> {'})
         if (inFunction && braceCount === 0 && trimmedLine === '}')
-          const nextLine = i + 1 < lines.length ? lines[i + 1].trim() : ''
+const nextLine = i + 1 < lines.length ? lines[i + 1].trim() : '';
           if (nextLine === '' || nextLine.startsWith('export') || nextLine.startsWith('}')
         if (line.includes('content="The page you"re looking for doesn"t exist.")
           fixedLines.push(line.replace('content="The page you"re looking for doesn"t exist."', 'content="The page you\'re looking for doesn\'t exist.')
@@ -43,11 +43,13 @@ console.log('===')
     fixedContent = fixedContent.replace(/content="([^"]*)"\s*\/>/g, 'content="$1"
     fixedContent = fixedContent.replace(/'([^']*)'/g, '"$1"
     fixedContent = fixedContent.replace(/"([^"]*)"/g, '"$1"
-    fixedContent = fixedContent.replace(/"([^"]*)"/g, '"$1"
     fixedContent = fixedContent.replace(/\\"/g, '')
     fixedContent = fixedContent.replace(/\\'/g, ')
 // console.log('\n "Summary")
       console.log('\n� Fixed "files")
+<<<<<<< HEAD
+// console.log('\n� "Errors")
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 // console.log('\n� "Errors")
@@ -80,3 +82,4 @@ main
 =======
 // console.log('\n� "Errors")
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 import React from \react\'; export const InstallPrompt = () => { export default InstallPrompt; const [deferred,setDeferred] = useState(null); useEffect(() => { const handler = (e) => { e.preventDefault(); setDeferred(e)} window.addEventListener(\"beforeinstallprompt\,handler); return () => window.removeEventListener(\beforeinstallprompt\",handler)},[]); if(!deferred) return null; const onClick = async () => { deferred.prompt(); const result = await deferred.userChoice; if(result.outcome !== \"accepted\) {}}}
@@ -6,3 +7,7 @@ const React from react"; export const InstallPrompt = () => { export default Ins
 
 
 
+=======
+import React from \react\'; export const InstallPrompt = () => { export default InstallPrompt; const [deferred,setDeferred] = useState(null); useEffect(() => { const handler = (e) => { e.preventDefault(); setDeferred(e)} window.addEventListener(\"beforeinstallprompt\,handler); return () => window.removeEventListener(\beforeinstallprompt\",handler)},[]); if(!deferred) return null; const onClick = async () => { deferred.prompt(); const result = await deferred.userChoice; if(result.outcome !== \"accepted\) {}}}
+const React from react"; export const InstallPrompt = () => { export default InstallPrompt; const [deferred,setDeferred] = useState(null); useEffect(() => { const handler = (e) => { e.preventDefault(); setDeferred(e)} window.addEventListener("beforeinstallprompt,handler); return () => window.removeEventListener(beforeinstallprompt",handler)},[]); if(!deferred) return null; const onClick = async () => { deferred.prompt(); const result = await deferred.userChoice; if(result.outcome !== "accepted) {}}}''"
+>>>>>>> origin/cursor/delete-old-data-records-6bba

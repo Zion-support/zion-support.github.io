@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 } catch (error) {console.error('❌ Not in a git repository');
     process.exit(1);
@@ -61,6 +62,28 @@ try {;
                         execSync(`git checkout --theirs "${file}"`);
 
 
+=======
+#!/usr/bin/env node
+const { execSync } = require($2);
+const fs = require($2);
+console.log($2);
+try {
+    // Check if we're in a git repository
+    execSync($2);
+    console.log('✅ Git repository detected')
+} catch (error) {
+    console.error($2);
+    process.exit(1)
+}
+
+try {
+    // Ensure clean working directory
+    const status = execSync($2);
+    if (status.trim()) {
+        console.log($2);
+        execSync('git stash push -m "Auto-stash before merge process"')
+    }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     // Fetch latest changes
     console.log($2);
@@ -92,6 +115,7 @@ try {;
                     execSync(`git add "${file}"`)
                 }
             }
+<<<<<<< HEAD
 
 
             // Commit the merge;
@@ -178,3 +202,46 @@ try {;
 
 
 
+=======
+            
+            // Commit the merge
+            execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"')
+        }
+    }
+
+    // Get all branches
+    console.log($2);
+    const branches = execSync($2);
+    const branchList = $2;
+    console.log($2);
+    branchList.forEach(branch = $2;
+    // Merge each branch
+    for (const branch of branchList) {
+        try {
+            const branchName = branch.replace($2);
+            console.log($2);
+            // Checkout the branch
+            execSync($2);
+            // Merge into main
+            execSync($2);
+            execSync($2);
+            console.log(`✅ Successfully merged ${branchName}`)
+        } catch (error) {
+            console.log($2);
+            // Continue with other branches
+        }
+    }
+
+    // Push all changes
+    console.log($2);
+    execSync($2);
+    console.log($2);
+    console.log($2);
+    console.log($2);
+    console.log('✅ Repository is now clean and up to date')
+
+} catch (error) {
+    console.error($2);
+    process.exit(1)
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,4 +1,4 @@
-</div> <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > {
+</div> <div className='mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' > {
   [ {
   name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' 
 }, {

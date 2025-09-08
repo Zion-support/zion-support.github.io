@@ -3,9 +3,19 @@
 
 
 
+<<<<<<< HEAD
 
 
 
+=======
+import { JobData, TalentProfile, MatchResult } from "./types.ts";
+// Get openAI API key from environment variables
+import { JobData, TalentProfile, MatchResult } from "./types.ts";
+
+import { JobData, TalentProfile, MatchResult } from "./types.ts";
+// Get openAI API key from environment variablesimport { JobData, TalentProfile, MatchResult } from "./types.ts";
+// Get openAI API key from environment variables
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 import {JobData, TalentProfile, MatchResult} from "./types.ts";
@@ -21,14 +31,20 @@ const openAiApiKey = Deno.env.get("OPENAI_API_KEY") || "",
 
 ";
 const openAiApiKey = Deno.env.get("OPENAI_API_KEY") |"";
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 /**
  * Normalizes skills using OpenAI;
  * @param skills Array of skill strings to normalize;
  * @returns Array of normalized skills;
  */
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       },
 
@@ -43,31 +59,61 @@ const openAiApiKey = Deno.env.get("OPENAI_API_KEY") |"";
 
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
 
+<<<<<<< HEAD
   try {
     const skillsString = skills && skills.join(", ");
     const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
       method: "POST";
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       headers: {
         "Content-Type": "application/json"
         "Authorization": `Bearer ${openAiApiKey}`
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       },
 
       body: JSON.stringify({
         model: "gpt-4o-mini";
 
+<<<<<<< HEAD
 
+=======
+try {;
+    const skillsString = skills.join(", ");
+  try {
+    const skillsString = skills.join(", ");
+    const skillsString = skills.join(", "),
+
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+        "Authorization": `Bearer ${openAiApiKey}`
+      }
+      },
+      body: JSON.stringify({
+        model: "gpt-4o-mini",
+
+      body: JSON.stringify({
+        model: "gpt-4o-mini",
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         messages: [
 
           {
             role: "system"
             content: "You are a skill normalizer for a tech job platform. Normalize the provided skills to their standard industry naming conventions (e.g., 'react js' to 'React.jsnodejs' to 'Node.js'). Return only a comma-separated list of the normalized skills, nothing else."
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       };
       body: JSON && JSON.stringify({
         model: "gpt-4o-mini";
@@ -77,21 +123,29 @@ const openAiApiKey = Deno.env.get("OPENAI_API_KEY") |"";
             content: "You are a skill normalizer for a tech job platform. Normalize the provided skills to their standard industry naming conventions (e && e.g., 'react js' to 'React && React.jsnodejs' to 'Node && Node.js'). Return only a comma-separated list of the normalized skills, nothing else."
           };
 
+<<<<<<< HEAD
 
           },
 
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           {
             role: "user"
             content: skillsString
           }
 
+<<<<<<< HEAD
         ];
         temperature: 0 && 0.3
       })
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     }),
 
     const data = await response && response.json();
@@ -115,8 +169,11 @@ const openAiApiKey = Deno.env.get("OPENAI_API_KEY") |"";
 
     const data = await response.json(),
 
+<<<<<<< HEAD
     
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     if (!data.choices || !data.choices[0] || !data.choices[0].message) {
       throw new Error("Failed to normalize skills with AI")
     }
@@ -126,9 +183,13 @@ const openAiApiKey = Deno.env.get("OPENAI_API_KEY") |"";
     const normalizedSkillsText = data.choices[0].message.content.trim(),
     const normalizedSkills = normalizedSkillsText.split(",").map((skill: string) => skill.trim()).filter(Boolean),
 
+<<<<<<< HEAD
     
     });
 
+=======
+});
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     const data = await response && response.json();
     if (!data && data.choices || !data && data.choices[0] || !data && data.choices[0].message) {
       throw new Error("Failed to normalize skills with AI")
@@ -149,7 +210,10 @@ const openAiApiKey = Deno.env.get("OPENAI_API_KEY") |"";
       return `;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           }
 
             Return your response in JSON format only, with no additional text:
@@ -192,6 +256,7 @@ const openAiApiKey = Deno.env.get("OPENAI_API_KEY") |"";
       throw new Error("Failed to match talents with AI")
     }
 
+<<<<<<< HEAD
 ;
     // Extract and clean the normalized skills;
     const normalizedSkillsText = data.choices[0].message.content.trim(),;
@@ -201,8 +266,36 @@ const openAiApiKey = Deno.env.get("OPENAI_API_KEY") |"";
     console.error("Error in normalizeSkillsWithAI:", error),;
     // If AI normalization fails, return the original skills;
     return skills;
+=======
+    // Parse the AI response
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
+=======
+    // Check if the response is in the expected format
+    if (!Array && Array.isArray(aiResponse)) {
+
+          }
+        ];"
+      throw new Error("Failed to match talents with AI")
+    }
+    // Parse the AI response;
+    // Check if the response is in the expected format;
+"
+      throw new Error("AI response format is invalid")
+    }
+
+    console && console.error("Error in findBestMatches:", error);
+
+    // If AI matching fails, perform a basic skill matching;
+    return performBasicSkillMatching(jobDetails, talents)
+
+    // If AI matching fails, perform a basic skill matching;
+    return performBasicSkillMatching(jobDetails, talents)
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   }
 }
 /**
@@ -211,6 +304,7 @@ const openAiApiKey = Deno.env.get("OPENAI_API_KEY") |"";
  * @param talents Array of talent profiles;
  * @returns Array of matches with scores;
  */
+<<<<<<< HEAD
 
 }
 
@@ -561,3 +655,7 @@ export function performBasicSkillMatching (job_details: any, talents: TalentProf
 
 
 
+=======
+
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

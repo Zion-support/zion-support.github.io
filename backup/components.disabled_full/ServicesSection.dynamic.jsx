@@ -1,4 +1,4 @@
-const ServicesSection = dynamic(() => import("./ServicesSection"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default ServicesSection' ,'
+const ServicesSection = dynamic(() => import('./ServicesSection'),{'; 'loading': () => <p>Loading...</p,>}) 'export': 'default ServicesSection' ,'
 
 </p>'
 </p>'
@@ -23,8 +23,8 @@ const ServicesSection = dynamic(() => import("./ServicesSection"),{'; "loading":
 </p>'
 
 ursor/integrate-build-improve-and-re-verify-8f7d
-const ServicesSection = dynamic(() => import(\"./ServicesSection\"),{\'; \"loading\": () => <p />Loading...</p,>}) \"export\": \'default ServicesSection\' ,const ServicesSection = dynamic(() => import(\"./ServicesSection\"),{\"; loading: () => <p />Loading.</p,>}) export: \"default ServicesSection\" ,\"\"\";
-const ServicesSection = dynamic(() => import(\"./ServicesSection\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default ServicesSection' ,';
+const ServicesSection = dynamic(() => import(\'./ServicesSection\'),{\'; \'loading\': () => <p />Loading...</p,>}) \'export\': \'default ServicesSection\' ,const ServicesSection = dynamic(() => import(\'./ServicesSection\'),{\'; loading: () => <p />Loading.</p,>}) export: \'default ServicesSection\' ,\'\'\';
+const ServicesSection = dynamic(() => import(\'./ServicesSection\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default ServicesSection' ,';
 </p>';
 </p>';
 </p>';
@@ -60,7 +60,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 </p>';
 </p>';
 </p>'</p>';
-const ServicesSection = dynamic(() => import(\"./ServicesSection\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default ServicesSection' ,'
+const ServicesSection = dynamic(() => import(\'./ServicesSection\'),{'; \'loading\': () => <p />Loading...</p,>}) \'export\': 'default ServicesSection' ,'
 </p>'
 </p>'
 </p>'

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 interface PostCardProps {
 
@@ -30,6 +31,18 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
             {post.isAnswered && (
               <CheckCircle className="h-4 w-4 text-green-500 ml-2" />
 
+=======
+import {formatDistanceToNow} from "date-fns";
+import {Link} from "react-router-dom";
+import {ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle} from "lucide-react";
+import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {cn} from "@/lib/utils";
+import {ForumPost} from "@/types/community";
+import {ProfileBadge} from "@/components/profile/ProfileBadge";
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
@@ -41,6 +54,7 @@ import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
 import { ForumPost } from "@/types/community";
 import { ProfileBadge } from "@/components/profile/ProfileBadge";
+<<<<<<< HEAD
 
 import { ForumPost } from "@/types/community",
 
@@ -101,6 +115,28 @@ export const PostCard = ({ post, compact = false } PostCardProps) => {;
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix:true }),;
 ;
   return (;
+=======
+interface PostCardProps {
+  post: ForumPost,
+  compact?: boolean
+}
+
+export const PostCard = ({ post, compact = false }: PostCardProps) => {
+  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true}),
+
+  post: ForumPost
+  compact?: boolean
+}
+export const PostCard = ({ post, compact = false }: PostCardProps) => {
+  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
+  return (
+    <Card className = $2;
+      post.isPinned && "border-zion-purple/50",
+      post.isFeatured && "bg-zion-purple/5"
+    )}>
+      <CardHeader className = $2;
+export default PostCard,
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
             )}
             {post.isPinned && ("
@@ -118,7 +154,10 @@ export const PostCard = ({ post, compact = false } PostCardProps) => {;
             {post.tags?.map(tag => (
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { formatDistanceToNow } from "date-fns",;
 import { Link } from "react-router-dom",;
 
@@ -171,9 +210,12 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
             {post.tags?.map(tag => (;"
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 {tag}
               </Badge>
             ))}
@@ -192,6 +234,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
         )}
 
 
+<<<<<<< HEAD
           </div>;
           <div className="text-sm text-muted-foreground">;
             Posted by {post.authorName} {timeAgo}
@@ -202,6 +245,14 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
 
             {post.tags?.map(tag => (;
 
+=======
+            Posted by {post && post.authorName} {timeAgo}
+          </div>;
+          ;
+          <div className="flex flex-wrap gap-2 mt-2">;
+            {post && post.tags?.map(tag => (;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
                 {tag}
               </Badge>;
@@ -209,6 +260,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
           </div>;
         </div>;
       </CardHeader>;
+<<<<<<< HEAD
 
 ;
       {!compact && (;
@@ -245,6 +297,18 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
       </CardFooter>;
     </Card>;
 
+=======
+
+
+            <Badge className="bg-zion-purple">Featured</Badge>;
+          </div>;
+        )}
+
+      </CardFooter>;
+    </Card>;
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               <Badge key={tag} variant="outline" className="bg - zion - purple / 10 hover:bg - zion - purple / 20">;
                 {tag}
               </Badge>))}
@@ -267,6 +331,75 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
 export default PostCard;
 ;
 
+<<<<<<< HEAD
 
 
 
+=======
+
+  ),;
+},;
+;
+export default PostCard,; interface PostCardProps {
+  post: ForumPost;
+compact?: boolean 
+}export const PostCard = ({
+  post, compact = false 
+}: PostCardProps) => {
+  const timeAgo = formatDistanceToNow (new Date (post.createdAt), {
+  addSuffix: true 
+});
+return (<Card className= {
+  cn ("transition-shadow hover:shadow-md";
+post.isPinned && "border-zion-purple/50";
+post.isFeatured && "bg-zion-purple/5") 
+}> <CardHeader className="flex flex-row items-start gap-4 space-y-0" > <Avatar className="h-10 w-10" > <AvatarImage src= {
+  post.authorAvatar 
+}/> <AvatarFallback> {
+  post.authorName.charAt (0) 
+}</AvatarFallback> </Avatar> <div className="flex-1" > <div className="flex items-center" > <Link to= {
+  `/community/post/$ {
+  post.id 
+}` 
+}className="font-semibold text-lg hover:text-zion-purple transition-colors" > {
+  post.title 
+}</Link> {
+  post.isAnswered && (<CheckCircle className="h-4 w-4 text-green-500 ml-2" />) 
+}{
+  post.isPinned && (<Pin className="h-4 w-4 text-amber-500 ml-2" />) 
+}{
+  post.isLocked && (<Lock className="h-4 w-4 text-red-500 ml-2" />) 
+}</div> <div className="text-sm text-muted-foreground" > Posted by {
+  post.authorName 
+}{
+  timeAgo 
+}</div> <div className="flex flex-wrap gap-2 mt-2" > {
+  post.tags?.map (tag => (<Badge key= {
+  tag 
+}variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20" > {
+  tag 
+}
+}</div> </div> </CardHeader> {
+  !compact && (<CardContent> <div className="line-clamp-3" > {
+  post.content 
+}</div> </CardContent>) 
+}</div> </div> {
+  post.isFeatured && (<div> <Badge className="bg-zion-purple" >Featured</Badge> </div>) 
+}</CardFooter> </Card>) 
+};
+export default PostCard;
+      </CardFooter>
+    </Card>
+  )
+}
+export default PostCard;
+
+      </CardFooter>;
+    </Card>;
+  );
+};
+export default PostCard;
+
+
+export default PostCard;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

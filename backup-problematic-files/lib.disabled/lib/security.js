@@ -11,10 +11,13 @@ export class SecurityUtils {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex && emailRegex.test(email)}
 
+<<<<<<< HEAD
   static generateCSRFToken() {
   return crypto && crypto.randomBytes(32).toString("hex")}
   static hashPassword(password) {
   return crypto && crypto.createHash("sha256").update(password).digest("hex")}
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   static validatePassword(password) {
   // At least 8 characters, 1 uppercase, 1 lowercase, 1 number;
@@ -28,4 +31,7 @@ export class SecurityUtils {
       """: "&quot;",
 
       """: "&#039;"}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -30,8 +30,8 @@ import {Search;
   MapPin;} from 'lucide-react';import {Search, Star, Users, TrendingUp, DollarSign, Clock;
   CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe;}
   Zap, Sparkles, Shield, Target, Cpu, Database, Cloud;}
-  Search,Star,Users,TrendingUp,DollarSign,Clock,CheckCircle,ArrowRight,Rocket,Brain,Atom,Globe,Zap,Sparkles,Shield,Target,Cpu,Database,Cloud,Lock,ShieldCheck,Eye,Heart,Share2,Download,Phone,class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div />Something went wrong.</div>;}
-  Search,Star,Users,TrendingUp,DollarSign,Clock,CheckCircle,ArrowRight,Rocket,Brain,Atom,Globe,Zap,Sparkles,Shield,Target,Cpu,Database,Cloud,Lock,ShieldCheck,Eye,Heart,Share2,Download,Phone,class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return {hasError: true }
+  Search,Star,Users,TrendingUp,DollarSign,Clock,CheckCircle,ArrowRight,Rocket,Brain,Atom,Globe,Zap,Sparkles,Shield,Target,Cpu,Database,Cloud,Lock,ShieldCheck,Eye,Heart,Share2,Download,Phone,class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }static getDerivedStateFromError(error) {return { hasError: true }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div />Something went wrong.</div>;}
+  Search,Star,Users,TrendingUp,DollarSign,Clock,CheckCircle,ArrowRight,Rocket,Brain,Atom,Globe,Zap,Sparkles,Shield,Target,Cpu,Database,Cloud,Lock,ShieldCheck,Eye,Heart,Share2,Download,Phone,class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }static getDerivedStateFromError(error) {return {hasError: true }
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
   return <div />Something went wrong.</div>;}
     }return this.props.children;
@@ -221,7 +221,7 @@ const contactInfo = {mobile: '+1 302 464 0950',
         </title>;
         <meta;
           name='description';
-          content="Explore Zion Tech Group's revolutionary 2027 services showcase featuring cutting-edge AI consciousness evolution, quantum computing, autonomous AI civilizations, and practical micro SAAS solutions for businesses.";
+          content='Explore Zion Tech Group's revolutionary 2027 services showcase featuring cutting-edge AI consciousness evolution, quantum computing, autonomous AI civilizations, and practical micro SAAS solutions for businesses.';
         />;
         <meta;
           name='keywords';
@@ -246,43 +246,43 @@ const contactInfo = {mobile: '+1 302 464 0950',
         />      </Head>        {/* Open Graph */}
               </span>;
             </h1>;
-            <p className="text-xl md:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto" />;
+            <p className='text-xl md:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto' />;
               Experience the future of technology with our revolutionary 2027 services. From AI consciousness evolution to practical micro SAAS solutions.;
             </p>;
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12" />;
-              <div className="text-center" />;
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2" />;
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12' />;
+              <div className='text-center' />;
+                <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2' />;
                   {allServices.length}+;
                 </div>;
-                <div className="text-cyan-300" />Services</div>;
+                <div className='text-cyan-300' />Services</div>;
               </div>;
-              <div className="text-center" />;
-                <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2" />;
+              <div className='text-center' />;
+                <div className='text-3xl md:text-4xl font-bold text-purple-400 mb-2' />;
                   15+;
                 </div>;
-                <div className="text-purple-300" />Categories</div>;
+                <div className='text-purple-300' />Categories</div>;
               </div>;
-              <div className="text-center" />;
-                <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2" />;
+              <div className='text-center' />;
+                <div className='text-3xl md:text-4xl font-bold text-pink-400 mb-2' />;
                   1000+;
                 </div>;
-                <div className="text-pink-300" />Customers</div>;
+                <div className='text-pink-300' />Customers</div>;
               </div>;
-              <div className="text-center" />;
-                <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2" />;
+              <div className='text-center' />;
+                <div className='text-3xl md:text-4xl font-bold text-green-400 mb-2' />;
                   4.9★;
                 </div>;
-                <div className="text-green-300" />Rating</div>;
+                <div className='text-green-300' />Rating</div>;
               </div>;
             </div>;
-                href="/contact";
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2">;
-                <Rocket className="w-5 h-5" />;
+                href='/contact';
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2'>;
+                <Rocket className='w-5 h-5' />;
                 <span />Get Started</span>;
               </Link>;
               <Link;
-                href="/pricing";
+                href='/pricing';
         />;
       </Head>;
       <UltraFuturisticNavigation2027 />;
@@ -290,13 +290,13 @@ const contactInfo = {mobile: '+1 302 464 0950',
 <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8' />;
         <div className='max-w-7xl mx-auto text-center' />;
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            initial={{ opacity: 0, y: 30 ,}
+            initial={ opacity: 0, y: 30 }
+            animate={ opacity: 1, y: 0 }
+            transition={ duration: 0.8 }
+            initial={ opacity: 0, y: 30 ,}
 }
-            animate={{ opacity: 1, y: 0 }}
-            transition={{duration: 0.8 }
+            animate={ opacity: 1, y: 0 }
+            transition={duration: 0.8 }
 }
            />;
 <h1 className='text-5xl md:text-7xl font-bold mb-6' />;
@@ -360,16 +360,16 @@ const contactInfo = {mobile: '+1 302 464 0950',
           </motion.div>;
         </div>;
       </section>;
-                className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2">;
-                <DollarSign className="w-5 h-5" />;
+                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2'>;
+                <DollarSign className='w-5 h-5' />;
                 <span />View Pricing</span>;
               </Link>;
             </div>;
           </motion && motion.div>;
         </div>;
       </section>;{/* Search and Filters */}<input;
-                  type="text";
-                  placeholder="Search services...";
+                  type='text';
+                  placeholder='Search services...';
                   value={searchTerm}
                 </select />;
               </div>;{/* Price Range Filter */}
@@ -385,7 +385,7 @@ const contactInfo = {mobile: '+1 302 464 0950',
                   {priceRanges && priceRanges.map(range => (                    <option key={range && range.id} value={range && range.id} />                <select;
                   value={selectedPriceRange}
                   onChange={(e) = /> setSelectedPriceRange(e && e.target.value)}
-                  className="w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400";
+                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400';
                 >;
                   {priceRanges && priceRanges.map((range) => (<option key={range && range.id} value={range && range.id} />;
                   className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus: outline-none focus:border-cyan-400'>
@@ -394,7 +394,7 @@ const contactInfo = {mobile: '+1 302 464 0950',
 } />                <select;
                   value={selectedPriceRange}
                   onChange={(e) = /> setSelectedPriceRange(e && e.target.value)}
-                  className="w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus: outline-none focus:border-cyan-400">
+                  className='w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus: outline-none focus:border-cyan-400'>
 
                   {priceRanges && priceRanges.map((range) => (<option key={range && range.id} value={range && range.i,}
 } />;
@@ -458,7 +458,7 @@ const contactInfo = {mobile: '+1 302 464 0950',
                   Sort By;
                 </label>;{/* Sort By */}
               <div />;
-                <label className="block text-cyan-400 font-medium mb-2" htmlFor="input-Sort By" />Sort By</label>;
+                <label className='block text-cyan-400 font-medium mb-2' htmlFor='input-Sort By' />Sort By</label>;
                 <select;
                   value={sortBy}
                   onChange={e = /> setSortBy(e && e.target.value)}
@@ -469,9 +469,9 @@ const contactInfo = {mobile: '+1 302 464 0950',
                   <option value='roi' />ROI</option>                </select>                <select;
                   value={sortBy}
                  />;
-                  <option value="name" />Name</option>;
-                  <option value="price" />Price</option>;
-                  <option value="roi" />ROI</option>;
+                  <option value='name' />Name</option>;
+                  <option value='price' />Price</option>;
+                  <option value='roi' />ROI</option>;
                 </select>;
               </div>;
             </div>;
@@ -479,9 +479,9 @@ const contactInfo = {mobile: '+1 302 464 0950',
         </div>;
       </section>;
       {/* Services Grid */}
-      <section className="px-4 sm:px-6 lg:px-8 mb-20" />;
-        <div className="max-w-7xl mx-auto" />;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" />;
+      <section className='px-4 sm:px-6 lg:px-8 mb-20' />;
+        <div className='max-w-7xl mx-auto' />;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' />;
 <label className='block text-cyan-400 font-medium mb-2' />;
                   Sort By;
                 </label>;
@@ -509,23 +509,23 @@ const contactInfo = {mobile: '+1 302 464 0950',
       {/* Services Grid */}
       <section className='px - 4 sm:px - 6 lg:px - 8 mb - 20' />;
         <div className='max - w-7xl mx - auto' />;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8' />            <AnimatePresence />      <section className="px - 4 sm:px - 6 lg:px-8 mb-20" />;
-        <div className="max-w-7xl mx-auto" />;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-8" />;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8' />            <AnimatePresence />      <section className='px - 4 sm:px - 6 lg:px-8 mb-20' />;
+        <div className='max-w-7xl mx-auto' />;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-8' />;
             <AnimatePresence />;
               {sorted_services.map ((service, index) => (<motion.div;}
                   key={service.id}
-                  initial={{ opacity: 0, coordinate_y: 30, scale: 0.9 }}
-                  animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}exit={{ opacity: 0, y: -30, scale: 0.9 }}
+                  initial={ opacity: 0, coordinate_y: 30, scale: 0.9 }
+                  animate={ opacity: 1, coordinate_y: 0, scale: 1 }
+                  transition={ duration: 0.5, delay: index * 0.1 }exit={ opacity: 0, y: -30, scale: 0.9 }
 className='group';
                  />;
-                  initial={{ opacity: 0, coordinate_y: 30, scale: 0.9 ,}
+                  initial={ opacity: 0, coordinate_y: 30, scale: 0.9 ,}
 }
-                  animate={{ opacity: 1, coordinate_y: 0, scale: 1 ,}
+                  animate={ opacity: 1, coordinate_y: 0, scale: 1 ,}
 }
-                  transition={{ duration: 0.5, delay: index * 0.1 ,}
-}exit={{ opacity: 0, y: -30, scale: 0.9 ,}
+                  transition={ duration: 0.5, delay: index * 0.1 ,}
+}exit={ opacity: 0, y: -30, scale: 0.9 ,}
 }
 className='group'>
 
@@ -535,9 +535,9 @@ className='group'>
                       <div className='text-4xl' />🚀</div>;
                     </div>;
                     {/* Service Info */}
-                    <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition-colors duration-300" />;
+                    <h3 className='text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition-colors duration-300' />;
                       {service.name}</h3>;
-                    <p className="text - cyan - 300 text - sm mb - 4 line-clamp-3" />;
+                    <p className='text - cyan - 300 text - sm mb - 4 line-clamp-3' />;
                       {service.description}
                       <div className='text-2xl font-bold text-white' />                        {service.price}</h3>;
                     <p className='text-cyan-300 text-sm mb-4 line-clamp-3' />;
@@ -547,24 +547,24 @@ className='group'>
                       <div className='text-2xl font-bold text-white' />;
                         {service.price}</div>;
                     </div>;
-                    <div className="flex items-start justify-between mb-4" />;
-                      <div className="text-4xl" />🚀</div>;
+                    <div className='flex items-start justify-between mb-4' />;
+                      <div className='text-4xl' />🚀</div>;
                     </div>;
                     {/* Service Info */}
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300" />;
+                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300' />;
                       {service && service.name}
                     </h3>;
-                    <p className="text-cyan-300 text-sm mb-4 line-clamp-3" />;
+                    <p className='text-cyan-300 text-sm mb-4 line-clamp-3' />;
                       {service && service.description}
                     </p>;
                     {/* Price */}
                     <div className='mb-4' />;
-                      <div className='text-2xl font-bold text-white' />                    <div className="mb-4" />;
-                      <div className="text-2xl font-bold text-white" />;
+                      <div className='text-2xl font-bold text-white' />                    <div className='mb-4' />;
+                      <div className='text-2xl font-bold text-white' />;
                         {service && service.price}
                       </div>;
                     </div>;
-                        {service.features.length > 3 && (<div className="text-cyan-400 text-sm" />;}
+                        {service.features.length > 3 && (<div className='text-cyan-400 text-sm' />;}
                     {/* Features */}
 <div className='mb-6' />;
                       <h4 className='text-cyan-400 font-semibold mb-3' />;
@@ -588,15 +588,15 @@ className='group'>
                           </div>;
                         )}{/* ROI */}</div>;
                     </div>;
-                    <div className="mb-6 text-center" />;
-                      <div className="text-green-400 font-semibold text-lg" />ROI: {service.roi}</div>;
-                      <div className="text-gray-400 text-xs" />Return on Investment</div>;
+                    <div className='mb-6 text-center' />;
+                      <div className='text-green-400 font-semibold text-lg' />ROI: {service.roi}</div>;
+                      <div className='text-gray-400 text-xs' />Return on Investment</div>;
 <div className='mb-6 text-center' />;
                       <div className='text-green-400 font-semibold text-lg' />;
                         ROI: {service.roi}
-                      <div className="text-green-400 font-semibold text-lg" />ROI: {service.ro,}
+                      <div className='text-green-400 font-semibold text-lg' />ROI: {service.ro,}
 }</div>;
-                      <div className="text-gray-400 text-xs" />Return on Investment</div>;
+                      <div className='text-gray-400 text-xs' />Return on Investment</div>;
 <div className='mb-6 text-center' />;
                       <div className='text-green-400 font-semibold text-lg' />;
                         ROI: {service.ro,}
@@ -617,10 +617,10 @@ className='group'>
                       </div>;
                     </div>;
                     {/* Actions */}
-                    <div className="flex space-x-3" />;
+                    <div className='flex space-x-3' />;
                       <Link;
                         href={service && service.link}
-                        className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center text-sm" />;
+                        className='flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center text-sm' />;
                         Learn More;
                       </Link>;
                       <Link;
@@ -633,8 +633,8 @@ className='group'>
                         Learn More;
                       </Link>;
                       <Link;
-                        href="/contact";
-                        className="px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm";
+                        href='/contact';
+                        className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm';
 href='/contact';
                         className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm';
                        />;
@@ -642,13 +642,13 @@ href='/contact';
 
                         Contact;
                     </div>;
-                        className="px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm">;
+                        className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'>;
                         Contact;
                       </Link>;
-                    </div>;className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                        href="/contact";
+                    </div>;className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                        href='/contact';
                     {/* Category Badge */}<div className='mt-4' />;
-                      <span className='inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30' />                        {service && service.category}                    <div className="mt-4" />;
-                      <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30" />;
+                      <span className='inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30' />                        {service && service.category}                    <div className='mt-4' />;
+                      <span className='inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30' />;
                         {service && service.category}
                       </span>;
                     </div>;
@@ -663,11 +663,11 @@ href='/contact';
               ))}
           {/* No Results */}
           {sortedServices && sortedServices.length === 0 && (<motion&& motion.div;}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}onClick={() = /> {setSearchTerm('')setSelectedCategory('all')setSelectedPriceRange('all')}}
+              initial={ opacity: 0 }
+              animate={ opacity: 1 }onClick={() = /> {setSearchTerm('')setSelectedCategory('all')setSelectedPriceRange('all')}
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all')setSelectedPriceRange('all')className='text-center py-20';
             >;
-              animate={{ opacity: 1 }}onClick={() => {setSearchTerm('')setSelectedCategory('all')setSelectedPriceRange('all'),}
+              animate={ opacity: 1 }onClick={() => {setSearchTerm('')setSelectedCategory('all')setSelectedPriceRange('all'),}
 }
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all')setSelectedPriceRange('all')className='text-center py-20'>
 
@@ -679,12 +679,12 @@ href='/contact';
                 Try adjusting your search criteria or browse all services.;
               </p>;
               <button;
-                onClick={() = /> {setSearchTerm('')setSelectedCategory('all')setSelectedPriceRange('all')}}
+                onClick={() = /> {setSearchTerm('')setSelectedCategory('all')setSelectedPriceRange('all')}
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300';
-                }}
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300";
+                }
+                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300';
               >;
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
+                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'>
 
                 Clear Filters;
               </button>;
@@ -726,25 +726,25 @@ href='/contact';
                 href='/pricing';
                 className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300' />              Ready to Transform Your Business?;
             </h2>;
-            <p className="text-cyan-300 mb-8 text-lg" />;
+            <p className='text-cyan-300 mb-8 text-lg' />;
               Contact our team to discuss how our 2027 services can revolutionize your operations and drive unprecedented growth.;
             </p>;
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8" />;
-              <div className="flex items-center justify-center space-x-3" />;
-                <Phone className="w-5 h-5 text-cyan-400" />;
-                <span className="text-white" />{contactInfo && contactInfo.mobile}</span>;
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8' />;
+              <div className='flex items-center justify-center space-x-3' />;
+                <Phone className='w-5 h-5 text-cyan-400' />;
+                <span className='text-white' />{contactInfo && contactInfo.mobile}</span>;
               </div>;
-              <div className="flex items-center justify-center space-x-3" />;
-                <Mail className="w-5 h-5 text-purple-400" />;
-                <span className="text-white" />{contactInfo && contactInfo.email}</span>;
+              <div className='flex items-center justify-center space-x-3' />;
+                <Mail className='w-5 h-5 text-purple-400' />;
+                <span className='text-white' />{contactInfo && contactInfo.email}</span>;
               </div>;
-              <div className="flex items-center justify-center space-x-3" />;
-                <MapPin className="w-5 h-5 text-pink-400" />;
-                <span className="text-white" />{contactInfo && contactInfo.address}</span>;
+              <div className='flex items-center justify-center space-x-3' />;
+                <MapPin className='w-5 h-5 text-pink-400' />;
+                <span className='text-white' />{contactInfo && contactInfo.address}</span>;
               </div>;
             </div>;
               <Link;
-                href="/contact";
+                href='/contact';
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25';
                />;
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25'>
@@ -764,29 +764,29 @@ href='/pricing';
         </div>;
       </section>;
       {/* Footer */}</div>;
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-2" />;
+            <h3 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-2' />;
               Zion Tech Group;
             </h3>;
-            <p className="text-cyan-300" />2027 Innovation Hub</p>;
+            <p className='text-cyan-300' />2027 Innovation Hub</p>;
           </div>;
-          <div className="text-cyan-300 text-sm" />;
+          <div className='text-cyan-300 text-sm' />;
             <p />&copy, 2027 Zion Tech Group. All rights reserved.</p>;
-            <p className="mt-2" />;
-              <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300" />Privacy Policy</Link>;
-          <div className="text-cyan-300 text-sm" />;
+            <p className='mt-2' />;
+              <Link href='/privacy' className='hover:text-cyan-400 transition-colors duration-300' />Privacy Policy</Link>;
+          <div className='text-cyan-300 text-sm' />;
             <p />&copy, 2027 Zion Tech Group. All rights reserved.</p>;
-            <p className="mt-2" />;
-              <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300" />Privacy Policy</Link>;
+            <p className='mt-2' />;
+              <Link href='/privacy' className='hover:text-cyan-400 transition-colors duration-300' />Privacy Policy</Link>;
               {' • '}
-              <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-300" />Terms of Service</Link>;
+              <Link href='/terms' className='hover:text-cyan-400 transition-colors duration-300' />Terms of Service</Link>;
               {' • '}
 }
-              <Link href="/contact" className="hover: text-cyan-400 transition-colors duration-300" />Contact Us</Link>;
+              <Link href='/contact' className='hover: text-cyan-400 transition-colors duration-300' />Contact Us</Link>;
                     </p>;
                     {/* Price */}
                     <div className='mb - 4' />;
-                      <div className='text - 2xl font - bold text - white' />                    <div className="mb-4" />;
-                      <div className="text - 2xl font-bold text-white" />;
+                      <div className='text - 2xl font - bold text - white' />                    <div className='mb-4' />;
+                      <div className='text - 2xl font-bold text-white' />;
                         {service.price}
                       </div>;
                     </div>;
@@ -805,11 +805,11 @@ href='/pricing';
                               {feature}
                             </span>;
                           </div>))}
-                        {service.features.length > 3 && (<div className='text - cyan - 400 text - sm' />                            +{service.features.length - 3} more features                        {service.features.slice (0, 3).map ((feature, idx) => (<div key={idx} className="flex items-center space-x-2" />;
-                            <CheckCircle className="w - 4 h - 4 text-green-400" />;
-                            <span className="text - gray-300 text-sm" />{feature}</span>;
+                        {service.features.length > 3 && (<div className='text - cyan - 400 text - sm' />                            +{service.features.length - 3} more features                        {service.features.slice (0, 3).map ((feature, idx) => (<div key={idx} className='flex items-center space-x-2' />;
+                            <CheckCircle className='w - 4 h - 4 text-green-400' />;
+                            <span className='text - gray-300 text-sm' />{feature}</span>;
                           </div>))}
-                        {service.features.length > 3 && (<div className="text - cyan-400 text-sm" />;}
+                        {service.features.length > 3 && (<div className='text - cyan-400 text-sm' />;}
                             +{service.features.length - 3} more features;
                           </div>)}
                             +{service.features.length - 3} more features;
@@ -839,25 +839,25 @@ href='/pricing';
                         href='/contact';
                         className='px - 4 py - 2 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 300 text - sm'                       />                    </div>;
                     {/* Actions */}
-                    <div className="flex space-x-3" />;
+                    <div className='flex space-x-3' />;
                       <Link;
                         href={service.link}
-                        className="flex - 1 px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - lg hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 text-center text-sm" />
+                        className='flex - 1 px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - lg hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 text-center text-sm' />
 
                         Learn More;
                       </Link>;
                       <Link;
                         href='/contact';
-                        className='px - 4 py - 2 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 300 text - sm'                        href="/contact";
-                        className="px - 4 py - 2 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 / 10 transition - all duration-300 text-sm" />
+                        className='px - 4 py - 2 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 300 text - sm'                        href='/contact';
+                        className='px - 4 py - 2 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 / 10 transition - all duration-300 text-sm' />
 
                         Contact;
                       </Link>;
                     </div>;
                     {/* Category Badge */}
                     <div className='mt - 4' />;
-                      <span className='inline - block px - 3 py - 1 bg - cyan - 500 / 20 text - cyan - 400 text - xs font - medium rounded - full border border - cyan - 500 / 30' />                        {service.category}                    <div className="mt-4" />;
-                      <span className="inline - block px - 3 py - 1 bg - cyan - 500 / 20 text - cyan - 400 text - xs font - medium rounded - full border border-cyan-500 / 30" />;
+                      <span className='inline - block px - 3 py - 1 bg - cyan - 500 / 20 text - cyan - 400 text - xs font - medium rounded - full border border - cyan - 500 / 30' />                        {service.category}                    <div className='mt-4' />;
+                      <span className='inline - block px - 3 py - 1 bg - cyan - 500 / 20 text - cyan - 400 text - xs font - medium rounded - full border border-cyan-500 / 30' />;
                         {service.category}
                       </span>;
                     </div>;
@@ -867,8 +867,8 @@ href='/pricing';
           </div>;
           {/* No Results */}
           {sorted_services.length === 0 && (<motion.div;}
-              initial={{ opacity: 0 }}
-              animate={{opacity: 1 }
+              initial={ opacity: 0 }
+              animate={opacity: 1 }
 }
               className='text - center py - 20' />
 
@@ -879,21 +879,21 @@ href='/pricing';
               <p className='text - cyan - 300 mb - 6' />;
                 Try adjusting your search criteria or browse all services.;
               </p>              <button;
-                on_click={() = /> {setSearchTerm ('')setSelectedCategory ('all')setSelectedPriceRange ('all')}}
-                className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'              >              className="text-center py-20";
+                on_click={() = /> {setSearchTerm ('')setSelectedCategory ('all')setSelectedPriceRange ('all')}
+                className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'              >              className='text-center py-20';
             >;
-                className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'              >              className="text-center py-20">
+                className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'              >              className='text-center py-20'>
 
-              <div className="text-6xl mb-4" />🔍</div>;
-              <h3 className="text - 2xl font - bold text-white mb-2" />No services found</h3>;
-              <p className="text - cyan-300 mb-6" />Try adjusting your search criteria or browse all services.</p>;
-                on_click={() => {setSearchTerm ('')setSelectedCategory ('all')setSelectedPriceRange ('all')}}
-                className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                  setSelectedPriceRange ('all')}}
-                className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition-all duration-300";
+              <div className='text-6xl mb-4' />🔍</div>;
+              <h3 className='text - 2xl font - bold text-white mb-2' />No services found</h3>;
+              <p className='text - cyan-300 mb-6' />Try adjusting your search criteria or browse all services.</p>;
+                on_click={() => {setSearchTerm ('')setSelectedCategory ('all')setSelectedPriceRange ('all')}
+                className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                  setSelectedPriceRange ('all')}
+                className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition-all duration-300';
               >;
                 className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                  setSelectedPriceRange ('all'),
 }
-                className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition-all duration-300">
+                className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition-all duration-300'>
 
                 Clear Filters;
               </button>;
@@ -935,34 +935,34 @@ href='/pricing';
                 href='/pricing';
                 className='px - 8 py - 4 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300'               />              Ready to Transform Your Business?;
             </h2>;
-            <p className="text - cyan - 300 mb-8 text-lg" />;
+            <p className='text - cyan - 300 mb-8 text-lg' />;
               Contact our team to discuss how our 2027 services can revolutionize your operations and drive unprecedented growth.;
             </p>;
-            <div className="grid grid - cols - 1 md:grid - cols - 3 gap-6 mb-8" />;
-              <div className="flex items - center justify-center space-x-3" />;
-                <Phone className="w - 5 h - 5 text-cyan-400" />;
-                <span className="text-white" />{contact_info.mobile}</span>;
+            <div className='grid grid - cols - 1 md:grid - cols - 3 gap-6 mb-8' />;
+              <div className='flex items - center justify-center space-x-3' />;
+                <Phone className='w - 5 h - 5 text-cyan-400' />;
+                <span className='text-white' />{contact_info.mobile}</span>;
               </div>;
-              <div className="flex items - center justify-center space-x-3" />;
-                <Mail className="w - 5 h - 5 text-purple-400" />;
-                <span className="text-white" />{contact_info.email}</span>;
+              <div className='flex items - center justify-center space-x-3' />;
+                <Mail className='w - 5 h - 5 text-purple-400' />;
+                <span className='text-white' />{contact_info.email}</span>;
               </div>;
-              <div className="flex items - center justify-center space-x-3" />;
-                <MapPin className="w - 5 h - 5 text-pink-400" />;
-                <span className="text-white" />{contact_info.address}</span>;
+              <div className='flex items - center justify-center space-x-3' />;
+                <MapPin className='w - 5 h - 5 text-pink-400' />;
+                <span className='text-white' />{contact_info.address}</span>;
               </div>;
             </div>;
-            <div className="flex flex - col sm:flex - row gap-4 justify-center" />;
+            <div className='flex flex - col sm:flex - row gap-4 justify-center' />;
               <Link;
-                href="/contact";
-                className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - lg shadow-cyan-500 / 25" />
+                href='/contact';
+                className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - lg shadow-cyan-500 / 25' />
 
                 Get Started Today;
               </Link>;
               <Link;
                 href='/pricing';
-                className='px - 8 py - 4 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300'                href="/pricing";
-                className="px - 8 py - 4 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition-all duration-300" />
+                className='px - 8 py - 4 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300'                href='/pricing';
+                className='px - 8 py - 4 border border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition-all duration-300' />
 
                 View Pricing Plans;
               </Link>;
@@ -1006,19 +1006,19 @@ href='/pricing';
                 Contact Us;
               </Link>            </p>              Z;
             </div>;
-            <h3 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text-transparent mb-2" />;
+            <h3 className='text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text-transparent mb-2' />;
               Zion Tech Group;
             </h3>;
-            <p className="text-cyan-300" />2027 Innovation Hub</p>;
+            <p className='text-cyan-300' />2027 Innovation Hub</p>;
           </div>;
-          <div className="text - cyan-300 text-sm" />;
+          <div className='text - cyan-300 text-sm' />;
             <p />&copy, 2027 Zion Tech Group. All rights reserved.</p>;
-            <p className="mt-2" />;
-              <Link href="/privacy" className="hover:text - cyan - 400 transition-colors duration-300" />Privacy Policy</Link>;
+            <p className='mt-2' />;
+              <Link href='/privacy' className='hover:text - cyan - 400 transition-colors duration-300' />Privacy Policy</Link>;
               {' • '}
-              <Link href="/terms" className="hover:text - cyan - 400 transition-colors duration-300" />Terms of Service</Link>;
+              <Link href='/terms' className='hover:text - cyan - 400 transition-colors duration-300' />Terms of Service</Link>;
               {' • '}
-              <Link href="/contact" className="hover: text - cyan - 400 transition-colors duration-300" />Contact Us</Link>;
+              <Link href='/contact' className='hover: text - cyan - 400 transition-colors duration-300' />Contact Us</Link>;
             </p>;
           </div>;
         </div>;

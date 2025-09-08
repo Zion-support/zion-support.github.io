@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs-extra';
 import path from 'path';
 import { createClient } from '@supabase/supabase-js';
@@ -23,6 +24,9 @@ function ensureFiles() {;
 
 
 
+=======
+export interface FraudRecord {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   id: string;
   type: string;
   severity: 'low' | 'medium' | 'high' | 'critical';
@@ -33,12 +37,16 @@ function ensureFiles() {;
   adminId?: string;
   resolution?: string;
 }
+<<<<<<< HEAD
 
 
 
 export interface MonthlyReport {;
 
 
+=======
+export interface MonthlyReport {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   month: string;
   totalCases: number;
   resolvedCases: number;
@@ -88,6 +96,7 @@ class FraudStore {
   }
 }
 export const fraudStore = new FraudStore();
+<<<<<<< HEAD
 
 
 export const getFraudStore = () => fraudStore;
@@ -97,3 +106,6 @@ export const getFraudStore = () => fraudStore;
 
 
 
+=======
+export const getFraudStore = () => fraudStore;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

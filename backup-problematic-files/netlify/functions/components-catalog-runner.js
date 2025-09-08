@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -26,9 +29,12 @@ exports.handler = async () => {
   );
 
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+<<<<<<< HEAD
   return { statusCode: 200, body: logs.join('\n') }
 
 
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -20,7 +20,11 @@ export const "CustomerFeedbackSystem": React.FC<CustomerFeedbackSystemProps> = (
   useEffect(() => {// "TODO": "Add dependencies if needed;"
   }
   return () => {// Cleanup function;
+<<<<<<< HEAD
+  "}, []), [])const "sampleFeedback": "Feedbac k[] = [{"id": '1'","customerName": 'Sarah Johnson',"rating": "5","comment": 'Exceptional AI consulting services! The team at Zion Tech Group delivered beyond our expectations.Their expertise in machine learning helped us optimize our processes significantly.',"category": 'service',"sentiment": 'positive',"date": '2024-01-15',"helpful": "2 4","unhelpful": "1",tags['AI',Consulting',Machine Learning'],"verified": "tru e;"
+=======
   "}}, []), [])const "sampleFeedback": "Feedbac k[] = [{"id": '1'","customerName": 'Sarah Johnson',"rating": "5","comment": 'Exceptional AI consulting services! The team at Zion Tech Group delivered beyond our expectations.Their expertise in machine learning helped us optimize our processes significantly.',"category": 'service',"sentiment": 'positive',"date": '2024-01-15',"helpful": "2 4","unhelpful": "1",tags['AI',Consulting',Machine Learning'],"verified": "tru e;"
+>>>>>>> origin/resolved-merge-conflicts
       "},{"id": '2',"customerName": 'Michael Chen',"rating": "4","comment": 'Great cloud migration support.The team was professional and helped us transition smoothly to the cloud.Minor delays but overall excellent experience.',"category": 'support',"sentiment": 'positive',"date": '2024-01-12',"helpful": "1 8","unhelpful": "2",tags['Cloud',Migration',Support'],"verified": "tru e;"
       "},{"id": '3',"customerName": 'Emily Rodriguez',"rating": "5","comment": 'Outstanding digital transformation project! Zion Tech Group helped us modernize our entire infrastructure.ROI was achieved within 6 months.',"category": 'product',"sentiment": 'positive',"date": '2024-01-10',"helpful": "3 1","unhelpful": "0",tags['Digital Transformation',Infrastructure',ROI'],"verified": "tru e;"
       "},{"id": '4',"customerName": 'David Kim',"rating": "3","comment": 'Good security services but communication could be improved.The technical work was solid but project updates were infrequent.',"category": 'service',"sentiment": 'neutral',"date": '2024-01-08',"helpful": "1 2","unhelpful": "5",tags['Security',Communication',Project Management'],"verified": "tru e;"
@@ -33,7 +37,11 @@ export const "CustomerFeedbackSystem": React.FC<CustomerFeedbackSystemProps> = (
   useEffect(() => {// "TODO": Add dependencies if needed;
   }
   return () => {// Cleanup function;
+<<<<<<< HEAD
+  }, []), [])const "sampleFeedback": Feedbac k[] = [{';'
+=======
   }}, []), [])const "sampleFeedback": Feedbac k[] = [{';'
+>>>>>>> origin/resolved-merge-conflicts
 ';';'
         }
         "id": '1',';';'
@@ -63,7 +71,11 @@ export const "CustomerFeedbackSystem": React.FC<CustomerFeedbackSystemProps> = (
   useEffect(() => {// "TODO": Add dependencies if needed;
   }
   return () => {// Cleanup function;
+<<<<<<< HEAD
+  }, []), [])if(feedback.length > 0) {const responseRate = 95; // Simulated response rate;
+=======
   }}, []), [])if(feedback.length > 0) {const responseRate = 95; // Simulated response rate;
+>>>>>>> origin/resolved-merge-conflicts
       }
       const categoryCounts = feedback.reduce((acc, f) => {acc[f.category] = (acc[f.category] || 0) + 1;
         }
@@ -77,7 +89,11 @@ export const "CustomerFeedbackSystem": React.FC<CustomerFeedbackSystemProps> = (
   useEffect(() => {// "TODO": Add dependencies if needed;
   }
   return () => {// Cleanup function;
+<<<<<<< HEAD
+  }, []), [])let filtered = feedback;';'
+=======
   }}, []), [])let filtered = feedback;';'
+>>>>>>> origin/resolved-merge-conflicts
 ';';'
     if(selectedCategory !== 'all') {let filtered  = feedback;if(selectedCategory !== 'all') {let filtered = feedback;'
     }
@@ -126,7 +142,11 @@ export const "CustomerFeedbackSystem": React.FC<CustomerFeedbackSystemProps> = (
     switch(sentiment) {case 'positive': return 'text-green-400 bg-green-400/20';'
       }
       case 'negative': return 'text-red-400 bg-red-400/20';'
+<<<<<<< HEAD
+      "default": retur n 'text-yellow-400 bg-yellow-400/20'}  }// Get category color;'
+=======
       "default": retur n 'text-yellow-400 bg-yellow-400/20'}  }// Get category color;;'
+>>>>>>> origin/resolved-merge-conflicts
 ';'
   'service': 'text-blue-400 bg-blue-400/20',';'
       'product': 'text-green-400 bg-green-400/20',';'
@@ -143,21 +163,36 @@ export const "CustomerFeedbackSystem": React.FC<CustomerFeedbackSystemProps> = (
         <div className="grid grid-cols-1 "md": "gri d-cols-2 "lg": gri d-cols-4 gap-6 mb-8">;"
           <motion.div;
             }
+<<<<<<< HEAD
+            initial = { "opacity": 0","y": "2 0;"
+"}"
+            animate = { "opacity": "1","y": "0;"
+"}";"
+=======
             initial = {{ "opacity": 0","y": "2 0;"
 "}}"
             animate = {{ "opacity": "1","y": "0;"
 "}}";"
+>>>>>>> origin/resolved-merge-conflicts
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";"
 ";"
             <div className="text-3xl font-bold text-white mb-2">{stats.totalFeedback}</div>";"
             <div className="text-zinc-400">Total Reviews</div>;"
           </motion.div>;
           <motion.div;
+<<<<<<< HEAD
+            initial = { "opacity": "0","y": "2 0;"
+"}"
+            animate = { "opacity": 1,"y": 0;
+}
+            transition={ "delay": 0.1 }";"
+=======
             initial = {{ "opacity": "0","y": "2 0;"
 "}}"
             animate = {{ "opacity": 1,"y": 0;
 }}
             transition={{ "delay": 0.1 }}";"
+>>>>>>> origin/resolved-merge-conflicts
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";"
 ";"
             <div className="flex items-center justify-center gap-2 mb-2">";"
@@ -166,10 +201,17 @@ export const "CustomerFeedbackSystem": React.FC<CustomerFeedbackSystemProps> = (
                 {[1, 2, 3, 4, 5].map((star) => (';'
                   <Star key={star}';';'
                     className={`w-5 h-5 ${star <= stats.averageRating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`;`            }
+<<<<<<< HEAD
+            transition={ "delay": 0.1 }";"
+  { "opacity": "1","y": "0;"
+"}"
+            transition={ "delay": "0.1 "}";"
+=======
             transition={{ "delay": 0.1 }}";"
   { "opacity": "1","y": "0;"
 "}}"
             transition={{ "delay": "0.1 "}}";"
+>>>>>>> origin/resolved-merge-conflicts
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";"
 ";"
             <div className="flex items-center justify-center gap-2 mb-2">";"
@@ -179,21 +221,36 @@ export const "CustomerFeedbackSystem": React.FC<CustomerFeedbackSystemProps> = (
         <div className="grid grid-cols-1 "md": gri d-cols-2 "lg": gri d-cols-4 gap-6 mb-8">;"
           <motion.div;
             }
+<<<<<<< HEAD
+            initial = { "opacity": 0,"y": 2 0;
+}
+            animate = { "opacity": 1,"y": 0;
+}";"
+=======
             initial = {{ "opacity": 0,"y": 2 0;
 }}
             animate = {{ "opacity": 1,"y": 0;
 }}";"
+>>>>>>> origin/resolved-merge-conflicts
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";"
 ";"
             <div className="text-3xl font-bold text-white mb-2">{stats.totalFeedback}</div>";"
             <div className="text-zinc-400">Total Reviews</div>;"
           </motion.div>;
           <motion.div;
+<<<<<<< HEAD
+            initial = { "opacity": 0,"y": 2 0;
+}
+            animate = { "opacity": 1,"y": 0;
+}
+            transition={ "delay": 0.1 }";"
+=======
             initial = {{ "opacity": 0,"y": 2 0;
 }}
             animate = {{ "opacity": 1,"y": 0;
 }}
             transition={{ "delay": 0.1 }}";"
+>>>>>>> origin/resolved-merge-conflicts
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";"
 ";"
             <div className="flex items-center justify-center gap-2 mb-2">";"
@@ -204,43 +261,75 @@ export const "CustomerFeedbackSystem": React.FC<CustomerFeedbackSystemProps> = (
                     className={`w-5 h-5 ${star <= stats.averageRating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`;`                    }`}` />) ) }              </div>;            </div>";"
             <div className="text-zinc-400">Average Rating</div>;"
           </motion.div>;<motion.div;
+<<<<<<< HEAD
+            initial = { "opacity": "0","y": "2 0;"
+"}"
+            animate = { "opacity": "1","y": "0;"
+"}"
+            transition={ "delay": "0.2 "}";"
+=======
             initial = {{ "opacity": "0","y": "2 0;"
 "}}"
             animate = {{ "opacity": "1","y": "0;"
 "}}"
             transition={{ "delay": "0.2 "}}";"
+>>>>>>> origin/resolved-merge-conflicts
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";"
 ";"
             <div className="text-3xl font-bold text-green-400 mb-2">{stats.positivePercentage.toFixed(1)}%</div>";"
             <div className="text-zinc-400">Positive Feedback</div>;"
           </motion.div>;<motion.div;
+<<<<<<< HEAD
+            initial = { "opacity": "0","y": "2 0;"
+"}"
+            animate = { "opacity": "1","y": "0;"
+"}"
+            transition={ "delay": "0.3 "}";"
+=======
             initial = {{ "opacity": "0","y": "2 0;"
 "}}"
             animate = {{ "opacity": "1","y": "0;"
 "}}"
             transition={{ "delay": "0.3 "}}";"
+>>>>>>> origin/resolved-merge-conflicts
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";"
 ";"
             <div className="text-3xl font-bold text-zion-cyan mb-2">{stats.responseRate}%</div>";"
             <div className="text-zinc-400">Response Rate</div>;"
           </motion.div>;
           <motion.div;
+<<<<<<< HEAD
+            initial = { "opacity": 0,"y": 2 0;
+}
+            animate = { "opacity": 1,"y": 0;
+}
+            transition={ "delay": 0.2 }";"
+=======
             initial = {{ "opacity": 0,"y": 2 0;
 }}
             animate = {{ "opacity": 1,"y": 0;
 }}
             transition={{ "delay": 0.2 }}";"
+>>>>>>> origin/resolved-merge-conflicts
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";"
 ";"
             <div className="text-3xl font-bold text-green-400 mb-2">{stats.positivePercentage.toFixed(1)}%</div>";"
             <div className="text-zinc-400">Positive Feedback</div>;"
           </motion.div>;
           <motion.div;
+<<<<<<< HEAD
+            initial = { "opacity": 0,"y": 2 0;
+}
+            animate = { "opacity": 1,"y": 0;
+}
+            transition={ "delay": 0.3 }";"
+=======
             initial = {{ "opacity": 0,"y": 2 0;
 }}
             animate = {{ "opacity": 1,"y": 0;
 }}
             transition={{ "delay": 0.3 }}";"
+>>>>>>> origin/resolved-merge-conflicts
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";"
 ";"
             <div className="text-3xl font-bold text-zion-cyan mb-2">{stats.responseRate}%</div>";"
@@ -248,7 +337,11 @@ export const "CustomerFeedbackSystem": React.FC<CustomerFeedbackSystemProps> = (
           </motion.div>;
             </div>;
   )}
+<<<<<<< HEAD
+            transition={ "delay": 0.3 }";"
+=======
             transition={{ "delay": 0.3 }}";"
+>>>>>>> origin/resolved-merge-conflicts
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";"
 ";"
             <div className="text-3xl font-bold text-zion-cyan mb-2">{stats.responseRate}%</div>";"
@@ -263,11 +356,19 @@ export const "CustomerFeedbackSystem": React.FC<CustomerFeedbackSystemProps> = (
             {stats.topCategories.map((category", index)  => (<motion.div;"
                 }
                 key={category.category}
+<<<<<<< HEAD
+                initial = { "opacity": "0","scale": "0.9;"
+"}"
+                animate = { "opacity": "1","scale": "1;"
+"}"
+                transition={ "delay": "inde x * 0.1 "}";"
+=======
                 initial = {{ "opacity": "0","scale": "0.9;"
 "}}"
                 animate = {{ "opacity": "1","scale": "1;"
 "}}"
                 transition={{ "delay": "inde x * 0.1 "}}";"
+>>>>>>> origin/resolved-merge-conflicts
                 className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-lg text-center";"
 ";"
                 <div className="text-2xl font-bold text-white mb-1">{category.count}</div>";"
@@ -280,11 +381,19 @@ export const "CustomerFeedbackSystem": React.FC<CustomerFeedbackSystemProps> = (
             {stats.topCategories.map((category, index)  => (<motion.div;
                 }
                 key={category.category}
+<<<<<<< HEAD
+                initial = { "opacity": 0,"scale": 0.9;
+}
+                animate = { "opacity": 1,"scale": 1;
+}
+                transition={ "delay": inde x * 0.1 }";"
+=======
                 initial = {{ "opacity": 0,"scale": 0.9;
 }}
                 animate = {{ "opacity": 1,"scale": 1;
 }}
                 transition={{ "delay": inde x * 0.1 }}";"
+>>>>>>> origin/resolved-merge-conflicts
                 className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-lg text-center";"
 ";"
                 <div className="text-2xl font-bold text-white mb-1">{category.count}</div>";"
@@ -345,12 +454,28 @@ export const "CustomerFeedbackSystem": React.FC<CustomerFeedbackSystemProps> = (
       <AnimatePresence>;
         {showFeedbackForm && (<motion.div;
             }
+<<<<<<< HEAD
+            initial = { "height": 0,"opacity": 0;
+}
+=======
             initial = {{ "height": 0,"opacity": 0;
 }}
+>>>>>>> origin/resolved-merge-conflicts
             animate = {';'
 ';';'
   { "height": 'auto',"opacity": 1;'
             }
+<<<<<<< HEAD
+            animate = { "height": 'auto',"opacity": 1;'
+}
+  { "height": "0","opacity": "0;"
+"}"
+            animate = { "height": 'auto',"opacity": "1;"
+"}"
+            exit = { "height": "0","opacity": "0;"
+"}"
+            transition={ "duration": "0.3 "}";"
+=======
             animate = {{ "height": 'auto',"opacity": 1;'
 }}
   { "height": "0","opacity": "0;"
@@ -360,6 +485,7 @@ export const "CustomerFeedbackSystem": React.FC<CustomerFeedbackSystemProps> = (
             exit = {{ "height": "0","opacity": "0;"
 "}}"
             transition={{ "duration": "0.3 "}}";"
+>>>>>>> origin/resolved-merge-conflicts
             className="mb-6 overflow-hidden";"
 ";"
             <div className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">";"
@@ -409,6 +535,15 @@ export const "CustomerFeedbackSystem": React.FC<CustomerFeedbackSystemProps> = (
       <AnimatePresence>;
         {showFeedbackForm && (<motion.div;
             }
+<<<<<<< HEAD
+            initial = { "height": 0,"opacity": 0;
+}
+            animate = { "height": 'auto',"opacity": 1;'
+}
+            exit = { "height": 0,"opacity": 0;
+}
+            transition={ "duration": 0.3 }";"
+=======
             initial = {{ "height": 0,"opacity": 0;
 }}
             animate = {{ "height": 'auto',"opacity": 1;'
@@ -416,6 +551,7 @@ export const "CustomerFeedbackSystem": React.FC<CustomerFeedbackSystemProps> = (
             exit = {{ "height": 0,"opacity": 0;
 }}
             transition={{ "duration": 0.3 }}";"
+>>>>>>> origin/resolved-merge-conflicts
             className="mb-6 overflow-hidden";"
 ";"
             <div className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">";"
@@ -545,21 +681,37 @@ export const "CustomerFeedbackSystem": React.FC<CustomerFeedbackSystemProps> = (
       <div className="space-y-4"> {filteredFeedback.map((item, index) => (<motion.div;"
             }
             key={item.id}
+<<<<<<< HEAD
+            initial = { "opacity": "0","y": "2 0;"
+"}"
+            animate = { "opacity": "1","y": "0;"
+"}"
+            transition={ "delay": "inde x * 0.1 "}";"
+=======
             initial = {{ "opacity": "0","y": "2 0;"
 "}}"
             animate = {{ "opacity": "1","y": "0;"
 "}}"
             transition={{ "delay": "inde x * 0.1 "}}";"
+>>>>>>> origin/resolved-merge-conflicts
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl "hover": "b g-zinc-900/50 transition-all duration-300";"
             {/* Header */"}";"
             <div className="flex items-start justify-between mb-4">";"
               <div className="flex items-center gap-3">";"
                 <div className="w-12 h-12 bg-zinc-800 rounded-full flex items-center justify-center text-zion-cyan font-semibold">;"
+<<<<<<< HEAD
+            initial = { "opacity": 0,"y": 2 0;
+}
+            animate = { "opacity": 1,"y": 0;
+}
+            transition={ "delay": inde x * 0.1 }";"
+=======
             initial = {{ "opacity": 0,"y": 2 0;
 }}
             animate = {{ "opacity": 1,"y": 0;
 }}
             transition={{ "delay": inde x * 0.1 }}";"
+>>>>>>> origin/resolved-merge-conflicts
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl "hover": b g-zinc-900/50 transition-all duration-300";"
             {/* Header */}";"
             <div className="flex items-start justify-between mb-4">";"
@@ -638,8 +790,13 @@ export const "CustomerFeedbackSystem": React.FC<CustomerFeedbackSystemProps> = (
       {/* No Results */}
       {filteredFeedback.length === 0 && (<motion.div;
           }
+<<<<<<< HEAD
+          initial={ "opacity": "0 "}"
+          animate={ "opacity": "1 "}";"
+=======
           initial={{ "opacity": "0 "}}"
           animate={{ "opacity": "1 "}}";"
+>>>>>>> origin/resolved-merge-conflicts
           className="text-center py-12";"
 ";"
           <MessageCircle className="w-16 h-16 text-zinc-600 mx-auto mb-4" />";"
@@ -703,8 +860,13 @@ export const "CustomerFeedbackSystem": React.FC<CustomerFeedbackSystemProps> = (
       {/* No Results */}
       {filteredFeedback.length === 0 && (<motion.div;
           }
+<<<<<<< HEAD
+          initial={ "opacity": 0 }
+          animate={ "opacity": 1 }";"
+=======
           initial={{ "opacity": 0 }}
           animate={{ "opacity": 1 }}";"
+>>>>>>> origin/resolved-merge-conflicts
           className="text-center py-12";"
 ";"
           <MessageCircle className="w-16 h-16 text-zinc-600 mx-auto mb-4" />";"

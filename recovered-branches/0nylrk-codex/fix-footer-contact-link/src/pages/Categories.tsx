@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 export default function Categories() {
@@ -19,13 +20,27 @@ export default function Categories() {
           </div>
 
 
+=======
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {CategoriesSection} from "@/components/CategoriesSection";
+import {GradientHeading} from "@/components/GradientHeading";
+
+
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { CategoriesSection } from "@/components/CategoriesSection";
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { GradientHeading } from "@/components/GradientHeading";
 import { CategoriesSection } from "@/components/CategoriesSection",
 
 export default function Categories() {
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
 import { CategoriesSection } from '@/components / CategoriesSection';
@@ -44,13 +59,18 @@ function Categories() {
               Browse Categories;
             </GradientHeading>;
 
+<<<<<<< HEAD
             <p className="text - zion - slate - light text - lg max - w-3xl mx - auto">;
 
 
+=======
+            <p className="text - zion - slate - light text - lg max - w-3xl mx-auto">;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               Explore our extensive range of AI services and products organized by category.;
               Find exactly what you're looking for to enhance your business or personal projects.;
             </p>;
           </div>;
+<<<<<<< HEAD
 
 
 import { Header } from "@/components/Header",;
@@ -100,12 +120,25 @@ function Categories() {
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           {/* Reuse the Categories Section component */}
           <CategoriesSection showTitle={false} />
         </div>
       </div>
       <Footer />
     </>
+<<<<<<< HEAD
+
+=======
 
 
+  );
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
+
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

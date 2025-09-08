@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -302,6 +303,9 @@ import Layout from '../../components/Layout';
 import { BarChart3, Database, TrendingUp, Brain, CheckCircle, ArrowRight } from 'lucide-react';
 import Layout from "../../components/Layout";";
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { BarChart3, TrendingUp, Database, Brain } from 'lucide-react';
@@ -552,6 +556,7 @@ export default function DataAnalyticsPage() {;
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {analyticsServices && analyticsServices.map((service, index) => {}
+<<<<<<< HEAD
 
                 const IconComponent = service && service.icon;
                 return (
@@ -565,6 +570,15 @@ export default function DataAnalyticsPage() {;
                     <div className="text-green-600 mb-4">";
                       <IconComponent className="w-10 h-10" />";
 
+=======
+                return (<motion&& motion.div)key={index}
+                    className="bg-white p-6 rounded-lg shadow-lg "hover":shadow-xl transition-all duration-300"";"
+                    initial={{ "opacity": 0, "y": 30 }}
+                    whileInView={{ "opacity": 1, "y": 0 }}
+                    transition={{ "duration": 0 && 0.8, "delay": index * 0 && 0.1 }}
+                    viewport={{ "once": true }}>,<div className="text-green-600 mb-4">";"
+                      <IconComponent className="w-10 h-10" />";"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                     </div>;
                     <h3 className="text-xl font-bold text-gray-900 mb-4">";
                       {service.title}
@@ -638,8 +652,18 @@ export default function DataAnalyticsPage() {;
 import Layout from '../../components/Layout';
 import { BarChart3, Database, TrendingUp, Brain, CheckCircle, ArrowRight } from 'lucide-react';
 const features = [
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
+=======
+const analyticsServices = [
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   {
     title: "Business Intelligence",
     description: "Transform data into actionable business insights",
@@ -666,6 +690,7 @@ const features = [
     description: "Advanced AI-powered analytics and insights",
     icon: Brain,
 
+<<<<<<< HEAD
     title: 'AI-Powered Insights',
     description: 'Artificial intelligence for automated data analysis and insights'
   },
@@ -709,6 +734,10 @@ const features = [;
     title: 'Data Visualization',;
     description: 'Interactive charts, graphs, and visual data representations';
 
+=======
+    features: ["AI algorithms", "Natural language processing", "Computer vision", "Deep learning"],
+    pricing: "$4,000 - $20,000/month"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   }
 ];
 
@@ -721,6 +750,7 @@ const benefits = [
   'Automated reporting and analytics'
 ];
 export default function DataAnalyticsServices() {
+<<<<<<< HEAD
 
 export default function DataAnalyticsPage() {;
 const benefits = [;
@@ -738,6 +768,20 @@ export default function DataAnalyticsServices() {;
       description="Transform your data into actionable insights with our comprehensive data analytics services. Business intelligence, predictive analytics, and AI-powered insights."
       keywords="data analytics, business intelligence, data warehousing, predictive analytics, data visualization, AI insights">;
       <div className="min-h-screen bg-white">;
+=======
+
+
+export default function DataAnalyticsPage() {
+  return (
+    <>
+      <Head>
+        <title>Data Analytics Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive data analytics services including business intelligence, predictive analytics, data management, and AI-powered insights." />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -776,11 +820,11 @@ export default function DataAnalyticsServices() {;
                     <feature.icon className="w-6 h-6 text-purple-600" />
 
         {/* Services Grid */}
-        <section className="py-16 px-4">;
-          <div className="max-w-7xl mx-auto">;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {analyticsServices && analyticsServices.map((service, index) => (;
-                <motion&& motion.div
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {analyticsServices.map((service, index) => (
+                <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -797,23 +841,23 @@ export default function DataAnalyticsServices() {;
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">;
-              <div>;
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
-                  Why Choose Our Data Analytics Services?;
-                </h2>;
-                <p className="text-xl text-gray-600 mb-8">;
-                  Our data analytics experts help you transform raw data into;
-                  actionable insights that drive business growth and innovation.;
-                </p>;
-                <ul className="space-y-4">;
-                  {benefits && benefits.map((benefit, index) => (;
-                    <li key={index} className="flex items-start">;
-                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />;
-                      <span className="text-gray-700">{benefit}</span>;
-                    </li>;
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  Why Choose Our Data Analytics Services?
+                </h2>
+                <p className="text-xl text-gray-600 mb-8">
+                  Our data analytics experts help you transform raw data into
+                  actionable insights that drive business growth and innovation.
+                </p>
+                <ul className="space-y-4">
+                  {benefits.map((benefit, index) => (
+                    <li key={index} className="flex items-start">
+                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">{benefit}</span>
+                    </li>
                   ))}
 
                 </ul>
@@ -868,7 +912,18 @@ export default function DataAnalyticsServices() {;
       </div>
 
     </>
+<<<<<<< HEAD
 
 export default Data-analytics;
 
 
+=======
+  );
+}
+
+    </Layout>
+    </Layout>
+    </>
+
+    </>
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,6 +1,7 @@
 import _React,{ useState,useRef,useEffect } from';react' import { Button } from '../ui/Button''';' import { Send } from 'lucide-react'
 }
 
+<<<<<<< HEAD
 
 
 :src.disabled/components/ChatAssistant/ChatInput.js.jsx
@@ -14,3 +15,7 @@ import _React,{ useState,useRef,useEffect } from';react' import { Button } from 
 
 
 
+=======
+export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState('';';) const inputRef = useRef(null) useEffect(() => {'';
+import _React,{ useState,useRef,useEffect } from';react' import { Button } from '../ui/Button''';' import { Send } from 'lucide-react' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState('';';) const inputRef = useRef(null) useEffect(() => {'';
+>>>>>>> origin/cursor/delete-old-data-records-6bba

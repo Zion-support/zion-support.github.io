@@ -8,7 +8,6 @@ const [formData, setFormData] = useState ({;
   setFieldErrors ({;
 });
 setIsLoading (true);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
 }
 }else {;
   const {;

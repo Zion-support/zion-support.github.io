@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 #!/usr/bin/env node;
@@ -10,10 +12,28 @@ const path = require('path')
 =======
 <<<<<<< HEAD
 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 #!/usr/bin/env node;
 const fs = require('fs')
-const path = require(path')
+const path = require('path')
 
+<<<<<<< HEAD
+
+
+console.log(' Starting Code Refactoring Automation...')
+  console.error(' Code refactoring automation "failed")
+  console.error(' Code refactoring automation "failed")
+
+  console.error(' Code refactoring automation "failed")
+    "file"""
+    "issues"""
+  const serviceCardComponent = """
+      "duplicateCodeFiles"""
+      "recommendations"""
+    "extractedComponents"""
+    "nextSteps"""
+  console.log('� Next "steps")""');
+=======
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 =======
 <<<<<<< HEAD
@@ -101,6 +121,7 @@ console.log(' Starting Code Refactoring Automation...')
   console.error(' Code refactoring automation "failed")
 <<<<<<< HEAD
   console.error(' Code refactoring automation "failed")
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   console.error(' Code refactoring automation "failed")
 

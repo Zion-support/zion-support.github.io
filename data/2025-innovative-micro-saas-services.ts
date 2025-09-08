@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
     tagline: 'Revolutionary AI-powered content creation and management',
     price: '$15,000',
     period: '/month',
@@ -124,6 +125,8 @@
     growth_rate: '250%+ annual growth', variant: 'saas - project',
     contact_info: {
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
   }
 ];
@@ -570,4 +573,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     reviews: 45;
   }
 ];
+<<<<<<< HEAD
 
+=======
+];
+>>>>>>> origin/cursor/delete-old-data-records-6bba

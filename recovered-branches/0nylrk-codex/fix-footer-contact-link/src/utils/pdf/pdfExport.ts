@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { Resume  } from '@/types/resume';
 import { jsPDF  } from 'jspdf';
 import 'jspdf-autotable';
@@ -26,6 +29,7 @@ import {addCertificationsSection} from './sections/certificationsSection';
 import {addPortfolioSection} from './sections/portfolioSection';
 export interface ExportOptions {;
 
+<<<<<<< HEAD
 
 
   theme: 'light' | 'dark';
@@ -54,6 +58,11 @@ export async function exportResumeToPDF(
 
 
 
+=======
+  theme: 'light' | 'dark';
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {Resume} from '@/types / resume';
 import {jsPDF} from 'jspdf';
 import 'jspdf - autotable';
@@ -174,6 +183,7 @@ pr-12325
   if (includePortfolio && resume.portfolio_projects && resume.portfolio_projects.length > 0) {;
     currentY = addPortfolioSection(doc, resume.portfolio_projects, colors, currentY, maxProjects);
 
+<<<<<<< HEAD
 
 
 
@@ -183,3 +193,8 @@ pr-12325
 
 
 
+=======
+  }
+  return doc.output('blob')
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

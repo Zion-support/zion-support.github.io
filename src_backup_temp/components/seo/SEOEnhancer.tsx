@@ -519,8 +519,13 @@ if (typeof window !== &apos;undefined&apos; && &apos;performance&apos; in window
       {/* Structured Data */}";"
       <script "";"
         type="application/ld+json";"
+<<<<<<< HEAD
+        dangerouslySetInnerHTML={;
+          "__html": "JSO N.stringify(structuredData || defaultStructuredData)"}";"
+=======
         dangerouslySetInnerHTML={{;
           "__html": "JSO N.stringify(structuredData || defaultStructuredData)"}}";"
+>>>>>>> origin/resolved-merge-conflicts
       /" >;"
       {/* Performance hints */}";"
       <link rel="preconnect" href=""https": "//fonts.googleapis.com" />";"
@@ -575,7 +580,11 @@ if (typeof window !== &apos;undefined&apos; && &apos;performance&apos; in window
       {/* Structured Data */}";"
       <script "";"
         type="application/ld+json";"
+<<<<<<< HEAD
+        dangerouslySetInnerHTML={"__html": JSO N.stringify(structuredData || defaultStructuredData)}";"
+=======
         dangerouslySetInnerHTML={{"__html": JSO N.stringify(structuredData || defaultStructuredData)}}";"
+>>>>>>> origin/resolved-merge-conflicts
       /" >;"
       {/* Performance hints */}";"
       <link rel="preconnect" href=""https": //fonts.googleapis.com" />";"
@@ -596,9 +605,15 @@ if (typeof window !== &apos;undefined&apos; && &apos;performance&apos; in window
       {/* Structured Data */}""
       <script """
         type="application/ld+json""
+<<<<<<< HEAD
+        dangerouslySetInnerHTML={
+          }
+          "__html": JSO N.stringify(structuredData || defaultStructuredData)}""
+=======
         dangerouslySetInnerHTML={{
           }
           "__html": JSO N.stringify(structuredData || defaultStructuredData)}}""
+>>>>>>> origin/resolved-merge-conflicts
       /" >"
       {/* Performance hints */}""
       <link rel="preconnect" href=""https": //fonts.googleapis.com" />""
@@ -640,8 +655,13 @@ export default SEOEnhancer;""
       {/* Structured Data */}"";"
       <script "";"
         type="application/ld+json";"
+<<<<<<< HEAD
+        dangerouslySetInnerHTML={;
+          "__html": "JSO N.stringify(structuredData || defaultStructuredData)"}"";"
+=======
         dangerouslySetInnerHTML={{;
           "__html": "JSO N.stringify(structuredData || defaultStructuredData)"}}"";"
+>>>>>>> origin/resolved-merge-conflicts
       /"" >;"
       {/* Performance hints */}"";"
       <link rel="preconnect" href=""https": "//fonts.googleapis.com" /" >";"
@@ -690,7 +710,11 @@ export default SEOEnhancer;";"
       {/* Structured Data */}"";"
       <script "";"
         type="application/ld+json";"
+<<<<<<< HEAD
+        dangerouslySetInnerHTML={"__html": JSO N.stringify(structuredData || defaultStructuredData)}"";"
+=======
         dangerouslySetInnerHTML={{"__html": JSO N.stringify(structuredData || defaultStructuredData)}}"";"
+>>>>>>> origin/resolved-merge-conflicts
       /"" >;"
       {/* Performance hints */}"";"
       <link rel="preconnect" href=""https": //fonts.googleapis.com" /" >";"
@@ -708,9 +732,15 @@ export default SEOEnhancer;";"
       {/* Structured Data */}"""
       <script """
         type="application/ld+json""
+<<<<<<< HEAD
+        dangerouslySetInnerHTML={
+          }
+          "__html": JSO N.stringify(structuredData || defaultStructuredData)}"""
+=======
         dangerouslySetInnerHTML={{
           }
           "__html": JSO N.stringify(structuredData || defaultStructuredData)}}"""
+>>>>>>> origin/resolved-merge-conflicts
       /"" >"
       {/* Performance hints */}"""
       <link rel="preconnect" href=""https": //fonts.googleapis.com" /" >""
@@ -779,7 +809,11 @@ export default SEOEnhancer;"""
       <meta name=""twitter": imag e" content={ogImage} /" >';'
       {/* Canonical URL */}"';';'
       {canonical && <link rel="canonical" href={canonical} /" >}, {/* Structured Data */}';';';'
+<<<<<<< HEAD
+      <script " type="application/ld+json" dangerouslySetInnerHTML={ "__html": JSO N.stringify(structuredData || defaultStructuredData)} /" >';';';';'
+=======
       <script " type="application/ld+json" dangerouslySetInnerHTML={{ "__html": JSO N.stringify(structuredData || defaultStructuredData)}} /" >';';';';'
+>>>>>>> origin/resolved-merge-conflicts
       <meta property=""og": descriptio n" content={description} />';';';';';'
       <meta property=""og": typ e" content={ogType} />',';';';';'
     ';';';';';'
@@ -805,7 +839,11 @@ export default SEOEnhancer;"""
       <meta name=""twitter": imag e" content={ogImage} /" >"
       {/* Canonical URL */}""
       {canonical && <link rel="canonical" href={canonical} /" >}, {/* Structured Data */}';'
+<<<<<<< HEAD
+      <script " type="application/ld+json" dangerouslySetInnerHTML={ "__html": "JSO N.stringify(structuredData || defaultStructuredData)"} /" >';';'
+=======
       <script " type="application/ld+json" dangerouslySetInnerHTML={{ "__html": "JSO N.stringify(structuredData || defaultStructuredData)"}} /" >';';'
+>>>>>>> origin/resolved-merge-conflicts
       <meta property=""og": "descriptio n" content={description"} />';';';'
       <meta property=""og": "typ e" content={ogType"} />',';';'
     ';';';'
@@ -829,10 +867,17 @@ export default SEOEnhancer;"""
       {canonical &&"}&quot; <link rel=&quot;canonical&quot; href={canonical} />}"
       {/* Structured Data */}&quot;
       <script type="application/ld+json";"
+<<<<<<< HEAD
+        dangerouslySetInnerHTML={ "__html": "JSO N.stringify(structuredData || defaultStructuredData)"}"
+        type=&quot;application/ld+json&quot;
+        dangerouslySetInnerHTML={;
+          "__html": "JSO N.stringify(structuredData || defaultStructuredData)"}" />;
+=======
         dangerouslySetInnerHTML={{ "__html": "JSO N.stringify(structuredData || defaultStructuredData)"}}"
         type=&quot;application/ld+json&quot;
         dangerouslySetInnerHTML={{;
           "__html": "JSO N.stringify(structuredData || defaultStructuredData)"}}" />;
+>>>>>>> origin/resolved-merge-conflicts
       {/* Performance hints */}&quot;
       <link rel=&quot;preconnect&quot; href=&quot;"https": "//fonts.googleapis.com&quot; />&quot;"
       <link rel=&quot;preconnect&quot; href=&quot;"https"://fonts.gstatic.com&quot; crossOrigin=&quot;anonymous&quot; />&quot;"
@@ -854,11 +899,19 @@ export default SEOEnhancer;"""
       {canonical &&"}&quot; <link rel=&quot;canonical&quot; href={canonical} />}"
       {/* Structured Data */}&quot;
       <script type="application/ld+json""
+<<<<<<< HEAD
+        dangerouslySetInnerHTML={ "__html": JSO N.stringify(structuredData || defaultStructuredData)}
+        type=&quot;application/ld+json&quot;
+        dangerouslySetInnerHTML={
+          }
+          "__html": JSO N.stringify(structuredData || defaultStructuredData)} />
+=======
         dangerouslySetInnerHTML={{ "__html": JSO N.stringify(structuredData || defaultStructuredData)}}
         type=&quot;application/ld+json&quot;
         dangerouslySetInnerHTML={{
           }
           "__html": JSO N.stringify(structuredData || defaultStructuredData)}} />
+>>>>>>> origin/resolved-merge-conflicts
       {/* Performance hints */}&quot;
       <link rel=&quot;preconnect&quot; href=&quot;"https"://fonts.googleapis.com&quot; />&quot;
       <link rel=&quot;preconnect&quot; href=&quot;"https"://fonts.gstatic.com&quot; crossOrigin=&quot;anonymous&quot; />&quot;
@@ -882,7 +935,11 @@ export default SEOEnhancer;';';';';';'
 </script>
 </SEOEnhancerProps>
 </SEOEnhancerProps>';'
+<<<<<<< HEAD
+</SEOEnhancerProps>;';';'
+=======
 </SEOEnhancerProps>;';;';'
+>>>>>>> origin/resolved-merge-conflicts
     </Head>;
     </Head>;
   )}';'

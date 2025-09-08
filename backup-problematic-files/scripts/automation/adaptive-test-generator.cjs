@@ -1,26 +1,7 @@
-<<<<<<< HEAD
 #!/"usr/bin/env"
 const { execSync } = require("child_process)
 const fs = require(fs")
 const path = require("path)
-=======
-<<<<<<< HEAD
-#!/""usr/bin/env""
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-console.log(""🧪 Starting Adaptive Test Generator...")
-// Get automation interval from environment variable ("default")
-      "testCoverage"
-      "untestedFiles"
-      "testSuggestions"
-      "testPatterns"
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-console.log(""🧪 Starting Adaptive Test Generator...")
-// Get automation interval from environment variable ("default")
->>>>>>> origin/chore/fix-lint-and-merge
 console.log("🧪 Starting Adaptive Test Generator...")
 // Get automation interval from environment variable (default)
       "testCoverage"
@@ -274,7 +255,6 @@ describe("API Integration)
   expect(screen.getByText("test data)).toBeInTheDocument()})})}
 });
   expect(screen.getByText("test data")).toBeInTheDocument()})})}
-<<<<<<< HEAD
 });
   console.log(🧪 Starting adaptive test generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals")
 process.on("SIGINT)
@@ -282,33 +262,8 @@ process.on("SIGINT)
 process.on("SIGTERM)
   console.log(� Received SIGTERM, shutting down gracefully...")
 
-=======
-});"
-  expect(screen.getByText("test data")).toBeInTheDocument()})})}
-});"
-  console.log("🧪 Starting adaptive test generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals")
-process.on("SIGINT")
-  console.log("� Received SIGINT, shutting down gracefully...")
-process.on("SIGTERM")
-  console.log("� Received SIGTERM, shutting down gracefully...")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
   console.error(" Failed to start adaptive test "generator")
   console.error(" Failed to start adaptive test "generator")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-  console.error(" Failed to start adaptive test "generator")
-=======
-  console.error(" Failed to start adaptive test "generator")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+

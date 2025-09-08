@@ -1,26 +1,6 @@
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 #!/usr/bin/env node
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -108,22 +88,16 @@ class SEOAccessibilityMonitor {
     if (!packageJson.description) {
 
   async checkAccessibility() {
-<<<<<<< HEAD
     try {
       this.log('♿ Checking accessibility...');
       const accessibilityIssues = [];
       // Check HTML files for accessibility issues
       for (const file of htmlFiles) {
-=======
-  // TODO: Implement
-
->>>>>>> origin/chore/fix-lint-and-merge
         const fileIssues = this.analyzeAccessibilityContent(file, content);
         accessibilityIssues.push(...fileIssues);
   // TODO: Implement
         issues: accessibilityIssues,
         totalIssues: accessibilityIssues.length,
-<<<<<<< HEAD
         criticalIssues: accessibilityIssues.filter(issue => issue.severity === 'critical').length,
         highIssues: accessibilityIssues.filter(issue => issue.severity === 'high').length
       };
@@ -149,15 +123,10 @@ class SEOAccessibilityMonitor {
         const hasLabel = lines.some((otherLine, otherIndex) => 
           otherIndex < index && 
           otherLine.includes('<label') && 
-=======
-
-          otherLine.includes('<label') &&
->>>>>>> origin/chore/fix-lint-and-merge
           otherLine.includes('for=') &&
           otherLine.includes(line.match(/id="([^"]*)"/)?.[1] || )
         );
         if (!hasLabel) {
-<<<<<<< HEAD
           issues.push({
             file: filePath,
             line: lineNum,
@@ -207,9 +176,6 @@ class SEOAccessibilityMonitor {
     });
     return issues;
   }
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
   async checkPerformance() {
   // TODO: Implement
 
@@ -218,7 +184,6 @@ class SEOAccessibilityMonitor {
       const imageFiles = this.getImageFiles();
       for (const file of imageFiles) {
         const stats = fs.statSync(file);
-<<<<<<< HEAD
         if (stats.size > 500 * 1024) { // 500KB
           performanceIssues.push({
             file: path.relative(this.projectRoot, file),
@@ -366,10 +331,6 @@ class SEOAccessibilityMonitor {
         action: 'Fix critical accessibility issues for compliance'
       });
     }
-=======
-        if (stats.size > 500 * 1024) { // 500KB;
-</button>
->>>>>>> origin/chore/fix-lint-and-merge
     if (lighthouseResults && lighthouseResults.accessibility < 80) {
       recommendations.push({
 
@@ -402,110 +363,23 @@ class SEOAccessibilityMonitor {
       process.exit(1);
 // Run the SEO & accessibility monitor;
 const monitor = new SEOAccessibilityMonitor();
-<<<<<<< HEAD
-monitor.run().catch(error => {
-  process.exit(1);
-});
-#!/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");class SEOAccessibility { constructor() {" this.processName = process.env.PM2_PROCESS_NAME | "seo-accessibility";" this.checkSEO = process.env.CHECK_SEO === "true";" this.checkAccessibility = process.env.CHECK_ACCESSIBILITY === "true";" this.checkPerformance = process.env.CHECK_PERFORMANCE === "true";" this.lighthouseAudit = process.env.LIGHTHOUSE_AUDIT === "true";" this.logFile = path.join(__dirname, "././logs/pm2/seo-accessibility.log"); this.ensureLogDir(); } ensureLogDir() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true }); } } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile, logMessage); } async checkSEO() { if (!this.checkSEO) {" this.log("SEO checking disabled"); return { checked: false }; } try {" this.log("Checking SEO compliance."); const seoIssues = []; const htmlFiles = this.findHTMLFiles(); for (const file of htmlFiles) { try {" const content = fs.readFileSync(file, "utf8"); const issues = this.analyzeSEO(content, file); seoIssues.push(.issues); } catch (err) {` this.log(`Error reading ${file}: ${err.message}`); } }` this.log(`Found ${seoIssues.length} SEO issues`); return { checked: true, issues: seoIssues, totalIssues: seoIssues.length, filesChecked: htmlFiles.length }; } catch (error) {` this.log(`SEO check failed: ${error.message}`); return { checked: false, error: error.message }; } } findHTMLFiles() { const htmlFiles = []; const scanDir = (dir) => { try { const files = fs.readdirSync(dir); for (const file of files) { const filePath = path.join(dir, file); const stat = fs.statSync(filePath); " if (stat.isDirectory() && !file.startsWith(".") && file !== "node_modules") { scanDir(filePath);" } else if (stat.isFile() && (file.endsWith(".html") | file.endsWith(".htm"))) { htmlFiles.push(filePath); } } } catch (err) {" / Skip directories that can"t be read } }; / Scan common directories" const scanDirs = ["public", "dist", "out", "build", "pages"]; for (const dir of scanDirs) { if (fs.existsSync(dir)) { scanDir(dir); } } return htmlFiles; } analyzeSEO(content, filePath) { const issues = []; / Check for title tag" if (!content.includes("<title>")) { issues.push({ file: filePath," type: "missing_title"," severity: "high"," message: "Missing <title> tag" }); } / Check for meta description" if (!content.includes("name="description"")) { issues.push({ file: filePath," type: "missing_meta_description"," severity: "high"," message: "Missing meta description" }); } / Check for h1 tag" if (!content.includes("<h1>")) { issues.push({ file: filePath," type: "missing_h1"," severity: "medium"," message: "Missing <h1> tag" }); } / Check for alt attributes on images const imgTags = content.match(/<img[^>]*>/g) | []; for (const imgTag of imgTags) {" if (!imgTag.includes("alt=")) { issues.push({ file: filePath," type: "missing_alt_text"," severity: "medium"," message: "Image missing alt attribute" }); } } / Check for lang attribute" if (!content.includes("lang=")) { issues.push({ file: filePath," type: "missing_lang"," severity: "medium"," message: "Missing lang attribute on html tag" }); } / Check for viewport meta tag"" if (!content.includes("name="viewport"")) { issues.push({ file: filePath," type: "missing_viewport"," severity: "high"," message: "Missing viewport meta tag" }); } return issues; } async checkAccessibility() { if (!this.checkAccessibility) {" this.log("Accessibility checking disabled"); return { checked: false }; } try {" this.log("Checking accessibility compliance."); const a11yIssues = []; const htmlFiles = this.findHTMLFiles(); for (const file of htmlFiles) { try {" const content = fs.readFileSync(file, "utf8"); const issues = this.analyzeAccessibility(content, file); a11yIssues.push(.issues); } catch (err) {` this.log(`Error reading ${file}: ${err.message}`); } }` this.log(`Found ${a11yIssues.length} accessibility issues`); return { checked: true, issues: a11yIssues, totalIssues: a11yIssues.length, filesChecked: htmlFiles.length }; } catch (error) {` this.log(`Accessibility check failed: ${error.message}`); return { checked: false, error: error.message }; } } analyzeAccessibility(content, filePath) { const issues = []; / Check for proper heading hierarchy const headings = content.match(/<h[1-6][^>]*>/g) | []; let lastLevel = 0; for (const heading of headings) { const level = parseInt(heading.match(/<h(\d)/)[1]); if (level > lastLevel + 1) { issues.push({ file: filePath," type: "heading_hierarchy"," severity: "medium",` message: `Heading level ${level} follows level ${lastLevel} (skipped levels)` }); } lastLevel = level; } / Check for form labels const inputTags = content.match(/<input[^>]*>/g) | []; for (const inputTag of inputTags) {"" if (inputTag.includes("type=") && !inputTag.includes("type="hidden"")) {" if (!inputTag.includes("aria-label") && !inputTag.includes("aria-labelledby")) {" / Check if there"s a label element nearby (simplified)" const hasLabel = content.includes("</label>"); if (!hasLabel) { issues.push({ file: filePath," type: "missing_form_label"," severity: "high"," message: "Form input missing label or aria-label" }); } } } } / Check for color contrast (simplified - would need actual color analysis) const colorStyles = content.match(/color\s*:\s*[^;]+/g) | []; if (colorStyles.length > 0) { issues.push({ file: filePath," type: "color_contrast_check"," severity: "low"," message: "Manual color contrast check recommended" }); } / Check for keyboard navigation const interactiveElements = content.match(/<button|<a|<input|<select|<textarea/g) | []; const tabIndexElements = content.match(/tabindex/g) | []; if (interactiveElements.length > 0 && tabIndexElements.length === 0) { issues.push({ file: filePath," type: "keyboard_navigation"," severity: "medium"," message: "Consider adding tabindex for keyboard navigation" }); } return issues; } async checkPerformance() { if (!this.checkPerformance) {" this.log("Performance checking disabled"); return { checked: false }; } try {" this.log("Checking performance."); const performanceIssues = []; / Check bundle size" const distDir = "dist"; if (fs.existsSync(distDir)) { const bundleSize = this.calculateBundleSize(distDir); if (bundleSize > 2 * 1024 * 1024) { / 2MB threshold performanceIssues.push({" type: "large_bundle"," severity: "medium",` message: `Bundle size is ${(bundleSize / 1024 / 1024).toFixed(2)}MB (consider code splitting)` }); } } / Check for unoptimized images const imageFiles = this.findImageFiles(); for (const file of imageFiles) { try { const stats = fs.statSync(file); if (stats.size > 500 * 1024) { / 500KB threshold performanceIssues.push({" type: "large_image"," severity: "medium",` message: `Large image file: ${path.basename(file)} (${(stats.size / 1024).toFixed(2)}KB)` }); } } catch (err) {" / Skip files that can"t be read } }` this.log(`Found ${performanceIssues.length} performance issues`); return { checked: true, issues: performanceIssues, totalIssues: performanceIssues.length }; } catch (error) {` this.log(`Performance check failed: ${error.message}`); return { checked: false, error: error.message }; } } calculateBundleSize(dir) { let totalSize = 0; const scanDir = (currentDir) => { try { const files = fs.readdirSync(currentDir); for (const file of files) { const filePath = path.join(currentDir, file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { scanDir(filePath);" } else if (stat.isFile() && (file.endsWith(".js") | file.endsWith(".css"))) { totalSize += stat.size; } } } catch (err) {" / Skip directories that can"t be read } }; scanDir(dir); return totalSize; } findImageFiles() { const imageFiles = [];" const extensions = [".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg"]; const scanDir = (dir) => { try { const files = fs.readdirSync(dir); for (const file of files) { const filePath = path.join(dir, file); const stat = fs.statSync(filePath); " if (stat.isDirectory() && !file.startsWith(".") && file !== "node_modules") { scanDir(filePath); } else if (stat.isFile() && extensions.some(ext => file.toLowerCase().endsWith(ext))) { imageFiles.push(filePath); } } } catch (err) {" / Skip directories that can"t be read } };" const scanDirs = ["public", "dist", "out", "build", "assets", "images"]; for (const dir of scanDirs) { if (fs.existsSync(dir)) { scanDir(dir); } } return imageFiles; } async runLighthouseAudit() { if (!this.lighthouseAudit) {" this.log("Lighthouse audit disabled"); return { audited: false }; } try {" this.log("Running Lighthouse audit."); / Check if Lighthouse is available try {" execSync("npx lighthouse --version", { stdio: "pipe" }); } catch (error) {" this.log("Lighthouse not found, installing.");" execSync("npm install -g lighthouse", { stdio: "pipe" }); } / Run Lighthouse audit (simplified - would need a running server)" this.log("Lighthouse audit requires a running server - skipping for now"); return { audited: false," reason: "No running server available for audit" }; } catch (error) {` this.log(`Lighthouse audit failed: ${error.message}`); return { audited: false, error: error.message }; } } async generateReport() { const report = { timestamp: new Date().toISOString(), processName: this.processName, seo: await this.checkSEO(), accessibility: await this.checkAccessibility(), performance: await this.checkPerformance(), lighthouse: await this.runLighthouseAudit(), environment: { NODE_ENV: process.env.NODE_ENV, checkSEO: this.checkSEO, checkAccessibility: this.checkAccessibility, checkPerformance: this.checkPerformance, lighthouseAudit: this.lighthouseAudit } };" const reportFile = path.join(__dirname, "././logs/pm2/seo-accessibility-report.json"); fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));` this.log(`SEO & Accessibility report generated: ${reportFile}`); return report; } async start() {` this.log(`${this.processName} started`); try { const report = await this.generateReport(); const totalIssues = (report.seo.totalIssues | 0) (report.accessibility.totalIssues | 0) (report.performance.totalIssues | 0); if (totalIssues === 0) {" this.log("SEO & Accessibility check completed - no issues found"); } else {` this.log(`SEO & Accessibility check completed - found ${totalIssues} issues`); } } catch (error) {` this.log(`SEO & Accessibility check error: ${error.message}`); } }}/ Start the serviceif (require.main === module) { const seoAccessibility = new SEOAccessibility(); seoAccessibility.start().catch(console.error);}module.exports = SEOAccessibility;""`"`
-=======
 monitor.run().catch(error => {)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
 #!/usr/bin/env node;
 /**
  * PM2 SEO & Accessibility Service;
  * Checks SEO and accessibility compliance;
  */
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
+
 class SEOAccessibility {}
   constructor() {}
     this.processName = process.env.PM2_PROCESS_NAME || 'seo-accessibility';
@@ -524,51 +398,11 @@ class SEOAccessibility {}
     };
   };
   log(message) {}
-<<<<<<< HEAD
-    const timestamp = new Date().toISOString();
-=======
-<<<<<<< HEAD
 
-=======
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
     );
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
-    );
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -580,68 +414,15 @@ class SEOAccessibility {}
     };
     try {}
       this.log('Checking SEO compliance...');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+
       const seoIssues = [];
       const htmlFiles = this.findHTMLFiles();
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-      const seoIssues = [];
-      const htmlFiles = this.findHTMLFiles();
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       
       const htmlFiles = this.findHTMLFiles();
       
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      const seoIssues = [];
+      
       const htmlFiles = this.findHTMLFiles();
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+      
       for (const file of htmlFiles) {}
         try {}
           const issues = this.analyzeSEO(content, file);
@@ -651,63 +432,13 @@ class SEOAccessibility {}
         };
       };
       this.log(`Found ${seoIssues.length} SEO issues`);
-<<<<<<< HEAD
+
       
       
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
       
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
       
       
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
-      
-      
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-      
-      
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
-      
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       return {}
         checked: true,
         issues: seoIssues,
@@ -721,126 +452,26 @@ class SEOAccessibility {}
   };
   findHTMLFiles() {}
     const htmlFiles = [];
-<<<<<<< HEAD
+
     
     
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
     
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
     
     
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
-    
-    
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-    
-    
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
-    
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     const scanDir = (dir) => {}
       try {}
         const files = fs.readdirSync(dir);
         for (const file of files) {}
           const filePath = path.join(dir, file);
           const stat = fs.statSync(filePath);
-<<<<<<< HEAD
+
           
           
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           
           
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
           
           
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
-          
-          
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-          
-          
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
-          
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {}
             scanDir(filePath);
           } else if (stat.isFile() && (file.endsWith('.html') || file.endsWith('.htm'))) {}
@@ -851,63 +482,13 @@ class SEOAccessibility {}
         // Skip directories that can't be read;
       };
     };
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
 
-
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     // Scan common directories;
     const scanDirs = ['public', 'dist', 'out', 'build', 'pages'];
     for (const dir of scanDirs) {}
@@ -918,64 +499,14 @@ class SEOAccessibility {}
     return htmlFiles;
   };
   analyzeSEO(content, filePath) {}
-<<<<<<< HEAD
+
+
     
     
-=======
-    const issues = [];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
     
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
     
     
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
-    
-    
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-    
-    
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
-    
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     // Check for title tag;
     if (!content.includes('<title>')) {}
       issues.push({})
@@ -1048,68 +579,15 @@ class SEOAccessibility {}
     };
     try {}
       this.log('Checking accessibility compliance...');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+
       const a11yIssues = [];
       const htmlFiles = this.findHTMLFiles();
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-      const a11yIssues = [];
-      const htmlFiles = this.findHTMLFiles();
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       
       const a11yIssues = [];
       
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+      
       const a11yIssues = [];
-      const htmlFiles = this.findHTMLFiles();
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+      
       for (const file of htmlFiles) {}
         try {}
           const issues = this.analyzeAccessibility(content, file);
@@ -1119,63 +597,13 @@ class SEOAccessibility {}
         };
       };
       this.log(`Found ${a11yIssues.length} accessibility issues`);
-<<<<<<< HEAD
+
       
       
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
       
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
       
       
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
-      
-      
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-      
-      
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
-      
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       return {}
         checked: true,
         issues: a11yIssues,
@@ -1188,70 +616,18 @@ class SEOAccessibility {}
     };
   };
   analyzeAccessibility(content, filePath) {}
-<<<<<<< HEAD
+
+
     
     
-=======
-    const issues = [];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
     
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
     
     
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
-    
-    
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-    
-    
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
-    
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     // Check for proper heading hierarchy;
-=======
 </h1>
         message: 'Missing <h1> tag
     const imgTags = content.match(/<img[^>]*>/g) || [];
->>>>>>> origin/chore/fix-lint-and-merge
     const headings = content.match(/<h[1-6][^>]*>/g) || [];
 </h>
       const level = parseInt(heading.match(/<h(\d)/)[1]);
@@ -1262,7 +638,6 @@ class SEOAccessibility {}
     const interactiveElements = content.match(/<button|<a|<input|<select|<textarea/g) || [];
     const tabIndexElements = content.match(/tabindex/g) || [];
     if (interactiveElements.length > 0 && tabIndexElements.length === 0) {}
-<<<<<<< HEAD
       issues.push({})
         file: filePath,
         type: 'keyboard_navigation',
@@ -1280,49 +655,19 @@ class SEOAccessibility {}
     };
     try {}
       this.log('Checking performance...');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      const performanceIssues = [];
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
-      
-      const performanceIssues = [];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-      
-      
-      
-      
-<<<<<<< HEAD
-=======
-      const performanceIssues = [];
-      
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-      const performanceIssues = [];
-=======
+
       
       const performanceIssues = [];
       
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+      
+      
+      
+
+      const performanceIssues = [];
+      
+      
+      
+      
       // Check bundle size;
       const distDir = 'dist';
       if (fs.existsSync(distDir)) {}
@@ -1353,63 +698,13 @@ class SEOAccessibility {}
         };
       };
       this.log(`Found ${performanceIssues.length} performance issues`);
-<<<<<<< HEAD
+
       
       
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
       
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
       
       
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
-      
-      
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-      
-      
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
-      
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       return {}
         checked: true,
         issues: performanceIssues,
@@ -1422,126 +717,26 @@ class SEOAccessibility {}
   };
   calculateBundleSize(dir) {}
     let totalSize = 0;
-<<<<<<< HEAD
+
     
     
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
     
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
     
     
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
-    
-    
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-    
-    
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
-    
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     const scanDir = (currentDir) => {}
       try {}
         const files = fs.readdirSync(currentDir);
         for (const file of files) {}
           const filePath = path.join(currentDir, file);
-<<<<<<< HEAD
+
+
           
           
-=======
-          const stat = fs.statSync(filePath);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           
           
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
           
           
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
-          
-          
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-          
-          
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
-          
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           if (stat.isDirectory()) {}
             scanDir(filePath);
           } else if (stat.isFile() && (file.endsWith('.js') || file.endsWith('.css'))) {}
@@ -1552,188 +747,42 @@ class SEOAccessibility {}
         // Skip directories that can't be read;
       };
     };
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
 
-
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     scanDir(dir);
     return totalSize;
   };
   findImageFiles() {}
     const imageFiles = [];
     const extensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
-<<<<<<< HEAD
+
     
     
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
     
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-    
-    
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
-    
-    
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-    
-    
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
-    
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const scanDir = (dir) => {}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       try {}
         for (const file of files) {}
-<<<<<<< HEAD
           
           
-=======
-          const filePath = path.join(dir, file);
-          const stat = fs.statSync(filePath);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           
           
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
+
           
           
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
           
           
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
+    
+    
+      try {}
+        for (const file of files) {}
           
           
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
-          
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {}
             scanDir(filePath);
           } else if (stat.isFile() && extensions.some(ext => file.toLowerCase().endsWith(ext))) {}
@@ -1744,63 +793,13 @@ class SEOAccessibility {}
         // Skip directories that can't be read;
       };
     };
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
 
-
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     const scanDirs = ['public', 'dist', 'out', 'build', 'assets', 'images'];
     for (const dir of scanDirs) {}
       if (fs.existsSync(dir)) {}
@@ -1816,63 +815,13 @@ class SEOAccessibility {}
     };
     try {}
       this.log('Running Lighthouse audit...');
-<<<<<<< HEAD
+
       
       
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
       
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
       
       
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
-      
-      
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-      
-      
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
-      
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       // Check if Lighthouse is available;
       try {}
         execSync('npx lighthouse --version', { stdio: 'pipe' }
@@ -1884,63 +833,13 @@ class SEOAccessibility {}
       };
       // Run Lighthouse audit (simplified - would need a running server);
       this.log('Lighthouse audit requires a running server - skipping for now');
-<<<<<<< HEAD
+
       
       
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
       
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
       
       
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
-      
-      
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-      
-      
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
-      
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       return {}
         audited: false,
         reason: 'No running server available for audit'
@@ -1966,113 +865,25 @@ class SEOAccessibility {}
         lighthouseAudit: this.lighthouseAudit;
       };
     };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     const reportFile = path.join(__dirname, '../../logs/pm2/seo-accessibility-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-    const reportFile = path.join(__dirname, '../../logs/pm2/seo-accessibility-report.json');
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
     const reportFile = path.join(__dirname, '../../logs/pm2/seo-accessibility-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    const reportFile = path.join(__dirname, '../../logs/pm2/seo-accessibility-report.json');
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     this.log(`SEO & Accessibility report generated: ${reportFile}`);
     return report;
   };
   async start() {}
     this.log(`${this.processName} started`);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
     try {}
       const report = await this.generateReport();
       const totalIssues = (report.seo.totalIssues || 0) + 
                          (report.accessibility.totalIssues || 0) + 
                          (report.performance.totalIssues || 0);
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     
     try {}
       const report = await this.generateReport();
@@ -2081,36 +892,7 @@ class SEOAccessibility {}
                          (report.accessibility.totalIssues || 0) + 
                          (report.performance.totalIssues || 0);
       
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    try {}
-      const report = await this.generateReport();
-      const totalIssues = (report.seo.totalIssues || 0) + 
-                         (report.accessibility.totalIssues || 0) + 
-                         (report.performance.totalIssues || 0);
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
       if (totalIssues === 0) {}
         this.log('SEO & Accessibility check completed - no issues found');
       } else {}
@@ -2125,37 +907,7 @@ class SEOAccessibility {}
 if (require.main === module) {}
   const seoAccessibility = new SEOAccessibility();
   seoAccessibility.start().catch(console.error);
-<<<<<<< HEAD
 };
-=======
-};
-module.exports = SEOAccessibility;module.exports = SEOAccessibility;
-=======
-<<<<<<< HEAD
 </button>`;
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-module.exports = SEOAccessibility;
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
 module.exports = SEOAccessibility;module.exports = SEOAccessibility;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-module.exports = SEOAccessibility;
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-module.exports = SEOAccessibility;module.exports = SEOAccessibility;
-module.exports = SEOAccessibility;module.exports = SEOAccessibility;
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+</button>`;

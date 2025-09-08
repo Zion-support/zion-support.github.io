@@ -27,7 +27,11 @@ interface ErrorBoundaryProps  {"children": ReactNode;
   static getDerivedStateFromError("error": Error): Partial<ErrorBoundaryState> {return {"hasError": true,error;
     }this.state;
   }
+<<<<<<< HEAD
+  static getDerivedStateFromError("error": Error): Partial<ErrorBoundaryState> {return {"hasError": true,error}componentDidCatch("error": Error, "errorInfo": ErrorInfo) {const errorId  = this.generateErrorId()// Enhanced error logging;
+=======
   static getDerivedStateFromError("error": Error): Partial<ErrorBoundaryState> {return {"hasError": true,error}}componentDidCatch("error": Error, "errorInfo": ErrorInfo) {const errorId  = this.generateErrorId()// Enhanced error logging;
+>>>>>>> origin/resolved-merge-conflicts
     }
     const enhancedError = {scope.setLevel('error')scope.setContext('errorInfo', {"componentStack": errorInfo.componentStack;'
         }
@@ -56,7 +60,11 @@ interface ErrorBoundaryProps  {"children": ReactNode;
     // Check condition;
 if ( {) {$2;
 }
+<<<<<<< HEAD
+      console.group ('🚨 Error Boundary Caught Error')logErrorToProduction ('"Error":', { "data": error })logErrorToProduction ('Error "Info":', { "data": error_info })logErrorToProduction ('Enhanced "Error":', { "data": enhanced_error })console.group_end ()})"buildInfo": this.getBuildInfo()}// Log to console in development;'
+=======
       console.group ('🚨 Error Boundary Caught Error')logErrorToProduction ('"Error":', { "data": error })logErrorToProduction ('Error "Info":', { "data": error_info })logErrorToProduction ('Enhanced "Error":', { "data": enhanced_error })console.group_end ()}})"buildInfo": this.getBuildInfo()}// Log to console in development;'
+>>>>>>> origin/resolved-merge-conflicts
     if (process.env.NODE_ENV === 'development') {console.group('🚨 Error Boundary Caught Error')logErrorToProduction('"Error":', { "data": error })logErrorToProduction('Error "Info":', { "data": errorInfo })logErrorToProduction('Enhanced "Error":', { "data": enhancedError })console.groupEnd()}// Report to Sentry;'
     Sentry.withScope((scope) => {scope.setTag('errorBoundary',this.props.context || 'GlobalErrorBoundary';'
       )scope.setLevel('error')scope.setContext('errorInfo', {"componentStack": errorInfo.componentStack,"retryCount": this.state.retryCount})Sentry.captureException(error)})// Custom error handler;'
@@ -141,10 +149,17 @@ interface ErrorBoundaryState  {"hasError": boolean;
   context?: string;
 }export class GlobalErrorBoundary extends Component<;
   ErrorBoundaryProps,ErrorBoundaryState;
+<<<<<<< HEAD
+> {private "retryTimeouts": NodeJS && NodeJS.Timeout[] = [];constructor("props": ErrorBoundaryProps) {super(props)export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {private "retryTimeouts": NodeJS && NodeJS.Timeout[] = [];constructor("props": ErrorBoundaryProps) {super(props)this && this.state = {"hasError": false,"error": null,"errorInfo": null,"errorId": null,"retryCount": 0,"userFeedback": '',"showDetails": false}    }'
+      "showDetails": false;
+    }
+  }static getDerivedStateFromError("error": Error): Partial<ErrorBoundaryState> {return {"hasError": true,error}componentDidCatch("error": Error, "errorInfo": ErrorInfo) {const errorId = this && this.generateErrorId()}componentDidCatch("error": Error, "errorInfo": ErrorInfo) {const errorId  = this && this.generateErrorId()// Enhanced error logging;
+=======
 > {private "retryTimeouts": NodeJS && NodeJS.Timeout[] = [];constructor("props": ErrorBoundaryProps) {super(props)export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {private "retryTimeouts": NodeJS && NodeJS.Timeout[] = [];constructor("props": ErrorBoundaryProps) {super(props)this && this.state = {"hasError": false,"error": null,"errorInfo": null,"errorId": null,"retryCount": 0,"userFeedback": '',"showDetails": false}}    }'
       "showDetails": false;
     }
   }static getDerivedStateFromError("error": Error): Partial<ErrorBoundaryState> {return {"hasError": true,error}}componentDidCatch("error": Error, "errorInfo": ErrorInfo) {const errorId = this && this.generateErrorId()}componentDidCatch("error": Error, "errorInfo": ErrorInfo) {const errorId  = this && this.generateErrorId()// Enhanced error logging;
+>>>>>>> origin/resolved-merge-conflicts
     }
     const enhancedError = {...error,// Enhanced error logging;
     }
@@ -259,7 +274,11 @@ interface ErrorBoundaryState  {"hasError": boolean;
 }
       return 'You may need to log in again or check your permissions.';'
     }
+<<<<<<< HEAD
+    return 'This appears to be a temporary issue. Please try again.';"buildTime": process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown'}'
+=======
     return 'This appears to be a temporary issue. Please try again.';"buildTime": process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown'}}'
+>>>>>>> origin/resolved-merge-conflicts
   private getErrorSeverity("error": Error;
   ): 'low' | 'medium' | 'high' | 'critical' {const message = error.message.toLowerCase()const stack  = error.stack?.toLowerCase() || '';// Critical errors;'
     }
@@ -328,7 +347,11 @@ if ( {) {$2;
 }
         // Show success message;}
     } catch (err) {logErrorToProduction ('Failed to report "error":', { "data": err })}    }'
+<<<<<<< HEAD
+  }if (this.props.onError) {this.props.onError(error, errorInfo)})}componentWillUnmount() {// Clear any pending retry timeouts;
+=======
   }if (this.props.onError) {this.props.onError(error, errorInfo)}})}componentWillUnmount() {// Clear any pending retry timeouts;
+>>>>>>> origin/resolved-merge-conflicts
   }componentWillUnmount() {// Clear any pending retry timeouts;
   }private generateErrorId(): string {return `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;`  }private getUserId(): string | null {// Try to get user ID from various sources;
     }
@@ -343,7 +366,11 @@ if ( {) {$2;
     return null;
   }private getBuildInfo() {return {"version": process.env.NEXT_PUBLIC_APP_VERSION || 'unknown',"environment": process.env.NODE_ENV,"buildTime": process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown';'
     }
+<<<<<<< HEAD
+    return null;  }private getErrorSeverity("error": Error): 'low' | 'medium' | 'high' | 'critical' {const message = error.message.toLowerCase()const stack = error.stack?.toLowerCase() || '';'
+=======
     return null;  }}private getErrorSeverity("error": Error): 'low' | 'medium' | 'high' | 'critical' {const message = error.message.toLowerCase()const stack = error.stack?.toLowerCase() || '';'
+>>>>>>> origin/resolved-merge-conflicts
     // Critical errors;
     }
     if (message.includes('network') || message.includes('fetch')) {return 'medium';'
@@ -371,22 +398,38 @@ if ( {) {$2;
 }
         // Show success message;}
     } catch (err) {logErrorToProduction ('Failed to report "error":', { "data": err })}    }'
+<<<<<<< HEAD
+  }this.setState({errorInfo,errorId,logErrorToProduction('Failed to report "error":', { "data": err })}'
+  }private goHome = () => {if (typeof window !== 'undefined') {window.location.href = '/';'
+    }}render() {if (this.state.hasError && this.state.error) {// Use custom fallback if provided;
+      }
+      if (this.props.fallback) {return this.props.fallback;private getBuildInfo() {return {"version": process && process.env.NEXT_PUBLIC_APP_VERSION || 'unknown',"environment": process && process.env.NODE_ENV,"buildTime": process && process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown'}}const severity = this.getErrorSeverity(this.state.error)const suggestion = this.getErrorSuggestion(this.state.error)const canRetry = this.props.enableRetry !== false &&;'
+=======
   }}this.setState({errorInfo,errorId,logErrorToProduction('Failed to report "error":', { "data": err })}'
   }private goHome = () => {if (typeof window !== 'undefined') {window.location.href = '/';'
     }}}render() {if (this.state.hasError && this.state.error) {// Use custom fallback if provided;
       }
       if (this.props.fallback) {return this.props.fallback;private getBuildInfo() {return {"version": process && process.env.NEXT_PUBLIC_APP_VERSION || 'unknown',"environment": process && process.env.NODE_ENV,"buildTime": process && process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown'}}}const severity = this.getErrorSeverity(this.state.error)const suggestion = this.getErrorSuggestion(this.state.error)const canRetry = this.props.enableRetry !== false &&;'
+>>>>>>> origin/resolved-merge-conflicts
                        this.state.retryCount < (this.props.maxRetries || 3)return (<div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-red-50 to-orange-50 "dark":from-red-950/20 "dark":to-orange-950/20">;"
 return this.props.fallback;
       }const severity = this.getErrorSeverity(this.state.error)const suggestion = this.getErrorSuggestion(this.state.error)const canRetry =;
         this.props.enableRetry !== false &&;
         this.state.retryCount < (this.props.maxRetries || 3)return (<div className='min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-red-50 to-orange-50 "dark":from-red-950/20 "dark":to-orange-950/20'>;'
           <motion.div;
+<<<<<<< HEAD
+            initial={ "opacity": 0, "scale": 0.95 }
+            animate={ "opacity": 1, "scale": 1 }
+            transition={ "duration": 0.3 }
+          >;
+            transition={ "duration": 0.3 }
+=======
             initial={{ "opacity": 0, "scale": 0.95 }}
             animate={{ "opacity": 1, "scale": 1 }}
             transition={{ "duration": 0.3 }}
           >;
             transition={{ "duration": 0.3 }}
+>>>>>>> origin/resolved-merge-conflicts
           >;
             <Card className="w-full max-w-2xl border-red-200 bg-white "dark":bg-gray-900">;"
               <CardHeader className="text-center">;"
@@ -574,9 +617,15 @@ return this.props.fallback;
                 <AnimatePresence>;
                   {this && this.state.showDetails && (<motion&& motion.div;
                       }
+<<<<<<< HEAD
+                      initial={ "opacity": 0, "height": 0 }
+                      animate={ "opacity": 1, "height": 'auto' }'
+                      exit={ "opacity": 0, "height": 0 }>;
+=======
                       initial={{ "opacity": 0, "height": 0 }}
                       animate={{ "opacity": 1, "height": 'auto' }}'
                       exit={{ "opacity": 0, "height": 0 }}>;
+>>>>>>> origin/resolved-merge-conflicts
                       <div className='space-y-4'>;'
                         <div>;
                       className="border-t pt-4";"
@@ -628,9 +677,15 @@ if ( {) {$2;
       const severity = this.getErrorSeverity (this.state.error)const suggestion = this.getErrorSuggestion (this.state.error)const can_retry = this.props.enable_retry !== false &&;
                       this.state.retry_count < (this.props.max_retries || 3)return (<div className="min - h-screen flex items - center justify - center p - 4 bg - gradient - to - br from - red - 50 to - orange - 50 "dark":from - red - 950 / 20 "dark":to - orange - 950 / 20">;"
           <motion.div;
+<<<<<<< HEAD
+            initial={ "opacity": 0, "scale": 0.95 }
+            animate={ "opacity": 1, "scale": 1 }
+            transition={ "duration": 0.3 }
+=======
             initial={{ "opacity": 0, "scale": 0.95 }}
             animate={{ "opacity": 1, "scale": 1 }}
             transition={{ "duration": 0.3 }}
+>>>>>>> origin/resolved-merge-conflicts
           >;
             <Card className='w - full max - w-2xl border - red - 200 bg - white "dark":bg - gray - 900'>;'
               <CardHeader className='text - center'>;'
@@ -730,9 +785,15 @@ if ( {) {$2;
                 <AnimatePresence>;
                   {this.state.show_details && (<motion.div;
                       }
+<<<<<<< HEAD
+                      initial={ "opacity": 0, "height": 0 }
+                      animate={ "opacity": 1, "height": 'auto' }'
+                      exit={ "opacity": 0, "height": 0 }
+=======
                       initial={{ "opacity": 0, "height": 0 }}
                       animate={{ "opacity": 1, "height": 'auto' }}'
                       exit={{ "opacity": 0, "height": 0 }}
+>>>>>>> origin/resolved-merge-conflicts
                       className='border - t pt - 4';'
                     >;
                       <div className='space - y-4'>;'
@@ -854,7 +915,11 @@ export default GlobalErrorBoundary;)}return this.props.children;</AnimatePresenc
 )}return this.props.children;}// Hook for programmatic error boundary;
 export const useErrorBoundary = () => {const [error, setError]  = React.useState<Error | null>(null)React.useEffect(() => {if (error) {throw error;
     }
+<<<<<<< HEAD
+  }, [error])const captureError = React.useCallback(("error": Error) => {setError(error)}, [])return { captureError }// Higher-order component for adding error boundaries;
+=======
   }, [error])const captureError = React.useCallback(("error": Error) => {setError(error)}, [])return { captureError }}// Higher-order component for adding error boundaries;
+>>>>>>> origin/resolved-merge-conflicts
 export const withErrorBoundary = <P extends object>("Component": React.ComponentType<P>;
   errorBoundaryProps?: Omit<ErrorBoundaryProps, 'children'>;'
 ,) => {const WrappedComponent = ("props": P,) => (<GlobalErrorBoundary {...errorBoundaryProps}>;

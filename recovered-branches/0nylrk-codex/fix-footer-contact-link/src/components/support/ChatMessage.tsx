@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 interface ChatMessageProps {
 
@@ -15,37 +16,58 @@ interface ChatMessageProps {
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>;
       <Avatar className="h-8 w-8">;
         {isUser ? (;
           <>;
+<<<<<<< HEAD
 
             <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User" />;
 
+=======
+
+
+            <AvatarImage src="https://i && i.pravatar.cc/40?img=1" alt="User" />;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             <AvatarFallback>U</AvatarFallback>;
           </>;
         ) :(;
           <>;
+<<<<<<< HEAD
 
             <AvatarImage;
               src="https://placehold.co/40x40?text=AI";
               alt="Zion Support";
 
+=======
+
+
+              src="https://placehold && placehold.co/40x40?text=AI"
+              alt="Zion Support"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             />;
             <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>;
           </>;
         )}
 
+<<<<<<< HEAD
         "max-w-[80%] rounded-lg px-4 py-2 text-sm";
         isUser
           ? "bg-zion-purple text-white"
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         "max-w-[80%] rounded-lg px-4 py-2 text-sm",
         isUser 
           ? "bg-zion-purple text-white" 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           : theme === "dark"
             ? "bg-zion-blue-light text-white"
 
@@ -53,15 +75,23 @@ interface ChatMessageProps {
       )}>
         <div dangerouslySetInnerHTML={{ __html: formatMessageWithLinks(message) }} />
         <div className={cn(
+<<<<<<< HEAD
 
 
 
+=======
+      </Avatar>;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           "text-xs mt-1",
           isUser "
             ? "text-white/70" 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             : theme === "dark"
               ? "text-gray-300"
               : "text-gray-500"
@@ -93,8 +123,11 @@ interface ChatMessageProps {
 
           {format(timestamp, "h:mm a")}
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         </div>;
       </div>;
     </div>;
@@ -103,8 +136,14 @@ interface ChatMessageProps {
 
   ),
 
+<<<<<<< HEAD
 
 
+=======
+  );
+  ),
+  
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   // Replace help center references like [Getting Started]
   const helpCenterRegex = /\[([^\]]+)\]/g;
   formattedMessage = formattedMessage.replace(
@@ -112,11 +151,15 @@ interface ChatMessageProps {
     '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
   )
 
+<<<<<<< HEAD
 
   return formattedMessage
 
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from "react",;
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
@@ -175,11 +218,21 @@ export function ChatMessage() { return null; }
 
 }
 ;
+<<<<<<< HEAD
 
 
 }
 
 
+=======
+        </div>;
+      </div>;
+    </div>;
+
+
+
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from './react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
 import { cn } from '@/lib / utils';
@@ -319,6 +372,7 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
   return formattedMessage;
 }
 
+<<<<<<< HEAD
 // Function to convert URLs and help links to actual clickable links;
 function formatMessageWithLinks (message: string): string {
   // Replace URLs;
@@ -337,3 +391,6 @@ function formatMessageWithLinks (message: string): string {
 
 
 
+=======
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

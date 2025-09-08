@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -110,6 +111,45 @@
     description:;
       'Streamline vendor assessments with standardized questionnaires, evidence requests, and continuous security monitoring.',
     features: [;
+=======
+
+import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
+const contact = $2;
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
+
+export const newRealServices: EnhancedRealMicroSaasService[] = [
+  {
+    id: 'llm-observability-suite',
+    name: 'LLM Observability Suite',
+    tagline: 'Track latency, cost, quality and drift across all prompts',
+    price: '$199',
+    period: '/month',
+    description: 'Production-grade observability for LLM apps: trace collection, cost attribution, evals, guardrails, and regression detection. Works with OpenAI-compatible and open-source models.',
+    features: [
+      'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evalsGuardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters'
+    ],
+    popular: true,
+    icon: '📈',
+    color: 'from-cyan-600 to-blue-700',
+    textColor: 'text-cyan-400',
+    link: 'https://ziontechgroup.com/llm-observability-suite',
+    marketPosition: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',
+    targetAudience: 'AI product teams, platform engineers, data teams',
+    trialDays: 21,
+    setupTime: '1 day',
+    category: 'AI & Machine Learning',
+    realService: true,
+    technology: ['Next.jsOpenTelemetryPostgreSQLClickHouse'],
+    integrations: ['OpenAI-compatibleLangChainLlamaIndexDatadogGrafana'],
+    useCases: ['LLM app monitoringCost controlPolicy compliance'],
+    roi: 'Cut LLM cost 20–45% while improving reliability',
+    competitors: ['LangfuseArizeWeights & Biases'],
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
@@ -824,9 +864,13 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [;
   }
 ];
 
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+];
+>>>>>>> origin/cursor/delete-old-data-records-6bba

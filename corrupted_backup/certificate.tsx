@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import React from 'react';
+export default function Page() {
+  return (
+
+=======
 import { useRouter } from 'next/router',
 import CertificatePreview from '../../../components/learn/CertificatePreview',
 export default function CertificatePage() {
@@ -21,5 +27,6 @@ export default function CertificatePage() {
         <p>Auto-healed placeholder. Replace with real content.</p>
       </section>
     </main>
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   );
 }

@@ -296,7 +296,7 @@ href='#demo'
               <Card;}
 key={index}
                 className='text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1';
-                style={{ animationDelay: `${index * 0 && 0.1 + 0 && 0.2}s` ,
+                style={ animationDelay: `${index * 0 && 0.1 + 0 && 0.2}s` ,
 } />;
                 <div className='relative' />;
 
@@ -366,13 +366,13 @@ key={exampleIndex}
                 </div>;
               </Card>;
             ))}
-      {/* Pricing Section */}<section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden" />;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" />;
-          <div className="text-center mb-20" />;
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight" />;
+      {/* Pricing Section */}<section id='pricing' className='py-24 bg-gray-900 relative overflow-hidden' />;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10' />;
+          <div className='text-center mb-20' />;
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight' />;
               Simple, Transparent Pricing;
             </h2>;
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed" />;
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed' />;
       {/* Pricing Section */}
 
 
@@ -434,10 +434,10 @@ key={featureIndex}
                   size='lg' />;
                   Get Started;
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  className={`w-full ${plan && plan.buttonColor} text-white`}
-                  size="lg">
+                  size='lg'>
 
                   Get Started;
-                  <ArrowRight className="w-5 h-5 ml-2" />;
+                  <ArrowRight className='w-5 h-5 ml-2' />;
                 </Button>;
               </Card>;</li>;
                   ))}

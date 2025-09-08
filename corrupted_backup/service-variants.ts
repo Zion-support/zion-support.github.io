@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 export type ServiceVariant =;
   | 'default';
   | 'holographic';
@@ -120,6 +123,7 @@ export default function Servicevariants({ }: ServicevariantsProps) {
 }
 }
 export type ServiceVariant = 
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   | 'default'
   | 'holographic'
   | 'quantum'
@@ -225,3 +229,7 @@ export type ServiceVariant =
   | 'real-estate-futuristic'
   | 'industrial-futuristic'
   | 'neural-futuristic',
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -13,7 +13,11 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             initialValidation[field.name] = {}
                 isValid: !field.required, '';
                 message: '', isTouched: false;
+<<<<<<< HEAD
+            })setFormData(initialData)setValidation(initialValidation)}, [fields])// Update progress based on filled fields;
+=======
             }})setFormData(initialData)setValidation(initialValidation)}, [fields])// Update progress based on filled fields;
+>>>>>>> origin/resolved-merge-conflicts
     useEffect(() => {}
 '';
 '';
@@ -154,10 +158,17 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         const fieldValidation = validation[field.name]'';
         const isPasswordField = field.name.toLowerCase().includes('password')return (<motion.div key={field.name} initial = {}
   { opacity: 0, y: 20;
+<<<<<<< HEAD
+} animate = {}
+  { opacity: 1, y: 0 '''';
+'''';
+} className='space-y-2'>'''';
+=======
 }} animate = {}
   { opacity: 1, y: 0 '''';
 '''';
 }} className='space-y-2'>'''';
+>>>>>>> origin/resolved-merge-conflicts
         <label className='block text-sm font-medium text-gray-700 dark:text-gray-300'>'''';
           {field.label}'''';
           {field.required && <span className='text-red-500 ml-1'>*</span>}
@@ -218,20 +229,35 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         {/* Validation Message */}
         {fieldValidation?.isTouched && fieldValidation.message && (<motion.p initial = {}
   { opacity: 0, height: 0;
+<<<<<<< HEAD
+} animate = {}
+  { opacity: 1,'';
+  height: 'auto' '''';
+'''';
+} className='text-sm text-red-600 dark:text-red-400'>;
+=======
 }} animate = {}
   { opacity: 1,'';
   height: 'auto' '''';
 '''';
 }} className='text-sm text-red-600 dark:text-red-400'>;
+>>>>>>> origin/resolved-merge-conflicts
             {fieldValidation.message}
           </motion.p>)}
       </motion.div>)}, [formData, validation, showPassword, getFieldIcon, handleFieldChange, handleFieldBlur, togglePasswordVisibility])if(isSubmitted) {}
         return (<motion.div initial = {}
   { opacity: 0, scale: 0.9;
+<<<<<<< HEAD
+} animate = {}
+  { opacity: 1, scale: 1 '''';
+'''';
+} className='text-center p-8 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700'>'''';
+=======
 }} animate = {}
   { opacity: 1, scale: 1 '''';
 '''';
 }} className='text-center p-8 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700'>'''';
+>>>>>>> origin/resolved-merge-conflicts
         <CheckCircle className='w-16 h-16 text-green-500 mx-auto mb-4'/>'''';
         <h3 className='text-2xl font-bold text-green-800 dark:text-green-200 mb-2'>;
           Thank You!'''';
@@ -242,10 +268,17 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
       </motion.div>)}
     return (<motion.div initial = {}
   { opacity: 0, y: 20;
+<<<<<<< HEAD
+} animate = {}
+  { opacity: 1, y: 0 `;
+``;
+} className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>'''';
+=======
 }} animate = {}
   { opacity: 1, y: 0 `;
 ``;
 }} className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>'''';
+>>>>>>> origin/resolved-merge-conflicts
       {/* Header */}'''';
       <div className='bg-gradient-to-r from-blue-500 to-purple-500 p-6 text-white'>'''';
         <h2 className='text-2xl font-bold mb-2'>{title}</h2>'''';
@@ -259,7 +292,11 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             <span>{Math.round(progress)}%</span>'''';
           </div>''`;
           <div className='w-full bg-gray-200 dark: bg-gray-700 rounded-full h-2'>'`'`;
+<<<<<<< HEAD
+            <motion.div className='bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300' initial={ width: 0 } animate={ width: `${progress}%` }/>;
+=======
             <motion.div className='bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300' initial={{ width: 0 }} animate={{ width: `${progress}%` }}/>;
+>>>>>>> origin/resolved-merge-conflicts
           </div>;
         </div>) }
 '''';
@@ -272,7 +309,11 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         {/* Submit Button */}'`''`';
         <motion.button type='submit' disabled={!isFormValid() || isSubmitting} className={`w-full py-3 px-6 rounded-lg font-medium text-white transition-all duration-200 flex items-center justify-center gap-2 ${!isFormValid() || isSubmitting''`;
             ? 'bg-gray-400 cursor-not-allowed''`'`;
+<<<<<<< HEAD
+            : 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105'}`} whileHover={isFormValid() && !isSubmitting ? { scale: 1.02 } : {} whileTap={isFormValid() && !isSubmitting ? { scale: 0.98 } : {}>'''';
+=======
             : 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105'}`} whileHover={isFormValid() && !isSubmitting ? { scale: 1.02 } : {}} whileTap={isFormValid() && !isSubmitting ? { scale: 0.98 } : {}}>'''';
+>>>>>>> origin/resolved-merge-conflicts
           {isSubmitting ? (<>'''';
               <Loader2 className='w-5 h-5 animate-spin'/>;
               Sending...'''';
@@ -285,6 +326,15 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         <AnimatePresence>;
           {Object.values(validation).some(v => !v.isValid && v.isTouched) && (<motion.div initial = {}
   { opacity: 0, height: 0;
+<<<<<<< HEAD
+} animate = {}
+  { opacity: 1,'';
+  height: 'auto';
+} exit = {}
+  { opacity: 0, height: 0 '''';
+'''';
+} className='p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg'>'''';
+=======
 }} animate = {}
   { opacity: 1,'';
   height: 'auto';
@@ -292,10 +342,15 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
   { opacity: 0, height: 0 '''';
 '''';
 }} className='p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg'>'''';
+>>>>>>> origin/resolved-merge-conflicts
               <p className='text-sm text-red-600 dark:text-red-400'>;
                 Please fix the errors above before submitting the form.</p>;
             </motion.div>) }
         </AnimatePresence>;
       </form>;
     </motion.div>)}''`;
+<<<<<<< HEAD
+''`''`'';
+=======
 ''`'"`'";
+>>>>>>> origin/resolved-merge-conflicts

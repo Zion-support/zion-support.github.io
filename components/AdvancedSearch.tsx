@@ -1,26 +1,13 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
 
-interface SearchResult  {id: string;
+interface SearchResult {
+  id: string;
   title: string;
   description: string;
   type: 'service' | 'technology' | 'page' | 'content';
   url: string;
-  tags: string[];}
-  relevance: number;}
-}
-
-interface SearchFilter  {type: string[];
   tags: string[];
-  dateRange: {start: Date | null;}
-    end: Date | null;}
-  }}
-
-interface SearchSuggestion {
-  text: string;
-  type: 'recent' | 'popular' | 'related';
-  count?: number;}
-}
+  relevance: number;
 }
 
 export default function AdvancedSearch() {const [query, setQuery] = useState('');
@@ -106,38 +93,15 @@ const timer = setTimeout(() => {if (query.trim()) {performSearch()} else {setRes
 }
 }
 
-const handleKeyDown = (if (e.key === 'ArrowDown') {e.preventDefault()setSelectedResult(prev => (prev < results.length - 1 ? prev + 1 : prev))) => {
-  return $3;}
-} else if (e.key === 'ArrowUp') {e.preventDefault()setSelectedResult(prev => (prev > 0 ? prev - 1 : -1),}
-} else if (e.key === 'Enter' && selectedResult >= 0) {e.preventDefault(;
-  const result = results[selectedResult];}
-      if (result) {window.location.href = result.url;}
-      }
-    } else if (e.key = == 'Escape') {setQuery('')setResults([])setSuggestions([])setSelectedResult(-1)}
-  }
-
-const toggleFilter = (setFilters(prev => ({...prev,[filterType]: prev[filterType].includes(value)? prev[filterType].filter(item => item !== value): [...prev[filterType], value],) => {
-  return $3;}
-});
-}
-
-const clearFilters = (setFilters({type: [],tags: [],dateRange: { start: null, end: null,) => {
-  return $3;}
-}
-},})}
-;
-  const getResultIcon = (switch (type) {case 'service':;
-        return '🔧';
-      case 'technology':;
-        return '💻';
-      case 'page':;
-        return '📄';
-      case 'content':;
-        return '📝';
-      default:;
-        return '🔍';) => {
-  return $3;}
-}
+const AdvancedSearch: React.FC = () => {
+  const [query, setQuery] = useState('');
+  const [results, setResults] = useState<SearchResult[]>([]);
+  const [filters, setFilters] = useState<SearchFilter>({
+    type: [],
+    tags: [],
+    dateRange: {
+      start: null,
+      end: null
     }
   }return (<div className="w-full max-w-4xl mx-auto" />;
       {/* Search Input */}
@@ -338,5 +302,8 @@ const clearFilters = (setFilters({type: [],tags: [],dateRange: { start: null, en
           </p>;
         </motion.div>;
       )}
-    </div>;
-  )}
+    </div>
+  );
+};
+
+export default AdvancedSearch;

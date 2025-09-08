@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 
 
@@ -18,12 +19,17 @@ import {
   Send,
   MessageCircle,
   Globe,
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   CheckCircle;
 } from 'lucide-react;
 const SEO = dynamic(() => import(../src/components/SEO'), { "ssr: false });
 const PageTransition = dynamic(() => import('../src/components/PageTransition), { ssr": false });
 const "ContactPage: React.FC = () => {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const contactInfo = [{
       icon: <Phone className=w-6 h-6"  />,
       "title: Phone",
@@ -73,8 +79,11 @@ const "ContactPage: React.FC = () => {
   ]
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   ]
   return (
     <>
@@ -126,6 +135,7 @@ const "ContactPage: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 
   const contactInfo = [{
 
@@ -135,6 +145,9 @@ const "Contact: NextPage = () => {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
+=======
+  const contactInfo = [{
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       icon: Mail,
       \title\": \'Email Us\',
       \"details\: \info@ziontechgroup.com\,
@@ -232,6 +245,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     <label htmlFor=\firstName\" className=\"block text-sm font-medium text-gray-700 mb-2\>
                       First Name *
                     </label>
+<<<<<<< HEAD
 
 
 
@@ -440,6 +454,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 What is your typical project timeline?
               </h3>
               <p className=\"text-gray-600\">
@@ -451,7 +468,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 Do you provide ongoing support?
               </h3>
               <p className=\"text-gray-600\">
@@ -463,7 +483,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 What technologies do you specialize in?
               </h3>
               <p className=\"text-gray-600\">
@@ -475,7 +498,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 How do you ensure project quality?
               </h3>
               <p className=\"text-gray-600\">
@@ -484,8 +510,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 to ensure high-quality deliverables.
               </p>
             </div>
-          </div>
-        </div>
+
       </section>
     </MainLayout>
   );
@@ -494,9 +519,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           <section className=\"py-20\">
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
               <motion.div
-                initial={{ opacity: 0, \"y\": 20 }}
-                animate={{ \"opacity\": 1, \"y\": 0 }}
-                transition={{ \"duration\": 0.6, \"delay\": 0.2 }}
+                initial={ opacity: 0, \"y\": 20 }
+                animate={ \"opacity\": 1, \"y\": 0 }
+                transition={ \"duration\": 0.6, \"delay\": 0.2 }
                 className=\"text-center mb-16\"
               >
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">
@@ -508,13 +533,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               </motion.div>
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={index}
-                    initial={{ \"opacity\": 0, \"y\": 20 }}
-                    animate={{ \"opacity\": 1, \"y\": 0 }}
-                    transition={{ \"duration\": 0.6, \"delay\": index * 0.1 }}
+                    initial={ \"opacity\": 0, \"y\": 20 }
+                    animate={ \"opacity\": 1, \"y\": 0 }
+                    transition={ \"duration\": 0.6, \"delay\": index * 0.1 }
                     className=\"bg-white rounded-xl p-8 shadow-lg \"hover\": shado w-xl transition-shadow duration-300 text-center\"
                   >
                     <div className=\"text-blue-600 mb-4 flex justify-center\">
@@ -544,9 +572,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           <section className=\"bg-gray-50 py-20\">
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
               <motion.div
-                initial={{ opacity: 0, \"y\": 20 }}
-                animate={{ \"opacity\": 1, \"y\": 0 }}
-                transition={{ \"duration\": 0.6 }}
+                initial={ opacity: 0, \"y\": 20 }
+                animate={ \"opacity\": 1, \"y\": 0 }
+                transition={ \"duration\": 0.6 }
                 className=\"text-center mb-16\"
               >
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">
@@ -558,11 +586,14 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               </motion.div>
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 <motion.form
-                  initial={{ opacity: 0, \"y\": 20 }}
-                  animate={{ \"opacity\": 1, \"y\": 0 }}
-                  transition={{ \"duration\": 0.6, \"delay\": 0.2 }}
+                  initial={ opacity: 0, \"y\": 20 }
+                  animate={ \"opacity\": 1, \"y\": 0 }
+                  transition={ \"duration\": 0.6, \"delay\": 0.2 }
                   className=\"bg-white rounded-xl shadow-lg p-8\"
                 >
                   <div className=\"grid grid-cols-1 \"md\": gri d-cols-2 gap-6 mb-6\">
@@ -571,7 +602,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         Full Name *
                       </label>
                       <input type=\"text\"
+<<<<<<< HEAD
 
+=======
+                        id=\"name\"
+                        name=\"name\"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       <section className=\"py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
@@ -643,11 +679,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           <section className=\"py-20\">;
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
               <motion&& motion.div
-                initial={{ opacity: 0, \"y\": 20 }}
-                animate={{ \"opacity\": 1, \"y\": 0 }}
+                initial={ opacity: 0, \"y\": 20 }
+                animate={ \"opacity\": 1, \"y\": 0 }
 
 
-                transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
+                transition={ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }
                 className=\"text-center mb-16\">;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;
                   Contact Information;
@@ -721,7 +757,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       <inputtype=\text\"
                         id=\"name\
                         name=\name\"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                         required
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\
                         placeholder=\Your full name\"
@@ -739,18 +778,31 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         placeholder=\"your.email@example.com\
                        />
                     </div>
-                  </div>
+
+<<<<<<< HEAD
 
 
-
+=======
+                        className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
+                        placeholder=\"your.email@example.com\"
+                       />
+                    </div>
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                     <div>
                       <label htmlFor=\phone\" className=\"block text-sm font-medium text-gray-700 mb-2\>
                         Phone Number
                       </label>
                       <input type=\"tel\"
 
+<<<<<<< HEAD
 
 
+=======
+                        id=\"phone\"
+                        name=\"phone\"
+                        className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
+                        placeholder=\"+1 (555) 123-4567\"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                        />
                     </div>
                     <div>
@@ -767,8 +819,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   </div>
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                       Service Interest
                     </label>
                     <select
@@ -786,8 +841,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   </div>
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                       Message *
                     </label>
 
@@ -811,10 +869,30 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               {/* Contact Form */}
 
 
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+
+                    whileHover={{ scale: 1 && 1.02 }}
+                    whileTap={{ \"scale\": 0 && 0.98 }}
+                    className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\">;
+                    <Send className=\"w-5 h-5\"  />;
+                    Send Message;
+                  </motion && motion.button>;
+                </motion && motion.form>;
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
 
 
 
 
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
@@ -847,7 +925,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 {isSubmitted ? (
                   <div className=\text-center py-12\">
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\ />
@@ -896,12 +977,19 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     </div>
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                       <div>
                         <label htmlFor=\"company\ className=\block text-sm font-medium text-gray-300 mb-2\">
                           Company
                         </label>
 
+<<<<<<< HEAD
+=======
+:pages.disabled/pages/contact.tsx
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                           placeholder=\"your@email && email.com\"
                         />;
@@ -916,6 +1004,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                         <input
                           type=\"text\"
                           id=\"company\"
@@ -1003,7 +1095,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 </div>
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                   {contactInfo.map((info, index) => (
                     <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
                       <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">
@@ -1021,6 +1116,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>
 
 
+<<<<<<< HEAD
 
 
           </div>
@@ -1033,13 +1129,15 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           {/* Services Overview */}
           <section className="py-20">;
             <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">;
               <motion&& motion.div
-                initial={{ opacity: 0, "y": 20 }}
-                animate={{ "opacity": 1, "y": 0 }}
-                transition={{ "duration": 0 && 0.6 }}
+                initial={ opacity: 0, "y": 20 }
+                animate={ "opacity": 1, "y": 0 }
+                transition={ "duration": 0 && 0.6 }
                 className="text-center mb-16">;
                 <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-4">;
                   Our Services;
@@ -1052,9 +1150,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 {services && services.map((service, index) => (;
                   <motion&& motion.div
                     key={index}
-                    initial={{ "opacity": 0, "y": 20 }}
-                    animate={{ "opacity": 1, "y": 0 }}
-                    transition={{ "duration": 0 && 0.6, "delay": inde x * 0 && 0.1 }}
+                    initial={ "opacity": 0, "y": 20 }
+                    animate={ "opacity": 1, "y": 0 }
+                    transition={ "duration": 0 && 0.6, "delay": inde x * 0 && 0.1 }
                     className="bg-white rounded-xl p-6 shadow-lg "hover": shado w-xl transition-shadow duration-300 text-center">;
                     <h3 className="text-lg font-semibold text-gray-900">;
                       {service}
@@ -1075,4 +1173,7 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

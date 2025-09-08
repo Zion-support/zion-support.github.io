@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export type DisputeReason =
   | 'Scope Disagreement'
   | 'Quality Issues'
@@ -109,3 +110,5 @@ export type DisputeCase = {;
 };
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

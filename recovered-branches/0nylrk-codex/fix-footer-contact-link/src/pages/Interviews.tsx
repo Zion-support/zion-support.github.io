@@ -1,6 +1,21 @@
+<<<<<<< HEAD
 
 
 
+=======
+import React, { useEffect, useState } from "react","
+import { useInterviews } from "@/hooks/useInterviews","
+import { Interview } from "@/types/interview","
+import { AppHeader } from "@/layout/AppHeader","
+import { Footer } from "@/components/Footer","
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs","
+import { SEO } from "@/components/SEO","
+import { ProtectedRoute } from "@/components/ProtectedRoute","
+import { InterviewCard } from "@/components/interviews/InterviewCard","
+import { Button } from "@/components/ui/button","
+import { Calendar, Clock, Video } from "lucide-react";"
+import { format, isAfter, parseISO, startOfDay } from "date-fns";"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React, { useEffect, useState } from "react",
 import { useInterviews } from "@/hooks/useInterviews",
 import { Interview } from "@/types/interview",
@@ -20,17 +35,78 @@ function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews();
   const [activeTab, setActiveTab] = useState("upcoming");
 
+<<<<<<< HEAD
 
 
 
   useEffect(() => {
     // Modified to handle Promise<Interview[]> return type
 
+=======
+  useEffect(() => {
+    // Modified to handle Promise<Interview[]> return type
+function InterviewsContent() {
+  }
+  const { interviews, isLoading, fetchInterviews } = useInterviews();
+  const [activeTab, setActiveTab] = useState("upcoming");"
+import { Calendar, Clock, Video } from "lucide-react","
+import { format, isAfter, parseISO, startOfDay } from "date-fns","
+function InterviewsContent() {
+}
+const { interviews, isLoading, fetchInterviews } = useInterviews(),;
+const [activeTab, setActiveTab] = useState("upcoming"),;"
+  useEffect(() => {
+    // Modified to handle Promise<Interview[]> return type
+}
+const loadInterviews = async () => {
+      }
+      await fetchInterviews()
+    }
+    loadInterviews()
+  }, []);
+  // Filter interviews based on status and date,
+const now = new Date();
+import React, { useEffect, useState } from "react";
+import {useInterviews} from "@/hooks/useInterviews";
+import {Interview} from "@/types/interview";
+import {AppHeader} from "@/layout/AppHeader";
+import {Footer} from "@/components/Footer";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {SEO} from "@/components/SEO";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {InterviewCard} from "@/components/interviews/InterviewCard";
+import {Button} from "@/components/ui/button";
+import {Calendar, Clock, Video} from "lucide-react";
+import {format, isAfter, parseISO, startOfDay} from "date-fns";
+
+import React, { useEffect, useState } from "react",
+import { useInterviews } from "@/hooks/useInterviews",
+import { Interview } from "@/types/interview",
+import { AppHeader } from "@/layout/AppHeader",
+import { Footer } from "@/components/Footer",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { InterviewCard } from "@/components/interviews/InterviewCard",
+import { Button } from "@/components/ui/button",
+
+import { Calendar, Clock, Video } from "lucide-react";
+import { format, isAfter, parseISO, startOfDay } from "date-fns";
+function InterviewsContent() {
+
+  const { interviews, isLoading, fetchInterviews } = useInterviews();
+  const [activeTab, setActiveTab] = useState("upcoming");
+
+
+  useEffect(() => {
+    // Modified to handle Promise<Interview[]> return type
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     const loadInterviews = async () => {
       await fetchInterviews()
 
 
+<<<<<<< HEAD
 
 
     loadInterviews()
@@ -42,13 +118,18 @@ function InterviewsContent() {
     .filter((interview) => {
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         ['confirmedrequested'].includes(interview.status)
     })
     .sort((a, b) =>
       parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     interview.status === 'requested'
   );
   const pastInterviews = interviews.filter(interview => {
@@ -58,6 +139,7 @@ function InterviewsContent() {
   });
   // Group interviews by date
   const groupInterviewsByDate = (interviews: Interview[]) => {
+<<<<<<< HEAD
 
     const grouped: Record<string Interview[]> = {},
     
@@ -89,15 +171,166 @@ function InterviewsContent() {
             ) : pastInterviews.length > 0 ? (
               renderInterviewGroups(pastGrouped)
 
+=======
 
 
+    interviews.forEach((interview) => {
+      const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd');
+      if (!grouped[dateKey]) {
+        grouped[dateKey] = []
+return Object.entries(groupedInterviews);
+      .sort(([dateA], [dateB]) =>
+        parseISO(dateA).getTime() - parseISO(dateB).getTime()
+      )
+      .map(([date, interviews]) => (
+
+    }),;
+
+    return grouped;
+  };
+  const upcomingGrouped = groupInterviewsByDate(upcomingInterviews);
+  const pastGrouped = groupInterviewsByDate(pastInterviews);
+const renderInterviewGroups = (;
+    "groupedInterviews": Record<string, Interview[]>,
+  ) => {
+}
+return Object.entries(groupedInterviews);
+      .sort(
+        ([dateA], [dateB]) =>
+          parseISO(dateA).getTime() - parseISO(dateB).getTime(),
+      )
+      .map(([date, interviews]) => (
+        <div key={date} className="mb-8">"
+          <h3 className="text-lg font-medium text-white mb-4 flex items-center">"
+            <Calendar className="h-5 w-5 mr-2" />"
+            {format(parseISO(date), "EEEE, MMMM d, yyyy")}"
+          </h3>
+          <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-4">"
+            {interviews.map((interview) => (
+              <InterviewCard
+}
+key={interview.id}
+
+        parseISO(dateA).getTime() - parseISO(dateB).getTime();
+      );
+      .map(([date, interviews]) => (;
+        <div key={date} className="mb-8">;
+          <h3 className="text-lg font-medium text-white mb-4 flex items-center">;
+            <Calendar className="h-5 w-5 mr-2" />;
+            {format(parseISO(date), 'EEEE, MMMM d, yyyy')}
+          </h3>;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">;
+
+
+              <InterviewCard 
+                key={interview.id} 
+
+
+                interview={interview}
+                onRefresh={async () => {}
+                  await fetchInterviews();
+                }}
+              />;
+            ))}
+
+          </div>
+        </div>
+
+  return (
+
+    <>
+      <SEO"
+        title="Interviews | Zion AI Marketplace""
+        description="Manage your scheduled interviews with clients and talent"
+      />
+      <AppHeader />"
+      <main className="container mx-auto px-4 py-8">"
+        <div className="flex justify-between items-center mb-8">"
+          <div>
+            <h1 className="text-3xl font-bold">Interviews</h1>"
+            <p className="text-muted-foreground mt-1">"
+              Schedule and manage your video interviews
+            </p>
+          </div>
+        </div>
+        <Tabs,
+defaultValue={activeTab}
+          onValueChange={setActiveTab}
+          className="space-y-8""
+        >
+          <TabsList className="mb-6">"
+            <TabsTrigger value="upcoming" className="flex items-center">"
+              <Clock className="h-4 w-4 mr-2" />"
+              Upcoming
+              {upcomingInterviews.length > 0 && (
+                <span className="ml-2 bg-primary rounded-full px-2 py-0.5 text-xs">"
+                  {upcomingInterviews.length}
+                </span>
+              )}
+            </TabsTrigger>
+            <TabsTrigger value="past">Past</TabsTrigger>"
+                  {upcomingInterviews.length}
+                </span>
+
+
+            <TabsTrigger value="pending">
+              Pending
+              {pendingInterviews.length > 0 && (
+                <span className="ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs">
+                  {pendingInterviews.length}
+                </span>
+
+
+              )}
+            </TabsTrigger>
+
+            <TabsTrigger value="past">Past</TabsTrigger>
+          </TabsList>"
+          <TabsContent value="upcoming" className="space-y-6">
+            {isLoading ? ("
+              <div className="flex justify-center py-12">"
+                <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
+
+              </div>
+            ) : upcomingInterviews.length > 0 ? (
+              renderInterviewGroups(upcomingGrouped)
+            ) : (
+
+              </div>
+            )}
+          </TabsContent>"
+          <TabsContent value="pending" className="space-y-6">
+            {isLoading ? ("
+              <div className="flex justify-center py-12">"
+                <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
+              </div>
+            ) : pendingInterviews.length > 0 ? (
+              renderInterviewGroups(pendingGrouped)
+            ) : (
+
+              </div>
+            ) : pastInterviews.length > 0 ? (
+              renderInterviewGroups(pastGrouped)
+            ) : (
+
+              </div>
+            )}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           </div>;
         </div>;
       ));
   };
+
   return (
     <>;
 
+<<<<<<< HEAD
       <SEO
         title="Interviews | Zion AI Marketplace" 
         description="Manage your scheduled interviews with clients and talent" 
@@ -175,6 +408,8 @@ function InterviewsContent() {
                 <p className="text-muted-foreground">Your interview history will appear here.</p>;
               </div>;
             )}
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import React, { useEffect, useState } from './react';
 import { use_interviews } from '@/hooks / use_interviews';
@@ -340,7 +575,35 @@ if ( {) {
                 <p className="text - muted - foreground">Your interview history will appear here.</p>;
               </div>)}
 
+<<<<<<< HEAD
 
+=======
+
+      <AppHeader />;
+      <main className="container mx-auto px-4 py-8">;
+        <div className="flex justify-between items-center mb-8">;
+          <div>;
+            <h1 className="text-3xl font-bold">Interviews</h1>;
+            <p className="text-muted-foreground mt-1">Schedule and manage your video interviews</p>;
+          </div>;
+        </div>;
+
+
+        <Tabs defaultValue={activeTab} onValueChange={setActiveTab} className="space-y-8">;
+          <TabsList className="mb-6">;
+            <TabsTrigger value="upcoming" className="flex items-center">;
+              <Clock className="h-4 w-4 mr-2" />;
+              Upcoming;
+
+
+                </span>;
+              )}
+            </TabsTrigger>;
+            <TabsTrigger value="pending">;
+              Pending;
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           </TabsContent>;
         </Tabs>;
       </main>;
@@ -374,6 +637,7 @@ export default function Interviews() {;
   );
 }
 
+<<<<<<< HEAD
 
 
 ;
@@ -393,3 +657,6 @@ function Interviews() {
 
 
 
+=======
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

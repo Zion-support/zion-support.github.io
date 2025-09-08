@@ -1,5 +1,13 @@
 <<<<<<< HEAD
 #!/""usr/bin/env""
+const fs = require("fs");
+const path = require("path");
+const { execSync, spawn } = require("child_process");
+    this.reportsDir = path.join(this.projectRoot, "reports")
+  "jsx": [{ pattern: /<\/motion\.article>\s*\)\)\s*\}\s*<\/div>/g, "fix": "</div>\n                </motion.article>\n                ))"]
+=======
+<<<<<<< HEAD
+#!/""usr/bin/env""
 #!/usr/bin/env
 =======
 <<<<<<< HEAD
@@ -114,9 +122,18 @@ const { execSync, spawn } = require("child_process")
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     automation.runContinuousMode(interval).catch(console.error)} else if (args.includes(")
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+    automation.runContinuousMode(interval).catch(console.error)} else if (args.includes(")
+        { "pattern": /<>\s*<Helmet>/g, "fix": "<>\n      <Helmet>"}"
+
+
+        { "pattern": /<>\s*<Helmet>/g, "fix": "<>\n      <Helmet>"}"
+
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
@@ -135,3 +152,4 @@ const { execSync, spawn } = require("child_process")
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

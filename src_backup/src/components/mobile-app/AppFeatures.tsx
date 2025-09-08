@@ -8,7 +8,11 @@ const features = null;
 const features = [;
   {"icon": <Clock className="h-10 w-10 text-zion-cyan" />,"title": "1-Click Hiring","description": "Streamlined hiring process that lets you connect with talent instantly with just one click.";"
   {"icon": <Award className="h-10 w-10 text-zion-cyan" />,"title": "Resume Builder","description": "Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired.";"
+<<<<<<< HEAD
+  }
+=======
   }}
+>>>>>>> origin/resolved-merge-conflicts
   },{"icon": <Award className="h - 10 w - 10 text - zion - cyan" />,"title": "Resume Builder","description": "Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired.";"
   {"icon": <Clock className="h-10 w-10 text-zion-cyan" />,"title": "1-Click Hiring","description": "Streamlined hiring process that lets you connect with talent instantly with just one click.";"
   {"icon": <Award className="h-10 w-10 text-zion-cyan" />,"title": "Resume Builder","description": "Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired.";"

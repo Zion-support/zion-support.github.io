@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src-disabled/components/loyalty/PointsBadge.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+}
+  }
+    } catch (error) {
+      logErrorToProduction ('Failed to refresh points:', { data: error });
+    } finally {
+
+{ purchase: 0, post: 0, referral: 0 });
+  const handle_click = (e: React.MouseEvent < HTMLAnchorElement>, ) =>: any {}
+    // Check condition;
+if ( {) {}
+  $2;
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { Gift, RefreshCw } from 'lucide-react'
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 }
@@ -5,7 +27,20 @@
       setLoginOpen (true);
     }
   }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD:src-disabled/components/loyalty/PointsBadge.tsx
+  const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {;,
+    e.preventDefault();
+    e.stopPropagation();
+    if (!isAuthenticated) return;
+    setIsRefreshing(true);    try {}
+      await fetchLedger()
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {;
     e.preventDefault();
     e.stopPropagation();
@@ -15,6 +50,17 @@
     } catch (error) {
       logErrorToProduction('Failed to refresh points:', { data: error })
     } finally {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      setIsRefreshing(false)
+    }
+  }
+import React, { useState } from 'react',;
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/loyalty/PointsBadge.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import { Gift, RefreshCw } from 'lucide-react';
 import { usePoints } from '@/hooks/usePoints',;
@@ -91,6 +137,28 @@ export function PointsBadge() {
       <div className="flex items-center gap-1">
         <Tooltip>
           <TooltipTrigger asChild>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src-disabled/components/loyalty/PointsBadge.tsx
+=======
+            <Link
+<<<<<<< HEAD
+              href={isAuthenticated ? '/points' : '#'}
+              onClick={handleClick}
+              title={
+                isAuthenticated ? 'View points' : 'Earn points by participating'
+              }
+              className='flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95'            >
+              <Gift className='h-4 w-4' aria-hidden='true' />
+              <span>{`${points} pts`}</span>
+              className='flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95'            >
+              <Gift className='h-4 w-4' aria-hidden='true' />
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/loyalty/PointsBadge.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
             <Link
 
@@ -182,8 +250,31 @@ export function PointsBadge() {
           <Tooltip>
             <TooltipTrigger asChild>
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        
+        {isAuthenticated && (
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                variant='ghost'
+                size='sm'
+                onClick={handleRefresh}
+                disabled={isRefreshing |loading}
+                className='p-1 h-6 w-6 text-muted-foreground hover:text-foreground'
+                aria-label='Refresh points'              >
+                <RefreshCw
+                  className={`h-3 w-3 ${isRefreshing |loading ? 'animate-spin' : ''}`}
+                  aria-hidden='true'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                 variant="ghost"
 
                 size="sm"
@@ -207,6 +298,13 @@ export function PointsBadge() {
             </TooltipContent>
           </Tooltip>
         )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 ursor/fix-website-loading-errors-and-merge-6662
 
@@ -219,6 +317,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 }
 ;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
               <p className='text - sm'>Refresh points balance</p>;
@@ -231,4 +334,21 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 }
 
+<<<<<<< HEAD
 
+=======
+    </TooltipProvider>
+  );
+<<<<<<< HEAD
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+<<<<<<< HEAD
+;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/loyalty/PointsBadge.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -67,6 +67,9 @@ const result = execSync(command, {"encoding": 'utf8',"stdio"});
   console.error('Automation "failed")
 <<<<<<< HEAD
 cursor/fix-lint-push-and-merge-to-main-f3c1;
+=======
+<<<<<<< HEAD
+cursor/fix-lint-push-and-merge-to-main-f3c1;
 
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
@@ -98,3 +101,4 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
   console.error('Automation "failed")
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 >>>>>>> merged-prs-20250907-203621
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

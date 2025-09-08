@@ -1,10 +1,17 @@
 
 
 
+<<<<<<< HEAD
+=======
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 type EpisodeListItem = any;
 useEffect ( () => {
   const load = async () => {
   try {
+<<<<<<< HEAD
 
   if (loading) return <div>Loading episodes…</div>;
 
@@ -14,6 +21,12 @@ useEffect ( () => {
   return (
     <div className='space-y-6'>;
 
+=======
+
+ ;
+  return (
+    <div className='space-y-6'    />;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       <div className='flex items-center justify-between'    />;
         <h1 className='text-3xl font-bold'    />Zion Podcast</h1>;
@@ -68,14 +81,55 @@ useEffect ( () => {
                   </a>;
 
                 )}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
                 {ep.audio?.wavUrl && (}
 <a;}
 href={ep.audio.wavUrl}
                     className='px-3 py-2 bg-gray-700 text-white rounded';
+<<<<<<< HEAD
 
 
+=======
+                    download>                    WAV;
+                  </a>;
+                )}
+                {ep && ep.audio?.mp4Url && (                  <a href={ep && ep.audio.wavUrl} className="px-3 py-2 bg-gray-700 text-white rounded" download>;
+                    WAV;
+                  </a>;
+                )}
+                {ep && ep.audio?.mp4Url && (<a;
+                    href={ep && ep.audio.mp4Url}
+                    className='px-3 py-2 bg-purple-700 text-white rounded';
+                    download>                    MP4                  <a href={ep && ep.audio.mp4Url} className="px-3 py-2 bg-purple-700 text-white rounded" download>;
+                {ep && ep.audio?.mp4Url && (;
+                  <a;
+                    href={ep && ep.audio.mp4Url}'
+                    className='px-3 py-2 bg-purple-700 text-white rounded'"
+                    download>                    MP4                  <a href={ep && ep.audio.mp4Url} className="px-3 py-2 bg-purple-700 text-white rounded" download>;
+
+                    download    />
+
+                    WAV;
+                  </a>;
+                )}
+                {ep.audio?.mp4Url && (<a;}
+                    href={ep.audio.mp4Url}
+                    className='px-3 py-2 bg-purple-700 text-white rounded';
+                    download    />
+
+                    MP4;
+                  </a>;
+                )}
+              </div>;
+            </div>;
+<div className='mt-3 flex gap-4'    />;
+              <Link;
+                href={`/media/podcast/${ep.id}`}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
@@ -85,7 +139,27 @@ type EpisodeListItem = $2;
   createdAt: string,
   summary: string,
   audio?: {
+<<<<<<< HEAD
 
+=======
+
+    mp3Url?: string,
+    wavUrl?: string,
+    mp4Url?: string
+  }
+},
+
+export default function PodcastIndexPage() {
+  const [episodes, setEpisodes] = useState<EpisodeListItem[]>([]),
+  const [loading, setLoading] = useState<boolean>(true),
+
+  useEffect(() => {
+    const load = async () => {
+      try {
+        const res = await fetch($2);
+        const data = await res.json($2);
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 mp3Url?: string;
     wavUrl?: string;
     mp4Url?: string
@@ -106,14 +180,27 @@ export default function PodcastIndexPage() {
         const res = await fetch('/api/podcast/list')
         const data = await res.json()
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         setEpisodes(data.episodes || [])
       } catch (err) {
         console.error(err)
       } finally {
         setLoading(false)
       }
+<<<<<<< HEAD
 
+=======
+
+    },
+    load()
+  }, []),
+
+  if (loading) return <div>Loading episodes…</div>,
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 };
     load()
   }, []);
@@ -198,7 +285,10 @@ useEffect ( () => {
                   </a>
                 )}
                 {ep.audio?.wavUrl && (  if (loading) return <div>Loading episodes…</div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   return (
     <div className="space-y-6">
@@ -223,21 +313,43 @@ useEffect ( () => {
                   </a>
                 )}
                 {ep.audio?.wavUrl && (
+<<<<<<< HEAD
 
                   <a href={ep.audio.wavUrl} className="px-3 py-2 bg-gray-700 text-white rounded" download>
 
+=======
+                  <a
+                    href={ep.audio.wavUrl}
+                    className='px-3 py-2 bg-gray-700 text-white rounded'
+                    download
+                  >                    WAV
+                  </a>
+                )}
+                {ep.audio?.mp4Url && (                  <a href={ep.audio.wavUrl} className="px-3 py-2 bg-gray-700 text-white rounded" download>
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                     WAV
                   </a>
                 )}
                 {ep.audio?.mp4Url && (
+<<<<<<< HEAD
 
                   <a href={ep.audio.mp4Url} className="px-3 py-2 bg-purple-700 text-white rounded" download>
 
+=======
+                  <a
+                    href={ep.audio.mp4Url}
+                    className='px-3 py-2 bg-purple-700 text-white rounded'
+                    download
+                  >                    MP4                  <a href={ep.audio.mp4Url} className="px-3 py-2 bg-purple-700 text-white rounded" download>
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                     MP4
                   </a>
                 )}
               </div>
+<<<<<<< HEAD
             </div>
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
             <div className="mt-3 flex gap-4">
               <Link href={`/media/podcast/${ep.id}`} className="text-blue-600 underline">View Transcript</Link>
@@ -251,7 +363,17 @@ useEffect ( () => {
 
 "
 }
+<<<<<<< HEAD
 
 
 
 
+=======
+}
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+}
+'"`
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
   return (
@@ -39,6 +40,44 @@ name='description'
         />;'
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;'
+=======
+export default function Page() {export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white'>;'
+      <Head>;
+        <title>Pattern — Trigger Homepage Sitemap</title>;import Head from 'next/head';'
+
+
+}
+
+export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white'>;'
+      <Head>;
+        <title />Pattern — Trigger Homepage Sitemap</title>;
+        <meta;
+          }
+          name='description';'
+          content='Actionable architectural pattern synthesized from live site signals.';' />;
+        <meta;
+          property='"og":title';'
+          content='Pattern — Trigger Homepage Sitemap';' />;
+        <meta;
+          property='"og":description';'
+          content='Actionable architectural pattern synthesized from live site signals.';'
+
+return (;
+    <div className='min-h-screen bg-slate-950 text-white'>;'
+      <Head>;
+        <title>Pattern — Trigger Homepage Sitemap</title>;
+        <meta,
+name='description''
+          content='Actionable architectural pattern synthesized from live site signals.'' />;
+        <meta,
+property='"og":title''
+          content='Pattern — Trigger Homepage Sitemap'' />;
+        <meta,
+property='"og":description''
+          content='Actionable architectural pattern synthesized from live site signals.'' />;
+        <meta name='"twitter":card' content='summary_large_image' />;'
+      </Head>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       <main className='container mx-auto px-6 py-12 prose prose-invert'>;'
         <h1 className='text-3xl font-extrabold'>;
           Pattern — Trigger Homepage Sitemap;
@@ -53,6 +92,7 @@ name='description'
           className='mt-4'
           dangerouslySetInnerHTML={{
             __html:
+<<<<<<< HEAD
 
 
 
@@ -95,10 +135,151 @@ export default function Page() {return (<div className='min-h-screen bg-slate-95
       <Head>;
         <title />Pattern — Trigger Homepage Sitemap</title>;
 
+=======
+
+export default function Page() {export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white'    />;
+      <Head    />;
+        <title    />Pattern — Trigger Homepage Sitemap</title>;import Head from 'next/head';
+
+export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white'    />;
+      <Head    />;
+        <title    />Pattern — Trigger Homepage Sitemap</title>;
+        <meta;
+          name='description';
+          content='Actionable architectural pattern synthesized from live site signals.';
+           />;
+        <meta;
+          property='og:title';
+          content='Pattern — Trigger Homepage Sitemap';
+           />;
+        <meta;
+          property='og:description';
+          content='Actionable architectural pattern synthesized from live site signals.';
+
+  return (
+    <div className='min-h-screen bg-slate-950 text-white'    />;
+      <Head    />;
+        <title    />Pattern — Trigger Homepage Sitemap</title>;
+        <meta;
+name='description'
+          content='Actionable architectural pattern synthesized from live site signals.'
+           />;
+        <meta;
+property='og:title'
+          content='Pattern — Trigger Homepage Sitemap'
+           />;
+        <meta;
+property='og:description'
+          content='Actionable architectural pattern synthesized from live site signals.'
+           />;
+        <meta name='twitter:card' content='summary_large_image'    />;
+      </Head>;
+      <main className='container mx-auto px-6 py-12 prose prose-invert'    />;
+        <h1 className='text-3xl font-extrabold'    />;
+          Pattern — Trigger Homepage Sitemap;
+        </h1>;
+        <div;
+          className='mt-4';}
+          dangerouslySetInnerHTML={{__html:;}
+              '<p    />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup && ziontechgroup.com/automation</a></p><h2    />Context</h2><p    />Signals indicate recurring needs around <strong    />trigger, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2    />Problem</h2><p    />How do we design a robust, observable, and cost-efficient approach?</p><h2    />Forces</h2><ul    /><li    />Latency and throughput trade-offs</li><li    />Quality and evaluation</li><li    />Security and governance</li></ul><h2    />Solution</h2><p    />Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2    />Consequences</h2><p    />Improved reliability and faster iteration; requires disciplined measurement.</p>'}}
+        <div;
+className='mt-4'
+          dangerouslySetInnerHTML={{
+            __html:
+"
+              '<p    />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup && ziontechgroup.com/automation</a></p><h2    />Context</h2><p    />Signals indicate recurring needs around <strong    />trigger, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2    />Problem</h2><p    />How do we design a robust, observable, and cost-efficient approach?</p><h2    />Forces</h2><ul    /><li    />Latency and throughput trade-offs</li><li    />Quality and evaluation</li><li    />Security and governance</li></ul><h2    />Solution</h2><p    />Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2    />Consequences</h2><p    />Improved reliability and faster iteration; requires disciplined measurement.</p>',;}
+}
+          }}
+        />;
+        <p className='mt-6 text-white/60 text-sm'>;'
+          Auto-generated by Cloud Deep Research Factory.;
+        </p>;
+      </main>;
+    </div>;
+
+      <Head>;
+        <title>Pattern — Trigger Homepage Sitemap</title>;
+}
+import Head from 'next / head';'
+
+export default /**;
+ * Page - Function description;
+ */;
+function Page() {return (<div className='min - h-screen bg - slate - 950 text - white'>;'
+  );
+
+}
+
+export default function Page() {;
+
+}
+
+export default function Page() {
+
+}
+
+return (;
+    <div className="min-h-screen bg-slate-950 text-white">;"
+      <Head>;
+        <title>Pattern — Trigger Homepage Sitemap</title>;
+    </div>;"
+  )export default function Page() {export default function Page() {return ('<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/automation</a></p><h2 />Context</h2><p />Signals indicate recurring needs around <strong />trigger;, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2 />Problem</h2><p />How do we design a robust, observable, and cost-efficient approach?</p><h2 />Forces</h2><ul /><li />Latency and throughput trade-offs</li><li />Quality and evaluation</li><li />Security and governance</li></ul><h2 />Solution</h2><p />Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2 />Consequences</h2><p />Improved reliability and faster iteration; requires disciplined measurement.</p>';
+            __html:;"
+              '<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/automation</a></p><h2 />Context</h2><p />Signals indicate recurring needs around <strong />trigger, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2 />Problem</h2><p />How do we design a robust, observable, and cost-efficient approach?</p><h2 />Forces</h2><ul /><li />Latency and throughput trade-offs</li><li />Quality and evaluation</li><li />Security and governance</li></ul><h2 />Solution</h2><p />Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2 />Consequences</h2><p />Improved reliability and faster iteration; requires disciplined measurement.</p>',export default function Page() {return (export default function Page() {return (<div className=\"min-h-screen bg-slate-950 text-white\" />;
+      <Head>;
+        <title />Pattern — Trigger Homepage Sitemap</title>;
+import Head from 'next / head';
+export default /**;
+ * Page - Function description;
+ */;
+function Page() {return (<div className='min - h-screen bg - slate - 950 text - white' />;
+  );
+export default function Page() {;
+export default function Page() {
+
+  return ("
+    <div className=\"min-h-screen bg-slate-950 text-white\" />;
+      <Head>;
+        <title />Pattern — Trigger Homepage Sitemap</title>;
+export default /**
+ * Page - Function description
+ */
+function Page() {
+}
+return (;
+    <div className='min - h-screen bg - slate - 950 text - white'>;'
+      <Head>;
+        <title  /> Pattern — Trigger Homepage Sitemap</title>;
+        <meta;
+          name='description';'
+          content='Actionable architectural pattern synthesized from live site signals.';' />;
+        <meta;
+          property='"og":title';'
+          content='Pattern — Trigger Homepage Sitemap';' />;
+        <meta;
+          property='"og":description';'
+          content='Actionable architectural pattern synthesized from live site signals.';' />;
+        <meta name='"twitter":card' content='summary_large_image' />;'
+      </Head>;
+      <main className='container mx - auto px - 6 py - 12 prose prose - invert'>;'
+        <h1 className='text - 3xl font - extrabold'>;'
+          Pattern — Trigger Homepage Sitemap;
+        </h1>;
+        <div;
+          className='mt - 4';'
+          dangerouslySetInnerHTML={{"__html":;
+              '<p > "Source": <a class="text - cyan - 300 underline" href=""https"://ziontechgroup.com / automation" target="_blank" rel="noopener">"https"://ziontechgroup.com / automation</a></p><h2 > Context</h2><p > Signals indicate recurring needs around <strong > trigger, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2 > Problem</h2><p > How do we design a robust, observable, and cost - efficient approach?</p><h2 > Forces</h2><ul><li > Latency and throughput trade - offs</li><li > Quality and evaluation</li><li > Security and governance</li></ul><h2 > Solution</h2><p > Define clear boundaries, automate evaluation, and continuously iterate with telemetry - in - the - loop.</p><h2 > Consequences</h2><p > Improved reliability and faster iteration; requires disciplined measurement.</p>';'
+          }
+          dangerouslySetInnerHTML={{
+            }
+            "__html":;
+              '<p > "Source": <a class="text - cyan - 300 underline" href=""https"://ziontechgroup.com / automation" target="_blank" rel="noopener">"https"://ziontechgroup.com / automation</a></p><h2 > Context</h2><p > Signals indicate recurring needs around <strong > trigger, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2 > Problem</h2><p > How do we design a robust, observable, and cost - efficient approach?</p><h2 > Forces</h2><ul><li > Latency and throughput trade - offs</li><li > Quality and evaluation</li><li > Security and governance</li></ul><h2 > Solution</h2><p > Define clear boundaries, automate evaluation, and continuously iterate with telemetry - in - the - loop.</p><h2 > Consequences</h2><p > Improved reliability and faster iteration; requires disciplined measurement.</p>''
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export default /**
  * Page - Function description;
  */
 
+<<<<<<< HEAD
 function Page() {
   return (
     <div className='min - h-screen bg - slate - 950 text - white'    />;
@@ -131,6 +312,40 @@ function Page() {
             __html:;}"
               '<p     /> Source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / automation\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com / automation</a></p><h2     /> Context</h2><p     /> Signals indicate recurring needs around <strong     /> trigger, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2     /> Problem</h2><p     /> How do we design a robust, observable, and cost - efficient approach?</p><h2     /> Forces</h2><ul    /><li     /> Latency and throughput trade - offs</li><li     /> Quality and evaluation</li><li     /> Security and governance</li></ul><h2     /> Solution</h2><p     /> Define clear boundaries, automate evaluation, and continuously iterate with telemetry - in - the - loop.</p><h2     /> Consequences</h2><p     /> Improved reliability and faster iteration; requires disciplined measurement.</p>'}
 
+=======
+  return (
+    <div className='min - h-screen bg - slate - 950 text - white />;
+      <Head>;
+        <title  /> Pattern — Trigger Homepage Sitemap</title>;
+        <meta;
+          name='description';
+          content='Actionable architectural pattern synthesized from live site signals.';
+        />;
+        <meta;'
+          property='og:title';'
+          content='Pattern — Trigger Homepage Sitemap';
+        />;
+        <meta;'
+          property='og:description';'
+          content='Actionable architectural pattern synthesized from live site signals.';
+        />;'
+        <meta name='twitter:card' content='summary_large_image' />;
+      </Head>;'
+      <main className='container mx - auto px - 6 py - 12 prose prose - invert'>;'
+        <h1 className='text - 3xl font - extrabold'>;
+      <main className='container mx - auto px - 6 py - 12 prose prose - invert'>;
+        <h1 className='text - 3xl font - extrabold'>;
+          Pattern — Trigger Homepage Sitemap;
+        </h1>;
+        <div;'
+          className='mt - 4';
+          dangerouslySetInnerHTML={{
+            __html:;
+              '<p > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / automation" target="_blank" rel="noopener">https://ziontechgroup.com / automation</a></p><h2 > Context</h2><p > Signals indicate recurring needs around <strong > trigger, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2 > Problem</h2><p > How do we design a robust, observable, and cost - efficient approach?</p><h2 > Forces</h2><ul><li > Latency and throughput trade - offs</li><li > Quality and evaluation</li><li > Security and governance</li></ul><h2 > Solution</h2><p > Define clear boundaries, automate evaluation, and continuously iterate with telemetry - in - the - loop.</p><h2 > Consequences</h2><p > Improved reliability and faster iteration; requires disciplined measurement.</p>',
+          dangerouslySetInnerHTML={{}
+            __html:;'"
+              '<p > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / automation" target="_blank" rel="noopener">https://ziontechgroup.com / automation</a></p><h2 > Context</h2><p > Signals indicate recurring needs around <strong > trigger, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2 > Problem</h2><p > How do we design a robust, observable, and cost - efficient approach?</p><h2 > Forces</h2><ul><li > Latency and throughput trade - offs</li><li > Quality and evaluation</li><li > Security and governance</li></ul><h2 > Solution</h2><p > Define clear boundaries, automate evaluation, and continuously iterate with telemetry - in - the - loop.</p><h2 > Consequences</h2><p > Improved reliability and faster iteration; requires disciplined measurement.</p>',
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           }}
         />;
         <p className='mt - 6 text - white / 60 text - sm'    />;
@@ -146,16 +361,90 @@ function Page() {return (<div className=\"min - h-screen bg - slate - 950 text -
 export default /**
  * Page - Function description;
  */
+<<<<<<< HEAD
 
         <meta name="description" content="Actionable architectural pattern synthesized from live site signals." />;
         <meta property="og:title" content="Pattern — Trigger Homepage Sitemap" />;
         <meta property="og:description" content="Actionable architectural pattern synthesized from live site signals." />;
         <meta name="twitter:card" content="summary_large_image" />;
+=======
+function Page() {}
+  return ("
+    <div className="min - h-screen bg - slate - 950 text - white">;
+      <Head>;
+        <title > Pattern — Trigger Homepage Sitemap</title>;"
+        <meta name="description" content="Actionable architectural pattern synthesized from live site signals." />;"
+        <meta property="og:title" content="Pattern — Trigger Homepage Sitemap" />;"
+        <meta property="og:description" content="Actionable architectural pattern synthesized from live site signals." />;"
+        <meta name="twitter:card" content="summary_large_image" />;
+      </Head>;
+          }}
+        />;
+        <p className='mt - 6 text - white / 60 text - sm'>;
+          content='Actionable architectural pattern synthesized from live site signals.;
+        />;
+        <meta;
+          property='og:title';
+          content=Pattern — Trigger Homepage Sitemap';
+        />;
+        <meta;'
+          property=og:description;'
+          content='Actionable architectural pattern synthesized from live site signals.;
+        />;
+        <meta name='twitter:card' content=summary_large_image />;
+
+          Pattern — Trigger Homepage Sitemap;
+        </h1>;
+        <div;'
+          className='mt - 4;
+
+          }}
+        />;
+        <p className='mt - 6 text - white / 60 text - sm'>;'
+          Auto - generated by Cloud Deep Research Factory.;
+        </p>;
+      </main>;
+    </div>)export default /**;
+ * Page - Function description;
+ */;
+function Page() {return (<div className="min - h-screen bg - slate - 950 text - white">;"
+    </div>);
+
+}
+
+export default /**
+ * Page - Function description;
+ */
+function Page() {}
+  return ("
+    <div className="min - h-screen bg - slate - 950 text - white">;
+      <Head>;
+        <title > Pattern — Trigger Homepage Sitemap</title>;"
+        <meta name="description" content="Actionable architectural pattern synthesized from live site signals." />;"
+        <meta property="og:title" content="Pattern — Trigger Homepage Sitemap" />;"
+        <meta property="og:description" content="Actionable architectural pattern synthesized from live site signals." />;"
+        <meta name="twitter:card" content="summary_large_image" />;
+      </Head>;
+          }}
+        />;
+        <p className='mt - 6 text - white / 60 text - sm'>;
+          Auto - generated by Cloud Deep Research Factory.;
+        </p>;
+      </main>;
+    </div>);export default /**
+ * Page - Function description
+ */
+function Page() {
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       </Head>;
 
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       <main className="container mx - auto px - 6 py - 12 prose prose - invert">;
         <h1 className="text - 3xl font - extrabold">Pattern — Trigger Homepage Sitemap</h1>;
         <div className="mt - 4" dangerouslySetInnerHTML={{ __html: "<p > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / automation" target="_blank" rel="noopener">https://ziontechgroup.com / automation</a></p><h2 > Context</h2><p > Signals indicate recurring needs around <strong > trigger, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2 > Problem</h2><p > How do we design a robust, observable, and cost - efficient approach?</p><h2 > Forces</h2><ul><li > Latency and throughput trade - offs</li><li > Quality and evaluation</li><li > Security and governance</li></ul><h2 > Solution</h2><p > Define clear boundaries, automate evaluation, and continuously iterate with telemetry - in - the - loop.</p><h2 > Consequences</h2><p > Improved reliability and faster iteration, requires disciplined measurement.</p>" }} />;
@@ -169,6 +458,27 @@ export default /**
         <div className="mt - 4" dangerouslySetInnerHTML={{ __html: "<p > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / automation" target="_blank" rel="noopener">https://ziontechgroup.com / automation</a></p><h2 > Context</h2><p > Signals indicate recurring needs around <strong > trigger;, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2 > Problem</h2><p > How do we design a robust, observable, and cost - efficient approach?</p><h2 > Forces</h2><ul><li > Latency and throughput trade - offs</li><li > Quality and evaluation</li><li > Security and governance</li></ul><h2 > Solution</h2><p > Define clear boundaries, automate evaluation, and continuously iterate with telemetry - in - the - loop.</p><h2 > Consequences</h2><p > Improved reliability and faster iteration, requires disciplined measurement.</p>" }} />;
         <p className="mt - 6 text - white / 60 text - sm">Auto - generated by Cloud Deep Research Factory.</p>;
 
+      <main className="container mx - auto px - 6 py - 12 prose prose - invert">;"
+        <h1 className="text - 3xl font - extrabold">Pattern — Trigger Homepage Sitemap</h1>;"
+        <div className="mt - 4" dangerouslySetInnerHTML={{ "__html": "<p > "Source": <a class="text - cyan - 300 underline" href=""https"://ziontechgroup.com / automation" target="_blank" rel="noopener">"https"://ziontechgroup.com / automation</a></p><h2 > Context</h2><p > Signals indicate recurring needs around <strong > trigger, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2 > Problem</h2><p > How do we design a robust, observable, and cost - efficient approach?</p><h2 > Forces</h2><ul><li > Latency and throughput trade - offs</li><li > Quality and evaluation</li><li > Security and governance</li></ul><h2 > Solution</h2><p > Define clear boundaries, automate evaluation, and continuously iterate with telemetry - in - the - loop.</p><h2 > Consequences</h2><p > Improved reliability and faster iteration, requires disciplined measurement.</p>" }} />;"
+        <p className="mt - 6 text - white / 60 text - sm">Auto - generated by Cloud Deep Research Factory.</p>;"
+      </main>
+    </div>
+  );
+}"__html":;
+              '<p>"Source": <a class="text-cyan-300 underline" href=""https"://ziontechgroup.com/automation" target="_blank" rel="noopener">"https"://ziontechgroup.com/automation</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>trigger, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration; requires disciplined measurement.</p>';'
+            "__html":;
+              '<p>"Source": <a class="text-cyan-300 underline" href=""https"://ziontechgroup.com/automation" target="_blank" rel="noopener">"https"://ziontechgroup.com/automation</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>trigger, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration; requires disciplined measurement.</p>';'
+            "__html":;
+              '<p>"Source": <a class="text-cyan-300 underline" href=""https"://ziontechgroup.com/automation" target="_blank" rel="noopener">"https"://ziontechgroup.com/automation</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>trigger, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration; requires disciplined measurement.</p>';'
+          }}
+        />;
+        <p className='mt-6 text-white/60 text-sm'>;'
+          Auto-generated by Cloud Deep Research Factory.;
+        </p>;
+      </main>;
+    </div>;
+  )export default function Page() {return ()export default function Page() {return (export default function Page() {return (<div className="min-h-screen bg-slate-950 text-white">;"
 "
       <main className=\"container mx - auto px - 6 py - 12 prose prose - invert\" />;"
         <h1 className=\"text - 3xl font - extrabold\" />Pattern — Trigger Homepage Sitemap</h1>;"
@@ -184,11 +494,34 @@ export default /**
         <h1 className=\text - 3xl font - extrabold\" />Pattern — Trigger Homepage Sitemap</h1>;"
         <div className=\mt - 4\ dangerouslySetInnerHTML={{ __html: \"<p  /> Source: <a class=\"text - cyan - 300 underline\ href=\https://ziontechgroup.com / automation\" target=\"_blank\ rel=\noopener\" />https://ziontechgroup.com / automation</a></p><h2  /> Context</h2><p  /> Signals indicate recurring needs around <strong  /> trigger;, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2  /> Problem</h2><p  /> How do we design a robust, observable, and cost - efficient approach?</p><h2  /> Forces</h2><ul /><li  /> Latency and throughput trade - offs</li><li  /> Quality and evaluation</li><li  /> Security and governance</li></ul><h2  /> Solution</h2><p  /> Define clear boundaries, automate evaluation, and continuously iterate with telemetry - in - the - loop.</p><h2  /> Consequences</h2><p  /> Improved reliability and faster iteration, requires disciplined measurement.</p>\" }} />;
         <p className=\mt - 6 text - white / 60 text - sm\" />Auto - generated by Cloud Deep Research Factory.</p>;
+<<<<<<< HEAD
 
+=======
+function Page() {
+  return ("
+    <div className=\"min - h-screen bg - slate - 950 text - white\"    />;
+      <Head    />;
+        <title     /> Pattern — Trigger Homepage Sitemap</title>;"
+        <meta name=\"description\" content=\"Actionable architectural pattern synthesized from live site signals.\"    />;"
+        <meta property=\"og:title\" content=\"Pattern — Trigger Homepage Sitemap\"    />;"
+        <meta property=\"og:description\" content=\"Actionable architectural pattern synthesized from live site signals.\"    />;}"
+        <meta name=\"twitter:card\" content=\"summary_large_image\"    />;}
+      </Head>;}
+
+export default function Page() {return (}
+      </Head>;
+
+"
+      <main className=\"container mx - auto px - 6 py - 12 prose prose - invert\"    />;"
+        <h1 className=\"text - 3xl font - extrabold\"    />Pattern — Trigger Homepage Sitemap</h1>;"
+        <div className=\"mt - 4\" dangerouslySetInnerHTML={{ __html: \"<p     /> Source: <a class=\"text - cyan - 300 underline\" href=\"https://ziontechgroup.com / automation\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com / automation</a></p><h2     /> Context</h2><p     /> Signals indicate recurring needs around <strong     /> trigger, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2     /> Problem</h2><p     /> How do we design a robust, observable, and cost - efficient approach?</p><h2     /> Forces</h2><ul    /><li     /> Latency and throughput trade - offs</li><li     /> Quality and evaluation</li><li     /> Security and governance</li></ul><h2     /> Solution</h2><p     /> Define clear boundaries, automate evaluation, and continuously iterate with telemetry - in - the - loop.</p><h2     /> Consequences</h2><p     /> Improved reliability and faster iteration, requires disciplined measurement.</p>\" }} />;"
+        <p className=\"mt - 6 text - white / 60 text - sm\"    />Auto - generated by Cloud Deep Research Factory.</p>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       </main>
     </div>
   );
 }__html:;"
+<<<<<<< HEAD
 
               '<p    />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com/automation</a></p><h2    />Context</h2><p    />Signals indicate recurring needs around <strong    />trigger, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2    />Problem</h2><p    />How do we design a robust, observable, and cost-efficient approach?</p><h2    />Forces</h2><ul    /><li    />Latency and throughput trade-offs</li><li    />Quality and evaluation</li><li    />Security and governance</li></ul><h2    />Solution</h2><p    />Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2    />Consequences</h2><p    />Improved reliability and faster iteration; requires disciplined measurement.</p>';
             __html:;"
@@ -199,10 +532,21 @@ export default /**
         />;
         <p className='mt-6 text-white/60 text-sm'    />;
 
+=======
+              '<p />Source: <a class=\text-cyan-300 underline\ href=\"https://ziontechgroup.com/automation\" target=\_blank\ rel=\"noopener\" />https://ziontechgroup.com/automation</a></p><h2 />Context</h2><p />Signals indicate recurring needs around <strong />trigger;, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2 />Problem</h2><p />How do we design a robust, observable, and cost-efficient approach?</p><h2 />Forces</h2><ul /><li />Latency and throughput trade-offs</li><li />Quality and evaluation</li><li />Security and governance</li></ul><h2 />Solution</h2><p />Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2 />Consequences</h2><p />Improved reliability and faster iteration; requires disciplined measurement.</p>;
+            __html:;
+              <p />Source: <a class=\text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\ target=\_blank\" rel=\"noopener\ />https://ziontechgroup.com/automation</a></p><h2 />Context</h2><p />Signals indicate recurring needs around <strong />trigger;, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2 />Problem</h2><p />How do we design a robust, observable, and cost-efficient approach?</p><h2 />Forces</h2><ul /><li />Latency and throughput trade-offs</li><li />Quality and evaluation</li><li />Security and governance</li></ul><h2 />Solution</h2><p />Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2 />Consequences</h2><p />Improved reliability and faster iteration; requires disciplined measurement.</p>';
+            __html:;
+              '<p />Source: <a class=\"text-cyan-300 underline\" href=\https://ziontechgroup.com/automation\ target=\"_blank\" rel=\noopener\ />https://ziontechgroup.com/automation</a></p><h2 />Context</h2><p />Signals indicate recurring needs around <strong />trigger;, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2 />Problem</h2><p />How do we design a robust, observable, and cost-efficient approach?</p><h2 />Forces</h2><ul /><li />Latency and throughput trade-offs</li><li />Quality and evaluation</li><li />Security and governance</li></ul><h2 />Solution</h2><p />Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2 />Consequences</h2><p />Improved reliability and faster iteration; requires disciplined measurement.</p>;
+          }}
+        />;
+        <p className=mt-6 text-white/60 text-sm' />;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           Auto-generated by Cloud Deep Research Factory.;
         </p>;
       </main>;
     </div>;"
+<<<<<<< HEAD
 
   )export default function Page() {return ()export default function Page() {return (export default function Page() {return (<div className=\"min-h-screen bg-slate-950 text-white\"    />;
       <Head    />;
@@ -219,6 +563,136 @@ export default /**
 
       </main>;
 ursor/fix-website-loading-errors-and-merge-6662;
+=======
+  )export default function Page() {return ()export default function Page() {return (export default function Page() {return (<div className=\"min-h-screen bg-slate-950 text-white\ />;
+      <Head>;
+        <title>Pattern — Trigger Homepage Sitemap</title>;
+        <meta name="description" content="Actionable architectural pattern synthesized from live site signals." />;"
+        <meta property=""og":title" content="Pattern — Trigger Homepage Sitemap" />;"
+        <meta property=""og":description" content="Actionable architectural pattern synthesized from live site signals." />;"
+        <meta name=""twitter":card" content="summary_large_image" />;"
+      </Head>;
+
+
+
+
+
+            __html:;'"
+            __html:;
+              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup.com/automation</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>trigger, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration; requires disciplined measurement.</p>',
+          }}
+        />'
+        <p className='mt-6 text-white/60 text-sm'>
+origin/cursor/automate-test-improve-and-merge-code-20a4
+pr-12243
+
+            __html:;"
+              '<p />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\" />https://ziontechgroup.com/automation</a></p><h2 />Context</h2><p />Signals indicate recurring needs around <strong />trigger;, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2 />Problem</h2><p />How do we design a robust, observable, and cost-efficient approach?</p><h2 />Forces</h2><ul /><li />Latency and throughput trade-offs</li><li />Quality and evaluation</li><li />Security and governance</li></ul><h2 />Solution</h2><p />Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2 />Consequences</h2><p />Improved reliability and faster iteration; requires disciplined measurement.</p>'
+          }}
+        />
+        <p className='mt-6 text-white/60 text-sm' />
+          Auto-generated by Cloud Deep Research Factory.
+        </p>
+      </main>
+    </div>
+  );export default function Page() {
+  return (
+
+
+export default function Page() {
+}
+return (;
+
+    <div className="min-h-screen bg-slate-950 text-white">
+      <Head>
+        <title>Pattern — Trigger Homepage Sitemap</title>
+        <meta name="description" content="Actionable architectural pattern synthesized from live site signals." />
+        <meta property="og:title" content="Pattern — Trigger Homepage Sitemap" />
+        <meta property="og:description" content="Actionable architectural pattern synthesized from live site signals." />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+      <main className="container mx-auto px-6 py-12 prose prose-invert">
+        <h1 className="text-3xl font-extrabold">Pattern — Trigger Homepage Sitemap</h1>
+        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/automation</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>trigger;, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration, requires disciplined measurement.</p>" }} />
+        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
+      </main>
+
+ursor/fix-website-loading-errors-and-merge-6662
+pr-12243
+
+
+    <div className="min-h-screen bg-slate-950 text-white">
+      <Head>
+        <title>Pattern — Trigger Homepage Sitemap</title>
+        <meta name="description" content="Actionable architectural pattern synthesized from live site signals." />
+        <meta property="og:title" content="Pattern — Trigger Homepage Sitemap" />
+        <meta property="og:description" content="Actionable architectural pattern synthesized from live site signals." />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+      <main className="container mx-auto px-6 py-12 prose prose-invert">
+        <h1 className="text-3xl font-extrabold">Pattern — Trigger Homepage Sitemap</h1>
+        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/automation</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>trigger;, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration, requires disciplined measurement.</p>" }} />
+        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
+      </main>
+  );
+export default function Page() {
+}
+return (;
+
+
+    <div className = "min-h-screen bg-slate-950 text-white">"
+      <Head>
+        <title>Pattern — Trigger Homepage Sitemap</title>
+        <meta name="description" content="Actionable architectural pattern synthesized from live site signals." />"
+        <meta property=""og":title" content="Pattern — Trigger Homepage Sitemap" />"
+        <meta property=""og":description" content="Actionable architectural pattern synthesized from live site signals." />"
+        <meta name=""twitter":card" content="summary_large_image" />"
+      </Head>
+      <main className="container mx-auto px-6 py-12 prose prose-invert">"
+        <h1 className="text-3xl font-extrabold">Pattern — Trigger Homepage Sitemap</h1>"
+        <div className="mt-4" dangerouslySetInnerHTML={{ "__html": "<p>"Source": <a class=\"text-cyan-300 underline\" href=\""https"://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\">"https"://ziontechgroup.com/automation</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>trigger, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration, requires disciplined measurement.</p>" }} />"
+        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>"
+      </main>
+    </div>
+  )
+}
+  )
+import Head from 'next/head';
+export default function Page(req, res) {
+  try {
+  return (;
+    <div className="min-h-screen bg-slate-950 text-white">;
+      <Head>;
+        <title>Pattern — Trigger Homepage Sitemap</title>;
+        <meta name="description" content="Actionable architectural pattern synthesized from live site signals." />;
+        <meta property="og:title" content="Pattern — Trigger Homepage Sitemap" />;
+        <meta property="og:description" content="Actionable architectural pattern synthesized from live site signals." />;
+        <meta name="twitter:card" content="summary_large_image" />;
+      </Head>;
+
+
+
+export default function Page() {
+  return (
+}
+
+}
+
+export default function Page() {
+  return (
+}
+
+
+
+
+}
+
+      <main className="container mx - auto px - 6 py - 12 prose prose - invert">;
+        <h1 className="text - 3xl font - extrabold">Pattern — Trigger Homepage Sitemap</h1>;
+        <div className="mt - 4" dangerouslySetInnerHTML={{ __html: "<p > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / automation" target="_blank" rel="noopener">https://ziontechgroup.com / automation</a></p><h2 > Context</h2><p > Signals indicate recurring needs around <strong > trigger, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2 > Problem</h2><p > How do we design a robust, observable, and cost - efficient approach?</p><h2 > Forces</h2><ul><li > Latency and throughput trade - offs</li><li > Quality and evaluation</li><li > Security and governance</li></ul><h2 > Solution</h2><p > Define clear boundaries, automate evaluation, and continuously iterate with telemetry - in - the - loop.</p><h2 > Consequences</h2><p > Improved reliability and faster iteration, requires disciplined measurement.</p>" }} />;
+        <p className="mt - 6 text - white / 60 text - sm">Auto - generated by Cloud Deep Research Factory.</p>;
+      </main>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     </div>);
 }
 
@@ -227,12 +701,29 @@ ursor/fix-website-loading-errors-and-merge-6662;
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+            __html:;
+              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup.com/automation</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>trigger, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration; requires disciplined measurement.</p>',
+          }}
+        />
+        <p className='mt-6 text-white/60 text-sm'>
+            __html:;"
+              '<p    />Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\"    />https://ziontechgroup.com/automation</a></p><h2    />Context</h2><p    />Signals indicate recurring needs around <strong    />trigger, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2    />Problem</h2><p    />How do we design a robust, observable, and cost-efficient approach?</p><h2    />Forces</h2><ul    /><li    />Latency and throughput trade-offs</li><li    />Quality and evaluation</li><li    />Security and governance</li></ul><h2    />Solution</h2><p    />Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2    />Consequences</h2><p    />Improved reliability and faster iteration; requires disciplined measurement.</p>'
+          }}
+        />
+        <p className='mt-6 text-white/60 text-sm'    />
+>>>>>>> origin/cursor/delete-old-data-records-6bba
           Auto-generated by Cloud Deep Research Factory.
         </p>
       </main>
     </div>
   );
 
+<<<<<<< HEAD
 
 export default function Page() {
   return (
@@ -375,3 +866,10 @@ export default function Page() {return (<div className=\"min-h-screen bg-slate-9
 
 
 
+=======
+export default function Page() {
+  return (
+
+
+"
+>>>>>>> origin/cursor/delete-old-data-records-6bba

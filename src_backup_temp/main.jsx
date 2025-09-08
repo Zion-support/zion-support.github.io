@@ -14,21 +14,37 @@ import './utils/consoleErrorToast';'
 // Import i18n configuration;
 import './i18n';'
 import { LanguageProvider } from '@/context/LanguageContext';'
+<<<<<<< HEAD
+import { LanguageDetectionPopup } from './components/LanguageDetectionPopup';'
+import { WhitelabelProvider } from '@/context/WhitelabelContext';'
+import { AppLayout } from '@/layout/AppLayout';'
+// Import auth and notification providers;
+import { AuthProvider } from './context/auth/AuthProvider';'
+import { NotificationProvider } from './context/notifications/NotificationContext';'
+=======
 import { LanguageDetectionPopup } from "./components/LanguageDetectionPopup";"
 import { WhitelabelProvider } from '@/context/WhitelabelContext';'
 import { AppLayout } from '@/layout/AppLayout';'
 // Import auth and notification providers;
 import { AuthProvider } from "./context/auth/AuthProvider";"
 import { NotificationProvider } from "./context/notifications/NotificationContext";"
+>>>>>>> origin/resolved-merge-conflicts
 // Import analytics provider;
 import { AnalyticsProvider } from './context/AnalyticsContext';'
 ;
 // Create a client;
 const queryClient = new QueryClient({;
+<<<<<<< HEAD
+  'defaultOptions': '{;'
+    'queries': {;'
+      'staleTime': 1000 * 60 * 5', // 5 minutes;'
+      'retry': '1',;'
+=======
   "defaultOptions": "{;"
     "queries": {;"
       "staleTime": 1000 * 60 * 5", // 5 minutes;"
       "retry": "1",;"
+>>>>>>> origin/resolved-merge-conflicts
     },;
   },;
 });
@@ -78,6 +94,22 @@ import { NotificationProvider } from './context/notifications/NotificationContex
 import { ViewModeProvider } from './context/ViewModeContext';'
 const queryClient = new QueryClient({
     }
+<<<<<<< HEAD
+    'defaultOptions': {';'
+        }
+        'queries': {';';'
+            }
+            'retry': 1, 'refetchOnWindowFocus': false}}
+    );';';';'
+''',';';'
+    ';';';'
+  'defaultOptions': {
+    }
+    'queries': {
+      }
+      'retry': 1,
+      'refetchOnWindowFocus': false
+=======
     "defaultOptions": {';'
         }
         "queries": {';';'
@@ -92,6 +124,7 @@ const queryClient = new QueryClient({
       }
       "retry": 1,
       "refetchOnWindowFocus": false
+>>>>>>> origin/resolved-merge-conflicts
     }
   }
 });
@@ -107,7 +140,11 @@ const renderApp = (props) => {
               <AuthProvider>
                 <NotificationProvider>
                   <AnalyticsProvider>
+<<<<<<< HEAD
+                    <LanguageProvider authState={ 'isAuthenticated': false, 'user': null }>
+=======
                     <LanguageProvider authState={{ "isAuthenticated": false, "user": null }}>
+>>>>>>> origin/resolved-merge-conflicts
                       <ViewModeProvider>
                         <AppLayout>
                           <App />
@@ -136,11 +173,28 @@ function displayFatalError() {
     }
     if (rootElement) {
         }
+<<<<<<< HEAD
+        rootElement.innerHTML = `'''            <div style='{`'padding': 20px;text-align}'</p>``            </div>`;}';'
+=======
         rootElement.innerHTML = `"""            <div style="{{`"padding": 20px;text-align}}"</p>``            </div>`;}';'
+>>>>>>> origin/resolved-merge-conflicts
 }';';'
 try {';';';'
     }
     renderApp();} catch (error) {``}',';';'    ';';';'
+<<<<<<< HEAD
+    console.error('Global error caught in main.'jsx': ', error);';';'
+    displayFatalError(error.message);}';';';'
+''',';';'
+    ';';';'
+window.addEventListener('error', (e) => {''',';';'
+    ';';';'
+    }
+    console.error('Unhandled 'error': ', e.error || e.message);';';'
+    displayFatalError(e.message);}
+    );';';';'
+'`''';';';';'
+=======
     console.error('Global error caught in main."jsx": ', error);';';'
     displayFatalError(error.message);}';';';'
 ""',';';'
@@ -152,6 +206,7 @@ window.addEventListener('error', (e) => {""',';';'
     displayFatalError(e.message);}
     );';';';'
 "`""';';';';'
+>>>>>>> origin/resolved-merge-conflicts
 </LanguageDetectionPopup>
 </App>
 </React>
@@ -159,7 +214,11 @@ function displayFatalError() {
   }
   if (rootElement) {
     }
+<<<<<<< HEAD
+    rootElement.innerHTML = ``      <div style=''padding': 20px; text-'align': center; 'color': red;'>'
+=======
     rootElement.innerHTML = ``      <div style=""padding": 20px; text-"align": center; "color": red;">"
+>>>>>>> origin/resolved-merge-conflicts
         <h2>Application Error</h2>
         <p>${errorMessage}</p>
       </div>
@@ -171,11 +230,19 @@ try {
   renderApp();
 } catch (error) {
   }
+<<<<<<< HEAD
+  console.error('Global error caught in main.'jsx': ', error);'
+=======
   console.error('Global error caught in main."jsx": ', error);'
+>>>>>>> origin/resolved-merge-conflicts
   displayFatalError(error.message);
 }
 window.addEventListener('error', (e) => {'
   }
+<<<<<<< HEAD
+  console.error('Unhandled 'error': ', e.error || e.message);'
+=======
   console.error('Unhandled "error": ', e.error || e.message);'
+>>>>>>> origin/resolved-merge-conflicts
   displayFatalError(e.message);
 });

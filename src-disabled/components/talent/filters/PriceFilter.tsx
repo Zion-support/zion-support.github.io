@@ -1,5 +1,17 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src-disabled/components/talent/filters/PriceFilter.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+:src/components/talent/filters/PriceFilter.tsx
+import { ChevronDown, ChevronUp } from 'lucide-react'
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 return (
     <div className='mb - 6 border - b border - zion - blue - light pb - 6'>;
       <button;
@@ -107,7 +119,18 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src-disabled/components/talent/filters/PriceFilter.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+<<<<<<< HEAD
+:src/components/talent/filters/PriceFilter.tsx
+        className='flex w-full items-center justify-between text-white font-medium'      >
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         className='flex w-full items-center justify-between text-white font-medium'      >
         className='flex w-full items-center justify-between text-white font-medium'      >
         className="flex w-full items-center justify-between text-white font-medium"
@@ -159,6 +182,19 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
             <span>${priceRange[0]}/hr</span>
             <span>${priceRange[1]}/hr</span>
           </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src-disabled/components/talent/filters/PriceFilter.tsx
+=======
+          <Slider
+<<<<<<< HEAD
+            aria-label='Hourly rate range'            aria-label="Hourly rate range"
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/talent/filters/PriceFilter.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
           <Slider
 
@@ -205,6 +241,32 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
             max={200}
             step={5}
             onValueChange={handleChange}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src-disabled/components/talent/filters/PriceFilter.tsx
+=======
+<<<<<<< HEAD
+            className="mt-6"
+          />
+        </div>
+      )};
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/talent/filters/PriceFilter.tsx
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
+    </div>;
+  );
+
+            className="mt-6"
+        </div>
+      )}
+    </div>
+  )
+}
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
   );
@@ -218,7 +280,16 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
           />
         </div>
       )}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+;
+=======
+<<<<<<< HEAD:src-disabled/components/talent/filters/PriceFilter.tsx
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     </div>
   )
 }
@@ -249,4 +320,11 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 
 
 ;
+<<<<<<< HEAD
 
+=======
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/cursor/delete-old-data-records-6bba

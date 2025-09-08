@@ -75,7 +75,7 @@ export default function Placeholder() {
           <a className='text-blue-600 hover:underline'>Back to Home</a>;
       </div>;
     </main>;
-    <main className="min-h-screen p-8">;"
+    <main className='min-h-screen p-8'>;'
 
 import Head from 'next / head';
 import Link from 'next / link';
@@ -96,13 +96,13 @@ function Placeholder() {
           <a className='text - blue - 600 hover:underline'>Back to Home</a>;
       </div>;)
     </main>);export default /**
-    <main className="min - h-screen p - 8">;"
+    <main className='min - h-screen p - 8'>;'
 
-        <title > Products - Placeholder</title>;"
-      <div className="max - w-3xl mx - auto">;"
-        <h1 className="text - 2xl font - semibold mb - 2">Products</h1>;""
-        <p className="text - gray - 600 mb - 6">Auto - generated placeholder for missing route: <code>/products</code>.</p>;""
-        <Link href="/"><a className="text - blue - 600 hover:underline">Back to Home</a>;"
+        <title > Products - Placeholder</title>;'
+      <div className='max - w-3xl mx - auto'>;'
+        <h1 className='text - 2xl font - semibold mb - 2'>Products</h1>;''
+        <p className='text - gray - 600 mb - 6'>Auto - generated placeholder for missing route: <code>/products</code>.</p>;''
+        <Link href='/'><a className='text - blue - 600 hover:underline'>Back to Home</a>;'
     </main>);
 
       <Head>
@@ -115,17 +115,17 @@ function Placeholder() {
         <p className=&quot;text-gray-600 mb-6&quot;>Auto-generated placeholder for missing route: <code>/products</code>.</p>
         <Link href=&quot;/&quot;><a className=&quot;text-blue-600 hover:underline&quot;>Back to Home</a></a>
 
-    </main>"
+    </main>'
 
-    <main className="min-h-screen p-8">"
+    <main className='min-h-screen p-8'>'
 
-        <title>Products - Placeholder</title>"
-        <meta name="robots" content="noindex" />"
-      "
-      <div className="max-w-3xl mx-auto">"
-        <h1 className="text-2xl font-semibold mb-2">Products</h1>""
-        <p className="text-gray-600 mb-6">Auto-generated placeholder for missing route: <code>/products</code>.</p>""
-        <Link href="/"><a className="text-blue-600 hover:underline">Back to Home</a>"
+        <title>Products - Placeholder</title>'
+        <meta name='robots' content='noindex' />'
+      '
+      <div className='max-w-3xl mx-auto'>'
+        <h1 className='text-2xl font-semibold mb-2'>Products</h1>''
+        <p className='text-gray-600 mb-6'>Auto-generated placeholder for missing route: <code>/products</code>.</p>''
+        <Link href='/'><a className='text-blue-600 hover:underline'>Back to Home</a>'
     <main className='min-h-screen p-8' />
       <Head />
         <title />Products - Placeholder</title>
@@ -278,7 +278,7 @@ export default function Placeholder() {return (<main className='min-h-screen p-8
       </div>;}
     </main>;}
   )}
-}}
+}
   )
     </main>
   );

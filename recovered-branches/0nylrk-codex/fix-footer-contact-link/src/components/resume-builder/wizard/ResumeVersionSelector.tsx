@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import {useState} from 'react';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
@@ -28,12 +29,46 @@ import {useResume} from '@/hooks/useResume';
 
 
 
+=======
+export function ResumeVersionSelector({
+
+  currentResume,
+  onResumeChange,
+}: ResumeVersionSelectorProps) {
+
+  const { createResume, fetchResume } = useResume();
+
+        setNewResumeTitle("");
+
+  const { createResume, fetchResume } = useResume();
+
+
+        setNewResumeTitle("");
+
+  const handleCreateNewVersion = async () => {
+    if (newResumeTitle.trim()) {
+      setIsLoading(true);
+      const resumeId = await createResume({ title: newResumeTitle.trim() });
+      if (resumeId) {
+        await fetchResume(resumeId);
+        onResumeChange(resumeId);
+        setSaveDialogOpen(false);
+        setNewResumeTitle("");
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       }
       setIsLoading(false);
     }
   }
 
 
+<<<<<<< HEAD
+=======
+        setNewResumeTitle('')
+
+        setNewResumeTitle('')
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { useState } from 'react',;
 
 import {;
@@ -67,9 +102,12 @@ export function ResumeVersionSelector() { return null; }
       if (resumeId) {;
         await fetchResume(resumeId),;
         onResumeChange(resumeId),;
+<<<<<<< HEAD
 
         setSaveDialogOpen(false);
         setNewResumeTitle('');
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
       }
@@ -79,6 +117,7 @@ export function ResumeVersionSelector() { return null; }
 "
 
 
+<<<<<<< HEAD
 
   return (
 
@@ -112,18 +151,27 @@ onClick={handleCreateNewVersion}
 
               className="gap-2"
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             >
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
 
               <Save className="h-4 w-4" />
               Save;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
             </Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
     </div>
 
+<<<<<<< HEAD
 
 
 
+=======
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

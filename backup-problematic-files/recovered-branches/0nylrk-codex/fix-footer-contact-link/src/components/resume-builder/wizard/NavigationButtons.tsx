@@ -11,6 +11,7 @@ export const NavigationButtons = ({;
   nextLabel = "Next",;")
   isLoading = false} NavigationButtonsProps) => {;
 
+<<<<<<< HEAD
   return (;
     <div className="flex justify-between">;
       {onBack && (;
@@ -19,6 +20,8 @@ export const NavigationButtons = ({;
       )}
       {onNext && (;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
           {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}

@@ -1,58 +1,10 @@
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const fs = require('fs');
-=======
-<<<<<<<< HEAD:fix-all-remaining.cjs
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node
 
-<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
-<<<<<<< HEAD
-#!/usr/bin/env node;
->
-
-#!/usr/bin/env node;
-const fs = require('fs');
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-
-const helpCategories = [
-  {
-    title: "Getting Started,
-    icon: BookOpen,
-    description: Learn the basics and get up and running quickly",
-    articles: [
-
-
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-========
-#!/usr/bin/env node;
+=#!/usr/bin/env node;
 ;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/fix-all-remaining.cjs
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-const fs = require('fs');
->>>>>>> merged-prs-20250907-203621
+>const fs = require('fs');
 const path = require('path');
 ;
 console.log('🔧 Fixing all remaining syntax errors...');
@@ -62,207 +14,53 @@ const helpContent = `import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { BookOpen, MessageCircle, Phone, Mail, Search, ChevronRight } from 'lucide-react';
 import Layout from '../components/Layout';
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
 
 const filesToFix = [
   {
-    titl: "Getting Started",
-    ico: BookOpen,
-    descriptio: "Learn the basics and get up and running quickly",
-    article: [
-      "Welcome to Zion Tech Group",
-      "Setting up your account",
-      "First steps with our platform"
->>>>>>> origin/chore/fix-lint-and-merge
+    title: "Account & Billing",
     ]
   };
   {
-<<<<<<< HEAD
     title: "Account & Billing,
     icon: MessageCircle,
-    description: Manage your account, billing, and subscription",
-    articles: [
-
-
-<<<<<<< HEAD
-function findAndFixFiles(dir) {
-  const files = fs.readdirSync(dir);
-  let fixedCount = 0;
-  
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory()) {
-      fixedCount += findAndFixFiles(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      if (fixAllRemaining(filePath)) {
-        console.log(`Fixed remaining issues in: ${filePath}`);
-        fixedCount++;
-      }
-    }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-=======
-
-=======
-    titl: "Account & Billing",
-    ico: MessageCircle,
-    descriptio: "Manage your account, billing, and subscription",
-    article: [
-      "Managing your subscription",
-      "Billing and payments",
-      "Account settings"
->>>>>>> origin/chore/fix-lint-and-merge
-    ]
-  };
-  {
-<<<<<<< HEAD
-    title: "Technical Support,
-    icon: Phone,
-    description: Get help with technical issues and troubleshooting",
+    description: "Manage your account, billing, and subscription",
     articles: [
 
 
 
-    ]
-  }
-
-  return (
-    <Layout>
-      <Head>
-        <title>Help Center - Zion Tech Group</title>
-        <meta name="description content=Find answers to your questions and get help with our services." />
-      </Head>
-
-
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory()) {}
-  } catch (error) {
-    console.error("Error:, error);
-    return res.status(500).json({ error: Internal server error" });
->>>>>>> merged-prs-20250907-203621
-  }
-}
-`
-  },
-  {
-<<<<<<< HEAD
-    title: "Technical Support",
-    icon: Phone,
-    description: "Get help with technical issues and troubleshooting",
-    articles: [
-
-
-    if (req.method === 'POST') {
-      const { title, content } = req.body;
-      if (!title || !content) return res.status(400).json({ error: 'Title and content required' });
-=======
-    path: pages/api/admin/pitch/add-slide.ts',
-    content: `import type { NextApiRequest, NextApiResponse } from 'next;
-import { ensureAdminFromApi } from ../../../../utils/auth';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const { allowed } = await ensureAdminFromApi(req);
-    if (!allowed) return res.status(403).json({ error: 'Forbidden });
-
-
-=======
-    if (req.method === POST') {
-      const { title, content } = req.body;
-      if (!title || !content) return res.status(400).json({ error: 'Title and content required });
->>>>>>> merged-prs-20250907-203621
-
-      // Mock slide creation
-      const slide = {
-        id: Date.now().toString(),
-        title,
-<<<<<<< HEAD
-        content: 'Add concise, investor-relevant content here (120-150 words). Use metrics, milestones, or strategic plans.',
-        createdAt: new Date().toISOString()
-      };
-
-      res.json({ slide });
-    } else {
-      res.setHeader('Allow', 'POST');
-      res.status(405).end('Method Not Allowed');
-    }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-`
-  },
-  {;
-    "title": "Setting up cloud migration",
-    "category": "Technical Support",
-    "readTime": "10 min";
-  },
-  {;
-    "title": "Understanding your billing",
-    "category": "Account & Billing",
-    "readTime": "3 min";
-  }
 ];
-
-export default function Help() {
-  return (
-    <Layout>
-      <Head>
-        <title>Help Center - Zion Tech Group</title>
-        <meta name="description" content="Find answers to your questions and get help with our services." />
-      </Head>
-
-console.log('✅ All remaining files fixed!');
-=======
-        content: Add concise, investor-relevant content here (120-150 words). Use metrics, milestones, or strategic plans.',
-        createdAt: new Date().toISOString()
-      }
-
-      res.json({ slide });
-    } else {
-      res.setHeader('Allow, POST');
-      res.status(405).end('Method Not Allowed);
-    }
-  } catch (error) {
-    console.error("Error:, error);
-    return res.status(500).json({ error: Internal server error" });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-  }
-];
+;
 const educationBenefits = [;
-  {
-    "icon: GraduationCap,
-    title": Student Success',
-    "description: 'Improve student outcomes with personalized learning and analytics.,
-    metric": 40%';
+  {;
+    "icon": GraduationCap,
+    "title": 'Student Success',
+    "description": 'Improve student outcomes with personalized learning and analytics.',
+    "metric": '40%';
   },
-  {
-    "icon: TrendingUp,
-    title": 'Efficiency Gains,
-    "description: Streamline administrative processes and reduce manual work.',
-    metric": '60%;
+  {;
+    "icon": TrendingUp,
+    "title": 'Efficiency Gains',
+    "description": 'Streamline administrative processes and reduce manual work.',
+    "metric": '60%';
   },
-  {
-    "icon: Shield,
-    title": Data Security',
-    "description: 'Protect sensitive student and institutional data with enterprise-grade security.,
-    metric": 99.9%';
+  {;
+    "icon": Shield,
+    "title": 'Data Security',
+    "description": 'Protect sensitive student and institutional data with enterprise-grade security.',
+    "metric": '99.9%';
   }
 ];
 
+export default function Education() {
+  return (
+    <Layout>
+      <Head>
+        <title>Education Solutions - Zion Tech Group</title>
+        <meta name="description" content="Transform education with our comprehensive technology solutions for schools, colleges, and universities." />
+      </Head>
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
+
     titl: "Technical Support",
     ico: Phone,
     descriptio: "Get help with technical issues and troubleshooting",
@@ -271,16 +69,13 @@ const educationBenefits = [;
       "API documentation",
       "Integration guides"
     ]
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
 }
 
 
 
 
-<<<<<<< HEAD
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
@@ -290,105 +85,6 @@ const educationBenefits = [;
               
               <div className="grid grid-cols-1: md:grid-cols-3 gap-8">
                 {helpCategories.map((category, index) => {
-=======
-;
-const helpCategories = [;
-  {;
-    titl:e:"Getting Started",;
-    ico:n:BookOpen,;
-    descriptio:n:"Learn the basics and get up and running quickly",;
-    article:s:[;
-      "Welcome to Zion Tech Group",;
-      "Setting up your account",;
-      "First steps with our platform";
-    ];
-  },;
-  {;
-    titl:e:"Account & Billing",;
-    ico:n:MessageCircle,;
-    descriptio:n:"Manage your account, billing, and subscription",;
-    article:s:[;
-      "Managing your subscription",;
-      "Billing and payments",;
-      "Account settings";
-    ];
-  },;
-  {;
-    titl:e:"Technical Support",;
-    ico:n:Phone,;
-    descriptio:n:"Get help with technical issues and troubleshooting",;
-    article:s:[;
-      "Common troubleshooting",;
-      "API documentation",;
-      "Integration guides";
-    ];  }
-];
-;
-const popularArticles = [;
-  {;
-    titl:e:"How to get started with our AI solutions",;
-    categor:y:"Getting Started",;
-    readTim:e:"5 min";
-  },;
-  {;
-    titl:e:"Setting up cloud migration",;
-    categor:y:"Technical Support",;
-    readTim:e:"10 min";
-  },;
-  {;
-    titl:e:"Understanding your billing",;
-    categor:y:"Account & Billing",;
-    readTim:e:"3 min";
-  }
-];
-;
-export default function Help() {;
-  return (;
-    <Layout>;
-      <Head>;
-        <title>Help Center - Zion Tech Group</title>;
-        <meta name="description" content="Find answers to your questions and get help with our services." />;
-      </Head>;
-;
-      <main>;
-        <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20">;
-          <div className="container mx-auto px-4">;
-            <motion.div;
-              className="text-center";
-              initial={{ opacit:y:0, y:30 }}
-              animate={{ opacit:y:1, y:0 }}
-              transition={{ duratio:n:0.8 }}
-            >;
-              <h1 className="text-4xl:md:text-6xl font-bold mb-6">;
-                Help Center;
-              </h1>;
-              <p className="text-xl:md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
-                Find answers to your questions and get the support you need.;
-              </p>;
-              <div className="max-w-2xl mx-auto">;
-                <div className="relative">;
-                  <input;
-                    type="text";
-                    placeholder="Search for help articles...";
-                    className="w-full px-6 py-4 pr-12 rounded-lg text-gray-900";
-                  />;
-                  <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400" />;
-                </div>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-;
-        <section className="py-20">;
-          <div className="container mx-auto px-4">;
-            <div className="max-w-6xl mx-auto">;
-              <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">;
-                Browse by Category;
-              </h2>;
-              ;
-              <div className="grid grid-cols-1:md:grid-cols-3 gap-8">;
-                {helpCategories.map((category, index) => {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                   const IconComponent = category.icon;
                   return (;
                     <motion.div;
@@ -589,36 +285,7 @@ export default function Education() {;
                   return (;
                     <motion.div;
                       key={index}
-                      className="bg-white rounded-xl shadow-lg p-8:hover:shadow-xl transition-shadow duration-300";
-                      initial={{ opacit:y:0, y:30 }}
-                      whileInView={{ opacit:y:1, y:0 }}
-                      transition={{ duratio:n:0.8, dela:y:index * 0.1 }}
-                      viewport={{ onc:e:true }}
-                    >;
-                      <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">;
-                        <IconComponent className="w-8 h-8 text-blue-600" />;
-                      </div>;
-                      <h3 className="text-2xl font-bold text-gray-900 mb-4">{solution.title}</h3>;
-                      <p className="text-gray-600 mb-6">{solution.description}</p>;
-                      ;
-                      <div className="space-y-3 mb-6">;
-                        <h4 className="font-semibold text-gray-900">Key:Features:</h4>;
-                        <ul className="space-y-2">;
-                          {solution.features.map((feature, featureIndex) => (;
-                            <li key={featureIndex} className="flex items-center text-sm text-gray-600">;
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
-                              {feature}
-                            </li>;
-                          ))}
-                        </ul>;
-                      </div>;
-;
-                      <div className="space-y-3">;
-                        <h4 className="font-semibold text-gray-900">Benefit:s:</h4>;
-                        <ul className="space-y-2">;
-                          {solution.benefits.map((benefit, benefitIndex) => (;
-                            <li key={benefitIndex} className="flex items-center text-sm text-gray-600">;
-                              <TrendingUp className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" />;
+
                               {benefit}
                             </li>;
                           ))}
@@ -627,42 +294,12 @@ export default function Education() {;
                     </motion.div>;
                   );
                 })}
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-;
-        <section className="py-20 bg-gray-50">;
-          <div className="container mx-auto px-4">;
-            <div className="max-w-6xl mx-auto">;
-              <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">;
-                Why Choose Our Education Solutions?;
-              </h2>;
-              ;
-              <div className="grid grid-cols-1:md:grid-cols-3 gap-8">;
-                {educationBenefits.map((benefit, index) => {;
+
                   const IconComponent = benefit.icon;
                   return (;
                     <motion.div;
                       key={index}
-                      className="bg-white rounded-lg p-8 text-center:hover:shadow-lg transition-shadow duration-300";
-                      initial={{ opacit:y:0, y:30 }}
-                      whileInView={{ opacit:y:1, y:0 }}
-                      transition={{ duratio:n:0.8, dela:y:index * 0.1 }}
-                      viewport={{ onc:e:true }}
-                    >;
-                      <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">;
-                        <IconComponent className="w-8 h-8 text-green-600" />;
-                      </div>;
-                      <div className="text-4xl font-bold text-green-600 mb-2">{benefit.metric}</div>;
-                      <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>;
-                      <p className="text-gray-600">{benefit.description}</p>;
-                    </motion.div>;
-                  );
-                })}
-              </div>;
-            </div>;
-          </div>;
+
         </section>;
       </main>;
     </Layout>;
@@ -673,8 +310,3 @@ fs.writeFileSync('/workspace/pages/industries/education.tsx', educationContent);
 console.log('✅ Fixed industries/education.tsx');
 ;
 console.log('🎉 All remaining syntax errors fixed!');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621

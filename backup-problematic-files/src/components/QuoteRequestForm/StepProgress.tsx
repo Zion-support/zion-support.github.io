@@ -50,8 +50,12 @@ export function StepProgress({ currentStep } StepProgressProps) {;
 }</div> <span) ;
 }> {;
 
+<<<<<<< HEAD
   step.label ;
 }</span> </div>) ;
 }) ;
 }</div> </div>) ;
 
+=======
+}</span> </div>) ;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

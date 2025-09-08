@@ -3,6 +3,7 @@ import { BadgeCheck } from "lucide-react",
 import { TalentCardAvatar } from "./TalentCardAvatar";
 import { TalentCardAvailability } from "./TalentCardAvailability";
 interface TalentCardHeaderProps {
+<<<<<<< HEAD
 
 
   fullName: string
@@ -12,11 +13,53 @@ interface TalentCardHeaderProps {
 interface TalentCardHeaderProps {
 
 
+=======
+
+  fullName: string
+
+
+  profilePicture?: string;
+  availabilityType: string,;
+  yearsExperience: number;
+}
+  availabilityType;import React from "react","
+interface TalentCardHeaderProps {
+  }
+  "fullName": string,
+"professionalTitle": string,
+profilePicture?: string;
+  "availabilityType": string,;
+  "yearsExperience": number;
+
+import React from "react",
+
+import { BadgeCheck } from "lucide-react",
+import { TalentCardAvatar } from "./TalentCardAvatar";
+
+import { TalentCardAvailability } from "./TalentCardAvailability";
+interface TalentCardHeaderProps {}
+  fullName: string;
+  professionalTitle: string;
+  profilePicture?: string;
+  availabilityType: string,;
+  yearsExperience: number;
+}
+  availabilityType;
+
+
+  yearsExperience;
+}: TalentCardHeaderProps) {;
+interface TalentCardHeaderProps {
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   fullName: string,
   professionalTitle: string,
   profilePicture?: string,
   availabilityType: string,
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   yearsExperience: number;
 }
 
@@ -24,7 +67,10 @@ interface TalentCardHeaderProps {
 
   yearsExperience
 }: TalentCardHeaderProps) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   return (
   return (  return (
 
@@ -150,8 +196,13 @@ yearsExperience: number;
               <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />;
             )}
 
+<<<<<<< HEAD
 
 
+=======
+}
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from "react",;
 import { BadgeCheck } from "lucide-react",;
 import { TalentCardAvatar } from "./TalentCardAvatar",;
@@ -182,6 +233,7 @@ export function TalentCardHeader({;
             {yearsExperience > 5 && (
               <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />
             )}
+<<<<<<< HEAD
 
 
           </h3>;
@@ -192,14 +244,23 @@ export function TalentCardHeader({;
         </div>;
 
 
+=======
+          </h3>;
+          </h3>;
+          <TalentCardAvailability availabilityType={availabilityType} />;
+        </div>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <p className="text-zion-cyan text-sm">{professionalTitle}</p>;
       </div>;
     </div>;
   );
 }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from './react';
 import { BadgeCheck } from './lucide-react';
 import { TalentCardAvatar } from './TalentCardAvatar';
@@ -233,9 +294,34 @@ function TalentCardHeader() {
     </div>);
 }
 
+<<<<<<< HEAD
 ;
 
 
 
 
 
+=======
+          ;
+          <TalentCardAvailability availabilityType={availabilityType} />;
+        </div>;
+        ;
+        <p className="text-zion-cyan text-sm">{professionalTitle}</p>;
+      </div>;
+    </div>;
+  ),;}
+ interface TalentCardHeaderProps {
+  fullName: string;
+professionalTitle: string;
+profilePicture?: string;
+availabilityType: string;
+yearsExperience: number 
+}export function TalentCardHeader ({
+  fullName;
+professionalTitle;
+profilePicture;
+availabilityType;
+yearsExperience 
+
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

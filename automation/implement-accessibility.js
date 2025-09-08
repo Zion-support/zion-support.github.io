@@ -1,6 +1,7 @@
 #!/usr/bin/env node;
 // Accessibility Implementation Script;
 
+<<<<<<< HEAD
 
 
 const fs = require('fs'),;
@@ -12,3 +13,5 @@ console.log('🚀 Implementing Accessibility Improvements...'),;
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

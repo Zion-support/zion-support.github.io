@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Education} from '@/types / resume';
@@ -48,7 +51,20 @@ export function EducationForm({ ;
       location: data.location}
 
 
+<<<<<<< HEAD
 
+=======
+import {useState} from 'react';
+import {Button} from '@/components/ui/button';
+import {Education} from '@/types/resume';
+import {useResume} from '@/hooks/useResume';
+import {format} from 'date-fns';
+import {EducationFormProps} from './types';
+import {EducationList} from './EducationList';
+import {EducationFormFields} from './EducationFormFields';
+export function EducationForm({
+export function EducationForm({ ;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   resumeId;
   educationEntries
   onComplete
@@ -83,18 +99,24 @@ export function EducationForm(): any ({ ;
 }: EducationFormProps) {;
   const { addEducation, updateEducation, deleteEducation, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   // Helper function to format dates to string;
   const formatDateValue = (dateValue: string | Date | undefined): string => {;
     if (!dateValue) return '';
     if (typeof dateValue === 'string') return dateValue,;
     return format(dateValue, 'yyyy-MM-dd');
   };
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const handleAddOrUpdate = async (data: any) => {;
     const educationData: Education = {;
       institution: data && data.institution,;
@@ -105,15 +127,51 @@ export function EducationForm(): any ({ ;
       is_current: data && data.is_current,;
       description: data && data.description,;
       location: data && data.location},;
+<<<<<<< HEAD
 
 
 
+=======
+    let success;
+}: EducationFormProps) {;
+  const { addEducation, updateEducation, deleteEducation, isLoading } = useResume(),;
+  const [editingId, setEditingId] = useState<string | null>(null),;
+  // Helper function to format dates to string;
+  const formatDateValue = (dateValue: string | Date | undefined): string => {;
+    if (!dateValue) return '',;
+    if (typeof dateValue === 'string') return dateValue,;
+    return format(dateValue, 'yyyy-MM-dd');
+  },;
+  const handleAddOrUpdate = async (data: any) => {;
+    const educationData: Education = {;
+      institution: data.institution,;
+      degree: data.degree,;
+      field_of_study: data.field_of_study,;
+      start_date: data.start_date,;
+      end_date: data.is_current ? undefined : (data.end_date || undefined),;
+      is_current: data.is_current,;
+      description: data.description,;
+      location: data.location},;
+    let success,;
+    let success;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     if (editingId) {;
       success = await updateEducation(editingId, educationData);
     } else {;
       success = await addEducation(resumeId, educationData);
+<<<<<<< HEAD
 
 
+=======
+    }
+    if (success) {}
+      setEditingId(null)
+    }
+
+    }
+    if (success) {}
+      setEditingId(null)
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     }
 
     }
@@ -121,9 +179,12 @@ export function EducationForm(): any ({ ;
   };
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const handleEdit = (edu: Education) => {
     setEditingId(edu.id!)
     // Form reset happens in the child component
@@ -138,8 +199,35 @@ export function EducationForm(): any ({ ;
       setEditingId(null)
     } else {
       onBack()
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
+=======
+  };
+
+  const handleEdit = (edu: Education) => {
+
+    setEditingId(edu.id!)
+    // Form reset happens in the child component;
+  }
+  const handleDelete = async (id: string) => {'
+    if (confirm('Are you sure you want to delete this education entry?')) {}
+      await deleteEducation(id)
+    }
+  }
+  const handleCancel = () => {}
+    if (editingId) {}
+      setEditingId(null)
+    } else {}
+      onBack()
+
+    }
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     }
     if (success) {;
@@ -154,16 +242,22 @@ export function EducationForm(): any ({ ;
   const handleEdit = (edu: Education) => {;
     setEditingId(edu && edu.id!),;
 
+<<<<<<< HEAD
     // Form reset happens in the child component;
   };
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     if (confirm('Are you sure you want to delete this education entry?')) {;
       await deleteEducation(id);
     }
   };
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const handleCancel = () => {;
     if (editingId) {;
       setEditingId(null);
@@ -171,10 +265,14 @@ export function EducationForm(): any ({ ;
       onBack();
 
 
+<<<<<<< HEAD
 
 
 
 
+=======
+    }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   return (
 
@@ -227,7 +325,10 @@ pr-12325
         onDelete={handleDelete}
       />
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       <EducationList
 
         educationEntries={educationEntries}
@@ -238,6 +339,13 @@ pr-12325
       />
 
 
+<<<<<<< HEAD
+=======
+      <div className="bg-muted/40 p-6 rounded-lg">
+        <h3 className="text-md font-medium mb-4">
+          {editingId ? 'Update Education' : 'Add Education'}
+        </h3>
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
 
@@ -245,7 +353,81 @@ pr-12325
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Education' : 'Add Education'}
         </h3>
+<<<<<<< HEAD
 
+=======
+}
+
+  return (
+
+import { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Education } from '@/types/resume',;
+import { useResume } from '@/hooks/useResume',;
+import { format } from 'date-fns',;
+import { EducationFormProps } from './types',;
+import { EducationList } from './EducationList',;
+import { EducationFormFields } from './EducationFormFields',;
+;
+export function EducationForm({ ;
+  resumeId,;
+  educationEntries, ;
+  onComplete, ;
+  onBack ;
+} EducationFormProps) {;
+  const { addEducation, updateEducation, deleteEducation, isLoading } = useResume(),;
+  const [editingId, setEditingId] = useState<string | null>(null),;
+  ;
+  // Helper function to format dates to string;
+  const formatDateValue = (dateValue:string | Date | undefined):string => {;
+    if (!dateValue) return '',;
+    if (typeof dateValue === 'string') return dateValue,;
+    return format(dateValue, 'yyyy-MM-dd'),;
+  },;
+;
+  const handleAddOrUpdate = async (data:any) => {;
+    const educationData:Education = {;
+      institution:data.institution,;
+      degree:data.degree,;
+      field_of_study:data.field_of_study,;
+      start_date:data.start_date,;
+      end_date:data.is_current ? undefined :(data.end_date || undefined),;
+      is_current:data.is_current,;
+      description:data.description,;
+      location:data.location},;
+;
+    let success,;
+    if (editingId) {;
+      success = await updateEducation(editingId, educationData),;
+    } else {;
+      success = await addEducation(resumeId, educationData),;
+    }
+;
+    if (success) {;
+      setEditingId(null),;    }
+  },;
+;
+  const handleEdit = (edu:Education) => {;
+    setEditingId(edu.id!),;
+    // Form reset happens in the child component;
+  },;
+;
+  const handleDelete = async (id:string) => {;
+    if (confirm('Are you sure you want to delete this education entry?')) {;
+      await deleteEducation(id);
+    }
+  },;
+;
+  const handleCancel = () => {;
+    if (editingId) {;
+      setEditingId(null),;
+    } else {;
+      onBack(),;
+    }
+  },;
+;
+  return (;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     <div className="space-y-6">;
       <div>;
@@ -254,28 +436,38 @@ pr-12325
           Add your educational background and academic achievements.;
         </p>;
       </div>;
-;
-      <EducationList ;
-        educationEntries={educationEntries} ;
+
+      <EducationList
+        educationEntries={educationEntries} 
         onEdit={handleEdit}
         onDelete={handleDelete}
       />;
-;
+
       <div className="bg-muted/40 p-6 rounded-lg">;
         <h3 className="text-md font-medium mb-4">;
-          {editingId ? 'Update Education' :'Add Education'}
+          {editingId ? 'Update Education' : 'Add Education'}
         </h3>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         <EducationFormFields
           isEditing={!!editingId}
           onSubmit={handleAddOrUpdate}
           onCancel={handleCancel}
 
+<<<<<<< HEAD
 
         />;
       </div>;
 
+=======
+        />;
+      </div>;
+        />;
+      </div>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 ;
       {!editingId && educationEntries.length > 0 && (;
@@ -287,12 +479,19 @@ pr-12325
         </div>;
       )}
     </div>;
+<<<<<<< HEAD
 
 export /**
  * EducationForm - Function description
  */
 function EducationForm() {
 
+=======
+
+  );
+}
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const { add_education, update_education, delete_education, is_loading } = use_resume ();
 
 "
@@ -386,6 +585,9 @@ if ( {) {
     </div>);
 
 }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

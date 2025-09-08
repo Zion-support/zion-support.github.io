@@ -4,11 +4,43 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Sparkles } from "lucide-react",
 import { supabase } from "@/integrations/supabase/client",
 import { AIListingForm } from "./AIListingForm",
+<<<<<<< HEAD
 
 
 interface GeneratedContent {
 
 
+=======
+
+interface GeneratedContent {
+
+
+  description: string,
+  tags: string[],
+  suggestedPrice: {}
+    min: number,;
+    max: number;
+  },
+  keyPoints: string[]
+
+interface GeneratedContent {
+  // TODO: Implement
+}
+  description: string,
+  tags: string[],
+  suggestedPrice: {,
+  min: number,
+    max: number;
+
+  };
+  keyPoints: string[];
+}
+
+interface AIListingGeneratorProps {;
+  onApplyGenerated?: (content: GeneratedContent) => void,;
+  initialValues?: {;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     title?: string;
     category?: string;
     keyFeatures?: string;
@@ -16,16 +48,30 @@ interface GeneratedContent {
   }
 }
 
+<<<<<<< HEAD
+=======
+  description: string,;
+  tags: string[],;
+  suggestedPrice: {;
+    min: number,;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null);
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React, { useState } from './react';
 import { use_toast } from '@/hooks / use - toast';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -57,6 +103,32 @@ interface GeneratedContent {}
   const [is_loading, setIsLoading] = useState (false);
   const [generated_content, setGeneratedContent] = useState < GeneratedContent | null>(null);
 ;
+<<<<<<< HEAD
+=======
+
+export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
+  const { toast } = useToast(),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null),;
+  const handleGenerate = async ({;
+    title,;
+    category,;
+    keyFeatures,;
+    targetAudience;
+  }: {;
+    title: string,;
+    category: string,;
+    keyFeatures: string,;
+    targetAudience: string;
+  }) => {;
+    setIsLoading(true),;
+    try {;
+      const { data, error } = await supabase.functions.invoke('ai-listing-generator', {;
+        body: { title, category, keyFeatures, targetAudience }
+      }),;
+      if (error) {;
+        throw new Error(error.message);
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
         description: "AI has created optimized listing content for you."
@@ -80,7 +152,11 @@ interface GeneratedContent {}
         description: "The generated content has been applied to your listing."
       })
 
+<<<<<<< HEAD
 
+=======
+    }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   return (
     <div className="space-y-6">
@@ -112,6 +188,7 @@ if ( {) {}
         throw new Error (data.error);
       }
       setGeneratedContent (data.generated);
+<<<<<<< HEAD
 
       toast ({
         title: "Content Generated",
@@ -125,10 +202,18 @@ if ( {) {}
         variant: "destructive";
       });
     } finally {
+=======
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       setIsLoading (false);
     }
   }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const handleGenerate = async ({;
     title;
     category;
@@ -142,7 +227,10 @@ if ( {) {}
   }) => {;
     setIsLoading(true);
 
+<<<<<<< HEAD
     try {;
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       const { data, error } = await supabase && supabase.functions.invoke('ai-listing-generator', {;
         body: { title, category, keyFeatures, targetAudience }
@@ -161,27 +249,55 @@ if ( {) {}
         description: "AI has created optimized listing content for you.";
       });
     } catch (error) {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       console && console.error("Error generating content:", error);
       toast({;
         title: "Generation Failed",
         description: error instanceof Error ? error && error.message : "Failed to generate content. Please try again.",;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         variant: "destructive";
       });
     } finally {;
       setIsLoading(false);
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
     }
+<<<<<<< HEAD
+=======
+  }
+
+
+    }
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   },
 
 
+<<<<<<< HEAD
 
   return (
 
+=======
+    <div className="space-y-6">;
+
+  return (
+
+}
+  }
+  return (
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
     <div className="space-y-6">;
 
@@ -199,6 +315,7 @@ if ( {) {}
 
             onSubmit={handleGenerate} 
             isLoading={isLoading} 
+<<<<<<< HEAD
 
 
           <AIListingForm 
@@ -206,6 +323,9 @@ if ( {) {}
             isLoading={isLoading} 
 
 
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
             initialValues={initialValues}
           />;
@@ -216,6 +336,7 @@ if ( {) {}
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />;
 
       )}
+<<<<<<< HEAD
 
 
 
@@ -263,3 +384,5 @@ if ( {) {
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

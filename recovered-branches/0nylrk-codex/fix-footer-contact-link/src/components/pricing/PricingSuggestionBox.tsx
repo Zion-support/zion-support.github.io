@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Loader2, Info, ThumbsUp } from "lucide-react";
 import { PricingSuggestion } from "@/services/pricingSuggestionService";
+<<<<<<< HEAD
 
 import { Loader2, Info, ThumbsUp } from "lucide-react",
 import { PricingSuggestion } from "@/services/pricingSuggestionService",
@@ -38,6 +39,12 @@ import { PricingSuggestion } from "@/services/pricingSuggestionService";
 import { Loader2, Info, ThumbsUp } from "lucide-react",
 import { PricingSuggestion } from "@/services/pricingSuggestionService",
 
+=======
+import { Loader2, Info, ThumbsUp } from "lucide-react",
+import { PricingSuggestion } from "@/services/pricingSuggestionService",
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface PricingSuggestionBoxProps {
   suggestion: PricingSuggestion | null;
     isLoading: boolean;
@@ -45,8 +52,11 @@ onApplySuggestion: () => void;}
 rateType: \"hourly\" | \"fixed\"}
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   if (isLoading) {
 }
 return (;
@@ -62,7 +72,10 @@ return (;
       </Card>
     )
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface PricingSuggestionBoxProps {;
   }
   "suggestion": PricingSuggestion | null,;
@@ -73,6 +86,7 @@ interface PricingSuggestionBoxProps {;
 
 
 
+<<<<<<< HEAD
 
       <Card className="border border-dashed border-muted">;
         <CardContent className="flex items-center justify-center p-6">;
@@ -82,18 +96,26 @@ interface PricingSuggestionBoxProps {;
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
               Generating optimal pricing suggestion...;
             </p>;
           </div>;
         </CardContent>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   }
   if (!suggestion) {
     return null
   }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const confidenceColor = {
     High: "bg-green-100 text-green-800"
     Medium: "bg-yellow-100 text-yellow-800"
@@ -145,7 +167,19 @@ interface PricingSuggestionBoxProps {;
   )
 
 
+<<<<<<< HEAD
 
+=======
+},
+;
+
+  const confidenceColor = {;
+    High: "bg-green-100 text-green-800",;
+    Medium: "bg-yellow-100 text-yellow-800",;
+    Low: "bg-red-100 text-red-800"}[suggestion && suggestion.confidence],;
+
+  return (
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     <Card className="border-2 border-dashed border-muted-foreground/20">;
       <CardContent className="p-5 space-y-4">;
         <div className="flex items-center justify-between">;
@@ -159,8 +193,11 @@ interface PricingSuggestionBoxProps {;
           </span>;
         </div>;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         <div className="flex items-center justify-between">;
           <TooltipProvider>;
             <Tooltip>;
@@ -178,6 +215,7 @@ interface PricingSuggestionBoxProps {;
             </Tooltip>;
           </TooltipProvider>;
         </div>;
+<<<<<<< HEAD
 
 
         <p className="text - xs text - center text - muted - foreground pt - 2">;
@@ -192,3 +230,24 @@ interface PricingSuggestionBoxProps {;
 
 
 
+=======
+              </TooltipContent>;
+            </Tooltip>;
+          </TooltipProvider>;
+        </div>;
+
+export default PricingSuggestionBox;
+
+
+        ;
+        <p className="text-xs text-center text-muted-foreground pt-2">;
+          Based on market data & trends. You can adjust as needed.;
+        </p>;
+      </CardContent>;
+    </Card>;
+  );
+};
+
+export default PricingSuggestionBox;
+        </div>;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

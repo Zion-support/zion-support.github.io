@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 ;
 export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",export interface MilestoneSuggestionInput  {scopeOfWork: string,export type ProjectType = "Web Dev" | "AI/ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",export interface MilestoneSuggestionInput  {scopeOfWork: string,export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",export interface MilestoneSuggestionInput  {scopeOfWork: string,startDateIso: string, // ISO 8601;
@@ -24,7 +27,10 @@ export interface MilestoneSuggestionInput {
   project_type: ProjectType;
 export type ProjectType = $2;
 export interface MilestoneSuggestionInput {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   scopeOfWork: string,
 
 }
@@ -82,7 +88,10 @@ export interface SuggestedMilestoneItem {;
 export interface SuggestedMilestoneItem {
   title: string,
   description: string,
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }  suggestedDueDateIso: string;
   estimatedEffortHours: number, // estimated hours;
   tags?: string[], // e.g., ["AI Suggested"];
@@ -107,13 +116,19 @@ export interface MilestoneSuggestionResponse {;
   milestones: SuggestedMilestoneItem[];
 
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 ;
 export interface SuggestedMilestoneItem {;
   title:string,;
   description:string,;
   suggestedDueDateIso:string,;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   estimatedEffortHours:number, // estimated hours;
   tags?:string[], // e.g., ["AI Suggested"];
 }
@@ -137,4 +152,7 @@ export interface MilestoneSuggestionResponse {;
 export interface MilestoneSuggestionResponse {
   milestones: SuggestedMilestoneItem[]
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,24 +1,46 @@
 class ErrorBoundary extends React.Component {
 
+<<<<<<< HEAD
 
+=======
+class ErrorBoundary extends React.Component {
+  // TODO: Implement
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
 
+<<<<<<< HEAD
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+=======
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
 
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     return this.props.children;
   }
 }
@@ -53,4 +75,9 @@ interface MainNavigationProps {
     </div>
 
 
+<<<<<<< HEAD
 
+=======
+    </div>'
+pr-12325
+>>>>>>> origin/cursor/delete-old-data-records-6bba

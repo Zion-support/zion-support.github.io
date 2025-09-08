@@ -8,6 +8,7 @@ import {
   RocketLaunchIcon,
   AcademicCapIcon,
 
+<<<<<<< HEAD
 
 import React from 'react';'
 
@@ -287,6 +288,8 @@ export default function ServicesPage() {return (<div className="min-h-screen bg-
             <a;
               href="/contact";"
               className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm "hover":bg-blue-500 focus-"visible":outline focus-"visible":outline-2 focus-"visible":outline-offset-2 focus-"visible":outline-blue-600 transition-all duration-200 "hover":scale-105">"
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
               Schedule Consultation;
             </Link>;
@@ -299,4 +302,7 @@ export default function ServicesPage() {return (<div className="min-h-screen bg-
   )}
 
 export default Page;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

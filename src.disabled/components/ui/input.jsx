@@ -1,12 +1,18 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from 'react';
 interface InputProps {
   // Add props here as needed
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -19,5 +25,8 @@ export default function Input({ }: InputProps) {
     </div>
   );
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba

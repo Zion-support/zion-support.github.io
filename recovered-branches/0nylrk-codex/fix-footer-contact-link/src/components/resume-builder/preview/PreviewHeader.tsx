@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import { Button  } from '@/components/ui/button';
 import { ArrowLeft, FileText, Link  } from 'lucide-react';
 import { PdfExportButton  } from '../PdfExportButton';
@@ -15,12 +18,47 @@ import {Resume} from '@/types/resume';
 import {useState} from 'react';
 
 
+<<<<<<< HEAD
 
   resume: Resume;
   onBack: () => void;
 }
+=======
+  resume: Resume;
+  onBack: () => void;
+}
+export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
+export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
+=======
+  const isMobile = useIsMobile();
+  const handleBrowserPrint = () => {
+    setIsPrinting(true);
+
+    // Inject print-specific CSS only for the duration of printing
+    const style = document.createElement("style");
+    style.innerHTML = `
+      @media print {
+        body * {
+          visibility: hidden
+import { Button } from '@/components/ui/button',;
+import { ArrowLeft, FileText, Link } from 'lucide-react',;
+import { PdfExportButton } from '../PdfExportButton',;
+import { Resume } from '@/types/resume',;
+import { useState } from 'react',;
+import { useIsMobile } from '@/hooks/use-mobile',;
+interface PreviewHeaderProps {;
+  resume: Resume,;
+  onBack: () => void;
+}
+;
+export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
+  const [isPrinting, setIsPrinting] = useState(false),;
+  const isMobile = useIsMobile(),;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   resume: Resume;
   onBack: () => void;
@@ -48,6 +86,7 @@ interface PreviewHeaderProps {;
 ;
 
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
+<<<<<<< HEAD
 
 
 
@@ -72,6 +111,31 @@ export function PreviewHeader(): any ({ resume, onBack }: PreviewHeaderProps) {;
 
 
 
+=======
+
+  const handleBrowserPrint = () => {;
+    setIsPrinting(true);
+
+          visibility: hidden;
+  const handleBrowserPrint = () => {;
+    setIsPrinting(true),;
+    // Inject print-specific CSS only for the duration of printing;
+    const style = document.createElement('style'),;
+    style.innerHTML = `;
+      @media print {;
+        body * {;
+          visibility: hidden;
+        }
+        .print-section, .print-section * {
+          visibility: visible
+        }
+        }
+        .print-section, .print-section * {
+          visibility: visible
+        }
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         .print-section {
           position: absolute
           left: 0
@@ -127,6 +191,7 @@ function PreviewHeader() {
           top: 0,
           width: 100%;
         }
+<<<<<<< HEAD
 
         .no - print {
           display: none !important;
@@ -141,6 +206,16 @@ function PreviewHeader() {
 
     
 
+=======
+
+        .no - print {}
+          display: none !important;
+
+    `,
+    document.head.appendChild(style),
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     // Trigger print dialog
     window.print(),
     
@@ -150,10 +225,23 @@ function PreviewHeader() {
       setIsPrinting(false)
     }, 1000)
   },
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
 
 
+=======
+    // Remove the temporary style element after printing
+    setTimeout(() => {
+      document.head.removeChild(style);
+      setIsPrinting(false);
+    }, 1000);
+  };
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
   return (
@@ -175,8 +263,16 @@ function PreviewHeader() {
         className={`flex ${isMobile ? "flex-col" : "flex-row"} space-${isMobile ? "y-2" : "x-2"} no-print`}
       >
 
+<<<<<<< HEAD
+=======
+
+        <PdfExportButton resume={resume} />
+        <Button 
+          variant="outline" 
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
+<<<<<<< HEAD
           disabled={isPrinting}
           className="gap-2"
         >
@@ -194,3 +290,7 @@ function PreviewHeader() {
 
 
 
+=======
+
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

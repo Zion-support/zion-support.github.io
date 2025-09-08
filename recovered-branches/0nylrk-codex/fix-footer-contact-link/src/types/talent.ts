@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -5,6 +6,14 @@
     description: string;
   }[];
 
+=======
+
+id: string;
+  user_id: string;
+  full_name: string;
+  // TODO: Implement
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 }
   id: string;,
   user_id: string;
@@ -37,10 +46,17 @@ pr-12325
   budget: {
     min: number;
 
+<<<<<<< HEAD
 
     max: number,
     currency: string;
 
+=======
+
+    max: number
+
+    currency: string
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   }
   timeline: {
     startDate: string;
@@ -51,9 +67,12 @@ pr-12325
   status: 'pending' | 'accepted' | 'rejected' | 'completed'
 
 
+<<<<<<< HEAD
 
 export interface TalentProfile {;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   availabilities?: string[];
   regions?: string[];
@@ -61,7 +80,11 @@ export interface TalentProfile {;
   experienceRange?: [number, number];
 }
 
+<<<<<<< HEAD
 ;
 
 
 
+=======
+export interface TalentProfile {;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

@@ -1,4 +1,4 @@
- > <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) ) 
+ > <option value='light' >Light</option> <option value='dark' >Dark</option> </select>) ) 
 }</select> </>) 
 }</div> </div> <PdfExportButton targetRef= {
   targetRef 

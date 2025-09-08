@@ -1,6 +1,10 @@
 
+<<<<<<< HEAD
 
 
+=======
+type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 interface ProfileBadgeProps {
   type: BadgeType
@@ -17,6 +21,7 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {}
       icon: Star"
       text: "Featured""
       colors: "bg-yellow-500/20 text-yellow-400"}
+<<<<<<< HEAD
 
 
     new: {
@@ -26,14 +31,34 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {}
     "top-rated": {
 
 
+=======
+
+
+  return (
+    <div className={cn(
+      "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium",
+      colors,
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   const { icon: Icon, text, colors } = badgeConfig[type],
 
   return (
+<<<<<<< HEAD
 
     <div className={cn(
       "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium",
       colors,
+=======
+    <div className = $2;
+      colors,
+      className
+    )}>
+      <Icon className="w-3 h-3" />
+      <span>{text}</span>
+    </div>
+  )
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 
       icon: Award,
@@ -49,24 +74,36 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {}
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from "react",;
 import { BadgeCheck, Star, Clock, Award } from "lucide-react",;
 import { cn } from "@/lib/utils",;
 
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',;
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface ProfileBadgeProps {;
   type: BadgeType,;
   className?: string;
 
 }
+<<<<<<< HEAD
 
 
 export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
 
+=======
+;
+export function ProfileBadge({ type, className }: ProfileBadgeProps) {;
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   const badgeConfig = {;
     verified: {;
       icon: BadgeCheck,;"
@@ -84,12 +121,36 @@ export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
       icon: Award,;"
       text: "Top Rated",;"
       colors: "bg-purple-500/20 text-purple-400"}},;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   const { icon: Icon, text, colors } = badgeConfig[type];
   return (
 
+<<<<<<< HEAD
 
+=======
+
+    <divclassName={cn("
+      "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium"
+      colors;
+      className;
+    )}>;"
+      <Icon className="w-3 h-3" />;
+      <span>{text}</span>;
+    </div>;
+
+  );
+
+
+import React from './react';
+import { BadgeCheck, Star, Clock, Award } from './lucide-react';
+import { cn } from '@/lib / utils';
+type BadgeType = 'verified' | 'featured' | 'new' | 'top - rated';
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 interface ProfileBadgeProps {
   type: BadgeType,
   class_name?: string;
@@ -114,6 +175,10 @@ function ProfileBadge() {
     "top - rated": {
       icon: Award,
       text: "Top Rated",
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
       colors: "bg - purple - 500 / 20 text - purple - 400"}},
   const { icon: Icon, text, colors } = badge_config[type];
@@ -127,5 +192,28 @@ function ProfileBadge() {
 }
 
 
+<<<<<<< HEAD
 
 
+=======
+  ),;}
+ type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
+  type, className 
+}: ProfileBadgeProps) {
+  const badgeConfig = {
+  verified: {
+  const {
+  icon: Icon, text, colors 
+}= badgeConfig[type];
+return (<div className= {
+  cn ("flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium";
+colors;
+className) 
+}> <Icon className="w-3 h-3" /> <span> {
+  text 
+}</span> 
+
+});
+}
+;
+>>>>>>> origin/cursor/delete-old-data-records-6bba

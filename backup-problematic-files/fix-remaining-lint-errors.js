@@ -5,6 +5,7 @@ function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file
     } catch (error) {_;
       // Skip files that can't be accessed'};
 
+<<<<<<< HEAD
       continue
 }
 }
@@ -43,6 +44,8 @@ function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file
     } catch (error) {;
       // Skip files that can't be accessed'};
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
       continue;
 };
 // Function to fix specific parsing errors;
@@ -57,6 +60,7 @@ function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file
     _,'
 }
 };
+<<<<<<< HEAD
 
         fixedCount++}
     } catch (error) {_;
@@ -78,3 +82,7 @@ function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file
 ,
   console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
 
+=======
+
+        fixedCount++}
+>>>>>>> origin/cursor/delete-old-data-records-6bba

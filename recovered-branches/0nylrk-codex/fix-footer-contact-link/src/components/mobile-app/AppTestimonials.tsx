@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -11,6 +12,13 @@ import {Card, CardContent, CardFooter} from "@/components/ui/card";
 
 
 
+=======
+import React from "react";
+import {Star} from "lucide-react";
+
+import {Card, CardContent, CardFooter} from "@/components/ui/card";
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 const testimonials = [
   {
     name: "Alex Johnson"
@@ -18,7 +26,10 @@ const testimonials = [
     text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!"
     rating: 5
 
+<<<<<<< HEAD
     avatar: "/placeholder.svg"
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
 import React from './react';
 import { Star } from './lucide-react';
@@ -32,16 +43,22 @@ const testimonials = [;
     rating: 5,"
     avatar: "/placeholder.svg";
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   }
   {"
     name: "Sarah Williams""
     role: "Tech Recruiter""
     text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.";
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   },
   {"
     name: "Sarah Williams","
@@ -51,8 +68,11 @@ const testimonials = [;
     avatar: "/placeholder.svg"
   },
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   {
 
     name: "Michael Chen"
@@ -62,16 +82,22 @@ const testimonials = [;
     rating: 4"
     avatar: "/placeholder.svg"
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 export const AppTestimonials: React.FC = () => {
   return (
     <section className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Users Say</h2>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             Join thousands of satisfied users who have transformed their tech careers with the Zion mobile app.
@@ -103,17 +129,31 @@ export const AppTestimonials: React.FC = () => {
                   <div>"
                     <p className="font-semibold text-white">{testimonial.name}</p>"
                     <p className="text-sm text-gray-400">{testimonial.role}</p>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                   </div>
                 </div>
               </CardFooter>
             </Card>
 
 
+<<<<<<< HEAD
+=======
+                    />;
+                  ))}
+                </div>;
+                <p className=text-gray-200 mb-6">"{testimonial && testimonial.text}"</p>;
+                  {Array.from({ length: 5}).map((_, i) => (
+                    <Star 
+                      key = $2;
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 import React from "react",;
 import { Star } from "lucide-react",;
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
 
+<<<<<<< HEAD
           ))}
         </div>
       </div>
@@ -125,13 +165,18 @@ import React from "react",;
 import { Star } from "lucide-react",;
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 const testimonials = [;
   {;
     name: "Alex Johnson",;
     role: "AI Developer",;
     text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!",;
     rating: 5,;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     avatar: "/placeholder && placeholder.svg";
   };
   {;
@@ -141,20 +186,29 @@ const testimonials = [;
     rating: 5,;
     avatar: "/placeholder && placeholder.svg";
   };
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
   {;
     name: "Michael Chen",;
     role: "Full Stack Developer",;
     text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.",;
     rating: 4,;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     avatar: "/placeholder && placeholder.svg";
   }
 ];
 
 export const AppTestimonials: React.FC = () => {;
   return (
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     <section className="py-16 bg-zion-blue">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
@@ -163,7 +217,10 @@ export const AppTestimonials: React.FC = () => {;
             Join thousands of satisfied users who have transformed their tech careers with the Zion mobile app.;
           </p>;
         </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
           {testimonials && testimonials.map((testimonial, index) => (;
@@ -179,15 +236,29 @@ export const AppTestimonials: React.FC = () => {;
                 </div>;
 
                 <p className="text-gray-200 mb-6">"{testimonial && testimonial.text}"</p>;
+<<<<<<< HEAD
 
+=======
+
+
+              </CardContent>;"
+              <CardFooter className="border-t border-zion-purple/20 pt-4">;"
+                <div className="flex items-center">;"
+                  <div className="h-10 w-10 rounded-full overflow-hidden mr-4">;
+
+
+>>>>>>> origin/cursor/delete-old-data-records-6bba
                   </div>;
                 </div>;
               </CardFooter>;
             </Card>;
           ))}
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
         </div>;
       </div>;
     </section>;
@@ -195,10 +266,13 @@ export const AppTestimonials: React.FC = () => {;
 };
 
 
+<<<<<<< HEAD
   );
 };
     rating: 5,
 
+=======
+>>>>>>> origin/cursor/delete-old-data-records-6bba
     avatar: "/placeholder.svg";
   }
   {"
@@ -224,5 +298,39 @@ export const AppTestimonials: React.FC = () => {;
 ;
 
 
+<<<<<<< HEAD
 
+=======
+  ),;
+},; const testimonials = [ {
+  name: "Alex Johnson";
+role: "AI Developer";
+text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!";
+rating: 5;
+avatar: "/placeholder.svg" 
+};
+{
+  name: "Sarah Williams";
+role: "Tech Recruiter";
+text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.";
+rating: 5;
+avatar: "/placeholder.svg" 
+};
+{
+  name: "Michael Chen";
+role: "Full Stack Developer";
+text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.";
+rating: 4;
+avatar: "/placeholder.svg" 
+}];
+export const AppTestimonials: React.FC = () => {
+  return (<section className="py-16 bg-zion-blue" > <div className="container mx-auto px-4" > <div className="text-center mb-12" > <h2 className="text-3xl md:text-4xl font-bold mb-4" >What Our Users Say</h2> <p className="text-lg text-gray-300 max-w-2xl mx-auto" > 
+}</div> </div> </section>) 
+};
+        </div>;
+      </div>;
+    </section>;
+  );
+};
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 

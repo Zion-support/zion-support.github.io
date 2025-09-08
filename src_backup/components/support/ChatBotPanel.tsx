@@ -6,7 +6,29 @@ import { toast } from "@/components/ui/use-toast",
 import { cn } from "@/lib/utils",
 import { ChatMessage } from "./ChatMessage",
 
+<<<<<<< HEAD
 
+=======
+const QUICK_REPLIES = [
+  { id: "hire", text: "How do I hire?" }
+  { id: "match", text: "How do I get matched?" }
+  { id: "billing", text: "Billing help" }]
+type Message = {
+  id: string
+  content: string
+  sender: "user" | "bot"
+  timestamp: Date
+}
+export function ChatBotPanel() {
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      id: "welcome"
+      content: "Hi! How can I help you?"
+      sender: "bot"
+      timestamp: new Date()}])
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/delete-old-data-records-6bba
 
   id: string,
   content: string,"
@@ -15,6 +37,7 @@ import { ChatMessage } from "./ChatMessage",
 },
 
 export function ChatBotPanel() {
+  const [messages, setMessages] = useState<Message[]>([
     {
       id: "welcome",
       content: "Hi! How can I help you?",
@@ -80,6 +103,7 @@ export function ChatBotPanel() {;
     }
   }, []),
 
+  const handleSendMessage = async (text: string = inputValue) => {
     if (!text.trim()) return,
     
     const userMessage: Message = {
@@ -426,7 +450,7 @@ export function ChatBotPanel() {;
           onSubmit={(e) => {}
             e.preventDefault(),
             handleSendMessage()
-          }}"
+          }"
           className="flex items-center gap-2"
         >
           <Input;
@@ -487,7 +511,7 @@ export function ChatBotPanel() {;
           onSubmit={(e) => {;
             e.preventDefault();
             handleSendMessage();
-          }}"
+          }"
           className="flex items-center gap-2";
         >;
           <Input;
@@ -533,6 +557,7 @@ export function ChatBotPanel() {;
         };
       }
 ;
+      const data = await response.json(),;
       return {;
         success: true,;
         message: data.message;
@@ -565,6 +590,7 @@ export function ChatBotPanel() {;
     logSupportEscalation()
   },
 
+  const logSupportEscalation = async () => {}
     try {}
       // Send the conversation to the backend for logging;
       // This would be implemented in a real system"

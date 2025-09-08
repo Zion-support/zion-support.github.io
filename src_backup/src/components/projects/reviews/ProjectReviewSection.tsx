@@ -1,12 +1,20 @@
 
+<<<<<<< HEAD
+export function ProjectReviewSection() {const { user } = useAuth(),const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),const isCompleted = project.status === 'completed',const isClient = user?.id === project.client_id,const isTalent = user?.id === project.talent_id,const clientProfile = project?.talent_profile,const talentProfile = project.talent_profile,// Determine who the current user needs to review;'
+=======
 export function ProjectReviewSection() {const { user } = useAuth(),const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),const isCompleted = project.status === "completed",const isClient = user?.id === project.client_id,const isTalent = user?.id === project.talent_id,const clientProfile = project?.talent_profile,const talentProfile = project.talent_profile,// Determine who the current user needs to review;"
+>>>>>>> origin/resolved-merge-conflicts
   const revieweeId = isClient ? project.talent_id : project.client_id,const revieweeName = isClient;
     ? talentProfile?.full_name || "Talent";"
     : clientProfile?.full_name || "Client",const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,const hasLeftReview = userReview != null,export function ProjectReviewSection() {const { user } = useAuth(),const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),const isCompleted = project.status === "completed",const isClient = user?.id === project.client_id,const isTalent = user?.id === project.talent_id,const clientProfile = project?.talent_profile,const talentProfile = project.talent_profile,// Determine who the current user needs to review;"
     ? talentProfile?.full_name || "Talent";"
     : clientProfile?.full_name || "Client",const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,const hasLeftReview = userReview != null,import { Button } from "@/components/ui/button",import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",import { ReviewsList } from "@/components/reviews/ReviewsList",import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",import { useReviews  } from '@/hooks/useReviews';'
 import { useAuth  } from '@/hooks/useAuth';'
+<<<<<<< HEAD
+interface ProjectReviewSectionProps  {'project': Project;
+=======
 interface ProjectReviewSectionProps  {"project": Project;
+>>>>>>> origin/resolved-merge-conflicts
 }
 export function ProjectReviewSection() {const { user } = useAuth()const { reviews, userReview, isLoading, reportReview } = useReviews(project.id)const [isReviewModalOpen, setIsReviewModalOpen] = useState(false)const isCompleted = null;
 import { Button  } from '@/components/ui/button';'
@@ -19,7 +27,11 @@ import { Card;
  } from '@/components/ui/card';'
 import { ReviewsList  } from '@/components/reviews/ReviewsList';'
 import { LeaveReviewModal  } from '@/components/reviews/LeaveReviewModal';'
+<<<<<<< HEAD
+interface ProjectReviewSectionProps  {'project': Project;
+=======
 interface ProjectReviewSectionProps  {"project": Project;
+>>>>>>> origin/resolved-merge-conflicts
 }
 export function ProjectReviewSection() {const { user } = useAuth()const { reviews, userReview, isLoading, reportReview } = useReviews(project.id;
   )const [isReviewModalOpen, setIsReviewModalOpen] = useState(false)const isCompleted = project.status === 'completed';'
@@ -43,8 +55,13 @@ export function ProjectReviewSection() {const { user } = useAuth()const { review
         </CardDescription>;
       </CardHeader>;
       <CardContent>;
+<<<<<<< HEAD
+        {isCompleted ? (<div className='space-y-6'>;'
+            {(isClient || isTalent) && (<div className='border-b pb-4 mb-4'>;'
+=======
         {isCompleted ? (<div className="space-y-6">;"
             {(isClient || isTalent) && (<div className="border-b pb-4 mb-4">;"
+>>>>>>> origin/resolved-merge-conflicts
                 {canLeaveReview ? (<div className='bg-muted/20 rounded-lg p-4 text-center'>;'
                     <h3 className='font-medium mb-2'>Share your experience</h3>;'
                     <p className='text-sm text-muted-foreground mb-3'>;'
@@ -56,6 +73,17 @@ export function ProjectReviewSection() {const { user } = useAuth()const { review
                     </Button>;
                   </div>;
                 ) : hasLeftReview ? (import { useState  } from 'react';'
+<<<<<<< HEAD
+                  <div className='bg-muted/20 rounded-lg p-4 text-center'>;'
+                    <h3 className='font-medium mb-2'>Thank you for your review!</h3>;'
+                    <p className='text-sm text-muted-foreground mb-3'>;'
+                      Your review is {userReview.status === 'approved' ? 'published' : 'pending approval'}'
+                    </p>;
+                    {userReview.status === 'pending' && (<Button variant='outline' onClick={() => setIsReviewModalOpen(true)}>;'
+                        Edit Review;
+                      </Button>;
+import { Project } from '@/types/projects',import { useState } from 'react',import { Star  } from 'lucide-react';'
+=======
                   <div className="bg-muted/20 rounded-lg p-4 text-center">;"
                     <h3 className="font-medium mb-2">Thank you for your review!</h3>;"
                     <p className="text-sm text-muted-foreground mb-3">;"
@@ -65,6 +93,7 @@ export function ProjectReviewSection() {const { user } = useAuth()const { review
                         Edit Review;
                       </Button>;
 import { Project } from '@/types/projects',import { useState } from "react",import { Star  } from 'lucide-react';'
+>>>>>>> origin/resolved-merge-conflicts
                       Leave Review;
                     </Button>;
                   </div>;
@@ -78,7 +107,11 @@ import { Project } from '@/types/projects',import { useState } from "react",impo
                         ? 'published';'
                         : 'pending approval'}'
                     </p>;
+<<<<<<< HEAD
+                    {userReview.status === 'pending' && (<Button variant='outline' onClick={() => setIsReviewModalOpen(true)}>;'
+=======
                     {userReview.status === "pending" && (<Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>;"
+>>>>>>> origin/resolved-merge-conflicts
                         Edit Review;
                       </Button>;)}
                   </div>;
@@ -94,26 +127,44 @@ import { Project } from '@/types/projects',import { useState } from "react",impo
           revieweeName = {revieweeName}
           isOpen = {isReviewModalOpen}
           onClose = {(,) => setIsReviewModalOpen(false)})}</Card>;
+<<<<<<< HEAD
+  )}<ReviewsList;
+=======
   )}}<ReviewsList;
+>>>>>>> origin/resolved-merge-conflicts
               reviews={reviews}
               isLoading={isLoading}
               onReportReview={reportReview} />;
           </div>;
+<<<<<<< HEAD
+        ) : (<div className='bg-muted/20 rounded-lg p-6 text-center'>;'
+            <h3 className='font-medium mb-2'>Reviews will be available once the project is completed</h3>;'
+            <p className='text-sm text-muted-foreground'>;'
+=======
         ) : (<div className="bg-muted/20 rounded-lg p-6 text-center">;"
             <h3 className="font-medium mb-2">Reviews will be available once the project is completed</h3>;"
             <p className="text-sm text-muted-foreground">;"
+>>>>>>> origin/resolved-merge-conflicts
               After the project is marked as completed, both parties will be able to leave reviews;
             </p>;
           </div>;
         )}</Card>;
+<<<<<<< HEAD
+  )}}import { Project  } from '@/types / projects';'
+=======
   )}}}import { Project  } from '@/types / projects';'
+>>>>>>> origin/resolved-merge-conflicts
 import { Button  } from '@/components / ui / button';'
 import { Card,CardContent,CardDescription,CardHeader,CardTitle} from '@/components / ui / card';'
 import { ReviewsList  } from '@/components / reviews / ReviewsList';'
 import { LeaveReviewModal  } from '@/components / reviews / LeaveReviewModal';'
 import { use_reviews  } from '@/hooks / use_reviews';'
 import { use_auth  } from '@/hooks / use_auth';'
+<<<<<<< HEAD
+interface ProjectReviewSectionProps  {'project': Project;
+=======
 interface ProjectReviewSectionProps  {"project": Project;
+>>>>>>> origin/resolved-merge-conflicts
 }
 export /**;
  * ProjectReviewSection - Function description;

@@ -30,13 +30,21 @@ const "EnhancedLoading": React.FC<{progress?: number;
           <Loader2 className='h-8 w-8 animate-spin text-primary' />          {showProgress && (<motion&& motion.div;'
               }
               className='absolute inset-0 rounded-full border-2 border-primary';'
+<<<<<<< HEAD
+              style={"background": `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`;`  progress?: number;
+=======
               style={{"background": `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`;`  progress?: number;
+>>>>>>> origin/resolved-merge-conflicts
   message?: string;
   show_progress?: boolean;
 }> = ({progress = 0,message = 'Loading component...',showProgress = true;'
 }) => (<motion.div;
               className="absolute inset-0 rounded-full border-2 border-primary";"
+<<<<<<< HEAD
+              style={"background": `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`;`  message = 'Loading component...',show_progress = true}) => (<Card className="w-full max-w-md mx-auto">;"
+=======
               style={{"background": `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`;`  message = 'Loading component...',show_progress = true}) => (<Card className="w-full max-w-md mx-auto">;"
+>>>>>>> origin/resolved-merge-conflicts
     <CardContent className="p-6">;"
       <div className="flex flex-col items-center space-y-4">;"
         <div className="relative">;"
@@ -44,11 +52,19 @@ const "EnhancedLoading": React.FC<{progress?: number;
           {showProgress && (<motion.div;
               }
               className="absolute inset-0 rounded-full border-2 border-primary";"
+<<<<<<< HEAD
+              style={"background": `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`;`
+              }
+              initial={ "rotate": 0 }
+              animate={ "rotate": 360 }
+              transition={ "duration": 2, "repeat": Infinity, "ease": 'linear' }// Enhanced Error Component;'
+=======
               style={{"background": `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`;`
               }}
               initial={{ "rotate": 0 }}
               animate={{ "rotate": 360 }}
               transition={{ "duration": 2, "repeat": Infinity, "ease": 'linear' }}// Enhanced Error Component;'
+>>>>>>> origin/resolved-merge-conflicts
 const "EnhancedError": React.FC<{"error": Error;
   }
   "retry": () => void;
@@ -168,7 +184,11 @@ const "EnhancedError": React.FC<{"error": Error;
   </Card>)// Network Status Hook;
 const useNetworkStatus = () =>: any {const [is_online, setIsOnline] = useState (true)useEffect (() => {const updateOnlineStatus = () =>: any setIsOnline (navigator.on_line)window.addEventListener ('online', updateOnlineStatus)window.addEventListener ('offline', updateOnlineStatus)return () => {window.removeEventListener ('online', updateOnlineStatus)window.removeEventListener ('offline', updateOnlineStatus)}'
   }, [])return is_online;
+<<<<<<< HEAD
+}return () => {}// Return empty cleanup function for other paths;
+=======
 }}return () => {}// Return empty cleanup function for other paths;
+>>>>>>> origin/resolved-merge-conflicts
   }, [loadingState.isLoading, loadingState.error])// Load component;
   const loadComponent = async () => {try {setLoadingState(prev => ({...prev;
         }
@@ -210,7 +230,11 @@ const useNetworkStatus = () =>: any {const [is_online, setIsOnline] = useState (
     </CardContent>;
   </Card>;
 )// Network Status Hook;
+<<<<<<< HEAD
+const useNetworkStatus = () => {const [isOnline, setIsOnline]  = useState(true)useEffect(() => {const updateOnlineStatus = () => setIsOnline(navigator && navigator.onLine)window && window.addEventListener('online', updateOnlineStatus)window && window.addEventListener('offline', updateOnlineStatus)return () => {window && window.removeEventListener('online', updateOnlineStatus)window && window.removeEventListener('offline', updateOnlineStatus)}, [])return isOnline;'
+=======
 const useNetworkStatus = () => {const [isOnline, setIsOnline]  = useState(true)useEffect(() => {const updateOnlineStatus = () => setIsOnline(navigator && navigator.onLine)window && window.addEventListener('online', updateOnlineStatus)window && window.addEventListener('offline', updateOnlineStatus)return () => {window && window.removeEventListener('online', updateOnlineStatus)window && window.removeEventListener('offline', updateOnlineStatus)}}, [])return isOnline;'
+>>>>>>> origin/resolved-merge-conflicts
 }// Advanced Dynamic Component Loader;
 export const "DynamicComponentLoader": React.FC<DynamicLoaderProps> = ({importFn,fallback,errorFallback,loadingComponent,enableRetry = true,maxRetries = 3,prefetch = false,className,children,...props;
 },) => {const [loadingState, setLoadingState] = useState<LoadingState>({"isLoading": true,"error": null,"retryCount": 0,"isOnline": true})const [progress, setProgress] = useState(0)const [DynamicComponent, setDynamicComponent] =;
@@ -248,19 +272,33 @@ export const "DynamicComponentLoader": React.FC<DynamicLoaderProps> = ({importFn
   if (DynamicComponent) {return (<Suspense fallback={fallback |<EnhancedLoading />}>;
         <AnimatePresence>;
           <motion.div;
+<<<<<<< HEAD
+            initial={ "opacity": 0, "y": 20 }
+            animate={ "opacity": 1, "y": 0 }
+            exit={ "opacity": 0, "y": -20 }
+            transition={ "duration": 0.3 } />;
+=======
             initial={{ "opacity": 0, "y": 20 }}
             animate={{ "opacity": 1, "y": 0 }}
             exit={{ "opacity": 0, "y": -20 }}
             transition={{ "duration": 0.3 }} />;
+>>>>>>> origin/resolved-merge-conflicts
       </motion && motion.div>;
     )}// Success state;
   if (DynamicComponent) {return (<Suspense fallback={fallback || <EnhancedLoading />}>;
         <AnimatePresence>;
           <motion&& motion.div;
+<<<<<<< HEAD
+            initial={ "opacity": 0, "y": 20 }
+            animate={ "opacity": 1, "y": 0 }
+            exit={ "opacity": 0, "y": -20 }
+            transition={ "duration": 0 && 0.3 }
+=======
             initial={{ "opacity": 0, "y": 20 }}
             animate={{ "opacity": 1, "y": 0 }}
             exit={{ "opacity": 0, "y": -20 }}
             transition={{ "duration": 0 && 0.3 }}
+>>>>>>> origin/resolved-merge-conflicts
             className = {className}>;
             <DynamicComponent {...props}>{children}</DynamicComponent>;
           </motion && motion.div>;className={className}
@@ -387,10 +425,17 @@ if ( {) {$2;
     return (<Suspense fallback={fallback || <EnhancedLoading />}>;
         <AnimatePresence>;
           <motion.div;
+<<<<<<< HEAD
+            initial={ "opacity": 0, "coordinate_y": 20 }
+            animate={ "opacity": 1, "coordinate_y": 0 }
+            exit={ "opacity": 0, "coordinate_y": -20 }
+            transition={ "duration": 0.3 }
+=======
             initial={{ "opacity": 0, "coordinate_y": 20 }}
             animate={{ "opacity": 1, "coordinate_y": 0 }}
             exit={{ "opacity": 0, "coordinate_y": -20 }}
             transition={{ "duration": 0.3 }}
+>>>>>>> origin/resolved-merge-conflicts
             class_name = {class_name }
           >;
             <DynamicComponent {...props}>{children}</DynamicComponent>;
