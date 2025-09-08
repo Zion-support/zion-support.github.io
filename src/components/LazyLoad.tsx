@@ -50,4 +50,3 @@ const LazyLoad: React.FC<LazyLoadProps> = memo(({
 
 LazyLoad.displayName = 'LazyLoad';
 
-

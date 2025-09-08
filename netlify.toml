@@ -1,5 +1,5 @@
 [build]
-  # Build the project on Netlify
+  # Build the Vite project on Netlify
   command = "npm ci --no-audit --no-fund && npm run build"
   publish = "dist"
   functions = "netlify/functions"
@@ -8,16 +8,7 @@
 [build.environment]
   NODE_VERSION = "20"
   PYTHON_VERSION = "3.11"
-<<<<<<< HEAD
-<<<<<<< HEAD
-  NPM_FLAGS = "--legacy-peer-deps"
-  # Skip the Next.js plugin when deploying a prebuilt static dist
-=======
   NPM_FLAGS = "--omit=optional"
->>>>>>> 2d860f6d988467851b2af614020911fca7341f41
-=======
-  NPM_FLAGS = "--omit=optional"
->>>>>>> 5d2b73ddc50f8086b5094ad4ebbdbbf8f784766b
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
   NETLIFY_FUNCTIONS_TIMEOUT = "30"
   # Avoid optional binary downloads (electron, playwright, cypress)
@@ -25,6 +16,15 @@
   PUPPETEER_SKIP_DOWNLOAD = "1"
   CYPRESS_INSTALL_BINARY = "0"
   ELECTRON_SKIP_DOWNLOAD = "1"
+
+[context.production.environment]
+  NODE_ENV = "production"
+
+[context.deploy-preview]
+  command = "npm ci --no-audit --no-fund && npm run build"
+
+[context.branch-deploy]
+  command = "npm ci --no-audit --no-fund && npm run build"
 
 # Headers
 [[headers]]
@@ -48,43 +48,23 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Redirects
-[[redirects]]
-  from = "/services"
-  to = "/services"
-  status = 200
+# Set basic cache headers for static assets for better performance
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
 
-[[redirects]]
-  from = "/about"
-  to = "/about"
-  status = 200
+[[headers]]
+  for = "/_next/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
 
-[[redirects]]
-  from = "/contact"
-  to = "/contact"
-  status = 200
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300"
 
-[[redirects]]
-  from = "/blog"
-  to = "/blog"
-  status = 200
-
-[[redirects]]
-  from = "/talent"
-  to = "/talent"
-  status = 200
-
-[[redirects]]
-  from = "/autonomy"
-  to = "/autonomy"
-  status = 200
-
-[[redirects]]
-  from = "/products"
-  to = "/products"
-  status = 200
-
-# SPA fallback
+# Vite/React SPA configuration
 [[redirects]]
   from = "/*"
   to = "/index.html"
