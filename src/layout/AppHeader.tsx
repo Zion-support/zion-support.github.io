@@ -41,9 +41,13 @@ export function AppHeader() {
 
   const navigation = [
     { name: 'Home', href: '/', current: true },
-    { name: 'Services', href: '/services', current: false, hasDropdown: true },
-    { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },
-    { name: 'Resources', href: '/resources', current: false, hasDropdown: true },
+    { name: 'Services', href: '/services', current: false },
+    { name: 'Innovative Showcase', href: '/innovative-services-showcase-2025', current: false },
+    { name: 'Pricing', href: '/pricing', current: false },
+    { name: 'AI Services', href: '/ai-services', current: false },
+    { name: 'IT Services', href: '/it-services', current: false },
+    { name: 'Micro SaaS', href: '/micro-saas', current: false },
+    { name: 'Blog', href: '/blog', current: false },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
   ];
