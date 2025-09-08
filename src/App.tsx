@@ -43,109 +43,24 @@ const AICybersecurity = React.lazy(() => import('./pages/services/ai-cybersecuri
 const QuantumComputing = React.lazy(() => import('./pages/services/quantum-computing'));
 const IoTEdgeComputing = React.lazy(() => import('./pages/services/iot-edge-computing'));
 
-// Footer Component
-const Footer = () => (
-  <footer className="bg-gray-900 text-white py-8">
-    <div className="container mx-auto px-4">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div>
-          <h3 className="text-lg font-bold mb-4">Zion Tech Group</h3>
-          <p className="text-gray-400">Leading technology solutions provider</p>
-        </div>
-        <div>
-          <h4 className="font-semibold mb-4">Services</h4>
-          <ul className="space-y-2 text-gray-400">
-            <li><Link to="/services/ai-business-intelligence" className="hover:text-cyan-400">AI Business Intelligence</Link></li>
-            <li><Link to="/services/cybersecurity" className="hover:text-cyan-400">Cybersecurity</Link></li>
-            <li><Link to="/services/cloud-devops" className="hover:text-cyan-400">Cloud & DevOps</Link></li>
-            <li><Link to="/services/quantum-computing" className="hover:text-cyan-400">Quantum Computing</Link></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="font-semibold mb-4">Solutions</h4>
-          <ul className="space-y-2 text-gray-400">
-            <li><Link to="/solutions/enterprise" className="hover:text-cyan-400">Enterprise Solutions</Link></li>
-            <li><Link to="/solutions/healthcare" className="hover:text-cyan-400">Healthcare</Link></li>
-            <li><Link to="/solutions/financial" className="hover:text-cyan-400">Financial Services</Link></li>
-            <li><Link to="/solutions/manufacturing" className="hover:text-cyan-400">Manufacturing</Link></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="font-semibold mb-4">Company</h4>
-          <ul className="space-y-2 text-gray-400">
-            <li><Link to="/about" className="hover:text-cyan-400">About Us</Link></li>
-            <li><Link to="/careers" className="hover:text-cyan-400">Careers</Link></li>
-            <li><Link to="/press" className="hover:text-cyan-400">Press</Link></li>
-            <li><Link to="/contact" className="hover:text-cyan-400">Contact</Link></li>
-          </ul>
-        </div>
-      </div>
-      <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-        <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-);
+// Solution pages
+const HealthcareSolutions = React.lazy(() => import('./pages/solutions/HealthcareSolutions'));
+const FinancialSolutions = React.lazy(() => import('./pages/solutions/FinancialSolutions'));
+const ManufacturingSolutions = React.lazy(() => import('./pages/solutions/ManufacturingSolutions'));
 
-// Page Components
-const HomePage = () => (
-  <div className="min-h-screen bg-gray-50">
-    <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-      <div className="container mx-auto px-4 text-center">
-        <h1 className="text-5xl font-bold mb-6">Welcome to Zion Tech Group</h1>
-        <p className="text-xl mb-8">Leading AI & Technology Solutions Provider</p>
-        <Link to="/services" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-          Explore Our Services
-        </Link>
-      </div>
-    </section>
-    <section className="py-16">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Our Core Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-bold mb-4">AI Solutions</h3>
-            <p className="text-gray-600">Advanced artificial intelligence and machine learning solutions</p>
-            <Link to="/ai-services" className="text-blue-600 hover:underline">Learn more →</Link>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-bold mb-4">IT Services</h3>
-            <p className="text-gray-600">Comprehensive IT infrastructure and support services</p>
-            <Link to="/it-services" className="text-blue-600 hover:underline">Learn more →</Link>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-bold mb-4">Micro SaaS</h3>
-            <p className="text-gray-600">Specialized software-as-a-service solutions</p>
-            <Link to="/micro-saas" className="text-blue-600 hover:underline">Learn more →</Link>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-);
+// Simple placeholder pages for missing ones
+const Partners = React.lazy(() => import('./pages/Partners'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
 
-const ServicesPage = () => (
-  <div className="min-h-screen bg-gray-50 py-16">
-    <div className="container mx-auto px-4">
-      <h1 className="text-4xl font-bold text-center mb-12">Our Services</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {[
-          { title: 'AI Business Intelligence', path: '/services/ai-business-intelligence' },
-          { title: 'Cybersecurity Suite', path: '/services/cybersecurity' },
-          { title: 'Cloud & DevOps', path: '/services/cloud-devops' },
-          { title: 'Quantum Computing', path: '/services/quantum-computing' },
-          { title: 'Digital Transformation', path: '/services/digital-transformation' },
-          { title: 'Data Analytics', path: '/services/data-analytics' },
-        ].map((service) => (
-          <div key={service.path} className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-bold mb-4">{service.title}</h3>
-            <p className="text-gray-600 mb-4">Comprehensive solutions for modern businesses</p>
-            <Link to={service.path} className="text-blue-600 hover:underline">
-              Learn More →
-            </Link>
-          </div>
-        ))}
-      </div>
+const Careers = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+    <SEO 
+      title="Careers - Zion Tech Group"
+      description="Join our team of technology experts and help shape the future of AI-powered business solutions."
+    />
+    <div className="text-center text-white">
+      <h1 className="text-4xl font-bold mb-4">Careers</h1>
+      <p className="text-xl text-gray-300">Join our team</p>
     </div>
   </div>
 );
@@ -270,9 +185,9 @@ function App() {
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/marketplace" element={<Marketplace />} />
-                <Route path="/api-docs" element={<APIDocs />} />
-                <Route path="/developers" element={<Developers />} />
-
+                <Route path="/partners" element={<Partners />} />
+                <Route path="/case-studies" element={<CaseStudies />} />
+                
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
                 <Route path="/services/digital-twin" element={<DigitalTwin />} />
@@ -293,6 +208,11 @@ function App() {
                 <Route path="/services/ai-data-governance" element={<AIDataGovernance />} />
                 <Route path="/services/edge-computing-platform" element={<EdgeComputingPlatform />} />
                 <Route path="/services/ai-customer-success-platform" element={<AICustomerSuccessPlatform />} />
+                
+                {/* Solution Routes */}
+                <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
+                <Route path="/solutions/financial" element={<FinancialSolutions />} />
+                <Route path="/solutions/manufacturing" element={<ManufacturingSolutions />} />
                 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />
