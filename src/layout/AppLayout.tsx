@@ -8,7 +8,7 @@ interface AppLayoutProps {
   config?: AppConfig;
 }
 
-export const AppLayout: React.FC<AppLayoutProps> = ({ children, config }) => {
+export const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
   return (
     <div className="min-h-screen bg-zion-blue text-white">
       <Navigation />
