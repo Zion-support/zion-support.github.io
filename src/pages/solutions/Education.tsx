@@ -1,289 +1,189 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { 
-  GraduationCap, 
+  BookOpen, 
   Users, 
-  TrendingUp, 
-  Shield, 
-  Cloud, 
   Brain, 
+  Globe, 
   Zap, 
-  Target,
-  CheckCircle,
+  BarChart3, 
+  CheckCircle, 
   ArrowRight,
-  BarChart3,
-  Workflow,
-  Database,
-  Globe,
-  Lock,
-  Rocket,
-  Star,
-  Award,
-  Headphones,
-  Phone,
-  Mail,
-  MapPin,
-  BookOpen,
-  Video,
-  Monitor,
-  Settings,
+  Building,
+  GraduationCap,
   Lightbulb,
-  Cog,
-  Wrench,
-  Laptop,
-  Smartphone,
-  Tablet,
-  Wifi,
-  MessageCircle,
-  Calendar,
-  Clock,
-  CheckSquare
+  Target,
+  Shield,
+  TrendingUp
 } from 'lucide-react';
 
-export default function Education() {
+export default function EducationSolutions() {
   const features = [
     {
+      icon: BookOpen,
+      title: 'Learning Excellence',
+      description: 'AI-powered personalized learning experiences',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      icon: Users,
+      title: 'Student Engagement',
+      description: 'Interactive tools to increase student participation',
+      color: 'from-purple-500 to-indigo-500'
+    },
+    {
       icon: Brain,
-      title: "AI-Powered Learning Analytics",
-      description: "Advanced analytics to track student progress, identify learning gaps, and personalize educational experiences.",
-      benefits: ["Student performance tracking", "Personalized learning paths", "Early intervention", "Progress analytics"]
+      title: 'Adaptive Learning',
+      description: 'AI that adapts to individual student needs',
+      color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: Workflow,
-      title: "Digital Learning Platforms",
-      description: "Comprehensive digital learning environments that enhance engagement and improve learning outcomes.",
-      benefits: ["Interactive content", "Multi-modal learning", "Real-time collaboration", "Accessibility features"]
+      icon: Globe,
+      title: 'Global Access',
+      description: 'Remote learning capabilities for worldwide access',
+      color: 'from-orange-500 to-red-500'
     },
     {
-      icon: Shield,
-      title: "Educational Security & Privacy",
-      description: "Robust security solutions to protect student data and ensure compliance with educational privacy regulations.",
-      benefits: ["FERPA compliance", "Data encryption", "Access controls", "Privacy protection"]
+      icon: Zap,
+      title: 'Real-time Analytics',
+      description: 'Instant insights into student progress and performance',
+      color: 'from-yellow-500 to-orange-500'
     },
     {
-      icon: Cloud,
-      title: "Cloud-Based Education Infrastructure",
-      description: "Scalable cloud solutions designed for educational institutions of all sizes.",
-      benefits: ["Scalable infrastructure", "Cost optimization", "Remote access", "Disaster recovery"]
+      icon: BarChart3,
+      title: 'Performance Tracking',
+      description: 'Comprehensive analytics for educational outcomes',
+      color: 'from-red-500 to-pink-500'
     }
   ];
 
   const solutions = [
     {
-      category: "K-12 Education",
-      services: [
-        "Student Information Systems",
-        "Learning Management Platforms",
-        "Parent Communication Tools",
-        "Assessment & Testing",
-        "Special Education Support"
-      ]
+      title: 'AI Learning Platform',
+      description: 'Comprehensive AI-powered educational management system',
+      features: ['Personalized Learning', 'Student Analytics', 'Content Management', 'Assessment Tools']
     },
     {
-      category: "Higher Education",
-      services: [
-        "Campus Management Systems",
-        "Online Learning Platforms",
-        "Student Lifecycle Management",
-        "Research & Analytics",
-        "Alumni Engagement"
-      ]
+      title: 'Virtual Classroom',
+      description: 'Advanced virtual learning environment with collaboration tools',
+      features: ['Video Conferencing', 'Interactive Whiteboards', 'Breakout Rooms', 'Recording']
     },
     {
-      category: "Corporate Training",
-      services: [
-        "Employee Learning Platforms",
-        "Skills Assessment Tools",
-        "Compliance Training",
-        "Performance Tracking",
-        "Certification Management"
-      ]
+      title: 'Learning Analytics',
+      description: 'Data-driven insights to improve educational outcomes',
+      features: ['Student Progress', 'Performance Metrics', 'Predictive Analytics', 'Reporting']
     },
     {
-      category: "Educational Technology",
-      services: [
-        "AI Tutoring Systems",
-        "Virtual Reality Learning",
-        "Mobile Learning Apps",
-        "Data Analytics Platforms",
-        "Integration Services"
-      ]
+      title: 'Content Creation',
+      description: 'AI-powered tools for creating engaging educational content',
+      features: ['Interactive Content', 'Multimedia Support', 'Accessibility', 'Localization']
     }
   ];
 
-  const caseStudies = [
+  const institutions = [
     {
-      institution: "Public School District",
-      challenge: "Limited access to technology and personalized learning tools",
-      solution: "Comprehensive digital learning platform with AI-powered analytics and mobile access",
-      results: "45% improvement in student engagement, 30% increase in test scores"
+      title: 'K-12 Schools',
+      description: 'Elementary and secondary education solutions',
+      icon: Building
     },
     {
-      institution: "University",
-      challenge: "Complex student management and outdated administrative systems",
-      solution: "Modern campus management system with integrated learning platforms",
-      results: "50% reduction in administrative overhead, 40% improvement in student satisfaction"
+      title: 'Universities',
+      description: 'Higher education and research institutions',
+      icon: GraduationCap
     },
     {
-      institution: "Corporate Training Center",
-      challenge: "Inefficient training delivery and lack of progress tracking",
-      solution: "AI-powered learning platform with skills assessment and certification tracking",
-      results: "60% faster training completion, 35% improvement in knowledge retention"
-    }
-  ];
-
-  const technologies = [
-    {
-      name: "AI & Machine Learning",
-      description: "Intelligent tutoring and personalized learning experiences",
-      icon: Brain
+      title: 'Corporate Training',
+      description: 'Professional development and skills training',
+      icon: Users
     },
     {
-      name: "Virtual Reality",
-      description: "Immersive learning environments and simulations",
-      icon: Monitor
-    },
-    {
-      name: "Mobile Learning",
-      description: "Accessible learning on any device, anywhere",
-      icon: Smartphone
-    },
-    {
-      name: "Cloud Computing",
-      description: "Scalable and secure educational infrastructure",
-      icon: Cloud
+      title: 'Online Learning',
+      description: 'Digital education platforms and MOOCs',
+      icon: Globe
     }
   ];
 
   const benefits = [
-    {
-      title: "Improved Learning Outcomes",
-      description: "AI-powered personalization leads to better student performance and engagement",
-      icon: TrendingUp
-    },
-    {
-      title: "Cost Efficiency",
-      description: "Reduce administrative overhead and optimize resource allocation",
-      icon: DollarSign
-    },
-    {
-      title: "Accessibility",
-      description: "Ensure equal access to quality education for all students",
-      icon: Users
-    },
-    {
-      title: "Data-Driven Insights",
-      description: "Make informed decisions based on comprehensive analytics",
-      icon: BarChart3
-    }
+    'Improve student engagement by 60%',
+    'Increase learning outcomes by 40%',
+    'Reduce administrative workload by 35%',
+    'Enable personalized learning paths',
+    'Support remote and hybrid learning',
+    'Provide data-driven insights'
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Helmet>
-        <title>Education Solutions - Zion Tech Group</title>
-        <meta name="description" content="Transform education with Zion Tech Group's AI-powered learning platforms, digital learning solutions, and comprehensive educational technology services." />
-        <meta name="keywords" content="education solutions, digital learning, AI education, learning management systems, educational technology, Zion Tech Group" />
-        <link rel="canonical" href="https://ziontechgroup.com/solutions/education" />
-      </Helmet>
-
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <div className="relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-blue/20 border border-zion-blue/30 text-zion-blue text-sm font-medium mb-6">
-              <GraduationCap className="w-4 h-4 mr-2" />
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Education Solutions
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Transforming Education with
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-blue to-zion-cyan"> AI-Powered Technology</span>
             </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Zion Tech Group delivers innovative education solutions that empower institutions to provide personalized, engaging, and effective learning experiences for students of all ages.
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform education with AI-powered solutions that enhance learning, engagement, and outcomes
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-blue to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-cyan hover:to-zion-blue transition-all duration-300 transform hover:scale-105"
-              >
+              <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 flex items-center justify-center gap-2">
                 Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                to="/pricing"
-                className="inline-flex items-center px-8 py-4 border border-zion-blue text-zion-blue font-semibold rounded-lg hover:bg-zion-blue hover:text-white transition-all duration-300"
-              >
-                View Pricing
-              </Link>
+                <ArrowRight className="w-5 h-5" />
+              </button>
+              <button className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-200">
+                Schedule Demo
+              </button>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
-        <div className="max-w-7xl mx-auto">
+      <div className="py-24 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Education Solutions
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Education-Focused Features
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              From K-12 to higher education and corporate training, we provide end-to-end educational technology solutions.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Built specifically for educational institutions with learning, engagement, and outcomes in mind
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 hover:border-zion-blue/50 transition-all duration-300">
-                <div className="flex items-center mb-6">
-                  <div className="p-3 bg-zion-blue/20 rounded-lg mr-4">
-                    <feature.icon className="w-8 h-8 text-zion-blue" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white">{feature.title}</h3>
+              <div key={index} className="bg-slate-800 p-8 rounded-xl border border-slate-700 hover:border-slate-600 transition-all duration-200">
+                <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-6`}>
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <p className="text-zion-slate-light mb-6">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-zion-slate-light">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Solutions Overview */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      {/* Solutions Section */}
+      <div className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Education Solution Portfolio
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Education Solutions
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Comprehensive solutions covering all aspects of modern education and learning.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Comprehensive solutions designed to address educational challenges and improve learning outcomes
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {solutions.map((solution, index) => (
-              <div key={index} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
-                <div className="flex items-center mb-4">
-                  <div className="p-2 bg-zion-cyan/20 rounded-lg mr-3">
-                    <Target className="w-6 h-6 text-zion-cyan" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white">{solution.category}</h3>
-                </div>
+              <div key={index} className="bg-slate-800 p-8 rounded-xl border border-slate-700">
+                <h3 className="text-2xl font-semibold text-white mb-3">{solution.title}</h3>
+                <p className="text-gray-300 mb-6">{solution.description}</p>
                 <ul className="space-y-2">
-                  {solution.services.map((service, idx) => (
-                    <li key={idx} className="text-sm text-zion-slate-light flex items-center">
-                      <ArrowRight className="w-4 h-4 text-zion-blue mr-2 flex-shrink-0" />
-                      {service}
+                  {solution.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center gap-3 text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -291,161 +191,76 @@ export default function Education() {
             ))}
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* Institutions Section */}
+      <div className="py-24 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Educational Institutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our solutions are designed to meet the unique needs of different educational settings
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {institutions.map((institution, index) => (
+              <div key={index} className="bg-slate-800 p-6 rounded-lg border border-slate-700 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <institution.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{institution.title}</h3>
+                <p className="text-gray-300 text-sm">{institution.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
-        <div className="max-w-7xl mx-auto">
+      <div className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Zion Tech Group?
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Why Choose Education Solutions?
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Our education solutions deliver measurable improvements in learning outcomes and operational efficiency.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Proven results and measurable impact for educational institutions
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 hover:border-zion-blue/50 transition-all duration-300">
-                <div className="flex items-center mb-6">
-                  <div className="p-3 bg-zion-blue/20 rounded-lg mr-4">
-                    <benefit.icon className="w-8 h-8 text-zion-blue" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white">{benefit.title}</h3>
-                </div>
-                <p className="text-zion-slate-light">{benefit.description}</p>
+              <div key={index} className="flex items-center gap-4 bg-slate-800 p-6 rounded-lg border border-slate-700">
+                <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />
+                <span className="text-white font-medium">{benefit}</span>
               </div>
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Technologies Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Cutting-Edge Technologies
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              We leverage the latest technologies to deliver innovative education solutions.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {technologies.map((tech, index) => (
-              <div key={index} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 text-center">
-                <div className="p-3 bg-zion-purple/20 rounded-lg mx-auto mb-4 w-16 h-16 flex items-center justify-center">
-                  <tech.icon className="w-8 h-8 text-zion-purple" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
-                <p className="text-sm text-zion-slate-light">{tech.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Case Studies */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Education Transformation Success Stories
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              See how educational institutions are revolutionizing learning with Zion Tech Group solutions.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (
-              <div key={index} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
-                <div className="flex items-center mb-4">
-                  <div className="p-2 bg-zion-blue/20 rounded-lg mr-3">
-                    <Star className="w-6 h-6 text-zion-blue" />
-                  </div>
-                  <div>
-                    <div className="text-white font-semibold">{study.institution}</div>
-                  </div>
-                </div>
-                <div className="mb-4">
-                  <h4 className="text-white font-semibold mb-2">Challenge:</h4>
-                  <p className="text-zion-slate-light text-sm">{study.challenge}</p>
-                </div>
-                <div className="mb-4">
-                  <h4 className="text-white font-semibold mb-2">Solution:</h4>
-                  <p className="text-zion-slate-light text-sm">{study.solution}</p>
-                </div>
-                <div>
-                  <h4 className="text-white font-semibold mb-2">Results:</h4>
-                  <p className="text-zion-cyan text-sm font-medium">{study.results}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      </div>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-zion-blue/20 to-zion-cyan/20 border border-zion-blue/30 rounded-2xl p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Education?
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-8">
-              Let's discuss how Zion Tech Group can help you create the future of learning.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-blue to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-cyan hover:to-zion-blue transition-all duration-300 transform hover:scale-105"
-              >
-                Schedule Consultation
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <a
-                href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border border-zion-blue text-zion-blue font-semibold rounded-lg hover:bg-zion-blue hover:text-white transition-all duration-300"
-              >
-                <Phone className="mr-2 w-5 h-5" />
-                Call Now
-              </a>
-            </div>
+      <div className="py-24">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Transform Education?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join leading educational institutions that have already improved learning outcomes with our solutions
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-200">
+              Contact Sales
+            </button>
+            <button className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-200">
+              Download Brochure
+            </button>
           </div>
         </div>
-      </section>
-
-      {/* Contact Info */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="flex flex-col items-center">
-              <div className="p-3 bg-zion-cyan/20 rounded-lg mb-4">
-                <Phone className="w-8 h-8 text-zion-cyan" />
-              </div>
-              <h3 className="text-white font-semibold mb-2">Phone</h3>
-              <p className="text-zion-slate-light">+1 (302) 464-0950</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="p-3 bg-zion-blue/20 rounded-lg mb-4">
-                <Mail className="w-8 h-8 text-zion-blue" />
-              </div>
-              <h3 className="text-white font-semibold mb-2">Email</h3>
-              <p className="text-zion-slate-light">kleber@ziontechgroup.com</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="p-3 bg-zion-purple/20 rounded-lg mb-4">
-                <MapPin className="w-8 h-8 text-zion-purple" />
-              </div>
-              <h3 className="text-white font-semibold mb-2">Address</h3>
-              <p className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown, DE 19709</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
   );
 }

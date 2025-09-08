@@ -1,307 +1,266 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { 
-  Factory, 
-  Users, 
-  TrendingUp, 
+  Settings, 
   Shield, 
-  Database, 
-  Network, 
-  Globe, 
-  Zap,
-  CheckCircle,
+  Users, 
+  BarChart3, 
+  Zap, 
+  TrendingUp, 
+  CheckCircle, 
   ArrowRight,
+  Building,
+  Globe,
   Cpu,
-  Brain,
   Target,
-  Award,
-  Star,
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  FileText,
-  BarChart3,
-  Settings,
-  ShoppingCart,
-  DollarSign,
-  Lightbulb,
-  Cog,
-  Wrench
+  Lock,
+  Activity
 } from 'lucide-react';
 
-const ManufacturingSolutions = () => {
-  const solutions = [
+export default function ManufacturingSolutions() {
+  const features = [
     {
-      title: 'Smart Factory Automation',
-      description: 'Transform your manufacturing operations with IoT sensors and AI-powered automation',
-      features: ['Predictive maintenance', 'Real-time monitoring', 'Quality control', 'Energy optimization'],
-      icon: Factory,
-      href: '/services/ai-predictive-maintenance'
+      icon: Settings,
+      title: 'Smart Manufacturing',
+      description: 'AI-powered automation and optimization',
+      color: 'from-orange-500 to-red-500'
     },
     {
-      title: 'Digital Twin Technology',
-      description: 'Create virtual replicas of your manufacturing processes for optimization and simulation',
-      features: ['Process simulation', 'Performance optimization', 'Risk assessment', 'Training scenarios'],
-      icon: Brain,
-      href: '/services/digital-twin'
+      icon: Shield,
+      title: 'Quality Assurance',
+      description: 'Advanced quality control and defect detection',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      icon: Users,
+      title: 'Workforce Management',
+      description: 'Optimize human resources and productivity',
+      color: 'from-purple-500 to-indigo-500'
+    },
+    {
+      icon: BarChart3,
+      title: 'Predictive Analytics',
+      description: 'Forecast maintenance and optimize operations',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      icon: Zap,
+      title: 'Real-time Monitoring',
+      description: 'Live insights into production processes',
+      color: 'from-yellow-500 to-orange-500'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Performance Optimization',
+      description: 'Continuous improvement and efficiency gains',
+      color: 'from-red-500 to-pink-500'
+    }
+  ];
+
+  const solutions = [
+    {
+      title: 'Smart Factory Platform',
+      description: 'Comprehensive IoT and AI manufacturing platform',
+      features: ['Production Monitoring', 'Quality Control', 'Predictive Maintenance', 'Analytics Dashboard']
     },
     {
       title: 'Supply Chain Optimization',
-      description: 'Streamline your supply chain with AI-powered analytics and automation',
-      features: ['Demand forecasting', 'Inventory management', 'Route optimization', 'Supplier analytics'],
-      icon: Network,
-      href: '/services/ai-supply-chain-optimization'
+      description: 'End-to-end supply chain visibility and optimization',
+      features: ['Inventory Management', 'Demand Forecasting', 'Supplier Management', 'Logistics Optimization']
     },
     {
       title: 'Quality Management System',
-      description: 'Ensure consistent product quality with automated inspection and monitoring',
-      features: ['Automated inspection', 'Quality analytics', 'Compliance tracking', 'Defect prevention'],
-      icon: Shield,
-      href: '/services/ai-quality-management'
+      description: 'AI-powered quality control and assurance',
+      features: ['Defect Detection', 'Quality Metrics', 'Compliance Monitoring', 'Continuous Improvement']
+    },
+    {
+      title: 'Workforce Optimization',
+      description: 'Human resource management and productivity tools',
+      features: ['Skill Management', 'Performance Tracking', 'Training Programs', 'Safety Monitoring']
     }
   ];
 
   const industries = [
-    'Automotive',
-    'Electronics',
-    'Pharmaceuticals',
-    'Food & Beverage',
-    'Aerospace',
-    'Textiles'
+    {
+      title: 'Automotive',
+      description: 'Vehicle manufacturing and assembly',
+      icon: Settings
+    },
+    {
+      title: 'Electronics',
+      description: 'Consumer electronics and components',
+      icon: Cpu
+    },
+    {
+      title: 'Pharmaceuticals',
+      description: 'Drug manufacturing and quality control',
+      icon: Shield
+    },
+    {
+      title: 'Food & Beverage',
+      description: 'Food processing and packaging',
+      icon: Activity
+    }
   ];
 
   const benefits = [
-    'Increased productivity',
-    'Reduced operational costs',
-    'Improved quality control',
-    'Enhanced safety',
-    'Real-time insights',
-    'Predictive maintenance'
+    'Increase production efficiency by 35%',
+    'Reduce quality defects by 60%',
+    'Lower operational costs by 25%',
+    'Improve equipment uptime by 40%',
+    'Enhance worker safety',
+    'Enable predictive maintenance'
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4">
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-blue-600/20"></div>
-        <div className="relative max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+      <div className="relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Manufacturing Solutions
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionize your manufacturing operations with Industry 4.0 technologies and AI-powered automation
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform manufacturing operations with AI-powered solutions that optimize production, quality, and efficiency
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
+              <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-200 flex items-center justify-center gap-2">
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/schedule-demo"
-                className="inline-flex items-center px-8 py-4 border-2 border-indigo-500 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500 hover:text-white transition-all duration-300"
-              >
+                <ArrowRight className="w-5 h-5" />
+              </button>
+              <button className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-200">
                 Schedule Demo
-              </Link>
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
-      </section>
+      </div>
 
-      {/* Solutions Grid */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Comprehensive Manufacturing Solutions
+      {/* Features Section */}
+      <div className="py-24 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Manufacturing-Focused Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From smart factories to quality management, we provide end-to-end manufacturing technology solutions
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Built specifically for manufacturing with automation, quality, and efficiency at the core
             </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => (
-              <motion.div
-                key={solution.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl p-8 border border-slate-600 hover:border-indigo-500 transition-all duration-300"
-              >
-                <div className="flex items-center mb-6">
-                  <div className="p-3 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg mr-4">
-                    <solution.icon className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white">{solution.title}</h3>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800 p-8 rounded-xl border border-slate-700 hover:border-slate-600 transition-all duration-200">
+                <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-6`}>
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Solutions Section */}
+      <div className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Manufacturing Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Comprehensive solutions designed to address manufacturing challenges and drive operational excellence
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {solutions.map((solution, index) => (
+              <div key={index} className="bg-slate-800 p-8 rounded-xl border border-slate-700">
+                <h3 className="text-2xl font-semibold text-white mb-3">{solution.title}</h3>
                 <p className="text-gray-300 mb-6">{solution.description}</p>
-                <ul className="space-y-2 mb-6">
-                  {solution.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
+                <ul className="space-y-2">
+                  {solution.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center gap-3 text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <Link
-                  to={solution.href}
-                  className="inline-flex items-center text-indigo-400 hover:text-indigo-300 font-semibold transition-colors duration-300"
-                >
-                  Learn More
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Industries Served */}
-      <section className="py-20 px-4 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Manufacturing Industries We Serve
+      {/* Industries Section */}
+      <div className="py-24 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Manufacturing Industries
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Tailored solutions for diverse manufacturing sectors and production environments
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our solutions are designed to meet the unique needs of different manufacturing sectors
             </p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {industries.map((industry, index) => (
-              <motion.div
-                key={industry}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-lg p-6 text-center border border-slate-600 hover:border-indigo-500 transition-all duration-300"
-              >
-                <Factory className="h-12 w-12 text-indigo-400 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-white">{industry}</h3>
-              </motion.div>
+              <div key={index} className="bg-slate-800 p-6 rounded-lg border border-slate-700 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <industry.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{industry.title}</h3>
+                <p className="text-gray-300 text-sm">{industry.description}</p>
+              </div>
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Why Choose Our Manufacturing Solutions?
+      <div className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Why Choose Manufacturing Solutions?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of working with a technology partner that understands manufacturing challenges
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Proven results and measurable impact for manufacturing organizations
             </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
-              <motion.div
-                key={benefit}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="p-4 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full w-16 h-16 mx-auto mb-6 flex items-center justify-center">
-                  <Star className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{benefit}</h3>
-              </motion.div>
+              <div key={index} className="flex items-center gap-4 bg-slate-800 p-6 rounded-lg border border-slate-700">
+                <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />
+                <span className="text-white font-medium">{benefit}</span>
+              </div>
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Manufacturing?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our manufacturing solutions can improve efficiency and drive innovation
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Get Started Today
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/schedule-demo"
-                className="inline-flex items-center px-8 py-4 border-2 border-indigo-500 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500 hover:text-white transition-all duration-300"
-              >
-                Schedule a Demo
-              </Link>
-            </div>
-          </motion.div>
+      <div className="py-24">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Transform Manufacturing?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join leading manufacturing organizations that have already optimized their operations with our solutions
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-200">
+              Contact Sales
+            </button>
+            <button className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-200">
+              Download Brochure
+            </button>
+          </div>
         </div>
-      </section>
-
-      {/* Contact Info */}
-      <section className="py-16 px-4 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="flex flex-col items-center">
-                <Phone className="h-8 w-8 text-indigo-400 mb-4" />
-                <p className="text-gray-300">+1 302 464 0950</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <Mail className="h-8 w-8 text-indigo-400 mb-4" />
-                <p className="text-gray-300">kleber@ziontechgroup.com</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <MapPin className="h-8 w-8 text-indigo-400 mb-4" />
-                <p className="text-gray-300 text-center">364 E Main St STE 1008<br />Middletown DE 19709</p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      </div>
     </div>
   );
-};
-
-export default ManufacturingSolutions;
+}

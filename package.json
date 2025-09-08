@@ -168,6 +168,7 @@
   },
   "resolutions": {
     "@rollup/rollup-darwin-x64": "@rollup/rollup-linux-x64-gnu",
-    "@esbuild/darwin-x64": "@esbuild/linux-x64"
+    "esbuild": "^0.21.5",
+    "rollup": "^4.49.0"
   }
 }

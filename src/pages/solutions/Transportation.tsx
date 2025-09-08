@@ -1,117 +1,114 @@
 import React from 'react';
 import { 
-  Building2, 
-  Rocket, 
+  Truck, 
   Users, 
+  BarChart3, 
   Globe, 
   Zap, 
-  DollarSign, 
-  BarChart3, 
-  Target,
-  CheckCircle,
+  TrendingUp, 
+  CheckCircle, 
   ArrowRight,
-  TrendingUp,
+  Building,
+  Smartphone,
+  Target,
   Shield,
-  Clock,
-  Lightbulb,
-  ShoppingCart,
-  Settings,
-  Heart
+  Activity,
+  Route
 } from 'lucide-react';
 
-export default function SMBSolutions() {
+export default function TransportationSolutions() {
   const features = [
     {
-      icon: Building2,
-      title: 'Scalable Growth',
-      description: 'Solutions that grow with your business from startup to enterprise',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Rocket,
-      title: 'Quick Implementation',
-      description: 'Fast deployment with minimal disruption to operations',
+      icon: Truck,
+      title: 'Fleet Management',
+      description: 'AI-powered fleet optimization and monitoring',
       color: 'from-blue-500 to-cyan-500'
     },
     {
+      icon: Route,
+      title: 'Route Optimization',
+      description: 'Intelligent routing for maximum efficiency',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
       icon: Users,
-      title: 'Team Collaboration',
-      description: 'Tools that enhance productivity and team communication',
+      title: 'Driver Management',
+      description: 'Driver safety, performance, and compliance',
       color: 'from-purple-500 to-indigo-500'
     },
     {
-      icon: Globe,
-      title: 'Market Expansion',
-      description: 'Solutions to help you reach new markets and customers',
+      icon: BarChart3,
+      title: 'Real-time Analytics',
+      description: 'Live insights into operations and performance',
       color: 'from-orange-500 to-red-500'
     },
     {
       icon: Zap,
-      title: 'Cost Efficiency',
-      description: 'Affordable solutions that maximize ROI and reduce costs',
+      title: 'Predictive Maintenance',
+      description: 'AI-driven maintenance scheduling and alerts',
       color: 'from-yellow-500 to-orange-500'
     },
     {
-      icon: Target,
-      title: 'Focused Results',
-      description: 'Targeted solutions for specific business challenges',
+      icon: TrendingUp,
+      title: 'Performance Optimization',
+      description: 'Continuous improvement and efficiency gains',
       color: 'from-red-500 to-pink-500'
     }
   ];
 
   const solutions = [
     {
-      title: 'AI Business Intelligence',
-      description: 'Data-driven insights to make better business decisions',
-      features: ['Real-time Analytics', 'Predictive Insights', 'Custom Dashboards', 'Automated Reporting']
+      title: 'Fleet Management Platform',
+      description: 'Comprehensive fleet operations and optimization system',
+      features: ['Vehicle Tracking', 'Maintenance Scheduling', 'Fuel Management', 'Driver Safety']
     },
     {
-      title: 'Digital Marketing Suite',
-      description: 'Comprehensive marketing automation and optimization',
-      features: ['SEO Optimization', 'Content Marketing', 'Social Media', 'Email Campaigns']
+      title: 'Route Optimization Engine',
+      description: 'AI-powered routing for maximum efficiency and cost savings',
+      features: ['Dynamic Routing', 'Traffic Optimization', 'Multi-stop Planning', 'Real-time Updates']
     },
     {
-      title: 'Customer Relationship Management',
-      description: 'Streamline customer interactions and improve satisfaction',
-      features: ['Lead Management', 'Sales Pipeline', 'Customer Support', 'Analytics']
+      title: 'Driver Management System',
+      description: 'Comprehensive driver safety and performance management',
+      features: ['Safety Monitoring', 'Performance Tracking', 'Compliance Management', 'Training Programs']
     },
     {
-      title: 'E-commerce Solutions',
-      description: 'Complete online selling platform for your products',
-      features: ['Online Store', 'Payment Processing', 'Inventory Management', 'Order Fulfillment']
+      title: 'Transportation Analytics',
+      description: 'Data-driven insights for operational excellence',
+      features: ['Performance Metrics', 'Cost Analysis', 'Predictive Insights', 'Reporting Dashboard']
     }
   ];
 
-  const industries = [
+  const transportTypes = [
     {
-      title: 'Retail & E-commerce',
-      description: 'Digital transformation for retail businesses',
-      icon: ShoppingCart
+      title: 'Trucking & Logistics',
+      description: 'Long-haul and local trucking operations',
+      icon: Truck
     },
     {
-      title: 'Professional Services',
-      description: 'Automation for consulting and service firms',
+      title: 'Public Transit',
+      description: 'Bus, rail, and public transportation systems',
+      icon: Building
+    },
+    {
+      title: 'Delivery Services',
+      description: 'Last-mile and express delivery operations',
+      icon: Route
+    },
+    {
+      title: 'Ride Sharing',
+      description: 'Passenger transportation and mobility services',
       icon: Users
-    },
-    {
-      title: 'Manufacturing',
-      description: 'Smart manufacturing and supply chain solutions',
-      icon: Settings
-    },
-    {
-      title: 'Healthcare',
-      description: 'Technology solutions for healthcare practices',
-      icon: Heart
     }
   ];
 
   const benefits = [
-    'Increase revenue by 35%',
-    'Reduce operational costs by 25%',
-    'Improve customer satisfaction by 45%',
-    'Accelerate growth by 60%',
-    'Streamline business processes',
-    'Gain competitive advantage'
+    'Reduce fuel costs by 25%',
+    'Improve delivery times by 30%',
+    'Increase fleet utilization by 40%',
+    'Enhance driver safety',
+    'Optimize maintenance schedules',
+    'Enable data-driven decisions'
   ];
 
   return (
@@ -121,13 +118,13 @@ export default function SMBSolutions() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              SMB Solutions
+              Transportation Solutions
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Powerful, affordable solutions designed specifically for small and medium businesses to compete and grow
+              Transform transportation operations with AI-powered solutions that optimize routes, enhance safety, and improve efficiency
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-200 flex items-center justify-center gap-2">
+              <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 flex items-center justify-center gap-2">
                 Get Started
                 <ArrowRight className="w-5 h-5" />
               </button>
@@ -144,10 +141,10 @@ export default function SMBSolutions() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              SMB-Focused Features
+              Transportation-Focused Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Built for small and medium businesses with affordability, ease of use, and quick ROI in mind
+              Built specifically for transportation with safety, efficiency, and optimization at the core
             </p>
           </div>
           
@@ -170,10 +167,10 @@ export default function SMBSolutions() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              SMB Solutions
+              Transportation Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive solutions designed to address common SMB challenges and drive growth
+              Comprehensive solutions designed to address transportation challenges and drive operational excellence
             </p>
           </div>
           
@@ -196,26 +193,26 @@ export default function SMBSolutions() {
         </div>
       </div>
 
-      {/* Industries Section */}
+      {/* Transport Types Section */}
       <div className="py-24 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Solutions
+              Transportation Types
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Tailored solutions for different industries and business types
+              Our solutions are designed to meet the unique needs of different transportation sectors
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {industries.map((industry, index) => (
+            {transportTypes.map((transportType, index) => (
               <div key={index} className="bg-slate-800 p-6 rounded-lg border border-slate-700 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <industry.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <transportType.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{industry.title}</h3>
-                <p className="text-gray-300 text-sm">{industry.description}</p>
+                <h3 className="text-lg font-semibold text-white mb-2">{transportType.title}</h3>
+                <p className="text-gray-300 text-sm">{transportType.description}</p>
               </div>
             ))}
           </div>
@@ -227,10 +224,10 @@ export default function SMBSolutions() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose SMB Solutions?
+              Why Choose Transportation Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Proven results and measurable impact for small and medium businesses
+              Proven results and measurable impact for transportation organizations
             </p>
           </div>
           
@@ -249,13 +246,13 @@ export default function SMBSolutions() {
       <div className="py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Grow Your Business?
+            Ready to Transform Transportation?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join thousands of SMBs that have already transformed their operations with our solutions
+            Join leading transportation organizations that have already optimized their operations with our solutions
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-200">
+            <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-200">
               Contact Sales
             </button>
             <button className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-200">
