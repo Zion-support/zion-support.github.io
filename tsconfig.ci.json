@@ -1,0 +1,28 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "next-env.d.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "pages/**/*.ts",
+    "pages/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next",
+    "dist",
+    "out",
+    "coverage",
+    "temp_components",
+    "temp_backup",
+    "temp-backup",
+    "src",
+    "src_backup",
+    "src.broken",
+    "src.corrupted",
+    "utils",
+    "supabase",
+    "scripts"
+  ]
+}
+
