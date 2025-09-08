@@ -12,17 +12,16 @@ import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
-const About = React.lazy(() => import('./pages/About'));
-const Contact = React.lazy(() => import('./pages/Contact'));
+const About = React.lazy(() => import('./pages/about'));
+const Contact = React.lazy(() => import('./pages/contact'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const Services = React.lazy(() => import('./pages/Services'));
-const ComprehensiveServices = React.lazy(() => import('./pages/ComprehensiveServices'));
-const AIServices = React.lazy(() => import('./pages/AIServices'));
-const AISolutions = React.lazy(() => import('./pages/AISolutions'));
-const ITServices = React.lazy(() => import('./pages/ITServices'));
-const MicroSaaS = React.lazy(() => import('./pages/MicroSaaS'));
-const MicroSAASSolutions = React.lazy(() => import('./pages/MicroSAASSolutions'));
+const Solutions = React.lazy(() => import('./pages/Solutions'));
+const Resources = React.lazy(() => import('./pages/Resources'));
+const CaseStudies = React.lazy(() => import('./pages/case-studies'));
+const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
+const Webinars = React.lazy(() => import('./pages/Webinars'));
 const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
 const Dashboard = React.lazy(() => import('./pages/Dashboard'));
 const Login = React.lazy(() => import('./pages/Login'));
@@ -94,16 +93,47 @@ const ComprehensiveServicesAdvertising = React.lazy(() => import('./pages/Compre
 const ComprehensiveServicesShowcase2030 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2030'));
 const InnovativeServicesOverview = React.lazy(() => import('./pages/InnovativeServicesOverview'));
 
-// Missing Service Pages
-const AIAutonomousResearchAssistant = createLazyComponent(() => import('./pages/services/ai-autonomous-research-assistant'));
-const CloudDevOpsAutomation = createLazyComponent(() => import('./pages/services/cloud-devops-automation'));
-const ITInfrastructure = createLazyComponent(() => import('./pages/services/it-infrastructure'));
-const CybersecuritySolutions = createLazyComponent(() => import('./pages/services/cybersecurity-solutions'));
-const NetworkInfrastructure = createLazyComponent(() => import('./pages/services/network-infrastructure'));
-const ITOnsiteServices = createLazyComponent(() => import('./pages/services/it-onsite-services'));
+// New innovative services
+const AILegalDocumentAnalysis = React.lazy(() => import('./pages/services/ai-legal-document-analysis'));
+const AISupplyChainOptimization = React.lazy(() => import('./pages/services/ai-supply-chain-optimization'));
+const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/ai-healthcare-analytics'));
+const AIFinancialTrading = React.lazy(() => import('./pages/services/ai-financial-trading'));
+const AISpaceTechnology = React.lazy(() => import('./pages/services/ai-space-technology'));
+const AISustainableTechnology = React.lazy(() => import('./pages/services/ai-sustainable-technology'));
+const AIMetaverse = React.lazy(() => import('./pages/services/ai-metaverse'));
+const AIEducation = React.lazy(() => import('./pages/services/ai-education'));
+const AIEntertainment = React.lazy(() => import('./pages/services/ai-entertainment'));
+const AIDevelopment = React.lazy(() => import('./pages/services/ai-development'));
+const AIGreenTechnology = React.lazy(() => import('./pages/services/ai-green-technology'));
+const AIMarketingAutomation = React.lazy(() => import('./pages/services/ai-marketing-automation'));
+const AICustomerSupportAutomation = React.lazy(() => import('./pages/services/ai-customer-support-automation'));
+const AIHRPlatform = React.lazy(() => import('./pages/services/ai-hr-platform'));
+const AIContentCreation = React.lazy(() => import('./pages/services/ai-content-creation'));
+const AIProjectManagement = React.lazy(() => import('./pages/services/ai-project-management'));
+const AIWorkflowAutomation = React.lazy(() => import('./pages/services/ai-workflow-automation'));
+const AIPredictiveMaintenance = React.lazy(() => import('./pages/services/ai-predictive-maintenance'));
+const AIAutonomousResearchAssistant = React.lazy(() => import('./pages/services/ai-autonomous-research-assistant'));
+const AIQuantumHybridPlatform = React.lazy(() => import('./pages/services/ai-quantum-hybrid-platform'));
 
-// Get Started Page
-const GetStarted = createLazyComponent(() => import('./pages/GetStarted'));
+// Service pages - only import existing ones
+const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
+const DigitalTwin = React.lazy(() => import('./pages/services/digital-twin'));
+const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
+const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
+const AIBusinessIntelligence = React.lazy(() => import('./pages/services/ai-business-intelligence'));
+const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSProducts'));
+const QuantumComputing = React.lazy(() => import('./pages/services/quantum-computing'));
+const IoTEdeComputing = React.lazy(() => import('./pages/services/iot-edge-computing'));
+const Cybersecurity = React.lazy(() => import('./pages/services/cybersecurity'));
+
+// Import real pages
+const Careers = React.lazy(() => import('./pages/Careers'));
+const Marketplace = React.lazy(() => import('./pages/Marketplace'));
+const InnovativeMicroSAASServices2025 = React.lazy(() => import('./pages/InnovativeMicroSAASServices2025'));
+const InnovativeAIServices2025 = React.lazy(() => import('./pages/InnovativeAIServices2025'));
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+const ComprehensivePricing2025 = React.lazy(() => import('./pages/ComprehensivePricing2025'));
+const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
 
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
@@ -156,27 +186,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
       </div>
     </div>
   </div>
-);
-
-// Not Found page
-const NotFound = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <EnhancedSEO
-      title="Page Not Found - Zion Tech Group"
-      description="The page you're looking for doesn't exist."
-      noindex
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">404 - Not Found</h1>
-      <p className="text-xl text-gray-300">Please check the URL or go back to the homepage.</p>
-    </div>
-  </div>
-);
-
-// Additional missing pages
-const Training = React.lazy(() => import('./pages/Training'));
-const InvestorRelations = React.lazy(() => import('./pages/InvestorRelations'));
-const Press = React.lazy(() => import('./pages/Press'));
+ );
 
 function App() {
   return (
@@ -245,14 +255,35 @@ function App() {
                   <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
                   <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
 
-                    {/* New AI Services 2025 */}
-                    <Route path="/services/ai-supply-chain-optimization" element={<ModernLayout><AISupplyChainOptimization /></ModernLayout>} />
-                    <Route path="/services/ai-cybersecurity-platform" element={<ModernLayout><AICybersecurity /></ModernLayout>} />
-                    <Route path="/services/ai-healthcare-platform" element={<ModernLayout><AIHealthcare /></ModernLayout>} />
-                    <Route path="/services/ai-quantum-hybrid-platform" element={<ModernLayout><AIQuantumHybridPlatform /></ModernLayout>} />
-                    <Route path="/services/ai-autonomous-research-assistant" element={<ModernLayout><AIAutonomousResearchAssistant /></ModernLayout>} />
-                    <Route path="/services/ai-financial-trading-platform" element={<ModernLayout><AIFinancialTradingPlatform /></ModernLayout>} />
-                    <Route path="/services/blockchain-enterprise-solutions" element={<ModernLayout><BlockchainEnterpriseSolutions /></ModernLayout>} />
+                {/* Service Routes - only for existing pages */}
+                <Route path="/services/cloud-devops" element={<CloudDevOps />} />
+                <Route path="/services/digital-twin" element={<DigitalTwin />} />
+                <Route path="/services/data-analytics" element={<DataAnalytics />} />
+                <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
+                <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                <Route path="/services/ai-legal-document-analysis" element={<AILegalDocumentAnalysis />} />
+                <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+                <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
+                <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
+                <Route path="/services/ai-space-technology" element={<AISpaceTechnology />} />
+                <Route path="/services/ai-sustainable-technology" element={<AISustainableTechnology />} />
+                <Route path="/services/ai-metaverse" element={<AIMetaverse />} />
+                <Route path="/services/ai-education" element={<AIEducation />} />
+                <Route path="/services/ai-entertainment" element={<AIEntertainment />} />
+                <Route path="/services/ai-development" element={<AIDevelopment />} />
+                <Route path="/services/ai-green-technology" element={<AIGreenTechnology />} />
+                <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
+                <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} />
+                <Route path="/services/ai-hr-platform" element={<AIHRPlatform />} />
+                <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
+                <Route path="/services/ai-project-management" element={<AIProjectManagement />} />
+                <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+                <Route path="/services/ai-predictive-maintenance" element={<AIPredictiveMaintenance />} />
+                <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
+                <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
+                <Route path="/services/quantum-computing" element={<QuantumComputing />} />
+                <Route path="/services/iot-edge-computing" element={<IoTEdeComputing />} />
+                <Route path="/services/cybersecurity" element={<Cybersecurity />} />
 
                     {/* New Innovative Services 2025 - Combined from both versions */}
                     <Route path="/services/ai-enterprise-automation-platform" element={<AIEnterpriseAutomationPlatform />} />

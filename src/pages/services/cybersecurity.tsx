@@ -2,16 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import { 
-  Workflow, 
-  Brain, 
-  Target, 
   Shield, 
-  BarChart3, 
-  Cpu, 
-  Database, 
-  Network,
-  CheckCircle,
-  ArrowRight,
+  Lock, 
+  Eye, 
+  AlertTriangle, 
+  CheckCircle, 
+  ArrowRight, 
   Star,
   Clock,
   TrendingUp,
@@ -27,114 +23,125 @@ import {
   Bot,
   Globe,
   Zap,
-  Settings,
-  GitBranch,
-  RefreshCw,
+  Cpu,
+  Network,
+  Database,
+  Gauge,
   Activity,
-  Timer,
-  AlertCircle
+  Rocket,
+  Wifi,
+  Server,
+  Key,
+  Fingerprint,
+  ShieldCheck,
+  Bug,
+  FileShield,
+  Network,
+  Monitor,
+  Smartphone,
+  Building
 } from 'lucide-react';
 
-const AIWorkflowAutomation: React.FC = () => {
+export default function Cybersecurity() {
   const features = [
     {
-      icon: Workflow,
-      title: 'Intelligent Process Mapping',
-      description: 'AI-powered workflow discovery and optimization for complex business processes'
-    },
-    {
-      icon: Brain,
-      title: 'Smart Decision Automation',
-      description: 'AI-driven decision making and routing based on data analysis and business rules'
-    },
-    {
-      icon: Target,
-      title: 'Process Optimization',
-      description: 'Continuous improvement of workflows using machine learning and performance analytics'
-    },
-    {
-      icon: Zap,
-      title: 'Real-time Automation',
-      description: 'Instant workflow execution and response to business events and triggers'
-    },
-    {
-      icon: GitBranch,
-      title: 'Conditional Logic',
-      description: 'Advanced branching and conditional workflows with AI-powered path optimization'
-    },
-    {
       icon: Shield,
-      title: 'Compliance & Security',
-      description: 'Enterprise-grade security and regulatory compliance for automated workflows'
+      title: 'Advanced Threat Protection',
+      description: 'Multi-layered security with AI-powered threat detection and prevention'
+    },
+    {
+      icon: Lock,
+      title: 'Zero Trust Security',
+      description: 'Comprehensive identity verification and access control for all resources'
+    },
+    {
+      icon: Eye,
+      title: '24/7 Security Monitoring',
+      description: 'Continuous surveillance and real-time threat intelligence'
+    },
+    {
+      icon: Key,
+      title: 'Encryption & Key Management',
+      description: 'Enterprise-grade encryption with secure key management systems'
+    },
+    {
+      icon: Bug,
+      title: 'Vulnerability Assessment',
+      description: 'Regular security audits and penetration testing'
+    },
+    {
+      icon: Network2,
+      title: 'Network Security',
+      description: 'Advanced firewall and intrusion detection systems'
     }
   ];
 
   const benefits = [
-    '80% reduction in manual process time',
-    'Improved accuracy and error reduction',
-    'Real-time process monitoring and insights',
-    'Scalable automation for growing operations',
-    'Enhanced compliance and audit trails',
-    'Faster response times to business events'
+    '99.9% threat detection rate',
+    'Zero false positive alerts',
+    '24/7 security monitoring',
+    'Compliance with industry standards',
+    'Reduced security incidents',
+    'Cost-effective protection'
   ];
 
   const useCases = [
     {
-      title: 'Customer Service Automation',
-      description: 'AI-powered workflows for ticket routing, response generation, and customer issue resolution with intelligent escalation'
+      title: 'Financial Services',
+      description: 'Banking and fintech security with fraud detection, transaction monitoring, and regulatory compliance'
     },
     {
-      title: 'Financial Process Automation',
-      description: 'Automated workflows for invoice processing, approval routing, and financial reporting with compliance monitoring'
+      title: 'Healthcare & Medical',
+      description: 'Patient data protection, medical device security, and HIPAA compliance for healthcare organizations'
     },
     {
-      title: 'HR Process Automation',
-      description: 'Streamlined workflows for employee onboarding, performance reviews, and leave management with intelligent routing'
+      title: 'Government & Defense',
+      description: 'Classified information protection, secure communications, and national security infrastructure'
     },
     {
-      title: 'Supply Chain Automation',
-      description: 'Automated workflows for order processing, inventory management, and supplier communication with real-time tracking'
+      title: 'Enterprise & Corporations',
+      description: 'Business data protection, employee security training, and incident response management'
     }
   ];
 
   const pricing = [
     {
-      name: 'Starter',
-      price: '$199',
+      name: 'Essential',
+      price: '$399',
       period: '/month',
-      description: 'Basic AI workflow automation for small businesses',
+      description: 'Basic cybersecurity for small businesses',
       features: [
-        'Basic workflow builder',
-        'Simple automation rules',
-        'Standard integrations',
-        'Basic reporting'
+        'Basic threat protection',
+        'Firewall management',
+        'Security monitoring',
+        'Email security'
       ]
     },
     {
       name: 'Professional',
-      price: '$499',
+      price: '$899',
       period: '/month',
-      description: 'Advanced AI workflow platform for growing organizations',
+      description: 'Advanced cybersecurity for growing organizations',
       features: [
-        'AI-powered optimization',
-        'Advanced integrations',
-        'Custom workflows',
-        'Advanced analytics',
+        'AI threat detection',
+        'Zero trust security',
+        'Vulnerability assessment',
+        'Incident response',
         'Priority support'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,199',
+      price: '$1,999',
       period: '/month',
-      description: 'Full-scale AI workflow automation for large organizations',
+      description: 'Comprehensive cybersecurity for large organizations',
       features: [
-        'Custom AI models',
-        'White-label solutions',
+        'Custom security solutions',
+        'Advanced threat hunting',
         '24/7 dedicated support',
-        'Custom development',
-        'Advanced security'
+        'Compliance management',
+        'Custom development'
       ]
     }
   ];
@@ -142,14 +149,14 @@ const AIWorkflowAutomation: React.FC = () => {
   return (
     <div className="min-h-screen bg-futuristic">
       <SEO 
-        title="AI Workflow Automation Platform - Zion Tech Group"
-        description="Revolutionary AI-powered workflow automation platform for intelligent process optimization, decision automation, and business process transformation. Streamline operations with AI insights."
-        keywords="AI workflow automation, process automation, business process automation, workflow optimization, AI automation, process intelligence"
+        title="Cybersecurity Services - Zion Tech Group"
+        description="Comprehensive cybersecurity solutions with AI-powered threat detection, zero trust security, and 24/7 monitoring. Protect your digital assets with enterprise-grade security."
+        keywords="cybersecurity, threat detection, zero trust security, network security, data protection, security monitoring"
         ogType="website"
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-teal-900 via-cyan-900 to-blue-900 py-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-red-900 via-purple-900 to-indigo-900 py-20">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900/20 to-gray-800/20"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -159,15 +166,15 @@ const AIWorkflowAutomation: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full mb-6">
-              <Workflow className="w-10 h-10 text-white" />
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-red-500 to-purple-500 rounded-full mb-6">
+              <Shield className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Workflow Automation
+              Cybersecurity
             </h1>
-            <p className="text-xl text-cyan-200 max-w-3xl mx-auto leading-relaxed">
-              Revolutionizing business processes with cutting-edge AI technology. 
-              From intelligent automation to process optimization, our platform transforms operations.
+            <p className="text-xl text-red-200 max-w-3xl mx-auto leading-relaxed">
+              Revolutionary cybersecurity platform with cutting-edge AI technology. 
+              From threat detection to zero trust security, our platform protects your digital future.
             </p>
           </motion.div>
 
@@ -200,25 +207,25 @@ const AIWorkflowAutomation: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced AI Workflow Automation Features
+              Advanced Cybersecurity Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI platform combines cutting-edge machine learning with workflow expertise 
-              to deliver unprecedented capabilities in process automation and optimization.
+              Our platform delivers cutting-edge cybersecurity capabilities 
+              for threat detection, prevention, and comprehensive digital protection.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion .div
-                key={feature.title}
-                initial={{ opacity: 0, y: 30 }}
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-gray-800 to-gray-700 p-6 rounded-xl border border-gray-600 hover:border-teal-500 transition-all duration-300 hover:transform hover:scale-105"
+                className="bg-gradient-to-br from-gray-800 to-gray-700 p-6 rounded-xl border border-gray-600 hover:border-red-500 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -230,7 +237,7 @@ const AIWorkflowAutomation: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-gradient-to-br from-teal-900 to-cyan-900">
+      <section className="py-20 bg-gradient-to-br from-red-900 to-purple-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -240,11 +247,11 @@ const AIWorkflowAutomation: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose AI Workflow Automation?
+              Why Choose Our Cybersecurity?
             </h2>
-            <p className="text-xl text-teal-200 max-w-3xl mx-auto">
-              Experience the future of business process automation with our AI-powered platform that delivers 
-              unprecedented efficiency, accuracy, and operational insights.
+            <p className="text-xl text-red-200 max-w-3xl mx-auto">
+              Experience the future of digital protection with our cybersecurity platform that delivers 
+              unprecedented security, reliability, and peace of mind.
             </p>
           </motion.div>
 
@@ -258,7 +265,7 @@ const AIWorkflowAutomation: React.FC = () => {
                 viewport={{ once: true }}
                 className="flex items-start space-x-4"
               >
-                <CheckCircle className="w-6 h-6 text-teal-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-red-400 mt-1 flex-shrink-0" />
                 <p className="text-lg text-white">{benefit}</p>
               </motion.div>
             ))}
@@ -277,11 +284,11 @@ const AIWorkflowAutomation: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Real-World Applications
+              Industry Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI workflow automation platform is transforming industries and enabling new possibilities 
-              in business process optimization and operational efficiency across diverse sectors.
+              Our cybersecurity platform is protecting critical infrastructure and enabling secure operations 
+              across industries that demand the highest levels of digital security.
             </p>
           </motion.div>
 
@@ -304,7 +311,7 @@ const AIWorkflowAutomation: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-gradient-to-br from-cyan-900 to-teal-900">
+      <section className="py-20 bg-gradient-to-br from-purple-900 to-red-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -314,10 +321,10 @@ const AIWorkflowAutomation: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Choose Your AI Workflow Automation Plan
+              Choose Your Cybersecurity Plan
             </h2>
-            <p className="text-xl text-cyan-200 max-w-3xl mx-auto">
-              Flexible pricing options designed to scale with your automation needs and business growth.
+            <p className="text-xl text-purple-200 max-w-3xl mx-auto">
+              Flexible pricing options designed to scale with your security needs and compliance requirements.
             </p>
           </motion.div>
 
@@ -330,12 +337,12 @@ const AIWorkflowAutomation: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-white rounded-2xl p-8 ${
-                  plan.popular ? 'ring-2 ring-teal-500 transform scale-105' : ''
+                  plan.popular ? 'ring-2 ring-red-500 transform scale-105' : ''
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-teal-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -353,7 +360,7 @@ const AIWorkflowAutomation: React.FC = () => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-teal-500 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-red-500 mr-3 flex-shrink-0" />
                       <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
@@ -369,7 +376,7 @@ const AIWorkflowAutomation: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-teal-600 to-cyan-600">
+      <section className="py-20 bg-gradient-to-r from-red-600 to-purple-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -378,14 +385,14 @@ const AIWorkflowAutomation: React.FC = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Automate Your Workflows?
+              Ready for Advanced Security?
             </h2>
-            <p className="text-xl text-teal-100 mb-8 max-w-3xl mx-auto">
-               Join the future of business process automation with our AI-powered platform. 
-               Contact us today to learn how we can optimize your operations.
+            <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">
+               Join the future of cybersecurity with our advanced protection platform. 
+               Contact us today to learn how we can secure your digital assets.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-futuristic-outline text-lg px-8 py-4 bg-white text-teal-600 hover:bg-teal-50">
+              <button className="btn-futuristic-outline text-lg px-8 py-4 bg-white text-red-600 hover:bg-red-50">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Contact Sales
               </button>
@@ -412,21 +419,21 @@ const AIWorkflowAutomation: React.FC = () => {
                 Get in Touch
               </h2>
               <p className="text-gray-300 mb-8">
-                Ready to explore the future of workflow automation? Our team of experts 
-                is here to help you build AI-powered process systems that drive efficiency.
+                Ready to explore the future of cybersecurity? Our team of security experts 
+                is here to help you build protection systems that define the next generation of digital security.
               </p>
               
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-teal-400" />
+                  <Phone className="w-5 h-5 text-red-400" />
                   <span className="text-white">+1 302 464 0950</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-teal-400" />
+                  <Mail className="w-5 h-5 text-red-400" />
                   <span className="text-white">kleber@ziontechgroup.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <MapPin className="w-5 h-5 text-teal-400" />
+                  <MapPin className="w-5 h-5 text-red-400" />
                   <span className="text-white">364 E Main St STE 1008 Middletown DE 19709</span>
                 </div>
               </div>
@@ -447,21 +454,21 @@ const AIWorkflowAutomation: React.FC = () => {
                   <input
                     type="text"
                     placeholder="Your Name"
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-teal-500"
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-500"
                   />
                 </div>
                 <div>
                   <input
                     type="email"
                     placeholder="Your Email"
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-teal-500"
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-500"
                   />
                 </div>
                 <div>
                   <textarea
-                    placeholder="Tell us about your workflow automation needs"
+                    placeholder="Tell us about your cybersecurity needs"
                     rows={4}
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-teal-500"
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-500"
                   ></textarea>
                 </div>
                 <button type="submit" className="w-full btn-futuristic">
@@ -473,6 +480,5 @@ const AIWorkflowAutomation: React.FC = () => {
         </div>
       </section>
     </div>
-  )};
-
-export default AIWorkflowAutomation;"`"
+  );
+}

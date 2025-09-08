@@ -1,41 +1,41 @@
 import React from 'react';
-import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
 import { 
   PenTool, 
   Brain, 
-  Zap, 
-  Users, 
-  CheckCircle, 
-  ArrowRight,
-  FileText,
-  Image,
-  Video,
-  Mic,
-  Globe,
-  TrendingUp,
-  BarChart3,
-  Clock,
-  Star,
-  Award,
-  Eye,
-  Database,
+  Target, 
+  Shield, 
+  BarChart3, 
+  Cpu, 
+  Database, 
   Network,
-  Cpu,
-  Smartphone,
-  Monitor,
-  Server,
-  Cloud,
-  Key,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Clock,
+  TrendingUp,
+  Award,
+  Play,
+  BookOpen,
   MessageCircle,
   Phone,
   Mail,
   MapPin,
+  Headphones,
+  HelpCircle,
+  Bot,
+  Globe,
+  FileText,
+  Image,
+  Video,
+  Music,
+  Zap,
   Palette,
   Type,
-  Layers,
-  ShoppingCart,
-  Code
+  Camera,
+  Mic,
+  Edit3
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
@@ -44,459 +44,436 @@ export default function AIContentCreation() {
     {
       icon: PenTool,
       title: 'AI Writing Assistant',
-      description: 'Advanced natural language processing for creating engaging, SEO-optimized content',
-      color: 'from-blue-500 to-cyan-500'
+      description: 'Intelligent content generation for blogs, articles, marketing copy, and creative writing'
     },
     {
       title: 'Visual Content Creation',
       description: 'Create stunning images, graphics, and visual assets with AI assistance',
       icon: Image,
-      title: 'Visual Content Generation',
-      description: 'AI-powered image and graphic creation for marketing and branding',
-      color: 'from-purple-500 to-pink-500'
+      title: 'AI Image Generation',
+      description: 'Create stunning visuals, graphics, and illustrations with AI-powered design tools'
     },
     {
-      title: 'Video Production',
-      description: 'Generate and edit professional videos with AI-driven automation',
       icon: Video,
-      title: 'Video Content Creation',
-      description: 'Automated video generation with AI voiceovers and dynamic visuals',
-      color: 'from-red-500 to-orange-500'
+      title: 'AI Video Creation',
+      description: 'Generate engaging video content, animations, and multimedia presentations'
     },
     {
-      icon: Mic,
-      title: 'Audio Content',
-      description: 'AI-generated podcasts, audiobooks, and voice content in multiple languages',
-      color: 'from-green-500 to-emerald-500'
+      icon: Music,
+      title: 'AI Audio Production',
+      description: 'Create background music, sound effects, and audio content for various media'
+    },
+    {
+      icon: Brain,
+      title: 'Content Optimization',
+      description: 'AI-driven SEO optimization and content performance analysis for better engagement'
+    },
+    {
+      icon: Shield,
+      title: 'Quality Assurance',
+      description: 'Advanced content validation and plagiarism detection for professional standards'
     }
   ];
 
   const benefits = [
-    'Increase content production by 500%',
-    'Reduce content creation costs by 70%',
-    'Improve SEO rankings with AI-optimized content',
-    'Generate content in 50+ languages automatically',
-    '24/7 content creation capabilities',
-    'Scalable for enterprise content needs'
+    '10x faster content creation and production',
+    'Consistent quality across all content types',
+    'Reduced creative production costs',
+    'Scalable content generation for campaigns',
+    'Data-driven content optimization',
+    '24/7 creative assistance and inspiration'
   ];
 
   const useCases = [
     {
-      title: 'Marketing Content',
-      description: 'AI-generated blog posts, social media content, and email campaigns',
-      icon: FileText
+      title: 'Marketing Content Creation',
+      description: 'AI-powered generation of blog posts, social media content, email campaigns, and advertising copy for digital marketing campaigns'
     },
     {
-      title: 'Product Descriptions',
-      description: 'Automated product descriptions and e-commerce content generation',
-      icon: ShoppingCart
+      title: 'E-commerce Product Content',
+      description: 'Automated creation of product descriptions, reviews, and marketing materials for online stores and marketplaces'
     },
     {
-      title: 'Technical Documentation',
-      description: 'AI-powered technical writing and documentation creation',
-      icon: Code
+      title: 'Educational Content',
+      description: 'AI-generated learning materials, tutorials, and educational content for training programs and courses'
     },
     {
-      title: 'Creative Writing',
-      description: 'Novels, scripts, and creative content with AI assistance',
-      icon: PenTool
+      title: 'Entertainment & Media',
+      description: 'Creative content generation for games, apps, social media, and digital entertainment platforms'
     }
   ];
 
-  const contentTypes = [
-    'Blog Posts & Articles',
-    'Social Media Content',
-    'Email Marketing Campaigns',
-    'Product Descriptions',
-    'Technical Documentation',
-    'Creative Writing & Fiction',
-    'Video Scripts & Storyboards',
-    'Podcast Transcripts',
-    'Press Releases',
-    'White Papers & Reports',
-    'Landing Page Copy',
-    'Ad Copy & Taglines'
-  ];
-
-  const technologies = [
-    'Natural Language Processing (NLP)',
-    'Generative AI Models (GPT, Claude)',
-    'Computer Vision & Image Generation',
-    'Text-to-Speech & Voice Synthesis',
-    'Content Optimization Algorithms',
-    'Multi-language Translation',
-    'SEO & Keyword Analysis',
-    'Content Performance Analytics'
+  const pricing = [
+    {
+      name: 'Creator',
+      price: '$199',
+      period: '/month',
+      description: 'Basic AI content creation for individuals and small projects',
+      features: [
+        'AI writing assistant',
+        'Basic image generation',
+        'Content templates',
+        'Standard analytics'
+      ]
+    },
+    {
+      name: 'Professional',
+      price: '$499',
+      period: '/month',
+      description: 'Advanced AI content platform for businesses and content teams',
+      features: [
+        'Full AI content suite',
+        'Advanced customization',
+        'Team collaboration',
+        'Priority support',
+        'Advanced analytics'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$1,299',
+      period: '/month',
+      description: 'Full-scale AI content creation solution for large organizations',
+      features: [
+        'Custom AI models',
+        'White-label solutions',
+        '24/7 dedicated support',
+        'Custom integrations',
+        'Advanced security'
+      ]
+    }
   ];
 
   return (
-    <>
+    <div className="min-h-screen bg-futuristic">
       <SEO 
-        title="AI Content Creation - Zion Tech Group"
-        description="Revolutionary AI-powered content creation platform for marketing, technical writing, and creative content. Generate high-quality content at scale with advanced AI technology."
-        keywords="AI content creation, content generation, AI writing, content marketing, AI copywriting, automated content, content automation"
-        canonical="https://ziontechgroup.com/services/ai-content-creation"
+        title="AI Content Creation Platform - Zion Tech Group"
+        description="Revolutionary AI-powered content creation platform for writing, images, videos, and audio. Transform your creative process with intelligent automation and unlimited inspiration."
+        keywords="AI content creation, AI writing, AI image generation, AI video creation, content automation, creative AI"
+        ogType="website"
       />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden py-20 lg:py-32">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-pink-900/20"></div>
-          <div className="container-responsive relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-6">
-                <PenTool className="w-4 h-4" />
-                Content Innovation
-              </div>
-              
-              <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-                AI Content Creation
-              </h1>
-              
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Transform your content strategy with cutting-edge AI technology. 
-                Our platform generates high-quality, engaging content at scale for 
-                marketing, technical writing, and creative projects.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center gap-2"
-                >
-                  Start Creating
-                  <ArrowRight className="w-5 h-5" />
-                </motion.button>
-                
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-purple-500 hover:text-purple-400 transition-all duration-300"
-                >
-                  View Examples
-                </motion.button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
 
-        {/* Features Grid */}
-        <section className="py-20">
-          <div className="container-responsive">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Content Creation Features
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Comprehensive AI-powered content solutions designed to transform 
-                how you create, manage, and distribute content.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <motion.div
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 group"
-                >
-                  <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  
-                  <p className="text-gray-400 leading-relaxed">
-                    {feature.description}
-                  </p>
-                </motion.div>
-              ))}
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-pink-900 to-red-900 py-20">
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/20 to-gray-800/20"></div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-8"
+          >
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-6">
+              <PenTool className="w-10 h-10 text-white" />
             </div>
-          </div>
-        </section>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              AI Content Creation
+            </h1>
+            <p className="text-xl text-pink-200 max-w-3xl mx-auto leading-relaxed">
+              Revolutionizing content creation with cutting-edge AI technology. 
+              From writing to visual design, our platform unleashes unlimited creative potential.
+            </p>
+          </motion.div>
 
-        {/* Benefits Section */}
-        <section className="py-20 bg-slate-800/30">
-          <div className="container-responsive">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+          >
+            <button className="btn-futuristic text-lg px-8 py-4">
+              <Play className="w-5 h-5 mr-2" />
+              Watch Demo
+            </button>
+            <button className="btn-futuristic-outline text-lg px-8 py-4">
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Contact Sales
+            </button>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Advanced AI Content Creation Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI platform combines cutting-edge machine learning with creative expertise 
+              to deliver unprecedented capabilities in content generation and optimization.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
+                className="bg-gradient-to-br from-gray-800 to-gray-700 p-6 rounded-xl border border-gray-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <h2 className="text-3xl lg:text-4xl font-bold text-white mb-8">
-                  Transform Your Content Strategy
-                </h2>
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-gradient-to-br from-purple-900 to-pink-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Why Choose AI Content Creation?
+            </h2>
+            <p className="text-xl text-purple-200 max-w-3xl mx-auto">
+              Experience the future of content creation with our AI-powered platform that delivers 
+              unprecedented speed, quality, and creative possibilities for your projects.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="flex items-start space-x-4"
+              >
+                <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-lg text-white">{benefit}</p>
+              </motion.div>
+
+      {/* Use Cases Section */}
+      <section className="py-20 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Real-World Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI content creation platform is transforming industries and enabling new possibilities 
+              in digital marketing, education, entertainment, and creative industries.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-br from-gray-800 to-gray-700 p-6 rounded-xl border border-gray-600"
+              >
+                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                <p className="text-gray-300">{useCase.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 bg-gradient-to-br from-pink-900 to-purple-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Choose Your AI Content Creation Plan
+            </h2>
+            <p className="text-xl text-pink-200 max-w-3xl mx-auto">
+              Flexible pricing options designed to scale with your creative needs and content production.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricing.map((plan, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative bg-white rounded-2xl p-8 ${
+                  plan.popular ? 'ring-2 ring-purple-500 transform scale-105' : ''
+                }`}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
                 
-                <div className="space-y-4">
-                  {benefits.map((benefit, index) => (
-                    <motion.div
-                      key={benefit}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="flex items-center gap-3"
-                    >
-                      <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-                        <CheckCircle className="w-4 h-4 text-white" />
-                      </div>
-                      <span className="text-gray-300">{benefit}</span>
-                    </motion.div>
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
+                    <span className="text-gray-600 ml-1">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-600 mt-2">{plan.description}</p>
+                </div>
+
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-purple-500 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700">{feature}</span>
+                    </li>
                   ))}
-                </div>
+                </ul>
+
+                <button className="w-full btn-futuristic">
+                  Get Started
+                </button>
               </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-                className="relative"
-              >
-                <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl p-8 border border-purple-500/30">
-                  <div className="grid grid-cols-2 gap-6">
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-purple-400 mb-2">500%</div>
-                      <div className="text-sm text-gray-400">Content Production</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-blue-400 mb-2">70%</div>
-                      <div className="text-sm text-gray-400">Cost Reduction</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-green-400 mb-2">50+</div>
-                      <div className="text-sm text-gray-400">Languages</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-pink-400 mb-2">24/7</div>
-                      <div className="text-sm text-gray-400">Creation</div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Use Cases */}
-        <section className="py-20">
-          <div className="container-responsive">
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Content Creation?
+            </h2>
+            <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
+               Join the future of creative content with our AI-powered platform. 
+               Contact us today to learn how we can revolutionize your creative process.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="btn-futuristic-outline text-lg px-8 py-4 bg-white text-purple-600 hover:bg-purple-50">
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Contact Sales
+              </button>
+              <button className="btn-futuristic text-lg px-8 py-4">
+                <Play className="w-5 h-5 mr-2" />
+                Schedule Demo
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
             >
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Content Applications
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Get in Touch
               </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our AI platform addresses content creation needs across multiple 
-                industries and use cases.
+              <p className="text-gray-300 mb-8">
+                Ready to explore the future of content creation? Our team of experts 
+                is here to help you build AI-powered creative systems that inspire and engage.
               </p>
+              
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Phone className="w-5 h-5 text-purple-400" />
+                  <span className="text-white">+1 302 464 0950</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Mail className="w-5 h-5 text-purple-400" />
+                  <span className="text-white">kleber@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <MapPin className="w-5 h-5 text-purple-400" />
+                  <span className="text-white">364 E Main St STE 1008 Middletown DE 19709</span>
+                </div>
+              </div>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (
-                <motion.div
-                  key={useCase.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
-                    <useCase.icon className="w-8 h-8 text-white" />
-                  </div>
-                  
-                  <h3 className="text-2xl font-semibold text-white mb-4">
-                    {useCase.title}
-                  </h3>
-                  
-                  <p className="text-gray-400 leading-relaxed">
-                    {useCase.description}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Content Types */}
-        <section className="py-20 bg-slate-800/30">
-          <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="bg-gray-800 p-8 rounded-xl"
             >
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Content Types We Generate
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                From blog posts to video scripts, our AI platform creates 
-                diverse content types for all your needs.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {contentTypes.map((type, index) => (
-                <motion.div
-                  key={type}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: index * 0.05 }}
-                  viewport={{ once: true }}
-                  className="bg-slate-700/50 backdrop-blur-sm border border-slate-600/50 rounded-xl p-4 text-center hover:border-purple-500/50 transition-all duration-300"
-                >
-                  <span className="text-gray-300 text-sm font-medium">{type}</span>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Technologies */}
-        <section className="py-20">
-          <div className="container-responsive">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Advanced AI Technologies
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Built with cutting-edge AI and content generation technologies for 
-                reliable, scalable, and high-quality content creation.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {technologies.map((tech, index) => (
-                <motion.div
-                  key={tech}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-slate-700/50 backdrop-blur-sm border border-slate-600/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300"
-                >
-                  <span className="text-gray-300 font-medium">{tech}</span>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20">
-          <div className="container-responsive">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Content?
-              </h2>
-              
-              <p className="text-xl text-gray-400 mb-8">
-                Join leading brands and content creators who are already using our AI platform 
-                to generate high-quality content at scale.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center gap-2"
-                >
-                  Start Creating Today
-                  <ArrowRight className="w-5 h-5" />
-                </motion.button>
-                
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-purple-500 hover:text-purple-400 transition-all duration-300"
-                >
-                  Schedule Demo
-                </motion.button>
-              </div>
+              <h3 className="text-2xl font-semibold text-white mb-6">
+                Request Information
+              </h3>
+              <form className="space-y-4">
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
+                  />
+                </div>
+                <div>
+                  <textarea
+                    placeholder="Tell us about your content creation needs"
+                    rows={4}
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
+                  ></textarea>
+                </div>
+                <button type="submit" className="w-full btn-futuristic">
+                  Send Message
+                </button>
+              </form>
             </motion.div>
           </div>
-        </section>
-
-        {/* Contact Info */}
-        <section className="py-16 bg-slate-800/50">
-          <div className="container-responsive">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-              <div>
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Phone className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
-                <a href="tel:+13024640950" className="text-purple-400 hover:text-purple-300 transition-colors">
-                  +1 302 464 0950
-                </a>
-                <p className="text-sm text-slate-400 mt-2">Available 24/7 for urgent support</p>
-              </div>
-              
-              <div>
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Mail className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
-                <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 transition-colors">
-                  kleber@ziontechgroup.com
-                </a>
-                <p className="text-sm text-slate-400 mt-2">Response within 2 hours</p>
-              </div>
-              
-              <div>
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
-                <p className="text-slate-300">
-                  364 E Main St STE 1008<br />
-                  Middletown DE 19709
-                </p>
-                <p className="text-sm text-slate-400 mt-2">Global remote support available</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+    </div>
   );
 }
