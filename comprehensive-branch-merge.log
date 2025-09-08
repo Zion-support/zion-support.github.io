@@ -8129,3 +8129,490 @@ fatal: couldn't find remote ref cursor/automate-automation-redundancy-and-build-
 [2025-09-08T20:50:09.810Z] ✅ Success: Get git status
 [2025-09-08T20:50:09.810Z] 📄 Found 0 conflicted files
 [2025-09-08T20:50:09.810Z] 🚀 Add resolved files: git add .
+[2025-09-08T20:50:09.895Z] ✅ Success: Add resolved files
+[2025-09-08T20:50:09.895Z] 🚀 Commit merge for cursor/automate-automation-redundancy-and-build-improvement-4a85: git commit -m "Resolve conflicts and merge cursor/automate-automation-redundancy-and-build-improvement-4a85"
+[2025-09-08T20:50:09.947Z] ✅ Success: Commit merge for cursor/automate-automation-redundancy-and-build-improvement-4a85
+[2025-09-08T20:50:09.947Z] ✅ Successfully resolved conflicts and merged: cursor/automate-automation-redundancy-and-build-improvement-4a85
+[2025-09-08T20:50:09.947Z] 🔄 Attempting to merge branch: cursor/automate-automation-redundancy-and-build-improvement-7bfb
+[2025-09-08T20:50:09.947Z] 🚀 Fetch origin/cursor/automate-automation-redundancy-and-build-improvement-7bfb: git fetch origin cursor/automate-automation-redundancy-and-build-improvement-7bfb
+[2025-09-08T20:50:10.312Z] ✅ Success: Fetch origin/cursor/automate-automation-redundancy-and-build-improvement-7bfb
+[2025-09-08T20:50:10.313Z] 🚀 Merge cursor/automate-automation-redundancy-and-build-improvement-7bfb: git merge origin/cursor/automate-automation-redundancy-and-build-improvement-7bfb --no-ff -m "Merge branch cursor/automate-automation-redundancy-and-build-improvement-7bfb into main"
+[2025-09-08T20:50:10.747Z] ✅ Success: Merge cursor/automate-automation-redundancy-and-build-improvement-7bfb
+[2025-09-08T20:50:10.748Z] ✅ Successfully merged: cursor/automate-automation-redundancy-and-build-improvement-7bfb
+[2025-09-08T20:50:10.748Z] 🔄 Attempting to merge branch: cursor/automate-automation-redundancy-and-build-improvement-87ee
+[2025-09-08T20:50:10.748Z] 🚀 Fetch origin/cursor/automate-automation-redundancy-and-build-improvement-87ee: git fetch origin cursor/automate-automation-redundancy-and-build-improvement-87ee
+[2025-09-08T20:50:11.085Z] ✅ Success: Fetch origin/cursor/automate-automation-redundancy-and-build-improvement-87ee
+[2025-09-08T20:50:11.086Z] 🚀 Merge cursor/automate-automation-redundancy-and-build-improvement-87ee: git merge origin/cursor/automate-automation-redundancy-and-build-improvement-87ee --no-ff -m "Merge branch cursor/automate-automation-redundancy-and-build-improvement-87ee into main"
+[2025-09-08T20:50:11.521Z] ✅ Success: Merge cursor/automate-automation-redundancy-and-build-improvement-87ee
+[2025-09-08T20:50:11.521Z] ✅ Successfully merged: cursor/automate-automation-redundancy-and-build-improvement-87ee
+[2025-09-08T20:50:11.521Z] 🔄 Attempting to merge branch: cursor/automate-automation-redundancy-and-build-improvement-8d77
+[2025-09-08T20:50:11.521Z] 🚀 Fetch origin/cursor/automate-automation-redundancy-and-build-improvement-8d77: git fetch origin cursor/automate-automation-redundancy-and-build-improvement-8d77
+[2025-09-08T20:50:11.878Z] ✅ Success: Fetch origin/cursor/automate-automation-redundancy-and-build-improvement-8d77
+[2025-09-08T20:50:11.878Z] 🚀 Merge cursor/automate-automation-redundancy-and-build-improvement-8d77: git merge origin/cursor/automate-automation-redundancy-and-build-improvement-8d77 --no-ff -m "Merge branch cursor/automate-automation-redundancy-and-build-improvement-8d77 into main"
+[2025-09-08T20:50:12.308Z] ✅ Success: Merge cursor/automate-automation-redundancy-and-build-improvement-8d77
+[2025-09-08T20:50:12.308Z] ✅ Successfully merged: cursor/automate-automation-redundancy-and-build-improvement-8d77
+[2025-09-08T20:50:12.308Z] 🔄 Attempting to merge branch: cursor/automate-automation-redundancy-and-build-improvement-90f7
+[2025-09-08T20:50:12.308Z] 🚀 Fetch origin/cursor/automate-automation-redundancy-and-build-improvement-90f7: git fetch origin cursor/automate-automation-redundancy-and-build-improvement-90f7
+[2025-09-08T20:50:12.634Z] ✅ Success: Fetch origin/cursor/automate-automation-redundancy-and-build-improvement-90f7
+[2025-09-08T20:50:12.634Z] 🚀 Merge cursor/automate-automation-redundancy-and-build-improvement-90f7: git merge origin/cursor/automate-automation-redundancy-and-build-improvement-90f7 --no-ff -m "Merge branch cursor/automate-automation-redundancy-and-build-improvement-90f7 into main"
+[2025-09-08T20:50:13.054Z] ✅ Success: Merge cursor/automate-automation-redundancy-and-build-improvement-90f7
+[2025-09-08T20:50:13.054Z] ✅ Successfully merged: cursor/automate-automation-redundancy-and-build-improvement-90f7
+[2025-09-08T20:50:13.054Z] 🔄 Attempting to merge branch: cursor/automate-automation-redundancy-and-build-improvement-940b
+[2025-09-08T20:50:13.054Z] 🚀 Fetch origin/cursor/automate-automation-redundancy-and-build-improvement-940b: git fetch origin cursor/automate-automation-redundancy-and-build-improvement-940b
+[2025-09-08T20:50:13.429Z] ✅ Success: Fetch origin/cursor/automate-automation-redundancy-and-build-improvement-940b
+[2025-09-08T20:50:13.429Z] 🚀 Merge cursor/automate-automation-redundancy-and-build-improvement-940b: git merge origin/cursor/automate-automation-redundancy-and-build-improvement-940b --no-ff -m "Merge branch cursor/automate-automation-redundancy-and-build-improvement-940b into main"
+[2025-09-08T20:50:13.867Z] ✅ Success: Merge cursor/automate-automation-redundancy-and-build-improvement-940b
+[2025-09-08T20:50:13.867Z] ✅ Successfully merged: cursor/automate-automation-redundancy-and-build-improvement-940b
+[2025-09-08T20:50:13.867Z] 🔄 Attempting to merge branch: cursor/automate-automation-redundancy-and-build-improvement-964e
+[2025-09-08T20:50:13.867Z] 🚀 Fetch origin/cursor/automate-automation-redundancy-and-build-improvement-964e: git fetch origin cursor/automate-automation-redundancy-and-build-improvement-964e
+[2025-09-08T20:50:14.221Z] ✅ Success: Fetch origin/cursor/automate-automation-redundancy-and-build-improvement-964e
+[2025-09-08T20:50:14.221Z] 🚀 Merge cursor/automate-automation-redundancy-and-build-improvement-964e: git merge origin/cursor/automate-automation-redundancy-and-build-improvement-964e --no-ff -m "Merge branch cursor/automate-automation-redundancy-and-build-improvement-964e into main"
+[2025-09-08T20:50:14.645Z] ✅ Success: Merge cursor/automate-automation-redundancy-and-build-improvement-964e
+[2025-09-08T20:50:14.645Z] ✅ Successfully merged: cursor/automate-automation-redundancy-and-build-improvement-964e
+[2025-09-08T20:50:14.645Z] 🔄 Attempting to merge branch: cursor/automate-automation-redundancy-and-build-improvement-97d7
+[2025-09-08T20:50:14.645Z] 🚀 Fetch origin/cursor/automate-automation-redundancy-and-build-improvement-97d7: git fetch origin cursor/automate-automation-redundancy-and-build-improvement-97d7
+[2025-09-08T20:50:15.020Z] ✅ Success: Fetch origin/cursor/automate-automation-redundancy-and-build-improvement-97d7
+[2025-09-08T20:50:15.020Z] 🚀 Merge cursor/automate-automation-redundancy-and-build-improvement-97d7: git merge origin/cursor/automate-automation-redundancy-and-build-improvement-97d7 --no-ff -m "Merge branch cursor/automate-automation-redundancy-and-build-improvement-97d7 into main"
+[2025-09-08T20:50:15.461Z] ✅ Success: Merge cursor/automate-automation-redundancy-and-build-improvement-97d7
+[2025-09-08T20:50:15.461Z] ✅ Successfully merged: cursor/automate-automation-redundancy-and-build-improvement-97d7
+[2025-09-08T20:50:16.461Z] 📦 Processing batch 91/509
+[2025-09-08T20:50:16.461Z] 🔄 Attempting to merge branch: cursor/automate-automation-redundancy-and-build-improvement-e3e4
+[2025-09-08T20:50:16.461Z] 🚀 Fetch origin/cursor/automate-automation-redundancy-and-build-improvement-e3e4: git fetch origin cursor/automate-automation-redundancy-and-build-improvement-e3e4
+[2025-09-08T20:50:16.811Z] ✅ Success: Fetch origin/cursor/automate-automation-redundancy-and-build-improvement-e3e4
+[2025-09-08T20:50:16.811Z] 🚀 Merge cursor/automate-automation-redundancy-and-build-improvement-e3e4: git merge origin/cursor/automate-automation-redundancy-and-build-improvement-e3e4 --no-ff -m "Merge branch cursor/automate-automation-redundancy-and-build-improvement-e3e4 into main"
+[2025-09-08T20:50:17.237Z] ✅ Success: Merge cursor/automate-automation-redundancy-and-build-improvement-e3e4
+[2025-09-08T20:50:17.237Z] ✅ Successfully merged: cursor/automate-automation-redundancy-and-build-improvement-e3e4
+[2025-09-08T20:50:17.237Z] 🔄 Attempting to merge branch: cursor/automate-automation-redundancy-and-build-improvement-ea74
+[2025-09-08T20:50:17.237Z] 🚀 Fetch origin/cursor/automate-automation-redundancy-and-build-improvement-ea74: git fetch origin cursor/automate-automation-redundancy-and-build-improvement-ea74
+[2025-09-08T20:50:17.557Z] ✅ Success: Fetch origin/cursor/automate-automation-redundancy-and-build-improvement-ea74
+[2025-09-08T20:50:17.557Z] 🚀 Merge cursor/automate-automation-redundancy-and-build-improvement-ea74: git merge origin/cursor/automate-automation-redundancy-and-build-improvement-ea74 --no-ff -m "Merge branch cursor/automate-automation-redundancy-and-build-improvement-ea74 into main"
+[2025-09-08T20:50:17.981Z] ✅ Success: Merge cursor/automate-automation-redundancy-and-build-improvement-ea74
+[2025-09-08T20:50:17.981Z] ✅ Successfully merged: cursor/automate-automation-redundancy-and-build-improvement-ea74
+[2025-09-08T20:50:17.981Z] 🔄 Attempting to merge branch: cursor/automate-automation-redundancy-and-build-improvement-f8c0
+[2025-09-08T20:50:17.981Z] 🚀 Fetch origin/cursor/automate-automation-redundancy-and-build-improvement-f8c0: git fetch origin cursor/automate-automation-redundancy-and-build-improvement-f8c0
+[2025-09-08T20:50:18.322Z] ✅ Success: Fetch origin/cursor/automate-automation-redundancy-and-build-improvement-f8c0
+[2025-09-08T20:50:18.322Z] 🚀 Merge cursor/automate-automation-redundancy-and-build-improvement-f8c0: git merge origin/cursor/automate-automation-redundancy-and-build-improvement-f8c0 --no-ff -m "Merge branch cursor/automate-automation-redundancy-and-build-improvement-f8c0 into main"
+[2025-09-08T20:50:18.751Z] ✅ Success: Merge cursor/automate-automation-redundancy-and-build-improvement-f8c0
+[2025-09-08T20:50:18.751Z] ✅ Successfully merged: cursor/automate-automation-redundancy-and-build-improvement-f8c0
+[2025-09-08T20:50:18.751Z] 🔄 Attempting to merge branch: cursor/automate-automation-redundancy-and-build-improvement-f915
+[2025-09-08T20:50:18.751Z] 🚀 Fetch origin/cursor/automate-automation-redundancy-and-build-improvement-f915: git fetch origin cursor/automate-automation-redundancy-and-build-improvement-f915
+[2025-09-08T20:50:19.086Z] ✅ Success: Fetch origin/cursor/automate-automation-redundancy-and-build-improvement-f915
+[2025-09-08T20:50:19.086Z] 🚀 Merge cursor/automate-automation-redundancy-and-build-improvement-f915: git merge origin/cursor/automate-automation-redundancy-and-build-improvement-f915 --no-ff -m "Merge branch cursor/automate-automation-redundancy-and-build-improvement-f915 into main"
+[2025-09-08T20:50:19.507Z] ✅ Success: Merge cursor/automate-automation-redundancy-and-build-improvement-f915
+[2025-09-08T20:50:19.507Z] ✅ Successfully merged: cursor/automate-automation-redundancy-and-build-improvement-f915
+[2025-09-08T20:50:19.508Z] 🔄 Attempting to merge branch: cursor/automate-broken-link-and-missing-page-checks-b931
+[2025-09-08T20:50:19.508Z] 🚀 Fetch origin/cursor/automate-broken-link-and-missing-page-checks-b931: git fetch origin cursor/automate-broken-link-and-missing-page-checks-b931
+[2025-09-08T20:50:19.836Z] ✅ Success: Fetch origin/cursor/automate-broken-link-and-missing-page-checks-b931
+[2025-09-08T20:50:19.836Z] 🚀 Merge cursor/automate-broken-link-and-missing-page-checks-b931: git merge origin/cursor/automate-broken-link-and-missing-page-checks-b931 --no-ff -m "Merge branch cursor/automate-broken-link-and-missing-page-checks-b931 into main"
+[2025-09-08T20:50:20.258Z] ✅ Success: Merge cursor/automate-broken-link-and-missing-page-checks-b931
+[2025-09-08T20:50:20.258Z] ✅ Successfully merged: cursor/automate-broken-link-and-missing-page-checks-b931
+[2025-09-08T20:50:20.258Z] 🔄 Attempting to merge branch: cursor/automate-broken-link-checking-with-agent-factories-41c3
+[2025-09-08T20:50:20.258Z] 🚀 Fetch origin/cursor/automate-broken-link-checking-with-agent-factories-41c3: git fetch origin cursor/automate-broken-link-checking-with-agent-factories-41c3
+[2025-09-08T20:50:20.612Z] ✅ Success: Fetch origin/cursor/automate-broken-link-checking-with-agent-factories-41c3
+[2025-09-08T20:50:20.612Z] 🚀 Merge cursor/automate-broken-link-checking-with-agent-factories-41c3: git merge origin/cursor/automate-broken-link-checking-with-agent-factories-41c3 --no-ff -m "Merge branch cursor/automate-broken-link-checking-with-agent-factories-41c3 into main"
+[2025-09-08T20:50:21.068Z] ✅ Success: Merge cursor/automate-broken-link-checking-with-agent-factories-41c3
+[2025-09-08T20:50:21.068Z] ✅ Successfully merged: cursor/automate-broken-link-checking-with-agent-factories-41c3
+[2025-09-08T20:50:21.068Z] 🔄 Attempting to merge branch: cursor/automate-cloud-cron-jobs-and-sync-repository-16dc
+[2025-09-08T20:50:21.068Z] 🚀 Fetch origin/cursor/automate-cloud-cron-jobs-and-sync-repository-16dc: git fetch origin cursor/automate-cloud-cron-jobs-and-sync-repository-16dc
+[2025-09-08T20:50:21.454Z] ✅ Success: Fetch origin/cursor/automate-cloud-cron-jobs-and-sync-repository-16dc
+[2025-09-08T20:50:21.454Z] 🚀 Merge cursor/automate-cloud-cron-jobs-and-sync-repository-16dc: git merge origin/cursor/automate-cloud-cron-jobs-and-sync-repository-16dc --no-ff -m "Merge branch cursor/automate-cloud-cron-jobs-and-sync-repository-16dc into main"
+[2025-09-08T20:50:21.906Z] ✅ Success: Merge cursor/automate-cloud-cron-jobs-and-sync-repository-16dc
+[2025-09-08T20:50:21.906Z] ✅ Successfully merged: cursor/automate-cloud-cron-jobs-and-sync-repository-16dc
+[2025-09-08T20:50:21.906Z] 🔄 Attempting to merge branch: cursor/automate-cloud-cron-jobs-and-sync-repository-5730
+[2025-09-08T20:50:21.906Z] 🚀 Fetch origin/cursor/automate-cloud-cron-jobs-and-sync-repository-5730: git fetch origin cursor/automate-cloud-cron-jobs-and-sync-repository-5730
+[2025-09-08T20:50:22.298Z] ✅ Success: Fetch origin/cursor/automate-cloud-cron-jobs-and-sync-repository-5730
+[2025-09-08T20:50:22.299Z] 🚀 Merge cursor/automate-cloud-cron-jobs-and-sync-repository-5730: git merge origin/cursor/automate-cloud-cron-jobs-and-sync-repository-5730 --no-ff -m "Merge branch cursor/automate-cloud-cron-jobs-and-sync-repository-5730 into main"
+[2025-09-08T20:50:22.763Z] ✅ Success: Merge cursor/automate-cloud-cron-jobs-and-sync-repository-5730
+[2025-09-08T20:50:22.763Z] ✅ Successfully merged: cursor/automate-cloud-cron-jobs-and-sync-repository-5730
+[2025-09-08T20:50:22.763Z] 🔄 Attempting to merge branch: cursor/automate-cloud-cron-jobs-and-sync-repository-8cc5
+[2025-09-08T20:50:22.763Z] 🚀 Fetch origin/cursor/automate-cloud-cron-jobs-and-sync-repository-8cc5: git fetch origin cursor/automate-cloud-cron-jobs-and-sync-repository-8cc5
+[2025-09-08T20:50:23.145Z] ✅ Success: Fetch origin/cursor/automate-cloud-cron-jobs-and-sync-repository-8cc5
+[2025-09-08T20:50:23.145Z] 🚀 Merge cursor/automate-cloud-cron-jobs-and-sync-repository-8cc5: git merge origin/cursor/automate-cloud-cron-jobs-and-sync-repository-8cc5 --no-ff -m "Merge branch cursor/automate-cloud-cron-jobs-and-sync-repository-8cc5 into main"
+[2025-09-08T20:50:23.606Z] ✅ Success: Merge cursor/automate-cloud-cron-jobs-and-sync-repository-8cc5
+[2025-09-08T20:50:23.606Z] ✅ Successfully merged: cursor/automate-cloud-cron-jobs-and-sync-repository-8cc5
+[2025-09-08T20:50:23.606Z] 🔄 Attempting to merge branch: cursor/automate-commit-push-and-sync-across-computers-bbfb
+[2025-09-08T20:50:23.606Z] 🚀 Fetch origin/cursor/automate-commit-push-and-sync-across-computers-bbfb: git fetch origin cursor/automate-commit-push-and-sync-across-computers-bbfb
+[2025-09-08T20:50:23.973Z] ✅ Success: Fetch origin/cursor/automate-commit-push-and-sync-across-computers-bbfb
+[2025-09-08T20:50:23.973Z] 🚀 Merge cursor/automate-commit-push-and-sync-across-computers-bbfb: git merge origin/cursor/automate-commit-push-and-sync-across-computers-bbfb --no-ff -m "Merge branch cursor/automate-commit-push-and-sync-across-computers-bbfb into main"
+[2025-09-08T20:50:24.438Z] ✅ Success: Merge cursor/automate-commit-push-and-sync-across-computers-bbfb
+[2025-09-08T20:50:24.438Z] ✅ Successfully merged: cursor/automate-commit-push-and-sync-across-computers-bbfb
+[2025-09-08T20:50:25.440Z] 📦 Processing batch 92/509
+[2025-09-08T20:50:25.440Z] 🔄 Attempting to merge branch: cursor/automate-continuous-development-processes-4d04
+[2025-09-08T20:50:25.440Z] 🚀 Fetch origin/cursor/automate-continuous-development-processes-4d04: git fetch origin cursor/automate-continuous-development-processes-4d04
+[2025-09-08T20:50:25.810Z] ✅ Success: Fetch origin/cursor/automate-continuous-development-processes-4d04
+[2025-09-08T20:50:25.810Z] 🚀 Merge cursor/automate-continuous-development-processes-4d04: git merge origin/cursor/automate-continuous-development-processes-4d04 --no-ff -m "Merge branch cursor/automate-continuous-development-processes-4d04 into main"
+[2025-09-08T20:50:26.259Z] ✅ Success: Merge cursor/automate-continuous-development-processes-4d04
+[2025-09-08T20:50:26.259Z] ✅ Successfully merged: cursor/automate-continuous-development-processes-4d04
+[2025-09-08T20:50:26.259Z] 🔄 Attempting to merge branch: cursor/automate-continuous-project-improvement-and-integration-3bb7
+[2025-09-08T20:50:26.259Z] 🚀 Fetch origin/cursor/automate-continuous-project-improvement-and-integration-3bb7: git fetch origin cursor/automate-continuous-project-improvement-and-integration-3bb7
+[2025-09-08T20:50:26.638Z] ✅ Success: Fetch origin/cursor/automate-continuous-project-improvement-and-integration-3bb7
+[2025-09-08T20:50:26.638Z] 🚀 Merge cursor/automate-continuous-project-improvement-and-integration-3bb7: git merge origin/cursor/automate-continuous-project-improvement-and-integration-3bb7 --no-ff -m "Merge branch cursor/automate-continuous-project-improvement-and-integration-3bb7 into main"
+[2025-09-08T20:50:27.106Z] ✅ Success: Merge cursor/automate-continuous-project-improvement-and-integration-3bb7
+[2025-09-08T20:50:27.106Z] ✅ Successfully merged: cursor/automate-continuous-project-improvement-and-integration-3bb7
+[2025-09-08T20:50:27.106Z] 🔄 Attempting to merge branch: cursor/automate-continuous-project-optimization-and-diversity-631b
+[2025-09-08T20:50:27.106Z] 🚀 Fetch origin/cursor/automate-continuous-project-optimization-and-diversity-631b: git fetch origin cursor/automate-continuous-project-optimization-and-diversity-631b
+[2025-09-08T20:50:27.473Z] ✅ Success: Fetch origin/cursor/automate-continuous-project-optimization-and-diversity-631b
+[2025-09-08T20:50:27.473Z] 🚀 Merge cursor/automate-continuous-project-optimization-and-diversity-631b: git merge origin/cursor/automate-continuous-project-optimization-and-diversity-631b --no-ff -m "Merge branch cursor/automate-continuous-project-optimization-and-diversity-631b into main"
+[2025-09-08T20:50:27.910Z] ✅ Success: Merge cursor/automate-continuous-project-optimization-and-diversity-631b
+[2025-09-08T20:50:27.910Z] ✅ Successfully merged: cursor/automate-continuous-project-optimization-and-diversity-631b
+[2025-09-08T20:50:27.910Z] 🔄 Attempting to merge branch: cursor/automate-cursor-warning-fixes-and-merge-9f31
+[2025-09-08T20:50:27.910Z] 🚀 Fetch origin/cursor/automate-cursor-warning-fixes-and-merge-9f31: git fetch origin cursor/automate-cursor-warning-fixes-and-merge-9f31
+[2025-09-08T20:50:28.255Z] ✅ Success: Fetch origin/cursor/automate-cursor-warning-fixes-and-merge-9f31
+[2025-09-08T20:50:28.255Z] 🚀 Merge cursor/automate-cursor-warning-fixes-and-merge-9f31: git merge origin/cursor/automate-cursor-warning-fixes-and-merge-9f31 --no-ff -m "Merge branch cursor/automate-cursor-warning-fixes-and-merge-9f31 into main"
+[2025-09-08T20:50:28.687Z] ✅ Success: Merge cursor/automate-cursor-warning-fixes-and-merge-9f31
+[2025-09-08T20:50:28.687Z] ✅ Successfully merged: cursor/automate-cursor-warning-fixes-and-merge-9f31
+[2025-09-08T20:50:28.687Z] 🔄 Attempting to merge branch: cursor/automate-deployment-redundancy-and-clean-up-0b6a
+[2025-09-08T20:50:28.687Z] 🚀 Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-0b6a: git fetch origin cursor/automate-deployment-redundancy-and-clean-up-0b6a
+[2025-09-08T20:50:29.030Z] ✅ Success: Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-0b6a
+[2025-09-08T20:50:29.030Z] 🚀 Merge cursor/automate-deployment-redundancy-and-clean-up-0b6a: git merge origin/cursor/automate-deployment-redundancy-and-clean-up-0b6a --no-ff -m "Merge branch cursor/automate-deployment-redundancy-and-clean-up-0b6a into main"
+[2025-09-08T20:50:29.462Z] ✅ Success: Merge cursor/automate-deployment-redundancy-and-clean-up-0b6a
+[2025-09-08T20:50:29.462Z] ✅ Successfully merged: cursor/automate-deployment-redundancy-and-clean-up-0b6a
+[2025-09-08T20:50:29.462Z] 🔄 Attempting to merge branch: cursor/automate-deployment-redundancy-and-clean-up-1895
+[2025-09-08T20:50:29.462Z] 🚀 Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-1895: git fetch origin cursor/automate-deployment-redundancy-and-clean-up-1895
+[2025-09-08T20:50:29.833Z] ✅ Success: Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-1895
+[2025-09-08T20:50:29.833Z] 🚀 Merge cursor/automate-deployment-redundancy-and-clean-up-1895: git merge origin/cursor/automate-deployment-redundancy-and-clean-up-1895 --no-ff -m "Merge branch cursor/automate-deployment-redundancy-and-clean-up-1895 into main"
+[2025-09-08T20:50:30.279Z] ✅ Success: Merge cursor/automate-deployment-redundancy-and-clean-up-1895
+[2025-09-08T20:50:30.279Z] ✅ Successfully merged: cursor/automate-deployment-redundancy-and-clean-up-1895
+[2025-09-08T20:50:30.279Z] 🔄 Attempting to merge branch: cursor/automate-deployment-redundancy-and-clean-up-405f
+[2025-09-08T20:50:30.279Z] 🚀 Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-405f: git fetch origin cursor/automate-deployment-redundancy-and-clean-up-405f
+[2025-09-08T20:50:30.614Z] ✅ Success: Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-405f
+[2025-09-08T20:50:30.614Z] 🚀 Merge cursor/automate-deployment-redundancy-and-clean-up-405f: git merge origin/cursor/automate-deployment-redundancy-and-clean-up-405f --no-ff -m "Merge branch cursor/automate-deployment-redundancy-and-clean-up-405f into main"
+[2025-09-08T20:50:31.045Z] ✅ Success: Merge cursor/automate-deployment-redundancy-and-clean-up-405f
+[2025-09-08T20:50:31.046Z] ✅ Successfully merged: cursor/automate-deployment-redundancy-and-clean-up-405f
+[2025-09-08T20:50:31.046Z] 🔄 Attempting to merge branch: cursor/automate-deployment-redundancy-and-clean-up-5b71
+[2025-09-08T20:50:31.046Z] 🚀 Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-5b71: git fetch origin cursor/automate-deployment-redundancy-and-clean-up-5b71
+[2025-09-08T20:50:31.359Z] ✅ Success: Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-5b71
+[2025-09-08T20:50:31.359Z] 🚀 Merge cursor/automate-deployment-redundancy-and-clean-up-5b71: git merge origin/cursor/automate-deployment-redundancy-and-clean-up-5b71 --no-ff -m "Merge branch cursor/automate-deployment-redundancy-and-clean-up-5b71 into main"
+[2025-09-08T20:50:31.780Z] ✅ Success: Merge cursor/automate-deployment-redundancy-and-clean-up-5b71
+[2025-09-08T20:50:31.780Z] ✅ Successfully merged: cursor/automate-deployment-redundancy-and-clean-up-5b71
+[2025-09-08T20:50:31.780Z] 🔄 Attempting to merge branch: cursor/automate-deployment-redundancy-and-clean-up-5c78
+[2025-09-08T20:50:31.780Z] 🚀 Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-5c78: git fetch origin cursor/automate-deployment-redundancy-and-clean-up-5c78
+[2025-09-08T20:50:32.097Z] ✅ Success: Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-5c78
+[2025-09-08T20:50:32.097Z] 🚀 Merge cursor/automate-deployment-redundancy-and-clean-up-5c78: git merge origin/cursor/automate-deployment-redundancy-and-clean-up-5c78 --no-ff -m "Merge branch cursor/automate-deployment-redundancy-and-clean-up-5c78 into main"
+[2025-09-08T20:50:32.516Z] ✅ Success: Merge cursor/automate-deployment-redundancy-and-clean-up-5c78
+[2025-09-08T20:50:32.516Z] ✅ Successfully merged: cursor/automate-deployment-redundancy-and-clean-up-5c78
+[2025-09-08T20:50:32.516Z] 🔄 Attempting to merge branch: cursor/automate-deployment-redundancy-and-clean-up-5d6d
+[2025-09-08T20:50:32.517Z] 🚀 Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-5d6d: git fetch origin cursor/automate-deployment-redundancy-and-clean-up-5d6d
+[2025-09-08T20:50:32.840Z] ✅ Success: Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-5d6d
+[2025-09-08T20:50:32.840Z] 🚀 Merge cursor/automate-deployment-redundancy-and-clean-up-5d6d: git merge origin/cursor/automate-deployment-redundancy-and-clean-up-5d6d --no-ff -m "Merge branch cursor/automate-deployment-redundancy-and-clean-up-5d6d into main"
+[2025-09-08T20:50:33.266Z] ✅ Success: Merge cursor/automate-deployment-redundancy-and-clean-up-5d6d
+[2025-09-08T20:50:33.266Z] ✅ Successfully merged: cursor/automate-deployment-redundancy-and-clean-up-5d6d
+[2025-09-08T20:50:34.267Z] 📦 Processing batch 93/509
+[2025-09-08T20:50:34.267Z] 🔄 Attempting to merge branch: cursor/automate-deployment-redundancy-and-clean-up-60e4
+[2025-09-08T20:50:34.267Z] 🚀 Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-60e4: git fetch origin cursor/automate-deployment-redundancy-and-clean-up-60e4
+[2025-09-08T20:50:34.587Z] ✅ Success: Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-60e4
+[2025-09-08T20:50:34.587Z] 🚀 Merge cursor/automate-deployment-redundancy-and-clean-up-60e4: git merge origin/cursor/automate-deployment-redundancy-and-clean-up-60e4 --no-ff -m "Merge branch cursor/automate-deployment-redundancy-and-clean-up-60e4 into main"
+[2025-09-08T20:50:35.021Z] ✅ Success: Merge cursor/automate-deployment-redundancy-and-clean-up-60e4
+[2025-09-08T20:50:35.021Z] ✅ Successfully merged: cursor/automate-deployment-redundancy-and-clean-up-60e4
+[2025-09-08T20:50:35.021Z] 🔄 Attempting to merge branch: cursor/automate-deployment-redundancy-and-clean-up-6a10
+[2025-09-08T20:50:35.021Z] 🚀 Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-6a10: git fetch origin cursor/automate-deployment-redundancy-and-clean-up-6a10
+[2025-09-08T20:50:35.350Z] ✅ Success: Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-6a10
+[2025-09-08T20:50:35.350Z] 🚀 Merge cursor/automate-deployment-redundancy-and-clean-up-6a10: git merge origin/cursor/automate-deployment-redundancy-and-clean-up-6a10 --no-ff -m "Merge branch cursor/automate-deployment-redundancy-and-clean-up-6a10 into main"
+[2025-09-08T20:50:35.769Z] ✅ Success: Merge cursor/automate-deployment-redundancy-and-clean-up-6a10
+[2025-09-08T20:50:35.769Z] ✅ Successfully merged: cursor/automate-deployment-redundancy-and-clean-up-6a10
+[2025-09-08T20:50:35.769Z] 🔄 Attempting to merge branch: cursor/automate-deployment-redundancy-and-clean-up-8421
+[2025-09-08T20:50:35.769Z] 🚀 Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-8421: git fetch origin cursor/automate-deployment-redundancy-and-clean-up-8421
+[2025-09-08T20:50:36.103Z] ✅ Success: Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-8421
+[2025-09-08T20:50:36.103Z] 🚀 Merge cursor/automate-deployment-redundancy-and-clean-up-8421: git merge origin/cursor/automate-deployment-redundancy-and-clean-up-8421 --no-ff -m "Merge branch cursor/automate-deployment-redundancy-and-clean-up-8421 into main"
+[2025-09-08T20:50:36.526Z] ✅ Success: Merge cursor/automate-deployment-redundancy-and-clean-up-8421
+[2025-09-08T20:50:36.526Z] ✅ Successfully merged: cursor/automate-deployment-redundancy-and-clean-up-8421
+[2025-09-08T20:50:36.526Z] 🔄 Attempting to merge branch: cursor/automate-deployment-redundancy-and-clean-up-94f3
+[2025-09-08T20:50:36.526Z] 🚀 Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-94f3: git fetch origin cursor/automate-deployment-redundancy-and-clean-up-94f3
+[2025-09-08T20:50:36.873Z] ✅ Success: Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-94f3
+[2025-09-08T20:50:36.873Z] 🚀 Merge cursor/automate-deployment-redundancy-and-clean-up-94f3: git merge origin/cursor/automate-deployment-redundancy-and-clean-up-94f3 --no-ff -m "Merge branch cursor/automate-deployment-redundancy-and-clean-up-94f3 into main"
+[2025-09-08T20:50:37.297Z] ✅ Success: Merge cursor/automate-deployment-redundancy-and-clean-up-94f3
+[2025-09-08T20:50:37.297Z] ✅ Successfully merged: cursor/automate-deployment-redundancy-and-clean-up-94f3
+[2025-09-08T20:50:37.297Z] 🔄 Attempting to merge branch: cursor/automate-deployment-redundancy-and-clean-up-a700
+[2025-09-08T20:50:37.297Z] 🚀 Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-a700: git fetch origin cursor/automate-deployment-redundancy-and-clean-up-a700
+[2025-09-08T20:50:37.625Z] ✅ Success: Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-a700
+[2025-09-08T20:50:37.625Z] 🚀 Merge cursor/automate-deployment-redundancy-and-clean-up-a700: git merge origin/cursor/automate-deployment-redundancy-and-clean-up-a700 --no-ff -m "Merge branch cursor/automate-deployment-redundancy-and-clean-up-a700 into main"
+[2025-09-08T20:50:38.047Z] ✅ Success: Merge cursor/automate-deployment-redundancy-and-clean-up-a700
+[2025-09-08T20:50:38.047Z] ✅ Successfully merged: cursor/automate-deployment-redundancy-and-clean-up-a700
+[2025-09-08T20:50:38.047Z] 🔄 Attempting to merge branch: cursor/automate-deployment-redundancy-and-clean-up-ae58
+[2025-09-08T20:50:38.047Z] 🚀 Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-ae58: git fetch origin cursor/automate-deployment-redundancy-and-clean-up-ae58
+[2025-09-08T20:50:38.367Z] ✅ Success: Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-ae58
+[2025-09-08T20:50:38.367Z] 🚀 Merge cursor/automate-deployment-redundancy-and-clean-up-ae58: git merge origin/cursor/automate-deployment-redundancy-and-clean-up-ae58 --no-ff -m "Merge branch cursor/automate-deployment-redundancy-and-clean-up-ae58 into main"
+[2025-09-08T20:50:38.800Z] ✅ Success: Merge cursor/automate-deployment-redundancy-and-clean-up-ae58
+[2025-09-08T20:50:38.800Z] ✅ Successfully merged: cursor/automate-deployment-redundancy-and-clean-up-ae58
+[2025-09-08T20:50:38.800Z] 🔄 Attempting to merge branch: cursor/automate-deployment-redundancy-and-clean-up-c86d
+[2025-09-08T20:50:38.800Z] 🚀 Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-c86d: git fetch origin cursor/automate-deployment-redundancy-and-clean-up-c86d
+[2025-09-08T20:50:39.110Z] ✅ Success: Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-c86d
+[2025-09-08T20:50:39.110Z] 🚀 Merge cursor/automate-deployment-redundancy-and-clean-up-c86d: git merge origin/cursor/automate-deployment-redundancy-and-clean-up-c86d --no-ff -m "Merge branch cursor/automate-deployment-redundancy-and-clean-up-c86d into main"
+[2025-09-08T20:50:39.555Z] ✅ Success: Merge cursor/automate-deployment-redundancy-and-clean-up-c86d
+[2025-09-08T20:50:39.555Z] ✅ Successfully merged: cursor/automate-deployment-redundancy-and-clean-up-c86d
+[2025-09-08T20:50:39.555Z] 🔄 Attempting to merge branch: cursor/automate-deployment-redundancy-and-clean-up-e342
+[2025-09-08T20:50:39.555Z] 🚀 Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-e342: git fetch origin cursor/automate-deployment-redundancy-and-clean-up-e342
+[2025-09-08T20:50:39.911Z] ✅ Success: Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-e342
+[2025-09-08T20:50:39.911Z] 🚀 Merge cursor/automate-deployment-redundancy-and-clean-up-e342: git merge origin/cursor/automate-deployment-redundancy-and-clean-up-e342 --no-ff -m "Merge branch cursor/automate-deployment-redundancy-and-clean-up-e342 into main"
+[2025-09-08T20:50:40.330Z] ✅ Success: Merge cursor/automate-deployment-redundancy-and-clean-up-e342
+[2025-09-08T20:50:40.330Z] ✅ Successfully merged: cursor/automate-deployment-redundancy-and-clean-up-e342
+[2025-09-08T20:50:40.330Z] 🔄 Attempting to merge branch: cursor/automate-deployment-redundancy-and-clean-up-ece7
+[2025-09-08T20:50:40.330Z] 🚀 Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-ece7: git fetch origin cursor/automate-deployment-redundancy-and-clean-up-ece7
+[2025-09-08T20:50:40.669Z] ✅ Success: Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-ece7
+[2025-09-08T20:50:40.669Z] 🚀 Merge cursor/automate-deployment-redundancy-and-clean-up-ece7: git merge origin/cursor/automate-deployment-redundancy-and-clean-up-ece7 --no-ff -m "Merge branch cursor/automate-deployment-redundancy-and-clean-up-ece7 into main"
+[2025-09-08T20:50:41.089Z] ✅ Success: Merge cursor/automate-deployment-redundancy-and-clean-up-ece7
+[2025-09-08T20:50:41.089Z] ✅ Successfully merged: cursor/automate-deployment-redundancy-and-clean-up-ece7
+[2025-09-08T20:50:41.089Z] 🔄 Attempting to merge branch: cursor/automate-deployment-redundancy-and-clean-up-fcee
+[2025-09-08T20:50:41.089Z] 🚀 Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-fcee: git fetch origin cursor/automate-deployment-redundancy-and-clean-up-fcee
+[2025-09-08T20:50:41.405Z] ✅ Success: Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-fcee
+[2025-09-08T20:50:41.405Z] 🚀 Merge cursor/automate-deployment-redundancy-and-clean-up-fcee: git merge origin/cursor/automate-deployment-redundancy-and-clean-up-fcee --no-ff -m "Merge branch cursor/automate-deployment-redundancy-and-clean-up-fcee into main"
+[2025-09-08T20:50:41.821Z] ✅ Success: Merge cursor/automate-deployment-redundancy-and-clean-up-fcee
+[2025-09-08T20:50:41.821Z] ✅ Successfully merged: cursor/automate-deployment-redundancy-and-clean-up-fcee
+[2025-09-08T20:50:42.822Z] 📦 Processing batch 94/509
+[2025-09-08T20:50:42.822Z] 🔄 Attempting to merge branch: cursor/automate-deployment-redundancy-and-clean-up-fd72
+[2025-09-08T20:50:42.822Z] 🚀 Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-fd72: git fetch origin cursor/automate-deployment-redundancy-and-clean-up-fd72
+[2025-09-08T20:50:43.142Z] ✅ Success: Fetch origin/cursor/automate-deployment-redundancy-and-clean-up-fd72
+[2025-09-08T20:50:43.142Z] 🚀 Merge cursor/automate-deployment-redundancy-and-clean-up-fd72: git merge origin/cursor/automate-deployment-redundancy-and-clean-up-fd72 --no-ff -m "Merge branch cursor/automate-deployment-redundancy-and-clean-up-fd72 into main"
+[2025-09-08T20:50:43.570Z] ✅ Success: Merge cursor/automate-deployment-redundancy-and-clean-up-fd72
+[2025-09-08T20:50:43.570Z] ✅ Successfully merged: cursor/automate-deployment-redundancy-and-clean-up-fd72
+[2025-09-08T20:50:43.570Z] 🔄 Attempting to merge branch: cursor/automate-error-fixing-and-deploy-to-main-8fed
+[2025-09-08T20:50:43.570Z] 🚀 Fetch origin/cursor/automate-error-fixing-and-deploy-to-main-8fed: git fetch origin cursor/automate-error-fixing-and-deploy-to-main-8fed
+[2025-09-08T20:50:43.901Z] ✅ Success: Fetch origin/cursor/automate-error-fixing-and-deploy-to-main-8fed
+[2025-09-08T20:50:43.901Z] 🚀 Merge cursor/automate-error-fixing-and-deploy-to-main-8fed: git merge origin/cursor/automate-error-fixing-and-deploy-to-main-8fed --no-ff -m "Merge branch cursor/automate-error-fixing-and-deploy-to-main-8fed into main"
+[2025-09-08T20:50:44.349Z] ✅ Success: Merge cursor/automate-error-fixing-and-deploy-to-main-8fed
+[2025-09-08T20:50:44.349Z] ✅ Successfully merged: cursor/automate-error-fixing-and-deploy-to-main-8fed
+[2025-09-08T20:50:44.349Z] 🔄 Attempting to merge branch: cursor/automate-exponential-app-usefulness-with-agent-factories-28bf
+[2025-09-08T20:50:44.349Z] 🚀 Fetch origin/cursor/automate-exponential-app-usefulness-with-agent-factories-28bf: git fetch origin cursor/automate-exponential-app-usefulness-with-agent-factories-28bf
+[2025-09-08T20:50:44.667Z] ✅ Success: Fetch origin/cursor/automate-exponential-app-usefulness-with-agent-factories-28bf
+[2025-09-08T20:50:44.667Z] 🚀 Merge cursor/automate-exponential-app-usefulness-with-agent-factories-28bf: git merge origin/cursor/automate-exponential-app-usefulness-with-agent-factories-28bf --no-ff -m "Merge branch cursor/automate-exponential-app-usefulness-with-agent-factories-28bf into main"
+[2025-09-08T20:50:45.087Z] ✅ Success: Merge cursor/automate-exponential-app-usefulness-with-agent-factories-28bf
+[2025-09-08T20:50:45.088Z] ✅ Successfully merged: cursor/automate-exponential-app-usefulness-with-agent-factories-28bf
+[2025-09-08T20:50:45.088Z] 🔄 Attempting to merge branch: cursor/automate-feature-and-content-updates-from-chat-a9d7
+[2025-09-08T20:50:45.088Z] 🚀 Fetch origin/cursor/automate-feature-and-content-updates-from-chat-a9d7: git fetch origin cursor/automate-feature-and-content-updates-from-chat-a9d7
+[2025-09-08T20:50:45.409Z] ✅ Success: Fetch origin/cursor/automate-feature-and-content-updates-from-chat-a9d7
+[2025-09-08T20:50:45.409Z] 🚀 Merge cursor/automate-feature-and-content-updates-from-chat-a9d7: git merge origin/cursor/automate-feature-and-content-updates-from-chat-a9d7 --no-ff -m "Merge branch cursor/automate-feature-and-content-updates-from-chat-a9d7 into main"
+[2025-09-08T20:50:45.846Z] ✅ Success: Merge cursor/automate-feature-and-content-updates-from-chat-a9d7
+[2025-09-08T20:50:45.846Z] ✅ Successfully merged: cursor/automate-feature-and-content-updates-from-chat-a9d7
+[2025-09-08T20:50:45.846Z] 🔄 Attempting to merge branch: cursor/automate-feature-comparison-and-merge-to-main-24d8
+[2025-09-08T20:50:45.846Z] 🚀 Fetch origin/cursor/automate-feature-comparison-and-merge-to-main-24d8: git fetch origin cursor/automate-feature-comparison-and-merge-to-main-24d8
+[2025-09-08T20:50:46.250Z] ✅ Success: Fetch origin/cursor/automate-feature-comparison-and-merge-to-main-24d8
+[2025-09-08T20:50:46.250Z] 🚀 Merge cursor/automate-feature-comparison-and-merge-to-main-24d8: git merge origin/cursor/automate-feature-comparison-and-merge-to-main-24d8 --no-ff -m "Merge branch cursor/automate-feature-comparison-and-merge-to-main-24d8 into main"
+[2025-09-08T20:50:46.698Z] ✅ Success: Merge cursor/automate-feature-comparison-and-merge-to-main-24d8
+[2025-09-08T20:50:46.698Z] ✅ Successfully merged: cursor/automate-feature-comparison-and-merge-to-main-24d8
+[2025-09-08T20:50:46.698Z] 🔄 Attempting to merge branch: cursor/automate-front-page-content-and-feature-advertising-3397
+[2025-09-08T20:50:46.698Z] 🚀 Fetch origin/cursor/automate-front-page-content-and-feature-advertising-3397: git fetch origin cursor/automate-front-page-content-and-feature-advertising-3397
+[2025-09-08T20:50:47.034Z] ✅ Success: Fetch origin/cursor/automate-front-page-content-and-feature-advertising-3397
+[2025-09-08T20:50:47.034Z] 🚀 Merge cursor/automate-front-page-content-and-feature-advertising-3397: git merge origin/cursor/automate-front-page-content-and-feature-advertising-3397 --no-ff -m "Merge branch cursor/automate-front-page-content-and-feature-advertising-3397 into main"
+[2025-09-08T20:50:47.455Z] ✅ Success: Merge cursor/automate-front-page-content-and-feature-advertising-3397
+[2025-09-08T20:50:47.455Z] ✅ Successfully merged: cursor/automate-front-page-content-and-feature-advertising-3397
+[2025-09-08T20:50:47.455Z] 🔄 Attempting to merge branch: cursor/automate-fundraising-deck-and-deal-room-generation-c352
+[2025-09-08T20:50:47.455Z] 🚀 Fetch origin/cursor/automate-fundraising-deck-and-deal-room-generation-c352: git fetch origin cursor/automate-fundraising-deck-and-deal-room-generation-c352
+[2025-09-08T20:50:47.771Z] ✅ Success: Fetch origin/cursor/automate-fundraising-deck-and-deal-room-generation-c352
+[2025-09-08T20:50:47.771Z] 🚀 Merge cursor/automate-fundraising-deck-and-deal-room-generation-c352: git merge origin/cursor/automate-fundraising-deck-and-deal-room-generation-c352 --no-ff -m "Merge branch cursor/automate-fundraising-deck-and-deal-room-generation-c352 into main"
+[2025-09-08T20:50:48.189Z] ✅ Success: Merge cursor/automate-fundraising-deck-and-deal-room-generation-c352
+[2025-09-08T20:50:48.189Z] ✅ Successfully merged: cursor/automate-fundraising-deck-and-deal-room-generation-c352
+[2025-09-08T20:50:48.189Z] 🔄 Attempting to merge branch: cursor/automate-futuristic-front-page-enhancements-738d
+[2025-09-08T20:50:48.189Z] 🚀 Fetch origin/cursor/automate-futuristic-front-page-enhancements-738d: git fetch origin cursor/automate-futuristic-front-page-enhancements-738d
+[2025-09-08T20:50:48.525Z] ✅ Success: Fetch origin/cursor/automate-futuristic-front-page-enhancements-738d
+[2025-09-08T20:50:48.525Z] 🚀 Merge cursor/automate-futuristic-front-page-enhancements-738d: git merge origin/cursor/automate-futuristic-front-page-enhancements-738d --no-ff -m "Merge branch cursor/automate-futuristic-front-page-enhancements-738d into main"
+[2025-09-08T20:50:48.962Z] ✅ Success: Merge cursor/automate-futuristic-front-page-enhancements-738d
+[2025-09-08T20:50:48.962Z] ✅ Successfully merged: cursor/automate-futuristic-front-page-enhancements-738d
+[2025-09-08T20:50:48.962Z] 🔄 Attempting to merge branch: cursor/automate-futuristic-front-page-enhancements-aafa
+[2025-09-08T20:50:48.962Z] 🚀 Fetch origin/cursor/automate-futuristic-front-page-enhancements-aafa: git fetch origin cursor/automate-futuristic-front-page-enhancements-aafa
+[2025-09-08T20:50:49.338Z] ✅ Success: Fetch origin/cursor/automate-futuristic-front-page-enhancements-aafa
+[2025-09-08T20:50:49.338Z] 🚀 Merge cursor/automate-futuristic-front-page-enhancements-aafa: git merge origin/cursor/automate-futuristic-front-page-enhancements-aafa --no-ff -m "Merge branch cursor/automate-futuristic-front-page-enhancements-aafa into main"
+[2025-09-08T20:50:49.768Z] ✅ Success: Merge cursor/automate-futuristic-front-page-enhancements-aafa
+[2025-09-08T20:50:49.768Z] ✅ Successfully merged: cursor/automate-futuristic-front-page-enhancements-aafa
+[2025-09-08T20:50:49.768Z] 🔄 Attempting to merge branch: cursor/automate-layout-fixing-and-agent-factory-suggestions-1ae5
+[2025-09-08T20:50:49.768Z] 🚀 Fetch origin/cursor/automate-layout-fixing-and-agent-factory-suggestions-1ae5: git fetch origin cursor/automate-layout-fixing-and-agent-factory-suggestions-1ae5
+[2025-09-08T20:50:50.105Z] ✅ Success: Fetch origin/cursor/automate-layout-fixing-and-agent-factory-suggestions-1ae5
+[2025-09-08T20:50:50.105Z] 🚀 Merge cursor/automate-layout-fixing-and-agent-factory-suggestions-1ae5: git merge origin/cursor/automate-layout-fixing-and-agent-factory-suggestions-1ae5 --no-ff -m "Merge branch cursor/automate-layout-fixing-and-agent-factory-suggestions-1ae5 into main"
+[2025-09-08T20:50:50.530Z] ✅ Success: Merge cursor/automate-layout-fixing-and-agent-factory-suggestions-1ae5
+[2025-09-08T20:50:50.530Z] ✅ Successfully merged: cursor/automate-layout-fixing-and-agent-factory-suggestions-1ae5
+[2025-09-08T20:50:51.530Z] 📦 Processing batch 95/509
+[2025-09-08T20:50:51.531Z] 🔄 Attempting to merge branch: cursor/automate-main-page-with-futuristic-design-e1b7
+[2025-09-08T20:50:51.531Z] 🚀 Fetch origin/cursor/automate-main-page-with-futuristic-design-e1b7: git fetch origin cursor/automate-main-page-with-futuristic-design-e1b7
+[2025-09-08T20:50:51.863Z] ✅ Success: Fetch origin/cursor/automate-main-page-with-futuristic-design-e1b7
+[2025-09-08T20:50:51.864Z] 🚀 Merge cursor/automate-main-page-with-futuristic-design-e1b7: git merge origin/cursor/automate-main-page-with-futuristic-design-e1b7 --no-ff -m "Merge branch cursor/automate-main-page-with-futuristic-design-e1b7 into main"
+[2025-09-08T20:50:52.292Z] ✅ Success: Merge cursor/automate-main-page-with-futuristic-design-e1b7
+[2025-09-08T20:50:52.292Z] ✅ Successfully merged: cursor/automate-main-page-with-futuristic-design-e1b7
+[2025-09-08T20:50:52.292Z] 🔄 Attempting to merge branch: cursor/automate-merge-conflict-resolution-and-main-branch-sync-421c
+[2025-09-08T20:50:52.292Z] 🚀 Fetch origin/cursor/automate-merge-conflict-resolution-and-main-branch-sync-421c: git fetch origin cursor/automate-merge-conflict-resolution-and-main-branch-sync-421c
+[2025-09-08T20:50:52.615Z] ✅ Success: Fetch origin/cursor/automate-merge-conflict-resolution-and-main-branch-sync-421c
+[2025-09-08T20:50:52.616Z] 🚀 Merge cursor/automate-merge-conflict-resolution-and-main-branch-sync-421c: git merge origin/cursor/automate-merge-conflict-resolution-and-main-branch-sync-421c --no-ff -m "Merge branch cursor/automate-merge-conflict-resolution-and-main-branch-sync-421c into main"
+[2025-09-08T20:50:53.041Z] ✅ Success: Merge cursor/automate-merge-conflict-resolution-and-main-branch-sync-421c
+[2025-09-08T20:50:53.041Z] ✅ Successfully merged: cursor/automate-merge-conflict-resolution-and-main-branch-sync-421c
+[2025-09-08T20:50:53.041Z] 🔄 Attempting to merge branch: cursor/automate-netlify-build-fixes-and-monitoring-43ee
+[2025-09-08T20:50:53.041Z] 🚀 Fetch origin/cursor/automate-netlify-build-fixes-and-monitoring-43ee: git fetch origin cursor/automate-netlify-build-fixes-and-monitoring-43ee
+[2025-09-08T20:50:53.368Z] ✅ Success: Fetch origin/cursor/automate-netlify-build-fixes-and-monitoring-43ee
+[2025-09-08T20:50:53.368Z] 🚀 Merge cursor/automate-netlify-build-fixes-and-monitoring-43ee: git merge origin/cursor/automate-netlify-build-fixes-and-monitoring-43ee --no-ff -m "Merge branch cursor/automate-netlify-build-fixes-and-monitoring-43ee into main"
+[2025-09-08T20:50:53.794Z] ✅ Success: Merge cursor/automate-netlify-build-fixes-and-monitoring-43ee
+[2025-09-08T20:50:53.794Z] ✅ Successfully merged: cursor/automate-netlify-build-fixes-and-monitoring-43ee
+[2025-09-08T20:50:53.794Z] 🔄 Attempting to merge branch: cursor/automate-netlify-build-fixing-and-monitoring-f10e
+[2025-09-08T20:50:53.794Z] 🚀 Fetch origin/cursor/automate-netlify-build-fixing-and-monitoring-f10e: git fetch origin cursor/automate-netlify-build-fixing-and-monitoring-f10e
+[2025-09-08T20:50:54.163Z] ✅ Success: Fetch origin/cursor/automate-netlify-build-fixing-and-monitoring-f10e
+[2025-09-08T20:50:54.163Z] 🚀 Merge cursor/automate-netlify-build-fixing-and-monitoring-f10e: git merge origin/cursor/automate-netlify-build-fixing-and-monitoring-f10e --no-ff -m "Merge branch cursor/automate-netlify-build-fixing-and-monitoring-f10e into main"
+[2025-09-08T20:50:54.591Z] ✅ Success: Merge cursor/automate-netlify-build-fixing-and-monitoring-f10e
+[2025-09-08T20:50:54.592Z] ✅ Successfully merged: cursor/automate-netlify-build-fixing-and-monitoring-f10e
+[2025-09-08T20:50:54.592Z] 🔄 Attempting to merge branch: cursor/automate-new-app-page-and-feature-additions-3779
+[2025-09-08T20:50:54.592Z] 🚀 Fetch origin/cursor/automate-new-app-page-and-feature-additions-3779: git fetch origin cursor/automate-new-app-page-and-feature-additions-3779
+[2025-09-08T20:50:54.934Z] ✅ Success: Fetch origin/cursor/automate-new-app-page-and-feature-additions-3779
+[2025-09-08T20:50:54.934Z] 🚀 Merge cursor/automate-new-app-page-and-feature-additions-3779: git merge origin/cursor/automate-new-app-page-and-feature-additions-3779 --no-ff -m "Merge branch cursor/automate-new-app-page-and-feature-additions-3779 into main"
+[2025-09-08T20:50:55.364Z] ✅ Success: Merge cursor/automate-new-app-page-and-feature-additions-3779
+[2025-09-08T20:50:55.364Z] ✅ Successfully merged: cursor/automate-new-app-page-and-feature-additions-3779
+[2025-09-08T20:50:55.364Z] 🔄 Attempting to merge branch: cursor/automate-project-development-with-netlify-7f13
+[2025-09-08T20:50:55.364Z] 🚀 Fetch origin/cursor/automate-project-development-with-netlify-7f13: git fetch origin cursor/automate-project-development-with-netlify-7f13
+[2025-09-08T20:50:55.684Z] ✅ Success: Fetch origin/cursor/automate-project-development-with-netlify-7f13
+[2025-09-08T20:50:55.684Z] 🚀 Merge cursor/automate-project-development-with-netlify-7f13: git merge origin/cursor/automate-project-development-with-netlify-7f13 --no-ff -m "Merge branch cursor/automate-project-development-with-netlify-7f13 into main"
+[2025-09-08T20:50:56.110Z] ✅ Success: Merge cursor/automate-project-development-with-netlify-7f13
+[2025-09-08T20:50:56.111Z] ✅ Successfully merged: cursor/automate-project-development-with-netlify-7f13
+[2025-09-08T20:50:56.111Z] 🔄 Attempting to merge branch: cursor/automate-project-enhancement-and-merge-cac0
+[2025-09-08T20:50:56.111Z] 🚀 Fetch origin/cursor/automate-project-enhancement-and-merge-cac0: git fetch origin cursor/automate-project-enhancement-and-merge-cac0
+[2025-09-08T20:50:56.433Z] ✅ Success: Fetch origin/cursor/automate-project-enhancement-and-merge-cac0
+[2025-09-08T20:50:56.433Z] 🚀 Merge cursor/automate-project-enhancement-and-merge-cac0: git merge origin/cursor/automate-project-enhancement-and-merge-cac0 --no-ff -m "Merge branch cursor/automate-project-enhancement-and-merge-cac0 into main"
+[2025-09-08T20:50:56.862Z] ✅ Success: Merge cursor/automate-project-enhancement-and-merge-cac0
+[2025-09-08T20:50:56.862Z] ✅ Successfully merged: cursor/automate-project-enhancement-and-merge-cac0
+[2025-09-08T20:50:56.862Z] 🔄 Attempting to merge branch: cursor/automate-project-error-resolution-6856
+[2025-09-08T20:50:56.862Z] 🚀 Fetch origin/cursor/automate-project-error-resolution-6856: git fetch origin cursor/automate-project-error-resolution-6856
+[2025-09-08T20:50:57.191Z] ✅ Success: Fetch origin/cursor/automate-project-error-resolution-6856
+[2025-09-08T20:50:57.191Z] 🚀 Merge cursor/automate-project-error-resolution-6856: git merge origin/cursor/automate-project-error-resolution-6856 --no-ff -m "Merge branch cursor/automate-project-error-resolution-6856 into main"
+[2025-09-08T20:50:57.613Z] ✅ Success: Merge cursor/automate-project-error-resolution-6856
+[2025-09-08T20:50:57.613Z] ✅ Successfully merged: cursor/automate-project-error-resolution-6856
+[2025-09-08T20:50:57.613Z] 🔄 Attempting to merge branch: cursor/automate-project-sync-to-github-main-branch-89d5
+[2025-09-08T20:50:57.613Z] 🚀 Fetch origin/cursor/automate-project-sync-to-github-main-branch-89d5: git fetch origin cursor/automate-project-sync-to-github-main-branch-89d5
+[2025-09-08T20:50:57.951Z] ✅ Success: Fetch origin/cursor/automate-project-sync-to-github-main-branch-89d5
+[2025-09-08T20:50:57.951Z] 🚀 Merge cursor/automate-project-sync-to-github-main-branch-89d5: git merge origin/cursor/automate-project-sync-to-github-main-branch-89d5 --no-ff -m "Merge branch cursor/automate-project-sync-to-github-main-branch-89d5 into main"
+[2025-09-08T20:50:58.370Z] ✅ Success: Merge cursor/automate-project-sync-to-github-main-branch-89d5
+[2025-09-08T20:50:58.370Z] ✅ Successfully merged: cursor/automate-project-sync-to-github-main-branch-89d5
+[2025-09-08T20:50:58.370Z] 🔄 Attempting to merge branch: cursor/automate-redundancy-and-cleanup-d88b
+[2025-09-08T20:50:58.370Z] 🚀 Fetch origin/cursor/automate-redundancy-and-cleanup-d88b: git fetch origin cursor/automate-redundancy-and-cleanup-d88b
+[2025-09-08T20:50:58.698Z] ✅ Success: Fetch origin/cursor/automate-redundancy-and-cleanup-d88b
+[2025-09-08T20:50:58.698Z] 🚀 Merge cursor/automate-redundancy-and-cleanup-d88b: git merge origin/cursor/automate-redundancy-and-cleanup-d88b --no-ff -m "Merge branch cursor/automate-redundancy-and-cleanup-d88b into main"
+[2025-09-08T20:50:59.118Z] ✅ Success: Merge cursor/automate-redundancy-and-cleanup-d88b
+[2025-09-08T20:50:59.118Z] ✅ Successfully merged: cursor/automate-redundancy-and-cleanup-d88b
+[2025-09-08T20:51:00.120Z] 📦 Processing batch 96/509
+[2025-09-08T20:51:00.120Z] 🔄 Attempting to merge branch: cursor/automate-script-management-and-repository-integration-0e77
+[2025-09-08T20:51:00.120Z] 🚀 Fetch origin/cursor/automate-script-management-and-repository-integration-0e77: git fetch origin cursor/automate-script-management-and-repository-integration-0e77
+[2025-09-08T20:51:00.437Z] ✅ Success: Fetch origin/cursor/automate-script-management-and-repository-integration-0e77
+[2025-09-08T20:51:00.437Z] 🚀 Merge cursor/automate-script-management-and-repository-integration-0e77: git merge origin/cursor/automate-script-management-and-repository-integration-0e77 --no-ff -m "Merge branch cursor/automate-script-management-and-repository-integration-0e77 into main"
+[2025-09-08T20:51:00.866Z] ✅ Success: Merge cursor/automate-script-management-and-repository-integration-0e77
+[2025-09-08T20:51:00.866Z] ✅ Successfully merged: cursor/automate-script-management-and-repository-integration-0e77
+[2025-09-08T20:51:00.866Z] 🔄 Attempting to merge branch: cursor/automate-site-navigation-enhancement-285c
+[2025-09-08T20:51:00.866Z] 🚀 Fetch origin/cursor/automate-site-navigation-enhancement-285c: git fetch origin cursor/automate-site-navigation-enhancement-285c
+[2025-09-08T20:51:01.197Z] ✅ Success: Fetch origin/cursor/automate-site-navigation-enhancement-285c
+[2025-09-08T20:51:01.197Z] 🚀 Merge cursor/automate-site-navigation-enhancement-285c: git merge origin/cursor/automate-site-navigation-enhancement-285c --no-ff -m "Merge branch cursor/automate-site-navigation-enhancement-285c into main"
+[2025-09-08T20:51:01.622Z] ✅ Success: Merge cursor/automate-site-navigation-enhancement-285c
+[2025-09-08T20:51:01.622Z] ✅ Successfully merged: cursor/automate-site-navigation-enhancement-285c
+[2025-09-08T20:51:01.623Z] 🔄 Attempting to merge branch: cursor/automate-terminal-content-generation-and-deploy-5f97
+[2025-09-08T20:51:01.623Z] 🚀 Fetch origin/cursor/automate-terminal-content-generation-and-deploy-5f97: git fetch origin cursor/automate-terminal-content-generation-and-deploy-5f97
+[2025-09-08T20:51:01.971Z] ✅ Success: Fetch origin/cursor/automate-terminal-content-generation-and-deploy-5f97
+[2025-09-08T20:51:01.971Z] 🚀 Merge cursor/automate-terminal-content-generation-and-deploy-5f97: git merge origin/cursor/automate-terminal-content-generation-and-deploy-5f97 --no-ff -m "Merge branch cursor/automate-terminal-content-generation-and-deploy-5f97 into main"
+[2025-09-08T20:51:02.400Z] ✅ Success: Merge cursor/automate-terminal-content-generation-and-deploy-5f97
+[2025-09-08T20:51:02.400Z] ✅ Successfully merged: cursor/automate-terminal-content-generation-and-deploy-5f97
+[2025-09-08T20:51:02.400Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-020e
+[2025-09-08T20:51:02.400Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-020e: git fetch origin cursor/automate-test-fix-improve-and-merge-code-020e
+[2025-09-08T20:51:02.730Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-020e
+[2025-09-08T20:51:02.730Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-020e: git merge origin/cursor/automate-test-fix-improve-and-merge-code-020e --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-020e into main"
+[2025-09-08T20:51:03.161Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-020e
+[2025-09-08T20:51:03.162Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-020e
+[2025-09-08T20:51:03.162Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-074b
+[2025-09-08T20:51:03.162Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-074b: git fetch origin cursor/automate-test-fix-improve-and-merge-code-074b
+[2025-09-08T20:51:03.497Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-074b
+[2025-09-08T20:51:03.497Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-074b: git merge origin/cursor/automate-test-fix-improve-and-merge-code-074b --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-074b into main"
+[2025-09-08T20:51:03.922Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-074b
+[2025-09-08T20:51:03.922Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-074b
+[2025-09-08T20:51:03.922Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-07b1
+[2025-09-08T20:51:03.922Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-07b1: git fetch origin cursor/automate-test-fix-improve-and-merge-code-07b1
+[2025-09-08T20:51:04.260Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-07b1
+[2025-09-08T20:51:04.261Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-07b1: git merge origin/cursor/automate-test-fix-improve-and-merge-code-07b1 --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-07b1 into main"
+[2025-09-08T20:51:04.706Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-07b1
+[2025-09-08T20:51:04.706Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-07b1
+[2025-09-08T20:51:04.706Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-0801
+[2025-09-08T20:51:04.706Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-0801: git fetch origin cursor/automate-test-fix-improve-and-merge-code-0801
+[2025-09-08T20:51:05.053Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-0801
+[2025-09-08T20:51:05.053Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-0801: git merge origin/cursor/automate-test-fix-improve-and-merge-code-0801 --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-0801 into main"
+[2025-09-08T20:51:05.483Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-0801
+[2025-09-08T20:51:05.483Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-0801
+[2025-09-08T20:51:05.483Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-0975
+[2025-09-08T20:51:05.483Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-0975: git fetch origin cursor/automate-test-fix-improve-and-merge-code-0975
+[2025-09-08T20:51:05.823Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-0975
+[2025-09-08T20:51:05.823Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-0975: git merge origin/cursor/automate-test-fix-improve-and-merge-code-0975 --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-0975 into main"
+[2025-09-08T20:51:06.262Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-0975
+[2025-09-08T20:51:06.262Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-0975
+[2025-09-08T20:51:06.262Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-1563
+[2025-09-08T20:51:06.262Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-1563: git fetch origin cursor/automate-test-fix-improve-and-merge-code-1563
+[2025-09-08T20:51:06.579Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-1563
+[2025-09-08T20:51:06.579Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-1563: git merge origin/cursor/automate-test-fix-improve-and-merge-code-1563 --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-1563 into main"
+[2025-09-08T20:51:07.009Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-1563
+[2025-09-08T20:51:07.009Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-1563
+[2025-09-08T20:51:07.009Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-1884
+[2025-09-08T20:51:07.009Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-1884: git fetch origin cursor/automate-test-fix-improve-and-merge-code-1884
+[2025-09-08T20:51:07.353Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-1884
+[2025-09-08T20:51:07.353Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-1884: git merge origin/cursor/automate-test-fix-improve-and-merge-code-1884 --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-1884 into main"
+[2025-09-08T20:51:07.791Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-1884
+[2025-09-08T20:51:07.792Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-1884
+[2025-09-08T20:51:08.792Z] 📦 Processing batch 97/509
+[2025-09-08T20:51:08.793Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-1c7d
+[2025-09-08T20:51:08.793Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-1c7d: git fetch origin cursor/automate-test-fix-improve-and-merge-code-1c7d
+[2025-09-08T20:51:09.128Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-1c7d
+[2025-09-08T20:51:09.128Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-1c7d: git merge origin/cursor/automate-test-fix-improve-and-merge-code-1c7d --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-1c7d into main"
+[2025-09-08T20:51:09.561Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-1c7d
+[2025-09-08T20:51:09.561Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-1c7d
+[2025-09-08T20:51:09.561Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-2b9a
+[2025-09-08T20:51:09.561Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-2b9a: git fetch origin cursor/automate-test-fix-improve-and-merge-code-2b9a
+[2025-09-08T20:51:09.884Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-2b9a
+[2025-09-08T20:51:09.884Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-2b9a: git merge origin/cursor/automate-test-fix-improve-and-merge-code-2b9a --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-2b9a into main"
+[2025-09-08T20:51:10.307Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-2b9a
+[2025-09-08T20:51:10.307Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-2b9a
+[2025-09-08T20:51:10.307Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-2c16
+[2025-09-08T20:51:10.307Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-2c16: git fetch origin cursor/automate-test-fix-improve-and-merge-code-2c16
+[2025-09-08T20:51:10.631Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-2c16
+[2025-09-08T20:51:10.631Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-2c16: git merge origin/cursor/automate-test-fix-improve-and-merge-code-2c16 --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-2c16 into main"
+[2025-09-08T20:51:11.061Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-2c16
+[2025-09-08T20:51:11.061Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-2c16
+[2025-09-08T20:51:11.061Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-2df7
+[2025-09-08T20:51:11.061Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-2df7: git fetch origin cursor/automate-test-fix-improve-and-merge-code-2df7
+[2025-09-08T20:51:11.380Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-2df7
+[2025-09-08T20:51:11.380Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-2df7: git merge origin/cursor/automate-test-fix-improve-and-merge-code-2df7 --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-2df7 into main"
+[2025-09-08T20:51:11.801Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-2df7
+[2025-09-08T20:51:11.801Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-2df7
+[2025-09-08T20:51:11.801Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-36c4
+[2025-09-08T20:51:11.801Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-36c4: git fetch origin cursor/automate-test-fix-improve-and-merge-code-36c4
+[2025-09-08T20:51:12.122Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-36c4
+[2025-09-08T20:51:12.122Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-36c4: git merge origin/cursor/automate-test-fix-improve-and-merge-code-36c4 --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-36c4 into main"
+[2025-09-08T20:51:12.545Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-36c4
+[2025-09-08T20:51:12.545Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-36c4
+[2025-09-08T20:51:12.545Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-3c70
+[2025-09-08T20:51:12.545Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-3c70: git fetch origin cursor/automate-test-fix-improve-and-merge-code-3c70
+[2025-09-08T20:51:12.874Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-3c70
+[2025-09-08T20:51:12.874Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-3c70: git merge origin/cursor/automate-test-fix-improve-and-merge-code-3c70 --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-3c70 into main"
+[2025-09-08T20:51:13.296Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-3c70
+[2025-09-08T20:51:13.296Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-3c70
+[2025-09-08T20:51:13.296Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-3dc6
+[2025-09-08T20:51:13.296Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-3dc6: git fetch origin cursor/automate-test-fix-improve-and-merge-code-3dc6
+[2025-09-08T20:51:13.678Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-3dc6
+[2025-09-08T20:51:13.678Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-3dc6: git merge origin/cursor/automate-test-fix-improve-and-merge-code-3dc6 --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-3dc6 into main"
+[2025-09-08T20:51:14.145Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-3dc6
+[2025-09-08T20:51:14.145Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-3dc6
+[2025-09-08T20:51:14.145Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-3f7f
+[2025-09-08T20:51:14.145Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-3f7f: git fetch origin cursor/automate-test-fix-improve-and-merge-code-3f7f
+[2025-09-08T20:51:14.497Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-3f7f
+[2025-09-08T20:51:14.497Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-3f7f: git merge origin/cursor/automate-test-fix-improve-and-merge-code-3f7f --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-3f7f into main"
+[2025-09-08T20:51:14.931Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-3f7f
+[2025-09-08T20:51:14.932Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-3f7f
+[2025-09-08T20:51:14.932Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-408f
+[2025-09-08T20:51:14.932Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-408f: git fetch origin cursor/automate-test-fix-improve-and-merge-code-408f
+[2025-09-08T20:51:15.278Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-408f
+[2025-09-08T20:51:15.278Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-408f: git merge origin/cursor/automate-test-fix-improve-and-merge-code-408f --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-408f into main"
+[2025-09-08T20:51:15.708Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-408f
+[2025-09-08T20:51:15.708Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-408f
+[2025-09-08T20:51:15.708Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-4a18
+[2025-09-08T20:51:15.708Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-4a18: git fetch origin cursor/automate-test-fix-improve-and-merge-code-4a18
+[2025-09-08T20:51:16.062Z] ✅ Success: Fetch origin/cursor/automate-test-fix-improve-and-merge-code-4a18
+[2025-09-08T20:51:16.062Z] 🚀 Merge cursor/automate-test-fix-improve-and-merge-code-4a18: git merge origin/cursor/automate-test-fix-improve-and-merge-code-4a18 --no-ff -m "Merge branch cursor/automate-test-fix-improve-and-merge-code-4a18 into main"
+[2025-09-08T20:51:16.490Z] ✅ Success: Merge cursor/automate-test-fix-improve-and-merge-code-4a18
+[2025-09-08T20:51:16.490Z] ✅ Successfully merged: cursor/automate-test-fix-improve-and-merge-code-4a18
+[2025-09-08T20:51:17.491Z] 📦 Processing batch 98/509
+[2025-09-08T20:51:17.491Z] 🔄 Attempting to merge branch: cursor/automate-test-fix-improve-and-merge-code-4b74
+[2025-09-08T20:51:17.491Z] 🚀 Fetch origin/cursor/automate-test-fix-improve-and-merge-code-4b74: git fetch origin cursor/automate-test-fix-improve-and-merge-code-4b74
+[2025-09-08T20:51:17.607Z] ❌ Error in Fetch origin/cursor/automate-test-fix-improve-and-merge-code-4b74: Command failed: git fetch origin cursor/automate-test-fix-improve-and-merge-code-4b74
+fatal: couldn't find remote ref cursor/automate-test-fix-improve-and-merge-code-4b74
+
+[2025-09-08T20:51:17.607Z] ❌ Failed to merge cursor/automate-test-fix-improve-and-merge-code-4b74: Command failed: git fetch origin cursor/automate-test-fix-improve-and-merge-code-4b74
+fatal: couldn't find remote ref cursor/automate-test-fix-improve-and-merge-code-4b74
+
+[2025-09-08T20:51:17.607Z] 🔧 Attempting to resolve conflicts for: cursor/automate-test-fix-improve-and-merge-code-4b74
+[2025-09-08T20:51:17.607Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T20:51:17.674Z] ✅ Success: Get git status
+[2025-09-08T20:51:17.674Z] 📄 Found 0 conflicted files
+[2025-09-08T20:51:17.674Z] 🚀 Add resolved files: git add .
