@@ -1,34 +1,34 @@
 import React from 'react';
 import { LoadingSpinnerProps } from '../types/components';
 
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = "medium", 
-  color = "primary",
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'medium',
+  color = 'primary',
+  className = '',
   text,
-  className = "" 
 }) => {
   const sizeClasses = {
-    small: "w-4 h-4",
-    medium: "w-8 h-8",
-    large: "w-12 h-12"
+    small: 'w-4 h-4',
+    medium: 'w-8 h-8',
+    large: 'w-12 h-12',
   };
 
   const colorClasses = {
-    primary: "text-zion-blue",
-    secondary: "text-zion-slate",
-    white: "text-white"
+    primary: 'text-blue-600',
+    secondary: 'text-purple-600',
+    white: 'text-white',
+    gray: 'text-gray-600',
   };
 
   return (
-    <div className={`flex flex-col items-center ${className}`}>
-      <div 
-        className={`${sizeClasses[size]} ${colorClasses[color]}`} 
-        role="status" 
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      <div
+        className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`}
+        role="status"
         aria-label="Loading"
       >
         <svg
-          className="animate-spin"
-          xmlns="http://www.w3.org/2000/svg"
+          className="w-full h-full"
           fill="none"
           viewBox="0 0 24 24"
           aria-hidden="true"
@@ -54,6 +54,63 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         </p>
       )}
       <span className="sr-only">Loading...</span>
+    </div>
+  );
+};
+
+// Alternative spinner with dots
+export const LoadingDots: React.FC<{
+  size?: 'small' | 'medium' | 'large';
+  color?: 'primary' | 'secondary' | 'white' | 'gray';
+  className?: string;
+}> = ({ size = 'medium', color = 'primary', className = '' }) => {
+  const sizeClasses = {
+    small: 'w-1 h-1',
+    medium: 'w-2 h-2',
+    large: 'w-3 h-3',
+  };
+
+  const colorClasses = {
+    primary: 'bg-blue-600',
+    secondary: 'bg-purple-600',
+    white: 'bg-white',
+    gray: 'bg-gray-600',
+  };
+
+  return (
+    <div className={`flex space-x-1 ${className}`}>
+      <div
+        className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-bounce`}
+        style={{ animationDelay: '0ms' }}
+      />
+      <div
+        className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-bounce`}
+        style={{ animationDelay: '150ms' }}
+      />
+      <div
+        className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-bounce`}
+        style={{ animationDelay: '300ms' }}
+      />
+    </div>
+  );
+};
+
+// Pulse loading component
+export const LoadingPulse: React.FC<{
+  className?: string;
+  lines?: number;
+}> = ({ className = '', lines = 3 }) => {
+  return (
+    <div className={`space-y-2 ${className}`}>
+      {Array.from({ length: lines }).map((_, index) => (
+        <div
+          key={index}
+          className="h-4 bg-gray-200 rounded animate-pulse"
+          style={{
+            width: `${Math.random() * 40 + 60}%`,
+          }}
+        />
+      ))}
     </div>
   );
 };
