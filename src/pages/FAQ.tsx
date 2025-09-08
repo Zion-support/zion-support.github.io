@@ -20,258 +20,152 @@ import {
   Zap,
   Award,
   Globe,
-  Building,
-  Target,
-  TrendingUp,
-  Heart,
-  ArrowRight,
-  FileText,
-  HelpCircle,
-  BookOpen,
-  Video,
-  Headphones,
-  Calendar,
-  MapPin,
-  DollarSign
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-
-interface FAQItem {
-  id: string;
-  question: string;
-  answer: string;
-  category: string;
-  tags: string[];
-}
-
-const faqData: FAQItem[] = [
-  // General Questions
-  {
-    id: 'general-1',
-    question: 'What services does Zion Tech Group offer?',
-    answer: 'Zion Tech Group provides comprehensive technology solutions including AI & Analytics, Cloud & DevOps, Cybersecurity, Digital Twin technology, Micro SaaS solutions, and IT consulting. We specialize in digital transformation and emerging technologies.',
-    category: 'General',
-    tags: ['services', 'overview', 'technology']
-  },
-  {
-    id: 'general-2',
-    question: 'How long has Zion Tech Group been in business?',
-    answer: 'Zion Tech Group has been delivering innovative technology solutions for over 15 years. We have successfully completed 500+ projects and serve clients across various industries worldwide.',
-    category: 'General',
-    tags: ['company', 'experience', 'history']
-  },
-  {
-    id: 'general-3',
-    question: 'What industries do you serve?',
-    answer: 'We serve a wide range of industries including technology, healthcare, finance, manufacturing, retail, education, government, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards.',
-    category: 'General',
-    tags: ['industries', 'clients', 'sectors']
-  },
-
-  // AI & Analytics
-  {
-    id: 'ai-1',
-    question: 'What AI technologies do you specialize in?',
-    answer: 'We specialize in machine learning, natural language processing, computer vision, predictive analytics, and large language models (LLMs). Our AI solutions include business intelligence, sales automation, and content generation.',
-    category: 'AI & Analytics',
-    tags: ['AI', 'machine learning', 'analytics', 'LLM']
-  },
-  {
-    id: 'ai-2',
-    question: 'How do you ensure AI model accuracy and fairness?',
-    answer: 'We implement rigorous testing protocols, bias detection algorithms, and continuous monitoring systems. Our AI models undergo extensive validation using diverse datasets and are regularly updated to maintain accuracy and fairness.',
-    category: 'AI & Analytics',
-    tags: ['AI', 'accuracy', 'fairness', 'testing']
-  },
-  {
-    id: 'ai-3',
-    question: 'Can you integrate AI with existing business systems?',
-    answer: 'Yes, we specialize in seamless AI integration with existing business systems. We use APIs, microservices architecture, and custom connectors to ensure smooth integration with your current infrastructure.',
-    category: 'AI & Analytics',
-    tags: ['AI', 'integration', 'systems', 'APIs']
-  },
-
-  // Cloud & DevOps
-  {
-    id: 'cloud-1',
-    question: 'Which cloud platforms do you support?',
-    answer: 'We support all major cloud platforms including AWS, Azure, Google Cloud Platform, and hybrid cloud solutions. We also provide multi-cloud strategies and cloud migration services.',
-    category: 'Cloud & DevOps',
-    tags: ['cloud', 'AWS', 'Azure', 'GCP', 'migration']
-  },
-  {
-    id: 'cloud-2',
-    question: 'What DevOps practices do you implement?',
-    answer: 'We implement CI/CD pipelines, infrastructure as code, automated testing, monitoring, and deployment strategies. Our DevOps approach focuses on automation, collaboration, and continuous improvement.',
-    category: 'Cloud & DevOps',
-    tags: ['DevOps', 'CI/CD', 'automation', 'testing']
-  },
-  {
-    id: 'cloud-3',
-    question: 'How do you handle cloud cost optimization?',
-    answer: 'We use FinOps practices, automated scaling, resource monitoring, and cost analysis tools to optimize cloud spending. Our solutions typically reduce cloud costs by 20-40% while maintaining performance.',
-    category: 'Cloud & DevOps',
-    tags: ['cloud', 'cost optimization', 'FinOps', 'scaling']
-  },
-
-  // Cybersecurity
-  {
-    id: 'security-1',
-    question: 'What security certifications do you have?',
-    answer: 'We maintain ISO 27001, SOC 2 Type II, and other industry-recognized security certifications. Our team includes certified security professionals with expertise in various security frameworks.',
-    category: 'Cybersecurity',
-    tags: ['security', 'certifications', 'compliance', 'ISO']
-  },
-  {
-    id: 'security-2',
-    question: 'How do you protect against cyber threats?',
-    answer: 'We implement multi-layered security including threat detection, intrusion prevention, encryption, access controls, and 24/7 monitoring. Our security solutions use AI-powered threat intelligence for proactive protection.',
-    category: 'Cybersecurity',
-    tags: ['security', 'threats', 'protection', 'monitoring']
-  },
-  {
-    id: 'security-3',
-    question: 'Do you provide incident response services?',
-    answer: 'Yes, we offer 24/7 incident response services with guaranteed response times. Our team includes certified incident responders and we follow industry best practices for threat containment and recovery.',
-    category: 'Cybersecurity',
-    tags: ['security', 'incident response', '24/7', 'recovery']
-  },
-
-  // Digital Solutions
-  {
-    id: 'digital-1',
-    question: 'What is Digital Twin technology?',
-    answer: 'Digital Twin creates virtual replicas of physical systems, processes, or products. We use this technology for real-time monitoring, predictive maintenance, performance optimization, and simulation-based decision making.',
-    category: 'Digital Solutions',
-    tags: ['digital twin', 'monitoring', 'simulation', 'IoT']
-  },
-  {
-    id: 'digital-2',
-    question: 'How do you develop Micro SaaS solutions?',
-    answer: 'We develop Micro SaaS solutions using modern technologies like React, Node.js, and cloud-native architectures. Our approach focuses on scalability, user experience, and rapid deployment.',
-    category: 'Digital Solutions',
-    tags: ['Micro SaaS', 'development', 'React', 'Node.js']
-  },
-  {
-    id: 'digital-3',
-    question: 'Can you customize solutions for specific business needs?',
-    answer: 'Absolutely. We specialize in custom development tailored to your specific business requirements. We work closely with your team to understand your needs and deliver solutions that fit your workflow.',
-    category: 'Digital Solutions',
-    tags: ['customization', 'development', 'business needs', 'workflow']
-  },
-
-  // Pricing & Billing
-  {
-    id: 'pricing-1',
-    question: 'What are your pricing models?',
-    answer: 'We offer flexible pricing models including monthly subscriptions, project-based pricing, and custom enterprise solutions. Pricing depends on the scope, complexity, and duration of the project.',
-    category: 'Pricing & Billing',
-    tags: ['pricing', 'subscriptions', 'projects', 'enterprise']
-  },
-  {
-    id: 'pricing-2',
-    question: 'Do you offer free consultations?',
-    answer: 'Yes, we provide free initial consultations to understand your needs and discuss potential solutions. This helps us provide accurate estimates and recommendations for your project.',
-    category: 'Pricing & Billing',
-    tags: ['consultations', 'free', 'estimates', 'recommendations']
-  },
-  {
-    id: 'pricing-3',
-    question: 'What payment terms do you offer?',
-    answer: 'We offer flexible payment terms including upfront payments, milestone-based payments, and monthly billing for ongoing services. We can work with your budget and payment preferences.',
-    category: 'Pricing & Billing',
-    tags: ['payment', 'terms', 'milestones', 'billing']
-  },
-
-  // Support & Maintenance
-  {
-    id: 'support-1',
-    question: 'What support levels do you provide?',
-    answer: 'We offer multiple support tiers including basic email support, priority phone support, and 24/7 dedicated support for enterprise clients. Response times vary by support level.',
-    category: 'Support & Maintenance',
-    tags: ['support', '24/7', 'response times', 'enterprise']
-  },
-  {
-    id: 'support-2',
-    question: 'Do you provide training for your solutions?',
-    answer: 'Yes, we provide comprehensive training programs including user training, administrator training, and technical training. We also offer ongoing training as new features are released.',
-    category: 'Support & Maintenance',
-    tags: ['training', 'users', 'administrators', 'technical']
-  },
-  {
-    id: 'support-3',
-    question: 'How do you handle system updates and maintenance?',
-    answer: 'We provide automated updates, scheduled maintenance windows, and proactive monitoring. All updates are tested in staging environments before production deployment to ensure stability.',
-    category: 'Support & Maintenance',
-    tags: ['updates', 'maintenance', 'monitoring', 'testing']
-  }
-];
-
-const categories = [
-  { id: 'all', name: 'All Questions', icon: HelpCircle, count: faqData.length },
-  { id: 'General', name: 'General', icon: Building, count: faqData.filter(faq => faq.category === 'General').length },
-  { id: 'AI & Analytics', name: 'AI & Analytics', icon: Brain, count: faqData.filter(faq => faq.category === 'AI & Analytics').length },
-  { id: 'Cloud & DevOps', name: 'Cloud & DevOps', icon: Cloud, count: faqData.filter(faq => faq.category === 'Cloud & DevOps').length },
-  { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, count: faqData.filter(faq => faq.category === 'Cybersecurity').length },
-  { id: 'Digital Solutions', name: 'Digital Solutions', icon: Rocket, count: faqData.filter(faq => faq.category === 'Digital Solutions').length },
-  { id: 'Pricing & Billing', name: 'Pricing & Billing', icon: DollarSign, count: faqData.filter(faq => faq.category === 'Pricing & Billing').length },
-  { id: 'Support & Maintenance', name: 'Support & Maintenance', icon: Users, count: faqData.filter(faq => faq.category === 'Support & Maintenance').length }
-];
-
-const supportChannels = [
-  {
-    title: 'Live Chat',
-    description: 'Get instant help from our support team',
-    icon: MessageSquare,
-    color: 'from-blue-400 to-cyan-500',
-    action: 'Start Chat',
-    href: '/chat'
-  },
-  {
-    title: 'Phone Support',
-    description: 'Speak directly with our experts',
-    icon: Phone,
-    color: 'from-green-400 to-emerald-500',
-    action: 'Call Now',
-    href: 'tel:+1-555-0123'
-  },
-  {
-    title: 'Email Support',
-    description: 'Send us a detailed message',
-    icon: Mail,
-    color: 'from-purple-400 to-pink-500',
-    action: 'Send Email',
-    href: 'mailto:support@ziontechgroup.com'
-  },
-  {
-    title: 'Documentation',
-    description: 'Browse our comprehensive guides',
-    icon: BookOpen,
-    color: 'from-yellow-400 to-orange-500',
-    action: 'View Docs',
-    href: '/documentation'
-  }
-];
+  Lightbulb
+ } from 'lucide-react';
 
 export default function FAQ() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
 
-  const filteredFAQs = faqData.filter(faq => {
-    const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
-    const matchesSearch = faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         faq.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         faq.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+  const toggleItem = (index: number) => {
+    setOpenItems(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
+    )};
 
-  const toggleItem = (id: string) => {
-    const newExpanded = new Set(expandedItems);
-    if (newExpanded.has(id)) {
-      newExpanded.delete(id);
-    } else {
-      newExpanded.add(id);
+  const faqCategories = [
+    {
+      name: 'General Questions',
+      icon: HelpCircle,
+      questions: [
+        {
+          question: 'What is Zion Tech Group?',
+          answer: 'Zion Tech Group is a leading technology comp specializing in AI-powered solutions, cloud services, cybersecurity, and digital transformation. We help businesses leverage cutting-edge technology to drive innovation and growth.'
+        },
+        {
+          question: 'Where is Zion Tech Group located?',
+          answer: 'Our headquarters is located at 364 E Main St STE 1008, Middletown, DE 19709. We serve clients globally with operations in 25+ countries.'
+        },
+        {
+          question: 'What industries do you serve?',
+          answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, technology, and government sectors. Our solutions are adaptable to  industry that can benefit from AI and digital transformation.'
+        },
+        {
+          question: 'How long has Zion Tech Group been in business?',
+          answer: 'Zion Tech Group was founded in 2018 and has been delivering innovative technology solutions for over 5 years. We have successfully completed 500+ projects and serve 100+ enterprise clients.'
+        }
+      ]
+    },
+    {
+      name: 'AI & Technology Services',
+      icon: Zap,
+      questions: [
+        {
+          question: 'What AI services do you offer?',
+          answer: 'We offer comprehensive AI services including AI Business Intelligence, AI Sales Copilot, AI Compliance Assistant, LLM Content Studio, and custom AI solutions. Our AI services help automate processes, gain insights, and transform business operations.'
+        },
+        {
+          question: 'How do you ensure AI solutions are ethical and secure?',
+          answer: 'We follow strict AI ethics guidelines and implement enterprise-grade security measures. All our AI solutions include bias detection, explainability features, and comply with industry standards and regulations.'
+        },
+        {
+          question: 'Can you customize AI solutions for our specific needs?',
+          answer: 'Absolutely! We specialize in custom AI solutions tailored to your specific business requirements. Our team works closely with you to understand your needs and develop solutions that deliver measurable results.'
+        },
+        {
+          question: 'What is the typical timeline for AI project implementation?',
+          answer: 'AI project timelines vary based on complexity and scope. Simple AI integrations can take 4-8 weeks, while complex enterprise AI solutions may take 3-6 months. We provide detailed project timelines during the planning phase.'
+        }
+      ]
+    },
+    {
+      name: 'Cloud & DevOps',
+      icon: Shield,
+      questions: [
+        {
+          question: 'What cloud platforms do you support?',
+          answer: 'We support all major cloud platforms including AWS, Azure, Google Cloud, and hybrid cloud environments. Our team has certifications in multiple cloud platforms and can help you choose the best solution for your needs.'
+        },
+        {
+          question: 'How do you ensure cloud security?',
+          answer: 'We implement enterprise-grade security measures including encryption, access controls, monitoring, and compliance frameworks. Our cloud solutions are ISO 27001 certified and SOC 2 Type II compliant.'
+        },
+        {
+          question: 'What DevOps practices do you implement?',
+          answer: 'We implement modern DevOps practices including CI/CD pipelines, Infrastructure as Code, automated testing, monitoring, and continuous deployment. This ensures faster delivery and higher quality software.'
+        },
+        {
+          question: 'Can you help optimize our cloud costs?',
+          answer: 'Yes! Our Cloud FinOps Optimizer service helps analyze cloud spending, identify optimization opportunities, and implement cost-saving measures. We typically help clients reduce cloud costs by 20-40%.'
+        }
+      ]
+    },
+    {
+      name: 'Pricing & Billing',
+      icon: Award,
+      questions: [
+        {
+          question: 'How do you price your services?',
+          answer: 'We offer flexible pricing models including fixed-price projects, time and materials, and subscription-based services. Pricing depends on project scope, complexity, and requirements. Contact us for a custom quote.'
+        },
+        {
+          question: 'Do you offer payment plans?',
+          answer: 'Yes, we offer flexible payment plans for larger projects. We can structure payments based on project milestones or provide monthly payment options. We also offer enterprise payment terms for ongoing services.'
+        },
+        {
+          question: 'What is included in your service packages?',
+          answer: 'Our service packages include project planning, development, testing, deployment, training, and ongoing support. We also provide documentation, user guides, and maintenance services as part of our comprehensive packages.'
+        },
+        {
+          question: 'Are there  hidden costs?',
+          answer: 'No hidden costs! We provide transparent pricing with detailed breakdowns of all services and costs. Any additional requirements or changes are discussed upfront and clearly communicated before implementation.'
+        }
+      ]
+    },
+    {
+      name: 'Support & Maintenance',
+      icon: Users,
+      questions: [
+        {
+          question: 'What support do you provide after project completion?',
+          answer: 'We provide comprehensive post-project support including bug fixes, updates, maintenance, and 24/7 emergency support for critical systems. Our support packages are customizable to meet your specific needs.'
+        },
+        {
+          question: 'How quickly do you respond to support requests?',
+          answer: 'We provide different response time SLAs based on issue priority. Critical issues receive immediate attention, while standard requests are typically resolved within 4-8 hours. Emergency support is available 24/7.'
+        },
+        {
+          question: 'Do you provide training for our team?',
+          answer: 'Yes! We provide comprehensive training for your team on all implemented solutions. This includes user training, administrator training, and ongoing education as new features are added.'
+        },
+        {
+          question: 'Can you help with system upgrades and migrations?',
+          answer: 'Absolutely! We provide migration services, system upgrades, and technology refresh services. Our team ensures smooth transitions with minimal downtime and comprehensive testing.'
+        }
+      ]
+    },
+    {
+      name: 'Security & Compliance',
+      icon: Shield,
+      questions: [
+        {
+          question: 'What security certifications do you have?',
+          answer: 'We are ISO 27001 certified and SOC 2 Type II compliant. We also maintain certifications in various cloud platforms and security frameworks. Our security practices meet or exceed industry standards.'
+        },
+        {
+          question: 'How do you protect client data?',
+          answer: 'We implement enterprise-grade security measures including encryption, access controls, regular security audits, and compliance monitoring. All client data is protected with industry-standard security protocols.'
+        },
+        {
+          question: 'Do you comply with industry regulations?',
+          answer: 'Yes, we comply with major industry regulations including GDPR, HIPAA, SOX, and industry-specific requirements. We can help ensure your solutions meet all applicable compliance standards.'
+        },
+        {
+          question: 'What happens in case of a security incident?',
+          answer: 'We have comprehensive incident response procedures including immediate notification, containment, investigation, and resolution. We provide detailed incident reports and work to prevent future occurrences.'
+        }
+      ]
     }
     setExpandedItems(newExpanded);
   };

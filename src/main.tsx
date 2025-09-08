@@ -1,10 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router } from 'react-router-dom'
-import { HelmetProvider } from 'react-helmet-async'
 import App from './App'
-<<<<<<< HEAD
-import { SkipToContent } from './components/Accessibility'
 import './index.css'
 <<<<<<< HEAD
 

@@ -17,32 +17,59 @@ import {
 } from 'lucide-react';
 
 export default function Privacy() {
-  const lastUpdated = 'January 15, 2025';
-  const companyInfo = {
-    name: 'Zion Tech Group',
-    address: '364 E Main St STE 1008, Middletown, DE 19709',
-    email: 'privacy@ziontechgroup.com',
-    phone: '+1 302 464 0950'
-  };
+  const lastUpdated = 'December 15, 2024';
+
+  const privacyPrinciples = [
+    {
+      icon: Shield,
+      title: 'Data Protection',
+      description: 'We implement enterprise-grade security measures to protect your personal information.'
+    },
+    {
+      icon: Lock,
+      title: 'Secure Processing',
+      description: 'All data processing follows strict security protocols and industry best practices.'
+    },
+    {
+      icon: Eye,
+      title: 'Transparency',
+      description: 'We are transparent about how we collect, use, and protect your information.'
+    },
+    {
+      icon: Users,
+      title: 'User Control',
+      description: 'You have full control over your personal data and can request changes or deletion.'
+    }
+  ];
 
   const dataCategories = [
     {
       icon: Users,
       title: 'Personal Information',
-      description: 'Name, email, phone number, company details',
-      examples: ['Contact forms', 'Account registration', 'Newsletter signup']
+      items: [
+        'Name and contact information (email, phone, address)',
+        'Comp and job title information',
+        'Professional credentials and certifications',
+        'Communication preferences and history'
+      ]
     },
     {
-      icon: Database,
-      title: 'Usage Data',
-      description: 'Website interactions, preferences, analytics',
-      examples: ['Page visits', 'Feature usage', 'Performance metrics']
+      title: 'Technical Information',
+      items: [
+        'IP address and device information',
+        'Browser type and version',
+        'Operating system and platform',
+        'Usage data and analytics'
+      ]
     },
     {
-      icon: Globe,
-      title: 'Technical Data',
-      description: 'IP address, browser type, device information',
-      examples: ['Log files', 'Cookies', 'Device identifiers']
+      title: 'Business Information',
+      items: [
+        'Project requirements and specifications',
+        'Service usage and performance data',
+        'Payment and billing information',
+        'Support and communication records'
+      ]
     }
   ];
 

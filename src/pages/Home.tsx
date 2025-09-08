@@ -153,32 +153,75 @@ const containerVariants = {
     { number: '24/7', label: 'Support Available' }
   ];
 
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      role: 'CTO, TechCorp',
-      content: 'Zion Tech Group transformed our entire IT infrastructure. Their AI solutions increased our efficiency by 300%.',
-      rating: 5
-    },
-    {
-      name: 'Michael Chen',
-      role: 'CEO, InnovateLab',
-      content: 'The cybersecurity solutions provided by Zion Tech Group are world-class. We feel completely protected.',
-      rating: 5
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'Operations Director, GlobalTech',
-      content: 'Their cloud solutions helped us scale rapidly while maintaining cost efficiency.',
-      rating: 5
-    }
-  ];
+// AI Services data
+const aiServices = [
+  {
+    icon: Brain,
+    title: "AI Business Intelligence",
+    description: "Transform your data into actionable insights with our advanced AI analytics platform.",
+    path: "/services/ai-business-intelligence",
+    features: [
+      "Predictive Analytics",
+      "Real-time Dashboards",
+      "Automated Reporting",
+      "Custom ML Models"
+    ]
+  },
+  {
+    icon: Cloud,
+    title: "Cloud DevOps",
+    description: "Streamline your development pipeline with automated cloud infrastructure.",
+    path: "/services/cloud-devops",
+    features: [
+      "CI/CD Automation",
+      "Infrastructure as Code",
+      "Container Orchestration",
+      "Security Integration"
+    ]
+  },
+  {
+    icon: Shield,
+    title: "AI Cybersecurity",
+    description: "Protect your business with intelligent threat detection and response systems.",
+    path: "/services/ai-cybersecurity-suite",
+    features: [
+      "Threat Intelligence",
+      "Automated Response",
+      "Zero Trust Architecture",
+      "Compliance Monitoring"
+    ]
+  }
+];
 
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   };
+
+// Trust Signals data
+const trustSignals = [
+  {
+    icon: Award,
+    label: "ISO 27001 Certified",
+    description: "Information security management"
+  },
+  {
+    icon: Shield,
+    label: "SOC 2 Compliant",
+    description: "Security, availability, and confidentiality"
+  },
+  {
+    icon: Globe,
+    label: "GDPR Ready",
+    description: "Data protection compliance"
+  },
+  {
+    icon: Star,
+    label: "99.9% Uptime",
+    description: "Enterprise-grade reliability"
+  }
+];
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);

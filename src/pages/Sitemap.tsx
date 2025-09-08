@@ -1,64 +1,103 @@
 import React from 'react';
-import { SEO } from '../components/SEO';
-import { motion } from 'framer-motion';
-import { Map, ArrowRight, ExternalLink, FileText, Users, Settings, Shield, Globe, Database, Cloud, Brain, Zap } from 'lucide-react';
+import { Link  } from 'react-router-dom';
+import { Sitemap, Home, Users, Settings, FileText, Shield, Mail, HelpCircle, Building, Briefcase, Brain, Cloud, Rocket, Heart, Globe, Lock, Cpu, Zap, Star, TrendingUp, MessageCircle, DollarSign, BookOpen, Phone, MapPin  } from 'lucide-react';
 
-export default function Sitemap() {
-  const siteStructure = {
-    main: [
-      { name: 'Home', path: '/', description: 'Main landing page' },
-      { name: 'About', path: '/about', description: 'Company information and mission' },
-      { name: 'Contact', path: '/contact', description: 'Get in touch with us' },
-      { name: 'Blog', path: '/blog', description: 'Latest insights and articles' },
-      { name: 'Press', path: '/press', description: 'Press releases and media' },
-      { name: 'Careers', path: '/careers', description: 'Job opportunities' },
-      { name: 'Team', path: '/team', description: 'Meet our leadership team' }
-    ],
-    services: [
-      { name: 'Services Overview', path: '/services-overview', description: 'Complete services catalog' },
-      { name: 'AI Services', path: '/ai-services', description: 'Artificial intelligence solutions' },
-      { name: 'IT Services', path: '/it-services', description: 'Information technology services' },
-      { name: 'Micro SaaS', path: '/micro-saas', description: 'Micro software-as-a-service solutions' },
-      { name: 'Cloud & DevOps', path: '/services/cloud-devops', description: 'Cloud infrastructure and DevOps' },
-      { name: 'Digital Twin', path: '/services/digital-twin', description: 'Digital twin technology' },
-      { name: 'Data Analytics', path: '/services/data-analytics', description: 'Data analysis and insights' },
-      { name: 'IT Infrastructure', path: '/services/it-infrastructure', description: 'IT infrastructure management' },
-      { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', description: 'AI-powered BI solutions' },
-      { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', description: 'AI sales assistance' },
-      { name: 'Cloud FinOps Optimizer', path: '/services/cloud-finops-optimizer', description: 'Cloud financial optimization' },
-      { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', description: 'AI compliance tools' },
-      { name: 'AI Auto Email Responder', path: '/services/ai-auto-email-responder', description: 'Automated email responses' },
-      { name: 'Customer Feedback Surveys', path: '/services/mobile-feedback-surveys', description: 'Feedback collection tools' },
-      { name: 'AI Compliance Copilot', path: '/services/ai-compliance-copilot', description: 'Advanced compliance AI' },
-      { name: 'LLM Content Studio', path: '/services/llm-content-studio', description: 'Content generation platform' },
-      { name: 'FinOps Advisor', path: '/services/finops-advisor', description: 'Financial operations advisory' },
-      { name: 'IoT Edge', path: '/services/iot-edge', description: 'Internet of Things edge computing' },
-      { name: 'Blockchain Solutions', path: '/services/blockchain-enterprise-solutions', description: 'Enterprise blockchain' },
-      { name: 'Healthcare Tech', path: '/services/healthcare-tech', description: 'Healthcare technology solutions' },
-      { name: 'Zero Trust Architecture', path: '/services/zero-trust-architecture', description: 'Security architecture' },
-      { name: 'Incident Response Platform', path: '/services/incident-response-platform', description: 'Security incident management' }
-    ],
-    resources: [
-      { name: 'Documentation', path: '/docs', description: 'Technical documentation and guides' },
-      { name: 'Training', path: '/training', description: 'Learning and certification programs' },
-      { name: 'Webinars', path: '/webinars', description: 'Educational webinars and events' },
-      { name: 'FAQ', path: '/faq', description: 'Frequently asked questions' },
-      { name: 'Help Center', path: '/help', description: 'Help and support resources' },
-      { name: 'Status', path: '/status', description: 'System status and uptime' }
-    ],
-    business: [
-      { name: 'Pricing Guide', path: '/pricing-guide', description: 'Service pricing information' },
-      { name: 'Request Quote', path: '/request-quote', description: 'Get a custom quote' },
-      { name: 'Partners', path: '/partners', description: 'Partnership opportunities' },
-      { name: 'Marketplace', path: '/marketplace', description: 'Solution marketplace' },
-      { name: 'Dashboard', path: '/dashboard', description: 'Client dashboard access' }
-    ],
-    legal: [
-      { name: 'Privacy Policy', path: '/privacy', description: 'Privacy and data protection' },
-      { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions' },
-      { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage information' }
-    ]
-  };
+export default function SitemapPage() {
+  const siteStructure = [
+    {
+      title: "Main Pages",
+      icon: Home,
+      links: [
+        { name: "Home", path: "/", description: "Welcome to Zion Tech Group" },
+        { name: "About Us", path: "/about", description: "Learn about our comp and mission" },
+        { name: "Contact", path: "/contact", description: "Get in touch with our team" },
+        { name: "Services Overview", path: "/services-overview", description: "Explore all our services" },
+        { name: "Partners", path: "/partners", description: "Strategic partnerships and collaborations" },
+        { name: "Careers", path: "/careers", description: "Join our team of experts" },
+        { name: "Team", path: "/team", description: "Meet our leadership and experts" },
+        { name: "Press", path: "/press", description: "Media resources and press releases" }
+      ]
+    },
+    {
+      title: "Core Services",
+      icon: Settings,
+      links: [
+        { name: "AI Services", path: "/ai-services", description: "Comprehensive AI solutions" },
+        { name: "IT Services", path: "/it-services", description: "Enterprise IT solutions" },
+        { name: "Micro SaaS", path: "/micro-saas", description: "Scalable software solutions" },
+        { name: "Cloud & DevOps", path: "/services/cloud-devops", description: "Infrastructure & automation" },
+        { name: "Digital Twin", path: "/services/digital-twin", description: "Simulation & monitoring" },
+        { name: "Data Analytics", path: "/services/data-analytics", description: "Business intelligence" },
+        { name: "IoT & Edge", path: "/services/iot-edge", description: "Connected ecosystems" },
+        { name: "Blockchain Solutions", path: "/services/blockchain-enterprise-solutions", description: "DeFi & smart contracts" }
+      ]
+    },
+    {
+      title: "Specialized Services",
+      icon: Brain,
+      links: [
+        { name: "AI Business Intelligence", path: "/services/ai-business-intelligence", description: "Machine Learning & Data Science" },
+        { name: "AI Sales Copilot", path: "/services/ai-sales-copilot", description: "AI-powered sales automation" },
+        { name: "AI Compliance Assistant", path: "/services/ai-compliance-assistant", description: "Regulatory compliance automation" },
+        { name: "AI Auto Email Responder", path: "/services/ai-auto-email-responder", description: "Faster replies, CRM logging" },
+        { name: "LLM Content Studio", path: "/services/llm-content-studio", description: "AI content generation" },
+        { name: "FinOps Advisor", path: "/services/finops-advisor", description: "Cloud cost optimization" },
+        { name: "Healthcare Tech", path: "/services/healthcare-tech", description: "AI medicine & diagnostics" },
+        { name: "Sustainability", path: "/services/sustainability", description: "Green IT solutions" }
+      ]
+    },
+    {
+      title: "Advanced Solutions",
+      icon: Rocket,
+      links: [
+        { name: "Quantum AI Platform", path: "/services/quantum-ai-platform", description: "Next-gen quantum computing" },
+        { name: "AI Cybersecurity Suite", path: "/services/ai-cybersecurity-suite", description: "Advanced security solutions" },
+        { name: "AI Healthcare Analytics", path: "/services/ai-healthcare-analytics", description: "Healthcare data insights" },
+        { name: "Zero Trust Architecture", path: "/services/zero-trust-network-architecture", description: "Advanced security framework" },
+        { name: "IT Infrastructure", path: "/services/it-infrastructure", description: "Enterprise infrastructure" },
+        { name: "Space Technology", path: "/services/space-tech", description: "Aerospace innovation" },
+        { name: "Innovative Services 2025", path: "/innovative-services-showcase-2025", description: "Latest cutting-edge solutions" },
+        { name: "Revolutionary Services 2030", path: "/revolutionary-services-showcase-2030", description: "Future-ready services" }
+      ]
+    },
+    {
+      title: "Pricing & Solutions",
+      icon: DollarSign,
+      links: [
+        { name: "Pricing Guide", path: "/pricing-guide", description: "Comprehensive pricing information" },
+        { name: "Pricing 2027", path: "/pricing", description: "Current year pricing strategies" },
+        { name: "Pricing 2030", path: "/pricing-2030", description: "Advanced pricing strategies" },
+        { name: "Request Quote", path: "/request-quote", description: "Get custom pricing" },
+        { name: "Marketplace", path: "/marketplace", description: "Explore our solutions" }
+      ]
+    },
+    {
+      title: "Support & Resources",
+      icon: HelpCircle,
+      links: [
+        { name: "Help Center", path: "/help", description: "Find answers to common questions" },
+        { name: "FAQ", path: "/faq", description: "Frequently asked questions" },
+        { name: "Support Portal", path: "/support", description: "Technical support and assistance" },
+        { name: "Documentation", path: "/docs", description: "Technical guides and API references" },
+        { name: "Training", path: "/training", description: "Learning resources and courses" },
+        { name: "Webinars", path: "/webinars", description: "Educational sessions and workshops" },
+        { name: "Blog", path: "/blog", description: "Latest insights and news" },
+        { name: "Case Studies", path: "/case-studies", description: "Success stories and projects" }
+      ]
+    },
+    {
+      title: "Legal & Compliance",
+      icon: Shield,
+      links: [
+        { name: "Privacy Policy", path: "/privacy", description: "How we protect your data" },
+        { name: "Terms of Service", path: "/terms", description: "Terms and conditions" },
+        { name: "Cookie Policy", path: "/cookies", description: "Cookie usage information" },
+        { name: "Accessibility", path: "/accessibility", description: "Accessibility statement" },
+        { name: "Security", path: "/security", description: "Security practices" },
+        { name: "Compliance", path: "/compliance", description: "Regulatory compliance" }
+      ]
+    }
+  ];
 
   const categoryIcons = {
     main: Globe,

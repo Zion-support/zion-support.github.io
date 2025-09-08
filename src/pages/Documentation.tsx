@@ -16,18 +16,10 @@ import {
   Terminal,
   Database,
   Shield,
-  Zap,
-  Users,
-  Globe,
-  Lock,
-  Settings,
-  Play,
-  Bookmark,
-  Star,
-  Mail
-} from 'lucide-react';
+  Rocket
+ } from 'lucide-react';
 
-const Documentation: React.FC = () => {
+export default function Documentation() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedSections, setExpandedSections] = useState<string[]>(['getting-started']);
@@ -44,146 +36,50 @@ const Documentation: React.FC = () => {
   const documentationSections = [
     {
       id: 'getting-started',
-      title: 'Getting Started',
-      description: 'Quick start guides and setup instructions',
-      icon: Play,
+      name: 'Getting Started',
+      icon: Rocket,
+      description: 'Quick start guides and basic setup',
       articles: [
-        {
-          title: 'Quick Start Guide',
-          description: 'Get up and running with Zion Tech Group in 5 minutes',
-          difficulty: 'Beginner',
-          time: '5 min read',
-          url: '#'
-        },
-        {
-          title: 'Installation & Setup',
-          description: 'Step-by-step installation instructions for all platforms',
-          difficulty: 'Beginner',
-          time: '10 min read',
-          url: '#'
-        },
-        {
-          title: 'Authentication',
-          description: 'Learn how to authenticate with our services',
-          difficulty: 'Beginner',
-          time: '8 min read',
-          url: '#'
-        },
-        {
-          title: 'First Project',
-          description: 'Build your first project with Zion Tech Group',
-          difficulty: 'Beginner',
-          time: '15 min read',
-          url: '#'
-        }
+        { title: 'Welcome to Zion Tech Group', readTime: '5 min', difficulty: 'Beginner' },
+        { title: 'Account Setup Guide', readTime: '10 min', difficulty: 'Beginner' },
+        { title: 'First Project Setup', readTime: '15 min', difficulty: 'Beginner' },
+        { title: 'Dashboard Overview', readTime: '8 min', difficulty: 'Beginner' }
       ]
     },
     {
-      id: 'api',
-      title: 'API Reference',
-      description: 'Complete API documentation and endpoints',
-      icon: Code,
+      id: 'ai-services',
+      name: 'AI Services',
+      icon: Brain,
+      description: 'AI and machine learning documentation',
       articles: [
-        {
-          title: 'REST API Overview',
-          description: 'Complete REST API reference with examples',
-          difficulty: 'Intermediate',
-          time: '20 min read',
-          url: '#'
-        },
-        {
-          title: 'GraphQL API',
-          description: 'GraphQL schema and query examples',
-          difficulty: 'Intermediate',
-          time: '25 min read',
-          url: '#'
-        },
-        {
-          title: 'WebSocket API',
-          description: 'Real-time communication with WebSocket',
-          difficulty: 'Advanced',
-          time: '18 min read',
-          url: '#'
-        },
-        {
-          title: 'Rate Limiting',
-          description: 'Understanding API rate limits and quotas',
-          difficulty: 'Intermediate',
-          time: '12 min read',
-          url: '#'
-        }
+        { title: 'AI Business Intelligence Setup', readTime: '20 min', difficulty: 'Intermediate' },
+        { title: 'Machine Learning Model Training', readTime: '30 min', difficulty: 'Advanced' },
+        { title: 'AI Compliance Assistant', readTime: '15 min', difficulty: 'Intermediate' },
+        { title: 'LLM Content Studio Guide', readTime: '25 min', difficulty: 'Intermediate' }
       ]
     },
     {
-      id: 'guides',
-      title: 'Guides & Tutorials',
-      description: 'In-depth guides and best practices',
-      icon: BookOpen,
+      id: 'cloud-devops',
+      name: 'Cloud & DevOps',
+      icon: Cloud,
+      description: 'Cloud infrastructure and DevOps guides',
       articles: [
-        {
-          title: 'AI Model Integration',
-          description: 'Integrate AI models into your applications',
-          difficulty: 'Intermediate',
-          time: '30 min read',
-          url: '#'
-        },
-        {
-          title: 'Data Processing',
-          description: 'Process and analyze data with our tools',
-          difficulty: 'Intermediate',
-          time: '25 min read',
-          url: '#'
-        },
-        {
-          title: 'Security Best Practices',
-          description: 'Secure your applications and data',
-          difficulty: 'Advanced',
-          time: '35 min read',
-          url: '#'
-        },
-        {
-          title: 'Performance Optimization',
-          description: 'Optimize your applications for better performance',
-          difficulty: 'Advanced',
-          time: '28 min read',
-          url: '#'
-        }
+        { title: 'Cloud Migration Guide', readTime: '45 min', difficulty: 'Advanced' },
+        { title: 'DevOps Pipeline Setup', readTime: '30 min', difficulty: 'Intermediate' },
+        { title: 'Container Orchestration', readTime: '25 min', difficulty: 'Advanced' },
+        { title: 'Performance Optimization', readTime: '20 min', difficulty: 'Intermediate' }
       ]
     },
     {
-      id: 'sdks',
-      title: 'SDKs & Libraries',
-      description: 'Official SDKs and client libraries',
-      icon: Download,
+      id: 'security',
+      name: 'Security & Compliance',
+      icon: Shield,
+      description: 'Security best practices and compliance',
       articles: [
-        {
-          title: 'JavaScript/Node.js SDK',
-          description: 'Official JavaScript SDK for Node.js and browsers',
-          difficulty: 'Beginner',
-          time: '15 min read',
-          url: '#'
-        },
-        {
-          title: 'Python SDK',
-          description: 'Python client library with examples',
-          difficulty: 'Beginner',
-          time: '12 min read',
-          url: '#'
-        },
-        {
-          title: 'Java SDK',
-          description: 'Java client library for enterprise applications',
-          difficulty: 'Intermediate',
-          time: '18 min read',
-          url: '#'
-        },
-        {
-          title: 'Mobile SDKs',
-          description: 'iOS and Android SDKs for mobile development',
-          difficulty: 'Intermediate',
-          time: '20 min read',
-          url: '#'
-        }
+        { title: 'Zero Trust Implementation', readTime: '35 min', difficulty: 'Advanced' },
+        { title: 'Security Audit Process', readTime: '25 min', difficulty: 'Intermediate' },
+        { title: 'Compliance Requirements', readTime: '20 min', difficulty: 'Intermediate' },
+        { title: 'Incident Response Guide', readTime: '30 min', difficulty: 'Advanced' }
       ]
     }
   ];

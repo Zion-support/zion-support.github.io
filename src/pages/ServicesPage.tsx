@@ -35,7 +35,10 @@ import SEOHead from "@/components/SEOHead";
 import { ALL_INNOVATIVE_SERVICES, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
 
 export default function ServicesPage() {
-  const [listings, setListings] = useState<ProductListing[]>(SERVICE_LISTINGS);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+  const [sortBy, setSortBy] = useState('featured');
 
   useEffect(() => {
     const interval = setInterval(() => {

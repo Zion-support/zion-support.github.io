@@ -1,21 +1,14 @@
 import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ErrorBoundary } from 'react-error-boundary';
-import { AppHeader } from './layout/AppHeader';
-import { Sidebar } from './components/Sidebar';
-import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturisticFooter';
-import { ChatAssistant } from './components/ChatAssistant';
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
-import { ModernUIEnhancer } from './components/ModernUIEnhancer';
-import { LoadingSpinner } from './components/ui/LoadingSpinner';
-import { EnhancedSEO } from './components/EnhancedSEO';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import { ErrorBoundary } from './components/ErrorBoundary';
-import { EnhancedAccessibilityPanel } from './components/EnhancedAccessibilityPanel';
-import { AdvancedPerformanceMonitor } from './components/AdvancedPerformanceMonitor';
-import InteractiveUserExperience from './components/InteractiveUserExperience';
-import SecurityEnhancer from './components/SecurityEnhancer';
+import { Routes, Route } from 'react-router-dom';
+import { AppHeader  } from './layout/AppHeader';
+import { EnhancedFuturisticFooter  } from './components/EnhancedFuturisticFooter';
+import { ChatAssistant  } from './components/ChatAssistant';
+import { LoadingSpinner  } from './components/ui/LoadingSpinner';
+import { SEO  } from './components/SEO';
+import { PerformanceOptimizer  } from './components/PerformanceOptimizer';
+import { EnhancedAccessibilityEnhancer  } from './components/EnhancedAccessibilityEnhancer';
+import { MobileExperienceEnhancer  } from './components/MobileExperienceEnhancer';
+import { ErrorBoundary  } from './components/ErrorBoundary';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));

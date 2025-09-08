@@ -105,7 +105,12 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
         content: 'Hello! I\'m your AI assistant. How can I help you today?',
         timestamp: new Date(),
         metadata: {
-          suggestions: ['Tell me about your services', 'How can I get started?', 'What are your pricing options?']
+                  suggestions: [
+          'Tell me about your services',
+          'Help me with pricing',
+          'Schedule a consultation',
+          'Technical support'
+        ]
         }
       }]);
     }
@@ -141,7 +146,52 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
     }, 1000);
   };
 
-  const handleKeyPress = (e: React.KeyboardEvent) => {
+  // Generate AI response (replace with actual AI integration)
+  const generateAIResponse = (userInput: string): string  => {
+    const responses = [
+      'I understand you\'re asking about that. Let me help you with some information.',
+      'That\'s a great question! Here\'s what I can tell you about that topic.',
+      'I\'d be happy to help you with that. Let me provide some details.',
+      'That\'s an interesting point. Here\'s what I know about that subject.',
+      'I can definitely assist you with that. Let me share some relevant information.',
+    ];
+    
+    return responses[Math.floor(Math.random() * responses.length)]};
+
+  // Generate suggestions based on user input
+  const generateSuggestions = (userInput: string): string[]  => {
+    const suggestions = [
+      'Tell me more',
+      'Can you explain that differently?',
+      'What are the next steps?',
+      'Show me examples',
+      'How does this work?'
+    ];
+    
+    return suggestions.slice(0, 3)};
+
+  // Handle file upload
+  const handleFileUpload = useCallback((event: React.ChangeEvent<HTMLInputElement>)  => {
+    const file = event.target.files?.[0];
+    if (file) {
+      const fileMessage: ChatMessage = {
+        id: Date.now().toString(),
+        type: 'user',
+        content: `Uploaded file: ${file.name}`,
+        timestamp: new Date(),
+        metadata: {
+          sources: [file.name],
+        }
+      };
+      setMessages(prev  => [...prev, fileMessage])}
+  }, []);
+
+  // Handle suggestion click
+  const handleSuggestionClick = useCallback((suggestion: string)  => {
+    sendMessage(suggestion)}, [sendMessage]);
+
+  // Handle enter key
+  const handleKeyPress = useCallback((e: React.KeyboardEvent)  => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       handleSendMessage(inputValue);

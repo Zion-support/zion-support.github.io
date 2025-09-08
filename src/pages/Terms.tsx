@@ -11,21 +11,11 @@ import {
   AlertTriangle,
   Mail,
   Phone,
-  MapPin,
-  Calendar,
-  Scale,
-  Lock
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
+  MapPin
+ } from 'lucide-react';
 
 export default function Terms() {
-  const lastUpdated = 'January 15, 2025';
-  const companyInfo = {
-    name: 'Zion Tech Group',
-    address: '364 E Main St STE 1008, Middletown, DE 19709',
-    email: 'legal@ziontechgroup.com',
-    phone: '+1 302 464 0950'
-  };
+  const lastUpdated = 'December 15, 2024';
 
   const serviceCategories = [
     {

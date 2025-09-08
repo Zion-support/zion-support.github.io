@@ -17,11 +17,11 @@ import {
 } from 'lucide-react';
 
 export default function About() {
-  const companyStats = [
-    { icon: Users, number: '500+', label: 'Clients Worldwide' },
-    { icon: Award, number: '15+', label: 'Years Experience' },
-    { icon: Target, number: '98%', label: 'Client Satisfaction' },
-    { icon: Lightbulb, number: '200+', label: 'Innovations' }
+  const stats = [
+    { number: '500+', label: 'Projects Completed', description: 'Successfully delivered across industries' },
+    { number: '50+', label: 'Team Members', description: 'Expert professionals and specialists' },
+    { number: '25+', label: 'Countries Served', description: 'Global presence and reach' },
+    { number: '99%', label: 'Client Satisfaction', description: 'Consistent high-quality delivery' }
   ];
 
   const values = [
@@ -51,20 +51,58 @@ export default function About() {
     {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
-      bio: 'Visionary leader with 15+ years in AI and technology innovation.',
-      image: '/team/kleber-santos.jpg'
+      bio: 'Visionary leader with 15+ years in technology innovation and business transformation.',
+              expertise: ['AI Strategy', 'Digital Transformation', 'Business Innovation'],
+      image: '/images/team/kleber-santos.jpg'
     },
     {
-      name: 'AI Innovation Team',
-      role: 'Research & Development',
-      bio: 'World-class engineers and researchers pushing the boundaries of AI technology.',
-      image: '/team/ai-team.jpg'
+      name: 'Dr. Sarah Chen',
+      role: 'CTO & AI Research Lead',
+      bio: 'PhD in Computer Science with expertise in machine learning and artificial intelligence.',
+              expertise: ['Machine Learning', 'AI Research', 'Technical Architecture'],
+      image: '/images/team/sarah-chen.jpg'
     },
     {
-      name: 'Digital Solutions Team',
-      role: 'Implementation & Support',
-      bio: 'Expert consultants ensuring successful digital transformation for our clients.',
-      image: '/team/solutions-team.jpg'
+      name: 'Marcus Rodriguez',
+      role: 'Head of Cloud & DevOps',
+      bio: 'Cloud infrastructure expert with certifications in AWS, Azure, and Google Cloud.',
+              expertise: ['Cloud Architecture', 'DevOps', 'Infrastructure'],
+      image: '/images/team/marcus-rodriguez.jpg'
+    },
+    {
+      name: 'Dr. Emily Watson',
+      role: 'Cybersecurity Director',
+      bio: 'Former government cybersecurity specialist with expertise in threat intelligence.',
+              expertise: ['Cybersecurity', 'Compliance', 'Risk Management'],
+      image: '/images/team/emily-watson.jpg'
+    }
+  ];
+
+  const milestones = [
+    {
+      year: '2018',
+      title: 'Comp Founded',
+      description: 'Zion Tech Group established with a vision to democratize AI technology.'
+    },
+    {
+      year: '2020',
+      title: 'First AI Product Launch',
+      description: 'Successfully launched our flagship AI compliance assistant.'
+    },
+    {
+      year: '2022',
+      title: 'Global Expansion',
+      description: 'Expanded operations to 25+ countries with 100+ enterprise clients.'
+    },
+    {
+      year: '2024',
+      title: 'Quantum Computing Initiative',
+      description: 'Launched quantum computing research and development program.'
+    },
+    {
+      year: '2025',
+      title: 'AI Ethics Leadership',
+      description: 'Recognized as industry leader in responsible AI development.'
     }
   ];
 

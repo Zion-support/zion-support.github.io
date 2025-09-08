@@ -1,60 +1,8 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Briefcase, 
-  Users, 
-  Globe, 
-  Award, 
-  Star,
-  Zap,
-  Brain,
-  Shield,
-  Rocket,
-  Cpu,
-  Database,
-  Lock,
-  Cloud,
-  Code,
-  Server,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Bot,
-  Workflow,
-  Eye,
-  Sparkles,
-  Atom,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  Activity,
-  MessageCircle,
-  BarChart,
-  Settings,
-  Palette,
-  Target,
-  Handshake,
-  Lightbulb,
-  TrendingUp,
-  CheckCircle,
-  ArrowRight,
-  Play,
-  ChevronRight,
-  Heart,
-  MapPin,
-  Clock,
-  DollarSign,
-  GraduationCap,
-  Building2,
-  Mail,
-  Linkedin,
-  Github,
-  ExternalLink
-} from 'lucide-react';
+import { Users, MapPin, Clock, Briefcase, GraduationCap, Heart, Zap, Globe, Mail, Phone, MapPinIcon  } from 'lucide-react';
 
-const Careers = () => {
+export default function Careers() {
+  const [searchTerm, setSearchTerm] = useState('');
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const [selectedLocation, setSelectedLocation] = useState('all');
   const [selectedType, setSelectedType] = useState('all');
@@ -99,21 +47,13 @@ const Careers = () => {
       location: 'san-francisco',
       type: 'full-time',
       experience: '5+ years',
-      salary: '$150,000 - $200,000',
-      description: 'Join our AI team to build next-generation machine learning models and AI solutions.',
+      description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
       requirements: [
-        'Strong background in machine learning and deep learning',
-        'Experience with PyTorch, TensorFlow, or similar frameworks',
-        'Knowledge of NLP, computer vision, or reinforcement learning',
-        'PhD in Computer Science or related field preferred'
-      ],
-      benefits: [
-        'Competitive salary and equity',
-        'Flexible work arrangements',
-        'Professional development budget',
-        'Health, dental, and vision insurance'
-      ],
-      featured: true
+        'Advanced degree in Computer Science, AI, or related field',
+        'Expertise in Python, TensorFlow, PyTorch',
+        'Experience with large language models and NLP',
+        'Strong background in machine learning algorithms'
+      ]
     },
     {
       id: 2,
@@ -122,44 +62,28 @@ const Careers = () => {
       location: 'new-york',
       type: 'full-time',
       experience: '3+ years',
-      salary: '$120,000 - $160,000',
-      description: 'Help protect our clients and systems from cyber threats.',
+      description: 'Protect our systems and clients with advanced security solutions.',
       requirements: [
-        'Experience with security tools and frameworks',
-        'Knowledge of threat intelligence and incident response',
-        'Familiarity with compliance standards (SOC 2, ISO 27001)',
-        'Relevant certifications (CISSP, CEH, etc.)'
-      ],
-      benefits: [
-        'Competitive salary and equity',
-        'Flexible work arrangements',
-        'Professional development budget',
-        'Health, dental, and vision insurance'
-      ],
-      featured: true
+        'Bachelor\'s degree in Cybersecurity or related field',
+        'Certifications: CISSP, CEH, or similar',
+        'Experience with penetration testing and vulnerability assessment',
+        'Knowledge of compliance frameworks (SOC2, ISO27001)'
+      ]
     },
     {
       id: 3,
       title: 'Cloud Solutions Architect',
-      department: 'cloud-devops',
-      location: 'remote',
-      type: 'full-time',
-      experience: '7+ years',
-      salary: '$140,000 - $190,000',
-      description: 'Design and implement scalable cloud solutions for enterprise clients.',
+      department: 'Infrastructure',
+      location: 'Remote / London, UK',
+      type: 'Full-time',
+      experience: '4+ years',
+      description: 'Design and implement scalable cloud infrastructure solutions.',
       requirements: [
-        'Expertise in AWS, Azure, or Google Cloud',
-        'Experience with infrastructure as code',
-        'Knowledge of containerization and orchestration',
-        'Strong understanding of security best practices'
-      ],
-      benefits: [
-        'Competitive salary and equity',
-        'Flexible work arrangements',
-        'Professional development budget',
-        'Health, dental, and vision insurance'
-      ],
-      featured: false
+        'Bachelor\'s degree in Computer Science or related field',
+        'AWS, Azure, or GCP certifications',
+        'Experience with Kubernetes and Docker',
+        'Strong understanding of microservices architecture'
+      ]
     },
     {
       id: 4,
@@ -191,44 +115,13 @@ const Careers = () => {
       location: 'middletown',
       type: 'full-time',
       experience: '3+ years',
-      salary: '$100,000 - $140,000',
-      description: 'Transform data into actionable insights for business decisions.',
+      description: 'Drive product strategy and development for our technology solutions.',
       requirements: [
-        'Experience with Python, R, or similar languages',
-        'Knowledge of statistical analysis and machine learning',
-        'Experience with data visualization tools',
-        'Strong communication and presentation skills'
-      ],
-      benefits: [
-        'Competitive salary and equity',
-        'Flexible work arrangements',
-        'Professional development budget',
-        'Health, dental, and vision insurance'
-      ],
-      featured: false
-    },
-    {
-      id: 6,
-      title: 'Software Engineering Intern',
-      department: 'engineering',
-      location: 'san-francisco',
-      type: 'internship',
-      experience: 'Student',
-      salary: '$8,000 - $12,000/month',
-      description: 'Gain hands-on experience with cutting-edge technologies.',
-      requirements: [
-        'Currently pursuing Computer Science degree',
-        'Knowledge of programming languages (Python, JavaScript, etc.)',
-        'Strong problem-solving skills',
-        'Eagerness to learn and grow'
-      ],
-      benefits: [
-        'Competitive stipend',
-        'Mentorship from senior engineers',
-        'Real project experience',
-        'Potential for full-time conversion'
-      ],
-      featured: false
+        'Bachelor\'s degree in Business, Engineering, or related field',
+        'Experience in B2B SaaS product management',
+        'Strong analytical and communication skills',
+        'Background in technology or consulting preferred'
+      ]
     }
   ];
 

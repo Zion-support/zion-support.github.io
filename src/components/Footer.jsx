@@ -98,7 +98,7 @@ export function Footer() {
       ]
     },
     {
-      title: "Company",
+      title: "Comp",
       links: [
         { label: "About Us", path: "/about" },
         { label: "Our Team", path: "/team" },
@@ -108,54 +108,7 @@ export function Footer() {
       ]
     },
     {
-      title: "Services",
-      links: [
-        { label: "AI & Business Solutions", path: "/services/ai-business-solutions" },
-        { label: "Cybersecurity Suite", path: "/services/cybersecurity-suite" },
-        { label: "Cloud Infrastructure", path: "/services/cloud-infrastructure" },
-        { label: "Digital Marketing", path: "/services/digital-marketing" },
-        { label: "Financial Solutions", path: "/services/financial-solutions" },
-        { label: "Manufacturing Solutions", path: "/services/manufacturing-solutions" },
-        { label: "IoT Services", path: "/services/iot-services" },
-        { label: "Blockchain Services", path: "/services/blockchain-services" },
-        { label: "Quantum Technology", path: "/services/quantum-technology" },
-        { label: "5G Enterprise Solutions", path: "/services/5g-enterprise-solutions" },
-        { label: "Green IT", path: "/services/green-it" },
-        { label: "Enterprise IT", path: "/services/enterprise-it" },
-        { label: "Micro SaaS Services", path: "/services/micro-saas" },
-        { label: "Onsite IT Services", path: "/services/onsite-it" },
-        { label: "Dispute Management", path: "/services/dispute-management" }
-      ]
-    },
-    {
-      title: "Products",
-      links: [
-        { label: "All Products", path: "/products" },
-        { label: "New Products", path: "/products/new" },
-        { label: "Equipment", path: "/equipment" },
-        { label: "Portfolio Builder", path: "/portfolio-builder" },
-        { label: "Zion Hire AI", path: "/zion-hire-ai" },
-        { label: "AI Research Assistant", path: "/ai-research-assistant" },
-        { label: "AI Content Generator", path: "/ai-content-generator" },
-        { label: "AI Code Review", path: "/ai-code-review" },
-        { label: "Cloud Cost Optimizer", path: "/cloud-cost-optimizer" },
-        { label: "Service Description Generator", path: "/service-description-generator" }
-      ]
-    },
-    {
-      title: "Business Solutions",
-      links: [
-        { label: "Business Solutions", path: "/business-solutions" },
-        { label: "Enterprise Admin", path: "/enterprise" },
-        { label: "Enterprise Billing", path: "/enterprise/billing" },
-        { label: "Enterprise Demo", path: "/enterprise/demo" },
-        { label: "Enterprise Plans", path: "/enterprise/plans" },
-        { label: "Digital Transformation", path: "/digital-transformation" },
-        { label: "Autonomous Business Platform", path: "/autonomous-business-platform" }
-      ]
-    },
-    {
-      title: "Community",
+      title: "Resources",
       links: [
         { label: "Blog", path: "/blog" },
         { label: "Documentation", path: "/docs" }

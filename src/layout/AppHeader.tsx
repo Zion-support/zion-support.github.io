@@ -1,13 +1,11 @@
-import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, User, Bell, Award, GraduationCap, LifeBuoy } from 'lucide-react';
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Sidebar as SidebarIcon } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Bot, Atom } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sidebar } from '../components/Sidebar';
 
-export function AppHeader() {
+export function AppHeader(): JSX.Element {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -231,42 +229,18 @@ export function AppHeader() {
     }
   ];
 
-  // Solutions categories
-  const solutions = [
-    { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building, description: 'Large-scale enterprise solutions', category: 'Enterprise', color: 'from-blue-500 to-indigo-500' },
-    { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: Heart, description: 'Healthcare IT infrastructure', category: 'Healthcare', color: 'from-red-500 to-pink-500' },
-    { name: 'Financial Services', href: '/solutions/financial', icon: DollarSign, description: 'Financial technology solutions', category: 'Financial', color: 'from-green-500 to-emerald-500' },
-    { name: 'Manufacturing', href: '/solutions/manufacturing', icon: Truck, description: 'Manufacturing IT systems', category: 'Manufacturing', color: 'from-orange-500 to-red-500' },
-    { name: 'Retail & E-commerce', href: '/solutions/retail', icon: ShoppingCart, description: 'Retail technology solutions', category: 'Retail', color: 'from-purple-500 to-pink-500' },
-    { name: 'Government', href: '/solutions/government', icon: Building, description: 'Public sector IT solutions', category: 'Government', color: 'from-gray-500 to-slate-500' }
-  ];
-
-  // Resources categories
-  const resources = [
-    { name: 'Blog', href: '/blog', icon: BookOpen, description: 'Latest insights and updates', category: 'Content', color: 'from-blue-500 to-cyan-500' },
-    { name: 'Case Studies', href: '/case-studies', icon: FileText, description: 'Client success stories', category: 'Content', color: 'from-green-500 to-emerald-500' },
-    { name: 'News', href: '/news', icon: Newspaper, description: 'Company news and announcements', category: 'Content', color: 'from-purple-500 to-pink-500' },
-    { name: 'FAQ', href: '/faq', icon: HelpCircle, description: 'Frequently asked questions', category: 'Support', color: 'from-orange-500 to-red-500' },
-    { name: 'Help Center', href: '/help', icon: LifeBuoy, description: 'Support and documentation', category: 'Support', color: 'from-indigo-500 to-purple-500' },
-    { name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Service pricing and plans', category: 'Business', color: 'from-yellow-500 to-orange-500' },
-    { name: 'Partners', href: '/partners', icon: Users, description: 'Partnership opportunities', category: 'Business', color: 'from-green-500 to-teal-500' },
-    { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Job opportunities', category: 'Business', color: 'from-blue-500 to-indigo-500' }
-  ];
-
-  const quickLinks = [
-    { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
-    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
-    { name: 'Pricing', href: '/pricing', icon: DollarSign },
-    { name: 'Careers', href: '/careers', icon: Users },
-    { name: 'Partners', href: '/partners', icon: HeartHandshake },
-    { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar },
-    { name: 'Community', href: '/community', icon: Users },
-    { name: 'Developers', href: '/developers', icon: Code },
-    { name: 'Privacy', href: '/privacy', icon: Shield },
-    { name: 'Terms', href: '/terms', icon: BookOpen },
-  ];
-
-  const companyCategories = [
+  const servicesCategories = [
+    {
+      name: 'Core Services',
+      icon: Settings,
+      color: 'from-blue-600 to-cyan-600',
+      services: [
+        { name: 'Services Overview', href: '/services-overview', description: 'Complete service portfolio' },
+        { name: 'AI Services', href: '/ai-services', description: 'AI-powered solutions' },
+        { name: 'IT Services', href: '/it-services', description: 'Enterprise IT solutions' },
+        { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable software solutions' }
+      ]
+    },
     {
       name: 'AI & Analytics',
       icon: Brain,
@@ -349,6 +323,16 @@ export function AppHeader() {
     {
       name: 'Cloud & DevOps',
       icon: Cloud,
+      color: 'from-green-600 to-emerald-600',
+      services: [
+        { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure & Automation' },
+        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cost optimization' },
+        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations' }
+      ]
+    },
+    {
+      name: 'Edge & IoT',
+      icon: Server,
       color: 'from-blue-600 to-cyan-600',
       description: 'Infrastructure & automation',
       services: [

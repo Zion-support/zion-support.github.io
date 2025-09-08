@@ -85,15 +85,47 @@ export default function Contact() {
     }
   ];
 
-  const services = [
-    'AI Solutions & Consulting',
-    'Quantum Computing Services',
-    'Digital Transformation',
-    'Cloud & DevOps',
-    'Cybersecurity Solutions',
-    'Micro SAAS Platforms',
-    'IT Infrastructure',
-    'Custom Development'
+  const serviceCategories = [
+    {
+      name: 'AI-Powered Micro SAAS',
+              services: [
+          'AI Code Review & Security',
+          'AI Customer Experience Analytics',
+          'AI DevOps Automation Platform',
+          'AI IoT Edge Computing Platform'
+        ]
+    },
+    {
+      name: 'Cloud & Infrastructure',
+      services: [
+        'Cloud DevOps',
+        'IT Infrastructure',
+        'Digital Twin'
+      ]
+    },
+    {
+      name: 'Data & Analytics',
+      services: [
+        'Data Analytics',
+        'AI Business Intelligence',
+        'IoT Edge Computing'
+      ]
+    },
+    {
+      name: 'Security & Compliance',
+      services: [
+        'Zero Trust Network Architecture',
+        'AI Cybersecurity Suite',
+        'AI Compliance Assistant'
+      ]
+    }
+  ];
+
+  const quickLinks = [
+    { title: 'AI Services Showcase', url: '/ai-services-showcase', icon: '🚀' },
+    { title: 'All Services', url: '/all-services', icon: '📋' },
+    { title: 'Pricing', url: '/pricing', icon: '💰' },
+    { title: 'Comprehensive Services', url: '/comprehensive-services', icon: '🔍' }
   ];
 
   return (

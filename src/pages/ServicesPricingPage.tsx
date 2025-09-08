@@ -384,7 +384,6 @@ const pricingFeatures = [
   "Security Compliance",
   "Scalable Architecture"
 ];
-
 export default function ServicesPricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
