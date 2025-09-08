@@ -40,32 +40,23 @@
     "noUncheckedIndexedAccess": false,
     "allowJs": true,
     "incremental": true,
-    "noEmitOnError": false,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "noEmitOnError": false
   },
   "include": [
-    "src/main.tsx",
-    "src/App.tsx",
-    "src/index.css",
-    "src/layout/AppLayout.tsx",
-    "src/context/**/*.tsx",
-    "src/components/ui/**/*.tsx",
-    "src/components/PerformanceWrapper.tsx",
-    "src/components/support/ChatBotPanel.tsx"
+    "src/**/*",
+    "src/**/*.ts",
+    "src/**/*.tsx"
   ],
   "exclude": [
     "node_modules",
-    "src/pages",
-    "src/routes",
-    "src/components",
-    "src/hooks",
-    "src/services",
-    "src/data",
-    "src/layout",
-    "src/context/WalletContext.tsx"
+    "dist",
+    "build",
+    "src.disabled",
+    "src_disabled_*",
+    "tests",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx"
   ]
 }
