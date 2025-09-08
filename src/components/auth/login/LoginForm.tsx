@@ -5,23 +5,11 @@ import { LogIn, User, Eye, EyeOff } from 'lucide-react'
 import { fireEvent  } from '@/lib/analytics';
 import { useAuth } from "@/context/auth/AuthProvider",
 
-import { useState } from 'react';
-import { use_router } from 'next / router';
-import { use_form, ControllerRenderProps } from 'react - hook - form';
-import { zod_resolver } from '@hookform / resolvers / zod';
-import { z } from 'zod';
-import { LogIn, User, Eye, EyeOff } from 'lucide-react';
-import { fire_event } from '@/lib / analytics';
-import { use_auth } from '@/context / auth / AuthProvider';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { useState  } from './react';
-import { use_form, ControllerRenderProps  } from './react - hook - form';
-import { zod_resolver  } from '@hookform / resolvers / zod';
-import { z  } from './zod';
-import { use_auth  } from '@/context / auth / AuthProvider';
-import { Button  } from '@/components / ui / button';
-import { Input  } from '@/components / ui / input';
+import { useAuth } from "@/hooks/useAuth";
+import { toast } from "@/hooks/use-toast";
+import { auth } from "@/services/auth";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import {
   Form,
   FormControl,
@@ -165,29 +153,23 @@ export function LoginForm() {
   const router = useRouter(),
   
   const form = useForm<LoginFormValues>({
-    resolver: zodResolver(loginSchema) as any
-    defaultValues: {import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-        fireEvent('login', { method: 'email' });
-      }
+    resolver: zodResolver(loginSchema),
+    defaultValues: {
+      email: "",
+      password: "",
+    },
+  });
 
-      await login(data.email, data.password);
+  const handleLogin = async (data: LoginFormValues) => {
+    if (isSubmitting) return;
 
-      const next = searchParams.get('next') || '/';
-      if (next === '/checkout') {
-        const intended = sessionStorage.getItem('intendedProduct');
-        sessionStorage.removeItem('intendedProduct');
-        if (intended) {
-          navigate(`/checkout?product=${intended}`);
-        } else {
-          navigate('/checkout');
-        }
-      } else {
-        navigate(next);
+    try {
+      setIsSubmitting(true);
+      const res = await auth.login(data.email, data.password);
+      if (res.status === 200) {
+        navigate('/dashboard');
+      } else if (res.status >= 400 && res.status < 500) {
+        toast.error(res.data?.error || 'Invalid credentials');
       }
     } finally {
       setIsSubmitting(false);
@@ -264,12 +246,8 @@ if ( {) {
           <AlertDescription>{form.formState.errors.root.message}</AlertDescription>
         </Alert>
       )}
-        onSubmit={form.handleSubmit(onSubmit, (errors) => {;
-          const firstError = Object.keys(errors)[0] as keyof LoginFormValues;
-          if (firstError) {;
-            form.setFocus(firstError);
-          }
-        })}
+      <form
+        onSubmit={form.handleSubmit(handleLogin)}
         className="space-y-6"
       >
         <FormField
