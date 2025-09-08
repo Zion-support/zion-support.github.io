@@ -1,7 +1,7 @@
 # CI/CD Pipeline Report - 8/29/2025
 
 ## 📊 Summary
-- **Total Duration**: 18635ms
+- **Total Duration**: 15892ms
 - **Total Checks**: 6
 - **Passed**: 2 ✅
 - **Failed**: 3 ❌
@@ -12,7 +12,7 @@
 
 ### 📦 Dependencies
 - **Status**: ✅ Success
-- **Duration**: 6661ms
+- **Duration**: 5849ms
 
 
 ### 🔍 Linting
@@ -23,12 +23,12 @@
 ### 🔍 Type Checking
 - **Status**: ❌ Failed
 - **Duration**: N/A
-- **Issues**: 46 (46 errors, 0 warnings)
+- **Issues**: 32 (32 errors, 0 warnings)
 
 ### 🏗️ Build
 - **Status**: ✅ Success
-- **Duration**: 9522ms
-- **Build Size**: 7.72 MB
+- **Duration**: 8130ms
+- **Build Size**: 7.63 MB
 
 ### 🧪 Testing
 - **Status**: ⏭️ Skipped
