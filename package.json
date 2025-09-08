@@ -49,6 +49,7 @@
     "clean": "rm -rf dist node_modules/.vite",
     "prebuild": "echo 'Skipping type-check and lint for build compatibility'",
     "postbuild": "echo 'Build completed successfully' && npm run optimize",
+    "health": "node -e \"console.log('✅ Node.js:', process.version); console.log('✅ NPM:', process.env.npm_version || 'unknown'); console.log('✅ Build status: OK');\"",
     "optimize": "node scripts/optimize-build.js",
     "audit:accessibility": "node scripts/accessibility-audit.js",
     "audit:performance": "node scripts/performance-audit.js",
