@@ -7,3 +7,5 @@ export function WorkspaceHeader() {
     </div>
   )
 }
+  );
+};

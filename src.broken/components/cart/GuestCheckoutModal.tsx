@@ -7,3 +7,5 @@ export function GuestCheckoutModal() {
     </div>
   )
 }
+  );
+};

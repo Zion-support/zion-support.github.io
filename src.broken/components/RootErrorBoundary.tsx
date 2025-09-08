@@ -7,3 +7,5 @@ export function RootErrorBoundary() {
     </div>
   )
 }
+  );
+};

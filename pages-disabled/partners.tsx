@@ -96,3 +96,5 @@ const Partners: NextPage = () => {
   )};
 
 export default Page;
+  );
+};

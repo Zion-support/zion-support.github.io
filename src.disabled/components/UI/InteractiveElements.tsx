@@ -31,5 +31,3 @@ import: React { useState, useEffect } from,
 ,
   top-right': 'top-6: right-6',;
 ,
-
-

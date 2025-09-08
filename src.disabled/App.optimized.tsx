@@ -93,3 +93,5 @@ return(
     </HelmetProvider>
   )}
 export default App"
+  );
+};

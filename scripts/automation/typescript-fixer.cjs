@@ -175,9 +175,8 @@ class TypeScriptFixer {
       description: 'Remove merge conflict markers',
       action: () => {
         return line
-          .replace(/<<<<<<< HEAD/g, '')
-          .replace(/=======/g, '')
-          .replace(/>>>>>>> [a-f0-9]+/g, '')
+          .replace(//g, '')
+          .replace(/
           .trim();
       }
     };

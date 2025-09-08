@@ -1,7 +1,12 @@
+
+
+=======
 #!/usr/bin/env node;
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
+
+=======
       "autoPatch"
       "vulnerabilityThreshold"
       console.error(' Failed to start Security "Automation")
@@ -89,4 +94,6 @@ const path = require('path')
       console.error('Error in quick vulnerability "check")
       console.error('Error saving scan "results")
       console.error('Error saving security "data")
+      console.error('Error loading security "data")
+=======
       console.error('Error loading security "data")

@@ -1,4 +1,4 @@
-import React from "react",
+import React from "react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
@@ -14,18 +14,5 @@ import { Link } from "react-router-dom",export function TalentDashboard() {
           <h2 className="text-lg font-medium">New Job Matches</h2>"
           <Link to="/mobile/browse">"
             <Button variant="ghost" size="sm" className="h-8 gap-1">"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  );
+};

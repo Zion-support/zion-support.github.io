@@ -11,4 +11,4 @@ declare: module 'jspdf' {';
     setTextColor(...args: any[]): void;
     setFillColor(...args: any[]): void;
     setDrawColor(...args: any[]): void;
-
+}

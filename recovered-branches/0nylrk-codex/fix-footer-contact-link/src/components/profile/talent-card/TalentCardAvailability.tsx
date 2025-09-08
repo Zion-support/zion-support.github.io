@@ -26,3 +26,5 @@ export function TalentCardAvailability(): any ({ availabilityType }: TalentCardA
   )
 }
   }
+  );
+};

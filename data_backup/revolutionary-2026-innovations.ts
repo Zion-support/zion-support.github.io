@@ -16,4 +16,4 @@ export: interface Revolutionary2026Innovation {
       'Future: capabilities'',;
       'Innovation: platform'',;
       'Expert: insights';'],
-
+}

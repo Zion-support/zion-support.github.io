@@ -7,3 +7,5 @@ export function WorkFuturesSimulator() {
     </div>
   )
 }
+  );
+};

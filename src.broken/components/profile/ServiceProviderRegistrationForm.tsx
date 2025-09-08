@@ -7,3 +7,5 @@ export function ServiceProviderRegistrationForm() {
     </div>
   )
 }
+  );
+};

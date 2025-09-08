@@ -18,3 +18,4 @@ import React from';react' "export": interface AdvancedMicroSaasService {';
    roi: string;
    innovationLevel: string;
    contactInfo: { phone: string;
+}

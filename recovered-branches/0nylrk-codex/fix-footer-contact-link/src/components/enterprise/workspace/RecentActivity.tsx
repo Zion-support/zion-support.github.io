@@ -1,4 +1,4 @@
-import React from "react",
+import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -46,3 +46,5 @@ return <Badge variant="outline">Activity</Badge>;"
       <CardHeader>
         <CardTitle>Recent Activity</CardTitle>
         <CardDescription>Latest actions from your team</CardDescription>
+  );
+};

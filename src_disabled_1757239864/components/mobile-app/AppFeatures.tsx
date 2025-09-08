@@ -57,3 +57,5 @@ export const AppFeatures: React.FC = () => {
     </section>
   )
 };
+  );
+};

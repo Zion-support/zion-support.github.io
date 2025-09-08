@@ -16,4 +16,5 @@ export const MobileAppHero: React.FC = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               <span className="text-zion-cyan">Zion</span> in Your Pocket
             </h1>
-
+  );
+};

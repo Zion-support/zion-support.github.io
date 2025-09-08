@@ -7,3 +7,5 @@ export function OnsiteQuoteModal() {
     </div>
   )
 }
+  );
+};

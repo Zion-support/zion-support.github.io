@@ -10,7 +10,6 @@ interface PerformanceMetrics {
 const PerformanceMonitor: React.FC = memo(() => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     // Only show in development or when explicitly enabled
     const shouldShow = import.meta.env.DEV || 

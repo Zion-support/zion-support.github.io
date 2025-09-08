@@ -6,4 +6,4 @@
    enableIntersectionObserver?: boolean;
    enableMemoryManagement?: boolean;
    enableFPSMonitoring?: boolean;
-
+}

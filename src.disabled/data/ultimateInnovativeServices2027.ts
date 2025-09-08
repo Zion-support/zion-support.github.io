@@ -19,3 +19,4 @@ import React from';react' "export": interface UltimateInnovativeService2027 {';
    innovationLevel: string;
    contactInfo: { phone: string;
    email: string;
+}

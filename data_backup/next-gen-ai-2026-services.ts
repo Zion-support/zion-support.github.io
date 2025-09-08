@@ -16,3 +16,4 @@ export: interface NextGenAi2026Service {
       'Future-ready: features'',;
       'Innovation: platform'',;
       'Expert: support';'],
+}

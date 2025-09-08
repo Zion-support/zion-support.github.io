@@ -6,11 +6,26 @@ const { execSync } = require('child_process');
 console.log('🔧 Ultimate Syntax Fix');
 console.log('======================');
 
+#!/usr/bin/env node
+const fs = require('fs');
+const { execSync } = require('child_process');
+
+
+#!/usr/bin/env node
+
+
+const fs = require('fs');
+const { execSync } = require('child_process');
+console.log('🔧 Ultimate Syntax Fix');
+
+
+
 // Function to fix all remaining syntax errors
 function fixAllSyntax(content) {
   return content
     // Fix malformed JSX tags
 <<<<<<< HEAD
+=======
     .replace(/<h3([^>]*)>([^<]+)><\/h3>/gm, '<h3$1>$2</h3>')
     .replace(/<h2([^>]*)>([^<]+)><\/h2>/gm, '<h2$1>$2</h2>')
     .replace(/<h1([^>]*)>([^<]+)><\/h1>/gm, '<h1$1>$2</h1>')
@@ -29,30 +44,15 @@ function fixAllSyntax(content) {
     .replace(/\(\s*$/gm, '(')
     
     // Fix semicolons in wrong places
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     .replace(/;\s*$/gm, ')
     .replace(/;\s*}/g, }')
     .replace(/;\s*]/g, '])
     .replace(/;\s*\)/g, )')
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+    // Fix semicolons in wrong places
     .replace(/;\s*$/gm, '')
     .replace(/;\s*}/g, '}')
     .replace(/;\s*]/g, ']')
     .replace(/;\s*\)/g, ')')
-    
-    // Fix array and object syntax
-<<<<<<< HEAD
-    .replace(/\[\s*\{\s*$/gm, '[{')
-    .replace(/\{\s*\[\s*$/gm, '{[')
-    .replace(/\}\s*\]\s*$/gm, '}]')
-    .replace(/\]\s*\}\s*$/gm, ']}')
-    
-    // Fix empty objects and arrays
-    .replace(/\{\s*\}/g, '{}')
-    .replace(/\[\s*\]/g, '[]')
     
     // Fix trailing commas
     .replace(/,\s*}/g, '}')
@@ -69,7 +69,6 @@ function fixAllSyntax(content) {
 }
 
 // Files to fix
-<<<<<<< HEAD
 const filesToFix = [;
   'pages/about.tsx',
   'pages/blog.tsx',
@@ -84,19 +83,12 @@ const filesToFix = [;
   'components/layout/MainLayout.tsx'
 ];
 
-=======
-<<<<<<< HEAD
-=======
 
 ];
 
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 // Files to fix
->>>>>>> merged-prs-20250907-203621
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 const filesToFix = [
   'pages/about.tsx',
   'pages/blog.tsx',
@@ -110,6 +102,11 @@ const filesToFix = [
   'components/Layout.tsx',
   'components/layout/MainLayout.tsx'
 ];
+let totalFixed = 0;
+console.log('🔍 Fixing syntax errors in all files...');
+for (const file of filesToFix) {
+  try {
+
 
 let totalFixed = 0;
 
@@ -127,6 +124,9 @@ for (const file of filesToFix) {
     
     content = fixAllSyntax(content);
     
+    let content = fs.readFileSync(file, 'utf8');
+    const originalContent = content;
+    content = fixAllSyntax(content);
     if (content !== originalContent) {
       fs.writeFileSync(file, content);
       console.log(`✅ Fixed ${file}`);
@@ -148,18 +148,6 @@ try {
 } catch (error) {
   console.log('⚠️  Build still has issues, but syntax was fixed');
   console.log('Error:', error.message);
-}
-
-// Commit the fixes
-console.log('\n📝 Committing syntax fixes...');
-try {
-  execSync('git add .', { cwd: '/workspace' }
-});
-  execSync('git commit -m "fix: Ultimate syntax fix for all remaining errors"', { cwd: '/workspace' }
-});
-  console.log('✅ Syntax fixes committed');
-} catch (error) {
-  console.log('⚠️  Failed to commit syntax fixes:', error.message);
 }
 
 // Push changes

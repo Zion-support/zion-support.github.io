@@ -69,9 +69,6 @@ app && app.post('/jobs/generate', async (req: any, reply: any) => {
 ;
 app.post ('/jobs / generate', async (req: any, reply: any) => {
   const body = (req.body as any) || {}
-<<<<<<< HEAD
-
-=======
 >>>>>>> origin/cursor/delete-old-data-records-6bba
   const role = (body.role as string) || 'Engineer';
   const user_id = getUserId (req)const description = await generateJobPost (openai, role, body)// Check condition;
@@ -183,7 +180,6 @@ app.get('/notifications', async (req: any, reply: any) => {
 <<<<<<< HEAD
 
 =======
->>>>>>> origin/cursor/delete-old-data-records-6bba
   const body = $2;
   const prompt = $2;
   if (!prompt) return reply.code(400).send($2);

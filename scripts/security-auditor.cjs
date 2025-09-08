@@ -31,7 +31,6 @@
       this.log(`🔍 Found ${vulnerabilityCount} vulnerabilities`);
       
       return {
-<<<<<<< HEAD
   // TODO: Implement
         vulnerabilities,"
 
@@ -39,8 +38,6 @@
 
   async checkEnvironmentVariables() {"
 
-=======
->>>>>>> merged-prs-20250907-203621
         vulnerabilities,
         "count": vulnerabilityCount,
         "status": vulnerabilityCount === 0 ? 'secure' : 'vulnerable'
@@ -60,192 +57,8 @@
         const envPath = path.join(this.projectRoot, envFile);
         if (fs.existsSync(envPath)) {
           foundEnvFiles.push(envFile);
-<<<<<<< HEAD
-
-          // Check for sensitive variables;
-          const content = fs.readFileSync(envPath, 'utf8');
-          
-          // Check for sensitive variables
-          const sensitivePatterns = [/API_KEY/i,
-=======
-          const content = fs.readFileSync(envPath, 'utf8');
-          
-          // Check for sensitive variables
-const sensitivePatterns = [/API_KEY/i,;
->>>>>>> merged-prs-20250907-203621
-            /SECRET/i,
-            /PASSWORD/i,
-            /TOKEN/i,
-            /PRIVATE/i,
-            /CREDENTIAL/i;]
-          ];
-
-          const lines = content.split('\n');
-          lines.forEach((line, index) => {
-            if (line.trim() && !line.startsWith('#')) {
-              const [key] = line.split('=');
-              if (key && sensitivePatterns.some(pattern => pattern.test(key))) {
-                sensitiveVars.push({
-
-                  "line": index + 1,")"
-                  "variable": key.trim()"
-                })}
-<<<<<<< HEAD
-`;
-      this.log(`🔐 Found ${foundEnvFiles.length} environment files`);`;
-      this.log(`🔐 Found ${sensitiveVars.length} potentially sensitive variables`);
-
-  // TODO: Implement
-}"
-        "envFiles": foundEnvFiles,"
-        sensitiveVars,"
-
-
-      const foundVulnerable = Object.keys(dependencies).filter(dep => )
-=======
->>>>>>> merged-prs-20250907-203621
-            }
-          })}
-      }
-
-      this.log(`🔐 Found ${foundEnvFiles.length} environment files`);
-      this.log(`🔐 Found ${sensitiveVars.length} potentially sensitive variables`);
-
-      return {
-        "envFiles": foundEnvFiles,
-        sensitiveVars,
-        "status": sensitiveVars.length > 0 ? 'needs_review' : 'secure'
-      }} catch (error) {
-      this.log(`❌ Environment variables check "failed": ${error.message}`);
-      return { "error": error.message }}
-  }
-
-  async checkDependencies() {
-    this.log('📦 Checking dependencies...');
-    try {
-      const packageJsonPath = path.join(this.projectRoot, 'package.json');
-      if (!fs.existsSync(packageJsonPath)) {
-        throw new Error('package.json not found')}
-
-      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-      const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
-      
-      // Check for known vulnerable packages
-      const vulnerablePackages = ['lodash',
-        'moment',
-        'jquery',
-        'express',
-        'request'
-      ];
-
-      const foundVulnerable = Object.keys(dependencies).filter(dep => 
-        vulnerablePackages.some(vuln => dep.includes(vuln))
-      );
-
-      this.log(`📦 Found ${foundVulnerable.length} potentially vulnerable packages`);
-
-      return {
-        "totalDependencies": Object.keys(dependencies).length,
-        "vulnerablePackages": foundVulnerable,
-        "status": foundVulnerable.length === 0 ? 'secure' : 'needs_review'
-      }} catch (error) {
-      this.log(`❌ Dependencies check "failed": ${error.message}`);
-      return { "error": error.message }}
-  }
-
-  async checkCodeSecurity() {
-    this.log('🔍 Checking code security...');
-    try {
-      const securityIssues = [];
-      
-      // Check for common security issues in code
-      const patterns = [{
-          "name": 'eval() usage',
-          "pattern": /eval\s*\(/g,
-          "severity": 'high'
-        },
-        {
-          "name": 'innerHTML usage',
-          "pattern": /\.innerHTML\s*=/g,
-          "severity": 'medium'
-        },
-        {
-          "name": 'dangerouslySetInnerHTML usage',
-          "pattern": /dangerouslySetInnerHTML/g,
-          "severity": 'medium'
-        },
-        {
-          "name": 'console.log with sensitive data',
-          "pattern": /console\.log\s*\(\s*['""].*?(password|secret|token|key)['""]/gi,
-          "severity": 'high'
-        }
-      ];
-
-      const files = this.findSourceFiles();
-      
-      for (const file of files) {
-  // TODO: Implement
-
-          patterns.forEach(pattern => {)
-            const matches = content.match(pattern.pattern);
-            if (matches) {
-              securityIssues.push({)
-
-                "count": matches.length;"
-          })} catch (error) {"
-          // Skip files that can't be read;
-
-      this.log(`🔍 Found ${securityIssues.length} potential security issues`);
-
-  // TODO: Implement
-
-        try {
-          const content = fs.readFileSync(file, 'utf8');
-          
-          patterns.forEach(pattern => {
-            const matches = content.match(pattern.pattern);
-            if (matches) {
-              securityIssues.push({
-                "file": path.relative(this.projectRoot, file),
-                "issue": pattern.name,
-                "severity": pattern.severity,
-                "count": matches.length
-              })}
-          })} catch (error) {
-          // Skip files that can't be read
-        }
-      }
-
-      this.log(`🔍 Found ${securityIssues.length} potential security issues`);
-
-      return {
-        "issues": securityIssues,
-        "status": securityIssues.length === 0 ? 'secure' : 'needs_review'
-      }} catch (error) {
-      this.log(`❌ Code security check "failed": ${error.message}`);
-      return { "error": error.message }}
-  }
-
-  findSourceFiles() {
-    const sourceFiles = [];
-    const extensions = ['.ts', '.tsx', '.js', '.jsx'];
-    
-    const scanDirectory = (dir) => {
-  // TODO: Implement
-
-        this.fixes.push('Applied automatic security fixes');
-        console.log('✅ Security fixes applied');
-      } catch (error) {
-        console.log('❌ Could not apply automatic fixes');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-      "analysis": {"
-        npmAudit: await this.runNpmAudit(),"
-=======
->>>>>>> merged-prs-20250907-203621
 >>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+=======
       }
     } catch (error) {
       console.error('Error auditing dependencies:', error);
@@ -349,40 +162,8 @@ if (require.main === module) {
 
 module.exports = SecurityAuditor;
 #!/usr/bin/env node;
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-    this.reportsDir = path.join(this.projectRoot, 'security-reports')
-    this.log(' Running npm audit...')
-const result = execSync('npm audit --audit-level=moderate --json');
-        "encoding"
-        "status"
-          "name"
-=======
-
-        "status"
-        status
-        "status"
-          name
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-          "severity"
-          name
-          "severity"
-          name
-          "severity"
-          name
-          "pattern": /console\.log\s*\(\s*[')]
-          "severity"
-        status
-        "type"
-        priority
-        "message"
-<<<<<<< HEAD
         "impact"
-=======
         impact
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         "type"
         priority
         "message"
@@ -394,6 +175,15 @@ const result = execSync('npm audit --audit-level=moderate --json');
         "type"
         priority
         "message"
-<<<<<<< HEAD
         "impact"
       console.error('\n� Security Auditor "failed")
+
+
+
+
+
+
+main
+
+
+

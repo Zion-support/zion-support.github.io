@@ -213,5 +213,5 @@ function QuantumServices() {
                     </div>)}
                   <div className="text - center mb-6">;
                     <div className="inline - flex p - 3 bg - blue - 500 / 20 rounded - full mb-4">;
-
-
+  );
+};

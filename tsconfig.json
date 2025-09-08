@@ -1,20 +1,11 @@
 {
   "compilerOptions": {
-    "target": "ES2024",
+    "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-      "@/pages/*": ["./src/pages/*"]
-    },
-    "types": ["vite/client", "react", "react-router-dom", "node"],
+
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -22,8 +13,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
-    "strict": false,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
@@ -40,35 +33,27 @@
     "noUncheckedIndexedAccess": false,
     "allowJs": true,
     "incremental": true,
-    "noEmitOnError": false
+    "noEmitOnError": false,
+
+    /* Path mapping */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": [
+
     "src/**/*",
-    "pages/**/*",
-    "*.ts",
-    "*.tsx"
+    "src/**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "next-env.d.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    "dist",
-    "out",
-    "build",
-    "coverage",
-    "src-disabled",
-    "src.broken",
-    "src_disabled_*",
-    "pages._archive_corrupted",
-    "pages.bak",
-    "*.disabled",
-    "*.backup",
-    "*.bak",
-    "recovered-branches",
-    "backup",
-    "corrupted*",
-    "*_backup*",
-    "temp*",
-    "tmp*",
-    "*.tmp",
-    "*.temp"
+
   ]
 }

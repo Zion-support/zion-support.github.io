@@ -1,28 +1,4 @@
-#!/usr/bin/env node;
-const fs = require("child_process");
-const path = require("child_process");
-const { execSync } = require("child_process");
-    this.reportsDir = path.join(this.projectRoot, "automation-reports")
-    this.logFile = path.join(this.reportsDir, "advanced-security.log")
-=======
-<<<<<<< HEAD
-#!/usr/bin/env node;
-=======
-<<<<<<< HEAD
 
-#!/usr/bin/env node;
-
-class AdvancedSecurityAudit {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.logFile = path.join(this.reportsDir, 'advanced-security.log');
-    this.ensureDirectories()}
-
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir { recursive: true })}
-  }
 
   log(message) {
     const timestamp = new Date().toISOString();

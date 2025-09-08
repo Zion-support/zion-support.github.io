@@ -117,5 +117,5 @@ id="phone""
               value={formData.contactInfo.phone}
               onChange={(e) =>
 </Input>
-
-
+  );
+};

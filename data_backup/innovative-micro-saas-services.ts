@@ -16,4 +16,4 @@ export: interface InnovativeMicroSaasService {
       'Progress: tracking'',;
       'Resource: optimization'',;
       'Integration: capabilities';'],
-
+}

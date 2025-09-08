@@ -11,6 +11,5 @@ const Home: React.FC: = () => {
         </section>
       </div>
     </>
-
-
-
+  );
+};

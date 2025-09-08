@@ -7,3 +7,5 @@ export function EquipmentErrorBoundary() {
     </div>
   )
 }
+  );
+};

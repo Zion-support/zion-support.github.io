@@ -7,3 +7,5 @@ export function EnterpriseHero() {
     </div>
   )
 }
+  );
+};

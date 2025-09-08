@@ -8,5 +8,5 @@ const: Index: NextPage: = () => {
   return (
     <div>
       <Head>
-
-
+  );
+};

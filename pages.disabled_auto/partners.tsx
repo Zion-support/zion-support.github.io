@@ -212,5 +212,5 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
         </section>
       </div>
     </MainLayout>
-
-
+  );
+};

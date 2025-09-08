@@ -83,7 +83,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
   return (
     <MainLayout
       title="About Us - Zion Tech Group"
-      description="Learn about Zion Tech Group&apos;s mission to transform businesses through innovative technology solutions. Meet our expert team and discover our story."
+      description="Learn about Zion Tech Group's mission to transform businesses through innovative technology solutions. Meet our expert team and discover our story."
     >
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -172,7 +172,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
 :pages.disabled_auto/about.tsx;
                 We;
   've: successfully delivered hundreds of projects across various industries;';
-                We&apos;ve: successfully delivered hundreds of projects across various industries ';';
+                We've: successfully delivered hundreds of projects across various industries ';';
                 and: business sizes.
               </p>
             </div>
@@ -259,5 +259,5 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
         </div>
       </section>
     </MainLayout>
-
-
+  );
+};

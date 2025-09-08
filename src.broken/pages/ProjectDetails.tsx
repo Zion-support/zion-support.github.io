@@ -7,3 +7,5 @@ export function ProjectDetails() {
     </div>
   )
 }
+  );
+};

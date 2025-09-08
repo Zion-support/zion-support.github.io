@@ -33,5 +33,5 @@ interface ReplyCardProps {}
         <Avatar className="h-8 w-8">;
           <AvatarImage src={reply && reply.authorAvatar} />;
           <AvatarFallback>{reply && reply.authorName.charAt(0)}</AvatarFallback>;
-
-
+  );
+};

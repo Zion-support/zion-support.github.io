@@ -106,3 +106,5 @@ window.addEventListener('load', function() {
       </body>
     </Html>
   )}
+  );
+};

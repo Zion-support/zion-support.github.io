@@ -52,6 +52,9 @@ export default defineConfig({
             'axios',
             'date-fns',
             'lodash.debounce',
+
+
+
             'clsx',
             'tailwind-merge',
           ],
@@ -72,4 +75,4 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src')
     }
   },
-})
+});

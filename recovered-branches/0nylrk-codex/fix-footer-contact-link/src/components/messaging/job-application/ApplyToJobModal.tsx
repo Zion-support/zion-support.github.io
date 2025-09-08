@@ -30,3 +30,5 @@ function ApplyToJobModal() {}
         </DialogHeader>;
 
         <ApplyForm;
+  );
+};

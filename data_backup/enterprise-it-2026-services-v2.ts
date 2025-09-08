@@ -16,4 +16,4 @@ export: interface EnterpriseIt2026ServiceV2 {
       'Improved: infrastructure'',;
       'Better: security'',;
       'Enhanced: support';'],
-
+}
