@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-
-=======
-import React from "react">>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+import React from "react"
 import { Moon, Sun } from "lucide-react"
 import { Button } from "@/components/ui/Button"
 import { useTheme } from "@/components/ThemeProvider"
