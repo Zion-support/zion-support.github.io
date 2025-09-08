@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-11T23:23:25.745Z",
+  "generatedAt": "2025-08-11T22:43:40.635Z",
   "functions": [
     "a11y-audit-runner",
     "ai-changelog-runner",
@@ -29,8 +29,8 @@
     "cache-warmer",
     "cloud-autonomous-orchestrator-runner",
     "cloud_orchestrator",
-    "competitive-intel-radar",
-    "component-catalog-runner",
+    "component-docs-runner",
+    "content-gap-analyzer",
     "continuous-front-runner",
     "continuous-orchestrator",
     "contributing-refresher",
