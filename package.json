@@ -10,6 +10,7 @@
     "dev": "vite",
     "build": "vite -c vite.config.minimal.js build",
     "build:analyze": "NODE_ENV=production vite build --mode analyze",
+    "analyze": "node scripts/bundle-analyzer.js",
     "build:preview": "npm run build && npm run preview",
     "build:optimized": "npm run clean && npm run build && npm run optimize && npm run perf:check",
     "build:production": "NODE_ENV=production npm run build:optimized",

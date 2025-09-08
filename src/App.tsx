@@ -7,6 +7,7 @@ import ScrollToTop from './components/ScrollToTop';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import { PerformanceDashboard } from './components/PerformanceDashboard';
 import LoadingSpinner from './components/LoadingSpinner';
 
 // Pages - Lazy loaded for better performance
@@ -41,6 +42,7 @@ function App() {
               <ScrollToTop />
               <PerformanceMonitor />
               <PerformanceOptimizer enableMonitoring={process.env.NODE_ENV === 'development'} />
+              {process.env.NODE_ENV === 'development' && <PerformanceDashboard />}
               {/* SEO Meta Tags */}
               <Helmet>
                 <title>Zion Tech Group - AI, IT & Micro SaaS Solutions</title>
