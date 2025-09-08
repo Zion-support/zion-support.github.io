@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-09-08T04:38:39.101Z",
+  "generatedAt": "2025-09-08T05:06:53.276Z",
   "featuredCourses": [
     {
       "slug": "ai-engineering-foundations",
@@ -20,10 +20,6 @@
       "url": "https://twitter.com/samhenrigold/status/1964428927159382261"
     },
     {
-      "title": "GPT-5 Thinking in ChatGPT (a.k.a. Research Goblin) is good at search",
-      "url": "https://simonwillison.net/2025/Sep/6/research-goblin/"
-    },
-    {
       "title": "Everything from 1991 Radio Shack ad I now do with my phone (2014)",
       "url": "https://www.trendingbuffalo.com/life/uncle-steves-buffalo/everything-from-1991-radio-shack-ad-now/"
     },
@@ -32,8 +28,8 @@
       "url": "https://maxleiter.com/blog/formatting"
     },
     {
-      "title": "GitHub Community Discussions: Two most upvoted requests are to disable Copilot",
-      "url": "https://github.com/orgs/community/discussions"
+      "title": "GPT-5 Thinking in ChatGPT (a.k.a. Research Goblin) is good at search",
+      "url": "https://simonwillison.net/2025/Sep/6/research-goblin/"
     },
     {
       "title": "Analog optical computer for AI inference and combinatorial optimization",
@@ -48,8 +44,12 @@
       "url": "https://nickb.dev/blog/default-musl-allocator-considered-harmful-to-performance/"
     },
     {
-      "title": "'Make invalid states unrepresentable' considered harmful",
-      "url": "https://www.seangoedecke.com/invalid-states/"
+      "title": "How many dimensions is this?",
+      "url": "https://lcamtuf.substack.com/p/how-many-dimensions-is-this"
+    },
+    {
+      "title": "Creative Technology: The Sound Blaster",
+      "url": "https://www.abortretry.fail/p/the-story-of-creative-technology"
     }
   ],
   "recommendations": [
