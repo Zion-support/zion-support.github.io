@@ -68,47 +68,231 @@ const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/Comprehen
 const ScheduleDemo = React.lazy(() => import('./pages/ScheduleDemo'));
 const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
 
-// New innovative services
-const AILegalDocumentAnalysis = React.lazy(() => import('./pages/services/ai-legal-document-analysis'));
-const AISupplyChainOptimization = React.lazy(() => import('./pages/services/ai-supply-chain-optimization'));
-const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/ai-healthcare-analytics'));
-const AIFinancialTrading = React.lazy(() => import('./pages/services/ai-financial-trading'));
-const AIFraudDetectionPlatform = React.lazy(() => import('./pages/services/ai-fraud-detection-platform'));
-const AIHealthcareDiagnosis = React.lazy(() => import('./pages/services/ai-healthcare-diagnosis'));
-const AIMarketingAutomation = React.lazy(() => import('./pages/services/ai-marketing-automation'));
-// Service pages - only import existing ones
-const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
-const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
-const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
-const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
-const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
-const AIHealthcarePlatform = React.lazy(() => import('./pages/services/ai-healthcare-platform'));
-const AIContentCreation = React.lazy(() => import('./pages/services/ai-content-creation'));
-const AICybersecurity = React.lazy(() => import('./pages/services/ai-cybersecurity'));
-const QuantumComputing = React.lazy(() => import('./pages/services/quantum-computing'));
-const IoTEdgeComputing = React.lazy(() => import('./pages/services/iot-edge-computing'));
-const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSProducts'));
-// Import real pages
-const Careers = React.lazy(() => import('./pages/Careers'));
-const Marketplace = React.lazy(() => import('./pages/Marketplace'));
-const InnovativeMicroSAASServices2025 = React.lazy(() => import('./pages/InnovativeMicroSAASServices2025'));
-const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+// Enhanced lazy loading with preloading hints
+const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
+  const LazyComponent = lazy(importFn);
+  return (props: any) => (
+    <Suspense fallback={fallback || <LoadingSpinner />}>
+      <LazyComponent {...props} />
+    </Suspense>
+  );
+};
+
+// Core pages
+const Home = createLazyComponent(() => import('./pages/Home'));
+const About = createLazyComponent(() => import('./pages/About'));
+const Contact = createLazyComponent(() => import('./pages/Contact'));
+const GetStarted = createLazyComponent(() => import('./pages/GetStarted'));
+const RequestQuote = createLazyComponent(() => import('./pages/RequestQuote'));
+const Signup = createLazyComponent(() => import('./pages/Signup'));
+const Services = createLazyComponent(() => import('./pages/Services'));
+const AIServices = createLazyComponent(() => import('./pages/AIServices'));
+const AISolutions = createLazyComponent(() => import('./pages/AISolutions'));
+const ITServices = createLazyComponent(() => import('./pages/ITServices'));
+const MicroSaaS = createLazyComponent(() => import('./pages/MicroSaaS'));
+const Solutions = createLazyComponent(() => import('./pages/Solutions'));
+const Leadership = createLazyComponent(() => import('./pages/Leadership'));
+const Careers = createLazyComponent(() => import('./pages/Careers'));
+const News = createLazyComponent(() => import('./pages/News'));
+const Events = createLazyComponent(() => import('./pages/Events'));
+const Partners = createLazyComponent(() => import('./pages/Partners'));
+const Help = createLazyComponent(() => import('./pages/Help'));
+const Pricing = createLazyComponent(() => import('./pages/Pricing'));
+const Blog = createLazyComponent(() => import('./pages/Blog'));
+const Docs = createLazyComponent(() => import('./pages/Documentation'));
+const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
+const Webinars = createLazyComponent(() => import('./pages/Webinars'));
+const Training = createLazyComponent(() => import('./pages/Training'));
+const ResearchDevelopment = createLazyComponent(() => import('./pages/ResearchDevelopment'));
+const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
+
+// New AI Services 2025 - Combined from both versions
+const AISupplyChainOptimization = createLazyComponent(() => import('./pages/services/AI-Supply-Chain-Optimization'));
+const AICybersecurity = createLazyComponent(() => import('./pages/services/AI-Cybersecurity-Platform'));
+const AIHealthcare = createLazyComponent(() => import('./pages/services/AI-Healthcare-Platform'));
+const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Hybrid-Platform'));
+const AIAutonomousResearchAssistant = createLazyComponent(() => import('./pages/services/ai-autonomous-research-assistant'));
+const AIFinancialTradingPlatform = createLazyComponent(() => import('./pages/services/ai-financial-trading-platform'));
+const BlockchainEnterpriseSolutions = createLazyComponent(() => import('./pages/services/blockchain-enterprise-solutions'));
+
+// New Innovative Micro SAAS Services 2025
+const AIBusinessIntelligenceDashboard = createLazyComponent(() => import('./pages/services/ai-business-intelligence-dashboard'));
+const AICustomerSupportAutomation = createLazyComponent(() => import('./pages/services/ai-customer-support-automation'));
+const AIProjectManagementPlatform = createLazyComponent(() => import('./pages/services/ai-project-management-platform'));
+const AIMarketingAutomationPlatform = createLazyComponent(() => import('./pages/services/ai-marketing-automation-platform'));
+const AIWorkflowOrchestrator = createLazyComponent(() => import('./pages/services/ai-workflow-orchestrator'));
+const AIPredictiveMaintenance = createLazyComponent(() => import('./pages/services/ai-predictive-maintenance'));
+const AIHRPlatform = createLazyComponent(() => import('./pages/services/ai-hr-platform'));
+const AIFinancialTradingRiskManagement = createLazyComponent(() => import('./pages/services/ai-financial-trading-risk-management'));
+
+// Enhanced Innovative Micro SAAS Services 2025
+const AICustomerSuccessAutomation = createLazyComponent(() => import('./pages/services/ai-customer-success-automation'));
+const AISupplyChainOptimizationEnhanced = createLazyComponent(() => import('./pages/services/ai-supply-chain-optimization-enhanced'));
+const AIFinancialRiskManagementEnhanced = createLazyComponent(() => import('./pages/services/ai-financial-risk-management-enhanced'));
+
+// New Innovative Services 2025 - Additional
+const AIEnterpriseIntelligencePlatform = createLazyComponent(() => import('./pages/services/ai-enterprise-intelligence-platform'));
+const AIQuantumNeuralNetworkPlatform = createLazyComponent(() => import('./pages/services/ai-quantum-neural-network-platform'));
+const AISalesCopilot = createLazyComponent(() => import('./pages/services/ai-sales-copilot'));
+const AIComplianceAssistant = createLazyComponent(() => import('./pages/services/ai-compliance-assistant'));
+const CloudFinOpsOptimizer = createLazyComponent(() => import('./pages/services/cloud-finops-optimizer'));
+
+// New Innovative Services 2026
+const AIAutonomousLogisticsPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-logistics-platform'));
+const AIPoweredSEO = createLazyComponent(() => import('./pages/services/ai-powered-seo'));
+const QuantumEdgeComputingSolutions = createLazyComponent(() => import('./pages/services/quantum-edge-computing-solutions'));
+const AISpaceTechnologyPlatform = createLazyComponent(() => import('./pages/services/ai-space-technology-platform'));
+// New Innovative Micro SAAS Services 2026
+const AILegalDocumentAutomationPlatform = createLazyComponent(() => import('./pages/services/ai-legal-document-automation-platform'));
+const AIHealthcareAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-healthcare-analytics-platform'));
+const AIFinancialRiskManagementPlatform = createLazyComponent(() => import('./pages/services/ai-financial-risk-management-platform'));
+const AISupplyChainOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-supply-chain-optimization-platform'));
+
+
+
+// Innovative Services Showcase 2026
+const InnovativeServicesShowcase2026 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2026'));
+
+// Comprehensive Services Showcase 2031
+const ComprehensiveServicesShowcase2031 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2031'));
+
+// Innovative Services Showcase 2032
+const InnovativeServicesShowcase2032 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2032'));
+
+// Innovative Services Showcase 2033
+const InnovativeServicesShowcase2033 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2033'));
+
+// Comprehensive Pricing Guide 2032
+const ComprehensivePricingGuide2032 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2032'));
+
+// New Innovative Services 2025 - Combined from both versions
+const AIEnterpriseAutomationPlatform = createLazyComponent(() => import('./pages/services/ai-enterprise-automation-platform'));
+const AIDataAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-data-analytics-platform'));
+const ITInfrastructureManagement = createLazyComponent(() => import('./pages/services/it-infrastructure-management'));
+const MicroSaaSSolutionsComprehensive = createLazyComponent(() => import('./pages/services/micro-saas-solutions-comprehensive'));
+
+// New Innovative AI Services 2025 - From remote version
+const AIAutonomousBusinessOperationsPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-Business-Operations-Platform'));
+const AICustomerExperienceAnalyticsPlatform = createLazyComponent(() => import('./pages/services/AI-Customer-Experience-Analytics-Platform'));
+
+// Additional services
+const QuantumAICybersecurityPlatform = createLazyComponent(() => import('./pages/services/quantum-ai-cybersecurity-platform'));
+const AIHRManagementPlatform = createLazyComponent(() => import('./pages/services/ai-hr-management-platform'));
+
+// Solution pages
+const HealthcareSolutions = createLazyComponent(() => import('./pages/solutions/Healthcare'));
+const FinancialSolutions = createLazyComponent(() => import('./pages/solutions/FinancialSolutions'));
+const ManufacturingSolutions = createLazyComponent(() => import('./pages/solutions/ManufacturingSolutions'));
+const GovernmentSolutions = createLazyComponent(() => import('./pages/solutions/GovernmentSolutions'));
+const RetailSolutions = createLazyComponent(() => import('./pages/solutions/RetailSolutions'));
+const QuantumEdgeComputing = createLazyComponent(() => import('./pages/solutions/QuantumEdgeComputing'));
+const AIAutonomousBusiness = createLazyComponent(() => import('./pages/solutions/AIAutonomousBusiness'));
+const BlockchainWeb3 = createLazyComponent(() => import('./pages/solutions/BlockchainWeb3'));
+const IoTEdgeComputing = createLazyComponent(() => import('./pages/solutions/IoTEdgeComputing'));
+const SpaceTech = createLazyComponent(() => import('./pages/solutions/SpaceTech'));
+
+// Showcase pages
+const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
+const InnovativeAIServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeAIServicesShowcase2025'));
+const InnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2025'));
+
+// Legal and Policy Pages
+const Privacy = createLazyComponent(() => import('./pages/Privacy'));
+const Terms = createLazyComponent(() => import('./pages/Terms'));
+const Cookies = createLazyComponent(() => import('./pages/Cookies'));
+const Accessibility = createLazyComponent(() => import('./pages/Accessibility'));
+const Security = createLazyComponent(() => import('./pages/Security'));
+const Compliance = createLazyComponent(() => import('./pages/Compliance'));
+
+// Additional pages from main branch
+const Enterprise = createLazyComponent(() => import('./pages/Enterprise'));
+const IndustrySolutions = createLazyComponent(() => import('./pages/IndustrySolutions'));
+const CloudSolutions = createLazyComponent(() => import('./pages/CloudSolutions'));
+const EmergingTech = createLazyComponent(() => import('./pages/EmergingTech'));
+
+// Additional pages
+const Research = createLazyComponent(() => import('./pages/Research'));
+
+// Error fallback component
+const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
+  <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
+    <div className="text-center">
+      <h1 className="text-2xl font-bold text-red-400 mb-4">Something went wrong</h1>
+      <p className="text-gray-300 mb-6">{error.message}</p>
+      <button
+        onClick={resetErrorBoundary}
+        className="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
+      >
+        Try again
+      </button>
+    </div>
+  </div>
+ );
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <HelmetProvider>
-      <ErrorBoundary fallback={<ErrorFallback error={new Error()} resetErrorBoundary={() => { /* empty */ }} />}>
-        <div className="App min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-          {/* SEO Component */}
-          <SEO
-            title="Zion Tech Group - Leading AI & Technology Solutions"
-            description="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Leading the future of technology."
-            keywords="AI solutions, quantum computing, micro SAAS, technology consulting, digital transformation"
-            ogImage="/og-image.jpg"
-            canonicalUrl="https://ziontechgroup.com"
-          />
+      <ErrorBoundary FallbackComponent={ErrorFallback}>
+        <Router>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex flex-col">
+            {/* Header */}
+            <Header />
+            
+            {/* Skip Link for Accessibility */}
+            <a href="#main-content" className="skip-link">
+              Skip to main content
+            </a>
+            
+            <main id="main-content" className="flex-1 pt-20">
+              <Suspense fallback={<EnhancedLoadingSpinner />}>
+                <AnimatePresence mode="wait">
+                  <Routes>
+                    {/* Core Routes */}
+                    <Route
+                      path="/"
+                      element={
+                        <motion.div
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <ModernLayout showSidebar={false}>
+                            <Home />
+                          </ModernLayout>
+                        </motion.div>
+                      }
+                    />
+                    
+                    {/* Additional Core Routes */}
+                    <Route path="/get-started" element={<ModernLayout><GetStarted /></ModernLayout>} />
+                    <Route path="/request-quote" element={<ModernLayout><RequestQuote /></ModernLayout>} />
+                    <Route path="/signup" element={<ModernLayout><Signup /></ModernLayout>} />
+                    {/* Main Pages with Sidebar */}
+                    <Route path="/about" element={<ModernLayout><About /></ModernLayout>} />
+                    <Route path="/contact" element={<ModernLayout><Contact /></ModernLayout>} />
+                    <Route path="/services" element={<ModernLayout><Services /></ModernLayout>} />
+                    <Route path="/ai-services" element={<ModernLayout><AIServices /></ModernLayout>} />
+                    <Route path="/ai-solutions" element={<ModernLayout><AISolutions /></ModernLayout>} />
+                    <Route path="/it-services" element={<ModernLayout><ITServices /></ModernLayout>} />
+                    <Route path="/micro-saas" element={<ModernLayout><MicroSaaS /></ModernLayout>} />
+                    <Route path="/solutions" element={<ModernLayout><Solutions /></ModernLayout>} />
+                    <Route path="/leadership" element={<ModernLayout><Leadership /></ModernLayout>} />
+                    <Route path="/news" element={<ModernLayout><News /></ModernLayout>} />
+                    <Route path="/partners" element={<ModernLayout><Partners /></ModernLayout>} />
+                    <Route path="/help" element={<ModernLayout><Help /></ModernLayout>} />
+                    <Route path="/pricing" element={<ModernLayout><Pricing /></ModernLayout>} />
+                    <Route path="/blog" element={<ModernLayout><Blog /></ModernLayout>} />
+                    <Route path="/docs" element={<ModernLayout><Docs /></ModernLayout>} />
+                    <Route path="/white-papers" element={<ModernLayout><WhitePapers /></ModernLayout>} />
+                    <Route path="/webinars" element={<ModernLayout><Webinars /></ModernLayout>} />
+                    <Route path="/training" element={<ModernLayout><Training /></ModernLayout>} />
+                    <Route path="/research-development" element={<ModernLayout><ResearchDevelopment /></ModernLayout>} />
+                    <Route path="/careers" element={<ModernLayout><Careers /></ModernLayout>} />
+                    <Route path="/events" element={<ModernLayout><Events /></ModernLayout>} />
+                    <Route path="/case-studies" element={<ModernLayout><CaseStudies /></ModernLayout>} />
 
           {/* Performance Optimizer */}
           <PerformanceOptimizer enabled={true} />
