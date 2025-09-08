@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import './App.css';
@@ -19,36 +19,21 @@ import {
   CommunityRoutes,
   DeveloperRoutes
 } from './routes';
-import Home from './pages/Home';
-import AIMatcherPage from './pages/AIMatcher';
-import TalentDirectory from './pages/TalentDirectory';
-import TalentsPage from './pages/TalentsPage';
-import MoreTalentsPage from './pages/MoreTalentsPage';
-import AdditionalTalentsPage from './pages/AdditionalTalentsPage';
-import ServicesPage from './pages/ServicesPage';
-import EquipmentPage from './pages/EquipmentPage';
-import EquipmentDetail from './pages/EquipmentDetail';
-import Analytics from './pages/Analytics';
-import MobileLaunchPage from './pages/MobileLaunchPage';
-import CommunityPage from './pages/CommunityPage';
-import Categories from './pages/Categories';
-import Blog from './pages/Blog';
-import BlogPost from './pages/BlogPost';
-import NewProductsPage from './pages/NewProductsPage';
-import NewServicesPage from './pages/NewServicesPage';
-import Sitemap from './pages/Sitemap';
-import PartnersPage from './pages/Partners';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import ITOnsiteServicesPage from './pages/ITOnsiteServicesPage';
-import OpenAppRedirect from './pages/OpenAppRedirect';
-import ContactPage from './pages/Contact';
-import ZionHireAI from './pages/ZionHireAI';
-import RequestQuotePage from './pages/RequestQuote';
-import WishlistPage from './pages/Wishlist';
-import CartPage from './pages/Cart';
-import Checkout from './pages/Checkout';
-import PrivacyPage from './pages/PrivacyPage';
+
+const { lazy } = React;
+const Home = lazy(() => import('./pages/Home'));
+const AIMatcherPage = lazy(() => import('./pages/AIMatcher'));
+const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
+const TalentsPage = lazy(() => import('./pages/TalentsPage'));
+const ServicesPage = lazy(() => import('./pages/ServicesPage'));
+const EquipmentPage = lazy(() => import('./pages/EquipmentPage'));
+const Analytics = lazy(() => import('./pages/Analytics'));
+const MobileLaunchPage = lazy(() => import('./pages/MobileLaunchPage'));
+const CommunityPage = lazy(() => import('./pages/CommunityPage'));
+const Categories = lazy(() => import('./pages/Categories'));
+const Login = lazy(() => import('./pages/Login'));
+const Signup = lazy(() => import('./pages/Signup'));
+const ITOnsiteServicesPage = lazy(() => import('./pages/ITOnsiteServicesPage'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -254,8 +239,7 @@ function App() {
   return (
     <WhitelabelProvider>
       <ThemeProvider defaultTheme="dark">
-        <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
-          <ErrorBoundary>
+        <React.Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
           <Routes>
             {baseRoutes.map(({ path, element }) => (
               <Route key={path} path={path} element={element} />
@@ -272,8 +256,7 @@ function App() {
             <Route path="/developers/*" element={<DeveloperRoutes />} />
             <Route path="*" element={<ErrorRoutes />} />
           </Routes>
-          </ErrorBoundary>
-        </Suspense>
+        </React.Suspense>
         <Toaster />
         <SonnerToaster position="top-right" />
       </ThemeProvider>
