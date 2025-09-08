@@ -11,7 +11,7 @@ import {
   useAppKitEvents,
 } from '@reown/appkit/react';
 import { EthersAdapter } from '@reown/appkit-adapter-ethers';
-import { mainnet, polygon, goerli, optimism, arbitrum, base } from '@reown/appkit/networks'; // Import necessary chain objects
+import { mainnet, polygon, goerli } from '@reown/appkit/networks'; // Import necessary chain objects
 
 // Define the shape of the wallet state and context
 interface WalletState {
