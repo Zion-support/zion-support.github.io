@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Skeleton from "@/components/ui/skeleton";
@@ -305,7 +305,7 @@ export function TransactionHistory() {
                           {new Date(
                             transaction.completed_at || 
                             transaction.refunded_at || 
-                            transaction.cancelled_at!
+                            transaction.cancelled_at
                           ).toLocaleDateString()}
                         </span>
                       </div>

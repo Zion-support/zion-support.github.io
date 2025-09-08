@@ -61,5 +61,6 @@
     "ar": "العربية",
     "language_changed": "Idioma alterado para {{language}}",
     "switch_to_detected": "Mudar para {{language}}?"
-  }
+  },
+  "app.title": "Aplicativo Zion"
 }

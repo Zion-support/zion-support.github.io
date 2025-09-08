@@ -1,22 +1,21 @@
-
-import React from "react";
-import { Outlet } from "react-router-dom";
-import { AppHeader } from "./AppHeader";
-import { Footer } from "@/components/Footer";
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { AppConfig } from '../types/app';
 
 interface AppLayoutProps {
   children?: React.ReactNode;
-  hideFooter?: boolean;
+  config?: AppConfig;
 }
 
-export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
+export const AppLayout: React.FC<AppLayoutProps> = ({ children, config }) => {
   return (
-    <div className="flex flex-col min-h-screen bg-background">
-      <AppHeader />
-      <main className="flex-grow">
-        {children ?? <Outlet />}
+    <div className="min-h-screen bg-zion-blue text-white">
+      <Navigation />
+      <main className="container mx-auto px-4 py-8">
+        {children}
       </main>
-      {!hideFooter && <Footer />}
+      <Footer />
     </div>
   );
-}
+};
