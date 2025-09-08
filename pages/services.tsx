@@ -23,7 +23,15 @@ export default function ServicesPage() {
               </p>
             </header>
 
-            <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <section className="mx-auto max-w-6xl">
+            {/* Navigation */}
+            <nav className="mb-8">
+              <a href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                ← Back to Home
+              </a>
+            </nav>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
                 <div className="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center mb-6">
                   <svg className="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -182,8 +190,38 @@ export default function ServicesPage() {
                   Learn More
                 </a>
               </div>
-            </section>
-          </div>
+            </div>
+          </section>
+
+          {/* Related Pages */}
+          <section className="mx-auto max-w-6xl mt-16">
+            <h2 className="text-2xl font-bold mb-8 text-center text-white">Explore More</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <a href="/case-studies" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-2xl">📊</span>
+                </div>
+                <h3 className="text-lg font-semibold text-cyan-400 mb-2">Case Studies</h3>
+                <p className="text-white/80 text-sm">See our services in action with real results</p>
+              </a>
+              
+              <a href="/resources" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-fuchsia-400 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-2xl">📚</span>
+                </div>
+                <h3 className="text-lg font-semibold text-fuchsia-400 mb-2">Resources</h3>
+                <p className="text-white/80 text-sm">Download guides and tools to get started</p>
+              </a>
+              
+              <a href="/contact" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-2xl">💬</span>
+                </div>
+                <h3 className="text-lg font-semibold text-purple-400 mb-2">Get in Touch</h3>
+                <p className="text-white/80 text-sm">Discuss your automation needs with us</p>
+              </a>
+            </div>
+          </section>
         </main>
       </div>
     </>

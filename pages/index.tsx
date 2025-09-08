@@ -39,11 +39,17 @@ const Index: NextPage = () => {
               >
                 Explore Services
               </a>
-              <a 
-                href="/about" 
-                className="inline-flex items-center justify-center px-8 py-4 border border-white/20 text-white font-medium rounded-xl hover:bg-white/10 transition-all duration-200"
-              >
-                Learn More
+              <a href="/services" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-fuchsia-400/50">
+                Our Services
+              </a>
+              <a href="/case-studies" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50">
+                Case Studies
+              </a>
+              <a href="/resources" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50">
+                Resources
+              </a>
+              <a href="/contact" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
+                Contact
               </a>
             </div>
           </section>
@@ -98,36 +104,103 @@ const Index: NextPage = () => {
           </section>
           {/* AUTO-GENERATED: HOME_LATEST_CONTENT_END */}
 
-          <section className="mx-auto max-w-7xl px-6 pb-14 mt-16">
-            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90 mb-8">Quick Navigation</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              <a href="/about" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-200">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold mb-2">About Us</h3>
-                <p className="text-sm text-white/75">Learn about our mission and vision for autonomous technology.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Learn More <span aria-hidden>→</span></div>
-              </a>
+          {/* Featured Services */}
+          <section className="mx-auto max-w-7xl px-6 pb-14">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold tracking-wide text-white/90 mb-4">Our Core Services</h2>
+              <p className="text-lg text-white/70 max-w-3xl mx-auto">
+                Comprehensive AI and automation solutions designed to transform your business
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">
+                <div className="text-4xl mb-4">🤖</div>
+                <h3 className="text-xl font-bold mb-3 text-cyan-400">AI Development</h3>
+                <p className="text-white/70 mb-4">
+                  Custom AI solutions including machine learning models, natural language processing, and computer vision systems.
+                </p>
+                <a href="/services" className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium">
+                  Learn More →
+                </a>
+              </div>
               
-              <a href="/services" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-200">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold mb-2">Our Services</h3>
-                <p className="text-sm text-white/75">Explore our comprehensive range of autonomous solutions.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">View Services <span aria-hidden>→</span></div>
-              </a>
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300">
+                <div className="text-4xl mb-4">⚡</div>
+                <h3 className="text-xl font-bold mb-3 text-fuchsia-400">Automation Systems</h3>
+                <p className="text-white/70 mb-4">
+                  End-to-end automation solutions that streamline operations and improve efficiency across your organization.
+                </p>
+                <a href="/services" className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors text-sm font-medium">
+                  Learn More →
+                </a>
+              </div>
               
-              <a href="/contact" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-200">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold mb-2">Contact Us</h3>
-                <p className="text-sm text-white/75">Get in touch to discuss your automation needs.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Get in Touch <span aria-hidden>→</span></div>
-              </a>
-              
-              <a href="/reports" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-200">
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold mb-2">Reports</h3>
-                <p className="text-sm text-white/75">View detailed reports and system status updates.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">View Reports <span aria-hidden>→</span></div>
-              </a>
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:border-green-400/30 transition-all duration-300">
+                <div className="text-4xl mb-4">☁️</div>
+                <h3 className="text-xl font-bold mb-3 text-green-400">Cloud Infrastructure</h3>
+                <p className="text-white/70 mb-4">
+                  Scalable cloud solutions with automated deployment, monitoring, and optimization for peak performance.
+                </p>
+                <a href="/services" className="text-green-400 hover:text-green-300 transition-colors text-sm font-medium">
+                  Learn More →
+                </a>
+              </div>
+            </div>
+          </section>
+
+          {/* Success Metrics */}
+          <section className="mx-auto max-w-7xl px-6 pb-14">
+            <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl font-bold tracking-wide text-white/90 mb-4">Our Impact</h2>
+                <p className="text-lg text-white/70 max-w-3xl mx-auto">
+                  Measurable results from our autonomous technology solutions
+                </p>
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-cyan-400 mb-2">227</div>
+                  <div className="text-white/70">Active Automations</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-fuchsia-400 mb-2">2,960</div>
+                  <div className="text-white/70">Pages Generated</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
+                  <div className="text-white/70">Uptime</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-blue-400 mb-2">24/7</div>
+                  <div className="text-white/70">Monitoring</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Call to Action */}
+          <section className="mx-auto max-w-7xl px-6 pb-14">
+            <div className="text-center">
+              <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
+                <h2 className="text-3xl font-bold tracking-wide text-white/90 mb-4">Ready to Transform Your Business?</h2>
+                <p className="text-lg text-white/70 mb-8 max-w-3xl mx-auto">
+                  Join the future of autonomous technology and discover how our AI solutions can drive innovation and growth.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a 
+                    href="/contact" 
+                    className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-fuchsia-600 transition-all duration-200"
+                  >
+                    Get Started Today
+                  </a>
+                  <a 
+                    href="/case-studies" 
+                    className="px-8 py-4 bg-white/10 text-white font-semibold rounded-xl border border-white/20 hover:border-cyan-400/50 transition-all duration-200"
+                  >
+                    View Case Studies
+                  </a>
+                </div>
+              </div>
             </div>
           </section>
         </main>

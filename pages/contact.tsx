@@ -13,108 +13,26 @@ export default function ContactPage() {
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
-          <div className="max-w-6xl mx-auto">
+          <section className="text-center mb-16">
+            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+              Contact Us
+            </h1>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              Ready to explore the future of autonomous technology? Let's connect and discuss how we can help transform your vision into reality.
+            </p>
+          </section>
+
+          <section className="mx-auto max-w-6xl">
+            {/* Navigation */}
             <nav className="mb-8">
               <a href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                 ← Back to Home
               </a>
             </nav>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Contact Information */}
-              <div>
-                <header className="mb-8">
-                  <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent mb-4">
-                    Get In Touch
-                  </h1>
-                  <p className="text-xl text-white/80">
-                    Ready to transform your business with autonomous technology? Let's start a conversation.
-                  </p>
-                </header>
-                
-                <div className="space-y-6">
-                  <div className="bg-white/5 border border-white/10 rounded-lg p-6">
-                    <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
-                    <div className="space-y-4">
-                      <div className="flex items-center">
-                        <div className="bg-cyan-500/20 border border-cyan-500/30 rounded-full p-2 mr-4">
-                          <svg className="w-5 h-5 text-cyan-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                          </svg>
-                        </div>
-                        <div>
-                          <div className="font-medium text-white">Email</div>
-                          <div className="text-white/70">hello@ziontech.group</div>
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-center">
-                        <div className="bg-fuchsia-500/20 border border-fuchsia-500/30 rounded-full p-2 mr-4">
-                          <svg className="w-5 h-5 text-fuchsia-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                          </svg>
-                        </div>
-                        <div>
-                          <div className="font-medium text-white">Location</div>
-                          <div className="text-white/70">Global Operations</div>
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-center">
-                        <div className="bg-purple-500/20 border border-purple-500/30 rounded-full p-2 mr-4">
-                          <svg className="w-5 h-5 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-                          </svg>
-                        </div>
-                        <div>
-                          <div className="font-medium text-white">Response Time</div>
-                          <div className="text-white/70">Within 24 hours</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-white/5 border border-white/10 rounded-lg p-6">
-                    <h3 className="text-xl font-semibold text-white mb-4">Business Hours</h3>
-                    <div className="space-y-2 text-white/70">
-                      <div className="flex justify-between">
-                        <span>Monday - Friday</span>
-                        <span>9:00 AM - 6:00 PM UTC</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Saturday</span>
-                        <span>10:00 AM - 4:00 PM UTC</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Sunday</span>
-                        <span>Closed</span>
-                      </div>
-                    </div>
-                    <div className="mt-4 p-3 bg-cyan-500/10 border border-cyan-500/20 rounded-lg">
-                      <p className="text-sm text-cyan-300">
-                        <strong>Note:</strong> Our autonomous systems operate 24/7, so you can expect automated responses at any time.
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 border border-cyan-500/20 rounded-lg p-6">
-                    <h3 className="text-xl font-semibold text-white mb-4">Why Contact Us?</h3>
-                    <ul className="space-y-2 text-white/80">
-                      <li>• Custom autonomous technology solutions</li>
-                      <li>• AI automation consulting</li>
-                      <li>• Cloud infrastructure optimization</li>
-                      <li>• Partnership opportunities</li>
-                      <li>• Technical support and training</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Contact Form */}
-              <div className="bg-white/5 border border-white/10 rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-white mb-6">Send Us a Message</h2>
-                
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">
+                <h2 className="text-3xl font-bold mb-6 text-cyan-400">Get in Touch</h2>
                 <form className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
@@ -233,7 +151,58 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
-          </div>
+
+            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">
+              <h2 className="text-3xl font-bold mb-6 text-blue-400">Why Choose Zion Tech Group?</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="text-4xl mb-4">⚡</div>
+                  <h3 className="text-xl font-semibold mb-2">Fast Response</h3>
+                  <p className="text-white/70">Get a response within 24 hours, often much sooner</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl mb-4">🤖</div>
+                  <h3 className="text-xl font-semibold mb-2">AI-Powered</h3>
+                  <p className="text-white/70">Leverage our autonomous systems for your projects</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl mb-4">🌍</div>
+                  <h3 className="text-xl font-semibold mb-2">Global Reach</h3>
+                  <p className="text-white/70">We work with clients worldwide, 24/7</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Related Pages */}
+          <section className="mx-auto max-w-6xl mt-16">
+            <h2 className="text-2xl font-bold mb-8 text-center text-white">Explore More</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <a href="/services" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-2xl">⚡</span>
+                </div>
+                <h3 className="text-lg font-semibold text-cyan-400 mb-2">Our Services</h3>
+                <p className="text-white/80 text-sm">Learn about our AI and automation solutions</p>
+              </a>
+              
+              <a href="/case-studies" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-fuchsia-400 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-2xl">📊</span>
+                </div>
+                <h3 className="text-lg font-semibold text-fuchsia-400 mb-2">Case Studies</h3>
+                <p className="text-white/80 text-sm">See real-world success stories</p>
+              </a>
+              
+              <a href="/resources" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-2xl">📚</span>
+                </div>
+                <h3 className="text-lg font-semibold text-purple-400 mb-2">Resources</h3>
+                <p className="text-white/80 text-sm">Download free guides and tools</p>
+              </a>
+            </div>
+          </section>
         </main>
       </div>
     </>

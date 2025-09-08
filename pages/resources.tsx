@@ -6,195 +6,103 @@ export default function ResourcesPage() {
     {
       id: 'ai-automation-guide',
       title: 'Complete Guide to AI Automation',
-      type: 'Guide',
-      description: 'Comprehensive guide covering everything from basic automation concepts to advanced AI implementation strategies.',
-      downloadUrl: '#',
-      fileSize: '2.4 MB',
+      type: 'PDF Guide',
+      size: '2.4 MB',
+      description: 'Comprehensive guide covering AI automation strategies, implementation best practices, and ROI measurement.',
       category: 'Guides',
       featured: true
     },
     {
-      id: 'autonomous-systems-whitepaper',
-      title: 'Autonomous Systems: The Future of Business',
-      type: 'Whitepaper',
-      description: 'In-depth analysis of how autonomous systems are transforming industries and creating new business opportunities.',
-      downloadUrl: '#',
-      fileSize: '1.8 MB',
-      category: 'Whitepapers',
-      featured: true
-    },
-    {
-      id: 'performance-optimization-toolkit',
-      title: 'Performance Optimization Toolkit',
-      type: 'Toolkit',
-      description: 'Collection of tools, templates, and checklists for optimizing autonomous system performance.',
-      downloadUrl: '#',
-      fileSize: '5.2 MB',
-      category: 'Toolkits',
-      featured: true
+      id: 'cloud-automation-checklist',
+      title: 'Cloud Automation Implementation Checklist',
+      type: 'Checklist',
+      size: '156 KB',
+      description: 'Step-by-step checklist for implementing cloud automation in your organization.',
+      category: 'Checklists'
     },
     {
       id: 'ai-ethics-framework',
-      title: 'AI Ethics Framework',
-      type: 'Framework',
-      description: 'Comprehensive framework for developing and deploying ethical AI systems.',
-      downloadUrl: '#',
-      fileSize: '3.1 MB',
-      category: 'Frameworks',
-      featured: false
+      title: 'AI Ethics Framework for Business',
+      type: 'White Paper',
+      size: '1.8 MB',
+      description: 'Framework for implementing ethical AI practices in business operations.',
+      category: 'White Papers'
     },
     {
-      id: 'cloud-native-checklist',
-      title: 'Cloud-Native Implementation Checklist',
-      type: 'Checklist',
-      description: 'Step-by-step checklist for implementing cloud-native automation infrastructure.',
-      downloadUrl: '#',
-      fileSize: '0.8 MB',
-      category: 'Checklists',
-      featured: false
+      id: 'performance-metrics-template',
+      title: 'Performance Metrics Dashboard Template',
+      type: 'Template',
+      size: '892 KB',
+      description: 'Ready-to-use dashboard template for monitoring AI automation performance.',
+      category: 'Templates'
     },
     {
       id: 'automation-roi-calculator',
       title: 'Automation ROI Calculator',
-      type: 'Calculator',
-      description: 'Interactive tool to calculate the return on investment for automation projects.',
-      downloadUrl: '#',
-      pages: '28',
-      category: 'Business'
+      type: 'Tool',
+      size: 'Interactive',
+      description: 'Interactive calculator to estimate ROI from automation investments.',
+      category: 'Tools'
     },
     {
-      id: 'cloud-native-automation',
-      title: 'Cloud-Native Automation Architecture',
-      description: 'Building scalable, resilient automation systems using modern cloud technologies and microservices.',
-      downloadUrl: '#',
-      pages: '38',
-      category: 'Technology'
-    },
-    {
-      id: 'performance-optimization-guide',
-      title: 'Performance Optimization in Autonomous Systems',
-      description: 'Best practices for optimizing AI model performance, infrastructure efficiency, and system responsiveness.',
-      downloadUrl: '#',
-      pages: '42',
-      category: 'Performance'
-    },
-    {
-      id: 'human-ai-collaboration',
-      title: 'Human-AI Collaboration in the Workplace',
-      description: 'Strategies for creating effective partnerships between human workers and autonomous AI systems.',
-      downloadUrl: '#',
-      pages: '35',
-      category: 'Workplace'
+      id: 'case-study-template',
+      title: 'Case Study Template',
+      type: 'Template',
+      size: '324 KB',
+      description: 'Template for documenting and presenting automation success stories.',
+      category: 'Templates'
     }
   ];
 
-  const tools = [
-    {
-      id: 'automation-assessment',
-      title: 'Automation Readiness Assessment',
-      description: 'Evaluate your organization\'s readiness for AI automation implementation.',
-      type: 'Interactive Tool',
-      estimatedTime: '15 minutes'
-    },
-    {
-      id: 'ai-maturity-model',
-      title: 'AI Maturity Model',
-      description: 'Assess your current AI capabilities and plan your transformation journey.',
-      type: 'Framework',
-      estimatedTime: '30 minutes'
-    },
-    {
-      id: 'performance-benchmark',
-      title: 'Performance Benchmarking Tool',
-      description: 'Compare your automation performance against industry standards.',
-      type: 'Analytics Tool',
-      estimatedTime: '20 minutes'
-    },
-    {
-      id: 'cost-benefit-analyzer',
-      title: 'AI Automation Cost-Benefit Analyzer',
-      description: 'Calculate the financial impact of implementing autonomous systems in your organization.',
-      type: 'Financial Tool',
-      estimatedTime: '25 minutes'
-    },
-    {
-      id: 'security-assessment',
-      title: 'AI Security Assessment Framework',
-      description: 'Evaluate the security posture of your AI systems and identify potential vulnerabilities.',
-      type: 'Security Tool',
-      estimatedTime: '45 minutes'
-    },
-    {
-      id: 'compliance-checker',
-      title: 'AI Compliance Checker',
-      description: 'Ensure your autonomous systems meet regulatory requirements and industry standards.',
-      type: 'Compliance Tool',
-      estimatedTime: '35 minutes'
-    }
-  ];
+  const categories = ['All', 'Guides', 'Checklists', 'White Papers', 'Templates', 'Tools'];
 
   return (
     <>
       <Head>
-        <title>Resources | Zion Tech Group - AI & Automation Tools</title>
-        <meta name="description" content="Access valuable resources including guides, whitepapers, toolkits, and tools for AI automation and autonomous systems." />
+        <title>Resources | Zion Tech Group - AI & Automation Resources</title>
+        <meta name="description" content="Download free resources, guides, and tools to help you implement AI automation and technology solutions." />
         <meta property="og:title" content="Resources | Zion Tech Group" />
-        <meta property="og:description" content="Access valuable resources for AI automation and autonomous systems." />
+        <meta property="og:description" content="Free AI automation resources and guides." />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
-          <div className="max-w-7xl mx-auto">
-            <nav className="mb-8">
-              <a href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                ← Back to Home
-              </a>
-            </nav>
-            
-            <header className="text-center mb-16">
-              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-                Resources & Tools
-              </h1>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Access our comprehensive collection of guides, whitepapers, toolkits, and tools designed 
-                to help you succeed with AI automation and autonomous systems
-              </p>
-            </header>
-            
-            {/* Featured Resources */}
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-center text-white">Featured Resources</h2>
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                {resources.filter(resource => resource.featured).map(resource => (
-                  <div key={resource.id} className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">
-                    <div className="flex items-center gap-3 mb-4">
-                      <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
-                        {resource.category}
-                      </span>
-                      <span className="text-white/60 text-sm">{resource.type}</span>
-                    </div>
-                    
-                    <h3 className="text-2xl font-bold mb-4 text-white">{resource.title}</h3>
-                    <p className="text-white/80 mb-6">{resource.description}</p>
-                    
-                    <div className="flex items-center justify-between mb-6">
-                      <span className="text-white/60 text-sm">{resource.fileSize}</span>
-                      <span className="text-cyan-400 text-sm font-medium">Free Download</span>
-                    </div>
-                    
-                    <a 
-                      href={resource.downloadUrl}
-                      className="w-full bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 text-center block"
-                    >
-                      Download Now
-                    </a>
-                  </div>
-                ))}
+          <section className="text-center mb-16">
+            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+              Resources
+            </h1>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              Free resources, guides, and tools to help you implement AI automation and technology solutions
+            </p>
+          </section>
+
+          <section className="mx-auto max-w-6xl">
+            {/* Featured Resource */}
+            {resources.filter(resource => resource.featured).map(resource => (
+              <div key={resource.id} className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20 mb-16">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
+                    Featured
+                  </span>
+                  <span className="px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full border border-fuchsia-400/30">
+                    {resource.category}
+                  </span>
+                </div>
+                <h2 className="text-3xl font-bold mb-4 text-white">{resource.title}</h2>
+                <p className="text-lg text-white/80 mb-6 max-w-3xl">{resource.description}</p>
+                <div className="flex items-center gap-6 mb-6">
+                  <span className="text-white/60">Type: {resource.type}</span>
+                  <span className="text-white/60">Size: {resource.size}</span>
+                </div>
+                <button className="bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white px-8 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-fuchsia-600 transition-all duration-200">
+                  Download Now
+                </button>
               </div>
-            </section>
-            
+            ))}
+
             {/* Category Filter */}
-            <section className="mb-12">
+            <div className="mb-12">
               <div className="flex flex-wrap gap-3 justify-center">
                 {categories.map(category => (
                   <button
@@ -205,152 +113,83 @@ export default function ResourcesPage() {
                   </button>
                 ))}
               </div>
-            </section>
-            
-            {/* All Resources Grid */}
-            <section>
-              <h2 className="text-3xl font-bold mb-8 text-center text-white">All Resources</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {resources.map(resource => (
-                  <article key={resource.id} className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 group">
-                    <div className="flex items-center gap-3 mb-4">
-                      <span className="px-2 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-xs rounded-full border border-fuchsia-400/30">
-                        {resource.category}
-                      </span>
-                      <span className="text-white/60 text-xs">{resource.type}</span>
-                    </div>
-                    
-                    <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-cyan-400 transition-colors">
-                      {resource.title}
-                    </h3>
-                    
-                    <p className="text-white/80 text-sm mb-4 line-clamp-3">{resource.description}</p>
-                    
-                    <div className="flex items-center justify-between">
-                      <span className="text-white/60 text-xs">{resource.fileSize}</span>
-                      <a 
-                        href={resource.downloadUrl}
-                        className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium"
-                      >
-                        Download →
-                      </a>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </section>
-            
-            {/* Webinars and Events Section */}
-            <section className="mb-20">
-              <h2 className="text-3xl font-bold mb-8 text-center text-white">Upcoming Webinars & Events</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-purple-400/30 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl">🎥</span>
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-white">AI Ethics in Practice</h3>
-                  <p className="text-white/80 text-sm mb-4">Learn how to implement ethical AI practices in your organization.</p>
-                  <div className="space-y-2 mb-6">
-                    <span className="inline-block px-3 py-1 bg-purple-400/20 text-purple-400 text-xs rounded-full border border-purple-400/30">
-                      Webinar
+            </div>
+
+            {/* Resources Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              {resources.filter(resource => !resource.featured).map(resource => (
+                <div key={resource.id} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="px-2 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-xs rounded-full border border-fuchsia-400/30">
+                      {resource.category}
                     </span>
-                    <span className="block text-white/60 text-xs">January 25, 2025 • 2:00 PM EST</span>
+                    <span className="text-white/60 text-xs">{resource.type}</span>
                   </div>
-                  <button className="w-full bg-gradient-to-r from-purple-400 to-pink-400 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-500 hover:to-pink-500 transition-all duration-300">
-                    Register Now
-                  </button>
+                  
+                  <h3 className="text-xl font-semibold mb-3 text-white">{resource.title}</h3>
+                  <p className="text-white/70 text-sm mb-4">{resource.description}</p>
+                  
+                  <div className="flex items-center justify-between">
+                    <span className="text-white/60 text-xs">Size: {resource.size}</span>
+                    <button className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium">
+                      Download →
+                    </button>
+                  </div>
                 </div>
-                
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-blue-400/30 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl">🏢</span>
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-white">Enterprise Automation Summit</h3>
-                  <p className="text-white/80 text-sm mb-4">Join industry leaders for insights on enterprise automation strategies.</p>
-                  <div className="space-y-2 mb-6">
-                    <span className="inline-block px-3 py-1 bg-blue-400/20 text-blue-400 text-xs rounded-full border border-blue-400/30">
-                      Conference
-                    </span>
-                    <span className="block text-white/60 text-xs">February 15-16, 2025 • San Francisco</span>
-                  </div>
-                  <button className="w-full bg-gradient-to-r from-blue-400 to-cyan-400 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-500 hover:to-cyan-500 transition-all duration-300">
-                    Learn More
-                  </button>
-                </div>
-                
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-green-400/30 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl">🚀</span>
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-white">Performance Optimization Workshop</h3>
-                  <p className="text-white/80 text-sm mb-4">Hands-on workshop for optimizing autonomous system performance.</p>
-                  <div className="space-y-2 mb-6">
-                    <span className="inline-block px-3 py-1 bg-green-400/20 text-green-400 text-xs rounded-full border border-green-400/30">
-                      Workshop
-                    </span>
-                    <span className="block text-white/60 text-xs">February 28, 2025 • 10:00 AM EST</span>
-                  </div>
-                  <button className="w-full bg-gradient-to-r from-green-400 to-emerald-400 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-500 hover:to-emerald-500 transition-all duration-300">
-                    Reserve Spot
-                  </button>
-                </div>
-              </div>
-            </section>
-            
+              ))}
+            </div>
+
             {/* Newsletter Signup */}
-            <section className="mt-20 text-center">
-              <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
-                <h2 className="text-2xl font-bold mb-4 text-white">Stay Updated with New Resources</h2>
-                <p className="text-white/80 mb-6 max-w-2xl mx-auto">
-                  Get notified when we release new guides, whitepapers, and tools to help you succeed 
-                  with AI automation and autonomous systems.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                  <input
-                    type="email"
-                    placeholder="Enter your email address"
-                    className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50 focus:ring-1 focus:ring-cyan-400/50 transition-all duration-300"
-                  />
-                  <button className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300">
-                    Subscribe
-                  </button>
-                </div>
-                <p className="text-white/60 text-sm mt-4">
-                  No spam, unsubscribe at any time. We respect your privacy.
-                </p>
+            <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20 mb-16">
+              <h2 className="text-2xl font-bold mb-4 text-center text-cyan-300">Stay Updated with New Resources</h2>
+              <p className="text-white/80 mb-6 text-center max-w-2xl mx-auto">
+                Get notified when we release new resources, guides, and tools to help you succeed with AI automation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50 focus:ring-1 focus:ring-cyan-400/50 transition-all duration-300"
+                />
+                <button className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300">
+                  Subscribe
+                </button>
               </div>
-            </section>
-            
+              <p className="text-white/60 text-sm text-center mt-4">
+                No spam, unsubscribe at any time. We respect your privacy.
+              </p>
+            </div>
+
             {/* Related Pages */}
-            <section className="mt-16">
-              <h2 className="text-2xl font-bold mb-8 text-center text-white">Explore More</h2>
+            <div className="text-center">
+              <h2 className="text-2xl font-bold mb-8 text-white">Explore More</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <a href="/case-studies" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center group">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <span className="text-2xl">📊</span>
                   </div>
                   <h3 className="text-lg font-semibold text-cyan-400 mb-2">Case Studies</h3>
-                  <p className="text-white/80 text-sm">See real-world results from our autonomous systems</p>
-                </a>
-                
-                <a href="/blog" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-fuchsia-400 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-2xl">📝</span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-fuchsia-400 mb-2">Blog</h3>
-                  <p className="text-white/80 text-sm">Read insights and trends in AI automation</p>
+                  <p className="text-white/80 text-sm">Real-world success stories and implementations</p>
                 </a>
                 
                 <a href="/services" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-fuchsia-400 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <span className="text-2xl">⚡</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-purple-400 mb-2">Services</h3>
-                  <p className="text-white/80 text-sm">Explore our comprehensive AI automation services</p>
+                  <h3 className="text-lg font-semibold text-fuchsia-400 mb-2">Our Services</h3>
+                  <p className="text-white/80 text-sm">Comprehensive AI and automation solutions</p>
+                </a>
+                
+                <a href="/contact" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-2xl">💬</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-purple-400 mb-2">Get in Touch</h3>
+                  <p className="text-white/80 text-sm">Have questions? We'd love to help</p>
                 </a>
               </div>
-            </section>
-          </div>
+            </div>
+          </section>
         </main>
       </div>
     </>
