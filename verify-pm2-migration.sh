@@ -1,66 +1,73 @@
 #!/bin/bash
 
-echo "🔍 Verifying PM2 Migration Status..."
+echo "🔍 PM2 Migration Verification Script"
 echo "=================================="
+echo ""
 
-# Check PM2 is running
-echo "1. Checking PM2 status..."
-if command -v pm2 &> /dev/null; then
-    echo "✅ PM2 is installed"
-else
-    echo "❌ PM2 is not installed"
-    exit 1
-fi
-
-# Check PM2 processes
-echo "2. Checking PM2 processes..."
+# Check PM2 status
+echo "📊 PM2 Process Status:"
+echo "----------------------"
 pm2 list
 
-# Check automation reports
-echo "3. Checking automation reports..."
-echo "   CI/CD Reports:"
-if [ -d "ci-cd-reports" ]; then
-    echo "   ✅ ci-cd-reports directory exists"
-    ls -la ci-cd-reports/ | head -5
-else
-    echo "   ❌ ci-cd-reports directory missing"
-fi
-
-echo "   Security Reports:"
-if [ -d "security-reports" ]; then
-    echo "   ✅ security-reports directory exists"
-    ls -la security-reports/ | head -5
-else
-    echo "   ❌ security-reports directory missing"
-fi
-
-echo "   Test Reports:"
-if [ -d "test-reports" ]; then
-    echo "   ✅ test-reports directory exists"
-    ls -la test-reports/ | head -5
-else
-    echo "   ❌ test-reports directory missing"
-fi
-
-echo "   Link Reports:"
-if [ -d "link-reports" ]; then
-    echo "   ✅ link-reports directory exists"
-    ls -la link-reports/ | head -5
-else
-    echo "   ❌ link-reports directory missing"
-fi
-
-# Check remaining GitHub Actions
-echo "4. Checking remaining GitHub Actions..."
-echo "   Remaining workflows:"
-ls -la .github/workflows/ | grep -v backup | grep "\.yml$" | wc -l
-
-echo "5. Migration Summary:"
-echo "   ✅ PM2 automation processes are running"
-echo "   ✅ Automation reports are being generated"
-echo "   ✅ GitHub Actions have been replaced where appropriate"
-echo "   ✅ Core application processes are managed by PM2"
+echo ""
+echo "📁 Automation Reports Generated:"
+echo "--------------------------------"
+ls -la *-report.json 2>/dev/null | wc -l | xargs echo "Total reports:"
+ls -la *-report.json 2>/dev/null | head -5
 
 echo ""
-echo "🎉 PM2 Migration Verification Complete!"
-echo "   Check the PM2_MIGRATION_SUMMARY.md file for detailed information."
+echo "🔗 GitHub Actions Workflows Remaining:"
+echo "--------------------------------------"
+ls -la .github/workflows/*.yml 2>/dev/null | wc -l | xargs echo "Total workflows:"
+
+echo ""
+echo "✅ Migration Status:"
+echo "-------------------"
+
+# Check if PM2 is running
+if pm2 list > /dev/null 2>&1; then
+    echo "✅ PM2 is running"
+    
+    # Count running processes
+    RUNNING_PROCESSES=$(pm2 list | grep "online" | wc -l)
+    echo "✅ PM2 processes running: $RUNNING_PROCESSES"
+    
+    # Check for errored processes
+    ERRORED_PROCESSES=$(pm2 list | grep "errored\|stopped" | wc -l)
+    if [ "$ERRORED_PROCESSES" -eq 0 ]; then
+        echo "✅ All PM2 processes are healthy"
+    else
+        echo "⚠️  $ERRORED_PROCESSES PM2 processes have issues"
+    fi
+else
+    echo "❌ PM2 is not running"
+fi
+
+# Check if automation reports are being generated
+REPORT_COUNT=$(ls -la *-report.json 2>/dev/null | wc -l)
+if [ "$REPORT_COUNT" -gt 0 ]; then
+    echo "✅ Automation reports are being generated ($REPORT_COUNT found)"
+else
+    echo "⚠️  No automation reports found"
+fi
+
+# Check if redundant GitHub Actions were removed
+if [ ! -f ".github/workflows/continuous-improvement.yml" ] && \
+   [ ! -f ".github/workflows/quality-check.yml" ] && \
+   [ ! -f ".github/workflows/security.yml" ] && \
+   [ ! -f ".github/workflows/link-checker.yml" ] && \
+   [ ! -f ".github/workflows/dependency-review.yml" ]; then
+    echo "✅ Redundant GitHub Actions workflows removed"
+else
+    echo "⚠️  Some redundant workflows may still exist"
+fi
+
+echo ""
+echo "🎯 Next Steps:"
+echo "1. Monitor PM2 processes for 24-48 hours"
+echo "2. Check logs: pm2 logs --lines 50"
+echo "3. Set up PM2 startup: pm2 startup"
+echo "4. Monitor automation reports for issues"
+
+echo ""
+echo "🚀 Migration verification complete!"
