@@ -1,1 +1,277 @@
-if(!self.define){let e,i={};const s=(s,r)=>(s=new URL(s+".js",r).href,i[s]||new Promise(i=>{if("document"in self){const e=document.createElement("script");e.src=s,e.onload=i,document.head.appendChild(e)}else e=s,importScripts(s),i()}).then(()=>{let e=i[s];if(!e)throw new Error(`Module ${s} didn’t register its module`);return e}));self.define=(r,n)=>{const c=e||("document"in self?document.currentScript.src:"")||location.href;if(i[c])return;let l={};const o=e=>s(e,c),t={module:{uri:c},exports:l,require:o};i[c]=Promise.all(r.map(e=>t[e]||o(e))).then(e=>(n(...e),l))}}define(["./workbox-42774e1b"],function(e){"use strict";self.skipWaiting(),e.clientsClaim(),e.precacheAndRoute([{url:"assets/index-BiObBgq8.css",revision:null},{url:"assets/index-Hi8r19v_.js",revision:null},{url:"assets/query-BcFYXIOk.js",revision:null},{url:"assets/router-sUeF5zxq.js",revision:null},{url:"assets/ui-CR4DguNQ.js",revision:null},{url:"assets/vendor-Z2Iecplj.js",revision:null},{url:"favicon.ico",revision:"b5abf45e99dd17337c4ab75d073f6f79"},{url:"favicon.svg",revision:"3ff27fc992cc1f1d52488195358e13ea"},{url:"index.html",revision:"2ccb1acae9b7de5809b117fc259d2f25"},{url:"offline.html",revision:"91b65335af24fc6fc3d24cd3e4fec0ac"},{url:"registerSW.js",revision:"1872c500de691dce40960bb85481de07"},{url:"reports/page-validation/index.html",revision:"c9e3dab1e7497945af1b85dadc4b928f"},{url:"reports/pre-build-health/index.html",revision:"63d97c85d00b24d44f8c2e4221fc4a16"},{url:"services/index.html",revision:"310eee3c8cc1e92c6511022116b7cde0"},{url:"favicon.ico",revision:"b5abf45e99dd17337c4ab75d073f6f79"},{url:"manifest.webmanifest",revision:"6b9fbf61feee614de19459fb94f307fb"}],{}),e.cleanupOutdatedCaches(),e.registerRoute(new e.NavigationRoute(e.createHandlerBoundToURL("index.html"))),e.registerRoute(/^https:\/\/api\./,new e.NetworkFirst({cacheName:"api-cache",plugins:[new e.ExpirationPlugin({maxEntries:10,maxAgeSeconds:31536e3}),new e.CacheableResponsePlugin({statuses:[0,200]})]}),"GET")});
+// Enhanced Service Worker for PWA capabilities
+const CACHE_NAME = 'zion-tech-v2';
+const STATIC_CACHE = 'zion-static-v2';
+const DYNAMIC_CACHE = 'zion-dynamic-v2';
+
+// Files to cache immediately
+const STATIC_FILES = [
+  '/',
+  '/index.html',
+  '/manifest.json',
+  '/favicon.ico',
+  '/offline.html'
+];
+
+// API endpoints to cache
+const API_CACHE_PATTERNS = [
+  /\/api\//,
+  /\/data\//
+];
+
+// Install event - cache static resources
+self.addEventListener('install', (event) => {
+  console.log('Service Worker: Installing...');
+  
+  event.waitUntil(
+    caches.open(STATIC_CACHE)
+      .then((cache) => {
+        console.log('Service Worker: Caching static files');
+        return cache.addAll(STATIC_FILES);
+      })
+      .then(() => {
+        console.log('Service Worker: Static files cached successfully');
+        return self.skipWaiting();
+      })
+      .catch((error) => {
+        console.error('Service Worker: Failed to cache static files', error);
+      })
+  );
+});
+
+// Activate event - clean up old caches
+self.addEventListener('activate', (event) => {
+  console.log('Service Worker: Activating...');
+  
+  event.waitUntil(
+    caches.keys()
+      .then((cacheNames) => {
+        return Promise.all(
+          cacheNames.map((cacheName) => {
+            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
+              console.log('Service Worker: Deleting old cache', cacheName);
+              return caches.delete(cacheName);
+            }
+          })
+        );
+      })
+      .then(() => {
+        console.log('Service Worker: Activated successfully');
+        return self.clients.claim();
+      })
+  );
+});
+
+// Fetch event - serve from cache or network
+self.addEventListener('fetch', (event) => {
+  const { request } = event;
+  const url = new URL(request.url);
+
+  // Skip non-GET requests
+  if (request.method !== 'GET') {
+    return;
+  }
+
+  // Skip chrome-extension and other non-http requests
+  if (!url.protocol.startsWith('http')) {
+    return;
+  }
+
+  event.respondWith(
+    handleRequest(request)
+  );
+});
+
+async function handleRequest(request) {
+  const url = new URL(request.url);
+  
+  try {
+    // Strategy 1: Cache First for static assets
+    if (isStaticAsset(request)) {
+      return await cacheFirst(request);
+    }
+    
+    // Strategy 2: Network First for API calls
+    if (isApiRequest(request)) {
+      return await networkFirst(request);
+    }
+    
+    // Strategy 3: Stale While Revalidate for HTML pages
+    if (isHtmlRequest(request)) {
+      return await staleWhileRevalidate(request);
+    }
+    
+    // Default: Network First
+    return await networkFirst(request);
+    
+  } catch (error) {
+    console.error('Service Worker: Error handling request', error);
+    
+    // Return offline page for navigation requests
+    if (request.mode === 'navigate') {
+      return await caches.match('/offline.html');
+    }
+    
+    // Return cached version if available
+    const cachedResponse = await caches.match(request);
+    if (cachedResponse) {
+      return cachedResponse;
+    }
+    
+    // Return a generic error response
+    return new Response('Offline - Content not available', {
+      status: 503,
+      statusText: 'Service Unavailable'
+    });
+  }
+}
+
+// Cache First strategy
+async function cacheFirst(request) {
+  const cachedResponse = await caches.match(request);
+  if (cachedResponse) {
+    return cachedResponse;
+  }
+  
+  const networkResponse = await fetch(request);
+  if (networkResponse.ok) {
+    const cache = await caches.open(STATIC_CACHE);
+    cache.put(request, networkResponse.clone());
+  }
+  
+  return networkResponse;
+}
+
+// Network First strategy
+async function networkFirst(request) {
+  try {
+    const networkResponse = await fetch(request);
+    if (networkResponse.ok) {
+      const cache = await caches.open(DYNAMIC_CACHE);
+      cache.put(request, networkResponse.clone());
+    }
+    return networkResponse;
+  } catch (error) {
+    const cachedResponse = await caches.match(request);
+    if (cachedResponse) {
+      return cachedResponse;
+    }
+    throw error;
+  }
+}
+
+// Stale While Revalidate strategy
+async function staleWhileRevalidate(request) {
+  const cache = await caches.open(DYNAMIC_CACHE);
+  const cachedResponse = await cache.match(request);
+  
+  const fetchPromise = fetch(request).then((networkResponse) => {
+    if (networkResponse.ok) {
+      cache.put(request, networkResponse.clone());
+    }
+    return networkResponse;
+  });
+  
+  return cachedResponse || fetchPromise;
+}
+
+// Helper functions
+function isStaticAsset(request) {
+  const url = new URL(request.url);
+  return url.pathname.match(/\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot)$/);
+}
+
+function isApiRequest(request) {
+  const url = new URL(request.url);
+  return API_CACHE_PATTERNS.some(pattern => pattern.test(url.pathname));
+}
+
+function isHtmlRequest(request) {
+  return request.headers.get('accept')?.includes('text/html');
+}
+
+// Background sync for offline actions
+self.addEventListener('sync', (event) => {
+  if (event.tag === 'background-sync') {
+    event.waitUntil(doBackgroundSync());
+  }
+});
+
+async function doBackgroundSync() {
+  console.log('Service Worker: Background sync triggered');
+  // Implement background sync logic here
+  // e.g., sync offline form submissions, cache updates, etc.
+}
+
+// Push notifications
+self.addEventListener('push', (event) => {
+  if (event.data) {
+    const data = event.data.json();
+    const options = {
+      body: data.body,
+      icon: '/favicon.ico',
+      badge: '/favicon.ico',
+      vibrate: [100, 50, 100],
+      data: data.data,
+      actions: [
+        {
+          action: 'open',
+          title: 'Open App',
+          icon: '/favicon.ico'
+        },
+        {
+          action: 'close',
+          title: 'Close',
+          icon: '/favicon.ico'
+        }
+      ]
+    };
+    
+    event.waitUntil(
+      self.registration.showNotification(data.title, options)
+    );
+  }
+});
+
+// Notification click handler
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+  
+  if (event.action === 'open') {
+    event.waitUntil(
+      clients.openWindow('/')
+    );
+  }
+});
+
+// Message handler for communication with main thread
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+  
+  if (event.data && event.data.type === 'GET_CACHE_SIZE') {
+    getCacheSize().then(size => {
+      event.ports[0].postMessage({ cacheSize: size });
+    });
+  }
+});
+
+async function getCacheSize() {
+  const cacheNames = await caches.keys();
+  let totalSize = 0;
+  
+  for (const cacheName of cacheNames) {
+    const cache = await caches.open(cacheName);
+    const keys = await cache.keys();
+    
+    for (const key of keys) {
+      const response = await cache.match(key);
+      if (response) {
+        const blob = await response.blob();
+        totalSize += blob.size;
+      }
+    }
+  }
+  
+  return totalSize;
+}
