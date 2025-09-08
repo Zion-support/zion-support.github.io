@@ -34,9 +34,5 @@ import {useReviews} from "@/hooks/useReviews";
 
 
 ;
-
-
-
-
-
-
+  );
+};

@@ -1,7 +1,5 @@
 /**
-======= * Performance Monitoring Utility
- * Tracks and reports performance metrics
- */
+
 
 export interface PerformanceMetric {
   name: string;
@@ -326,9 +324,8 @@ export const PerformanceWrapper: React.FC<{
 };
 
 export default performanceMonitor;
-=======
- * Performance utilities for optimizing the application
- */
+
+
 
 // Debounce function for search and input handling
 export function debounce<T extends (...args: any[]) => any>(
@@ -473,4 +470,5 @@ export function getMemoryUsage() {
     };
   }
   return null;
-}>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+}
+

@@ -1,6 +1,6 @@
 
 export function EnterpriseHero() {
-  return (import React from "react",
+  return (import React from "react";
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button",
@@ -14,7 +14,7 @@ export function EnterpriseHero() {
 
                 />;                />;
 
-import React from "react",;
+import React from "react";;
 import { Button } from "@/components/ui/button",;
 import { GradientHeading } from "@/components/GradientHeading",;
 
@@ -54,7 +54,7 @@ export function EnterpriseHero() {;
 }
     </section>
   )
-import React from "react",;
+import React from "react";;
 import { Button } from "@/components/ui/button",;
 import { GradientHeading } from "@/components/GradientHeading";
 export function EnterpriseHero() {;

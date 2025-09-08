@@ -16,4 +16,4 @@ export: interface InnovativeMicroSaasV3 {
       'Ticket: management'',;
       'Analytics: dashboard'',;
       'CRM: integration';'],
-
+}

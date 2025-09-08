@@ -7,3 +7,5 @@ export function AIListingForm() {
     </div>
   )
 }
+  );
+};

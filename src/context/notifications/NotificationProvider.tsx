@@ -1,10 +1,10 @@
-=======
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-interface Notification {
+export interface Notification {
   id: string;
-  message: string;
   type: 'success' | 'error' | 'warning' | 'info';
+  title: string;
+  message: string;
   duration?: number;
 }
 
@@ -12,7 +12,7 @@ interface NotificationContextType {
   notifications: Notification[];
   addNotification: (notification: Omit<Notification, 'id'>) => void;
   removeNotification: (id: string) => void;
-  clearAll: () => void;>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+  clearAll: () => void;
 }
 
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
@@ -29,7 +29,8 @@ export const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({ 
       setTimeout(() => {
         removeNotification(id);
       }, notification.duration || 5000);
-    }  };
+    }
+  };
 
   const removeNotification = (id: string) => {
     setNotifications(prev => prev.filter(n => n.id !== id));
@@ -51,11 +52,10 @@ export const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({ 
   );
 };
 
-export const useNotifications = () => {>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+export const useNotifications = () => {
   const context = useContext(NotificationContext);
   if (!context) {
     throw new Error('useNotifications must be used within a NotificationProvider');
   }
   return context;
-=======>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
 };

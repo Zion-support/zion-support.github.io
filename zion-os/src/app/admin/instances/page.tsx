@@ -156,3 +156,5 @@
                       inst.vertical === 'EDUCATION' ? 'bg-purple-500/20 text-purple-400' :;
                       inst.vertical === 'LAW' ? 'bg-yellow-500/20 text-yellow-400' :;
                       'bg-gray-500/20 text-gray-400';
+  );
+};

@@ -1,4 +1,4 @@
-import React from "react",
+import React from "react";
 import { AppHeader } from "./AppHeader";
 import { Footer } from "@/components/Footer";
 import { AppHeader } from "./AppHeader",
@@ -14,7 +14,7 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
       <main className="flex-grow">
 }
 
-import React from "react",;
+import React from "react";;
 import { AppHeader } from "./AppHeader",;
 import { Footer } from "@/components/Footer",;
 ;
@@ -30,7 +30,7 @@ export function AppLayout() { return null; }
     </div>
   )
 }"
-import React from "react",;"
+import React from "react";;"
 import { AppHeader } from "./AppHeader",;"
 
 }

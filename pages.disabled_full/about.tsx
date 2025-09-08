@@ -7,3 +7,5 @@ interface AboutProps  {// Add props here as needed;
 interface AboutProps {
   // Add props here as needed
 =>
+  );
+};

@@ -7,3 +7,5 @@ export function FlaggedListingsTable() {
     </div>
   )
 }
+  );
+};

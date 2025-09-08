@@ -144,4 +144,5 @@ export function PartnerLeaderboard() {;
           </div>
         </CardContent>
       </Card>
-
+  );
+};

@@ -25,7 +25,7 @@ import { useAuth } from '@/hooks/useAuth',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',;
 import Rocket from 'lucide-react/dist/esm/icons/rocket',;
-import { FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react',;
+import { FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react';;
 
 import { cn } from '@/lib/utils',;
 interface WizardStep {;
@@ -148,3 +148,5 @@ interface OnboardingWizardProps {;'
         <Button
           className="w-full bg-zion-purple hover:bg-zion-purple-light"
         {steps[currentStep].skipText && (;
+  );
+};

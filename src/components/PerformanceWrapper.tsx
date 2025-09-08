@@ -1,63 +1,39 @@
-<<<<<<< HEAD
-import React, { memo, Suspense, lazy, ComponentType, ReactNode } from 'react';
-import { useLazyComponent } from '../hooks/useLazyLoad';
-=======
-import React, { memo, Suspense, ReactNode } from 'react';>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+import React, { memo, Suspense, ReactNode } from 'react';
 
 interface PerformanceWrapperProps {
   children: ReactNode;
   fallback?: ReactNode;
   enableLazyLoading?: boolean;
-<<<<<<< HEAD
-  lazyImport?: () => Promise<{ default: ComponentType<any> }>;
-=======
-  lazyImport?: () => Promise<{ default: React.ComponentType<any> }>;>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+  lazyImport?: () => Promise<{ default: React.ComponentType<any> }>;
   memoize?: boolean;
   className?: string;
 }
 
-// Simple lazy loading hook
-const useLazyComponent = (importFn: () => Promise<{ default: ComponentType<unknown> }>) => {
-  const [Component, setComponent] = useState<ComponentType<unknown> | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [isError, setIsError] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    importFn()
-      .then((module) => {
-        setComponent(() => module.default);
-        setIsLoading(false);
-      })
-      .catch(() => {
-        setIsError(true);
-        setIsLoading(false);
-      });
-  }, [importFn]);
-
-  return { ref, Component, isLoading, isError };
-};
 
 /**
-<<<<<<< HEAD
- * Performance wrapper component that provides lazy loading and memoization
-=======
- * Performance wrapper component that provides basic performance optimizations>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+ * Performance wrapper component that provides basic performance optimizations
  */
 const PerformanceWrapper: React.FC<PerformanceWrapperProps> = ({
   children,
   fallback = <div>Loading...</div>,
-};
-=======
-  className,
+
 }) => {
+  const MemoizedComponent = memo ? memo(children as React.ComponentType<any>) : children;
+
+  if (enableLazyLoading && lazyImport) {
+    const LazyComponent = React.lazy(lazyImport);
+    return (
+      <Suspense fallback={fallback}>
+        <LazyComponent />
+      </Suspense>
+    );
+  }
+
   return (
     <div className={className}>
-      <Suspense fallback={fallback}>
-        {children}
-      </Suspense>
+      {memoize ? MemoizedComponent : children}
     </div>
   );
 };
 
-export default memo(PerformanceWrapper);>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+

@@ -3,7 +3,7 @@ import { Button  } from '@/components / ui / button';
 import { ShieldAlert  } from './lucide-react';
 interface EmptyFraudStateProps {
   has_filters: boolean;
-import React from "react",
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
 interface EmptyFraudStateProps {
@@ -17,4 +17,3 @@ import { ShieldAlert } from "lucide-react",
 
     </div>;
 );
-

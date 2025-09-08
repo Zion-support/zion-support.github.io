@@ -7,3 +7,5 @@ export function skeleton() {
     </div>
   )
 }
+  );
+};

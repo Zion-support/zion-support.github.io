@@ -46,7 +46,7 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
           Conversion Analysis;
         </CardTitle>;
         <CardDescription className="text - zion - slate-light">;
-import React from "react",;
+import React from "react";;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
 ;
@@ -56,3 +56,5 @@ import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
         />;
       </CardContent>;
     </Card>;
+  );
+};

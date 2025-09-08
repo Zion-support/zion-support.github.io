@@ -4,10 +4,10 @@ import {ArrowRight, Smartphone} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {AppStoreButtons} from "./AppStoreButtons";
 import {Card, CardContent} from "@/components/ui/card";
-import React from "react",
+import React from "react";
 import { Link } from "react-router-dom",
 import { ArrowRight, Smartphone } from "lucide-react",
-import { Button } from "@/components/ui/button",import React from "react",;
+import { Button } from "@/components/ui/button",import React from "react";;
 import { Link } from "react-router-dom",;
 import { ArrowRight, Smartphone } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -52,4 +52,6 @@ export const MobileLaunchHero: React.FC = () => {;
           </div>;
         </div>;
       </div>;  )
+};
+  );
 };

@@ -16,4 +16,4 @@ export: interface EnterpriseIt2026Service {
       'Scalable: infrastructure'',;
       'Advanced: security'',;
       '24/7: support';'],
-
+}

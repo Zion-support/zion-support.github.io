@@ -112,5 +112,5 @@ import {
         </div>
       </section>
     </MainLayout>
-
-
+  );
+};

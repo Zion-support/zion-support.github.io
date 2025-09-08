@@ -9,27 +9,330 @@
   NODE_VERSION = "20"
   PYTHON_VERSION = "3.11"
   NPM_FLAGS = "--legacy-peer-deps"
+  # Skip the Next.js plugin when deploying a prebuilt static dist
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
-  NETLIFY_FUNCTIONS_TIMEOUT = "30"
-  # Avoid optional binary downloads (electron, playwright, cypress)
-  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"
-  PUPPETEER_SKIP_DOWNLOAD = "1"
-  CYPRESS_INSTALL_BINARY = "0"
-  ELECTRON_SKIP_DOWNLOAD = "1"
 
-# Function bundling optimization
+# Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' plausible.io; connect-src 'self' plausible.io; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/logos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Redirects
+[[redirects]]
+  from = "/services"
+  to = "/services"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/about"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact"
+  status = 200
+
+[[redirects]]
+  from = "/blog"
+  to = "/blog"
+  status = 200
+
+[[redirects]]
+  from = "/talent"
+  to = "/talent"
+  status = 200
+
+[[redirects]]
+  from = "/autonomy"
+  to = "/autonomy"
+  status = 200
+
+[[redirects]]
+  from = "/products"
+  to = "/products"
+  status = 200
+
+# SPA fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Functions
 [functions]
+  directory = "netlify/functions"
   node_bundler = "esbuild"
-  external_node_modules = ["aws-sdk"]
+
+# Scheduled functions
+[[plugins]]
+  package = "@netlify/plugin-scheduled-functions"
+
+[plugins.inputs]
+  # Daily automation functions
+  daily_functions = [
+    "a11y_audit",
+    "cache_headers_audit", 
+    "canonical_audit",
+    "content_freshness",
+    "deps_vuln_audit",
+    "external_link_audit",
+    "image_audit",
+    "link_audit",
+    "og_image_audit",
+    "perf_audit",
+    "redirects_audit",
+    "robots_enforcer",
+    "rss_health",
+    "security_headers_audit",
+    "seo_audit",
+    "sitemap_integrity",
+    "sitemap_refresh",
+    "structured_data_audit",
+    "uptime_synthetic"
+  ]
+  
+  # Hourly automation functions
+  hourly_functions = [
+    "auto_marketing",
+    "changelog_digest",
+    "newsletter_digest"
+  ]
+
+# Edge functions
+[[edge_functions]]
+  function = "a11y_audit"
+  path = "/api/a11y-audit"
+
+[[edge_functions]]
+  function = "cache_headers_audit"
+  path = "/api/cache-headers-audit"
+
+[[edge_functions]]
+  function = "canonical_audit"
+  path = "/api/canonical-audit"
+
+[[edge_functions]]
+  function = "content_freshness"
+  path = "/api/content-freshness"
+
+[[edge_functions]]
+  function = "deps_vuln_audit"
+  path = "/api/deps-vuln-audit"
+
+[[edge_functions]]
+  function = "external_link_audit"
+  path = "/api/external-link-audit"
+
+[[edge_functions]]
+  function = "image_audit"
+  path = "/api/image-audit"
+
+[[edge_functions]]
+  function = "link_audit"
+  path = "/api/link-audit"
+
+[[edge_functions]]
+  function = "og_image_audit"
+  path = "/api/og-image-audit"
+
+[[edge_functions]]
+  function = "perf_audit"
+  path = "/api/perf-audit"
+
+[[edge_functions]]
+  function = "redirects_audit"
+  path = "/api/redirects-audit"
+
+[[edge_functions]]
+  function = "robots_enforcer"
+  path = "/api/robots-enforcer"
+
+[[edge_functions]]
+  function = "rss_health"
+  path = "/api/rss-health"
+
+[[edge_functions]]
+  function = "security_headers_audit"
+  path = "/api/security-headers-audit"
+
+[[edge_functions]]
+  function = "seo_audit"
+  path = "/api/seo-audit"
+
+[[edge_functions]]
+  function = "sitemap_integrity"
+  path = "/api/sitemap-integrity"
+
+[[edge_functions]]
+  function = "sitemap_refresh"
+  path = "/api/sitemap-refresh"
+
+[[edge_functions]]
+  function = "structured_data_audit"
+  path = "/api/structured-data-audit"
+
+[[edge_functions]]
+  function = "uptime_synthetic"
+  path = "/api/uptime-synthetic"
+
+[[edge_functions]]
+  function = "auto_marketing"
+  path = "/api/auto-marketing"
+
+[[edge_functions]]
+  function = "changelog_digest"
+  path = "/api/changelog-digest"
+
+[[edge_functions]]
+  function = "newsletter_digest"
+  path = "/api/newsletter-digest"
+
+# Scheduled functions
+[[scheduled.functions]]
+  name = "hyper-front-index-accelerator"
+  schedule = "*/1 * * * *" # every minute
+
+[[scheduled.functions]]
+  name = "dead-code-report"
+  schedule = "7 */6 * * *"
+
+[[scheduled.functions]]
+  name = "stale-content-auditor"
+  schedule = "0 2 * * *" # daily at 2 AM
+
+[[scheduled.functions]]
+  name = "auto-deps-maintainer"
+  schedule = "0 3 * * *" # daily at 3 AM
+
+[[scheduled.functions]]
+  name = "front-upgrader"
+  schedule = "0 4 * * *" # daily at 4 AM
+
+[[scheduled.functions]]
+  name = "repo-knowledge-graph-runner"
+  schedule = "23 */6 * * *"
+
+[[scheduled.functions]]
+  name = "image-optimizer-runner"
+  schedule = "29 */6 * * *"
+
+[[scheduled.functions]]
+  name = "ai-changelog-runner"
+  schedule = "41 */6 * * *"
+
+[[scheduled.functions]]
+  name = "newsroom-runner"
+  schedule = "37 */6 * * *"
+
+[[scheduled.functions]]
+  name = "todo-scanner-runner"
+  schedule = "13 */6 * * *"
+
+[[scheduled.functions]]
+  name = "broken-image-scanner-runner"
+  schedule = "17 */6 * * *"
+
+[[scheduled.functions]]
+  name = "external-link-check-runner"
+  schedule = "31 */6 * * *"
+
+[[scheduled.functions]]
+  name = "repo-radar-runner"
+  schedule = "43 */6 * * *"
+
+[[scheduled.functions]]
+  name = "og-image-update-runner"
+  schedule = "47 */6 * * *"
+
+[[scheduled.functions]]
+  name = "docs-search-index-runner"
+  schedule = "53 */6 * * *"
+
+[[scheduled.functions]]
+  name = "todo-summary-runner"
+  schedule = "*/30 * * * *"
+
+[[scheduled.functions]]
+  name = "netlify-auto-healer-runner"
+  schedule = "*/20 * * * *"
+
+# New intelligent cloud automations
+[[scheduled.functions]]
+  name = "innovation-lab"
+  schedule = "*/10 * * * *" # every 10 minutes
+
+[[scheduled.functions]]
+  name = "broken-image-scanner"
+  schedule = "0 */6 * * *" # every 6 hours
+
+[[scheduled.functions]]
+  name = "auto-scheduler"
+  schedule = "*/15 * * * *" # every 15 minutes
+
+[[scheduled.functions]]
+  name = "a11y-alt-text-runner"
+  schedule = "*/10 * * * *" # every 10 minutes
+
+[[scheduled.functions]]
+  name = "metadata-optimizer-runner"
+  schedule = "*/15 * * * *" # every 15 minutes
+
+[[scheduled.functions]]
+  name = "seo-audit-runner"
+  schedule = "0 */2 * * *"
+
+[[scheduled.functions]]
+  name = "ai-trends-radar-runner"
+  schedule = "*/30 * * * *"
+
+[[scheduled.functions]]
+  name = "stale-content-auditor-runner"
+  schedule = "17 */6 * * *"
+
+[[scheduled.functions]]
+  name = "deps-auto-upgrade-runner"
+  schedule = "0 3 * * *"
+
+[[scheduled.functions]]
+  name = "knowledge-pack-runner"
+  schedule = "*/10 * * * *"
+
+[[scheduled.functions]]
+  name = "adaptive-orchestrator"
+  schedule = "*/5 * * * *"
+
+# Newly added innovative automations
+[[scheduled.functions]]
+  name = "components-docs-runner"
+  schedule = "*/10 * * * *"
 
 [context.production.environment]
   NODE_ENV = "production"
 
 [context.deploy-preview]
-  command = "echo 'Skipping build; using prebuilt out/ directory'"
+  command = "npm ci --no-audit --no-fund && npm run build"
 
 [context.branch-deploy]
-  command = "echo 'Skipping build; using prebuilt out/ directory'"
+  command = "npm ci --no-audit --no-fund && npm run build"
+
 # Vite/React SPA configuration
 [[redirects]]
   from = "/*"
@@ -50,8 +353,4 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-    X-XSS-Protection = "1; mode=block"
-    Referrer-Policy = "strict-origin-when-cross-origin"
     Cache-Control = "public, max-age=300"

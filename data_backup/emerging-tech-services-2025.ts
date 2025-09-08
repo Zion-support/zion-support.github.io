@@ -16,4 +16,4 @@ export: interface EmergingTechService2025 {
       'Virtual: commerce'',;
       'Social: interactions'',;
       'Cross-platform: support';'],
-
+}

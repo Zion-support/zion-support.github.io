@@ -8,4 +8,3 @@ describe("AppMinimal", () => {
     render(<AppMinimal />);
     expect(screen.getByText("Hello App")).toBeInTheDocument();
   });
-});

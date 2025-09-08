@@ -1,7 +1,8 @@
-import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 const Services: NextPage = () => {
   const serviceCategories = [
     {
@@ -99,10 +100,100 @@ const Services: NextPage = () => {
       ]
     }
   ];
+=======
+import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
+import { additionalEnhancedServices } from '../../data/additional-real-services';
+import { extraServices } from '../../data/extra-services';
+import { newlyAddedServices } from '../../data/newly-added-services';
+import { curatedMarketServices } from '../../data/curated-market-services';
+import { realMarketServices } from '../../data/real-market-services';
+import { new2025Services } from '../../data/new-2025-services';
+import { marketValidatedServices } from '../../data/market-validated-services';
+import { moreRealServices2025 } from '../../data/more-real-services-2025';
+import { realOperationalServices } from '../../data/real-operational-services';
+import { verified2025Additions } from '../../data/verified-2025-additions';
+import { realServicesQ12025 } from '../../data/real-services-q1-2025'
+import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
+import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
+import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
+import { additionalLiveServices2025 } from '../../data/additional-live-services-2025';
+import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
+import { real2025Q3Additions } from '../../data/real-2025-q3-additions';
 
+function toSlug(value: string) {
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
+
+const categories = [
+  'AI & Data',
+  'Developer Tools',
+  'Cloud & FinOps',
+  'Observability',
+  'Quality & Monitoring',
+];
+
+export default function ServicesIndexPage() {
+  const all = (enhancedRealMicroSaasServices as unknown[])
+    .concat(
+      extraServices as unknown[],
+      additionalEnhancedServices as unknown[],
+      newlyAddedServices as unknown[],
+      curatedMarketServices as unknown[],
+      realMarketServices as unknown[],
+      new2025Services as unknown[],
+      marketValidatedServices as unknown[],
+      moreRealServices2025 as unknown[],
+      realOperationalServices as unknown[],
+      verified2025Additions as unknown[],
+      realServicesQ12025 as unknown[],
+      realEnterpriseServices2025 as unknown[],
+      realMarketAugmentations2025 as unknown[],
+      verifiedRealServices2025Batch2 as unknown[],
+      additionalLiveServices2025 as unknown[],
+      real2025Q2Additions as unknown[],
+      real2025Q3Additions as unknown[]
+    );
+  const byCategory: Record<string, unknown[]> = {};
+  for (const c of categories) byCategory[c] = [];
+  // Normalize various category labels into our main buckets
+  const categoryAliases: Record<string, string> = {
+    'AI & Data': 'AI & Data',
+    'AI & Machine Learning': 'AI & Data',
+    'GenAI': 'AI & Data',
+    'Cloud & FinOps': 'Cloud & FinOps',
+    'Cloud & Data': 'Cloud & FinOps',
+    'Platform Engineering': 'Cloud & FinOps',
+    'Observability': 'Observability',
+    'Observability & Telemetry': 'Observability',
+    'Quality & Monitoring': 'Quality & Monitoring',
+    'Security & Reliability': 'Quality & Monitoring',
+    'Security & Compliance': 'Quality & Monitoring',
+    'Developer Tools': 'Developer Tools',
+    'Growth & Marketing': 'Developer Tools'
+  };
+  for (const s of all) {
+    const service = s as { category?: string };
+    const rawCat = (service.category || '').trim();
+    const mapped = categoryAliases[rawCat] || (categories.includes(rawCat) ? rawCat : 'Developer Tools');
+    byCategory[mapped].push(s);
+  }
+
+  const anchorMap: Record<string, string> = {
+    'AI & Data': 'ai',
+    'Developer Tools': 'developer-tools',
+    'Cloud & FinOps': 'cloud',
+    'Observability': 'observability',
+    'Quality & Monitoring': 'quality',
+  };
+>>>>>>> origin/feat/q3-services
+
+=======
+export default function ServicesIndex() {
+>>>>>>> origin/feat/home-redesign
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       <Head>
+<<<<<<< HEAD
         <title>Our Services - Zion Tech Group | Comprehensive Technology Solutions</title>
         <meta name="description" content="Explore our comprehensive range of technology services including AI development, cloud solutions, software development, data analytics, security, and automation services. Contact us at +1 302 464 0950." />
         <meta name="keywords" content="AI services, cloud solutions, software development, data analytics, cybersecurity, automation, micro SAAS, technology consulting" />
@@ -195,3 +286,18 @@ const Services: NextPage = () => {
 };
 
 export default Services;
+=======
+        <title>Services — Zion Tech Solutions</title>
+        <meta name="description" content="AI development, cloud, data analytics, and blockchain services." />
+      </Head>
+      <h1 className="text-3xl font-bold mb-6">Services</h1>
+      <ul className="grid md:grid-cols-2 gap-4">
+        <li className="enhanced-card"><Link href="/services/ai-development"><a className="underline">AI Development</a></Link></li>
+        <li className="enhanced-card"><Link href="/services/cloud-services"><a className="underline">Cloud & MLOps</a></Link></li>
+        <li className="enhanced-card"><Link href="/services/data-analytics"><a className="underline">Data Analytics</a></Link></li>
+        <li className="enhanced-card"><Link href="/services/blockchain"><a className="underline">Web3 & Blockchain</a></Link></li>
+      </ul>
+    </div>
+  );
+}
+>>>>>>> origin/feat/home-redesign

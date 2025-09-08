@@ -22,3 +22,5 @@ const Sitemap: React.FC = () => {
   )};
 
 export default SitemapPage;
+  );
+};

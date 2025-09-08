@@ -18,4 +18,4 @@ export: interface InnovativeMicroSaasService {
    roi: string;
    innovationLevel: string;
    contactInfo: { phone: string;
-
+}

@@ -14,3 +14,5 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
   const getPercentage = (count: number) => {
     if (totalReviews === 0) return 0
     return (count / totalReviews) * 100
+  );
+};

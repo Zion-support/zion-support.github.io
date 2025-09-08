@@ -1,8 +1,6 @@
-=======>>>>>>> origin/main
-<<<<<<< HEAD=======
-=======
->>>>>>> origin/main
->>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+
+
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;

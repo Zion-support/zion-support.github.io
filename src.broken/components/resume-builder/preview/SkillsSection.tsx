@@ -7,3 +7,5 @@ export function SkillsSection() {
     </div>
   )
 }
+  );
+};

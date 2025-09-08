@@ -95,3 +95,5 @@ const AuthRoutes = () => {;
     <Routes>;
       {/* Auth Routes */}
 export default AuthRoutes;
+  );
+};

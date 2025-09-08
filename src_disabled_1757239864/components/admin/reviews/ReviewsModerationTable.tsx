@@ -143,5 +143,5 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="space-y-2">
                 <h4 className="text-sm font-medium">Additional Ratings</h4>
                 <div className="flex flex-wrap gap-2">
-
-
+  );
+};

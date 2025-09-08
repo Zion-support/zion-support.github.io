@@ -1,4 +1,4 @@
-=======>>>>>>> origin/main      fs.appendFileSync(this.logFile, logMessage);,
+
     } catch (error) {}
       _console.error('Failed to write to log file:', error.message);',
     }
@@ -12,7 +12,7 @@
     }
   }
   async getSystemHealth() {}
-=======>>>>>>> origin/main
+
       }
       return health;
     } catch (error) {}
@@ -69,9 +69,7 @@
       }
       // Get system processes (top 10 by memory, usage),
       try {}
-        const psOutput = execSync('ps aux --sort=-%mem | head -11', { encoding: 'utf8' });',=======
-      try {}
-        const psOutput = execSync('ps aux --sort=-%mem | head -11', { encoding: 'utf8' });',>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+        const psOutput = execSync('ps aux --sort=-%mem | head -11', { encoding: 'utf8' });',
         const lines = psOutput.split('\n').slice(1); // Skip header';,
         for (const line of, lines) {}
           if (line.trim()) {}
@@ -81,13 +79,10 @@
                 name: parts[10],
                 pid: parseInt(parts[1]),
                 memory: parseFloat(parts[3]),
-=======                cpu: parseFloat(parts[2]),=======
-                cpu: parseFloat(parts[2]),>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+
                 command: parts.slice(10).join(' '),
               });,
             }
           }
-=======module.exports = HealthMonitor;=======
-module.exports = HealthMonitor;
->>>>>>> origin/main
->>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+
+

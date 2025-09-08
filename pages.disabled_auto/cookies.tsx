@@ -130,5 +130,5 @@
         </section>
       </div>
     </MainLayout>
-
-
+  );
+};

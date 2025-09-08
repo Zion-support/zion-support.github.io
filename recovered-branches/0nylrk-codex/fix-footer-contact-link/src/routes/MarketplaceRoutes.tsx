@@ -210,3 +210,5 @@ export default MarketplaceRoutes,; const MarketplaceRoutes = () => {
 }/> </Routes>) 
 };
 export default MarketplaceRoutes;
+  );
+};

@@ -7,3 +7,5 @@ export function SearchResultsPage() {
     </div>
   )
 }
+  );
+};

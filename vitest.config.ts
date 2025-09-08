@@ -17,7 +17,7 @@ export default defineConfig({
   },
   test: {
     environment: 'jsdom',
-    setupFiles: './tests/setup.ts',
+    setupFiles: './src/test/setup.ts',
     globals: true,
     coverage: {
       provider: 'v8',
@@ -48,5 +48,4 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src')
     }
   }
-})=======
-});>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+})

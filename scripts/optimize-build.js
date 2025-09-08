@@ -13,7 +13,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const projectRoot = path.join(__dirname, '..');
 
-// Colors for console output
 const colors = {
   reset: '\x1b[0m',
   bright: '\x1b[1m',
@@ -23,6 +22,7 @@ const colors = {
   blue: '\x1b[34m',
   magenta: '\x1b[35m',
   cyan: '\x1b[36m',
+  white: '\x1b[37m'
 };
 
 function log(message, color = 'reset') {
@@ -30,16 +30,10 @@ function log(message, color = 'reset') {
 }
 
 function analyzeBundleSize() {
-  const distPath = path.join(projectRoot, 'dist');
-  
-  if (!fs.existsSync(distPath)) {
-    log('❌ Dist folder not found. Run npm run build first.', 'red');
-    return;
-  }
-
   log('\n📊 Bundle Size Analysis', 'cyan');
   log('='.repeat(50), 'cyan');
 
+  const distPath = path.join(projectRoot, 'dist');
   const assetsPath = path.join(distPath, 'assets');
   const files = fs.readdirSync(assetsPath);
   
@@ -98,30 +92,6 @@ function analyzeBundleSize() {
   };
 }
 
-function checkDependencies() {
-  log('\n🔍 Dependency Analysis:', 'cyan');
-  log('='.repeat(50), 'cyan');
-
-  const packageJsonPath = path.join(projectRoot, 'package.json');
-  const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-  
-  const dependencies = {
-    ...packageJson.dependencies,
-    ...packageJson.devDependencies
-  };
-
-  const importantDeps = [
-    'react', 'react-dom', 'react-router-dom',
-    '@tanstack/react-query', 'framer-motion', 'lucide-react'
-  ];
-
-  importantDeps.forEach(dep => {
-    if (dependencies[dep]) {
-      log(`  ✓ ${dep}: ${dependencies[dep]}`, 'green');
-    }
-  });
-}
-
 function checkBuildConfig() {
   log('\n🔧 Build Configuration Check', 'cyan');
   log('='.repeat(50), 'cyan');
@@ -169,6 +139,28 @@ function generateReport(analysis) {
   log('  3. Use dynamic imports for route-based code splitting', 'blue');
   log('  4. Optimize images and assets', 'blue');
   log('  5. Remove unused dependencies', 'blue');
+}
+
+function checkDependencies() {
+  log('\n🔍 Dependency Analysis:', 'cyan');
+  log('='.repeat(50), 'cyan');
+  
+  const packageJsonPath = path.join(projectRoot, 'package.json');
+  const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+  
+  const deps = Object.keys(packageJson.dependencies || {});
+  const devDeps = Object.keys(packageJson.devDependencies || {});
+  
+  log(`  ✓ Dependencies: ${deps.length}`, 'green');
+  log(`  ✓ Dev Dependencies: ${devDeps.length}`, 'green');
+  
+  // Check for common heavy dependencies
+  const heavyDeps = ['react', 'react-dom', 'framer-motion', 'three', 'lodash'];
+  const foundHeavy = deps.filter(dep => heavyDeps.some(heavy => dep.includes(heavy)));
+  
+  if (foundHeavy.length > 0) {
+    log(`  ✓ Heavy dependencies found: ${foundHeavy.join(', ')}`, 'yellow');
+  }
 }
 
 function main() {

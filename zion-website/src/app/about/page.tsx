@@ -16,5 +16,5 @@ export default function Page() {
 
 
 import React from 'react';'
->>>>>>> f056e1038c528e7c7990a21cd793614976bb5152
-=======
+  );
+};

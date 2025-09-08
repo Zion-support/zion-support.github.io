@@ -1,4 +1,4 @@
-import React from "react",
+import React from "react";
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { TransactionHistory } from "@/components/transactions/TransactionHistory",
@@ -10,7 +10,5 @@ export default function Payments() {
   return (
     <>
       <Header />
-
-
-
-
+  );
+};

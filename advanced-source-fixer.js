@@ -1,5 +1,5 @@
-=======>>>>>>> origin/main
->>>>>>> origin/main      }
+
+
       if (fixed && fixed.includes("export default")) {
         fixes && fixes.push("Added default export");
       }
@@ -217,8 +217,7 @@ class AdvancedSourceFixer {}
       /Property or signature expected/,
       /Unexpected token/,'
       /'from' expected/,
-=======      /', ' expected/,      /';' expected/,=======
-      /', ' expected/,      /';' expected/,>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+
 // Check condition
 if ( {) {
   $2

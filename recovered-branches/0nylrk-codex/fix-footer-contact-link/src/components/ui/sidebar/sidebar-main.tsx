@@ -15,3 +15,5 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
   if (props.collapsible === "none") {
     return (
       <div;
+  );
+};

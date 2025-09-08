@@ -7,3 +7,5 @@ export function WalletContext() {
     </div>
   )
 }
+  );
+};

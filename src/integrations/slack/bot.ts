@@ -32,12 +32,7 @@ declare const globalThis: {
 
 // Mock App class that mimics the Slack Bolt SDK behavior
 class MockApp {
-=======  private commandHandlers: Record<string, (args: any) => Promise<void>> = {};
 
-  command(commandName: string, handler: (args: any) => Promise<void>) {=======
-  private commandHandlers: Record<string, (args: unknown) => Promise<void>> = {};
-
-  command(commandName: string, handler: (args: unknown) => Promise<void>) {>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
     this.commandHandlers[commandName] = handler;
     return this;
   }
@@ -61,8 +56,7 @@ async function askZionGPT(prompt: string): Promise<string> {
   if (safeConsole && safeConsole.log) {
     safeConsole.log(`ZionGPT was asked: ${prompt}`);
   }
-==============
-  await new Promise(resolve => setTimeout(resolve, 0)); // Add await to fix async warning>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+
   return `AI response to: ${prompt}`;
 }
 
@@ -106,5 +100,20 @@ app.command('/zion', async (args: unknown) => {
   const port = env.PORT ? Number(env.PORT) : 3000;
   await app.start(port);
 })();
+
+// Add this function either inside MockApp or as an exported function
+async function sendSlackAlert(message: string): Promise<void> {
+  // Safely log without direct console reference
+  const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined;
+  if (safeConsole && safeConsole.log) {
+    safeConsole.log(`SLACK_ALERT: ${message}`);
+  }
+  // In a real scenario, this would use the Slack API to send a message
+  // For example: await app.client.chat.postMessage({ channel: '#alerts', text: message });
+  return Promise.resolve();
+}
+
+// Export it if it's standalone, or ensure it can be called
+export { sendSlackAlert }; // If standalone
 
 export default app;

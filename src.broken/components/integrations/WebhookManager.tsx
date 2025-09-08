@@ -7,3 +7,5 @@ export function WebhookManager() {
     </div>
   )
 }
+  );
+};

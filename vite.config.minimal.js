@@ -1,9 +1,4 @@
-=======import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-export default defineConfig({
-  plugins: [react()],
-  build: {
->>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
+
     outDir: 'dist',
     sourcemap: false,
 import { defineConfig } from 'vite'
@@ -44,27 +39,11 @@ export default defineConfig({
         assetFileNames: 'assets/[name]-[hash].[ext]'
       }
     },
-    chunkSizeWarningLimit: 1000,>>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+    chunkSizeWarningLimit: 1000,
   },
   css: {
     postcss: './postcss.config.js',
   },
-})>>>>>>> 97898c1e8ff6077b3b3a3ca38c9422c9b60de8e3
-=======
-})=======
-  optimizeDeps: {
-    include: [
-      'react',
-      'react-dom',
-      'react-router-dom',
-      'lucide-react',
-      '@radix-ui/react-dialog',
-      '@radix-ui/react-dropdown-menu',
-      '@radix-ui/react-select',
-      'framer-motion',
-      '@tanstack/react-query'
-    ]
-  }
 })
->>>>>>> origin/main
->>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
+
+

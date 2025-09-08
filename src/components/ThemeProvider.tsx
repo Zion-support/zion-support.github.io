@@ -1,18 +1,14 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
-<<<<<<< HEAD
-type Theme = 'light' | 'dark' | 'system';
 
-=======export type Theme = 'light' | 'dark' | 'system';
 
 interface ThemeContextValue {
->>>>>>> 1306cdfc5ab0f8df8cd228e773bcfa58ba294204
   theme: Theme;
   setTheme: (theme: Theme) => void;
   actualTheme: 'light' | 'dark';
 }
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
 
 export const useTheme = () => {
   const context = useContext(ThemeContext);

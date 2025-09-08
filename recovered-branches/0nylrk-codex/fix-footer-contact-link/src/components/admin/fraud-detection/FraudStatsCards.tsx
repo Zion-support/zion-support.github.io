@@ -79,7 +79,7 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
       </Card>
   )
 },
-import React from "react",;
+import React from "react";;
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
 import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react",;
 import { FraudStats } from "@/types/fraud",;
@@ -186,4 +186,3 @@ export default FraudStatsCards;
 };
 
 export default FraudStatsCards;
-

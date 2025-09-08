@@ -7,3 +7,5 @@ export function Status() {
     </div>
   )
 }
+  );
+};
