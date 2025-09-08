@@ -6,12 +6,12 @@ const stripe = new Stripe(Deno.env.get('STRIPE_SECRET_KEY') || '', {
   apiVersion: '2023-10-16'
 });
 
-const supabase = createClient(
-  Deno.env.get('SUPABASE_URL') || '',
-  Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || ''
-);
-
 const webhookSecret = Deno.env.get('STRIPE_WEBHOOK_SECRET') || '';
+
+// const supabase = createClient(
+//   Deno.env.get('SUPABASE_URL') || '',
+//   Deno.env.get('SUPABASE_ANON_KEY') || ''
+// );
 
 serve(async (req) => {
   if (req.method === 'POST') {
@@ -29,6 +29,10 @@ serve(async (req) => {
       const session = event.data.object as Stripe.Checkout.Session;
       const orderId = session.metadata?.orderId;
       if (orderId) {
+        const supabase = createClient(
+          Deno.env.get('SUPABASE_URL') || '',
+          Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || ''
+        );
         await supabase.from("orders").update({ status: "paid" }).eq("id", orderId);
       }
     }

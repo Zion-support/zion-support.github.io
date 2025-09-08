@@ -97,13 +97,9 @@ export default defineConfig(({ mode }) => ({
     // Exclude problematic dependencies
     exclude: ['@vite/client', '@vite/env'],
   },
-  // Performance optimizations
-  esbuild: {
-    target: 'esnext',
-    format: 'esm',
-  },
   // CSS optimizations
   css: {
     devSourcemap: true,
+    postcss: './postcss.config.js',
   },
 }))

@@ -111,6 +111,7 @@ export class ErrorReporter {
       console.log('Sending error report:', errorReport);
       
       // Example: Send to your error reporting service
+      await new Promise(resolve => setTimeout(resolve, 0)); // Add await to fix async warning
       // await fetch('/api/errors', {
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
