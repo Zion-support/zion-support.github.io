@@ -1,70 +1,178 @@
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-export default function FAQ() {
-  const contact = {
-    email: 'kleber@ziontechgroup.com',
-    phone: '+1-302-464-0950',
-    site: 'https://ziontechgroup.com'
+export default function FAQPage() {
+  const [openItems, setOpenItems] = useState<number[]>([]);
+
+  const toggleItem = (index: number) => {
+    setOpenItems(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
+    );
   };
 
   const faqs = [
     {
-      question: "What services does Zion Tech Group offer?",
-      answer: "We offer 40+ micro SaaS products, 16+ AI services, and 16+ IT solutions including cloud migration, cybersecurity, data engineering, machine learning, and more."
+      question: "What is AI automation and how does it work?",
+      answer: "AI automation combines artificial intelligence with automated processes to create systems that can learn, adapt, and operate independently. Our platform uses machine learning algorithms to analyze data, make decisions, and execute actions without human intervention, while continuously improving through experience."
     },
     {
-      question: "How do I get started with your services?",
-      answer: "Contact us through our contact form, call us at +1 302 464 0950, or email kleber@ziontechgroup.com. We'll schedule a consultation to understand your needs and provide a custom solution."
+      question: "How long does it take to implement AI automation?",
+      answer: "Implementation time varies based on complexity and scope. Simple automation workflows can be deployed in 2-4 weeks, while comprehensive enterprise solutions typically take 3-6 months. We use agile methodologies to deliver value incrementally, with the first benefits often visible within the first month."
     },
     {
-      question: "What is the typical pricing for your services?",
-      answer: "Pricing varies by service and complexity. Micro SaaS products typically range from $99-$3,500/month, AI services from $699-$12,999/month, and IT services from $999-$15,999/month. Contact us for a custom quote."
+      question: "What industries do you serve?",
+      answer: "We serve a wide range of industries including manufacturing, healthcare, financial services, retail, transportation, energy, and more. Our AI automation platform is designed to be industry-agnostic, with customizable solutions that can be adapted to specific sector requirements and compliance needs."
     },
     {
-      question: "Do you offer custom development?",
-      answer: "Yes, we specialize in custom development for micro SaaS products, AI solutions, and IT services. We work closely with clients to build tailored solutions that meet their specific business requirements."
+      question: "How do you ensure the security of AI systems?",
+      answer: "Security is built into every layer of our platform. We implement enterprise-grade encryption, role-based access control, comprehensive audit logging, and regular security assessments. Our systems comply with SOC 2, GDPR, and other relevant standards, with continuous monitoring and threat detection."
     },
     {
-      question: "What technologies do you work with?",
-      answer: "We work with modern technologies including AWS, Azure, GCP, Kubernetes, Docker, Python, JavaScript, React, Node.js, machine learning frameworks, and various cloud and AI platforms."
+      question: "Can AI automation replace human workers?",
+      answer: "Our approach focuses on augmenting human capabilities, not replacing them. AI automation handles repetitive, time-consuming tasks, allowing humans to focus on creative problem-solving, strategic thinking, and high-value activities. We design systems for human-AI collaboration that enhances productivity and job satisfaction."
     },
     {
-      question: "How long does a typical project take?",
-      answer: "Project timelines vary based on complexity. Simple micro SaaS products can be delivered in 2-4 weeks, while complex AI or IT solutions may take 2-6 months. We provide detailed timelines during consultation."
+      question: "What kind of ROI can I expect from AI automation?",
+      answer: "ROI varies by use case, but our clients typically see 200-500% returns within the first year. Common benefits include 40-60% reduction in operational costs, 3-5x improvement in process efficiency, and significant time savings. We provide detailed ROI analysis during the planning phase."
     },
     {
-      question: "Do you provide ongoing support?",
-      answer: "Yes, we offer comprehensive support and maintenance services for all our solutions. This includes monitoring, updates, troubleshooting, and optimization to ensure optimal performance."
+      question: "How do you handle data privacy and compliance?",
+      answer: "We implement privacy-by-design principles with data minimization, encryption, and user consent controls. Our platform supports compliance with GDPR, CCPA, HIPAA, and other regulations. We provide comprehensive data governance tools and can work with your existing compliance frameworks."
     },
     {
-      question: "Can you help with cloud migration?",
-      answer: "Absolutely! We specialize in cloud migration and modernization services, helping businesses move to AWS, Azure, or GCP with minimal downtime and maximum efficiency."
+      question: "What support and training do you provide?",
+      answer: "We provide comprehensive onboarding, training programs, and ongoing support. This includes user training, technical documentation, 24/7 support for critical systems, and regular platform updates. We also offer certification programs for your team to become self-sufficient."
     },
     {
-      question: "What makes your AI services different?",
-      answer: "Our AI services are tailored to specific business needs, not generic solutions. We focus on practical applications that deliver measurable ROI, with custom model development and integration support."
+      question: "Can I integrate AI automation with my existing systems?",
+      answer: "Yes, our platform is designed for seamless integration with existing enterprise systems. We support standard protocols, provide pre-built connectors for common platforms, and can develop custom integrations. Our API-first approach ensures compatibility with your current technology stack."
     },
     {
-      question: "Do you work with small businesses?",
-      answer: "Yes, we work with businesses of all sizes, from startups to enterprises. Our micro SaaS products are particularly well-suited for small and medium businesses looking for cost-effective solutions."
+      question: "How do you ensure AI systems make ethical decisions?",
+      answer: "We implement comprehensive ethical AI frameworks including bias detection, explainable AI, and human oversight capabilities. Our systems are designed with transparency, fairness, and accountability in mind. We regularly audit for bias and provide clear explanations of decision-making processes."
+    },
+    {
+      question: "What happens if something goes wrong with the AI system?",
+      answer: "Our systems include multiple safety mechanisms: human override capabilities, automatic escalation protocols, comprehensive monitoring, and fail-safe modes. We provide 24/7 monitoring with immediate alerting and rapid response procedures to ensure business continuity."
+    },
+    {
+      question: "How do you stay current with AI technology advances?",
+      answer: "We maintain a dedicated research team and partnerships with leading AI institutions. Our platform is continuously updated with the latest advances in machine learning, natural language processing, and automation technology. We regularly evaluate emerging technologies and integrate them when they provide clear value."
     }
   ];
 
-const Page = () => {
   return (
-    <MainLayout 
-      title="Page - Zion Tech Group"
-      description="Zion Tech Group page"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 py-20">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Page</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
+    <>
+      <Head>
+        <title>FAQ | Zion Tech Group - AI Automation Questions & Answers</title>
+        <meta name="description" content="Find answers to frequently asked questions about AI automation, our services, and how we can help transform your business." />
+        <meta property="og:title" content="FAQ | Zion Tech Group" />
+        <meta property="og:description" content="Find answers to frequently asked questions about AI automation and our services." />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+        <main className="container mx-auto px-6 py-12">
+          <div className="max-w-4xl mx-auto">
+            <nav className="mb-8">
+              <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                ← Back to Home
+              </Link>
+            </nav>
+            
+            <header className="text-center mb-16">
+              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+                Frequently Asked Questions
+              </h1>
+              <p className="text-xl text-white/80 max-w-3xl mx-auto">
+                Find answers to common questions about AI automation, our services, and how we can help transform your business
+              </p>
+            </header>
+
+            {/* FAQ Section */}
+            <section className="mb-16">
+              <div className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-xl border border-white/20 overflow-hidden">
+                    <button
+                      onClick={() => toggleItem(index)}
+                      className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-200"
+                    >
+                      <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
+                      <span className="text-cyan-400 text-xl transition-transform duration-200">
+                        {openItems.includes(index) ? '−' : '+'}
+                      </span>
+                    </button>
+                    {openItems.includes(index) && (
+                      <div className="px-6 pb-4">
+                        <p className="text-white/80 leading-relaxed">{faq.answer}</p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Additional Help */}
+            <section className="mb-16">
+              <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20 text-center">
+                <h2 className="text-2xl font-bold mb-4 text-white">Still Have Questions?</h2>
+                <p className="text-white/80 mb-6">
+                  Can't find the answer you're looking for? Our team is here to help with any questions 
+                  about AI automation or our services.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link 
+                    href="/contact"
+                    className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+                  >
+                    Contact Our Team
+                  </Link>
+                  <Link 
+                    href="/resources"
+                    className="px-6 py-3 border border-cyan-400/50 text-cyan-400 rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+                  >
+                    Browse Resources
+                  </Link>
+                </div>
+              </div>
+            </section>
+
+            {/* Related Topics */}
+            <section>
+              <h2 className="text-2xl font-bold mb-8 text-center text-white">Related Topics</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <Link href="/platform" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-2xl">🤖</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-cyan-400 mb-2">Our Platform</h3>
+                  <p className="text-white/80 text-sm">Learn about our AI automation technology</p>
+                </Link>
+                
+                <Link href="/services" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300 text-center group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-fuchsia-400 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-2xl">🚀</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-fuchsia-400 mb-2">Our Services</h3>
+                  <p className="text-white/80 text-sm">Explore our comprehensive solutions</p>
+                </Link>
+                
+                <Link href="/case-studies" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-green-400/30 transition-all duration-300 text-center group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-2xl">📊</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-green-400 mb-2">Case Studies</h3>
+                  <p className="text-white/80 text-sm">See real-world success stories</p>
+                </Link>
+              </div>
+            </section>
+          </div>
+        </main>
       </div>
-    </MainLayout>
+    </>
   );
 }
-
-export default Faq;
