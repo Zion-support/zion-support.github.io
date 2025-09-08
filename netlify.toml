@@ -8,6 +8,28 @@
 [build.environment]
   NODE_VERSION = "20"
   PYTHON_VERSION = "3.11"
+  NPM_FLAGS = "--omit=optional"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  NETLIFY_FUNCTIONS_TIMEOUT = "30"
+  # Avoid optional binary downloads (electron, playwright, cypress)
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"
+  PUPPETEER_SKIP_DOWNLOAD = "1"
+  CYPRESS_INSTALL_BINARY = "0"
+  ELECTRON_SKIP_DOWNLOAD = "1"
+
+# Function bundling optimization
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["aws-sdk"]
+
+[context.production.environment]
+  NODE_ENV = "production"
+
+[context.deploy-preview]
+  command = "npm ci --no-audit --no-fund && npm run build"
+
+[context.branch-deploy]
+  command = "npm ci --no-audit --no-fund && npm run build"
 
 # Vite/React SPA configuration
 # Redirect all routes to index.html for client-side routing
@@ -60,5 +82,5 @@
   [headers.values]
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
     X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
