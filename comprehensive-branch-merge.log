@@ -20056,3 +20056,20 @@ fatal: couldn't find remote ref cursor/expand-services-advertise-and-build-proje
 [2025-09-08T21:26:46.981Z] ✅ Success: Get git status
 [2025-09-08T21:26:46.981Z] 📄 Found 0 conflicted files
 [2025-09-08T21:26:46.981Z] 🚀 Add resolved files: git add .
+[2025-09-08T21:26:47.094Z] ✅ Success: Add resolved files
+[2025-09-08T21:26:47.094Z] 🚀 Commit merge for cursor/expand-services-advertise-and-build-project-8c98: git commit -m "Resolve conflicts and merge cursor/expand-services-advertise-and-build-project-8c98"
+[2025-09-08T21:26:47.174Z] ✅ Success: Commit merge for cursor/expand-services-advertise-and-build-project-8c98
+[2025-09-08T21:26:47.174Z] ✅ Successfully resolved conflicts and merged: cursor/expand-services-advertise-and-build-project-8c98
+[2025-09-08T21:26:47.174Z] 🔄 Attempting to merge branch: cursor/expand-services-advertise-and-build-project-931c
+[2025-09-08T21:26:47.174Z] 🚀 Fetch origin/cursor/expand-services-advertise-and-build-project-931c: git fetch origin cursor/expand-services-advertise-and-build-project-931c
+[2025-09-08T21:26:47.289Z] ❌ Error in Fetch origin/cursor/expand-services-advertise-and-build-project-931c: Command failed: git fetch origin cursor/expand-services-advertise-and-build-project-931c
+fatal: couldn't find remote ref cursor/expand-services-advertise-and-build-project-931c
+
+[2025-09-08T21:26:47.289Z] ❌ Failed to merge cursor/expand-services-advertise-and-build-project-931c: Command failed: git fetch origin cursor/expand-services-advertise-and-build-project-931c
+fatal: couldn't find remote ref cursor/expand-services-advertise-and-build-project-931c
+
+[2025-09-08T21:26:47.289Z] 🔧 Attempting to resolve conflicts for: cursor/expand-services-advertise-and-build-project-931c
+[2025-09-08T21:26:47.289Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T21:26:47.348Z] ✅ Success: Get git status
+[2025-09-08T21:26:47.348Z] 📄 Found 0 conflicted files
+[2025-09-08T21:26:47.348Z] 🚀 Add resolved files: git add .
