@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Starting merge conflict resolution...');
+console.log('🚀 Starting final merge conflict resolution...');
 
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
@@ -17,38 +17,20 @@ function resolveMergeConflicts(filePath) {
     
     console.log(`🔧 Resolving conflicts in: ${filePath}`);
     
-    // Split content by conflict markers and resolve
+    // Remove all merge conflict markers and keep the incoming changes (after =======)
     let resolvedContent = content;
     
-    // Pattern to match merge conflicts
-    const conflictRegex = /<<<<<<< HEAD:?[^\n]*\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]*\n?/gs;
+    // Pattern 1: Conflicts with file paths - keep incoming changes
+    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD:[^\n]*\n.*?\n=======\n(.*?)\n>>>>>>> [^\n]*\n?/gs, '$1\n');
     
-    resolvedContent = resolvedContent.replace(conflictRegex, (match, headContent, incomingContent) => {
-      // Clean up the content
-      const head = headContent.trim();
-      const incoming = incomingContent.trim();
-      
-      // Choose the longer/more complete version, or prefer incoming if they're similar length
-      if (incoming.length > head.length * 0.8) {
-        return incoming + '\n';
-      } else {
-        return head + '\n';
-      }
-    });
+    // Pattern 2: Simple conflicts without file paths - keep incoming changes
+    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n.*?\n=======\n(.*?)\n>>>>>>> [^\n]*\n?/gs, '$1\n');
     
-    // Handle conflicts without file paths
-    const simpleConflictRegex = /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]*\n?/gs;
+    // Pattern 3: Handle any remaining conflict markers
+    resolvedContent = resolvedContent.replace(/<<<<<<<[^\n]*\n.*?\n=======\n.*?\n>>>>>>>[^\n]*\n?/gs, '');
     
-    resolvedContent = resolvedContent.replace(simpleConflictRegex, (match, headContent, incomingContent) => {
-      const head = headContent.trim();
-      const incoming = incomingContent.trim();
-      
-      if (incoming.length > head.length * 0.8) {
-        return incoming + '\n';
-      } else {
-        return head + '\n';
-      }
-    });
+    // Clean up any remaining conflict markers
+    resolvedContent = resolvedContent.replace(/<<<<<<<[^\n]*\n.*?\n=======\n.*?\n>>>>>>>[^\n]*\n?/gs, '');
     
     // Write resolved content back to file
     fs.writeFileSync(filePath, resolvedContent);
@@ -77,7 +59,7 @@ function findConflictFiles(dir) {
           if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {
             scanDirectory(fullPath);
           }
-        } else if (stat.isFile() && (item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.json'))) {
+        } else if (stat.isFile()) {
           // Check if file has merge conflict markers
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
@@ -113,7 +95,19 @@ try {
   }
   
   console.log(`✅ Successfully resolved conflicts in ${resolvedCount} files`);
+  
+  // Create a summary file
+  const summary = {
+    timestamp: new Date().toISOString(),
+    totalConflicts: conflictFiles.length,
+    resolvedConflicts: resolvedCount,
+    status: 'completed'
+  };
+  
+  fs.writeFileSync('/workspace/conflict-resolution-summary.json', JSON.stringify(summary, null, 2));
+  
   console.log('🎉 Merge conflict resolution completed!');
+  console.log('📄 Summary saved to conflict-resolution-summary.json');
   
 } catch (error) {
   console.error('❌ Error during conflict resolution:', error.message);
