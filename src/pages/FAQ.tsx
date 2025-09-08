@@ -334,4 +334,6 @@ interface FAQItem {
       </div>
     </div>
   );
-};
+}
+
+export default FAQ;

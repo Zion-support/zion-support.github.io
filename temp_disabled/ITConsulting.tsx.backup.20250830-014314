@@ -482,6 +482,6 @@ const ITConsulting = () => {
       </section>
     </div>
   );
-};
+}
 
 export default ITConsulting;

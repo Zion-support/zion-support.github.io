@@ -97,7 +97,35 @@ module.exports = {
       }
     },
 
-    // NEW: AI-Powered Code Review Automation
+    // 🛡️ NEW: Comprehensive Error Prevention - runs every 10 minutes (HIGHEST PRIORITY)
+    {
+      name: 'comprehensive-error-prevention',
+      script: './scripts/automation/comprehensive-error-prevention.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '600000' // 10 minutes
+      }
+    },
+
+    // 🔧 NEW: Error Fixer - runs every 15 minutes (HIGH PRIORITY)
+    {
+      name: 'error-fixer',
+      script: './scripts/automation/error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '900000' // 15 minutes
+      }
+    },
+
+    // 🧠 NEW: Intelligent Predictive Monitor - runs every 5 minutes (HIGHEST PRIORITY)
     {
       name: 'ai-code-review',
       script: './scripts/automation/ai-code-review-automation.cjs',

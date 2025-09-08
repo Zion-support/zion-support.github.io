@@ -2,48 +2,144 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
-import { 
-  Map, 
-  Home, 
-  Info, 
-  Settings, 
-  MessageSquare, 
-  HelpCircle, 
-  FileText, 
-  Shield, 
-  Cookie, 
+import {
+  BarChart3,
+  ShoppingCart,
+  Building,
+  Star,
+  Target,
+  DollarSign,
+  Mail,
+  Video,
+  Heart,
   Globe,
-  Brain,
-  Cloud,
-  Zap,
-  Users
+  ArrowRight
 } from 'lucide-react';
 
-export default function Sitemap() {
-  const currentYear = new Date().getFullYear();
+interface SitemapLink {
+  name: string;
+  path: string;
+  description: string;
+}
 
-  const mainPages = [
-    { name: 'Home', href: '/', icon: Home, description: 'Main landing page' },
-    { name: 'About Us', href: '/about', icon: Info, description: 'Company information and mission' },
-    { name: 'Services', href: '/services', icon: Settings, description: 'Overview of all services' },
-    { name: 'Contact', href: '/contact', icon: MessageSquare, description: 'Get in touch with us' },
-    { name: 'FAQ', href: '/faq', icon: HelpCircle, description: 'Frequently asked questions' },
-    { name: 'Help Center', href: '/help', icon: HelpCircle, description: 'Support and resources' },
-    { name: 'Request Quote', href: '/quote', icon: FileText, description: 'Get a custom quote' },
-  ];
+interface SitemapSection {
+  title: string;
+  icon: any;
+  links: SitemapLink[];
+}
 
-  const servicePages = [
-    { name: 'AI Solutions', href: '/services/ai', icon: Brain, description: 'Machine Learning & AI Services' },
-    { name: 'Cloud Infrastructure', href: '/services/cloud', icon: Cloud, description: 'AWS, Azure, GCP Solutions' },
-    { name: 'Cybersecurity', href: '/services/security', icon: Shield, description: 'Security & Compliance' },
-    { name: 'Digital Transformation', href: '/services/transformation', icon: Zap, description: 'Business Process Modernization' },
-  ];
+const sitemapData: SitemapSection[] = [
+  {
+    title: 'Data Analytics & AI',
+    icon: BarChart3,
+    links: [
+      { name: 'Data Analytics', path: '/services/data-analytics', description: 'Business intelligence & insights' },
+      { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics', description: 'Healthcare data analysis' },
+      { name: 'AI Financial Trading', path: '/services/ai-financial-trading', description: 'AI-powered trading' },
+    ]
+  },
+  {
+    title: 'Micro SaaS Solutions',
+    icon: ShoppingCart,
+    links: [
+      { name: 'Micro CRM', path: '/services/micro-crm', description: 'Customer relationship management' },
+      { name: 'Helpdesk Platform', path: '/services/helpdesk', description: 'Customer support system' },
+      { name: 'Website Analytics', path: '/services/website-analytics', description: 'Performance tracking & insights' },
+      { name: 'IT Helpdesk', path: '/services/it-helpdesk', description: 'IT support system' },
+      { name: 'Affiliate Tracking', path: '/services/affiliate-tracking', description: 'Affiliate program management' },
+      { name: 'Mobile Survey', path: '/services/mobile-survey', description: 'Mobile survey platform' },
+      { name: 'Email Sequencer', path: '/services/email-sequencer', description: 'Email automation' },
+      { name: 'Podcast Transcription', path: '/services/podcast-transcription', description: 'Audio transcription service' },
+      { name: 'Returns Management', path: '/services/returns-management', description: 'Returns processing system' },
+    ]
+  },
+  {
+    title: 'Industry Solutions',
+    icon: Building,
+    links: [
+      { name: 'Enterprise Solutions', path: '/solutions/enterprise', description: 'Enterprise-grade solutions' },
+      { name: 'Healthcare Solutions', path: '/solutions/healthcare', description: 'Healthcare industry solutions' },
+    ]
+  },
+  {
+    title: 'Specialized Services',
+    icon: Star,
+    links: [
+      { name: 'AI Legal Document Automation', path: '/services/ai-legal-document-automation', description: 'Legal document AI' },
+      { name: 'AI Content Creation Suite', path: '/services/ai-content-creation-suite', description: 'Content creation AI' },
+      { name: 'AI HR Platform', path: '/services/ai-hr-platform', description: 'HR automation platform' },
+      { name: 'AI Content Creation', path: '/services/ai-content-creation', description: 'AI content generation' },
+      { name: 'AI Cybersecurity', path: '/services/ai-cybersecurity', description: 'AI security solutions' },
+    ]
+  },
+  {
+    title: 'Advanced Service Showcases',
+    icon: Target,
+    links: [
+      { name: '2026 Services Overview', path: '/ultimate-services-showcase-2026', description: 'Revolutionary AI & Quantum Solutions' },
+      { name: '2027 Services Overview', path: '/comprehensive-services-showcase-2027', description: 'Cutting-edge Innovation & Emerging Tech' },
+      { name: '2029 Cutting-Edge Services', path: '/zion-cutting-edge-services-2029', description: 'Future-ready Technology Solutions' },
+      { name: 'Comprehensive Services 2025', path: '/comprehensive-services-showcase-2025', description: 'Comprehensive service overview' },
+      { name: 'Innovative Services 2025', path: '/innovative-services-showcase-2025', description: 'Innovative service showcase' },
+      { name: 'Ultimate Innovative Services 2025', path: '/ultimate-innovative-services-showcase-2025', description: 'Ultimate innovative services' },
+      { name: 'New Services 2025', path: '/new-services-showcase-2025', description: 'New service offerings' },
+    ]
+  },
+  {
+    title: 'Pricing & Guides',
+    icon: DollarSign,
+    links: [
+      { name: 'Comprehensive Pricing 2026', path: '/comprehensive-pricing-2026', description: '2026 pricing guide' },
+      { name: 'Comprehensive Pricing 2028', path: '/comprehensive-pricing-2028', description: '2028 pricing guide' },
+      { name: 'Comprehensive Pricing Guide 2027', path: '/comprehensive-pricing-guide-2027', description: '2027 pricing guide' },
+    ]
+  }
+];
 
-  const legalPages = [
-    { name: 'Privacy Policy', href: '/privacy', icon: Shield, description: 'Data protection and privacy' },
-    { name: 'Terms of Service', href: '/terms', icon: FileText, description: 'Terms and conditions' },
-    { name: 'Cookie Policy', href: '/cookies', icon: Cookie, description: 'Cookie usage information' },
-  ];
+interface SitemapSection {
+  title: string;
+  icon: any;
+  description: string;
+  links: Array<{
+    name: string;
+    href: string;
+    description?: string;
+  }>;
+}
+
+const sitemapSections: SitemapSection[] = [
+  {
+    title: 'Main Pages',
+    icon: Globe,
+    description: 'Core website pages and information',
+    links: [
+      { name: 'Home', href: '/', description: 'Main landing page' },
+      { name: 'About', href: '/about', description: 'Company information and team' },
+      { name: 'Services', href: '/services', description: 'Overview of all services' },
+      { name: 'Contact', href: '/contact', description: 'Get in touch with us' },
+      { name: 'Blog', href: '/blog', description: 'Latest news and insights' },
+      { name: 'Careers', href: '/careers', description: 'Job opportunities' },
+      { name: 'Partners', href: '/partners', description: 'Partnership information' },
+      { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
+      { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
+      { name: 'Help Center', href: '/help', description: 'Support and documentation' },
+      { name: 'News', href: '/news', description: 'Company updates' },
+      { name: 'Sitemap', href: '/sitemap', description: 'This page' }
+    ]
+  },
+  {
+    title: 'AI & Machine Learning',
+    icon: Globe,
+    description: 'Artificial intelligence and machine learning services',
+    links: [
+      { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'AI-powered analytics' },
+      { name: 'Machine Learning Solutions', href: '/services/machine-learning', description: 'Custom ML models' },
+      { name: 'Deep Learning', href: '/services/deep-learning', description: 'Neural network solutions' },
+      { name: 'Computer Vision', href: '/services/computer-vision', description: 'Image and video analysis' },
+      { name: 'Natural Language Processing', href: '/services/nlp', description: 'Text and language processing' }
+    ]
+  }
+];
 
   return (
     <>
@@ -222,3 +318,6 @@ export default function Sitemap() {
     </>
   );
 }
+
+
+export default Sitemap;

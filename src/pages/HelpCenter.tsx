@@ -158,4 +158,6 @@ export const HelpCenter: React.FC = () => {
       </div>
     </div>
   );
-};
+}
+
+export default HelpCenter;
