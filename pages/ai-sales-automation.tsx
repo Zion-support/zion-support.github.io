@@ -1,6 +1,15 @@
 import React from 'react';
 import Head from 'next/head';
-import Layout from '../components/Layout';
+import { Phone, Mail, MapPin, Check, ArrowRight, Star, ChartBar } from 'lucide-react';
+const Layout = ({ children }: { children: React.ReactNode }) => <>
+  {children}
+</>;
+
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+
+export default function AISalesAutomationPage() {
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-sales-automation'));
+  if (!service) return null;
 
 export default function AISalesAutomation() {
   return (

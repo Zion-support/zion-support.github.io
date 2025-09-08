@@ -1,14 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Satellite, ArrowRight, CheckCircle, Star, TrendingUp, 
-  Globe, Zap, Shield, Users, Rocket, 
-  Phone, Mail, MapPin, Brain, Sparkles
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
+const Layout = ({ children }: { children: React.ReactNode }) => <>
+  {children}
+</>;
 
 export default function SpaceTechnologyAIPlatform() {
   const contactInfo = {

@@ -2,8 +2,14 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, ExternalLink } from 'lucide-react';
-import Layout from '../components/layout/Layout';
+import { 
+  Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket, Target,
+  Search, Filter, ArrowRight, Phone, Mail, MapPin, Globe, Cpu, Lock, Cloud,
+  BarChart3, Settings, Eye, Clock, Heart, Lightbulb, CheckCircle, ChevronDown
+} from 'lucide-react';
+const Layout = ({ children }: { children: React.ReactNode }) => <>
+  {children}
+</>;
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
 import { cuttingEdgeITInfrastructureInnovations2025 } from '../data/2025-cutting-edge-it-infrastructure-innovations';
 import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions';

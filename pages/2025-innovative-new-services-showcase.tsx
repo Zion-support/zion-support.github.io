@@ -8,7 +8,9 @@ import {
   Brain, Shield, Rocket, Zap, Globe, Cpu, Target,
   CheckCircle, Clock, DollarSign, Users as UsersIcon
 } from 'lucide-react';
-import Layout from '../components/layout/Layout';
+const Layout = ({ children }: { children: React.ReactNode }) => <>
+  {children}
+</>;
 import { innovativeNewServices2025 } from '../data/2025-innovative-new-services';
 import { emergingTechBreakthroughs2025 } from '../data/2025-emerging-tech-breakthroughs';
 

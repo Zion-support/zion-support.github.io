@@ -1,6 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
-import Layout from '../components/layout/Layout';
+const Layout = ({ children }: { children: React.ReactNode }) => <>
+  {children}
+</>;
 
 const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })

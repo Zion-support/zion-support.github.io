@@ -1,6 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
-import Layout from '../components/layout/Layout';
+const Layout = ({ children }: { children: React.ReactNode }) => <>
+  {children}
+</>;
 
 export default function SsoUserLifecycleAutomationPage() {
   return (

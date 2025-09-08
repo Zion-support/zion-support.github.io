@@ -1,8 +1,5 @@
 import React from 'react';
 
-const UltraFuturisticBackground2030: React.FC = () => {
-  // Temporarily simplified to avoid build issues
-  return <div className="sr-only">UltraFuturisticBackground2030 temporarily disabled</div>;
-};
-
-export default UltraFuturisticBackground2030;
+export default function UltraFuturisticBackground2030({ children }: { children?: React.ReactNode }) {
+	return <div>{children}</div>;
+}

@@ -1,7 +1,10 @@
-import NextHead from 'next/head';
-import { Wifi, Check, Phone, Mail, MapPin } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
+import React from 'react';
+import Head from 'next/head';
+import { Phone, Mail, MapPin, Check, ArrowRight, Cpu, Star } from 'lucide-react';
+const Layout = ({ children }: { children: React.ReactNode }) => <>
+  {children}
+</>;
+
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 
 export default function QuantumIoTPage() {

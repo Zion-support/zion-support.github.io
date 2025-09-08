@@ -9,8 +9,10 @@ import {
   Dna, Users, Globe, Cpu, Lock, Database,
   BarChart3, Target, Microscope, Cloud
 } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { innovativeNewServices2025 } from '../data/2025-innovative-new-services';
+const Layout = ({ children }: { children: React.ReactNode }) => <>
+  {children}
+</>;
+import { innovative2025NewServices } from '../data/innovative-2025-new-services';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',

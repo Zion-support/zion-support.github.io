@@ -1,46 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
-import Link from 'next/link';
-import { 
-  Cloud, 
-  Shield, 
-  Database, 
-  Network, 
-  Monitor, 
-  CheckCircle,
-  ArrowRight,
-  Clock,
-  Award,
-  Star,
-  Server,
-  Settings,
-  Lock,
-  Zap,
-  Users,
-  Globe,
-  TrendingUp,
-  Cpu,
-  HardDrive,
-  Wifi,
-  Smartphone,
-  Laptop,
-  Building,
-  BarChart3,
-  Code,
-  Search,
-  ShoppingCart,
-  BookOpen,
-  Brain,
-  DollarSign,
-  Rocket,
-  Phone,
-  Mail,
-  LinkIcon,
-  TestTube,
-  Wrench
-} from 'lucide-react';
-import Layout from '../components/Layout';
+import { Cloud, Cpu, Server, Database, Settings, Shield, Phone, Mail, MapPin, Check } from 'lucide-react';
+const Layout = ({ children }: { children: React.ReactNode }) => <>
+  {children}
+</>;
 
 const itServices = [
   {

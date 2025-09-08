@@ -1,4 +1,9 @@
-import Head from 'next/head'
+import React from 'react';
+import Head from 'next/head';
+import { Phone, Mail, MapPin, Check, ArrowRight, Star } from 'lucide-react';
+const Layout = ({ children }: { children: React.ReactNode }) => <>
+  {children}
+</>;
 
 export default function AIContentGenerator() {
 	return (

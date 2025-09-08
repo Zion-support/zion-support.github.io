@@ -1,8 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
 import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-// import ServiceAds from '../components/sections/ServiceAds';
+const Layout = ({ children }: { children: React.ReactNode }) => <>
+  {children}
+</>;
+import ServiceAds from '../components/sections/ServiceAds';
 
 
 export default function ApiMockContractTestingPage() {

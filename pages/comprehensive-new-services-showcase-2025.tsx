@@ -8,11 +8,13 @@ import {
   Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, 
   Clock, Heart, Lightbulb, ArrowRight, CheckCircle, ChevronRight
 } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { innovativeNewServices2025 } from '../data/2025-innovative-new-services';
-import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced';
-import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
-import { cuttingEdgeEnterpriseSolutions2025 } from '../data/2025-cutting-edge-enterprise-solutions';
+const Layout = ({ children }: { children: React.ReactNode }) => <>
+  {children}
+</>;
+import { innovativeNewMicroSaasServices2025 } from '../data/2025-innovative-new-micro-saas-services';
+import { innovativeNewAIServices2025 } from '../data/2025-innovative-new-ai-services';
+import { innovativeNewITServices2025 } from '../data/2025-innovative-new-it-services';
+import { innovativeNewBusinessSolutions2025 } from '../data/2025-innovative-new-business-solutions';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',

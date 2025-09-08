@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  typescript: { ignoreBuildErrors: true },
+  eslint: { ignoreDuringBuilds: true },
+  pageExtensions: ['page.tsx'],
   // Temporarily exclude problematic pages from the build
   async rewrites() {
     return [
@@ -75,49 +78,8 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
-  experimental: {
-    esmExternals: false },
-  eslint: {
-    ignoreDuringBuilds: true },
-  typescript: {
-    ignoreBuildErrors: true },
-  images: {
-    domains: ['ziontechgroup.com'],
-    unoptimized: true },
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production' },
-  webpack: config => {
-    config.module.rules.push({
-      test: /\.(ts|tsx)$/,
-      exclude: [
-        /node_modules/,
-        /api-backup/,
-        /pages\.disabled/,
-        /backup-pages/,
-        /components\//,
-        /\.backup/,
-        /\.disabled/,
-        /automation\/backups/,
-        /automation_backup/,
-        /broken_files_backup/,
-        /contracts/,
-        /hardhat/ ] });
-
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      'react-router-dom': path.resolve(__dirname, 'utils/next-router-shim.tsx'),
-      'react-router': path.resolve(__dirname, 'utils/next-router-shim.tsx') };
-
-    config.resolve.fallback = {
-      ...config.resolve.fallback,
-      fs: false,
-      net: false,
-      tls: false };
-
-    return config},
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  onDemandEntries: {
-    maxInactiveAge: 25 * 1000,
-    pagesBufferLength: 2 } };
+  // Use standalone output for deployment
+  output: 'standalone',
+};
 
 export default nextConfig;

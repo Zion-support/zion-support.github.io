@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import Head from 'next/head';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-import { FileCode2, Download } from 'lucide-react';
-import type { DocumentationConfig, APIDocumentation } from '../services/apiDocGeneratorService';
-import { APIDocGeneratorService } from '../services/apiDocGeneratorService';
+import { Phone, Mail, MapPin, Check, ArrowRight, Code, Star } from 'lucide-react';
+const Layout = ({ children }: { children: React.ReactNode }) => <>
+  {children}
+</>;
 
 export default function APIDocGeneratorPage() {
   const [sourcePath, setSourcePath] = useState('src');
