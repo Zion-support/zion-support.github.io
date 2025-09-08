@@ -135,79 +135,23 @@
   name = "hyper-front-index-accelerator"
   schedule = "*/1 * * * *" # every minute
 
+# New autonomous cloud automations
 [[scheduled.functions]]
-  name = "dependencies-guardian"
-  schedule = "0 * * * *" # hourly
+  name = "auto-reports-suite"
+  schedule = "*/5 * * * *" # every 5 minutes
 
 [[scheduled.functions]]
-  name = "ai-innovator"
-  schedule = "17 */6 * * *" # every 6 hours, offset minutes
+  name = "ai-changelog-broadcaster"
+  schedule = "13 */2 * * *" # every 2 hours at :13
 
 [[scheduled.functions]]
-  name = "docs-index-runner"
-  schedule = "11 */4 * * *"
+  name = "guardian-ultra"
+  schedule = "*/3 * * * *" # every 3 minutes
 
 [[scheduled.functions]]
-  name = "repo-knowledge-graph-runner"
-  schedule = "23 */6 * * *"
-
-[[scheduled.functions]]
-  name = "image-optimizer-runner"
-  schedule = "29 */6 * * *"
-
-[[scheduled.functions]]
-  name = "ai-changelog-runner"
-  schedule = "41 */6 * * *"
-
-[[scheduled.functions]]
-  name = "newsroom-runner"
-  schedule = "37 */6 * * *"
-
-[[scheduled.functions]]
-  name = "todo-scanner-runner"
-  schedule = "13 */6 * * *"
-
-[[scheduled.functions]]
-  name = "broken-image-scanner-runner"
-  schedule = "17 */6 * * *"
-
-[[scheduled.functions]]
-  name = "external-link-check-runner"
-  schedule = "31 */6 * * *"
-
-[[scheduled.functions]]
-  name = "repo-radar-runner"
-  schedule = "43 */6 * * *"
-
-[[scheduled.functions]]
-  name = "og-image-update-runner"
-  schedule = "47 */6 * * *"
-
-[[scheduled.functions]]
-  name = "docs-search-index-runner"
-  schedule = "53 */6 * * *"
-
-[[scheduled.functions]]
-  name = "todo-summary-runner"
-  schedule = "*/30 * * * *"
-
-[[scheduled.functions]]
-  name = "netlify-auto-healer-runner"
-  schedule = "*/20 * * * *"
-
-# New intelligent cloud automations
-[[scheduled.functions]]
-  name = "innovation-lab"
-  schedule = "*/10 * * * *" # every 10 minutes
-
-[[scheduled.functions]]
-  name = "broken-image-scanner"
-  schedule = "0 */6 * * *" # every 6 hours
-
-[[scheduled.functions]]
-  name = "auto-scheduler"
-  schedule = "*/15 * * * *" # every 15 minutes
-
-[[scheduled.functions]]
-  name = "docs-freshness-runner"
+  name = "newsroom-auto"
   schedule = "*/30 * * * *" # every 30 minutes
+
+[[scheduled.functions]]
+  name = "og-image-refresh"
+  schedule = "*/20 * * * *" # every 20 minutes
