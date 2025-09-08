@@ -72,7 +72,6 @@ const App: React.FC = () => {
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
-<<<<<<< HEAD
                     <Route path="/pricing" element={<Pricing />} />
                     
                     {/* Service Routes */}
@@ -91,8 +90,6 @@ const App: React.FC = () => {
                     <Route path="/support" element={<Support />} />
                     
                     {/* 404 Route */}
-=======
->>>>>>> 68abf56c6663e5c83206ddc2077e2a6b8f837ad6
                     <Route path="*" element={<NotFound />} />
                   </Routes>
                 </Suspense>

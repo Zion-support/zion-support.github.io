@@ -33,7 +33,6 @@
     "allowJs": true,
     "incremental": true,
     "noEmitOnError": false,
-    "skipLibCheck": true,
 
     /* Path mapping */
     "baseUrl": ".",
