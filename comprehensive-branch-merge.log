@@ -28389,3 +28389,56 @@ fatal: couldn't find remote ref cursor/install-dependencies-and-fix-errors-827a
 [2025-09-08T21:39:57.813Z] ✅ Success: Get git status
 [2025-09-08T21:39:57.813Z] 📄 Found 0 conflicted files
 [2025-09-08T21:39:57.813Z] 🚀 Add resolved files: git add .
+[2025-09-08T21:39:57.961Z] ✅ Success: Add resolved files
+[2025-09-08T21:39:57.961Z] 🚀 Commit merge for cursor/install-dependencies-and-fix-errors-827a: git commit -m "Resolve conflicts and merge cursor/install-dependencies-and-fix-errors-827a"
+[2025-09-08T21:39:58.051Z] ✅ Success: Commit merge for cursor/install-dependencies-and-fix-errors-827a
+[2025-09-08T21:39:58.051Z] ✅ Successfully resolved conflicts and merged: cursor/install-dependencies-and-fix-errors-827a
+[2025-09-08T21:39:58.051Z] 🔄 Attempting to merge branch: cursor/install-dependencies-and-prepare-build-environment-728a
+[2025-09-08T21:39:58.051Z] 🚀 Fetch origin/cursor/install-dependencies-and-prepare-build-environment-728a: git fetch origin cursor/install-dependencies-and-prepare-build-environment-728a
+[2025-09-08T21:39:58.394Z] ✅ Success: Fetch origin/cursor/install-dependencies-and-prepare-build-environment-728a
+[2025-09-08T21:39:58.395Z] 🚀 Merge cursor/install-dependencies-and-prepare-build-environment-728a: git merge origin/cursor/install-dependencies-and-prepare-build-environment-728a --no-ff -m "Merge branch cursor/install-dependencies-and-prepare-build-environment-728a into main"
+[2025-09-08T21:39:59.210Z] ✅ Success: Merge cursor/install-dependencies-and-prepare-build-environment-728a
+[2025-09-08T21:39:59.210Z] ✅ Successfully merged: cursor/install-dependencies-and-prepare-build-environment-728a
+[2025-09-08T21:39:59.211Z] 🔄 Attempting to merge branch: cursor/install-dependencies-and-prepare-build-environment-cc5b
+[2025-09-08T21:39:59.211Z] 🚀 Fetch origin/cursor/install-dependencies-and-prepare-build-environment-cc5b: git fetch origin cursor/install-dependencies-and-prepare-build-environment-cc5b
+[2025-09-08T21:39:59.561Z] ✅ Success: Fetch origin/cursor/install-dependencies-and-prepare-build-environment-cc5b
+[2025-09-08T21:39:59.561Z] 🚀 Merge cursor/install-dependencies-and-prepare-build-environment-cc5b: git merge origin/cursor/install-dependencies-and-prepare-build-environment-cc5b --no-ff -m "Merge branch cursor/install-dependencies-and-prepare-build-environment-cc5b into main"
+[2025-09-08T21:40:00.391Z] ✅ Success: Merge cursor/install-dependencies-and-prepare-build-environment-cc5b
+[2025-09-08T21:40:00.391Z] ✅ Successfully merged: cursor/install-dependencies-and-prepare-build-environment-cc5b
+[2025-09-08T21:40:00.391Z] 🔄 Attempting to merge branch: cursor/install-dependencies-with-package-json-error-91b0
+[2025-09-08T21:40:00.391Z] 🚀 Fetch origin/cursor/install-dependencies-with-package-json-error-91b0: git fetch origin cursor/install-dependencies-with-package-json-error-91b0
+[2025-09-08T21:40:00.780Z] ✅ Success: Fetch origin/cursor/install-dependencies-with-package-json-error-91b0
+[2025-09-08T21:40:00.780Z] 🚀 Merge cursor/install-dependencies-with-package-json-error-91b0: git merge origin/cursor/install-dependencies-with-package-json-error-91b0 --no-ff -m "Merge branch cursor/install-dependencies-with-package-json-error-91b0 into main"
+[2025-09-08T21:40:01.226Z] ✅ Success: Merge cursor/install-dependencies-with-package-json-error-91b0
+[2025-09-08T21:40:01.226Z] ✅ Successfully merged: cursor/install-dependencies-with-package-json-error-91b0
+[2025-09-08T21:40:01.226Z] 🔄 Attempting to merge branch: cursor/install-fix-push-and-merge-changes-fe82
+[2025-09-08T21:40:01.226Z] 🚀 Fetch origin/cursor/install-fix-push-and-merge-changes-fe82: git fetch origin cursor/install-fix-push-and-merge-changes-fe82
+[2025-09-08T21:40:01.587Z] ✅ Success: Fetch origin/cursor/install-fix-push-and-merge-changes-fe82
+[2025-09-08T21:40:01.587Z] 🚀 Merge cursor/install-fix-push-and-merge-changes-fe82: git merge origin/cursor/install-fix-push-and-merge-changes-fe82 --no-ff -m "Merge branch cursor/install-fix-push-and-merge-changes-fe82 into main"
+[2025-09-08T21:40:02.034Z] ✅ Success: Merge cursor/install-fix-push-and-merge-changes-fe82
+[2025-09-08T21:40:02.034Z] ✅ Successfully merged: cursor/install-fix-push-and-merge-changes-fe82
+[2025-09-08T21:40:02.034Z] 🔄 Attempting to merge branch: cursor/install-missing-netlify-plugin-compress-4a48
+[2025-09-08T21:40:02.034Z] 🚀 Fetch origin/cursor/install-missing-netlify-plugin-compress-4a48: git fetch origin cursor/install-missing-netlify-plugin-compress-4a48
+[2025-09-08T21:40:02.403Z] ✅ Success: Fetch origin/cursor/install-missing-netlify-plugin-compress-4a48
+[2025-09-08T21:40:02.404Z] 🚀 Merge cursor/install-missing-netlify-plugin-compress-4a48: git merge origin/cursor/install-missing-netlify-plugin-compress-4a48 --no-ff -m "Merge branch cursor/install-missing-netlify-plugin-compress-4a48 into main"
+[2025-09-08T21:40:02.851Z] ✅ Success: Merge cursor/install-missing-netlify-plugin-compress-4a48
+[2025-09-08T21:40:02.851Z] ✅ Successfully merged: cursor/install-missing-netlify-plugin-compress-4a48
+[2025-09-08T21:40:02.851Z] 🔄 Attempting to merge branch: cursor/install-missing-netlify-plugin-compress-5bd0
+[2025-09-08T21:40:02.851Z] 🚀 Fetch origin/cursor/install-missing-netlify-plugin-compress-5bd0: git fetch origin cursor/install-missing-netlify-plugin-compress-5bd0
+[2025-09-08T21:40:03.237Z] ✅ Success: Fetch origin/cursor/install-missing-netlify-plugin-compress-5bd0
+[2025-09-08T21:40:03.237Z] 🚀 Merge cursor/install-missing-netlify-plugin-compress-5bd0: git merge origin/cursor/install-missing-netlify-plugin-compress-5bd0 --no-ff -m "Merge branch cursor/install-missing-netlify-plugin-compress-5bd0 into main"
+[2025-09-08T21:40:03.692Z] ✅ Success: Merge cursor/install-missing-netlify-plugin-compress-5bd0
+[2025-09-08T21:40:03.692Z] ✅ Successfully merged: cursor/install-missing-netlify-plugin-compress-5bd0
+[2025-09-08T21:40:03.692Z] 🔄 Attempting to merge branch: cursor/install-project-dependencies-and-husky-2974
+[2025-09-08T21:40:03.692Z] 🚀 Fetch origin/cursor/install-project-dependencies-and-husky-2974: git fetch origin cursor/install-project-dependencies-and-husky-2974
+[2025-09-08T21:40:03.807Z] ❌ Error in Fetch origin/cursor/install-project-dependencies-and-husky-2974: Command failed: git fetch origin cursor/install-project-dependencies-and-husky-2974
+fatal: couldn't find remote ref cursor/install-project-dependencies-and-husky-2974
+
+[2025-09-08T21:40:03.807Z] ❌ Failed to merge cursor/install-project-dependencies-and-husky-2974: Command failed: git fetch origin cursor/install-project-dependencies-and-husky-2974
+fatal: couldn't find remote ref cursor/install-project-dependencies-and-husky-2974
+
+[2025-09-08T21:40:03.807Z] 🔧 Attempting to resolve conflicts for: cursor/install-project-dependencies-and-husky-2974
+[2025-09-08T21:40:03.807Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T21:40:03.871Z] ✅ Success: Get git status
+[2025-09-08T21:40:03.871Z] 📄 Found 0 conflicted files
+[2025-09-08T21:40:03.871Z] 🚀 Add resolved files: git add .
