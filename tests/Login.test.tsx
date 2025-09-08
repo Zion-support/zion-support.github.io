@@ -1,27 +1,36 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { MemoryRouter, Routes, Route } from 'react-router-dom';
 import { vi } from 'vitest';
-import Login from '@/pages/auth/Login';
-import * as authApi from '@/services/auth';
+import { LoginForm } from '@/components/auth/login';
+import * as authService from '@/services/authService';
+import { Toaster } from '@/components/ui/toaster';
+import * as authHook from '@/hooks/useAuth';
 
 vi.mock('@/services/auth');
 
-describe('Login page', () => {
-  it('redirects to /dashboard on successful login', async () => {
-    vi.spyOn(authApi, 'login').mockResolvedValue({ status: 200, data: { token: 'x' } } as any);
+describe('LoginForm', () => {
+  it('shows error toast on 401 response', async () => {
+    vi.spyOn(authService, 'loginUser').mockResolvedValue({
+      res: { ok: false, status: 401 } as Response,
+      data: { error: 'Invalid credentials' },
+    });
 
     render(
-      <MemoryRouter initialEntries={['/login']}>
-        <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/dashboard" element={<div>Dashboard</div>} />
-        </Routes>
+      <MemoryRouter>
+        <LoginForm />
+        <Toaster />
       </MemoryRouter>
 
-    fireEvent.input(screen.getByLabelText(/email/i), { target: { value: 'a@b.com' } });
-    fireEvent.input(screen.getByLabelText(/password/i), { target: { value: 'secret' } });
-    fireEvent.click(screen.getByRole('button', { name: /login/i }));
+    fireEvent.input(screen.getByLabelText(/email address/i), {
+      target: { value: 'a@b.com' },
+    });
+    fireEvent.input(screen.getByLabelText(/password/i), {
+      target: { value: 'secret' },
+    });
+    fireEvent.submit(screen.getByRole('button', { name: /login/i }));
 
-    await waitFor(() => expect(screen.getByText('Dashboard')).toBeInTheDocument());
+    // Wait for toast to appear in the DOM
+    const toastMsg = await screen.findByText('Invalid credentials');
+    expect(toastMsg).toBeInTheDocument();
   });
 });

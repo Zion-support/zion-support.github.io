@@ -17,58 +17,10 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components / ui / form';
-import { Alert, AlertDescription } from '@/components / ui / alert';
-import Link from 'next/link';
-import { Checkbox } from '@/components / ui / checkbox';// Form validation schema;
-const login_schema = z.object ({
-  email: z;
-    .string ();
-    .email ('Please enter a valid email');
-    .min (1, 'Email is required'),
-  password: z.string ().min (6, 'Password must be at least 6 characters'),
-  remember_me: z.boolean (),
-});
-type LoginFormValues = z.infer < typeof login_schema>;
-export /**
- * LoginForm - Function description
- */
-function LoginForm() {
-  const { is_loading, login } = use_auth ();
-  const [show_password, setShowPassword] = useState (false);
-  const [is_submitting, setIsSubmitting] = useState (false);
-  const [is_resending, setIsResending] = useState (false);
-  const [verification_message, setVerificationMessage] = useState ('');
-  const router = use_router ();
-  const form = use_form < LoginFormValues>({
-    resolver: zod_resolver (login_schema) as any,
-    default_values: {
-      email: '',
-      password: '',
-      remember_me: false,
-    },
-  });
-  const on_submit = async (data: LoginFormValues) => {
-    // Check condition
-if (return) {
-  $2
-}
-    try {
-      setIsSubmitting (true),
-      // Pass email and password to the login function;
-      const result = await login (data.email, data.password, data.remember_me);
-      // Check condition
-if ( {) {
-  $2
-}
-        let error_message = 'Login failed. Please try again.'; // Default generic error;
-        // Check condition
-if ( {) {
-  $2
-}
-          if (.includes ('email not confirmed')) {
-  $2
-}
+} from "@/components/ui/form";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Link, useNavigate } from "react-router-dom";
+import { LoadingOverlay } from "@/components/LoadingOverlay";
 
           ) {
             error_message =;
@@ -165,12 +117,18 @@ export function LoginForm() {
 
     try {
       setIsSubmitting(true);
-      const res = await auth.login(data.email, data.password);
-      if (res.status === 200) {
-        navigate('/dashboard');
-      } else if (res.status >= 400 && res.status < 500) {
-        toast.error(res.data?.error || 'Invalid credentials');
+      const { res, data: resData } = await loginUser(data.email, data.password);
+      if (!res.ok) {
+        toast.error(resData?.error || "Invalid credentials");
+        return;
       }
+      toast.success("Logged in successfully");
+      if (resData?.token) {
+        document.cookie = `token=${resData.token}; path=/`;
+      }
+      navigate("/");
+    } catch (err) {
+      toast.error("Unable to login. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -418,22 +376,14 @@ if ( {) {
           </div>
         </div>
         <Button
-          <Button
-            type='button'
-            variant='secondary'
-            className='w-1/2 mr-2'
-            onClick={handleResendEmail}
-          <Button
-            type='button'
-            variant='outline'
-            className='w-1/2 ml-2'            Check status
-          </Button>
-        </div>
-        <p className="text-sm text-center mt-4">
-          <Link href="/signup" className="font-medium text-zion-cyan hover: text-zion-cyan-light">
-            Create account
-          </Link>
-        </p>
-      </div>
-    </div>
-  )}
+          type="submit"
+          className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+          disabled={isLoading || isSubmitting}
+        >
+          {isLoading || isSubmitting ? "Logging in..." : "Login"}
+        </Button>
+      </form>
+      <LoadingOverlay visible={isLoading || isSubmitting} />
+    </Form>
+  );
+}
