@@ -1,8 +1,16 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import fs from 'fs';
+import path from 'path';
 import Link from 'next/link';
 
-const Index: NextPage = () => {
+type UpdateLink = { href: string; title: string };
+
+interface HomePageProps {
+  latestUpdates?: UpdateLink[];
+}
+
+export default function HomePage({ latestUpdates = [] }: HomePageProps) {
   return (
     <div>
       <Head>
@@ -341,51 +349,13 @@ const Index: NextPage = () => {
                 <p className="text-white/70 text-sm">Get started</p>
               </Link>
 
-              <Link href="/privacy" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-slate-400/30 transition-all duration-300 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-slate-400 to-slate-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+              <Link href="/privacy" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-amber-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <span className="text-xl">⚖️</span>
                 </div>
-                <h3 className="text-lg font-semibold text-slate-300 mb-2">Privacy</h3>
-                <p className="text-white/70 text-sm">Your data & trust</p>
+                <h3 className="text-lg font-semibold text-amber-400 mb-2">Privacy</h3>
+                <p className="text-white/70 text-sm">Our data practices</p>
               </Link>
-              <Link href="/privacy" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-rose-400/30 transition-all duration-300 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-rose-400 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-xl">📜</span>
-                </div>
-                <h3 className="text-lg font-semibold text-rose-400 mb-2">Privacy</h3>
-                <p className="text-white/70 text-sm">Policy & compliance</p>
-              </Link>
-            </div>
-          </section>
-
-          {/* Quick Links Directory */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-3xl font-bold tracking-wide text-white/90 mb-8">🗂️ Quick Links Directory</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20">
-                <h3 className="text-lg font-semibold text-cyan-400 mb-3">Start Here</h3>
-                <ul className="text-white/80 text-sm space-y-2">
-                  <li>• <Link href="/about" className="text-cyan-300 hover:text-cyan-200">About</Link></li>
-                  <li>• <Link href="/services" className="text-cyan-300 hover:text-cyan-200">Services</Link></li>
-                  <li>• <Link href="/contact" className="text-cyan-300 hover:text-cyan-200">Contact</Link></li>
-                </ul>
-              </div>
-              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20">
-                <h3 className="text-lg font-semibold text-fuchsia-400 mb-3">Content</h3>
-                <ul className="text-white/80 text-sm space-y-2">
-                  <li>• <Link href="/blog" className="text-fuchsia-300 hover:text-fuchsia-200">Blog</Link></li>
-                  <li>• <Link href="/case-studies" className="text-fuchsia-300 hover:text-fuchsia-200">Case Studies</Link></li>
-                  <li>• <Link href="/resources" className="text-fuchsia-300 hover:text-fuchsia-200">Resources</Link></li>
-                </ul>
-              </div>
-              <div className="bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20">
-                <h3 className="text-lg font-semibold text-green-400 mb-3">Docs</h3>
-                <ul className="text-white/80 text-sm space-y-2">
-                  <li>• <Link href="/README.md" className="text-green-300 hover:text-green-200">README</Link></li>
-                  <li>• <Link href="/ARCHITECTURE.md" className="text-green-300 hover:text-green-200">Architecture</Link></li>
-                  <li>• <Link href="/SECURITY.md" className="text-green-300 hover:text-green-200">Security</Link></li>
-                </ul>
-              </div>
             </div>
           </section>
 
@@ -453,17 +423,111 @@ const Index: NextPage = () => {
                 <div className="w-12 h-12 bg-gradient-to-br from-red-400 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <span className="text-xl">🔒</span>
                 </div>
-                <h3 className="text-lg font-semibold text-red-400 mb-2">Privacy & Security</h3>
-                <p className="text-white/70 text-sm">Trust & compliance</p>
-              </Link>
-              
-              <Link href="/reports" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-indigo-400/30 transition-all duration-300 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-indigo-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-xl">📈</span>
+                <h3 className="text-lg font-semibold text-yellow-400 mb-2">Security</h3>
+                <p className="text-white/70 text-sm">Scanning, Compliance, Protection</p>
+              </div>
+            </div>
+          </section>
+
+          {/* Advanced Automation Systems Deep Dive */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🔧 Advanced Automation Systems Deep Dive</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">🔄 Ultimate Redundancy V2</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Multi-layer redundancy</li>
+                  <li>• Automatic failover</li>
+                  <li>• Self-healing systems</li>
+                  <li>• Geographic distribution</li>
+                  <li>• Real-time monitoring</li>
+                </ul>
+                <div className="text-cyan-400 text-sm font-semibold">
+                  Status: Active & Monitoring
                 </div>
-                <h3 className="text-lg font-semibold text-indigo-400 mb-2">Reports & Analytics</h3>
-                <p className="text-white/70 text-sm">Performance data</p>
-              </Link>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">🧠 AI Content Factory</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Autonomous content generation</li>
+                  <li>• AI-powered optimization</li>
+                  <li>• Intelligent scheduling</li>
+                  <li>• Quality assurance</li>
+                  <li>• Performance analytics</li>
+                </ul>
+                <div className="text-fuchsia-400 text-sm font-semibold">
+                  Status: Continuously Learning
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">⚡ Build Orchestration</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Smart dependency management</li>
+                  <li>• Automated testing</li>
+                  <li>• Performance optimization</li>
+                  <li>• Error recovery</li>
+                  <li>• Deployment automation</li>
+                </ul>
+                <div className="text-green-400 text-sm font-semibold">
+                  Status: Self-Optimizing
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Project Documentation & Resources */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">📚 Project Documentation & Resources</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-blue-400 mb-4 text-center">📖 Core Documentation</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• <Link href="/README.md" className="text-blue-400 hover:text-blue-300">Main README</Link> - Project overview</li>
+                  <li>• <Link href="/ARCHITECTURE.md" className="text-blue-400 hover:text-blue-300">Architecture Guide</Link> - System design</li>
+                  <li>• <Link href="/API.md" className="text-blue-400 hover:text-blue-300">API Documentation</Link> - Integration guide</li>
+                  <li>• <Link href="/DEPLOYMENT.md" className="text-blue-400 hover:text-blue-300">Deployment Guide</Link> - Setup instructions</li>
+                  <li>• <Link href="/CONTRIBUTING.md" className="text-blue-400 hover:text-blue-300">Contributing Guide</Link> - Development workflow</li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-purple-400 mb-4 text-center">🔧 Automation Guides</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• <Link href="/README_ULTIMATE_REDUNDANCY.md" className="text-purple-400 hover:text-purple-300">Ultimate Redundancy</Link> - System overview</li>
+                  <li>• <Link href="/README_COMPREHENSIVE_REDUNDANCY.md" className="text-purple-400 hover:text-purple-300">Comprehensive Redundancy</Link> - Advanced features</li>
+                  <li>• <Link href="/README_PM2_REDUNDANCY_COMPLETE.md" className="text-purple-400 hover:text-purple-300">PM2 Redundancy</Link> - Process management</li>
+                  <li>• <Link href="/README_GITHUB_ACTIONS.md" className="text-purple-400 hover:text-purple-300">GitHub Actions</Link> - CI/CD automation</li>
+                  <li>• <Link href="/README_CONTINUOUS_OPERATION.md" className="text-purple-400 hover:text-purple-300">Continuous Operation</Link> - Zero-downtime</li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">🚀 Advanced Features</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• <Link href="/SECURITY.md" className="text-green-400 hover:text-green-300">Security Guide</Link> - Protection measures</li>
+                  <li>• <Link href="/TESTING.md" className="text-green-400 hover:text-green-300">Testing Guide</Link> - Quality assurance</li>
+                  <li>• <Link href="/SERVICE_GENERATION_README.md" className="text-green-400 hover:text-green-300">Service Generation</Link> - Auto-creation</li>
+                  <li>• <Link href="/ULTIMATE_REDUNDANCY_AUTOMATION_README.md" className="text-green-400 hover:text-green-300">Automation README</Link> - System details</li>
+                  <li>• <Link href="/EXPONENTIAL_GROWTH_AUTOMATION.md" className="text-green-400 hover:text-green-300">Growth Automation</Link> - Scaling systems</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* Latest Autonomous Content */}
+          <section className="mx-auto max-w-7xl px-6 pb-14">
+            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Latest Autonomous Content</h2>
+            <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {(latestUpdates.length ? latestUpdates : []).slice(0, 6).map((u) => (
+                <Link key={u.href} href={u.href} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
+                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                  <h3 className="text-lg font-semibold">{u.title}</h3>
+                  <p className="mt-1 text-sm text-white/75">Freshly published by autonomous agents.</p>
+                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+                </Link>
+              ))}
             </div>
           </section>
 
@@ -1117,6 +1181,23 @@ const Index: NextPage = () => {
       </div>
     </>
   );
-};
+}
 
-export default Index;
+export async function getStaticProps() {
+  try {
+    const updatesDir = path.join(process.cwd(), 'pages', 'reports', 'updates');
+    const files = fs.readdirSync(updatesDir)
+      .filter((f) => f.endsWith('.tsx'))
+      .sort((a, b) => (a < b ? 1 : -1));
+
+    const latestUpdates: UpdateLink[] = files.slice(0, 6).map((file) => {
+      const slug = file.replace(/\.tsx$/, '');
+      const title = `Autonomous Update — ${slug.replace('update-', '').replace(/-/g, ': ')}`;
+      return { href: `/reports/updates/${slug}`, title };
+    });
+
+    return { props: { latestUpdates } };
+  } catch {
+    return { props: { latestUpdates: [] } };
+  }
+}
