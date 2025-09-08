@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 
+// Main App component
 const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 to-purple-900 text-white">
