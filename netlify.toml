@@ -1,5 +1,5 @@
 [build]
-  # Use prebuilt dist; skip install/build entirely in Netlify
+  # Install dependencies and build the static site via Vite. Publish the dist output.
   command = "npm ci --no-audit --no-fund && npm run build"
   publish = "dist"
   command_timeout = "30m"
@@ -7,16 +7,20 @@
 [build.environment]
   NODE_VERSION = "20"
   PYTHON_VERSION = "3.11"
-  MISE_PYTHON_COMPILE = "false"
-  # Disable Netlify's auto dependency installers; we handle installs in the build command
+  # Ensure Netlify installs dependencies for the build
   NETLIFY_SKIP_INSTALL = "false"
-  # Disable mise shims entirely during Netlify builds
+  # Avoid optional binary downloads (electron, playwright, cypress)
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"
+  PUPPETEER_SKIP_DOWNLOAD = "1"
+  CYPRESS_INSTALL_BINARY = "0"
+  ELECTRON_SKIP_DOWNLOAD = "1"
+  # Defensive: avoid Python build steps
+  MISE_PYTHON_COMPILE = "false"
   MISE_DISABLE = "1"
   MISE_SHIMS = "0"
-  # Force mise to use system Python even during Netlify's dependency stage (defensive)
   MISE_TOOL_VERSIONS__python = "system"
 
-
+# Keep the config minimal to avoid plugin-related build failures
 
 [[redirects]]
   from = "/*"

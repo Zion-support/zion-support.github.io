@@ -1,5 +1,16 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+<<<<<<< HEAD
+
+export default function ContentRoutes() {
+	return (
+		<Routes>
+			<Route path="/sitemap" element={<div>Sitemap</div>} />
+			<Route path="/sitemap-page" element={<div>Sitemap Page</div>} />
+			<Route path="/search" element={<div>Search</div>} />
+		</Routes>
+	);
+=======
 import Home from '@/pages/Home';
 import About from '@/pages/About';
 
@@ -11,5 +22,6 @@ export default function ContentRoutes() {
       <Route path="/about" element={<About />} />
     </Routes>
   );
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0e36
 }
 
