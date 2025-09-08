@@ -85,4 +85,8 @@ const Header: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Header;
+=======
+  export default Header;
+>>>>>>> origin/cursor/build-application-and-resolve-vite-error-fe37
