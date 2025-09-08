@@ -57,7 +57,24 @@ interface WhitelabelContextType {
   setLogo: (logo: string) => void;
 }
 
-const WhitelabelContext = createContext<WhitelabelContextType | undefined>(undefined);
+const defaultContext: WhitelabelContextType = {
+  isWhitelabel: false,
+  primaryColor: '#9b87f5', // Default Zion purple
+  logoUrl: null,
+  brandName: 'Zion AI Marketplace',
+  themePreset: 'light',
+  landingPageCopy: {
+    headline: 'AI Talent Marketplace',
+    subtitle: 'Find the best AI talent for your projects',
+    cta: 'Get Started',
+  },
+  tenant: null,
+};
+
+const WhitelabelContext = createContext<WhitelabelContextType>(defaultContext);
+
+export const useWhitelabel = () =>
+  useContext<WhitelabelContextType>(WhitelabelContext);
 
 interface WhitelabelProviderProps {
   children: ReactNode;

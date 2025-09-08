@@ -96,8 +96,8 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
   );
 }
 
-export function useAnalytics() {
-  const context = useContext(AnalyticsContext);
+export const useAnalytics = () => {
+  const context = useContext<AnalyticsContextType | undefined>(AnalyticsContext);
   if (context === undefined) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
