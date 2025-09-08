@@ -27037,3 +27037,191 @@ fatal: couldn't find remote ref cursor/fix-syntax-push-and-merge-to-main-7d1f
 [2025-09-08T21:36:59.793Z] ✅ Success: Get git status
 [2025-09-08T21:36:59.793Z] 📄 Found 0 conflicted files
 [2025-09-08T21:36:59.793Z] 🚀 Add resolved files: git add .
+[2025-09-08T21:36:59.901Z] ✅ Success: Add resolved files
+[2025-09-08T21:36:59.901Z] 🚀 Commit merge for cursor/fix-syntax-push-and-merge-to-main-7d1f: git commit -m "Resolve conflicts and merge cursor/fix-syntax-push-and-merge-to-main-7d1f"
+[2025-09-08T21:36:59.973Z] ✅ Success: Commit merge for cursor/fix-syntax-push-and-merge-to-main-7d1f
+[2025-09-08T21:36:59.973Z] ✅ Successfully resolved conflicts and merged: cursor/fix-syntax-push-and-merge-to-main-7d1f
+[2025-09-08T21:36:59.973Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-7db5
+[2025-09-08T21:36:59.974Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-7db5: git fetch origin cursor/fix-syntax-push-and-merge-to-main-7db5
+[2025-09-08T21:37:00.324Z] ✅ Success: Fetch origin/cursor/fix-syntax-push-and-merge-to-main-7db5
+[2025-09-08T21:37:00.324Z] 🚀 Merge cursor/fix-syntax-push-and-merge-to-main-7db5: git merge origin/cursor/fix-syntax-push-and-merge-to-main-7db5 --no-ff -m "Merge branch cursor/fix-syntax-push-and-merge-to-main-7db5 into main"
+[2025-09-08T21:37:00.764Z] ✅ Success: Merge cursor/fix-syntax-push-and-merge-to-main-7db5
+[2025-09-08T21:37:00.765Z] ✅ Successfully merged: cursor/fix-syntax-push-and-merge-to-main-7db5
+[2025-09-08T21:37:00.765Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-7e96
+[2025-09-08T21:37:00.765Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-7e96: git fetch origin cursor/fix-syntax-push-and-merge-to-main-7e96
+[2025-09-08T21:37:01.127Z] ✅ Success: Fetch origin/cursor/fix-syntax-push-and-merge-to-main-7e96
+[2025-09-08T21:37:01.127Z] 🚀 Merge cursor/fix-syntax-push-and-merge-to-main-7e96: git merge origin/cursor/fix-syntax-push-and-merge-to-main-7e96 --no-ff -m "Merge branch cursor/fix-syntax-push-and-merge-to-main-7e96 into main"
+[2025-09-08T21:37:01.571Z] ✅ Success: Merge cursor/fix-syntax-push-and-merge-to-main-7e96
+[2025-09-08T21:37:01.571Z] ✅ Successfully merged: cursor/fix-syntax-push-and-merge-to-main-7e96
+[2025-09-08T21:37:01.571Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-7f8a
+[2025-09-08T21:37:01.571Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-7f8a: git fetch origin cursor/fix-syntax-push-and-merge-to-main-7f8a
+[2025-09-08T21:37:01.921Z] ✅ Success: Fetch origin/cursor/fix-syntax-push-and-merge-to-main-7f8a
+[2025-09-08T21:37:01.922Z] 🚀 Merge cursor/fix-syntax-push-and-merge-to-main-7f8a: git merge origin/cursor/fix-syntax-push-and-merge-to-main-7f8a --no-ff -m "Merge branch cursor/fix-syntax-push-and-merge-to-main-7f8a into main"
+[2025-09-08T21:37:02.369Z] ✅ Success: Merge cursor/fix-syntax-push-and-merge-to-main-7f8a
+[2025-09-08T21:37:02.369Z] ✅ Successfully merged: cursor/fix-syntax-push-and-merge-to-main-7f8a
+[2025-09-08T21:37:02.369Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-7fb1
+[2025-09-08T21:37:02.369Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-7fb1: git fetch origin cursor/fix-syntax-push-and-merge-to-main-7fb1
+[2025-09-08T21:37:02.738Z] ✅ Success: Fetch origin/cursor/fix-syntax-push-and-merge-to-main-7fb1
+[2025-09-08T21:37:02.739Z] 🚀 Merge cursor/fix-syntax-push-and-merge-to-main-7fb1: git merge origin/cursor/fix-syntax-push-and-merge-to-main-7fb1 --no-ff -m "Merge branch cursor/fix-syntax-push-and-merge-to-main-7fb1 into main"
+[2025-09-08T21:37:03.189Z] ✅ Success: Merge cursor/fix-syntax-push-and-merge-to-main-7fb1
+[2025-09-08T21:37:03.189Z] ✅ Successfully merged: cursor/fix-syntax-push-and-merge-to-main-7fb1
+[2025-09-08T21:37:04.191Z] 📦 Processing batch 329/509
+[2025-09-08T21:37:04.191Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-80b5
+[2025-09-08T21:37:04.191Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-80b5: git fetch origin cursor/fix-syntax-push-and-merge-to-main-80b5
+[2025-09-08T21:37:04.532Z] ✅ Success: Fetch origin/cursor/fix-syntax-push-and-merge-to-main-80b5
+[2025-09-08T21:37:04.532Z] 🚀 Merge cursor/fix-syntax-push-and-merge-to-main-80b5: git merge origin/cursor/fix-syntax-push-and-merge-to-main-80b5 --no-ff -m "Merge branch cursor/fix-syntax-push-and-merge-to-main-80b5 into main"
+[2025-09-08T21:37:05.001Z] ✅ Success: Merge cursor/fix-syntax-push-and-merge-to-main-80b5
+[2025-09-08T21:37:05.001Z] ✅ Successfully merged: cursor/fix-syntax-push-and-merge-to-main-80b5
+[2025-09-08T21:37:05.001Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-8154
+[2025-09-08T21:37:05.001Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-8154: git fetch origin cursor/fix-syntax-push-and-merge-to-main-8154
+[2025-09-08T21:37:05.350Z] ✅ Success: Fetch origin/cursor/fix-syntax-push-and-merge-to-main-8154
+[2025-09-08T21:37:05.350Z] 🚀 Merge cursor/fix-syntax-push-and-merge-to-main-8154: git merge origin/cursor/fix-syntax-push-and-merge-to-main-8154 --no-ff -m "Merge branch cursor/fix-syntax-push-and-merge-to-main-8154 into main"
+[2025-09-08T21:37:05.787Z] ✅ Success: Merge cursor/fix-syntax-push-and-merge-to-main-8154
+[2025-09-08T21:37:05.787Z] ✅ Successfully merged: cursor/fix-syntax-push-and-merge-to-main-8154
+[2025-09-08T21:37:05.788Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-82ad
+[2025-09-08T21:37:05.788Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-82ad: git fetch origin cursor/fix-syntax-push-and-merge-to-main-82ad
+[2025-09-08T21:37:06.165Z] ✅ Success: Fetch origin/cursor/fix-syntax-push-and-merge-to-main-82ad
+[2025-09-08T21:37:06.165Z] 🚀 Merge cursor/fix-syntax-push-and-merge-to-main-82ad: git merge origin/cursor/fix-syntax-push-and-merge-to-main-82ad --no-ff -m "Merge branch cursor/fix-syntax-push-and-merge-to-main-82ad into main"
+[2025-09-08T21:37:06.639Z] ✅ Success: Merge cursor/fix-syntax-push-and-merge-to-main-82ad
+[2025-09-08T21:37:06.639Z] ✅ Successfully merged: cursor/fix-syntax-push-and-merge-to-main-82ad
+[2025-09-08T21:37:06.639Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-82f1
+[2025-09-08T21:37:06.639Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-82f1: git fetch origin cursor/fix-syntax-push-and-merge-to-main-82f1
+[2025-09-08T21:37:06.996Z] ✅ Success: Fetch origin/cursor/fix-syntax-push-and-merge-to-main-82f1
+[2025-09-08T21:37:06.996Z] 🚀 Merge cursor/fix-syntax-push-and-merge-to-main-82f1: git merge origin/cursor/fix-syntax-push-and-merge-to-main-82f1 --no-ff -m "Merge branch cursor/fix-syntax-push-and-merge-to-main-82f1 into main"
+[2025-09-08T21:37:07.503Z] ✅ Success: Merge cursor/fix-syntax-push-and-merge-to-main-82f1
+[2025-09-08T21:37:07.503Z] ✅ Successfully merged: cursor/fix-syntax-push-and-merge-to-main-82f1
+[2025-09-08T21:37:07.504Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-853b
+[2025-09-08T21:37:07.504Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-853b: git fetch origin cursor/fix-syntax-push-and-merge-to-main-853b
+[2025-09-08T21:37:07.888Z] ✅ Success: Fetch origin/cursor/fix-syntax-push-and-merge-to-main-853b
+[2025-09-08T21:37:07.889Z] 🚀 Merge cursor/fix-syntax-push-and-merge-to-main-853b: git merge origin/cursor/fix-syntax-push-and-merge-to-main-853b --no-ff -m "Merge branch cursor/fix-syntax-push-and-merge-to-main-853b into main"
+[2025-09-08T21:37:08.392Z] ✅ Success: Merge cursor/fix-syntax-push-and-merge-to-main-853b
+[2025-09-08T21:37:08.392Z] ✅ Successfully merged: cursor/fix-syntax-push-and-merge-to-main-853b
+[2025-09-08T21:37:08.392Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-88e7
+[2025-09-08T21:37:08.392Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-88e7: git fetch origin cursor/fix-syntax-push-and-merge-to-main-88e7
+[2025-09-08T21:37:08.774Z] ✅ Success: Fetch origin/cursor/fix-syntax-push-and-merge-to-main-88e7
+[2025-09-08T21:37:08.775Z] 🚀 Merge cursor/fix-syntax-push-and-merge-to-main-88e7: git merge origin/cursor/fix-syntax-push-and-merge-to-main-88e7 --no-ff -m "Merge branch cursor/fix-syntax-push-and-merge-to-main-88e7 into main"
+[2025-09-08T21:37:09.266Z] ✅ Success: Merge cursor/fix-syntax-push-and-merge-to-main-88e7
+[2025-09-08T21:37:09.266Z] ✅ Successfully merged: cursor/fix-syntax-push-and-merge-to-main-88e7
+[2025-09-08T21:37:09.266Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-8957
+[2025-09-08T21:37:09.266Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-8957: git fetch origin cursor/fix-syntax-push-and-merge-to-main-8957
+[2025-09-08T21:37:09.625Z] ✅ Success: Fetch origin/cursor/fix-syntax-push-and-merge-to-main-8957
+[2025-09-08T21:37:09.625Z] 🚀 Merge cursor/fix-syntax-push-and-merge-to-main-8957: git merge origin/cursor/fix-syntax-push-and-merge-to-main-8957 --no-ff -m "Merge branch cursor/fix-syntax-push-and-merge-to-main-8957 into main"
+[2025-09-08T21:37:10.072Z] ✅ Success: Merge cursor/fix-syntax-push-and-merge-to-main-8957
+[2025-09-08T21:37:10.072Z] ✅ Successfully merged: cursor/fix-syntax-push-and-merge-to-main-8957
+[2025-09-08T21:37:10.072Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-8a16
+[2025-09-08T21:37:10.072Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-8a16: git fetch origin cursor/fix-syntax-push-and-merge-to-main-8a16
+[2025-09-08T21:37:10.426Z] ✅ Success: Fetch origin/cursor/fix-syntax-push-and-merge-to-main-8a16
+[2025-09-08T21:37:10.426Z] 🚀 Merge cursor/fix-syntax-push-and-merge-to-main-8a16: git merge origin/cursor/fix-syntax-push-and-merge-to-main-8a16 --no-ff -m "Merge branch cursor/fix-syntax-push-and-merge-to-main-8a16 into main"
+[2025-09-08T21:37:10.883Z] ✅ Success: Merge cursor/fix-syntax-push-and-merge-to-main-8a16
+[2025-09-08T21:37:10.883Z] ✅ Successfully merged: cursor/fix-syntax-push-and-merge-to-main-8a16
+[2025-09-08T21:37:10.883Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-8b7c
+[2025-09-08T21:37:10.883Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-8b7c: git fetch origin cursor/fix-syntax-push-and-merge-to-main-8b7c
+[2025-09-08T21:37:11.279Z] ✅ Success: Fetch origin/cursor/fix-syntax-push-and-merge-to-main-8b7c
+[2025-09-08T21:37:11.279Z] 🚀 Merge cursor/fix-syntax-push-and-merge-to-main-8b7c: git merge origin/cursor/fix-syntax-push-and-merge-to-main-8b7c --no-ff -m "Merge branch cursor/fix-syntax-push-and-merge-to-main-8b7c into main"
+[2025-09-08T21:37:11.719Z] ✅ Success: Merge cursor/fix-syntax-push-and-merge-to-main-8b7c
+[2025-09-08T21:37:11.719Z] ✅ Successfully merged: cursor/fix-syntax-push-and-merge-to-main-8b7c
+[2025-09-08T21:37:11.720Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-8ba0
+[2025-09-08T21:37:11.720Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-8ba0: git fetch origin cursor/fix-syntax-push-and-merge-to-main-8ba0
+[2025-09-08T21:37:12.125Z] ✅ Success: Fetch origin/cursor/fix-syntax-push-and-merge-to-main-8ba0
+[2025-09-08T21:37:12.126Z] 🚀 Merge cursor/fix-syntax-push-and-merge-to-main-8ba0: git merge origin/cursor/fix-syntax-push-and-merge-to-main-8ba0 --no-ff -m "Merge branch cursor/fix-syntax-push-and-merge-to-main-8ba0 into main"
+[2025-09-08T21:37:12.611Z] ✅ Success: Merge cursor/fix-syntax-push-and-merge-to-main-8ba0
+[2025-09-08T21:37:12.611Z] ✅ Successfully merged: cursor/fix-syntax-push-and-merge-to-main-8ba0
+[2025-09-08T21:37:13.611Z] 📦 Processing batch 330/509
+[2025-09-08T21:37:13.612Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-8cdc
+[2025-09-08T21:37:13.612Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-8cdc: git fetch origin cursor/fix-syntax-push-and-merge-to-main-8cdc
+[2025-09-08T21:37:13.971Z] ✅ Success: Fetch origin/cursor/fix-syntax-push-and-merge-to-main-8cdc
+[2025-09-08T21:37:13.971Z] 🚀 Merge cursor/fix-syntax-push-and-merge-to-main-8cdc: git merge origin/cursor/fix-syntax-push-and-merge-to-main-8cdc --no-ff -m "Merge branch cursor/fix-syntax-push-and-merge-to-main-8cdc into main"
+[2025-09-08T21:37:14.407Z] ✅ Success: Merge cursor/fix-syntax-push-and-merge-to-main-8cdc
+[2025-09-08T21:37:14.407Z] ✅ Successfully merged: cursor/fix-syntax-push-and-merge-to-main-8cdc
+[2025-09-08T21:37:14.407Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-917f
+[2025-09-08T21:37:14.407Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-917f: git fetch origin cursor/fix-syntax-push-and-merge-to-main-917f
+[2025-09-08T21:37:14.783Z] ✅ Success: Fetch origin/cursor/fix-syntax-push-and-merge-to-main-917f
+[2025-09-08T21:37:14.784Z] 🚀 Merge cursor/fix-syntax-push-and-merge-to-main-917f: git merge origin/cursor/fix-syntax-push-and-merge-to-main-917f --no-ff -m "Merge branch cursor/fix-syntax-push-and-merge-to-main-917f into main"
+[2025-09-08T21:37:15.256Z] ✅ Success: Merge cursor/fix-syntax-push-and-merge-to-main-917f
+[2025-09-08T21:37:15.256Z] ✅ Successfully merged: cursor/fix-syntax-push-and-merge-to-main-917f
+[2025-09-08T21:37:15.256Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-952f
+[2025-09-08T21:37:15.256Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-952f: git fetch origin cursor/fix-syntax-push-and-merge-to-main-952f
+[2025-09-08T21:37:15.590Z] ✅ Success: Fetch origin/cursor/fix-syntax-push-and-merge-to-main-952f
+[2025-09-08T21:37:15.590Z] 🚀 Merge cursor/fix-syntax-push-and-merge-to-main-952f: git merge origin/cursor/fix-syntax-push-and-merge-to-main-952f --no-ff -m "Merge branch cursor/fix-syntax-push-and-merge-to-main-952f into main"
+[2025-09-08T21:37:16.037Z] ✅ Success: Merge cursor/fix-syntax-push-and-merge-to-main-952f
+[2025-09-08T21:37:16.037Z] ✅ Successfully merged: cursor/fix-syntax-push-and-merge-to-main-952f
+[2025-09-08T21:37:16.037Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-95ce
+[2025-09-08T21:37:16.037Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-95ce: git fetch origin cursor/fix-syntax-push-and-merge-to-main-95ce
+[2025-09-08T21:37:16.382Z] ✅ Success: Fetch origin/cursor/fix-syntax-push-and-merge-to-main-95ce
+[2025-09-08T21:37:16.382Z] 🚀 Merge cursor/fix-syntax-push-and-merge-to-main-95ce: git merge origin/cursor/fix-syntax-push-and-merge-to-main-95ce --no-ff -m "Merge branch cursor/fix-syntax-push-and-merge-to-main-95ce into main"
+[2025-09-08T21:37:16.823Z] ✅ Success: Merge cursor/fix-syntax-push-and-merge-to-main-95ce
+[2025-09-08T21:37:16.823Z] ✅ Successfully merged: cursor/fix-syntax-push-and-merge-to-main-95ce
+[2025-09-08T21:37:16.823Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-960c
+[2025-09-08T21:37:16.823Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-960c: git fetch origin cursor/fix-syntax-push-and-merge-to-main-960c
+[2025-09-08T21:37:17.170Z] ✅ Success: Fetch origin/cursor/fix-syntax-push-and-merge-to-main-960c
+[2025-09-08T21:37:17.170Z] 🚀 Merge cursor/fix-syntax-push-and-merge-to-main-960c: git merge origin/cursor/fix-syntax-push-and-merge-to-main-960c --no-ff -m "Merge branch cursor/fix-syntax-push-and-merge-to-main-960c into main"
+[2025-09-08T21:37:17.616Z] ✅ Success: Merge cursor/fix-syntax-push-and-merge-to-main-960c
+[2025-09-08T21:37:17.616Z] ✅ Successfully merged: cursor/fix-syntax-push-and-merge-to-main-960c
+[2025-09-08T21:37:17.617Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-9696
+[2025-09-08T21:37:17.617Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-9696: git fetch origin cursor/fix-syntax-push-and-merge-to-main-9696
+[2025-09-08T21:37:17.977Z] ✅ Success: Fetch origin/cursor/fix-syntax-push-and-merge-to-main-9696
+[2025-09-08T21:37:17.977Z] 🚀 Merge cursor/fix-syntax-push-and-merge-to-main-9696: git merge origin/cursor/fix-syntax-push-and-merge-to-main-9696 --no-ff -m "Merge branch cursor/fix-syntax-push-and-merge-to-main-9696 into main"
+[2025-09-08T21:37:18.427Z] ✅ Success: Merge cursor/fix-syntax-push-and-merge-to-main-9696
+[2025-09-08T21:37:18.427Z] ✅ Successfully merged: cursor/fix-syntax-push-and-merge-to-main-9696
+[2025-09-08T21:37:18.427Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-97b7
+[2025-09-08T21:37:18.427Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-97b7: git fetch origin cursor/fix-syntax-push-and-merge-to-main-97b7
+[2025-09-08T21:37:18.776Z] ✅ Success: Fetch origin/cursor/fix-syntax-push-and-merge-to-main-97b7
+[2025-09-08T21:37:18.776Z] 🚀 Merge cursor/fix-syntax-push-and-merge-to-main-97b7: git merge origin/cursor/fix-syntax-push-and-merge-to-main-97b7 --no-ff -m "Merge branch cursor/fix-syntax-push-and-merge-to-main-97b7 into main"
+[2025-09-08T21:37:19.260Z] ✅ Success: Merge cursor/fix-syntax-push-and-merge-to-main-97b7
+[2025-09-08T21:37:19.261Z] ✅ Successfully merged: cursor/fix-syntax-push-and-merge-to-main-97b7
+[2025-09-08T21:37:19.261Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-983f
+[2025-09-08T21:37:19.261Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-983f: git fetch origin cursor/fix-syntax-push-and-merge-to-main-983f
+[2025-09-08T21:37:19.616Z] ✅ Success: Fetch origin/cursor/fix-syntax-push-and-merge-to-main-983f
+[2025-09-08T21:37:19.616Z] 🚀 Merge cursor/fix-syntax-push-and-merge-to-main-983f: git merge origin/cursor/fix-syntax-push-and-merge-to-main-983f --no-ff -m "Merge branch cursor/fix-syntax-push-and-merge-to-main-983f into main"
+[2025-09-08T21:37:20.072Z] ✅ Success: Merge cursor/fix-syntax-push-and-merge-to-main-983f
+[2025-09-08T21:37:20.072Z] ✅ Successfully merged: cursor/fix-syntax-push-and-merge-to-main-983f
+[2025-09-08T21:37:20.072Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-995e
+[2025-09-08T21:37:20.072Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-995e: git fetch origin cursor/fix-syntax-push-and-merge-to-main-995e
+[2025-09-08T21:37:20.420Z] ✅ Success: Fetch origin/cursor/fix-syntax-push-and-merge-to-main-995e
+[2025-09-08T21:37:20.421Z] 🚀 Merge cursor/fix-syntax-push-and-merge-to-main-995e: git merge origin/cursor/fix-syntax-push-and-merge-to-main-995e --no-ff -m "Merge branch cursor/fix-syntax-push-and-merge-to-main-995e into main"
+[2025-09-08T21:37:20.896Z] ✅ Success: Merge cursor/fix-syntax-push-and-merge-to-main-995e
+[2025-09-08T21:37:20.897Z] ✅ Successfully merged: cursor/fix-syntax-push-and-merge-to-main-995e
+[2025-09-08T21:37:20.897Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-99f9
+[2025-09-08T21:37:20.897Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-99f9: git fetch origin cursor/fix-syntax-push-and-merge-to-main-99f9
+[2025-09-08T21:37:21.265Z] ✅ Success: Fetch origin/cursor/fix-syntax-push-and-merge-to-main-99f9
+[2025-09-08T21:37:21.265Z] 🚀 Merge cursor/fix-syntax-push-and-merge-to-main-99f9: git merge origin/cursor/fix-syntax-push-and-merge-to-main-99f9 --no-ff -m "Merge branch cursor/fix-syntax-push-and-merge-to-main-99f9 into main"
+[2025-09-08T21:37:21.719Z] ✅ Success: Merge cursor/fix-syntax-push-and-merge-to-main-99f9
+[2025-09-08T21:37:21.719Z] ✅ Successfully merged: cursor/fix-syntax-push-and-merge-to-main-99f9
+[2025-09-08T21:37:22.719Z] 📦 Processing batch 331/509
+[2025-09-08T21:37:22.719Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-9e46
+[2025-09-08T21:37:22.719Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-9e46: git fetch origin cursor/fix-syntax-push-and-merge-to-main-9e46
+[2025-09-08T21:37:23.065Z] ✅ Success: Fetch origin/cursor/fix-syntax-push-and-merge-to-main-9e46
+[2025-09-08T21:37:23.065Z] 🚀 Merge cursor/fix-syntax-push-and-merge-to-main-9e46: git merge origin/cursor/fix-syntax-push-and-merge-to-main-9e46 --no-ff -m "Merge branch cursor/fix-syntax-push-and-merge-to-main-9e46 into main"
+[2025-09-08T21:37:23.542Z] ✅ Success: Merge cursor/fix-syntax-push-and-merge-to-main-9e46
+[2025-09-08T21:37:23.543Z] ✅ Successfully merged: cursor/fix-syntax-push-and-merge-to-main-9e46
+[2025-09-08T21:37:23.543Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-9e81
+[2025-09-08T21:37:23.543Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-9e81: git fetch origin cursor/fix-syntax-push-and-merge-to-main-9e81
+[2025-09-08T21:37:23.907Z] ✅ Success: Fetch origin/cursor/fix-syntax-push-and-merge-to-main-9e81
+[2025-09-08T21:37:23.907Z] 🚀 Merge cursor/fix-syntax-push-and-merge-to-main-9e81: git merge origin/cursor/fix-syntax-push-and-merge-to-main-9e81 --no-ff -m "Merge branch cursor/fix-syntax-push-and-merge-to-main-9e81 into main"
+[2025-09-08T21:37:24.390Z] ✅ Success: Merge cursor/fix-syntax-push-and-merge-to-main-9e81
+[2025-09-08T21:37:24.390Z] ✅ Successfully merged: cursor/fix-syntax-push-and-merge-to-main-9e81
+[2025-09-08T21:37:24.390Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-9e90
+[2025-09-08T21:37:24.390Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-9e90: git fetch origin cursor/fix-syntax-push-and-merge-to-main-9e90
+[2025-09-08T21:37:24.759Z] ✅ Success: Fetch origin/cursor/fix-syntax-push-and-merge-to-main-9e90
+[2025-09-08T21:37:24.759Z] 🚀 Merge cursor/fix-syntax-push-and-merge-to-main-9e90: git merge origin/cursor/fix-syntax-push-and-merge-to-main-9e90 --no-ff -m "Merge branch cursor/fix-syntax-push-and-merge-to-main-9e90 into main"
+[2025-09-08T21:37:25.235Z] ✅ Success: Merge cursor/fix-syntax-push-and-merge-to-main-9e90
+[2025-09-08T21:37:25.235Z] ✅ Successfully merged: cursor/fix-syntax-push-and-merge-to-main-9e90
+[2025-09-08T21:37:25.235Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-9fbb
+[2025-09-08T21:37:25.235Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-9fbb: git fetch origin cursor/fix-syntax-push-and-merge-to-main-9fbb
+[2025-09-08T21:37:25.611Z] ✅ Success: Fetch origin/cursor/fix-syntax-push-and-merge-to-main-9fbb
+[2025-09-08T21:37:25.612Z] 🚀 Merge cursor/fix-syntax-push-and-merge-to-main-9fbb: git merge origin/cursor/fix-syntax-push-and-merge-to-main-9fbb --no-ff -m "Merge branch cursor/fix-syntax-push-and-merge-to-main-9fbb into main"
+[2025-09-08T21:37:26.075Z] ✅ Success: Merge cursor/fix-syntax-push-and-merge-to-main-9fbb
+[2025-09-08T21:37:26.075Z] ✅ Successfully merged: cursor/fix-syntax-push-and-merge-to-main-9fbb
+[2025-09-08T21:37:26.075Z] 🔄 Attempting to merge branch: cursor/fix-syntax-push-and-merge-to-main-9fe2
+[2025-09-08T21:37:26.075Z] 🚀 Fetch origin/cursor/fix-syntax-push-and-merge-to-main-9fe2: git fetch origin cursor/fix-syntax-push-and-merge-to-main-9fe2
+[2025-09-08T21:37:26.186Z] ❌ Error in Fetch origin/cursor/fix-syntax-push-and-merge-to-main-9fe2: Command failed: git fetch origin cursor/fix-syntax-push-and-merge-to-main-9fe2
+fatal: couldn't find remote ref cursor/fix-syntax-push-and-merge-to-main-9fe2
+
+[2025-09-08T21:37:26.186Z] ❌ Failed to merge cursor/fix-syntax-push-and-merge-to-main-9fe2: Command failed: git fetch origin cursor/fix-syntax-push-and-merge-to-main-9fe2
+fatal: couldn't find remote ref cursor/fix-syntax-push-and-merge-to-main-9fe2
+
+[2025-09-08T21:37:26.186Z] 🔧 Attempting to resolve conflicts for: cursor/fix-syntax-push-and-merge-to-main-9fe2
+[2025-09-08T21:37:26.186Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T21:37:26.264Z] ✅ Success: Get git status
+[2025-09-08T21:37:26.264Z] 📄 Found 0 conflicted files
+[2025-09-08T21:37:26.264Z] 🚀 Add resolved files: git add .
