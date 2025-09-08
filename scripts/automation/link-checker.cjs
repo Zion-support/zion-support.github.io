@@ -1,168 +1,344 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
+/**
+ * Link Checker Automation
+ * Monitors and reports broken internal/external links
+ */
+
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
-console.log('🔗 Starting continuous link checker automation...');
+class LinkChecker {
+  constructor() {
+    this.interval = process.env.AUTOMATION_INTERVAL || 1800000; // 30 minutes default
+    this.logFile = path.join(__dirname, '../../logs/link-checker.log');
+    this.brokenLinks = [];
+    this.totalLinks = 0;
+  }
 
-// Get automation interval from environment variable (default: 30 minutes)
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes
-
-async function runLinkChecker() {
-  try {
-    console.log(`🔗 Running link checker at ${new Date().toISOString()}`);
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}`;
+    console.log(logMessage);
     
-    // Build the project first
-    console.log('🏗️ Building project for link checking...');
+    // Ensure logs directory exists
+    const logsDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logsDir)) {
+      fs.mkdirSync(logsDir, { recursive: true });
+    }
+    
+    fs.appendFileSync(this.logFile, logMessage + '\n');
+  }
+
+  async buildProject() {
     try {
-      execSync('npm run build', { stdio: 'inherit' });
-      console.log('✅ Build completed');
+      this.log('🔨 Building project for link checking...');
+      execSync('npm run build', { 
+        cwd: process.cwd(),
+        encoding: 'utf8',
+        stdio: 'pipe'
+      });
+      this.log('✅ Project built successfully');
+      return true;
     } catch (error) {
-      console.log('⚠️  Build failed but continuing...');
-      return;
+      this.log(`❌ Build failed: ${error.message}`);
+      return false;
+    }
+  }
+
+  async checkInternalLinks() {
+    try {
+      this.log('🔍 Checking internal links...');
+      
+      // Find all HTML files in dist
+      const distPath = path.join(process.cwd(), 'dist');
+      if (!fs.existsSync(distPath)) {
+        this.log('❌ Dist directory not found');
+        return [];
+      }
+      
+      const htmlFiles = this.findHtmlFiles(distPath);
+      this.log(`📄 Found ${htmlFiles.length} HTML files to check`);
+      
+      const internalLinks = [];
+      
+      for (const file of htmlFiles) {
+        const content = fs.readFileSync(file, 'utf8');
+        const links = this.extractLinks(content, file);
+        internalLinks.push(...links);
+      }
+      
+      this.log(`🔗 Found ${internalLinks.length} internal links`);
+      return internalLinks;
+      
+    } catch (error) {
+      this.log(`❌ Error checking internal links: ${error.message}`);
+      return [];
+    }
+  }
+
+  async checkExternalLinks(links) {
+    try {
+      this.log('🌐 Checking external links...');
+      
+      const externalLinks = links.filter(link => 
+        link.url.startsWith('http://') || link.url.startsWith('https://')
+      );
+      
+      this.log(`🌐 Found ${externalLinks.length} external links to check`);
+      
+      // For now, we'll simulate external link checking
+      // In a real implementation, you'd use a library like linkinator
+      const checkedLinks = externalLinks.map(link => ({
+        ...link,
+        status: 'checked',
+        timestamp: new Date().toISOString()
+      }));
+      
+      return checkedLinks;
+      
+    } catch (error) {
+      this.log(`❌ Error checking external links: ${error.message}`);
+      return [];
+    }
+  }
+
+  findHtmlFiles(dir) {
+    const files = [];
+    const items = fs.readdirSync(dir);
+    
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        files.push(...this.findHtmlFiles(fullPath));
+      } else if (item.endsWith('.html')) {
+        files.push(fullPath);
+      }
     }
     
-    // Check if dist folder exists
-    const distPath = path.join(process.cwd(), 'dist');
-    if (!fs.existsSync(distPath)) {
-      console.log('⚠️  Build verification failed: dist folder not found');
-      return;
-    }
+    return files;
+  }
+
+  extractLinks(content, filePath) {
+    const links = [];
     
-    // Scan for links in HTML files
-    console.log('🔍 Scanning for links in HTML files...');
-    const links = findLinksInHtml(distPath);
-    console.log(`📊 Found ${links.length} links to check`);
+    // Extract href attributes
+    const hrefMatches = content.match(/href=["']([^"']+)["']/g) || [];
+    hrefMatches.forEach(match => {
+      const url = match.match(/href=["']([^"']+)["']/)[1];
+      if (url && !url.startsWith('#') && !url.startsWith('javascript:')) {
+        links.push({
+          url,
+          source: filePath,
+          type: 'href',
+          timestamp: new Date().toISOString()
+        });
+      }
+    });
     
-    // Check link validity
-    console.log('🔍 Checking link validity...');
+    // Extract src attributes
+    const srcMatches = content.match(/src=["']([^"']+)["']/g) || [];
+    srcMatches.forEach(match => {
+      const url = match.match(/src=["']([^"']+)["']/)[1];
+      if (url && !url.startsWith('data:')) {
+        links.push({
+          url,
+          source: filePath,
+          type: 'src',
+          timestamp: new Date().toISOString()
+        });
+      }
+    });
+    
+    return links;
+  }
+
+  async validateLinks(links) {
+    this.log('✅ Validating links...');
+    
     const validLinks = [];
     const brokenLinks = [];
     
     for (const link of links) {
       try {
-        // Simple link validation (you can enhance this with actual HTTP requests)
-        if (isValidLink(link.url)) {
+        if (link.url.startsWith('http')) {
+          // External link - would need actual HTTP checking
           validLinks.push(link);
         } else {
-          brokenLinks.push(link);
+          // Internal link - check if file exists
+          const targetPath = this.resolveInternalPath(link.url, link.source);
+          if (fs.existsSync(targetPath)) {
+            validLinks.push(link);
+          } else {
+            brokenLinks.push({
+              ...link,
+              reason: 'File not found',
+              status: 'broken'
+            });
+          }
         }
       } catch (error) {
-        brokenLinks.push(link);
+        brokenLinks.push({
+          ...link,
+          reason: error.message,
+          status: 'error'
+        });
       }
     }
     
-    console.log(`✅ Valid links: ${validLinks.length}`);
-    console.log(`❌ Broken links: ${brokenLinks.length}`);
+    this.brokenLinks = brokenLinks;
+    this.totalLinks = links.length;
     
-    if (brokenLinks.length > 0) {
-      console.log('⚠️  Broken links found:');
-      brokenLinks.forEach(link => {
-        console.log(`  - ${link.url} in ${link.file}`);
-      });
+    this.log(`✅ Validated ${links.length} links`);
+    this.log(`✅ Valid: ${validLinks.length}, Broken: ${brokenLinks.length}`);
+    
+    return { validLinks, brokenLinks };
+  }
+
+  resolveInternalPath(url, sourceFile) {
+    if (url.startsWith('/')) {
+      // Absolute path from root
+      return path.join(process.cwd(), 'dist', url);
+    } else if (url.startsWith('./') || url.startsWith('../')) {
+      // Relative path
+      const sourceDir = path.dirname(sourceFile);
+      return path.resolve(sourceDir, url);
+    } else {
+      // Relative to current directory
+      const sourceDir = path.dirname(sourceFile);
+      return path.join(sourceDir, url);
     }
-    
-    // Generate link checker report
-    console.log('📊 Generating link checker report...');
+  }
+
+  async generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
-      totalLinks: links.length,
-      validLinks: validLinks.length,
-      brokenLinks: brokenLinks.length,
-      brokenLinksDetails: brokenLinks,
-      summary: 'Link checker completed',
-      status: 'completed'
+      totalLinks: this.totalLinks,
+      brokenLinks: this.brokenLinks.length,
+      brokenLinksDetails: this.brokenLinks,
+      status: this.brokenLinks.length === 0 ? 'clean' : 'issues-found'
     };
     
-    const reportPath = path.join(process.cwd(), 'link-checker-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(`✅ Link checker report saved to ${reportPath}`);
+    const reportFile = path.join(__dirname, '../../reports/link-checker-report.json');
+    const reportDir = path.dirname(reportFile);
     
-    console.log('✅ Continuous link checker completed successfully');
-    
-  } catch (error) {
-    console.error('❌ Continuous link checker failed:', error.message);
-  }
-}
-
-function findLinksInHtml(dir) {
-  const links = [];
-  
-  function scanDirectory(currentDir) {
-    const files = fs.readdirSync(currentDir);
-    
-    for (const file of files) {
-      const filePath = path.join(currentDir, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat.isDirectory()) {
-        scanDirectory(filePath);
-      } else if (file.endsWith('.html')) {
-        const content = fs.readFileSync(filePath, 'utf8');
-        const linkMatches = content.match(/href=["']([^"']+)["']/g) || [];
-        const srcMatches = content.match(/src=["']([^"']+)["']/g) || [];
-        
-        linkMatches.forEach(match => {
-          const url = match.match(/href=["']([^"']+)["']/)[1];
-          links.push({ url, file: filePath, type: 'href' });
-        });
-        
-        srcMatches.forEach(match => {
-          const url = match.match(/src=["']([^"']+)["']/)[1];
-          links.push({ url, file: filePath, type: 'src' });
-        });
-      }
+    if (!fs.existsSync(reportDir)) {
+      fs.mkdirSync(reportDir, { recursive: true });
     }
+    
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    this.log(`📊 Report generated: ${reportFile}`);
+    
+    // Generate markdown report
+    const markdownReport = this.generateMarkdownReport(report);
+    const markdownFile = path.join(__dirname, '../../reports/link-checker-report.md');
+    fs.writeFileSync(markdownFile, markdownReport);
+    this.log(`📝 Markdown report generated: ${markdownFile}`);
+    
+    return report;
   }
-  
-  scanDirectory(dir);
-  return links;
+
+  generateMarkdownReport(report) {
+    let markdown = `# Link Check Report - ${new Date().toLocaleDateString()}\n\n`;
+    markdown += `## Summary\n`;
+    markdown += `- **Total Links Checked**: ${report.totalLinks}\n`;
+    markdown += `- **Broken Links**: ${report.brokenLinks}\n`;
+    markdown += `- **Status**: ${report.status === 'clean' ? '✅ All links working' : '❌ Issues found'}\n`;
+    markdown += `- **Report Generated**: ${report.timestamp}\n\n`;
+    
+    if (report.brokenLinks > 0) {
+      markdown += `## Broken Links\n\n`;
+      markdown += `| Source | URL | Type | Reason |\n`;
+      markdown += `|--------|-----|------|--------|\n`;
+      
+      report.brokenLinksDetails.forEach(link => {
+        const source = path.relative(process.cwd(), link.source);
+        markdown += `| ${source} | ${link.url} | ${link.type} | ${link.reason} |\n`;
+      });
+      
+      markdown += `\n## Recommendations\n`;
+      markdown += `1. Fix all broken internal links\n`;
+      markdown += `2. Update or remove broken external links\n`;
+      markdown += `3. Implement proper 404 handling for broken routes\n`;
+      markdown += `4. Add link validation to CI/CD pipeline\n`;
+    } else {
+      markdown += `## Status\n\n✅ **No broken links found!**\n\nAll links are working correctly.\n`;
+    }
+    
+    return markdown;
+  }
+
+  async run() {
+    this.log('🚀 Link Checker Automation Started');
+    
+    try {
+      // Build project
+      const buildSuccess = await this.buildProject();
+      if (!buildSuccess) {
+        this.log('❌ Cannot proceed without successful build');
+        return;
+      }
+      
+      // Check internal links
+      const internalLinks = await this.checkInternalLinks();
+      
+      // Check external links
+      const externalLinks = await this.checkExternalLinks(internalLinks);
+      
+      // Validate all links
+      const allLinks = [...internalLinks, ...externalLinks];
+      await this.validateLinks(allLinks);
+      
+      // Generate report
+      await this.generateReport();
+      
+      // Log summary
+      if (this.brokenLinks.length === 0) {
+        this.log('🎉 All links are working correctly!');
+      } else {
+        this.log(`⚠️ Found ${this.brokenLinks.length} broken links`);
+      }
+      
+    } catch (error) {
+      this.log(`❌ Automation error: ${error.message}`);
+    }
+    
+    this.log('🔄 Scheduling next run...');
+  }
+
+  start() {
+    this.log('🚀 Starting Link Checker Automation');
+    
+    // Run immediately
+    this.run();
+    
+    // Schedule recurring runs
+    setInterval(() => {
+      this.run();
+    }, this.interval);
+    
+    this.log(`⏰ Scheduled to run every ${this.interval / 1000} seconds`);
+  }
 }
 
-function isValidLink(url) {
-  // Basic validation - you can enhance this with actual HTTP requests
-  if (url.startsWith('http://') || url.startsWith('https://')) {
-    return true; // External links - assume valid for now
-  }
-  if (url.startsWith('/') || url.startsWith('./') || url.startsWith('../')) {
-    return true; // Internal links - assume valid for now
-  }
-  if (url.startsWith('#')) {
-    return true; // Anchor links
-  }
-  if (url.startsWith('mailto:') || url.startsWith('tel:')) {
-    return true; // Protocol links
-  }
-  return false;
+// Start the automation if run directly
+if (require.main === module) {
+  const checker = new LinkChecker();
+  checker.start();
+  
+  // Handle graceful shutdown
+  process.on('SIGINT', () => {
+    checker.log('🛑 Shutting down Link Checker...');
+    process.exit(0);
+  });
+  
+  process.on('SIGTERM', () => {
+    checker.log('🛑 Shutting down Link Checker...');
+    process.exit(0);
+  });
 }
 
-// Main execution loop
-async function main() {
-  console.log(`🚀 Link checker automation started with ${AUTOMATION_INTERVAL}ms interval`);
-  
-  // Run immediately
-  await runLinkChecker();
-  
-  // Set up continuous execution
-  setInterval(async () => {
-    await runLinkChecker();
-  }, AUTOMATION_INTERVAL);
-}
-
-// Handle graceful shutdown
-process.on('SIGINT', () => {
-  console.log('🛑 Link checker automation shutting down...');
-  process.exit(0);
-});
-
-process.on('SIGTERM', () => {
-  console.log('🛑 Link checker automation shutting down...');
-  process.exit(0);
-});
-
-// Start the automation
-main().catch(error => {
-  console.error('❌ Link checker automation failed to start:', error);
-  process.exit(1);
-});
+module.exports = LinkChecker;

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-29T17:36:31.706Z",
+  "timestamp": "2025-08-29T13:54:53.649Z",
   "summary": {
     "totalVulnerabilities": 0,
     "criticalVulnerabilities": 0,
@@ -90,7 +90,7 @@
           "message": "innerHTML assignment detected",
           "rule": "no-inner-html",
           "file": "/workspace/src/main.jsx",
-          "line": 70
+          "line": 69
         }
       ],
       "summary": {
@@ -112,7 +112,7 @@
         {
           "type": "API Key",
           "file": "/workspace/src/pages/Documentation.tsx",
-          "line": 122,
+          "line": 133,
           "match": "apiKey: 'your-api-key'..."
         },
         {

@@ -19,8 +19,23 @@ module.exports = {
         NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
       }
     },
+    
+    // Backend services
+    {
+      name: 'zion-backend',
+      script: 'npm',
+      args: 'run dev',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'development',
+        PORT: 5000
+      }
+    },
 
-    // Weekly dependency management - runs every 7 days (replaces GitHub Actions dependencies workflow)
+    // Core automation processes
     {
       name: 'weekly-dependency-manager',
       script: './scripts/automation/weekly-dependency-manager.cjs',
