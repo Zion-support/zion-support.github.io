@@ -51,7 +51,7 @@ export const useToast = () => {
     info,
     warning
   };
-};
+}
 
 // Export a simple toast function for direct use
 export const toast = {

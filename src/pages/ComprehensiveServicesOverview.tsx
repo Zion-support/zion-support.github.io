@@ -1,4 +1,59 @@
+import React, { useState, useMemo } from 'react';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Input } from '@/components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { 
+  Search, 
+  Filter, 
+  Star, 
+  Users, 
+  Zap, 
+  Shield, 
+  Code, 
+  BarChart3,
+  Bot,
+  Globe,
+  Building,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Sparkles,
+  Brain,
+  Database,
+  Cloud,
+  Smartphone,
+  FileText,
+  Lock,
+  Settings,
+  DollarSign,
+  Clock,
+  Target,
+  Award,
+  Globe2,
+  Cpu,
+  Heart,
+  Eye,
+  ExternalLink,
+  Play,
+  BookOpen,
+  Mail,
+  Phone,
+  MapPin
+} from 'lucide-react';
+import { ENHANCED_INNOVATIVE_SERVICES } from '@/data/enhancedInnovativeServices';
+import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
+import { INNOVATIVE_MICRO_SAAS_SERVICES } from '@/data/innovativeMicroSaasServices';
+import { motion } from 'framer-motion';
+import EnhancedSEO from '@/components/EnhancedSEO';
 
+// Combine all services
+const ALL_SERVICES = [
+  ...ENHANCED_INNOVATIVE_SERVICES,
+  ...COMPREHENSIVE_SERVICES,
+  ...INNOVATIVE_MICRO_SAAS_SERVICES
+] as any[];
 
 const categoryIcons = {
   'AI & Legal Tech': FileText,

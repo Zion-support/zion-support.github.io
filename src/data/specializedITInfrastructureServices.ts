@@ -265,6 +265,12 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES: SpecializedITInfrastructure
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
+    technology: ["Post-Quantum Algorithms", "Hybrid Cryptography", "C++", "Python", "Custom Software"],
+    integrations: ["PKI systems", "TLS/SSL", "Digital certificates", "Security platforms"],
+    compliance: ["NIST standards", "FIPS", "Industry regulations", "International standards"],
+    roi: "350% within 18 months",
+    competitors: ["ISARA", "PQShield", "Cryptosense", "Quantum Xchange", "ID Quantique"]
+=======
     technology: ["OpenFlow", "React", "Node.js", "PostgreSQL", "Redis", "Docker"],
     integrations: ["Cisco", "Juniper", "VMware", "OpenStack", "Kubernetes"],
     compliance: ["ISO 27001", "SOC 2", "GDPR"],

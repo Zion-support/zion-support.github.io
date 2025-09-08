@@ -1,3 +1,4 @@
+=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -72,6 +73,7 @@ export default function InnovativeServicesMarketing() {
   // Get unique categories
   const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
 
+=======
   // Filter services by category
   const filteredServices = activeTab === 'all' 
     ? allServices 
@@ -216,6 +218,7 @@ export default function InnovativeServicesMarketing() {
         </div>
       </div>
 
+=======
       {/* Why Choose Us Section */}
       <div className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -469,6 +472,7 @@ export default function InnovativeServicesMarketing() {
               <p className="text-sm text-blue-200">Available 24/7</p>
             </div>
             
+=======
             <div className="text-center">
               <div className="bg-white/20 backdrop-blur-sm w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Mail className="h-10 w-10" />

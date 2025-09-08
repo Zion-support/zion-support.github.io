@@ -1,4 +1,13 @@
 {
+  "name": "Zion Tech Group - AI-Powered Business Solutions",
+  "short_name": "Zion Tech",
+  "description": "Transform your business with cutting-edge artificial intelligence solutions, comprehensive IT services, and innovative micro-SaaS platforms.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#667eea",
+=======
+=======
   "name": "Zion Tech Group - AI-Powered Innovation & Enterprise IT Solutions",
   "short_name": "Zion Tech Group",
   "description": "Transform your business with cutting-edge AI solutions, comprehensive IT services, and innovative micro SAAS applications. Expert consulting, cybersecurity, and digital transformation.",
@@ -18,6 +27,8 @@
   ],
   "icons": [
     {
+      "src": "/icons/icon-72x72.png",
+=======
       "src": "/images/icon-72x72.png",
       "sizes": "72x72",
       "type": "image/png",
@@ -48,12 +59,17 @@
       "purpose": "maskable any"
     },
     {
+      "src": "/logo192.png",
+=======
+=======
       "src": "/images/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
+      "src": "/icons/icon-384x384.png",
+=======
       "src": "/images/icon-384x384.png",
       "sizes": "384x384",
       "type": "image/png",
@@ -64,6 +80,84 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable any"
+      "src": "/logo512.png",
+=======
+  "name": "Zion Tech Group - AI-Powered Tech Marketplace",
+  "short_name": "Zion Tech",
+  "description": "Discover top AI and tech talent, services, and equipment in one place. AI-powered matching for your tech needs.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#172d67",
+  "theme_color": "#2e73ea",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": [
+    "business",
+    "productivity",
+    "technology",
+    "marketplace"
+  ],
+  "icons": [
+    {
+      "src": "/images/zion-logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/zion-logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/zion-logo-72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/zion-logo-96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/zion-logo-128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/zion-logo-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/zion-logo-152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/zion-logo-384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+=======
+      "src": "/images/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Zion Tech Group Desktop View"
+    },
+    {
+      "src": "/images/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Zion Tech Group Mobile View"
     }
   ],
   "screenshots": [
@@ -92,13 +186,67 @@
         {
           "src": "/images/ai-solutions-icon.png",
           "sizes": "96x96"
+=======
+      "name": "AI Solutions",
+      "short_name": "AI",
+      "description": "Explore our AI-powered business solutions",
+      "url": "/ai-solutions",
+      "icons": [
+        {
+          "src": "/logo192.png",
+          "sizes": "192x192"
+=======
+      "name": "Find Talent",
+      "short_name": "Talent",
+      "description": "Browse and find tech talent",
+      "url": "/talent",
+      "icons": [
+        {
+          "src": "/images/talent-icon.png",
+          "sizes": "96x96"
         }
       ]
     },
     {
+      "name": "Pricing",
+      "short_name": "Pricing",
+      "description": "View pricing plans",
+      "url": "/pricing",
+=======
       "name": "Services",
       "short_name": "Services",
       "description": "View our comprehensive services",
+      "url": "/services",
+      "icons": [
+        {
+          "src": "/images/services-icon.png",
+          "sizes": "96x96"
+=======
+      "name": "Services",
+      "short_name": "Services",
+      "description": "View our comprehensive IT services",
+      "url": "/services",
+      "icons": [
+        {
+          "src": "/logo192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Get in touch with our team",
+      "url": "/contact",
+      "icons": [
+        {
+          "src": "/logo192.png",
+          "sizes": "192x192"
+=======
+=======
+      "name": "Browse Services",
+      "short_name": "Services",
+      "description": "Explore tech services",
       "url": "/services",
       "icons": [
         {
@@ -108,18 +256,32 @@
       ]
     },
     {
-      "name": "Contact",
-      "short_name": "Contact",
-      "description": "Get in touch with us",
-      "url": "/contact",
+      "name": "AI Matcher",
+      "short_name": "AI Match",
+      "description": "AI-powered talent matching",
+      "url": "/match",
       "icons": [
         {
-          "src": "/images/contact-icon.png",
+          "src": "/images/ai-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Equipment",
+      "short_name": "Equipment",
+      "description": "Browse tech equipment",
+      "url": "/equipment",
+      "icons": [
+        {
+          "src": "/images/equipment-icon.png",
           "sizes": "96x96"
         }
       ]
     }
   ],
+=======
+=======
   "related_applications": [
     {
       "platform": "webapp",
@@ -137,10 +299,18 @@
   "capture_links": "new-client",
   "file_handlers": [
     {
-      "action": "/file-handler",
+      "action": "/",
       "accept": {
-        "text/*": [".txt", ".md", ".json", ".xml", ".html", ".css", ".js", ".ts", ".jsx", ".tsx"],
+        "text/*": [".txt", ".md", ".json"],
         "application/pdf": [".pdf"],
+        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".svg"]
+=======
+      "action": "/upload",
+      "accept": {
+        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".webp"],
+        "application/pdf": [".pdf"],
+        "text/*": [".txt", ".md", ".json"]
+=======
         "image/*": [".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp"],
         "application/json": [".json"],
         "text/markdown": [".md"]
@@ -169,10 +339,13 @@
       ]
     }
   },
+=======
   "background": {
     "service_worker": "/sw.js",
     "type": "module"
   },
+=======
+=======
   "permissions": [
     "notifications",
     "geolocation",
@@ -184,6 +357,12 @@
     "Cross Platform",
     "fast",
     "simple",
+    "AI-Powered",
+    "Offline Support"
+=======
+    "ai-powered",
+    "offline-capable"
+=======
     "AI-Powered",
     "Enterprise Ready"
   ],
