@@ -11,6 +11,7 @@ import LoadingSpinner from './components/LoadingSpinner';
 import { SEO, HomePageSEO } from './components/SEO';
 import { AccessibilityWrapper } from './components/AccessibilityEnhancements';
 import { PerformanceOptimizations } from './components/PerformanceOptimizations';
+import './App.css';
 
 // Pages - Lazy loaded for better performance
 const Home = lazy(() => import('./pages/Home'));
