@@ -8,9 +8,9 @@ import { Button } from "@/components/ui/Button"
 type CarouselApi = ReturnType<typeof useEmblaCarousel>[1]
 type CarouselOptions = {
   axis?: 'x' | 'y'
-  [key: string]: any
+  [key: string]: unknown
 }
-type CarouselPlugin = any
+type CarouselPlugin = unknown
 
 type CarouselProps = {
   opts?: CarouselOptions
@@ -32,13 +32,13 @@ type CarouselContextProps = {
 const CarouselContext = React.createContext<CarouselContextProps | null>(null)
 
 function useCarousel(): CarouselContextProps {
-  const context = React.useContext(CarouselContext) as CarouselContextProps | null
+  const context = React.useContext(CarouselContext)
 
   if (!context) {
     throw new Error("useCarousel must be used within a <Carousel />")
   }
 
-  return context as CarouselContextProps
+  return context
 }
 
 const Carousel = React.forwardRef<
