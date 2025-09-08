@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
     "target": "ES2024",
     "useDefineForClassFields": true,
     "lib": [
