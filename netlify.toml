@@ -1,6 +1,6 @@
 [build]
-  # Build the Vite app and deploy from dist/
-  command = "npm run build"
+  # Skip build on Netlify; deploy prebuilt Vite output
+  command = "echo 'Skipping build: deploying prebuilt dist'"
   publish = "dist"
   command_timeout = "30m"
 
