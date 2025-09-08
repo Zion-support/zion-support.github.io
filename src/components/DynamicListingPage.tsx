@@ -6,7 +6,7 @@ import { ProductListingCard } from "@/components/ProductListingCard";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import Skeleton from "@/components/ui/skeleton";
+import { Skeleton } from "@/components/ui/skeleton";
 import { Slider } from "@/components/ui/slider";
 import { ProductListing, ListingView } from "@/types/listings";
 import { Search, Filter, LayoutGrid, List, Star } from "lucide-react";

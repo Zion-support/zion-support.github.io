@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
-import { HeartIcon } from '@/components/icons';
+import { HeartIcon } from '@/components/icons/index';
 
 interface FavoriteButtonProps {
   isFavorited?: boolean;
