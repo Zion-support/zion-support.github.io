@@ -652,9 +652,9 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                   <li>• Threat detection & response</li>
                   <li>• Zero-trust architecture</li>
                 </ul>
-                <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/PERFORMANCE.md" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  View Security Guide →
-                </a>
+                <Link href="/privacy" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  View Security & Privacy →
+                </Link>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -666,9 +666,9 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                   <li>• Security testing</li>
                   <li>• Continuous validation</li>
                 </ul>
-                <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/PERFORMANCE.md" target="_blank" rel="noopener noreferrer" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  View Testing Guide →
-                </a>
+                <Link href="/resources" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                  Explore Testing Resources →
+                </Link>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -680,9 +680,9 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                   <li>• Analytics dashboard</li>
                   <li>• Predictive maintenance</li>
                 </ul>
-                <Link href="https://github.com/Zion-Holdings/zion.app/blob/main/PERFORMANCE.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  View Performance Guide →
-                </a>
+                <Link href="/blog/performance-optimization" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  Read Performance Article →
+                </Link>
               </div>
             </div>
           </section>
@@ -700,8 +700,8 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                   <li>• Health monitoring</li>
                   <li>• Self-healing infrastructure</li>
                 </ul>
-                <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  Learn More →
+                <Link href="/services" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  Explore Services →
                 </Link>
               </div>
 
@@ -715,7 +715,7 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                   <li>• Predictive analytics</li>
                 </ul>
                 <Link href="/services" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  Learn More →
+                  Explore Services →
                 </Link>
               </div>
 
@@ -728,8 +728,8 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                   <li>• Performance monitoring</li>
                   <li>• Cluster management</li>
                 </ul>
-                <Link href="/services" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  Learn More →
+                <Link href="/resources" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  Explore Resources →
                 </Link>
               </div>
             </div>
@@ -1250,21 +1250,3 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
   );
 }
 
-export async function getStaticProps() {
-  try {
-    const updatesDir = path.join(process.cwd(), 'pages', 'reports', 'updates');
-    const files = fs.readdirSync(updatesDir)
-      .filter((f) => f.endsWith('.tsx'))
-      .sort((a, b) => (a < b ? 1 : -1));
-
-    const latestUpdates: UpdateLink[] = files.slice(0, 6).map((file) => {
-      const slug = file.replace(/\.tsx$/, '');
-      const title = `Autonomous Update — ${slug.replace('update-', '').replace(/-/g, ': ')}`;
-      return { href: `/reports/updates/${slug}`, title };
-    });
-
-    return { props: { latestUpdates } };
-  } catch {
-    return { props: { latestUpdates: [] } };
-  }
-}
