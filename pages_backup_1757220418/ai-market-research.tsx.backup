@@ -1,8 +1,17 @@
 import React from 'react';
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Search } from 'lucide-react';
+<<<<<<<< HEAD:pages_backup_1757220418/ai-market-research.tsx.backup
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+========
+const Layout = ({ children }: { children: React.ReactNode }) => <>
+  {children}
+</>;
+
+
+
+>>>>>>>> origin/cursor/build-and-dependency-installation-failure-6ae3:pages/ai-market-research.tsx
 export default function AIMarketResearchPage() {
   const service = $2;
   if (!service) return null,

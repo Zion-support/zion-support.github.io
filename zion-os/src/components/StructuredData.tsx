@@ -27,6 +27,7 @@ function StructuredData() {}
         "https://linkedin.com / company / ziontechgroup";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       "Modular Architecture";
     ],"
     "screenshot": "https://ziontechgroup.com / screenshot.png","
@@ -55,3 +56,5 @@ function StructuredData() {}
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 =======
 >>>>>>> f056e1038c528e7c7990a21cd793614976bb5152
+=======
+>>>>>>> origin/cursor/build-and-dependency-installation-failure-6ae3

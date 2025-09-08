@@ -3,6 +3,7 @@ interface LoadingSpinnerProps {"
   size?: "small" | "medium" | "large",
   class_name?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======}
 export /**
  * LoadingSpinner - Function description
@@ -37,6 +38,8 @@ function LoadingSpinner() {
 
 =======
 >>>>>>> f056e1038c528e7c7990a21cd793614976bb5152
+=======
+>>>>>>> origin/cursor/build-and-dependency-installation-failure-6ae3
   return (
     <div className={`${size_classes[size]} ${class_name}`} role="status" aria - label="Loading">;"  return (;
     <div className={`${sizeClasses[size]} ${className}`} role="status" aria-label="Loading">;"
@@ -66,6 +69,9 @@ function LoadingSpinner() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 =======
 >>>>>>> f056e1038c528e7c7990a21cd793614976bb5152
+=======
+>>>>>>> origin/cursor/build-and-dependency-installation-failure-6ae3

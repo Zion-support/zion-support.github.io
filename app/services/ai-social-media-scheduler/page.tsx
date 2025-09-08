@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 =======
 >>>>>>> f056e1038c528e7c7990a21cd793614976bb5152
+=======
+>>>>>>> origin/cursor/build-and-dependency-installation-failure-6ae3
 export const metadata = {
   title: 'AI Social Media Scheduler | Zion Tech Group',
   description: 'Professional AI-powered social media scheduling and management tools.',

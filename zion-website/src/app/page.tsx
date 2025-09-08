@@ -264,6 +264,7 @@
                 key={solution.name}
                 className="flex flex - col items - start group bg - white / 5 p - 8 rounded - 2xl backdrop - blur - sm "hover":bg - white / 10 transition - all duration - 300 "hover":scale-105">"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
       {/* CTA section */}
@@ -283,6 +284,8 @@
 
 =======
 >>>>>>> f056e1038c528e7c7990a21cd793614976bb5152
+=======
+>>>>>>> origin/cursor/build-and-dependency-installation-failure-6ae3
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">

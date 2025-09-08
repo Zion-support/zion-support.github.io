@@ -22,6 +22,7 @@
             <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">;"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 export default function Footer() {;
   return (;
@@ -182,3 +183,6 @@ function Footer() {  return (<footer className="bg-gray-900 text-white">;"
 =======
 
 >>>>>>> f056e1038c528e7c7990a21cd793614976bb5152
+=======
+
+>>>>>>> origin/cursor/build-and-dependency-installation-failure-6ae3

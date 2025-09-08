@@ -553,10 +553,13 @@ export const getCategories = () => {;
   return Array.from(new Set(services.map(service => { return service.category))); }
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/delete-old-data-records-6bba
 =======
 >>>>>>> f056e1038c528e7c7990a21cd793614976bb5152
+=======
+>>>>>>> origin/cursor/build-and-dependency-installation-failure-6ae3
 export interface Service {
 
   id: string,

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
 
   UserGroupIcon,
@@ -303,3 +304,6 @@ export default Page;
 =======
 export default Page;
 >>>>>>> f056e1038c528e7c7990a21cd793614976bb5152
+=======
+export default Page;
+>>>>>>> origin/cursor/build-and-dependency-installation-failure-6ae3

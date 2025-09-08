@@ -12,6 +12,7 @@ interface FeatureCardProps {}
   is_active: boolean,
   on_click: () => void;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======}
 export /**
  * FeatureCard - Function description
@@ -107,3 +108,8 @@ if ( {) {
 
 
 >>>>>>> f056e1038c528e7c7990a21cd793614976bb5152
+=======
+
+
+
+>>>>>>> origin/cursor/build-and-dependency-installation-failure-6ae3

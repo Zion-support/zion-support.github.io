@@ -1,8 +1,19 @@
+<<<<<<<< HEAD:temp_components.disabled/metaverse-ai-development-platform.tsx
 import NextHead from 'next/head';
 import { Wifi, Check, Phone, Mail, MapPin } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+========
+import React from 'react';
+import Head from 'next/head';
+import { Phone, Mail, MapPin, Check, ArrowRight, Cpu, Star } from 'lucide-react';
+const Layout = ({ children }: { children: React.ReactNode }) => <>
+  {children}
+</>;
+
+
+>>>>>>>> origin/cursor/build-and-dependency-installation-failure-6ae3:pages/quantum-iot.tsx
 
 export default function QuantumIoTPage() {
   const service = enhancedRealMicroSaasServices.find(s => (s.link || '').endsWith('/quantum-iot'));

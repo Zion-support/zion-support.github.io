@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 =======
 >>>>>>> f056e1038c528e7c7990a21cd793614976bb5152
+=======
+>>>>>>> origin/cursor/build-and-dependency-installation-failure-6ae3
 export const metadata = {
   title: 'AI Invoice Generator | Zion Tech Group',
   description: 'Professional AI-powered invoice generation services to streamline your billing process.',
@@ -135,7 +138,10 @@ export default function ServicePage() {
             </ul>
           </div>
         </div>
+<<<<<<< HEAD
 >>>>>>> f056e1038c528e7c7990a21cd793614976bb5152
+=======
+>>>>>>> origin/cursor/build-and-dependency-installation-failure-6ae3
       </div>
     </div>
   );

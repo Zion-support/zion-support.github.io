@@ -1,8 +1,17 @@
 import React from 'react';
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Cpu } from 'lucide-react';
+<<<<<<<< HEAD:pages_backup_1757220418/ai-iot-platform.tsx.backup
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+========
+const Layout = ({ children }: { children: React.ReactNode }) => <>
+  {children}
+</>;
+
+
+
+>>>>>>>> origin/cursor/build-and-dependency-installation-failure-6ae3:pages/ai-iot-platform.tsx
 export default function AIIoTPlatformPage() {
   const service = $2;
   if (!service) return null,

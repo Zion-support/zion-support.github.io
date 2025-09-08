@@ -132,7 +132,10 @@ export default function ServicePage() {
             </ul>
           </div>
         </div>
+<<<<<<< HEAD
 >>>>>>> f056e1038c528e7c7990a21cd793614976bb5152
+=======
+>>>>>>> origin/cursor/build-and-dependency-installation-failure-6ae3
       </div>
     </div>
   );

@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 =======
 >>>>>>> f056e1038c528e7c7990a21cd793614976bb5152
+=======
+>>>>>>> origin/cursor/build-and-dependency-installation-failure-6ae3
 export const metadata = {
   title: 'AI Email Optimizer | Zion Tech Group',
   description: 'Professional AI email optimization services to improve your email marketing campaigns.',
@@ -135,7 +138,10 @@ export default function ServicePage() {
             </ul>
           </div>
         </div>
+<<<<<<< HEAD
 >>>>>>> f056e1038c528e7c7990a21cd793614976bb5152
+=======
+>>>>>>> origin/cursor/build-and-dependency-installation-failure-6ae3
       </div>
     </div>
   );

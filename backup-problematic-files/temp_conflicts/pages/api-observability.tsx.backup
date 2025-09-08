@@ -4,6 +4,7 @@
 =======
 import React from 'react',
 import Head from 'next/head';
+<<<<<<<< HEAD:backup-problematic-files/temp_conflicts/pages/api-observability.tsx.backup
 import { Shield, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import { Button  } from '../components/ui/Button';
@@ -12,6 +13,18 @@ export default function ApiObservabilityPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability')),
   if (!service) return null,
 >>>>>>> origin/cursor/delete-old-data-records-6bba
+========
+import { Phone, Mail, MapPin, Check, ArrowRight, Activity } from 'lucide-react';
+const Layout = ({ children }: { children: React.ReactNode }) => <>
+  {children}
+</>;
+
+
+
+export default function UptimeSLOMonitorPage() {
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/uptime-slo-monitor'));
+  if (!service) return null;
+>>>>>>>> origin/cursor/build-and-dependency-installation-failure-6ae3:pages/uptime-slo-monitor.tsx
 
   return (
     <UltraFuturisticBackground variant="quantum" intensity={1.5}>
