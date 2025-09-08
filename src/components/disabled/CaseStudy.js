@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { CASE_STUDIES } from "@/data/case-studies";
-import { SEO } from "@/components/SEO";
+import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 export default function CaseStudy() {
@@ -11,9 +11,10 @@ export default function CaseStudy() {
     if (!study) {
         return (<div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
         Case study not found.
-      </div>)}
-    return (<React.Fragment>
-      <SEO title={study.title} description={study.excerpt}/>
+      </div>);
+    }
+    return (<>
+      <SEOHead title={study.title} description={study.excerpt}/>
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <div className="container mx-auto max-w-3xl">
           <Button variant="outline" className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" asChild>

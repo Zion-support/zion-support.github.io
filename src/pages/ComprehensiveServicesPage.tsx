@@ -85,13 +85,13 @@ export default function ComprehensiveServicesPage() {
   };
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-background">
-      <SEO 
-        title="All Services - Zion Tech Group" 
-        description="Explore our comprehensive suite of AI services, IT solutions, Micro SAAS platforms, and digital transformation services."
-        keywords="AI services, IT services, Micro SAAS, digital transformation, business solutions, technology services"
-      />
+    <div className="min-h-screen bg-zion-blue-dark">
+              <SEOHead 
+          title="Comprehensive Micro SAAS Solutions - Zion Tech Group" 
+          description="Discover our extensive portfolio of innovative micro SAAS, IT, and AI services designed to transform your business operations and drive growth"
+          keywords="micro SAAS, IT services, AI solutions, Zion Tech Group"
+          url="https://ziontechgroup.com/comprehensive-services"
+        />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 md:py-32 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light">
@@ -683,14 +683,12 @@ export default function ComprehensiveServicesPage() {
 
   return (
     <>
-      <SEO 
-        title="Comprehensive Tech Services - Zion Tech Group" 
-        description="Discover our comprehensive suite of AI, cybersecurity, cloud, and digital transformation services. Expert solutions for modern businesses."
-        keywords="AI services, cybersecurity, cloud solutions, digital transformation, IT services, micro SAAS"
-        canonical="https://ziontechgroup.com/services"
+      <SEOHead 
+        title="Comprehensive Services - Zion Tech Group" 
+        description="Discover our complete range of micro SAAS, IT services, and AI solutions. Transform your business with cutting-edge technology."
+        keywords="micro SAAS, IT services, AI solutions, technology services, business solutions"
       />
-      
-      <Header />
+      <FuturisticNavigation />
       
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         {/* Hero Section */}

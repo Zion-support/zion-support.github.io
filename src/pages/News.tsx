@@ -2200,6 +2200,125 @@ export default function News() {
     'Awards'
   ];
 
+      title: "Zion Tech Group Launches Revolutionary AI-Powered Business Intelligence Platform",
+      excerpt: "Our latest AI platform transforms how businesses analyze data and make decisions, featuring advanced machine learning algorithms and real-time analytics.",
+      category: "Product Launch",
+      date: "2025-01-15",
+      readTime: "5 min read",
+      image: "🤖",
+      featured: true
+    },
+    {
+      id: 2,
+      title: "Zion Tech Group Named Top 10 AI Companies to Watch in 2025",
+      excerpt: "Industry recognition for our innovative approach to artificial intelligence and machine learning solutions that are reshaping enterprise technology.",
+      category: "Company News",
+      date: "2025-01-10",
+      readTime: "3 min read",
+      image: "🏆",
+      featured: false
+    },
+    {
+      id: 3,
+      title: "New Partnership with Global Cloud Provider Expands Our Reach",
+      excerpt: "Strategic partnership announcement that will enable us to deliver enhanced cloud solutions to clients worldwide with improved scalability and performance.",
+      category: "Partnerships",
+      date: "2025-01-08",
+      readTime: "4 min read",
+      image: "🤝",
+      featured: false
+    },
+    {
+      id: 4,
+      title: "Cybersecurity Innovation: Zero-Trust Architecture Implementation Guide",
+      excerpt: "Comprehensive guide on implementing zero-trust security architecture for modern enterprises, based on our successful client implementations.",
+      category: "Technical Insights",
+      date: "2025-01-05",
+      readTime: "8 min read",
+      image: "🔒",
+      featured: false
+    },
+    {
+      id: 5,
+      title: "Digital Transformation Success Story: Manufacturing Industry Case Study",
+      excerpt: "How we helped a leading manufacturer achieve 40% efficiency improvement through digital transformation and IoT integration.",
+      category: "Case Studies",
+      date: "2025-01-02",
+      readTime: "6 min read",
+      image: "🏭",
+      featured: false
+    },
+    {
+      id: 6,
+      title: "The Future of Quantum Computing in Enterprise Applications",
+      excerpt: "Exploring the potential of quantum computing and how businesses can prepare for this revolutionary technology shift.",
+      category: "Industry Insights",
+      date: "2024-12-28",
+      readTime: "7 min read",
+      image: "⚛️",
+      featured: false
+    }
+  ];
+
+  const pressReleases = [
+    {
+      title: "Zion Tech Group Secures $25M Series B Funding Round",
+      date: "2024-12-20",
+      summary: "Funding will accelerate product development and expand market presence in North America and Europe."
+    },
+    {
+      title: "New Executive Appointments Strengthen Leadership Team",
+      date: "2024-12-15",
+      summary: "Industry veterans join to drive innovation and strategic growth initiatives."
+    },
+    {
+      title: "Zion Tech Group Achieves SOC 2 Type II Compliance",
+      date: "2024-12-10",
+      summary: "Security certification demonstrates commitment to protecting client data and maintaining highest security standards."
+    }
+  ];
+
+  const categories = [
+    "All News",
+    "Product Launch",
+    "Company News", 
+    "Partnerships",
+    "Technical Insights",
+    "Case Studies",
+    "Industry Insights"
+  ];
+
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
+
+  return (
+    <>
+      <SEOHead 
+        title="News & Press - Zion Tech Group"
+        description="Stay updated with the latest news, product launches, company updates, and industry insights from Zion Tech Group."
+        keywords="news, press releases, company updates, AI news, technology news, Zion Tech Group"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl"></div>
+          </div>
+          
+          <motion.div 
+            className="max-w-7xl mx-auto text-center relative z-10"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header Section */}
@@ -2517,6 +2636,208 @@ export default function News() {
                       <ArrowRight className="w-5 h-5" />
                     </button>
                   </div>
+                </motion.article>
+              ))}
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Press Releases */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <motion.div 
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+                Press Releases
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Official announcements and company milestones
+              </p>
+            </motion.div>
+            
+            <motion.div 
+              className="grid grid-cols-1 lg:grid-cols-3 gap-8"
+              variants={staggerContainer}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+            >
+              {pressReleases.map((release, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
+                  variants={fadeInUp}
+                  whileHover={{ scale: 1.02 }}
+                >
+                  <div className="mb-4">
+                    <span className="text-blue-400 text-sm font-medium">Press Release</span>
+                  </div>
+                  
+                  <h3 className="text-lg font-semibold text-white mb-3 leading-tight">
+                    {release.title}
+                  </h3>
+                  
+                  <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                    {release.summary}
+                  </p>
+                  
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400 text-xs">{formatDate(release.date)}</span>
+                    <button className="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors duration-300">
+                      Read Full Release →
+                    </button>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Newsletter Signup */}
+        <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
+          <div className="max-w-4xl mx-auto text-center px-4">
+            <motion.h2 
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              Stay Updated
+            </motion.h2>
+            <motion.p 
+              className="text-xl text-gray-300 mb-8 leading-relaxed"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Subscribe to our newsletter for the latest news, insights, and updates from Zion Tech Group
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-6 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent backdrop-blur-lg"
+                  aria-label="Email address for newsletter"
+                />
+                <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
+                  Subscribe
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default News;
+      title: 'Zion Tech Group Named Top AI Company by Tech Innovation Awards',
+      excerpt: 'Recognition for our groundbreaking work in autonomous AI systems and machine learning solutions that are transforming industries worldwide.',
+      date: '2025-01-10',
+      category: 'Awards',
+      image: '/images/news/ai-awards.jpg'
+    },
+    {
+      id: 3,
+      title: 'Partnership Announced with Leading Healthcare Provider',
+      excerpt: 'Strategic collaboration to deploy AI-powered diagnostic tools across multiple healthcare facilities, improving patient outcomes and operational efficiency.',
+      date: '2025-01-05',
+      category: 'Partnerships',
+      image: '/images/news/healthcare-partnership.jpg'
+    },
+    {
+      id: 4,
+      title: 'New Research Paper on Quantum Machine Learning Published',
+      excerpt: 'Our research team publishes groundbreaking findings on the intersection of quantum computing and machine learning algorithms.',
+      date: '2024-12-28',
+      category: 'Research',
+      image: '/images/news/quantum-ml-research.jpg'
+    },
+    {
+      id: 5,
+      title: 'Zion Tech Group Expands Global Operations',
+      excerpt: 'Opening new offices in Europe and Asia to better serve our growing international client base and accelerate global innovation.',
+      date: '2024-12-20',
+      category: 'Company News',
+      image: '/images/news/global-expansion.jpg'
+    },
+    {
+      id: 6,
+      title: 'Cybersecurity Solutions Achieve Industry Certification',
+      excerpt: 'Our advanced cybersecurity platform receives SOC2 Type II certification, demonstrating the highest standards of security and compliance.',
+      date: '2024-12-15',
+      category: 'Security',
+      image: '/images/news/cybersecurity-certification.jpg'
+    }
+  ];
+
+  const categories = ['All', 'Product Launch', 'Awards', 'Partnerships', 'Research', 'Company News', 'Security'];
+
+  return (
+    <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="News & Updates - Zion Tech Group" 
+        description="Stay updated with the latest news, press releases, and announcements from Zion Tech Group"
+        keywords="news, updates, press releases, announcements, Zion Tech Group"
+        canonical="https://ziontechgroup.com/news"
+      />
+
+      <div className="container mx-auto px-4 py-12">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gradient">
+            News & Updates
+          </h1>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Stay informed about the latest developments, product launches, partnerships, 
+            and innovations from Zion Tech Group as we continue to shape the future of technology.
+          </p>
+        </div>
+
+        {/* Featured News */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8">Featured News</h2>
+          {newsItems.filter(item => item.featured).map((item) => (
+            <div key={item.id} className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-3xl p-8 border border-cyan-500/20">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="px-3 py-1 bg-cyan-500 text-white text-sm font-medium rounded-full">
+                      {item.category}
+                    </span>
+                    <span className="text-gray-400 text-sm">
+                      {new Date(item.date).toLocaleDateString('en-US', { 
+                        year: 'numeric', 
+                        month: 'long', 
+                        day: 'numeric' 
+                      })}
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
+                  <p className="text-gray-300 text-lg leading-relaxed mb-6">{item.excerpt}</p>
+                  <Link 
+                    to={`/news/${item.id}`}
+                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 font-medium"
+                  >
+                    Read Full Article
+                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
                 </div>
               </article>
             ))}

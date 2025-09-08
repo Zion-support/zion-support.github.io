@@ -2,9 +2,13 @@ import { SEO } from '@/components/SEO';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent';
 function ContractBuilderPage() {
-    return (<ProtectedRoute>
-  {/* Empty JSX fragment */}
-        <SEO title="Smart Contract Builder | Zion AI Marketplace" description="Create and deploy blockchain-backed smart contracts for your projects"/>
+  return (
+    <ProtectedRoute>
+      <>
+        <SEOHead 
+          title="Smart Contract Builder | Zion AI Marketplace" 
+          description="Create and deploy blockchain-backed smart contracts for your projects"
+        />
         
         
         <main className="container mx-auto py-10 px-4">

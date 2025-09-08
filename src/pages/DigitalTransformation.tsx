@@ -947,7 +947,7 @@ export default function DigitalTransformation() {
 =======
 >>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     <div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO 
+      <SEOHead 
         title="Digital Transformation Services - Zion Tech Group" 
         description="Transform your business with comprehensive digital transformation services including process automation, legacy modernization, and change management."
         keywords="digital transformation, process automation, legacy modernization, change management, technology strategy"

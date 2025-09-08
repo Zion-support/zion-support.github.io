@@ -1,5 +1,8 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import SEOHead from "@/components/SEOHead";
 import { 
   PenTool, 
   FileText, 
@@ -44,6 +47,27 @@ export default function AIContentGenerator() {
 
   const contentTypes = [
     {
+import SEOHead from "@/components/SEOHead";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Check, Brain, Zap, FileText, Globe, Users, Shield, Clock, Star } from "lucide-react";
+import { Link } from "react-router-dom";
+
+export default function AIContentGenerator() {
+  const features = [
+    "AI-powered content generation for any industry",
+    "SEO-optimized content with keyword research",
+    "Multiple content formats (blogs, social media, emails)",
+    "Brand voice customization and consistency",
+    "Plagiarism-free, original content",
+    "Real-time content optimization",
+    "Multi-language support (100+ languages)",
+    "Content calendar and scheduling",
+    "Performance analytics and insights",
+    "Team collaboration tools",
+    "API access for enterprise integration",
+    "24/7 customer support"
       title: "Blog Posts",
       description: "Long-form articles and blog content",
       icon: <FileText className="h-8 w-8 text-blue-500"/>
@@ -125,8 +149,8 @@ export default function AIContentGenerator() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
-      <SEO 
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-purple-dark to-zion-slate-dark">
+      <SEOHead 
         title="AI Content Generator - Zion Tech Group" 
         description="Generate high-quality, SEO-optimized content with our AI-powered writing assistant. Create blogs, social media posts, and marketing copy in seconds." 
         keywords="AI content generator, content writing, AI writing assistant, content creation, Zion Tech Group" 

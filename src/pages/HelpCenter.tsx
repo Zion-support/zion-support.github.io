@@ -2642,10 +2642,166 @@ function CreditCard(props: React.SVGProps<SVGSVGElement>) {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="Help Center | Zion Tech Group" 
-        description="Get help and support for using the Zion Tech Group platform. Find answers to frequently asked questions and contact our support team."
-        keywords="help, support, FAQ, customer service, Zion Tech Group"
+      <SEOHead 
+        title="Help Center - Zion Tech Group" 
+        description="Get help and support for using Zion Tech Group's AI and tech marketplace platform."
+        keywords="help, support, documentation, Zion Tech Group, AI marketplace, tech services"
+        canonical="https://ziontechgroup.com/help-center"
+      />
+      
+      <AppHeader />
+      
+      <main className="pt-16 pb-20">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Help Center
+            </h1>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
+              Find answers, tutorials, and support resources to help you make the most of Zion Tech Group
+            </p>
+            
+            {/* Search Bar */}
+            <div className="max-w-2xl mx-auto">
+              <div className="relative">
+import { Link } from 'react-router-dom';
+import { CogIcon } from '@heroicons/react/24/outline';
+
+const $page: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="flex justify-center mb-6">
+            <div className="p-3 bg-blue-600/20 rounded-full">
+              <CogIcon className="h-12 w-12 text-blue-400" />
+            </div>
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            $page
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            This page is under development. Contact us for more information.
+          </p>
+          <Link
+            to="/contact"
+            className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
+          >
+            Contact Us for More Information
+          </Link>
+        </div>
+          {/* Support Channels */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-12">Get Support</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {supportChannels.map((channel) => {
+                const IconComponent = channel.icon;
+                return (
+                  <div key={channel.title} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <IconComponent className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">{channel.title}</h3>
+                    <p className="text-gray-300 mb-4">{channel.description}</p>
+                    <div className="space-y-2 text-sm">
+                      <p className="text-blue-400 font-semibold">{channel.contact}</p>
+                      <p className="text-gray-400">{channel.availability}</p>
+                      <p className="text-gray-400">Response: {channel.response}</p>
+                    </div>
+                  </div>
+                );
+              })}
+import { AppLayout } from "@/layout/AppLayout";
+import SEOHead from "@/components/SEOHead";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Search, MessageCircle, BookOpen, Users, Settings, Shield, CreditCard, HelpCircle } from "lucide-react";
+import { Link } from "react-router-dom";
+
+export default function HelpCenter() {
+  const helpCategories = [
+    {
+      title: "Getting Started",
+      description: "Learn the basics of using Zion marketplace",
+      icon: BookOpen,
+      color: "text-zion-cyan"
+    },
+    {
+      title: "Account & Billing",
+      description: "Manage your account and payment methods",
+      icon: CreditCard,
+      color: "text-zion-purple"
+    },
+    {
+      title: "Marketplace",
+      description: "Buy, sell, and discover products",
+      icon: Search,
+      color: "text-zion-green"
+    },
+    {
+      title: "Community",
+      description: "Connect with other users and get help",
+      icon: Users,
+      color: "text-zion-orange"
+    },
+    {
+      title: "Security & Privacy",
+      description: "Learn about our security measures",
+      icon: Shield,
+      color: "text-zion-red"
+    },
+    {
+      title: "Technical Support",
+      description: "Get help with technical issues",
+      icon: Settings,
+      color: "text-zion-blue"
+    }
+  ];
+
+  const faqs = [
+    {
+      question: "How do I create an account on Zion?",
+      answer: "Creating an account is simple! Click the 'Sign Up' button in the top right corner, choose whether you're a client or talent, fill in your details, and verify your email address."
+    },
+    {
+      question: "What services does Zion offer?",
+      answer: "Zion offers a comprehensive marketplace for AI and tech services, including talent hiring, equipment sales, service listings, and community forums. We specialize in connecting AI professionals with businesses."
+    },
+    {
+      question: "How do I post a job or service request?",
+      answer: "To post a job or service request, go to the 'Services' section, click 'Post a Request', fill in the details including requirements, budget, and timeline, then submit for review."
+    },
+    {
+      question: "Is Zion free to use?",
+      answer: "Yes! Zion is completely free to use for basic marketplace features. We offer premium features for advanced users and businesses, but the core platform is free."
+    },
+    {
+      question: "How do I contact customer support?",
+      answer: "You can reach our support team through the chat widget at the bottom right of any page, by emailing support@ziontechgroup.com, or by scheduling a call through the Contact page."
+    },
+    {
+      question: "What payment methods are accepted?",
+      answer: "We accept all major credit cards, PayPal, and bank transfers. For enterprise clients, we also offer invoicing and payment terms."
+    },
+    {
+      question: "How do I verify my identity?",
+      answer: "Identity verification helps build trust. Go to your profile settings, upload a government-issued ID, and complete the verification process. This typically takes 24-48 hours."
+    },
+    {
+      question: "Can I use Zion internationally?",
+      answer: "Yes! Zion is available worldwide. We support multiple currencies and languages, making it easy to connect with talent and clients globally."
+    }
+  ];
+
+  return (
+    <AppLayout>
+      <SEOHead 
+        title="Help Center - Zion Tech Group Support" 
+        description="Get help and support for using the Zion AI and tech marketplace. Find answers to common questions and contact our support team." 
+        keywords="help center, support, FAQ, Zion marketplace, customer service"
         canonical="https://ziontechgroup.com/help"
       />
 

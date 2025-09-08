@@ -1,6 +1,7 @@
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
+import React from "react";
+import { FuturisticNavigation } from "@/components/FuturisticNavigation";
+import { FuturisticFooter } from "@/components/FuturisticFooter";
+import SEOHead from "@/components/SEOHead";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
@@ -12,11 +13,11 @@ export default function Ecommerce() {
         "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
         "url": "https://app.ziontechgroup.com/features/e-commerce"
     };
-    return (<React.Fragment>
-      <SEO title="E-commerce Platform" description="Buy and sell hardware, software and services in the Zion marketplace." keywords="tech marketplace, buy IT hardware, sell AI solutions" canonical="https://app.ziontechgroup.com/features/e-commerce"/>
+    return (<>
+      <SEOHead title="E-commerce Platform" description="Buy and sell hardware, software and services in the Zion marketplace." keywords="tech marketplace, buy IT hardware, sell AI solutions" canonical="https://app.ziontechgroup.com/features/e-commerce"/>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
-      <Header />
+      <FuturisticNavigation />
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md:px-6">
           <GradientHeading className="mb-4 text-center">E-commerce Platform</GradientHeading>

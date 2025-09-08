@@ -1,5 +1,5 @@
 import { IntegrationsHub } from "@/components/integrations/IntegrationsHub";
-import { SEO } from "@/components/SEO";
+import SEOHead from "@/components/SEOHead";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function IntegrationsPage() {
     return (<ProtectedRoute adminOnly={true}>

@@ -1,7 +1,7 @@
 import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard";
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter } from "next/router";
-import { SEO } from "@/components/SEO";
+import SEOHead from "@/components/SEOHead";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function EnterpriseBilling() {
     const { user } = useAuth();
@@ -15,8 +15,15 @@ export default function EnterpriseBilling() {
         }
         return null;
     }
-    return (<ProtectedRoute>
-      <SEO title="Enterprise Billing - Zion AI Marketplace" description="Manage your subscription, view invoice history, and download billing statements."/>
+    return null;
+  }
+
+  return (
+    <ProtectedRoute>
+      <SEOHead 
+        title="Enterprise Billing - Zion AI Marketplace"
+        description="Manage your subscription, view invoice history, and download billing statements."
+      />
       
       <main className="min-h-screen bg-background">
         <BillingDashboard />

@@ -5,9 +5,14 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ResumeWizard } from '@/components/resume-builder/ResumeWizard';
 import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder';
 function PortfolioBuilderContent() {
-    const [activeTab, setActiveTab] = useState('resume');
-    return (<React.Fragment>
-      <SEO title="Portfolio Builder | Zion AI Marketplace" description="Create and customize your resume and portfolio to showcase your skills and experience."/>
+  const [activeTab, setActiveTab] = useState('resume');
+  
+  return (
+    <>
+      <SEOHead 
+        title="Portfolio Builder | Zion AI Marketplace" 
+        description="Create and customize your resume and portfolio to showcase your skills and experience." 
+      />
       
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-8">Resume & Portfolio Builder</h1>

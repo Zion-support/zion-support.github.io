@@ -32,7 +32,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 >>>>>>> origin/main
 import { 
   X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, 
-  Shield, Handshake, ChevronDown, ChevronRight, Brain, Cpu, Database, Network, Code, Palette, 
+  Shield, Users, ChevronDown, ChevronRight, Brain, Cpu, Database, Network, Code, Palette, 
   Target, Rocket, Eye, DollarSign, ShoppingCart, Clock, Cloud, Search, Building, Zap, Heart, 
   Lightbulb, TrendingUp, BarChart3, Lock, AlertTriangle, Server, CheckCircle, Truck, Car, 
   TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, 
@@ -56,7 +56,7 @@ import React, { useState } from 'react';
 =======
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Rocket, Building, Target, Zap, Database, Network, Cloud, Lock, BarChart3, Palette, Smartphone, Server, Github, Youtube } from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Users, Brain, Cpu, Rocket, Building, Target, Zap, Database, Network, Cloud, Lock, BarChart3, Palette, Smartphone, Server, Github, Youtube } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { 
@@ -70,46 +70,73 @@ import {
   Settings, 
   FileText, 
   HelpCircle, 
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Database, Network, Zap, Target, Rocket, Cloud, Github } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Rocket, Zap, ChevronRight, ChevronDown } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Cloud, Database, Code, BarChart3, Target, Heart, Building, Rocket, Lock, Network, Eye, Workflow, Palette, Server, Clock, Zap, Star, TrendingUp, ShoppingCart, Calendar, Video, FileText } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Database, Cloud, Lock, BookOpen, FileText, Calendar, HelpCircle, Settings, Star, TrendingUp, Rocket, Cpu, Network, Server, Code, Palette, Target, Lightbulb, Github } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, ShoppingCart, Code, DollarSign } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Database, Cpu, Lock, Rocket, BookOpen, FileText, Calendar, HelpCircle, Settings, BarChart3, Target, Building2, Heart, Car, Factory, ShoppingCart, GraduationCap, Microscope, Truck, Plane, Satellite, Atom, Cloud, Signal, Github, Link as LinkIcon } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Rocket, Building, Target, Zap, Database, Network, Cloud, Lock, BarChart3, Palette, Smartphone, Server, Github, Youtube } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Zap, FileText, HelpCircle, Settings, Rocket, Brain, Database, Lock, Cloud, Code, BarChart3, Palette, Target, Lightbulb, BookOpen, Calendar, MessageSquare, Star, Award, TrendingUp, Cpu, Network, Server, ShieldCheck, Globe2, Smartphone, Wifi, Satellite, Atom, TestTube, Microscope, Car, Plane, Ship, Truck, Building2, Heart, Pill, Stethoscope, Gavel, Scale, Factory, Cog, Bot, Eye, Key, QrCode, Wallet, Coins, Leaf, Sun, Wind, Store, Cookie, Github } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Cloud, Database, Network, Settings, BookOpen, MessageCircle, FileText, Star, Rocket, Target, Lightbulb, CheckCircle, Eye } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Github, Youtube, Shield, Handshake } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Eye } from 'lucide-react';
-=======
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Cloud, Lock, Code, Rocket, Target, Lightbulb, Sparkles } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Rocket, Target } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Rocket, BookOpen, HelpCircle, Settings, Star, Cloud, Code } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Rocket, BookOpen, FileText, TrendingUp, ArrowRight, Cloud, Calendar } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Network, Brain, BarChart3, Zap, Database, Command } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, FileText } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Shield, Handshake, Github } from 'lucide-react';
-=======
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Atom, Server, Database, Package, Building, Rocket } from 'lucide-react';
->>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+  MessageSquare, 
+  BarChart3, 
+  ShoppingCart, 
+  Wrench, 
+  Globe, 
+  Building, 
+  Code, 
+  Shield, 
+  Zap, 
+  ChevronRight, 
+  ChevronDown,
+  Star,
+  Rocket,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  Brain,
+  Leaf,
+  Smartphone,
+  DollarSign,
+  BookOpen,
+  Video,
+  FileSearch,
+  Lightbulb,
+  Target,
+  Users2,
+  Users,
+  Award,
+  TrendingUp,
+  Palette,
+  Monitor,
+  Server,
+  Cloud,
+  Key,
+  Eye,
+  ShieldCheck,
+  Bug,
+  Activity,
+  PieChart,
+  BarChart,
+  LineChart,
+  Map,
+  Calendar,
+  Clock,
+  Mail,
+  MapPin
+} from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Users, Brain, Cpu, Database, Network, Zap, Target, Rocket, Cloud, Github } from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Users, Brain, Cpu, Rocket, Zap, ChevronRight, ChevronDown } from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Users, Brain, Cpu, Cloud, Database, Code, BarChart3, Target, Heart, Building, Rocket, Lock, Network, Eye, Workflow, Palette, Server, Clock, Zap, Star, TrendingUp, ShoppingCart, Calendar, Video, FileText } from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Users, Brain, Zap, Database, Cloud, Lock, BookOpen, FileText, Calendar, HelpCircle, Settings, Star, TrendingUp, Rocket, Cpu, Network, Server, Code, Palette, Target, Lightbulb, Github } from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Users, ShoppingCart, Code, DollarSign } from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Users, Brain, Zap, Database, Cpu, Lock, Rocket, BookOpen, FileText, Calendar, HelpCircle, Settings, BarChart3, Target, Building2, Heart, Car, Factory, ShoppingCart, GraduationCap, Microscope, Truck, Plane, Satellite, Atom, Cloud, Signal, Github, Link as LinkIcon } from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Users, Brain, Cpu, Rocket, Building, Target, Zap, Database, Network, Cloud, Lock, BarChart3, Palette, Smartphone, Server, Github, Youtube } from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Users, Zap, FileText, HelpCircle, Settings, Rocket, Brain, Database, Lock, Cloud, Code, BarChart3, Palette, Target, Lightbulb, BookOpen, Calendar, MessageSquare, Star, Award, TrendingUp, Cpu, Network, Server, ShieldCheck, Globe2, Smartphone, Wifi, Satellite, Atom, TestTube, Microscope, Car, Plane, Ship, Truck, Building2, Heart, Pill, Stethoscope, Gavel, Scale, Factory, Cog, Bot, Eye, Key, QrCode, Wallet, Coins, Leaf, Sun, Wind, Store, Cookie, Github } from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Users, Brain, Zap, Cloud, Database, Network, Settings, BookOpen, MessageCircle, FileText, Star, Rocket, Target, Lightbulb, CheckCircle, Eye } from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Github, Youtube, Shield, Users } from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Users, Eye } from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Users, Brain, Cpu, Cloud, Lock, Code, Rocket, Target, Lightbulb, Sparkles } from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Users, Brain, Cpu, Rocket, Target } from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Users, Brain, Zap, Rocket, BookOpen, HelpCircle, Settings, Star, Cloud, Code } from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Users, Brain, Zap, Rocket, BookOpen, FileText, TrendingUp, ArrowRight, Cloud, Calendar } from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Users, Network, Brain, BarChart3, Zap, Database, Command } from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Users, FileText } from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Shield, Users, Github } from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Users, Brain, Atom, Server, Database, Package, Building, Rocket } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 
@@ -411,6 +438,367 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
         { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Briefcase },
+        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe }
+      ]
+    },
+    {
+        { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
+        { name: 'AI Business Platform', path: '/ai-autonomous-business-platform', icon: Briefcase },
+        { name: 'Business Intelligence', path: '/services/business-intelligence', icon: Briefcase },
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Briefcase },
+        { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', icon: Briefcase },
+        { name: 'AI Legal Tech', path: '/services/ai-legal-tech', icon: Briefcase },
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Briefcase },
+        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Briefcase },
+        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase },
+      title: 'AI & Technology',
+      items: [
+        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
+        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain },
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
+        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Brain },
+        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Brain },
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Brain },
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Brain },
+        { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', icon: Brain },
+        { name: 'AI Legal Tech', path: '/services/ai-legal-tech', icon: Brain },
+        { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics', icon: Brain }
+      ]
+    },
+    {
+      title: 'Infrastructure & Security',
+      items: [
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+      title: 'AI Services',
+      items: [
+        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Cpu },
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Zap },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', icon: Zap },
+        { name: 'AI Content Generation', path: '/ai-content-generator', icon: Brain },
+        { name: 'AI Code Review', path: '/ai-code-review', icon: Cpu },
+        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain },
+        { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Brain },
+        { name: 'AI Autonomous Business Platform', path: '/ai-autonomous-business-platform', icon: Brain },
+        { name: 'AI Autonomous Research', path: '/ai-autonomous-research', icon: Brain },
+        { name: 'AI Autonomous Systems Platform', path: '/ai-autonomous-systems-platform', icon: Brain },
+        { name: 'AI Autonomous Code Review', path: '/ai-autonomous-code-review', icon: Cpu },
+        { name: 'AI Autonomous Creative Director', path: '/ai-autonomous-creative-director', icon: Brain },
+        { name: 'AI Autonomous Data', path: '/ai-autonomous-data', icon: Database },
+        { name: 'AI Autonomous Decision Engine', path: '/ai-autonomous-decision-engine', icon: Brain },
+        { name: 'AI Autonomous Decision Platform', path: '/ai-autonomous-decision-platform', icon: Brain },
+        { name: 'AI Autonomous DevOps', path: '/ai-autonomous-devops', icon: Cpu },
+        { name: 'AI Autonomous Education Professor', path: '/ai-autonomous-education-professor', icon: Users },
+        { name: 'AI Autonomous Healthcare Physician', path: '/ai-autonomous-healthcare-physician', icon: Users },
+        { name: 'AI Autonomous Learning System', path: '/ai-autonomous-learning-system', icon: Brain },
+        { name: 'AI Autonomous Legal Counsel', path: '/ai-autonomous-legal-counsel', icon: Users },
+        { name: 'AI Autonomous Logistics', path: '/ai-autonomous-logistics', icon: Globe },
+        { name: 'AI Autonomous Manufacturing', path: '/ai-autonomous-manufacturing', icon: Cpu },
+        { name: 'AI Autonomous Robotics', path: '/ai-autonomous-robotics', icon: Cpu },
+        { name: 'AI Autonomous Scientific Researcher', path: '/ai-autonomous-scientific-researcher', icon: Brain },
+        { name: 'AI Autonomous Security', path: '/ai-autonomous-security', icon: Shield },
+        { name: 'AI Autonomous Testing', path: '/ai-autonomous-testing', icon: Cpu },
+        { name: 'AI Autonomous Vehicle Platform', path: '/ai-autonomous-vehicle-platform', icon: Rocket },
+        { name: 'AI Autonomous Vehicle', path: '/ai-autonomous-vehicle', icon: Rocket },
+        { name: 'AI Autonomous Vehicles Platform', path: '/ai-autonomous-vehicles-platform', icon: Rocket },
+        { name: 'AI Autonomous Vehicles', path: '/ai-autonomous-vehicles', icon: Rocket },
+        { name: 'AI Autonomous Venture Capitalist', path: '/ai-autonomous-venture-capitalist', icon: Users }
+        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield },
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe }
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Cpu },
+        { name: 'Cloud DevOps', path: '/cloud-devops', icon: Cpu },
+        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Cpu },
+        { name: 'Network Infrastructure', path: '/services/network-infrastructure', icon: Cpu },
+        { name: 'Managed IT Services', path: '/services/managed-it-services', icon: Cpu },
+        { name: 'DevOps Automation', path: '/services/devops-automation', icon: Cpu },
+        { name: 'Cloud Migration', path: '/services/cloud-migration', icon: Cpu }
+      title: 'Core Services',
+      items: [
+        { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
+        { name: 'Cybersecurity', path: '/cybersecurity', icon: Shield },
+        { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Cloud },
+        { name: 'Quantum Technology', path: '/quantum-technology', icon: Zap },
+        { name: 'Enterprise Solutions', path: '/enterprise-solutions', icon: Briefcase },
+        { name: 'IT Infrastructure', path: '/it-infrastructure', icon: Settings }
+      ]
+    },
+    {
+      title: 'AI Autonomous Systems',
+      items: [
+        { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Brain },
+        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: BookOpen },
+        { name: 'AI Code Review', path: '/ai-autonomous-code-review', icon: Code },
+        { name: 'AI Creative Director', path: '/ai-autonomous-creative-director', icon: Star },
+        { name: 'AI Decision Engine', path: '/ai-autonomous-decision-engine', icon: Zap },
+        { name: 'AI Autonomous Systems Platform', path: '/ai-autonomous-systems-platform', icon: Rocket }
+      ]
+    },
+    {
+      title: 'Innovative Services',
+      items: [
+        { name: 'Innovative Services Showcase', path: '/innovative-services-showcase', icon: Rocket },
+        { name: 'Comprehensive Services', path: '/comprehensive-services-overview', icon: Briefcase },
+        { name: 'Micro SaaS Solutions', path: '/micro-saas-solutions', icon: Globe },
+        { name: 'Emerging Technology', path: '/emerging-tech', icon: Zap },
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
+        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Settings }
+      ]
+    },
+    {
+      title: 'Industry Solutions',
+      items: [
+      items: [
+        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Briefcase },
+        { name: '5G Enterprise Network', path: '/5g-enterprise-network', icon: Briefcase },
+        { name: '5G Network Optimization', path: '/5g-network-optimization', icon: Briefcase },
+        { name: '5G Private Network Solutions', path: '/5g-private-network-solutions', icon: Briefcase },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Briefcase },
+        { name: 'Cloud DevOps', path: '/cloud-devops', icon: Briefcase }
+      ]
+    },
+    {
+      title: 'Cybersecurity & Compliance',
+      items: [
+        { name: 'Cybersecurity Services', path: '/services/cybersecurity', icon: Shield },
+        { name: 'Advanced Cybersecurity Suite', path: '/advanced-cybersecurity-suite', icon: Shield },
+        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield },
+        { name: 'Accessibility Auditor', path: '/accessibility-auditor', icon: Eye }
+      ]
+    },
+    {
+      title: 'Other Services',
+      items: [
+        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
+        { name: 'Emerging Technology', path: '/emerging-tech', icon: Globe },
+        { name: 'Industry Solutions', path: '/services/industry-solutions', icon: Globe }
+      ]
+    },
+    {
+      title: 'Technology Services',
+      items: [
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
+        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Briefcase },
+        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Database },
+        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield },
+        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Network },
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Cpu },
+        { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Cloud },
+        { name: 'Digital Transformation', path: '/digital-transformation', icon: Zap },
+        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Briefcase },
+        { name: 'Emerging Technology', path: '/emerging-tech', icon: Rocket },
+        { name: 'Space Technology', path: '/space-tech', icon: Rocket },
+        { name: 'Research & Development', path: '/research-development', icon: Brain }
+      ]
+    },
+    {
+      title: 'AI Specialized Solutions',
+      items: [
+        { name: 'AI Biomedical Research', path: '/ai-biomedical-research', icon: Heart },
+        { name: 'AI Biotech Drug Discovery', path: '/ai-biotech-drug-discovery', icon: TestTube },
+        { name: 'AI Blockchain Analytics', path: '/ai-blockchain-analytics', icon: Database },
+        { name: 'AI Blockchain Governance', path: '/ai-blockchain-governance', icon: Shield },
+        { name: 'AI Brain Computer Interface', path: '/ai-brain-computer-interface', icon: Brain },
+        { name: 'AI Brain Interface', path: '/ai-brain-interface', icon: Brain },
+        { name: 'AI Brand Personality Generator', path: '/ai-brand-personality-generator', icon: Palette },
+        { name: 'AI Business Intelligence Elite', path: '/ai-business-intelligence-elite', icon: BarChart3 },
+        { name: 'AI Business Intelligence Pro', path: '/ai-business-intelligence-pro', icon: BarChart3 },
+        { name: 'AI Business Intelligence Suite', path: '/ai-business-intelligence-suite', icon: BarChart3 },
+        { name: 'AI Business Intelligence', path: '/ai-business-intelligence', icon: BarChart3 },
+        { name: 'AI Climate Prediction Engine', path: '/ai-climate-prediction-engine', icon: Globe },
+        { name: 'AI Climate Prediction Platform', path: '/ai-climate-prediction-platform', icon: Globe },
+        { name: 'AI Climate Prediction', path: '/ai-climate-prediction', icon: Globe },
+        { name: 'AI Code Generation Enterprise', path: '/ai-code-generation-enterprise', icon: Code },
+        { name: 'AI Code Review Copilot', path: '/ai-code-review-copilot', icon: Code },
+        { name: 'AI Code Review', path: '/ai-code-review', icon: Code },
+        { name: 'AI Compliance Automation', path: '/ai-compliance-automation', icon: Shield },
+        { name: 'AI Computer Vision Platform', path: '/ai-computer-vision-platform', icon: Eye },
+        { name: 'AI Consciousness Evolution', path: '/ai-consciousness-evolution', icon: Brain },
+        { name: 'AI Consciousness Evolution Platform', path: '/ai-consciousness-evolution-platform', icon: Brain },
+        { name: 'AI Consciousness Simulation Platform', path: '/ai-consciousness-simulation-platform', icon: Brain },
+        { name: 'AI Consciousness Simulation', path: '/ai-consciousness-simulation', icon: Brain },
+        { name: 'AI Consciousness Simulator', path: '/ai-consciousness-simulator', icon: Brain },
+        { name: 'AI Content Creation Revolution', path: '/ai-content-creation-revolution', icon: PenTool },
+        { name: 'AI Content Creation', path: '/ai-content-creation', icon: PenTool },
+        { name: 'AI Content Factory', path: '/ai-content-factory', icon: Building2 },
+        { name: 'AI Content Generation Automation', path: '/ai-content-generation-automation', icon: PenTool },
+        { name: 'AI Content Generation Pro', path: '/ai-content-generation-pro', icon: PenTool },
+        { name: 'AI Content Generator', path: '/ai-content-generator', icon: PenTool },
+        { name: 'AI Content Marketing Automation', path: '/ai-content-marketing-automation', icon: TrendingUp },
+        { name: 'AI Content Personalization Engine', path: '/ai-content-personalization-engine', icon: Target },
+        { name: 'AI Creativity Studio', path: '/ai-creativity-studio', icon: Palette },
+        { name: 'AI Market Research', path: '/ai-market-research', icon: Search },
+        { name: 'AI Powered Enterprise Security', path: '/ai-powered-enterprise-security', icon: Shield },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', icon: Zap }
+      ]
+    },
+    {
+      title: 'Core Services',
+      items: [
+        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+        { name: 'Advanced Cybersecurity Suite', path: '/advanced-cybersecurity-suite', icon: Shield },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Server },
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Atom },
+        { name: 'Quantum Neural Network Platform', path: '/quantum-neural-network-platform', icon: Brain },
+        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
+        { name: 'Industry Solutions', path: '/services/industry-solutions', icon: Building },
+        { name: 'Accessibility Auditor', path: '/accessibility-auditor', icon: Eye },
+        { name: 'Affiliate Attribution Hub', path: '/affiliate-attribution-hub', icon: BarChart3 },
+        { name: 'SOC2 Compliance Automation', path: '/soc2-compliance-automation', icon: Shield },
+        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Network },
+        { name: 'Autonomous Business Operations Platform', path: '/autonomous-business-operations-platform', icon: Briefcase },
+        { name: 'AI Powered IT Asset Management', path: '/ai-powered-it-asset-management', icon: Database }
+      title: 'AI & Autonomous Systems',
+      items: [
+        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
+        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain },
+        { name: 'AI Business Manager', path: '/services/ai-autonomous-business-manager', icon: Brain },
+        { name: 'AI Business Platform', path: '/services/ai-autonomous-business-platform', icon: Brain },
+        { name: 'AI Code Review', path: '/services/ai-autonomous-code-review', icon: Code },
+        { name: 'AI Creative Director', path: '/services/ai-autonomous-creative-director', icon: Palette },
+        { name: 'AI Workflow Automation', path: '/services/ai-workflow-automation', icon: Workflow },
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Target },
+        { name: 'AI Content Generation', path: '/services/ai-content-generation-automation', icon: Code },
+        { name: 'AI Consciousness Evolution', path: '/services/ai-consciousness-evolution', icon: Brain }
+      ]
+    },
+    {
+      title: 'Technology & Infrastructure',
+      items: [
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Brain },
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Lock },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Server },
+        { name: 'Cloud DevOps', path: '/cloud-devops', icon: Cloud },
+        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Network },
+        { name: 'Network Infrastructure', path: '/services/network-infrastructure', icon: Network },
+        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe }
+      ]
+    },
+    {
+      title: 'Emerging Technologies',
+      items: [
+        { name: 'Blockchain Solutions', path: '/services/blockchain-enterprise-solutions', icon: Brain },
+        { name: 'IoT Data Analytics', path: '/services/iot-data-analytics', icon: Network },
+        { name: 'AR/VR Solutions', path: '/services/ar-vr-solutions', icon: Eye },
+        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Building },
+        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Database },
+        { name: 'Emerging Technology', path: '/emerging-tech', icon: Rocket }
+      ]
+    },
+    {
+      title: 'Solutions & Industries',
+      items: [
+        { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
+        { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart },
+        { name: 'Financial Solutions', path: '/solutions/financial', icon: TrendingUp },
+        { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', icon: Cpu },
+        { name: 'Retail Solutions', path: '/solutions/retail', icon: ShoppingCart },
+        { name: 'Government Solutions', path: '/solutions/government', icon: Building },
+        { name: 'Digital Transformation', path: '/digital-transformation', icon: Rocket }
+      title: 'AI & Technology Services',
+      items: [
+        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
+        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain },
+        { name: 'Agentic RAG Helpdesk', path: '/agentic-rag-helpdesk', icon: MessageCircle },
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Zap },
+        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Rocket },
+        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Database },
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Zap },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Cloud },
+        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Network },
+        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
+        { name: 'Emerging Technology', path: '/emerging-tech', icon: Lightbulb }
+      ]
+    },
+    {
+      title: 'Security & Compliance',
+      items: [
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: CheckCircle },
+        { name: 'Accessibility Auditor', path: '/accessibility-auditor', icon: Eye },
+        { name: 'Security Assessment', path: '/services#security-assessment', icon: Shield },
+        { name: 'Compliance & Audit', path: '/services#compliance', icon: FileText }
+      ]
+    },
+    {
+      title: 'Company & Resources',
+      title: 'Company & Support',
+      items: [
+        { name: 'About Us', path: '/about', icon: Users },
+        { name: 'Our Mission', path: '/mission', icon: Target },
+        { name: 'Our Team', path: '/team', icon: Users },
+        { name: 'News', path: '/news', icon: Globe },
+        { name: 'Case Studies', path: '/case-studies', icon: Globe }
+        { name: 'Our Team', path: '/team', icon: Users },
+        { name: 'Mission', path: '/mission', icon: Target },
+        { name: 'Partners', path: '/partners', icon: Users },
+        { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
+        { name: 'News', path: '/news', icon: Globe },
+        { name: 'Blog', path: '/blog', icon: Globe },
+        { name: 'Our Mission', path: '/mission', icon: Users },
+        { name: 'Partners', path: '/partners', icon: Users }
+        { name: 'Our Mission', path: '/mission', icon: Users },
+        { name: 'Our Team', path: '/team', icon: Users },
+        { name: 'Partners', path: '/partners', icon: Users }
+      ]
+    },
+    {
+      title: 'Support & Resources',
+        { name: 'Our Mission', path: '/mission', icon: Star },
+        { name: 'Team', path: '/team', icon: Users },
+        { name: 'Partners', path: '/partners', icon: Users },
+        { name: 'Case Studies', path: '/case-studies', icon: Star },
+        { name: 'Blog', path: '/blog', icon: Globe },
+        { name: 'News', path: '/news', icon: Globe },
+        { name: 'Careers', path: '/careers', icon: Briefcase }
+      ]
+    },
+    {
+      title: 'Support & Help',
+      items: [
+        { name: 'Help Center', path: '/help', icon: Users },
+        { name: 'Documentation', path: '/docs', icon: Globe },
+      icon: Home,
+      items: [
+        { name: 'Home', path: '/', icon: Home, description: 'Welcome to Zion Tech Group' },
+        { name: 'Services', path: '/services', icon: Briefcase, description: 'Explore our AI services' },
+        { name: 'Solutions', path: '/solutions/enterprise', icon: Rocket, description: 'Industry solutions' },
+        { name: 'Pricing', path: '/pricing', icon: Briefcase, description: 'Service plans and pricing' },
+        { name: 'About', path: '/about', icon: Users, description: 'Learn about our company' },
+        { name: 'Contact', path: '/contact', icon: Phone, description: 'Get in touch with us' }
+      ]
+    },
+    {
+      title: 'AI & Micro SAAS Services',
+      icon: Brain,
+      items: [
+        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
+        { name: 'AI Workflow Automation', path: '/services/ai-workflow-automation', icon: Brain },
+        { name: 'AI Customer Intelligence', path: '/services/ai-customer-intelligence', icon: Users },
+        { name: 'AI Predictive Analytics', path: '/services/ai-predictive-analytics', icon: BarChart3 },
+        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain },
+        { name: 'Advanced Research Automation', path: '/advanced-research-automation', icon: Brain },
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
+        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Rocket },
+        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Database },
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Target },
+        { name: 'Affiliate Attribution Hub', path: '/affiliate-attribution-hub', icon: BarChart3 },
+        { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', icon: Users },
+        { name: 'AI Legal Tech', path: '/services/ai-legal-tech', icon: Shield },
+        { name: 'Quantum-Secure Cloud', path: '/services/quantum-secure-cloud', icon: Shield },
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield },
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Briefcase },
+        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Briefcase },
+        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
         { name: 'Cloud DevOps', path: '/cloud-devops', icon: Briefcase },
         { name: 'Digital Transformation', path: '/digital-transformation', icon: Briefcase }
       ]
@@ -576,7 +964,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       items: [
         { name: 'About Us', path: '/about', icon: Users, description: 'Our story' },
         { name: 'Our Team', path: '/team', icon: Users, description: 'Meet the team' },
-        { name: 'Partners', path: '/partners', icon: Handshake, description: 'Partnerships' },
+        { name: 'Partners', path: '/partners', icon: Users, description: 'Partnerships' },
         { name: 'Case Studies', path: '/case-studies', icon: FileText, description: 'Success stories' },
         { name: 'News & Updates', path: '/news', icon: Globe, description: 'Latest news' },
         { name: 'Blog', path: '/blog', icon: BookOpen, description: 'Insights & articles' },
@@ -600,7 +988,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'Our Mission', path: '/mission', icon: Target },
         { name: 'Our Team', path: '/team', icon: Users },
         { name: 'Our Mission', path: '/mission', icon: Target },
-        { name: 'Partners', path: '/partners', icon: Handshake },
+        { name: 'Partners', path: '/partners', icon: Users },
         { name: 'Careers', path: '/careers', icon: Users },
         { name: 'Case Studies', path: '/case-studies', icon: FileText },
         { name: 'News', path: '/news', icon: FileText },
@@ -647,7 +1035,454 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       ]
     },
     {
+      title: 'Support & Legal',
+        { name: 'News', path: '/news', icon: Globe },
+        { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
+        { name: 'Events', path: '/events', icon: Globe },
+        { name: 'Webinars', path: '/webinars', icon: Globe }
+      ]
+    },
+    {
+      title: 'Support & Resources',
+      items: [
+        { name: 'Help Center', path: '/help-center', icon: Users },
+        { name: 'Documentation', path: '/docs', icon: Globe },
+        { name: 'Contact Support', path: '/contact', icon: Phone },
+        { name: 'Status Page', path: '/status', icon: Globe },
+        { name: 'Privacy Policy', path: '/privacy', icon: Lock },
+        { name: 'Terms of Service', path: '/terms', icon: Lock },
+        { name: 'Cookie Policy', path: '/cookies', icon: Lock }
+        { name: 'Solutions', path: '/solutions/enterprise', icon: Zap },
+        { name: 'Solutions', path: '/solutions/enterprise', icon: Target },
+        { name: 'Pricing', path: '/pricing', icon: Briefcase },
+        { name: 'About', path: '/about', icon: Users },
+        { name: 'Contact', path: '/contact', icon: Phone }
+      ]
+    },
+    {
+      title: 'Main Navigation',
+      items: [
+        { name: 'Home', path: '/', icon: Home, description: 'Welcome to Zion Tech Group' },
+        { name: 'Services', path: '/services', icon: Briefcase, description: 'Explore our comprehensive services' },
+        { name: 'AI Solutions', path: '/ai-solutions', icon: Brain, description: 'Advanced AI and machine learning' },
+        { name: 'Solutions', path: '/solutions/enterprise', icon: Target, description: 'Industry-specific solutions' },
+        { name: 'Pricing', path: '/pricing', icon: Briefcase, description: 'Transparent pricing plans' },
+        { name: 'About', path: '/about', icon: Users, description: 'Learn about our company' },
+        { name: 'Contact', path: '/contact', icon: Phone, description: 'Get in touch with us' }
+      ]
+    },
+    {
+      title: 'AI & Technology Services',
+      items: [
+        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain, description: 'Advanced AI systems' },
+        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain, description: 'AI-powered research' },
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Cpu, description: 'Quantum computing solutions' },
+        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Briefcase, description: 'Self-operating systems' },
+        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase, description: 'Intelligent IT management' },
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Cpu, description: 'Quantum solutions' },
+        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Globe, description: 'High-speed connectivity' },
+        { name: 'Emerging Technology', path: '/emerging-tech', icon: Rocket, description: 'Cutting-edge tech' }
+      ]
+    },
+    {
+      title: 'Infrastructure & Security',
+      items: [
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Cloud, description: 'Complete IT solutions' },
+        { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Cloud, description: 'Cloud development' },
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield, description: 'Security solutions' },
+        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Lock, description: 'Compliance automation' },
+        { name: 'Edge Computing', path: '/services#edge-computing', icon: Cpu, description: 'Edge infrastructure' },
+        { name: 'Network Infrastructure', path: '/services#network', icon: Globe, description: 'Network solutions' },
+        { name: 'Blockchain Platform', path: '/services#blockchain', icon: Code, description: 'Blockchain solutions' },
+        { name: 'IoT Solutions', path: '/services#iot', icon: Globe, description: 'Internet of Things' }
+      ]
+    },
+    {
+      title: 'Micro SAAS & Development',
+      items: [
+        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Code, description: 'Scalable software' },
+        { name: 'Innovative Micro Services', path: '/innovative-micro-saas-services', icon: Code, description: 'Custom solutions' },
+        { name: 'Custom Development', path: '/services#custom-development', icon: Code, description: 'Tailored software' },
+        { name: 'API Integration', path: '/services#api-integration', icon: Code, description: 'System integration' },
+        { name: 'AI Project Management', path: '/services#ai-project-management', icon: Brain, description: 'Smart project tools' },
+        { name: 'AI Customer Support', path: '/services#ai-support', icon: Brain, description: 'Automated support' },
+        { name: 'AI HR Automation', path: '/services#ai-hr', icon: Brain, description: 'HR automation' },
+        { name: 'AI Marketing Platform', path: '/services#ai-marketing', icon: Brain, description: 'Marketing automation' }
+      title: 'AI & Technology Services',
+      items: [
+        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
+        { name: 'AI Business Intelligence', path: '/ai-business-intelligence', icon: TrendingUp },
+        { name: 'AI Content Generation', path: '/ai-content-generator', icon: FileText },
+        { name: 'AI Marketing Automation', path: '/ai-content-marketing-automation', icon: Zap },
+        { name: 'AI Code Review', path: '/ai-code-review', icon: Briefcase },
+        { name: 'AI Agents', path: '/ai-agents', icon: Brain },
+        { name: 'AI Analytics Copilot', path: '/ai-analytics-copilot', icon: TrendingUp },
+        { name: 'AI Assistant', path: '/ai-assistant', icon: Users }
+      ]
+    },
+    {
+      title: 'Quantum & Advanced Tech',
+      items: [
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Zap },
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
+        { name: 'Quantum Cloud Infrastructure', path: '/quantum-cloud-infrastructure', icon: Globe },
+        { name: 'Quantum Financial Trading', path: '/quantum-financial-trading', icon: TrendingUp },
+        { name: 'AI Brain Interface', path: '/ai-brain-interface', icon: Brain },
+        { name: 'AI Consciousness Evolution', path: '/ai-consciousness-evolution', icon: Rocket },
+        { name: 'AI Autonomous Research', path: '/ai-autonomous-research', icon: BookOpen },
+        { name: 'AI Autonomous Robotics', path: '/ai-autonomous-robotics', icon: Zap }
+      ]
+    },
+    {
+      title: 'Infrastructure & Security',
+      items: [
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Globe },
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+        { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Cloud },
+        { name: 'AI-Powered Security', path: '/ai-powered-enterprise-security', icon: Shield },
+        { name: 'Autonomous DevOps', path: '/autonomous-devops-platform', icon: Zap },
+        { name: 'Enterprise IT', path: '/enterprise-it', icon: Briefcase },
+        { name: 'AI Autonomous Security', path: '/ai-autonomous-security', icon: Shield },
+        { name: 'AI Compliance Automation', path: '/ai-compliance-automation', icon: Shield }
+      ]
+    },
+    {
+      title: 'Industry Solutions',
+      items: [
+        { name: 'Blog', path: '/blog', icon: BookOpen },
+        { name: 'Case Studies', path: '/case-studies', icon: FileText },
+        { name: 'News', path: '/news', icon: Globe },
+        { name: 'Webinars', path: '/webinars', icon: MessageCircle },
+        { name: 'White Papers', path: '/white-papers', icon: FileText },
+        { name: 'Testimonials', path: '/testimonials', icon: Star },
+        { name: 'Affiliate Attribution Hub', path: '/affiliate-attribution-hub', icon: Target }
+      ]
+    },
+    {
+      title: 'Support & Help',
+      items: [
+        { name: 'Help Center', path: '/help', icon: MessageCircle },
+        { name: 'Documentation', path: '/docs', icon: FileText },
+        { name: 'FAQ', path: '/faq', icon: MessageCircle },
+        { name: 'Contact Support', path: '/support', icon: Phone },
+      ]
+    },
+    {
+      title: 'Solutions & Industries',
+      items: [
+        { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
+        { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart },
+        { name: 'Financial Solutions', path: '/solutions/financial', icon: DollarSign },
+        { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', icon: Building2 },
+        { name: 'Retail Solutions', path: '/solutions/retail', icon: ShoppingCart },
+        { name: 'Government Solutions', path: '/solutions/government', icon: Building },
+        { name: 'Space Technology', path: '/space-tech', icon: Rocket },
+        { name: 'Research & Development', path: '/research-development', icon: Search },
+        { name: 'Quantum Cloud Infrastructure', path: '/quantum-cloud-infrastructure', icon: Cloud },
+        { name: 'Quantum Financial Trading', path: '/quantum-financial-trading', icon: DollarSign },
+        { name: 'Quantum Services', path: '/quantum-services', icon: Atom }
+        { name: 'Healthcare AI', path: '/ai-autonomous-healthcare-physician', icon: Users },
+        { name: 'Manufacturing AI', path: '/ai-autonomous-manufacturing', icon: Briefcase },
+        { name: 'Financial Services', path: '/ai-autonomous-business-operations', icon: TrendingUp },
+        { name: 'Retail Solutions', path: '/ai-market-research', icon: Globe },
+        { name: 'Government Tech', path: '/ai-autonomous-ecosystem', icon: Shield },
+        { name: 'Education AI', path: '/ai-autonomous-education-professor', icon: BookOpen },
+        { name: 'Legal AI', path: '/ai-autonomous-legal-counsel', icon: Shield },
+        { name: 'Logistics AI', path: '/ai-autonomous-logistics', icon: Globe }
+      title: 'AI & Technology',
+      items: [
+        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
+        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain },
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
+        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Rocket },
+        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Database },
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
+        { name: 'Machine Learning', path: '/services/ai-machine-learning', icon: Brain },
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 }
+      ]
+    },
+    {
+      title: 'Infrastructure & Security',
+      items: [
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Server },
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Lock },
+        { name: 'Cloud DevOps', path: '/cloud-devops', icon: Cloud },
+        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Network },
+        { name: 'Network Infrastructure', path: '/services/network-infrastructure', icon: Network },
+        { name: 'Managed IT Services', path: '/services/managed-it-services', icon: Server },
+        { name: 'Security Assessment', path: '/services/security-assessment', icon: Shield }
+      ]
+    },
+    {
+      title: 'Industry Solutions',
+      items: [
+        { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
+        { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Users },
+        { name: 'Financial Solutions', path: '/solutions/financial', icon: BarChart3 },
+        { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', icon: Cpu },
+        { name: 'Retail Solutions', path: '/solutions/retail', icon: Smartphone },
+        { name: 'Government Solutions', path: '/solutions/government', icon: Building },
+        { name: 'Digital Transformation', path: '/digital-transformation', icon: Zap },
+        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe }
+      ]
+    },
+    {
+      title: 'Company & Resources',
+      items: [
+        { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Briefcase, description: 'Large-scale solutions' },
+        { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Users, description: 'Medical technology' },
+        { name: 'Financial Solutions', path: '/solutions/financial', icon: Briefcase, description: 'Fintech solutions' },
+        { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', icon: Briefcase, description: 'Smart manufacturing' },
+        { name: 'Retail Solutions', path: '/solutions/retail', icon: Briefcase, description: 'Digital retail' },
+        { name: 'Government Solutions', path: '/solutions/government', icon: Shield, description: 'Public sector tech' },
+        { name: 'Digital Transformation', path: '/digital-transformation', icon: Rocket, description: 'Business modernization' },
+        { name: 'Business Intelligence', path: '/services#business-intelligence', icon: Lightbulb, description: 'Data insights' }
+      ]
+    },
+    {
+      title: 'Company & Support',
+      items: [
+        { name: 'About Us', path: '/about', icon: Users, description: 'Our story and mission' },
+        { name: 'Our Team', path: '/team', icon: Users, description: 'Meet our experts' },
+        { name: 'Careers', path: '/careers', icon: Briefcase, description: 'Join our team' },
+        { name: 'Partners', path: '/partners', icon: Users, description: 'Partnership opportunities' },
+        { name: 'Case Studies', path: '/case-studies', icon: Lightbulb, description: 'Success stories' },
+        { name: 'Help Center', path: '/help', icon: Globe, description: 'Support resources' },
+        { name: 'Documentation', path: '/docs', icon: Globe, description: 'Technical guides' },
+        { name: 'Status Page', path: '/status', icon: Globe, description: 'System status' }
+        { name: 'Status Page', path: '/status', icon: Globe },
+        { name: 'FAQ', path: '/faq', icon: Users },
+        { name: 'Privacy Policy', path: '/privacy', icon: Shield },
+        { name: 'Terms of Service', path: '/terms', icon: Shield },
+        { name: 'Cookie Policy', path: '/cookies', icon: Shield },
+        { name: 'Accessibility', path: '/accessibility', icon: Users }
+      items: [
+        { name: 'Mission & Vision', path: '/mission', icon: Star },
+        { name: 'Partners', path: '/partners', icon: Users },
+        { name: 'Case Studies', path: '/case-studies', icon: BookOpen },
+        { name: 'Careers', path: '/careers', icon: Users }
+      ]
+    },
+    {
       title: 'Resources & Support',
+      items: [
+        { name: 'Help Center', path: '/help', icon: HelpCircle },
+        { name: 'Documentation', path: '/docs', icon: BookOpen },
+        { name: 'Webinars', path: '/webinars', icon: Globe },
+        { name: 'White Papers', path: '/white-papers', icon: BookOpen },
+        { name: 'Blog & News', path: '/news', icon: BookOpen },
+        { name: 'FAQ', path: '/faq', icon: HelpCircle },
+        { name: 'Support', path: '/support', icon: HelpCircle }
+        { name: 'Our Mission', path: '/mission', icon: Rocket },
+        { name: 'Team', path: '/team', icon: Users },
+        { name: 'Blog', path: '/blog', icon: FileText },
+        { name: 'News', path: '/news', icon: TrendingUp },
+        { name: 'Webinars', path: '/webinars', icon: Globe },
+        { name: 'White Papers', path: '/white-papers', icon: BookOpen },
+        { name: 'Events', path: '/events', icon: Calendar },
+        { name: 'Partners', path: '/partners', icon: Users }
+        { name: 'Contact Us', path: '/contact', icon: Phone },
+        { name: 'FAQ', path: '/faq', icon: Users },
+        { name: 'News', path: '/news', icon: Globe }
+        { name: 'Contact Support', path: '/support', icon: Phone },
+        { name: 'Status Page', path: '/status', icon: Globe },
+        { name: 'FAQ', path: '/help#faq', icon: FileText }
+        { name: 'Help Center', path: '/help-center', icon: Users },
+        { name: 'Case Studies', path: '/case-studies', icon: Globe },
+        { name: 'News', path: '/news', icon: Globe },
+        { name: 'Webinars', path: '/webinars', icon: Globe },
+        { name: 'White Papers', path: '/white-papers', icon: Globe }
+        { name: 'Contact Support', path: '/support', icon: Phone }
+        { name: 'Status Page', path: '/status', icon: Globe },
+        { name: 'FAQ', path: '/faq', icon: Users },
+        { name: 'Sitemap', path: '/sitemap', icon: Globe }
+        { name: 'Leadership', path: '/leadership', icon: Users },
+        { name: 'Careers', path: '/careers', icon: Briefcase },
+        { name: 'Partners', path: '/partners', icon: Users },
+        { name: 'News', path: '/news', icon: Globe }
+  className?: string;
+}
+
+export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
+  const location = useLocation();
+  Users, 
+  MessageSquare, 
+  Settings, 
+  HelpCircle, 
+  BookOpen, 
+  Briefcase,
+  Building,
+  Globe,
+  Zap,
+  ChevronRight,
+  Menu,
+  X
+} from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
+
+interface SidebarProps {
+  isOpen: boolean;
+  onToggle: () => void;
+  className?: string;
+}
+
+export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
+  const location = useLocation();
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
+
+  const navigationItems = [
+    {
+      title: 'Main',
+      items: [
+    onClose();
+  }, [location.pathname, onClose]);
+
+  const navigationItems = [
+    {
+      title: 'AI Services',
+      icon: Brain,
+      items: [
+        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Briefcase },
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Briefcase },
+        { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', icon: Users },
+        { name: 'AI Legal Tech', path: '/services/ai-legal-tech', icon: Shield },
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Globe },
+        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
+        { name: 'Industry Solutions', path: '/services/industry-solutions', icon: Briefcase }
+        { name: 'AI Content Generation', href: '/ai-services-showcase', icon: Bot, badge: 'Popular' },
+        { name: 'AI Business Intelligence', href: '/ai-services-showcase', icon: BarChart3, badge: 'New' },
+        { name: 'AI Customer Support', href: '/ai-services-showcase', icon: MessageSquare, badge: 'Featured' },
+        { name: 'AI Recruitment Platform', href: '/ai-services-showcase', icon: Users, badge: 'Popular' },
+        { name: 'Quantum AI Platform', href: '/ai-services-showcase', icon: CpuIcon, badge: 'Premium' },
+        { name: 'AI Ethics & Governance', href: '/ai-services-showcase', icon: ShieldCheck, badge: 'Enterprise' }
+      ]
+    },
+    {
+      title: 'IT Solutions',
+      icon: Server,
+      items: [
+        { name: 'Edge Computing Platform', href: '/services', icon: Globe2, badge: 'New' },
+        { name: 'DevOps Automation', href: '/services', icon: ZapIcon, badge: 'Popular' },
+        { name: 'API Gateway Management', href: '/services', icon: Network, badge: 'Enterprise' },
+        { name: 'Cloud-Native Development', href: '/services', icon: Cloud, badge: 'Premium' },
+        { name: 'Low-Code Platform', href: '/services', icon: Layers, badge: 'Featured' },
+        { name: 'PWA Builder', href: '/services', icon: Smartphone, badge: 'New' }
+      ]
+    },
+    {
+      title: 'Development',
+      icon: Code,
+      items: [
+        { name: 'Web Development', href: '/services', icon: Globe, badge: 'Popular' },
+        { name: 'Mobile Development', href: '/services', icon: Smartphone, badge: 'Featured' },
+        { name: 'Metaverse Development', href: '/services', icon: Eye, badge: 'New' },
+        { name: 'Blockchain Development', href: '/services', icon: Lock, badge: 'Premium' },
+        { name: 'IoT Development', href: '/services', icon: Wifi, badge: 'Enterprise' }
+      ]
+    },
+    {
+      title: 'Security',
+      icon: Shield,
+      items: [
+        { name: 'Cyber Threat Detection', href: '/services', icon: ShieldCheck, badge: 'Premium' },
+        { name: 'Blockchain Identity', href: '/services', icon: Lock, badge: 'New' },
+        { name: 'Managed SOC', href: '/services', icon: Eye, badge: 'Enterprise' },
+        { name: 'Compliance & Audit', href: '/services', icon: Award, badge: 'Featured' }
+      ]
+    },
+    {
+      title: 'Enterprise',
+      icon: Building,
+      items: [
+        { name: 'Digital Transformation', href: '/enterprise-solutions', icon: TrendingUp, badge: 'Enterprise' },
+        { name: 'Legacy System Migration', href: '/enterprise-solutions', icon: Server, badge: 'Premium' },
+        { name: 'Cloud Migration', href: '/enterprise-solutions', icon: Cloud, badge: 'Popular' },
+        { name: 'Data Center Solutions', href: '/enterprise-solutions', icon: Database, badge: 'Featured' }
+      ]
+    },
+    {
+      title: 'Company',
+      icon: Users,
+      items: [
+        { name: 'About Us', href: '/about', icon: Info },
+        { name: 'Our Team', href: '/about', icon: Users },
+        { name: 'Careers', href: '/careers', icon: Briefcase },
+        { name: 'Blog', href: '/blog', icon: FileText },
+        { name: 'News', href: '/news', icon: MessageSquare },
+        { name: 'Press Kit', href: '/press', icon: FileText }
+      ]
+    },
+    {
+      title: 'Support',
+      icon: HelpCircle,
+      items: [
+        { name: 'Help Center', href: '/help', icon: HelpCircle },
+        { name: 'Request Quote', href: '/request-quote', icon: FileText },
+        { name: 'Community', href: '/community', icon: Users },
+        { name: 'Documentation', href: '/docs', icon: BookOpen },
+        { name: 'API Reference', href: '/api', icon: Code },
+        { name: 'Status Page', href: '/status', icon: CheckCircle }
+        { name: 'Blog', href: '/blog', icon: BookOpen },
+        { name: 'Help Center', href: '/help-center', icon: HelpCircle },
+        { name: 'Green IT', href: '/green-it', icon: Leaf },
+        { name: 'Sitemap', href: '/sitemap', icon: FileText },
+      ]
+    },
+    {
+      title: 'Legal',
+      items: [
+        { name: 'Privacy Policy', href: '/privacy', icon: Shield },
+        { name: 'Terms of Service', href: '/terms', icon: FileText },
+        { label: 'Home', href: '/', icon: Home },
+        { label: 'Marketplace', href: '/marketplace', icon: Briefcase },
+        { label: 'Talent', href: '/talent', icon: Users },
+        { label: 'Community', href: '/community', icon: Globe },
+        { label: 'Blog', href: '/blog', icon: BookOpen },
+        { label: 'About', href: '/about', icon: Building },
+      ]
+    },
+    {
+      title: 'Services',
+      items: [
+        { label: 'AI Matcher', href: '/ai-matcher', icon: Zap },
+        { label: 'Services', href: '/services', icon: Briefcase },
+        { label: 'Equipment', href: '/equipment', icon: Briefcase },
+        { label: 'Green IT', href: '/green-it', icon: Globe },
+        { label: 'Request Quote', href: '/request-quote', icon: MessageSquare },
+      ]
+    },
+    ...(isAuthenticated ? [{
+      title: 'Account',
+      items: [
+        { label: 'Dashboard', href: '/dashboard', icon: Settings },
+        { label: 'Messages', href: '/messages', icon: MessageSquare },
+        { label: 'Post Job', href: '/post-job', icon: Briefcase },
+        { label: 'Publish Product', href: '/publish', icon: Briefcase },
+      ]
+    }] : []),
+    {
+      title: 'Support',
+      items: [
+        { label: 'Help Center', href: '/help', icon: HelpCircle },
+        { label: 'Contact', href: '/contact', icon: MessageSquare },
+        { label: 'Sitemap', href: '/sitemap', icon: Globe },
+        { name: 'About Us', path: '/about', icon: Users },
+        { name: 'Our Mission', path: '/mission', icon: Target },
+        { name: 'Our Team', path: '/team', icon: Users },
+        { name: 'Careers', path: '/careers', icon: Briefcase },
+        { name: 'Partners', path: '/partners', icon: Users },
+        { name: 'Blog', path: '/blog', icon: Globe },
+        { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
+        { name: 'Help Center', path: '/help', icon: Globe }
+      ]
+    },
+    {
+      title: 'Support & Legal',
       items: [
         { name: 'Help Center', path: '/help', icon: Users },
         { name: 'Documentation', path: '/docs', icon: Globe },

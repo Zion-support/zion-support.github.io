@@ -49,7 +49,7 @@ export default function TokenIntegrations() {
         setSuggested(chain);
     };
     return (<div>
-      <Header />
+      <FuturisticNavigation />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           <h1 className="text-3xl font-bold text-white">ZION$ Integrations</h1>

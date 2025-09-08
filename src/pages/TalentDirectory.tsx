@@ -1,17 +1,12 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { SEO } from '@/components/SEO';
-=======
-
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
+import React, { useState } from 'react';
+import SEOHead from "@/components/SEOHead";
+import Link from 'next/link';
+import { Search, Filter, MapPin, Briefcase, Star, Users, Zap, Building } from 'lucide-react';
 
 const TalentDirectory: React.FC = () => {
   return (
-    <>
-      <SEO 
+    <div className="min-h-screen bg-background">
+      <SEOHead 
         title="Talent Directory - Zion Tech Group"
         description="Browse our directory of talented professionals and experts"
       />

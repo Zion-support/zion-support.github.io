@@ -256,7 +256,7 @@ const EnhancedServicesPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEOHead 
         title="Enhanced IT & AI Services - Zion Tech Group" 
         description="Discover our comprehensive range of AI, cybersecurity, cloud, and specialized IT services. Expert solutions for modern businesses."
         keywords="AI services, cybersecurity, cloud solutions, IT consulting, digital transformation, healthcare IT, financial services IT"

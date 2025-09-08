@@ -11,8 +11,8 @@ export default function ZionHireAI() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
-      <SEO 
+    <>
+      <SEOHead 
         title="Zion Hire AI - White-labeled AI Recruiting Assistant" 
         description="Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience." 
         keywords="AI hiring, AI recruiting, talent acquisition, AI assistant, Zion Hire AI" 

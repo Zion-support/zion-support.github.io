@@ -58,9 +58,13 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 
-// Enhanced services pages - only import existing ones
-const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
-const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027.tsx'));
+// New service pages
+const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
+const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage'));
+const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const ResearchDevelopment = React.lazy(() => import('./pages/ResearchDevelopment'));
+const Solutions = React.lazy(() => import('./pages/Solutions'));
 
 // Additional pages
 const Leadership = React.lazy(() => import('./pages/Leadership.jsx'));
@@ -136,6 +140,10 @@ function App() {
               <Route path="/services" element={<ServicesPage />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/enhanced-services" element={<EnhancedServices />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/research-development" element={<ResearchDevelopment />} />
+              <Route path="/solutions" element={<Solutions />} />
               
               {/* Service Routes */}
               <Route path="/services/overview" element={<ComprehensiveServicesOverview2027 />} />

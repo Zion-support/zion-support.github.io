@@ -124,14 +124,39 @@ export default function Team() {
   ];
 
   return (
-    <div className="min-h-screen bg-futuristic">
-      {/* SEO and Hero Section */}
-      <SEO title="Our Team - Zion Tech Group" description="Meet the people behind our innovations." />
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/30 rounded-full blur-3xl"></div>
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
+      <SEOHead 
+        title="Our Team - Zion Tech Group" 
+        description="Meet the exceptional team of innovators, engineers, and industry experts driving Zion Tech Group's mission to revolutionize technology."
+        tags={["team", "leadership", "experts", "AI specialists", "quantum physicists", "cybersecurity experts", "Zion Tech Group"]}
+        url="https://ziontechgroup.com/team"
+      />
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
+        <div className="relative z-10 max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            Meet Our Team
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Our diverse team of experts brings together decades of experience in AI, 
+            cybersecurity, quantum computing, and digital transformation.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a
+              href="#team"
+              className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+            >
+              View Team
+            </a>
+            <a
+              href="/careers"
+              className="px-8 py-3 border border-cyan-500 text-cyan-400 font-medium rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
+            >
+              Join Our Team
+            </a>
+          </div>
         </div>
         
         <div className="container-responsive relative z-10">
@@ -286,9 +311,79 @@ export default function Team() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <motion.div
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-gray-400 mb-2">Achievements:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {member.achievements.map((achievement, idx) => (
+                          <span key={idx} className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded-full">
+                            {achievement}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+      {/* Department Heads */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">Department Leadership</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our specialized teams are led by industry experts in their respective fields
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {departmentHeads.map((head, index) => (
+              <div key={index} className="text-center p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <span className="text-white font-bold text-xl">{head.avatar}</span>
+    <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Our Team - Zion Tech Group" 
+        description="Meet the visionary leaders and experts behind Zion Tech Group's revolutionary technology solutions"
+        keywords="team, leadership, founders, experts, AI, quantum computing, Zion Tech Group"
+        canonical="https://ziontechgroup.com/team"
+      />
+
+      <div className="container mx-auto px-4 py-12">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gradient">
+            Meet Our Team
+          </h1>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            The brilliant minds behind Zion Tech Group's revolutionary technology solutions. 
+            Our team combines decades of experience in AI, quantum computing, and business 
+            innovation to deliver transformative results.
+          </p>
+        </div>
+
+        {/* Leadership Team */}
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Leadership Team</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {leadership.map((member, index) => (
+              <div key={index} className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 group">
+                <div className="text-center">
+                  <div className="w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
+                  <p className="text-cyan-400 font-semibold mb-3">{member.role}</p>
+                  <p className="text-gray-300 text-sm leading-relaxed mb-4">{member.bio}</p>
+                  <div className="flex justify-center space-x-3">
+                {/* Social Links */}
+                <div className="flex justify-center space-x-3">
+                  {member.linkedin && (
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {departments.map((dept, index) => (
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

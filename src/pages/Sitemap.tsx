@@ -1,6 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
+import {
+  Map as SitemapIcon,
+  Home,
+  Users,
+  Briefcase,
+  FileText,
+  MessageSquare,
+  HelpCircle,
+  Shield,
+  Globe,
+  Building2,
+  Rocket,
+  Brain,
+  Cloud,
+  Code,
+  BookOpen,
+  Users,
+  LogIn,
+  ArrowRight,
+  ExternalLink
+} from 'lucide-react';
 
 const links = [
 	'/', '/about', '/contact', '/blog', '/faq', '/careers', '/partners', '/news',

@@ -1,16 +1,15 @@
 
-import { useState   } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from '@/components/ui/card';
-import { Input   } from '@/components/ui/input';
-import { Button   } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger   } from '@/components/ui/tabs';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue   } from '@/components/ui/select';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow   } from '@/components/ui/table';
-import { Badge   } from '@/components/ui/badge';
-import { Search, Filter   } from 'lucide-react';
-import { SEO   } from '@/components/SEO';
+import React, { useState } from "react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Badge } from "@/components/ui/badge";
+import { Search, Filter } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 
-import { SEO } from "@/components/SEO";
 // Mock data for support requests
 const MOCK_SUPPORT_REQUESTS = [
   {
@@ -139,8 +138,8 @@ export default function SupportRequests(...args: any[]): any {
   };
   
   return (
-  {/* Empty JSX fragment */}
-      <SEO 
+    
+      <SEOHead 
         title="Support Requests | Admin Dashboard"
         description="Manage and track user support requests and issues"
       />

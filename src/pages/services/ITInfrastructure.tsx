@@ -224,16 +224,12 @@ export default function ITInfrastructure() {
   ];
 
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-green-900 text-white">
-=======
->>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
-      <SEO 
-        title="IT Infrastructure Services - Zion Tech Group"
-        description="Enterprise IT infrastructure solutions including servers, networking, storage, and security. 24/7 monitoring and managed services."
+    <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="IT Infrastructure - Zion Tech Group"
+        description="Build a robust and scalable IT infrastructure with our expert solutions and management services."
+        keywords="IT infrastructure, server management, network design, data centers, infrastructure security"
+        canonical="https://ziontechgroup.com/services/infrastructure"
       />
 
 <<<<<<< HEAD

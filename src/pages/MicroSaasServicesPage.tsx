@@ -3,11 +3,12 @@ import { SEO   } from '@/components/SEO';
 
 const MicroSAASServicesPage = () => {
   return (
-  {/* Empty JSX fragment */}
-      <SEO 
-        title="Micro SAAS Services - Zion Tech Group"
-        description="Specialized micro SAAS solutions for niche business needs and targeted industry solutions."
-        keywords="micro SAAS, specialized solutions, niche services, business software"
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
+      <SEOHead 
+        title="Micro SAAS Services - Zion Tech Group" 
+        description="Discover innovative micro SAAS services and solutions in AI, IT, and business automation. Transform your business with cutting-edge technology."
+        keywords="micro SAAS, AI services, IT solutions, business automation, Zion Tech Group"
+        canonical="https://ziontechgroup.com/micro-saas-services"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-800 text-white">

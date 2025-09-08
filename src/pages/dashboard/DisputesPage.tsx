@@ -6,8 +6,8 @@ import { ProtectedRoute   } from '@/components/ProtectedRoute';
 function DisputesPage(...args: any[]): any {
   return (
     <ProtectedRoute>
-  {/* Empty JSX fragment */}
-        <SEO 
+      <>
+        <SEOHead 
           title="Dispute Resolution Center | Zion AI Marketplace" 
           description="View and manage disputes between clients and talents"
         />

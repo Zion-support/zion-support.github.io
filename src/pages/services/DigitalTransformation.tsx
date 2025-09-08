@@ -164,8 +164,14 @@ export default function DigitalTransformation(...args: any[]): any {
     'Transportation'
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <SEO title="Digital Transformation - Zion Tech Group" description="Modernize processes with cloud-native platforms, automation, and data-driven operations." />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
+      <SEOHead 
+        title="Digital Transformation - Zion Tech Group"
+        description="Transform your business for the digital age with our comprehensive digital transformation services."
+        keywords="digital transformation, process automation, digital strategy, change management, performance optimization"
+        canonical="https://ziontechgroup.com/services/digital-transformation"
+      />
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-red-500/10"></div>

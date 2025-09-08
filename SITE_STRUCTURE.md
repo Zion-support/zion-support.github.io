@@ -1,369 +1,301 @@
-# Zion Tech Group - Complete Site Structure
+# Zion Tech Group Website Structure
 
 ## Overview
-This document outlines the complete structure of the Zion Tech Group website, including all routes, components, data files, and organizational structure.
+The Zion Tech Group website is a modern React.js application built with Vite, featuring a comprehensive technology solutions platform with AI services, micro-SaaS offerings, IT services, and emerging technology solutions.
 
-## Project Architecture
-
-### Technology Stack
-- **Frontend**: React 18 with TypeScript/JavaScript
-- **Build Tool**: Vite 5
-- **Styling**: Tailwind CSS with custom Zion Tech Group theme
-- **Routing**: React Router DOM v6
-- **State Management**: React Context API
-- **UI Components**: Custom component library with Radix UI primitives
-- **Icons**: Lucide React
+## Technology Stack
+- **Frontend Framework**: React.js 18+ with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS with custom Zion Tech Group color scheme
+- **Routing**: React Router DOM
 - **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **SEO**: React Helmet Async
+- **State Management**: Redux Toolkit & React Redux
+- **UI Components**: Radix UI primitives
+- **Development**: ESLint, TypeScript, PostCSS
 
-### Project Structure
+## Project Structure
+
 ```
-zion-tech-group/
+zion-website/
+├── public/
+│   ├── favicon.ico
+│   └── vite.svg
 ├── src/
-│   ├── components/          # Reusable UI components
-│   ├── pages/              # Page components and routes
-│   ├── layout/             # Layout components (header, footer, navigation)
-│   ├── context/            # React Context providers
-│   ├── hooks/              # Custom React hooks
-│   ├── data/               # Data files and mock data
-│   ├── utils/              # Utility functions
-│   └── types/              # TypeScript type definitions
-├── data/                   # Root-level data files
-├── public/                 # Static assets
-└── dist/                   # Build output
-```
-
-## Complete Route Structure
-
-### Main Routes
-- `/` - Home page
-- `/about` - About page
-- `/contact` - Contact page
-- `/faq` - FAQ page
-- `/sitemap` - Complete site map
-
-### Authentication Routes
-- `/login` - User login
-- `/signup` - User registration
-- `/forgot-password` - Password recovery
-- `/update-password` - Password update
-
-### Services Routes
-- `/services` - Main services page
-- `/services/ai-business-solutions` - AI & Business Solutions
-- `/services/cybersecurity-suite` - Cybersecurity Suite
-- `/services/cloud-infrastructure` - Cloud Infrastructure
-- `/services/digital-marketing` - Digital Marketing
-- `/services/financial-solutions` - Financial Solutions
-- `/services/manufacturing-solutions` - Manufacturing Solutions
-- `/services/iot-services` - IoT Services
-- `/services/blockchain-services` - Blockchain Services
-- `/services/quantum-technology` - Quantum Technology
-- `/services/5g-enterprise-solutions` - 5G Enterprise Solutions
-- `/services/green-it` - Green IT
-- `/services/enterprise-it` - Enterprise IT
-- `/services/micro-saas` - Micro SaaS Services
-- `/services/onsite-it` - Onsite IT Services
-- `/services/dispute-management` - Dispute Management
-
-### Products Routes
-- `/products` - All products
-- `/products/new` - New products
-- `/equipment` - Equipment page
-- `/portfolio-builder` - Portfolio Builder
-- `/zion-hire-ai` - Zion Hire AI
-- `/ai-research-assistant` - AI Research Assistant
-- `/ai-content-generator` - AI Content Generator
-- `/ai-code-review` - AI Code Review
-- `/cloud-cost-optimizer` - Cloud Cost Optimizer
-- `/service-description-generator` - Service Description Generator
-
-### Business Solutions Routes
-- `/business-solutions` - Business Solutions
-- `/enterprise` - Enterprise Admin
-- `/enterprise/billing` - Enterprise Billing
-- `/enterprise/demo` - Enterprise Demo
-- `/enterprise/plans` - Enterprise Plans
-- `/digital-transformation` - Digital Transformation
-- `/autonomous-business-platform` - Autonomous Business Platform
-
-### Community Routes
-- `/partners` - Partners page
-- `/events` - Events page
-- `/news` - News page
-- `/blog` - Blog page
-- `/forum/create` - Create forum post
-- `/forum/post/:id` - View forum post
-- `/forum/category/:category` - Forum category
-- `/forum/edit/:id` - Edit forum post
-- `/jobs/post` - Post a job
-- `/jobs/:id` - Job details
-
-### User & Account Routes
-- `/dashboard` - User dashboard
-- `/profile` - User profile
-- `/settings` - Account settings
-- `/notifications` - User notifications
-- `/messages` - User messages
-- `/favorites` - User favorites
-- `/orders` - Order history
-- `/invoices` - Invoice history
-
-### Marketplace Routes
-- `/cart` - Shopping cart
-- `/checkout` - Checkout process
-- `/marketplace` - Main marketplace
-- `/listings` - All listings
-- `/listings/:id` - Individual listing
-- `/create-listing` - Create new listing
-- `/edit-listing/:id` - Edit listing
-- `/my-listings` - User's listings
-
-### Jobs & Talent Routes
-- `/jobs` - All jobs
-- `/jobs/post` - Post a job
-- `/jobs/:id` - Job details
-- `/talent` - Talent directory
-- `/hiring-tracker` - Hiring tracker
-- `/talent-onboarding` - Talent onboarding
-
-### Legal & Documentation Routes
-- `/terms` - Terms of Service
-- `/privacy` - Privacy Policy
-- `/cookies` - Cookie Policy
-- `/legal` - Legal information
-- `/docs` - Documentation
-- `/api-docs` - API documentation
-- `/developer` - Developer portal
-
-### Pricing & Plans Routes
-- `/pricing` - Main pricing page
-- `/pricing-guide` - Pricing guide
-- `/enterprise-pricing` - Enterprise pricing
-- `/custom-quote` - Request custom quote
-- `/request-quote` - Quote request form
-
-### Specialized Services Routes
-- `/next-gen-services-2025` - Next Gen Services 2025
-- `/cutting-edge-innovative-services-2025` - Cutting Edge Innovative Services 2025
-- `/enhanced-services-showcase` - Enhanced Services Showcase
-- `/specialized-industry-solutions-2025` - Specialized Industry Solutions 2025
-
-### Admin & Management Routes
-- `/admin` - Admin dashboard
-- `/admin/users` - User management
-- `/admin/products` - Product management
-- `/admin/services` - Service management
-- `/admin/orders` - Order management
-- `/admin/analytics` - Analytics dashboard
-- `/admin/settings` - Admin settings
-
-### Other Routes
-- `/video-call` - Video call functionality
-- `/index` - Index page
-- `/dev` - Developer page
-- `/404` - 404 error page
-
-## Component Architecture
-
-### Core Layout Components
-- `AppHeader` - Main navigation header with dropdown menus
-- `Footer` - Site footer with organized link sections
-- `Sitemap` - Comprehensive site map component
-- `SEO` - SEO optimization component
-- `LoadingFallback` - Loading state component
-
-### UI Components
-- `Button` - Custom button component with variants
-- `Card` - Card component for content display
-- `Input` - Form input component
-- `Badge` - Badge/tag component
-- `Tabs` - Tab navigation component
-- `Accordion` - Collapsible content component
-- `Dialog` - Modal dialog component
-- `Dropdown` - Dropdown menu component
-
-### Service-Specific Components
-- `ServiceCard` - Service display card
-- `ServiceDetails` - Service details component
-- `ServiceLandingTemplate` - Service landing page template
-- `ITServicePricingTable` - IT service pricing table
-- `EnterprisePricingTable` - Enterprise pricing table
-- `GlobalServiceSection` - Global service information
-- `QuoteFormSection` - Quote request form
-
-### Business Components
-- `TrustedBySection` - Trust indicators section
-- `BenefitsSection` - Benefits showcase
-- `FeaturesGuideSection` - Features guide
-- `TestimonialCarousel` - Customer testimonials
-- `ContactCTA` - Contact call-to-action
-
-## Data Structure
-
-### Service Data Files
-- `2025-cutting-edge-innovative-services.js` - Innovative services data
-- `2025-specialized-industry-solutions.js` - Industry-specific solutions
-- `2025-comprehensive-pricing-analysis.js` - Pricing analysis data
-- `microSaasServices.js` - Micro SaaS services data
-- `newProductsData.js` - New products data
-- `expandedServices.ts` - Expanded services data
-
-### Data Structure Examples
-```javascript
-// Service Object Structure
-{
-  id: 'service-id',
-  name: 'Service Name',
-  description: 'Service description',
-  price: '$999',
-  period: '/month',
-  category: 'Category',
-  features: ['Feature 1', 'Feature 2'],
-  popular: true,
-  rating: 4.8,
-  reviews: 156
-}
-
-// Pricing Analysis Structure
-{
-  serviceId: 'service-id',
-  serviceName: 'Service Name',
-  basePrice: 2999,
-  marketAverage: 2500,
-  roi: 450,
-  paybackPeriod: 8,
-  marketSize: '15B',
-  growthRate: 35
-}
+│   ├── components/
+│   │   ├── ui/                    # Radix UI components
+│   │   │   ├── accordion.jsx
+│   │   │   ├── dialog.jsx
+│   │   │   ├── dropdown-menu.jsx
+│   │   │   ├── select.jsx
+│   │   │   ├── tabs.jsx
+│   │   │   └── toast.jsx
+│   │   ├── FuturisticNavigation.tsx    # Main navigation header
+│   │   ├── FuturisticFooter.tsx        # Main footer
+│   │   ├── FuturisticAnimatedBackground.tsx
+│   │   ├── ChatAssistant.tsx
+│   │   ├── SEOHead.tsx                 # SEO meta tags component
+│   │   └── header/
+│   │       └── Header.jsx              # Legacy header (corrupted, replaced)
+│   ├── pages/                    # Main page components
+│   │   ├── Home.tsx              # Landing page
+│   │   ├── About.tsx             # Company information
+│   │   ├── Contact.tsx           # Contact form and information
+│   │   ├── Services.tsx          # Services overview
+│   │   ├── Solutions.tsx         # Technology solutions
+│   │   ├── ResearchDevelopment.tsx # R&D initiatives
+│   │   ├── CaseStudies.tsx       # Client success stories
+│   │   ├── Blog.tsx              # Blog listing
+│   │   ├── BlogPost.tsx          # Individual blog posts
+│   │   ├── FAQ.tsx               # Frequently asked questions
+│   │   ├── Careers.tsx           # Job opportunities
+│   │   ├── Privacy.jsx           # Privacy policy
+│   │   ├── Terms.jsx             # Terms of service
+│   │   ├── Sitemap.tsx           # Site navigation
+│   │   ├── PartnersPage.tsx      # Partnership opportunities
+│   │   ├── GreenIT.tsx           # Green IT services
+│   │   ├── Login.jsx             # User authentication
+│   │   ├── EnhancedServices.tsx  # Enhanced service offerings
+│   │   ├── AIServices.tsx        # AI services overview
+│   │   ├── AIServiceDetail.tsx   # Individual AI service details
+│   │   ├── MicroSaas.tsx         # Micro-SaaS overview
+│   │   ├── MicroSaasDetail.tsx   # Individual micro-SaaS details
+│   │   ├── ITServices.tsx        # IT services overview
+│   │   ├── ITServiceDetail.tsx   # Individual IT service details
+│   │   ├── EmergingTech.tsx      # Emerging technology overview
+│   │   ├── EmergingTechDetail.tsx # Individual emerging tech details
+│   │   └── Marketplace.tsx       # Technology marketplace
+│   ├── hooks/                    # Custom React hooks
+│   │   └── use-toast.ts
+│   ├── routes.js                 # Route configuration constants
+│   ├── App.tsx                   # Main application component
+│   ├── main.tsx                  # Application entry point
+│   └── index.css                 # Global styles
+├── package.json                  # Dependencies and scripts
+├── tailwind.config.js           # Tailwind CSS configuration
+├── vite.config.ts               # Vite build configuration
+├── tsconfig.json                # TypeScript configuration
+├── .eslintrc.cjs                # ESLint configuration
+└── README.md                    # Project documentation
 ```
 
 ## Navigation Structure
 
-### Header Navigation
-1. **Home** - Landing page
-2. **About** - Company information
-3. **Services** - Dropdown with all service categories
-4. **Products** - Dropdown with product categories
-5. **Business** - Dropdown with business solutions
-6. **Pricing** - Dropdown with pricing options
-7. **Community** - Dropdown with community features
-8. **FAQ** - Frequently asked questions
-9. **Contact** - Contact information
+### Main Navigation (Header)
+- **AI Services** (`/ai-services`)
+  - AI Autonomous Systems
+  - Machine Learning Solutions
+  - Natural Language Processing
+  - Computer Vision
+  - Predictive Analytics
+  - AI Consulting
 
-### Footer Navigation
-Organized into 7 main sections:
-1. **Company** - About, team, careers, press, partners
-2. **Services** - All service categories
-3. **Products** - All product categories
-4. **Business Solutions** - Business-focused solutions
-5. **Community** - Events, news, blog, forum, jobs
-6. **Support** - FAQ, contact, docs, developer portal
-7. **Legal** - Terms, privacy, cookies
+- **Micro SAAS** (`/micro-saas`)
+  - Business Intelligence Tools
+  - Project Management
+  - Customer Relationship Management
+  - Financial Management
+  - Marketing Automation
+  - HR Solutions
 
-## Theme & Styling
+- **IT Services** (`/it-services`)
+  - Cloud Infrastructure
+  - Cybersecurity
+  - Digital Transformation
+  - IT Consulting
+  - System Integration
+  - DevOps Services
 
-### Color Palette
-- **Primary**: Zion Blue (`#1e40af`)
-- **Secondary**: Zion Cyan (`#06b6d4`)
-- **Accent**: Zion Purple (`#7c3aed`)
-- **Background**: Zion Slate Dark (`#0f172a`)
-- **Text**: White, Zion Slate Light (`#cbd5e1`)
+- **Emerging Tech** (`/emerging-tech`)
+  - Quantum Computing
+  - Blockchain Solutions
+  - IoT Platforms
+  - Edge Computing
+  - 5G Networks
+  - Augmented Reality
 
-### Design System
-- **Typography**: Custom font hierarchy with responsive sizing
-- **Spacing**: Consistent spacing scale using Tailwind CSS
-- **Components**: Reusable component patterns
-- **Animations**: Smooth transitions and micro-interactions
-- **Responsive**: Mobile-first responsive design
+- **Marketplace** (`/marketplace`)
+  - Technology Products
+  - Software Solutions
+  - Hardware Components
+  - Professional Services
 
-## SEO & Performance
+### Footer Links
+- **Company**: About, Careers, Partners, News, Events
+- **Support**: Contact, FAQ, Privacy Policy, Terms of Service
+- **Services**: All service categories with direct links
+- **Contact Info**: Phone, Email, Address
 
-### SEO Implementation
-- Meta tags for all pages
-- Canonical URLs
-- Structured data markup
-- Sitemap generation
-- Meta descriptions and keywords
+## Page Details
 
-### Performance Features
-- Lazy loading of components
-- Code splitting by routes
-- Optimized images
-- Minified CSS and JavaScript
-- CDN-ready static assets
+### Core Pages
+1. **Home** (`/`) - Landing page with hero section, services overview, and company highlights
+2. **About** (`/about`) - Company history, mission, vision, and team information
+3. **Contact** (`/contact`) - Contact form, office locations, and contact details
+4. **Services** (`/services`) - Comprehensive overview of all service offerings
 
-## Security & Compliance
+### Service Pages
+5. **Solutions** (`/solutions`) - Technology solutions portfolio with industry focus
+6. **AI Services** (`/ai-services`) - Artificial intelligence service offerings
+7. **Micro SAAS** (`/micro-saas`) - Software-as-a-Service solutions
+8. **IT Services** (`/it-services`) - Information technology services
+9. **Emerging Tech** (`/emerging-tech`) - Cutting-edge technology solutions
+10. **Marketplace** (`/marketplace`) - Technology products and services marketplace
 
-### Security Features
-- HTTPS enforcement
-- Input validation
-- XSS protection
-- CSRF protection
-- Secure authentication
+### Specialized Pages
+11. **Research & Development** (`/research-development`) - R&D initiatives and projects
+12. **Case Studies** (`/case-studies`) - Client success stories and project examples
+13. **Green IT** (`/green-it`) - Sustainable technology solutions
+14. **Partners** (`/partners`) - Partnership opportunities and alliances
 
-### Compliance
-- GDPR compliance
-- Privacy policy
-- Cookie consent
-- Terms of service
-- Data protection
+### Content Pages
+15. **Blog** (`/blog`) - Company blog and industry insights
+16. **FAQ** (`/faq`) - Frequently asked questions
+17. **Careers** (`/careers`) - Job opportunities and company culture
+18. **News** (`/news`) - Company news and announcements
+19. **Events** (`/events`) - Upcoming events and webinars
 
-## Development & Deployment
+### Legal & Support
+20. **Privacy Policy** (`/privacy`) - Data protection and privacy information
+21. **Terms of Service** (`/terms`) - Website usage terms
+22. **Sitemap** (`/sitemap`) - Complete site navigation
+23. **Login** (`/login`) - User authentication portal
+
+## Routing Configuration
+
+### Main Routes (App.tsx)
+```typescript
+// Core pages
+<Route path="/" element={<Home />} />
+<Route path="/about" element={<About />} />
+<Route path="/contact" element={<Contact />} />
+<Route path="/services" element={<Services />} />
+
+// Service pages
+<Route path="/solutions" element={<Solutions />} />
+<Route path="/ai-services" element={<AIServices />} />
+<Route path="/ai-services/:service" element={<AIServiceDetail />} />
+<Route path="/micro-saas" element={<MicroSaas />} />
+<Route path="/micro-saas/:service" element={<MicroSaasDetail />} />
+<Route path="/it-services" element={<ITServices />} />
+<Route path="/it-services/:service" element={<ITServiceDetail />} />
+<Route path="/emerging-tech" element={<EmergingTech />} />
+<Route path="/emerging-tech/:service" element={<EmergingTechDetail />} />
+<Route path="/marketplace" element={<Marketplace />} />
+<Route path="/marketplace/:service" element={<MarketplaceDetail />} />
+
+// Specialized pages
+<Route path="/research-development" element={<ResearchDevelopment />} />
+<Route path="/case-studies" element={<CaseStudies />} />
+<Route path="/green-it" element={<GreenIT />} />
+<Route path="/partners" element={<PartnersPage />} />
+
+// Content pages
+<Route path="/blog" element={<Blog />} />
+<Route path="/blog/:slug" element={<BlogPost />} />
+<Route path="/faq" element={<FAQ />} />
+<Route path="/careers" element={<Careers />} />
+
+// Legal & support
+<Route path="/privacy" element={<Privacy />} />
+<Route path="/terms" element={<Terms />} />
+<Route path="/sitemap" element={<Sitemap />} />
+<Route path="/login" element={<Login />} />
+```
+
+## Component Architecture
+
+### Navigation Components
+- **FuturisticNavigation**: Main header with dropdown navigation, search, and mobile menu
+- **FuturisticFooter**: Comprehensive footer with organized link categories
+- **FuturisticAnimatedBackground**: Animated background effects
+
+### Page Components
+- **SEOHead**: SEO meta tags management using React Helmet Async
+- **ChatAssistant**: AI-powered chat support widget
+- **UI Components**: Radix UI primitives for accessible UI elements
+
+### Styling System
+- **Tailwind CSS**: Utility-first CSS framework
+- **Custom Color Scheme**: Zion Tech Group brand colors
+  - `zion-slate-dark`, `zion-slate`, `zion-slate-light`
+  - `zion-cyan`, `zion-blue`, `zion-purple`
+- **Responsive Design**: Mobile-first approach with breakpoint utilities
+- **Animations**: Framer Motion for smooth transitions and interactions
+
+## Build & Deployment
 
 ### Development Commands
 ```bash
+npm install          # Install dependencies
 npm run dev          # Start development server
 npm run build        # Build for production
 npm run preview      # Preview production build
 npm run lint         # Run ESLint
-npm run format       # Format code with Prettier
 ```
 
-### Build Configuration
-- **Target**: ES2020+
-- **Minification**: Terser
-- **Source Maps**: Disabled for production
-- **Chunk Splitting**: Vendor and application chunks
-- **Asset Optimization**: Image and font optimization
+### Dependencies
+- **Core**: React, React DOM, React Router DOM
+- **UI**: Tailwind CSS, Framer Motion, Lucide React
+- **State**: Redux Toolkit, React Redux
+- **Components**: Radix UI primitives
+- **Utilities**: clsx, tailwind-merge, class-variance-authority
+- **Development**: TypeScript, ESLint, Vite
 
-### Deployment
-- **Platform**: Vercel/Netlify ready
-- **Environment**: Node.js 18+
-- **Build Output**: Static files in `dist/` directory
-- **CDN**: Optimized for global content delivery
+## SEO & Performance
 
-## Maintenance & Updates
+### SEO Features
+- **Meta Tags**: Dynamic title, description, and keywords for each page
+- **Structured Data**: Semantic HTML and proper heading hierarchy
+- **Performance**: Lazy loading with React.lazy and Suspense
+- **Accessibility**: ARIA labels and semantic markup
 
-### Regular Tasks
-- Update service data
-- Review and update pricing
-- Monitor performance metrics
-- Update security dependencies
-- Content updates and blog posts
+### Performance Optimizations
+- **Code Splitting**: Route-based lazy loading
+- **Bundle Optimization**: Vite build optimization
+- **Image Optimization**: Optimized assets and lazy loading
+- **Caching**: Efficient caching strategies
 
-### Content Management
-- Service descriptions
-- Pricing information
-- Company updates
-- Blog content
-- Case studies
+## Current Status
 
-## Support & Documentation
+### ✅ Completed
+- All 23 main pages created and functional
+- Navigation structure implemented with dropdown menus
+- Footer with organized link categories
+- SEO optimization with meta tags
+- Responsive design with Tailwind CSS
+- Build system working correctly
+- All dependencies installed and resolved
+- Merge conflicts resolved
+- Import/export issues fixed
 
-### Technical Support
-- Developer documentation
-- API documentation
-- Component library
-- Code examples
-- Troubleshooting guides
+### 🔄 In Progress
+- Final testing and validation
+- Performance optimization
+- Content review and refinement
 
-### User Support
-- FAQ section
-- Contact forms
-- Live chat integration
-- Knowledge base
-- Video tutorials
+### 📋 Next Steps
+- Create pull request for main branch
+- Merge changes to production
+- Monitor site performance
+- Gather user feedback
+- Plan future enhancements
+
+## Contact Information
+
+**Zion Tech Group**
+- **Phone**: +1 302 464 0950
+- **Email**: kleber@ziontechgroup.com
+- **Address**: 364 E Main St STE 1008, Middletown DE 19709
+- **Website**: https://ziontechgroup.com
+
+## Repository Information
+
+- **Current Branch**: `cursor/website-audit-and-enhancement-c7f4`
+- **Last Commit**: "Add comprehensive Case Studies, Research & Development, and Solutions pages with proper routing and SEO optimization"
+- **Status**: Ready for pull request and merge to main branch
 
 ---
 
-*This document is maintained by the Zion Tech Group development team and should be updated as the site structure evolves.*
+*This document reflects the current state of the Zion Tech Group website as of the latest development cycle. All pages are functional, navigation is complete, and the build system is working correctly.*

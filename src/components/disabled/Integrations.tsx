@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
+import { FuturisticNavigation } from "@/components/FuturisticNavigation";
+import { FuturisticFooter } from "@/components/FuturisticFooter";
+import SEOHead from "@/components/SEOHead";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
@@ -16,12 +16,13 @@ export default function IntegrationsFeature() {
     };
     const { markSlackConnected } = useAdvancedOnboardingStatus();
     useEffect(() => {
-        markSlackConnected()}, [markSlackConnected]);
-    return (<React.Fragment>
-      <SEO title="API & Integrations" description="Extend Zion by embedding widgets or using our REST API for custom workflows." keywords="Zion API, Slack integration, embed widget" canonical="https://app.ziontechgroup.com/features/integrations"/>
+        markSlackConnected();
+    }, [markSlackConnected]);
+    return (<>
+      <SEOHead title="API & Integrations" description="Extend Zion by embedding widgets or using our REST API for custom workflows." keywords="Zion API, Slack integration, embed widget" canonical="https://app.ziontechgroup.com/features/integrations"/>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
-      <Header />
+      <FuturisticNavigation />
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md:px-6">
           <GradientHeading className="mb-4 text-center">API & Integrations</GradientHeading>
