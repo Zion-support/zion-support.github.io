@@ -107,10 +107,8 @@
     "post_job_button": "Post Job"
   },
   "language": {
-    "en": "English",
-    "es": "Español",
-    "pt": "Português",
-    "ar": "العربية",
+    "en-US": "English",
+    "es-ES": "Español",
     "language_changed": "Language changed to {{language}}",
     "switch_to_detected": "Switch to {{language}}?"
   },
