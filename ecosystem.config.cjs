@@ -217,31 +217,31 @@ module.exports = {
       }
     },
 
-    // 🏥 NEW: Project Health Monitor - runs every 5 minutes (HIGHEST PRIORITY)
+    // 🚨 NEW: Error Fix Automation Orchestrator - runs continuously (HIGHEST PRIORITY)
     {
-      name: 'project-health-monitor',
-      script: './scripts/automation/project-health-monitor.cjs',
+      name: 'error-fix-orchestrator',
+      script: './scripts/automation/error-fix-orchestrator.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '512M',
+      max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '300000' // 5 minutes
+        AUTOMATION_INTERVAL: '60000' // 1 minute (continuous monitoring)
       }
     },
 
-    // 🔧 NEW: Enhanced Error Fixer - runs every 10 minutes (HIGH PRIORITY)
+    // 🔧 NEW: Core Error Fixer - runs every 15 minutes (HIGHEST PRIORITY)
     {
-      name: 'enhanced-error-fixer',
-      script: './scripts/automation/enhanced-error-fixer.cjs',
+      name: 'core-error-fixer',
+      script: './scripts/automation/error-fix-automation.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '512M',
+      max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '600000' // 10 minutes
+        AUTOMATION_INTERVAL: '900000' // 15 minutes
       }
     },
 
