@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import { Dispute, DisputeStatus } from "@/types/disputes";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/badge";
 import {
   Table,
