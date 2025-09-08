@@ -1,7 +1,7 @@
 [build]
-  # Use prebuilt static site in 'out' to avoid broken build step
-  command = "echo Using prebuilt out directory"
-  publish = "out"
+  # Skipping build: deploying prebuilt dist
+  command = "echo 'Skipping build: deploying prebuilt dist'"
+  publish = "dist"
   functions = "netlify/functions"
   command_timeout = "30m"
   # Only run when files outside dist/ change
