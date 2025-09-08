@@ -97,22 +97,34 @@ import {
   UserHeart2
 } from 'lucide-react';
 
-interface MarketplaceItem {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: string;
-  rating: number;
-  reviews: number;
-  image: string;
-  featured: boolean;
-  tags: string[];
-  vendor: string;
-  availability: 'available' | 'limited' | 'out-of-stock';
-  delivery: string;
-  warranty: string;
+import React, { useState, useEffect, useMemo } from "react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { Grid3X3, ListFilter, Loader2 } from "lucide-react";
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { FilterSidebar } from "@/components/search/FilterSidebar";
+import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar";
+import { ProductListingCard } from "@/components/ProductListingCard";
+import { ProductListing } from "@/types/listings";
+import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from "@/data/marketplaceData";
+import { generateRandomListing } from "@/utils/generateRandomListing";
+import { toast } from "@/hooks/use-toast";
+import { useNavigate } from "react-router-dom";
+import { SearchSuggestion } from "@/types/search";
+import styles from './Marketplace.module.css';
+import { useViewMode, ViewMode } from '@/context/ViewModeContext';
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from '@/components/ui/pagination';
+
+interface ProductContainerProps {
+  listings: ProductListing[];
+  onRequestQuote: (id: string) => void;
 }
 
 const marketplaceItems: MarketplaceItem[] = [
@@ -218,9 +230,18 @@ const categories = [
 ];
 
 export default function Marketplace() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState('featured');
+  const navigate = useNavigate();
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
+  const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
+  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
+  const [selectedRating, setSelectedRating] = useState<number | null>(null);
+  const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
+  const [isLoading, setIsLoading] = useState(false);
+  const { viewMode, setViewMode } = useViewMode();
+  const createViewModeHandler = <T extends ViewMode>(mode: T) => () => setViewMode(mode);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
 
   const filteredItems = marketplaceItems.filter(item => {
     const categoryMatch = selectedCategory === 'all' || item.category === selectedCategory;
@@ -246,22 +267,91 @@ export default function Marketplace() {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Zion Tech <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Marketplace</span>
-            </h1>
-            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Discover cutting-edge technology solutions, expert services, and innovative products 
-              from Zion Tech Group and our trusted partners.
-            </p>
+    <main className="flex-grow container mx-auto px-4 py-8">
+        <div className="max-w-4xl mx-auto mb-8">
+          <h1 className="font-bold text-white mb-4 text-[clamp(1.5rem,3vw,1.875rem)]">AI & Tech Marketplace</h1>
+          <p className="text-zion-slate-light text-[clamp(1rem,2.5vw,1.125rem)]">
+            Discover professional services and products for your AI and tech projects.
+            Browse our curated collection of solutions from verified providers.
+          </p>
+        </div>
+        
+        {/* Search and filter bar */}
+        <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 mb-8">
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="relative flex-1">
+              <EnhancedSearchInput
+                value={searchQuery}
+                onChange={setSearchQuery}
+                onSelectSuggestion={setSearchQuery}
+                placeholder="Search the marketplace..."
+                searchSuggestions={searchSuggestions}
+              />
+            </div>
+            <div className="flex gap-2">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={createViewModeHandler('grid')}
+                aria-label="Grid view"
+                aria-pressed={viewMode === 'grid'}
+                className="text-zion-slate-light"
+              >
+                <Grid3X3 className="h-4 w-4" />
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={createViewModeHandler('list')}
+                aria-label="List view"
+                aria-pressed={viewMode === 'list'}
+                className="text-zion-slate-light"
+              >
+                <ListFilter className="h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        {/* Main layout with sidebar and results */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+          {/* Sidebar Filters */}
+          <div className="lg:col-span-1">
+            <FilterSidebar
+              filters={{
+                selectedProductTypes,
+                selectedLocations,
+                selectedAvailability,
+                selectedRating
+              }}
+              filterOptions={filterOptions}
+              onFilterChange={handleFilterChange}
+              onRatingChange={setSelectedRating}
+              onClearFilters={clearAllFilters}
+            />
+          </div>
+          
+          {/* Main content */}
+          <div className="lg:col-span-3">
+            {/* Active filters display */}
+            <ActiveFiltersBar 
+              selectedProductTypes={selectedProductTypes}
+              selectedLocations={selectedLocations}
+              selectedAvailability={selectedAvailability}
+              selectedRating={selectedRating}
+              searchQuery={searchQuery}
+              onRemoveFilter={handleFilterChange}
+              onRemoveRating={() => setSelectedRating(null)}
+              onClearSearch={() => setSearchQuery("")}
+            />
+
+            {/* Results count */}
+            <div className="mb-6">
+              <p className="text-zion-slate-light">
+                Showing {filteredListings.length} results
+                {searchQuery && ` for "${searchQuery}"`}
+              </p>
+            </div>
             
             <div className="flex flex-wrap justify-center gap-4 text-slate-300 mb-8">
               <div className="flex items-center gap-2">
