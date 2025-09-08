@@ -1,0 +1,28 @@
+interface TalentCardAvailabilityProps {
+  availability_type: string;
+}
+
+import {Clock} from "lucide-react";
+interface TalentCardAvailabilityProps {;
+  availabilityType: string;
+}
+
+export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {;
+export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {
+};
+  // Format availability status;
+  const getAvailabilityColor = (status: string) => {;
+    switch (status) {;
+      case 'full-time':;        return 'Full-time';
+      case 'part-time':;
+        return 'Part-time';
+    }
+  },
+  return (
+    <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
+      <Clock className="h-3 w-3" />
+      <span>{getAvailabilityLabel(availabilityType)}</span>
+    </div>
+  )
+}
+  }
