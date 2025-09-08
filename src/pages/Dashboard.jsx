@@ -1,45 +1,34 @@
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { CommunityDiscussion } from "@/components/CommunityDiscussion";
-import { Badge } from "@/components/ui/badge";
-import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings } from "lucide-react";
-import { createTestNotification, createOnboardingNotification, createSystemNotification } from "@/utils/notifications";
-import { NotificationCenter } from "@/components/NotificationCenter";
-import { useToast } from "@/hooks/use-toast";
-import { Link } from "react-router-dom";
+import { SEO } from '@/components/SEO';
+
 export default function Dashboard() {
-    const { user, logout } = useAuth();
-    const { toast } = useToast();
-    if (!user)
-        return null;
-    const handleTestNotification = async () => {
-        const result = await createTestNotification(user.id);
-        if (result.success) {
-            toast({
-                title: "Test notification created",
-                description: "Check your notification center",
-            });
-        }
-        else {
-            toast({
-                title: "Error creating test notification",
-                description: "Something went wrong",
-                variant: "destructive",
-            });
-        }
-    };
-    const Dashboard = () => {
-        return (<>
-      
-      <div className="min-h-screen bg-zion-blue">
-        <div className="container mx-auto px-4 py-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Left Sidebar - User Profile */}
-            <div className="lg:col-span-1">
-              <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-24 h-24 rounded-full bg-zion-purple flex items-center justify-center text-2xl font-bold text-white mb-4">
-                    {user.displayName.split(' ').map(name => name[0]).join('')}
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO
+        title="Dashboard - Zion Tech Group"
+        description="Access your Zion Tech Group dashboard to manage your services, view analytics, and control your account."
+        keywords="dashboard, account management, services, analytics"
+        canonical="https://ziontechgroup.com/dashboard"
+      />
+
+      {/* Header */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-white mb-4">Welcome to Your Dashboard</h1>
+            <p className="text-xl text-gray-300">
+              Monitor your services, track performance, and manage your Zion Tech Group solutions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Service Status */}
+            <div>
+              <div className="bg-slate-800/50 border border-white/10 rounded-xl p-6">
+                <h3 className="text-xl font-bold text-white mb-4">Service Status</h3>
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-green-400 mb-2">100%</div>
+                    <div className="text-gray-300 text-sm">Active</div>
                   </div>
                   <h2 className="text-xl font-bold text-white">{user.displayName}</h2>
                   <p className="text-zion-slate-light mb-2">{user.email}</p>

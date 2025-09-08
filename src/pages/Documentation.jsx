@@ -24,3 +24,5 @@ const Documentation = () => {
       </div>
     </React.Fragment>)};
 export default Documentation;
+
+export { Documentation };

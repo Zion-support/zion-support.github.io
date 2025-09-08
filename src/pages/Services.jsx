@@ -73,4 +73,7 @@ export default function Services() {
 
 				</div>
 			</main>
-		</React.Fragment>)}
+		</>);
+}
+
+export { Services };
