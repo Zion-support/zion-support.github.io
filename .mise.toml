@@ -1,5 +1,3 @@
-[tools]
-python = "3.11.9"
-
 [settings]
-python.compile = true
+# Disable compiling or installing Python via mise during Netlify builds
+python.compile = false
