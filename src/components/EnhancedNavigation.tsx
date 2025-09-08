@@ -87,7 +87,14 @@ const navigationItems: NavigationItem[] = [
       { label: 'News', href: '/news' },
       { label: 'FAQ', href: '/faq' },
       { label: 'Help Center', href: '/help' },
-      { label: 'Documentation', href: '/documentation' }
+      { label: 'Documentation', href: '/documentation' },
+      { label: 'API Reference', href: '/api' },
+      { label: 'API Documentation', href: '/api-docs' },
+      { label: 'Developer Portal', href: '/developer' },
+      { label: 'Training', href: '/training' },
+      { label: 'Webinars', href: '/webinars' },
+      { label: 'White Papers', href: '/white-papers' },
+      { label: 'Sitemap', href: '/sitemap' }
     ]
   }
 ];
