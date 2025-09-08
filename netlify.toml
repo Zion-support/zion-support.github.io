@@ -15,10 +15,7 @@
   CYPRESS_INSTALL_BINARY = "0"
   ELECTRON_SKIP_DOWNLOAD = "1"
 
-# Attempt to disable Next.js plugin if installed via file-based config
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-  pinned_version = "5"
+
 
 [[redirects]]
   from = "/*"
