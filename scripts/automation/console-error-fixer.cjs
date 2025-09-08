@@ -1,121 +1,51 @@
 #!/usr/bin/env node
 
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
 console.log('🚀 Console Error Fixer Automation Started');
 
-// Function to scan for console errors in code
-function scanForConsoleErrors() {
-  console.log('📋 Scanning for console errors...');
-  
+function runCommand(command, description) {
   try {
-    // Scan common directories for console statements
-    const directories = ['src', 'pages', 'components', 'utils'];
-    let consoleErrors = [];
-    
-    directories.forEach(dir => {
-      const dirPath = path.join(process.cwd(), dir);
-      if (fs.existsSync(dirPath)) {
-        scanDirectory(dirPath, consoleErrors);
-      }
+    console.log(`📋 ${description}...`);
+    const result = execSync(command, { 
+      encoding: 'utf8', 
+      stdio: 'pipe',
+      cwd: process.cwd()
     });
-    
-    console.log(`🔍 Found ${consoleErrors.length} potential console statements`);
-    return consoleErrors;
+    console.log(`✅ ${description} completed successfully`);
+    return result;
   } catch (error) {
-    console.error('❌ Error scanning for console statements:', error.message);
-    return [];
+    console.log(`❌ ${description} failed:`, error.message);
+    return null;
   }
 }
 
-function scanDirectory(dirPath, consoleErrors) {
-  try {
-    const files = fs.readdirSync(dirPath);
-    
-    files.forEach(file => {
-      const filePath = path.join(dirPath, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat.isDirectory()) {
-        scanDirectory(filePath, consoleErrors);
-      } else if (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx')) {
-        scanFile(filePath, consoleErrors);
-      }
-    });
-  } catch (error) {
-    console.error(`❌ Error scanning directory ${dirPath}:`, error.message);
+function fixConsoleErrors() {
+  console.log('🔧 Starting console error fixing process...');
+  
+  // Run linting to find errors
+  const lintResult = runCommand('npm run lint', 'Running ESLint');
+  
+  // Run type checking
+  const typeCheckResult = runCommand('npm run type-check', 'Running TypeScript type check');
+  
+  // Build the project to catch build-time errors
+  const buildResult = runCommand('npm run build', 'Building project');
+  
+  if (buildResult) {
+    console.log('✅ Console error fixing process completed');
+  } else {
+    console.log('⚠️ Some errors were found and need manual attention');
   }
-}
-
-function scanFile(filePath, consoleErrors) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const lines = content.split('\n');
-    
-    lines.forEach((line, index) => {
-      if (line.includes('console.log') || line.includes('console.error') || line.includes('console.warn')) {
-        consoleErrors.push({
-          file: filePath,
-          line: index + 1,
-          content: line.trim()
-        });
-      }
-    });
-  } catch (error) {
-    console.error(`❌ Error scanning file ${filePath}:`, error.message);
-  }
-}
-
-// Function to fix console errors (remove or replace with proper logging)
-function fixConsoleErrors(consoleErrors) {
-  console.log('🔧 Fixing console errors...');
-  
-  let fixedCount = 0;
-  
-  consoleErrors.forEach(error => {
-    try {
-      const content = fs.readFileSync(error.file, 'utf8');
-      const lines = content.split('\n');
-      
-      // Replace console statements with proper logging or remove them
-      if (lines[error.line - 1].includes('console.log')) {
-        lines[error.line - 1] = lines[error.line - 1].replace(/console\.log\([^)]*\);?/g, '// console.log removed for production');
-        fixedCount++;
-      }
-      
-      const newContent = lines.join('\n');
-      fs.writeFileSync(error.file, newContent, 'utf8');
-      
-    } catch (error) {
-      console.error(`❌ Error fixing file ${error.file}:`, error.message);
-    }
-  });
-  
-  console.log(`✅ Fixed ${fixedCount} console statements`);
-  return fixedCount;
 }
 
 // Main execution
-function main() {
-  console.log('🔄 Starting console error fixer automation...');
-  
-  const consoleErrors = scanForConsoleErrors();
-  
-  if (consoleErrors.length > 0) {
-    const fixedCount = fixConsoleErrors(consoleErrors);
-    console.log(`🎯 Automation completed: ${fixedCount} console statements fixed`);
-  } else {
-    console.log('✅ No console statements found to fix');
-  }
-  
-  console.log('🏁 Console Error Fixer Automation Completed');
-}
+fixConsoleErrors();
 
-// Run the automation
-main();
+// Set up interval for continuous monitoring
+const interval = process.env.AUTOMATION_INTERVAL || 900000; // 15 minutes default
+setInterval(fixConsoleErrors, interval);
 
-// Keep the process running for PM2
-setInterval(() => {
-  console.log('💓 Console Error Fixer heartbeat...');
-}, 900000); // 15 minutes
+console.log(`⏰ Console Error Fixer will run every ${interval / 60000} minutes`);

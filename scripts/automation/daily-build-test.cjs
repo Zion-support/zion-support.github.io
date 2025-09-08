@@ -1,82 +1,85 @@
 #!/usr/bin/env node
 
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-console.log('🚀 Daily Build Test Automation Started');
+console.log('🏗️ Daily Build Test Automation Started');
 
-async function runDailyBuildTest() {
+function runCommand(command, description) {
   try {
-    console.log('🏗️ Running daily build test...');
-    
-    const buildResults = [];
-    
-    // Install dependencies
-    console.log('📦 Installing dependencies...');
-    try {
-      execSync('npm install', { encoding: 'utf8' });
-      buildResults.push({
-        type: 'dependencies',
-        result: 'Dependencies installed successfully'
-      });
-    } catch (error) {
-      buildResults.push({
-        type: 'dependencies',
-        result: 'Dependency installation failed'
-      });
-    }
-    
-    // Build the project
-    console.log('🔨 Building project...');
-    try {
-      execSync('npm run build', { encoding: 'utf8' });
-      buildResults.push({
-        type: 'build',
-        result: 'Build completed successfully'
-      });
-    } catch (error) {
-      buildResults.push({
-        type: 'build',
-        result: 'Build failed'
-      });
-    }
-    
-    // Run tests
-    console.log('🧪 Running tests...');
-    try {
-      execSync('npm test', { encoding: 'utf8' });
-      buildResults.push({
-        type: 'tests',
-        result: 'Tests passed'
-      });
-    } catch (error) {
-      buildResults.push({
-        type: 'tests',
-        result: 'Tests failed'
-      });
-    }
-    
-    // Generate report
-    const report = {
-      timestamp: new Date().toISOString(),
-      totalChecks: buildResults.length,
-      results: buildResults
-    };
-    
-    fs.writeFileSync('daily-build-test-report.json', JSON.stringify(report, null, 2));
-    console.log('📊 Report generated: daily-build-test-report.json');
-    
+    console.log(`📋 ${description}...`);
+    const result = execSync(command, { 
+      encoding: 'utf8', 
+      stdio: 'pipe',
+      cwd: process.cwd()
+    });
+    console.log(`✅ ${description} completed successfully`);
+    return result;
   } catch (error) {
-    console.error('❌ Error in daily build test:', error);
+    console.log(`❌ ${description} failed:`, error.message);
+    return null;
   }
 }
 
-// Run the automation
-runDailyBuildTest().then(() => {
-  console.log('✅ Daily Build Test Automation Completed');
-  process.exit(0);
-}).catch((error) => {
-  console.error('❌ Daily Build Test Automation Failed:', error);
-  process.exit(1);
-});
+function runDailyBuildTest() {
+  console.log('🌅 Starting daily build and test process...');
+  
+  // Clean previous build
+  if (fs.existsSync('dist')) {
+    console.log('🧹 Cleaning previous build...');
+    fs.rmSync('dist', { recursive: true, force: true });
+  }
+  
+  // Install dependencies
+  console.log('📦 Installing dependencies...');
+  runCommand('npm ci', 'Dependency installation');
+  
+  // Run linting
+  console.log('🔍 Running linting...');
+  runCommand('npm run lint', 'ESLint check');
+  
+  // Run type checking
+  console.log('🔍 Running type checking...');
+  runCommand('npm run type-check', 'TypeScript check');
+  
+  // Build project
+  console.log('🏗️ Building project...');
+  const buildResult = runCommand('npm run build', 'Project build');
+  
+  if (buildResult) {
+    console.log('✅ Build successful!');
+    
+    // Verify build output
+    if (fs.existsSync('dist')) {
+      console.log('📁 Build output verification:');
+      const files = fs.readdirSync('dist');
+      files.forEach(file => {
+        const stats = fs.statSync(path.join('dist', file));
+        if (stats.isFile()) {
+          console.log(`  📄 ${file} (${(stats.size / 1024).toFixed(2)} KB)`);
+        } else {
+          console.log(`  📁 ${file}/`);
+        }
+      });
+    }
+    
+    // Run tests if available
+    console.log('🧪 Running tests...');
+    runCommand('npm test', 'Test execution');
+    
+  } else {
+    console.log('❌ Build failed!');
+  }
+  
+  console.log('✅ Daily build and test process completed');
+}
+
+// Main execution
+runDailyBuildTest();
+
+// Set up interval for daily execution
+const interval = process.env.AUTOMATION_INTERVAL || 86400000; // 24 hours default
+setInterval(runDailyBuildTest, interval);
+
+console.log(`⏰ Daily Build Test will run every ${interval / 3600000} hours`);

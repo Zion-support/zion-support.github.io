@@ -1,98 +1,135 @@
 #!/usr/bin/env node
 
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-console.log('🚀 Performance Monitor Automation Started');
+console.log('⚡ Performance Monitor Automation Started');
 
-async function monitorPerformance() {
+function runCommand(command, description) {
   try {
-    console.log('📊 Monitoring performance...');
-    
-    const performanceResults = [];
+    console.log(`📋 ${description}...`);
+    const result = execSync(command, { 
+      encoding: 'utf8', 
+      stdio: 'pipe',
+      cwd: process.cwd()
+    });
+    console.log(`✅ ${description} completed successfully`);
+    return result;
+  } catch (error) {
+    console.log(`❌ ${description} failed:`, error.message);
+    return null;
+  }
+}
+
+function runPerformanceMonitor() {
+  console.log('📊 Starting performance monitoring process...');
+  
+  // Build project if needed
+  if (!fs.existsSync('dist')) {
+    console.log('🏗️ Building project for performance analysis...');
+    runCommand('npm run build', 'Project build');
+  }
+  
+  if (fs.existsSync('dist')) {
+    console.log('📁 Analyzing build performance...');
     
     // Check bundle size
-    console.log('📦 Checking bundle size...');
-    try {
-      const bundleSize = execSync('npm run build', { encoding: 'utf8' });
-      performanceResults.push({
-        type: 'bundle-size',
-        result: 'Build completed for size analysis'
-      });
-    } catch (error) {
-      performanceResults.push({
-        type: 'bundle-size',
-        result: 'Build failed for size analysis'
-      });
-    }
+    const distStats = fs.statSync('dist');
+    const totalSizeMB = (distStats.size / 1024 / 1024).toFixed(2);
+    console.log(`📊 Total build size: ${totalSizeMB} MB`);
     
-    // Check for performance issues in code
-    console.log('🔍 Scanning for performance issues...');
-    const sourceDirs = ['src', 'pages', 'components'];
-    let performanceIssues = [];
+    // Analyze individual files
+    const files = fs.readdirSync('dist');
+    let jsSize = 0;
+    let cssSize = 0;
+    let otherSize = 0;
     
-    for (const dir of sourceDirs) {
-      if (fs.existsSync(dir)) {
-        const files = getAllFiles(dir);
-        for (const file of files) {
-          if (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx')) {
-            const content = fs.readFileSync(file, 'utf8');
-            // Check for common performance anti-patterns
-            if (content.includes('setInterval') || content.includes('setTimeout')) {
-              performanceIssues.push({
-                file,
-                issue: 'Timer usage detected'
-              });
-            }
-          }
-        }
+    files.forEach(file => {
+      const filePath = path.join('dist', file);
+      const stats = fs.statSync(filePath);
+      const sizeKB = (stats.size / 1024).toFixed(2);
+      
+      if (file.endsWith('.js') || file.endsWith('.mjs')) {
+        jsSize += stats.size;
+        console.log(`  📄 ${file}: ${sizeKB} KB (JavaScript)`);
+      } else if (file.endsWith('.css')) {
+        cssSize += stats.size;
+        console.log(`  🎨 ${file}: ${sizeKB} KB (CSS)`);
+      } else {
+        otherSize += stats.size;
+        console.log(`  📁 ${file}: ${sizeKB} KB (Other)`);
       }
+    });
+    
+    // Performance metrics
+    const jsSizeMB = (jsSize / 1024 / 1024).toFixed(2);
+    const cssSizeMB = (cssSize / 1024 / 1024).toFixed(2);
+    const otherSizeMB = (otherSize / 1024 / 1024).toFixed(2);
+    
+    console.log('\n📊 Performance Summary:');
+    console.log(`  JavaScript: ${jsSizeMB} MB`);
+    console.log(`  CSS: ${cssSizeMB} MB`);
+    console.log(`  Other: ${otherSizeMB} MB`);
+    
+    // Performance recommendations
+    console.log('\n💡 Performance Recommendations:');
+    
+    if (jsSizeMB > 1) {
+      console.log('  ⚠️ JavaScript bundle is large, consider code splitting');
     }
     
-    if (performanceIssues.length > 0) {
-      performanceResults.push({
-        type: 'code-analysis',
-        result: `Found ${performanceIssues.length} potential performance issues`
+    if (cssSizeMB > 0.5) {
+      console.log('  ⚠️ CSS bundle is large, consider purging unused styles');
+    }
+    
+    if (totalSizeMB > 5) {
+      console.log('  ⚠️ Total bundle size is large, consider optimization');
+    }
+    
+    // Check for common performance issues
+    console.log('\n🔍 Checking for performance issues...');
+    
+    // Look for large dependencies
+    if (fs.existsSync('package.json')) {
+      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
+      
+      const largeDeps = ['lodash', 'moment', 'date-fns', 'ramda'];
+      largeDeps.forEach(dep => {
+        if (dependencies[dep]) {
+          console.log(`  ⚠️ Large dependency detected: ${dep}`);
+        }
       });
     }
     
-    // Generate report
-    const report = {
-      timestamp: new Date().toISOString(),
-      totalChecks: performanceResults.length,
-      results: performanceResults,
-      issues: performanceIssues
-    };
-    
-    fs.writeFileSync('performance-monitor-report.json', JSON.stringify(report, null, 2));
-    console.log('📊 Report generated: performance-monitor-report.json');
-    
-  } catch (error) {
-    console.error('❌ Error in performance monitoring:', error);
-  }
-}
-
-function getAllFiles(dirPath, arrayOfFiles = []) {
-  const files = fs.readdirSync(dirPath);
-  
-  for (const file of files) {
-    const fullPath = path.join(dirPath, file);
-    if (fs.statSync(fullPath).isDirectory()) {
-      arrayOfFiles = getAllFiles(fullPath, arrayOfFiles);
-    } else {
-      arrayOfFiles.push(fullPath);
+    // Check for duplicate dependencies
+    try {
+      const duplicateResult = execSync('npm ls --depth=0', { 
+        encoding: 'utf8', 
+        stdio: 'pipe',
+        cwd: process.cwd()
+      });
+      
+      if (duplicateResult.includes('UNMET PEER DEPENDENCY')) {
+        console.log('  ⚠️ Peer dependency issues detected');
+      }
+    } catch (error) {
+      // Ignore errors in dependency checking
     }
+    
+  } else {
+    console.log('❌ Build failed, cannot analyze performance');
   }
   
-  return arrayOfFiles;
+  console.log('✅ Performance monitoring process completed');
 }
 
-// Run the automation
-monitorPerformance().then(() => {
-  console.log('✅ Performance Monitor Automation Completed');
-  process.exit(0);
-}).catch((error) => {
-  console.error('❌ Performance Monitor Automation Failed:', error);
-  process.exit(1);
-});
+// Main execution
+runPerformanceMonitor();
+
+// Set up interval for continuous monitoring
+const interval = process.env.AUTOMATION_INTERVAL || 1800000; // 30 minutes default
+setInterval(runPerformanceMonitor, interval);
+
+console.log(`⏰ Performance Monitor will run every ${interval / 60000} minutes`);
