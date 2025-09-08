@@ -1,4 +1,4 @@
-              No results found for &quot;{query}&quot;
+              No results found for "{query}"
             </div>
           ) : null}
         </div>

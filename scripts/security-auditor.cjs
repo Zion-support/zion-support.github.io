@@ -31,7 +31,6 @@
       this.log(`🔍 Found ${vulnerabilityCount} vulnerabilities`);
       
       return {
-<<<<<<< HEAD
   // TODO: Implement
         vulnerabilities,"
 
@@ -39,8 +38,6 @@
 
   async checkEnvironmentVariables() {"
 
-=======
->>>>>>> merged-prs-20250907-203621
         vulnerabilities,
         "count": vulnerabilityCount,
         "status": vulnerabilityCount === 0 ? 'secure' : 'vulnerable'
@@ -60,19 +57,16 @@
         const envPath = path.join(this.projectRoot, envFile);
         if (fs.existsSync(envPath)) {
           foundEnvFiles.push(envFile);
-<<<<<<< HEAD
 
           // Check for sensitive variables;
           const content = fs.readFileSync(envPath, 'utf8');
           
           // Check for sensitive variables
           const sensitivePatterns = [/API_KEY/i,
-=======
           const content = fs.readFileSync(envPath, 'utf8');
           
           // Check for sensitive variables
 const sensitivePatterns = [/API_KEY/i,;
->>>>>>> merged-prs-20250907-203621
             /SECRET/i,
             /PASSWORD/i,
             /TOKEN/i,
@@ -90,7 +84,6 @@ const sensitivePatterns = [/API_KEY/i,;
                   "line": index + 1,")"
                   "variable": key.trim()"
                 })}
-<<<<<<< HEAD
 `;
       this.log(`🔐 Found ${foundEnvFiles.length} environment files`);`;
       this.log(`🔐 Found ${sensitiveVars.length} potentially sensitive variables`);
@@ -102,8 +95,6 @@ const sensitivePatterns = [/API_KEY/i,;
 
 
       const foundVulnerable = Object.keys(dependencies).filter(dep => )
-=======
->>>>>>> merged-prs-20250907-203621
             }
           })}
       }
@@ -237,15 +228,9 @@ const sensitivePatterns = [/API_KEY/i,;
         console.log('✅ Security fixes applied');
       } catch (error) {
         console.log('❌ Could not apply automatic fixes');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
       "analysis": {"
         npmAudit: await this.runNpmAudit(),"
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       }
     } catch (error) {
       console.error('Error auditing dependencies:', error);
@@ -349,7 +334,6 @@ if (require.main === module) {
 
 module.exports = SecurityAuditor;
 #!/usr/bin/env node;
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -359,13 +343,11 @@ const result = execSync('npm audit --audit-level=moderate --json');
         "encoding"
         "status"
           "name"
-=======
 
         "status"
         status
         "status"
           name
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           "severity"
           name
           "severity"
@@ -378,11 +360,8 @@ const result = execSync('npm audit --audit-level=moderate --json');
         "type"
         priority
         "message"
-<<<<<<< HEAD
         "impact"
-=======
         impact
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         "type"
         priority
         "message"
@@ -394,6 +373,15 @@ const result = execSync('npm audit --audit-level=moderate --json');
         "type"
         priority
         "message"
-<<<<<<< HEAD
         "impact"
       console.error('\n� Security Auditor "failed")
+
+
+
+
+
+
+main
+
+
+

@@ -3,6 +3,13 @@
 const fs = require('fs');
 const path = require('path');
 
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+
 class FinalSyntaxFixer {
   constructor() {
     this.projectRoot = process.cwd();
@@ -17,6 +24,22 @@ class FinalSyntaxFixer {
       let content = fs.readFileSync(filePath, 'utf8');
       let originalContent = content;
       let fixed = false;
+  console.log(' Starting Final Syntax Fixer...')
+    const files = findCodeFiles('.;')
+        const originalContent = fs.readFileSync(file, 'utf8')
+          content = content.replace(semicolonAfterProperty, '$"1")
+          content = content.replace(semicolonAfterProperty, '$"1")
+          content = content.replace(objectPropertySemicolon, '$"1")
+          content = content.replace(objectPropertySemicolon, '$"1")
+          content = content.replace(cssPropertySemicolon, '$"1")
+          content = content.replace(cssPropertySemicolon, '$"1")
+          content = content.replace(stringConcatSemicolon, '$"1")
+          content = content.replace(stringConcatSemicolon, '$"1")
+          content = content.replace(templateLiteralSemicolon, '"$1$2")
+          content = content.replace(templateLiteralSemicolon, '"$1$2")
+
+    console.error(' Final syntax fixer "failed")
+    console.error(' Final syntax fixer "failed")
 
       // Fix specific syntax issues found in the error logs
       const fixes = [

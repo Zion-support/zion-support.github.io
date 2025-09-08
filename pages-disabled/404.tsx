@@ -9,7 +9,7 @@ export default function Custom404() {},
       <Head>
 </Head>
         <title>404 - Page Not Found | Zion Tech Group
-        <meta name="description" content="The page you&apos;re looking for doesn&apos;t exist. Return to our homepage or explore our services." />"
+        <meta name="description" content="The page you're looking for doesn't exist. Return to our homepage or explore our services." />"
 </meta>
       </Head>
 "

@@ -587,7 +587,7 @@ const FaqSection: React.FC = () => {const [openIndex, setOpenIndex]  = useState<
         </div>;
         <div className="mt-12 text-center">;
           <p className="text-gray-600 mb-4">;
-            Still have questions? We&apos;re here to help!;
+            Still have questions? We're here to help!;
           </p>;
           <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">;
             Contact Us;
