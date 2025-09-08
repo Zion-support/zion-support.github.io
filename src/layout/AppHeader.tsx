@@ -49,10 +49,82 @@ export function AppHeader() {
 
   const services = [
     { 
-      name: 'Innovative Services Showcase 2027', 
-      href: '/innovative-services-showcase-2027', 
+      name: 'Revolutionary Services 2030', 
+      href: '/revolutionary-services-2030', 
       icon: Rocket, 
-      description: 'Complete Services Portfolio',
+      description: 'Next-Generation AI & Technology',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500'
+    },
+    { 
+      name: 'AI & Analytics', 
+      href: '/services', 
+      icon: Brain, 
+      description: 'Machine Learning & Data Science',
+      featured: true,
+      color: 'from-purple-500 to-cyan-500'
+    },
+    { 
+      name: 'AI & Legal Tech', 
+      href: '/services', 
+      icon: Scale, 
+      description: 'Document Analysis & Compliance',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'AI & Healthcare', 
+      href: '/services', 
+      icon: Heart, 
+      description: 'Medical AI & Diagnostics',
+      featured: true,
+      color: 'from-red-500 to-pink-500'
+    },
+    { 
+      name: 'AI & Research', 
+      href: '/services', 
+      icon: Eye, 
+      description: 'Scientific Research & Discovery',
+      featured: true,
+      color: 'from-purple-500 to-violet-500'
+    },
+    { 
+      name: 'AI & Green Tech', 
+      href: '/services', 
+      icon: Leaf, 
+      description: 'Sustainability Solutions',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'AI & Metaverse', 
+      href: '/services', 
+      icon: Globe, 
+      description: 'Virtual Reality & Gaming',
+      featured: true,
+      color: 'from-purple-500 to-indigo-500'
+    },
+    { 
+      name: 'AI & Blockchain', 
+      href: '/services', 
+      icon: Lock, 
+      description: 'DeFi & Smart Contracts',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'AI & Edge Computing', 
+      href: '/services', 
+      icon: Cpu, 
+      description: 'IoT & Real-time Processing',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'Quantum Computing', 
+      href: '/services', 
+      icon: Atom, 
+      description: 'Quantum AI & Optimization',
       featured: true,
       color: 'from-purple-500 to-pink-500'
     },
