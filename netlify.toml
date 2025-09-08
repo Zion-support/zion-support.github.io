@@ -1,6 +1,6 @@
 [build]
-  # Use prebuilt static site to avoid CI build failures
-  command = "echo 'Skipping build; using prebuilt out/ directory'"
+  # Build the Vite project on Netlify
+  command = "npm ci --no-audit --no-fund && npm run build"
   publish = "dist"
   functions = "netlify/functions"
   command_timeout = "30m"
@@ -8,12 +8,18 @@
 [build.environment]
   NODE_VERSION = "20"
   PYTHON_VERSION = "3.11"
-  
+  NPM_FLAGS = "--omit=optional"
+
+[context.production.environment]
+  NODE_ENV = "production"
+
+[context.deploy-preview]
+  command = "npm ci --no-audit --no-fund && npm run build"
+
+[context.branch-deploy]
+  command = "npm ci --no-audit --no-fund && npm run build"
 
 # Vite/React SPA configuration
-
-
-
 [[redirects]]
   from = "/*"
   to = "/index.html"
