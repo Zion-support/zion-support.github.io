@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { TrendingUp, Shield, Zap, CheckCircle, ArrowRight, Clock, Users } from 'lucide-react';
+import { Search, Shield, Zap, CheckCircle, ArrowRight, Clock, Users } from 'lucide-react';
 
-const AiFinancialTrading: React.FC = () => {
+const AiSeo: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-8">
@@ -14,14 +14,14 @@ const AiFinancialTrading: React.FC = () => {
         >
           <div className="flex justify-center mb-6">
             <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center">
-              <TrendingUp className="w-10 h-10 text-white" />
+              <Search className="w-10 h-10 text-white" />
             </div>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-green-500 to-emerald-600 bg-clip-text text-transparent mb-6">
-            AI Financial Trading
+            AI SEO
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Advanced AI-powered trading algorithms and financial market analysis.
+            AI-powered search engine optimization with intelligent content analysis.
           </p>
         </motion.div>
 
@@ -33,10 +33,10 @@ const AiFinancialTrading: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-green-500/20"
           >
-            <TrendingUp className="w-12 h-12 text-green-400 mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-3">Algorithmic Trading</h3>
+            <Search className="w-12 h-12 text-green-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Content Optimization</h3>
             <p className="text-slate-300">
-              AI-driven trading strategies and automated execution.
+              AI-driven content analysis and optimization.
             </p>
           </motion.div>
           <motion.div
@@ -45,10 +45,10 @@ const AiFinancialTrading: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-green-500/20"
           >
-            <TrendingUp className="w-12 h-12 text-green-400 mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-3">Market Analysis</h3>
+            <Search className="w-12 h-12 text-green-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Keyword Research</h3>
             <p className="text-slate-300">
-              Real-time market data analysis and trend prediction.
+              Intelligent keyword discovery and analysis.
             </p>
           </motion.div>
           <motion.div
@@ -57,10 +57,10 @@ const AiFinancialTrading: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.30000000000000004 }}
             className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-green-500/20"
           >
-            <TrendingUp className="w-12 h-12 text-green-400 mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-3">Risk Management</h3>
+            <Search className="w-12 h-12 text-green-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Performance Tracking</h3>
             <p className="text-slate-300">
-              Advanced risk assessment and portfolio optimization.
+              Real-time SEO performance monitoring.
             </p>
           </motion.div>
         </div>
@@ -72,7 +72,7 @@ const AiFinancialTrading: React.FC = () => {
           className="text-center"
         >
           <button className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-            Get Started with AI Financial Trading
+            Get Started with AI SEO
             <ArrowRight className="w-5 h-5 ml-2 inline" />
           </button>
         </motion.div>
@@ -81,4 +81,4 @@ const AiFinancialTrading: React.FC = () => {
   );
 };
 
-export default AiFinancialTrading;
+export default AiSeo;

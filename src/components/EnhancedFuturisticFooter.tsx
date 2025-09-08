@@ -135,12 +135,16 @@ export function EnhancedFuturisticFooter() {
         { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', featured: true },
         { name: 'AI Content Creation', href: '/services/ai-content-creation', featured: true },
         { name: 'AI Research & Discovery', href: '/services/ai-autonomous-research-assistant', featured: true },
-        { name: 'AI Green Technology', href: '/services/green-it', featured: true },
-        { name: 'AI Metaverse Platform', href: '/services/ai-quantum-hybrid-platform', featured: true },
-        { name: 'AI Space Technology', href: '/services/space-tech', featured: true },
-        { name: 'AI FinTech Platform', href: '/services/quantum-ai-trading-platform', featured: true },
-        { name: 'AI Supply Chain', href: '/services/ai-workflow-automation', featured: true },
-        { name: 'AI Quality Assurance', href: '/services/ai-project-management', featured: true }
+        { name: 'AI Green Technology', href: '/services/sustainable-technology', featured: true },
+        { name: 'AI Metaverse Platform', href: '/services/ai-content-creation', featured: true },
+        { name: 'AI Space Technology', href: '/space-tech', featured: true },
+        { name: 'AI FinTech Platform', href: '/services/ai-financial-trading', featured: true },
+        { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization', featured: true },
+        { name: 'AI Quality Assurance', href: '/services/ai-predictive-maintenance', featured: true },
+        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', featured: true },
+        { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', featured: true },
+        { name: 'AI HR & Recruitment', href: '/services/ai-hr-platform', featured: true },
+        { name: 'AI Content Creation', href: '/services/ai-content-creation', featured: true }
       ]
     },
     {
@@ -198,8 +202,8 @@ export function EnhancedFuturisticFooter() {
       icon: Server,
       color: 'from-orange-600 to-red-600',
       links: [
-        { name: 'Comprehensive Pricing 2027', href: '/pricing-guide-2027', featured: true },
-        { name: 'Pricing Guide 2030', href: '/pricing-guide-2030', featured: true },
+        { name: 'Comprehensive Pricing 2025', href: '/comprehensive-pricing-guide-2025', featured: true },
+        { name: 'Pricing Guide 2025', href: '/pricing-guide-2025', featured: true },
         { name: 'Blog & Insights', href: '/blog', featured: false },
         { name: 'FAQ & Help Center', href: '/faq', featured: false },
         { name: 'Documentation', href: '/docs', featured: false },

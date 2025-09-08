@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShoppingCart, Shield, Zap, CheckCircle, ArrowRight, Clock, Users } from 'lucide-react';
+import { Headphones, Shield, Zap, CheckCircle, ArrowRight, Clock, Users } from 'lucide-react';
 
-const MicroSaas: React.FC = () => {
+const Helpdesk: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-8">
@@ -14,14 +14,14 @@ const MicroSaas: React.FC = () => {
         >
           <div className="flex justify-center mb-6">
             <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center">
-              <ShoppingCart className="w-10 h-10 text-white" />
+              <Headphones className="w-10 h-10 text-white" />
             </div>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-500 to-pink-600 bg-clip-text text-transparent mb-6">
-            Micro SaaS Products
+            Helpdesk Platform
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            AI-powered micro SaaS solutions with transparent pricing and rapid deployment.
+            AI-powered helpdesk platform with intelligent ticket management.
           </p>
         </motion.div>
 
@@ -33,10 +33,10 @@ const MicroSaas: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-purple-500/20"
           >
-            <ShoppingCart className="w-12 h-12 text-purple-400 mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-3">Rapid Deployment</h3>
+            <Headphones className="w-12 h-12 text-purple-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Ticket Management</h3>
             <p className="text-slate-300">
-              Quick setup and deployment of AI-powered SaaS solutions.
+              Intelligent ticket routing and management.
             </p>
           </motion.div>
           <motion.div
@@ -45,10 +45,10 @@ const MicroSaas: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-purple-500/20"
           >
-            <ShoppingCart className="w-12 h-12 text-purple-400 mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-3">Transparent Pricing</h3>
+            <Headphones className="w-12 h-12 text-purple-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">AI Support</h3>
             <p className="text-slate-300">
-              Clear, predictable pricing with no hidden costs.
+              AI-powered customer support automation.
             </p>
           </motion.div>
           <motion.div
@@ -57,10 +57,10 @@ const MicroSaas: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.30000000000000004 }}
             className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-purple-500/20"
           >
-            <ShoppingCart className="w-12 h-12 text-purple-400 mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-3">Scalable Solutions</h3>
+            <Headphones className="w-12 h-12 text-purple-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Analytics Dashboard</h3>
             <p className="text-slate-300">
-              Flexible scaling options to grow with your business.
+              Comprehensive helpdesk analytics.
             </p>
           </motion.div>
         </div>
@@ -72,7 +72,7 @@ const MicroSaas: React.FC = () => {
           className="text-center"
         >
           <button className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-            Get Started with Micro SaaS Products
+            Get Started with Helpdesk Platform
             <ArrowRight className="w-5 h-5 ml-2 inline" />
           </button>
         </motion.div>
@@ -81,4 +81,4 @@ const MicroSaas: React.FC = () => {
   );
 };
 
-export default MicroSaas;
+export default Helpdesk;

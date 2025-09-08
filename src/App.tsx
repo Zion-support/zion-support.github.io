@@ -85,26 +85,9 @@ const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/Comprehen
 const ComprehensiveServicesLanding2027 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2027'));
 const InnovativeServices2025 = React.lazy(() => import('./pages/InnovativeServices2025'));
 const ComprehensivePricingGuide2025 = React.lazy(() => import('./pages/ComprehensivePricingGuide2025'));
-const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/ComprehensivePricingGuide2030'));
-const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025'));
-const ComprehensiveServicesLanding2030 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2030'));
-const EnhancedServicesLanding = React.lazy(() => import('./pages/EnhancedServicesLanding'));
-const ComprehensiveServicesAdvertising = React.lazy(() => import('./pages/ComprehensiveServicesAdvertising'));
-const ComprehensiveServicesShowcase2030 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2030'));
-const InnovativeServicesOverview = React.lazy(() => import('./pages/InnovativeServicesOverview'));
-
-// New innovative services
-const AILegalDocumentAnalysis = React.lazy(() => import('./pages/services/ai-legal-document-analysis'));
-const AISupplyChainOptimization = React.lazy(() => import('./pages/services/ai-supply-chain-optimization'));
-const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/ai-healthcare-analytics'));
-const AIFinancialTrading = React.lazy(() => import('./pages/services/ai-financial-trading'));
-
-// Additional service imports for existing service pages
-const AIContentCreation = React.lazy(() => import('./pages/services/ai-content-creation'));
-const AICybersecurity = React.lazy(() => import('./pages/services/ai-cybersecurity'));
-const AIHealthcarePlatform = React.lazy(() => import('./pages/services/ai-healthcare-platform'));
-const QuantumComputing = React.lazy(() => import('./pages/services/quantum-computing'));
-const IoTEdgeComputing = React.lazy(() => import('./pages/services/iot-edge-computing'));
+const RevolutionaryServices2030 = React.lazy(() => import('./pages/revolutionary-services-2030'));
+const PricingGuide2025 = React.lazy(() => import('./pages/pricing-guide-2025'));
+const Developers = React.lazy(() => import('./pages/developers'));
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -390,20 +373,29 @@ function App() {
                 <Route path="/marketplace" element={<Marketplace />} />
                 <Route path="/schedule-demo" element={<ScheduleDemo />} />
                 <Route path="/demo" element={<Demo />} />
-                <Route path="/support" element={<Support />} />
-                <Route path="/community" element={<Community />} />
-                <Route path="/partnerships" element={<Partnerships />} />
-                <Route path="/investors" element={<Investors />} />
-                <Route path="/press" element={<Press />} />
-                <Route path="/legal" element={<Legal />} />
-                <Route path="/training" element={<Training />} />
-                <Route path="/api-docs" element={<API />} />
+                <Route path="/team" element={<Team />} />
+                <Route path="/news" element={<News />} />
+                <Route path="/help" element={<HelpCenter />} />
+                
+                {/* New pricing guide route */}
+                <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
+                <Route path="/pricing-guide-2025" element={<PricingGuide2025 />} />
+                <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
                 <Route path="/developers" element={<Developers />} />
-                <Route path="/whitepapers" element={<Whitepapers />} />
-
-                {/* Service Routes - only for existing pages */}
-                <Route path="/services/DevOpsCloud" element={<CloudDevOps />} />
-                <Route path="/services/DigitalTwin" element={<DigitalTwin />} />
+                
+                {/* Service Routes */}
+                <Route path="/ai-services" element={<AIServices />} />
+                <Route path="/it-services" element={<ITServices />} />
+                <Route path="/micro-saas" element={<MicroSaaS />} />
+                
+                {/* New sitemap routes */}
+                <Route path="/ai-solutions" element={<AiSolutions />} />
+                <Route path="/solutions/enterprise" element={<SolutionsEnterprise />} />
+                <Route path="/solutions/healthcare" element={<SolutionsHealthcare />} />
+                
+                {/* Service routes */}
+                <Route path="/services/cloud-devops" element={<CloudDevOps />} />
+                <Route path="/services/digital-twin" element={<DigitalTwin />} />
                 <Route path="/services/data-analytics" element={<DataAnalytics />} />
                 <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
