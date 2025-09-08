@@ -1,54 +1,133 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 
-interface UseLazyComponentResult {
-  ref: React.RefObject<HTMLDivElement>;
-  Component: React.ComponentType<any> | null;
-  isLoading: boolean;
-  isError: boolean;
+interface UseLazyLoadOptions {
+  rootMargin?: string;
+  threshold?: number;
+  triggerOnce?: boolean;
 }
 
-export function useLazyComponent(
-  importFn: () => Promise<{ default: React.ComponentType<any> }>
-): UseLazyComponentResult {
-  const [Component, setComponent] = useState<React.ComponentType<any> | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
+interface UseLazyLoadReturn {
+  ref: React.RefObject<HTMLElement>;
+  isVisible: boolean;
+  hasBeenVisible: boolean;
+}
 
-  const loadComponent = useCallback(async () => {
-    if (Component) return;
-    
-    setIsLoading(true);
-    setIsError(false);
-    
-    try {
-      const module = await importFn();
-      setComponent(() => module.default);
-    } catch (error) {
-      console.error('Failed to load component:', error);
-      setIsError(true);
-    } finally {
-      setIsLoading(false);
-    }
-  }, [Component, importFn]);
+/**
+ * Hook for lazy loading elements using Intersection Observer
+ */
+export const useLazyLoad = (options: UseLazyLoadOptions = {}): UseLazyLoadReturn => {
+  const {
+    rootMargin = '50px',
+    threshold = 0.1,
+    triggerOnce = true,
+  } = options;
+
+  const [isVisible, setIsVisible] = useState(false);
+  const [hasBeenVisible, setHasBeenVisible] = useState(false);
+  const ref = useRef<HTMLElement>(null);
+
+  const handleIntersection = useCallback(
+    (entries: IntersectionObserverEntry[]) => {
+      const [entry] = entries;
+      
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+        if (!hasBeenVisible) {
+          setHasBeenVisible(true);
+        }
+      } else if (!triggerOnce) {
+        setIsVisible(false);
+      }
+    },
+    [triggerOnce, hasBeenVisible]
+  );
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          loadComponent();
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
+    const element = ref.current;
+    if (!element) return;
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    const observer = new IntersectionObserver(handleIntersection, {
+      rootMargin,
+      threshold,
+    });
+
+    observer.observe(element);
+
+    return () => {
+      observer.unobserve(element);
+    };
+  }, [handleIntersection, rootMargin, threshold]);
+
+  return {
+    ref,
+    isVisible,
+    hasBeenVisible,
+  };
+};
+
+/**
+ * Hook for lazy loading images
+ */
+export const useLazyImage = (src: string, options: UseLazyLoadOptions = {}) => {
+  const { ref, isVisible } = useLazyLoad(options);
+  const [imageSrc, setImageSrc] = useState<string | null>(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isError, setIsError] = useState(false);
+
+  useEffect(() => {
+    if (isVisible && !imageSrc) {
+      setImageSrc(src);
     }
+  }, [isVisible, src, imageSrc]);
 
-    return () => observer.disconnect();
-  }, [loadComponent]);
+  const handleLoad = useCallback(() => {
+    setIsLoaded(true);
+    setIsError(false);
+  }, []);
+
+  const handleError = useCallback(() => {
+    setIsError(true);
+    setIsLoaded(false);
+  }, []);
+
+  return {
+    ref,
+    imageSrc,
+    isLoaded,
+    isError,
+    handleLoad,
+    handleError,
+  };
+};
+
+/**
+ * Hook for lazy loading components
+ */
+export const useLazyComponent = <T extends React.ComponentType<any>>(
+  importFn: () => Promise<{ default: T }>,
+  options: UseLazyLoadOptions = {}
+) => {
+  const { ref, isVisible } = useLazyLoad(options);
+  const [Component, setComponent] = useState<T | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+
+  useEffect(() => {
+    if (isVisible && !Component && !isLoading) {
+      setIsLoading(true);
+      importFn()
+        .then((module) => {
+          setComponent(() => module.default);
+          setIsError(false);
+        })
+        .catch(() => {
+          setIsError(true);
+        })
+        .finally(() => {
+          setIsLoading(false);
+        });
+    }
+  }, [isVisible, Component, isLoading, importFn]);
 
   return {
     ref,
@@ -56,4 +135,6 @@ export function useLazyComponent(
     isLoading,
     isError,
   };
-}
+};
+
+export default useLazyLoad;

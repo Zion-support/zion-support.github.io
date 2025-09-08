@@ -1,9 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 interface User {
   id: string;
   email: string;
   name: string;
+  avatar?: string;
+  role?: string;
 }
 
 interface AuthState {
@@ -12,79 +14,107 @@ interface AuthState {
   isAuthenticated: boolean;
 }
 
-export function useAuth() {
-  const [authState, setAuthState] = useState<AuthState>({
-    user: null,
-    isLoading: true,
-    isAuthenticated: false,
-  });
+interface AuthActions {
+  login: (email: string, password: string) => Promise<void>;
+  logout: () => void;
+  register: (email: string, password: string, name: string) => Promise<void>;
+  updateUser: (userData: Partial<User>) => void;
+}
 
+export const useAuth = (): AuthState & AuthActions => {
+  const [user, setUser] = useState<User | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Initialize auth state from localStorage
   useEffect(() => {
-    // Simulate checking for existing auth
-    const checkAuth = async () => {
+    const initializeAuth = () => {
       try {
-        // In a real app, this would check localStorage, cookies, or make an API call
         const storedUser = localStorage.getItem('user');
         if (storedUser) {
-          const user = JSON.parse(storedUser);
-          setAuthState({
-            user,
-            isLoading: false,
-            isAuthenticated: true,
-          });
-        } else {
-          setAuthState({
-            user: null,
-            isLoading: false,
-            isAuthenticated: false,
-          });
+          setUser(JSON.parse(storedUser));
         }
       } catch (error) {
-        console.error('Auth check failed:', error);
-        setAuthState({
-          user: null,
-          isLoading: false,
-          isAuthenticated: false,
-        });
+        console.error('Error initializing auth:', error);
+        localStorage.removeItem('user');
+      } finally {
+        setIsLoading(false);
       }
     };
 
-    checkAuth();
+    initializeAuth();
   }, []);
 
-  const login = async (email: string, password: string) => {
-    setAuthState(prev => ({ ...prev, isLoading: true }));
-    
+  const login = useCallback(async (email: string, password: string) => {
+    setIsLoading(true);
     try {
-      // In a real app, this would make an API call
-      const user = { id: '1', email, name: email.split('@')[0] };
-      localStorage.setItem('user', JSON.stringify(user));
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
       
-      setAuthState({
-        user,
-        isLoading: false,
-        isAuthenticated: true,
-      });
+      // Mock user data - in real app, this would come from API
+      const mockUser: User = {
+        id: '1',
+        email,
+        name: email.split('@')[0],
+        role: 'user'
+      };
       
-      return { success: true };
+      setUser(mockUser);
+      localStorage.setItem('user', JSON.stringify(mockUser));
     } catch (error) {
-      setAuthState(prev => ({ ...prev, isLoading: false }));
-      return { success: false, error: 'Login failed' };
+      console.error('Login error:', error);
+      throw error;
+    } finally {
+      setIsLoading(false);
     }
-  };
+  }, []);
 
-  const logout = () => {
+  const register = useCallback(async (email: string, password: string, name: string) => {
+    setIsLoading(true);
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Mock user data - in real app, this would come from API
+      const mockUser: User = {
+        id: '1',
+        email,
+        name,
+        role: 'user'
+      };
+      
+      setUser(mockUser);
+      localStorage.setItem('user', JSON.stringify(mockUser));
+    } catch (error) {
+      console.error('Registration error:', error);
+      throw error;
+    } finally {
+      setIsLoading(false);
+    }
+  }, []);
+
+  const logout = useCallback(() => {
+    setUser(null);
     localStorage.removeItem('user');
-    setAuthState({
-      user: null,
-      isLoading: false,
-      isAuthenticated: false,
-    });
-  };
+  }, []);
+
+  const updateUser = useCallback((userData: Partial<User>) => {
+    if (user) {
+      const updatedUser = { ...user, ...userData };
+      setUser(updatedUser);
+      localStorage.setItem('user', JSON.stringify(updatedUser));
+    }
+  }, [user]);
 
   return {
-    ...authState,
+    user,
+    isLoading,
+    isAuthenticated: !!user,
     login,
     logout,
+    register,
+    updateUser,
   };
-}
+};
+
+// Export alias for backward compatibility
+export const _useAuth = useAuth;

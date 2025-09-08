@@ -1,73 +1,45 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Textarea } from '@/components/ui/textarea';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { cn } from '@/lib/utils';
 
 interface AIListingGeneratorProps {
-  onGenerate: (listing: string) => void;
-  className?: string;
+  onGenerate: (content: string) => void;
+  isLoading?: boolean;
 }
 
-export function AIListingGenerator({ onGenerate, className }: AIListingGeneratorProps) {
-  const [description, setDescription] = useState('');
-  const [isGenerating, setIsGenerating] = useState(false);
+export const AIListingGenerator: React.FC<AIListingGeneratorProps> = ({
+  onGenerate,
+  isLoading = false,
+}) => {
+  const [prompt, setPrompt] = useState('');
 
-  const handleGenerate = async () => {
-    if (!description.trim()) return;
-
-    setIsGenerating(true);
-    
-    try {
-      // Simulate AI generation
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      const generatedListing = `AI Generated Listing for: ${description}
-      
-This is a professionally crafted listing that highlights the key features and benefits of your product. The AI has analyzed your description and created an optimized listing that will attract more customers.
-
-Key Features:
-- Professional presentation
-- SEO optimized content
-- Compelling call-to-action
-- Market-tested language
-
-Generated at: ${new Date().toLocaleString()}`;
-      
-      onGenerate(generatedListing);
-    } catch (error) {
-      console.error('Failed to generate listing:', error);
-    } finally {
-      setIsGenerating(false);
+  const handleGenerate = () => {
+    if (prompt.trim()) {
+      onGenerate(prompt);
     }
   };
 
   return (
-    <Card className={cn('w-full', className)}>
-      <CardHeader>
-        <CardTitle>AI Listing Generator</CardTitle>
-      </CardHeader>
-      <CardContent className="space-y-4">
-        <div>
-          <label className="block text-sm font-medium mb-2">
-            Describe your product or service
-          </label>
-          <Textarea
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-            placeholder="Enter a brief description of what you're offering..."
-            className="min-h-[100px]"
-          />
-        </div>
-        
-        <Button
-          onClick={handleGenerate}
-          disabled={!description.trim() || isGenerating}
+    <div className="space-y-4">
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-2">
+          AI Listing Generator
+        </label>
+        <Textarea
+          value={prompt}
+          onChange={(e) => setPrompt(e.target.value)}
+          placeholder="Describe what you want to list (e.g., 'A premium web development service for small businesses')"
           className="w-full"
-        >
-          {isGenerating ? 'Generating...' : 'Generate AI Listing'}
-        </Button>
-      </CardContent>
-    </Card>
+          rows={3}
+        />
+      </div>
+      <Button
+        onClick={handleGenerate}
+        disabled={!prompt.trim() || isLoading}
+        className="w-full"
+      >
+        {isLoading ? 'Generating...' : 'Generate Listing'}
+      </Button>
+    </div>
   );
-}
+};
