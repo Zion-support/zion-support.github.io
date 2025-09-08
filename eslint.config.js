@@ -23,6 +23,8 @@ export default [
   {
     ignores: [
       "dist/",
+      "out/",
+      "build/",
       "node_modules/",
       "**/*.config.js", // Ignores this file, tailwind.config.js, etc.
       // "*.config.ts", // Handled by specific tsconfig below if needed
@@ -33,6 +35,54 @@ export default [
       "scripts/",
       "coverage/",
       "*.d.ts", // Typically declaration files don't need linting
+      // Disabled/corrupted files
+      "src-disabled/",
+      "src.broken/",
+      "src_disabled_*/",
+      "pages._archive_corrupted/",
+      "pages.bak/",
+      "*.disabled/",
+      "*.backup/",
+      "*.bak/",
+      // Build artifacts
+      "**/*.min.js",
+      "**/*.bundle.js",
+      // Service workers (browser globals)
+      "public/sw*.js",
+      "public/service-worker.js",
+      // Automation scripts
+      "*automation*.js",
+      "*automation*.cjs",
+      "*fix*.js",
+      "*fix*.cjs",
+      "*merge*.js",
+      "*merge*.cjs",
+      "*resolve*.js",
+      "*resolve*.cjs",
+      "*ultimate*.js",
+      "*ultimate*.cjs",
+      "*comprehensive*.js",
+      "*comprehensive*.cjs",
+      // PM2 configs
+      "ecosystem*.js",
+      "ecosystem*.cjs",
+      "pm2-*.js",
+      "pm2-*.cjs",
+      // Recovery/backup files
+      "recovered-branches/",
+      "backup/",
+      "corrupted*/",
+      "*_backup*/",
+      // Temporary files
+      "temp*/",
+      "tmp*/",
+      "*.tmp",
+      "*.temp",
+      // Config files that may have syntax issues
+      "postcss.config*.js",
+      "vite.config*.js",
+      "vitest.config*.js",
+      "next.config*.js",
     ],
   },
 
