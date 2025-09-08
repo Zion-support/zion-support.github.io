@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, Star, Users, Award, Zap } from 'lucide-react';
+// import { ArrowRight, CheckCircle, Star, Users, Award, Zap } from 'lucide-react'; // Removed unused imports
 
 interface CardProps {
   title: string;
@@ -23,30 +23,7 @@ const Card: React.FC<CardProps> = ({ title, description, icon, href }) => (
 );
 
 export default function HomePage() {
-  const features = [
-    {
-      title: 'AI-Powered Solutions',
-      description: 'Cutting-edge artificial intelligence to automate and optimize your business processes.',
-      icon: '🤖'
-    },
-    {
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions tailored to your business needs.',
-      icon: '☁️'
-    },
-    {
-      title: '24/7 Support',
-      description: 'Round-the-clock technical support to keep your systems running smoothly.',
-      icon: '🛠️'
-    }
-  ]
-
-  const stats = [
-    { label: 'Projects Completed', value: '500+' },
-    { label: 'Happy Clients', value: '200+' },
-    { label: 'Years Experience', value: '10+' },
-    { label: 'Team Members', value: '50+' }
-  ]
+  // Removed unused variables to fix linting warnings
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">

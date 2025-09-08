@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import Link from 'next/link';
+// import Link from 'next/link'; // Removed unused import
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './globals.css';

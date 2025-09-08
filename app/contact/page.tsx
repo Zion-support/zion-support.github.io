@@ -38,7 +38,7 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to transform your business with cutting-edge technology? Let's discuss your project requirements.
+            Ready to transform your business with cutting-edge technology? Let&apos;s discuss your project requirements.
           </p>
         </div>
       </section>
