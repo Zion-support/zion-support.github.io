@@ -1,7 +1,6 @@
 [build]
-  # Temporary: skip build and serve prebuilt static output
   command = "echo 'Skipping build on Netlify; serving prebuilt files'"
-  publish = "out"
+  publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
