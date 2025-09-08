@@ -429,7 +429,9 @@
     "postcss": "^8.4.32",
     "react": "^18.3.1",
     "react-datepicker": "^8.4.0",
-    "react-dom": "^18.3.1",
+    "react-dom": "18.2.0",
+    "react-markdown": "^9.0.3",
+    "remark-gfm": "^4.0.0",
     "uuid": "^11.1.0"
   },
   "devDependencies": {
