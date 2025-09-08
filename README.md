@@ -121,7 +121,10 @@ VITE_API_URL=your_api_url_here
 VITE_GOOGLE_ANALYTICS_ID=your_ga_id_here
 ```
 
-### Build Configuration
+If you don't have network connectivity, run `./offline-dev.sh` to start a
+minimal offline server until you can reinstall the packages. This script
+provides a basic interface so you can continue working in a limited mode
+until dependencies can be installed.
 
 The build process is configured in `vite.config.ts`:
 
