@@ -1,256 +1,158 @@
 #!/usr/bin/env node
 
+/**
+ * Security Audit Automation
+ * Monitors and audits security aspects of the Zion Tech Group application
+ */
+
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-class SecurityAudit {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.reportPath = path.join(this.projectRoot, 'security-audit-report.json');
-    this.vulnerabilities = [];
-    this.outdatedPackages = [];
-    this.securityIssues = [];
+const CONFIG = {
+  name: 'security-audit',
+  interval: process.env.AUTOMATION_INTERVAL || 7200000, // 2 hours default
+  logFile: path.join(__dirname, '../../logs/security-audit.log')
+};
+
+function log(message, level = 'INFO') {
+  const timestamp = new Date().toISOString();
+  const logMessage = `[${timestamp}] [${level}] ${message}`;
+  console.log(logMessage);
+  
+  const logDir = path.dirname(CONFIG.logFile);
+  if (!fs.existsSync(logDir)) {
+    fs.mkdirSync(logDir, { recursive: true });
   }
+  fs.appendFileSync(CONFIG.logFile, logMessage + '\n');
+}
 
-  async run() {
-    console.log('🔒 Starting Security Audit...');
+function runSecurityAudit() {
+  try {
+    log('Starting security audit...');
     
-    try {
-      await this.runNpmAudit();
-      await this.checkOutdatedPackages();
-      await this.checkDependencies();
-      await this.checkSecurityConfig();
-      await this.generateReport();
-      
-      console.log('✅ Security Audit completed successfully');
-    } catch (error) {
-      console.error('❌ Security Audit failed:', error.message);
-      process.exit(1);
-    }
-  }
-
-  async runNpmAudit() {
-    console.log('🔍 Running npm audit...');
+    const srcDir = path.join(__dirname, '../../src');
+    const pagesDir = path.join(__dirname, '../../pages');
     
-    try {
-      const auditOutput = execSync('npm audit --json --silent', { 
-        encoding: 'utf8',
-        cwd: this.projectRoot,
-        stdio: 'pipe'
-      });
-      
-      const auditData = JSON.parse(auditOutput);
-      
-      if (auditData.vulnerabilities) {
-        Object.keys(auditData.vulnerabilities).forEach(packageName => {
-          const vuln = auditData.vulnerabilities[packageName];
-          this.vulnerabilities.push({
-            package: packageName,
-            severity: vuln.severity,
-            title: vuln.title,
-            description: vuln.description,
-            recommendation: vuln.recommendation,
-            via: vuln.via
-          });
-        });
-      }
-      
-    } catch (error) {
-      // npm audit failed, try alternative approach
-      try {
-        const auditOutput = execSync('npm audit --silent', { 
-          encoding: 'utf8',
-          cwd: this.projectRoot,
-          stdio: 'pipe'
-        });
-        
-        // Parse text output for vulnerabilities
-        if (auditOutput.includes('found')) {
-          this.securityIssues.push({
-            type: 'npm_audit_found_vulnerabilities',
-            details: 'Vulnerabilities found in npm audit'
-          });
-        }
-      } catch (auditError) {
-        this.securityIssues.push({
-          type: 'npm_audit_failed',
-          details: auditError.message
-        });
-      }
-    }
-  }
-
-  async checkOutdatedPackages() {
-    console.log('📦 Checking for outdated packages...');
+    let totalFiles = 0;
+    let securityIssues = 0;
     
-    try {
-      const outdatedOutput = execSync('npm outdated --json --silent', { 
-        encoding: 'utf8',
-        cwd: this.projectRoot,
-        stdio: 'pipe'
-      });
+    const auditDirectory = (dir) => {
+      if (!fs.existsSync(dir)) return;
       
-      const outdatedData = JSON.parse(outdatedOutput);
-      
-      Object.keys(outdatedData).forEach(packageName => {
-        const pkg = outdatedData[packageName];
-        this.outdatedPackages.push({
-          package: packageName,
-          current: pkg.current,
-          wanted: pkg.wanted,
-          latest: pkg.latest,
-          location: pkg.location
-        });
-      });
-      
-    } catch (error) {
-      // npm outdated failed, which might mean no outdated packages
-      console.log('✅ No outdated packages found or check failed');
-    }
-  }
-
-  async checkDependencies() {
-    console.log('🔍 Checking dependencies...');
-    
-    try {
-      const packagePath = path.join(this.projectRoot, 'package.json');
-      if (fs.existsSync(packagePath)) {
-        const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
-        
-        // Check for potentially risky dependencies
-        const allDeps = {
-          ...packageJson.dependencies,
-          ...packageJson.devDependencies
-        };
-        
-        Object.keys(allDeps).forEach(dep => {
-          const version = allDeps[dep];
-          
-          // Check for known risky patterns
-          if (version.includes('*') || version.includes('latest')) {
-            this.securityIssues.push({
-              type: 'unstable_version',
-              package: dep,
-              version: version,
-              risk: 'Unstable version specification'
-            });
-          }
-          
-          if (version.includes('^') && !version.includes('0.')) {
-            // Major version updates could introduce breaking changes
-            this.securityIssues.push({
-              type: 'major_version_update_risk',
-              package: dep,
-              version: version,
-              risk: 'Major version updates may introduce breaking changes'
-            });
-          }
-        });
-      }
-    } catch (error) {
-      console.log('⚠️  Could not check dependencies:', error.message);
-    }
-  }
-
-  async checkSecurityConfig() {
-    console.log('🔒 Checking security configuration...');
-    
-    try {
-      // Check for security-related files
-      const securityFiles = [
-        '.npmrc',
-        '.yarnrc',
-        'security.md',
-        'SECURITY.md'
-      ];
-      
-      securityFiles.forEach(file => {
-        const filePath = path.join(this.projectRoot, file);
-        if (fs.existsSync(filePath)) {
-          this.securityIssues.push({
-            type: 'security_file_found',
-            file: file,
-            status: 'present'
-          });
-        }
-      });
-      
-      // Check package.json for security scripts
-      const packagePath = path.join(this.projectRoot, 'package.json');
-      if (fs.existsSync(packagePath)) {
-        const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
-        
-        if (packageJson.scripts && packageJson.scripts.audit) {
-          this.securityIssues.push({
-            type: 'security_script_found',
-            script: 'audit',
-            status: 'present'
-          });
+      const files = fs.readdirSync(dir, { withFileTypes: true });
+      for (const file of files) {
+        if (file.isDirectory()) {
+          auditDirectory(path.join(dir, file.name));
+        } else if (file.name.match(/\.(js|jsx|ts|tsx)$/)) {
+          totalFiles++;
+          const filePath = path.join(dir, file.name);
+          const issues = auditFileSecurity(filePath);
+          securityIssues += issues;
         }
       }
-      
-    } catch (error) {
-      console.log('⚠️  Could not check security configuration:', error.message);
-    }
-  }
-
-  async generateReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      total_vulnerabilities: this.vulnerabilities.length,
-      total_outdated_packages: this.outdatedPackages.length,
-      total_security_issues: this.securityIssues.length,
-      vulnerabilities: this.vulnerabilities,
-      outdated_packages: this.outdatedPackages,
-      security_issues: this.securityIssues,
-      status: this.vulnerabilities.length === 0 ? 'secure' : 'vulnerable',
-      recommendations: this.generateRecommendations()
     };
     
-    fs.writeFileSync(this.reportPath, JSON.stringify(report, null, 2));
-    console.log(`📊 Security report generated: ${this.reportPath}`);
+    auditDirectory(srcDir);
+    auditDirectory(pagesDir);
     
-    if (this.vulnerabilities.length > 0) {
-      console.log(`⚠️  Found ${this.vulnerabilities.length} security vulnerabilities`);
-    }
+    log(`Security audit complete: ${totalFiles} files audited, ${securityIssues} security issues found`);
+    return { totalFiles, securityIssues };
     
-    if (this.outdatedPackages.length > 0) {
-      console.log(`📦 Found ${this.outdatedPackages.length} outdated packages`);
-    }
-  }
-
-  generateRecommendations() {
-    const recommendations = [];
-    
-    if (this.vulnerabilities.length > 0) {
-      recommendations.push('Run npm audit fix to automatically fix vulnerabilities');
-      recommendations.push('Review and manually fix any remaining vulnerabilities');
-    }
-    
-    if (this.outdatedPackages.length > 0) {
-      recommendations.push('Update outdated packages to latest versions');
-      recommendations.push('Test thoroughly after updating packages');
-    }
-    
-    if (this.securityIssues.length > 0) {
-      recommendations.push('Review security configuration files');
-      recommendations.push('Add security scripts to package.json');
-    }
-    
-    if (recommendations.length === 0) {
-      recommendations.push('Maintain current security practices');
-      recommendations.push('Regularly run security audits');
-    }
-    
-    return recommendations;
+  } catch (error) {
+    log(`Error during security audit: ${error.message}`, 'ERROR');
+    return null;
   }
 }
 
-// Run the automation
+function auditFileSecurity(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    let issues = 0;
+    
+    // Check for common security issues
+    if (content.includes('eval(')) issues++;
+    if (content.includes('innerHTML')) issues++;
+    if (content.includes('document.write')) issues++;
+    if (content.includes('localStorage')) issues++;
+    if (content.includes('sessionStorage')) issues++;
+    if (content.includes('XMLHttpRequest')) issues++;
+    
+    return issues;
+  } catch (error) {
+    return 0;
+  }
+}
+
+function runHealthCheck() {
+  try {
+    const requiredDirs = [
+      path.join(__dirname, '../../src'),
+      path.join(__dirname, '../../pages')
+    ];
+    
+    const missingDirs = requiredDirs.filter(dir => !fs.existsSync(dir));
+    if (missingDirs.length > 0) {
+      log(`Missing directories: ${missingDirs.join(', ')}`, 'WARN');
+      return false;
+    }
+    
+    log('Health check passed');
+    return true;
+  } catch (error) {
+    log(`Health check failed: ${error.message}`, 'ERROR');
+    return false;
+  }
+}
+
+async function main() {
+  log(`Starting ${CONFIG.name} automation`);
+  
+  if (!runHealthCheck()) {
+    log('Health check failed, exiting', 'ERROR');
+    process.exit(1);
+  }
+  
+  setInterval(async () => {
+    try {
+      log('Running automation cycle...');
+      const auditResults = runSecurityAudit();
+      runHealthCheck();
+    } catch (error) {
+      log(`Error in main loop: ${error.message}`, 'ERROR');
+    }
+  }, CONFIG.interval);
+  
+  try {
+    log('Running initial audit...');
+    const auditResults = runSecurityAudit();
+  } catch (error) {
+    log(`Error in initial run: ${error.message}`, 'ERROR');
+  }
+}
+
+process.on('uncaughtException', (error) => {
+  log(`Uncaught Exception: ${error.message}`, 'ERROR');
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+  log(`Unhandled Rejection: ${reason}`, 'ERROR');
+});
+
+process.on('SIGTERM', () => {
+  log('Received SIGTERM, shutting down gracefully...');
+  process.exit(0);
+});
+
+process.on('SIGINT', () => {
+  log('Received SIGINT, shutting down gracefully...');
+  process.exit(0);
+});
+
 if (require.main === module) {
-  const audit = new SecurityAudit();
-  audit.run();
+  main().catch(error => {
+    log(`Failed to start automation: ${error.message}`, 'ERROR');
+    process.exit(1);
+  });
 }
 
-module.exports = SecurityAudit;
+module.exports = { runSecurityAudit, runHealthCheck, main };

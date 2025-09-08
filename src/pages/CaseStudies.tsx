@@ -1,53 +1,8 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
-import { SEO  } from '../components/SEO';
-import { TrendingUp, 
-  Users, 
-  DollarSign, 
-  Clock, 
-  Target, 
-  CheckCircle,
-  ArrowRight,
-  Filter,
-  Search,
-  Building,
-  Brain,
-  Shield,
-  Cloud,
-  Rocket,
-  Heart,
-  Globe,
-  Star,
-  Award,
-  Zap,
-  BarChart3,
-  ShoppingCart
- } from 'lucide-react';
-
-export default function CaseStudies(...args: any[]): any {
-  const [selectedIndustry, setSelectedIndustry] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const categories = [
-    { id: 'all', name: 'All Categories', icon: Building },
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Cpu },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },
-    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud },
-    { id: 'data', name: 'Data Analytics', icon: BarChart3 },
-    { id: 'iot', name: 'IoT & Automation', icon: Zap },
-    { id: 'digital', name: 'Digital Transformation', icon: Rocket }
-  ];
-
-  const industries = [
-    { id: 'all', name: 'All Industries', icon: Building },
-    { id: 'healthcare', name: 'Healthcare', icon: Users },
-    { id: 'finance', name: 'Finance', icon: DollarSign },
-    { id: 'manufacturing', name: 'Manufacturing', icon: Target },
-    { id: 'retail', name: 'Retail', icon: ShoppingBag },
-    { id: 'government', name: 'Government', icon: Shield },
-    { id: 'education', name: 'Education', icon: Lightbulb }
-  ];
-
+import React from 'react';
+import { SEO } from '../components/SEO';
+import { motion } from 'framer-motion';
+import { TrendingUp, Users, DollarSign, Clock, ArrowRight, CheckCircle } from 'lucide-react';
+function CaseStudies() {
   const caseStudies = [
     {
       id: 1,

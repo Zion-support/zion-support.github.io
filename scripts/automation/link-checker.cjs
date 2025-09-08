@@ -1,219 +1,167 @@
 #!/usr/bin/env node
 
+/**
+ * Link Checker Automation
+ * Monitors and checks links in the Zion Tech Group application
+ */
+
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-class LinkChecker {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.reportPath = path.join(this.projectRoot, 'link-checker-report.json');
-    this.brokenLinks = [];
-    this.workingLinks = [];
+const CONFIG = {
+  name: 'link-checker',
+  interval: process.env.AUTOMATION_INTERVAL || 1800000, // 30 minutes default
+  logFile: path.join(__dirname, '../../logs/link-checker.log')
+};
+
+function log(message, level = 'INFO') {
+  const timestamp = new Date().toISOString();
+  const logMessage = `[${timestamp}] [${level}] ${message}`;
+  console.log(logMessage);
+  
+  const logDir = path.dirname(CONFIG.logFile);
+  if (!fs.existsSync(logDir)) {
+    fs.mkdirSync(logDir, { recursive: true });
   }
+  fs.appendFileSync(CONFIG.logFile, logMessage + '\n');
+}
 
-  async run() {
-    console.log('🔗 Starting Link Checker...');
+function scanForLinks() {
+  try {
+    log('Starting link scan...');
     
-    try {
-      await this.checkInternalLinks();
-      await this.checkExternalLinks();
-      await this.generateReport();
-      
-      console.log('✅ Link Checker completed successfully');
-    } catch (error) {
-      console.error('❌ Link Checker failed:', error.message);
-      process.exit(1);
-    }
-  }
-
-  async checkInternalLinks() {
-    console.log('🔍 Checking internal links...');
+    const srcDir = path.join(__dirname, '../../src');
+    const pagesDir = path.join(__dirname, '../../pages');
     
-    try {
-      // Build the project first
-      execSync('npm run build --silent', { 
-        encoding: 'utf8',
-        cwd: this.projectRoot,
-        stdio: 'pipe'
-      });
-      
-      // Check for internal link issues in built files
-      const distDir = path.join(this.projectRoot, 'dist');
-      if (fs.existsSync(distDir)) {
-        await this.scanDirectoryForLinks(distDir);
-      }
-      
-    } catch (error) {
-      console.log('⚠️  Could not check internal links:', error.message);
-    }
-  }
-
-  async checkExternalLinks() {
-    console.log('🌐 Checking external links...');
+    let totalFiles = 0;
+    let filesWithLinks = 0;
+    let totalLinks = 0;
     
-    try {
-      // Extract external URLs from source files
-      const srcDir = path.join(this.projectRoot, 'src');
-      if (fs.existsSync(srcDir)) {
-        await this.extractExternalUrls(srcDir);
-      }
+    const scanDirectory = (dir) => {
+      if (!fs.existsSync(dir)) return;
       
-    } catch (error) {
-      console.log('⚠️  Could not check external links:', error.message);
-    }
-  }
-
-  async scanDirectoryForLinks(dir) {
-    const files = fs.readdirSync(dir);
-    
-    for (const file of files) {
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat.isDirectory()) {
-        await this.scanDirectoryForLinks(filePath);
-      } else if (file.endsWith('.html')) {
-        await this.processHtmlFile(filePath);
-      }
-    }
-  }
-
-  async processHtmlFile(filePath) {
-    try {
-      const content = fs.readFileSync(filePath, 'utf8');
-      
-      // Find all links in HTML
-      const linkMatches = content.match(/href=["']([^"']+)["']/g) || [];
-      const srcMatches = content.match(/src=["']([^"']+)["']/g) || [];
-      
-      const allLinks = [...linkMatches, ...srcMatches].map(match => {
-        return match.replace(/href=["']|src=["']|["']/g, '');
-      });
-      
-      // Check each link
-      for (const link of allLinks) {
-        if (link.startsWith('http')) {
-          // External link
-          await this.checkExternalLink(link, filePath);
-        } else if (link.startsWith('/') || link.startsWith('./')) {
-          // Internal link
-          await this.checkInternalLink(link, filePath);
+      const files = fs.readdirSync(dir, { withFileTypes: true });
+      for (const file of files) {
+        if (file.isDirectory()) {
+          scanDirectory(path.join(dir, file.name));
+        } else if (file.name.match(/\.(js|jsx|ts|tsx|md|html)$/)) {
+          totalFiles++;
+          const filePath = path.join(dir, file.name);
+          const links = extractLinksFromFile(filePath);
+          
+          if (links.length > 0) {
+            filesWithLinks++;
+            totalLinks += links.length;
+          }
         }
       }
-      
-    } catch (error) {
-      console.log(`⚠️  Could not process HTML file ${filePath}:`, error.message);
-    }
-  }
-
-  async extractExternalUrls(dir) {
-    const files = fs.readdirSync(dir);
-    
-    for (const file of files) {
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat.isDirectory()) {
-        await this.extractExternalUrls(filePath);
-      } else if (file.endsWith('.ts') || file.endsWith('.tsx') || file.endsWith('.js')) {
-        await this.processSourceFile(filePath);
-      }
-    }
-  }
-
-  async processSourceFile(filePath) {
-    try {
-      const content = fs.readFileSync(filePath, 'utf8');
-      
-      // Find external URLs in source code
-      const urlMatches = content.match(/https?:\/\/[^\s"']+/g) || [];
-      
-      for (const url of urlMatches) {
-        await this.checkExternalLink(url, filePath);
-      }
-      
-    } catch (error) {
-      console.log(`⚠️  Could not process source file ${filePath}:`, error.message);
-    }
-  }
-
-  async checkExternalLink(url, sourceFile) {
-    try {
-      // Simple HTTP check (in production, you might want to use a proper HTTP client)
-      const result = {
-        url,
-        source: sourceFile,
-        status: 'unknown',
-        timestamp: new Date().toISOString()
-      };
-      
-      // For now, just categorize the link
-      if (url.includes('localhost') || url.includes('127.0.0.1')) {
-        result.status = 'local';
-      } else {
-        result.status = 'external';
-      }
-      
-      this.workingLinks.push(result);
-      
-    } catch (error) {
-      this.brokenLinks.push({
-        url,
-        source: sourceFile,
-        error: error.message,
-        timestamp: new Date().toISOString()
-      });
-    }
-  }
-
-  async checkInternalLink(link, sourceFile) {
-    try {
-      const result = {
-        link,
-        source: sourceFile,
-        status: 'internal',
-        timestamp: new Date().toISOString()
-      };
-      
-      this.workingLinks.push(result);
-      
-    } catch (error) {
-      this.brokenLinks.push({
-        link,
-        source: sourceFile,
-        error: error.message,
-        timestamp: new Date().toISOString()
-      });
-    }
-  }
-
-  async generateReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      total_links_checked: this.workingLinks.length + this.brokenLinks.length,
-      working_links: this.workingLinks.length,
-      broken_links: this.brokenLinks.length,
-      broken_links_details: this.brokenLinks,
-      working_links_details: this.workingLinks,
-      status: this.brokenLinks.length === 0 ? 'success' : 'issues_found'
     };
     
-    fs.writeFileSync(this.reportPath, JSON.stringify(report, null, 2));
-    console.log(`📊 Report generated: ${this.reportPath}`);
+    scanDirectory(srcDir);
+    scanDirectory(pagesDir);
     
-    if (this.brokenLinks.length > 0) {
-      console.log(`⚠️  Found ${this.brokenLinks.length} broken links`);
-    } else {
-      console.log('✅ All links are working correctly');
-    }
+    log(`Scan complete: ${totalFiles} files scanned, ${filesWithLinks} files with links, ${totalLinks} total links found`);
+    return { totalFiles, filesWithLinks, totalLinks };
+    
+  } catch (error) {
+    log(`Error during scan: ${error.message}`, 'ERROR');
+    return null;
   }
 }
 
-// Run the automation
-if (require.main === module) {
-  const checker = new LinkChecker();
-  checker.run();
+function extractLinksFromFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const linkPatterns = [
+      /https?:\/\/[^\s<>"{}|\\^`\[\]]+/g,
+      /href=["']([^"']+)["']/g,
+      /src=["']([^"']+)["']/g
+    ];
+    
+    const links = [];
+    linkPatterns.forEach(pattern => {
+      const matches = content.match(pattern);
+      if (matches) {
+        links.push(...matches);
+      }
+    });
+    
+    return links;
+  } catch (error) {
+    return [];
+  }
 }
 
-module.exports = LinkChecker;
+function runHealthCheck() {
+  try {
+    const requiredDirs = [
+      path.join(__dirname, '../../src'),
+      path.join(__dirname, '../../pages')
+    ];
+    
+    const missingDirs = requiredDirs.filter(dir => !fs.existsSync(dir));
+    if (missingDirs.length > 0) {
+      log(`Missing directories: ${missingDirs.join(', ')}`, 'WARN');
+      return false;
+    }
+    
+    log('Health check passed');
+    return true;
+  } catch (error) {
+    log(`Health check failed: ${error.message}`, 'ERROR');
+    return false;
+  }
+}
+
+async function main() {
+  log(`Starting ${CONFIG.name} automation`);
+  
+  if (!runHealthCheck()) {
+    log('Health check failed, exiting', 'ERROR');
+    process.exit(1);
+  }
+  
+  setInterval(async () => {
+    try {
+      log('Running automation cycle...');
+      const scanResults = scanForLinks();
+      runHealthCheck();
+    } catch (error) {
+      log(`Error in main loop: ${error.message}`, 'ERROR');
+    }
+  }, CONFIG.interval);
+  
+  try {
+    log('Running initial scan...');
+    const scanResults = scanForLinks();
+  } catch (error) {
+    log(`Error in initial run: ${error.message}`, 'ERROR');
+  }
+}
+
+process.on('uncaughtException', (error) => {
+  log(`Uncaught Exception: ${error.message}`, 'ERROR');
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+  log(`Unhandled Rejection: ${reason}`, 'ERROR');
+});
+
+process.on('SIGTERM', () => {
+  log('Received SIGTERM, shutting down gracefully...');
+  process.exit(0);
+});
+
+process.on('SIGINT', () => {
+  log('Received SIGINT, shutting down gracefully...');
+  process.exit(0);
+});
+
+if (require.main === module) {
+  main().catch(error => {
+    log(`Failed to start automation: ${error.message}`, 'ERROR');
+    process.exit(1);
+  });
+}
+
+module.exports = { scanForLinks, runHealthCheck, main };

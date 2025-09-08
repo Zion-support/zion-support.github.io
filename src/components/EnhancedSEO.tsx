@@ -1,48 +1,5 @@
-import React from 'react';
-import { Helmet    } from 'react-helmet-async';
-
-interface SEOProps extends React.PropsWithChildren<{}> {
-
-interface SEOProps {
-  title: string;
-  description: string;
-  keywords?: string[];
-  author?: string;
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'service';
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-  structuredData?: unknown;
-}
-
-export function EnhancedSEO({
-  title,
-  description,
-  keywords = [],
-  author = 'Zion Tech Group',
-  image = '/images/zion-tech-group-og.jpg',
-  url = window.location.href,
-  type = 'website',
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = [],
-  structuredData
-}: SEOProps) {
-  const defaultKeywords = [
-    'AI services',
-    'IT consulting',
-    'technology solutions',
-    'digital transformation',
-    'cloud computing',
-    'cybersecurity',
-    'machine learning',
-    'quantum computing',
-    'Zion Tech Group'
-  ];
+import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
   const allKeywords = [...new Set([...defaultKeywords, ...keywords])];
 
@@ -72,110 +29,91 @@ export function EnhancedSEO({
 
   const finalStructuredData = structuredData || defaultStructuredData;
 
+      return () => {
+        document.head.removeChild(script);
+      };
+    }
+  }, [title, structuredData]);
+
   return (
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={allKeywords.join(', ')} />
-      <meta name="author" content={author} />
-      <meta name="robots" content="index, follow" />
-      <meta name="language" content="English" />
-      <meta name="revisit-after" content="7 days" />
+      {keywords && <meta name="keywords" content={keywords} />}
+      <link rel="canonical" href={fullCanonical} />
+      
+      {/* Robots Meta */}
+      <meta name="robots" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} />
       
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={title} />
+      <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={url} />
-      <meta property="og:image" content={image} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={fullCanonical} />
+      <meta property="og:image" content={`${siteUrl}${ogImage}`} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:site_name" content={siteName} />
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
       
-      {/* Additional Meta Tags */}
+      {/* Additional SEO Meta Tags */}
+      <meta name="author" content={siteName} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#0ea5e9" />
-      <meta name="msapplication-TileColor" content="#0ea5e9" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       
-      {/* Canonical URL */}
-      <link rel="canonical" href={url} />
+      {/* Mobile Meta Tags */}
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="theme-color" content="#1e40af" />
+      <meta name="msapplication-TileColor" content="#1e40af" />
       
-      {/* Favicon */}
+      {/* Security Meta Tags */}
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+      <meta httpEquiv="X-Frame-Options" content="DENY" />
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+      
+      {/* Performance Meta Tags */}
+      <meta name="dns-prefetch" content="//www.google-analytics.com" />
+      <meta name="dns-prefetch" content="//fonts.googleapis.com" />
+      
+      {/* Favicon and App Icons */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
       
-      {/* Preconnect to external domains */}
+      {/* Preconnect for Performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       
-      {/* Structured Data */}
+      {/* Additional Structured Data for WebPage */}
       <script type="application/ld+json">
-        {JSON.stringify(finalStructuredData)}
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": title,
+          "description": description,
+          "url": fullCanonical,
+          "publisher": {
+            "@type": "Organization",
+            "name": siteName
+          },
+          "mainEntity": {
+            "@type": "Organization",
+            "name": siteName,
+            "description": "Leading AI & Technology Solutions Provider"
+          }
+        })}
       </script>
-      
-      {/* Additional structured data for articles */}
-      {type === 'article' && publishedTime && (
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": title,
-            "description": description,
-            "image": image,
-            "author": {
-              "@type": "Organization",
-              "name": author
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://ziontechgroup.com/images/zion-tech-group-logo.png"
-              }
-            },
-            "datePublished": publishedTime,
-            "dateModified": modifiedTime || publishedTime,
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": url
-            }
-          })}
-        </script>
-      )}
-      
-      {/* Additional structured data for services */}
-      {type === 'service' && (
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": title,
-            "description": description,
-            "provider": {
-              "@type": "Organization",
-              "name": "Zion Tech Group"
-            },
-            "serviceType": section,
-            "areaServed": "Worldwide",
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Zion Tech Group Services"
-            }
-          })}
-        </script>
-      )}
     </Helmet>
   );
 }

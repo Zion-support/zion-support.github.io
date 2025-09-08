@@ -1,5 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { Suspense } from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Brain, Shield, Zap, Star, CheckCircle, Rocket, Target, TrendingUp } from 'lucide-react';
+import EnhancedSEO from "@/components/EnhancedSEO";
+import { HeroSection } from "@/components/HeroSection";
+import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
+import { Link } from 'react-router-dom';
 
 import React, { Suspense, useState, useEffect } from 'react';
 import { motion   } from 'framer-motion';
@@ -395,7 +400,112 @@ export default function Home(...args: any[]): any {
             </div>
           </motion.div>
         </div>
-      </section>
+      </motion.section>
+
+      {/* Quick Access Section */}
+      <Suspense fallback={<LoadingFallback message="Loading Quick Access..." />}>
+        <QuickAccess />
+      </Suspense>
+
+      {/* Feature Highlights */}
+      <Suspense fallback={<LoadingFallback message="Loading Features..." />}>
+        <FeatureHighlights />
+      </Suspense>
+
+      {/* Tech Solutions Section */}
+      <Suspense fallback={<LoadingFallback message="Loading Tech Solutions..." />}>
+        <TechSolutionsSection />
+      </Suspense>
+
+      {/* Case Studies Section */}
+      <Suspense fallback={<LoadingFallback message="Loading Case Studies..." />}>
+        <CaseStudiesSection />
+      </Suspense>
+
+      {/* Team Expertise Section */}
+      <Suspense fallback={<LoadingFallback message="Loading Team Expertise..." />}>
+        <TeamExpertiseSection />
+      </Suspense>
+
+      {/* Technology Stack Section */}
+      <Suspense fallback={<LoadingFallback message="Loading Technology Stack..." />}>
+        <TechnologyStackSection />
+      </Suspense>
+
+      {/* Security & Compliance Section */}
+      <Suspense fallback={<LoadingFallback message="Loading Security & Compliance..." />}>
+        <SecurityComplianceSection />
+      </Suspense>
+
+      {/* AI Services Showcase */}
+      <Suspense fallback={<LoadingFallback message="Loading AI Services..." />}>
+        <AIServicesShowcase />
+      </Suspense>
+
+      {/* Interactive Testimonials */}
+      <Suspense fallback={<LoadingFallback message="Loading Testimonials..." />}>
+        <InteractiveTestimonials />
+      </Suspense>
+
+      {/* Services Showcase */}
+      <Suspense fallback={<LoadingFallback message="Loading Services..." />}>
+        <ServicesShowcase />
+      </Suspense>
+
+      {/* Feature CTAs */}
+      <Suspense fallback={<LoadingFallback message="Loading Features..." />}>
+        <FeatureCTAs />
+      </Suspense>
+
+      {/* Pricing Section */}
+      <Suspense fallback={<LoadingFallback message="Loading Pricing..." />}>
+        <PricingSection />
+      </Suspense>
+
+      {/* Global Presence Section */}
+      <Suspense fallback={<LoadingFallback message="Loading Global Presence..." />}>
+        <GlobalPresenceSection />
+      </Suspense>
+
+      {/* Innovation & Research Section */}
+      <Suspense fallback={<LoadingFallback message="Loading Innovation..." />}>
+        <InnovationResearchSection />
+      </Suspense>
+
+      {/* Client Success Stories */}
+      <Suspense fallback={<LoadingFallback message="Loading Success Stories..." />}>
+        <ClientSuccessStoriesSection />
+      </Suspense>
+
+      {/* Categories Section */}
+      <Suspense fallback={<LoadingFallback message="Loading Categories..." />}>
+        <CategoriesSection />
+      </Suspense>
+
+      {/* Benefits Section */}
+      <Suspense fallback={<LoadingFallback message="Loading Benefits..." />}>
+        <BenefitsSection />
+      </Suspense>
+
+      {/* How It Works Section */}
+      <Suspense fallback={<LoadingFallback message="Loading How It Works..." />}>
+        <HowItWorksSection />
+      </Suspense>
+
+      {/* Featured Listings Section */}
+      <Suspense fallback={<LoadingFallback message="Loading Featured Listings..." />}>
+        <FeaturedListingsSection />
+      </Suspense>
+
+      {/* Newsletter Section */}
+      <Suspense fallback={<LoadingFallback message="Loading Newsletter..." />}>
+        <NewsletterSection />
+      </Suspense>
+
+      {/* Floating CTA */}
+      <Suspense fallback={null}>
+        <FloatingCTA />
+      </Suspense>
     </div>
   );
 };

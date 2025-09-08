@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '../../components/SEO';
+import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
 import { Truck, Globe, TrendingUp, CheckCircle, Clock, Sparkles, BarChart3, Target, Zap, Shield, Users, ArrowRight, Package, Route, Factory } from 'lucide-react';
 
@@ -395,4 +395,5 @@ export default function AISupplyChainOptimization(...args: any[]): any {
       </section>
     </div>
   );
-}
+};
+export default AISupplyChainOptimization;

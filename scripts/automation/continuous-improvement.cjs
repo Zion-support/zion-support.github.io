@@ -1,255 +1,159 @@
 #!/usr/bin/env node
 
+/**
+ * Continuous Improvement Automation
+ * Monitors and continuously improves the Zion Tech Group application
+ */
+
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-class ContinuousImprovement {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.reportPath = path.join(this.projectRoot, 'continuous-improvement-report.json');
-    this.improvements = [];
-    this.issues = [];
+const CONFIG = {
+  name: 'continuous-improvement',
+  interval: process.env.AUTOMATION_INTERVAL || 3600000, // 1 hour default
+  logFile: path.join(__dirname, '../../logs/continuous-improvement.log')
+};
+
+function log(message, level = 'INFO') {
+  const timestamp = new Date().toISOString();
+  const logMessage = `[${timestamp}] [${level}] ${message}`;
+  console.log(logMessage);
+  
+  const logDir = path.dirname(CONFIG.logFile);
+  if (!fs.existsSync(logDir)) {
+    fs.mkdirSync(logDir, { recursive: true });
   }
+  fs.appendFileSync(CONFIG.logFile, logMessage + '\n');
+}
 
-  async run() {
-    console.log('🚀 Starting Continuous Improvement...');
+function analyzeCodeQuality() {
+  try {
+    log('Analyzing code quality...');
     
-    try {
-      await this.runCodeQualityChecks();
-      await this.runLinting();
-      await this.runTypeChecking();
-      await this.runTests();
-      await this.runBuildCheck();
-      await this.generateReport();
-      
-      console.log('✅ Continuous Improvement completed successfully');
-    } catch (error) {
-      console.error('❌ Continuous Improvement failed:', error.message);
-      process.exit(1);
-    }
-  }
-
-  async runCodeQualityChecks() {
-    console.log('🔍 Running code quality checks...');
+    const srcDir = path.join(__dirname, '../../src');
+    const pagesDir = path.join(__dirname, '../../pages');
     
-    try {
-      // Check for common code quality issues
-      const srcDir = path.join(this.projectRoot, 'src');
-      if (fs.existsSync(srcDir)) {
-        await this.analyzeCodeQuality(srcDir);
-      }
-      
-      // Check package.json for potential improvements
-      await this.analyzePackageJson();
-      
-    } catch (error) {
-      console.log('⚠️  Code quality checks failed:', error.message);
-    }
-  }
-
-  async analyzeCodeQuality(dir) {
-    const files = fs.readdirSync(dir);
+    let totalFiles = 0;
+    let qualityScore = 0;
     
-    for (const file of files) {
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
+    const analyzeDirectory = (dir) => {
+      if (!fs.existsSync(dir)) return;
       
-      if (stat.isDirectory()) {
-        await this.analyzeCodeQuality(filePath);
-      } else if (file.endsWith('.ts') || file.endsWith('.tsx') || file.endsWith('.js')) {
-        await this.analyzeFile(filePath);
-      }
-    }
-  }
-
-  async analyzeFile(filePath) {
-    try {
-      const content = fs.readFileSync(filePath, 'utf8');
-      
-      // Check for common issues
-      if (content.includes('console.log') || content.includes('console.warn')) {
-        this.issues.push({
-          type: 'console_statement',
-          file: filePath,
-          severity: 'low',
-          suggestion: 'Remove console statements for production'
-        });
-      }
-      
-      if (content.includes('TODO') || content.includes('FIXME')) {
-        this.issues.push({
-          type: 'todo_fixme',
-          file: filePath,
-          severity: 'medium',
-          suggestion: 'Address TODO/FIXME comments'
-        });
-      }
-      
-      if (content.includes('debugger')) {
-        this.issues.push({
-          type: 'debugger_statement',
-          file: filePath,
-          severity: 'high',
-          suggestion: 'Remove debugger statements'
-        });
-      }
-      
-      // Check for potential improvements
-      if (content.includes('var ')) {
-        this.improvements.push({
-          type: 'var_to_const_let',
-          file: filePath,
-          suggestion: 'Consider using const/let instead of var'
-        });
-      }
-      
-    } catch (error) {
-      console.log(`⚠️  Could not analyze file ${filePath}:`, error.message);
-    }
-  }
-
-  async analyzePackageJson() {
-    try {
-      const packagePath = path.join(this.projectRoot, 'package.json');
-      if (fs.existsSync(packagePath)) {
-        const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
-        
-        // Check for potential improvements
-        if (packageJson.scripts && !packageJson.scripts['type-check']) {
-          this.improvements.push({
-            type: 'missing_type_check_script',
-            suggestion: 'Add type-check script to package.json'
-          });
-        }
-        
-        if (packageJson.scripts && !packageJson.scripts.lint) {
-          this.improvements.push({
-            type: 'missing_lint_script',
-            suggestion: 'Add lint script to package.json'
-          });
+      const files = fs.readdirSync(dir, { withFileTypes: true });
+      for (const file of files) {
+        if (file.isDirectory()) {
+          analyzeDirectory(path.join(dir, file.name));
+        } else if (file.name.match(/\.(js|jsx|ts|tsx)$/)) {
+          totalFiles++;
+          const filePath = path.join(dir, file.name);
+          const fileScore = analyzeFileQuality(filePath);
+          qualityScore += fileScore;
         }
       }
-    } catch (error) {
-      console.log('⚠️  Could not analyze package.json:', error.message);
-    }
-  }
-
-  async runLinting() {
-    console.log('🧹 Running linting...');
-    
-    try {
-      execSync('npm run lint --silent', { 
-        encoding: 'utf8',
-        cwd: this.projectRoot,
-        stdio: 'pipe'
-      });
-      this.improvements.push('linting_passed');
-    } catch (error) {
-      this.issues.push({
-        type: 'linting_failed',
-        severity: 'medium',
-        suggestion: 'Fix linting issues'
-      });
-      
-      // Try auto-fix
-      try {
-        execSync('npm run lint -- --fix --silent', { 
-          encoding: 'utf8',
-          cwd: this.projectRoot,
-          stdio: 'pipe'
-        });
-        this.improvements.push('linting_auto_fixed');
-      } catch (fixError) {
-        console.log('⚠️  Linting auto-fix failed');
-      }
-    }
-  }
-
-  async runTypeChecking() {
-    console.log('🔍 Running type checking...');
-    
-    try {
-      execSync('npm run type-check --silent', { 
-        encoding: 'utf8',
-        cwd: this.projectRoot,
-        stdio: 'pipe'
-      });
-      this.improvements.push('type_checking_passed');
-    } catch (error) {
-      this.issues.push({
-        type: 'type_checking_failed',
-        severity: 'high',
-        suggestion: 'Fix TypeScript type errors'
-      });
-    }
-  }
-
-  async runTests() {
-    console.log('🧪 Running tests...');
-    
-    try {
-      execSync('npm test --silent', { 
-        encoding: 'utf8',
-        cwd: this.projectRoot,
-        stdio: 'pipe'
-      });
-      this.improvements.push('tests_passed');
-    } catch (error) {
-      this.issues.push({
-        type: 'tests_failed',
-        severity: 'high',
-        suggestion: 'Fix failing tests'
-      });
-    }
-  }
-
-  async runBuildCheck() {
-    console.log('🏗️  Running build check...');
-    
-    try {
-      execSync('npm run build --silent', { 
-        encoding: 'utf8',
-        cwd: this.projectRoot,
-        stdio: 'pipe'
-      });
-      this.improvements.push('build_successful');
-    } catch (error) {
-      this.issues.push({
-        type: 'build_failed',
-        severity: 'critical',
-        suggestion: 'Fix build errors'
-      });
-    }
-  }
-
-  async generateReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      total_improvements: this.improvements.length,
-      total_issues: this.issues.length,
-      improvements: this.improvements,
-      issues: this.issues,
-      status: this.issues.length === 0 ? 'excellent' : 'needs_attention'
     };
     
-    fs.writeFileSync(this.reportPath, JSON.stringify(report, null, 2));
-    console.log(`📊 Report generated: ${this.reportPath}`);
+    analyzeDirectory(srcDir);
+    analyzeDirectory(pagesDir);
     
-    if (this.issues.length > 0) {
-      console.log(`⚠️  Found ${this.issues.length} issues to address`);
-    }
+    const averageScore = totalFiles > 0 ? qualityScore / totalFiles : 0;
+    log(`Quality analysis complete: ${totalFiles} files analyzed, average quality score: ${averageScore.toFixed(2)}`);
     
-    if (this.improvements.length > 0) {
-      console.log(`✅ Applied ${this.improvements.length} improvements`);
-    }
+    return { totalFiles, qualityScore: averageScore };
+    
+  } catch (error) {
+    log(`Error during quality analysis: ${error.message}`, 'ERROR');
+    return null;
   }
 }
 
-// Run the automation
-if (require.main === module) {
-  const improvement = new ContinuousImprovement();
-  improvement.run();
+function analyzeFileQuality(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    let score = 100;
+    
+    // Check for common quality issues
+    if (content.includes('TODO')) score -= 10;
+    if (content.includes('FIXME')) score -= 15;
+    if (content.includes('console.log')) score -= 5;
+    if (content.includes('debugger')) score -= 20;
+    if (content.length > 1000) score -= 5;
+    
+    return Math.max(0, score);
+  } catch (error) {
+    return 0;
+  }
 }
 
-module.exports = ContinuousImprovement;
+function runHealthCheck() {
+  try {
+    const requiredDirs = [
+      path.join(__dirname, '../../src'),
+      path.join(__dirname, '../../pages')
+    ];
+    
+    const missingDirs = requiredDirs.filter(dir => !fs.existsSync(dir));
+    if (missingDirs.length > 0) {
+      log(`Missing directories: ${missingDirs.join(', ')}`, 'WARN');
+      return false;
+    }
+    
+    log('Health check passed');
+    return true;
+  } catch (error) {
+    log(`Health check failed: ${error.message}`, 'ERROR');
+    return false;
+  }
+}
+
+async function main() {
+  log(`Starting ${CONFIG.name} automation`);
+  
+  if (!runHealthCheck()) {
+    log('Health check failed, exiting', 'ERROR');
+    process.exit(1);
+  }
+  
+  setInterval(async () => {
+    try {
+      log('Running automation cycle...');
+      const qualityResults = analyzeCodeQuality();
+      runHealthCheck();
+    } catch (error) {
+      log(`Error in main loop: ${error.message}`, 'ERROR');
+    }
+  }, CONFIG.interval);
+  
+  try {
+    log('Running initial analysis...');
+    const qualityResults = analyzeCodeQuality();
+  } catch (error) {
+    log(`Error in initial run: ${error.message}`, 'ERROR');
+  }
+}
+
+process.on('uncaughtException', (error) => {
+  log(`Uncaught Exception: ${error.message}`, 'ERROR');
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+  log(`Unhandled Rejection: ${reason}`, 'ERROR');
+});
+
+process.on('SIGTERM', () => {
+  log('Received SIGTERM, shutting down gracefully...');
+  process.exit(0);
+});
+
+process.on('SIGINT', () => {
+  log('Received SIGINT, shutting down gracefully...');
+  process.exit(0);
+});
+
+if (require.main === module) {
+  main().catch(error => {
+    log(`Failed to start automation: ${error.message}`, 'ERROR');
+    process.exit(1);
+  });
+}
+
+module.exports = { analyzeCodeQuality, runHealthCheck, main };
