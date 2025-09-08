@@ -1,0 +1,10 @@
+
+  'All') const [selectedService, setSelectedService] = useState(null) const [isAutoPlaying, setIsAutoPlaying] = useState(true) const filteredServices = selectedCategory ===;
+  'All' ? aiServices;: aiServices.filter(service => service.category === selectedCategory) const getStatusBadge = (status) => { const statusConfig = { active: { colo,
+    r:;
+  'bg-green-500, text:,
+
+  'bg-yellow-500, text:,
+
+
+

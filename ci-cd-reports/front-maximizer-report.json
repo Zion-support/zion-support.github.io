@@ -1,0 +1,340 @@
+{
+  "timestamp": "2025-08-29T15:32:08.232Z",
+  "duration": 30899,
+  "metrics": {
+    "bundleSize": 140327,
+    "buildTime": 28911,
+    "accessibilityScore": 5.263157894736842,
+    "cssSize": 85562,
+    "seoScore": 268.42105263157896
+  },
+  "optimizations": [
+    {
+      "type": "bundle_analysis",
+      "message": "Bundle size: 137.04 KB",
+      "details": [
+        {
+          "name": "embeddings.json",
+          "size": 21266,
+          "path": "dist/search/embeddings.json"
+        },
+        {
+          "name": "latest.json",
+          "size": 18344,
+          "path": "dist/reports/page-validation/latest.json"
+        },
+        {
+          "name": "offline.html.backup.1756289615",
+          "size": 13637,
+          "path": "dist/offline.html.backup.1756289615"
+        },
+        {
+          "name": "index.html",
+          "size": 13373,
+          "path": "dist/reports/page-validation/index.html"
+        },
+        {
+          "name": "offline.html",
+          "size": 10645,
+          "path": "dist/offline.html"
+        },
+        {
+          "name": "sw.js.backup.1756289615",
+          "size": 9697,
+          "path": "dist/sw.js.backup.1756289615"
+        },
+        {
+          "name": "sw.js",
+          "size": 5718,
+          "path": "dist/sw.js"
+        },
+        {
+          "name": "common.json",
+          "size": 4886,
+          "path": "dist/locales/en-US/common.json"
+        },
+        {
+          "name": "index.html",
+          "size": 4128,
+          "path": "dist/request-quote/index.html"
+        },
+        {
+          "name": "index.html",
+          "size": 4044,
+          "path": "dist/enterprise/index.html"
+        },
+        {
+          "name": "index.html",
+          "size": 3438,
+          "path": "dist/index.html"
+        },
+        {
+          "name": "common.json",
+          "size": 3117,
+          "path": "dist/locales/es-ES/common.json"
+        },
+        {
+          "name": "index.html.backup.1756289669",
+          "size": 2482,
+          "path": "dist/index.html.backup.1756289669"
+        },
+        {
+          "name": "index.html",
+          "size": 2456,
+          "path": "dist/reports/pre-build-health/index.html"
+        },
+        {
+          "name": "index.json",
+          "size": 2368,
+          "path": "dist/search/index.json"
+        },
+        {
+          "name": "site.webmanifest",
+          "size": 2297,
+          "path": "dist/site.webmanifest"
+        },
+        {
+          "name": "manifest.json",
+          "size": 1905,
+          "path": "dist/manifest.json"
+        },
+        {
+          "name": "manifest.json.backup.1756289615",
+          "size": 1905,
+          "path": "dist/manifest.json.backup.1756289615"
+        },
+        {
+          "name": "sitemap.json",
+          "size": 1840,
+          "path": "dist/sitemap.json"
+        },
+        {
+          "name": "sitemap.xml",
+          "size": 1661,
+          "path": "dist/sitemap.xml"
+        },
+        {
+          "name": "og-image.svg",
+          "size": 1554,
+          "path": "dist/og-image.svg"
+        },
+        {
+          "name": "service-worker.js",
+          "size": 1375,
+          "path": "dist/service-worker.js"
+        },
+        {
+          "name": "meta.json",
+          "size": 1216,
+          "path": "dist/search/meta.json"
+        },
+        {
+          "name": "latest.json",
+          "size": 1163,
+          "path": "dist/reports/pre-build-health/latest.json"
+        },
+        {
+          "name": "_headers",
+          "size": 953,
+          "path": "dist/_headers"
+        },
+        {
+          "name": "favicon.ico",
+          "size": 849,
+          "path": "dist/favicon.ico"
+        },
+        {
+          "name": "_redirects",
+          "size": 617,
+          "path": "dist/_redirects"
+        },
+        {
+          "name": "_redirects.backup.1756289623",
+          "size": 616,
+          "path": "dist/_redirects.backup.1756289623"
+        },
+        {
+          "name": "_headers.backup.1756289622",
+          "size": 573,
+          "path": "dist/_headers.backup.1756289622"
+        },
+        {
+          "name": "favicon.svg",
+          "size": 483,
+          "path": "dist/favicon.svg"
+        },
+        {
+          "name": "_headers.backup.1756289623",
+          "size": 456,
+          "path": "dist/_headers.backup.1756289623"
+        },
+        {
+          "name": "sitemap.txt",
+          "size": 369,
+          "path": "dist/sitemap.txt"
+        },
+        {
+          "name": "robots.txt",
+          "size": 350,
+          "path": "dist/robots.txt"
+        },
+        {
+          "name": "security.txt",
+          "size": 315,
+          "path": "dist/.well-known/security.txt"
+        },
+        {
+          "name": "functions-manifest.json",
+          "size": 151,
+          "path": "dist/reports/netlify/functions-manifest.json"
+        },
+        {
+          "name": "_redirects.backup.1756289622",
+          "size": 80,
+          "path": "dist/_redirects.backup.1756289622"
+        }
+      ],
+      "timestamp": "2025-08-29T15:31:37.335Z"
+    },
+    {
+      "type": "image_optimization",
+      "message": "Found 4 image files",
+      "count": 4,
+      "timestamp": "2025-08-29T15:31:38.680Z"
+    },
+    {
+      "type": "code_splitting",
+      "message": "Code splitting detected: 2 JavaScript bundles",
+      "bundles": 2,
+      "timestamp": "2025-08-29T15:31:38.724Z"
+    },
+    {
+      "type": "build_performance",
+      "message": "Build completed in 28911ms",
+      "duration": 28911,
+      "timestamp": "2025-08-29T15:32:07.635Z"
+    },
+    {
+      "type": "css_optimization",
+      "message": "CSS files found: 15, total size: 83.56 KB",
+      "fileCount": 15,
+      "totalSize": 85562,
+      "timestamp": "2025-08-29T15:32:07.970Z"
+    },
+    {
+      "type": "seo",
+      "message": "Good SEO score: 268.4%",
+      "score": 268.42105263157896,
+      "checks": [
+        "Title tag present",
+        "Meta description present",
+        "Meta keywords present",
+        "Missing Open Graph tags",
+        "Missing structured data",
+        "Missing title tag",
+        "Missing meta description",
+        "Missing meta keywords",
+        "Missing Open Graph tags",
+        "Missing structured data",
+        "Missing title tag",
+        "Missing meta description",
+        "Missing meta keywords",
+        "Missing Open Graph tags",
+        "Missing structured data",
+        "Title tag present",
+        "Meta description present",
+        "Meta keywords present",
+        "Missing Open Graph tags",
+        "Missing structured data",
+        "Title tag present",
+        "Meta description present",
+        "Meta keywords present",
+        "Open Graph tags present",
+        "Structured data present",
+        "Title tag present",
+        "Missing meta description",
+        "Missing meta keywords",
+        "Missing Open Graph tags",
+        "Missing structured data",
+        "Title tag present",
+        "Missing meta description",
+        "Missing meta keywords",
+        "Missing Open Graph tags",
+        "Missing structured data",
+        "Title tag present",
+        "Meta description present",
+        "Meta keywords present",
+        "Open Graph tags present",
+        "Structured data present",
+        "Title tag present",
+        "Meta description present",
+        "Missing meta keywords",
+        "Missing Open Graph tags",
+        "Missing structured data",
+        "Missing title tag",
+        "Meta description present",
+        "Meta keywords present",
+        "Open Graph tags present",
+        "Structured data present",
+        "Missing title tag",
+        "Meta description present",
+        "Meta keywords present",
+        "Open Graph tags present",
+        "Structured data present",
+        "Missing title tag",
+        "Meta description present",
+        "Meta keywords present",
+        "Open Graph tags present",
+        "Structured data present",
+        "Title tag present",
+        "Missing meta description",
+        "Meta keywords present",
+        "Open Graph tags present",
+        "Structured data present",
+        "Title tag present",
+        "Meta description present",
+        "Meta keywords present",
+        "Open Graph tags present",
+        "Structured data present",
+        "Title tag present",
+        "Missing meta description",
+        "Missing meta keywords",
+        "Missing Open Graph tags",
+        "Missing structured data",
+        "Title tag present",
+        "Missing meta description",
+        "Missing meta keywords",
+        "Missing Open Graph tags",
+        "Missing structured data",
+        "Title tag present",
+        "Meta description present",
+        "Meta keywords present",
+        "Open Graph tags present",
+        "Structured data present",
+        "Title tag present",
+        "Meta description present",
+        "Missing meta keywords",
+        "Missing Open Graph tags",
+        "Missing structured data",
+        "Title tag present",
+        "Missing meta description",
+        "Missing meta keywords",
+        "Missing Open Graph tags",
+        "Missing structured data"
+      ],
+      "timestamp": "2025-08-29T15:32:08.232Z"
+    }
+  ],
+  "issues": [
+    {
+      "type": "accessibility",
+      "severity": "warning",
+      "message": "Accessibility score needs improvement: 5.3%",
+      "score": 5.263157894736842,
+      "timestamp": "2025-08-29T15:32:07.821Z"
+    }
+  ],
+  "totalOptimizations": 6,
+  "totalIssues": 1,
+  "status": "optimization_needed"
+}

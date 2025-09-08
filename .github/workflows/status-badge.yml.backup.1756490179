@@ -1,0 +1,54 @@
+name: Status Badge
+
+on:
+  workflow_run:
+    workflows: ["CI/CD Pipeline", "Testing & Quality Assurance", "Security & Dependency Management"]
+    types:
+      - completed
+
+jobs:
+  update-badge:
+    name: Update Status Badge
+    runs-on: ubuntu-latest
+    if: github.event.workflow_run.conclusion != 'skipped'
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Generate status badge
+      run: |
+        echo "Generating status badge..."
+        
+        # Get workflow status
+        WORKFLOW_NAME="${{ github.event.workflow_run.name }}"
+        WORKFLOW_CONCLUSION="${{ github.event.workflow_run.conclusion }}"
+        WORKFLOW_URL="${{ github.event.workflow_run.html_url }}"
+        
+        # Create badge data
+        if [ "$WORKFLOW_CONCLUSION" = "success" ]; then
+          STATUS="passing"
+          COLOR="green"
+        elif [ "$WORKFLOW_CONCLUSION" = "failure" ]; then
+          STATUS="failing"
+          COLOR="red"
+        else
+          STATUS="unknown"
+          COLOR="lightgrey"
+        fi
+        
+        # Generate badge URL
+        BADGE_URL="https://img.shields.io/badge/$WORKFLOW_NAME-$STATUS-$COLOR"
+        
+        echo "Badge URL: $BADGE_URL"
+        echo "Workflow: $WORKFLOW_NAME"
+        echo "Status: $STATUS"
+        echo "URL: $WORKFLOW_URL"
+    
+    - name: Comment on PR
+      if: github.event.workflow_run.event == 'pull_request'
+      run: |
+        echo "Workflow ${{ github.event.workflow_run.name }} completed with status: ${{ github.event.workflow_run.conclusion }}"
+        echo "View details: ${{ github.event.workflow_run.html_url }}"

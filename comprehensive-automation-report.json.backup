@@ -1,0 +1,246 @@
+{
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  "timestamp": "2025-09-07T03:26:27.171Z",
+  "duration": 628,
+  "summary": {
+    "successful": 1,
+    "errors": 7,
+    "warnings": 0
+  },
+=======
+>>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
+<<<<<<< HEAD
+  "timestamp: 2025-09-07T02:53:54.838Z",
+  "duration: 23172,
+  summary": {
+    "successful: 5,
+    errors": 4,
+    "warnings: 0
+=======
+<<<<<<< HEAD
+  "timestamp": "2025-09-07T06:47:18.564Z",
+  "totalDuration": 33886,
+  "successfulTasks": 2,
+  "totalTasks": 3,
+  "results": {
+    "Comprehensive Automation Suite": true,
+    "Final Automation Suite": false,
+    "Execute All Scripts": true
+=======
+  "timestamp": "2025-09-07T02:33:22.872Z",
+  "duration": "1285ms",
+  "summary": {
+    "successful": 3,
+    "errors": 14,
+    "warnings": 3
+>>>>>>> origin/chore/fix-lint-and-merge
+  },
+  results": {
+    "success: [
+      Pre-automation checks passed",
+      {
+<<<<<<< HEAD
+        "script: scripts/auto-fixer.js",
+        "category: error-fixing",
+        "output: [INFO] 🚀 Starting Auto Fixer\n[INFO] Checking for merge conflicts...\n[INFO] No merge conflicts found\n[INFO] Fixing import errors...\n[INFO] Fixing TypeScript errors...\n[ERROR] Failed to fix TypeScript errors\n[INFO] Fixing linting errors...\n[INFO] Report saved to /workspace/error-reports/auto-fixer-report.json\n[INFO] ✅ Auto Fixer completed\n[INFO] Applied 2 fixes\n[INFO] Failed 1 fixes\n[INFO] Success rate: 66.67%\n"
+      },
+      {
+        "script: scripts/advanced-build-optimizer.js",
+        "category: build-optimization",
+        "output: ℹ️ 🚀 Starting Advanced Build Optimizer\nℹ️ 📦 Optimizing bundle size...\n❌ ❌ Bundle optimization failed: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nFailed to compile.\n\napp/layout.tsx\nAn error occurred in `next/font`.\n\nSyntaxError: Unexpected token ',\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\n./components/Layout.tsx\nError:   \u001b[31mx\u001b[0m Expression expected\n   ,-[\u001b[36;1;4m/workspace/components/Layout.tsx\u001b[0m:2:1]\n \u001b[2m1\u001b[0m | \n \u001b[2m2\u001b[0m | }export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}\n   : \u001b[35;1m^\u001b[0m\n \u001b[2m3\u001b[0m |   static getDerivedStateFromError(error) {return { hasError: true }}\n \u001b[2m4\u001b[0m |   componentDidCatch(error, errorInfo) {console.error(Error caught by boundary:', error, errorInfo)}\n \u001b[2m5\u001b[0m |   render() {if (this.state.hasError) {return <div />Something went wrong.</div>;}\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./components/Layout.tsx\n./pages/summit.tsx\n\n./pages/ai-services.tsx\nError:   \u001b[31mx\u001b[0m Unterminated string constant\n   ,-[\u001b[36;1;4m/workspace/pages/ai-services.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React from \\\"react\\\";\n   : \u001b[35;1m                   ^^^^^^^^^\u001b[0m\n \u001b[2m2\u001b[0m | import Layout from \\\../components/Layout\\\;\n \u001b[2m3\u001b[0m | export default function AIServices() {\n \u001b[2m4\u001b[0m |   return (\n   `----\n  \u001b[31mx\u001b[0m Expected unicode escape\n   ,-[\u001b[36;1;4m/workspace/pages/ai-services.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React from \\\"react\\\";\n   : \u001b[35;1m                  ^\u001b[0m\n \u001b[2m2\u001b[0m | import Layout from \\\../components/Layout\\\;\n \u001b[2m3\u001b[0m | export default function AIServices() {\n \u001b[2m4\u001b[0m |   return (\n   `----\n  \u001b[31mx\u001b[0m Unexpected token `<lexing error: Error { error: (19..19, ExpectedUnicodeEscape) }>`. Expected a string literal\n   ,-[\u001b[36;1;4m/workspace/pages/ai-services.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React from \\\"react\\\";\n   : \u001b[35;1m                  ^\u001b[0m\n \u001b[2m2\u001b[0m | import Layout from \\\../components/Layout\\\;\n \u001b[2m3\u001b[0m | export default function AIServices() {\n \u001b[2m4\u001b[0m |   return (\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/ai-services.tsx\n\n./pages/deploy/genesis.tsx\nError:   \u001b[31mx\u001b[0m Expected unicode escape\n   ,-[\u001b[36;1;4m/workspace/pages/deploy/genesis.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | export { default } from \\\"../zion/init\\\";\\n   : \u001b[35;1m                        ^\u001b[0m\n \u001b[2m2\u001b[0m | \\n   `----\n  \u001b[31mx\u001b[0m Unexpected token `<lexing error: Error { error: (25..25, ExpectedUnicodeEscape) }>`. Expected a string literal\n   ,-[\u001b[36;1;4m/workspace/pages/deploy/genesis.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | export { default } from \\\"../zion/init\\\";\\n   : \u001b[35;1m                        ^\u001b[0m\n \u001b[2m2\u001b[0m | \\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/deploy/genesis.tsx\n\n./pages/design-map.tsx\nError:   \u001b[31mx\u001b[0m Unterminated string constant\n   ,-[\u001b[36;1;4m/workspace/pages/design-map.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React, { useMemo, useState } from \\\"react\\\";\n   : \u001b[35;1m                                          ^^^^^^^^^\u001b[0m\n \u001b[2m2\u001b[0m | import Head from \\\next/head\\\;\n \u001b[2m3\u001b[0m | import { getZionDesignMap } from \\\"../utils/design-map\\\";\n \u001b[2m4\u001b[0m | export default function DesignMapPage() {\n   `----\n  \u001b[31mx\u001b[0m Expected unicode escape\n   ,-[\u001b[36;1;4m/workspace/pages/design-map.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React, { useMemo, useState } from \\\react\\\;\n   : \u001b[35;1m                                         ^\u001b[0m\n \u001b[2m2\u001b[0m | import Head from \\\"next/head\\\";\n \u001b[2m3\u001b[0m | import { getZionDesignMap } from \\\../utils/design-map\\\;\n \u001b[2m4\u001b[0m | export default function DesignMapPage() {\n   `----\n  \u001b[31mx\u001b[0m Unexpected token `<lexing error: Error { error: (42..42, ExpectedUnicodeEscape) }>`. Expected a string literal\n   ,-[\u001b[36;1;4m/workspace/pages/design-map.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React, { useMemo, useState } from \\\"react\\\";\n   : \u001b[35;1m                                         ^\u001b[0m\n \u001b[2m2\u001b[0m | import Head from \\\next/head\\\;\n \u001b[2m3\u001b[0m | import { getZionDesignMap } from \\\"../utils/design-map\\\";\n \u001b[2m4\u001b[0m | export default function DesignMapPage() {\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/design-map.tsx\n\n\n> Build failed because of webpack errors\n\nℹ️ 🖼️ Optimizing images...\n✅ ✅ Image optimization completed - 0 images found\nℹ️ 🔀 Optimizing code splitting...\n✅ ✅ Code splitting analysis completed - 61 dynamic imports found\n✅ 📊 Report saved to /workspace/build-optimization-report.json\n✅ ✅ Build optimization completed\nℹ️ 📊 Applied 2 optimizations\nℹ️ ❌ Encountered 1 errors\n
+      },
+      {
+        script": "scripts/performance-monitor-enhanced.js,
+        category": "performance-monitoring,
+        output": "ℹ️ 🚀 Starting Enhanced Performance Monitor\nℹ️ 📦 Measuring bundle size...\n❌ ❌ Bundle size measurement failed: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nFailed to compile.\n\napp/layout.tsx\nAn error occurred in `next/font`.\n\nSyntaxError: Unexpected token ',\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\n./components/Layout.tsx\nError:   \u001b[31mx\u001b[0m Expression expected\n   ,-[\u001b[36;1;4m/workspace/components/Layout.tsx\u001b[0m:2:1]\n \u001b[2m1\u001b[0m | \n \u001b[2m2\u001b[0m | }export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}\n   : \u001b[35;1m^\u001b[0m\n \u001b[2m3\u001b[0m |   static getDerivedStateFromError(error) {return { hasError: true }}\n \u001b[2m4\u001b[0m |   componentDidCatch(error, errorInfo) {console.error(Error caught by boundary:', error, errorInfo)}\n \u001b[2m5\u001b[0m |   render() {if (this.state.hasError) {return <div />Something went wrong.</div>;}\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./components/Layout.tsx\n./pages/summit.tsx\n\n./pages/ai-services.tsx\nError:   \u001b[31mx\u001b[0m Unterminated string constant\n   ,-[\u001b[36;1;4m/workspace/pages/ai-services.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React from \\\react\\\;\n   : \u001b[35;1m                   ^^^^^^^^^\u001b[0m\n \u001b[2m2\u001b[0m | import Layout from \\\"../components/Layout\\\";\n \u001b[2m3\u001b[0m | export default function AIServices() {\n \u001b[2m4\u001b[0m |   return (\n   `----\n  \u001b[31mx\u001b[0m Expected unicode escape\n   ,-[\u001b[36;1;4m/workspace/pages/ai-services.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React from \\\react\\\;\n   : \u001b[35;1m                  ^\u001b[0m\n \u001b[2m2\u001b[0m | import Layout from \\\"../components/Layout\\\";\n \u001b[2m3\u001b[0m | export default function AIServices() {\n \u001b[2m4\u001b[0m |   return (\n   `----\n  \u001b[31mx\u001b[0m Unexpected token `<lexing error: Error { error: (19..19, ExpectedUnicodeEscape) }>`. Expected a string literal\n   ,-[\u001b[36;1;4m/workspace/pages/ai-services.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React from \\\react\\\;\n   : \u001b[35;1m                  ^\u001b[0m\n \u001b[2m2\u001b[0m | import Layout from \\\"../components/Layout\\\";\n \u001b[2m3\u001b[0m | export default function AIServices() {\n \u001b[2m4\u001b[0m |   return (\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/ai-services.tsx\n\n./pages/deploy/genesis.tsx\nError:   \u001b[31mx\u001b[0m Expected unicode escape\n   ,-[\u001b[36;1;4m/workspace/pages/deploy/genesis.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | export { default } from \\\../zion/init\\\;\"\n   : \u001b[35;1m                        ^\u001b[0m\n \u001b[2m2\u001b[0m | \"\n   `----\n  \u001b[31mx\u001b[0m Unexpected token `<lexing error: Error { error: (25..25, ExpectedUnicodeEscape) }>`. Expected a string literal\n   ,-[\u001b[36;1;4m/workspace/pages/deploy/genesis.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | export { default } from \\\../zion/init\\\;\"\n   : \u001b[35;1m                        ^\u001b[0m\n \u001b[2m2\u001b[0m | \"\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/deploy/genesis.tsx\n\n./pages/design-map.tsx\nError:   \u001b[31mx\u001b[0m Unterminated string constant\n   ,-[\u001b[36;1;4m/workspace/pages/design-map.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React, { useMemo, useState } from \\\react\\\;\n   : \u001b[35;1m                                          ^^^^^^^^^\u001b[0m\n \u001b[2m2\u001b[0m | import Head from \\\"next/head\\\";\n \u001b[2m3\u001b[0m | import { getZionDesignMap } from \\\../utils/design-map\\\;\n \u001b[2m4\u001b[0m | export default function DesignMapPage() {\n   `----\n  \u001b[31mx\u001b[0m Expected unicode escape\n   ,-[\u001b[36;1;4m/workspace/pages/design-map.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React, { useMemo, useState } from \\\"react\\\";\n   : \u001b[35;1m                                         ^\u001b[0m\n \u001b[2m2\u001b[0m | import Head from \\\next/head\\\;\n \u001b[2m3\u001b[0m | import { getZionDesignMap } from \\\"../utils/design-map\\\";\n \u001b[2m4\u001b[0m | export default function DesignMapPage() {\n   `----\n  \u001b[31mx\u001b[0m Unexpected token `<lexing error: Error { error: (42..42, ExpectedUnicodeEscape) }>`. Expected a string literal\n   ,-[\u001b[36;1;4m/workspace/pages/design-map.tsx\u001b[0m:1:1]\n \u001b[2m1\u001b[0m | import React, { useMemo, useState } from \\\react\\\;\n   : \u001b[35;1m                                         ^\u001b[0m\n \u001b[2m2\u001b[0m | import Head from \\\"next/head\\\";\n \u001b[2m3\u001b[0m | import { getZionDesignMap } from \\\../utils/design-map\\\;\n \u001b[2m4\u001b[0m | export default function DesignMapPage() {\n   `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/design-map.tsx\n\n\n> Build failed because of webpack errors\n\nℹ️ 🧠 Measuring memory usage...\n✅ ✅ Memory usage: 4.71 MB\nℹ️ 📁 Counting source files...\n✅ ✅ Source files: 1834\n✅ 📊 Performance report saved to /workspace/performance-monitor-report.json\n✅ ✅ Performance monitoring completed\nℹ️ 📊 Bundle size: 0.00 MB\nℹ️ 🧠 Memory usage: 4.71 MB\nℹ️ 📁 Source files: 1834\nℹ️ 💡 Recommendations: 1\n"
+      },
+      {
+        "script: scripts/performance-optimizer.js",
+        "category: performance-monitoring",
+        "output: ℹ️ 🚀 Starting Performance Optimizer\nℹ️ 🖼️ Optimizing images...\n✅ ✅ Image optimization completed - 0 large images found\nℹ️ 🔀 Optimizing code splitting...\n✅ ✅ Code splitting analysis completed\nℹ️   - Dynamic imports: 104\nℹ️   - Large files: 918\nℹ️ 📦 Optimizing dependencies...\n✅ ✅ Dependency analysis completed - 84 dependencies\n✅ 📊 Performance optimization report saved to /workspace/performance-optimization-report.json\n✅ ✅ Performance optimization completed\nℹ️ 📊 Applied 922 optimizations\nℹ️ ❌ Encountered 0 errors\n"
+=======
+        "script": "scripts/performance-monitor-enhanced.js",
+        "category": "performance-monitoring",
+        "output": "ℹ️ Starting enhanced performance monitoring...\nℹ️ Monitoring build performance...\n❌ Build performance monitoring failed: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at <unknown> (next.config.js:58:1)\n\n❌ Performance monitoring failed: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at <unknown> (next.config.js:58:1)\n\n"
+      },
+      {
+        "script": "scripts/auto-fixer.js",
+        "category": "error-fixing",
+        "output": "[INFO] Starting auto-fixer...\n[INFO] Checking for merge conflicts...\n[INFO] No merge conflicts found\n[INFO] Fixing import errors...\n[INFO] Fixing TypeScript errors...\n[ERROR] Failed to fix TypeScript errors\n[INFO] Fixing syntax errors...\n[ERROR] Failed to fix syntax errors\n[INFO] Report saved to /workspace/error-reports/auto-fixer-report.json\n[INFO] Auto-fixer completed. Applied: 1, Failed: 1\n"
+>>>>>>> origin/chore/fix-lint-and-merge
+      }
+    ],
+    "errors: [
+      {
+<<<<<<< HEAD
+        script": "scripts/comprehensive-error-fixer.cjs,
+        category": "error-fixing,
+        error": "Command failed: node scripts/comprehensive-error-fixer.cjs\n/workspace/scripts/comprehensive-error-fixer.cjs:62\n    content = content.replace(/#!/usr/bin/env node;/g, '#!/usr/bin/env node);\n                              ^\n\nSyntaxError: Invalid regular expression flags\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n
+      },
+      {
+        check": "ESLint,
+        error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnode:internal/modules/cjs/loader:1404\n  throw err;\n  ^\n\nError: Cannot find module /workspace/node_modules/.bin/eslint'\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49 {\n  code: 'MODULE_NOT_FOUND,\n  requireStack: []\n}\n\nNode.js v22.16.0\n
+      },
+      {
+        check": "TypeScript,
+        error": "Command failed: npm run type-check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnode:internal/modules/cjs/loader:1404\n  throw err;\n  ^\n\nError: Cannot find module /workspace/node_modules/.bin/tsc'\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49 {\n  code: 'MODULE_NOT_FOUND,\n  requireStack: []\n}\n\nNode.js v22.16.0\n
+      },
+      {
+        check": "Build,
+        error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n
+=======
+        "script": "scripts/comprehensive-error-fixer.cjs",
+        "category": "error-fixing",
+        "error": "Command failed: node scripts/comprehensive-error-fixer.cjs\nError fixing failed: Error: ENOENT: no such file or directory, stat '/workspace/media/docu-script/requirements.txt'\n    at Object.statSync (node:fs:1740:25)\n    at scanDirectory (/workspace/scripts/comprehensive-error-fixer.cjs:86:25)\n    at scanDirectory (/workspace/scripts/comprehensive-error-fixer.cjs:91:13)\n    at scanDirectory (/workspace/scripts/comprehensive-error-fixer.cjs:91:13)\n    at ComprehensiveErrorFixer.getAllJSFiles (/workspace/scripts/comprehensive-error-fixer.cjs:99:5)\n    at ComprehensiveErrorFixer.fixSyntaxErrors (/workspace/scripts/comprehensive-error-fixer.cjs:26:24)\n    at ComprehensiveErrorFixer.run (/workspace/scripts/comprehensive-error-fixer.cjs:157:18)\n    at Object.<anonymous> (/workspace/scripts/comprehensive-error-fixer.cjs:177:9)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)\n    at Object..js (node:internal/modules/cjs/loader:1895:10) {\n  errno: -2,\n  code: 'ENOENT',\n  syscall: 'stat',\n  path: '/workspace/media/docu-script/requirements.txt'\n}\n"
+      },
+      {
+<<<<<<< HEAD
+        "script": "scripts/auto-fixer.js",
+        "category": "error-fixing",
+        "error": "Command failed: node scripts/auto-fixer.js\n/workspace/scripts/auto-fixer.js:3\n#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; import { fileURLToPath } from 'url';\n^\n\nSyntaxError: Invalid or unexpected token\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+      },
+      {
+        "script": "scripts/advanced-build-optimizer.js",
+        "category": "build-optimization",
+        "error": "Command failed: node scripts/advanced-build-optimizer.js\n/workspace/scripts/advanced-build-optimizer.js:3\nursor/integrate-build-improve-and-re-verify-8f7d;\n                                            ^\n\nSyntaxError: Invalid or unexpected token\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+      },
+      {
+        "script": "scripts/performance-monitor-enhanced.js",
+        "category": "performance-monitoring",
+        "error": "Command failed: node scripts/performance-monitor-enhanced.js\n/workspace/scripts/performance-monitor-enhanced.js:3\nursor/fix-syntax-push-and-merge-to-main-40de;\n                                        ^^\n\nSyntaxError: Invalid or unexpected token\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+=======
+        "script": "scripts/advanced-build-optimizer.js",
+        "category": "build-optimization",
+        "error": "spawnSync /bin/sh ENOBUFS"
+      },
+      {
+        "check": "ESLint",
+        "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+>>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
+      },
+      {
+        "check": "TypeScript",
+        "error": "spawnSync /bin/sh ENOBUFS"
+<<<<<<< HEAD
+=======
+      },
+      {
+        "check": "Build",
+        "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at <unknown> (next.config.js:58:1)\n"
+>>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+      }
+    ],
+    warnings": [],
+    "metrics: {
+      startTime": 1757221718615,
+      "endTime: 1757221756275,
+      duration": 37660,
+      "memoryUsage: {
+        start": {
+          "rss: 48332800,
+          heapTotal": 5570560,
+          "heapUsed: 4468160,
+          external": 1574360,
+          "arrayBuffers: 10515
+        },
+        end": {
+          "rss: 54534144,
+          heapTotal": 7516160,
+          "heapUsed: 5846928,
+          external": 2623888,
+          "arrayBuffers: 1060003
+        }
+      },
+      systemInfo": {
+        "platform: linux",
+        "arch: x64",
+        "nodeVersion: v22.16.0",
+        "cpus: 4,
+        totalMemory": 16795742208,
+        "freeMemory: 14595481600
+      }
+    }
+
+
+  "timestamp": "2025-09-07T05:59:20.856Z",
+  "totalDuration": 44655,
+  "successfulTasks": 2,
+  "totalTasks": 3,
+  "results": {
+    "Comprehensive Automation Suite": true,
+    "Final Automation Suite": false,
+    "Execute All Scripts": true
+  },
+  "errors": [
+    {
+      "command": "node final-automation-suite-fixed.cjs",
+      "description": "Final Automation Suite",
+      "error": "Command failed: node final-automation-suite-fixed.cjs\n/workspace/final-automation-suite-fixed.cjs:4\nconst path = require(\"path\");\"\n                             ^\n\nSyntaxError: Invalid or unexpected token\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+    }
+  ],
+
+
+  },
+  "errors": [
+    {
+      "command": "node final-automation-suite-fixed.cjs",
+      "description": "Final Automation Suite",
+      "error": "Command failed: node final-automation-suite-fixed.cjs\n/workspace/final-automation-suite-fixed.cjs:4\nconst path = require(\"path\");\"\n                             ^\n\nSyntaxError: Invalid or unexpected token\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+    }
+  ],
+
+
+  "fixes": [
+    "Fixed memory issues with Node.js heap size",
+    Created missing automation scripts,
+    "Fixed ESLint configuration",
+    "Added comprehensive error handling"
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  ]
+}
+  ]
+}
+=======
+>>>>>>> origin/resolved-merge-conflicts
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "recommendations": [
+    "Review and fix code quality issues",
+    "Optimize application performance",
+    "Enhance accessibility features"
+>>>>>>> origin/cursor/delete-old-data-records-6bba
+  ]
+}
+
+  ]
+}
+<<<<<<< HEAD
+
+
+=======
+=======
+  ]
+}
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> merged-prs-20250907-203621
+<<<<<<< HEAD
+=======
+>>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+>>>>>>> origin/resolved-merge-conflicts
+>>>>>>> origin/cursor/delete-old-data-records-6bba

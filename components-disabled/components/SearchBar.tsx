@@ -1,0 +1,10 @@
+              No results found for &quot;{query}&quot;
+            </div>
+          ) : null}
+        </div>
+      )}
+    </div>
+  );
+};
+
+

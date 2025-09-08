@@ -1,0 +1,11 @@
+module.exports = {
+  plugins: {
+<<<<<<< HEAD
+    tailwindcss: {},
+=======
+    "@tailwindcss/postcss": {},
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e367
+    autoprefixer: {},
+  },
+}
+
