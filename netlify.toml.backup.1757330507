@@ -6,7 +6,13 @@
 
 [build.environment]
   NODE_VERSION = "20"
+<<<<<<< HEAD
+  PYTHON_VERSION = "3.11.9"
+  # Prevent Netlify/mise from attempting to compile Python from source
+  MISE_SETTINGS__PYTHON__COMPILE = "false"
+=======
   PYTHON_VERSION = "3.11.10"
+>>>>>>> origin/cursor/install-python-dependencies-with-mise-bb39
 
 [[plugins]]
   package = "netlify-plugin-compress"
