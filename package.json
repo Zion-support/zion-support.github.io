@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "NODE_ENV=production tsc && NODE_ENV=production vite build && node scripts/prerender.js",
+    "build": "NODE_ENV=production tsc && NODE_ENV=production vite build",
+    "postbuild": "next-sitemap",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "NODE_ENV=production vite preview",
     "test": "jest",
@@ -172,7 +173,8 @@
     "@google/model-viewer": "^1.12.0",
     "zod": "^3.22.4",
     "yup": "^1.2.0",
-    "firebase": "^9.23.0"
+    "next-seo": "^6.0.0",
+    "next-sitemap": "^5.4.1"
   },
   "devDependencies": {
     "@types/node": "^20.11.17",

@@ -12,28 +12,24 @@ export interface TalentProfile {
   title?: string;
   profile_picture_url?: string;
   bio?: string;
-  skills: string[];
-  experience: number;
-  hourlyRate: number;
-  currency: string;
-  location: {
-    city: string;
-    country: string;
-    timezone: string;
-  };
-  availability: 'full-time' | 'part-time' | 'contract' | 'freelance';
-  rating: number;
-  reviewCount: number;
-  portfolio: PortfolioItem[];
-  education: Education[];
-  certifications: Certification[];
-  languages: Language[];
-  socialLinks: SocialLinks;
-  createdAt: Date;
-  updatedAt: Date;
-  status: 'active' | 'inactive' | 'suspended';
-  verified: boolean;
-  featured: boolean;
+  summary?: string;
+  /** Optional name field for SEO metadata */
+  name?: string;
+  /** Optional title field for SEO metadata */
+  title?: string;
+  location?: string;
+  skills?: string[];
+  hourly_rate?: number;
+  years_experience?: number;
+  availability_type?: string;
+  timezone?: string;
+  average_rating?: number;
+  rating_count?: number;
+  is_verified?: boolean;
+  key_projects?: {
+    title: string;
+    description: string;
+  }[];
 }
 
 export interface PortfolioItem {
