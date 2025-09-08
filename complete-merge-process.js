@@ -21,10 +21,10 @@ function resolveMergeConflicts(filePath) {
     let resolvedContent = content;
     
     // Pattern 1: Conflicts with file paths - keep incoming changes
-    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD:[^\n]*\n.*?\n=======\n(.*?)\n>>>>>>> [^\n]*\n?/gs, '$1\n');
+    resolvedContent = resolvedContent.replace(/
     
     // Pattern 2: Simple conflicts without file paths - keep incoming changes
-    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n.*?\n=======\n(.*?)\n>>>>>>> [^\n]*\n?/gs, '$1\n');
+    resolvedContent = resolvedContent.replace(/
     
     // Pattern 3: Handle any remaining conflict markers
     resolvedContent = resolvedContent.replace(/<<<<<<<[^\n]*\n.*?\n=======\n.*?\n>>>>>>>[^\n]*\n?/gs, '');
