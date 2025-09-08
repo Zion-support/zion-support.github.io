@@ -18,21 +18,41 @@ import {
   CommunityRoutes,
   DeveloperRoutes
 } from './routes';
-const Home = React.lazy(() => import('./pages/Home'));
-const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
-const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
-const TalentsPage = React.lazy(() => import('./pages/TalentsPage'));
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
-const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage'));
-const Analytics = React.lazy(() => import('./pages/Analytics'));
-const MobileLaunchPage = React.lazy(() => import('./pages/MobileLaunchPage'));
-const CommunityPage = React.lazy(() => import('./pages/CommunityPage'));
-const Categories = React.lazy(() => import('./pages/Categories'));
-const Login = React.lazy(() => import('./pages/Login'));
-const Signup = React.lazy(() => import('./pages/Signup'));
-const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
-const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
-const ContactPage = React.lazy(() => import('./pages/Contact'));
+import Home from './pages/Home';
+import AIMatcherPage from './pages/AIMatcher';
+import TalentDirectory from './pages/TalentDirectory';
+import TalentsPage from './pages/TalentsPage';
+import MoreTalentsPage from './pages/MoreTalentsPage';
+import AdditionalTalentsPage from './pages/AdditionalTalentsPage';
+import ServicesPage from './pages/ServicesPage';
+import EquipmentPage from './pages/EquipmentPage';
+import EquipmentDetail from './pages/EquipmentDetail';
+import Analytics from './pages/Analytics';
+import MobileLaunchPage from './pages/MobileLaunchPage';
+import CommunityPage from './pages/CommunityPage';
+import { CommunityProvider } from './context';
+import Categories from './pages/Categories';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
+import NewProductsPage from './pages/NewProductsPage';
+erpabg-codex/add-new-products-page-with-10-items
+import NewServicesPage from './pages/NewServicesPage';
+main
+import Sitemap from './pages/Sitemap';
+import PartnersPage from './pages/Partners';
+import Help from './pages/Help';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import SimpleSignup from './pages/SimpleSignup';
+import ITOnsiteServicesPage from './pages/ITOnsiteServicesPage';
+import OpenAppRedirect from './pages/OpenAppRedirect';
+import ContactPage from './pages/Contact';
+import ZionHireAI from './pages/ZionHireAI';
+import RequestQuotePage from './pages/RequestQuote';
+import WishlistPage from './pages/Wishlist';
+import CartPage from './pages/Cart';
+import Checkout from './pages/Checkout';
+import { SupportChatbot } from './components/SupportChatbot';
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -51,6 +71,7 @@ const baseRoutes = [
   { path: '/equipment', element: <EquipmentPage /> },
   { path: '/equipment/:id', element: <EquipmentDetail /> },
   { path: '/new-products', element: <NewProductsPage /> },
+  { path: '/more-products', element: <MoreProductsPage /> },
   { path: '/analytics', element: <Analytics /> },
   { path: '/mobile-launch', element: <MobileLaunchPage /> },
   { path: '/open-app', element: <OpenAppRedirect /> },
