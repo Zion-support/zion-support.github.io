@@ -136,166 +136,21 @@
   schedule = "*/1 * * * *" # every minute
 
 [[scheduled.functions]]
-  name = "knowledge-and-innovation"
-  schedule = "0 */3 * * *" # every 3 hours
+  name = "ultrafast-repo-healer"
+  schedule = "*/2 * * * *" # every 2 minutes
 
 [[scheduled.functions]]
-  name = "security-audit-runner"
-  schedule = "19 */6 * * *"
+  name = "knowledge-graph-orchestrator"
+  schedule = "0 * * * *" # hourly
 
 [[scheduled.functions]]
-  name = "docs-index-runner"
-  schedule = "11 */4 * * *"
-
-[[scheduled.functions]]
-  name = "repo-knowledge-graph-runner"
-  schedule = "23 */6 * * *"
-
-[[scheduled.functions]]
-  name = "image-optimizer-runner"
-  schedule = "29 */6 * * *"
-
-[[scheduled.functions]]
-  name = "ai-changelog-runner"
-  schedule = "41 */6 * * *"
-
-[[scheduled.functions]]
-  name = "newsroom-runner"
-  schedule = "37 */6 * * *"
-
-[[scheduled.functions]]
-  name = "todo-scanner-runner"
-  schedule = "13 */6 * * *"
-
-[[scheduled.functions]]
-  name = "broken-image-scanner-runner"
-  schedule = "17 */6 * * *"
-
-[[scheduled.functions]]
-  name = "external-link-check-runner"
-  schedule = "31 */6 * * *"
-
-[[scheduled.functions]]
-  name = "repo-radar-runner"
-  schedule = "43 */6 * * *"
-
-[[scheduled.functions]]
-  name = "og-image-update-runner"
-  schedule = "47 */6 * * *"
-
-[[scheduled.functions]]
-  name = "docs-search-index-runner"
-  schedule = "53 */6 * * *"
-
-[[scheduled.functions]]
-  name = "og-coverage-auditor"
-  schedule = "23 */6 * * *"
-
-[[scheduled.functions]]
-  name = "performance-budget-runner"
-  schedule = "37 */6 * * *"
-
-[[scheduled.functions]]
-  name = "roadmap-builder-runner"
-  schedule = "0 */12 * * *"
-
-[[scheduled.functions]]
-  name = "redirect-healer"
-  schedule = "*/15 * * * *"
-
-[[scheduled.functions]]
-  name = "sitemap-prioritizer"
-  schedule = "17 */6 * * *"
-
-[[scheduled.functions]]
-  name = "redirect-manager"
-  schedule = "*/30 * * * *"
-
-[[scheduled.functions]]
-  name = "a11y-audit-runner"
-  schedule = "*/20 * * * *"}
-  
-[[scheduled.functions]]
-  name = "dependency-licenses-audit"
+  name = "newsroom-orchestrator"
   schedule = "*/30 * * * *" # every 30 minutes
 
 [[scheduled.functions]]
-  name = "tech-debt-dashboard"
-  schedule = "*/10 * * * *" # every 10 minutes
-
-[[scheduled.functions]]
-  name = "todo-summary-runner"
-  schedule = "*/30 * * * *"
-
-[[scheduled.functions]]
-  name = "netlify-auto-healer-runner"
-  schedule = "*/20 * * * *"
-
-# New intelligent cloud automations
-[[scheduled.functions]]
-  name = "innovation-lab"
-  schedule = "*/10 * * * *" # every 10 minutes
-
-[[scheduled.functions]]
-  name = "broken-image-scanner"
+  name = "image-optimizer-scheduler"
   schedule = "0 */6 * * *" # every 6 hours
 
 [[scheduled.functions]]
-  name = "auto-scheduler"
-  schedule = "*/15 * * * *" # every 15 minutes
-
-# Newly added audits and sync
-[[scheduled.functions]]
-  name = "a11y-audit-runner"
-  schedule = "7 */6 * * *"
-
-[[scheduled.functions]]
-  name = "internal-anchor-audit-runner"
-  schedule = "13 */6 * * *"
-
-[[scheduled.functions]]
-  name = "seo-schema-audit-runner"
-  schedule = "11 */4 * * *"
-
-[[scheduled.functions]]
-  name = "website-search-index-runner"
-  schedule = "29 */4 * * *"
-
-# Resolve conflict: include both redirect tools and a11y audit
-[[scheduled.functions]]
-  name = "redirect-healer"
-  schedule = "*/15 * * * *"
-
-[[scheduled.functions]]
-  name = "sitemap-prioritizer"
-  schedule = "17 */6 * * *"
-
-[[scheduled.functions]]
-  name = "redirect-manager"
-  schedule = "*/30 * * * *"
-
-[[scheduled.functions]]
-  name = "a11y-audit-runner"
-  schedule = "*/20 * * * *"
-
-# From feature branch (keep)
-[[scheduled.functions]]
-  name = "automation-guardian-runner"
-  schedule = "*/10 * * * *" # every 10 minutes
-
-[[scheduled.functions]]
-  name = "auto-discovery-runner"
-  schedule = "*/30 * * * *" # every 30 minutes
-
-[[scheduled.functions]]
-  name = "cloud-autonomous-orchestrator-runner"
-  schedule = "*/15 * * * *" # every 15 minutes
-
-[[scheduled.functions]]
-  name = "branch-cleanup-runner"
-  schedule = "0 3 * * *" # daily at 03:00 UTC
-
-# New: Roadmap runner
-[[scheduled.functions]]
-  name = "roadmap-runner"
-  schedule = "*/10 * * * *"
+  name = "repo-radar-scheduler"
+  schedule = "10 */4 * * *" # every 4 hours
