@@ -130,14 +130,15 @@ describe('AutocompleteSuggestions', () => {
   test('displays suggestion type', () => {
     renderComponent();
     expect(screen.getByText((content, element) => element?.textContent === 'product' && element.tagName.toLowerCase() === 'span')).toBeInTheDocument();
-    expect(screen.getByText((content, element) => element?.textContent === 'category' && element.tagName.toLowerCase() === 'span')).toBeInTheDocument(); // Ensure secondary type renders
-    const suggestionsWithCategory = [
+    expect(screen.getByText((content, element) => element?.textContent === 'category' && element.tagName.toLowerCase() === 'span')).toBeInTheDocument();
+    // Add an extra suggestion with a different type to ensure the label renders correctly
+    const suggestionsWithSkill = [
         ...mockSuggestions,
-        { text: 'Banana Phone', type: 'category' }
+        { text: 'Banana Phone', type: 'skill' }
     ];
-    render( // re-render with new suggestions
+    render(
         <AutocompleteSuggestions
-          suggestions={suggestionsWithCategory}
+          suggestions={suggestionsWithSkill}
           searchTerm={mockSearchTerm}
           onSelectSuggestion={mockOnSelectSuggestion}
           visible={true}
@@ -145,6 +146,6 @@ describe('AutocompleteSuggestions', () => {
           listId="test-autocomplete-list"
         />
       );
-    expect(screen.getByText('category')).toBeInTheDocument();
+    expect(screen.getByText('skill')).toBeInTheDocument();
   });
 });
