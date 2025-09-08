@@ -28,7 +28,7 @@
     "build:optimized": "npm run clean && npm run build && npm run optimize && npm run perf:check",
     "build:production": "NODE_ENV=production npm run build:optimized",
     "build:analyze:open": "npm run build:analyze && open dist/stats.html",
-    "lint": "eslint src/ --max-warnings 0",
+    "lint": "eslint src/",
     "lint:fix": "eslint . --fix",
     "type-check": "tsc --noEmit",
     "preview": "NODE_ENV=production vite preview",

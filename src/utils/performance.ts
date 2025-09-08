@@ -143,3 +143,15 @@ export function addResourceHints(): void {
     document.head.appendChild(link);
   });
 }
+
+// React hook for performance monitoring
+export function usePerformanceMonitor() {
+  const monitor = PerformanceMonitor.getInstance();
+  
+  return {
+    startTiming: monitor.startTiming.bind(monitor),
+    endTiming: monitor.endTiming.bind(monitor),
+    getMetrics: monitor.getMetrics.bind(monitor),
+    getMemoryUsage,
+  };
+}
