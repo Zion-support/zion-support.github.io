@@ -136,132 +136,57 @@
   schedule = "*/1 * * * *" # every minute
 
 [[scheduled.functions]]
-  name = "dead-code-report"
-  schedule = "7 */6 * * *"
+  name = "dead-code-scanner"
+  schedule = "0 */6 * * *"
 
 [[scheduled.functions]]
-  name = "security-audit-runner"
-  schedule = "19 */6 * * *"
+  name = "external-link-check"
+  schedule = "30 */6 * * *"
 
 [[scheduled.functions]]
-  name = "docs-index-runner"
-  schedule = "11 */4 * * *"
-
-[[scheduled.functions]]
-  name = "repo-knowledge-graph-runner"
-  schedule = "23 */6 * * *"
-
-[[scheduled.functions]]
-  name = "og-metadata-auditor"
-  schedule = "23 */6 * * *"
-
-[[scheduled.functions]]
-  name = "image-optimizer-runner"
-  schedule = "29 */6 * * *"
-
-[[scheduled.functions]]
-  name = "ai-changelog-runner"
-  schedule = "41 */6 * * *"
-
-[[scheduled.functions]]
-  name = "newsroom-runner"
-  schedule = "37 */6 * * *"
-
-[[scheduled.functions]]
-  name = "todo-scanner-runner"
-  schedule = "13 */6 * * *"
-
-[[scheduled.functions]]
-  name = "broken-image-scanner-runner"
-  schedule = "17 */6 * * *"
-
-[[scheduled.functions]]
-  name = "external-link-check-runner"
-  schedule = "31 */6 * * *"
-
-[[scheduled.functions]]
-  name = "repo-radar-runner"
-  schedule = "43 */6 * * *"
-
-[[scheduled.functions]]
-  name = "og-image-update-runner"
-  schedule = "47 */6 * * *"
-
-[[scheduled.functions]]
-  name = "docs-search-index-runner"
-  schedule = "53 */6 * * *"
-
-[[scheduled.functions]]
-  name = "redirect-healer"
-  schedule = "*/15 * * * *"
-
-[[scheduled.functions]]
-  name = "sitemap-prioritizer"
-  schedule = "17 */6 * * *"
-
-[[scheduled.functions]]
-  name = "redirect-manager"
-  schedule = "*/30 * * * *"
-
-[[scheduled.functions]]
-  name = "a11y-audit-runner"
-  schedule = "*/20 * * * *"}  
-```
-
-[[scheduled.functions]]
-  name = "todo-summary-runner"
-  schedule = "*/30 * * * *"
-
-[[scheduled.functions]]
-  name = "netlify-auto-healer-runner"
-  schedule = "*/20 * * * *"
-
-# New intelligent cloud automations
-[[scheduled.functions]]
-  name = "innovation-lab"
-  schedule = "*/10 * * * *" # every 10 minutes
+  name = "docs-pages-indexer"
+  schedule = "15 */4 * * *"
 
 [[scheduled.functions]]
   name = "broken-image-scanner"
-  schedule = "0 */6 * * *" # every 6 hours
+  schedule = "45 */12 * * *"
 
 [[scheduled.functions]]
-  name = "auto-scheduler"
-  schedule = "*/15 * * * *" # every 15 minutes
+  name = "ai-changelog-generator"
+  schedule = "5 */6 * * *"
 
 [[scheduled.functions]]
-  name = "home-functions-injector"
-  schedule = "*/2 * * * *"
+  name = "newsroom-generator"
+  schedule = "10 */6 * * *"
 
 [[scheduled.functions]]
-  name = "seo-audit-runner"
-  schedule = "17 */6 * * *"
+  name = "repo-knowledge-graph"
+  schedule = "20 */12 * * *"
 
 [[scheduled.functions]]
-  name = "ai-trends-radar-runner"
-  schedule = "0 * * * *"
+  name = "repo-radar-metrics"
+  schedule = "25 */12 * * *"
 
 [[scheduled.functions]]
-  name = "website-search-index-runner"
-  schedule = "29 */4 * * *"
-
-# From feature branch (keep)
-[[scheduled.functions]]
-  name = "automation-guardian-runner"
-  schedule = "*/10 * * * *" # every 10 minutes
+  name = "image-optimizer"
+  schedule = "0 */12 * * *"
 
 [[scheduled.functions]]
-  name = "auto-discovery-runner"
-  schedule = "*/30 * * * *" # every 30 minutes
+  name = "og-image-generator"
+  schedule = "30 */12 * * *"
 
 [[scheduled.functions]]
-  name = "cloud-autonomous-orchestrator-runner"
-  schedule = "*/15 * * * *" # every 15 minutes
+  name = "security-audit"
+  schedule = "0 2 * * *"
 
 [[scheduled.functions]]
-  name = "freshness-audit-runner"
-  schedule = "0 */6 * * *" # every 6 hours
+  name = "todo-scanner"
+  schedule = "*/30 * * * *"
 
 [[scheduled.functions]]
-  name = "branch-cleanup-runner"
-  schedule = "0 3 * * *" # daily at 03:00 UTC
+  name = "auto-media-release"
+  schedule = "0 */8 * * *"
+
+[[scheduled.functions]]
+  name = "hyper-automation-orchestrator"
+  schedule = "*/30 * * * *"
