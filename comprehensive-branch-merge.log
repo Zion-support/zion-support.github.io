@@ -28442,3 +28442,24 @@ fatal: couldn't find remote ref cursor/install-project-dependencies-and-husky-29
 [2025-09-08T21:40:03.871Z] ✅ Success: Get git status
 [2025-09-08T21:40:03.871Z] 📄 Found 0 conflicted files
 [2025-09-08T21:40:03.871Z] 🚀 Add resolved files: git add .
+[2025-09-08T21:40:03.995Z] ✅ Success: Add resolved files
+[2025-09-08T21:40:03.995Z] 🚀 Commit merge for cursor/install-project-dependencies-and-husky-2974: git commit -m "Resolve conflicts and merge cursor/install-project-dependencies-and-husky-2974"
+[2025-09-08T21:40:04.079Z] ✅ Success: Commit merge for cursor/install-project-dependencies-and-husky-2974
+[2025-09-08T21:40:04.080Z] ✅ Successfully resolved conflicts and merged: cursor/install-project-dependencies-and-husky-2974
+[2025-09-08T21:40:04.080Z] 🔄 Attempting to merge branch: cursor/install-python-dependencies-with-mise-59fb
+[2025-09-08T21:40:04.080Z] 🚀 Fetch origin/cursor/install-python-dependencies-with-mise-59fb: git fetch origin cursor/install-python-dependencies-with-mise-59fb
+[2025-09-08T21:40:04.469Z] ✅ Success: Fetch origin/cursor/install-python-dependencies-with-mise-59fb
+[2025-09-08T21:40:04.469Z] 🚀 Merge cursor/install-python-dependencies-with-mise-59fb: git merge origin/cursor/install-python-dependencies-with-mise-59fb --no-ff -m "Merge branch cursor/install-python-dependencies-with-mise-59fb into main"
+[2025-09-08T21:40:05.254Z] ✅ Success: Merge cursor/install-python-dependencies-with-mise-59fb
+[2025-09-08T21:40:05.254Z] ✅ Successfully merged: cursor/install-python-dependencies-with-mise-59fb
+[2025-09-08T21:40:05.254Z] 🔄 Attempting to merge branch: cursor/install-python-toolchain-for-build-2098
+[2025-09-08T21:40:05.254Z] 🚀 Fetch origin/cursor/install-python-toolchain-for-build-2098: git fetch origin cursor/install-python-toolchain-for-build-2098
+[2025-09-08T21:40:05.611Z] ✅ Success: Fetch origin/cursor/install-python-toolchain-for-build-2098
+[2025-09-08T21:40:05.611Z] 🚀 Merge cursor/install-python-toolchain-for-build-2098: git merge origin/cursor/install-python-toolchain-for-build-2098 --no-ff -m "Merge branch cursor/install-python-toolchain-for-build-2098 into main"
+[2025-09-08T21:40:06.439Z] ❌ Error in Merge cursor/install-python-toolchain-for-build-2098: Command failed: git merge origin/cursor/install-python-toolchain-for-build-2098 --no-ff -m "Merge branch cursor/install-python-toolchain-for-build-2098 into main"
+[2025-09-08T21:40:06.439Z] ❌ Failed to merge cursor/install-python-toolchain-for-build-2098: Command failed: git merge origin/cursor/install-python-toolchain-for-build-2098 --no-ff -m "Merge branch cursor/install-python-toolchain-for-build-2098 into main"
+[2025-09-08T21:40:06.439Z] 🔧 Attempting to resolve conflicts for: cursor/install-python-toolchain-for-build-2098
+[2025-09-08T21:40:06.439Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T21:40:06.496Z] ✅ Success: Get git status
+[2025-09-08T21:40:06.496Z] 📄 Found 0 conflicted files
+[2025-09-08T21:40:06.496Z] 🚀 Add resolved files: git add .
