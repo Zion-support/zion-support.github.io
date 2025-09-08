@@ -879,3 +879,47 @@ fatal: couldn't find remote ref cursor/add-and-advertise-new-services-then-build
 [2025-09-08T20:39:18.400Z] ✅ Success: Get git status
 [2025-09-08T20:39:18.400Z] 📄 Found 0 conflicted files
 [2025-09-08T20:39:18.400Z] 🚀 Add resolved files: git add .
+[2025-09-08T20:39:18.477Z] ✅ Success: Add resolved files
+[2025-09-08T20:39:18.477Z] 🚀 Commit merge for cursor/add-and-advertise-new-services-then-build-9c6d: git commit -m "Resolve conflicts and merge cursor/add-and-advertise-new-services-then-build-9c6d"
+[2025-09-08T20:39:18.524Z] ✅ Success: Commit merge for cursor/add-and-advertise-new-services-then-build-9c6d
+[2025-09-08T20:39:18.524Z] ✅ Successfully resolved conflicts and merged: cursor/add-and-advertise-new-services-then-build-9c6d
+[2025-09-08T20:39:18.524Z] 🔄 Attempting to merge branch: cursor/add-and-advertise-new-services-then-build-9d8e
+[2025-09-08T20:39:18.524Z] 🚀 Fetch origin/cursor/add-and-advertise-new-services-then-build-9d8e: git fetch origin cursor/add-and-advertise-new-services-then-build-9d8e
+[2025-09-08T20:39:18.641Z] ❌ Error in Fetch origin/cursor/add-and-advertise-new-services-then-build-9d8e: Command failed: git fetch origin cursor/add-and-advertise-new-services-then-build-9d8e
+fatal: couldn't find remote ref cursor/add-and-advertise-new-services-then-build-9d8e
+
+[2025-09-08T20:39:18.641Z] ❌ Failed to merge cursor/add-and-advertise-new-services-then-build-9d8e: Command failed: git fetch origin cursor/add-and-advertise-new-services-then-build-9d8e
+fatal: couldn't find remote ref cursor/add-and-advertise-new-services-then-build-9d8e
+
+[2025-09-08T20:39:18.641Z] 🔧 Attempting to resolve conflicts for: cursor/add-and-advertise-new-services-then-build-9d8e
+[2025-09-08T20:39:18.641Z] 🚀 Get git status: git status --porcelain
+[2025-09-08T20:39:18.698Z] ✅ Success: Get git status
+[2025-09-08T20:39:18.698Z] 📄 Found 0 conflicted files
+[2025-09-08T20:39:18.699Z] 🚀 Add resolved files: git add .
+[2025-09-08T20:39:18.701Z] ❌ Error in Add resolved files: Command failed: git add .
+fatal: Unable to create '/workspace/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+
+[2025-09-08T20:39:18.701Z] ❌ Failed to resolve conflicts for cursor/add-and-advertise-new-services-then-build-9d8e: Command failed: git add .
+fatal: Unable to create '/workspace/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+
+[2025-09-08T20:39:18.701Z] 🚀 Abort merge for cursor/add-and-advertise-new-services-then-build-9d8e: git merge --abort
+[2025-09-08T20:39:18.703Z] ❌ Error in Abort merge for cursor/add-and-advertise-new-services-then-build-9d8e: Command failed: git merge --abort
+fatal: There is no merge to abort (MERGE_HEAD missing).
+
+[2025-09-08T20:39:18.703Z] ⚠️ Failed to abort merge for cursor/add-and-advertise-new-services-then-build-9d8e: Command failed: git merge --abort
+fatal: There is no merge to abort (MERGE_HEAD missing).
+
+[2025-09-08T20:39:18.703Z] 🔄 Attempting to merge branch: cursor/add-and-advertise-new-services-then-build-a284
+[2025-09-08T20:39:18.703Z] 🚀 Fetch origin/cursor/add-and-advertise-new-services-then-build-a284: git fetch origin cursor/add-and-advertise-new-services-then-build-a284
