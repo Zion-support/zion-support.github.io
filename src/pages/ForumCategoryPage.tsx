@@ -59,17 +59,39 @@ const iconMap = {
     "FileText": FileText,
     "Megaphone": Megaphone
 };
-function CategoryContent({ categoryId, category, IconComponent, user, }) {
-    const [searchQuery, setSearchQuery] = useState("");
-    const { posts = [], loading, } = usePostsByCategory(categoryId);
-    const errorMessage = null;
-    const filteredPosts = searchQuery
-        ? posts.filter((post) => post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            post.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            post.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase())))
-        : posts;
-    const canCreatePost = categoryId !== "announcements" || (user?.userType === "admin" || user?.role === "admin");
-    return (<div className="container py-8">
+
+function CategoryContent({
+  categoryId,
+  category,
+  IconComponent,
+  user,
+}: {
+  categoryId: string;
+  category: ForumCategoryInfo;
+  IconComponent: React.ComponentType<any>;
+  user: any;
+}) {
+  const [searchQuery, setSearchQuery] = useState("");
+  const {
+    data: posts = [],
+    isPending: loading,
+    error,
+  } = usePostsByCategory(categoryId);
+  const errorMessage = error instanceof Error ? error.message : null;
+
+  const filteredPosts = searchQuery
+    ? posts.filter((post) =>
+        post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        post.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        post.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+      )
+    : posts;
+
+  const canCreatePost =
+    categoryId !== "announcements" || (user?.userType === "admin" || user?.role === "admin");
+
+  return (
+    <div className="container py-8">
       <div className="flex items-center gap-3 mb-6">
         <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">
           Forum
