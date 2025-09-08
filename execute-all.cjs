@@ -16,8 +16,12 @@ class ExecuteAllScripts {
     ];
   }
 
+<<<<<<< HEAD
+=======
+=======
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
   async run() {
     console.log('🚀 Executing all automation scripts...');
     const scripts = [
@@ -25,6 +29,10 @@ class ExecuteAllScripts {
       'final-automation-suite-fixed.cjs',
       'master-automation-orchestrator.cjs'
     ];
+<<<<<<< HEAD
+  }
+
+=======
 
 
 
@@ -91,6 +99,7 @@ async function runAll() {
   }
 
 
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
   async run() {
     console.log('🚀 Executing all automation scripts...');
     const scripts = ['comprehensive-automation-suite.cjs', 'final-automation-suite-fixed.cjs', 'ultimate-automation-orchestrator.cjs'];
@@ -107,6 +116,9 @@ async function runAll() {
       }
 
 const executor = new ExecuteAllScripts();
+<<<<<<< HEAD
+=======
+=======
 
 executor.run().catch(console.error);
 
@@ -183,6 +195,7 @@ module.exports = ExecuteAllScripts;
 
 const executor = new ExecuteAllScripts();
 executor.run().catch(console.error);
+>>>>>>> 2a52ffcaecd5f6a836f52d5d40dfd3f48a28a425
 
 
 

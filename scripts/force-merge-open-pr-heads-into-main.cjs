@@ -52,6 +52,20 @@ function autoResolveConflicts() {}
 async function main() {}
   const { owner, repo } = getRepo();
 
+
+
+
+
+
+    };
+  }
+});
+  const text = await res.text();
+
+=======
+=======
+
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
   let data; try { data = text ? JSON.parse(text) : undefined} catch { data = { "raw": text }};
   if (!res.ok) throw new Error(data && data.message ? data.message : `HTTP ${res.status}`);
   return data};

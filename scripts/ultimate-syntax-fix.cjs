@@ -24,6 +24,8 @@ console.log('🔧 Ultimate Syntax Fix');
 function fixAllSyntax(content) {
   return content
     // Fix malformed JSX tags
+<<<<<<< HEAD
+=======
     .replace(/<h3([^>]*)>([^<]+)><\/h3>/gm, '<h3$1>$2</h3>')
     .replace(/<h2([^>]*)>([^<]+)><\/h2>/gm, '<h2$1>$2</h2>')
     .replace(/<h1([^>]*)>([^<]+)><\/h1>/gm, '<h1$1>$2</h1>')
@@ -86,6 +88,7 @@ const filesToFix = [;
 
 
 // Files to fix
+>>>>>>> 23701123c2003b6514f1b91a1b71d5372d66372e
 const filesToFix = [
   'pages/about.tsx',
   'pages/blog.tsx',
