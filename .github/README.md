@@ -1,217 +1,175 @@
 # PM2 Automation System
 
-This directory contains the PM2 process manager configuration and automation scripts for the Zion Tech Group website.
+This directory contains the configuration for the PM2 process manager that handles all automation tasks for the Zion Tech Group website.
 
 ## Overview
 
-The application now uses PM2 (Process Manager 2) for all automation tasks instead of GitHub Actions. This provides:
-- **Real-time automation**: Continuous monitoring and execution
-- **Better performance**: No waiting for GitHub Actions queue
-- **Local control**: Full control over automation processes
-- **Resource efficiency**: Optimized memory and CPU usage
+Instead of GitHub Actions, this project uses PM2 (Process Manager 2) to run continuous automation tasks. PM2 provides better performance, local execution, and real-time monitoring capabilities.
 
-## PM2 Configuration
+## Current Automation Processes
 
-### Main Configuration File
-- **File**: `ecosystem.config.cjs` (in project root)
-- **Purpose**: Defines all PM2 processes and their configurations
-
-### Available Scripts
-
-```bash
-# Start all automation processes
-npm run pm2:start:automation
-
-# Start main applications
-npm run pm2:start:apps
-
-# Start all processes
-npm run pm2:start
-
-# Stop all processes
-npm run pm2:stop
-
-# Restart all processes
-npm run pm2:restart
-
-# View logs
-npm run pm2:logs
-
-# Monitor processes
-npm run pm2:monit
-
-# Check status
-npm run pm2:status
-
-# Save current configuration
-npm run pm2:save
-
-# Setup startup scripts
-npm run pm2:startup
-```
-
-## Automation Processes
-
-### 🔧 Console Error Fixer
+### 🔄 Console Error Fixer
+- **Process Name**: `console-error-fixer`
 - **Script**: `./scripts/automation/console-error-fixer.cjs`
-- **Frequency**: Every 15 minutes
-- **Purpose**: Automatically fixes console errors in the codebase
+- **Interval**: Every 15 minutes (900,000ms)
+- **Purpose**: Automatically detects and fixes console errors in the application
 
 ### 🔗 Link Checker
+- **Process Name**: `link-checker`
 - **Script**: `./scripts/automation/link-checker.cjs`
-- **Frequency**: Every 30 minutes
+- **Interval**: Every 30 minutes (1,800,000ms)
 - **Purpose**: Checks for broken links and reports issues
 
-### 📈 Continuous Improvement
+### 🚀 Continuous Improvement
+- **Process Name**: `continuous-improvement`
 - **Script**: `./scripts/automation/continuous-improvement.cjs`
-- **Frequency**: Every 2 hours
-- **Purpose**: Suggests and implements code improvements
+- **Interval**: Every 2 hours (7,200,000ms)
+- **Purpose**: Suggests and implements improvements automatically
 
 ### 🧪 Daily Build & Test
+- **Process Name**: `daily-build-test`
 - **Script**: `./scripts/automation/daily-build-test.cjs`
-- **Frequency**: Every hour
-- **Purpose**: Runs build verification and basic tests
+- **Interval**: Every hour (3,600,000ms)
+- **Purpose**: Runs build verification and testing
 
 ### 🔒 Security Audit
+- **Process Name**: `security-audit`
 - **Script**: `./scripts/automation/security-audit.cjs`
-- **Frequency**: Every 4 hours
-- **Purpose**: Security vulnerability scanning and reporting
+- **Interval**: Every 4 hours (14,400,000ms)
+- **Purpose**: Performs security vulnerability scanning
+
+### 📦 Dependency Updates
+- **Process Name**: `dependency-updates`
+- **Script**: `./scripts/automation/dependency-updates.cjs`
+- **Interval**: Every 6 hours (21,600,000ms)
+- **Purpose**: Checks for and updates outdated dependencies
+
+### 📊 Performance Monitoring
+- **Process Name**: `performance-monitor`
+- **Script**: `./scripts/automation/performance-monitor.cjs`
+- **Interval**: Every 2 hours (7,200,000ms)
+- **Purpose**: Monitors application performance metrics
+
+### ✅ Quality Checks
+- **Process Name**: `quality-checks`
+- **Script**: `./scripts/automation/quality-checks.cjs`
+- **Interval**: Every 3 hours (10,800,000ms)
+- **Purpose**: Runs code quality and linting checks
+
+### 🔗 Link Integrity
+- **Process Name**: `link-integrity`
+- **Script**: `./scripts/automation/link-integrity.cjs`
+- **Interval**: Every 2 hours (7,200,000ms)
+- **Purpose**: Ensures link integrity and reports broken links
+
+### 🎯 Front Maximizer
+- **Process Name**: `front-maximizer`
+- **Script**: `./scripts/automation/front-maximizer.cjs`
+- **Interval**: Every 4 hours (14,400,000ms)
+- **Purpose**: Optimizes frontend performance and user experience
+
+### 🗺️ Sitemap Runner
+- **Process Name**: `sitemap-runner`
+- **Script**: `./scripts/automation/sitemap-runner.cjs`
+- **Interval**: Every 6 hours (21,600,000ms)
+- **Purpose**: Generates and validates sitemaps
+
+## Configuration
+
+### Ecosystem File
+The PM2 configuration is defined in `ecosystem.config.cjs` at the project root.
+
+### Environment Variables
+All automation processes run with:
+- `NODE_ENV`: production
+- `AUTOMATION_INTERVAL`: Process-specific interval in milliseconds
+
+## Management Commands
+
+### Start All Processes
+```bash
+pm2 start ecosystem.config.cjs
+```
+
+### Monitor Processes
+```bash
+pm2 list
+pm2 monit
+```
+
+### View Logs
+```bash
+pm2 logs [process-name]
+pm2 logs --lines 100
+```
+
+### Restart Processes
+```bash
+pm2 restart [process-name]
+pm2 restart all
+```
+
+### Stop Processes
+```bash
+pm2 stop [process-name]
+pm2 stop all
+```
+
+### Delete Processes
+```bash
+pm2 delete [process-name]
+pm2 delete all
+```
+
+## Benefits of PM2 over GitHub Actions
+
+1. **Real-time Execution**: Processes run continuously instead of on-demand
+2. **Local Control**: No dependency on external services or API limits
+3. **Better Performance**: Faster execution without CI/CD overhead
+4. **Cost Effective**: No additional service costs
+5. **Immediate Feedback**: Real-time monitoring and logging
+6. **Customizable Intervals**: Precise control over execution timing
 
 ### 📦 Dependency Updates
 - **Script**: `./scripts/automation/dependency-updates.cjs`
 - **Frequency**: Every 6 hours
 - **Purpose**: Checks for outdated packages and security updates
 
-### 📊 Performance Monitor
-- **Script**: `./scripts/automation/performance-monitor.cjs`
-- **Frequency**: Every 2 hours
-- **Purpose**: Monitors application performance metrics
+### Process Status
+- All processes are configured with `autorestart: true`
+- Memory limits are set to prevent resource exhaustion
+- Processes automatically restart on failure
 
-### ✅ Quality Checks
-- **Script**: `./scripts/automation/quality-checks.cjs`
-- **Frequency**: Every 3 hours
-- **Purpose**: Code quality analysis and linting
-
-### 🔗 Link Integrity
-- **Script**: `./scripts/automation/link-integrity.cjs`
-- **Frequency**: Every 2 hours
-- **Purpose**: Deep link validation and integrity checking
-
-### 🎯 Front Maximizer
-- **Script**: `./scripts/automation/front-maximizer.cjs`
-- **Frequency**: Every 4 hours
-- **Purpose**: Frontend optimization and enhancement
-
-### 🗺️ Sitemap Runner
-- **Script**: `./scripts/automation/sitemap-runner.cjs`
-- **Frequency**: Every 6 hours
-- **Purpose**: Generates and validates sitemaps
-
-## Main Applications
-
-### Zion App
-- **Script**: `npm start`
-- **Purpose**: Main frontend application
-- **Status**: Configured but not required for automation
-
-### Zion Backend
-- **Script**: `cd server && npm start`
-- **Purpose**: Backend server
-- **Status**: Configured but not required for automation
-
-## Monitoring and Management
-
-### View Process Status
-```bash
-pm2 status
-```
-
-### View Logs
-```bash
-pm2 logs [process-name]
-```
-
-### Monitor Resources
-```bash
-pm2 monit
-```
-
-### Restart Specific Process
-```bash
-pm2 restart [process-name]
-```
-
-### Stop Specific Process
-```bash
-pm2 stop [process-name]
-```
-
-## Benefits Over GitHub Actions
-
-1. **Real-time Execution**: No waiting for GitHub Actions queue
-2. **Continuous Monitoring**: 24/7 automation without delays
-3. **Resource Control**: Optimized memory and CPU usage
-4. **Local Management**: Full control over automation processes
-5. **Cost Effective**: No GitHub Actions minutes consumption
-6. **Faster Execution**: Direct local execution vs. remote CI/CD
+### Health Checks
+- Monitor process status with `pm2 list`
+- Check logs for any errors or issues
+- Use `pm2 monit` for real-time monitoring
 
 ## Troubleshooting
 
-### Process Not Starting
+### Common Issues
+1. **Process Stopped**: Check logs for error details
+2. **High Memory Usage**: Verify memory limits in ecosystem config
+3. **Script Errors**: Check automation script syntax and dependencies
+
+### Debug Mode
+To debug a specific process:
 ```bash
-# Check PM2 logs
-pm2 logs
-
-# Restart specific process
-pm2 restart [process-name]
-
-# Check ecosystem config
-cat ecosystem.config.cjs
-```
-
-### High Memory Usage
-```bash
-# Monitor memory usage
-pm2 monit
-
-# Restart processes
-pm2 restart all
-
-# Check memory limits in ecosystem.config.cjs
-```
-
-### Process Errors
-```bash
-# View error logs
-pm2 logs [process-name] --err
-
-# Check process status
-pm2 status
-
-# Restart errored processes
+pm2 logs [process-name] --lines 200
 pm2 restart [process-name]
 ```
-
-## Configuration
-
-All automation processes are configured in `ecosystem.config.cjs` with:
-- **Memory limits**: 512MB per automation process
-- **Auto-restart**: Enabled for all processes
-- **Environment variables**: Production-ready configuration
-- **Instance management**: Single instance per process for efficiency
 
 ## Security
 
-- All processes run in production environment
-- Memory limits prevent resource exhaustion
-- Auto-restart ensures continuous operation
-- Process isolation for security
+- All processes run in production mode
+- No sensitive data is logged
+- Processes are isolated and have memory limits
+- Regular security audits are performed automatically
 
 ## Support
 
 For PM2 automation issues:
-1. Check process status: `pm2 status`
-2. View logs: `pm2 logs [process-name]`
-3. Monitor resources: `pm2 monit`
-4. Restart processes: `pm2 restart [process-name]`
-5. Check ecosystem configuration: `ecosystem.config.cjs`
+1. Check process status with `pm2 list`
+2. Review logs for error details
+3. Verify automation scripts exist and are executable
+4. Check ecosystem configuration syntax
