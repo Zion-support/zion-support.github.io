@@ -1,44 +1,46 @@
-export interface RateLimitConfig {
-  windowMs: number;
-  maxRequests: number;
+interface RateLimitEntry {
+  count: number;
+  resetTime: number;
 }
 
-export class RateLimiter {
-  private requests: Map<string, number[]> = new Map();
-  private config: RateLimitConfig;
+const rateLimitStore = new Map<string, RateLimitEntry>();
 
-  constructor(config: RateLimitConfig) {
-    this.config = config;
+export function rateLimit(
+  key: string,
+  maxRequests: number = 100,
+  windowMs: number = 15 * 60 * 1000 // 15 minutes
+): { allowed: boolean; remaining: number; resetTime: number } {
+  const now = Date.now();
+  const entry = rateLimitStore.get(key);
+
+  if (!entry || now > entry.resetTime) {
+    // Create new entry or reset expired entry
+    const newEntry: RateLimitEntry = {
+      count: 1,
+      resetTime: now + windowMs
+    };
+    rateLimitStore.set(key, newEntry);
+    return {
+      allowed: true,
+      remaining: maxRequests - 1,
+      resetTime: newEntry.resetTime
+    };
   }
 
-  isAllowed(identifier: string): boolean {
-    const now = Date.now();
-    const windowStart = now - this.config.windowMs;
-    
-    if (!this.requests.has(identifier)) {
-      this.requests.set(identifier, []);
-    }
-    
-    const userRequests = this.requests.get(identifier)!;
-    
-    // Remove old requests outside the window
-    const validRequests = userRequests.filter(time => time > windowStart);
-    this.requests.set(identifier, validRequests);
-    
-    if (validRequests.length >= this.config.maxRequests) {
-      return false;
-    }
-    
-    validRequests.push(now);
-    return true;
+  if (entry.count >= maxRequests) {
+    return {
+      allowed: false,
+      remaining: 0,
+      resetTime: entry.resetTime
+    };
   }
 
-  reset(identifier: string): void {
-    this.requests.delete(identifier);
-  }
+  entry.count++;
+  rateLimitStore.set(key, entry);
+
+  return {
+    allowed: true,
+    remaining: maxRequests - entry.count,
+    resetTime: entry.resetTime
+  };
 }
-
-export const defaultRateLimiter = new RateLimiter({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  maxRequests: 100
-});

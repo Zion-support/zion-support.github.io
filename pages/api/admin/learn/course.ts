@@ -11,9 +11,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   try {
     const body = req.body || {};
+    const coursesPath = path.join(process.cwd(), 'data', 'courses.json');
     const raw = fs.readFileSync(coursesPath, 'utf-8');
     const courses = JSON.parse(raw);
-
     const existingIndex = courses.findIndex((c: any) => c.id === body.id);
     if (existingIndex >= 0) {
       courses[existingIndex] = { ...courses[existingIndex], ...body };

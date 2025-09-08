@@ -1,36 +1,78 @@
 export interface TokenConfig {
-  id: string;
-  name: string;
-  symbol: string;
+  tokenName: string;
+  tokenSymbol: string;
+  totalSupply: number;
   decimals: number;
-  totalSupply: string;
-  contractAddress?: string;
-  network: string;
-  isActive: boolean;
+  initialPrice: number;
 }
 
-export async function getTokenConfigs(): Promise<TokenConfig[]> {
-  // Mock implementation - in production, this would query a database
-  return [
-    {
-      id: 'zion-token',
-      name: 'Zion Token',
-      symbol: 'ZION',
-      decimals: 18,
-      totalSupply: '1000000000',
-      contractAddress: '0x1234567890123456789012345678901234567890',
-      network: 'ethereum',
-      isActive: true
-    }
-  ];
+export interface Transaction {
+  id: string;
+  userId: string;
+  type: 'mint' | 'burn' | 'transfer';
+  amount: number;
+  timestamp: number;
+  description: string;
 }
 
-export async function updateTokenConfig(id: string, config: Partial<TokenConfig>): Promise<TokenConfig | null> {
-  // Mock implementation - in production, this would update a database
-  return null;
+// Mock data - in production, this would connect to a real database
+const mockConfig: TokenConfig = {
+  tokenName: 'ZION Token',
+  tokenSymbol: 'ZION',
+  totalSupply: 1000000000,
+  decimals: 18,
+  initialPrice: 0.01
+};
+
+const mockTransactions: Transaction[] = [
+  {
+    id: '1',
+    userId: 'user1',
+    type: 'mint',
+    amount: 1000,
+    timestamp: Date.now() - 86400000,
+    description: 'Initial token allocation'
+  },
+  {
+    id: '2',
+    userId: 'user2',
+    type: 'mint',
+    amount: 500,
+    timestamp: Date.now() - 43200000,
+    description: 'Reward for early participation'
+  }
+];
+
+export function getConfig(): TokenConfig {
+  return { ...mockConfig };
 }
 
-export async function createTokenConfig(config: Omit<TokenConfig, 'id'>): Promise<TokenConfig | null> {
-  // Mock implementation - in production, this would create a new record in a database
-  return null;
+export function getAllTransactions(): Transaction[] {
+  return [...mockTransactions];
+}
+
+export function issueTokens(userId: string, amount: number, reason: string): Transaction {
+  const transaction: Transaction = {
+    id: Math.random().toString(36).substr(2, 9),
+    userId,
+    type: 'mint',
+    amount,
+    timestamp: Date.now(),
+    description: reason
+  };
+  mockTransactions.push(transaction);
+  return transaction;
+}
+
+export function revokeTokens(userId: string, amount: number, reason: string): Transaction {
+  const transaction: Transaction = {
+    id: Math.random().toString(36).substr(2, 9),
+    userId,
+    type: 'burn',
+    amount,
+    timestamp: Date.now(),
+    description: reason
+  };
+  mockTransactions.push(transaction);
+  return transaction;
 }

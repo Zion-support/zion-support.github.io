@@ -1,27 +1,26 @@
-export interface DatabaseConfig {
-  host: string;
-  port: number;
-  database: string;
-  username: string;
-  password: string;
+import fs from 'fs';
+import path from 'path';
+
+export function readJsonFile<T>(filePath: string, defaultValue: T): T {
+  try {
+    if (!fs.existsSync(filePath)) {
+      return defaultValue;
+    }
+    const content = fs.readFileSync(filePath, 'utf8');
+    return JSON.parse(content);
+  } catch {
+    return defaultValue;
+  }
 }
 
-export function getDatabaseConfig(): DatabaseConfig {
-  return {
-    host: process.env.DB_HOST || 'localhost',
-    port: parseInt(process.env.DB_PORT || '5432'),
-    database: process.env.DB_NAME || 'zion',
-    username: process.env.DB_USER || 'postgres',
-    password: process.env.DB_PASSWORD || 'password'
-  };
-}
-
-export async function connectToDatabase() {
-  // Mock implementation - in production, this would connect to a real database
-  return { connected: true };
-}
-
-export async function queryDatabase(sql: string, params: any[] = []) {
-  // Mock implementation - in production, this would execute SQL queries
-  return [];
+export function writeJsonFile<T>(filePath: string, data: T): void {
+  try {
+    const dir = path.dirname(filePath);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  } catch (error) {
+    console.error('Error writing JSON file:', error);
+  }
 }

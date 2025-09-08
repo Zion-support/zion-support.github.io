@@ -1,30 +1,20 @@
-export interface TokenStorage {
-  id: string;
-  name: string;
-  type: 'database' | 'file' | 'memory';
-  config: Record<string, any>;
-  isActive: boolean;
-}
+import { TokenConfig } from './service';
 
-export async function getTokenStorages(): Promise<TokenStorage[]> {
-  // Mock implementation - in production, this would query a database
-  return [
-    {
-      id: 'default-db',
-      name: 'Default Database',
-      type: 'database',
-      config: { connectionString: 'postgresql://localhost:5432/zion' },
-      isActive: true
-    }
-  ];
-}
+// Mock storage - in production, this would use a real database
+let config: TokenConfig = {
+  tokenName: 'ZION Token',
+  tokenSymbol: 'ZION',
+  totalSupply: 1000000000,
+  decimals: 18,
+  initialPrice: 0.01
+};
 
-export async function updateTokenStorage(id: string, storage: Partial<TokenStorage>): Promise<TokenStorage | null> {
-  // Mock implementation - in production, this would update a database
-  return null;
-}
-
-export async function createTokenStorage(storage: Omit<TokenStorage, 'id'>): Promise<TokenStorage | null> {
-  // Mock implementation - in production, this would create a new record in a database
-  return null;
-}
+export const tokenStore = {
+  getConfig(): TokenConfig {
+    return { ...config };
+  },
+  
+  setConfig(newConfig: Partial<TokenConfig>): void {
+    config = { ...config, ...newConfig };
+  }
+};

@@ -3,25 +3,23 @@ import puppeteer from 'puppeteer';
 export const config = {
   api: {
     bodyParser: {
-      sizeLimit: '10mb'}};
-
+      sizeLimit: '10mb'}}};
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' });
-    return
+    return;
   }
 
   const { html, pageSize } = req.body as { html: string, pageSize?: 'A4' | 'LETTER' };
   if (!html) {
     res.status(400).json({ error: 'Missing html' });
-    return
+    return;
   }
 
   const browser = await puppeteer.launch({
     headless: true,
     args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
-
   try {
     const page = await browser.newPage();
     await page.setContent(html, { waitUntil: 'networkidle0' });

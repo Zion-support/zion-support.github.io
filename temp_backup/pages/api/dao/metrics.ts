@@ -5,9 +5,9 @@ const configPath = path.join(process.cwd(), 'datadaoconfig.json'),
 const cachePath = path.join(process.cwd(), 'datadaometrics.json'),
 
 async function fetchJson(url: string) {
-  const resp = await fetch($2);
-  if (!resp.ok) throw new Error($2);
-  return resp.json()
+  const resp = await fetch(url);
+  if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+  return resp.json();
 }
 
 function readJson(p: string) {
@@ -20,10 +20,10 @@ function writeJson(p: string, v: any) {
 
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
   try {
-    const cfg = readJson($2);
-    const cache = readJson($2);
-    const now = Date.now($2);
-    const oneWeekMs = $2;
+    const cfg = readJson(configPath);
+    const cache = readJson(cachePath);
+    const now = Date.now();
+    const oneWeekMs = 7 * 24 * 60 * 60 * 1000;
     if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {
       return res.status(200).json({ ...cache, cached: true})
     }

@@ -4,7 +4,7 @@ import { createFlag, getAllFlags } from '../../../../../utils/moderationDb';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = parseUserFromRequest(req);
-  try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode || 403).json({ error: 'Forbidden' }); }
+  try { ensureAdmin(user); } catch (e: any) { return res.status(e.statusCode || 403).json({ error: 'Forbidden' }); }
 
   if (req.method === 'GET') {
     const { status, reason, userEmail, contentType } = req.query as Record<string, string | undefined>;
@@ -15,13 +15,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       (!userEmail || f.userEmail.toLowerCase().includes(userEmail.toLowerCase())) &&
       (!contentType || f.contentType === contentType)
     );
-    return res.status(200).json({ flags: filtered })
+    return res.status(200).json({ flags: filtered });
   }
 
   if (req.method === 'POST') {
     const init = req.body || {};
     try {
-      const flag = createFlag(init);
+      const flag = await createFlag(init);
       return res.status(201).json({ flag });
     } catch (e: any) {
       return res.status(400).json({ error: e.message || 'Invalid payload' });
