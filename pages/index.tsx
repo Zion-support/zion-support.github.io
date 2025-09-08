@@ -267,10 +267,12 @@ export default function Home() {
               { title: 'Smart Redirect Manager', desc: 'Fixes internal 404s by auto-adding redirects; writes a public report.', href: '/.netlify/functions/redirect-manager' },
               { title: 'A11y Alt-Text Auditor', desc: 'Scans for missing alt text and publishes a report.', href: '/.netlify/functions/a11y-audit-runner' },
               { title: 'Branch Cleanup Runner (daily)', desc: 'Deletes merged or stale ephemeral branches via GitHub API.', href: '/.netlify/functions/branch-cleanup-runner' },
-              { title: 'A11y Audit (hourly)', desc: 'Scans pages/components for missing alt text and empty anchors; writes reports and syncs.', href: '/.netlify/functions/a11y-audit-runner' },
-              { title: 'Alt Text Suggester (2h)', desc: 'Suggests alt text for images in public and writes suggestions.', href: '/.netlify/functions/alt-text-suggester-runner' },
-              { title: 'Docs Gap Finder (30m)', desc: 'Finds TODO/FIXME/TBD markers and compiles a docs gap report.', href: '/.netlify/functions/docs-gap-finder-runner' },
-              { title: 'Code Churn Heatmap (daily)', desc: 'Analyzes git history to highlight most‑changed files.', href: '/.netlify/functions/code-churn-heatmap-runner' },
+              { title: 'Frontend Sync Autonomous', desc: 'High‑frequency front sync that commits and pushes changes fast.', href: '/.netlify/functions/frontend-sync-autonomous-runner' },
+              { title: 'UI Evolution Runner', desc: 'Analyzes and beautifies UI continuously.', href: '/.netlify/functions/ui-evolution-runner' },
+              { title: 'Linting Orchestrator', desc: 'Runs lint checks and applies safe auto‑fixes.', href: '/.netlify/functions/linting-orchestrator-runner' },
+              { title: 'Diversification Runner', desc: 'Explores and publishes new content and feature variations.', href: '/.netlify/functions/diversification-runner' },
+              { title: 'Meta Orchestrator', desc: 'Generates meta content and knowledge for better discovery.', href: '/.netlify/functions/meta-orchestrator-runner' },
+              { title: 'Venture Orchestrator', desc: 'Synthesizes venture ideas, services, and sales agents.', href: '/.netlify/functions/venture-runner' },
             ].map((tool) => (
               <a key={tool.title} href={tool.href} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />

@@ -229,19 +229,26 @@
   name = "branch-cleanup-runner"
   schedule = "0 3 * * *" # daily at 03:00 UTC
 
-# New useful autonomous runners
 [[scheduled.functions]]
-  name = "a11y-audit-runner"
-  schedule = "0 * * * *" # hourly
+  name = "diversification-runner"
+  schedule = "*/45 * * * *"
 
 [[scheduled.functions]]
-  name = "alt-text-suggester-runner"
-  schedule = "0 */2 * * *" # every 2 hours
+  name = "meta-orchestrator-runner"
+  schedule = "0 * * * *"
 
 [[scheduled.functions]]
-  name = "docs-gap-finder-runner"
-  schedule = "*/30 * * * *" # every 30 minutes
+  name = "ui-evolution-runner"
+  schedule = "*/10 * * * *"
 
 [[scheduled.functions]]
-  name = "code-churn-heatmap-runner"
-  schedule = "0 3 * * *" # daily at 03:00 UTC
+  name = "venture-runner"
+  schedule = "0 */2 * * *"
+
+[[scheduled.functions]]
+  name = "linting-orchestrator-runner"
+  schedule = "*/15 * * * *"
+
+[[scheduled.functions]]
+  name = "frontend-sync-autonomous-runner"
+  schedule = "*/5 * * * *"
