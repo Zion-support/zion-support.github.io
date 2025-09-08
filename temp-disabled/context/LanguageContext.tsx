@@ -1,20 +1,26 @@
-import React, { createContext, useContext, useMemo, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
-export interface LanguageContextValue {
+interface LanguageContextType {
   language: string;
   setLanguage: (lang: string) => void;
 }
 
-const LanguageContext = createContext<LanguageContextValue | undefined>(undefined);
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export const LanguageProvider: React.FC<React.PropsWithChildren<{ authState?: unknown }>> = ({ children }) => {
-  const [language, setLanguage] = useState<string>('en');
-  const value = useMemo(() => ({ language, setLanguage }), [language]);
-  return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
+export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [language, setLanguage] = useState('en');
+  
+  return (
+    <LanguageContext.Provider value={{ language, setLanguage }}>
+      {children}
+    </LanguageContext.Provider>
+  );
 };
 
-export const useLanguage = (): LanguageContextValue => {
-  const ctx = useContext(LanguageContext);
-  if (!ctx) throw new Error('useLanguage must be used within a LanguageProvider');
-  return ctx;
+export const useLanguage = () => {
+  const context = useContext(LanguageContext);
+  if (!context) {
+    throw new Error('useLanguage must be used within a LanguageProvider');
+  }
+  return context;
 };
